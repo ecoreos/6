@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>File Station</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script> <script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Virtuelle Laufwerke anhängen</h2>
+
+<p>
+Sie können virtuelle Laufwerke anhängen, um mit File Station auf Inhalte von Datenträger-Abbildern zuzugreifen.
+</p>
+
+<h4>Virtuelles Laufwerk anhängen:</h4>
+<ol>
+<li>
+Wählen Sie ein Datenträger-Abbild aus und klicken Sie auf <b>Extras</b> > <b>Virtuelles Laufwerk anhängen</b>.
+</li>
+<img src="about:blank" class="help_image"/>
+<li>
+Klicken Sie auf <b>Durchsuchen</b>, um auf der DiskStation einen leeren Zielordner zum Anhängen des virtuellen Laufwerks auszuwählen oder zu erstellen.
+</li>
+<img src="about:blank" class="help_image"/>
+<li>
+Aktivieren Sie <b>Beim Start automatisch anhängen</b>, falls Ihre DiskStation das virtuelle Laufwerk bei jedem Systemstart bzw. Neustart anhängen soll. Klicken Sie auf <b>Anhängen</b>, um fortzufahren. Sie können anschließend den Zielordner, in dem das virtuelle Laufwerk angehängt ist, durchsuchen und auf die Inhalte des Datenträger-Abbilds zugreifen.
+</li>
+<img src="about:blank" class="help_image"/>
+</ol>
+
+<div class="section">
+<h4>Hinweis:</h4>
+<p>Virtuelle Laufwerke und .iso-Dateien k&ouml;nnen nur an Unterordner unter freigegebenen Ordner angeh&auml;ngt werden.</p>
+</div>
+
+
+
+<h4>Virtuelles Laufwerk trennen:</h4>
+<ol>
+<li>Rechtsklicken Sie auf den Zielordner, in dem das virtuelle Laufwerk angehängt ist, und wählen Sie <b>Trennen</b> aus.</li>
+<img src="about:blank" class="help_image"/>
+</ol>
+<ol>
+<span class="note_head">Hinweis: </span>
+<li>
+Unterstütztes Datenträger-Abbildformat: "<b>.iso</b>"-Dateien unter Verwendung des Dateisystems ISO 9660 und UDF.
+</li>
+<li>
+Die maximale Anzahl von gleichzeitigen virtuellen Laufwerken beträgt 16.
+</li>
+<li class="enable-dockerx64">Das Anhängen virtueller Laufwerke wird nur im Modus hoher Priorität unterstützt. Gehen Sie, um diese Funktion zu verwenden, zum Docker-Paket des Host-DSM, wählen Sie das <strong>Docker DSM</strong> aus, für das Sie verschlüsselte freigegebene Ordner aktivieren möchten, klicken Sie auf <strong>Bearbeiten</strong> und aktivieren Sie das Kontrollkästchen neben <strong>Container mit hoher Priorität ausführen</strong>.</li>
+
+</ol>
+</body>
+</html>

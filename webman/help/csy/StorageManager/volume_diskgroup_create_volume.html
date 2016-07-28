@@ -1,0 +1,67 @@
+﻿ <!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Vytvoření svazku – Nápověda Synology DSM</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="This article walks you through the steps to create a volume on DiskStation pomocí Správce úložiště."><link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Vytvoření svazku</h2>
+
+<p>Tento článek popisuje, jak vytvořit svazek v zařízení DiskStation. Při vytváření nového svazku si můžete vybrat jeden z následujících způsobů:</p>
+
+<ul>
+  <li><b>Rychlé:</b> Toto je nejlepší možnost pro začátečníky. Tento způsob zvolte, pokud chcete automaticky optimalizovat kapacitu a výkon úložiště, aniž byste se museli starat o technické záležitosti, např. úrovně RAID. </li>
+
+<li><b>Vlastní:</b> Pro pokročilé uživatele, kteří chtějí ovládat podrobnější aspekty vytváření svazku, například typy RAID a rozdělení kapacity. Tato možnost podporuje různé typy RAID, umožňuje vytvářet jeden nebo více svazků a poskytuje možnosti přidělit konkrétní objemy kapacity každému svazku (jen při vytváření více svazků v systému RAID).</li>
+</ul>
+
+<div class="section">
+<h4>Jeden nebo více svazků v systému RAID?</h4>
+<p>Při vytváření svazku ve vlastním režimu máte na výběr z těchto možností:</p>
+<ul>
+  <li><b>Jeden svazek v systému RAID</b><ul>
+      <li>Vytvoří jeden svazek s využitím celé dostupné kapacity zvolených pevných disků.</li>
+      <li>Poskytuje vyšší rychlost a výkonnost.</li>
+      <li>Podporuje různé typy RAID.</li>
+    </ul>
+  </li>
+  <li><b>Více svazků v systému RAID</b><ul>
+      <li>Umožní vytvořit ve skupině disků více svazků.</li>
+      <li>Podporuje přiřazení stanovené kapacity ke každému svazku.</li>
+      <li>Poskytuje větší flexibilitu při správě úložiště.</li>
+      <li>Podporuje různé typy RAID.</li>
+    </ul>
+  </li>
+</ul>
+</div>
+
+
+<div class="section">
+<h4>Než začnete:</h4>
+<ul>
+<li>Než začnete, přesvědčte se, že se na pevných discích nenacházejí žádná důležitá data. Při procesu vytváření se všechna stávající data odstraní.</li>
+<li>Přejděte na stránku <b>HDD/SSD</b> a zkontrolujte, jestli je stav všech pevných disků <b>Normální</b> nebo <strong>Není inicializováno</strong>.</li>
+</ul>
+</div>
+
+<div class="section enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64">
+<h4>Poznámka:</h4>
+<ul>
+<li>Minimální velikost svazku Btrfs je 10 GB.</li>
+<li>Svazky Btrfs budou rezervovat 4 % prostoru na metadata.</li>
+</ul>
+</div>
+
+<h4>Vytvoření svazku:</h4>
+<ol>
+<li>Otevřete <b>Správce úložiště</b>.</li><img src="about:blank" class="help_image"/><li>Přejděte do části <b>Svazek</b> a klikněte na možnost <b>Vytvořit</b>.</li><img src="../../../online_img/dsm/StorageManager/volume_diskgroup_create_volume/volume_create.png" class="help_image"/><li>Zobrazí se průvodce vytvořením svazku. Podle svých potřeb vyberte možnost <strong>Rychlý</strong> nebo <strong>Vlastní</strong>. Poté dokončete vytvoření svazku podle pokynů v průvodci.</li><img src="../../../online_img/dsm/StorageManager/volume_diskgroup_create_volume/choose_mode.png" class="help_image"/></ol>
+
+</body>
+</html>

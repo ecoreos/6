@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Notification</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>SMS</h2>
+<p class="disable-eds14">Vous pouvez activer les notifications par SMS pour que votre DiskStation vous envoie des messages de notification via SMS quand des changements d&rsquo;&eacute;tat ou des erreurs se produisent dans le syst&egrave;me, comme une perte de connexion, un changement de comportement du ventilateur, une panne d&rsquo;&eacute;lectricit&eacute;, un manque d&rsquo;espace libre sur un volume de stockage ou un &eacute;chec de sauvegarde et restauration, etc.</p>
+
+<p class="enable-eds14">Vous pouvez activer les notifications par SMS pour que votre DiskStation vous envoie des messages de notification via SMS quand des changements d&rsquo;&eacute;tat ou des erreurs se produisent dans le syst&egrave;me, comme une perte de connexion, une panne d&rsquo;&eacute;lectricit&eacute;, un manque d&rsquo;espace libre sur un volume de stockage ou un &eacute;chec de sauvegarde et restauration, etc.</p>
+
+
+<h4>Pour activer les notifications par SMS&nbsp;:</h4>
+<p>Cochez <b>Activer les notifications par SMS</b> et configurez les param&egrave;tres suivants&nbsp;:</p>
+<ol>
+<li>S&eacute;lectionnez un fournisseur SMS dans la liste d&eacute;roulante <b>Fournisseur de service SMS</b>. Le fournisseur par d&eacute;faut est «&nbsp;Clickatell ».</li>
+<li>Cliquez sur <b>Ajouter un fournisseur de service SMS</b><b> </b>pour cr&eacute;er une nouvelle configuration SMS ou cliquez sur <b> <b>Supprimer</b></b> pour supprimer la configuration de fournisseur SMS s&eacute;lectionn&eacute;e.</li>
+<li>Dans le champ <b>Nom d&apos;utilisateur</b>, saisissez le nom d&rsquo;utilisateur de votre compte SMS.</li>
+<li>Dans les champs <b>Mot de passe</b> et <b>Confirmer le mot de passe</b>, entrez et confirmez le mot de passe de votre compte SMS.</li>
+<li>Entrez votre <b>Num&eacute;ro de t&eacute;l&eacute;phone principal</b> ou <b>Num&eacute;ro de t&eacute;l&eacute;phone secondaire</b>. Si les deux num&eacute;ros sont entr&eacute;s, les messages SMS de notification seront envoy&eacute;s aux deux num&eacute;ros.</li>
+<li>Si vous ne voulez pas recevoir trop de messages, cochez la case <b>Activer la limite d&apos;intervalle SMS</b> et limitez le nombre de messages de notification &agrave; un message par intervalle sp&eacute;cifi&eacute;.</li>
+<li>Cliquez sur <b>Envoyer un message SMS de test</b> pour envoyer un message SMS de test au num&eacute;ro de t&eacute;l&eacute;phone sp&eacute;cifi&eacute;. Si vous ne recevez pas de message, la configuration est incorrecte.</li>
+<li>Cliquez sur <b><b>Appliquer</b></b>pour enregistrer la configuration ou sur <b> <b>R&eacute;initialiser</b></b>pour annuler le d&eacute;marrage.</li>
+</ol>
+<p><span class="note_head">Remarque&nbsp;: </span>La langue de notification par SMS est d&eacute;finie dans <strong>Langue de notification</strong>. Pour changer votre langue de notification par SMS, allez dans <strong>Menu principal</strong> &gt; <strong>Panneau de configuration</strong> &gt; <strong>Options r&eacute;gionales</strong>, cliquez sur l&apos;onglet <strong>Langue</strong>, et choisissez votre langue pr&eacute;f&eacute;r&eacute;e dans le menu d&eacute;roulant de la section <strong>Langue de notification</strong>.</p>
+<ol><span class="note_head">Limites&nbsp;:</span><li>Nom d&rsquo;utilisateur&nbsp;: doit respecter la casse et &ecirc;tre d&apos;une longueur allant de 1 &agrave; 32 caract&egrave;res Unicode.</li>
+<li>Mot de passe&nbsp;: doit respecter la casse et &ecirc;tre d&apos;une longueur allant de 0 &agrave; 128 caract&egrave;res affichables, comme lettres, nombres, symboles et espaces.</li>
+<li>La limite d&rsquo;intervalle SMS doit &ecirc;tre comprise entre 1 et 10 000 minutes.</li>
+</ol>
+<h4>Pour cr&eacute;er une configuration de fournisseur SMS&nbsp;:</h4>
+<ol>
+<li>Cliquez sur <b>Ajouter un fournisseur de service SMS</b><b>.</b></li>
+<li>Dans le champ <b>Nom du fournisseur</b>, saisissez le nom du fournisseur de service SMS dans le champ.</li>
+<li>Dans le champ <b>URL SMS</b>, entrez une URL SMS dont le message est «&nbsp;Hello world.&nbsp;» Vous pouvez obtenir cette URL SMS aupr&egrave;s de votre fournisseur de service SMS.</li>
+<li>Cliquez sur <b>Suivant</b>.</li>
+<li>Le syst&egrave;me d&eacute;composera l&rsquo;URL du SMS en diff&eacute;rents param&egrave;tres. D&eacute;finissez chaque param&egrave;tre en s&eacute;lectionnant la cat&eacute;gorie correspondante. A l&apos;exception d&rsquo;<b>Autre</b>, les cat&eacute;gories de param&egrave;tre ne peuvent &ecirc;tre utilis&eacute;es qu&apos;une fois.</li>
+</ol>
+<ol><a name='smshowto'></a><span class="note_head">Limites&nbsp;:</span><li>Nom du fournisseur&nbsp;: doit respecter la casse et &ecirc;tre d&apos;une longueur allant de 1 &agrave; 32 caract&egrave;res Unicode.</li>
+<li>URL SMS&nbsp;: doit respecter la casse et &ecirc;tre d&apos;une longueur allant de 1 &agrave; 500 caract&egrave;res Unicode. Le nombre de param&egrave;tres doit &ecirc;tre entre 4 et 10. Cette URL SMS est uniquement destin&eacute;e &agrave; la configuration. Aucun SMS ne sera envoy&eacute; une fois la configuration termin&eacute;e. Le format de cette URL est fourni par le fournisseur de service SMS, et l&apos;URL doit inclure les param&egrave;tres suivants&nbsp;: nom d&apos;utilisateur, mot de passe, t&eacute;l&eacute;phone de destination et contenu du message. Avec Clickatell pour exemple, l&apos;URL possible est&nbsp;: https://api.clickatell.com/http/sendmsg?user=TestUser&amp;password=TestPassword&amp;api_id=3148203&amp;to=886123456789&amp;text=Hello+world. Notez que dans le «&nbsp;contenu du message&nbsp;», l&rsquo;espace entre «&nbsp;Hello&nbsp;» et «&nbsp;world&nbsp;» sera remplac&eacute; par un caract&egrave;re particulier d&eacute;fini par le fournisseur de service.</li>	
+
+</ol>
+</body>
+</html>

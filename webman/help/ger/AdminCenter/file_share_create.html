@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Gemeinsamen Ordner erstellen - Hilfe zu Synology DSM</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="Shared folders are the basic directories where you can store and manage files and folders on your DiskStation. This article shows you how to create a shared folder.">
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2>Freigegebenen Ordner erstellen</h2>
+<p>Gemeinsame Ordner sind die Grundverzeichnisse, in denen Sie Dateien und Ordner auf Ihrem DiskStation speichern und verwalten können. Bevor Sie in DSM Dateien speichern können, muss mindestens ein gemeinsamer Ordner erstellt werden. </p>
+
+<h4>Freigegebenen Ordner erstellen:</h4>
+<ol>
+	<li>Gehen Sie zu <strong>Systemsteuerung</strong> > <strong>Freigegebener Ordner</strong> und klicken Sie auf <strong>Erstellen</strong>.<br /><img src="about:blank" class="help_image"/></li>
+	<li>Geben Sie einen Namen und eine Beschreibung für den freigegebenen Ordner an.<br /><img src="about:blank" class="help_image disable-bromolow disable-grantley disable-avoton disable-braswell disable-broadwell disable-kvmx64"/><img src="../../../online_img/dsm/AdminCenter/file_share_create/howto571-5.png" class="help_image enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64"/></li>
+	<li>Wählen Sie einen Speicher aus, in dem der freigegebene Ordner erstellt werden soll (überspringen Sie diesen Schritt, wenn nur ein Speicher vorhanden ist).<br /><img src="about:blank" class="help_image disable-bromolow disable-grantley disable-avoton disable-braswell disable-broadwell disable-kvmx64"/><img src="../../../online_img/dsm/AdminCenter/file_share_create/howto571-6.png" class="help_image enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64"/></li>
+	<li>Ändern Sie die folgenden Optionen, falls erforderlich:<br /><img src="about:blank" class="help_image disable-bromolow disable-grantley disable-avoton disable-braswell disable-broadwell disable-kvmx64"/><img src="../../../online_img/dsm/AdminCenter/file_share_create/howto571-7.png" class="help_image enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64"/>
+		<ul>
+			<li><strong>Diesen gemeinsamen Ordner unter „Netzwerkumgebung“ ausblenden:</strong> Verhindert, dass der freigegebene Ordner unter „Netzwerk“ in Windows Explorer angezeigt wird. Diese Option beeinflusst nicht die Berechtigungen für den Zugriff auf den gemeinsamen Ordner.
+				<div class="section"><h4>Hinweis:</h4>
+				<p>Das Verbergen eines freigegebenen Ordners in „Netzwerkumgebung“ hat keine Auswirkungen auf dessen Zugriffsrechte. Die Zugriffsrechte für den ausgeblendeten gemeinsamen Ordner bleiben unverändert. Benutzer mit den richtigen Zugriffsberechtigungen auf den freigegebenen Ordner können immer noch auf diesen zugreifen, indem sie „\\server name\Name des freigegebenen Ordners“ eingeben.</p>
+				</div>
+			</li>
+			<li><strong>Unterordner und Dateien vor Benutzern ohne Berechtigungen ausblenden:</strong> Wenn <strong>Unterordner und Dateien vor Benutzern ohne Berechtigungen ausblenden</strong> aktiviert ist und ein Benutzer ohne Leseberechtigungen versucht, über das Windows-Dateifreigabeprotokoll auf einen freigegebenen Ordner zuzugreifen, kann er Unterordner oder Dateien im freigegebenen Ordner nicht anzeigen. Dies vermeidet Verwirrung bei den Benutzern, wenn sie die Verbindung zum Synology-Produkt herstellen und auf eine große Anzahl von Dateien und Unterordnern treffen, die sie nicht öffnen können.
+				<div class="section"><h4>Hinweis:</h4>
+				<ul>
+					<li>Diese Funktion wird nur mit dem Windows-Dateifreigabeprotokoll unterstützt.</li>
+					<li>Sie können die Privilegieneinstellungen jedes Ordners und jeder Datei in File Station ändern, indem Sie mit der rechten Maustaste auf den Ordner oder die Datei klicken. Wählen Sie <strong>Eigenschaften</strong> aus dem Dropdown-Menü aus und klicken Sie auf die Registerkarte <strong>Berechtigung</strong>.</li>
+					<li>Der gemeinsame Ordner wird für Benutzer ohne Berechtigungen nicht ausgeblendet, wenn <strong>Unterordner und Dateien vor Benutzern ohne Berechtigungen ausblenden</strong> aktiviert ist. Es werden nur die Unterordner und Dateien in diesem gemeinsamen Ordner ausgeblendet.</li>
+				</ul>
+				</div>
+			</li>
+		</ul>
+	</li>
+	<li><strong>Papierkorb aktivieren:</strong> Wenn Dateien im freigegebenen Ordner gelöscht werden, werden sie in einen Ordner namens <strong>#recycled</strong> verschoben. Der Zugriff auf den Papierkorb kann auf Benutzer der Gruppe <strong>administrators</strong> beschränkt werden.</li>
+	<a name="sharequota"></a><li class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64"><strong>Gemeinsames Ordnerkontingent aktivieren:</strong> Um die maximale Kapazität für jeden freigegebenen Ordner anzugeben, aktivieren Sie das Kontrollkästchen <strong>Gemeinsames Ordnerkontingent aktivieren</strong> und geben die maximale Kapazität (z. B. 10 GB) in das folgende Feld ein.
+		<div class="section"><h4>Hinweis:</h4>
+		<ul>
+			<li>Die Option <strong>Gemeinsames Ordnerkontingent aktivieren</strong> ist für freigegebene Ordner nur verfügbar, wenn der Speicher das Btrfs-Dateisystem nutzt ist.</li>
+			<li>Die gesamte Speichernutzung der <strong>home</strong>-Verzeichnisse aller Benutzer kann das Kontingent von „<strong>homes</strong>“ nicht überschreiten.</li>
+		</ul>
+		</div>
+	</li>
+	<a name="integrity_protection"></a><li class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64"><strong>Erweiterten Datenintegritätsschutz aktivieren:</strong> Um einen freigegebenen Ordner mit den Strategien <strong>CRC32-Prüfsumme</strong> und <strong>Kopieren-nach-Schreiben</strong> zu schützen, können Sie bei der Erstellung des freigegebenen Ordners den <strong>erweiterten Datenintegritätsschutz aktivieren</strong>. Mit CRC32 checksum wird geprüft, ob die Daten sich noch in ihrem ursprünglichen Zustand befinden. Wird eine Beschädigung festgestellt, wird der Benutzer benachrichtigt. Kopieren-nach-Schreiben verbessert die Datenkonsistenz, nachdem ein System unnormal heruntergefahren wurde.
+		<div class="section"><h4>Hinweis:</h4>
+		<ul>
+			<li>Diese Option ist nur für Volumes mit dem Btrfs-Dateisystem verfügbar.</li>
+			<li>Diese Option können Sie für jeden gemeinsamen Ordner während der Erstellung aktivieren bzw. deaktivieren. Nach der Erstellung des gemeinsamen Ordners kann diese Option nicht mehr geändert werden.</li>
+			<li>Wenn Dateien, wie etwa Datenbanken, kontinuierlich bearbeitet und aktualisiert werden, könnte sich die Anzahl der fragmentierten Dateien in Folge von „Kopieren-nach-Schreiben“ erhöhen. Um die Leistung zu verbessern, sollten Sie diese Option deaktivieren.</li>
+		</ul>
+		</div>
+	</li>
+    <a name="btrfs_compression"></a><li class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64"><strong>Dateikomprimierung aktivieren</strong>: Um Speicherplatz zu sparen, werden die Daten im erstellten freigegebenen Ordner vom Btrf-Dateisystem automatisch komprimiert. Wenn Daten zur Verwendung abgerufen werden, werden sie automatisch entpackt.
+		<div class="section"><h4>Hinweis:</h4>
+		<ul>
+			<li>Diese Option ist nur verfügbar, wenn Sie einen freigegebenen Ordner auf einem Btrfs-Volume erstellen oder wenn <strong>Erweiterter Datenintegritätsschutz</strong> aktiviert ist.</li>
+			<li>Nach der Erstellung des freigegebenen Ordners kann diese Option nicht mehr geändert werden.</li>
+			<li>Die Komprimierungsrate ist vom Datentyp abhängig: Textdateien haben die höchste Komprimierungsrate, während Multimediadateien (z. B. Bilder, Musik oder Videos) nicht sehr gut komprimiert werden können, da sie bereits für die Ausgabe komprimiert wurden.</li>
+		</ul>
+		</div>
+	</li>
+	<li><strong>Diesen gemeinsamen Ordner verschlüsseln:</strong> Führen Sie zum Verschlüsseln des freigegebenen Ordners die folgenden Schritte durch:
+		<ol>
+			<li>Geben Sie einen neuen Verschlüsselungsschlüssel an und bestätigen Sie ihn. Der Verschlüsselungsschlüssel darf keine Kommas (,) oder Gleichheitszeichen (=) enthalten. </li>
+			<li>Soweit erforderlich, aktivieren Sie das Kästchen <strong>Beim Start automatisch anhängen</strong>, um den verschlüsselten Ordner automatisch anzuhängen, wenn das System gestartet wird. Wenn diese Option nicht aktiviert ist, wird der verschlüsselte Ordner beim nächsten Start von DiskStation getrennt. Um einen getrennten gemeinsamen Ordner anzuzeigen oder darauf zuzugreifen, müssen Sie den Ordner manuell anhängen, indem Sie den Schlüssel für die Verschlüsselung importieren oder eingeben.</li>
+		</ol>
+	</li>
+	<li>Klicken Sie zum Beenden auf <strong>OK</strong>.</li>
+</ol>
+
+<div class="section"><h4>Namensregeln für gemeinsame Ordner:</h4>
+<ul>
+	<li>Bei Namen für gemeinsame Ordner wird die Groß-/Kleinschreibung nicht berücksichtigt und sie können 1-32 Zeichen umfassen. Der Name darf die folgenden Zeichen nicht enthalten: <strong>! " # $ % & ' ( ) * + , / : ; <= > ? @ [ ] \ ^ ` { } | ~</strong></li>
+	<li>Die folgenden Namen sind für die Systemnutzung reserviert: <strong>.</strong>, <strong>..</strong>, <strong>global</strong>, <strong>home</strong>, <strong>homes</strong>, <strong>printers</strong>, <strong>public</strong>, <strong>satashare</strong>, <strong>surveillance</strong>, <strong>usbbackup</strong>, <strong>usbshare</strong>. </li>
+	<li>Das erste Zeichen eines gemeinsamen Ordners darf kein Minus- oder Leerzeichen sein und das letzte Zeichen darf ebenfalls kein Leerzeichen sein.</li>
+	<li>Bei der <strong>Beschreibung</strong> des gemeinsam genutzten Ordners wird die Groß-/Kleinschreibung berücksichtigt und sie ist auf bis zu 64 anzeigbare Unicode-Zeichen beschränkt.</li>
+</ul>
+</div>
+
+
+<div class="section"><h4>Gemeinsame Ordner verschlüsseln:</h4>
+<p>Die AES 256-Bit-Verschlüsselung kann Daten vor nicht autorisierten Zugriffsversuchen schützen. Wenn ein gemeinsamer Ordner verschlüsselt ist, kann niemand ohne Schlüssel auf die verschlüsselten Daten zugreifen oder sie ändern, selbst wenn sie die Festplatten von DiskStation entfernen und sie in einem anderen Gerät installieren.</p>
+</div>
+
+<div class="section"><h4>Hinweis:</h4>
+<ul>
+	<li>Gemeinsame Ordner können nur bei ihrer Erstellung verschlüsselt werden. </li>
+	<li>Die Namen der Dateien und Ordner in verschlüsselten gemeinsamen Ordnern dürfen 143 englische oder 43 asiatische Zeichen nicht überschreiten.</li>
+	<li>Die verschlüsselten gemeinsamen Ordner können nicht über NFS aufgerufen werden.</li>
+	<li>Wenn Standard-Kennwörter mit der Reset-Taste des DiskStation wiederhergestellt werden, werden verschlüsselte gemeinsame Ordner deaktiviert und die Option, verschlüsselte gemeinsame Ordner automatisch anzuhängen, wird deaktiviert.</li>
+	<li class="enable-dockerx64">Verschlüsselte freigegebene Ordner werden nur im Modus hoher Priorität unterstützt. Gehen Sie, um diese Funktion zu verwenden, zum Docker-Paket des Host-DSM, wählen Sie das <strong>Docker DSM</strong> aus, für das Sie verschlüsselte freigegebene Ordner aktivieren möchten, klicken Sie auf <strong>Bearbeiten</strong> und aktivieren Sie das Kontrollkästchen neben <strong>Container mit hoher Priorität ausführen</strong>.</li>
+</ul>
+</div>
+
+</body>
+</html>

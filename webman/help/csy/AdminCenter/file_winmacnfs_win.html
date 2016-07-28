@@ -1,0 +1,139 @@
+﻿<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Win/Mac/NFS</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Souborová služba Windows</h2>
+
+<p>Souborová služba Windows zajišťuje klientům Windows, Mac a Linux s podporou protokolu SMB/CIFS přístup k datům uloženým na zařízení DiskStation. Pokud chcete procházet soubory uložené na zařízení DiskStation pomocí nástroje Průzkumník Windows nebo připojovat sdílené složky jako síťové jednotky, povolte tuto možnost v části <strong>Ovládací panel</strong> > <strong>Souborové služby</strong> > <strong>Win/Mac/NFS</strong>.</p>
+
+
+<h4>Povolení souborové služby systému Windows:</h4>
+<ol>
+<li>Zaškrtněte možnost <b>Povolit souborovou službu systému Windows</b>.</li>
+<li>Klikněte na možnost <b>Použít</b>.</li>
+</ol>
+
+<div class="section disable-hi3535">
+<h4>Poznámka:</h4>
+<p>Po povolení souborové služby Windows je možné připojit plně indexované složky k počítači Mac prostřednictvím služby SMB a k hledání obsahu souborů v rámci připojených složek použít funkci Spotlight v programu Finder.</p>
+</div>
+
+
+<h3>Pracovní skupina</h3>
+<p>Díky této možnosti lze pro účely správy sítě určit systém jako člena konkrétní pracovní skupiny.</p>
+
+<div class="section">
+
+<h4>Poznámka:</h4>
+<ul>
+<li>Název pracovní skupiny může obsahovat 1 až 15 znaků. Název nesmí obsahovat následující znaky: [ ] ; : " < > * + = \ / | ? ,</li>
+<li>Pokud používáte počítač Mac se systémem OS X 10.9 a zařízení DiskStation se připojilo k doméně systému Windows, můžete se přihlásit přidáním výrazu <strong>localhost\</strong> před místní uživatelské jméno zařízení DiskStation a získat tak přístup k souborům uloženým v zařízení DiskStation pomocí souborové služby systému Windows.</li>
+</ul>
+</div>
+
+<h3 class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64">Zakázat přístup k předchozím verzím</h3>
+<p class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64">V aplikaci Průzkumník Windows jsou snímky složek nebo souborů uživatelům přístupné kliknutím na kartu <strong>Předchozí verze</strong> v rámci sdílené složky, což uživatelům umožňuje obnovovat nebo kopírovat data i bez asistence správce. Pokud vyberete možnost <strong>Zakázat přístup k předchozím verzím</strong>, na stránce „Předchozí verze“ se nezobrazí žádné údaje.</p>
+
+<div class="section enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64"><h4>Poznámka:</h4>
+<ul>
+	<li>Uživatelé mají oprávnění pro přístup k předchozí verzi pouze v případě, že v okamžiku vytvoření snímku odpovídajícího předchozí verzi byly jejich uživatelské účty již vytvořeny a mají přiděleno oprávnění ke čtení sdílené složky, pro kterou byl příslušný snímek pořízen.</li>
+</ul>
+</div>
+
+<h3>Povolení protokolování přenosů</h3>
+<p>Pokud zaškrtnete tuto možnost, bude povoleno protokolování přístupu k souborům včetně vytváření, odstraňování, čtení, zápisu, přesunování a přejmenování souborů nebo složek prostřednictvím protokolu CIFS/SMB, který se označuje také jako protokol Windows File Transfer (Přenos souborů v systému Windows).</p>
+
+<h3>Rozšířená nastavení</h3>
+<p>Kliknutím na kartu <strong>Rozšířená nastavení</strong> zobrazíte níže uvedené možnosti.</p>
+<ul>
+<li><strong>Server WINS</strong>: Microsoft Windows Internet Name Service (WINS) je mapovací služba systému NetBIOS pro mapování názvu na IP adresu. Pokud je systém nakonfigurován tak, aby se registroval na serveru WINS, mohou jej uživatelé systému Windows v sítích TCP/IP najít jednodušeji.</li>
+<li><strong>Max. protokol pro souborovou službu Windows</strong>: V závislosti na konfiguraci vaší sítě je možné nastavit nejvyšší úroveň protokolu, která bude podporována zařízením DiskStation.<ul>
+    <li><strong>Povolit SMB 2</strong>: Protokol SMB (Server Message Block) 2 je podporovaný od systému Windows Vista a představuje vylepšenou verzi protokolu SMB. Protokol SMB 2 přidává možnost slučovat více akcí SMB do jediného požadavku, snížit tak počet síťových paketů a zvýšit výkon.</li>
+    <li><strong>Povolit SMB 2 s Large MTU</strong>: Termínem „Maximum transmission unit“ (MTU, česky „největší přenosová jednotka“) se označuje největší datová jednotka, kterou lze přenést prostřednictvím komunikačního protokolu. Chcete-li využívat výhod rychlejších síťových rozhraní, jako je například 1- či 10gigabitová síť Ethernet, zvýší funkce Large MTU hodnotu největší přenosové jednotky na 1 megabajt (MB). Povolením funkce Large MTU dojde ke zvýšení rychlosti a efektivity přenosů velkých souborů a zároveň ke snížení počtu paketů, které je potřeba zpracovat.</li>
+    <li><strong>Povolit SMB 3</strong>: Protokol SMB 3 je podporovaný od systému Windows 8 a Windows Server 2012. Jedná se o zdokonalenou verzi SMB 2. Protokol SMB 3 podporuje šifrovaný přenos souborů na bázi AES a tím podporuje zabezpečení přenosu souborů peer-to-peer.</li>
+</ul>
+<div class="section">
+  <h4>Poznámka:</h4>
+  <ul>
+    <li>Protokol SMB 2 podporují systémy Windows Vista, Windows 2008 R2, Windows 7 a novější.</li>
+    <li>Funkci Large MTU podporují systémy Windows 2008 R2, Windows 7 a novější.</li>
+    <li>Chcete-li zvýšit efektivitu funkce Large MTU na počítači se systémem Windows, bude nutné provést změnu nastavení registru počítače. Více informací získáte od technické podpory společnosti Microsoft (můžete použít například tento <a href="http://technet.microsoft.com/en-us/library/ff625695(v=ws.10).aspx" target="_blank">článek</a>).</li>
+    </ul>
+</div>
+<li><strong>Režim šifrování přenosu</strong>: Když je povolen protokol SMB 3, souborová služba Windows bude v rámci posílení zabezpečení přenosu souborů přenos šifrovat.<ul>
+    <li><b>Zakázat</b>: Nebude použito žádné šifrování přenosu.</li>
+    <li><b>Automaticky</b>: Šifrování přenosu bude použito pouze u klientů podporujících tuto funkci.</li>
+    <li><b>Vynutit</b>: Šifrování přenosu bude použito vždy. To povede k tomu, že klienti, kteří nepodporují šifrování přenosu, nebudou moci souborovou službu Windows používat.</li>
+  </ul>
+</li>
+<div class="section">
+  <h4>Poznámka:</h4>
+  <ul>
+    <li>Šifrování přenosu podporují systémy Windows 8, Windows Server 2012 a novější.</li>
+    <li>Pokud je šifrování přenosu povoleno, není podporováno anonymní přihlášení k souborové službě Windows.</li>
+    <li>Pokud je povolené šifrování přenosu, ponechte možnost <b>Zakázat příležitostné uzamčení souborů</b> nezaškrtnutou, aby nedocházelo k aplikaci časových limitů.</li>
+    </ul>
+</div>
+<li><strong>Zakázat příležitostné uzamčení souborů</strong>: Zaškrtnutím této možnosti zakážete funkci „Opportunistic locking“ (příležitostné uzamykání) v systému CIFS, čímž se zvýší výkon, když databázové aplikace přistupují k databázovým souborům ve sdílené složce zařízení DiskStation přes síť.</li>
+<li><strong>Povolit prohlížeč Local Master Browser</strong>: Pokud je v rámci stejné podsítě k dispozici několik počítačů se systémem Windows, je možné vybrat jeden počítač, který bude plnit funkci prohlížeče „hlavního místního prohlížeče“ (local master browser). Prohlížeč Local Master Browser provádí správu seznamů ostatních počítačů v rámci podsítě a jejích sdílených prostředků a sdílí tyto seznamy s ostatními počítači. Na základě této možnosti může zařízení DiskStation plnit funkci prohlížeče Local Master Browser.</li>
+
+<div class="section">
+<h4>Poznámka:</h4>
+<p>Povolení této funkce znemožní úsporný režim pevných disků a aktivuje účet typu guest bez hesla.</p>
+</div>
+
+
+<li><strong>Povolit modul DirSort VFS</strong>: Třídí názvy složek a uvádí je podle abecedy. Povolení této možnosti má vliv na výkon systému.</li>
+
+<li><strong>Soubory veto</strong>: Skryje soubory podle stanovených kritérií. Kritéria mohou obsahovat zástupné znaky (*), více položek je nutné oddělit lomítkem (/). Příklad: <i>/abc*/*.txt/*.conf/</i>. Povolení této možnosti má vliv na výkon systému.</li>
+
+<li><strong>Povolit symbolické odkazy v rámci sdílených složek</strong>: Povolení této možnosti umožní, aby symbolické odkazy odkazovaly na soubory a složky v rámci stejné sdílené složky. Symbolické odkazy lze vytvářet pomocí terminálu DSM.</li>
+
+<li><strong>Povolit symbolické odkazy napříč sdílenými složkami</strong>: Povolení této možnosti umožní, aby symbolické odkazy odkazovaly na soubory nebo složky v jiných sdílených složkách. Symbolické odkazy lze vytvářet pomocí terminálu DSM. Povolení této možnosti může uživatelům bez přístupových oprávnění umožnit zobrazení a přístup ke sdíleným složkám, které představují cíle symbolických odkazů.</li>
+
+<li><strong>Povolit modul MSDFS VFS</strong>: Umožní, aby symbolické odkazy odkazovaly na soubory nebo složky umístěné na jiných serverech SMB. Ve starších verzích systému Windows, jako např. Windows XP, se klient a zařízení DiskStation musí před povolením této možnosti připojit k doméně Windows. Další informace o vytváření odkazů MSDFS najdete <a href="http://www.samba.org/samba/docs/man/Samba-HOWTO-Collection/msdfs.html" target=_blank>v tomto odkazu</a>. Před zákazem této možnosti by se měla vymazat mezipaměť klientského zařízení. V opačném případě to může mít vliv na normální výkon.</li>
+
+<li><strong>Zakázat větší počet připojení ze stejné IP adresy</strong>: Pokud je povolena tato možnost, umožní zařízení DiskStation z IP adresy klientů, kteří používají souborovou službu systému Windows, pouze jedno připojení. Pokud souborovou službu systému Windows využívá větší počet klientů se stejnou IP adresou, zachová zařízení DiskStation pouze nejnovější připojení a všechna ostatní budou zrušena. V prostředí NAT může klient využívat samostatnou IP adresu. V takovém případě může mít povolení této možnosti vliv na normální výkon.</li>
+
+<li><strong>Shromažďovat protokoly ladění</strong>: Pokud je povolena tato možnost, budou se pro účely ladění ukládat podrobnější protokoly. Povolení této možnosti má vliv na výkon systému.</li>
+<li><strong>Použití výchozích oprávnění UNIX</strong>: Povolením této možnosti použijete při odesílání nebo vytváření souborů a složek výchozí oprávnění UNIX. Oprávnění systému UNIX bude 744 pro soubory a 755 pro složky. Pokud je tato možnost zakázána, má oprávnění systému UNIX pro soubory a složky hodnotu 777.</li>
+<div class="section enable-eds14">
+<h4>Poznámka:</h4>
+<ul>
+<li>Povolení této možnosti může způsobit problémy s konzistencí oprávnění mezi různými protokoly. Chcete-li zamezit nekonzistencím, doporučujeme, aby tato možnost byla i nadále zakázána.</li>
+</ul>
+</div>
+<div class="section disable-eds14">
+<h4>Poznámka:</h4>
+<ul>
+  <li>U sdílených složek s povoleným seznamem Windows ACL (všechny sdílené složky s výjimkou složky „photo“ a sdílených složek na externích jednotkách) proveďte pomocí příkazu <strong>chmod</strong> na klientovi se systémem Linux nebo v klientovi FTP změnu typů oprávnění ke složkám a souborům z varianty Windows ACL na UNIX.</li>
+  <li>Povolení této možnosti může způsobit problémy s konzistencí oprávnění mezi různými protokoly. Chcete-li zamezit nekonzistencím, doporučujeme, aby tato možnost byla i nadále zakázána.</li>
+</ul>
+</div>
+<li><b>Při vytváření souborů nevyhrazovat prostor na disku</b>: Tuto možnost povolte, chcete li při vytváření souborů v zařízení DiskStation zakázat rezervování místa na disku.</li>
+<li><strong>Vymazat mezipaměť SMB</strong>: Kliknutím na toto tlačítko je možné v rámci řešení problémů odstranit následující soubory mezipaměti SMB: <ul>
+
+<li>/var/cache/samba/netsamlogon_cache.tdb</li>
+<li>/var/lib/samba/winbindd_cache.tdb</li>
+<li>/var/lib/samba/share_info.tdb</li>
+<li>/var/lib/samba/registry.tdb</li>
+<li>/run/samba/connections.tdb</li>
+<li>/run/samba/gencacche.tdb</li>
+<li>/run/samba/gencache_notran.tdb</li>
+</ul></li>
+
+</ul>
+
+</body>
+</html>

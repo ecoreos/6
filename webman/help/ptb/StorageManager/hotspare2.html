@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+	<h2>Hot Spare</h2>
+	<p>Os discos hot spare são discos rígidos de reserva que podem reparar um grupo RAID danificado substituindo um disco com defeito automaticamente. Discos Hot spare podem ser atribuídos globalmente para reparar qualquer RAID Group dentro do DiskStation. Um disco hot spare pode reparar apenas um grupo RAID que atenda os seguintes critérios:
+</p>
+	<ul>
+  <li>O tipo RAID do grupo RAID deve ser ter proteção de dados (isto é, RAID 1, RAID 5, RAID 6, RAID 10).</li>
+		<li>O tipo do disco rígido do disco hot spare deve ser o mesmo dos discos membros do grupo RAID (isto é, SATA, SAS).</li>
+		<li>O tamanho do disco hot spare deve ser maior ou igual ao tamanho do menor disco do grupo RAID.</li>
+	</ul>
+	<h4>Para gerenciar discos hot spare:</h4>
+	<ol>
+		<li>Clique em <b>Gerenciar</b>.</li>
+		<li>Para atribuir um disco hot spare, encontre a seção <b>Discos disponíveis</b> no lado direito e marque a caixa ao lado do disco que você deseja designar como hot spare. Para remover um disco hot spare, desmarque a mesma caixa. Clique em <b>Aplicar</b> para salvar as configurações.</li>
+	</ol>
+	<p>
+<div class="section">
+<h4>Nota:</h4> 
+<ul>
+<li>Quando um disco hot spare repara um grupo RAID degradado, todos os dados no disco hot spare serão apagados. Antes de designar um disco hot spare, certifique-se de que ele não tenha dados importantes.</li>
+<li>Um RAID montado por HDDs não será automaticamente reparado pelos discos SSD hot spare e vice-versa.</li>
+</ul>
+</div>
+<h4>Para ajustar as configurações do hot spare para o RAID Group:</h4>
+<ol>
+<li>Clique em <b>Configurar</b>.</li>
+<li>Na guia <b>Alvos do Hot Spare</b>, os RAID Groups que podem ser protegidos pelos discos hot spare serão listados. Se você desmarcar as caixas, os RAID Groups correspondentes não serão reparados automaticamente pelos discos hot spare quando degradados.</li>
+<li>Na guia <b>Hot spare de dispositivo cruzado</b>, você pode permitir que os discos hot spare de um dispositivo reparem um RAID degradado localizado em um dispositivo diferente.</li>
+<li>Clique em <b>OK</b> para salvar as configurações.</li>
+</ol>
+</body>
+</html>

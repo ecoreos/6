@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+	<h2>Overview</h2>
+	<p>Overview displays the overall status of your storage spaces, including the overall health of all spaces, hard disk utilization, top volume usage, and iSCSI LUN usage.</p>
+
+		<h4>Storage Health</h4>
+        <p>There are three types of status:</p>
+	  	<ul>
+				<li><b>Healthy</b>: All storage spaces are Normal.</li>
+				<li><B>Attention</B>: A storage space (volume or iSCSI LUN) has become degraded, SSD Cache has crashed, or a system partition has failed.</li>
+				<li><b>Danger</b>: A storage space (volume or iSCSI LUN) has crashed.</li>
+			</ul>
+			<p>If multiple abnormalities occur at the same time, health status will be displayed in the following order: 1) Storage spaces (volume or iSCSI LUN); 2) SSD Cache; and 3) system partition. If a problem occurs, please follow the suggested instructions below the status.</p>
+		
+		<h4>Disk Info</h4>
+        <p>This section displays hard drive and hardware information. You can check how many hard drives are being used by what storage spaces, the number of spare hard disks, and the number of available hard disks slots.</p>
+        
+		<h4>Top Volume Usage</h4>
+        <p>This section displays the used capacity of a volume. If the total usage reaches 90%, the pie chart will become red; over 80% will be yellow; and under 79% will remain blue.</p>
+        
+		<h4>iSCSI LUN Usage</h4>
+        <p>This section displays the following information:</p>
+        <ul>
+         		<li><b>Reported</b>:  Total allocated capacity of all iSCSI LUN (Block-Level) and iSCSI LUN (Regular File) on the DiskStation added together.</li>
+                <li><b>Used</b>: Total allocated capacity on iSCSI LUN (Regular Files) and the total capacity on iSCSI LUN (Block-Level) added together.</li>
+                <li><b>Saved</b>:  Total <b>Reported</b> size minus the total <b>Used</b> size, displaying the amount saved on storage space purchasing and management costs.</li>
+</ul>
+        </li>
+</body>
+</html>

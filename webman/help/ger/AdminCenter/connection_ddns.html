@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>DDNS</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>DDNS</h2>
+<p>DDNS (Dynamic Domain Name Service) vereinfacht die Verbindung von DiskStation über das Internet durch Zuweisung eines Hostnamens zur IP-Adresse. DDNS erlaubt Ihnen z.B. den Zugriff auf DiskStation unter Verwendung eines Domänennamens (z.B. <i>www.john.synology.me</i>), ohne dass Sie sich an die IP-Adresse (z.B. <i>172.16.254.1</i>) erinnern müssen.</p>
+
+<h3>DDNS einrichten</h3>
+<p>Sie können einen existierenden Hostnamen auf die IP-Adresse von DiskStation richten oder einen neuen, von Synology oder verschiedenen anderen DDNS Providern bereitgestellten, registrieren. Bitte wenden Sie sich an den jeweiligen Anbieter, um mehr über die Registrierung von Hostnamen zu erfahren.
+</p>
+
+
+
+<h4>Einen DDNS Hostnamen einrichten:</h4>
+<ol>
+<li>Klicken Sie auf <b>Hinzufügen</b>.</li>
+<li>Ein Dialogfenster wird angezeigt und Sie auffordern, die folgenden Einstellungen zu ändern:
+  <ul>
+<li><strong>Serviceanbieter:</strong> Wählen Sie einen Service-Anbieter. Um einen kostenlosen Hostnamen von Synology zu registrieren, wählen Sie <b>Synology</b> aus dem Dropdown-Menü, klicken Sie auf <b>Jetzt registrieren</b> und geben Sie die Details wie gefordert ein.</li>
+<li><strong>Hostname:</strong> Geben Sie einen registrierten DDNS Hostnamen ein, zum Beispiel <i>john.synology.me</i>.</li>
+<li><strong>Benutzername:</strong> Geben Sie den Benutzernamen für Ihren DDNS Anbieter ein.</li>
+<li><strong>Kennwort:</strong> Geben Sie das Kennwort für Ihren DDNS Anbieter ein.</li>
+<li><strong>Externe Adresse:</strong> Geben Sie die externe IP-Adresse von DiskStation ein, der den Hostnamen verwenden wird.</li>
+<li><strong>Heartbeat:</strong> Aktivieren Sie diese Option, um Alarme in Bezug auf den Status des zugewiesenen Hostnamens zu erhalten (nur für von Synology bereitgestellte Hostnamen).</li>
+</ul>
+</li>
+<li>Klicken Sie auf <strong>Verbindung testen</strong>, um zu prüfen, ob die Einstellungen korrekt sind.</li>
+<li>Klicken Sie zum Speichern und Fertigstellen auf <strong>OK</strong>.</li>
+</ol>
+
+<p>Nach dem Abschluss der Einrichtung können Sie auf DiskStation über das Internet durch Eingabe des DDNS Hostnamens in einem Webbrowser zugreifen.</p>
+<div class="section">
+<h4>Anforderungen und Einschränkungen</h4>
+<ul> 
+<li>Die Server des DDNS Dienstes funktionieren.</li>
+<li>DiskStation kann sich mit dem Internet verbinden.</li>
+<li>DDNS funktioniert in einer Netzwerkumgebung, in der kein Proxyserver benötigt wird.</li>
+<li>Sie können nur einen Hostnamen für jeden DDNS-Anbieter eingeben.</li>
+
+</ul>
+</div>
+
+<h3>Hostnamen verwalten</h3>
+<p>Verwenden Sie die folgenden Schaltflächen, um bestehende Hostnameneinträge zu verwalten:</p>
+<ul>
+<li><strong>Löschen:</strong> Entfernt den ausgewählten Hostnameneintrag aus der Liste.</li>
+<li><strong>Bearbeiten:</strong> Ändert Einstellungen des ausgewählten Hostnameneintrags.</li>
+<li><strong>Jetzt aktualisieren:</strong> Aktualisiert den Status aller Hostnameneinträge, für die der DDNS Dienst aktiviert ist.</li></ul>
+
+<h3>Benutzerdefinierten DDNS-Anbieter einrichten</h3>
+<p>Sie können einen benutzerdefinierten DDNS-Anbieter hinzufügen, wenn Ihr Anbieter nicht bereits in der Liste der Serviceanbieter angezeigt wird.</p>
+<h4>Benutzerdefinierten DDNS-Anbieter einrichten:</h4>
+<ol>
+<li>Klicken Sie auf <b>Anpassen</b>.</li>
+<li>Ein Dialogfenster wird angezeigt und fordert Sie auf, die nachstehenden Einstellungen einzugeben:
+<ul>
+    <li><strong>Serviceanbieter:</strong> Geben Sie den Namen Ihres benutzerdefinierten Serviceanbieters ein.</li>
+    <li><strong>Abfrage-URL:</strong> Geben Sie die URL Ihres benutzerdefinierten Serviceanbieters ein.</li>
+  </ul>
+</li>
+<li>Klicken Sie auf <strong>Speichern</strong>, um den benutzerdefinierten Serviceanbieter zur Liste der DDNS-Serviceanbieter hinzuzufügen.</li>
+</ol>
+<div class="section">
+<h4>Anforderungen und Einschränkungen</h4>
+<ul>
+  <li>Die Abfrage-URL muss dem von Ihrem Serviceanbieter angegebenen Protokoll entsprechen. Diese URL wird verwendet, um aktuelle IP-Informationen zum DDNS-Server Ihres Anbieters zusenden.</li>
+  <li>Eine Abfrage-URL enthält grundsätzlich die vier folgenden Parameter. Ersetzen Sie bei der Eingabe der Abfrage-URL die folgenden Parameter durch die entsprechende Variable.</li>
+  <ul>
+    <li>Benutzername: __USERNAME__</li>
+    <li>Kennwort: __PASSWORD__</li>
+    <li>Hostname: __HOSTNAME__</li>
+    <li>Externe Adresse: __MYIP__</li>
+  </ul>
+<li>Die Abfrage-URL darf keine Leerzeichen oder Semikolons enthalten.</li>
+</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+	<h2>RAID Group*</h2>
+	<p>Med DiskStation kan du kombinera flera hårddiskar till en enskild lagringsenhet kallad en RAID Group. Volymer eller iSCSI LUNs (Blocknivå) kan skapas utöver RAID Groups. Volymer eller iSCSI LUN kan utökas om en RAID Group har allokerbart utrymme. Olika RAID-typer erbjuder varierande nivå av dataskydd. För en allmän lista över RAID-typer som stöds av din DiskStation, se <a href="general.html">Allmänt</a>.
+</p>
+
+<h4>För att skapa en ny RAID Group:</h4>
+	<ol>
+		<li>Klicka på knappen <b>Skapa</b>.</li>
+		<li>Välj något av följande alternativ: 
+	  <ul>
+				<li>RAID Group för en enskild volym eller iSCSI LUN (blocknivå): Ger bättre prestanda.</li>
+				<li>RAID Group för flera volymer eller iSCSI LUNs (blocknivå): Ger bättre hanteringsflexibilitet.</li>
+			</ul>
+		</li>
+		<li>Följ guiden för att slutföra processen.</li>
+	</ol>
+<div class="section">
+<h4>Obs: </h4>
+<ul>
+<li>En RAID Group måste innehålla hårddiskar av samma hårddisk-typ. Du kan inte använda hårddiskar med SATA och SAS samtidigt och inte heller SSD och HDD samtidigt för att skapa RAID.</li>
+<li>En RAID Group för flera volymer eller iSCSI LUNs (blocknivå) som använder <b>RAID 5</b> eller <b>RAID 6</b> kan innehålla flera <b>RAID Arrays</b>. Varje RAID Array som tillhör samma RAID Group blir samma RAID-typ (t.ex. RAID 5 eller RAID 6). Högsta antal hårddiskar för varje RAID Array är 6, 12 eller 24. Du kan ställa in maximalt antal diskar när du skapar RAID Group och det antalet kan inte ändras senare. När en RAID Array har tilldelats, med maximalt antal diskar, så kan nästa hårddisk, som läggs till en RAID Group, tilldelas till en ny RAID Array. Den nya RAID Array måste innehålla det lägsta antalet hårddiskar som krävs för den specifika RAID-typen (dvs. tre hårddiskar för RAID 5 och fyra hårddiskar för RAID 6).
+</li>
+<li>Om du vill skapa en RAID Group med en viss hårddisk och denna inte visas i <b>Guiden Skapa RAID Group</b> kan du kontrollera hårddiskens status i <b>HDD-hantering</b>.</li>
+</ul>
+</div>
+
+	<h4>För att ta bort en RAID Group:</h4>
+	<ol>
+		<li>Välj den RAID Group du vill ta bort.</li>
+		<li>Klicka på knappen <b>Radera</b> och följ guiden för att avsluta processen.</li>
+	</ol>
+
+<div class="section">
+<h4>Obs: </h4>
+<ul>
+<li>Volymer och iSCSI LUN på RAID Group kommer att tas bort när du tar bort aktuell RAID Group. Förvissa att inga viktiga data tas bort.</li>
+</ul>
+</div>
+
+
+	<h4>För att reparera en RAID Group:</h4>
+	<p>En RAID Group med statusen <b>Trasig</b> kan repareras om denna RAID Group är en av följande typer: RAID 1, RAID 5, RAID 6 och RAID 10. Befintlig data på denna RAID Group kommer inte att tas bort.</p>
+	<p>Följ nedanstående steg för att reparera din RAID Group:</p>
+	<ol>
+		<li>Stäng av din DiskStation. (Du kan hoppa över detta steg om din modell stöder byte under körning.)</li>
+		<li>Ersätt den felaktiga hårddisken som visas i Diskinfo, som du hittar i RAID Group-statusen.</li>
+		<li>Klicka på <b>Hantera</b>.</li>
+		<li>Välj <b>Reparera</b>.</li>
+		<li>Följ guiden för att slutföra processen.</li>
+        </ol>
+        
+<div class="section">
+<h4>Obs:</h4>
+<ul>
+<li>Hårddiskens storlek för ersättning måste vara lika stor eller större än den minsta hårddisken i aktuell RAID Group.</li>
+<li>Hårddiskens status för ersättning måste vara "Initierad" eller "Ej initierad".</li>
+</ul>
+</div>
+
+	<h4>För att ändra RAID-typ på en RAID Group</h4>
+	<p>För att ändra RAID-typ på en RAID Group måste det finnas tillgängliga hårddiskar installerade på din DiskStation. Numera erbjuds följande RAID-utbytesfunktioner:</p>
+	<ul>
+		<li>Grundläggande till RAID 1 eller RAID 5</li>
+		<li>RAID 1 till RAID 5</li>
+		<li>RAID 5 till RAID 6</li>
+      <li>Lägg till spegelhårddisk till RAID 1</li>
+	</ul>
+	<p>Följ stegen nedan för att ändra RAID-typ på din RAID Group:</p>
+	<ol>
+		<li>Välj den RAID Group du vill ta ändra.</li>
+		<li>Klicka på <b>Hantera</b>.</li>
+		<li>Välj <b>Ändra RAID-typ</b>.</li>
+		<li>Följ guiden för att slutföra processen.</li>
+        </ol>
+<div class="section">
+<h4>Obs: </h4>
+<ul>
+<li>Status för en RAID Group måste vara <b>Normal</b> innan dess typ av RAID kan ändras. Annars kommer data att förloras. Om status för RAID Group är <b>Trasig</b>, vänligen reparera den först.</li>
+<li>För att ändra RAID-typ för RAID Group måste tillräckligt många hårddiskar vara installerade på din DiskStation, och den nya hårddiskens storlek måste vara större än den minsta hårddisken i samma RAID Group.</li>
+<li>Statusen för den nya hårddisken måste vara "Initierat" eller "Ej initierat".</li>
+<li>RAID-typ för RAID Group med flera RAID Arrays kan inte ändras.</li>
+</ul>
+</div>
+
+	<h4>Utöka storlek på RAID Group</h4>
+	<p>Storleken på RAID Groups kan utökas genom att ersätta befintliga hårddiskar med större hårddiskar eller genom att lägga till hårddiskar.</p>
+
+<div class="section">
+<h4>Obs: </h4>
+<ul>
+  <li>För att expandera en RAID Group med hårddiskar som är 3 TB stora, eller större, vänligen tillse att din RAID Group skapades med DSM 3.0 eller senare.
+</ul>
+</div>
+
+	<h4>För att utöka en RAID Group genom att ersätta befintliga hårddiskar med större hårddiskar:</h4>
+	<p>Du kan utöka en RAID Group genom att ersätta befintliga hårddiskar med större hårddiskar i följande RAID-typer: RAID 1, RAID 5 och RAID 6. Associerade volymer eller iSCSI LUN på RAID Group för en enskild volym eller iSCSI LUN expanderas automatiskt.  Följ stegen nedan:</p>
+	<ol>
+    <li>Stäng av din DiskStation. Du kan hoppa över detta steg om din modell stöder hot swap.</li>
+		<li>Byt ut en hårddisk mot en större.</li>
+		<li>Slå på DiskStation och reparera RAID Group.</li>
+		<li>Upprepa steg 1 till 3 tills alla hårddiskar har bytts ut mot större hårddiskar.</li>
+		<li>Systemet kommer att expandera din RAID Group automatiskt.</li>
+	</ol>
+
+<div class="section">
+<h4>Obs: </h4>
+<ul>
+<li>Alla tjänster på Storage Manager kommer tillfälligt att stoppas under utvidgningsprocessen.</li> 
+<li>Du kan bara utöka hårddisken när status för RAID Group är <b>Normal</b>, annars förloras data. Om status för RAID Group är <b>Trasig</b>, vänligen reparera den först.</li>
+	</ul>
+</div>
+
+	<h4>Du kan utöka en RAID Group genom att lägga till hårddiskar:</h4>
+	<p>Den här funktionen går att använda med RAID-typerna JBOD, RAID 5 och RAID 6. För att göra detta:</p>
+	<ol>
+		<li>Välj den RAID Group du vill utöka.</li>
+		<li>Klicka på <b>Hantera</b>.</li>
+		<li>Välj <b>Lägg till disk</b>.</li>
+		<li>Följ guiden för att slutföra installationen.</li>
+</ol>
+<div class="section">
+<h4>Obs: </h4>
+<ul>
+		<li>Status för RAID Group måste vara <b>Normal</b>.</li>
+		<li>För RAID Group-typerna RAID 5 och RAID 6 måste hårddiskens storlek vara större än den minsta hårddisken i samma RAID Group.</li>
+		<li>Den markerade hårddiskens status måste vara "Initierad" eller "Ej initierad".</li>
+	</ul>
+    </div>
+
+	<h4>För att redigera RAID Group-beskrivningen:</h4>
+	<ol>
+		<li>Välj den RAID Group du vill redigera</li>
+		<li>Klicka på <b>Hantera</b>.</li>
+		<li>Välj <b>Redigera beskrivning</b>.</li>
+		<li>Redigera beskrivning och klicka på <b>OK</b> för att spara resultatet.</li>
+	</ol>
+	<h3>RAID-skrubbning</h3>
+    <p>RAID-skrubbning är en dataunderhållsfunktion som inspekterar RAID Groups och reparerar alla icke överensstämmande data som upptäcks. Denna funktion kan användas med RAID Groups som har implementerat RAID 5 eller RAID 6. </p>
+    <p>Vi rekommenderar att regelbundet utföra RAID-skrubbning för att upprätthålla dataöverensstämmelse och undvika att förlora några kritiska data i händelse av diskfel.</p>
+    <h4>Att utföra RAID-skrubbning:</h4>
+    <ol>
+      <li>Välj den RAID Group på vilken RAID-skrubbning ska utföras.</li>
+      <li>Klicka på <strong>Hantera</strong></li>
+      <li>Välj <strong>RAID-skrubbning</strong>.</li>
+    </ol>
+    <div class="section">
+      <h4>Obs:</h4>
+      <ul>
+        <li>RAID-skrubbning kan bara utföras när status för RAID Group är <strong>Normal</strong>.</li>
+        <li>Stäng inte av systemet innan RAID-skrubbningen är slutförd. Om systemet stängs av innan slutförande, måste RAID-skrubbningen startas om från början.</li>
+      </ul>
+    </div>
+    
+<p>____<br />* Endast tillgängligt för vissa modeller.</p>    
+</body>
+</html>

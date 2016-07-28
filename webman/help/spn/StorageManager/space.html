@@ -1,0 +1,157 @@
+﻿<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+	<h2>Volumen</h2>
+	<p>Los volúmenes son espacios de almacenamiento básico en los que el usuario puede crear carpetas compartidas o iSCSI LUN (archivo normal), guardar datos o instalar paquetes. Antes de crear cualquier volumen, asegúrese de que ya ha creado un RAID Group. Para obtener más información sobre RAID Group, consulte <a href="raid.html">RAID Group</a>.</p>
+
+	<h4>Para crear un volumen:</h4>
+<ol>
+  <li>Asegúrese de que DiskStation tiene un RAID Group existente con espacio asignable.</li>
+  <li>Haga clic en el botón <strong>Crear</strong>.</li>
+		<li>Elija un RAID Group en el que crear el volumen.</li>
+		<li>Modifique la configuración que desee.</li>
+		<li>Ajuste la asignación de tamaño del volumen (el ajuste de la asignación de tamaño no está disponible para volúmenes creados en un RAID Group para volúmenes únicos o iSCSI LUN)</li>
+</ol>
+
+<div class="section">
+<h4>Nota:</h4>
+<ul>
+	<li>El tamaño máximo de volumen que se puede asignar es 200 TB.</li>
+	<li class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64">El tamaño mínimo asignado a un volumen Btrfs debe ser al menos de 10 GB.</li>
+    <li class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64">Los volúmenes Btrfs reservarán un 4 % de espacio para los metadatos.</li>
+</ul>
+</div>
+
+
+<h4>Para quitar un volumen:</h4>
+	<ol>
+		<li>Seleccione el volumen que desea quitar.</li>
+		<li>Haga clic en el botón <b>Quitar</b> y siga el asistente para completar el proceso.</li>
+	</ol>
+<div class="section">
+<h4>Nota:</h4>
+<ul>
+<li>Al eliminar un volumen, se borrarán todos los datos existentes de dicho volumen.</li>
+</ul>
+</div>
+
+<h4>Para realizar el montaje forzoso de un volumen:</h4>
+<p>Si falta la caché de un volumen, el sistema no montará el volumen al arrancar. Si no se puede recuperar la caché y desea acceder al volumen, puede hacer clic en <b>Montaje forzoso</b>. </p>
+
+<div class="section">
+<h4>Nota:</h4>
+<ul>
+<li>Esta función solo está disponible en determinados modelos.</li>
+</ul>
+</div>
+
+	<h4>Para reparar un volumen:</h4>
+	<p>Si el estado del volumen es <b>Degradado</b>, vaya a la pestaña <b>RAID Group</b> y busque el RAID Group adecuado. A continuación, siga las instrucciones sugeridas para repararlo.</p>
+
+	<h4>Para ampliar el tamaño de un volumen</h4>
+	<ul>
+		<li>Para volúmenes creados en un RAID Group para múltiples volúmenes o iSCSI LUN (nivel de bloques).<ol>
+				<li>Seleccione el volumen que desea ampliar.</li>
+				<li>Haga clic en <b>Editar</b>.</li>
+				<li>Introduzca el nuevo tamaño y haga clic en <b>OK</b> para ampliarlo.</li>
+			</ol>
+		<li>Para volúmenes creados en un RAID Group para un único volumen/iSCSI LUN (nivel de bloques), consulte la sección <b>Para ampliar el tamaño de un RAID Group</b> de <a href="raid.html">RAID Group</a>, el tamaño del volumen se ampliará una vez que se haya ampliado el RAID Group subyacente.</li>
+	</ul>
+
+
+<h3>SSD TRIM</h3>
+
+<p>Si un volumen está formado completamente por SSD (Unidades de estado sólido), recomendamos habilitar el SSD TRIM. Esta característica mejora el rendimiento de lectura y escritura de volúmenes creados en SSD, aumentando la eficiencia además de ampliar la vida útil de las SSD.</p>
+
+<h4>Para habilitar SSD TRIM:</h4>
+
+<ol>
+  <li>Abra <b>Administrador de almacenamiento</b> y vaya a <b>Volumen</b>.</li>
+  <li>Seleccione un volumen que esté formado completamente por SSD y a continuación haga clic en el botón <b>Configurar</b>.</li>
+  <li>En la ventana que aparecerá, vaya a la pestaña <b>SSD TRIM</b> y marque la casilla <b>Habilitar TRIM</b>.</li>
+<li>Haga clic en el botón <strong>Establecer el programa</strong> para elegir cuando el sistema realizará el SSD TRIM.</li>
+<li>Haga clic en <strong>OK</strong>.</li>
+</ol>
+
+<div class="section">
+<h4>Nota:</h4>
+<ul>
+
+<li>SSD TRIM solo está disponible en algunos modelos de DiskStation y tipos de RAID. </li>
+
+
+<li>Algunos modelos de SSD no son capaces de realizar SSD TRIM en volúmenes RAID 5 y RAID 6. Consulte la lista de compatibilidad en <a href="http://www.synology.com/" target=_blank>www.synology.com</a>.</li>
+
+
+<li>SSD TRIM no se puede habilitar en las siguientes situaciones:<ul>
+    <li>El volumen se ha montado con caché de SSD.</li>
+    <li>El paquete <strong>Time Backup</strong> está instalado.</li>
+    <li>Se ha creado un clúster high-availability con <strong>High Availability Manager</strong>.</li>
+  </ul>
+</li>
+<li>SSD TRIM no se puede habilitar con iSCSI LUN a nivel de bloques.</li>
+<li>El rendimiento del sistema se verá afectado cuando se esté realizando SSD TRIM. El tiempo necesario para realizar TRIM depende del tamaño del volumen y del modelo de SSD.</li>
+
+<li>Cuando TRIM está habilitado en un volumen, también lo estará en otros volúmenes creados en el mismo grupo de discos o RAID Group.</li>
+
+</ul>
+</div>
+
+
+<h3>Depuración del sistema de archivos*</h3>
+<p>La depuración del sistema de archivos consiste en una función de mantenimiento de datos que inspecciona volúmenes. Si se detectan datos que no son coherentes con la suma de comprobación, la ruta de archivo se registrará en el Centro de registros y se recomienda utilizar una copia de seguridad para reparar los datos.</p>
+<p>Recomendamos realizar regularmente la depuración del sistema de archivos para garantizar la coherencia de los datos.</p>
+
+<h4>Para realizar la depuración del sistema de archivos:</h4>
+<ol>
+<li>Abra <b>Administrador de almacenamiento</b> y vaya a <b>Volumen</b>.</li>
+<li>Seleccione el volumen en el que se va a realizar la depuración del sistema de archivos.</li>
+<li>Haga clic en <b>Administrar</b>.</li>
+<li>Seleccione <b>Depuración del sistema de archivos</b>.</li>
+</ol>
+
+<div class="section">
+<h4>Nota:</h4>
+<ul>
+<li>La depuración del sistema de archivos solo se puede llevar a cabo en volúmenes del sistema de archivos <b>Btrfs</b>.</li>
+<li>La depuración del sistema de archivos solo se puede realizar cuando el estado del volumen es <strong>Normal</strong>.</li>
+<li>No apague el sistema hasta que finalice la depuración del sistema de archivos. Si el sistema se apaga antes de que el proceso termine, tendrá que reiniciar manualmente la depuración del sistema de archivos desde el principio.</li>
+</ul></div>
+
+<h3>Desfragmentación del sistema de archivos*</h3>
+<p>Si los datos sufren modificaciones constantemente, aumentará la cantidad de archivos fragmentados en el sistema de archivos, lo que dará lugar a una disminución del rendimiento de acceso a los archivos almacenados en las unidades de disco duro. Llevar a cabo una desfragmentación del sistema de archivos puede mejorar el rendimiento.</p>
+
+<h4>Para realizar una desfragmentación del sistema de archivos:</h4>
+
+<ol>
+<li>Abra <strong>Administrador de almacenamiento</strong> y vaya a <b>Volumen</b>.</li>
+<li>Seleccione el volumen en el que se va a realizar la desfragmentación del sistema de archivos.</li>
+<li>Haga clic en <strong>Administrar</strong>.</li>
+<li>Seleccione <strong>Desfragmentación del sistema de archivos</strong>.</li>
+</ol>
+
+<div class="section">
+<h4>Nota:</h4>
+<ul>
+<li>La desfragmentación del sistema de archivos solo se puede llevar a cabo en volúmenes del sistema de archivos <b>Btrfs</b>.</li>
+<li>La desfragmentación del sistema de archivos solo se puede realizar cuando el estado del volumen es <strong>Normal</strong>.</li>
+<li>No apague el sistema hasta que finalice la desfragmentación del sistema de archivos. Si el sistema se apaga antes de que el proceso termine, tendrá que reiniciar manualmente la desfragmentación del sistema de archivos desde el principio.</li>
+<li>El uso del volumen puede aumentar si el volumen contiene instantáneas de carpetas compartidas.</li>
+</ul>
+</div>
+
+<p>____<br />*Solo disponible en ciertos modelos.</p>
+
+
+
+</body>
+</html>

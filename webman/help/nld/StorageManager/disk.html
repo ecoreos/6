@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+	<h2>HDD/SSD</h2>
+	<p>In dit gedeelte kunt u de status van geïnstalleerde HDD/SSD's op uw DiskStation controleren en beschikt u over opties om de prestaties en de integriteit van HDD/SSD's te beheren en te analyseren. Ga naar <strong>Opslagbeheer</strong> > <strong>HDD/SSD</strong> om deze opties te beheren.</p>
+
+	<h4>De HDD/SSD-informatie controleren:</h4>
+	<ol>
+		<li>ga naar het tabblad <b>HDD/SSD</b>.</li>
+		<li>Selecteer een schijf in de lijst en vouw de selectie uit. Hier vindt u de S.M.A.R.T.-status, volume-informatie, modelnaam, serienummer, firmwareversie en temperatuur.</li>
+	</ol>	
+	
+	<h4>De integriteitsinformatie controleren:</h4>
+    <ol>
+      <li>ga naar het tabblad <b>HDD/SSD</b>.</li>
+	  <li>Selecteer een schijf.</li>
+      <li>Klik op <b>Integriteitsinformatie</b>.</li>
+	  <li>Ga naar het tabblad <strong>Overzicht</strong>. Hier ziet u hoeveel uren de schijf in werking is, de huidige temperatuur, de herverbindings-/heridentificatietelling, de telling van beschadigde sectoren en de algemene S.M.A.R.T.-status.</li>
+      <li>Ga naar het tabblad <strong>S.M.A.R.T.-informatie</strong>. De nummers in de lijst kunnen u verder helpen bij de statusdiagnose van uw schijf.</li>
+    </ol>
+
+<div class="section">
+<h4>Opmerking:</h4>
+<p>
+   SAS-schijven bieden geen ondersteuning voor S.M.A.R.T.-informatie.
+</p>
+</div>
+
+	<h4>Om de S.M.A.R.T.-test te starten:</h4>
+	<P>Een Disk S.M.A.R.T.-test onderzoekt en rapporteert de status van uw schijven en waarschuwt u voor mogelijke schijfstoringen. Wij raden u aan om onmiddellijk uw schijven te vervangen bij de detectie van fouten. </P>
+    <ol>
+      <li>ga naar het tabblad <strong>HDD/SSD</strong>.</li>
+      <li>Selecteer een schijf.</li>
+      <li>Klik op <b>S.M.A.R.T.-test</b>.</li>
+      <li>Kies een testtype en klik op <strong>Start</strong> om de test te starten.</li>
+      <li>De resultaten van de laatste test worden weergegeven in de sectie <b>Testresultaat</b>.</li>
+    </ol>
+    <div class="section">
+<h4>Opmerking:</h4>
+    <p>de duur van de test varieert al naargelang uw systeemomgeving.</p>
+</div>
+    <h4>Om S.M.A.R.T.-tests te plannen:</h4>
+    <p>Door taken te maken kunnen S.M.A.R.T-tests automatische worden gepland en uitgevoerd.</p>
+    <ol>
+      <li>Ga naar het tabblad <strong>Testplanner</strong>.</li>
+      <li>Klik op <strong>Maken</strong> om een nieuwe taak in te stellen.</li>
+      <li>Wijzig de volgende instellingen op het tabblad <strong>Algemeen</strong>:</li>
+      <ul>
+        <li><strong>Taak:</strong> voer een naam in voor de taak.</li>
+        <li><strong>S.M.A.R.T.-testtype:</strong> kies om een snelle test of uitgebreide test uit te voeren.</li>
+        <li><strong>S.M.A.R.T.-testbereik:</strong> selecteer welke HDD/SSD moeten worden getest bij elke S.M.A.R.T.-test.</li>
+      </ul>
+      <li>Op het tabblad <strong>Schema</strong> kunt u de volgende instellingen wijzigen:</li>
+      <ul>
+        <li><strong>Datum:</strong> geef op wanneer de S.M.A.R.T.-test moet worden uitgevoerd. S.M.A.R.T.-tests kunnen gepland worden voor uitvoering op bepaalde dagen van de week (bv. dagelijks, elk weekend, elke zondag enz.) of op specifieke datums (bv. 2015/10/21).</li>
+        <li><strong>Tijd:</strong> geef aan hoe vaak de S.M.A.R.T.-test moet worden uitgevoerd, en vemeld ook de eerste en laatste keer voor elke dag.</li>
+      </ul>
+      <li>Klik op <strong>OK</strong> om te voltooien.</li>
+    </ol>
+
+<h4>Een Secure Erase uitvoeren:</h4>
+<ol>
+<li>ga naar het tabblad <b>HDD/SSD</b>.</li>
+<li>Selecteer een schijf en klik op <b>Secure Erase</b>.</li>
+</ol>
+
+
+<div class="section">
+<h4>Opmerking:</h4>
+<ul>
+<li>Secure Erase kan niet worden uitgevoerd op schijven in uitbreidingseenheden.</li>
+<li>Secure Erase worden alle gegevens op uw schijf verwijderd. Controleer dat de gekozen schijf niet wordt gebruikt of een back-up van de gegevens hebt gemaakt.</li>
+<li>Wanneer het systeem een Secure Erase uitvoert, wordt de gekozen schijf tijdelijk geblokkeerd en na voltooiing van het proces automatisch ontgrendeld.</li>
+<li>Wordt het Secure Erase-proces op onjuiste wijze onderbroken, dan kunt u Secure Erase rechtstreeks op de gebruikersinterface opnieuw uitvoeren. Worden de schijven verwijderd of ergens anders gebruikt terwijl ze nog steeds zijn geblokkeerd, voer dan het wachtwoord "synology" in om de schijven te ontgrendelen.</li>
+</ul>
+</div>
+
+
+	<h3>Schrijfcache-ondersteuning voor HDD inschakelen</h3>
+	<p>Door de schrijfcache-ondersteuning in te schakelen worden de prestaties van uw DiskStation verbeterd. Alleen bepaalde HDD-modellen ondersteunen deze functie. Om de bescherming van de gegevens tijdens het gebruik van de schrijfcache-ondersteuning te gebruiken, wordt het gebruik van een UPS-apparaat ten sterkste aanbevolen. Het wordt ook aanbevolen het systeem telkens correct af te sluiten na gebruik. Het uitschakelen van de schrijfcache beperkt het risico op gegevensverlies door abnormale stroomstoringen. De systeemprestaties zullen echter lager zijn.</p>
+
+	<h4>De schrijfcache-ondersteuning inschakelen </h4>
+	<ol>
+		<li>Ga naar het tabblad <b>Cachebeheer</b>.</li>
+		<li>Selecteer <b>Schrijfcache inschakelen</b>. Standaard is deze functie ingeschakeld.</li>
+		<li>Klik op <b>Toepassen</b>.</li>
+	</ol>
+	
+
+ 
+
+</body>
+</html>

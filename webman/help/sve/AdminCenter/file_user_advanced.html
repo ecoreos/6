@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Avancerade inställningar för användare</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Avancerade inställningar för användare</h2>
+
+<p>För att ändra avancerade inställningar för användare kan du gå till <strong>Kontrollpanel</strong> > <strong>Användare</strong> > <strong>Avancerad</strong>. Nedanstående alternativ finns tillgängliga. </p>
+
+<h3>Tillåt användare att återställa glömda lösenord</h3>
+<p>Om du vill tillåta användare att återställa bortglömda lösenord via e-post kan du aktivera <strong>Tillåt användare som inte är admin att återställa glömda lösenord via e-post</strong>. När detta alternativ är aktiverat visas en länk med texten <strong>Glömt ditt lösenord?</strong>  på inloggningssidan för DSM. Om en användare glömmer sitt lösenord, kan denne klicka på denna länk och ange sitt användarnamn. I så fall kommer systemet att skicka ett e-postmeddelande till användaren, med en länk till återställning av det glömda lösenordet. </p>
+
+<div class="section">
+<h4>Obs:</h4>
+<ul>
+<li>Innan aktivering av detta alternativ, vänlig tillse att du redan aktiverat SMTP för e-postmeddelanden. För att göra detta, gå till <strong>Kontrollpanel</strong> > <strong>Meddelande</strong>.</li>
+<li>För att erhålla meddelande från systemet, måste användare ha angett en e-postadress i avsnittet för användarinformation i sitt konto.</li>
+<li>Användare som hör till gruppen <strong>administrators</strong> kan inte återställa lösenord med detta alternativ.</li>
+<li>Domänanvändare kan inte återställa lösenord med detta alternativ.</li>
+<li>LDAP-användare kan återställa lösenord med detta alternativ, så länge som DiskStation agerar server för LDAP-katalogen.</li>
+
+</ul>
+</div>
+
+
+<h3>Lösenordsstyrka</h3>
+<p>Du kan ställa in regler för lösenordsstyrka för användare av din DiskStation.</p>
+
+<div class="section">
+<h4>Obs:</h4>
+<p>Regler för lösenordsstyrka gäller endast nya lösenord. Till exempel, nya regler för lösenordsstyrka appliceras bara när ett nytt konto skapas eller när en befintligt användare byter sitt lösenord. Befintliga lösenord och de som hör till importerade användare är undantagna från nya lösenordsregler.</p>
+</div>
+<h4>Aktivera regler för lösenordsstyrka:</h4>
+<ol>
+<li>Markera kryssrutan <b>Tillämpa regler för lösenordsstyrka</b> om du vill aktivera lösenordsskydd.</li>
+<li>Välj fler än ett av dessa lösenordsskydd, från reglerna här nedanför:</li>
+<ul>
+<li><b>Uteslut namn och beskrivning av användaren från lösenordet</b>: Lösenordet får inte innehålla användarens namn eller användarens beskrivning. UTF-8-kodade tecken är uteslutna.</li>
+<li><b>Inkludera både gemener och versaler</b>: Lösenordet måste innehålla både gemena (små) och versala (stora) bokstäver.</li>
+<li><b>Inkludera numeriskt tecken</b>: Lösenordet måste innehålla minst ett numeriskt tecken (0~9).</li>
+<li><b>Inkludera specialtecken</b>: Lösenordet måste innehålla minst ett ASCII specialtecken (dvs. ~, `, !, @, #, $, %, ^, &, *, (, ), -, _, =, +, [, {, ], }, \, |, ;, :, ', ", <, >, /, ?).</li>
+<li><b>Minsta längd på lösenord</b>: Lösenordet måste vara minst det värde som specificeras i textfältet. Lösenordets längd ska vara mellan 6 och 127 tecken.</li>
+</ul>
+<li>Klicka på <b>Tillämpa</b> för att spara inställningarna.</li>
+</ol>
+
+
+
+<h3>2-stegsverifikation</h3>
+<p>2-stegsverifikation ger dig ökad säkerhet för användarei DSM. Du kan framtvinga administrators i DSM eller alla användare i DSM att aktivera deras 2-stegsverifikation för att ytterligare skydda deras konton.</p>
+
+<h4>För att aktivera 2-stegsverifikation för användare i DSM:</h4>
+
+<ol>
+<li>Markera rutan <strong>Framtvinga 2-stegsverifikation för de följande användarna</strong> och välj vilka användare du vill tillämpa detta på.</li>
+<div class="section">
+<h4>Obs:</h4>
+<p>Om du fortfarande inte har konfigurerat 2-stegsverifikation i <b>Inst.</b> > <b>Konto</b> kommer installationsguiden för 2-stegsverifikation att startas för att hjälpa dig slutföra de erforderliga inställningarna innan du kan tillämpa detta framtvingande.</p>
+</div>
+
+<li>Med detta framtvingande tillämpat kommer användare som inte har aktiverat sin 2-stegsverifikation att bli ombedda att slutföra inställningarna innan de kan logga in till DSM.</li>
+</ol>
+
+<div class="section">
+<h4>Obs:</h4>
+<p>Avaktivering av framtvingad 2-stegsverifikation här påverkar inte och avaktiverar heller inte inställningarna för 2-stegsverifikation för varje användare. Användare kan behålla deras inställningar för 2-stegsverifikation eller gå till <b>Inst.</b> > <b>Konto</b> för att avaktivera dessa inställningar.</p>
+</div>
+
+
+<h3>Användarhem</h3>
+
+<p>Aktivera användarhem för att skapa en personlig mapp, <b>home</b>, för varje användare, utom för <b>guest</b>. Alla användare kan få åtkomst till sin egen home-mapp via CIFS, AFP, FTP eller File Station.</p>
+<p>Användare som hör till gruppen <strong>administrators</strong> har åtkomst till alla personliga mappar som finns i den delade mappen <b>homes</b> som är standard. Namnet på home-mappen är det samma som användare.</p>
+
+<h4>Aktivera tjänsten Användarhem:</h4>
+<ol>
+<li>Markera <b>Aktivera tjänsten Användarhem</b>.</li>
+<li>Om det finns flera volymer, välj var mappen <b>homes</b> ska lagras.</li>
+<li>Klicka på <b>Tillämpa</b>.</li>
+</ol>
+
+<div class="section">
+<h4>Obs:</h4>
+<p>När tjänsten användarhem för lokala användare avaktiveras kommer även tjänsten användarhem för domänanvändare att avaktiveras samtidigt.</p>
+</div>
+
+<h4>Avaktivera tjänsten Användarhem:</h4>
+<ol>
+<li>Avmarkera <b>Aktivera tjänsten Användarhem</b>.</li>
+<li>Klicka på <b>Tillämpa</b>.</li>
+</ol>
+<p>Efter att tjänsten Användarhem avaktiverats kommer den delade mappen <b>homes</b> att bevaras för administratörs-åtkomst.  Användare kommer att kunna få åtkomst till sina home-mappar igen när tjänsten för användarhem aktiveras igen.</p>
+
+<div class="section">
+<h4>Obs:</h4>
+<ol>
+<li>För att ta bort den delade mappen <b>homes</b> måste först tjänsten användarhem avaktiveras.</li>
+<li>Tjänsten Användarhem för domänanvändare avaktiveras om tjänsten Användarhem för lokala användare avaktiveras.</li> 
+</ol> 
+</div>
+
+
+</body>	
+</html> 

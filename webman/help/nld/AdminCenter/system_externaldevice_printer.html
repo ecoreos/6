@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Externe apparaten</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2><a name="usbprinter"></a>Printers</h2>
+<p>U kunt DiskStation gebruiken als afdrukserver, zodat clientcomputers of mobiele apparaten toegang hebben tot printers die zijn aangesloten op DiskStation. Bovendien kunt u via Apple Wireless Printing- en Google Cloud Print-ondersteuning vanop afstand afdrukken met behulp van iOS-apparaten of Google-producten en -services.</p>
+<p>Ga naar <a href="http://www.synology.com" target="_blank">www.synology.com</a> voor compatibele printers.</p>
+
+<h3>Printers instellen</h3>
+<p>Zie de onderstaande aanwijzingen om een <span style="display: inline;" class="disable-rc18015xsp">USB- of </span>netwerkprinter op uw DiskStation aan te sluiten en in te stellen.</p>
+
+
+<h4 class="disable-rc18015xsp">Om een USB-printer in te stellen:</h4>
+<ol class="disable-rc18015xsp">
+<li>Schakel de printer in en sluit deze aan op een USB-poort van de DiskStation.</li>
+<li>Ga naar <strong>Configuratiescherm</strong> > <strong>Externe apparaten</strong> > <strong>Printer</strong>.</li>
+<li>Selecteer de printer die u wilt instellen. Denk eraan dat DiskStation geen printers kan herkennen die via USB-hubs zijn aangesloten.</li>
+<li>Klik op <b>Printerbeheer</b> en selecteer <b>Printer instellen</b>.</li>
+<li>In het dialoogvenster selecteert u een van de volgende modi:
+<ul>
+<li><b>Netwerk-MFP:</b> laat clients van hetzelfde lokale netwerk toe om de afdruk-, scan- en faxfuncties van uw multifunctionele printer te gebruiken. De scan- en faxfuncties zijn alleen beschikbaar voor Windows-computers.</li>
+<li><b>Netwerkprinter:</b> kies deze modus voor printers die alleen afdrukken ondersteunen of wanneer u de clients alleen toestaat om de afdrukfunctie te gebruiken.</li>
+</ul>
+</li>
+<li>Configureer de Apple Wireless Printing- of Google Cloud Print-instellingen (optioneel).</li>
+<li>Klik op <b>Opslaan</b>.</li>
+</ol>
+
+<div class="section disable-rc18015xsp">
+<h4>Opmerking:</h4>
+<p>een netwerk-MFP is alleen toegankelijk door een client per keer.</p>
+</div>
+
+
+<h4>Om een netwerkprinter in te stellen:</h4>
+<ol>
+<li>Schakel de netwerkprinter in en sluit deze aan op hetzelfde netwerk van uw DiskStation.</li>
+<li>Ga naar <strong>Configuratiescherm</strong> > <strong>Externe apparaten</strong> > <strong>Printer</strong>.</li>
+<li>Klik op <b>Netwerkprinter toevoegen</b> en volg de aanwijzingen van de installatiewizard.</li>
+</ol>
+
+<div class="section">
+<h4>Opmerking:</h4>
+<ul>
+<li><strong>Printernaam:</strong> tijdens de installatie moet een printernaam worden ingevoerd, bestaande uit maximaal 32 tekens, inclusief letters, cijfers en liggende streepjes.</li>
+	<li><strong>Protocol:</strong> over het algemeen gebruiken HP-netwerkprinters Socket, Canon-netwerkprinters BJNP en het merendeel van de andere printers LPR.</li>
+<li><strong>Wachtrijnaam:</strong> voer de vereiste wachtrijnaam voor LPR- en IPP-netwerkprinters in; niet van toepassing voor Socket- of BJNP-printers.</li>
+<li><strong>Geen netwerk-MFP:</strong> op DiskStation aangesloten netwerkprinters kunnen geen Netwerk-MFP-modus gebruiken.</li>
+<li><strong>Geen USB-printers:</strong> door een Synology-product gedeelde USB-printers kunnen niet als netwerkprinter worden ingesteld.</li>
+</ul>
+</div>
+
+
+<h3>Printers beheren</h3>
+<p>Het tabblad Printer omvat de volgende opties om op DiskStation aangesloten <span style="display: inline;" class="disable-rc18015xsp">USB- of </span>netwerkprinters te beheren.</p>
+
+<ul>
+<li><b>Informatie ophalen:</b> toont informatie van de geselecteerde printer, zoals apparaatnaam, fabrikant, status enz.</li>
+<li><strong>Verwijderen:</strong> om een printer van DiskStation los te koppelen en te verwijderen.</li>
+<li><strong>Printerbeheer:</strong> bevat de volgende opties:
+<ul>
+<li><strong>Printer instellen</strong>: hiermee kunt u printerinstellingen bewerken, zoals Apple Wireless Printing of Google Cloud Print (zie de onderstaande aanwijzingen).</li>
+<li><strong>Spoolruimte opruimen:</strong> annuleert alle afdruktaken van alle printers.</li>
+<li><strong>Testpagina afdrukken:</strong> drukt een testpagina af om na te gaan of de configuraties correct zijn.</li>
+<li><b>Printer vrijgeven:</b> koppelt de printer en client los (alleen voor de Netwerk-MFP-modus). Als een client een verbinding maakt met een multifunctionele printer om faxen te ontvangen of bestanden te scannen kan de uitvoering van de taak lang duren. Indien nodig kan de verbinding worden onderbroken zodat de volgende client in de wachtrij toegang heeft tot de printer.</li>
+</ul></li>
+</ul>
+
+
+<h4>Om Apple Wireless Printing in te schakelen:</h4>
+<ol>
+<li>Ga naar <strong>Configuratiescherm</strong> > <strong>Externe apparaten</strong> > <strong>Printer</strong>.</li>
+<li>Selecteer een printer in de apparaatlijst.</li>
+<li>Klik op <b>Printerbeheer</b> > <b>Printer instellen</b>.</li>
+<li>Schakel het selectievakje <b>Apple Wireless Printing inschakelen</b> in.</li>
+<li>Selecteer het merk en stuurprogramma van uw printer.</li>
+<li>Klik op <b>Opslaan</b>.</li>
+</ol>
+
+<p>Na het voltooien van de installatie kunt u een testpagina afdrukken door op <b>Printerbeheer</b> > <b>Testpagina afdrukken</b> te klikken.</li>
+
+<div class="section">
+<h4>Opmerking:</h4>
+<ul>
+<li>als u Apple Wireless Printing inschakelt, wordt ook Bonjour Printer Broadcast voor DSM ingeschakeld.</li>
+<li>Apple Wireless Printing is uitsluitend beschikbaar voor iOS 4.2 en hoger.</li>
+</ul>
+</div>
+
+
+<h4>Om Google Cloud Print in te schakelen:</h4>
+<ol>
+<li>Ga naar <strong>Configuratiescherm</strong> > <strong>Externe apparaten</strong> > <strong>Printer</strong>.</li>
+<li>Selecteer een printer in de apparaatlijst.</li>
+<li>Klik op <b>Printerbeheer</b> > <b>Printer instellen</b>.</li>
+<li>Schakel het selectievakje <b>Google Cloud Print inschakelen</b> in.</li>
+<li>Voer de volgende gegevens in:
+<ul>
+
+<li>Uw Google-accountinformatie.</li>
+<li>Het merk en stuurprogramma van uw printer.</li>
+</ul>
+<li>Klik op <b>Opslaan</b>.</li>
+</ol>
+<p>Na het voltooien van de installatie kunt u een testpagina afdrukken door op <b>Printerbeheer</b> > <b>Testpagina afdrukken</b> te klikken.</li>
+</p>
+<p>Om Google Cloud Print-taken te beheren, klikt u op de koppeling <a href="http://www.google.com/cloudprint/manage.html" target="_blank">Google Cloud Print</a>.</p>
+
+
+<h3>Toegang krijgen tot printers</h3>
+<p>Zie het onderstaande gedeelte om met een pc of Mac toegang te krijgen tot printers.</p>
+<h4><a name="others"></a>Toegang tot printers met een Windows-pc:</h4>
+<p>
+De beste methode om toegang te krijgen tot de afdrukservice van het apparaat DiskStation is door met Synology Assistant een verbinding met de printer in te stellen. Raadpleeg de desbetreffende Help voor gedetailleerde instructies.
+</p>
+
+<p>Als Synology Assistant niet op de computer is geïnstalleerd, kijk dan hieronder voor andere methodes om toegang te krijgen tot de afdrukservice van het apparaat DiskStation.</p>
+<p><strong>Type 1. Gedeelde netwerkprinter</strong></p>
+<ol>
+<li>Open op uw pc <b>Netwerk </b>in Verkenner en dubbelklik op DiskStation.</li>
+
+<li>Dubbelklik op <span style="display: inline;" class="disable-rc18015xsp"><b>USB-printer</b> of </span><b>Netwerkprinternaam</b>; het systeem vraagt u om het correcte stuurprogramma te installeren, klik vervolgens op <b>Ja</b>.</li>
+
+<li>Haal het printerstuurprogramma van de cd of de website van de fabrikant. Selecteer de fabrikant en het model van de printer of klik op <strong>Heb schijf</strong> om de locatie van het stuurprogramma te selecteren. Klik vervolgens op <b>OK</b>.</li>
+<li>Het systeem start met de installatie van de netwerkprinter. Na het voltooien van de installatie kunt u de printer gebruiken. </li>
+</ol>
+
+
+<p><strong>Type 2. LPR-poort (aanbevolen)</strong></p>
+<ol>
+<li>Klik op uw pc op <b>Start</b> en ga naar <b>Apparaten en printers</b>.</li>
+<li>Klik op <b>Printer toevoegen</b>. </li>
+	<li>Selecteer <strong>Een netwerk-, draadloze- of Bluetooth-printer toevoegen.</strong> </li>
+	<li>Selecteer <strong>De printer staat niet in de lijst.</strong></li>
+<li>Selecteer <b>Een printer met TCP/IP-adres of hostnaam toevoegen</b>. Klik op <b>Volgende</b> om door te gaan.</li>
+<li>Selecteer als apparaattype <b>TCP/IP-poortapparaat.</b></li>
+<li>Voer het IP-adres van de DiskStation in. Klik op <b>Volgende</b> om door te gaan.</li>
+<li>Selecteer <b>Apparaattype:</b> <strong>Aangepast</strong> > <strong>Instellingen</strong> > …. Klik op <b>Volgende</b> om door te gaan.</li>
+
+<li>Selecteer <b>LPR</b> voor protocol. Voer <span style="display: inline;" class="disable-rc18015xsp"><b>USB-printer</b> of </span><b>Netwerkprinternaam</b> in voor Wachtrijnaam en schakel het selectievakje voor <b>LPR-bytetelling ingeschakeld</b> in. Klik op <b>OK</b> om door te gaan.</li>
+
+<li>Haal het printerstuurprogramma van de cd of de website van de fabrikant. Selecteer de fabrikant en het model van de printer of klik op <strong>Heb schijf</strong> om de locatie van het stuurprogramma te selecteren. Klik vervolgens op <b>OK</b>.</li>
+	<li>Het systeem start met de installatie van de netwerkprinter. Na het voltooien van de installatie kunt u de printer gebruiken.</li>
+</ol>
+
+<h4>Met een Mac toegang krijgen tot printers:</h4>
+<p>
+gebruikers van Mac krijgen toegang tot de afdrukservice van het apparaat DiskStation door Bonjour printer broadcast van DSM in te schakelen en de printer toe te voegen in de Systeemvoorkeuren.</p>
+<P>Controleer voor u doorgaat of uw DiskStation de Postscript-printer gebruikt.
+</p>
+<p><strong>Stap 1- Bonjour printer broadcast van DSM inschakelen</strong></p>
+<ol>
+<li>
+Meld u bij DSM aan als <b>admin</b> of als een gebruiker van de groep <b>administrators</b>.
+</li>
+<li>
+Ga naar <b>Configuratiescherm</b> > <strong>Bestandsservices</strong> > <b>Win/Mac/NFS</b>.
+</li>
+<li>
+Selecteer <b>Bonjour Printer Broadcast inschakelen</b>.
+</li>
+</ol>
+
+<p><strong>Stap 2.Toegang krijgen tot printers op Mac</strong></p>
+<ol>
+<li>
+Ga op uw Mac naar <b>Systeemvoorkeuren</b> > <b>Afdrukken en scannen</b> en klik vervolgens op <b>+</b>.
+</li>
+
+<li>
+Selecteer in de vervolgkeuzemenu <span style="display: inline;" class="disable-rc18015xsp"><b>USB-printer[nummer]</b> of </span><b>Netwerkprinternaam</b>. Uw Mac stelt de printer automatisch in.
+</li>
+
+</ol>
+</div>
+</body>
+</html>

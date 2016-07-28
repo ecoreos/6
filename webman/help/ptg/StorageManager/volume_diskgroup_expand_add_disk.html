@@ -1,0 +1,85 @@
+ <!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Adicionar um Disco R&iacute;gido a um Volume ou Grupo de Discos - Ajuda do Synology DSM</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="This article walks you through the steps to add an additional hard drive to an existing volume or disk group on your DiskStation.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Adicionar um Disco R&iacute;gido para Expandir a Capacidade de Armazenamento</h2>
+
+<p>Se existirem ranhuras para discos r&iacute;gidos dispon&iacute;veis no seu DiskStation, pode instalar discos r&iacute;gidos adicionais e adicion&aacute;-los a um volume ou grupo de discos existentes. Este artigo fornece instru&ccedil;&otilde;es para expandir um volume ou grupo de discos existentes, instalando discos r&iacute;gidos adicionais.</p>
+
+<h3>Antes de come&ccedil;ar</h3>
+
+<p>Antes de come&ccedil;ar, certifique-se de que os discos r&iacute;gidos que pretende adicionar cumprem os seguintes requisitos de tamanho:</p>
+<ul>
+  <li><strong>Para SHR:</strong> A capacidade do disco r&iacute;gido que deseja adicionar tem de ser igual ou superior ao maior disco r&iacute;gido no volume ou grupo de discos, ou igual a qualquer dos discos r&iacute;gidos no volume ou grupo de discos. Por exemplo, se o seu volume SHR for composto por tr&ecirc;s discos r&iacute;gidos &ndash; 2 TB, 1,5 TB e 1 TB respectivamente &ndash; ent&atilde;o, a capacidade do novo disco r&iacute;gido dever&aacute; ser de, pelo menos, 2 TB ou igual a 1.5 TB ou 1 TB.</li>
+  <li><strong>Para RAID 5 e RAID 6:</strong> A capacidade do disco r&iacute;gido que deseja adicionar dever&aacute; ser igual ou superior ao disco r&iacute;gido mais pequeno no volume ou grupo de discos. Por exemplo, se o seu volume for composto por tr&ecirc;s discos r&iacute;gidos &ndash; 2 TB, 1,5 TB e 1 TB respectivamente &ndash; ent&atilde;o, a capacidade do novo disco r&iacute;gido dever&aacute; ser de, pelo menos, 1 TB.</li>
+</ul>
+
+<div class="section">
+<h4>Verificar o Estado do Volume</h4>
+
+<p>Certifique-se de que o estado do seu volume ou grupo de discos &eacute; <strong>Normal</strong>. Caso contr&aacute;rio, dever&aacute; repar&aacute;-lo primeiro.</p>
+</div>
+
+
+<h3>  Adicionar um Disco R&iacute;gido a um Volume ou Grupo de Discos</h3>
+
+<p>Podem ser adicionados discos r&iacute;gidos aos seguintes tipos de RAID: </p>
+
+<ul>
+<li>Synology Hybrid RAID (SHR)</li>
+<li>JBOD</li>
+<li>RAID 5</li>
+<li>RAID 6</li>
+</ul>
+
+<div class="section">
+<h4>Nota:</h4>
+<p>Para volumes SHR, a capacidade de armazenamento apenas &eacute; expandida quando s&atilde;o adicionados discos r&iacute;gidos a um volume com dois ou mais discos r&iacute;gidos.</p>
+</ul>
+</div>
+
+<h4>Para adicionar um disco r&iacute;gido a um volume ou grupo de discos:</h4>
+
+<ol>
+<li>Desligue o seu DiskStation. (Ignore este passo se o seu DiskStation suportar hot-swapping.)</li>
+<li>Introduza um disco r&iacute;gido novo numa ranhura para disco r&iacute;gido vazia.</li>
+
+<div class="section">
+<h4>Nota:</h4>
+<p>Para evitar ferimentos ou danificar o seu DiskStation, siga as instru&ccedil;&otilde;es de instala&ccedil;&atilde;o do disco r&iacute;gido, que se encontram no <i>Guia de Instala&ccedil;&atilde;o R&aacute;pida</i> do seu produto Synology.</p>
+</div>
+
+<li>Ligue o seu DiskStation.</li>
+<li>Inicie sess&atilde;o no DSM com uma conta pertencente ao grupo <strong>administrators</strong>.</li>
+<li>Abra o <strong>Gestor de Armazenamento</strong>.</li>
+<img src="about:blank" class="help_image"/>
+
+<li>Neste ponto, proceda da seguinte forma:</li>
+  <ul class="list_abc">
+    
+  <li>Se estiver a expandir um volume &uacute;nico, aceda ao separador <strong>Volume</strong>. Seleccione o volume que deseja expandir. Clique em <strong>Gerir</strong> e continue para o passo seguinte. </li>
+<img src="about:blank" class="help_image"/>
+    
+  <li>Se estiver a expandir um grupo de discos, aceda ao separador <strong>Grupo de Discos</strong>. Seleccione o grupo de discos que deseja expandir. Clique em <strong>Gerir</strong> e continue para o passo seguinte.</li>
+<img src="about:blank" class="help_image"/>
+  </ul>
+<li>Seleccione <strong>Expandir o volume (ou grupo de discos), adicionando discos r&iacute;gidos</strong>. Depois, clique em <strong>Seguinte</strong>.</li>
+<img src="about:blank" class="help_image"/>
+<li>Seleccione os discos r&iacute;gidos com os quais deseja expandir o volume ou grupo de discos. Pode adicionar discos r&iacute;gidos assinalando as caixas de verifica&ccedil;&atilde;o correspondentes. Depois, clique em <strong>Seguinte</strong>.</li>
+<img src="about:blank" class="help_image"/>
+<li>Siga os passos do assistente para concluir.</li>
+</ol>
+</body>
+</html>

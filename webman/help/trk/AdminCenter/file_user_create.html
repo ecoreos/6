@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Kullanıcı Oluşturma - Synology DSM Yardım</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="This article shows you how to create users in DSM.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2><a name="leaf_user"></a>Kullanıcı Oluşturma</h2>
+<p>DiskStation sunucunuz üzerinde çok sayıda kullanıcı hesabı oluşturabilir ve yönetebilirsiniz.</p>
+
+
+<h4 class="disable-eds14">Bir kullanıcı oluşturmak için:</h4>
+<ol class="disable-eds14">
+<li><strong>Denetim Masası</strong> > <strong>Kullanıcı</strong> öğesine gidin.</li>
+<img src="about:blank" class="help_image"/>
+<li><b>Oluştur</b> düğmesine ve ardından Kullanıcı oluştur öğesine tıklayın. Bu işlem <b>Kullanıcı Oluşturma Sihirbazı</b>'nı başlatır.</li>
+<img src="about:blank" class="help_image"/>
+<li><strong>Kullanıcı Bilgileri</strong> sayfasında, aşağıdaki seçenekleri belirleyin:
+<ul>
+<li><strong>İsim:</strong> Kullanıcı için bir ad girin. Bu bölüm gereklidir.</li>
+<li><strong>Açıklama:</strong> Kullanıcı için kısa bir açıklama girin.</li>
+<li><strong>E-posta:</strong> Kullanıcı için bir e-posta adresi girin. Şifre sıfırlama mesajları gibi sistem bildirimleri burada belirtilen adrese gönderilir.</li>
+<li><strong>Yeni oluşturulan kullanıcıya bildirim mesajı gönder:</strong> Bu seçenek etkinleştirilirse, yeni hesap hakkında uyarmak için sistem kullanıcıya bir mesaj gönderir. Bu seçenek <b>Ana Menü</b> > <b>Denetim Masası</b> > <b>Bildirim</b> > <strong>E-posta</strong> öğesinde sistem e-posta bildirimlerinin etkinleştirilmesini gerektirir. Varsayılan olarak, kullanıcı hesabı şifresi bildirim mesajında görüntülenmez. Ancak, bildirim mesajında şifreyi görüntülemek isterseniz, lütfen <strong>Bildirim postasında kullanıcı şifresini göster</strong> kutusunu işaretleyin.</li>
+<li><strong>Kullanıcının hesap parolasını değiştirmesine izin verme:</strong> Eğer bu seçenek etkinleştirilirse, kullanıcı DSM'de oturum açmak için kullanılan şifresini değiştiremeyecektir.</li></ul>
+</li>
+<li><strong>Grup</strong> > <strong>Oluştur</strong> > <strong>Grup Oluşturma Sihirbazı</strong> sayfasında, yeni kullanıcının ait olması gereken grupları belirtin (ör. kullanıcılar, yöneticiler vb.). </li>
+<li><strong>Paylaşımlı klasör izinlerini ata</strong> sayfasında, erişim ayrıcalıklarını değiştirerek yeni kullanıcının hangi paylaşımlı klasörlere erişebileceğini seçin. Ayrıcalıkların önceliği şu şekildedir: <strong>Erişim yok</strong> > <strong>Oku/Yaz</strong> > <strong>Salt oku</strong>.
+  
+  <ul>
+    <li><strong>Önizleme:</strong> Bu sütun, geçerli ayarlara ve kullanıcının dahil olduğu gruplara göre kullanıcının asıl paylaşımlı klasör erişim ayrıcalıklarını görüntüler.</li>
+  <li><strong>Grup izinleri:</strong> Bu sütun, kullanıcının dahil olduğu kullanıcı gruplarına göre paylaşımlı klasör erişim ayrıcalıklarını görüntüler.</li></ul>
+  <a name="userquota"></a>
+  <li class="disable-dockerx64"><strong>Kullanıcı kota ayarı</strong> sayfasında, yeni kullanıcı tarafından ne kadar depolama alanı kullanılabileceğini kontrol edebilirsiniz. Kullanıcının kullanabileceği alanın miktarını kısıtlamak için, <strong>Kotayı etkinleştir</strong> altındaki kutuyu her birim<span style="display: inline;" class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64">/paylaşımlı klasör</span> için işaretleyin. Ardından kullanılabilecek maksimum alan miktarını <strong>Kota</strong> alanına girin (ör. 10 GB).</li>
+<li><strong>Uygulama izinlerini ata</strong> sayfasında, kullanıcının hangi hizmetlere erişebileceğini kontrol edebilirsiniz.</li>
+<li><strong>Grup Hız Limiti Ayarı</strong> sayfasında, dosyaları transfer ederken kullanıcı tarafından tüketilen bant genişliği miktarını kısıtlamak amacıyla farklı hizmetler (ör. File Station, FTP vb.) için bir hız limitini etkinleştirebilirsiniz. Her hizmet için, aşağıdakilerden birisini seçebilirsiniz:
+  <ul>
+  <li><strong>Yok:</strong> Hız limiti ayarları kullanıcının ait olduğu grupla aynı olacaktır.</li>
+  <li><strong>Sabit:</strong> Fiks, sabit bir hız limiti uygulanacaktır. Karşıya yükleme ve indirme hızı limitlerini soldaki alanlarda belirtebilirsiniz.</li>
+  <li><strong>Değişken:</strong> Bir programa göre iki farklı hız limiti belirlenebilir ve kullanıcıya uygulanabilir. Hız limiti ayarlarını ve programı değiştirmek için <strong>Özelleştir</strong> düğmesine tıklayın.</li></ul>
+<li>Ayarları onayladıktan sonra <b>Uygula</b>'ya tıklayarak bitirin.</li>
+</ol>
+
+<h4 class="enable-eds14">Bir kullanıcı oluşturmak için:</h4>
+<ol class="enable-eds14">
+<li><strong>Denetim Masası</strong> > <strong>Kullanıcı</strong> öğesine gidin.</li>
+<img src="about:blank" class="help_image"/>
+<li><b>Oluştur</b> düğmesine ve ardından Kullanıcı oluştur öğesine tıklayın. Bu işlem <b>Kullanıcı Oluşturma Sihirbazı</b>'nı başlatır.</li>
+<img src="about:blank" class="help_image"/>
+<li><strong>Kullanıcı Bilgileri</strong> sayfasında, aşağıdaki seçenekleri belirleyin:
+<ul>
+<li><strong>İsim:</strong> Kullanıcı için bir ad girin. Bu bölüm gereklidir.</li>
+<li><strong>Açıklama:</strong> Kullanıcı için kısa bir açıklama girin.</li>
+<li><strong>E-posta:</strong> Kullanıcı için bir e-posta adresi girin. Şifre sıfırlama mesajları gibi sistem bildirimleri burada belirtilen adrese gönderilir.</li>
+<li><strong>Yeni oluşturulan kullanıcıya bildirim mesajı gönder:</strong> Bu seçenek etkinleştirilirse, yeni hesap hakkında uyarmak için sistem kullanıcıya bir mesaj gönderir. Bu seçenek <b>Ana Menü</b> > <b>Denetim Masası</b> > <b>Bildirim</b> > <strong>E-posta</strong> öğesinde sistem e-posta bildirimlerinin etkinleştirilmesini gerektirir. Varsayılan olarak, kullanıcı hesabı şifresi bildirim mesajında görüntülenmez. Ancak, bildirim mesajında şifreyi görüntülemek isterseniz, lütfen <strong>Bildirim postasında kullanıcı şifresini göster</strong> kutusunu işaretleyin.</li>
+<li><strong>Kullanıcının hesap parolasını değiştirmesine izin verme:</strong> Eğer bu seçenek etkinleştirilirse, kullanıcı DSM'de oturum açmak için kullanılan şifresini değiştiremeyecektir.</li></ul>
+<li><strong>Grup</strong> > <strong>Oluştur</strong> > <strong>Grup Oluşturma Sihirbazı</strong> sayfasında, yeni kullanıcının ait olması gereken grupları belirtin (ör. kullanıcılar, yöneticiler vb.). </li>
+<li><strong>Paylaşımlı klasör izinlerini ata</strong> sayfasında, erişim ayrıcalıklarını değiştirerek yeni kullanıcının hangi paylaşımlı klasörlere erişebileceğini seçin. Ayrıcalıkların önceliği şu şekildedir: <strong>Erişim yok</strong> > <strong>Oku/Yaz</strong> > <strong>Salt oku</strong>.</li>  
+  <ul>
+    <li><strong>Önizleme:</strong> Bu sütun, geçerli ayarlara ve kullanıcının dahil olduğu gruplara göre kullanıcının asıl paylaşımlı klasör erişim ayrıcalıklarını görüntüler.</li>
+  <li><strong>Grup izinleri:</strong> Bu sütun, kullanıcının dahil olduğu kullanıcı gruplarına göre paylaşımlı klasör erişim ayrıcalıklarını görüntüler.</li></ul>
+<li><strong>Uygulama izinlerini ata</strong> sayfasında, kullanıcının hangi hizmetlere erişebileceğini kontrol edebilirsiniz.</li>
+<li><strong>Grup Hız Limiti Ayarı</strong> sayfasında, dosyaları transfer ederken kullanıcı tarafından tüketilen bant genişliği miktarını kısıtlamak amacıyla farklı hizmetler (ör. File Station, FTP vb.) için bir hız limitini etkinleştirebilirsiniz. Her hizmet için, aşağıdakilerden birisini seçebilirsiniz:</li>
+  <ul>
+  <li><strong>Yok:</strong> Hız limiti ayarları kullanıcının ait olduğu grupla aynı olacaktır.</li>
+  <li><strong>Sabit:</strong> Fiks, sabit bir hız limiti uygulanacaktır. Karşıya yükleme ve indirme hızı limitlerini soldaki alanlarda belirtebilirsiniz.</li>
+  <li><strong>Değişken:</strong> Bir programa göre iki farklı hız limiti belirlenebilir ve kullanıcıya uygulanabilir. Hız limiti ayarlarını ve programı değiştirmek için <strong>Özelleştir</strong> düğmesine tıklayın.</li></ul>
+</li>
+</ul>
+<li>Ayarları onayladıktan sonra <b>Uygula</b>'ya tıklayarak bitirin.</li>
+</ol>
+ 
+<div class="section">
+<h4>Kullanıcı adı sınırlaması:</h4>
+
+<ul>
+<li>Kullanıcı adı büyük/küçük harfe karşı duyarlı değildir ve 1 ile 64 Unicode karakter arasında olmalıdır ama şu semboller kullanılamaz:<br> ! " # $ % & ' ( ) * + , / : ; < = > ? @ [ ] \ ^ ` { } | ~</li>
+<li>İlk karakter eksi işareti veya boşluk olamaz ve en son karakter de boşluk olamaz.</li>
+<li>Aşağıdaki kullanıcı adları sistem kullanımı için ayrılmıştır: mailer-daemon, postmaster.</li>
+<li>Kullanıcı açıklaması en fazla 64 tane görüntülenebilir Unicode karakter içerebilir.</li>
+</ul>
+<h4>Şifre sınırlaması:</h4>
+<ul>
+<li>Şifre büyük/küçük harfe karı duyarlıdır ve 127'e kadar görüntülenebilir karakter ile sınırlıdır, bunlara harfler, rakamlar, işaretler ve boşluk dahildir.</li>
+</ul>
+<h4 class="disable-eds14 disable-dockerx64">Kota sınırlaması:</h4>
+<ul class="disable-eds14 disable-dockerx64">
+<li>Her kullanıcı için girilebilecek maksimum depolama kullanımı kotası yaklaşık 4 TB'dir (4095 GB).</li>
+</ul>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>E-mail - Synology DSM Help</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="Enabling email notifications allows your DiskStation to send messages to your email when specified events occur.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>E-mail</h2>
+<p class="disable-eds14">Door e-mailmeldingen in te schakelen, kan DiskStation berichten naar uw e-mail sturen wanneer bepaalde gebeurtenissen plaatsvinden, zoals systeemfouten, verbroken netwerkverbinding, ventilatorgedrag, stroomstoring of fout back-uptaak.</p>
+
+<p class="enable-eds14">Door e-mailmeldingen in te schakelen, kan DiskStation berichten naar uw e-mail sturen wanneer bepaalde gebeurtenissen plaatsvinden, zoals systeemfouten, verbroken netwerkverbinding, stroomstoring of fout back-uptaak.</p>
+
+
+<h4>E-mailmeldingen inschakelen:</h4>
+<ol>
+<li>Ga naar <strong>Configuratiescherm</strong> > <strong>Melding</strong> > <strong>E-mail</strong>.</li>
+<li>Tik op <strong>E-mailmeldingen inschakelen</strong>.</li>
+<li>Voer een of meer e-mailadressen in het veld <strong>Ontvangers</strong> in. Systeemmeldingen worden naar alle hier ingevoerde adressen gestuurd. Twee adressen zijn toegestaan. U kunt meerdere adressen scheiden met een puntkomma (;).</li>
+<li>Indien nodig voer een onderwerpvoorvoegsel in het veld <strong>Prefix van onderwerp</strong> in. Dit voorvoegsel wordt toegevoegd aan het onderwerp van elk bericht dat DiskStation verstuurt en helpt u bij de identificatie en filtering van berichten.</li>
+<li>Wilt u een e-mailserver van derden (bijv. Gmail, Outlook, Yahoo!) gebruiken om meldingen door te sturen, zie dan het onderstaande gedeelte "E-mailservice van derden". Wilt u een aangepaste server gebruiken, zie dan het gedeelte "Aangepaste SMTP-server". </li>
+</ol>
+
+
+
+
+<h4>Een emailservice van derden gebruiken:</h4>
+<ol>
+
+
+<li>Selecteer in het menu <strong>Serviceprovider</strong> een e-mailservice van derden, zoals Gmail, Yahoo of Outlook.</li>
+<li>Voer uw gebruikersnaam en wachtwoord in voor de geselecteerde e-mailservice.</li>
+<li>Klik op <strong>Toepassen</strong> om de instellingen op te slaan.</li>
+<li>U kunt op <strong>Een teste-mail verzenden</strong> klikken om te zien of uw instellingen correct zijn.</li>
+</ol>
+
+<h4>Een aangepaste SMTP-server gebruiken:</h4>
+<ol>
+
+
+<li>In het menu <strong>Serviceprovider</strong> selecteer <strong>Aangepaste SMTP-server</strong>.</li>
+<li>Voer de SMTP-servernaam of IP-adres in het veld <strong>SMTP-server</strong> in. </li>
+<li>Voer het SMTP-poortnummer in het veld <strong>SMTP-poort</strong> in. (hebt u een andere SMTP-poort opgegeven bij het instellen van de poort doorsturen-regels, geef dan dat nummer op.)</li>
+<li>Als uw SMTP-server authenticatie vereist, schakelt u het selectievakje <strong>Verificatie vereist</strong> in en voert u uw <strong>Gebruikersnaam</strong> en <strong>Wachtwoord</strong> in voor de e-mailserver. </li>
+<li>Als uw SMTP-server een SSL/TLS-verbinding vereist, selecteert u <strong>Beveiligde verbinding (SSL/TLS) is vereist</strong>.
+<li>Wilt u de naam van de afzender wijzigen die in de e-mailberichten van DiskStation verschijnt, voer dan de naam in het veld <strong>Naam afzender</strong> in. Wilt u het e-mailadres van de afzender wijzigen, voer dan het e-mailadres in het veld <strong>E-mail afzender</strong> in. Laat u dit veld leeg dan wordt het eerste in het veld <strong>Ontvangers</strong> opgegeven adres gebruikt.</li>
+<li>Klik op <strong>Toepassen</strong> om de instellingen op te slaan.</li>
+<li>U kunt op <strong>Een teste-mail verzenden</strong> klikken om te zien of uw instellingen correct zijn.</li>
+</ol>
+
+
+
+
+
+
+<div class="section">
+<h4>Opmerking:</h4>
+<ul>
+<li>wilt u een welkomstbericht naar alle nieuwe gebruikersaccounts sturen, schakel dan het selectievakje <strong>Een welkomstbericht aan nieuwe gebruikers verzenden</strong> in en elke gebruiker ontvangt een welkomstbericht bij het maken van zijn account.</li>
+<li>De taal voor e-mailmeldingen kunt u instellen bij <strong>Taal meldingen</strong>. Om de taal voor e-mailmeldingen te wijzigen, gaat u naar <strong>Hoofdmenu</strong> > <strong>Configuratiescherm</strong> > <strong>Regionale opties</strong>, klikt u op het tabblad <strong>Taal</strong> en selecteert u de gewenste taal uit de vervolgkeuzelijst in het gedeelte <strong>Taal meldingen</strong>.</li>
+<li>Als u de SMTP-server van Gmail gebruikt en tweestapsverificatie hebt ingeschakeld, moet u uw "toepassingsspecifiek wachtwoord" van Google voor SMTP-verificatie gebruiken.</li>
+</ul>
+</div>
+
+<div class="section">
+<h4>SMTP-server domeinnaam:</h4>
+<p>de SMTP-server kan zowel een IP-adres zijn als een domeinnaam. Als het een domeinnaam is, moet u ervoor zorgen dat er een geldig DNS-server-IP is ingevoerd op de pagina <b>Hoofdmenu</b> > <b>Configuratiescherm</b> > <b>Netwerk</b> en controleren of de server met het internet is verbonden. </p>
+
+
+</div>
+</body>
+</html>

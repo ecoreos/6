@@ -1,0 +1,163 @@
+﻿<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+	<h2>Grupa macierzy RAID Group*</h2>
+	<p>DiskStation pozwala połączyć wiele dysków twardych w jedną jednostkę pamięci masowej zwaną grupą macierzy RAID Group. Na bazie grup RAID Group można tworzyć woluminy lub jednostki iSCSI LUN (na poziomie bloku). Woluminy i jednostki iSCSI LUN można rozszerzyć, jeśli w grupie RAID Group jest dostępne miejsce do przydzielenia. Różne typy zapewniają różne poziomy ochrony danych. Ogólną listę typów RAID obsługiwanych przez urządzenie DiskStation można znaleźć w części <a href="general.html">Ogólne</a>.</p>
+
+<h4>Aby utworzyć grupę RAID Group:</h4>
+	<ol>
+		<li>Kliknij przycisk <b>Utwórz</b>.</li>
+		<li>Wybierz jedną z następujących opcji:<ul>
+				<li>Grupa RAID Group dla jednego woluminu lub jednostki iSCSI LUN (na poziomie bloku): Zapewnia wyższą wydajność.</li>
+				<li>Grupa RAID Group dla wielu woluminów lub jednostek iSCSI LUN (na poziomie bloku): Zapewnia większą elastyczność zarządzania.</li>
+			</ul>
+		</li>
+		<li>Postępuj zgodnie z instrukcjami kreatora, aby zakończyć proces.</li>
+	</ol>
+<div class="section">
+<h4>Uwaga: </h4>
+<ul>
+<li>Grupa RAID Group musi składać się z dysków twardych tego samego typu. Do utworzenia macierzy RAID nie można używać równocześnie dysków twardych SATA i SAS ani dysków SSD i HDD.</li>
+<li>Grupa RAID Group dla wielu woluminów lub jednostek iSCSI LUN (na poziomie bloku), która wykorzystuje <b>RAID 5</b> lub <b>RAID 6</b>, może zawierać wiele <b>Macierzy RAID</b>. Każda macierz RAID należąca do tej samej grupy RAID Group będzie tego samego typu RAID (np. RAID 5 lub RAID 6). Maksymalna liczba dysków w każdej macierzy RAID wynosi 6, 12, lub 24. Podczas tworzenia RAID Group można ustawić maksymalną liczbę dysków i liczby tej nie można już później zmodyfikować. Gdy do macierzy RAID przypisano maksymalną liczbę 12 dysków, następny dysk dodany do grupy RAID Group może być przypisany do nowej macierzy RAID. Nowa macierz RAID musi zawierać minimalną liczbę dysków wymaganą dla określonego typu RAID (np. trzy dyski w przypadku RAID 5 i cztery dyski w przypadku RAID 6).</li>
+<li>Aby utworzyć grupę RAID Group przy użyciu określonego dysku twardego, który nie jest widoczny w <b>Kreator tworzenia grup RAID Group</b>, sprawdź stan tego dysku twardego na karcie <b>Zarządzanie HDD</b>.</li>
+</ul>
+</div>
+
+	<h4>Aby usunąć grupę RAID Group:</h4>
+	<ol>
+		<li>Wybierz grupę RAID Group do usunięcia.</li>
+		<li>Kliknij przycisk <b>Usuń</b> i postępuj zgodnie z instrukcjami kreatora, aby ukończyć proces.</li>
+	</ol>
+
+<div class="section">
+<h4>Uwaga: </h4>
+<ul>
+<li>W przypadku usunięcia grupy RAID Group woluminy i jednostki iSCSI LUN w grupie RAID Group zostaną usunięte. Upewnij się, że żadne ważne dane nie zostaną usunięte.</li>
+</ul>
+</div>
+
+
+	<h4>Aby naprawić grupę RAID Group:</h4>
+	<p>Grupę RAID Group, której status jest <b>Zdegradowany</b>, można naprawić. Dotyczy to grup RAID Group następujących typów: RAID 1, RAID 5, RAID 6 i RAID 10. Istniejące dane w grupie RAID Group nie zostaną usunięte.</p>
+	<p>Aby naprawić grupę RAID Group, wykonaj następujące kroki:</p>
+	<ol>
+		<li>Wyłącz urządzenie DiskStation. (Pomiń ten krok, jeśli posiadany model obsługuje funkcję wymiany dysków podczas pracy).</li>
+		<li>Wymień uszkodzony dysk twardy wskazany w polu Disk Info w obszarze Status grupy RAID Group.</li>
+		<li>Kliknij przycisk <b>Zarządzaj</b>.</li>
+		<li>Wybierz opcję <b>Napraw</b>.</li>
+		<li>Postępuj zgodnie z instrukcjami kreatora, aby zakończyć proces.</li>
+        </ol>
+        
+<div class="section">
+<h4>Uwaga:</h4>
+<ul>
+<li>Rozmiar dysku twardego na wymianę musi być większy lub równy rozmiarowi najmniejszego dysku w grupie RAID Group.</li>
+<li>Stan dysku twardego na wymianę musi być [Zainicjowany] lub [Nie zainicjowany].</li>
+</ul>
+</div>
+
+	<h4>Zmiana typu RAID grupy RAID Group</h4>
+	<p>Aby możliwa była zmiana typu macierzy RAID w grupie RAID Group, w urządzeniu DiskStation muszą być dostępne zainstalowane dyski twarde. Obecnie obsługiwane są następujące typy zmiany macierzy RAID:</p>
+	<ul>
+		<li>Podstawowy na RAID 1 lub RAID 5</li>
+		<li>RAID 1 na RAID 5</li>
+		<li>RAID 5 na RAID 6</li>
+      <li>Dodanie dysku kopii lustrzanej do macierzy RAID 1</li>
+	</ul>
+	<p>Aby zmienić typ RAID grupy RAID Group, wykonaj następujące czynności:</p>
+	<ol>
+		<li>Wybierz grupę RAID Group do zmiany.</li>
+		<li>Kliknij przycisk <b>Zarządzaj</b>.</li>
+		<li>Wybierz <b>Zmień typ macierzy RAID</b>.</li>
+		<li>Postępuj zgodnie z instrukcjami kreatora, aby zakończyć proces.</li>
+        </ol>
+<div class="section">
+<h4>Uwaga: </h4>
+<ul>
+<li>Przed zmianą typu RAID status grupy RAID Group musi być <b>Normalny</b>. W przeciwnym wypadku dane zostaną utracone. Jeśli grupa RAID Group ma stan <b>Zdegradowany</b>, należy ją w pierwsze kolejności naprawić.</li>
+<li>Aby można było zmienić typ grupy RAID Group, w urządzeniu DiskStation musi być zainstalowana wystarczająca liczba dysków twardych, a rozmiar nowego dysku musi być większy niż najmniejszy dysk w grupie RAID Group.</li>
+<li>Nowy dysk twardy musi mieć status Zainicjowany lub Niezainicjowany.</li>
+<li>Typu grupy RAID Group z wieloma macierzami RAID nie można zmienić.</li>
+</ul>
+</div>
+
+	<h4>Rozszerzenie rozmiaru grupy RAID Group</h4>
+	<p>Rozmiar grupy RAID Group można rozszerzyć poprzez wymianę bieżących dysków twardych na dyski o większym rozmiarze lub poprzez dodanie dysków twardych.</p>
+
+<div class="section">
+<h4>Uwaga: </h4>
+<ul>
+  <li>Aby rozszerzyć grupę RAID Group o dyski 3 TB lub większe, upewnij się, że grupa RAID Group została utworzona przy użyciu systemu DSM 3.0 lub nowszego.</ul>
+</div>
+
+	<h4>Rozszerzanie grupy RAID Group poprzez wymianę istniejących dysków twardych na większe:</h4>
+	<p>Grupę RAID Group można rozszerzyć, wymieniając istniejące dyski twarde na większe dla następujących typów RAID: RAID 1, RAID 5 i RAID 6. Powiązane woluminy lub jednostki iSCSI LUN w grupie macierzy RAID Group dla pojedynczego woluminu lub jednostki iSCSI LUN zostaną powiększone automatycznie. Wykonaj opisane poniżej kroki:</p>
+	<ol>
+    <li>Wyłącz urządzenie DiskStation. Ten krok można pominąć, jeśli model wspiera wymianę dysków podczas pracy.</li>
+		<li>Wymień jeden dysk twardy na inny o większej pojemności.</li>
+		<li>Włącz urządzenie DiskStation i napraw grupę RAID Group.</li>
+		<li>Powtarzaj kroki od 1 do 3, aż wszystkie dyski twarde zostaną zastąpione dyskami o większej pojemności.</li>
+		<li>System automatycznie rozszerzy grupę RAID Group.</li>
+	</ol>
+
+<div class="section">
+<h4>Uwaga: </h4>
+<ul>
+<li>Wszystkie usługi narzędzia Zarządzanie przechowywaniem zostaną tymczasowo zatrzymane na czas procesu rozszerzania.</li> 
+<li>Dysk twardy można rozszerzyć tylko wtedy, gdy grupa RAID Group ma stan <b>Normalny</b>. W przeciwnym wypadku spowoduje to utratę danych. Jeśli grupa RAID Group ma stan <b>Zdegradowany</b>, należy ją w pierwsze kolejności naprawić.</li>
+	</ul>
+</div>
+
+	<h4>Aby powiększyć grupę RAID Group przez dodanie dysków twardych:</h4>
+	<p>Ta funkcja jest dostępna w przypadku następujących typów RAID: JBOD, RAID 5 oraz RAID 6. Aby to zrobić:</p>
+	<ol>
+		<li>Wybierz grupę RAID Group do rozszerzenia.</li>
+		<li>Kliknij przycisk <b>Zarządzaj</b>.</li>
+		<li>Wybierz <b>Dodaj dysk</b>.</li>
+		<li>Postępuj zgodnie z instrukcjami kreatora, aby zakończyć konfigurację.</li>
+</ol>
+<div class="section">
+<h4>Uwaga: </h4>
+<ul>
+		<li>Status grupy RAID Group musi być <b>Normalny</b>.</li>
+		<li>W przypadku grup RAID Group typu RAID 5 i RAID 6 rozmiar dysku twardego musi być większy niż rozmiar najmniejszego dysku w grupie RAID Group.</li>
+		<li>Stan wybranego dysku twardego musi być [Zainicjowany] lub [Nie zainicjowany].</li>
+	</ul>
+    </div>
+
+	<h4>Aby edytować opis grupy RAID Group:</h4>
+	<ol>
+		<li>Wybierz grupę RAID Group do edycji.</li>
+		<li>Kliknij przycisk <b>Zarządzaj</b>.</li>
+		<li>Wybierz opcję <b>Edytuj opis</b>.</li>
+		<li>Edytuj opis, a następnie kliknij <b>OK</b>, aby zapisać wynik.</li>
+	</ol>
+	<h3>Czyszczenie RAID</h3>
+    <p>Czyszczenie RAID to funkcja do zarządzania danymi, która sprawdza grupy macierzy RAID Group i naprawia wszelkie wykryte niespójności danych. Ta funkcja może być używana w przypadku grup RAID Group zgodnych z RAID 5 lub RAID 6. </p>
+    <p>Zaleca się regularne wykonywanie czyszczenia RAID w celu zapewnienia spójności danych i uniknięcia utraty ważnych danych w razie awarii dysku.</p>
+    <h4>Aby przeprowadzić czyszczenie RAID:</h4>
+    <ol>
+      <li>Wybierz grupę RAID Group, dla której chcesz przeprowadzić czyszczenie RAID.</li>
+      <li>Kliknij przycisk <strong>Zarządzaj</strong></li>
+      <li>Wybierz <strong>Czyszczenie RAID</strong>.</li>
+    </ol>
+    <div class="section">
+      <h4>Uwaga:</h4>
+      <ul>
+        <li>Czyszczenie RAID można przeprowadzić tylko wtedy, gdy stan grupy RAID Group jest <strong>Normalny</strong>.</li>
+        <li>Nie zamykaj systemu przed zakończeniem procesu czyszczenia RAID. Jeśli system zostanie zamknięty przed zakończeniem, czyszczenie RAID należy uruchomić ponownie od nowa.</li>
+      </ul>
+    </div>
+    
+<p>____<br />*Ta funkcja jest dostępna tylko w niektórych modelach.</p>    
+</body>
+</html>

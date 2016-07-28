@@ -1,0 +1,77 @@
+ <!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Een volume maken - Synology DSM Help</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="This article walks you through the steps to create a volume on DiskStation using Storage Manager.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script> <script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Een volume maken</h2>
+
+<p>Dit artikel legt uit hoe u een volume op uw DiskStation maakt. Selecteer een van de volgende methoden om een nieuw volume te maken:</p>
+
+<ul>
+  <li><b>Snel:</b> de beste optie voor beginners. Kies deze methode om de opslagcapaciteit en prestaties automatisch te optimaliseren, zonder omkijken naar technische aspecten zoals RAID-niveaus. </li>
+
+<li><b>Aangepast:</b> voor geavanceerde gebruikers die zelf de fijne aspecten van het maken van de volume willen bepalen zoals RAID-types en capaciteitstoewijzing. Deze optie ondersteunt verschillende RAID-types, het maken van enkele of meerdere volumes en opties om specifieke opslagcapaciteiten aan elk volume toe te voegen (alleen bij het maken van meerdere volumes op RAID).
+</li>
+</ul>
+
+<div class="section">
+<h4>Enkel of meerdere volumes op RAID?</h4>
+<p>Kies een van de volgende optie wanneer u een volume maakt in de aangepaste modus:</p>
+<ul>
+  <li><b>Eén volume op RAID</b>
+    <ul>
+      <li>Maakt een enkel volume en gebruikt daarbij de beschikbare capaciteit van de geselecteerde harde schijven.</li>
+      <li>Biedt betere snelheid en prestaties.</li>
+      <li>Ondersteunt verschillende RAID-types.</li>
+    </ul>
+  </li>
+  <li><b>Meerdere volumes op RAID</b>
+    <ul>
+      <li>Biedt u de mogelijkheid om meerdere volumes in een schijfgroep te maken.</li>
+      <li>Ondersteunt toewijzing van een bepaalde capaciteit aan elk volume.</li>
+      <li>Biedt meer opslagbeheerflexibiliteit.</li>
+      <li>Ondersteunt verschillende RAID-types.</li>
+    </ul>
+  </li>
+</ul>
+</div>
+
+
+<div class="section">
+<h4>Voor u begint:</h4>
+<ul>
+<li>controleer of er geen belangrijke gegevens op de harde schijven staan. Alle bestaande gegevens worden verwijderd door het maken van een volume.</li>
+<li>Ga naar pagina <b>HDD/SSD</b> en controleer of de status van elke harde schijf op <b>Normaal</b> of <strong>Niet geïnitialiseerd</strong> staat.</li>
+</ul>
+</div>
+
+<div class="section enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64">
+<h4>Opmerking:</h4>
+<ul>
+<li>de minimum grootte voor een Btrfs-volume is 10GB.</li>
+<li>Btrfs-volumes reserveren 4% van de ruimte voor metagegevens.</li>
+</ul>
+</div>
+
+<h4>Om een volume te maken:</h4>
+<ol>
+<li>Open <b>Opslagbeheer</b>.</li>
+<img src="about:blank" class="help_image"/>
+<li>Ga naar <b>Volume</b> en klik op <b>Maken</b>.</li>
+<img src="about:blank" class="help_image"/>
+<li>De wizard volume maken verschijnt. Selecteer afhankelijk van uw behoeften <strong>Snel</strong> of <strong>Aangepast</strong>. Volg vervolgens de instructies van de wizard om het maken van het volume te voltooien.</li>
+<img src="about:blank" class="help_image"/>
+</ol>
+
+</body>
+</html>

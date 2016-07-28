@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script> <script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+	<h2>Volume</h2>
+	<p>Volumes sind grundlegende Speicherbereiche, in denen der Benutzer gemeinsame Ordner, iSCSI LUN (reguläre Datei) erstellen, Daten speichern oder Pakete installieren kann. Vergewissern Sie sich vor der Erstellung von Volumes, dass Sie bereits eine RAID-Gruppe erstellt haben. Weitere Informationen zu RAID-Gruppen finden Sie unter <a href="raid.html">RAID-Gruppe</a>.
+</p>
+
+	<h4>Volume erstellen:</h4>
+<ol>
+  <li>Stellen Sie sicher, dass Ihr DiskStation über eine bestehende RAID-Gruppe mit zuweisbarem Speicher verfügt.</li>
+  <li>Klicken Sie auf die Schaltfläche <strong>Erstellen</strong>.</li>
+		<li>Wählen Sie eine RAID-Gruppe aus, in der Sie das Volume erstellen möchten.</li>
+		<li>Ändern Sie die gewünschten Einstellungen.</li>
+		<li>Stellen Sie die Zuordnungsgröße für das Volume ein. (Die Einstellung der Größenzuordnung ist nicht verfügbar, wenn Volumes in RAID-Gruppen für einzelne Volumes oder iSCSI LUN erstellt wurden.)
+		</li>
+</ol>
+
+<div class="section">
+<h4>Hinweis:</h4>
+<ul>
+	<li>Die maximal zuzuordnende Volume-Größe beträgt 200 TB.</li>
+	<li class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64">Einem Btrfs-Volume muss eine Größe von mindestens 10 GB zugewiesen werden.</li>
+    <li class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64">Btrfs-Volumes reservieren 4 % des Speicherplatzes für Metadaten.</li>
+</ul>
+</div>
+
+
+<h4>Volume entfernen:</h4>
+	<ol>
+		<li>Wählen Sie das Volume aus, das Sie löschen möchten.</li>
+		<li>Klicken Sie auf die Schaltfläche <b>Entfernen</b> und folgen Sie dem Assistenten, um den Vorgang durchzuführen.</li>
+	</ol>
+<div class="section">
+<h4>Hinweis:</h4>
+<ul>
+<li>Durch Entfernen eines Volumes werden sämtliche Daten auf dem Volume gelöscht.</li>
+</ul>
+</div>
+
+<h4>Volume zwangsweise anhängen:</h4>
+<p>Wenn der Cache auf einem Volume fehlt, wird das Volume beim Hochfahren vom System nicht angehängt. Wenn der Cache nicht wiederherstellbar ist und Sie auf das Volume zugreifen möchten, können Sie auf <b>Zwangsweise installieren</b> klicken. </p>
+
+<div class="section">
+<h4>Hinweis:</h4>
+<ul>
+<li>Diese Funktion wird nur bei bestimmten Modellen unterstützt.</li>
+</ul>
+</div>
+
+	<h4>Volume reparieren:</h4>
+	<p>Gehen Sie, wenn der Volume-Status <b>Fehlerhaft</b> ist, zur Registerkarte <b>RAID-Gruppe</b> und suchen Sie die entsprechende RAID-Gruppe. Folgen Sie anschließend den vorgeschlagenen Anweisungen, um es zu reparieren.
+</p>
+
+	<h4>Größe eines Volumes erweitern:</h4>
+	<ul>
+		<li>Für Volumes, die in einer RAID-Gruppe für mehrere Volumes oder iSCSI LUNs (Block-Niveau) erstellt wurden: 
+<ol>
+				<li>Wählen Sie das Volume aus, das Sie erweitern möchten.</li>
+				<li>Klicken Sie auf <b>Bearbeiten</b>.</li>
+				<li>Geben Sie die neue Größe ein und klicken Sie zum Erweitern auf <b>OK</b>.</li>
+			</ol>
+		<li>Bei Volumes, die in einer RAID-Gruppe für einzelne Volumes oder iSCSI LUN (Block-Niveau) erstellt wurden, lesen Sie bitte den Abschnitt <b>Größe einer RAID-Gruppe erweitern</b> unter <a href="raid.html">RAID-Gruppe</a>. Die Größe des Volumes wird erweitert, wenn die betreffende RAID-Gruppe erweitert wurde.
+	  </li>
+	</ul>
+
+
+<h3>SSD TRIM</h3>
+
+<p>Wenn ein Volume ausschließlich aus SSDs (Solid State Drives) besteht, empfehlen wir die Aktivierung von SSD TRIM. Diese Funktion verbessert die Lese- und Schreibleistung von Volumes, die auf SSDs erstellt wurden, wodurch die Effizienz Ihrer SSDs gesteigert und deren Lebensdauer verlängert wird.</p>
+
+<h4>SSD TRIM aktivieren:</h4>
+
+<ol>
+  <li>Öffnen Sie <b>Speicher-Manager</b> und gehen Sie zu <b>Volume</b>.</li>
+  <li>Wählen Sie ein Volume aus, das ausschließlich aus SSDs besteht, und klicken Sie auf die Schaltfläche <b>Konfigurieren</b>.</li>
+  <li>Gehen Sie im angezeigten Fenster zur Registerkarte <b>SSD TRIM</b> und aktivieren Sie das Kontrollkästchen <b>TRIM aktivieren</b>.</li>
+<li>Klicken Sie auf die Schaltfläche <strong>Zeitplan einstellen</strong>, um festzulegen, wann das System SSD TRIM ausführt.</li>
+<li>Klicken Sie auf <strong>OK</strong>.</li>
+</ol>
+
+<div class="section">
+<h4>Hinweis:</h4>
+<ul>
+
+<li>SSD TRIM ist nur auf bestimmten DiskStation-Modellen und RAID-Typen verfügbar. </li>
+
+
+<li>Einige SSD-Modelle unterstützen die Ausführung von SSD TRIM auf RAID 5- und RAID 6-Volumes nicht. Beachten Sie die Kompatibilitätsliste auf <a href="http://www.synology.com/" target=_blank>www.synology.com</a>.</li>
+
+
+<li>SSD TRIM kann in den folgenden Situationen nicht aktiviert werden:
+  <ul>
+    <li>Das Volume wurde mit SSD Cache angehängt.</li>
+    <li>Das Paket <strong>Time Backup</strong> ist installiert.</li>
+    <li>Ein High-Availability-Cluster wurde mit dem <strong>High Availability Manager</strong> erstellt.</li>
+  </ul>
+</li>
+<li>SSD TRIM kann nicht auf Block-Niveau-iSCSI LUNs aktiviert werden.</li>
+<li>Die Systemleistung wird durch das Ausführen von SSD TRIM beeinträchtigt. Die benötigte Zeit bis zum Ende der TRIM-Ausführung variiert je nach Volume-Größe und SSD-Modell.</li>
+
+<li>Wenn TRIM auf einem Volume aktiviert ist, wird es auch auf anderen Volumes der gleichen Diskgruppe oder RAID-Gruppe aktiviert.</li>
+
+</ul>
+</div>
+
+
+<h3>Dateisystembereinigung*</h3>
+<p>Bei der Dateisystembereinigung handelt es sich um eine Wartungsfunktion für Dateien, bei der Volumes oder Diskgruppen überprüft werden. Wenn Daten gefunden werden, die nicht mit der Prüfsumme übereinstillen, wird der Dateipfad im Protokoll-Center festgehalten und es wird empfohlen, eine Sicherung zu verwenden, um die Daten zu reparieren.</p>
+<p>Wir empfehlen, die Dateisystembereinigung regelmäßig durchzuführen, um die Datenkonsistenz sicherzustellen.</p>
+
+<h4>Dateisystembereinigung durchführen:</h4>
+<ol>
+<li>Öffnen Sie <b>Speicher-Manager</b> und gehen Sie zu <b>Volume</b>.</li>
+<li>Wählen Sie das Volume aus, auf dem die Dateisystembereinigung durchgeführt werden soll.</li>
+<li>Klicken Sie auf <b>Verwalten</b>.</li>
+<li>Wählen Sie <b>Dateisystembereinigung</b> aus.</li>
+</ol>
+
+<div class="section">
+<h4>Hinweis:</h4>
+<ul>
+<li>Die Dateisystembereinigung kann nur auf Volumes im <b>Btrfs</b>-Dateisystem durchgeführt werden.</li>
+<li>Die Dateisystembereinigung kann nur durchgeführt werden, wenn das Volume den Status <strong>Normal</strong> hat.</li>
+<li>Fahren Sie das System nicht herunter, bevor die Dateisystembereinigung abgeschlossen ist. Wenn das System vor der Fertigstellung heruntergefahren wird, müssen Sie die Dateisystembereinigung manuell von vorn beginnen.</li>
+</ul></div>
+
+<h3>Dateisystem-Defragmentierung*</h3>
+<p>Wenn Ihre Daten kontinuierlich geändert werden, nimmt die Anzahl der fragmentierten Dateien im Dateisystem zu, wodurch der Zugriff auf die Dateien auf den Festplatten verlangsamt wird. Mit der Dateisystem-Defragmentierung können Sie die Leistung verbessern.</p>
+
+<h4>Dateisystem-Defragmentierung durchführen:</h4>
+
+<ol>
+<li>Öffnen Sie <strong>Speicher-Manager</strong> und gehen Sie zu <b>Volume</b>.</li>
+<li>Wählen Sie das Volume aus, auf dem die Dateisystem-Defragmentierung durchgeführt werden soll.</li>
+<li>Klicken Sie auf <strong>Verwalten</strong>.</li>
+<li>Wählen Sie <strong>Dateisystem-Defragmentierung</strong> aus.</li>
+</ol>
+
+<div class="section">
+<h4>Hinweis:</h4>
+<ul>
+<li>Die Dateisystem-Defragmentierung kann nur auf Volumes im <b>Btrfs</b>-Dateisystem durchgeführt werden.</li>
+<li>Die Dateisystem-Defragmentierung kann nur durchgeführt werden, wenn das Volume den Status <strong>Normal</strong> hat.</li>
+<li>Fahren Sie das System nicht herunter, bevor die Dateisystem-Defragmentierung abgeschlossen ist. Wenn das System vor der Fertigstellung heruntergefahren wird, müssen Sie die Dateisystem-Defragmentierung manuell von vorn beginnen.</li>
+<li>Die Volume-Auslastung könnte sich erhöhen, wenn das Volume Schnappschüsse von freigegebenen Ordnern enthält.</li>
+</ul>
+</div>
+
+<p>____<br />*Nur bei bestimmten Modellen verfügbar.</p>
+
+
+
+</body>
+</html>

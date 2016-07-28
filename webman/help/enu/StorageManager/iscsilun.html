@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Storage Manager</title>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2><a name="leaf_iscsilun"></a>iSCSI LUN*</h2>
+<p>iSCSI is a storage networking service that facilitates transferring data over local networks or long distances. By mapping iSCSI LUNs to iSCSI Targets, clients may access storage spaces as if they were local disks. An iSCSI LUN (logical unit number) can be mapped to one or multiple iSCSI Targets to provide iSCSI storage services.  Go to <strong>Storage Manager</strong> &gt; <strong>iSCSI LUN</strong> to manage iSCSI LUNs.</p>
+
+<div class="section"><h4>Note:</h4>
+<p>The number of supported iSCSI LUNs varies on DiskStation models. For detailed product specification, please refer to <a href="http://www.synology.com/" target="_blank">www.synology.com</a>.</p>
+</div>
+
+<p>DiskStation currently supports the following types of iSCSI LUNs:</p>
+<ul>
+	<li><b>iSCSI LUN (Regular Files)</b>: The iSCSI LUN is created by designating a portion of the volume space for its usage. You can expand its size later when necessary. This type of iSCSI LUN provides the flexibility of dynamic capacity management with Thin Provisioning, VMware VAAI hardware acceleration support, Windows ODX support, LUN snapshot and LUN clone.</li>
+	<li class="disable-bromolow disable-grantley disable-avoton disable-braswell disable-broadwell disable-kvmx64"><b>iSCSI LUN (Block-Level) - Single LUN on RAID</b>: The iSCSI LUN is created using all the space of a volume. You can repair or expand it, or change its RAID type, just like using a volume. Please refer to the <a href="space.html">Volume</a> page for more information.</li>
+	<li class="disable-bromolow disable-grantley disable-avoton disable-braswell disable-broadwell disable-kvmx64"><b>iSCSI LUN (Block-Level) - Multiple LUNs on RAID</b>: The iSCSI LUN is created by designating a specific space of a Disk Group. You can expand the iSCSI LUN later if there is available space on the Disk Group. Please refer to the <a href="raid.html">Disk Group</a> page for more information.</li>
+	<li class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64"><b>iSCSI LUN (Block-Level)</b>: This type of iSCSI LUN is created on a RAID Group and provides flexibility of dynamic capacity management in addition to optimized access performance. You can expand this type of iSCSI LUN later using unallocated space on the RAID Group. Please refer to the <a href="raid.html">RAID Group</a> page for more information.</li>
+</ul>
+
+<div class="section"><h4>Note:</h4>
+<p>iSCSI LUNs with advanced LUN features are only available on ext4<span style="display: inline;" class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64">/Btrfs</span> file system.</p>
+</div>
+
+<h4>To create an iSCSI LUN:</h4>
+<ol>
+	<li>Click <b>Create</b>.</li>
+	<li>Select the iSCSI LUN type you wish to create.</li>
+	<li>Follow the wizard to complete the process.</li>
+</ol>
+
+<div class="section"><h4>Note:</h4>
+<p>Advanced LUN features can only be enabled during initial iSCSI LUN creation. This setting cannot be changed afterwards.</p>
+</div>
+
+<p>Advanced LUN allocation unit size can be optimized for certain features for application server, such as Microsoft Exchange or SQL Server, or virtualization servers and storage acceleration technologies, such as Microsoft Windows ODX or VMware VAAI, by doing either of the following:</p>
+<ul>
+	<li>Set the allocation unit size during the creation of the first advanced LUN of a volume.</li>
+	<li>Set the allocation unit size from the <strong>Configure</strong> before you create the first advanced LUN of a volume.</li>
+</ul>
+
+<p>We recommend you to specify the allocation unit size for your application when using the direct connection from your application server or RDM (pass-through) methods of working with Advanced iSCSI LUNs on DiskStation. To leverage Synology Advanced LUN technology for cloning for Windows ODX, we suggest you to format the NTFS volume with the allocation unit size equal to (or larger than) the one you specified on DSM.</p>
+
+<div class="section"><h4>Note:</h4>
+<p>The Advanced LUN allocation unit of each volume can be set only once.</p>
+</div>
+
+<h4>To remove an iSCSI LUN:</h4>
+<p>When removing an iSCSI LUN, all data on the iSCSI LUN will be deleted. Connections between the iSCSI LUN and any mapped iSCSI Targets will be lost also.</p>
+<ol>
+	<li>Select the iSCSI LUN you want to remove.</li>
+	<li>Click <b>Remove</b> button and follow the wizard to complete the process.</li>
+</ol>
+
+<div class="section"><h4>Note:</h4>
+<p>Deleting VAAI LUNs on the DiskStation does not free up disk space immediately. Data is moved to a system reserved folder called <strong>@EP_trash</strong> and deleted piece by piece. For example, if a 100 GB VAAI LUN is deleted from the DiskStation, it might take approximately 15-20 minutes to free up the 100 GB of space on the disk volume.</p>
+</div>
+
+<h4>To force mount iSCSI LUN (Block-Level):</h4>
+<p>If the cache on an iSCSI LUN (Block-Level) is missing, the system will not mount the iSCSI LUN (Block-Level) when booting up. If the cache is not recoverable, and you want to access the iSCSI LUN (Block-Level), you can click <b>Force mount</b>.</p>
+
+<div class="section"><h4>Note:</h4>
+<p>This function is only available on certain models.</p>
+</div>
+
+<h4>To edit an iSCSI LUN:</h4>
+<ol>
+	<li>Select the iSCSI LUN you want to edit.</li>
+	<li>Click <b>Edit</b>.</li>
+	<li>Edit the desired properties.</li>
+	<li>Click <b>OK</b> to save the settings.</li>
+</ol>	
+
+<div class="section"><h4>Note:</h4>
+<p>To avoid data loss when editing iSCSI LUN capacity, you can only make it larger than the current size.</p>
+</div>
+
+<h4>To take an iSCSI LUN snapshot:</h4>
+<p>A snapshot of an iSCSI LUN is a point-in-time, read-only copy of an iSCSI LUN.</p>
+<ol>
+	<li>Select the iSCSI LUN of which you want to take snapshots.</li>
+	<li>Click <strong>Snapshot</strong> and choose <strong>Take a Snapshot</strong>.</li>
+	<li>Enter the description for this snapshot.</li>
+	<li>Choose either of the following snapshot types according to your needs:
+		<ul>
+			<li><strong>Application consistent</strong>: This type of snapshot can only be taken when Synology Snapshot Manager is installed on your Windows server or VMware vCenter Server depending on your operating environment to communicate with DSM. When  application-consistent snapshots are triggered on DSM, applications will be notified and flush all the data from memory to the LUN on which the snapshot is taken to guarantee data consistency.</li>
+			<li><strong>Crash consistent</strong>: If no Synology Snapshot Manager is installed on either of your client, you can only capture  crash-consistent snapshots of LUNs. When they are triggered, applications will not be notified to flush the data from memory to the LUN and therefore guarantee no data consistency.</li>
+		</ul>
+	</li>
+	<li>Click <strong>OK</strong>.</li>
+</ol>
+
+<h4>To restore an iSCSI LUN:</h4>
+<p>Select a point-in-time snapshot to restore the data on an iSCSI LUN.</p>
+<ol>
+	<li>Select the iSCSI LUN you want to restore.</li>
+	<li>Click <strong>Snapshot</strong> and choose <strong>Snapshot Manager</strong>.</li>
+	<li>Select a snapshot to which you want to restore and click <strong>Restore</strong>.</li>
+</ol>
+
+<h4>To clone an iSCSI LUN or snapshot:</h4>
+<p>Make a writable copy of an iSCSI LUN or an iSCSI LUN snapshot.</p>
+<ul>
+	<li>Select an iSCSI LUN from the list and click <strong>Clone</strong>.</li>
+	<li>Select an iSCSI LUN snapshot from <strong>Snapshot Manager</strong> and click <strong>Clone</strong>.</li>
+</ul>
+
+<div class="section"><h4>Note:</h4>
+<ul>
+<li>On certain models, you will have to go to <b>Package Center</b> and install <b>Snapshot & Replication</b> for functions including restoring iSCSI LUNs, taking and cloning iSCSI LUN snapshots.</li>
+	<li>If there is at least one connected iSCSI session associated with the LUN and is used by Windows Server or VMware ESXi Server, we recommend installing the <b>Synology Snapshot Manager</b> plug-in to avoid possible data inconsistencies, otherwise you must stop any applications and log off these sessions from the initiators before proceeding.</li>
+	<li>LUN snapshot, restore and clone functions are only available on iSCSI LUNs with advanced LUN features.</li>
+	<li>If you took a snapshot or created a clone, and the status turned out to be <strong>Abnormal</strong>/<strong>Crashed</strong>, please delete this snapshot/clone and create another one.</li>
+	<li>All changes to a LUN after a snapshot was created will be lost when you restore LUN to this snapshot.</li>
+	<li>If the status of an iSCSI LUN changes to <b>Unavailable</b>, it means that some data-related errors occurred while accessing iSCSI LUN. In order to avoid severe data loss on your system, this iSCSI LUN will be temporarily inaccessible. Please contact Synology for support as soon as possible.</li>
+</ul>
+</div>
+
+
+<div class="section"><h4>Glossary:</h4>
+<ul>
+	<li><b>Thin Provisioning</b>: Thin Provisioning is a method for optimizing storage utilization by allocating storage space in a dynamic and on-demand manner. This setting is only available for <b>iSCSI LUN (regular files)</b>.</li>
+	<li><b>VMware VAAI</b>: The VMware vStorage APIs for Array Integration (VAAI) can offload the work of the standard operations on virtual storage arrays to the iSCSI device in the VMware vSphere environment and optimize the storage performance.</li>
+	<li><b>Windows ODX</b>: A new data transfer technology developed by Windows in Windows Server 2012 and 8 called Offload Data Transfer (ODX). ODX improves transfer performance by offloading some of the workload to the storage array.<br />If the data source and destination are located on LUNs located on the same volume, cloning will be processed by Synology Advanced LUN technology which saves up to 99.9% of the storage space consumption and accelerates cloning at the same time.</li>
+	<li><b>iSCSI Target Mapping</b>: Map the iSCSI LUN to one or more iSCSI Targets.</li>
+	<li><b>Synology Snapshot Manager</b>: Synology Snapshot Manager is a software plug-in, allowing you to take application-consistent snapshots directly from DiskStation Manager (DSM).
+		<ul>
+		    <li>For VMware environment, you will need to install Synology Snapshot Manager on the Windows server where VMware vCenter Server is installed. When a snapshot is triggered on DSM, VMware vCenter Server will be notified and flush all the data from memory to the LUN on which the snapshot is taken to guarantee data consistency. Once the snapshot is complete, VMware vCenter Server will resume normal I/O operation of VMware datastore. Synology Snapshot Manager for VMware vCenter Server supports vSphere 5.1 or newer versions.</li>
+		    <li>For Windows environment, you will need to install Synology Snapshot Manager on your Windows server. When a snapshot is triggered on DSM, Synology Snapshot Manager will leverage Microsoft Volume Shadow Copy Service (VSS) technology to produce consistent point-in-time copies of data. Synology Snapshot Manager for Windows supports Windows Server 2008 R2, 2012 and 2012 R2.</li>
+			<li>Synology Snapshot Manager can be downloaded free from <a href="http://www.synology.com/" target="_blank">www.synology.com</a>.</li>
+		</ul>
+	</li>
+</ul>
+</div>
+<p>____<br />*Only available on certain models.</p>
+
+
+</body>
+</html>

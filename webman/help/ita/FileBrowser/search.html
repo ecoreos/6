@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Ricerca di file o cartelle</title>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script> <script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2>Ricerca di file o cartelle</h2>
+<p>Il <strong>Filtro</strong> di File Station consente di cercare e visualizzare i file o le cartelle che soddisfano i criteri necessari. È possibile filtrare i file o le cartelle nella cartella corrente o eseguire una ricerca avanzata in tutte le sottocartelle per ottenere risultati della ricerca più dettagliati.</p>
+
+<h4>Per cercare file o cartelle nella cartella corrente:</h4>
+<ol>
+	<li>Utilizzare File Station per accedere alla cartella con i contenuti da cercare.</li>
+	<li>Nel campo <b>Filtro</b>, nell'angolo in alto a destra, inserire una parola chiave e vedere i risultati filtrati nell'area principale della finestra.</li>
+</ol>
+
+<h4>Per eseguire una ricerca avanzata:</h4>
+<ol>
+	<li>Utilizzare File Station per accedere alla cartella con i contenuti da cercare.</li>
+  <li>Fare clic sull'icona della lente di ingrandimento accanto al campo <b>Filtro</b>, nell'angolo in alto a destra, per aprire il menu di ricerca avanzata.</li>
+	<li>Specificare i criteri di ricerca seguenti oppure sceglierli dai menu a discesa:
+		<ul>
+			<li><b>Parola chiave</b>: inserire una parola chiave per cercare file o cartelle con nomi corrispondenti.
+				<div class="section"><h4>Nota:</h4>
+				<ul>
+					<li>è possibile utilizzare simboli jolly [*] (che indica zero o più caratteri) e [?] (che indica un carattere casuale) nella parola chiave. Ad esempio, [a<span class="note_content">*</span>n] può rappresentare [a<span class="note_content">ctio</span>n], [a<span class="note_content">ttentio</span>n] o [an].</li>
+					<li>È possibile utilizzare gli spazi per separare le parole chiave. Ad esempio, la parola chiave [File Station] porta risultati di ricerca contenenti [File], [Station], o entrambi.</li>
+					<li>È possibile inserire le virgolette ["] all'inizio e alla fine della parola chiave per eseguire la ricerca esatta del termine, con le corrispondenze di maiuscole/minuscole. Ad esempio, [<span class="note_content">"Synology Inc."</span>] rappresenta [<span class="note_content">Synology Inc.</span>], ma non può rappresentare [<span class="note_content">Synology Incorporation</span>].
+					</li>
+					<li class="disable-hi3535">Gli operatori seguenti possono essere usati per ridefinire i risultati di ricerca:
+						<table width="84%" border="1">
+							<tbody>
+								<tr>
+									<th width="147" align="center">Operatore</th>
+									<th width="229" align="center">Esempio</th>
+									<th width="926" align="center">Uso</th>
+								</tr>
+								<tr>
+									<td align="center">&&</td>
+									<td align="center">[X] && [Y]</td>
+									<td><li>Elencare le corrispondenze contenenti entrambi [X] e [Y]</li></td>
+								</tr>
+								<tr>
+									<td align="center">||</td>
+									<td align="center">[X] || [Y]</td>
+									<td>
+										<li>Elencare le corrispondenze contenenti [X], [Y] o entrambi</li>
+										<li>Le corrispondenze contenenti entrambi [X] e [Y] saranno elencate nella parte superiore</li>
+									</td>
+								</tr>
+								<tr>
+									<td align="center">+</td>
+									<td align="center">+[X]</td>
+									<td><li>Elencare le corrispondenze contenenti [X]</li></td>
+								</tr>
+								<tr>
+									<td align="center">-</td>
+									<td align="center">-[X]</td>
+									<td><li>Elencare le corrispondenze non contenenti [X]</li></td>
+								</tr>
+								<tr>
+									<td align="center">!</td>
+									<td align="center">![X]</td>
+									<td><li>Elencare le corrispondenze non contenenti [X]</li></td>
+								</tr>
+								<tr>
+									<td align="center">\</td>
+									<td align="center">\[SpecialCharacter]</td>
+									<td>
+										<li>Caratteri speciali: <span class="note_content">&nbsp; + &nbsp;&nbsp;-&nbsp;&nbsp; &&	&nbsp;&nbsp;|| &nbsp;&nbsp; ! &nbsp;&nbsp; ( &nbsp;&nbsp; ) &nbsp;&nbsp; { &nbsp;&nbsp; } &nbsp;&nbsp; [ &nbsp;&nbsp; ] &nbsp;&nbsp; ^ &nbsp;&nbsp; " &nbsp;&nbsp; ~ &nbsp;&nbsp; * &nbsp;&nbsp; ? &nbsp;&nbsp; : &nbsp;&nbsp;\</span></li>
+										<li>Elencare le corrispondenze contenenti un carattere speciale indicato sopra</li>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</li>
+				</ul>
+				</div>
+			</li>
+			<li class="disable-hi3535"><strong>Abilita ricerca contenuto file</strong>: ricercare i file indicizzati con il contenuto file o i metadati corrispondenti alle parole chiave.</li>
+			<li><b>Posizione</b>: scegliere dal menu a discesa per impostare l'intervallo e la profondità della ricerca avanzata. È anche possibile personalizzare l'ambito della ricerca selezionando qualsiasi altra cartella condivisa elencata.</li>
+			<li><b>Tipo di file</b>: scegliere <b>Estensione</b> per limitare la ricerca a tipi di file specifici oppure scegliere <b>Qualsiasi cartella</b> per ricercare solo le cartelle.</li>
+			<li><strong>Data</strong>: scegliere <b>Data ultima modifica</b>, <b>Data creazione</b> o <strong>Ultimo accesso</strong>, quindi scegliere una data dal calendario per cercare i file con le date corrispondenti.</li>
+			<li><b>Dimensioni (MB)</b>: scegliere tra <b>uguale</b>, <b>è maggiore di</b> e <b>è minore di</b>, quindi inserire una dimensione per cercare i file con dimensioni corrispondenti. (Scegliendo <strong>uguale</strong>, nei risultati della ricerca saranno inclusi anche i file con approssimativamente la stessa dimensione specificata.)</li>
+			<li><b>Proprietario/Gruppo</b>: scegliere <b>Proprietario</b> o <b>Gruppo</b> e quindi scegliere dal menu a discesa i file o le cartelle che appartengono al gruppo o al proprietario selezionato.
+				<div class="section"><h4>Nota:</h4>
+				<ul>
+					<li>Per eseguire la ricerca avanzata, è necessario specificare la <b>Posizione</b> e almeno un altro criterio di ricerca.</li>
+					<li>Se una cartella ISO o una cartella remota viene montata in una cartella condivisa indicizzata, non sarà possibile individuare i file interni attraverso una ricerca avanzata.</li>
+				</ul>
+				</div>
+			</li>
+		</ul>
+	</li>
+	<li>Fare clic su <b>Cerca</b> per avviare la ricerca, oppure fare clic su <b>Reimposta</b> e specificare di nuovo il criterio di ricerca. Al termine della ricerca, i file corrispondenti verranno elencati nell'area principale di File Station.</li>
+</ol>
+
+</body>
+</html>

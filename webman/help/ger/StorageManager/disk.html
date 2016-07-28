@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+	<h2>HDD/SSD</h2>
+	<p>In diesem Abschnitt können Sie den Status der auf dem DiskStation installierten HDD/SSD durch Optionen wie die Verwaltung und Analyse der HDD/SSD-Leistung und deren Zustand überwachen. Gehen Sie zu <strong>Speicher-Manager</strong> > <strong>HDD/SSD</strong>, um diese Optionen zu verwalten.</p>
+
+	<h4>So werden HDD/SSD-Infos überprüft:</h4>
+	<ol>
+		<li>Wechseln Sie zur Registerkarte <b>HDD/SSD</b>.</li>
+		<li>Wählen Sie ein Laufwerk aus der Liste aus und erweitern Sie es. Hier werden S.M.A.R.T.-Status, Volume-Info, Modellbezeichnung, Seriennummer, Firmware-Version und die Temperatur angezeigt.</li>
+	</ol>	
+	
+	<h4>So werden Informationen zum Integritätsstatus überprüft:</h4>
+    <ol>
+      <li>Wechseln Sie zur Registerkarte <b>HDD/SSD</b>.</li>
+	  <li>Wählen Sie ein Laufwerk.</li>
+      <li>Klicken Sie auf <b>Integritätsstatus</b>.</li>
+	  <li>Gehen Sie zur Registerkarte <strong>Überblick</strong>. Hier erfahren Sie, wie viele Stunden das Laufwerk eingeschaltet war, die aktuelle Temperatur, Anzahl der neuen Verbindungen/der erneuten Identifikationen, die fehlerhafte Sektorenanzahl und den gesamte S.M.A.R.T.-Status.</li>
+      <li>Gehen Sie zur Registerkarte <strong>S.M.A.R.T.-Informationen</strong>. Die aufgelisteten Zahlen können Ihnen bei der Diagnose Ihres Laufwerksstatus helfen.</li>
+    </ol>
+
+<div class="section">
+<h4>Hinweis:</h4>
+<p>
+   SAS-Festplatten unterstützen keine S.M.A.R.T. Info.
+</p>
+</div>
+
+	<h4>S.M.A.R.T.-Test starten:</h4>
+	<P>Mit dem S.M.A.R.T.-Test können Sie den Status Ihrer Festplatten untersuchen und ausgeben, sodass Sie auf mögliche Festplattenfehler hingewiesen werden. Wir empfehlen den umgehenden Austausch der Festplatten, wenn Fehler erkannt werden. </P>
+    <ol>
+      <li>Wechseln Sie zur Registerkarte <strong>HDD/SSD</strong>.</li>
+      <li>Wählen Sie ein Laufwerk.</li>
+      <li>Klicken Sie auf <b>S.M.A.R.T.-Test</b>.</li>
+      <li>Wählen Sie einen Testtyp und klicken Sie auf <strong>Start</strong>, um mit dem Test zu beginnen.</li>
+      <li>Die letzten Testergebnisse werden im Abschnitt <b>Testergebnis</b> angezeigt.</li>
+    </ol>
+    <div class="section">
+<h4>Hinweis:</h4>
+    <p>Die Testdauer hängt von der Systemumgebung ab.</p>
+</div>
+    <h4>S.M.A.R.T.-Tests planen:</h4>
+    <p>S.M.A.R.T. Tests können über das Erstellen von Aufgaben für eine automatische Ausführung geplant werden.</p>
+    <ol>
+      <li>Gehen Sie zur Registerkarte <strong>Test-Zeitplaner</strong>.</li>
+      <li>Klicken Sie auf <strong>Erstellen</strong>, um eine neue Aufgabe einzurichten.</li>
+      <li>Auf der Registerkarte <strong>Allgemein</strong> können Sie die folgenden Einstellungen ändern:</li>
+      <ul>
+        <li><strong>Aufgabe:</strong> Geben Sie einen Namen für die Aufgabe ein.</li>
+        <li><strong>S.M.A.R.T. Test Typ:</strong> Wählen Sie aus, ob ein Schnelltest oder erweiterter Test durchgeführt werden soll.</li>
+        <li><strong>S.M.A.R.T. Test Bereich:</strong> Wählen Sie aus, welche HDD/SSD bei jeder Ausführung des S.M.A.R.T.-Tests überprüft werden soll.</li>
+      </ul>
+      <li>Auf der Registerkarte <strong>Zeitplan</strong> können Sie die folgenden Einstellungen ändern:</li>
+      <ul>
+        <li><strong>Datum:</strong> Geben Sie an, wann die S.M.A.R.T. Tests durchgeführt werden sollen. S.M.A.R.T. Tests können an bestimmten Tagen der Woche (z.B. täglich, am Wochenende, jeden Sonntag usw.) oder an bestimmten Daten (z.B. 21.10.2015) ausgeführt werden.</li>
+        <li><strong>Zeit:</strong> Geben Sie, wie oft der S.M.A.R.T. Test durchgeführt werden soll, sowie die das erste und letzte Mal für jeden Tag.</li>
+      </ul>
+      <li>Klicken Sie zum Beenden auf <strong>OK</strong>.</li>
+    </ol>
+
+<h4>Secure Erase ausführen:</h4>
+<ol>
+<li>Wechseln Sie zur Registerkarte <b>HDD/SSD</b>.</li>
+<li>Wählen Sie ein Laufwerk, und klicken Sie auf <b>Secure Erase</b>.</li>
+</ol>
+
+
+<div class="section">
+<h4>Hinweis:</h4>
+<ul>
+<li>"Secure Erase" kann auf Festplatten in Expansionseinheiten nicht durchgeführt werden.</li>
+<li>"Secure Erase" wird alle Daten auf Ihrem Laufwerk komplett löschen. Stellen Sie bitte sicher, dass das gewählte Laufwerk nicht in Betrieb ist oder die Daten gesichert wurden, bevor Sie fortfahren.</li>
+<li>Wenn das System "Secure Erase" durchführt, wird das gewählte Laufwerk vorübergehend gesperrt und dann automatisch entsperrt, wenn der Vorgang abgeschlossen ist.</li>
+<li>Wenn "Secure Erase" während der Operation unsachgemäß angehalten wurde, können Sie "Secure Erase" direkt auf der Benutzeroberfläche erneut ausführen. Wenn die Laufwerke entfernt oder anderweitig verwendet werden, wenn diese noch gesperrt sind, dann geben Sie das Kennwort "Synology" ein, um die Laufwerke zu entsperren.</li>
+</ul>
+</div>
+
+
+	<h3>Schreibcache-Unterstützung für HDD aktivieren</h3>
+	<p>Die Aktivierung der Schreibcache-Unterstützung verbessert die Leistung des DiskStation. Nur bestimmte HDD-Modelle unterstützen diese Funktion. Um den Datenschutz bei Verwendung der Schreibcache-Unterstützung zu gewährleisten, sollte unbedingt ein USV-Gerät verwendet werden. Wir empfehlen zudem, das System jedes Mal nach der Verwendung ordnungsgemäß herunterzufahren. Bei Deaktivierung des Schreibcaches ist das Risiko des Datenverlustes durch Stromausfall geringer, doch verringert sich auch die Systemleistung.</p>
+
+	<h4>So wird die Schreibcache-Unterstützung aktiviert: </h4>
+	<ol>
+		<li>Gehen Sie zur Registerkarte <b>Cache-Management</b>.</li>
+		<li>Markieren Sie <b>Schreibcache aktivieren</b>. Diese Funktion ist durch die Standardeinstellung aktiviert.</li>
+		<li>Klicken Sie auf <b>Übernehmen</b>.</li>
+	</ol>
+	
+
+
+
+</body>
+</html>

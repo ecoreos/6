@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Param&egrave;tres utilisateur avanc&eacute;s</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Param&egrave;tres utilisateur avanc&eacute;s</h2>
+
+<p>Pour modifier les param&egrave;tres utilisateur avanc&eacute;s, vous pouvez aller dans <strong>Panneau de configuration</strong> &gt; <strong>Utilisateur</strong> &gt; <strong>Avanc&eacute;</strong>. Les options ci-dessous sont disponibles. </p>
+
+<h3>Autoriser les utilisateurs &agrave; r&eacute;initialiser les mots de passe oubli&eacute;s</h3>
+<p>Si vous d&eacute;sirez permettre aux utilisateurs de r&eacute;initialiser les mots de passe oubli&eacute;s, vous pouvez activer <strong>Autoriser les utilisateurs non-admin &agrave; r&eacute;initialiser les mots de passe oubli&eacute;s via email</strong>. Lorsque cette option est activ&eacute;e, un lien marqu&eacute; <strong>Mot de passe oubli&eacute; ?</strong>  appara&icirc;t sur la page de connexion DSM. Si un utilisateur oublie son mot de passe, il peut cliquer sur ce lien et saisir son nom d&apos;utilisateur. Dans ce cas, le syst&egrave;me enverra un message &agrave; l&apos;utilisateur contenant un lien permettant de r&eacute;initialiser son mot de passe oubli&eacute;. </p>
+
+<div class="section">
+<h4>Remarque&nbsp;:</h4>
+<ul>
+<li>Avant d&apos;activer cette option, assurez-vous que vous avez d&eacute;j&agrave; activ&eacute; les notifications SMTP par email. Pour ce faire, allez dans <strong>Panneau de configuration</strong> &gt; <strong>Notifications</strong>.</li>
+<li>Pour recevoir des messages syst&egrave;me, les utilisateurs doivent fournir une adresse email dans la section informations concernant l&apos;utilisateur de leurs comptes.</li>
+<li>Les utilisateurs appartenant au groupe <strong>administrators</strong> ne peuvent pas r&eacute;initialiser leur mot de passe &agrave; l&apos;aide de cette option.</li>
+<li>Les utilisateurs du domaine ne peuvent pas r&eacute;initialiser leur mot de passe &agrave; l&apos;aide de cette option.</li>
+<li>Les utilisateurs LDAP peuvent r&eacute;initialiser leurs mots de passe &agrave; l&apos;aide de cette option, tant que le DiskStation sert de directory server LDAP.</li>
+
+</ul>
+</div>
+
+
+<h3>Force du mot de passe</h3>
+<p>Vous pouvez d&eacute;finir des r&egrave;gles de force du mot de passe pour les utilisateurs sur votre DiskStation.</p>
+
+<div class="section">
+<h4>Remarque&nbsp;:</h4>
+<p>Les r&egrave;gles de force du mot de passe ne s&apos;appliquent qu&apos;aux nouveaux mots de passe. Par exemple, les nouvelles r&egrave;gles de force du mot de passe ne s&apos;appliquent que lors de la cr&eacute;ation d&apos;un nouveau compte utilisateur ou lorsqu&apos;un utilisateur existant change son mot de passe. Les mots de passe existants et ceux appartenant aux comptes utilisateurs import&eacute;s sont exclus des nouvelles r&egrave;gles de mot de passe.</p>
+</div>
+<h4>Pour appliquer les r&egrave;gles de force du mot de passe&nbsp;:</h4>
+<ol>
+<li>Cochez la case  <b>Appliquer les r&egrave;gles de force de mot de passe</b> pour activer les restrictions sur les mots de passe.</li>
+<li>S&eacute;lectionnez plus d&apos;une restriction de mot de passe dans les r&egrave;gles ci-dessous&nbsp;:</li>
+<ul>
+<li><b>Exclure du mot de passe le nom et la description de l&rsquo;utilisateur</b>&nbsp;: Le mot de passe ne doit pas contenir le nom de l&apos;utilisateur ou la description de l&apos;utilisateur. Mais les caract&egrave;res cod&eacute;s en UTF-8 sont exclus.</li>
+<li><b>Inclut le m&eacute;lange majuscule/minuscule</b>: Le mot de passe doit contenir des lettres majuscules et des lettres minuscules.</li>
+<li><b>Inclure les caract&egrave;res num&eacute;riques</b>: Le mot de passe doit contenir au moins un caract&egrave;re num&eacute;rique (0 &agrave; 9).</li>
+<li><b>Inclure les caract&egrave;res sp&eacute;ciaux</b>: Le mot de passe doit contenir au moins un caract&egrave;re ASCII sp&eacute;cial (c.-&agrave;-d., ~, `, !, @, #, $, %, ^, &amp;, *, (, ), -, _, =, +, [, {, ], }, \, |, ;, :, &apos;, &quot;, <, >, /, ?).</li>
+<li><b>Longueur minimale du mot de passe</b>: La longueur du mot de passe doit &ecirc;tre sup&eacute;rieure ou &eacute;gale &agrave; la valeur sp&eacute;cifi&eacute;e dans le champ texte. La longueur doit &ecirc;tre un nombre compris entre 6 et 127.</li>
+</ul>
+<li>Cliquez sur <b>Appliquer</b> pour enregistrer les param&egrave;tres.</li>
+</ol><h3>V&eacute;rification en 2 &eacute;tapes</h3>
+<p>La v&eacute;rification en 2 &eacute;tapes fournit une s&eacute;curit&eacute; am&eacute;lior&eacute;e pour vos comptes utilisateur DSM. Vous pouvez forcer les administrators DSM ou tous les utilisateurs DSM &agrave; activer leur v&eacute;rification en 2 &eacute;tapes afin de prot&eacute;ger davantage leurs comptes.</p>
+
+<h4>Pour renforcer la v&eacute;rification en 2 &eacute;tapes pour les utilisateurs DSM :</h4>
+
+<ol>
+<li>Cochez la case <strong>Renforcer la v&eacute;rification en 2 &eacute;tapes pour les utilisateurs suivants</strong> et s&eacute;lectionnez &agrave; quels utilisateurs vous souhaitez l&apos;appliquer.</li>
+<div class="section">
+<h4>Remarque&nbsp;:</h4>
+<p>Si vous n&apos;avez pas encore configur&eacute; la v&eacute;rification en 2 &eacute;tapes, allez dans <b>Perso.</b> &gt; <b>Compte</b>, l&apos;assistant de configuration de la v&eacute;rification en 2 &eacute;tapes sera lanc&eacute; pour vous aider &agrave; terminer les param&egrave;tres demand&eacute;s avant que vous appliquiez ce renforcement.</p>
+</div>
+
+<li>Avec ce renforcement appliqu&eacute;, il sera demand&eacute; aux utilisateurs qui n&apos;ont pas activ&eacute; leur v&eacute;rification en 2 &eacute;tapes de finir leurs param&egrave;tres avant qu&apos;ils ne s&apos;identifient dans DSM.  </li>
+</ol>
+
+<div class="section">
+<h4>Remarque&nbsp;:</h4>
+<p>La d&eacute;sactivation du renforcement de la v&eacute;rification en 2 &eacute;tapes ici n&apos;affectera pas ou ne d&eacute;sactivera pas les param&egrave;tres de v&eacute;rification en 2 &eacute;tapes de chaque utilisateur.  Les utilisateurs peuvent garder leurs param&egrave;tres de la v&eacute;rification en 2 &eacute;tapes ou allez dans <b>Perso.</b> &gt; <b>Compte</b> pour d&eacute;sactiver ces param&egrave;tres.</p>
+</div><h3>Accueil utilisateur</h3>
+
+<p>Activez la fonction accueil utilisateur pour cr&eacute;er un dossier d&apos; <b>home</b> personnel pour chaque utilisateur except&eacute; <b>guest</b>. Tous les utilisateurs peuvent acc&eacute;der &agrave; leurs propres dossiers personnalis&eacute;s via CIFS, AFP, FTP ou File Station.</p>
+<p>Les utilisateurs appartenant au groupe des <strong>administrators</strong> peuvent acc&eacute;der &agrave; tous les dossiers personnels du dossier partag&eacute; par d&eacute;faut <b>homes</b>. Le nom du dossier d&apos;accueil est le m&ecirc;me que le compte utilisateur.</p>
+
+<h4>Pour activer le service d&rsquo;accueil de l&rsquo;utilisateur :</h4>
+<ol>
+<li>Cochez <b>Activer le service d&rsquo;accueil de l&rsquo;utilisateur</b>.</li>
+<li>S&apos;il y a plus d&apos;un volume, s&eacute;lectionnez le volume o&ugrave; vous voulez stocker le dossier <b>homes</b>.</li>
+<li>Cliquez sur <b>Appliquer</b>.</li>
+</ol>
+
+<div class="section">
+<h4>Remarque&nbsp;:</h4>
+<p>Une fois le service d&apos;accueil de l&apos;utilisateur local d&eacute;sactiv&eacute;, le service d&apos;accueil de l&apos;utilisateur du domaine sera &eacute;galement d&eacute;sactiv&eacute; parall&egrave;lement.</p>
+</div>
+
+<h4>Pour d&eacute;sactiver le service d&rsquo;accueil de l&rsquo;utilisateur&nbsp;:</h4>
+<ol>
+<li>D&eacute;cochez <b>Activer le service d&rsquo;accueil de l&rsquo;utilisateur</b>.</li>
+<li>Cliquez sur <b>Appliquer</b>.</li>
+</ol>
+<p>Apr&egrave;s la d&eacute;sactivation du service d&apos;accueil de l&apos;utilisateur, l&apos;acc&egrave;s au dossier partag&eacute; <b>homes</b> sera r&eacute;serv&eacute; &agrave; admin.  Les utilisateurs pourront &agrave; nouveau acc&eacute;der &agrave; leurs dossiers d&apos;accueil quand le service d&apos;accueil utilisateur sera r&eacute;activ&eacute;.</p>
+
+<div class="section">
+<h4>Remarque&nbsp;:</h4>
+<ol>
+<li>Pour supprimer le dossier partag&eacute; <b><b>homes</b></b>, le service d&apos;accueil de l&apos;utilisateur doit d&apos;abord &ecirc;tre d&eacute;sactiv&eacute;.</li>
+<li>Le service d&apos;accueil de l&apos;utilisateur du domaine sera d&eacute;sactiv&eacute; si le service d&apos;accueil de l&apos;utilisateur est d&eacute;sactiv&eacute;.</li> 
+</ol> 
+</div>
+
+
+</body>	
+</html> 

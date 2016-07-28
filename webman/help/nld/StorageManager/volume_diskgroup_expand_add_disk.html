@@ -1,0 +1,84 @@
+ <!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Een harde schijf toevoegen aan een volume of schijfgroep - Synology DSM Help</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="This article walks you through the steps to add an additional hard drive to an existing volume or disk group on your DiskStation.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script> <script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Een harde schijf toevoegen voor meer opslagcapaciteit</h2>
+
+<p>Zijn er lege harde schijfladen op uw DiskStation, dan kunt u extra harde schijven installeren en toevoegen aan een bestaand volume of een bestaande schijfgroep. Dit artikel beschrijft de uitbreiding van een bestaand volume of een bestaande schijfgroep door installatie van extra harde schijven.</p>
+
+<h3>Voor u begint</h3>
+
+<p>Controleer voor u begint of de harde schijven die u wilt toevoegen voldoen aan de volgende capaciteitsvereisten:</p>
+<ul>
+  <li><strong>Voor SHR:</strong> De capaciteit van de harde schijf die u wilt toevoegen moet groter of gelijk zijn aan de grootste harde schijf op het volume of de schijfgroep, of gelijk zijn aan de grootte van één van de harde schijven in het volume of de schijfgroep. Als uw SHR-volume bijvoorbeeld uit drie harde schijven bestaat, 2 TB, 1,5 TB en 1 TB, moet de capaciteit van de nieuwe harde schijf minstens 2 TB of gelijk aan 1,5 TB of 1 TB zijn.</li>
+  <li><strong>Voor RAID 5 en RAID 6:</strong> de capaciteit van de harde schijf die u wilt toevoegen moet gelijk zijn aan of groter dan de kleinste harde schijf van het volume of de schijfgroep. Als uw volume bijvoorbeeld uit drie harde schijven bestaat, 2 TB, 1,5 TB en 1 TB, moet de capaciteit van de nieuwe harde schijf minstens 1 TB zijn.</li>
+</ul>
+
+<div class="section">
+<h4>Volumestatus controleren</h4>
+
+<p>Controleer of de status van uw volume of schijfgroep op <strong>Normaal</strong> staat. Zo niet, moet u dit eerst herstellen.</p>
+</div>
+
+
+<h3>  Een harde schijf toevoegen aan een volume of schijfgroep</h3>
+
+<p>Aan de volgende RAID-types kunt u harde schijven toevoegen: </p>
+
+<ul>
+<li>Synology Hybrid RAID (SHR)</li>
+<li>JBOD</li>
+<li>RAID 5</li>
+<li>RAID 6</li>
+</ul>
+
+<div class="section">
+<h4>Opmerking:</h4>
+<p>de opslagcapaciteit van SHR-volumes is alleen uit te breiden door harde schijven toe te voegen aan een volume met twee of meer harde schijven.</p>
+</ul>
+</div>
+
+<h4>Een harde schijf toevoegen aan een volume of schijfgroep:</h4>
+
+<ol>
+<li>Zet uw DiskStation uit. (Sla deze stap over als uw DiskStation hot-swapping ondersteunt).</li>
+<li>Plaats een nieuwe harde schijf in een lege lade voor harde schijven.</li>
+
+<div class="section">
+<h4>Opmerking:</h4>
+<p>om uzelf niet te kwetsen of uw DiskStation niet te beschadigen, moet u de installatie-instructies van harde schijven in de <i>Snelinstallatiegids</i> van uw Synology-product volgen.</p>
+</div>
+
+<li>Zet uw DiskStation aan.</li>
+<li>Meld u bij DSM aan met een account van de groep <strong>administrators</strong>.</li>
+<li>Open <strong>Opslagbeheer</strong>.</li>
+<img src="about:blank" class="help_image"/>
+
+<li>Ga nu als volgt te werk:</li>
+  <ul class="list_abc">
+    
+  <li>Wilt u een enkel volume uitbreiden, ga dan naar het tabblad <strong>Volume</strong>. Selecteer het volume dat u wilt uitbreiden. Klik op <strong>Beheren</strong> en ga verder met de volgende stap. </li>
+<img src="about:blank" class="help_image"/>
+    
+  <li>Wilt u een schijfgroep uitbreiden, ga dan naar het tabblad <strong>Schijfgroep</strong>. Selecteer de schijfgroep die u wilt uitbreiden. Klik op <strong>Beheren</strong> en ga verder met de volgende stap.</li>
+<img src="about:blank" class="help_image"/>
+  </ul>
+<li>Selecteer <strong>Het volume (of de schijfgroep) uitbreiden door harde schijven toe te voegen</strong>. Klik vervolgens op <strong>Volgende</strong>.</li>
+<img src="about:blank" class="help_image"/>
+<li>Selecteer de harde schijven waarmee u het volume of de schijfgroep wilt uitbreiden. U kunt de harde schijven selecteren door de bijhorende selectievakjes in te schakelen. Klik vervolgens op <strong>Volgende</strong>.</li>
+<img src="about:blank" class="help_image"/>
+<li>Volg de stappen van de wizard om de installatie te voltooien.</li>
+</ol>
+</body>
+</html>

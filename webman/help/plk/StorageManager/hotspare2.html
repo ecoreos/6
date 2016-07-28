@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+	<h2>Hot Spare</h2>
+	<p>Dyski Hot Spare są dyskami oczekującymi w gotowości, które umożliwiają naprawę zdegradowanej grupy macierzy RAID Group, automatycznie zastępując dysk, który uległ awarii. Dyski Hot Spare mogą być globalnie przypisane do naprawy dowolnej grupy RAID Group w urządzeniu DiskStation. Dysk Hot Spare umożliwia naprawę tylko takich grup RAID Group, które spełniają następujące kryteria:</p>
+	<ul>
+  <li>Typ RAID grupy RAID Group musi być typem z ochroną danych (tj. RAID 1, RAID 5, RAID 6, RAID 10).</li>
+		<li>Typ dysku twardego Hot Spare musi być zgodny z typem dysków należących do grupy RAID Group (np. SATA, SAS).</li>
+		<li>Pojemność dysku Hot Spare musi być co najmniej równa pojemności najmniejszego dysku w grupie RAID Group.</li>
+	</ul>
+
+	<h4>Aby zarządzać dyskami Hot Spare:</h4>
+	<ol>
+		<li>Kliknij przycisk <b>Zarządzaj</b>.</li>
+		<li>Aby przypisać dysk Hot Spare, znajdź sekcję <b>Dostępne dyski</b> po prawej stronie, a następnie zaznacz pole obok dysku, który ma być przypisany jako dysk Hot Spare. Aby usunąć dysk Hot Spare, usuń zaznaczenie pola. Kliknij przycisk <b>Zastosuj</b>, aby zapisać ustawienia.</li>
+	</ol>
+	<p>
+<div class="section">
+<h4>Uwaga:</h4> 
+<ul>
+<li>Gdy dysk Hot Spare jest używany do naprawy zdegradowanej grupy RAID Group, wszystkie dane na dysku Hot Spare zostaną usunięte. Przed przypisaniem dysku Hot Spare należy upewnić się, że nie zawiera on żadnych ważnych danych.</li>
+<li>Dysk RAID zamontowany przez dyski HDD nie zostanie automatycznie naprawiony przez dyski SSD Hot Spare i odwrotnie.</li>
+</ul>
+</div>
+
+<h4>Aby skonfigurować ustawienia Hot Spare dla grupy RAID Group:</h4>
+<ol>
+<li>Kliknij <b>Konfiguruj</b>.</li>
+<li>W zakładce <b>Cele Hot Spare</b> zostaną wyświetlone grupy RAID Group, które mogą być chronione przez dyski Hot Spare. Jeśli usuniesz zaznaczenie z pól, odpowiednie grupy RAID Group nie zostaną automatycznie naprawione przez dyski Hot Spare po ich zdegradowaniu.</li>
+<li>W zakładce <b>Kopia Hot Spare dla innych urządzeń</b> możesz zezwolić dyskom Hot Spare znajdującym się na jednym urządzeniu na naprawienie zdegradowanego RAID, który znajduje się na innym urządzeniu.</li>
+<li>Kliknij <b>OK</b>, aby zapisać ustawienia.</li>
+</ol>
+
+</body>
+</html>

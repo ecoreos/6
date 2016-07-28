@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Skupina</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Úprava skupiny</h2>
+<p>Můžete upravit informace o skupině a přístupová oprávnění ke sdíleným složkám.</p>
+<h4>Postup úpravy informací o skupině:</h4>
+<ol>
+<li>Vyberte skupinu, kterou chcete upravit.</li>
+<li>Klikněte na možnost <b>Upravit</b> a upravte informace o skupině.</li>
+<li>Postup dokončíte kliknutím na možnost <b>OK</b>.</li>
+</ol>
+<h4>Postup úpravy přístupových práv skupiny ke sdíleným složkám:</h4>
+<ol>
+<li>Vyberte skupinu, kterou chcete upravit.</li>
+<li>Klikněte na možnost <b>Upravit</b> a <b>Oprávnění</b>.</li>
+<li>Zaškrtněte nebo zrušte zaškrtnutí následujících oprávnění a zadejte přístupová oprávnění skupiny:</li>
+<ol>
+<li><b>Čtení/zápis</b>: Skupina bude mít přístup ke sdílené složce a může provádět změny.</li>
+<li><b>Jen pro čtení</b>: Skupina bude mít přístup ke sdílené složce, ale nemůže provádět změny.</li>
+<li><b>Žádný přístup</b>: Skupina nebude mít ke sdílené složce žádný přístup.</li>
+</ol>
+<li>Postup dokončíte kliknutím na možnost <b>OK</b>.</li>
+</ol>
+
+<div class="section">
+<h4>Poznámka:</h4>
+<p>V případě konfliktu oprávnění je priorita oprávnění následující: Žádný přístup > Čtení/zápis > Jen pro čtení.</p>
+</div>
+
+
+<h4 class="disable-dockerx64">Úprava kvóty používání skupiny:</h4>
+<ol class="disable-dockerx64">
+<li class="disable-dockerx64">Vyberte skupinu, kterou chcete upravit.</li>
+<li class="disable-dockerx64">Přejděte do části <strong>Upravit</strong> a přejděte na kartu <strong>Kvóta</strong>.</li>
+<li class="disable-dockerx64">U každého svazku<span style="display: inline;" class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64">/sdíleného adresáře</span> zaškrtněte políčko po možností <strong>Povolit kvótu</strong>. Do pole <strong>Kvóta</strong> poté zadejte kvótu používání (např. 10 GB).</li>
+</ol>
+<div class="section disable-eds14 disable-dockerx64">
+<h4>Poznámka:</h4>
+<ul>
+<li>Každý člen skupiny přebírá stanovenou kvótu používání skupiny. Kvóta používání skupiny není sdílena mezi všemi členy skupiny.</li>
+<li>Maximální kvóta využití úložiště, kterou lze zadat pro jednotlivé skupiny, činí přibližně 4 TB (4095 GB).</li>
+</ul>
+</div>
+
+
+<h4>Postup úpravy přístupových oprávnění skupiny k aplikacím:</h4>
+<ol>
+<li>Vyberte skupinu, kterou chcete upravit.</li>
+<li>Přejděte do části <b>Upravit</b> a přejděte na kartu <strong>Aplikace</strong>.</li>
+<li>Pro jednotlivé služby můžete vybrat jednu z následujících možností:<ul>
+<li><strong>Povolit:</strong> Skupina bude mít přístup k aplikaci.</li>
+<li><strong>Odepřít:</strong> Skupina nebude mít k aplikaci žádný přístup.</li>
+<li><strong>Vlastní:</strong> Provádějte správu oprávnění přístupu podle IP adresy.</li>
+</ul>
+</li>
+<li>Postup dokončíte kliknutím na možnost <b>OK</b>.</li>
+</ol>
+
+<div class="section">
+<h4>Poznámka:</h4>
+<ul>
+<li>V případě konfliktu oprávnění je priorita oprávnění následující: Odepřít > Povolit.</li>
+<li>Ne všechny balíčky a služby podporují nastavení oprávnění přístupu <strong>Podle IP</strong>.</li>
+</ul>
+</div>
+
+<h4>Úprava omezení rychlosti skupiny:</h4>
+<p>Povolením omezení rychlosti skupiny pro různé služby (např. File Station, FTP atd.) můžete omezit zatížení šířky pásma, které využívají členové skupiny při přenosu souborů prostřednictvím jednotlivých služeb. Jednotlivá omezení rychlosti sdílejí všichni členové skupiny.</p>
+<ol>
+<li>Vyberte skupinu, kterou chcete upravit.</li>
+<li>Klikněte na možnost <b>Upravit</b> a přejděte na kartu <strong>Omezení rychlosti</strong>.</li>
+<li>Pro jednotlivé služby můžete vybrat jednu z následujících možností:<ul>
+<li><strong>Žádné:</strong> Při přenosu souborů pomocí této služby nebude uplatněno žádné omezení rychlosti.</li>
+<li><strong>Konstantní:</strong> Pro členy skupiny bude uplatněno pevné, konstantní omezení rychlosti. Omezení rychlosti odesílání a stahování lze zadat do polí vlevo.</li>
+<li><strong>Variabilní:</strong> Pro členy skupiny lze zadat a uplatnit dva typy omezení rychlosti podle plánu. Kliknutím na tlačítko <strong>Přizpůsobit</strong> změníte nastavení omezení rychlosti a plánu.</li>
+</ul>
+</li>
+<li>Postup dokončíte kliknutím na možnost <b>OK</b>.</li>
+</ol>
+
+<div class="section">
+<h4>Omezení rychlosti uživatelů z různých skupin</h4>
+
+<p>Pokud je uživatel součástí různých skupin, je omezení rychlosti podmíněno skupinou s největší šířkou pásma při přenosu souborů. Z důvodu rovnoměrného rozdělení šířky pásma mezi uživateli, kteří nyní provádí přenos souborů, jsou změny šířky pásma prováděny v závislosti na tom, kolik uživatelů aktuálně využívá sdílenou šířku pásma skupiny.</p>
+
+<p>Uživatel „John“ může být například členem skupiny „Group 1“ (omezení rychlosti 500 kB/s; celkem pět uživatelů) a skupiny „Group 2“ (omezení rychlosti 400 kB/s; celkem dva uživatelé).</p>
+<ul>
+<li>Pokud uživatelé skupiny Group 1 a Group 2 provádí ve stejnou dobu přenos souborů, bude omezení rychlosti uživatele John stanoveno hodnotou 200 kB/s a využití šířky pásma bude připočteno ke kvótě šířky pásma skupiny Group 2.</li>
+<li>Jakmile ostatní uživatelé skupiny Group 1 dokončí přenos souborů, bude omezení rychlosti uživatele John změněno na hodnotu 500 kB/s a využití šířky pásma bude připočteno ke kvótě šířky pásma skupiny Group 1.</li>
+</ul>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+	<h2>Visi&oacute;n general</h2>
+	<p>La secci&oacute;n Visi&oacute;n general muestra el estado general de sus espacios de almacenamiento, incluyendo el estado general de todos los espacios, la utilizaci&oacute;n de los discos duros, el uso de volumen m&aacute;ximo y el uso de iSCSI LUN.</p>
+
+		<h4>Estado del almacenamiento</h4>
+        <p>Hay tres tipos de estados:</p>
+	  	<ul>
+				<li><b>En buen estado</b>: todos los espacios de almacenamiento son Normales.</li>
+				<li><B>Atenci&oacute;n</B>: un espacio de almacenamiento (volumen o iSCSI LUN) se ha degradado, la SSD de cach&eacute; se ha averiado o una partici&oacute;n del sistema ha fallado.</li>
+				<li><b>Peligro</b>: se ha averiado un espacio de almacenamiento (volumen o iSCSI LUN).</li>
+			</ul>
+			<p>Si se producen varios problemas al mismo tiempo, el estado se mostrar&aacute; en el orden siguiente: 1) Espacios de almacenamiento (volumen o iSCSI LUN); 2) SSD de cach&eacute;; y 3) partici&oacute;n del sistema. Si se produce un problema, siga las instrucciones que se indican debajo del estado.</p>
+		
+		<h4>Informaci&oacute;n del disco</h4>
+        <p>En esta secci&oacute;n se muestra la informaci&oacute;n del disco duro y del hardware. Puede consultar cu&aacute;ntos discos duros est&aacute;n utilizando los espacios de almacenamiento, el n&uacute;mero de discos duros de recambio y el n&uacute;mero de ranuras de disco duro disponibles.</p>
+        
+		<h4>Uso de volumen m&aacute;ximo</h4>
+        <p>En esta secci&oacute;n se muestra la capacidad usada en un volumen. Si el uso total alcanza el 90%, el gr&aacute;fico de sectores se pondr&aacute; rojo; si alcanza el 80%, se pondr&aacute; amarillo; y si est&aacute; por debajo del 79% se mantendr&aacute; azul.</p>
+        
+		<h4>Uso de iSCSI LUN</h4>
+        <p>En esta secci&oacute;n se muestra la siguiente informaci&oacute;n:</p>
+        <ul>
+         		<li><b>Notificado</b>:  suma de la capacidad total asignada de todos los iSCSI LUN (nivel de bloques) e iSCSI LUN (archivos normales) del DiskStation.</li>
+                <li><b>Usado</b>: suma de la capacidad total asignada en iSCSI LUN (archivos regulares) y la capacidad total en iSCSI LUN (nivel de bloques).</li>
+                <li><b>Guardado</b>:  el tama&ntilde;o total <b>Notificado</b> menos el tama&ntilde;o total <b>Usado</b>, mostrando la cantidad ahorrada en costes de adquisici&oacute;n y gesti&oacute;n de espacio de almacenamiento.</li>
+</ul>
+        </li>
+</body>
+</html>

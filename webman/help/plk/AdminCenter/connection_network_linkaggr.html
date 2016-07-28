@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Sieć</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2><a name="link_aggr"></a>Link Aggregation*</h2>
+<p>DiskStation obsługuje wiele sieci LAN, co pozwala na łączenie interfejsów LAN przy użyciu funkcji Link Aggregation. Pozwala ona zwiększyć przepustowość serwera DiskStation przez połączenie wielu interfejsów sieciowych w jeden. Zapewnia również mechanizm przełączania awaryjnego ruchu w celu utrzymania połączenia sieciowego w razie awarii jednego z połączeń.</p>
+<p>Po połączeniu interfejsów LAN pojawi się nowy interfejs o nazwie <b>Bond</b> na liście <b>Panel sterowania</b> > <b>Sieć</b> > <b>Interfejs sieciowy</b>, który można konfigurować tak jak inne interfejsy (na przykład LAN lub PPPoE).</p>
+
+
+<div class="section">
+<h4>Uwaga:</h4>
+<ul>
+<li>Po włączeniu funkcji Link Aggregation ruch sieciowy będzie automatycznie regulowany i równoważony między połączonymi urządzeniami.</li>
+<li>Jeżeli interfejsy sieciowe są połączone z wieloma przełącznikami, sprawdź, czy porty przełączników są w tej samej sieci LAN lub VLAN.</li>
+</ul>
+</div>
+
+
+<h4>Aby połączyć wiele sieci LAN przy użyciu funkcji Link Aggregation:</h4>
+<ol>
+<li>Przejdź do pozycji <strong>Panel sterowania</strong> > <strong>Sieć</strong> > <strong>Interfejs sieciowy</strong>. Kliknij <strong>Utwórz</strong> > <strong>Utwórz Bond</strong>.</li>
+
+<img src="about:blank" class="help_image"/>
+
+<li>Wybierz żądany tryb.<div class="section">
+<h4>Opisy trybu:</h4>
+<ul>
+<li><strong>Adaptive Load Balancing</strong>: w tym trybie optymalizowany jest ruch sieciowy odbierany i wysyłany przez urządzenie DiskStation bez względu na to, czy przełącznik obsługuje funkcję Link Aggregation. Aby uniknąć nieoczekiwanych błędów, nie włączaj funkcji Link Aggregation na przełączniku, nawet jeżeli tę funkcję obsługuje.</li>
+<li><strong>IEEE 802.3ad Dynamic Link Aggregation</strong>: w tym trybie optymalizowany jest ruch sieciowy odbierany i wysyłany przez serwer DiskStation. Wymagane jest przy tym włączenie na przełącznikach funkcji IEEE 802.3ad (Dynamic) Link Aggregation (LACP, 802.1AX). Jeśli używanych jest wiele przełączników, muszą być przystosowane do pracy w stosie i prawidłowo skonfigurowane.</li>
+<li><strong>Równoważenie XOR</strong>: w tym trybie równoważony jest ruch sieciowy odbierany i wysyłany przez serwer DiskStation. Wymagane jest przy tym włączenie na przełącznikach funkcji Static Link Aggregation. Jeśli używanych jest wiele przełączników, muszą być przystosowane do pracy w stosie i prawidłowo skonfigurowane. Ruch wysyłany przez serwer DiskStation można równoważyć, nawet jeśli funkcja Link Aggregation nie jest obsługiwana przez przełącznik. W tym trybie można wykrywać utracone połączenia, ale nie przyczynę ich utraty (np. kable Ethernet są odłączone lub przełącznik jest błędnie skonfigurowany).</li>
+<li><strong>Aktywność/gotowość</strong>: w tym trybie serwer DiskStation może wykorzystywać funkcję network fault tolerance. Oznacza to, że w razie awarii aktywnego interfejsu sieciowego, jeden z pozostałych portów LAN przejmie jego rolę, aby zapewnić ciągłość połączenia sieciowego. Ten tryb można wybrać bez potrzeby konfigurowania przełącznika lub w przypadku przełącznika obsługującego funkcję IEEE 802.3ad Link Aggregation.</li>
+</ul>
+</div>
+</li>
+
+<img src="about:blank" class="help_image"/>
+
+<li>Wybierz interfejsy, aby utworzyć Link Aggregation.</li>
+
+<img src="about:blank" class="help_image"/>
+
+<li>Skonfiguruj ustawienia IP. W razie potrzeby można także włączyć opcję VLAN. Kliknij <b>Zastosuj</b>, aby zakończyć konfigurację.</li>
+
+<img src="about:blank" class="help_image"/>
+
+<li>Po zakończeniu na liście <b>Interfejs sieciowy</b> zostanie wyświetlony nowy interfejs o nazwie <b>Bond 1</b>.</li>
+
+<img src="about:blank" class="help_image"/>
+
+</ol>
+
+<h4>Aby edytować ustawienia Link Aggregation:</h4>
+<ol>
+<li>Aby zmienić tryb Link Aggregation lub wyświetlić informacje o urządzeniach fizycznych, wybierz <b>Panel sterowania</b> > <b>Sieć</b> > <b>Interfejs sieciowy</b>.</li>
+<li>Wybierz interfejs <b>Bond 1</b>, a następnie kliknij przycisk <b>Edytuj</b>.</li>
+
+<img src="about:blank" class="help_image"/>
+
+<li>Przejdź do odpowiednich kart, aby zmodyfikować żądane ustawienia.</li>
+</ol>
+
+<h4>Aby usunąć Link Aggregation:</h4>
+<ol>
+<li>Przejdź do pozycji <b>Panel sterowania</b> > <b>Sieć</b> > <b>Interfejs sieciowy</b>.</li>
+<li>Wybierz interfejs <b>Bond 1</b>, a następnie kliknij przycisk <b>Usuń</b>.</li>
+
+<img src="about:blank" class="help_image"/>
+
+<li>Po zakończeniu interfejs <b>Bond 1</b> zostanie zastąpiony przez dwa interfejsy LAN.</li>
+
+<img src="about:blank" class="help_image"/>
+
+</ol>
+
+<p>____<br> * Funkcja dostępna tylko w niektórych modelach.</p>
+
+</body>
+</html>
+

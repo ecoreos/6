@@ -1,0 +1,84 @@
+ <!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Aggiungere un disco rigido a un Volume o Gruppo Disco - Guida Synology DSM</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="This article walks you through the steps to add an additional hard drive to an existing volume or disk group on your DiskStation.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script> <script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Aggiungere un disco rigido per espandere la capacità di archiviazione</h2>
+
+<p>In presenza di slot per disco rigido vuoti sul DiskStation, è possibile installare dischi rigidi aggiuntivi e aggiungerli a un volume o gruppo disco esistente. In questo articolo sono fornite le istruzioni per espandere un volume o gruppo disco esistente installando ulteriori dischi rigidi.</p>
+
+<h3>Prima di cominciare</h3>
+
+<p>Prima di iniziare, verificare che il disco rigido da aggiungere soddisfi i seguenti requisiti di dimensioni minimi:</p>
+<ul>
+  <li><strong>Per SHR:</strong> La capacità del disco rigido da aggiungere deve essere uguale o superiore al disco rigido più grande nel volume o gruppo dischi oppure deve essere uguarle a qualsiasi disco rigido nel volume o gruppo dischi. Ad esempio, se il volume SHR è composto da tre dischi rigidi – rispettivamente da 2 TB, 1,5 TB e 1 TB – allora la capacità del nuovo disco deve essere di almeno 2 TB oppure uguale a 1,5 TB o 1 TB.</li>
+  <li><strong>Per RAID 5 e RAID 6:</strong> la capacità del disco rigido da aggiungere deve essere uguale o superiore a quella del disco rigido più piccolo presente nel volume o gruppo disco. Ad esempio, se il volume è composto da tre dischi rigidi – rispettivamente da 2 TB, 1,5 TB e 1 TB – allora la capacità del nuovo disco deve essere di almeno 1 TB.</li>
+</ul>
+
+<div class="section">
+<h4>Controllare lo stato del volume</h4>
+
+<p>Verificare che lo stato del volume o del gruppo disco sia su <strong>Normale</strong>. In caso contrario, sarà necessario ripararlo prima.</p>
+</div>
+
+
+<h3>  Aggiungere un disco rigido a un Volume o Gruppo Disco</h3>
+
+<p>Dischi rigidi che possono essere aggiunti ai tipi di RAID seguenti: </p>
+
+<ul>
+<li>Synology Hybrid RAID (SHR)</li>
+<li>JBOD</li>
+<li>RAID 5</li>
+<li>RAID 6</li>
+</ul>
+
+<div class="section">
+<h4>Nota:</h4>
+<p>per volumi SHR, la capacità di archiviazione è estesa solo quando si aggiungono dischi rigidi a un volume con due o più dischi rigidi.</p>
+</ul>
+</div>
+
+<h4>Per aggiungere un disco rigido a un volume o gruppo disco:</h4>
+
+<ol>
+<li>Spegnere la DiskStation. È possibile saltare questo passaggio se DiskStation supporta l'hot-swap.</li>
+<li>Inserire un nuovo disco rigido in uno slot per disco rigido vuoto.</li>
+
+<div class="section">
+<h4>Nota:</h4>
+<p>per evitare rischi alla persona o il danneggiamento di DiskStation, osservare le istruzioni per l'installazione del disco rigido riportate nella <i>Guida di installazione rapida</i> del prodotto Synology.</p>
+</div>
+
+<li>Accendere DiskStation.</li>
+<li>Accedere al DSM con un account che appartiene al gruppo <strong>administrators</strong>.</li>
+<li>Aprire <strong>Gestione archiviazione</strong>.</li>
+<img src="about:blank" class="help_image"/>
+
+<li>A questo punto, procedere come segue:</li>
+  <ul class="list_abc">
+    
+  <li>In caso di espansione di un singolo volume, andare alla scheda <strong>Volume</strong>. Selezionare il volume da espandere. Fare clic su <strong>Gestisci</strong> e continuare al passaggio successivo. </li>
+<img src="about:blank" class="help_image"/>
+    
+  <li>In caso di espansione di un gruppo disco, andare alla scheda <strong>Gruppo Disco</strong>. Selezionare il gruppo disco da espandere. Fare clic su <strong>Gestisci</strong> e continuare al passaggio successivo.</li>
+<img src="about:blank" class="help_image"/>
+  </ul>
+<li>Selezionare <strong>Espandere il volume (o gruppo disco) aggiungendo dei dischi rigidi</strong>. Quindi fare clic su <strong>Avanti</strong>.</li>
+<img src="about:blank" class="help_image"/>
+<li>Selezionare i dischi rigidi con cui espandere il volume o gruppo disco. È possibile aggiungere dischi rigidi spuntando le caselle corrispondenti. Quindi fare clic su <strong>Avanti</strong>.</li>
+<img src="about:blank" class="help_image"/>
+<li>Seguire i passaggi della procedura guidata per terminare.</li>
+</ol>
+</body>
+</html>

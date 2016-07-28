@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+	<h2>概要</h2>
+	<p>概要には、全スペースの全体的な状態、ハードディスクの使用状況、ボリュームの最大使用量、iSCSI LUN ストレージを含む、ストレージ  スペースの全体的な状態が表示されます。</p>
+
+		<h4>ストレージの健康状態</h4>
+        <p>状態には次の 3 つのタイプがあります。</p>
+	  	<ul>
+				<li><b>健康</b>： すべてのストレージ スペースは正常です。</li>
+				<li><B>注意</B>： 1 つのストレージ スペース (ボリュームまたは iSCSI LUN) が降等しているか、SSD キャッシュがクラッシュしたか、システムのパーティションが故障しています。</li>
+				<li><b>危険</b>： ストレージ スペース (ボリュームまたは iSCSI LUN) がクラッシュしています。</li>
+			</ul>
+			<p>複数の異常が同時に発生した場合、健康状態は次の順番で表示されます。 1) ストレージ スペース (ボリュームまたは iSCSI LUN)、2) SSD キャッシュ、3) システム パーティション。 問題が発生した場合は、次の手順に従ってください。</p>
+		
+		<h4>ディスク情報</h4>
+        <p>このセクションには、ハードドライブとハードウェアの情報が表示されます。 どのストレージ スペースがいくつのハードドライブを使用しているか、スペア ハードディスクの数、使用可能なハードディスク スロットの数を確認できます。</p>
+        
+		<h4>使用量が最も多いボリューム</h4>
+        <p>このセクションには、ボリュームが使用している容量が表示されます。 使用量の合計が 90% に達すると、パイチャートが赤くなります。80% を超えると黄色、79% 以下で青くなります。</p>
+        
+		<h4>iSCSI LUN 使用量</h4>
+        <p>このセクションには、次の情報が表示されます。</p>
+        <ul>
+         		<li><b>報告済み</b>：  全 iSCSI LUN (ブロックレベル) の合計割り当て量と DiskStationの iSCSI LUN (通常ファイル) を足した量です。</li>
+                <li><b>使用中</b>： iSCSI LUN (通常ファイル) 上の合計割り当て量と iSCSI LUN (ブロックレベル) の合計容量を足した量です。</li>
+                <li><b>保存済み</b>：  <b>報告済み</b>のサイズから<b>使用中</b>の合計サイズを引いた量です。購入したストレージ スペースに保存された量と管理費用が表示されます。</li>
+</ul>
+        </li>
+</body>
+</html>

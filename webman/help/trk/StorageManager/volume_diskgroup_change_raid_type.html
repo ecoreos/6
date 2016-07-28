@@ -1,0 +1,114 @@
+ <!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Bir Birimin veya Disk Grubunun RAID Tipini Değiştir - Synology DSM Yardım</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="This article provides instructions to change the RAID type of existing volumes and disk groups on your DiskStation.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Bir Birimin veya Disk Grubunun RAID Tipini Değiştir</h2>
+
+<p>Birimler ve disk grupları bir RAID tipinden başkasına mevcut veriler kaybolmadan değiştirilebilir. Örneğin, DiskStation sunucunuza bir RAID 1 birimi oluşturabilir ve daha fazla sabit disk takarsanız ileride RAID 5'e değiştirebilirsiniz. Bu yazı DiskStation sunucunuzda mevcut birimlerin ve disk gruplarının RAID tipini değiştirmeye dair talimatları sunar.</p>
+<h3>RAID Tipi Sınırlamaları</h3>
+
+<p>Sadece bazı RAID tipleri belirli diğer RAID tiplerine değiştirilebilir. Ayrıntılar için aşağıdaki tabloya bakın.</p>
+
+<table>
+  <tr>
+    <th width="50%">RAID tipi</th>
+    <th width="50%">Değiştirilebilecek hedef tip...</th>
+  </tr>
+  <tr>
+    <td>Temel</td>
+    <td>RAID 1<br /> RAID 5</td>
+  </tr>
+  <tr>
+    <td>RAID 1</td>
+    <td>RAID 5</td>
+  </tr>
+  <tr>
+    <td>RAID 5</td>
+    <td>RAID 6</td>
+  </tr>
+
+</table>
+
+<div class="section">
+<h4>Örnek:</h4>
+<p>RAID 1, RAID 5'e değiştirilebilir ancak RAID 5, RAID 1'e değiştirilemez.</p>
+</div>
+
+
+<h3>Sabit Disk Gereksinimleri</h3>
+
+<p>Bir birim ya da disk grubunun RAID tipini değiştirmek için, DiskStation sunucunuzda kurulu yeterli sayıda kullanılabilir sabit disk olmalıdır. Her bir RAID tipi için gereken minimum sabit disk sayısı için lütfen aşağıya bakın.</p>
+
+<table>
+  <tr>
+    <th width="50%">İstenen RAID tipi</th>
+    <th width="50%">Gerekli sabit diskler</th>
+  </tr>
+  <tr>
+    <td>RAID 1</td>
+    <td>2 ya da 4</td>
+  </tr>
+  <tr>
+    <td>RAID 5</td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>RAID 6</td>
+    <td>4</td>
+  </tr>
+</table>
+
+<div class="section">
+<h4>Örnek:</h4>
+<p>Bir RAID 1 birimini RAID 5'e değiştirmek istiyorsanız, toplam olarak en az üç sabit diske ihtiyacınız vardır (ör. RAID 1 birimine ait iki sabit disk, artı birime eklemek için bir boş sabit disk).</p>
+</div>
+
+<h3>RAID Tipini Değiştirin</h3>
+
+<p>Aşağıdaki örnekte, bir <strong>Basic</strong> birimi bir <strong>RAID 1</strong> birimine değiştireceğiz.</p>
+
+<div class="section">
+<h4>Başlamadan Önce:</h4>
+<ul>
+<li>Biriminizin veya disk grubunuzun durumu <b>Normal</b> olmalıdır.</li>
+<li>Bir birime veya disk grubuna yeni sabit diskleri eklerken, yeni sabit diskler birim veya disk grubu içindeki en küçük sabit diskten daha büyük olmalıdır.</li>
+<li>Yeni sabit disklerin durumu <b>İlk Kullanıma Hazırlandı</b> veya <b>İlk Kullanıma Hazırlanmadı</b> olmalıdır.</li></ul>
+</div>
+
+<h4>Bir birimin RAID tipini değiştirmek için:</h4>
+
+<ol>
+<li><strong>Depolama Yöneticisi</strong>'ni açın.</li>
+<img src="about:blank" class="help_image"/>
+<li><b>Birim</b> öğesine gidin.  (Bir disk grubunun RAID tipini değiştirmek istiyorsanız, <b>Disk Grubu</b> sekmesine gidin.)</li>
+<li>Değiştirmek istediğiniz birimi seçin ve <b>Yönet</b>'e tıklayın.</li>
+<img src="about:blank" class="help_image"/>
+
+<li>Kurulum sihirbazı belirdiğinde, <b>RAID tipini değiştir</b> öğesini seçin. Ardından <b>İleri</b>'ye tıklayın.</li>
+<img src="about:blank" class="help_image"/>
+
+
+<li>Birimi değiştirmek istediğiniz RAID tipini seçin. <b>İleri</b>'ye tıklayın.</li>
+<img src="about:blank" class="help_image"/>
+
+
+<li>Mevcut birime hangi sabit disklerin ekleneceğini seçin. Ardından <b>İleri</b>'ye tıklayın.</li>
+<img src="about:blank" class="help_image"/>
+
+
+<li>Tamamlamak için kurulum sihirbazının talimatlarını izleyin. Eklenen sabit diskteki mevcut verilerin silineceğine lütfen dikkat edin.</li></ol>
+
+</body>
+</html>

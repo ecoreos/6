@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+	<h2>Hot Spare</h2>
+	<p>Hot spare diskler, arızalı bir diski otomatik olarak değiştirerek kapasitesi düşmüş bir RAID Group'u onarabilen yedek sabit disklerdir. Hot spare diskler DiskStation sunucunuz içindeki herhangi bir RAID Group'u onarmak üzere global olarak atanabilir. Bir hot spare disk sadece aşağıdaki kriterleri karşılayan bir RAID Group'u destekler:
+</p>
+	<ul>
+  <li>RAID Group'un RAID tipi veri korumalı olmalıdır (RAID 1, RAID 5, RAID 6, RAID 10 gibi).</li>
+		<li>Hot spare diskin sabit disk tipi RAID Group üye diskleriyle (SATA, SAS gibi) aynı olmalıdır.</li>
+		<li>Hot spare disk boyutu RAID Group içindeki en küçük diskin boyutuna eşit veya daha büyük olmalıdır.</li>
+	</ul>
+
+	<h4>Hot spare diskleri yönetmek için:</h4>
+	<ol>
+		<li><b>Yönet</b>'e tıklayın.</li>
+		<li>Bir hot spare disk atamak için, sağ tarafta <b>Mevcut Diskler</b> bölümünü bulun ve hot spare olarak atamak istediğiniz diskin yanındaki kutuyu işaretleyin. Bir hot spare diski kaldırmak için, aynı kutuyu boş bırakın. Ayarları kaydetmek için <b>Uygula</b>'ya tıklayın.</li>
+	</ol>
+	<p>
+<div class="section">
+<h4>Not:</h4> 
+<ul>
+<li>Bir hot spare disk kapasitesi düşmüş bir RAID Group'u onardığında, hot spare disk üzerindeki tüm veriler silinir. Bir hot spare diski atamadan evvel, diskin üzerinde önemli veri bulunmadığından emin olun.</li>
+<li>HDD'ler tarafından monte edilen bir RAID, SSD hot spare diskler tarafından otomatik olarak onarılmaz.</li>
+</ul>
+</div>
+
+<h4>RAID Group için hot spare ayarlarını yapılandırma:</h4>
+<ol>
+<li><b>Yapılandır</b> üzerine tıklayın.</li>
+<li><b>Hot Spare Hedefleri</b> sekmesinde, hot spare diskler tarafından korunabilen RAID Group'lar listelenecektir. Kutuların işaretini kaldırırsanız, ilgili RAID Group'lar kapasiteleri düştüğünde hot spare diskler tarafından otomatik olarak onarılmaz.</li>
+<li><b>Cihaz arası Hot Spare</b> sekmesinde, farklı bir cihazda bulunan kapasitesi düşmüş bir RAID'i onarmak için bir cihaz üzerinde hot spare disklere izin verebilirsiniz.</li>
+<li><b>Tamam</b> üzerine tıklayarak ayarları kaydedin.</li>
+</ol>
+
+</body>
+</html>

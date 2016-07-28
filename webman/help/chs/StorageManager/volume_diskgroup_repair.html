@@ -1,0 +1,130 @@
+﻿ <!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>修复卷或硬盘组 - Synology DSM 帮助</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="This article walks you through the steps to create a volume on DiskStation using Storage Manager.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>修复卷或硬盘组</h2>
+
+<p>导致卷出现错误的原因有很多，如系统磁区损坏或硬盘故障。在某些情况下，您可按下列步骤来诊断错误并修复问题。</p>
+
+<div class="section">
+<h4>注：</h4>
+<ul>
+<li>在此所述的<strong>修复</strong>功能仅适用于具有数据冗余功能的 RAID 类型（如 RAID 1、RAID 5、RAID 6）。请注意，此功能无法修复损毁的硬盘，也无法保证能够挽救损毁卷上的数据。</li>
+<li>对于已损毁卷，建议您联系我们的<span class="last"><a href="https://account.synology.com/support/support_form.php?lang=enu" target="_blank">技术支持</a>来寻求帮助</span>。</li>
+</ul>
+</div>
+
+<h3>系统磁区错误</h3>
+
+<p>当系统磁区出现错误时，您会看到一则信息，告知您系统分磁无法访问。</p>
+<h4>修复系统磁区：</h4>
+
+<ol>
+<li>打开<strong>存储管理器</strong>。</li>
+<img src="about:blank" class="help_image"/>
+
+<li>进入<strong>概述</strong>并单击标记为<strong>修复</strong>的链接。系统应修复系统磁区。</li>
+
+<img src="about:blank" class="help_image"/>
+</ol>
+
+
+<h3>卷处于堪用状态</h3>
+
+
+<p>当硬盘出错时，卷或硬盘组会变为<strong>堪用</strong>，但数据不会丢失。这只会发生在有数据冗余功能的 RAID 类型中，如 SHR、RAID 1、RAID 5、RAID 6 和 RAID 10。</p>
+<p>堪用的卷或硬盘组可修复，方法是以状态良好的硬盘来替换故障硬盘并修复卷或硬盘组。</p>
+
+<div class="section">
+<h4>注：</h4>
+<ul>
+<li>用于更换的硬盘容量必须大于或等于卷中的最小硬盘容量。</li>
+<li>用于更换的硬盘状态必须为<strong>已初始化</strong>或<strong>未初始化</strong>。</li>
+</ul>
+
+</div>
+
+<h4> 修复堪用的卷或硬盘组：</h4>
+
+<ol>
+
+<li>进入<strong>存储管理器</strong> &gt; <strong>卷</strong>或<strong>硬盘组</strong>来确认确认状态已更改为<strong>堪用</strong>。</li> 
+<img src="about:blank" class="help_image"/>
+
+<li>如果是，进入 <strong>HDD/SSD</strong> 选项卡来查看发生故障的硬盘。</li>
+<img src="about:blank" class="help_image"/>
+
+<li>卸下故障硬盘并用新硬盘进行替换。</li>
+
+<div class="section">
+<h4>注：</h4>
+<ul>
+<li>如果您的 DiskStation 不支持热插拔功能，卸下和安装任何硬盘之前请务必先关机。</li>
+<li>用于更换的硬盘中的已有数据都将擦除。</li>
+</ul>
+</div>
+
+<li>安装完替换硬盘后，回到<strong>卷</strong>或<strong>硬盘组</strong>选项卡。</li>
+
+<li>选择堪用的卷或硬盘组。</li>
+
+<li>单击<strong>管理</strong>。</li>  
+<img src="about:blank" class="help_image"/>
+
+<li>选择<strong>修复</strong>并单击<strong>下一步</strong>。</li>  
+<img src="about:blank" class="help_image"/>
+
+<li>选择要添加到卷的替换硬盘。然后单击<strong>下一步</strong>。</li>
+<img src="about:blank" class="help_image"/>
+
+<li> 按照设置向导的指示完成操作。</li>
+</ol>
+
+
+
+
+<h3>修复卷</h3>
+<p>若要修复堪用状态的卷/硬盘组/iSCSI LUN，您需要用符合下列条件的硬盘来更换损毁的硬盘:</p>
+<ul>
+<li>对于 RAID 1、RAID 5 或 RAID 6 卷，堪用的卷可用等于或大于 RAID 卷中最小硬盘的硬盘来修复。</li>
+<li>对于 SHR-1 卷，可用的硬盘必须符合以下条件之一：(1) 其大小必须等于或大于损毁硬盘的大小；(2) 由于不包括 RAID 卷中的最大硬盘，其大小必须等于或大于余下的最大硬盘。
+
+<ol>
+<li>例 1：SHR-1 由 3TB、2TB、2TB 和 1TB 硬盘组成。如果 3TB 硬盘损坏，可用等于或大于 2TB 的硬盘修复。</li>
+<li>例 2：SHR-1 由 4TB、4TB、2TB 和 2TB 硬盘组成。如果 4TB 硬盘损坏，可用等于或大于 4TB 的硬盘修复。</li>
+<li>例 3：SHR-1 由 4TB、4TB、2TB 和 2TB 硬盘组成。如果 2TB 硬盘损坏，可用等于或大于 2TB 的硬盘修复。</li>
+</ol>
+</li>
+<li>对于 SHR-2 卷，可用的硬盘必须符合以下条件之一：(1) 其大小必须等于或大于损毁硬盘的大小；(2) 由于不包括 RAID 卷中的两个最大硬盘，其大小必须等于或大于余下的最大硬盘。</li>
+</ul>
+<p>如果您将硬盘配置为符合上述条件的备援，则它们可用作修复卷/硬盘组/RAID 组/iSCSI LUN。</p>
+
+
+<h3>解决损毁的卷</h3>
+
+<p>当卷状态变更为<strong>已损毁</strong>时，您无法自行修复该卷。若要解决此问题，建议您联系我们的<a href="https://account.synology.com/support/support_form.php?lang=enu" target="_blank">技术支持</a>来寻求帮助。</p>
+
+<div class="section">
+<h4>您联系技术支持前：</h4>
+
+<ul>
+<li>通过 File Station、Windows File Service、FTP 或其它文件服务将文件复制到计算机或外接设备可抢救 DiskStation 上的数据。</li>
+<li>保持硬盘的排序与卷损毁时相同。</li>
+<li>请对损毁硬盘执行 S.M.A.R.T. 检测。若要进行此操作，请进入<strong>存储管理器</strong> &gt; <strong>HDD/SSD</strong>。选择有问题的硬盘，然后单击 <strong>S.M.A.R.T.测试</strong>。<br />
+</li>
+</ul>
+</div>
+</body>
+</html>

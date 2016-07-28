@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>File Station</title>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Créer des demandes de fichiers</h2>
+<p>Les demandes de fichiers sont des invitations à transférer des fichiers envoyés à des utilisateurs non DSM. Avec des liens de demande de fichiers, des utilisateurs non DSM peuvent transférer directement plusieurs fichiers sur File Station sur votre DiskStation, sans qu'il soit nécessaire de posséder de compte utilisateur correspondant ni de privilèges de transfert de fichiers.</p>
+<h4>Pour créer des liens de demande de fichiers :</h4>
+<ol>
+<li>Accédez à <strong>File Station</strong> et sélectionnez un dossier comme destination de transfert.</li>
+<li>Cliquez sur <strong>Action</strong> ou cliquez avec le bouton droit sur le dossier de destination et sélectionnez <strong>Créer une demande de fichier</strong>.</li>
+<li>Dans la fenêtre contextuelle, vous pouvez rechercher/modifier les informations suivantes:
+<ul>
+<li><strong>Chemin de fichier</strong> : Indique le chemin du répertoire de destination.</li>
+<li><strong>Lien</strong> : Indique le lien de la demande de fichiers à partager avec les utilisateurs cible.</li>
+<li><strong>Votre nom</strong> : Saisissez un nom pour indiquer l'identité du demandeur. La valeur par défaut est votre nom d'utilisateur.</li>
+<li><strong>Message</strong> : Personnalisez le message pour des utilisateurs cible.</li>
+<li><strong>Activer la protection par mot de passe</strong> : Sélectionnez cette option afin que seuls les utilisateurs ayant le mot de passe puissent transférer des fichiers via le lien créé. Indiquer le mot de passe dans la boîte qui se trouve en dessous.</li>
+<li><strong>Période de validité</strong> : Cliquez sur ce bouton pour personnaliser la durée de ce lien de demande de fichiers:
+<ul>
+<li><strong>Configurer l'heure d'arrêt</strong> : Sélectionnez cette option pour déterminer le moment où le lien cesse de fonctionner pour le transfert de fichiers, à l'aide de la date et de l'heure.</li>
+<li><strong>Configurer l'heure de début</strong> : Sélectionnez cette option pour déterminer le moment où le lien commence à fonctionner pour le transfert de fichiers, à l'aide de la date et de l'heure.</li>
+<li><strong>Nombre d'accès autorisés</strong> : Sélectionnez cette option pour déterminer le nombre de fois où il est possible d'accéder au lien.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Cliquez sur <strong>Enregistrer</strong> pour terminer la configuration.</li>
+</ol>
+<h4>Pour partager des liens de demande de fichiers :</h4>
+<p>Pour rechercher l'URL de la demande de fichiers, accédez à <strong>File Station</strong> > <strong>Outils</strong> > <strong>Gestionnaire de liens partagés</strong> et double-cliquez sur le lien souhaité. Vous pouvez partager le lien de l'une des manières indiquées ci-dessous :</p>
+<ul>
+<li>Copiez simplement l'URL vers les utilisateurs cible.</li>
+<li>Envoyez le lien via <strong>l'adresse e-mail par défaut</strong> (votre compte e-mail DSM) ou via un <strong>courrier</strong> (une application de messagerie électronique tierce). Pour les utilisateurs débutants, suivez les instructions de l'assistant pour configurer un compte e-mail à utiliser.</li>
+</ul>
+<h4>Pour transférer des fichiers :</h4>
+<p>Si l'on vous a demandé de transférer des fichiers via le lien, procédez comme suit :</p>
+<ol>
+<li>Ouvrez l'URL fournie sur l'ordinateur local ou un périphérique mobile (Android ou iOS). Saisissez le mot de passe si nécessaire.</li>
+<li>Sur la page de transfert, saisissez un nom qui indique votre identité.</li>
+<li>Glissez et déposez simplement le ou les fichiers à transférer ou cliquez sur <strong>Ajouter des fichiers</strong> pour sélectionner un ou des fichiers.</li>
+<li>Cliquez sur <strong>Transférer</strong> pour terminer la demande.</li>
+</ol>
+<div class="section">
+<h4>Remarque :</h4>
+<ul>
+<li>Il est impossible de transférer des dossiers via un lien de demande de fichiers.</li>
+<li>Les dossiers se trouvent dans le dossier partagé « Web » ne peuvent pas être spécifiés comme dossier de destination.</li>
+<li>La fonction de transfert varie en fonction des navigateurs Web :
+<ul>
+<li>Internet Explorer 8 et Internet Explorer 9 ne prennent pas en charge le transfert de fichiers via glisser/déposer.</li>
+<li>Chrome sur les périphériques iOS ne prend en charge que le transfert d'images.</li>
+<li>Safari sur les périphériques iOS ne prend en charge que le transfert d'images et de vidéos.</li>
+<li>Les navigateurs Web sous Android ne sont soumis aucune restriction de type de fichier.</li>
+</ul>
+</li>
+</ul>
+</div>
+<h4>Pour rechercher des fichiers transférés :</h4>
+<p>Les fichiers transférés par le même utilisateur s'affichent tous dans un dossier identique au sein de la destination. Par défaut, le nom du dossier est <strong>Nom_du_télépartageur (Nom_du_demandeur)</strong>.</p>
+<p>Par exemple, si les fichiers sont transférés par <strong>Watson</strong> à <strong>Holmes</strong>, vous pouvez rechercher les fichiers dans le dossier nommé <strong>Watson (Holmes)</strong>.</p>
+<h3>Gestion des liens de demande de fichiers</h3>
+<h4>Pour modifier des liens de demande de fichiers :</h4>
+<p>Après avoir créé un lien de demande de fichiers, vous pouvez en modifier les paramètres dans <strong>File Station</strong> > <strong>Outils</strong> > <strong>Gestionnaire de liens partagés</strong>.</p>
+<ol>
+<li>Double-cliquez sur le lien souhaité ou sélectionnez le lien et cliquez sur <strong>Modifier</strong>.</li>
+<li>Dans la fenêtre contextuelle, modifiez les paramètres correspondants.</li>
+<li>Cliquez sur <strong>Enregistrer</strong> pour appliquer les nouveaux paramètres.</li>
+</ol>
+<h4>Pour supprimer des liens de demande de fichiers :</h4>
+<ol>
+<li>Accédez à <strong>File Station</strong> > <strong>Outils</strong> > <strong>Gestionnaire de liens partagés</strong>.</li>
+<li>Sélectionnez le ou les liens souhaités et cliquez sur <strong>Supprimer</strong>. La ou les URL correspondantes à la demande de fichiers cessent immédiatement de fonctionner.</li>
+</ol>
+<h4>Pour affecter des privilèges de remplissage de demande :</h4>
+<p>En tant qu'<strong>admin</strong> ou utilisateur appartenant au groupe <strong>administrators</strong> vous pouvez affecter des privilèges à des utilisateurs afin qu'ils puissent créer des liens de demande de fichiers.</p>
+<ol>
+<li>Accédez à <strong>File Station</strong> > <strong>Paramètres</strong> > <strong>Liens partagés</strong> > <strong>Liens de demande de fichiers</strong>.</li>
+<li>Sélectionnez le type d'utilisateur pour les autoriser à demander des privilèges de remplissage.</li>
+<li>Cliquez sur <strong>OK</strong> pour enregistrer les paramètres.</li>
+</ol>
+</body>
+</html>

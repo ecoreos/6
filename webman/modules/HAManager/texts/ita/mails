@@ -1,0 +1,149 @@
+
+[HA_ConfSyncError]
+Subject: Il cluster high-availability %HOSTNAME% ha rilevato un errore di sincronizzazione durante la verifica della configurazione di sistema.
+
+Gentile utente,
+
+il cluster high-availability %HOSTNAME% ha rilevato un errore di sincronizzazione durante la verifica della configurazione di sistema dei server attivo e passivo. Il sistema ha tentato di correggere l'errore eseguendo la sincronizzazione completa delle configurazioni di sistema. Controllare i Registri di sistema o la pagina Registri di High Availability Manager per ulteriori informazioni.
+
+Azione: %HA_ACTION%
+Errore: %HA_PARAM_1%
+
+Cordialmente,
+%COMPANY_NAME%
+
+
+[HA_FailOver]
+Subject: Errore rilevato sul cluster high-availability %HOSTNAME%.
+
+Gentile utente,
+
+è stato rilevato un errore sul cluster high-availability %HOSTNAME%. Il sistema passerà i servizi al server passivo. Controllare i registri di sistema per ulteriori informazioni.
+
+Azione: %HA_ACTION%
+Errore: %HA_PARAM_1%
+
+Cordialmente,
+%COMPANY_NAME%
+
+
+[HA_MismatchedSsdCache]
+Subject: I dischi cache SSD non sono identici sul cluster high-availability %HOSTNAME%
+
+Gentile utente,
+
+i dischi appartenenti alla seguente cache SSD sul server passivo %HA_PARAM_1% non sono identici ai dischi sul server attivo: cache SSD %HA_PARAM_2%.
+
+Controllare la pagina Registri di High Availability Manager per ulteriori informazioni.
+
+Azione: %HA_ACTION%
+
+Cordialmente,
+%COMPANY_NAME%
+
+
+[HA_SplitBrain]
+Subject: Errore split-brain sul cluster high-availability %HOSTNAME%
+
+Gentile utente,
+
+si è verificato un errore split-brain sul cluster high-availability %HOSTNAME%. Controllare i registri di sistema per ulteriori informazioni.
+
+Azione: %HA_ACTION%
+
+Cordialmente,
+%COMPANY_NAME%
+
+
+[HA_StatusChange]
+Subject: Lo stato del cluster high-availability %HOSTNAME% è stato modificato da %HA_PARAM_1% a %HA_PARAM_2%.
+
+Gentile utente,
+
+Lo stato del cluster high-availability %HOSTNAME% è stato modificato da %HA_PARAM_1% a %HA_PARAM_2%. Controllare i Registri di sistema o la pagina Registri di High Availability Manager per ulteriori informazioni.
+
+Azione: %HA_ACTION%
+Descrizione: %HA_PARAM_3%
+
+Cordialmente,
+%COMPANY_NAME%
+
+
+[HA_SwitchFail]
+Subject: Impossibile eseguire il passaggio dei servizi del cluster high-availability  %HOSTNAME%
+
+Gentile utente,
+
+il sistema ha tentato di passare i servizi al server passivo del cluster high-availability %HOSTNAME% e non c'è riuscito. Controllare i registri di sistema per ulteriori informazioni.
+
+Azione: %HA_ACTION%
+
+Cordialmente,
+%COMPANY_NAME%
+
+
+[HA_SwitchFinished]
+Subject: Il cluster High-availability %HOSTNAME% sta eseguendo i servizi su %HA_PARAM_1%.
+
+Gentile utente,
+
+I servizi del cluster high-availability %HOSTNAME% sono eseguiti correntemente in %HA_PARAM_1%. Controllare i Registri di sistema o la pagina Registri di High Availability Manager per ulteriori informazioni.
+
+Azione: %HA_ACTION%
+
+Cordialmente,
+%COMPANY_NAME%
+
+
+[HA_SwitchOver]
+Subject: Passaggio del cluster high-availability %HOSTNAME% su %HA_PARAM_1%.
+
+Gentile utente,
+
+qualcuno ha inizializzato il passaggio del cluster high-availability %HOSTNAME%. I servizi saranno passati a %HA_PARAM_1%. Controllare i registri di sistema per ulteriori informazioni.
+
+Azione: %HA_ACTION%
+
+Cordialmente,
+%COMPANY_NAME%
+
+
+[HA_SwitchOver_With_Reason]
+Subject: Il cluster high-availability %HOSTNAME% ha inizializzato un passaggio a %HA_PARAM_1%.
+
+Gentile utente,
+
+è stato inizializzato un passaggio su un cluster high-availability %HOSTNAME%. I servizi saranno passati a %HA_PARAM_1%. Controllare i registri di sistema per ulteriori informazioni.
+
+Azione: %HA_ACTION%
+Motivo: %HA_PARAM_2%
+
+Cordialmente,
+%COMPANY_NAME%
+
+
+[HA_SyncComplete]
+Subject: La replica completa dei dati del cluster high-availability %HOSTNAME% è stata completata.
+
+Gentile utente,
+
+La replica completa dei dati del cluster high-availability %HOSTNAME% è stata completata. Il server passivo è ora pronto a fornire i servizi nel caso sia necessario il passaggio. Controllare i Registri di sistema o la pagina Registri di High Availability Manager per ulteriori informazioni.
+
+Azione: %HA_ACTION%
+
+Cordialmente,
+%COMPANY_NAME%
+
+
+[HA_UnbindLocal]
+Subject: Lo host locale è stato rimosso dal cluster high-availability
+
+Gentile utente,
+
+%HA_PARAM_1% è stato rimosso dal cluster high-availability %HA_PARAM_2% Controllare i registri di sistema per ulteriori informazioni.
+
+Azione: %HA_ACTION%
+
+Cordialmente,
+%COMPANY_NAME%
+

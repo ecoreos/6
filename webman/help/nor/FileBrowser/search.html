@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Søke etter filer eller mapper</title>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script> <script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2>Søke etter filer eller mapper</h2>
+<p>File Stations <strong>Filter</strong> gir deg alternativer for å søke etter og vise filer og mapper som samsvarer med kriteriene dine. Du kan filtrere ut filer og mapper i den åpne mappen eller utføre et avansert søk som dekker alle undermapper for mer presise søkeresultater.</p>
+
+<h4>Slik søker du etter filer eller mapper i gjeldende mappe:</h4>
+<ol>
+	<li>Bruk File Station for å gå til mappen med innholdet du vil søke etter.</li>
+	<li>I feltet <b>Filter</b> øverst til høyre skriver du inn et nøkkelord og ser det filtrerte resultatet i hovedområdet i vinduet.</li>
+</ol>
+
+<h4>For å utføre et avansert søk:</h4>
+<ol>
+	<li>Bruk File Station for å gå til mappen med innholdet du vil søke etter.</li>
+  <li>Klikk på forstørrelsesglassikonet ved siden av feltet <b>Filter</b> øverst til høyre for å vise menyen for avansert søk.</li>
+	<li>Spesifiser søkekriteriene nedenfor, eller velg fra rullegardinmenyer:
+		<ul>
+			<li><b>Nøkkelord</b>: Skriv inn et nøkkelord for å søke etter filer eller mapper med matchende navn.
+				<div class="section"><h4>Merk:</h4>
+				<ul>
+					<li>Du kan bruke jokertegnene [*] (som betyr null eller flere tegn) og [?] (som betyr et vilkårlig tegn) i nøkkelordene dine. For eksempel kan , [a<span class="note_content">*</span>n] representere [a<span class="note_content">ctio</span>n], [a<span class="note_content">ttentio</span>n], eller [an].</li>
+					<li>Du kan bruke mellomrom til å skille mellom nøkkelord. For eksempel, nøkkelordet [File Station] gir resultater som inneholder [File], [Station] eller begge deler.</li>
+					<li>Du kan legge til dobbelt hermetegn ["] i begynnelsen og slutten av nøkkelord for å søke etter nøyaktige. versalsensitive treff. For eksempel kan [<span class="note_content">"Synology Inc."</span>] representere [<span class="note_content">Synology Inc.</span>], men ikke [<span class="note_content">Synology Incorporation</span>].
+					</li>
+					<li class="disable-hi3535">Bruk operatorene nedenfor til å finjustere søket ditt:
+						<table width="84%" border="1">
+							<tbody>
+								<tr>
+									<th width="147" align="center">Operator</th>
+									<th width="229" align="center">Eksempel</th>
+									<th width="926" align="center">Forbruk</th>
+								</tr>
+								<tr>
+									<td align="center">&&</td>
+									<td align="center">[X] && [Y]</td>
+									<td><li>Lister opp treff som inneholder både [X] og [Y]</li></td>
+								</tr>
+								<tr>
+									<td align="center">||</td>
+									<td align="center">[X] || [Y]</td>
+									<td>
+										<li>Lister opp treff som inneholder [X], [Y] eller begge deler</li>
+										<li>Treff som inneholder både [X] og [Y] vil ligge øverst på listen</li>
+									</td>
+								</tr>
+								<tr>
+									<td align="center">+</td>
+									<td align="center">+[X]</td>
+									<td><li>Lister opp treff som inneholder [X]</li></td>
+								</tr>
+								<tr>
+									<td align="center">-</td>
+									<td align="center">-[X]</td>
+									<td><li>Lister opp treff som ikke inneholder [X]</li></td>
+								</tr>
+								<tr>
+									<td align="center">!</td>
+									<td align="center">![X]</td>
+									<td><li>Lister opp treff som ikke inneholder [X]</li></td>
+								</tr>
+								<tr>
+									<td align="center">\</td>
+									<td align="center">\[SpecialCharacter]</td>
+									<td>
+										<li>spesialtegn: <span class="note_content">&nbsp; + &nbsp;&nbsp;-&nbsp;&nbsp; &&	&nbsp;&nbsp;|| &nbsp;&nbsp; ! &nbsp;&nbsp; ( &nbsp;&nbsp; ) &nbsp;&nbsp; { &nbsp;&nbsp; } &nbsp;&nbsp; [ &nbsp;&nbsp; ] &nbsp;&nbsp; ^ &nbsp;&nbsp; " &nbsp;&nbsp; ~ &nbsp;&nbsp; * &nbsp;&nbsp; ? &nbsp;&nbsp; : &nbsp;&nbsp;\</span></li>
+										<li>Lister opp treff som inneholder et av spesialtegnene ovenfor</li>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</li>
+				</ul>
+				</div>
+			</li>
+			<li class="disable-hi3535"><strong>Aktiver søk i filinnhold</strong>: Søk etter indekserte filer med filinnhold eller metadata som samsvarer med nøkkelordene.</li>
+			<li><b>Plassering</b>: Velg fra rullegardinmenyen for å angi område og dybde for avansert søk. Du kan også tilpasse søkeomfanget ved å velge enhver annen delt mappe fra listen.</li>
+			<li><b>Filtype</b>: Velg <b>Filetternavn</b> for å begrense søkeområdet til bestemte filtyper, eller velg <b>Enhver mappe</b> for å bare søke etter mapper.</li>
+			<li><strong>Dato</strong>: Velg <b>Endret dato</b>, <b>Dato opprettet</b> eller <strong>Sist brukt</strong> og velg en dato fra kalenderen for å søke etter filer med samsvarende datoer.</li>
+			<li><b>Størrelse (MB)</b>: Velg blant <b>er lik</b>, <b>er større enn</b> og <b>er mindre enn</b>, og angi deretter en størrelse for å søke etter filer med matchende størrelse. (Når du velger <strong>er lik</strong>, vil søkeresultatene inkludere filer på omtrent samme størrelse som den som er spesifisert.)</li>
+			<li><b>Eier/gruppe</b>: Velg <b>Eier</b> eller <b>Gruppe</b>, og velg deretter fra rullegardinmenyen for å søke etter filer eller mapper som tilhører valgt eier eller gruppe.
+				<div class="section"><h4>Merk:</h4>
+				<ul>
+					<li>For å utføre avansert søk, må du spesifisere <b>Plassering</b> og minst ett annet søkekriterium.</li>
+					<li>Hvis en ISO-mappe eller en ekstern mappe er montert i en indeksert delt mappe, finner du ikke filene i den i et avansert søk.</li>
+				</ul>
+				</div>
+			</li>
+		</ul>
+	</li>
+	<li>Klikk på <b>Søk</b> for å starte søket, eller klikk på <b>Tilbakestill</b> og angi søkekriterier på nytt. Når søket er fullført, vil matchende filer bli oppført i hovedområdet i File Station.</li>
+</ol>
+
+</body>
+</html>

@@ -1,0 +1,2655 @@
+
+[]
+
+
+
+[AutoBlockAdd]
+Category: System
+Title: IP-адрес заблокирован
+Subject: IP-адрес [[%CLIENT_IP%]] %HOSTNAME% заблокирован %SERVICE%
+
+Уважаемый пользователь!
+
+С IP-адреса [%CLIENT_IP%] было произведено несколько неудачных попыток (%AUTOBLOCK_ATTEMPTS%) входа в %SERVICE%, где запущен %HOSTNAME% в течение %AUTOBLOCK_ATTEMPT_MIN% мин., поэтому он был заблокирован в %AUTOBLOCK_TIME%.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[BackupTaskCanceled]
+Category: Backup/Restore,Important
+Title: Резервирование отменено
+Subject: Выполнена отмена %TASK_TYPE% - %TASK_NAME% в %HOSTNAME%
+
+Уважаемый пользователь!
+
+Резервирование данных в %HOSTNAME% было отменено.
+
+Задача резервирования: %TASK_NAME%
+Место назначения резервирования: %DESTINATION_IP% %DESTINATION_PATH%
+Время запуска: %START_TIME%
+Длительность: %DURATION%
+
+С уважением,
+%COMPANY_NAME%
+
+
+[BackupTaskFailed]
+Category: Backup/Restore,Important
+Title: Ошибка резервирования
+Subject: Сбой %TASK_TYPE% - %TASK_NAME% в %HOSTNAME%
+
+Уважаемый пользователь!
+
+Произошел сбой резервирования данных в %HOSTNAME%.
+
+См. журнал резервирования в разделе [Hyper Backup] > [Журнал]
+для получения дополнительной информации.
+
+Задача резервирования: %TASK_NAME%
+Место назначения резервирования: %DESTINATION_IP% %DESTINATION_PATH%
+Время запуска: %START_TIME%
+Длительность: %DURATION%
+
+С уважением,
+%COMPANY_NAME%
+
+
+[BackupTaskFinished]
+Category: Backup/Restore
+Title: Резервирование завершено
+Subject: Успешное выполнение %TASK_TYPE% - %TASK_NAME% в %HOSTNAME%
+
+Уважаемый пользователь!
+
+Задача резервирования %TASK_NAME% завершена.
+
+Задача резервирования: %TASK_NAME%
+Место назначения резервирования: %DESTINATION_IP%  %DESTINATION_PATH%
+Время запуска: %START_TIME%
+Длительность: %DURATION%
+
+С уважением,
+%COMPANY_NAME%
+
+
+[BackupTaskPartial]
+Category: Backup/Restore,Important
+Title: Резервирование завершено частично
+Subject: Частичное выполнение %TASK_TYPE% - %TASK_NAME% в %HOSTNAME%
+
+Уважаемый пользователь!
+
+Задача резервирования %TASK_NAME% завершена с незначительными исключениями.
+
+См. журнал резервирования в разделе [Hyper Backup] > [Журнал]
+для получения дополнительной информации.
+
+Задача резервирования: %TASK_NAME%
+Место назначения резервирования: %DESTINATION_IP% %DESTINATION_PATH%
+Время запуска: %START_TIME%
+Длительность: %DURATION%
+
+С уважением,
+%COMPANY_NAME%
+
+
+[CMSClientConnectFailed]
+Category: CMS
+Title: Сбой подключения к хосту CMS
+Subject: %HOSTNAME% не удается подключиться к хосту CMS (%CMS_SERVER%).
+
+Уважаемый пользователь!
+
+Серверу %HOSTNAME% не удается подключиться к хосту CMS (%CMS_SERVER%). Проверьте подключение к сети и настройки обоих серверов.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[CMSClientDetachSuccess]
+Category: CMS
+Title: Выполнено отключение от хоста CMS
+Subject: Выполнено отключение %HOSTNAME% от хоста CMS (%CMS_SERVER%).
+
+Уважаемый пользователь!
+
+Сервер %HOSTNAME% отключен от хоста CMS (%CMS_SERVER%).
+
+С уважением,
+%COMPANY_NAME%
+
+
+[CMSClientJoinSuccess]
+Category: CMS
+Title: Успешно подключен к хосту CMS
+Subject: %HOSTNAME% подключен к хосту CMS (%CMS_SERVER%).
+
+Уважаемый пользователь!
+
+Сервер %HOSTNAME% успешно подключен к хосту CMS (%CMS_SERVER%). Некоторые настройки будут управляться с помощью хоста CMS.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[CpuFanResume]
+Category: System
+Title: Вентилятор процессора возобновил работу
+Subject: Вентилятор процессора %FANID% на %HOSTNAME% (серийный номер: %HOST_SN%) возобновил работу
+
+Уважаемый пользователь!
+
+Вентилятор процессора %FANID% на %HOSTNAME% (серийный номер: %HOST_SN%) возобновил работу.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[CpuFanStop]
+Category: System,Important
+Title: Вентилятор процессора остановил работу
+Subject: Вентилятор процессора %FANID% на %HOSTNAME% (серийный номер: %HOST_SN%) остановил работу
+
+Уважаемый пользователь!
+
+Вентилятор процессора %FANID% на %HOSTNAME% (серийный номер: %HOST_SN%) остановил работу.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[DDNSFail]
+Category: System
+Title: Сбой регистрации DDNS
+Subject: Службе DDNS не удалось зарегистрировать IP-адрес %EXTERNAL_IP% на %DDNS_HOST_NAME% [%FAIL_REASON%]
+
+Уважаемый пользователь!
+
+Системе не удалось зарегистрировать внешний IP-адрес %EXTERNAL_IP% на %DDNS_HOST_NAME% в сервере DDNS %DDNS_NAME%. Система сообщает о следующей причине ошибки: [%FAIL_REASON%].
+
+С уважением,
+%COMPANY_NAME%
+
+
+[DRLunScheduleSnapshotFail]
+Category: Snapshot Replication,Important
+Title: Не удалось сделать моментальный снимок для iSCSI LUN
+Subject: Не удалось сделать моментальный снимок для LUN %LUNNAME% на %HOSTNAME%
+
+Уважаемый пользователь!
+
+Не удалось сделать моментальный снимок для LUN на %HOSTNAME%. Подробную информацию см. в журнале пакета Snapshot Replication.
+
+LUN: %LUNNAME%
+
+С уважением,
+%COMPANY_NAME%
+
+
+[DRReplicationCleanupTestFailoverCompletion]
+Category: Snapshot Replication,Important
+Title: Выполнена очистка тестового аварийного переключения задачи репликации
+Subject: Очистка тестового аварийного переключения с %DRSITE_TARGET_NAME% на %DRSITE_HOSTNAME% успешно выполнена
+
+Уважаемый пользователь!
+
+Система успешно выполнила очистку тестового аварийного переключения с %DRSITE_TARGET_NAME% на целевой сервер (%DRSITE_HOSTNAME%). Подробную информацию см. на странице [Журнал] пакета Snapshot Replication.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[DRReplicationCleanupTestFailoverFail]
+Category: Snapshot Replication,Important
+Title: Сбой очистки тестового аварийного переключения задачи репликации
+Subject: Не удалось выполнить очистку тестового аварийного переключения с %DRSITE_TARGET_NAME% на %DRSITE_HOSTNAME%.
+
+Уважаемый пользователь!
+
+При очистке тестового аварийного переключения с %DRSITE_TARGET_NAME% на %DRSITE_HOSTNAME% произошел сбой. Подробную информацию см. на странице [Журнал] пакета Snapshot Replication.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[DRReplicationExportCompletion]
+Category: Snapshot Replication,Important
+Title: Задача экспорта репликации успешно выполнена
+Subject: Экспорт %MAINSITE_TARGET_NAME% успешно завершен
+
+Уважаемый пользователь!
+
+Система успешно экспортировала %MAINSITE_TARGET_NAME%. Подробную информацию см. на странице [Журнал] пакета Snapshot Replication.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[DRReplicationExportFail]
+Category: Snapshot Replication,Important
+Title: Не удалось выполнить задачу экспорта репликации
+Subject: Не удалось экспортировать %MAINSITE_TARGET_NAME%.
+
+Уважаемый пользователь!
+
+Системе не удалось экспортировать %MAINSITE_TARGET_NAME%. Подробную информацию см. на странице [Журнал] пакета Snapshot Replication.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[DRReplicationFailoverCompletion]
+Category: Snapshot Replication,Important
+Title: Успешное аварийное переключение задачи репликации
+Subject: Аварийное переключение с %DRSITE_TARGET_NAME% на %DRSITE_HOSTNAME% успешно выполнено
+
+Уважаемый пользователь!
+
+Система успешно выполнила аварийное переключение с %DRSITE_TARGET_NAME% на целевой сервер (%DRSITE_HOSTNAME%). Подробную информацию см. на странице [Журнал] пакета Snapshot Replication.
+
+Версия аварийного переключения: %SNAPSHOT_VERSION%
+
+С уважением,
+%COMPANY_NAME%
+
+
+[DRReplicationFailoverFail]
+Category: Snapshot Replication,Important
+Title: Сбой аварийного переключения задачи репликации
+Subject: Не удалось выполнить аварийное переключение с %DRSITE_TARGET_NAME% на %DRSITE_HOSTNAME%
+
+Уважаемый пользователь!
+
+Системе не удалось выполнить аварийное переключение с %DRSITE_TARGET_NAME% на целевой сервер (%DRSITE_HOSTNAME%). Подробную информацию см. на странице [Журнал] пакета Snapshot Replication.
+
+Версия аварийного переключения: %SNAPSHOT_VERSION%
+
+С уважением,
+%COMPANY_NAME%
+
+
+[DRReplicationImportCompletion]
+Category: Snapshot Replication,Important
+Title: Задача импорта репликации успешно выполнена
+Subject: Импорт %DRSITE_TARGET_NAME% успешно завершен
+
+Уважаемый пользователь!
+
+Система успешно импортировала %DRSITE_TARGET_NAME%. Подробную информацию см. на странице [Журнал] пакета Snapshot Replication.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[DRReplicationImportFail]
+Category: Snapshot Replication,Important
+Title: Не удалось выполнить задачу импорта репликации
+Subject: Не удалось импортировать %DRSITE_TARGET_NAME%.
+
+Уважаемый пользователь!
+
+Системе не удалось импортировать %DRSITE_TARGET_NAME%. Подробную информацию см. на странице [Журнал] пакета Snapshot Replication.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[DRReplicationInitialSyncCompletion]
+Category: Snapshot Replication,Important
+Title: Начальная репликация завершена
+Subject: Задача репликации завершила начальную репликацию %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%) в %DRSITE_HOSTNAME% (%DRSITE_TARGET_NAME%)
+
+Уважаемый пользователь!
+
+Задача репликации завершила начальную репликацию. Подробную информацию см. на странице [Журнал] пакета Snapshot Replication.
+
+Сервер-источник: %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%)
+Целевой сервер: %DRSITE_HOSTNAME% (%DRSITE_TARGET_NAME%)
+
+С уважением,
+%COMPANY_NAME%
+
+
+[DRReplicationInitialSyncFail]
+Category: Snapshot Replication,Important
+Title: Сбой начальной репликации
+Subject: Задаче репликации не удалось выполнить начальную репликацию в %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%)
+
+Уважаемый пользователь!
+
+Задаче репликации не удалось выполнить начальную репликацию в %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%). Подробную информацию см. на странице [Журнал] пакета Snapshot Replication.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[DRReplicationReprotectCompletion]
+Category: Snapshot Replication,Important
+Title: Успешно выполнена задача по повторной защите репликации
+Subject: Задача по повторной защите репликации (%NEW_MAINSITE_TARGET_NAME%) успешно выполнена
+
+Уважаемый пользователь!
+
+Система выполнила задачу по повторной защите репликации (%NEW_MAINSITE_TARGET_NAME%) на новый сервер-источник (%NEW_MAINSITE_HOSTNAME%) с реплицированными данными (%NEW_DRSITE_TARGET_NAME%) на новом целевом сервере (%NEW_DRSITE_HOSTNAME%). Подробную информацию см. на странице [Журнал] пакета Snapshot Replication.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[DRReplicationReprotectFail]
+Category: Snapshot Replication,Important
+Title: Не удалось выполнить задачу по повторной защите репликации
+Subject: Задача по повторной защите репликации (%NEW_MAINSITE_TARGET_NAME%) не выполнена
+
+Уважаемый пользователь!
+
+Системе не удалось выполнить задачу по повторной защите репликации (%NEW_MAINSITE_TARGET_NAME%) на новый сервер-источник (%NEW_MAINSITE_HOSTNAME%) с реплицированными данными (%NEW_DRSITE_TARGET_NAME%) на новом целевом сервере (%NEW_DRSITE_HOSTNAME%). Подробную информацию см. на странице [Журнал] пакета Snapshot Replication.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[DRReplicationScheduleSyncCompletion]
+Category: Snapshot Replication,Important
+Title: Запланированная репликация выполнена
+Subject: Выполнена задача запланированной репликации %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%) на %DRSITE_HOSTNAME% (%DRSITE_TARGET_NAME%)
+
+Уважаемый пользователь!
+
+Задача запланированной репликации была выполнена. Подробную информацию см. на странице [Журнал] пакета Snapshot Replication.
+
+Сервер-источник: %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%)
+Целевой сервер: %DRSITE_HOSTNAME% (%DRSITE_TARGET_NAME%)
+
+С уважением,
+%COMPANY_NAME%
+
+
+[DRReplicationScheduleSyncFail]
+Category: Snapshot Replication,Important
+Title: Сбой запланированной репликации
+Subject: Не выполнена задача запланированной репликации на %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%)
+
+Уважаемый пользователь!
+
+Задача запланированной репликации на %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%) не выполнена. Подробную информацию см. на странице [Журнал] пакета Snapshot Replication.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[DRReplicationSwitchoverCompletion]
+Category: Snapshot Replication,Important
+Title: Успешное переключение задачи репликации
+Subject: Переключение с %NEW_DRSITE_HOSTNAME% (%NEW_DRSITE_TARGET_NAME%) на %NEW_MAINSITE_HOSTNAME% успешно выполнено
+
+Уважаемый пользователь!
+
+Система успешно выполнила переключение с %NEW_DRSITE_HOSTNAME% (%NEW_DRSITE_TARGET_NAME%) на целевой сервер (%NEW_MAINSITE_HOSTNAME%). Подробную информацию см. на странице [Журнал] пакета Snapshot Replication.
+
+Новый сервер-источник: %NEW_MAINSITE_HOSTNAME% (%NEW_MAINSITE_TARGET_NAME%)
+Новый целевой сервер: %NEW_DRSITE_HOSTNAME% (%NEW_DRSITE_TARGET_NAME%)
+
+С уважением,
+%COMPANY_NAME%
+
+
+[DRReplicationSwitchoverFail]
+Category: Snapshot Replication,Important
+Title: Сбой переключения задачи репликации
+Subject: Не удалось выполнить переключение с %NEW_DRSITE_HOSTNAME% (%NEW_DRSITE_TARGET_NAME%) на %NEW_MAINSITE_HOSTNAME%
+
+Уважаемый пользователь!
+
+Системе не удалось выполнить переключение с %NEW_DRSITE_HOSTNAME% (%NEW_DRSITE_TARGET_NAME%) на целевой сервер (%NEW_MAINSITE_HOSTNAME%). Подробную информацию см. на странице [Журнал] пакета Snapshot Replication.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[DRReplicationSyncFail]
+Category: Snapshot Replication,Important
+Title: Сбой репликации
+Subject: Не выполнена задача репликации на %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%)
+
+Уважаемый пользователь!
+
+Задача репликации на %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%) не выполнена. Подробную информацию см. на странице [Журнал] пакета Snapshot Replication.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[DRReplicationSyncNotFinishInNotifyTime]
+Category: Snapshot Replication,Important
+Title: Задача репликации не завершена
+Subject: Задача репликации (%MAINSITE_TARGET_NAME%) в %DRSITE_HOSTNAME% (%DRSITE_TARGET_NAME%) не завершена
+
+Уважаемый пользователь!
+
+Задача репликации не завершена за %NOTIFY_TIME% мин. Подробную информацию см. на странице [Журнал] пакета Snapshot Replication.
+
+Сервер-источник: %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%)
+Целевой сервер: %DRSITE_HOSTNAME% (%DRSITE_TARGET_NAME%)
+
+С уважением,
+%COMPANY_NAME%
+
+
+[DRReplicationSyncStop]
+Category: Snapshot Replication,Important
+Title: Репликация остановлена
+Subject: Остановлена задача репликации на %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%)
+
+Уважаемый пользователь!
+
+Задача репликации на %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%) остановлена. Подробную информацию см. на странице [Журнал] пакета Snapshot Replication.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[DRReplicationTestFailoverCompletion]
+Category: Snapshot Replication,Important
+Title: Успешный запуск тестового аварийного переключения задачи репликации
+Subject: Доступна тестовое аварийное переключение %TEST_TARGET_NAME%
+
+Уважаемый пользователь!
+
+Тестовое аварийное переключение %TEST_TARGET_NAME% теперь доступно. Подробную информацию см. на странице [Журнал] пакета Snapshot Replication.
+
+Тестовый сервер: %DRSITE_HOSTNAME%
+Имя общей папки/iSCSI LUN: %TEST_TARGET_NAME%
+Версия теста: %SNAPSHOT_VERSION%
+
+С уважением,
+%COMPANY_NAME%
+
+
+[DRReplicationTestFailoverFail]
+Category: Snapshot Replication,Important
+Title: Сбой запуска тестового аварийного переключения задачи репликации
+Subject: Не удалось запустить тестовое аварийное переключение с %TEST_TARGET_NAME% на %DRSITE_HOSTNAME%.
+
+Уважаемый пользователь!
+
+Системе не удалось запустить тестовое аварийное переключение на целевой сервер (%DRSITE_HOSTNAME%). Подробную информацию см. на странице [Журнал] пакета Snapshot Replication.
+
+Тестовый сервер: %DRSITE_HOSTNAME%
+Имя общей папки/iSCSI LUN: %TEST_TARGET_NAME%
+Версия теста: %SNAPSHOT_VERSION%
+
+С уважением,
+%COMPANY_NAME%
+
+
+[DRShareTakeSnapshotFail]
+Category: Snapshot Replication,Important
+Title: Не удалось сделать моментальный снимок общей папки
+Subject: Не удалось сделать моментальный снимок общей папки %SHARE% на %HOSTNAME%
+
+Уважаемый пользователь!
+
+Не удалось сделать моментальный снимок общей папки на %HOSTNAME%. Подробную информацию см. в журнале пакета Snapshot Replication.
+
+Общая папка: %SHARE%
+
+С уважением,
+%COMPANY_NAME%
+
+
+[DRSnapshotScheduleTaskTooDenseFail]
+Category: Snapshot Replication,Important
+Title: Предыдущая запланированная задача моментальных снимков все еще выполняется
+Subject: Предыдущая запланированная задача моментальных снимков все еще выполняется на %MAINSITE_TARGET_NAME%.
+
+Уважаемый пользователь!
+
+Не удалось выполнить запланированную задачу моментальных снимков на %MAINSITE_TARGET_NAME%, так как еще выполняется предыдущая. Подробную информацию см. на странице [Журнал] пакета Snapshot Replication.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[DSMAutoUpdateReady]
+Category: System,Important
+Title: Автоматическое обновление системы
+Subject: Автоматическое обновление %OSNAME% на %HOSTNAME% начнется через %COUNTDOWN_MINUTE% мин.
+
+Уважаемый пользователь!
+
+Обновление %NEW_VERSION% будет автоматически установлено через %COUNTDOWN_MINUTE% мин. Если вы хотите отменить установку, выполните вход в %HOSTNAME% и отмените ее в области уведомлений.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[DSMAutoUpdateShutdownStart]
+Category: System,Important
+Title: Системные обновления, которые будут установлены до запланированного отключения
+Subject: Обновления %OSNAME% будут установлены на %HOSTNAME% перед запланированным выключением
+
+Уважаемый пользователь!
+
+Обновление %NEW_VERSION% будет установлено перед запланированным отключением, и %HOSTNAME% отключится после завершения установки. Не выключайте %DISKSTATION% до завершения установки.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[DSMUpdateAvailable]
+Category: System,Important
+Title: Готово новое обновление для %OSNAME%
+Subject: Обновление %OSNAME% готово для установки на %HOSTNAME%
+
+Уважаемый пользователь!
+
+Новая версия %OSNAME% загружена и готова к установке. Выполните вход в %HOSTNAME% и выберите Панель управления > Обновить и восстановить для установки %NEW_VERSION%. Подробную информацию об обновлении %OSNAME% см. на странице %HTTP_URL%.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[DeviceEjectedImproperly]
+Category: External Storage
+Title: Внешнее устройство извлечено неправильно
+Subject: Внешнее устройство %DEVICE_NAME% на %HOSTNAME% было извлечено неправильно.
+
+Уважаемый пользователь!
+
+Внешнее устройство %DEVICE_NAME% на %HOSTNAME% было извлечено неправильно. Во избежание потери данных рекомендуется извлечь устройство перед его отсоединением.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[DiskTemperatureAbnormal]
+Category: Storage,Important
+Title: Температура диска выходит за рамки рабочей температуры
+Subject: %DISK_ID% диска выходит за рамки рабочей температуры
+
+Уважаемый пользователь!
+
+Температура диска %DISK_ID% [%MODEL%] составляет %REAL_TEMPERATURE% ºC, что выходит за рамки рабочей температуры, %MIN_TEMPERATURE% ºC ~ %MAX_TEMPERATURE% ºC.
+Храните диски в пределах допустимой рабочей температуры.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[DiskTemperatureNormal]
+Subject: %DISK_ID% диска не выходит за рамки рабочей температуры
+
+Уважаемый пользователь!
+
+Температура диска %DISK_ID% [%MODEL%] теперь не выходит за рамки рабочей температуры, %MIN_TEMPERATURE% ºC ~ %MAX_TEMPERATURE% ºC.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[DriveSlotDisabled]
+Category: Storage,Important
+Title: Разъем для жесткого диска отключен
+Subject: Разъем для жесткого диска [%DISK_ID%] отключен
+
+Уважаемый пользователь!
+
+Разъем жесткого диска был отключен из-за ошибок на жестком диске [%DISK_ID%]. Замените диск, включите его и при необходимости восстановите все неисправные разделы.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[DsmProtectionCheckFailed]
+Category: System,Important
+Title: Обнаружена неисправность системы
+Subject: Неисправность обнаружена в %HOSTNAME%. Все разделы отключены.
+
+Уважаемый пользователь!
+
+Система обнаружила неисправность в %HOSTNAME%. В целях защиты данных все разделы были отключены. Для получения дополнительной поддержки обратитесь в службу поддержки Synology.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[EBoxHDEcc]
+Category: Storage,Important
+Title: Ошибка ввода/вывода на диске устройства расширения
+Subject: Ошибка ввода/вывода на диске %DISK_ID% %EUNIT_ID% на %HOSTNAME%
+
+Уважаемый пользователь!
+
+На жестком диске %DISK_ID% %EUNIT_ID% на %HOSTNAME% возникла ошибка ввода/вывода, но после нескольких попыток он работает исправно. Ошибка могла быть вызвана наличием плохих секторов. Если такая ситуация повторится, выполните резервное копирование данных и запустите на жестком диске тест S.M.A.R.T. для диагностики состояния жесткого диска.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[ESATADiskFull]
+Category: External Storage
+Title: Диск eSATA заполнен
+Subject: На диске eSATA %DISK_NUMBER% на %HOSTNAME% заканчивается свободное место
+
+Уважаемый пользователь!
+
+На диске eSATA %DISK_NUMBER% на %HOSTNAME% заканчивается свободное место. Ознакомьтесь с информацией ниже и примите соответствующие меры.
+
+Общая емкость: %DISK_SIZE% ГБ
+Доступное пространство: %FREE_SPACE% ГБ (%USAGE%%)
+
+С уважением,
+%COMPANY_NAME%
+
+
+[ESATAPartitionFull]
+Category: External Storage
+Title: Раздел eSATA заполнен
+Subject: В разделе %PARTITION_NUMBER% на диске eSATA %DISK_NUMBER% на %HOSTNAME% заканчивается свободное место
+
+Уважаемый пользователь!
+
+В разделе %PARTITION_NUMBER% на диске eSATA %DISK_NUMBER% %HOSTNAME% заканчивается свободное место. Ознакомьтесь с информацией ниже и примите соответствующие меры.
+
+Общая емкость: %DISK_SIZE% ГБ
+Доступное пространство: %FREE_SPACE% ГБ (%USAGE%%)
+
+С уважением,
+%COMPANY_NAME%
+
+
+[EUnitPowerFail]
+Category: System,Important
+Title: Сбой резервного блока питания устройства расширения
+Subject: Произошел сбой питания номер %POWERID% %EUNIT_ID% на %HOSTNAME%
+
+Уважаемый пользователь!
+
+Произошел сбой питания номер %POWERID% %EUNIT_ID% на %HOSTNAME%.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[EUnitPowerResume]
+Category: System,Important
+Title: Резервный блок питания устройства расширения восстановлен
+Subject: Питание номер %POWERID% %EUNIT_ID% на %HOSTNAME% восстановлено
+
+Уважаемый пользователь!
+
+Питание номер %POWERID% %EUNIT_ID% на %HOSTNAME% восстановлено.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[EboxFanResume]
+Category: System,Important
+Title: Работа вентилятора устройства расширения возобновлена
+Subject: Возобновлена работа вентилятора %FAN_ID% процессора %EBOX_ID% на %HOSTNAME%
+
+Уважаемый пользователь!
+
+Возобновлена работа вентилятора %EBOX_ID% процессора %FAN_ID% на %HOSTNAME%.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[EboxFanStop]
+Category: System,Important
+Title: Остановлена работа вентилятора устройства расширения
+Subject: Остановлена работа вентилятора %EBOX_ID% процессора %FAN_ID% на %HOSTNAME%
+
+Уважаемый пользователь!
+
+Остановлена работа вентилятора %EBOX_ID% процессора %FAN_ID% на %HOSTNAME%.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[EboxLinkFail]
+Category: System,Important
+Title: Ошибка подключения в устройстве расширения
+Subject: Произошла ошибка подключения в устройстве расширения %EBOX_ID% (выход SAS — %LINK_ID%) на %HOSTNAME% (серийный номер: %HOST_SN%)
+
+Уважаемый пользователь!
+
+Произошла ошибка подключения в устройстве расширения %EBOX_ID% (выход SAS — %LINK_ID%) на %HOSTNAME% (серийный номер: %HOST_SN%).
+
+С уважением,
+%COMPANY_NAME%
+
+
+[EboxLinkResume]
+Category: System,Important
+Title: Подключение устройства расширения восстановлено
+Subject: Восстановлено подключение в устройстве расширения %EBOX_ID% (выход SAS — %LINK_ID%) на %HOSTNAME% (серийный номер: %HOST_SN%)
+
+Уважаемый пользователь!
+
+Подключение в устройстве расширения %EBOX_ID% (выход SAS — %LINK_ID%) на %HOSTNAME% (серийный номер: %HOST_SN%) было восстановлено.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[ExpansionFrmInconsistent]
+Category: System,Important
+Title: Несогласованность микропрограммного обеспечения на устройстве расширения
+Subject: Микропрограмма на устройстве расширения %HOSTNAME% является несовместимой.
+
+Уважаемый пользователь:
+
+Микропрограмма на устройстве расширения %HOSTNAME% является несовместимой. Для устранения этой проблемы обратитесь в службу онлайн-поддержки Synology: www.synology.com.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[ForgetPassword]
+Subject: Сброс забытого пароля
+Уважаемый(ая) %USER%,
+
+Щелкните ссылку для сброса пароля:
+%URL%
+
+Ссылка будет работать только в течение 24 часов. Если вы не запрашивали изменение пароля, проигнорируйте это сообщение.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[HA_AbleSwitchover]
+Category: HA,Important
+Title: Переключение функций High Availability кластера снова работоспособно
+Subject: Переключение функций High Availability кластера %HOSTNAME% снова работоспособно
+
+Уважаемый пользователь!
+
+Переключение функций High Availability кластера %HOSTNAME% снова работоспособно. Подробную информацию можно найти на странице "Системные журналы" или "Журналы" в High Availability Manager.
+
+Действие: %HA_ACTION%
+
+С уважением,
+%COMPANY_NAME%
+
+
+[HA_FailOver]
+Category: HA,Important
+Title: Обнаружена ошибка кластера high-availability
+Subject: В кластере high-availability %HOSTNAME% обнаружена ошибка
+
+Уважаемый пользователь!
+
+В кластере high-availability %HOSTNAME% были обнаружены ошибки. Система переключится на пассивный сервер. Дальнейшую информацию см. в системных журналах.
+
+Действие: %HA_ACTION%
+Ошибка: %HA_PARAM_1%
+
+С уважением,
+%COMPANY_NAME%
+
+
+[HA_PassiveTimeout]
+Category: HA,Important
+Title: Локальному хосту не удалось обнаружить активный сервер
+Subject: [%HA_PARAM_1%] В течение некоторого времени не удается обнаружить активный сервер
+
+Уважаемый пользователь!
+
+Пассивный сервер [%HA_PARAM_1%] был отключен, поскольку ему в течение некоторого времени не удавалось обнаружить активный сервер [%HA_PARAM_2%]. Для начала включите активный сервер [%HA_PARAM_2%]. Если активный сервер [%HA_PARAM_2%] недоступен, удалите кластер high-availability. Для этого выполните следующие действия: Запустите [%HA_PARAM_1%] и подождите 5 минут. Нажмите и удерживайте кнопку RESET на задней панели %DISKSTATION% в течение 4 секунд, пока %DISKSTATION% не подаст звуковой сигнал. Сразу же отпустите кнопку. (Внимание! Длительное удержание кнопки RESET приведет к переустановке операционной системы.) Для получения дополнительной информации о системных настройках, которые будут сброшены, см. в этом руководстве: https://www.synology.com/knowledgebase/DSM/tutorial/General/How_to_reset_your_Synology_NAS.
+
+Действие: %HA_ACTION%
+
+С уважением,
+%COMPANY_NAME%
+
+
+[HA_SwitchFail]
+Category: HA,Important
+Title: Сбой переключения служб
+Subject: Сбой переключения служб кластера high-availability %HOSTNAME%
+
+Уважаемый пользователь!
+
+Система пыталась переключить службы на пассивный сервер кластера high-availability %HOSTNAME%, но произошел сбой. Дальнейшую информацию см. в системных журналах.
+
+Действие: %HA_ACTION%
+
+С уважением,
+%COMPANY_NAME%
+
+
+[HA_SwitchFinished]
+Category: HA,Important
+Title: Кластер high-availability теперь работает
+Subject: Кластер high-availability %HOSTNAME% теперь работает на %HA_PARAM_1%
+
+Уважаемый пользователь!
+
+Службы кластера high-availability %HOSTNAME% сейчас работают на %HA_PARAM_1%. Подробную информацию можно найти на странице /"Системные журналы/" или /"Журналы/" в High Availability Manager.
+
+Действие: %HA_ACTION%
+
+С уважением,
+%COMPANY_NAME%
+
+
+[HA_SwitchOver]
+Category: HA,Important
+Title: Переключение функций кластера high-availability
+Subject: Переключение функций кластера high-availability %HOSTNAME% на %HA_PARAM_1%
+
+Уважаемый пользователь!
+
+В кластере high-availability %HOSTNAME% было инициировано переключение функций. Выполняется переключение функций служб кластера high-availability на %HA_PARAM_1%. Дальнейшую информацию см. в системных журналах.
+
+Действие: %HA_ACTION%
+
+С уважением,
+%COMPANY_NAME%
+
+
+[HA_SyncComplete]
+Category: HA,Important
+Title: Полная репликация данных завершена
+Subject: Полная репликация данных в кластере high-availability %HOSTNAME% завершена
+
+Уважаемый пользователь!
+
+Полная репликация данных в кластере high-availability %HOSTNAME% завершена. Теперь пассивный сервер может взять на себя управление службами при необходимости переключения функций или отработки отказа. Подробную информацию можно найти на странице /"Системные журналы/" или /"Журналы/" в High Availability Manager.
+
+Действие: %HA_ACTION%
+
+С уважением,
+%COMPANY_NAME%
+
+
+[HA_UnableSwitchover]
+Category: HA,Important
+Title: Переключение функций High Availability кластера отключено
+Subject: Переключение функций High Availability кластера %HOSTNAME% было отключено
+
+Уважаемый пользователь!
+
+Переключение функций High Availability кластера %HOSTNAME% было отключено. Подробную информацию можно найти на странице /"Системные журналы/" или /"Журналы/" в High Availability Manager.
+
+Действие: %HA_ACTION%
+
+С уважением,
+%COMPANY_NAME%
+
+
+[HA_UnbindLocal]
+Category: HA,Important
+Title: Выполнено удаление локального хоста из кластера high-availability
+Subject: Выполнено удаление %HA_PARAM_1% из кластера high-availability %HA_PARAM_2%
+
+Уважаемый пользователь!
+
+Выполнено удаление %HA_PARAM_1% из кластера high-availability %HA_PARAM_2%. Дальнейшую информацию см. в системных журналах.
+
+Действие: %HA_ACTION%
+
+С уважением,
+%COMPANY_NAME%
+
+
+[HDEcc]
+Category: Storage,Important
+Title: Ошибка ввода/вывода диска
+Subject: Ошибка ввода/вывода на жестком диске %DISK_ID% на %HOSTNAME%
+
+Уважаемый пользователь!
+
+На жестком диске %DISK_ID% на %HOSTNAME% возникла ошибка ввода/вывода, но после нескольких попыток он работает исправно. Ошибка могла быть вызвана наличием плохих секторов. Если такая ситуация повторится, выполните резервное копирование данных и запустите на жестком диске тест S.M.A.R.T. для диагностики состояния жесткого диска.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[HotSpareDiskPlugout]
+Category: Storage,Important
+Title: Глобальный диск Hot Spare не подключен.
+Subject: Диск Hot Spare (%DISK_ID%) не подключен
+
+Уважаемый пользователь!
+
+Система обнаружила, что диск Hot Spare (%DISK_ID%) не подключен.
+Рекомендуется добавлять диски Hot Spare для защиты данных на диске.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[HotSpareRepairDone]
+Category: Storage,Important
+Title: Восстановление глобального Hot Spare завершено
+Subject: Восстановление данных на диске (%STORAGE_ID%) завершено
+
+Уважаемый пользователь!
+
+Система выполнила восстановление поврежденных данных (%STORAGE_ID%) на диске Hot Spare (%DISK_ID%).
+
+С уважением,
+%COMPANY_NAME%
+
+
+[HotSpareRepairFailed]
+Category: Storage,Important
+Title: Сбой восстановления глобального Hot Spare
+Subject: Сбой восстановления данных на диске (%STORAGE_ID%)
+
+Уважаемый пользователь!
+
+Система не может восстановить поврежденные данные (%STORAGE_ID%) на диске Hot Spare (%DISK_ID%).
+Подробную информацию см. в системных журналах.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[HotSpareRepairNoProtect]
+Category: Storage,Important
+Title: Глобальный Hot Spare: напомнить, какой объем не замещен
+Subject: Некоторые места хранения не защищены Hot Spare
+
+Уважаемый пользователь!
+
+Некоторые места хранения (%STORAGE_ID%) не защищены Hot Spare.
+Рекомендуется добавлять диски Hot Spare для защиты данных на диске.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[HotSpareRepairStart]
+Category: Storage,Important
+Title: Восстановление глобального Hot Spare выполняется
+Subject: Система использует диски Hot Spare для восстановления поврежденных данных на диске (%STORAGE_ID%)
+
+Уважаемый пользователь!
+
+В данный момент система использует диск Hot Spare (%DISK_ID%) для восстановления поврежденных данных на диске (%STORAGE_ID%).
+
+С уважением,
+%COMPANY_NAME%
+
+
+[ImproperShutdown]
+Category: System,Important
+Title: Неправильное выключение
+Subject: На %HOSTNAME% обнаружено неправильное выключение
+
+Уважаемый пользователь!
+
+Из-за сбоя питания произошло неправильно отключение %HOSTNAME%.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[InternalFanResume]
+Category: System
+Title: Вентилятор сервера возобновил работу
+Subject: Вентилятор %FANID% сервера %HOSTNAME% (серийный номер: %HOST_SN%) возобновил работу
+
+Уважаемый пользователь!
+
+Вентилятор %FANID% на сервере %HOSTNAME% (серийный номер: %HOST_SN%) возобновил работу.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[InternalFanStop]
+Category: System,Important
+Title: Вентилятор сервера перестал работать
+Subject: Вентилятор %FANID% на сервере %HOSTNAME% (серийный номер: %HOST_SN%) остановил работу
+
+Уважаемый пользователь!
+
+Вентилятор %FANID% на сервере %HOSTNAME% (серийный номер: %HOST_SN%) остановил работу.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[LocalLUNBkpError]
+Category: Backup/Restore,Important
+Title: Сбой локального резервирования LUN
+Subject: Сбой — резервирование LUN на %HOSTNAME%
+
+Уважаемый пользователь!
+
+Произошел сбой резервирования LUN на %HOSTNAME% в локальную папку общего доступа. Для получения дополнительной информации см. журнал резервирования в разделе DSM "Резервирование и репликация > Журнал".
+
+Имя LUN: %LUN%
+Задача резервирования: %BKP_TASK%
+Место назначения резервирования: %BKP_DST%  %PATH%
+Время запуска: %TIME%
+Длительность: %DUR%
+
+С уважением,
+%COMPANY_NAME%
+
+
+[LocalLUNBkpFinished]
+Category: Backup/Restore
+Title: Локальное резервирование LUN завершено
+Subject: Завершено — резервирование LUN на %HOSTNAME%
+
+Уважаемый пользователь!
+
+Резервирование LUN на %HOSTNAME% в локальную папку общего доступа было завершено.
+
+Имя LUN: %LUN%
+Задача резервирования: %BKP_TASK%
+Место назначения резервирования: %BKP_DST%  %PATH%
+Время запуска: %TIME%
+Длительность: %DUR%
+
+С уважением,
+%COMPANY_NAME%
+
+
+[LocalLUNRecoverError]
+Category: Backup/Restore,Important
+Title: Сбой локального восстановления LUN
+Subject: Сбой — восстановление LUN на %HOSTNAME%
+
+Уважаемый пользователь!
+
+Произошел сбой восстановления LUN на %HOSTNAME% из локальной папки общего доступа. Для получения дополнительной информации см. журнал резервирования в разделе DSM "Резервирование и репликация > Журнал".
+
+Имя LUN: %LUN%
+Источник восстановления: %BKP_SRC%  %SRC_PATH%
+Время запуска: %TIME%
+Длительность: %DUR%
+
+С уважением,
+%COMPANY_NAME%
+
+
+[LocalLUNRecoverFinished]
+Category: Backup/Restore
+Title: Локальное восстановление LUN завершено
+Subject: Завершено — восстановление LUN на %HOSTNAME%
+
+Уважаемый пользователь!
+
+Завершено восстановление LUN на %HOSTNAME% из локальной папки общего доступа.
+
+Имя LUN: %LUN%
+Источник восстановления: %BKP_SRC%  %SRC_PATH%
+Время запуска: %TIME%
+Длительность: %DUR%
+
+С уважением,
+%COMPANY_NAME%
+
+
+[MyDSPasswordChanged]
+Category: System,Important
+Title: Пароль учетной записи Synology изменен
+Subject: Пароль учетной записи Synology на %HOSTNAME% был изменен
+
+Уважаемый пользователь!
+
+Это сообщение подтверждает, что пароль от вашей учетной записи Synology [%MYDS_ACCOUNT%] был изменен через учетную запись Synology на %HOSTNAME%.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[NetLUNBkpError]
+Category: Backup/Restore,Important
+Title: Сбой сетевого резервирования LUN
+Subject: Сбой — резервирование LUN на %HOSTNAME%
+
+Уважаемый пользователь!
+
+Произошел сбой резервирования LUN на %HOSTNAME% в удаленную папку общего доступа. Для получения дополнительной информации см. журнал резервирования в разделе DSM "Резервирование и репликация > Журнал".
+
+Имя LUN: %LUN%
+Задача резервирования: %BKP_TASK%
+Место назначения резервирования: %BKP_DST%  %PATH%
+Время запуска: %TIME%
+Длительность: %DUR%
+
+С уважением,
+%COMPANY_NAME%
+
+
+[NetLUNBkpOK]
+Category: Backup/Restore
+Title: Сетевое резервирование LUN завершено
+Subject: Завершено — резервирование LUN на %HOSTNAME%
+
+Уважаемый пользователь!
+
+Резервирование LUN на %HOSTNAME% в удаленную папку общего доступа завершено.
+
+Имя LUN: %LUN%
+Задача резервирования: %BKP_TASK%
+Место назначения резервирования: %BKP_DST%  %PATH%
+Время запуска: %TIME%
+Длительность: %DUR%
+
+С уважением,
+%COMPANY_NAME%
+
+
+[NetLUNRecoverError]
+Category: Backup/Restore,Important
+Title: Сбой сетевого восстановления LUN
+Subject: Сбой — восстановление LUN на %HOSTNAME%
+
+Уважаемый пользователь!
+
+Произошел сбой восстановления LUN на %HOSTNAME% из удаленной папки общего доступа. Для получения дополнительной информации см. журнал резервирования в разделе DSM "Резервирование и репликация > Журнал".
+
+Имя LUN: %LUN%
+Источник восстановления: %BKP_SRC%  %SRC_PATH%
+Время запуска: %TIME%
+Длительность: %DUR%
+
+С уважением,
+%COMPANY_NAME%
+
+
+[NetLUNRecoverFinished]
+Category: Backup/Restore,Important
+Title: Сетевое восстановление LUN завершено
+Subject: Завершено — восстановление LUN на %HOSTNAME%
+
+Уважаемый пользователь!
+
+Восстановление LUN на %HOSTNAME% из удаленной папки общего доступа завершено.
+
+Имя LUN: %LUN%
+Источник восстановления: %BKP_SRC%  %SRC_PATH%
+Время запуска: %TIME%
+Длительность: %DUR%
+
+С уважением,
+%COMPANY_NAME%
+
+
+[OTP_emergency_mail]
+Subject: Запасной проверочный код для %USER_NAME% %HOSTNAME%
+
+Уважаемый пользователь!
+
+Ниже приведен одноразовый запасной проверочный код, который может использоваться для входа в %HOSTNAME% и сброса настроек 2-этапной проверки. Введите этот 8-значный код при появлении запроса на ввод кода подтверждения.
+
+Запасной проверочный код: %EMG_CODE%
+
+С уважением,
+%COMPANY_NAME%
+
+
+[OTP_emergency_mail_warning]
+Subject: Запасной проверочный код для %USER_NAME% %HOSTNAME%
+
+Уважаемый пользователь!
+
+Ниже приведен одноразовый запасной проверочный код, который может использоваться для входа в %HOSTNAME% и сброса настроек 2-этапной проверки. Введите этот 8-значный код при появлении запроса на ввод кода подтверждения.
+
+Примечание. Достигнуто максимальное количество запасных кодов. Сбросьте настройки 2-ступенчатой проверки при первой же возможности.
+
+Запасной код для входа: %EMG_CODE%
+
+С уважением,
+%COMPANY_NAME%
+
+
+[OverheatShutdownCPU]
+Category: System,Important
+Title: Отключение процессора из-за перегрева
+Subject: %HOSTNAME% (серийный номер: %HOST_SN%) отключен из-за перегрева процессора
+
+Уважаемый пользователь!
+
+%HOSTNAME% (серийный номер: %HOST_SN%) автоматически отключен из-за перегрева процессора (более %SHUTDOWN_TMP%°C).
+
+С уважением,
+%COMPANY_NAME%
+
+
+[OverheatShutdownDisk]
+Category: System,Important
+Title: Отключение диска из-за перегрева
+Subject: %HOSTNAME% отключен из-за перегрева процессора.
+
+Уважаемый пользователь!
+
+%HOSTNAME% автоматически отключен из-за перегрева диска %DISK_NUM% и нагревания до %SHUTDOWN_TMP%°C.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[OverheatShutdownThermal]
+Category: System,Important
+Title: Отключение из-за перегрева
+Subject: %HOSTNAME% (серийный номер: %HOST_SN%) отключен из-за перегрева
+
+Уважаемый пользователь!
+
+%HOSTNAME% (серийный номер: %HOST_SN%) автоматически отключен из-за перегрева (более %SHUTDOWN_TMP%°C).
+
+С уважением,
+%COMPANY_NAME%
+
+
+[PKGUpgrade]
+Subject: Информация об обновлении пакета для %HOSTNAME%
+
+Уважаемый пользователь!
+
+Следующие пакеты готовы к обновлению на %HOSTNAME%. Для их обновления вы можете запустить центр пакетов в %OSNAME%.
+
+Пакеты для обновления:
+%PKG_SET%
+
+С уважением,
+%COMPANY_NAME%
+
+
+[Raid5SpareChanged]
+Category: Storage,Important
+Title: Раздел RAID5+spare находится в режиме ограниченной функциональности
+Subject: Раздел RAID5+spare %VOLUME_ID% на %HOSTNAME% находится в режиме ограниченной функциональности
+
+Уважаемый пользователь!
+
+Раздел %VOLUME_ID% на %HOSTNAME% понижен с RAID5+spare до RAID5. Чтобы восстановить раздел до RAID5+spare, подготовьте запасной диск, перейдите в "Главное меню" > "Диспетчер хранения" > "Раздел" > "Управление" для замены неисправного диска.
+
+Для получения помощи обратитесь в службу онлайн-поддержки Synology: http://www.synology.com.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[RaidDiskFail]
+Category: Storage,Important
+Title: Сбой жесткого диска в группе дисков
+Subject: Произошел сбой жесткого диска %DISK_ID% в группе дисков на сервере %HOSTNAME%
+
+Уважаемый пользователь!
+
+Произошел сбой жесткого диска %DISK_ID% в группе дисков на сервере %HOSTNAME%; замените его.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[RaidGroupCrashed]
+Category: Storage,Important
+Title: Повреждение блоков RAID Group
+Subject: Произошло повреждение блоков RAID Group %RAID_ID% на %HOSTNAME%
+
+Уважаемый пользователь!
+
+Произошло повреждение блоков RAID Group %RAID_ID% на %HOSTNAME%. Система может не загружаться.
+
+Для получения помощи обратитесь в службу онлайн-поддержки Synology: http://www.synology.com.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[RaidGroupDegraded]
+Category: Storage,Important
+Title: Неисправные блоки RAID Group
+Subject: RAID Group %RAID_ID% на %HOSTNAME% работает в режиме ограниченной функциональности [%ACTIVE_DISK%/%TOTAL_DISK%]
+
+Уважаемый пользователь!
+
+RAID Group %RAID_ID% на %HOSTNAME% работает в режиме ограниченной функциональности. (Общее число жестких дисков: %TOTAL_DISK%; Число активных жестких дисков: %ACTIVE_DISK%) Определите причину ухудшения рабочих характеристик и примите корректирующие меры.
+
+Для получения помощи обратитесь в службу онлайн-поддержки Synology: http://www.synology.com.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[RaidGroupDiskFail]
+Category: Storage,Important
+Title: Сбой жесткого диска в RAID Group
+Subject: Произошел сбой жесткого диска %DISK_ID% в RAID Group на сервере %HOSTNAME%
+
+Уважаемый пользователь!
+
+Произошел сбой жесткого диска %DISK_ID% в RAID Group на сервере %HOSTNAME%; замените его.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[RaidGroupSyncDone]
+Category: Storage
+Title: Синхронизация RAID Group завершена
+Subject: Проверка последовательности RAID Group %RAID_ID% на %HOSTNAME% завершена
+
+Уважаемый пользователь!
+
+Проверка последовательности RAID Group %RAID_ID% на %HOSTNAME% завершена. Система готова к использованию.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[RaidGroupVolumeBadSector]
+Category: Storage,Important
+Title: Сбой тома в RAID Group
+Subject: Сбой тома в RAID Group (%VOLUME_ID%) на %HOSTNAME%
+
+Уважаемый пользователь!
+
+Некоторые файлы были повреждены, так как произошел сбой тома (%VOLUME_ID%) в RAID Group на сервере %HOSTNAME%. Файлы находятся под угрозой повреждения, так как том работает в режиме ограниченной функциональности. Как можно скорее восстановите работоспособность тома. Дополнительные сведения содержатся в разделе «Главное меню > Журнал системных событий».
+
+С уважением,
+%COMPANY_NAME%
+
+
+[RaidGroupiScsiBadSector]
+Category: Storage,Important
+Title: Сбой iSCSI LUN в RAID Group
+Subject: Сбой iSCSI LUN на %HOSTNAME% в RAID Group
+
+Уважаемый пользователь!
+
+Некоторые файлы были повреждены, так как произошел сбой iSCSI LUN в RAID Group на сервере %HOSTNAME%. Файлы находятся под угрозой повреждения, так как том работает в режиме ограниченной функциональности. Как можно скорее восстановите работоспособность тома.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[RaidSuggestDataScrubbing]
+Category: Storage
+Title: Напоминание об исправлении ошибок данных RAID
+Subject: Напоминание об исправлении ошибок данных RAID на %HOSTNAME%
+
+Уважаемый пользователь!
+
+Исправление ошибок данных RAID на %HOSTNAME% не выполнялось в течение месяца. Для обеспечения целостности данных рекомендуется выполнить исправление ошибок данных RAID.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[RaidSystemVolumeCrashed]
+Category: Storage,Important
+Title: Повреждение системного раздела
+Subject: Системный раздел (%SYSTEM_ID%) на %HOSTNAME% поврежден
+
+Уважаемый пользователь!
+
+Системный раздел (%SYSTEM_ID%) на %HOSTNAME% поврежден. Система может не загружаться.
+Для получения помощи обратитесь в службу онлайн-поддержки Synology: http://www.synology.com.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[RaidSystemVolumeDegrade]
+Category: Storage,Important
+Title: Системный раздел находится в режиме ограниченной функциональности
+Subject: Системный раздел (%SYSTEM_ID%) на %HOSTNAME% вошел в режим ограниченной функциональности [%ACTIVE_DISK%/%TOTAL_DISK%]
+
+Уважаемый пользователь!
+
+Системный раздел (%SYSTEM_ID%) на %HOSTNAME% вошел в режим ограниченной функциональности. (Общее число жестких дисков: %TOTAL_DISK%; Число активных жестких дисков: %ACTIVE_DISK%)
+
+Перезагрузите систему, чтобы автоматически выполнить восстановление при запуске.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[RaidSystemVolumeSyncDone]
+Category: Storage
+Title: Проверка последовательности в системе завершена
+Subject: Проверка последовательности системного раздела (%SYSTEM_ID%) на %HOSTNAME% завершена
+
+Уважаемый пользователь!
+
+%HOSTNAME% завершил проверку последовательности системного раздела (%SYSTEM_ID%). Система готова к использованию.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[RaidVolumeBadSector]
+Category: Storage,Important
+Title: Сбой тома в группе дисков
+Subject: Сбой тома в группе дисков (%VOLUME_ID%) на сервере %HOSTNAME%
+
+Уважаемый пользователь!
+
+Некоторые файлы были повреждены, так как произошел сбой тома (%VOLUME_ID%) в группе дисков на сервере %HOSTNAME%. Файлы находятся под угрозой повреждения, так как том работает в режиме ограниченной функциональности. Как можно скорее восстановите работоспособность тома. Дополнительные сведения содержатся в разделе «Главное меню > Сведения о системе > Журнал > Журнал системных событий».
+
+С уважением,
+%COMPANY_NAME%
+
+
+[RaidVolumeCrashed]
+Category: Storage,Important
+Title: Раздел поврежден
+Subject: Раздел %VOLUME_ID% на %HOSTNAME% поврежден
+
+Уважаемый пользователь!
+
+Раздел %VOLUME_ID% на %HOSTNAME% поврежден. Система может не загружаться.
+
+Для получения помощи обратитесь в службу онлайн-поддержки Synology: http://www.synology.com.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[RaidVolumeDegrade]
+Category: Storage,Important
+Title: Том в режиме ограниченной функциональности
+Subject: Том %VOLUME_ID% на %HOSTNAME% вошел в режим ограниченной функциональности [%ACTIVE_DISK%/%TOTAL_DISK%]
+
+Уважаемый пользователь!
+
+Том %VOLUME_ID% на %HOSTNAME% вошел в режим ограниченной функциональности. (Общее число жестких дисков: %TOTAL_DISK%; Число активных жестких дисков: %ACTIVE_DISK%) Определите причину ухудшения рабочих характеристик и примите корректирующие меры.
+
+Для восстановления тома замените неисправные диски новыми. Для получения дополнительной информации посетите базу знаний Synology на нашем официальном сайте.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[RaidVolumeFull]
+Category: Storage,Important
+Title: Раздел заполнен
+Subject: В разделе %VOLUME_ID% на %HOSTNAME% заканчивается свободное место
+
+Уважаемый пользователь!
+
+Доступное место в разделе %VOLUME_ID% на %HOSTNAME% заканчивается; удалите ненужные файлы, чтобы освободить место.
+
+Общая емкость: %VOLUME_SIZE% ГБ
+Доступное пространство: %FREE_SPACE% ГБ (%USAGE%%)
+
+С уважением,
+%COMPANY_NAME%
+
+
+[RaidVolumeSyncDone]
+Category: Storage
+Title: Проверка последовательности завершена
+Subject: Проверка последовательности раздела %VOLUME_ID% на %HOSTNAME% завершена
+
+Уважаемый пользователь!
+
+%HOSTNAME% завершил проверку последовательности раздела %VOLUME_ID%. Система готова к использованию.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[RaidiScsiBadSector]
+Category: Storage,Important
+Title: Сбой iSCSI LUN в группе дисков
+Subject: Сбой iSCSI LUN в группе дисков на сервере %HOSTNAME%
+
+Уважаемый пользователь!
+
+Некоторые файлы были повреждены, так как произошел сбой iSCSI LUN в группе дисков на сервере %HOSTNAME%. Файлы находятся под угрозой повреждения, так как том работает в режиме ограниченной функциональности. Как можно скорее восстановите работоспособность тома.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[RaidiScsiCrashed]
+Category: Storage,Important
+Title: Повреждение iSCSI LUN
+Subject: Произошло повреждение iSCSI LUN (%LUN_NAME%) в %HOSTNAME%
+
+Уважаемый пользователь!
+
+Произошло повреждение iSCSI LUN (%LUN_NAME%) в %HOSTNAME%. Система может не загружаться.
+
+Для получения помощи обратитесь в службу онлайн-поддержки Synology: http://www.synology.com.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[RaidiScsiDegraded]
+Category: Storage,Important
+Title: iSCSI LUN в режиме ограниченной функциональности
+Subject: iSCSI LUN (%LUN_NAME%) на %HOSTNAME% работает в режиме ограниченной функциональности [%ACTIVE_DISK%/%TOTAL_DISK%]
+
+Уважаемый пользователь!
+
+iSCSI LUN (%LUN_NAME%) на %HOSTNAME% работает в режиме ограниченной функциональности. (Общее число жестких дисков: %TOTAL_DISK%; Число активных жестких дисков: %ACTIVE_DISK%) Определите причину ухудшения рабочих характеристик и примите корректирующие меры.
+
+Для восстановления iSCSI LUN замените неисправные диски новыми. Для получения дополнительной информации посетите базу знаний Synology на нашем официальном сайте.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[RedundantPowerRecoveredProvide]
+Category: Power System
+Title: Восстановлен резервный источник питания
+Subject: Источник питания № %POWERID% на %HOSTNAME% (серийный номер: %HOST_SN%) восстановлен
+
+Уважаемый пользователь!
+
+Источник питания № %POWERID% на %HOSTNAME% (серийный номер: %HOST_SN%) восстановлен.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[RedundantPowerStopProvide]
+Category: Power System,Important
+Title: Произошел сбой резервного блока питания
+Subject: Источник питания № %POWERID% на %HOSTNAME% (серийный номер: %HOST_SN%)
+
+Уважаемый пользователь!
+
+Источник питания № %POWERID% на %HOSTNAME% (серийный номер: %HOST_SN%).
+
+С уважением,
+%COMPANY_NAME%
+
+
+[RestoreTaskCanceled]
+Category: Backup/Restore,Important
+Title: Восстановление отменено
+Subject: Выполнена отмена %TASK_TYPE% в %HOSTNAME%
+
+Уважаемый пользователь!
+
+Восстановление данных в %HOSTNAME% было отменено.
+
+Источник восстановления: %DESTINATION_IP% %DESTINATION_PATH%
+Время запуска: %START_TIME%
+Длительность: %DURATION%
+
+С уважением,
+%COMPANY_NAME%
+
+
+[RestoreTaskFailed]
+Category: Backup/Restore,Important
+Title: Не удалось выполнить восстановление
+Subject: Не удалось восстановить %TASK_TYPE% из %HOSTNAME%
+
+Уважаемый пользователь!
+
+Не удалось восстановить зарезервированные данные из %HOSTNAME%.
+
+См. журнал резервирования в разделе [Hyper Backup] > [Журнал]
+для получения дополнительной информации.
+
+Источник восстановления: %DESTINATION_IP% %DESTINATION_PATH%
+Время запуска: %START_TIME%
+Длительность: %DURATION%
+
+С уважением,
+%COMPANY_NAME%
+
+
+[RestoreTaskFinished]
+Category: Backup/Restore
+Title: Восстановление завершено
+Subject: Успешное выполнение %TASK_TYPE% в %HOSTNAME%
+
+Уважаемый пользователь!
+
+Задача восстановления %TASK_NAME% завершена.
+
+Источник восстановления: %DESTINATION_IP% %DESTINATION_PATH%
+Время запуска: %START_TIME%
+Длительность: %DURATION%
+
+С уважением,
+%COMPANY_NAME%
+
+
+[SDCardFull]
+Category: External Storage
+Title: Карта памяти SD заполнена
+Subject: На карте памяти SD %DISK_NUMBER% на %HOSTNAME% заканчивается свободное место
+
+Уважаемый пользователь!
+
+Заканчивается свободное место на карте памяти SD %DISK_NUMBER% на %HOSTNAME%. Ознакомьтесь с информацией ниже и примите соответствующие меры.
+
+Общая емкость: %DISK_SIZE% ГБ
+Доступное пространство: %FREE_SPACE% ГБ (%USAGE%%)
+
+С уважением,
+%COMPANY_NAME%
+
+
+[SDCardPartitionFull]
+Category: External Storage
+Title: Раздел карты памяти SD заполнен
+Subject: В разделе %PARTITION_NUMBER% на карте памяти SD %DISK_NUMBER% на %HOSTNAME% заканчивается свободное место
+
+Уважаемый пользователь!
+
+В разделе %PARTITION_NUMBER% на карте памяти SD %DISK_NUMBER% на %HOSTNAME% заканчивается свободное место. Примите соответствующие меры.
+
+Общая емкость: %DISK_SIZE% ГБ
+Доступное пространство: %FREE_SPACE% ГБ (%USAGE%%)
+
+С уважением,
+%COMPANY_NAME%
+
+
+[SFPModuleUnsupported]
+Category: System,Important
+Title: Неподдерживаемый модуль SFP+
+Subject: Обнаружен неподдерживаемый модуль %LAN% SFP+
+
+Уважаемый пользователь!
+
+Обнаружен неподдерживаемый модуль %LAN% SFP+, поэтому драйвер платы сетевого интерфейса был отключен.
+Установите поддерживаемый модуль и перезапустите %DISKSTATION%.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[SSDCacheCrashed]
+Category: Storage,Important
+Title: Кэш SSD поврежден
+Subject: Произошло повреждение кэша SSD %SSD_ID% на %HOSTNAME%
+
+Уважаемый пользователь!
+
+Произошло повреждение кэша SSD %SSD_ID% на %HOSTNAME%. Для получения помощи обратитесь в службу онлайн-поддержки Synology: http://www.synology.com.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[SSDCacheDegraded]
+Category: Storage,Important
+Title: Кэш SSD поврежден неисправен
+Subject: Кэш SSD %SSD_ID% на %HOSTNAME% работает в режиме ограниченной функциональности
+
+Уважаемый пользователь!
+
+Кэш SSD %SSD_ID% на %HOSTNAME% работает в режиме ограниченной функциональности. Для получения помощи обратитесь в службу онлайн-поддержки Synology: http://www.synology.com.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[SSDCacheMissing]
+Category: Storage,Important
+Title: Кэш чтения-записи отсутствует
+Subject: Кэш чтения-записи %SPACE_ID% на %HOSTNAME% отсутствует
+
+Уважаемый пользователь!
+
+Кэш чтения-записи %SPACE_ID% на %HOSTNAME% отсутствует. Для получения помощи обратитесь в службу онлайн-поддержки Synology: http://www.synology.com.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[SecurityScanAlarm]
+Category: System,Important
+Title: Обнаружены риски безопасности
+Subject: Обнаружены риски безопасности на %HOSTNAME%
+
+Уважаемый пользователь!
+
+Security Advisor завершил сканирование по графику на %HOSTNAME%. Были обнаружены риски безопасности, требующие ваших действий. Выполните вход в %OSNAME% на %HOSTNAME% и просмотрите отчет в Security Advisor.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[SecurityScanDSMOutOfDate]
+Category: System,Important
+Title: Система устарела
+Subject: Сообщение Security Advisor: версия %OSNAME% на %HOSTNAME% устарела
+
+Уважаемый пользователь!
+
+Текущая версия %OSNAME% на %HOSTNAME% устарела. Выполните вход в %OSNAME% на %HOSTNAME%, откройте панель управления и установите последнюю версию %OSNAME%. Для просмотра подробного отчета перейдите в раздел Security Advisor в основном меню.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[SecurityScanDSMPackageOutOfDate]
+Category: System,Important
+Title: Система и пакеты устарели
+Subject: Сообщение Security Advisor: %OSNAME% и пакеты на %HOSTNAME% устарели
+
+Уважаемый пользователь!
+
+%OSNAME% и пакеты: %NUMBER%, выполняемые на %HOSTNAME%, устарели. Выполните вход в %OSNAME% на %HOSTNAME%, затем выполните следующие действия:
+- Откройте панель управления и установите последнюю версию %OSNAME%.
+- Откройте Центр пакетов и установите последние версии пакетов.
+
+Для просмотра подробного отчета перейдите в раздел Security Advisor в основном меню.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[SecurityScanDanger]
+Category: System,Important
+Title: Обнаружено вредоносное ПО
+Subject: Обнаружено вредоносное ПО на %HOSTNAME%
+
+Уважаемый пользователь!
+
+Обнаружено вредоносное ПО на %HOSTNAME%. Выполните вход в %OSNAME% на %HOSTNAME% и откройте Security Advisor для решения проблемы.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[SecurityScanPackageOutOfDate]
+Category: System,Important
+Title:  Пакеты устарели
+Subject: Пакеты на %HOSTNAME% устарели
+
+Уважаемый пользователь!
+
+%NUMBER% пакетов, выполняющихся на %HOSTNAME%, устарели. Выполните вход в %OSNAME% на %HOSTNAME%, откройте Центр пакетов и установите последнюю версию пакетов.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[ShareSyncError]
+Category: Backup/Restore,Important
+Title: Сбой синхронизации папки общего доступа
+Subject: Сбой — синхронизация папки общего доступа
+
+Уважаемый пользователь!
+
+Произошел сбой синхронизации папки общего доступа на %HOSTNAME%. Для получения дополнительной информации см. журнал резервирования в разделе DSM "Центр журналов".
+
+Задача синхронизации: %S2S_TASK%
+Сервер синхронизации: %S2S_SERVER%
+Время запуска: %TIME%
+Длительность: %DUR%
+
+С уважением,
+%COMPANY_NAME%
+
+
+[ShareSyncSuccess]
+Category: Backup/Restore
+Title: Синхронизация папки общего доступа завершена
+Subject: Завершено — синхронизация папки общего доступа
+
+Уважаемый пользователь!
+
+Синхронизация папки общего доступа на %HOSTNAME% завершена.
+
+Задача синхронизации: %S2S_TASK%
+Сервер синхронизации: %S2S_SERVER%
+Время запуска: %TIME%
+Длительность: %DUR%
+
+С уважением,
+%COMPANY_NAME%
+
+
+[SmartEBoxAbnor]
+Category: Storage,Important
+Title: Ненормальное состояние S.M.A.R.T. на диске устройства расширения
+Subject: В состоянии S.M.A.R.T. диска %DISK_ID% на %EUNIT_ID%, подключенном к %HOSTNAME%, обнаружено отклонение от нормы
+
+Уважаемый пользователь!
+
+В состоянии S.M.A.R.T. диска %DISK_ID% на %EUNIT_ID%, подключенном к %HOSTNAME%, обнаружено отклонение от нормы. Это может свидетельствовать о возможном сбое. Как можно скорее зарезервируйте данные и замените диск.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[SmartESataAbnor]
+Category: External Storage,Important
+Title: Ненормальное состояние S.M.A.R.T. диска eSATA
+Subject: Ненормальное состояние S.M.A.R.T. диска eSATA на %HOSTNAME%
+
+Уважаемый пользователь!
+
+Ненормальное состояние S.M.A.R.T. диска eSATA на %HOSTNAME% Это может свидетельствовать о возможном сбое. Как можно скорее зарезервируйте данные и замените диск.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[SmartIntAbnor]
+Category: Storage,Important
+Title: Ненормальное состояние S.M.A.R.T. внутреннего диска
+Subject: В состоянии S.M.A.R.T. диска %DISK_ID% на %HOSTNAME% обнаружено отклонение от нормы
+
+Уважаемый пользователь!
+
+Ненормальное состояние S.M.A.R.T. внутреннего диска %DISK_ID% на %HOSTNAME%. Это может свидетельствовать о возможном сбое. Как можно скорее зарезервируйте данные и замените диск.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[SmartTestEBoxErr]
+Category: Storage,Important
+Title: Сбой проверки S.M.A.R.T. на диске устройства расширения
+Subject: На диске %DISK_ID% на %EUNIT_ID%, подключенном к %HOSTNAME%, произошел сбой проверки S.M.A.R.T.
+
+Уважаемый пользователь!
+
+На жестком диске %DISK_ID% на %EUNIT_ID%, подключенном к %HOSTNAME%, произошел сбой проверки S.M.A.R.T. Как можно скорее зарезервируйте данные и замените диск.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[SmartTestESataErr]
+Category: External Storage,Important
+Title: Сбой проверки S.M.A.R.T. на диске eSATA
+Subject: На диске eSATA на %HOSTNAME% произошел сбой проверки S.M.A.R.T.
+
+Уважаемый пользователь!
+
+На диске eSATA на %HOSTNAME% произошел сбой проверки S.M.A.R.T. Как можно скорее зарезервируйте данные и замените диск.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[SmartTestIntErr]
+Category: Storage,Important
+Title: Сбой проверки S.M.A.R.T. на внутреннем диске
+Subject: На диске %DISK_ID% на %HOSTNAME% произошел сбой проверки S.M.A.R.T.
+
+Уважаемый пользователь!
+
+На жестком диске %DISK_ID% на %HOSTNAME% произошел сбой проверки S.M.A.R.T. Как можно скорее зарезервируйте данные и замените диск.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[StoragePoolCrashed]
+Category: Storage,Important
+Title: Повреждение группы дисков
+Subject: Произошло повреждение группы дисков %RAID_ID% на %HOSTNAME%
+
+Уважаемый пользователь!
+
+Произошло повреждение группы дисков %RAID_ID% на %HOSTNAME%. Система может не загружаться.
+
+Для получения помощи обратитесь в службу онлайн-поддержки Synology: http://www.synology.com.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[StoragePoolDegraded]
+Category: Storage,Important
+Title: Группа дисков в режиме ограниченной функциональности
+Subject: Группа дисков %RAID_ID% на %HOSTNAME% вошла в режим ограниченной функциональности [%ACTIVE_DISK%/%TOTAL_DISK%]
+
+Уважаемый пользователь!
+
+Группа дисков %RAID_ID% на %HOSTNAME% вошла в режим ограниченной функциональности. (Общее число жестких дисков: %TOTAL_DISK%; Число активных жестких дисков: %ACTIVE_DISK%) Определите причину ухудшения рабочих характеристик и примите корректирующие меры.
+
+Для получения помощи обратитесь в службу онлайн-поддержки Synology: http://www.synology.com.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[StoragePoolRaid5SpareChanged]
+Category: Storage,Important
+Title: Группа дисков - Raid5+spare понижен
+Subject: Группа дисков %RAID_ID% на %HOSTNAME% понижена до RAID5
+
+Уважаемый пользователь!
+
+Группа дисков %RAID_ID% на %HOSTNAME% понижена с RAID5+spare до RAID5. Чтобы восстановить ее до RAID5+spare, подготовьте запасной диск, перейдите в "Главное меню" > "Диспетчер хранения" > "Группа дисков" для замены неисправного диска.
+
+Для получения помощи обратитесь в службу онлайн-поддержки Synology: http://www.synology.com.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[StoragePoolSyncDone]
+Category: Storage
+Title: Синхронизация группы дисков завершена
+Subject: Проверка последовательности группы дисков %RAID_ID% на %HOSTNAME% завершена
+
+Уважаемый пользователь!
+
+Проверка последовательности группы дисков %RAID_ID% на %HOSTNAME% завершена. Система готова к использованию.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[SynoReport]
+Subject: Создан отчет по использованию диска
+
+Уважаемый пользователь!
+
+Создан отчет %PROFILE% по использованию диска. Для просмотра отчета см. ниже:
+%LINK%
+
+С уважением,
+%COMPANY_NAME%
+
+
+[SynoReportFail]
+Subject: Сбой создания отчета по использованию хранилища
+
+Уважаемый пользователь!
+
+При создании отчета по использованию %PROFILE% возникла ошибка.
+
+Причина: %MSG%
+
+С уважением,
+%COMPANY_NAME%
+
+
+[SystemInodeFull]
+Category: System
+Title: Количество файлов в системе достигает предела
+Subject: Количество файлов в системном разделе на %HOSTNAME% достигает предела
+
+Уважаемый пользователь!
+
+Количество файлов в системном разделе на %HOSTNAME% достигает предела. Обратитесь в службу техподдержки Synology.
+
+Максимальное количество файлов: %TOTAL_INODE%
+Оставшееся количество файлов: %FREE_INODE% (%USAGE%%)
+
+С уважением,
+%COMPANY_NAME%
+
+
+[SystemVolumeCrashed]
+Category: System
+Title: Сбой в системе хранения
+Subject: В системе хранения на %HOSTNAME% произошел сбой
+
+Уважаемый пользователь!
+
+В системе хранения на %HOSTNAME% произошел сбой.
+
+Для получения помощи обратитесь в службу онлайн-поддержки Synology по адресу http://www.synology.com
+
+С уважением,
+%COMPANY_NAME%
+
+
+[SystemVolumeFull]
+Category: System
+Title: Объем хранения системы заполнен
+Subject: Свободный объем хранения системы на %HOSTNAME% заканчивается
+
+Уважаемый пользователь!
+
+Заканчивается свободное место в разделе на %HOSTNAME%. См. информацию ниже и освободите место.
+
+Общая емкость: %VOLUME_SIZE% ГБ
+Доступное пространство: %FREE_SPACE% ГБ (%USAGE%%)
+
+С уважением,
+%COMPANY_NAME%
+
+
+[TPLUNReachSoftLimit]
+Category: Storage,Important
+Title: Недостаточная емкость хранения LUN
+Subject: Заканчивается свободное место в хранилище LUN %LUN_NAME% на %HOSTNAME%
+
+Уважаемый пользователь!
+
+В LUN %LUN_NAME% на %HOSTNAME% заканчивается свободное место для хранения. Чтобы увеличить емкость хранения, выполните расширение тома.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[TaskSchedulerResult]
+Subject: Планировщик задач завершил выполнение запланированной задачи
+
+Уважаемый пользователь!
+
+Планировщик задач завершил выполнение запланированной задачи.
+
+Задача: %TASK_ID%
+Время запуска: %START_TIME%
+Время остановки: %STOP_TIME%
+Текущее состояние: %EXIT_CODE%
+Стандартный вывод/ошибка:
+%OUTPUT%
+
+С уважением,
+%COMPANY_NAME%
+
+
+[TestMail]
+Subject: Тестовое сообщение от %HOSTNAME%
+
+Уважаемый пользователь!
+
+Поздравляем! Вы успешно настроили службу уведомлений электронной почты на %HOSTNAME%.
+Для получения дальнейшей информации о конфигурации системы посетите сайт %HTTP_URL%.
+(Если не удается подключиться к серверу, обратитесь к администратору.)
+
+С уважением,
+%COMPANY_NAME%
+
+
+[UPSConnected]
+Category: Power System
+Title: ИБП подключен
+Subject: %HOSTNAME% подключен к ИБП.
+
+Уважаемый пользователь!
+
+%HOSTNAME% подключен к ИБП.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[UPSDisconnect]
+Category: Power System,Important
+Title: ИБП отключен
+Subject: %HOSTNAME% потерял соединение с ИБП.
+
+Уважаемый пользователь!
+
+%HOSTNAME% потерял соединение с ИБП. Проверьте настройки сервера.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[UPSOnAC]
+Category: Power System,Important
+Title: ИПБ переведено в режим питания от переменного тока
+Subject: Устройство ИПБ, подключенное к %HOSTNAME%, переведено в режим питания от переменного тока.
+
+Уважаемый пользователь!
+
+Устройство ИПБ, подключенное к %HOSTNAME%, переведено в режим питания от переменного тока.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[UPSOnBattery]
+Category: Power System,Important
+Title: ИПБ переведено в режим питания от батареи
+Subject: Устройство ИПБ, подключенное к %HOSTNAME%, переведено в режим питания от батареи.
+
+Уважаемый пользователь!
+
+Устройство ИПБ, подключенное к %HOSTNAME%, переведено в режим питания от батареи. %HOSTNAME% будет отключен, когда батарея устройства ИПБ будет разряжена. Выключите %HOSTNAME% вручную или подключите внешний источник питания при первой же возможности.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[UPSPowerFail]
+Category: Power System,Important
+Title: Разрядка батареи ИБП достигла предела
+Subject: ИБП, подключенное к %HOSTNAME%, достигло предела разрядки батареи
+
+Уважаемый пользователь!
+
+ИБП, подключенное к %HOSTNAME%, достигло предела разрядки батареи. Все службы отключены. Службы будут перезагружены после восстановления ИБП.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[USBCOPYDisconnect]
+Category: USB Copy
+Title: USBCopy отключено
+Subject: На сервере %HOSTNAME% отключено внешнее устройство
+
+Уважаемый пользователь!
+
+Произошел сбой %COPY% на %HOSTNAME%, поскольку внешнее устройство было отключено.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[USBCOPYError]
+Category: USB Copy,Important
+Title: Сбой USBCopy
+Subject: Произошел сбой %COPY% на %HOSTNAME%
+
+Уважаемый пользователь!
+
+%COPY% на %HOSTNAME% не удалось выполнить из-за неизвестных ошибок.
+Код ошибки: %ERR%. Дополнительную информацию см. в журнале событий USBCopy/SDCopy.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[USBCOPYFinished]
+Category: USB Copy
+Title: USBCopy выполнено
+Subject: %COPY% на %HOSTNAME% было выполнено
+
+Уважаемый пользователь!
+
+%COPY% на %HOSTNAME% было выполнено успешно.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[USBCOPYNospace]
+Category: USB Copy,Important
+Title: USBCopy отменено
+Subject: %COPY% на %HOSTNAME% было отменено
+
+Уважаемый пользователь!
+
+%COPY% на %HOSTNAME% отменено из-за недостатка места на целевой папке общего доступа.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[USBDiskFail]
+Category: External Storage
+Title: Сбой диска USB
+Subject: Произошел сбой диска USB %DISK_ID% на %HOSTNAME%
+
+Уважаемый пользователь!
+
+Произошел сбой диска USB %DISK_ID% на %HOSTNAME%.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[USBDiskFull]
+Category: External Storage
+Title: Диск USB заполнен
+Subject: На диске USB %DISK_NUMBER% на %HOSTNAME% заканчивается свободное место
+
+Уважаемый пользователь!
+
+На диске USB %DISK_NUMBER% на %HOSTNAME% заканчивается место; примите соответствующие меры.
+
+Общая емкость: %DISK_SIZE% ГБ
+Доступное пространство: %FREE_SPACE% ГБ (%USAGE%%)
+
+С уважением,
+%COMPANY_NAME%
+
+
+[USBPartitionFull]
+Category: External Storage
+Title: Раздел USB заполнен
+Subject: В разделе %PARTITION_NUMBER% на диске USB %DISK_NUMBER% на %HOSTNAME% заканчивается свободное место
+
+Уважаемый пользователь!
+
+В разделе %PARTITION_NUMBER% на диске USB %DISK_NUMBER% на %HOSTNAME% заканчивается свободное место. Примите соответствующие меры.
+
+Общая емкость: %DISK_SIZE% ГБ
+Доступное пространство: %FREE_SPACE% ГБ (%USAGE%%)
+
+С уважением,
+%COMPANY_NAME%
+
+
+[UserChangePassword]
+Subject: Пароль на %HOSTNAME% был изменен
+
+Уважаемый(ая) %USER_NAME%,
+
+Это сообщение подтверждает, что пароль на %HOSTNAME% был изменен.
+
+Чтобы изменить настройки учетной записи, введите в адресной строке браузера %HTTP_URL%. (Если не удается подключиться к серверу, обратитесь к администратору.)
+
+С уважением,
+%COMPANY_NAME%
+
+
+[UserWelcome]
+Category: System
+Title: Приветствие нового пользователя
+Subject: Приветствуем %USER_NAME% на сервере %HOSTNAME%
+
+Уважаемый пользователь!
+
+Добро пожаловать на %HOSTNAME%!
+Чтобы изменить личный профиль, введите в адресной строке браузера %HTTP_URL%.
+(Если не удается подключиться к серверу, обратитесь к администратору.)
+
+Имя пользователя: %USER_NAME%
+Пароль: %PASSWD%
+
+С уважением,
+%COMPANY_NAME%
+
+
+[VolumeInodeFull]
+Category: Storage,Important
+Title: Количество файлов в томе достигает предела
+Subject: Количество файлов в томе %VOLUME_ID% на %HOSTNAME% достигает предела
+
+Уважаемый пользователь!
+
+Количество файлов в томе %VOLUME_ID% на %HOSTNAME% достигает предела. Удалите некоторые файлы, чтобы сократить их количество.
+
+Максимальное количество файлов: %TOTAL_INODE%
+Оставшееся количество файлов: %FREE_INODE% (%USAGE%%)
+
+С уважением,
+%COMPANY_NAME%
+
+
+[VpncReconnectFail]
+Category: System
+Title: Сбой повторного набора клиента VPN
+Subject: Сбой повторного подключения профиля VPN [%VPN_CLIENT%] на %HOSTNAME%
+
+Уважаемый пользователь!
+
+Сбой повторного подключения профиля VPN [%VPN_CLIENT%] на %HOSTNAME% после отключения. Проверьте подключение между клиентом VPN и сервером.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[aha_reboot_active]
+Category: AHA,Important
+Title: Перезагрузить активный сервер
+Subject: Активный сервер кластера high-availability %HOSTNAME% (серийный номер: %HA_LOCAL_HOST_SN%) был перезагружен
+
+Уважаемый пользователь!
+
+Администратор перезагрузил активный сервер кластера high-availability %HOSTNAME% (серийный номер: %HA_LOCAL_HOST_SN%).
+
+С уважением,
+%COMPANY_NAME%
+
+
+[aha_reboot_active_fail]
+Category: AHA,Important
+Title: Не удалось перезагрузить активный сервер
+Subject: Не удалось перезагрузить активный сервер кластера high-availability %HOSTNAME% (серийный номер: %HA_LOCAL_HOST_SN%)
+
+Уважаемый пользователь!
+
+Активный сервер кластера high-availability %HOSTNAME% (серийный номер: %HA_LOCAL_HOST_SN%) не был перезагружен. Подробную информацию можно найти на странице "Журнал" в High Availability Manager.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[aha_reboot_passive]
+Category: AHA
+Title: Перезагрузить пассивный сервер
+Subject: Пассивный сервер кластера high-availability %HOSTNAME% (серийный номер: %HA_LOCAL_HOST_SN%) был перезагружен.
+
+Уважаемый пользователь!
+
+Пользователь перезагрузил активный сервер кластера high-availability %HOSTNAME% (серийный номер: %HA_LOCAL_HOST_SN%).
+
+С уважением,
+%COMPANY_NAME%
+
+
+[aha_reboot_passive_fail]
+Category: AHA
+Title: Не удалось перезагрузить пассивный сервер.
+Subject: Не удалось перезагрузить пассивный сервер кластера high-availability %HOSTNAME% (серийный номер: %HA_LOCAL_HOST_SN%)
+
+Уважаемый пользователь!
+
+Пассивный сервер кластера high-availability %HOSTNAME% (серийный номер: %HA_LOCAL_HOST_SN%) не был перезагружен. Подробную информацию можно найти на странице "Журнал" в High Availability Manager.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[aha_reboot_remote]
+Category: AHA
+Title: Перезагрузка неизвестного сервера
+Subject: Неизвестный сервер, подключенный к кластеру high-availability %HOSTNAME% (серийный номер: %HA_LOCAL_HOST_SN%) был перезагружен
+
+Уважаемый пользователь!
+
+Пользователь перезагрузил неизвестный сервер, подключенный к кластеру high-availability %HOSTNAME% (серийный номер: %HA_LOCAL_HOST_SN%).
+
+С уважением,
+%COMPANY_NAME%
+
+
+[aha_reboot_remote_fail]
+Category: AHA
+Title: Не удалось перезагрузить неизвестный сервер
+Subject: Не удалось перезагрузить неизвестный сервер, подключенный к кластеру high-availability %HOSTNAME% (серийный номер: %HA_LOCAL_HOST_SN%)
+
+Уважаемый пользователь!
+
+Неизвестный сервер, подключенный к кластеру high-availability %HOSTNAME% (серийный номер: %HA_LOCAL_HOST_SN%) не был перезагружен. Подробную информацию можно найти на странице "Журнал" в High Availability Manager.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[aha_recover_remote]
+Category: AHA,Important
+Title: Добавление нового сервера
+Subject: Добавление нового сервера в кластер high-availability
+
+Уважаемый пользователь!
+
+Администратор инициировал восстановление неизвестного сервера. В настоящее время этот сервер подключается к кластеру high-availability %HOSTNAME% (серийный номер: %HA_LOCAL_HOST_SN%) как пассивный сервер. Подробную информацию можно найти на странице "Журнал" в High Availability Manager.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[aha_recover_remote_fail]
+Category: AHA,Important
+Title: Не удалось добавить новый сервер
+Subject: Не удалось добавить новый сервер в кластер high-availability
+
+Уважаемый пользователь!
+
+Неизвестный сервер не удалось подключить к кластеру high-availability %HOSTNAME% (серийный номер: %HA_LOCAL_HOST_SN%) как пассивный сервер. Подробную информацию можно найти на странице "Журнал" в High Availability Manager.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[aha_shutdown]
+Category: AHA,Important
+Title: Отключение кластера high-availability
+Subject: Кластер high-availability %HOSTNAME% (серийный номер: %HA_LOCAL_HOST_SN%) был отключен.
+
+Уважаемый пользователь!
+
+Пользователь отключил кластер high-availability %HOSTNAME% (серийный номер: %HA_LOCAL_HOST_SN%).
+
+С уважением,
+%COMPANY_NAME%
+
+
+[aha_shutdown_active]
+Category: AHA,Important
+Title: Отключение активного сервера
+Subject: Активный сервер кластера high-availability %HOSTNAME% (серийный номер: %HA_LOCAL_HOST_SN%) был отключен.
+
+Уважаемый пользователь!
+
+Администратор отключил активный сервер кластера high-availability %HOSTNAME% (серийный номер: %HA_LOCAL_HOST_SN%).
+
+С уважением,
+%COMPANY_NAME%
+
+
+[aha_shutdown_active_fail]
+Category: AHA,Important
+Title: Не удалось отключить активный сервер
+Subject: Не удалось отключить активный сервер кластера high-availability %HOSTNAME% (серийный номер: %HA_LOCAL_HOST_SN%)
+
+Уважаемый пользователь!
+
+Активный сервер кластера high-availability %HOSTNAME% (серийный номер: %HA_LOCAL_HOST_SN%) не был отключен. Подробную информацию можно найти на странице "Журнал" в High Availability Manager.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[aha_shutdown_fail]
+Category: AHA,Important
+Title: Не удалось отключить кластер high-availability
+Subject: Не удалось отключить кластер high-availability %HOSTNAME% (серийный номер: %HA_LOCAL_HOST_SN%)
+
+Уважаемый пользователь!
+
+Кластер high-availability %HOSTNAME% (серийный номер: %HA_LOCAL_HOST_SN%) не был отключен. Подробную информацию можно найти на странице "Журнал" в High Availability Manager.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[aha_shutdown_passive]
+Category: AHA,Important
+Title: Отключение пассивного сервера
+Subject: Пассивный сервер кластера high-availability %HOSTNAME% (серийный номер: %HA_LOCAL_HOST_SN%) был отключен.
+
+Уважаемый пользователь!
+
+Администратор отключил пассивный сервер кластера high-availability %HOSTNAME% (серийный номер: %HA_LOCAL_HOST_SN%).
+
+С уважением,
+%COMPANY_NAME%
+
+
+[aha_shutdown_passive_fail]
+Category: AHA,Important
+Title: Не удалось отключить пассивный сервер
+Subject: Не удалось отключить пассивный сервер кластера high-availability %HOSTNAME% (серийный номер: %HA_LOCAL_HOST_SN%)
+
+Уважаемый пользователь!
+
+Пассивный сервер кластера high-availability %HOSTNAME% (серийный номер: %HA_LOCAL_HOST_SN%) не был отключен. Подробную информацию можно найти на странице "Журнал" в High Availability Manager.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[aha_shutdown_remote]
+Category: AHA
+Title: Отключение неизвестного сервера
+Subject: Неизвестный сервер, подключенный к кластеру high-availability %HOSTNAME% (серийный номер: %HA_LOCAL_HOST_SN%), был отключен.
+
+Уважаемый пользователь!
+
+Пользователь отключил неизвестный сервер, подключенный к кластеру high-availability %HOSTNAME% (серийный номер: %HA_LOCAL_HOST_SN%).
+
+С уважением,
+%COMPANY_NAME%
+
+
+[aha_shutdown_remote_fail]
+Category: AHA,Important
+Title: Не удалось отключить неизвестный сервер
+Subject: Не удалось отключить неизвестный сервер, подключенный к кластеру high-availability %HOSTNAME% (серийный номер: %HA_LOCAL_HOST_SN%)
+
+Уважаемый пользователь!
+
+Неизвестный сервер, подключенный к кластеру high-availability %HOSTNAME% (серийный номер: %HA_LOCAL_HOST_SN%) не был отключен. Подробную информацию можно найти на странице "Журнал" в High Availability Manager.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[aha_switchover]
+Category: AHA,Important
+Title: Переключение функций кластера high-availability
+Subject: Функции служб кластера high-availability %HOSTNAME% (серийный номер: %HA_LOCAL_HOST_SN%) переключены на %HA_REMOTE_HOST_SN%
+
+Уважаемый пользователь!
+
+Система инициировала переключение функций кластера high-availability %HOSTNAME% (серийный номер: %HA_LOCAL_HOST_SN%). Функции служб кластера high-availability будут переключены на %HA_REMOTE_HOST_SN%. Подробную информацию можно найти на странице "Журнал" в High Availability Manager.
+
+Причина: %HA_FAILOVER_REASON%
+
+С уважением,
+%COMPANY_NAME%
+
+
+[aha_switchover_fail]
+Category: AHA,Important
+Title: Не удалось выполнить переключение функций кластера high-availability
+Subject: Функции служб кластера high-availability %HOSTNAME% (серийный номер: %HA_LOCAL_HOST_SN%) не были переключены на %HA_REMOTE_HOST_SN%
+
+Уважаемый пользователь!
+
+Система пыталась выполнить переключение функций кластера high-availability %HOSTNAME% (серийный номер: %HA_LOCAL_HOST_SN%). Но не удалось выполнить переключение функций служб кластера high-availability на пассивный сервер (серийный номер: %HA_REMOTE_HOST_SN%). Подробную информацию можно найти на странице "Журнал" в High Availability Manager.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[aha_takeover]
+Category: AHA,Important
+Title: Отработка отказа кластера high-availability
+Subject: Обнаружены ошибки в кластере high-availability %HOSTNAME% (серийный номер: %HA_LOCAL_HOST_SN%)
+
+Уважаемый пользователь!
+
+В кластере high-availability %HOSTNAME% были обнаружены ошибки (серийный номер: %HA_LOCAL_HOST_SN%). Произойдет переключение служб на пассивный сервер. Подробную информацию можно найти на странице "Журнал" в High Availability Manager.
+
+Ошибка: %HA_FAILOVER_REASON%
+
+С уважением,
+%COMPANY_NAME%
+
+
+[aha_upgrade_fail]
+Category: AHA,Important
+Title: Не удалось обновить кластер high-availability
+Subject: Не удалось обновить кластер high-availability %HOSTNAME% (серийный номер: %HA_LOCAL_HOST_SN%)
+
+Уважаемый пользователь!
+
+Кластер high-availability %HOSTNAME% (серийный номер: %HA_LOCAL_HOST_SN%) не был обновлен. Подробную информацию можно найти на странице "Журнал" в High Availability Manager.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[aha_upgrade_passive_fail]
+Category: AHA,Important
+Title: Не удалось определить пассивный сервер
+Subject: Не удалось обновить пассивный сервер кластера high-availability %HOSTNAME% (серийный номер: %HA_LOCAL_HOST_SN%)
+
+Уважаемый пользователь!
+
+Пассивный сервер кластера high-availability %HOSTNAME% (серийный номер: %HA_LOCAL_HOST_SN%) не был обновлен. Подробную информацию можно найти на странице "Журнал" в High Availability Manager.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[aha_welcome]
+Category: AHA
+Title: Кластер high-availability работает
+Subject: Кластер high-availability %HOSTNAME% теперь выполняет службы на %HA_LOCAL_HOST_SN%
+
+Уважаемый пользователь!
+
+Службы кластера high-availability %HOSTNAME% сейчас работают на %HA_LOCAL_HOST_SN%. Подробную информацию можно найти на странице "Журнал" в High Availability Manager.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[disk_health_monthly_report]
+Subject: Ежемесячный отчет о состоянии диска на %HOSTNAME%
+
+Уважаемый пользователь!
+
+Ниже приведен ежемесячный отчет с информацией о состоянии диска на %HOSTNAME%. Вы можете проверить состояние отдельных дисков в разделе "Диспетчер хранения > HDD/SSD > Информация о состоянии".
+
+%CONTENT%
+
+С уважением,
+%COMPANY_NAME%
+
+
+[eSynoscheduler_complete_task]
+Subject: Планировщик задач завершил вызванную задачу
+
+Уважаемый пользователь!
+
+Планировщик задач завершил вызванную задачу.
+
+Задача: %TASK%
+Время запуска: %START_TIME%
+Время остановки: %END_TIME%
+Текущее состояние: %EXIT_CODE%
+Стандартный вывод/вывод ошибок:
+%OUT_PUT%
+
+С уважением,
+%COMPANY_NAME%
+
+
+[ext4_fs_err]
+Category: System,Important
+Title: Ошибка файловой системы
+Subject: Обнаружена ошибка файловой системы на %HOSTNAME%
+
+Уважаемый пользователь!
+
+В разделе %VOLUME_ID% обнаружена ошибка файловой системы. Перейдите в диспетчер хранения и как можно скорее исправьте ошибку.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[file_cksum_err]
+Category: System,Important
+Title: Ошибка контрольной суммы
+Subject: Ошибка контрольной суммы на %HOSTNAME%. Дополнительные сведения см. в Центре журналов.
+
+Уважаемый пользователь!
+
+В файле %FILE_PATH% обнаружена ошибка контрольной суммы. Восстановите файл с помощью его резервной копии.
+
+С уважением,
+%COMPANY_NAME%
+
+
+[iSCSILunScheduleSnapshotFail]
+Category: Storage,Important
+Title: Не удалось сделать моментальный снимок для iSCSI LUN
+Subject: Не удалось сделать моментальный снимок для iSCSI LUN %LUNNAME% на %HOSTNAME%
+
+Уважаемый пользователь!
+
+Не удалось сделать моментальный снимок для iSCSI LUN на %HOSTNAME%. Для получения дополнительной информация перейдите в [Диспетчер хранения].
+
+LUN: %LUNNAME%
+
+С уважением,
+%COMPANY_NAME%
+
+
+[widget]
+eunit	=	"Устройство расширения"
+link_fail	=	"Ошибка подключения"
+

@@ -1,0 +1,114 @@
+﻿ <!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>ボリュームまたはディスク グループの RAID タイプを変更 - Synology DSM ヘルプ</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="This article provides instructions to change the RAID type of existing volumes and disk groups on your DiskStation.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>ボリュームまたはディスク グループの RAID タイプを変更</h2>
+
+<p>ボリュームとディスクグループは、既存のデータを消失することなく、1つの RAID タイプから別のタイプに変更することができます。例えば、DiskStation に RAID 1 ボリュームを作成し、後からハード ドライブを追加して RAID 5 タイプに変更するといったことが可能です。ここでは、DiskStation 上にある既存のボリュームやディスクグループの RAID タイプを変更する方法を説明します。</p>
+<h3>RAID タイプの制限：</h3>
+
+<p>RAID タイプによっては、特定のタイプにしか変更できないものがあります。詳細は、次の表をご参照ください。</p>
+
+<table>
+  <tr>
+<th width="50%">RAID タイプ</th>
+<th width="50%">変更できるタイプ...</th>
+  </tr>
+  <tr>
+<td>ベーシック</td>
+<td>RAID 1<br /> RAID 5</td>
+  </tr>
+  <tr>
+<td>RAID 1</td>
+<td>RAID 5</td>
+  </tr>
+  <tr>
+<td>RAID 5</td>
+<td>RAID 6</td>
+  </tr>
+
+</table>
+
+<div class="section">
+<h4>例：</h4>
+<p>RAID 1 を RAID 5 に変更することは可能ですが、RAID 5 を RAID 1 に変更することはできません。</p>
+</div>
+
+
+<h3>ハードドライブの要件</h3>
+
+<p>ボリュームやディスク グループの RAID タイプを変更するためには、DiskStation に十分な数のハードドライブが必要です。RAID タイプ毎に必要となるハードドライブの数については、次の表を参照してください。</p>
+
+<table>
+  <tr>
+<th width="50%">変更後の RAID タイプ</th>
+<th width="50%">必要なハードドライブ数</th>
+  </tr>
+  <tr>
+<td>RAID 1</td>
+<td>2、4</td>
+  </tr>
+  <tr>
+<td>RAID 5</td>
+<td>3</td>
+  </tr>
+  <tr>
+<td>RAID 6</td>
+<td>4</td>
+  </tr>
+</table>
+
+<div class="section">
+<h4>例：</h4>
+<p>RAID 1 ボリュームを RAID 5 に変更するには、最低でも3台のハードドライブが必要です（RAID 1 ボリュームに使用される2台のハードドライブに加え、さらに1台の空のハードドライブをボリュームに追加する必要があります）。</p>
+</div>
+
+<h3>RAID タイプの変更</h3>
+
+<p>以下に、<strong>Basic</strong> ボリュームを<strong>RAID 1</strong> ボリュームに変更する例を紹介します。</p>
+
+<div class="section">
+<h4>はじめる前に：</h4>
+<ul>
+<li>ボリュームまたはディスク グループの状態が<b>正常</b>であることを確認してください。</li>
+<li>ボリュームやディスク グループにハードドライブを追加する場合、新しいハードドライブはボリュームやディスク グループの中の最小ドライブよりも大きくなければなりません。</li>
+<li>新しいハードドライブのステータスは、<b>「初期化済み」</b>または<b>「未初期化」</b>でなければなりません。</li></ul>
+</div>
+
+<h4>RAID タイプのボリュームを変更する：</h4>
+
+<ol>
+<li><strong>ストレージ マネージャ</strong>を開きます。</li>
+<img src="about:blank" class="help_image"/>
+<li><b>[ボリューム]</b> を選択します。（ディスクグループの RAID タイプを変更するには、<b>[ディスクグループ]</b> タブを開きます）。</li>
+<li>変更したいボリュームを選択して<b>[管理]</b>をクリックします。</li>
+<img src="about:blank" class="help_image"/>
+
+<li>セットアップ ウィザードが起動したら、<b>[RAID タイプの変更]</b> を選択します。次に、<b>[次へ]</b> をクリックします。</li>
+<img src="about:blank" class="help_image"/>
+
+
+<li>ボリュームを変更したい RAID タイプを選択します。<b>[次へ]</b> をクリックします。</li>
+<img src="about:blank" class="help_image"/>
+
+
+<li>既存のボリュームに追加するハードドライブを選択します。次に、<b>[次へ]</b> をクリックします。</li>
+<img src="about:blank" class="help_image"/>
+
+
+<li>ウィザードの手順に従って完了します。追加したハードドライブにある既存のデータは消去されますのでご注意ください。</li></ol>
+
+</body>
+</html>

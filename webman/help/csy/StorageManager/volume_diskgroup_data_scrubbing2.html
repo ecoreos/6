@@ -1,0 +1,50 @@
+ <!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+
+<title>Scrubbing dat</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="Data scrubbing is a data maintenance feature that inspects volumes or disk groups and repairs any detected data inconsistencies.">
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Scrubbing dat*</h2>
+<p>Scrubbing dat je funkce údržby dat, která kontroluje svazky nebo skupiny disků. Existují dva typy scrubbingu dat:</p>
+
+<ul>
+<li><strong>Scrubbing pole RAID:</strong> Tuto funkci je možné použít u svazků nebo skupin disků s implementací typu SHR (skládající se ze tří nebo více disků), RAID 5 nebo RAID 6. Dokáže opravit všechny zjištěné nekonzistence dat.</li>
+<li><strong>Scrubbing souborového systému:</strong> Tuto funkci je možné použít u svazků se systémem souborů Btrfs. V případě zjištění rozdílu v kontrolním součtu dat se provede zaznamenání cesty souboru do centra protokolů. Důrazně doporučujeme použít k opravě dat zálohu.</li>
+</ul>
+
+<p>Scrubbing dat doporučujeme provádět pravidelně, aby se zajistila konzistence dat a v případě závady pevného disku nedocházelo ke ztrátám dat.</p>
+
+<h4>Provedení scrubbingu dat:</h4>
+
+<ol>
+<li>Otevřete <strong>Správce úložiště</strong>.</li>
+<li>Přejděte k možnosti <strong>Svazek</strong> nebo <strong>Skupina disků</strong>.</li>
+<li>Vyberte svazek nebo skupinu disků, na kterých chcete scrubbing dat provést.</li>
+<li>Klikněte na možnost <strong>Správa</strong>.</li>
+<li>Vyberte možnost <strong>Scrubbing dat</strong>.</li>
+<li>Vyberte požadovaný typ scrubbingu dat. (Jestliže je k dispozici pouze jeden typ, systém automaticky tento krok přeskočí.)</li>
+</ol>
+
+<div class="section">
+<h4>Poznámka:</h4>
+<ul>
+<li>Scrubbing dat lze provést pouze tehdy, když je stav svazku nebo skupiny disků <strong>Normální</strong>.</li>
+<li>Jestliže se systém před dokončením vypne, bude nutné scrubbing dat spustit znovu ručně od začátku.</li>
+</ul></div>
+
+<p>____<br />*K dispozici pouze u některých modelů.</p>
+
+</body>
+</html>

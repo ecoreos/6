@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Win/Mac/NFS</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Domain</h2>
+<p>Ihr DiskStation kann einer Windows-Domain beitreten. Nach dem Beitritt zur Domain können Domainbenutzer sich mit ihrem Konto und Kennwort beim DiskStation anmelden, wodurch sie Zugriff auf Dateien und DSM-Anwendungen haben, ohne sich weitere Benutzernamen und Kennwörter merken zu müssen.</p>
+<h4>Domain beitreten:</h4>
+<ol>
+<li>Gehen Sie zu <strong>Systemsteuerung</strong> > <strong>Verzeichnisdienst</strong> > <strong>Domain</strong>.</li>
+<li>Aktivieren Sie das Kontrollkästchen <strong>Domain beitreten</strong>.</li>
+<li>Geben Sie den Domainnamen und den DNS-Server in die entsprechenden Felder ein.</li>
+<li>Falls erforderlich, aktivieren Sie das Kontrollkästchen <b>Erweiterte Domainoptionen</b>. (Details siehe unten.)</li>
+<li>Klicken Sie auf <b>Übernehmen</b>.</li>
+<li>Geben Sie in das Popup-Fenster den Benutzernamen und das Kennwort des Administrators des Domainservers ein.</li>
+<li>Klicken Sie auf <b>OK</b>.</li>
+</ol>
+<div class="section">
+<h4>DNS-Server</h4>
+<p>Es ist empfehlenswert, einen DNS-Server anzugeben, um den DiskStation bei der Suche nach der Domain zu helfen. Wenn die Domain jedoch nicht auf dem DNS-Server registriert ist, kann der Beitritt zu einer Domain fehlschlagen.</p>
+<h4>Domainservertyp</h4>
+<p>Dieses Feld zeigt den Domaintyp an, wenn der DiskStation einer Domain beigetreten ist. Der Domaintyp ist „AD-Domain“.</p>
+<h4>Verwaltungsmodus</h4>
+<p>Diese Option bestimmt, wie Sie die Berechtigungen der Domainbenutzer und -gruppen verwalten. </p>
+<ul>
+<li><b>Vertrauenswürdige Domain</b>: Sie können Benutzer und Gruppen in der verknüpften Domain sowie vertrauenswürdige Domains verwalten. Benutzer und Gruppen können mittels der Domain-Dropdown-Liste gefiltert werden.</li>
+<li><b>Einzeldomain mit OU</b>: Nur Benutzer und Gruppen in der verknüpften Domain werden in diesem Modus angezeigt. In diesem Modus können Sie Domainbenutzer/Domaingruppen mit der OU (Organizational Unit)-Dropdown-Liste filtern.</li>
+</ul>
+<h4>Erweiterte Domainoptionen</h4>
+<p>In den meisten Fällen müssen Sie die erweiterten Domainoptionen nicht angeben. Die erweiterten Domainoptionen werden nur für bestimmte Domain-Umgebungen benötigt. </p>
+<ul>
+<li><b>DC IP/FQDN</b>: Geben Sie eine DC (Domain Controller)-IP-Adresse oder FQDN an, der DiskStation versucht dann, mit ihm zu kommunizieren. Fügen Sie, wenn mehr als eine IP-Adresse oder FQDN vorhanden ist, ein Komma (,) zwischen ihnen ein. Fügen Sie das Sternchen (*) hinter der letzten DC-IP-Adresse oder dem letzten FQDN ein, der DiskStation versucht dann, mit dem anderen DC zu kommunizieren, wenn alle angegebenen fehlgeschlagen sind. Sie müssen zwischen dem Sternchen und der letzten IP-Adresse oder FQDN ein Komma einfügen.</li>
+<li><b>Domain NetBIOS-Name</b>: Geben Sie den NetBIOS-Namen der Domain an.</li>
+<li><b>Domain FQDN (DNS-Name)</b>: Geben Sie den FQDN (DNS-Namen) der Domain an.</li>
+<li><b>DNS-Schnittstelle registrieren:</b> Beim Beitritt zu einer Domain wird die hier angegebene NIC (Network Interface Card) im DNS-Server registriert. Beachten Sie, dass die Registrierung fehlschlägt, wenn der Hostname Ihres DiskStation einen Unterstrich (_) hat, da Unterstriche (_) bei DNS nicht verwendet werden können.</li>
+<li><b>Benutzer-/Gruppenliste aktualisieren</b>: Gibt an, wie oft der DiskStation automatisch die Domainbenutzer-/-gruppenliste aktualisiert. Sie können das Intervall für die Aktualisierungen auf täglich, wöchentlich oder monatlich einstellen. Außerdem können Sie die Listen mit Domainbenutzern bzw. -gruppen aktualisieren, indem Sie zur Registerkarte <strong>Domainbenutzer</strong> gehen und auf <strong>Alle Domains aktualisieren</strong> klicken. Beachten Sie, dass automatische Aktualisierungen den Ruhezustand des Systems beeinflussen.</li>
+</ul>
+
+<h4>Einem schreibgeschützten Domain Controller beitreten</h4>
+<p>Um mit Ihrem DiskStation einem schreibgeschützten Domain Controller (RODC) beizutreten, müssen Sie den „vollständigen Computernamen“ (FQDN) des Domain Controllers mit vollständigem Zugriff (RWDC) in das Feld <strong>DC IP/FQDN</strong> eingeben. Der vollständige Computername muss in folgendem Format angegeben werden: <strong>ComputerName.Domain</strong>, z. B. "ad01.synology.com".</p>
+
+</div>
+
+
+<div class="section">
+<h4>Hinweis:</h4>
+<ul>
+<li>Wenn Ihr Domain-Benutzername die Zeichen „%“ oder „$“ enthält, können Sie möglicherweise nicht auf Ihren Home-Ordner zugreifen. Bitten Sie Ihren Domainadministrator, Ihnen einen neuen Benutzernamen zu geben.</li>
+<li>Die Gruppen <strong>Domainadministratoren</strong> und <strong>Unternehmensadministratoren</strong> werden automatisch zur lokalen Gruppe <strong>Administratoren</strong> hinzugefügt. Daher besitzen die Domainbenutzer in diesen Gruppen Administratorrechte auf dem DiskStation , einschließlich des Zugangs zu Diensten wie CIFS/FTP/AFP/WebDAV und anderen DSM-Anwendungen.</li>
+<li>Sie können auch die Zugriffsberechtigung für den Domainbenutzer für die freigegebenen Ordnern auf dem DiskStation konfigurieren. Weitere Informationen finden Sie <a href="file_directory_service_user_group.html">hier</a>.</li>
+</ul>
+</div>
+
+
+
+<h3>Domainoptionen</h3>
+<p>Dieser Abschnitt enthält die folgenden zusätzlichen Domainoptionen.</p>
+<ul>
+<li><b>Die DiskStation synchronisiert sich jedes Mal mit einem NTP-Server, wenn sich ein Domainbenutzer anmeldet:</b> Die Aktivierung dieser Option erzwingt die Synchronisierung der Zeit zwischen der DiskStation und dem NTP-Server.</li>
+<li><b>Server-Signierung aktivieren:</b> Wenn auf dem Client die Clientsignatur aktiviert ist, muss auch die Serversignatur auf Ihrem DiskStation aktiviert sein, damit Benutzer die Domaindienste normal verwenden können.</li>
+<li><b>Benutzer-/Gruppenlisten mit NT4-kompatiblem Modus abrufen:</b> Durch die Aktivierung dieser Option kann das System Benutzer-/Gruppenlisten mit dem NT4 RPC-Modus abfragen. Diese Option kann aktiviert werden, wenn bestimmte Domainbenutzer-/-gruppenlisten nicht mit den Standardeinstellungen abgerufen werden können.</li>
+<li><b> Administratorberechtigungen für Domain- und Unternehmens-Admins deaktivieren:</b> Ein Benutzer mit Administratorberechtigungen kann die volle Kontrolle über Ihren DiskStation und seine Dateien übernehmen. Durch die Aktivierung dieser Option können Sie die Berechtigungen von Domain- und Unternehmens-Admins genau so einschränken wie für normale Benutzer, die damit die Datei-/Ordnerberechtigungen von normalen Benutzern übernehmen.</li>
+<li><strong>Verschachtelte Gruppenebenen aufzählen:</strong> Geben Sie die Anzahl der verschachtelten Domaingruppenmitglieder an, die aufgezählt werden können.</li>
+</ul>
+
+</body>
+</html>

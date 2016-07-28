@@ -1,0 +1,50 @@
+ <!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+
+<title>Datenbereinigung</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="Data scrubbing is a data maintenance feature that inspects volumes or disk groups and repairs any detected data inconsistencies.">
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Datenbereinigung*</h2>
+<p>Bei der Datenbereinigung handelt es sich um eine Wartungsfunktion für Dateien, bei der Volumes oder Diskgruppen überprüft werden. Es gibt zwei Arten der Datenbereinigung:</p>
+
+<ul>
+<li><strong>RAID-Bereinigung:</strong> Diese Funktion kann für Volumes oder Diskgruppen verwendet werden, die SHR (bestehend aus drei oder mehr Festplatten), RAID 5 oder RAID 6 nutzen. Sie kann alle gefundenen Datenunstimmigkeiten reparieren.</li>
+<li><strong>Dateisystembereinigung:</strong> Diese Funktion kann für Volumes in einem Btrfs-Dateisystem verwendet werden. Wenn bei der Prüfsumme eine Dateninkonsistenz erkannt wird, wird der Dateipfad im Protokoll-Center erfasst Wir empfehlen dringend, die Daten mithilfe einer Datensicherung zu reparieren.</li>
+</ul>
+
+<p>Wir empfehlen eine regelmäßige Datenbereinigung, um die Datenkonsistenz sicherzustellen und den Datenverlust im Fall eines Festplattenfehlers zu vermeiden.</p>
+
+<h4>Datenbereinigung ausführen:</h4>
+
+<ol>
+<li>Öffnen Sie den <strong>Speicher-Manager</strong>.</li>
+<li>Gehen Sie zu <strong>Volume</strong> oder <strong>Diskgruppe</strong>.</li>
+<li>Wählen Sie das Volume oder die Diskgruppe aus, auf dem bzw. der die Datenbereinigung ausgeführt werden soll.</li>
+<li>Klicken Sie auf <strong>Verwalten</strong>.</li>
+<li>Wählen Sie <strong>Datenbereinigung</strong> aus.</li>
+<li>Wählen Sie die gewünschte Art der Datenbereinigung aus. (Das System überspringt diesen Schritt automatisch, wenn nur eine Art verfügbar ist.)</li>
+</ol>
+
+<div class="section">
+<h4>Hinweis:</h4>
+<ul>
+<li>Die Datenbereinigung kann nur ausgeführt werden, wenn der Status des Volume oder der Diskgruppe <strong>Normal</strong> ist.</li>
+<li>Wenn das System vor der Fertigstellung heruntergefahren wird, müssen Sie die Datenbereinigung manuell von vorn beginnen.</li>
+</ul></div>
+
+<p>____<br />*Nur bei bestimmten Modellen verfügbar.</p>
+
+</body>
+</html>

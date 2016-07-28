@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Łączenie z różnymi serwerami plików przy użyciu aplikacji File Station — pomoc systemu Synology DSM</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="Learn how to customize File Station settings related to file management, shared links, and security.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Połączenie zdalne</h2>
+
+<p>Aplikacja File Station umożliwia łączenie się z usługami chmur publicznych (Box, Dropbox, Dysk Google i Microsoft OneDrive) i serwerami plików przy użyciu różnych protokołów (FTP, SFTP, WebDAV i WebDAV HTTPS).</p>
+
+<h4>Aby połączyć się z usługą chmury:</h4>
+<ol>
+  <li>Wybierz pozycje <strong>Narzędzia</strong> > <strong>Połączenie zdalne</strong> > <strong>Konfiguracja połączenia</strong>.</li>
+  <li>Wybierz żądaną usługę chmury, klikając odpowiednią ikonę, a następnie kliknij przycisk <strong>Dalej</strong>.</li>
+  <li>Postępuj zgodnie z instrukcjami kreatora wyświetlanymi w okienku wyskakującym, aby uwierzytelnić konto.</li>
+  <li>Po zakończeniu konfiguracji docelowa usługa chmury zostanie wyświetlona na lewym panelu.</li>
+</ol>
+
+
+<div class="section">
+<h4>Ograniczenia poszczególnych usług chmury:</h4>
+<ul>
+<li><strong>Box</strong>:<ul>
+  <li>Do nazwy katalogu udostępnionego innym współpracownikom zostanie dodany przyrostek w postaci nazwy użytkownika właściciela.</li>
+  <li>Jeżeli katalogi udostępnione innym współpracownikom mają te same nazwy (nazwa katalogu z sufiksem w postaci nazwy użytkownika właściciela), wyświetlany będzie tylko jeden taki katalog.</li>
+  <li>Pliki z następującymi rozszerzeniami można otworzyć tylko za pomocą usług Box: .gdoc, .gsheet i .boxnote.</li>
+  <li>W nazwach plików rozróżniania jest wielkość liter.</li>
+  <li>Więcej informacji na temat prawidłowych ustawień zapory można znaleźć w <a href="https://support.box.com/hc/articles/200523728-Configuring-a-Firewall-for-Box-or-Box-Sync"  target="_blank">tym artykule</a>.</li>
+</ul>
+</li>
+
+<li><strong>Dropbox</strong>:<ul>
+<li>Katalog Dropbox nie będzie wyświetlany, jeżeli zawiera ponad 25 000 plików.</li>
+<li>Nie można zmienić nazwy katalogu Dropbox, jeżeli zawiera on ponad 10 000 plików.</li>
+<li>Nie można wysyłać plików o wielkości przekraczającej 10 GB.</li>
+<li>Zadanie przesyłania nie powiedzie się, jeżeli przesłanie pliku docelowego będzie trwało dłużej niż 24 godziny.</li>
+<li>W nazwach plików rozróżniania jest wielkość liter.</li>
+<li>Więcej informacji na temat prawidłowych ustawień zapory można znaleźć w <a href="https://www.dropbox.com/help/23"  target="_blank">tym artykule</a>.</li>
+</ul>
+</li>
+
+<li><strong>Dysk Google</strong>:<ul>
+  <li>Pliki/foldery o ścieżce dłuższej niż 2048 znaków nie są wyświetlane.</li>
+  <li>Pliki o nazwie pliku dłuższej niż 255 znaków nie są wyświetlane.</li>
+  <li>Pliki/katalogi o identycznych nazwach są oznaczane godzinami utworzenia.</li>
+<li>Po otwarciu pliku Google (np. Dokument Google i Slajd Google) za pomocą aplikacji File Station zostanie wyświetlony adres URL, który umożliwia uzyskanie dostępu do pliku docelowego.</li>
+<li>Foldery <strong>Mój dysk</strong> i <strong>Oznaczone gwiazdką</strong> wyświetlane w File Station odpowiadają bezpośrednio folderom „Mój dysk” i „Oznaczone gwiazdką” na dysku Google Drive.</li>
+<li>Więcej informacji na temat prawidłowych ustawień zapory można znaleźć w <a href="https://support.google.com/drive/answer/2589954"  target="_blank">tym artykule</a>.</li>
+</ul>
+</li>
+
+<li><strong>Microsoft OneDrive</strong>:<ul>
+<li>Pliki notesów OneNote nie są wyświetlane.</li>
+<li>Nie można wysyłać plików o wielkości przekraczającej 10 GB.</li>
+<li>Pliki (np., .png, .jpg, .docx, .pdf) mogą mieć większe rozmiary (rozmiar oryginalny plus rozmiar miniatury). Nie będzie to miało wpływu na oryginalne rozmiary plików, gdy będą one pobierane.</li>
+<li>W nazwach plików rozróżniania jest wielkość liter.</li>
+
+</ul>
+</li>
+</ul>
+
+<p>Aby dowiedzieć się więcej o ograniczeniach, zaleca się odwiedzenie oficjalnej witryny danej usługi chmury.</p>
+
+
+</div>
+
+
+<h4>Aby połączyć się z serwerem plików:</h4>
+<ol>
+  <li>Wybierz pozycje <strong>Narzędzia</strong> > <strong>Połączenie zdalne</strong> > <strong>Konfiguracja połączenia</strong>.</li>
+  <li>Wybierz żądany protokół serwera, klikając odpowiednią ikonę, a następnie kliknij przycisk <strong>Dalej</strong>.</li>
+  <li>Wprowadź następujące informacje, aby zakończyć konfigurację:<ul>
+  <li><strong>Nazwa hosta lub IP</strong>: nazwa hosta lub adres IP docelowego serwera plików.</li>
+  <li><strong>Port</strong>: numer portu docelowego serwera plików.</li>
+  <li><strong>Użytkownik</strong> i <strong>Hasło</strong>: poświadczenia logowania, jeżeli wymagane jest podanie konta/hasła do logowania na docelowym serwerze plików.</li>
+  <li><strong>Strona kodowa</strong>: kodowanie znaków docelowego serwera plików umożliwiające prawidłowe wyświetlanie nazw plików.</li>
+  <li><strong>Nazwa profilu</strong>: unikatowa nazwa ułatwiająca identyfikację tego serwera plików.</li>
+  <li><strong>Użyj połączenia WebDAV HTTPS</strong>: opcja jest dostępna tylko podczas konfiguracji protokołu WebDAV i jeżeli zarówno klient, jak i serwer plików obsługują połączenia WebDAV HTTPS.</li>
+  <li><strong>Zezwól tylko na jedno połączenie na użytkownika</strong>: opcja jest dostępna tylko podczas konfiguracji protokołów FTP lub SFTP. Pozwala ona na zoptymalizowanie łączności, gdy na serwerze wprowadzono ograniczenia liczby połączeń.</li>
+  </ul>
+  </li>
+<li>Kliknij przycisk <strong>Zastosuj</strong>, aby zapisać ustawienia. Docelowy serwer plików zostanie wyświetlony na lewym panelu.</li> 
+</ol>
+<h4>Aby zmodyfikować istniejący profil usługi chmury lub serwera plików:</h4>
+<ol>
+  <li>Wybierz pozycje <strong>Narzędzia</strong> > <strong>Połączenie zdalne</strong> > <strong>Lista połączeń</strong>.</li>
+  <li>Kliknij docelową usługę chmury lub serwer plików, aby wykonać jedną z następujących czynności zarządzania:<ul>
+      <li>Edycja: Kliknij przycisk <strong>Edytuj</strong>, zmień konfigurację bieżącego profilu, a następnie kliknij przycisk <strong>OK</strong>.</li>
+      <li>Rozłączanie: Kliknij przycisk <strong>Odłącz</strong>, aby zakończyć połączenie.</li>
+  <li>Ponowne łączenie: Kliknij przycisk <strong>Połącz</strong>, aby ponownie nawiązać połączenie. (Alternatywnie w celu ponownego nawiązania połączenia można kliknąć cel na lewym panelu aplikacji File Station).</li>
+  <li>Usuwanie: Kliknij przycisk <strong>Usuń</strong>, a następnie potwierdź, aby usunąć profil. (Alternatywnie w celu usunięcia można kliknąć cel na lewym panelu aplikacji File Station i kliknąć przycisk <strong>Usuń</strong>).</li>
+    </ul>
+  </li>
+  </ol>
+  
+  
+<div class="section">
+  <h4>Uwaga:</h4>
+<ul>
+  <li>Każdy użytkownik może się połączyć z maksymalnie 100 usługami chmury i serwerów plików jednocześnie.</li>
+  <li>Aby uniknąć nieoczekiwanych błędów, wybierz prawidłową stronę kodową serwera. Zaleca się wybranie kodowania Unicode, jeżeli strona kodowa serwera jest nieznana.</li>
+  <li>Na plikach przechowywanych w usługach chmury i na serwerach plików nie można używać niektórych funkcji aplikacji File Station (np. Kompresuj do, Wypakuj, Podgląd itp.).</li>
+<li>Szybkości transferów poszczególnych podłączonych usług chmury lub serwerów plików zależą od ustawień limitu szybkości użytkownika.</li>
+<li>Liczba jednoczesnych transferów plików ze wszystkimi połączonymi usługami chmury i serwerami plików jest ograniczona dla każdego użytkownika do trzech.</li>
+<li>Aby skonfigurować ustawienia proxy WebDAV, WebDAV HTTPS i usługi chmury, wybierz pozycje <strong>Panel sterowania</strong> > <strong>Sieć</strong> > <strong>Ogólne</strong> > <strong>Serwer proxy</strong>. Po zmianie ustawień proxy, gdy połączenie z usługą chmury lub serwerem plików jest aktywne, rozłącz i nawiąż połączenie ponownie.</li>
+<li>Zmiana informacji połączonych usług chmury lub serwerów plików nie wywiera wpływu na stan połączenia.</li>
+<li>Aby zwolnić zasób połączenia, usługa chmury/serwer plików zostanie automatycznie rozłączony, jeśli na zawartych tam plikach nie zostanie przez 30 minut przeprowadzona żadna operacja. Kliknij ikonę usługi chmury/serwera plików, aby wznowić połączenie.</li>
+<li>W systemie nie są wyświetlane pliki/foldery, których nazwa ma następujący format:<ul>
+    <li>Zaczyna się od <strong>._</strong> lub <strong>.SYNOPPSDB</strong></li>
+    <li>Zawiera <strong>/</strong></li>
+<li>Ma nazwę dokładnie <strong>.</strong>    <strong>..</strong>    <strong>'</strong>    <strong>"</strong>    <strong>.DS_Store</strong>    <strong>@eaDir</strong>    <strong>@sharebin</strong>    <strong>@tmp</strong>    <strong>.SynologyWorkingDirectory</strong></li>
+  </ul>
+</li><li class="enable-dockerx64">Połączenie zdalne jest obsługiwane wyłącznie w trybie wysokich uprawnień. Aby użyć tej funkcji, przejdź do strony Docker w systemie DSM hosta, wybierz system <strong>Docker DSM</strong>, dla którego chcesz włączyć szyfrowane foldery współdzielone, kliknij <strong>Edytuj</strong>, a następnie zaznacz pole obok <strong>Uruchom kontener przy użyciu wysokich uprawnień</strong>.</li></ul>
+</div>
+</body>
+</html>

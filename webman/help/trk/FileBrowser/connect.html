@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>File Station ile Farklı Dosya Sunucularına Bağlanma - Synology DSM Yardım</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="Learn how to customize File Station settings related to file management, shared links, and security.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Uzak Bağlantı</h2>
+
+<p>File Station'da, genel bulut hizmetlerine (Box, Dropbox, Google Drive ve Microsoft OneDrive) ve dosya sunucularına çeşitli farklı protokoller (FTP, STFP, WebDAV ve WebDAV HTTPS) yoluyla bağlanabilirsiniz.</p>
+
+<h4>Bir bulut hizmetine bağlanmak için:</h4>
+<ol>
+  <li><strong>Araçlar</strong> > <strong>Uzak Bağlantı</strong> > <strong>Bağlantı Ayarı</strong> seçeneğine gidin.</li>
+  <li>Simgeye tıklayarak istenilen bulut hizmetini seçin ve <strong>İleri</strong> öğesine tıklayın.</li>
+  <li>Açılan pencerede, hesap doğrulaması için sihirbazın talimatlarına uyun.</li>
+  <li>Ayar tamamlandığında, hedef bulut hizmeti sol panelde görülecektir.</li>
+</ol>
+
+
+<div class="section">
+<h4>Buluta Özel Sınırlamalar:</h4>
+<ul>
+<li><strong>Box</strong>:
+<ul>
+  <li>Diğer ortaklarla paylaşılan bir katalog sahibin kullanıcı adı son ekini alacaktır.</li>
+  <li>Diğer ortaklarla paylaşılan kataloglar benzer bir ad kullanıyorsa (sahibin kullanıcı adı son ekini alan bir katalog adı), sadece bir adet böyle bir katalog görüntülenir.</li>
+  <li>Sadece Box yoluyla bu uzantılara sahip dosyaları açabilirsiniz: .gdoc, .gsheet ve .boxnote.</li>
+  <li>Dosya adları büyük-küçük harfe duyarlı değildir.</li>
+  <li>Uygun güvenlik duvarı ayarları için, lütfen <a href="https://support.box.com/hc/articles/200523728-Configuring-a-Firewall-for-Box-or-Box-Sync"  target="_blank">bu yazıya</a> bakın.</li>
+</ul>
+</li>
+
+<li><strong>Dropbox</strong>:
+<ul>
+<li>25000'den fazla dosya içeriyorsa bir Dropbox kataloğu görüntülenemez.</li>
+<li>10000'den fazla dosya içeriyorsa bir Dropbox kataloğu yeniden adlandırılamaz.</li>
+<li>10 GB'ı aşan dosyalar karşıya yüklenemez.</li>
+<li>Hedef dosyanın karşıya yüklenmesi 24 saatten fazla sürerse karşıya yükleme görevi başarısız olur.</li>
+<li>Dosya adları büyük-küçük harfe duyarlı değildir.</li>
+<li>Uygun güvenlik duvarı ayarları için, lütfen <a href="https://www.dropbox.com/help/23"  target="_blank">bu yazıya</a> bakın.</li>
+</ul>
+</li>
+
+<li><strong>Google Drive</strong>:
+<ul>
+  <li>2048 karakterden daha uzun yola sahip dosyalar/klasörler görüntülenmez.</li>
+  <li>255 karakterden daha uzun dosya adına sahip dosyalar görüntülenmez.</li>
+  <li>Benzer ada sahip dosyalar/kataloglar bağımsız oluşturma zamanları ile işaretlenirler.</li>
+<li>File Station yoluyla Google'a özel bir dosya (ör., Google Docs ve Google Slides) açarsanız, hedef dosyaya erişmek için bir URL görüntülenir.</li>
+<li>File Station'da görüntülenen <strong>Sürücüm</strong> ve <strong>Yıldızlı</strong> klasörleri, sırasıyla Google Drive'daki "Sürücüm" ve "Yıldızlı" klasörlerine karşılık gelir.</li>
+<li>Uygun güvenlik duvarı ayarları için, lütfen <a href="https://support.google.com/drive/answer/2589954"  target="_blank">bu yazıya</a> bakın.</li>
+</ul>
+</li>
+
+<li><strong>Microsoft OneDrive</strong>:
+<ul>
+<li>OneNote defter dosyaları görüntülenmez.</li>
+<li>10 GB'ı aşan dosyalar karşıya yüklenemez.</li>
+<li>Dosyalar (e.g., .png, .jpg, .docx, .pdf) daha büyük dosya boyutlarını görüntüleyebilir (orijinal boyutlar artı küçük resim boyutları). İndirilirlerken bu kendi orijinal dosya boyutlarını etkilemez.</li>
+<li>Dosya adları büyük-küçük harfe duyarlı değildir.</li>
+
+</ul>
+</li>
+</ul>
+
+<p>Diğer sınırlamalar hakkında bilgi için, ilgili bulut hizmetine ilişkin resmi web sitesini ziyaret etmenizi öneririz.</p>
+
+
+</div>
+
+
+<h4>Bir dosya sunucusuna bağlanmak için:</h4>
+<ol>
+  <li><strong>Araçlar</strong> > <strong>Uzak Bağlantı</strong> > <strong>Bağlantı Ayarı</strong> seçeneğine gidin.</li>
+  <li>Simgeye tıklayarak istenilen sunucu protokolünü seçin ve <strong>İleri</strong> öğesine tıklayın.</li>
+  <li>Kurulumu tamamlamak için aşağıdaki bilgileri verin:
+  <ul>
+  <li><strong>Ana bilgisayar adı veya IP'si</strong>: Hedef dosya sunucusunun ana bilgisayar adını veya IP'sini girin.</li>
+  <li><strong>Bağlantı Noktası</strong>: Hedef dosya sunucusunun bağlantı noktası numarasını girin.</li>
+  <li><strong>Kullanıcı</strong> ve <strong>Şifre</strong>: Hedef dosya sunucusuu bir hesap/şifre gerektiriyorsa bu oturum açma bilgisini girin.</li>
+  <li><strong>Kod sayfası</strong>: Dosya adlarını doğru görüntülemek için hedef dosya sunucusunun karakter kodlamasını seçin.</li>
+  <li><strong>Profil Adı</strong>: Bu dosya sunucusunu kolayca belirlemek için eşsiz bir ad girin.</li>
+  <li><strong>WebDAV HTTPS bağlantısını kullan</strong>: Bu seçenek sadece bir WebDAV protokolünü ayarlarken ve hem istemci hem de dosya sunucusunu WebDAV HTTPS desteklerken kullanılabilir.</li>
+  <li><strong>Kullanıcı başına sadece bir bağlantıya izin ver</strong>: Bu seçenek sadece bir FTP veya SFTP protokolünü kuruyor olduğunuzda kullanılabilir. Sunucu bağlantı sayısı üzerinde sınırlamalara sahip olduğunda bağlantıyı optimize etmek için bu seçeneği işaretleyin.</li>
+  </ul>
+  </li>
+<li>Ayarları kaydetmek için <strong>Uygula</strong>'ya tıklayın. Hedef dosya sunucusu sol panelde görülür.</li> 
+</ol>
+<h4>Mevcut bir bulut hizmetini veya dosya sunucusu profilini değiştirmek için:</h4>
+<ol>
+  <li><strong>Araçlar</strong> > <strong>Uzak Bağlantı</strong> > <strong>Bağlantı Listesi</strong> seçeneğine gidin.</li>
+  <li>Aşağıdaki yönetimler için hedef bulut hizmetine veya dosya sunucusuna tıklayın:
+    <ul>
+      <li>Düzenleme: <strong>Düzenle</strong>'ye tıklayın, mevcut profil yapılandırmasını değiştirin ve <strong>Tamam</strong>'a tıklayın.</li>
+      <li>Bağlantı kesme: Bağlantıyı sonlandırmak için <strong>Bağlantıyı kes</strong> üzerine tıklayın.</li>
+  <li>Yeniden bağlanma: Bağlantıyı devam ettirmek için <strong>Bağlan</strong>'a tıklayın. (Alternatif olarak, yeniden bağlantı için File Station'un sol panelindeki hedefe tıklayın.)</li>
+  <li>Silme: <strong>Sil</strong> üzerine tıklayın ve ardından profili iptal etmek için onaylayın. (Alternatif olarak, File Station'un sol panelindeki hedefe tıklayın ve silmek için <strong>Sil</strong>'e tıklayın.)</li>
+    </ul>
+  </li>
+  </ol>
+  
+  
+<div class="section">
+  <h4>Not:</h4>
+<ul>
+  <li>Her kullanıcı 100'den fazla bulut hizmetine ve dosya sunucusuna eş zamanlı olarak bağlanabilir.</li>
+  <li>Beklenmedik hatalardan kaçınmak için doğru sunucu kod sayfasını seçtiğinizden emin olun. Sunucu kod sayfasını bilmiyorsanız unicode önerilir.</li>
+  <li>Belirli File Station işlevleri (ör. Sıkıştır, Çıkart, Önizleme vb.) bulut hizmetlerinde veya dosya sunucularında saklanan dosyalara uygulanamazlar.</li>
+<li>Her bağlanan bulut hizmeti veya dosya sunucusu için münferit aktarım hızları kullanıcı hız limiti ayarlarına tabidir.</li>
+<li>Her kullanıcı tüm bulut hizmetleri ve dosya sunucularında üç adede kadar eşzamanlı dosya aktarımı ile sınırlıdır.</li>
+<li>WebDAV, WebDAV HTTPS ve bulut hizmeti proxy ayarlarını yapılandırmak için, <strong>Denetim Masası</strong> > <strong>Ağ</strong> > <strong>Genel</strong> > <strong>Proxy</strong> öğesine gidin. Bir bulut hizmetine veya dosya sunucusuna bağlanırken proxy ayarlarını değiştirmişseniz, lütfen bağlantıyı kesin ve tekrar bağlayın.</li>
+<li>Bağlı olan bulut hizmetlerinin veya dosya sunucularının bilgilerinin değiştirilmesi bağlantı durumunu etkilemez.</li>
+<li>Bağlantı kaynağını bırakmak için, bulunan dosyalar 30 dakikadan uzun süre dokunulmadan kalırsa bir bulut hizmeti/dosya sunucusunun otomatik olarak bağlantısı kesilir. Bağlantıyı devam ettirmek için bulut hizmeti/dosya sunucusuna tıklayın.</li>
+<li>Sistem aşağıdaki adlandırma biçimlerini kullanan dosyaları/klasörleri görütülemez:
+  <ul>
+    <li><strong>._</strong> veya <strong>.SYNOPPSDB</strong> ile başlayan</li>
+    <li><strong>/</strong> dahil</li>
+<li>Tam olarak <strong>.</strong>&nbsp;&nbsp;&nbsp;&nbsp;<strong>..</strong>&nbsp;&nbsp;&nbsp;&nbsp;<strong>'</strong>&nbsp;&nbsp;&nbsp;&nbsp;<strong>"</strong>&nbsp;&nbsp;&nbsp;&nbsp;<strong>.DS_Store</strong>&nbsp;&nbsp;&nbsp;&nbsp;<strong>@eaDir</strong>&nbsp;&nbsp;&nbsp;&nbsp;<strong>@sharebin</strong>&nbsp;&nbsp;&nbsp;&nbsp;<strong>@tmp</strong>&nbsp;&nbsp;&nbsp;&nbsp;<strong>.SynologyWorkingDirectory</strong> şeklinde adlandırılan</li>
+  </ul>
+</li>
+<li class="enable-dockerx64">Uzak bağlantı sadece yüksek ayrıcalık modunda desteklenir. Bu özelliği kullanmak için, ana DSM'nizdeki Docker paketine gidin, şifrelenmiş paylaşımlı klasörleri etkinleştirmek istediğiniz <strong>Docker DSM</strong>'yi seçin, <strong>Düzenle</strong>'ye tıklayın ve <strong>Yüksek ayrıcalıklar kullanarak konteyneri yürüt</strong> yanındaki kutuyu işaretleyin.</li>
+
+</ul>
+</div>
+</body>
+</html>

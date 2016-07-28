@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Přiřazen&iacute; opr&aacute;vněn&iacute; ke sd&iacute;len&yacute;m složk&aacute;m&nbsp;&ndash; N&aacute;pověda Synology DSM</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="You can specify which users or groups can access, view, or modify a shared folder and its contents. This article shows you how to assign and customize shared folder permissions in DSM.">
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+
+
+
+<h2>Přiřazen&iacute; opr&aacute;vněn&iacute; ke sd&iacute;len&yacute;m složk&aacute;m</h2>
+
+<p>Můžete zadat, kteř&iacute; uživatel&eacute; nebo skupiny mohou z&iacute;skat př&iacute;stup ke sd&iacute;len&eacute; složce a&nbsp;obsahu, a&nbsp;tuto složku tak zobrazovat a&nbsp;upravovat. Př&iacute;stupov&aacute; opr&aacute;vněn&iacute; sd&iacute;len&eacute; složky, stejně jako jednotliv&eacute; soubory a&nbsp;podsložky, lze přizpůsobit pro jednotliv&eacute; uživatele nebo skupiny.</p>
+
+<div class="section disable-eds14">
+<h4>Windows ACL:</h4>
+
+<p>V&nbsp;syst&eacute;mu DSM&nbsp;5.0 nebo nověj&scaron;&iacute;ch verz&iacute;ch jsou př&iacute;stupov&aacute; opr&aacute;vněn&iacute; sd&iacute;len&yacute;ch složek ve v&yacute;choz&iacute;m nastaven&iacute; založena na seznamu Windows&nbsp;ACL. Nově vytvořen&eacute; sd&iacute;len&eacute; složky využ&iacute;vaj&iacute; nastaven&iacute; opr&aacute;vněn&iacute; seznamu Windows&nbsp;ACL, což tak&eacute; umožňuje přizpůsoben&iacute; opr&aacute;vněn&iacute; jednotliv&yacute;ch souborů a&nbsp;podsložek. Kromě toho lze opr&aacute;vněn&iacute; přizpůsobit prostřednictv&iacute;m služby File Station nebo v&nbsp;programu Průzkumn&iacute;k souborů syst&eacute;mu Windows.</p>
+<p>N&aacute;sleduj&iacute;c&iacute; sd&iacute;len&eacute; složky nemohou využ&iacute;vat syst&eacute;m spr&aacute;vy opr&aacute;vněn&iacute; seznamu Windows&nbsp;ACL: <strong>photo</strong>, <strong>satashare</strong>, <strong>sdshare</strong>, <strong>surveillance</strong>, <strong>usbshare</strong>.</p>
+</div>
+<div class="section disable-eds14">
+<h4>Pozn&aacute;mka:</h4>  
+<p>Vlastn&iacute; složky <strong>home</strong> uživatele jsou um&iacute;stěny ve složce <strong>homes</strong>. Vzhledem k&nbsp;tomu, že seznam ACL funguje na z&aacute;kladě děděn&iacute; opr&aacute;vněn&iacute;, nebudou uživatel&eacute; m&iacute;t př&iacute;stup k&nbsp;vlastn&iacute; složce <strong>home</strong>, pokud pro uživatele nebo skupinu v&nbsp;r&aacute;mci složky <strong>homes</strong> nastav&iacute;te opr&aacute;vněn&iacute; Neuvedeno. </p>
+</div>
+<h4>Postup &uacute;pravy opr&aacute;vněn&iacute; sd&iacute;len&eacute; složky:</h4>
+
+<ol>
+
+<li>Přejděte do č&aacute;sti <strong>Ovl&aacute;dac&iacute; panel</strong> &gt; <strong>Sd&iacute;len&aacute; složka</strong>.</li><img src="about:blank" class="help_image"/><li>Vyberte sd&iacute;lenou složku, jej&iacute;ž opr&aacute;vněn&iacute; chcete upravit. Klikněte na možnost <b>Upravit</b>.</li><img src="../../../online_img/dsm/AdminCenter/file_share_privilege/howto450-2.png" class="help_image"/><li> Přejděte na kartu <strong>Opr&aacute;vněn&iacute;</strong>.</li><img src="../../../online_img/dsm/AdminCenter/file_share_privilege/howto450-3.png" class="help_image"/><li>Z&nbsp;rozev&iacute;rac&iacute; nab&iacute;dky vyberte jednu z&nbsp;n&aacute;sleduj&iacute;c&iacute;ch možnost&iacute;:<ul>
+<li><b>Intern&iacute; uživatel syst&eacute;mu:</b> Přiřaďte opr&aacute;vněn&iacute; pro v&yacute;choz&iacute; uživatele syst&eacute;mu, jako je uživatel anonymn&iacute;ho&nbsp;FTP/WebDAV. Dř&iacute;ve než povol&iacute;te uživatelům anonymn&iacute;ho&nbsp;FTP připojen&iacute; ke sd&iacute;len&eacute; složce, mus&iacute;te tomuto uživateli přiřadit př&iacute;stupov&aacute; opr&aacute;vněn&iacute;.</li>
+<li><b>M&iacute;stn&iacute; uživatel&eacute;:</b> Přiřaďte opr&aacute;vněn&iacute; pro m&iacute;stn&iacute; uživatele (včetně uživatele <b>guest</b>).</li>
+<li><b>M&iacute;stn&iacute; skupiny:</b> Přiřaďte opr&aacute;vněn&iacute; pro m&iacute;stn&iacute; skupiny.</li>
+</ul>
+</li><img src="about:blank" class="help_image"/><li>Za&scaron;krtnut&iacute;m nebo zru&scaron;en&iacute;m za&scaron;krtnut&iacute; př&iacute;slu&scaron;n&yacute;ch pol&iacute;ček pro jednotliv&eacute; uživatele nebo skupiny uprav&iacute;te př&iacute;stupov&aacute; opr&aacute;vněn&iacute; ke sd&iacute;len&eacute; složce:<ul>
+<li><b>Čten&iacute; / z&aacute;pis</b>: Uživatel nebo skupina budou m&iacute;t př&iacute;stup a&nbsp;mohou prov&aacute;dět změny souborů a&nbsp;podsložek sd&iacute;len&eacute; složky.</li>
+<li><b>Jen pro čten&iacute;</b>: Uživatel nebo skupina bude m&iacute;t př&iacute;stup k&nbsp;souborům a&nbsp;podsložk&aacute;m ve sd&iacute;len&eacute; složce.</li>
+<li><b>Ž&aacute;dn&yacute; př&iacute;stup</b>: Uživatel ani skupina nebudou m&iacute;t př&iacute;stup k&nbsp;souborům a&nbsp;podsložk&aacute;m sd&iacute;len&eacute; složky.</li>
+</ul>
+</li><img src="about:blank" class="help_image"/><li>Postup dokonč&iacute;te kliknut&iacute;m na možnost <b>OK</b>.</li>
+</ol>
+
+<div class="section">
+<h4>Pozn&aacute;mka:</h4>
+
+<ul>
+<li>V&nbsp;př&iacute;padě konfliktu opr&aacute;vněn&iacute; bude pořad&iacute; opr&aacute;vněn&iacute; n&aacute;sleduj&iacute;c&iacute;: Ž&aacute;dn&yacute; př&iacute;stup &gt; Čten&iacute;/z&aacute;pis &gt; Jen pro čten&iacute;.</li>
+<li>Pokud vytvoř&iacute;te novou sd&iacute;lenou složku a&nbsp;pokud jsou opr&aacute;vněn&iacute; pro uživatele ze skupiny <strong>administrators</strong> nastavena na možnost <b>Ž&aacute;dn&yacute; př&iacute;stup</b>, uvid&iacute; uživatel pouze sd&iacute;lenou složku v&nbsp;č&aacute;sti <strong>Ovl&aacute;dac&iacute; panel</strong> &gt; <strong>Sd&iacute;len&aacute; složka</strong>.</li>
+</ul>
+</div>
+
+<h3 class="disable-eds14">Přizpůsoben&iacute; opr&aacute;vněn&iacute; seznamu Windows ACL</h3>
+
+<p class="disable-eds14">Kromě nastaven&iacute; popsan&yacute;ch v&yacute;&scaron;e lze opr&aacute;vněn&iacute; přizpůsobit je&scaron;tě podrobněji na z&aacute;kladě n&iacute;že uveden&yacute;ch kroků. </p>
+
+<div class="section disable-eds14">
+<h4>Pozn&aacute;mka:</h4>
+<p>N&iacute;že uveden&aacute; nastaven&iacute; nelze použ&iacute;vat s&nbsp;n&aacute;sleduj&iacute;c&iacute;mi sd&iacute;len&yacute;mi složkami: <strong>photo</strong>, <strong>satashare</strong>, <strong>sdshare</strong>, <strong>surveillance</strong>, <strong>usbshare</strong>.</p>
+</div>
+
+<h4 class="disable-eds14">Postup přizpůsoben&iacute; opr&aacute;vněn&iacute;:</h4>
+<ol class="disable-eds14">
+  <li>Na kartě <strong>Opr&aacute;vněn&iacute;</strong> vyberte uživatele, jehož opr&aacute;vněn&iacute; chcete přizpůsobit. Klikněte kdekoli v&nbsp;r&aacute;mci sloupce <strong>Vlastn&iacute;</strong>.</li><img src="about:blank" class="help_image"/><li>Spr&aacute;vu opr&aacute;vněn&iacute; seznamu ACL k&nbsp;souboru nebo složce provedete některou z&nbsp;n&aacute;sleduj&iacute;c&iacute;ch akc&iacute; v&nbsp;okně <b>Editor opr&aacute;vněn&iacute;</b>:<ol>
+        <li><b>Uživatel nebo skupina:</b> Zadejte uživatele nebo skupinu, jejichž opr&aacute;vněn&iacute; chcete přizpůsobit.</li><img src="about:blank" class="help_image"/><li><b>Zdědit od:</b> Pouze pro zobrazen&iacute;. Zobrazen&iacute;m t&eacute;to informace zjist&iacute;te, zda bylo opr&aacute;vněn&iacute; zděděno (od nadřazen&eacute; složky) nebo je explicitn&iacute; (zobrazeno jako <b>Ž&aacute;dn&eacute;</b>). </li><img src="../../../online_img/dsm/AdminCenter/file_share_privilege/howto450-9.png" class="help_image"/><li><b>Typ:</b> Vyberte možnost <b>Povolit</b> nebo <b>Odepř&iacute;t</b>, kde můžete uživateli nebo skupině udělit nebo zam&iacute;tnout opr&aacute;vněn&iacute;.</li><img src="../../../online_img/dsm/AdminCenter/file_share_privilege/howto450-10.png" class="help_image"/><li><b>Použ&iacute;t pro:</b> Pokud vytv&aacute;ř&iacute;te položku opr&aacute;vněn&iacute; pro složku, za&scaron;krtněte pol&iacute;čko a&nbsp;použijte tuto položku pro tuto složku, složky (nebo <b>Podř&iacute;zen&eacute; složky</b>) nebo soubory (nebo <b>Podř&iacute;zen&eacute; soubory</b>) v&nbsp;t&eacute;to složce, nebo pro v&scaron;echny soubory a&nbsp;složky obsažen&eacute; v&nbsp;t&eacute;to složce (nebo ve složce <b>V&scaron;ichni potomci</b>). </li><img src="../../../online_img/dsm/AdminCenter/file_share_privilege/howto450-11.png" class="help_image"/><li><b>Spr&aacute;va:</b> Za&scaron;krtnut&iacute;m možnosti <b>Č&iacute;st opr&aacute;vněn&iacute;</b>, <b>Změnit opr&aacute;vněn&iacute;</b> nebo <b>Převz&iacute;t vlastnictv&iacute;</b> zadejte nastaven&iacute; př&iacute;stupov&yacute;ch opr&aacute;vněn&iacute; uživatele nebo skupiny k&nbsp;položce. </li>
+        <li><b>Čten&iacute;</b> nebo <b>Z&aacute;pis</b>: Za&scaron;krtnut&iacute;m pol&iacute;ček v&nbsp;těchto č&aacute;stech můžete upravit nastaven&iacute; př&iacute;stupov&yacute;ch opr&aacute;vněn&iacute; uživatele nebo skupiny k&nbsp;souboru nebo složce. </li>
+      </ol>    
+  <li> Klikněte na možnost <b>OK</b>.</li>
+</ol>
+<div class="section disable-eds14">
+  <h4>Opr&aacute;vněn&iacute; ACL lze seřadit do těchto kategori&iacute;:</h4>
+  <ul>
+    <li><b>Spr&aacute;va:</b><ul>
+      <li><b>Změnit opr&aacute;vněn&iacute;</b>: Tato kategorie upřesňuje, zda uživatel může měnit opr&aacute;vněn&iacute; souboru nebo složky.</li>
+      <li><b>Převz&iacute;t vlastnictv&iacute;</b>: Tato kategorie upřesňuje, zda je uživatel vlastn&iacute;kem souboru nebo složky.</li>
+    </ul></li>
+    <li><b>Čten&iacute;:</b><ul>
+      <li><b>Přesouvat složky/Spou&scaron;tět soubory</b>: Tato kategorie upřesňuje, zda uživatel může spustit programov&yacute; soubor.</li>
+      <li><b>Řadit složky/Č&iacute;st data</b>: Tato kategorie upřesňuje, zda uživatel může č&iacute;st data ze souboru.</li>
+      <li><b>Č&iacute;st atributy</b>: Tato kategorie upřesňuje, zda uživatel může prohl&iacute;žet atributy souboru.</li>
+      <li><b>Č&iacute;st roz&scaron;&iacute;řen&eacute; atributy</b>: Tato kategorie upřesňuje, zda uživatel může prohl&iacute;žet roz&scaron;&iacute;řen&eacute; atributy souboru.</li>
+      <li><b>Č&iacute;st opr&aacute;vněn&iacute;</b>: Tato kategorie upřesňuje, zda uživatel může č&iacute;st opr&aacute;vněn&iacute; souboru nebo složky.</li>
+    </ul></li>
+    <li><b>Z&aacute;pis:</b><ul>
+      <li><b>Vytv&aacute;řet soubory/Zapisovat data</b>: Tato kategorie upřesňuje, zda uživatel může měnit obsah souboru.</li>
+      <li><b>Vytv&aacute;řet složky/Připojovat data</b>: Tato kategorie upřesňuje, zda uživatel může přid&aacute;vat data na konec souboru.</li>
+      <li><b>Zapisovat atributy</b>: Tato kategorie upřesňuje, zda uživatel může měnit atributy souboru.</li>
+      <li><b>Zapisovat roz&scaron;&iacute;řen&eacute; atributy</b>: Tato kategorie upřesňuje, zda uživatel může měnit roz&scaron;&iacute;řen&eacute; atributy souboru.</li>
+      <li><b>Odstraňovat podsložky a&nbsp;soubory</b>: Tato kategorie upřesňuje, zda uživatel může odstranit složku.</li>
+      <li><b>Odstranit</b>: Tato kategorie upřesňuje, zda uživatel může odstranit soubor.</li>
+    </ul></li>
+  </ul>
+  <h4>O&nbsp;dědičnosti opr&aacute;vněn&iacute;:</h4>
+  <p> Opr&aacute;vněn&iacute; seznamu ACL zděděn&aacute; z&nbsp;rodičovsk&eacute;ho objektu na podř&iacute;zen&eacute; objekty. Pokud např&iacute;klad položka ACL složky &bdquo;prodej&ldquo; zaručuje uživatelce &bdquo;Amy&ldquo; opr&aacute;vněn&iacute; ke &bdquo;čten&iacute;&ldquo;, pot&eacute; bude položka ACL aplikov&aacute;na na v&scaron;echny soubory ve složce &bdquo;prodej&ldquo; (jako je &bdquo;v&yacute;ročn&iacute; zpr&aacute;va.xls&ldquo;) a&nbsp;umožn&iacute; uživatelce otev&iacute;rat tyto soubory. Zděděn&aacute; opr&aacute;vněn&iacute; jsou označena &scaron;edou barvou, vlastn&iacute; opr&aacute;vněn&iacute; objektu (nebo &bdquo;explicitn&iacute;&ldquo; opr&aacute;vněn&iacute;) jsou pak označena černou barvou. </p>
+</div>
+<div class="section disable-eds14">
+  <h4>Pozn&aacute;mka:</h4>
+  <ul>
+    <li>K&nbsp;souboru nebo složce můžete přidat maxim&aacute;lně 200&nbsp;explicitn&iacute;ch opr&aacute;vněn&iacute;&nbsp;ACL.</li>
+    <li>Seznam Windows&nbsp;ACL je podporov&aacute;n pouze syst&eacute;mem souborů ext4<span style="display: inline;" class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64">/Btrfs</span>. Uživatel&eacute; firmwaru předchoz&iacute; verze DSM&nbsp;2.3, kteř&iacute; chtěj&iacute; použ&iacute;vat opr&aacute;vněn&iacute; seznamu Windows&nbsp;ACL, mus&iacute; vytvořit alespoň jeden svazek&nbsp;ext4<span style="display: inline;" class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64">/Btrfs</span>. To znamen&aacute;, že mus&iacute;te naform&aacute;tovat alespoň jeden disk a&nbsp;vytvořit znovu svazek. Při form&aacute;tov&aacute;n&iacute; zař&iacute;zen&iacute; DiskStation budou vymaz&aacute;na ve&scaron;ker&aacute; uložen&aacute; data a&nbsp;nastaven&iacute;. Před zah&aacute;jen&iacute;m postupu se ujistěte, zda jsou v&scaron;echna data z&aacute;lohov&aacute;na.</li>
+    <li>Pokud chcete definovat nov&aacute; opr&aacute;vněn&iacute; pro uživatele dom&eacute;ny, ověřte, zda jsou klienti syst&eacute;mu&nbsp;DSM a&nbsp;Windows souč&aacute;st&iacute; stejn&eacute; dom&eacute;ny.</li>
+    <li>Pokud prov&aacute;d&iacute;te změny opr&aacute;vněn&iacute; pomoc&iacute; programu Průzkumn&iacute;k souborů syst&eacute;mu Windows, budou pravidla typu <strong>Odepř&iacute;t</strong> pro skupinu <strong>Domain Admins</strong> ignorov&aacute;na.</li>
+  </ul>
+</div>
+
+
+</body>
+</html>

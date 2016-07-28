@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Pomoc DSM – Klient SSO</title>
+<meta name="author" content="Synology Inc.">
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2>Klient SSO</h2>
+
+<p>Jeżeli DiskStation dołączył do tej samej domeny lub usługi LDAP jak serwer SSO, można ustawić DiskStation jako klienta SSO. Użytkownicy mogą uzyskać dostęp do usług świadczonych przez DiskStation po zalogowaniu się do serwera SSO przy użyciu swoich poświadczeń.</p>
+
+<p>Przed rozpoczęciem należy się upewnić, że DiskStation dołączył do tej samej domeny lub usługi LDAP jak serwer SSO.</p>
+
+<h4>Aby ustawić DiskStation jako klienta SSO:</h4>
+<ol>
+	<li>Przejdź do pozycji <strong>Panelu sterowania</strong> > <strong>Domena/LDAP</strong> > <strong>Klient SSO</strong>.</li>
+	<li>Zaznacz pole wyboru <strong>Włącz usługę SSO</strong>.</li>
+	<li>Określ <strong>Adres URL serwera SSO</strong> i <strong>ID aplikacji</strong> w polach poniżej pola wyboru.<div class="section"><h4>Uwaga:</h4>
+	<p>Aby uzyskać ID aplikacji, postępuj według jednego z poniższych sposobów:</p>
+	<ul>
+		<li><strong>Sposób 1:</strong><ol>
+				<li>Zaloguj się do systemu DSM, który działa jako serwer SSO.</li>
+				<li>Dodaj DiskStation, który będzie służyć jako aplikacja kliencka na liście aplikacji na serwerze SSO. Szczegółowe instrukcje można znaleźć w artykule Pomocy dla <strong>Serwera SSO</strong> > <strong>Lista aplikacji</strong>.</li>
+				<li>Kopiuj i wklej ID aplikacji przydzielone przez serwer SSO po dodaniu DiskStation do serwera SSO.</li>
+			</ol>
+		</li>
+		<li><strong>Sposób 2:</strong><ol>
+				<li>Po wprowadzeniu <strong>adresu URL serwera SSO</strong>* kliknij opcję <strong>Szybka rejestracja </strong> obok pola ID aplikacji.</li>
+				<li>W oknie rejestracji wprowadź poświadczenia konta administratora serwera SSO w polach <strong>Administrator serwera</strong> i <strong>Hasło</strong>.</li>
+				<li>Określ nazwę aplikacji klienckiej w polu <strong>Nazwa aplikacji</strong>.</li>
+				<li>Upewnij się, że <strong>Adres URI przekierowania</strong> odnosi się dokładnie do strony logowania DiskStation.</li>
+				<li>Kliknij <strong>OK</strong>, a DiskStation zostanie dodany do serwera SSO. Pole ID aplikacji zostanie uzupełnione automatycznie.</li>
+			</ol>
+		</li>
+	</ul>
+<p>______</p><p style="margin-left: 20px; text-indent: -10px;">* Podczas konfigurowania każdego klienta SSO wymagane jest wprowadzenie identycznego adresu URL serwera SSO (nazwy hosta lub adresu IP).</p>
+</div>
+	</li>
+	<li>Kliknij przycisk <strong>Zastosuj</strong>, aby zapisać ustawienia.</li>
+</ol>
+
+<div class="section"><h4>Uwaga:</h4>
+<ul>
+	<li>Jeśli serwer SSO używa protokołu HTTPS, w przypadku braku zaufanego certyfikatu logowanie SSO może być zablokowane przez przeglądarki.</li>
+	<li>W przypadku uzyskiwania dostępu do serwera SSO przy użyciu protokołu HTTP i gdy DiskStation (ustawiony jako klient SSO) używa połączenia HTTP, użytkownicy muszą skonfigurować ustawienia przeglądarek, aby umożliwić korzystanie z niezabezpieczonego połączenia.</li>
+	<li>Adres IP serwera SSO Server w formacie IPv6 nie będzie obsługiwany, jeżeli zaznaczono pole wyboru <strong>Zwiększ bezpieczeństwo za pomocą nagłówka HTTP Content Security Policy (CSP)</strong> w części <strong>Panel sterowania</strong> > <strong>Bezpieczeństwo</strong> > <strong>Bezpieczeństwo</strong> w systemie DSM.</li>
+</ul>
+</div>
+
+</body>
+</html>

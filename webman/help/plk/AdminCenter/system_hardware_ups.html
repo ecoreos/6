@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Zasilanie</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+
+
+<h2>UPS</h2>
+
+<p class="disable-eds14">Zasilacz UPS (zasilacz bezprzerwowy) to urządzenie służące jako zapasowe zasilanie pozwalające urządzeniu DiskStation na pracę przez krótki czas w przypadku zaniku zasilania. Funkcja ta dostępna w pozycji <strong>Panel sterowania</strong> > <strong>Sprzęt i zasilanie</strong> > <strong>UPS</strong> pomaga zapobiegać utracie danych, dając urządzeniu DiskStation wystarczającą ilość czasu na zapisanie danych i domontowanie woluminów przed utratą zasilania i wyłączeniem.</p>
+
+<p class="enable-eds14">Zasilacz UPS (zasilacz bezprzerwowy) to urządzenie służące jako zapasowe zasilanie pozwalające urządzeniu DiskStation na pracę przez krótki czas w przypadku zaniku zasilania. Funkcja ta dostępna w pozycji <strong>Panel sterowania</strong> > <strong>Sprzęt i zasilanie</strong> > <strong>UPS</strong> pomaga zapobiegać utracie danych, dając urządzeniu DiskStation wystarczającą ilość czasu na zapisanie danych i demontaż woluminów przed utratą zasilania i wstrzymaniem pracy.</p>
+
+<div class="section">
+<h4>Tryb bezpieczeństwa</h4>
+<p class="disable-eds14">Gdy urządzenie DiskStation przechodzi w tryb bezpieczeństwa, zatrzymuje ono wszystkie usługi i demontuje wszystkie woluminy w celu zapobiegania utracie danych i wyłącza w bezpieczny sposób, gdy urządzenie UPS przestanie działać. Domyślnie system przechodzi w tryb bezpieczeństwa, gdy w urządzeniu UPS zacznie wyczerpywać się bateria. Możesz również określić czas od wystąpienia awarii zasilania, po którym urządzenie DiskStation przejdzie w tryb bezpieczeństwa. Jeżeli jednak bateria w zasilaczu UPS stanie się słaba przed upłynięciem określonego czasu, system natychmiast przejdzie w tryb bezpieczeństwa.</p>
+
+<p class="enable-eds14">Gdy urządzenie DiskStation przechodzi w tryb bezpieczeństwa, zatrzymuje ono wszystkie usługi i demontuje wszystkie woluminy w celu zapobiegania utracie danych i zostaje wstrzymane w bezpieczny sposób, gdy urządzenie UPS przestanie działać. Domyślnie system przechodzi w tryb bezpieczeństwa, gdy w urządzeniu UPS zacznie wyczerpywać się bateria. Możesz również określić czas od wystąpienia awarii zasilania, po którym urządzenie DiskStation przejdzie w tryb bezpieczeństwa. Jeżeli jednak bateria w zasilaczu UPS stanie się słaba przed upłynięciem określonego czasu, system natychmiast przejdzie w tryb bezpieczeństwa.</p>
+
+
+<p></p>
+<p class="disable-eds14">W sytuacji, gdy urządzenie DiskStation zostało wyłączone w trybie bezpiecznym, zostanie ono automatycznie włączone po przywróceniu zasilania, jeżeli włączono opcję <strong>Uruchom ponownie automatycznie po awarii zasilania</strong> (znajdującą się w pozycji <strong>Panel sterowania</strong> > <strong>Sprzęt i zasilanie</strong> > <strong>Ogólne</strong>).</p>
+
+<p></p>
+</div>
+
+
+
+
+<h3>Lokalna obsługa UPS</h3>
+
+<p>Szczegółowe informacje dotyczące instalacji sprzętowej można znaleźć w instrukcji obsługi urządzenia UPS. Po zakończeniu instalacji oraz podłączeniu urządzenia DiskStation do zasilacza UPS możesz wykonać poniższe instrukcje, aby włączyć obsługę zasilacza UPS.</p>
+<h4>Aby włączyć lokalną obsługę UPS:</h4>
+<OL>
+<li>Podłącz urządzenie UPS do portu USB w urządzeniu DiskStation.</li>
+<LI>Na karcie <strong>UPS</strong> zaznacz pole wyboru <b>Włącz obsługę UPS</b>.</LI>
+<LI>Wybierz kiedy urządzenie DiskStation powinno przejść w tryb bezpieczny po wystąpieniu awarii zasilania.</LI>
+<LI>Wybierz, czy chcesz, by sygnał wyłączania był wysyłany do urządzenia UPS, gdy system przechodzi w tryb bezpieczeństwa. Większość urządzeń UPS może zostać automatycznie włączona po przywróceniu zasilania.</LI>
+<LI>Kliknij przycisk <b>Zastosuj</b>.</LI>
+</OL>
+
+<h3>Obsługa UPS SNMP</h3>
+
+<p>Urządzenie DiskStation obsługuje również podłączanie urządzeń UPS z SNMP (protokołem Simple Network Management Protocol). Szczegółowe informacje dotyczące instalacji sprzętowej można znaleźć w instrukcji obsługi urządzenia UPS SNMP. Po podłączeniu urządzenia DiskStation do UPS połączonego z tą samą siecią możesz wykonać poniższe instrukcję w celu włączenia obsługi UPS.</p>
+<h4>Aby włączyć obsługę sieciową UPS SNMP:</h4>
+<ol>
+<LI>Na karcie <strong>UPS</strong> zaznacz pole wyboru <b>Włącz obsługę UPS</b>.</LI>
+<li>Wybierz opcje <strong>UPS SNMP</strong> z menu rozwijanego <strong>Typ sieciowego UPS</strong>.</li>
+<li>W polu <strong>Adres IP UPS SNMP</strong> wprowadź adres IP urządzenia UPS SNMP.</li>
+<LI>Wybierz kiedy urządzenie DiskStation powinno przejść w tryb bezpieczny po wystąpieniu awarii zasilania.</LI>
+<li>Wprowadź ciąg społeczności dla urządzeni UPS SNMP w polu <strong>Społeczność SNMP</strong>.</li>
+<LI>Kliknij przycisk <b>Zastosuj</b>.</LI>
+</ol>
+
+<div class="section">
+<h4>Uwaga:</h4>
+<ul>
+<li>Stanowczo zaleca się stosowanie urządzeń <b>UPS SNMP</b> w przypadku korzystania z wdrożeń Synology High Availability (SHA).</li>
+<li>DiskStation obsługuje urządzenia UPS SNMPv1 oraz SNMPv2c.</li>
+</ul>
+</div>
+
+
+<h3>Obsługa sieciowego UPS</h3>
+
+<p>Jeśli dwa urządzenia Synology korzystają z jednego zasilacza UPS z pojedynczym portem USB, tylko jedno urządzenie DiskStation może uzyskać informacje dotyczące stanu urządzenia UPS. W tym przypadku jedno urządzenie DiskStation pełni rolę serwera sieciowego UPS i łączy się z urządzeniem UPS za pośrednictwem portu USB lub sieci (w zależności od urządzenia). Serwer sieciowego UPS uzyskuje informacje na temat UPS i przekazuje je do innego urządzenia klienta DiskStation.</p>
+<h4>Aby włączyć obsługę sieciową UPS:</h4>
+<OL>
+<li>Zaloguj się do urządzenia DiskStation, które zostało podłączone do urządzenia UPS (za pośrednictwem USB lub sieci). Jeżeli obsługa lokalnego urządzenia UPS nie została jeszcze włączona w danym urządzeniu DiskStation, zapoznaj się z sekcją znajdującą się powyżej.</li>
+<LI>Na karcie <strong>UPS</strong> zaznacz pole <strong>Włącz sieciowy serwer UPS</strong>, aby umożliwić urządzeniu DiskStation przekazywanie informacji o UPS do urządzenia klienckiego DiskStation.</li>
+<li>Kliknij przycisk <strong>Dozwolone urządzenia DiskStation</strong>.</li>
+<li>W wyświetlonym oknie wprowadź adresy IP innego urządzenia DiskStation, które korzysta z urządzenia UPS, a które nie zostało z nim połączone za pośrednictwem USB lub sieci. Kliknij <strong>OK</strong>.</li>
+<li>Kliknij przycisk <strong>Zastosuj</strong>, aby zapisać ustawienia.</li>
+</OL>
+<p>Teraz serwer sieciowego UPS może uzyskiwać informacje o UPS i przekazywać je do innego urządzenia DiskStation korzystającego z urządzenia UPS. Skorzystaj z instrukcji podanych poniżej, aby włączyć obsługę UPS w innym urządzeniu DiskStation.</p>
+<h4>Aby włączyć obsługę UPS w urządzeniu klienckim DiskStation:</h4>
+<ol>
+<li>Zaloguj się do drugiego urządzenia DiskStation korzystającego z urządzenia UPS, ale które nie zostało z nim podłączone za pośrednictwem USB lub sieci.</li>
+<li>Na karcie <strong>UPS</strong> zaznacz pole wyboru <strong>Włącz obsługę UPS</strong>.</li>
+<li>Wybierz opcje <strong>Serwer UPS Synology</strong> z menu rozwijanego <strong>Typ sieciowego UPS</strong>.</li>
+<li>Wprowadź adres IP serwera sieciowego UPS (urządzenia DiskStation połączonego z urządzeniem UPS) w polu <strong>IP sieciowego serwera UPS</strong>.</li>
+<LI>Wybierz kiedy urządzenie DiskStation powinno przejść w tryb bezpieczny po wystąpieniu awarii zasilania. Aby uprościć procedurę wprowadzania ustawień trybu bezpieczeństwa wybierz opcję <strong>Tak samo jak serwer</strong>.</LI>
+<LI>Kliknij przycisk <b>Zastosuj</b>, aby zapisać ustawienia.</LI>
+</OL>
+<div class="section">
+<h4>Wymagania sieciowego UPS:</h4>
+<UL>
+<LI>Aby przekazywać informacje o urządzeniu UPS, każde z urządzeń DiskStation powinno być podłączone do tej samej sieci.</LI>
+<LI>Urządzenie sieciowe (np. przełącznik lub koncentrator), do którego podłączono poszczególne urządzenia DiskStation powinny być podłączone do tego samego urządzenia UPS. W przeciwnym razie urządzenia DiskStation nie będą w stanie przekazywać informacji o urządzeniu UPS, gdy wystąpi awaria zasilania.</LI>
+</UL>
+</div>
+</body>
+</html>

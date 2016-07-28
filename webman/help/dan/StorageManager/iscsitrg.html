@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Lagerstyring</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2><a name="leaf_iscsitrg"></a>iSCSI Target*</h2>
+
+<p>iSCSI er en type lagerområdenetværk (SAN)-tjeneste, der giver adgang til konsolideret, blokniveaudatalagring. Det muliggør dataoverførsel over intranet og lagerstyring over lange afstande. Ved at tilknytte iSCSI LUNs til iSCSI Targets kan klientservere få adgang til lagerplads fra sin iSCSI-initiator, som om de var lokale diske. Afhængigt af modellen understøtter Synology-produktet oprettelse af flere iSCSI Targets, som iSCSI LUN'er kan knyttets til.</p>
+
+<p><span class="note_head">Bemærk: </span>Antallet af understøttede iSCSI Target'er varierer på dine Synology-produkter. Detaljerede produktspecifikationer findes på Synologys websted.</p>
+
+<h4>Sådan opretter du en iSCSI Target:</h4>
+<ol>
+<li>Klik på knappen <b>Opret</b>.</li>
+<li>Indtast iSCSI Targets oplysninger, herunder <b>Navn</b>, <b>IQN</b>, og om <b>CHAP-godkendelse</b> skal aktiveres.</li>
+<li>Klik på <b>Næste</b>.</li>
+<li>Konfigurer iSCSI LUN-tilknytning. Vælg <b>Opret en ny iSCSI LUN</b> eller <b>Tilknyt eksisterende iSCSI LUNs</b>.</li>
+<li>Klik på <b>Næste</b>.</li>
+<li>Klik på <b>Tilbage</b> for at ændre eller <b>Anvend</b> for at bekræfte indstillinger.</li>
+</ol>
+
+<div class="section">
+<h4>Forklaring af ord</h4>
+<ul>
+<li><b>IQN</b>: IQN (iSCSI Qualified Name) er et sæt entydige navn på et iSCSI Target. Det må ikke konflikte med iSCSI Target IQN'er på andre servere. IQN skal være mindre end 128 tegn og kan indeholder bogstaver (skelner ikke mellem store og små bogstaver), tal, kolon, tankestreger og prikker. Det foreslåede navneformat er f.eks. iqn.[dato].[domæne]:[enheds-id]: <i>iqn.2000-04.com.synology:storage.diskarray.1</i>.</li>
+<li><b>CHAP-godkendelse</b>: Hvis du markerer <b>CHAP</b>, vil serveren kunne bekræfte klientens identitet. Brugernavn kan sammensættes af 1 ~ 12 bogstaver og tal, og adgangskoden kan sammensættes af 12 ~ 16 bogstaver og tal.</li>
+<li><b>Fælles CHAP-godkendelse</b>: I <b>Fælles CHAP</b> vil både klienten og serveren godkende hinanden. En CHAP-adgangskode, der bruges til klient-godkendelse, må ikke konfigureres til godkendelse af en server, og en CHAP-adgangskode, der bruges til server-godkendelse, må ikke konfigureres til godkendelse af en klient.</li></ul></div>
+
+
+<h4>Sådan fjerner du en iSCSI Target:</h4>
+<p>Du kan fjerne en iSCSI Target og en tilknyttet iSCSI LUNs. Bemærk, at når du fjerne en iSCSI LUN, bliver alle data på iSCSI LUN'en slettet.</p>
+<ol>
+<li>Vælg den iSCSI Target, du vil fjerne.</li>
+<li>Klik på <b>Fjern</b>.</li>
+<li>Hvis du vil fjerne tilknyttede iSCSI LUNs, skal du vælge <b>Slet også tilknyttede iSCSI LUNs</b>, og vælg dem, du vil fjerne.</li>
+<li>Klik på <b>OK</b>.</li>
+</ol>
+
+<h4>Sådan redigerer du en iSCSI Target:</h4>
+<ol>
+<li>Vælg den iSCSI Target, du vil redigere.</li>
+<li>Klik på <b>Rediger</b>.</li>
+<li>Rediger indstillinger til din præference. Klik på <b>OK</b> for at gemme ændringerne.</li>
+</ol>
+
+<div class="section">
+<h4>Forklaring af ord</h4>
+<ul>
+<li><b>CRC-checksum</b>: Aktiver CRC-checksum for at kontrollere, om der opstod eventuelle fejl under dataoverførslen.</li>
+<li><b>Flere sessioner</b>: Tillad flere sessioner fra en eller flere initiatorer for at oprette forbindelse til den samme iSCSI Target på samme tid. Beskyt filerne fra ødelæggelse eller uventet datatab ved at bruge en delt mappe eller et klyngesystem, hvilket kraftigt anbefales, f.eks. VMware Virtual Machine File System (VMFS) og Oracle Cluster File System (OCFS).</li>
+<li><b>Maskering</b>: Maskering gør det muligt, at kun udpegede iSCSI-initiator IQN'er får adgang til iSCSI Target.</li>
+</ul></div>
+
+<h4>Sådan aktiveres eller deaktiveres en iSCSI Target:</h4>
+<ol>
+<li>Vælg den iSCSI Target, du vil aktivere eller deaktivere.</li>
+<li>Klik på <b>Aktiver</b> eller <b>Deaktiver</b>.</li>
+</ol>
+<h4>For at registrere iSCSI Targets med en iSNS-server</h4>
+<p>iSNS (Internet Storage Name Service) indeholder mekanismen til centraliseret styring. Du kan registrere alle iSCSI Targets med iSNS-serveren.</p>
+<ol>
+<li>Klik på knappen <b>iSNS</b>, og marker afkrydsningsfeltet <b>Aktiver iSNS</b>.</li>
+<li>Indtast iSNS-serverens IP-adresse. Klik på <b>OK</b> for af anvende indstillingen.</li>
+</ol>
+<p>____<br />*Kun tilg&aelig;ngeligt p&aring; visse modeller.</p>
+
+</body>
+</html>

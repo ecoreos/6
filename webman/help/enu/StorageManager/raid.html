@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+	<h2>RAID Group*</h2>
+	<p>With DiskStation, you may combine multiple hard disks into a single storage unit called a RAID Group. Volumes or iSCSI LUNs (Block-Level) can be created on top of RAID Groups. Volumes or iSCSI LUNs may be expanded if a RAID Group has allocatable space. Different RAID types offer varying levels of data protection. For a general list of RAID types supported by your DiskStation, please refer to <a href="general.html">General</a>.
+</p>
+
+<h4>To create a RAID Group:</h4>
+	<ol>
+		<li>Click the <b>Create</b> button.</li>
+		<li>Choose either of the following options: 
+	  <ul>
+				<li>RAID Group for Single Volume or iSCSI LUN (Block-Level): Provides better performance.</li>
+				<li>RAID Group for Multiple Volumes or iSCSI LUNs (Block-Level): Provides better management flexibility.</li>
+			</ul>
+		</li>
+		<li>Follow the wizard to complete the process.</li>
+	</ol>
+<div class="section">
+<h4>Note: </h4>
+<ul>
+<li>A RAID Group must be comprised of hard disks of the same hard drive type. You cannot use SATA and SAS hard disks simultaneously nor SSD and HDD simultaneously to create RAID.</li>
+<li>A RAID Group for Multiple Volumes or iSCSI LUNs (Block-Level) which uses <b>RAID 5</b> or <b>RAID 6</b> may contain multiple <b>RAID Arrays</b>. Every RAID Array belonging to the same RAID Group will be the same RAID type (e.g. RAID 5 or RAID 6). The maximum disk number for each RAID Array can be 6, 12, or 24. You can set the maximum disk number while creating the RAID Group, and the number cannot be modified later. When a RAID Array has been assigned with the maximum number of disks, the next disk added to the RAID Group may be assigned to a new RAID Array. The new RAID Array must contain the minimum number of disks required for that specific RAID type (i.e. three disks for RAID 5 and four disks for RAID 6).
+</li>
+<li>If you want to create a RAID Group with a certain hard disk but it does not appear in the <b>RAID Group Creation Wizard</b>, please check the status of the hard disk in <b>HDD Management</b>.</li>
+</ul>
+</div>
+
+	<h4>To remove a RAID Group:</h4>
+	<ol>
+		<li>Select the RAID Group you want to remove.</li>
+		<li>Click the <b>Remove</b> button and follow the wizard to complete the process.</li>
+	</ol>
+
+<div class="section">
+<h4>Note: </h4>
+<ul>
+<li>Volumes and iSCSI LUNs on the RAID Group will be deleted when you remove the RAID Group. Make sure no important data will be deleted.</li>
+</ul>
+</div>
+
+
+	<h4>To repair a RAID Group:</h4>
+	<p>A RAID Group whose status is <b>Degraded</b> can be repaired, if the RAID Group is one of the following types: RAID 1, RAID 5, RAID 6 and RAID 10. Existing data on the RAID Group will not be deleted.</p>
+	<p>Please follow the steps below to repair your RAID Group:</p>
+	<ol>
+		<li>Turn off your DiskStation. (You can skip this step if your model supports hot-swapping.)</li>
+		<li>Replace the failed hard disk as indicated in Disk Info, located in the RAID Group status.</li>
+		<li>Click <b>Manage</b>.</li>
+		<li>Select <b>Repair</b>.</li>
+		<li>Follow the wizard to complete the process.</li>
+        </ol>
+        
+<div class="section">
+<h4>Note:</h4>
+<ul>
+<li>The size of the hard disk for replacement must be equal to or larger than the size of the smallest disk in the RAID Group.</li>
+<li>The status of the hard disk for replacement must be "Initialized" or "Not Initialized".</li>
+</ul>
+</div>
+
+	<h4>To change the RAID type of a RAID Group</h4>
+	<p>To change the RAID type of a RAID Group, there must be available hard disks installed on your DiskStation. Currently, the following types of RAID change are supported:</p>
+	<ul>
+		<li>Basic to RAID 1 or RAID 5</li>
+		<li>RAID 1 to RAID 5</li>
+		<li>RAID 5 to RAID 6</li>
+      <li>Add mirror disk to RAID 1</li>
+	</ul>
+	<p>Please follow the steps below to change the RAID type of your RAID Group:</p>
+	<ol>
+		<li>Select the RAID Group you want to change.</li>
+		<li>Click <b>Manage</b>.</li>
+		<li>Select <b>Change RAID type</b>.</li>
+		<li>Follow the wizard to complete the process.</li>
+        </ol>
+<div class="section">
+<h4>Note: </h4>
+<ul>
+<li>A RAID Group's status must be <b>Normal</b> before its RAID type can be changed. Otherwise data loss will occur. If the RAID Group is in <b>Degraded</b> status, please repair it first.</li>
+<li>To change a RAID Group's RAID type, enough hard disks must be installed on your DiskStation, and the size of the new disk must be larger than the smallest disk in the RAID Group.</li>
+<li>The status of the new disk must be "Initialized" or "Not Initialized".</li>
+<li>The RAID type of a RAID Group with multiple RAID Arrays can not be changed.</li>
+</ul>
+</div>
+
+	<h4>To expand the size of a RAID Group</h4>
+	<p>You can expand the size of a RAID Group by replacing existing hard disks with ones of larger size or by adding hard disks.</p>
+
+<div class="section">
+<h4>Note: </h4>
+<ul>
+  <li>To expand a RAID Group with 3 TB or larger disks, make sure your RAID Group was created using DSM 3.0 or later.
+</ul>
+</div>
+
+	<h4>To expand a RAID Group by replacing existing hard disks with ones of larger size:</h4>
+	<p>You can expand a RAID Group by replacing existing hard disks with ones of larger size in the following RAID types: RAID 1, RAID 5, and RAID 6. 
+       Associated volumes or iSCSI LUN on RAID Group for single volume or iSCSI LUN will be expanded automatically.  Please follow the steps below:</p>
+	<ol>
+    <li>Turn off your DiskStation. You can skip this step if your model supports hot-swapping.</li>
+		<li>Replace one hard disk with another of larger size.</li>
+		<li>Turn on the DiskStation and repair the RAID Group.</li>
+		<li>Repeat step 1 to 3 until all hard disks are replaced with ones of larger size.</li>
+		<li>The system will expand the RAID Group automatically.</li>
+	</ol>
+
+<div class="section">
+<h4>Note: </h4>
+<ul>
+<li>All services of Storage Manager will be temporarily stopped during the expansion process.</li> 
+<li>You can only expand the hard disk when the RAID Group is in <b>Normal</b> status; otherwise it will cause data loss. If the RAID Group is in <b>Degraded</b> status, please repair it first.</li>
+	</ul>
+</div>
+
+	<h4>To expand a RAID Group by adding hard disks:</h4>
+	<p>This function is applicable with JBOD, RAID 5 and RAID 6 types of RAID. To do this:</p>
+	<ol>
+		<li>Select the RAID Group you want to expand.</li>
+		<li>Click <b>Manage</b>.</li>
+		<li>Select <b>Add Disk</b>.</li>
+		<li>Follow the wizard to complete setup.</li>
+</ol>
+<div class="section">
+<h4>Note: </h4>
+<ul>
+		<li>The RAID Group status must be <b>Normal</b>.</li>
+		<li>For RAID 5 and RAID 6 types of RAID Group, the hard disk size must be larger than the smallest disk in the RAID Group.</li>
+		<li>The status of the selected hard disk must be "Initialized" or "Not Initialized".</li>
+	</ul>
+    </div>
+
+	<h4>To edit the RAID Group description:</h4>
+	<ol>
+		<li>Select the RAID Group you want to edit</li>
+		<li>Click <b>Manage</b>.</li>
+		<li>Select <b>Edit description</b>.</li>
+		<li>Edit description and click <b>OK</b> to save the result.</li>
+	</ol>
+	<h3>RAID Scrubbing</h3>
+    <p>RAID scrubbing is a data maintenance function that inspects RAID Groups and repairs any detected data inconsistencies. This function can be used with RAID Groups that implement RAID 5 or RAID 6. </p>
+    <p>We recommend regularly performing RAID scrubbing in order to maintain data consistency and avoid losing any critical data in the event of disk failure.</p>
+    <h4>To perform RAID scrubbing:</h4>
+    <ol>
+      <li>Select the RAID Group on which to perform RAID scrubbing.</li>
+      <li>Click <strong>Manage</strong></li>
+      <li>Select <strong>RAID scrubbing</strong>.</li>
+    </ol>
+    <div class="section">
+      <h4>Note:</h4>
+      <ul>
+        <li>RAID scrubbing can only be performed when the status of the RAID Group is <strong>Normal</strong>.</li>
+        <li>Please do not shut down the system before RAID scrubbing is completed. If the system is shut down before completion, RAID scrubbing must be restarted from the beginning.</li>
+      </ul>
+    </div>
+    
+<p>____<br />*Only available on certain models.</p>    
+</body>
+</html>

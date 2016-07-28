@@ -1,0 +1,104 @@
+ <!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Naprawianie woluminu lub grupy dysków — pomoc Synology DSM</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="This article walks you through the steps to create a volume on DiskStation using Storage Manager."><link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Naprawianie woluminu lub grupy dysków</h2>
+
+<p>Błędy woluminów mogą wystąpić z różnych przyczyn, takich jak uszkodzenie partycji systemowych lub uszkodzenie dysków twardych. W niektórych przypadkach można zdiagnozować błędy i rozwiązać problemy, wykonując poniższe czynności.</p>
+
+<div class="section">
+<h4>Uwagi:</h4>
+<ul>
+<li>Opisana tutaj funkcja <strong>Reperuj</strong> jest dostępna tylko dla macierzy RAID z nadmiarowością danych (np. RAID 1, RAID 5, RAID 6 itp.). Należy pamiętać, że ta funkcja nie umożliwia naprawy uszkodzonych dysków twardych ani nie gwarantuje odzyskania danych w uszkodzonych woluminach.</li>
+<li>W przypadku uszkodzonych woluminów zalecamy kontakt z naszą <span class="last"><a href="https://account.synology.com/support/support_form.php?lang=enu" target="_blank">Pomocą techniczną</a> w celu uzyskania wsparcia</span>.</li>
+</ul>
+</div>
+
+<h3>Uszkodzone partycje systemowe</h3>
+
+<p>Jeśli dojdzie do uszkodzenia partycji systemowych, powinien pojawić się komunikat informujący o braku dostępu do partycji systemowych.</p>
+<h4>Aby naprawić partycje systemowe:</h4>
+
+<ol>
+<li>Otwórz aplikację <strong>Zarządzanie przechowywaniem</strong>.</li><img src="about:blank" class="help_image"/><li>Wybierz <strong>Przegląd</strong>, a następnie kliknij łącze oznaczone <strong>Reperuj</strong>. System powinien naprawić partycje systemowe.</li><img src="../../../online_img/dsm/StorageManager/volume_diskgroup_repair/fail_system_partitions.png" class="help_image"/></ol>
+
+
+<h3>Zdegradowane woluminy</h3>
+
+
+<p>Wolumin lub grupa dysków jest <strong>zdegradowana</strong>, gdy doszło do uszkodzenia dysku twardego, jednakże dane nie zostały utracone. Może to wystąpić wyłącznie w macierzach RAID z nadmiarowością danych, takich jak SHR, RAID 1, RAID 5, RAID 6 oraz RAID 10. </p>
+<p>Zdegradowany wolumin lub grupę dysków można naprawić przez wymianę uszkodzonego dysku twardego na sprawny i naprawę woluminu lub grupy dysków.</p>
+
+<div class="section">
+<h4>Uwaga:</h4>
+<ul>
+  <li>Rozmiar dysku twardego na wymianę musi być większy lub równy rozmiarowi najmniejszego dysku woluminu.</li>
+  <li>Stan dysku twardego na wymianę musi być <strong>Zainicjowany</strong> lub <strong>Nie zainicjowany</strong>.</li>
+</ul>
+
+</div>
+
+<h4> Aby naprawić zdegradowany wolumin lub grupę dysków:</h4>
+
+<ol>
+
+<li>Wybierz <strong>Zarządzanie przechowywaniem</strong> > <strong>wolumin</strong> lub <strong>Grupa dysków</strong>, aby sprawdzić, czy stan zmienił się na <strong>Zdegradowany</strong>.</li><img src="about:blank" class="help_image"/><li>Jeśli tak, wybierz kartę <strong>HDD/SSD</strong>, aby sprawdzić, który dysk twardy został uszkodzony.</li><img src="../../../online_img/dsm/StorageManager/volume_diskgroup_repair/hdd_ssd.png" class="help_image"/><li>Wymontuj uszkodzony dysk twardy, a następnie wymień go na nowy.</li>
+
+<div class="section">
+<h4>Uwaga:</h4>
+<ul>
+<li>Jeśli urządzenie DiskStation nie obsługuje funkcji wymiany dysków podczas pracy, pamiętaj, aby przed wymontowaniem i zamontowaniem dysków twardych wyłączyć zasilanie urządzenia.</li>
+<li>Istniejące dane na dysku twardym na wymianę zostają usunięte.</li>
+</ul>
+</div>
+
+<li>Po zamontowaniu dysku twardego na wymianę powróć do karty <strong>Wolumin</strong> lub <strong>Grupa dysków</strong>.</li>
+
+<li>Wybierz zdegradowany wolumin lub grupę dysków.</li>
+
+<li>Kliknij przycisk <strong>Zarządzaj</strong>.</li><img src="about:blank" class="help_image"/><li>Wybierz <strong>Reperuj</strong>, a następnie kliknij przycisk <strong>Dalej</strong>. </li><img src="../../../online_img/dsm/StorageManager/volume_diskgroup_repair/manage_repair.png" class="help_image"/><li>Wybierz dysk twardy, który chcesz dodać do woluminu. Następnie kliknij przycisk <strong>Dalej</strong>.</li><img src="../../../online_img/dsm/StorageManager/volume_diskgroup_repair/choose_disks.png" class="help_image"/><li> Aby zakończyć operację, wykonaj instrukcje kreatora. </li>
+</ol>
+
+
+
+
+<h3>Napraw wolumin</h3>
+<p>Aby naprawić zdegradowany wolumin/grupę dysków/jednostkę iSCSI LUN musisz zastąpić dysk, który uległ awarii dyskiem, który spełnia poniższe kryteria:</p>
+<ul>
+<li>W przypadku woluminów RAID 1, RAID 5 lub RAID 6 zdegradowany wolumin można naprawić przy pomocy dostępnego dysku, którego rozmiar jest równy lub większy od rozmiaru najmniejszego dysku w woluminie RAID.</li>
+<li>W przypadku woluminów SHR-1 dostępny dysk musi spełniać jedno z poniższych kryteriów: (1) Jego rozmiar musi być równy lub większy od rozmiaru dysku, który uległ awarii; (2) Wyłączając największy dysk w woluminie RAID, rozmiar dostępnego dysku musi być równy lub większy od rozmiaru największego pozostałego dysku.<ol>
+<li>Przykład 1: Wolumin SHR-1 składa się z dysków o pojemności 3 TB, 2 TB, 2 TB i 1 TB. Jeżeli dysk o pojemności 3 TB ulegnie awarii, można go naprawić przy pomocy dysku o pojemności równej lub większej niż 2 TB.</li>
+<li>Przykład 2: Wolumin SHR-1 składa się z dysków o pojemności 4TB, 4TB, 2 TB i 2TB. Jeżeli dysk o pojemności 4TB ulegnie awarii, można go naprawić przy pomocy dysku o pojemności równej lub większej niż 4TB.</li>
+<li>Przykład 3: Wolumin SHR-1 składa się z dysków o pojemności 4TB, 4TB, 2 TB i 2TB. Jeżeli dysk o pojemności 2TB ulegnie awarii, można go naprawić przy pomocy dysku o pojemności równej lub większej niż 2 TB.</li>
+</ol>
+</li>
+<li>W przypadku woluminów SHR-2 dostępny dysk musi spełniać jedno z poniższych kryteriów: (1) Jego rozmiar musi być równy lub większy od rozmiaru dysku, który uległ awarii; (2) Wyłączając dwa największe dyski w woluminie RAID, rozmiar dostępnego dysku musi być równy lub większy od rozmiaru największego pozostałego dysku.</li>
+</ul>
+<p>Jeżeli skonfigurowano dyski jako Hot Spare spełniające powyższe kryteria, będą one używane do naprawy woluminu/grupy dysków/grupy RAID Group/jednostki iSCSI LUN.</p>
+
+
+<h3>Rozwiązywanie problemów z uszkodzonymi woluminami</h3>
+
+<p>Jeżeli wolumin ma stan <strong>Uszkodzony</strong>, nie można naprawić go samodzielnie. Aby rozwiązać ten problem, skontaktuj się z naszym działem <a href="https://account.synology.com/support/support_form.php?lang=enu" target="_blank">pomocy technicznej</a>.</p>
+
+<div class="section">
+<h4>Zanim skontaktujesz się z pomocą techniczną:</h4>
+
+<ul>
+<li>Odzyskaj dane przechowywane w urządzeniu DiskStation, kopiując pliki na komputer lub zewnętrzny dysk za pomocą aplikacji File Station, usługi plików systemu Windows, serwera FTP lub innych usług udostępniania plików.</li>
+<li>Zachowaj taką samą kolejność dysków twardych jak w momencie uszkodzenia woluminu.</li>
+<li>Przeprowadź test S.M.A.R.T. na dyskach twardych sprawiających problemy. Aby to zrobić, przejdź do strony <strong>Zarządzanie przechowywaniem</strong> > <strong>HDD/SSD</strong>. Wybierz dysk twardy i kliknij przycisk <strong>Test S.M.A.R.T.</strong> <br /></li>
+</ul>
+</div>
+</body>
+</html>

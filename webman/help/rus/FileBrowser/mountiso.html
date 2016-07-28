@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>File Station</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Подключение виртуальных дисков</h2>
+
+<p>Можно подключить виртуальные диски для доступа к содержимому образов дисков при помощи File Station.</p>
+
+<h4>Подключение виртуального диска:</h4>
+<ol>
+<li>Выделите образ диска и выберите <b>Инструменты</b> > <b>Подключить виртуальный диск</b>.</li><img src="about:blank" class="help_image"/><li>Нажмите <b>Обзор</b>, чтобы выбрать или создать пустую целевую папку в вашем устройстве DiskStation для подключения виртуального диска.</li><img src="../../../online_img/dsm/FileStation/mountiso/02.png" class="help_image"/><li>Установите флажок <b>Подключать автоматически при запуске</b>, если хотите, чтобы устройство DiskStation подключало этот виртуальный диск при каждом запуске или перезагрузке системы. Чтобы продолжить, нажмите <b>Подключить</b>. Теперь можно открыть целевую папку, в которой подключен виртуальный диск, и просмотреть содержимое образа диска.</li><img src="../../../online_img/dsm/FileStation/mountiso/03.png" class="help_image"/></ol>
+
+<div class="section">
+<h4>Примечания</h4>
+<p>Виртуальные диски и файлы .iso можно подключать только к подпапкам в составе общих папок.</p>
+</div>
+
+
+
+<h4>Отключение виртуального диска:</h4>
+<ol>
+<li>Правой кнопкой нажмите целевую папку, в которой подключен виртуальный диск, и выберите <b>Отключить</b>.</li><img src="about:blank" class="help_image"/></ol>
+<ol><span class="note_head">Примечание. </span><li>Поддерживаемые форматы образов дисков: формат файла "<b>.iso</b>", использующий файловую систему ISO 9660 и UDF.</li>
+<li>Одновременно можно подключить максимум 16 виртуальных дисков.</li>
+<li class="enable-dockerx64">Подключенные виртуальные диски поддерживаются только в режиме доступа высокого уровня. Чтобы использовать данную функцию, откройте пакет Docker в DSM хост-сервера, выберите <strong>Docker DSM</strong>, для которого необходимо включить зашифрованные общие папки, выберите <strong>Редактировать</strong> и установите флажок <strong>Использовать контейнер с правами доступа высокого уровня</strong>.</li>
+
+</ol>
+</body>
+</html>

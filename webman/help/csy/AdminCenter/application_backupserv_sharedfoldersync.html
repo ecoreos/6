@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Zálohování a replikace</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head> 
+<body>
+<h2>Synchronizace sdílených složek</h2>
+<p>Služba Synchronizace sdílených složek umožňuje uživatelům synchronizovat sdílené složky z jednoho zařízení Synology NAS (zdroj) na jiná zařízení  Synology NAS (cíl) v síti LAN nebo přes internet.</p>
+<p>Synchronizace sdílených složek provede nejprve úplnou synchronizaci vybraných sdílených složek. Poté se budou synchronizovat pouze změněné soubory. Soubory, které byly odstraněny ze zdroje, se odstraní i z cíle.</p>
+
+<div class="section">
+<h4>Poznámka:</h4>
+<ul>
+<li>Funkce Synchronizace sdílených složek představuje jednosměrné řešení synchronizace, které synchronizuje soubory ze zdroje na cíl. Pokud potřebujete obousměrné řešení synchronizace, použijte službu <strong>Cloud Station ShareSync</strong>.</li>
+<li>Pokud na cíli existuje sdílená složka se stejným názvem (např. SdílenáSložka), jako má zdrojová sdílená složka, přejmenuje se cílová složka na „SdílenáSložka_1“.</li>
+<li>Pokud na cíli neexistuje žádná sdílená složka se stejným názvem, jako má zdrojová sdílená složka, vytvoří se v odpovídajícím nebo v prvním dostupném svazku složka pomocí tohoto názvu.</li>
+<li>Podle výchozího nastavení nemá žádný uživatel oprávnění k přístupu do sdílené složky v cíli. O oprávnění požádejte správce <strong>admin</strong> cíle.</li>
+</ul>
+</p>
+</div>
+
+<h3>Povolení služby</h3>
+<h4>Povolení Synchronizace sdílených složek:</h4>
+<p>Službu musíte nejprve povolit na cílovém zařízení Synology NAS.</p>
+<ol>
+<li>Přejděte do části <strong>Ovládací panel</strong> > <strong>Souborová služba</strong> > <strong>rsync</strong></li>
+<li>Volbou možnosti <strong>Povolit službu rsync</strong> povolte službu Synchronizace sdílených složek.</li>
+<li>Klikněte na možnost <strong>Použít</strong>.</li>
+</ol>
+
+
+<h4>Zrušení propojení sdílených složek z cílového zařízení Synology NAS:</h4>
+
+<p>Pokud různé zdroje současně synchronizují totožné sdílené složky do jednoho cíle DiskStation, dojde ke konfliktu. Než bude moci jiný zdroj na cíl synchronizovat svou složku, budete muset zrušit propojení sdílené složky na straně zdroje.<ol>
+<li>Přihlaste se k cílovému zařízení Synology NAS a přejděte do části <strong>Ovládací panel</strong> > <strong>Synchronizace sdílených složek</strong> > <strong>Seznam připojení</strong>.</li>
+<li>Ve zdrojovém zařízení Synology NAS vyberte konfliktní připojení a kliknutím na možnost <strong>Zrušit propojení</strong> ho odeberte.</li>
+</ol>
+
+<p>Nyní může sdílenou složku do cílového zařízení DiskStation synchronizovat jiný zdroj.</p>
+
+<h3>Správa úloh synchronizace</h3>
+
+<h4>Vytvoření úlohy synchronizace:</h4>
+<ol>
+<li>Přihlaste se ke zdrojovému zařízení Synology NAS a přejděte do části <b>Ovládací panel</b> > <b>Synchronizace sdílených složek</b> > <strong>Seznam úloh</strong>.</li>
+<li>Klikněte na možnost <b>Vytvořit</b>.</li>
+<li>Zadejte název úlohy.</li>
+<li>Vyberte sdílenou složku, kterou chcete synchronizovat na cíl.</li>
+<li>Určete cílové zařízení Synology NAS a následující možnosti synchronizace:</li>
+<ul>
+<li><strong>Přizpůsobit port šifrování SSH pro synchronizaci sdílených složek</strong>: Zadejte požadovaný port šifrování pro šifrování přenosu SSH.</li>
+<li><strong>Povolit šifrování přenosu SSH</strong>: Šifrování dat během přenosu. Tato možnost nabízí lepší zabezpečení, zatímco nešifrovaný přenos nabízí lepší výkon. Vyberte možnost podle svých potřeb.</li> 
+<li><strong>Povolit komprimaci přenosu</strong>: Komprimace dat během přenosu. Šetří šířku pásma, ale zvyšuje zátěž procesoru.</li>
+<li><strong>Povolit synchronizaci na úrovni bloku</strong>: Přenáší se pouze rozdílná data namísto celých souborů. Šetří šířku pásma, ale zvyšuje zátěž procesoru.</li>
+</ul>
+<li>Po zobrazení výzvy vyberte některé z následujících možností a určete, kdy má proběhnout synchronizace ze zdroje na cíl:</li>
+<ul>
+<li><strong>Spustit synchronizaci při úpravě</strong>: Spuštění úlohy synchronizace okamžitě po provedení nějaké změny ve zdrojové sdílené složce.</li>
+<li><strong>Spustit synchronizaci ručně</strong>: Spuštění úlohy synchronizace ručně ze zdrojové sdílené složky.</li>
+<li><strong>Rozšířený plán</strong>: Klikněte na možnost <strong>Plán</strong> a určete, kdy se má úloha synchronizace provádět.</li>
+
+</ul>
+<li>Klikněte na možnost <strong>Použít</strong>. V seznamu úloh se zobrazí úloha synchronizace, která se bude provádět podle zadaného plánu.</li></ol>
+<h4>Správa úlohy synchronizace:</h4>
+<ol>
+<li>Ve zdrojovém zařízení Synology NAS přejděte do části <strong>Ovládací panel</strong> > <strong>Synchronizace sdílených složek</strong>, klikněte na možnost <strong>Seznam úloh</strong> a vyberte požadovanou úlohu.</li>
+<li>Proveďte některý z následujících úkonů:</li>
+<ul>
+<li>Kliknutím na možnost <b>Upravit</b> úlohu upravíte.</li>
+<li>Kliknutím na možnost <b>Odstranit</b> úlohu odstraníte.</li> 
+<li>Pokud úloha synchronizace právě neprobíhá, kliknutím na možnost <b>Synchronizovat</b> spustíte úlohu okamžitě.</li>
+<li>Pokud úloha synchronizace právě probíhá, kliknutím na možnost <b>Storno</b> probíhající úlohu zastavíte.</li>
+
+<div class="section">
+<h4>Poznámka:</h4>
+<p>Pokud je plán úlohy synchronizace nastaven na možnost <b>Spustit synchronizaci při úpravě</b>, kliknutím na možnost <b>Storno</b> se probíhající úloha synchronizace zastaví. Pokud však dojde k libovolným změnám v obsahu libovolné sdílené složky (složek) monitorované úlohou synchronizace, Synchronizace sdílených složek úlohu obnoví.</p>
+</div>
+
+<li>Kliknutím na položku <b>Úplná synchronizace</b> se synchronizují všechna data. Synchronizace sdílených složek spustí nejprve úplnou synchronizaci, později se již synchronizují pouze změněné části. Kliknutím na toto tlačítko lze ručně znovu synchronizovat všechna data.</li>
+</ul>
+</ol>
+
+<div class="section disable-eds14">
+<h4>Další informace</h4>
+<ol>
+<li>Název úlohy se musí skládat z 1 až 32 znaků Unicode a nesmí obsahovat následující znaky:<br> <span class="letterSpace5">! " # $ % & ' ( ) * + , / : ; <= > ? @ [ ] \ ^ ` { } | ~ </span></li>
+<li>Pokud synchronizujete sdílené složky ze souborového systému ext4 do ext3, mohou se vyskytnout chyby, pokud úloha obsahuje více než 32 000 složek.</li>
+<li>Pokud byly sdílené složky na cílovém zařízení DiskStation dříve synchronizovány s jiným zařízením DiskStation, provede Synchronizace sdílených složek úplnou synchronizaci úlohy.</li>
+<li>Při provádění úloh Synchronizace sdílených složek potřebujete oprávnění správce admin cílového zařízení DiskStation. Buď máte heslo k jeho účtu admin nebo jste členem skupiny administrators.</li>
+<li>Při synchronizaci na cílové zařízení DiskStation přes internet je možné zadat název serveru podle externí IP adresy nebo názvu hostitele. Pokud se však rozhodnete zadat název hostitele, musí být tento název ve formátu FQDN (Fully Qualified Domain Name), například „www.synology.com“.</li>
+<li>Při přesměrování portů používá služba Synchronizace sdílených složek port 22 při šifrovaném přenosu a port 873 při nešifrovaném přenosu.</li>
+<li>Služba Synchronizace sdílených složek nepodporuje externí úložiště.</li>
+<li>Když se spustí úloha Synchronizace sdílených složek, automaticky se připojí zašifrované sdílené složky v cíli; chcete-li však přistupovat k datům obsaženým v nich, musíte zašifrované sdílené složky v cíli nejprve připojit.</li>
+<li>Naplánovaná synchronizace sdílených složek se v zadanou dobu nespustí, pokud nedošlo k žádným změnám vybrané sdílené složky.</li>
+<li>Nejlepšího výkonu dosáhnete, když budou jednotlivé úlohy synchronizace obsahovat méně než 200 sdílených složek.</li>
+<li>Na cílovém zařízení DiskStation bude zakázána funkce <strong>Složka uživatele</strong>, pokud se sdílená složka <strong>homes</strong> ze zdrojového zařízení DiskStation synchronizuje na cílové zařízení DiskStation.</li>
+
+<li>U modelů s jinými procesory CPU než Intel je možné pomocí funkce Synchronizace sdílených složek synchronizovat až 100 000 sdílených složek (včetně podsložek).</li>
+ <li>Funkce Synchronizace sdílených složek dokáže zálohovat nastavení seznamu Windows ACL, pokud je souborovým systémem cíle systém ext4.</li>
+ 
+ <li>Synchronizace sdílených složek bude neúspěšná, pokud synchronizujete na cílový server, který má stejný název jako vaše zařízení DiskStation.</li>
+ 
+<li>Rozšířená oprávnění sdílené složky ze zdroje se na cíl nesynchronizují. Pro skupinu administrators bude v cílovém umístění vytvořeno pravidlo pouze pro čtení. </li> 
+
+  </ol>
+</div>
+<div class="section enable-eds14">
+<h4>Další informace</h4>
+<ol>
+<li>Název úlohy se musí skládat z 1 až 32 znaků Unicode a nesmí obsahovat následující znaky:<br> <span class="letterSpace5">! " # $ % & ' ( ) * + , / : ; <= > ? @ [ ] \ ^ ` { } | ~ </span></li>
+<li>Pokud synchronizujete sdílené složky ze souborového systému ext4 do ext3, mohou se vyskytnout chyby, pokud úloha obsahuje více než 32 000 složek.</li>
+<li>Pokud byly sdílené složky na cílovém zařízení DiskStation dříve synchronizovány s jiným zařízením DiskStation, provede Synchronizace sdílených složek úplnou synchronizaci úlohy.</li>
+<li>Při provádění úloh Synchronizace sdílených složek potřebujete oprávnění správce admin cílového zařízení DiskStation. Buď máte heslo k jeho účtu admin nebo jste členem skupiny administrators.</li>
+<li>Při synchronizaci na cílové zařízení DiskStation přes internet je možné zadat název serveru podle externí IP adresy nebo názvu hostitele. Pokud se však rozhodnete zadat název hostitele, musí být tento název ve formátu FQDN (Fully Qualified Domain Name), například „www.synology.com“.</li>
+<li>Při přesměrování portů používá služba Synchronizace sdílených složek port 22 při šifrovaném přenosu a port 873 při nešifrovaném přenosu.</li>
+<li>Služba Synchronizace sdílených složek nepodporuje externí úložiště.</li>
+<li>Když se spustí úloha Synchronizace sdílených složek, automaticky se připojí zašifrované sdílené složky v cíli; chcete-li však přistupovat k datům obsaženým v nich, musíte zašifrované sdílené složky v cíli nejprve připojit.</li>
+<li>Naplánovaná synchronizace sdílených složek se v zadanou dobu nespustí, pokud nedošlo k žádným změnám vybrané sdílené složky.</li>
+<li>Nejlepšího výkonu dosáhnete, když budou jednotlivé úlohy synchronizace obsahovat méně než 200 sdílených složek.</li>
+<li>Na cílovém zařízení DiskStation bude zakázána funkce <strong>Složka uživatele</strong>, pokud se sdílená složka <strong>homes</strong> ze zdrojového zařízení DiskStation synchronizuje na cílové zařízení DiskStation.</li>
+<li>U modelů s jinými procesory CPU než Intel je možné pomocí funkce Synchronizace sdílených složek synchronizovat až 100 000 sdílených složek (včetně podsložek).</li>
+ 
+ <li>Synchronizace sdílených složek bude neúspěšná, pokud synchronizujete na cílový server, který má stejný název jako vaše zařízení DiskStation.</li>
+ 
+<li>Rozšířená oprávnění sdílené složky ze zdroje se na cíl nesynchronizují. Na cíli bude vytvořeno pravidlo pouze pro čtení pro uživatele skupiny administrators. </li> 
+ 
+ </ol>
+</div>
+</body></html>

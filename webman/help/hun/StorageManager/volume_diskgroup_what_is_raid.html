@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>RAID-típus kiválasztása – Synology DSM Súgó</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="A brief overview describing what RAID types are supported by Synology DiskStation Manager (DSM).">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>RAID-típus kiválasztása</h2>
+
+<p>A RAID (Redundant Array of Independent Disks) egy adattárolási technológia, amelynek segítségével több független merevlemezt egyesíthet egy közös tárolóegységbe. Különböző RAID-típusok léteznek, mind különböző szintű teljesítményt, tárolókapacitást és megbízhatóságot biztosít.</p>
+
+<p>Ez a cikk rövid áttekintést nyújt a(z) DiskStation eszköz által támogatott RAID-típusokról, ideértve a telepítési követelményeket, illetve azok előnyeit és hátrányait.</p><!--1--><h3>Támogatott RAID-típusok</h3>
+
+<p>Az alábbi táblázat rövid áttekintést nyújt a(z) DiskStation eszköz által támogatott RAID-típusokról, ideértve azok tárolókapacitását, a RAID-típus kialakításához minimálisan szükséges merevlemezek számát, valamint, hogy hány merevlemez meghibásodása esetén nem következik még be adatvesztés. </p>
+
+<table>
+
+  <tr>
+
+    <th>Kötettípus</th>
+    <th>Merevlemezek száma</th>
+
+    <th>Tolerált merevlemezhibák</th>
+    <th>Leírás</th>
+
+    <th>Kötetkapacitás</th>
+
+  </tr>
+
+  <tr>
+
+    <td rowspan="3">SHR</td>
+    <td>1</td>
+
+    <td>0</td>
+    <td rowspan="3">
+    <div align="left">
+    <ul>
+    <li>Optimális kötetméretet biztosít különböző méretű merevlemezek egyesítésekor.</li>
+    <li>Adatredundanciát biztosít, ha a kötet két vagy több merevlemezt tartalmaz.</li>
+    <li>Kezdő felhasználóknak javasolt.</li>
+    </ul>
+    </div>
+    </td>
+
+    <td>1 x (HDD-méret)</td>
+
+  </tr>
+  <tr>
+    <td>2-3</td>
+    <td>1</td>
+    <td rowspan="2">A rendszer által optimalizálva.</td>
+  </tr>
+  <tr>
+    <td>≧4</td>
+    <td>1-2</td>
+  </tr>
+  
+  <tr>
+
+    <td>Basic</td>
+    <td>1</td>
+
+    <td>0</td>
+    <td>
+    <div align="left">
+    <ul>
+    <li>Egyetlen, független egységként működő merevlemezből áll.</li>
+    <li>Nem biztosít adatredundanciát.</li>
+    </ul>
+    </div>
+    </td>
+
+    <td>1 x (HDD-méret)</td>
+
+  </tr>
+
+  <tr>
+
+    <td>JBOD</td>
+    <td>≧1</td>
+
+    <td>0</td>
+    <td>
+    <div align="left">
+    <ul>
+    <li>Több merevlemezt egyesít egyetlen tárhellyé. A merevlemezek összkapacitásával megegyező kapacitást biztosít.</li>
+    <li>Nem biztosít adatredundanciát.</li>
+    </ul>
+    </div>
+    </td>
+
+    <td>A HDD-k méretének összege</td>
+
+  </tr>
+
+  <tr>
+
+    <td>RAID 0</td>
+    <td>≧2</td>
+
+    <td>0</td>
+    <td>
+    <div align="left">
+    <ul>
+    <li>„Striping” (csíkozás) funkciója tömbökre osztja az adatokat, ezeket az adattömböket pedig egyszerre több merevlemezen tárolja, így jobb teljesítményt képes elérni.</li>
+    <li>Nem biztosít adatredundanciát.</li>
+    </ul>
+    </div>
+    </td>
+
+    <td>A HDD-k méretének összege</td>
+
+  </tr>
+
+  <tr>
+
+    <td rowspan="3">RAID 1</td>
+    <td>2</td>
+
+    <td>1</td>
+    <td rowspan="3">
+    <div align="left">
+    <ul>
+    <li>Egy időben ugyanazon adatokat írja mindkét merevlemezre.</li>
+    <li>Adatredundanciát biztosít.</li>
+    </ul>
+    </div>
+    </td>
+
+    <td rowspan="3">Legkisebb HDD mérete</td>
+
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>3</td>
+  </tr>
+
+  <tr>
+
+    <td>RAID 5</td>
+    <td>≧3</td>
+
+    <td>1</td>
+
+    <td>
+    <div align="left">
+    <ul>
+    <li>Blokkszintű csíkozási funkciót biztosít, a tagmerevlemezek között elosztott adatparitással, ezáltal hatékonyabb adatredundanciát kínál, mint a RAID 1.</li>
+    </ul>
+    </div>
+    </td>
+
+    <td>(N – 1) x (legkisebb HDD mérete)</td>
+
+  </tr>
+
+  <tr>
+
+    <td>RAID 6</td>
+    <td>≧4</td>
+
+    <td>2</td>
+    <td>
+    <div align="left">
+    <ul>
+    <li>Kétrétegű adatparitást alkalmaz a két merevlemez méretével megegyező mennyiségű adat tárolására. Magasabb fokú adatredundanciát biztosít, mint a RAID 5.</li>
+    </ul>
+    </div>
+    </td>
+
+    <td>(N – 2) x (legkisebb HDD mérete)</td>
+
+  </tr>
+
+  <tr>
+
+    <td>RAID 10</td>
+    <td>≧4<br /> (páros szám)</td>
+
+    <td>A teljes HDD fele</td>
+    <td>
+    <div align="left">
+    <ul>
+    <li>A RAID 0 teljesítményét és a RAID 1 adatvédelmi szintjét nyújtja. Párosával csoportosítja a merevlemezeket, melyekben adattükrözést alkalmaz.</li>
+    </ul>
+    </div>
+    </td>
+
+    <td>(N/2) x (legkisebb HDD mérete)</td>
+
+  </tr>
+
+</table>
+
+
+<div class="section">
+<h4>Megjegyzés:</h4>
+<ul>
+<li>A „Basic” típustól eltérő RAID-típusok csak bizonyos termékek esetén alkalmazhatók, a lemezfiókok és a telepített merevlemezek számától függően.</li>
+<li>Az „N” a kötetben található merevlemezek számát jelöli.</li>
+</ul>
+</div><!--2--><h3>Synology Hybrid RAID (SHR)</h3>
+
+<p>A Synology Hybrid RAID (SHR) egy automatizált RAID-kezelőrendszer, melyet a tárhelykezelés egyszerűsítésére terveztek, elsősorban azok számára, akik még nincsenek tisztában a különböző RAID-típusokkal. </p>
+<p>Az SHR különböző méretű merevlemezeket egyesít egy optimalizált kapacitással és teljesítménnyel rendelkező tárolókötetben, így kevesebb merevlemez-kapacitás veszik el egy rugalmasabb tárolási megoldás keretében. Elegendő merevlemez alkalmazása esetén az SHR egy- vagy kétlemezes redundanciát kínál, vagyis az SHR-kötet egy vagy két lemez meghibásodása esetén is kizárja az adatvesztést.</p><img src="about:blank" class="help_image"/> <!--3--><h3>RAID 0</h3>
+<p>A RAID 0 két vagy több merevlemezt egyesít a teljesítmény és a kapacitás fokozása érdekében, de nem rendelkezik hibatoleranciával. Már egyetlen lemez meghibásodása is a tömbön tárolt összes adat elvesztésével jár. A RAID 0 nem kritikus fontosságú rendszerekhez ajánlott, ahol fontos az ár/teljesítmény arány.</p><img src="about:blank" class="help_image"/> <!--4--><h3>RAID 1</h3>
+<p>A RAID 1 leggyakrabban két merevlemezt tartalmaz. A merevlemezek adatai tükrözésre kerülnek, hibatoleranciát biztosítva a merevlemezek meghibásodása esetén. Az olvasási teljesítmény nő, míg az írási teljesítmény megegyezik azzal, amit egy önállóan működő merevlemeznél tapasztalna. Egyetlen merevlemez meghibásodását tolerálja adatvesztés nélkül. A RAID 1 használata akkor javasolt, ha a hibatolerancia elsődleges fontosságú, a tárhely mérete és a teljesítmény viszont nem.</p><img src="about:blank" class="help_image"/> <!--5--><h3>RAID 5</h3>
+<p>A RAID 5 hibatoleranciát és jobb olvasási teljesítményt nyújt. Minimum három merevlemezt igényel. A RAID 5 egyetlen merevlemez elvesztését tolerálja. Merevlemezhiba esetén a rendszer a fennmaradó merevlemezeken csíkozással tárolt paritásadatok alapján képes visszaállítani meghibásodott lemezen tárolt adatokat. Ezért csökkent állapotban a RAID 5 olvasási és írási teljesítménye jelentősen csökken. A RAID 5 használata akkor ideális, ha a tárhely mérete és a költségek csökkentése fontosabb a teljesítménynél.</p><img src="about:blank" class="help_image"/> <!--6--><h3>RAID 6</h3>
+<p>A RAID 6 hasonló a RAID 5 megoldáshoz, azzal a különbséggel, hogy eggyel több réteget tart fenn a csíkozás funkciónak, így két lemez meghibásodását tolerálja. Minimum négy merevlemezt igényel. A fokozott hibatoleranciának köszönhetően a RAID 6 teljesítménye alacsonyabb a RAID 5 teljesítményénél. RAID 6 használatát akkor javasoljuk, ha a tárhely mérete és a költségek csökkentése fontos, ugyanakkor több merevlemez meghibásodásának tolerálására is szükség van.</p><img src="about:blank" class="help_image"/> <!--7--><h3>RAID 10</h3>
+<p>A RAID 10 a RAID 1 és a RAID 0 előnyeit egyesíti. Jobb olvasási és írási teljesítményt nyújt, de csak a teljes kapacitás fele használható az adatok tárolására. Négy vagy több merevlemezre van szükség, így ez egy viszonylag költséges megoldás, mely ugyanakkor egyszerre képes remek teljesítményt és hibatoleranciát biztosítani. A RAID 10 több lemez egyidejű meghibásodását is képes tolerálni, amennyiben azok nem egyazon alcsoportban történnek. A RAID 10 ideális megoldás a magas kimeneti/bemeneti igényű alkalmazásokra, például adatbázisszerverekhez.</p><img src="about:blank" class="help_image"/></body>
+</html>

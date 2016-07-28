@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Připojování k různým souborovým serverů pomocí File Station – Nápověda Synology DSM</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="Learn how to customize File Station settings related to file management, shared links, and security.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Vzdálené připojení</h2>
+
+<p>V aplikaci File Station se můžete připojit ke cloudovým službám (Box, Dropbox, Google Drive a Microsoft OneDrive) a souborovým serverům pomocí různých protokolů (FTP, STFP, WebDAV a WebDAV HTTPS).</p>
+
+<h4>Postup připojení ke cloudové službě:</h4>
+<ol>
+  <li>Přejděte do nabídky <strong>Nástroje</strong> > <strong>Vzdálené připojení</strong> > <strong>Nastavení připojení</strong>.</li>
+  <li>Zvolte požadovanou cloudovou službu kliknutím na ikonu a klikněte na možnost <strong>Další</strong>.</li>
+  <li>Ve vyskakovacím okně postupujte podle pokynů průvodce ověřením účtu.</li>
+  <li>Jakmile je nastavení dokončeno, v levém panelu se objeví cílová cloudová služba.</li>
+</ol>
+
+
+<div class="section">
+<h4>Omezení specifická pro danou cloudovou službu:</h4>
+<ul>
+<li><strong>Box</strong>:<ul>
+  <li>Katalog sdílený s ostatními účastníky bude mít jako příponu uživatelské jméno vlastníka.</li>
+  <li>Pokud jsou katalog sdíleny s ostatními účastníky, použijte identický název (název katalogu s uživatelským jménem vlastníka v příponě). Pouze takové katalogy budou zobrazeny.</li>
+  <li>Pouze pomocí služby Box můžete otevírat soubory s následujícími příponami: .gdoc, .gsheet a .boxnote.</li>
+  <li>Názvy souborů rozlišují velká a malá písmena.</li>
+  <li>Správné nastavení brány firewall najdete v <a href="https://support.box.com/hc/articles/200523728-Configuring-a-Firewall-for-Box-or-Box-Sync"  target="_blank">tomto článku</a>.</li>
+</ul>
+</li>
+
+<li><strong>Dropbox</strong>:<ul>
+<li>Katalog služby Dropbox nelze zobrazit, pokud obsahuje více než 25 000 souborů.</li>
+<li>Katalog služby Dropbox nelze přejmenovat, pokud obsahuje více než 10 000 souborů.</li>
+<li>Soubory přesahující 10 GB nelze načíst.</li>
+<li>Načítání se nezdaří, pokud bude načítání souboru trvat déle než 24 hodin.</li>
+<li>Názvy souborů rozlišují velká a malá písmena.</li>
+<li>Správné nastavení brány firewall najdete v <a href="https://www.dropbox.com/help/23"  target="_blank">tomto článku</a>.</li>
+</ul>
+</li>
+
+<li><strong>Google Drive</strong>:<ul>
+  <li>Soubory/složky s cestou delší než 2048 znaků nebudou zobrazeny.</li>
+  <li>Soubory s názvem delším než 255 znaků nebudou zobrazeny.</li>
+  <li>Soubory/katalogy s identickým názvem budou označeny individuálními časy vytvoření.</li>
+<li>Pokud otevřete konkrétní soubor Google (např. Google Docs a Google Slides) pomocí aplikace File Station, zobrazí se vám URL pro přístup k cílovému souboru.</li>
+<li>Složky <strong>Moje jednotka</strong> a <strong>Označené hvězdičkami</strong>, zobrazené ve službě File Station, odpovídají složkám „Moje jednotka“ a „Označené hvězdičkami“ úložiště Google Drive.</li>
+<li>Správné nastavení brány firewall najdete v <a href="https://support.google.com/drive/answer/2589954"  target="_blank">tomto článku</a>.</li>
+</ul>
+</li>
+
+<li><strong>Microsoft OneDrive</strong>:<ul>
+<li>Soubory poznámkového bloku OneNote nebudou zobrazeny.</li>
+<li>Soubory přesahující 10 GB nelze načíst.</li>
+<li>U souborů (např. .png, .jpg, .docx, .pdf) může být uvedena větší velikost souboru (původní velikost plus velikost miniatury). Nijak to ale neovlivní původní velikosti souborů při jejich stahování.</li>
+<li>Názvy souborů rozlišují velká a malá písmena.</li>
+
+</ul>
+</li>
+</ul>
+
+<p>Chcete-li znát více omezení, doporučujeme vám navštívit oficiální webové stránky dané cloudové služby.</p>
+
+
+</div>
+
+
+<h4>Postup připojení k souborovému serveru:</h4>
+<ol>
+  <li>Přejděte do nabídky <strong>Nástroje</strong> > <strong>Vzdálené připojení</strong> > <strong>Nastavení připojení</strong>.</li>
+  <li>Zvolte požadovaný protokol serveru kliknutím na ikonu a klikněte na možnost <strong>Další</strong>.</li>
+  <li>K dokončení nastavení zadejte následující informace:<ul>
+  <li><strong>Název hostitele nebo IP adresa</strong>: Zadejte název hostitele nebo IP adresu cílového souborového serveru.</li>
+  <li><strong>Port</strong>: Zadejte port cílového souborového serveru.</li>
+  <li><strong>Uživatel</strong> a <strong>Heslo</strong>: Zadejte tyto přihlašovací informace, pokud cílový souborový server vyžaduje účet nebo heslo.</li>
+  <li><strong>Kódová stránka</strong>: Zvolte kódování znaků cílového souborového serveru pro správné zobrazení názvů souborů.</li>
+  <li><strong>Název profilu</strong>: Zadejte jedinečný název pro snadnou identifikaci tohoto souborového serveru.</li>
+  <li><strong>Použít připojení WebDAV HTTPS</strong>: Tato možnost je dostupná pouze tehdy, když nastavujete protokol WebDAV a když klient i souborový server podporují WebDAV HTTPS.</li>
+  <li><strong>Povolit pouze jedno připojení na uživatele</strong>: Tato možnost je dostupná pouze tehdy, když nastavujete protokol FTP nebo SFTP. Zaškrtněte tuto možnost k optimalizaci možností připojení, když má server omezení v počtu připojení.</li>
+  </ul>
+  </li>
+<li>Nastavení uložte kliknutím na možnost <strong>Použít</strong>. Cílový souborový server se objeví v levém panelu.</li> 
+</ol>
+<h4>Postup úpravy stávající cloudové služby nebo profilu souborového serveru:</h4>
+<ol>
+  <li>Přejděte do nabídky <strong>Nástroje</strong> > <strong>Vzdálené připojení</strong> > <strong>Seznam připojení</strong>.</li>
+  <li>Klikněte na cílovou cloudovou službu nebo souborový server, chcete-li provést následující operace:<ul>
+      <li>Úprava: Klikněte na možnost <strong>Upravit</strong>, změňte aktuální konfiguraci profilu a klikněte na možnost <strong>OK</strong>.</li>
+      <li>Odpojení: Klikněte na možnost <strong>Odpojit</strong> k ukončení připojení.</li>
+  <li>Opětovné připojení: Klikněte na možnost <strong>Připojit</strong> k obnovení připojení. (Případně klikněte na cíl na levém panelu aplikace File Station za účelem opětovného připojení.)</li>
+  <li>Odstranění: Klikněte na možnost <strong>Odstranit</strong> a následně možnost potvrďte a opusťte profil. (Případně klikněte na cíl v levém panelu aplikace File Station a klikněte na možnost <strong>Odstranit</strong>.)</li>
+    </ul>
+  </li>
+  </ol>
+  
+  
+<div class="section">
+  <h4>Poznámka:</h4>
+<ul>
+  <li>Každý uživatel se nemůže současně připojit k více než 100 souborovým serverům najednou.</li>
+  <li>Abyste zamezili neočekávaným chybám, ověřte, zda jste vybrali správnou kódovou stránku serveru. Doporučujeme kódování Unicode, pokud neznáte kódovou stránku serveru.</li>
+  <li>Některé funkce aplikace File Station (např. Komprimovat do, Extrahovat, Náhled atd.) nelze používat v případě souborů uložených v cloudových službách nebo na souborových serverech.</li>
+<li>Jednotlivé rychlosti přenosu pro každou připojenou cloudovou službu nebo souborový server podléhají nastavení omezení rychlosti uživatele.</li>
+<li>Každý uživatel je omezen třemi přenosy souborů napříč všemi připojenými cloudovými službami a souborovými servery.</li>
+<li>Chcete-li nakonfigurovat nastavení proxy WebDAV, WebDAV HTTPS a cloudové služby, přejděte do části <strong>Ovládací panel</strong> > <strong>Síť</strong> > <strong>Obecné</strong> > <strong>Proxy</strong>. Pokud jste změnili nastavení proxy serveru během připojení ke cloudové službě nebo souborovému serveru, odpojte se a znovu připojte.</li>
+<li>Úprava informací o připojených cloudových službách nebo souborových serverech neovlivní stav připojení.</li>
+<li>Aby došlo k uvolnění zdroje pro připojení, provede cloudová služba nebo souborový server automatické odpojení, pokud nedojde k použití obsažených souborů po dobu delší než 30 minut. Připojení můžete obnovit kliknutím na cloudovou službu nebo souborový server.</li>
+<li>Systém nemůže zobrazit soubory/složky, které mají následující formáty názvů:<ul>
+    <li>Začínající na <strong>._</strong> nebo <strong>.SYNOPPSDB</strong></li>
+    <li>Obsahující <strong>/</strong></li>
+<li>Pojmenované přesně <strong>.</strong>    <strong>..</strong>    <strong>'</strong>    <strong>"</strong>    <strong>.DS_Store</strong>    <strong>@eaDir</strong>    <strong>@sharebin</strong>    <strong>@tmp</strong>    <strong>.SynologyWorkingDirectory</strong></li>
+  </ul>
+</li><li class="enable-dockerx64">Vzdálené připojení je podporováno pouze v režimu s vysokým oprávněním. Chcete-li používat tuto funkci, přejděte do balíčku Docker v hostitelském systému DSM, vyberte <strong>Docker DSM</strong>, pro který chcete povolit šifrované sdílené složky, klikněte na možnost <strong>Upravit</strong> a zaškrtněte políčko vedle možnosti <strong>Spustit kontejner s vysokými oprávněními</strong>.</li></ul>
+</div>
+</body>
+</html>

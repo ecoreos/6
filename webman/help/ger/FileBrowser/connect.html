@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Herstellen einer Verbindung zu verschiedenen Dateiservern mit File Station - Hilfe zu Synology DSM</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="Learn how to customize File Station settings related to file management, shared links, and security.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Remote-Verbindung</h2>
+
+<p>In File Station können Sie über verschiedene Protokolle (FTP, STFP, WebDAV und WebDAV HTTPS) eine Verbindung zu öffentlichen Cloud-Diensten (Box, Dropbox, Google Drive und Microsoft OneDrive) und Dateiservern herstellen.</p>
+
+<h4>Verbindung zu einem Cloud-Dienst herstellen:</h4>
+<ol>
+  <li>Gehen Sie zu <strong>Extras</strong> > <strong>Remote-Verbindung</strong> > <strong>Verbindungseinrichtung</strong>.</li>
+  <li>Wählen Sie den gewünschten Cloud-Dienst aus, indem Sie auf das Symbol klicken, und klicken Sie auf <strong>Weiter</strong>.</li>
+  <li>Befolgen Sie im eingeblendeten Fenster die Anweisungen des Assistenten zur Authentifizierung des Kontos.</li>
+  <li>Nach Abschluss des Setup wird der betreffende Cloud- Dienst im linken Fenster angezeigt.</li>
+</ol>
+
+
+<div class="section">
+<h4>Cloud-spezifische Einschränkungen:</h4>
+<ul>
+<li><strong>Box</strong>:
+<ul>
+  <li>An den für andere Mitarbeiter freigegebenen Katalog wird der Benutzername des Besitzers angehängt.</li>
+  <li>Haben für andere Mitarbeiter freigegebene Kataloge denselben Namen (ein Katalogname, an den der Benutzername des Besitzers angehängt ist), wird nur einer dieser Kataloge angezeigt.</li>
+  <li>Dateien mit den Erweiterungen .gdoc, .gsheet und .boxnote können nur über Box geöffnet werden.</li>
+  <li>Bei Dateinamen wird zwischen Groß- und Kleinschreibung unterschieden.</li>
+  <li>Die korrekten Firewall-Einstellungen finden Sie in <a href="https://support.box.com/hc/articles/200523728-Configuring-a-Firewall-for-Box-or-Box-Sync"  target="_blank">diesem Artikel</a>.</li>
+</ul>
+</li>
+
+<li><strong>Dropbox</strong>:
+<ul>
+<li>Ein Dropbox-Katalog kann nicht angezeigt werden, wenn er mehr als 25000 Dateien enthält.</li>
+<li>Ein Dropbox-Katalog kann nicht umbenannt werden, wenn er mehr als 10000 Dateien enthält.</li>
+<li>Dateien mit einer Größe von mehr als 10 GB können nicht hochgeladen werden.</li>
+<li>Eine Upload-Aufgabe schlägt fehl, wenn das Hochladen einer Datei mehr als 24 Stunden dauert.</li>
+<li>Bei Dateinamen wird zwischen Groß- und Kleinschreibung unterschieden.</li>
+<li>Die korrekten Firewall-Einstellungen finden Sie in <a href="https://www.dropbox.com/help/23"  target="_blank">diesem Artikel</a>.</li>
+</ul>
+</li>
+
+<li><strong>Google Drive</strong>:
+<ul>
+  <li>Dateien/Ordner mit einem Pfad, der mehr als 2048 Zeichen umfasst, werden nicht angezeigt.</li>
+  <li>Dateien mit einem Namen, der mehr als 255 Zeichen umfasst, werden nicht angezeigt.</li>
+  <li>Dateien/Kataloge mit identischen Namen werden mit den jeweiligen Erstellungszeiten markiert.</li>
+<li>Wenn Sie eine spezielle Google-Datei (z. B. Google-Dokumente und Google-Folien) über File Station öffnen, wird eine URL für den Zugriff auf die betreffende Datei angezeigt.</li>
+<li>Die in File Station angezeigten Ordner <strong>My Drive</strong> und <strong>Starred</strong> entsprechen den Ordnern "Mein Laufwerk" bzw. "Mit Sternchen" in Google Drive.</li>
+<li>Die korrekten Firewall-Einstellungen finden Sie in <a href="https://support.google.com/drive/answer/2589954"  target="_blank">diesem Artikel</a>.</li>
+</ul>
+</li>
+
+<li><strong>Microsoft OneDrive</strong>:
+<ul>
+<li>OneNote-Notizbuchdateien werden nicht angezeigt.</li>
+<li>Dateien mit einer Größe von mehr als 10 GB können nicht hochgeladen werden.</li>
+<li>Für die Dateien (z. B. .png, .jpg, .docx, .pdf) können größere Dateigrößen (Originalgröße plus Miniaturansichtsgröße) angezeigt werden. Dies hat keinen Einfluss auf die Originaldateigröße, wenn sie heruntergeladen werden.</li>
+<li>Bei Dateinamen wird zwischen Groß- und Kleinschreibung unterschieden.</li>
+
+</ul>
+</li>
+</ul>
+
+<p>Weitere Informationen zu Einschränkungen finden Sie auf der offiziellen Website des betreffenden Cloud-Dienstes.</p>
+
+
+</div>
+
+
+<h4>Verbindung zu einem Dateiserver herstellen:</h4>
+<ol>
+  <li>Gehen Sie zu <strong>Extras</strong> > <strong>Remote-Verbindung</strong> > <strong>Verbindungseinrichtung</strong>.</li>
+  <li>Wählen Sie das gewünschte Serverprotokoll aus, indem Sie auf das Symbol klicken, und klicken Sie auf <strong>Weiter</strong>.</li>
+  <li>Geben Sie die nachstehenden Informationen an, um das Setup abzuschließen:
+  <ul>
+  <li><strong>Hostname oder IP</strong>: Geben Sie den Hostnamen oder die IP des betreffenden Dateiservers ein.</li>
+  <li><strong>Port</strong>: Geben Sie die Portnummer des betreffenden Dateiservers ein.</li>
+  <li><strong>Benutzer</strong> und <strong>Kennwort</strong>: Geben Sie diese Anmeldeinformationen ein, wenn der betreffende Dateiserver nach einem Konto/Kennwort fragt.</li>
+  <li><strong>Codepage</strong>: Wählen Sie die Zeichenkodierung des betreffenden Dateiservers aus, damit die Namen korrekt angezeigt werden.</li>
+  <li><strong>Profilname</strong>: Geben Sie einen eindeutigen Namen ein, um diesen Dateiserver einfach zu erkennen.</li>
+  <li><strong>WebDAV HTTPS-Verbindung verwenden</strong>: Diese Option ist nur verfügbar, wenn Sie ein WebDAV-Protokoll einrichten und wenn sowohl der Client als auch der Dateiserver WebDAV HTTPS unterstützen.</li>
+  <li><strong>Nur eine Verbindung pro Benutzer zulassen</strong>: Diese Option ist nur verfügbar, wenn Sie ein FTP- oder ein SFTP-Protokoll einrichten. Aktivieren Sie diese Option, um die Konnektivität zu optimieren, wenn für den Server in Bezug auf die Anzahl der Verbindungen Einschränkungen bestehen.</li>
+  </ul>
+  </li>
+<li>Klicken Sie auf <strong>Übernehmen</strong>, um die Einstellungen zu speichern. Der betreffende Dateiserver wird im linken Fenster angezeigt.</li> 
+</ol>
+<h4>Bestehenden Cloud-Dienst oder bestehendes Dateiserverprofil ändern:</h4>
+<ol>
+  <li>Gehen Sie zu <strong>Extras</strong> > <strong>Remote-Verbindung</strong> > <strong>Verbindungsliste</strong>.</li>
+  <li>Klicken Sie auf den betreffenden Cloud-Dienst oder Dateiserver, um folgende Optionen abzurufen:
+    <ul>
+      <li>Bearbeiten: Klicken Sie auf <strong>Bearbeiten</strong>, ändern Sie die aktuelle Profilkonfiguration und klicken Sie auf <strong>OK</strong>.</li>
+      <li>Verbindung trennen: Klicken Sie auf <strong>Trennen</strong>, um die Verbindung zu trennen.</li>
+  <li>Verbindung neu herstellen: Klicken Sie auf <strong>Verbinden</strong>, um die Verbindung wiederherzustellen. (Sie können auch auf das betreffende Ziel im linken Fenster von File Station klicken, um die Verbindung wiederherzustellen.)</li>
+  <li>Löschen: Klicken Sie auf <strong>Löschen</strong> und bestätigen Sie das Löschen des Profils. (Sie können auch auf das betreffende Ziel im linken Fenster von File Station und anschließend auf <strong>Löschen</strong>, um den Löschvorgang durchzuführen.)</li>
+    </ul>
+  </li>
+  </ol>
+  
+  
+<div class="section">
+  <h4>Hinweis:</h4>
+<ul>
+  <li>Es können nicht mehr als 100 Verbindungen zu Cloud-Diensten und Dateiservern gleichzeitig hergestellt werden.</li>
+  <li>Stellen Sie sicher, dass Sie die korrekte Server-Codepage ausgewählt haben, um unerwartete Fehler zu vermeiden. Wenn Ihnen die Server-Codepage nicht bekannt ist, wird Unicode empfohlen.</li>
+  <li>Bestimmte File Station-Funktionen (z. B. Komprimieren in, Extrahieren, Vorschau usw.) können nicht auf Dateien angewendet werden, die bei Cloud-Diensten oder auf Dateiservern gespeichert sind.</li>
+<li>Die Übertragungsgeschwindigkeit für jeden verbundenen Cloud-Dienst oder Dateiserver unterliegt den Benutzereinstellungen zur Geschwindigkeitseinschränkung.</li>
+<li>Jeder Benutzer ist für alle Cloud-Dienste und alle Dateiserver auf drei gleichzeitige Dateiübertragungen beschränkt.</li>
+<li>Um WebDAV, WebDAV HTTPS und Cloud-Dienst-Proxy-Einstellungen zu konfigurieren, gehen Sie zu <strong>Systemsteuerung</strong> > <strong>Netzwerk</strong> > <strong>Allgemein</strong> > <strong>Proxy</strong>. Wenn Sie die Proxy-Einstellungen bei bestehender Verbindung zu einem Cloud-Dienst oder einem Dateiserver geändert haben, müssen Sie die Verbindung trennen und wiederherstellen.</li>
+<li>Die Änderung von Informationen zu verbundenen Cloud-Diensten oder Dateiservern hat keinen Einfluss auf den Verbindungsstatus.</li>
+<li>Um die Verbindungsressource freizugeben, wird ein Cloud-Dienst/Dateiserver automatisch getrennt, wenn an den betreffenden Dateien länger als 30 Minuten keine Aktion durchgeführt wurde. Klicken Sie auf den Cloud-Dienst/Dateiserver, um die Verbindung wiederherzustellen.</li>
+<li>Das System kann Dateien/Ordner mit den nachstehenden Benennungsformaten nicht anzeigen:
+  <ul>
+    <li>Beginnend mit <strong>._</strong> oder <strong>.SYNOPPSDB</strong></li>
+    <li>Mit <strong>/</strong></li>
+<li>Mit den genauen Namen <strong>.</strong>&nbsp;&nbsp;&nbsp;&nbsp;<strong>..</strong>&nbsp;&nbsp;&nbsp;&nbsp;<strong>'</strong>&nbsp;&nbsp;&nbsp;&nbsp;<strong>"</strong>&nbsp;&nbsp;&nbsp;&nbsp;<strong>.DS_Store</strong>&nbsp;&nbsp;&nbsp;&nbsp;<strong>@eaDir</strong>&nbsp;&nbsp;&nbsp;&nbsp;<strong>@sharebin</strong>&nbsp;&nbsp;&nbsp;&nbsp;<strong>@tmp</strong>&nbsp;&nbsp;&nbsp;&nbsp;<strong>.SynologyWorkingDirectory</strong></li>
+  </ul>
+</li>
+<li class="enable-dockerx64">Remote-Verbindung wird nur im Modus hoher Priorität unterstützt. Gehen Sie, um diese Funktion zu verwenden, zum Docker-Paket des Host-DSM, wählen Sie das <strong>Docker DSM</strong> aus, für das Sie verschlüsselte freigegebene Ordner aktivieren möchten, klicken Sie auf <strong>Bearbeiten</strong> und aktivieren Sie das Kontrollkästchen neben <strong>Container mit hoher Priorität ausführen</strong>.</li>
+
+</ul>
+</div>
+</body>
+</html>

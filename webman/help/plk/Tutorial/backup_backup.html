@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+<meta content="en-us" http-equiv="Content-Language" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Wykonywanie kopii zapasowej danych na urządzeniu Synology NAS w celu zapewnienia bezpieczeństwa danych.</title>
+</head>
+
+<body class="tutorial-content-box" >
+
+<h1>Kopia zapasowa serwera Synology NAS</h1>
+<div class="tutorials_content"><img src="../../images/Backup/1x/Backup/back_up_your_data_on_synology_nas_to_ensure_data_security.jpg" /><h2>Przegląd</h2>
+<p>Nieoczekiwana utrata danych spowodowana awariami dysków twardych lub klęskami żywiołowymi może zagrozić bezpieczeństwu najważniejszych informacji, szczególnie jeśli nie ustanowiono niezawodnego rozwiązania do tworzenia kopii zapasowych. <strong>Hyper Backup</strong> stanowi intuicyjne, zintegrowane rozwiązanie tworzenia i odzyskiwania kopii zapasowych, które umożliwia przechowywanie oraz odzyskiwanie kopii cennych danych oraz przywracanie aplikacji i konfiguracji systemowych do stanu z wybranego punktu w czasie. Obsługiwane są następujące docelowe miejsca przechowywania:</p>
+
+<ul>
+<li><strong>Lokalne foldery współdzielone (w tym zewnętrzne urządzenia pamięci masowej podłączone do serwera DiskStation)</strong></li>
+<li><strong>Zdalny serwer Synology NAS</strong></li>
+<li><strong>Zdalne serwery rsync</strong></li>
+<li><strong>Zdalne serwery OpenStack Swift</strong></li>
+<li><strong>Publiczne chmury (Amazon S3, Microsoft Azure, OpenStack Swift itp.)</strong></li>
+</ul>
+</div>
+
+<div class="section">
+<h4>Uwaga:</h4>
+<p>Hyper Backup tworzy kopie zapasowych tylko określonych konfiguracji systemu i aplikacji. Aby uzyskać więcej informacji, zapoznaj się z dokumentami pomocy Hyper Backup.</p>
+</div>
+
+
+<h3 class="list_head">1. Utwórz lokalne zadanie tworzenia kopii zapasowej do lokalnego folderu współdzielonego / zewnętrznego urządzenia pamięci</h3>
+<p>Funkcja <strong>Hyper Backup</strong> zapewnia podobne procedury tworzenia i odtwarzania kopii zapasowej w wielu miejscach docelowych. Poniżej przedstawiono procedury tworzenia i odtwarzania danych lokalnie, stanowiące odniesienie do pozostałych typów zadań.</p>
+
+<ol>
+<li>Zaloguj się do aplikacji DSM i odszukaj pakiet <strong>Hyper Backup</strong>.</li>
+<li>Kliknij znak <strong>+</strong> w lewym dolnym rogu i wybierz <strong>Zadanie kopii zapasowej danych</strong>.</li>
+<li>Aby stworzyć zadanie tworzenia lokalnej kopii zapasowej, wybierz opcję <strong>Lokalny folder współdzielony</strong>.</li><img src="../../images/Backup/1x/Backup/1.png" width="600" alt=""/><li>Kliknij <strong>Utwórz zadanie kopii zapasowej</strong>, a następnie wybierz lokalny folder współdzielony lub zewnętrzne urządzenie pamięci podłączone do DiskStation.</li><img src="../../images/Backup/1x/Backup/2.png" width="600" alt=""/><li>Wybierz foldery źródłowe, których dane zostaną zapisane w kopii zapasowej. Jeśli wybrano szyfrowane foldery współdzielone, powinny one być zamontowane podczas procesu tworzenia kopii zapasowych. Jeśli źródło i cel znajdują się w tym samym wolumenie, system oznaczy takie foldery źródłowe pomarańczowymi wykrzyknikami.</li><img src="../../images/Backup/1x/Backup/3.png" width="600" alt=""/><li>Wybierz aplikacje, których kopie mają być tworzone.</li><img src="../../images/Backup/1x/Backup/4.png" width="600" alt=""/><li>Określ ustawienia tworzenia kopii zapasowych poniżej, aby dopasować je do swoich potrzeb:<ul>
+  <li><strong>Zadanie</strong>: Nazwij zadanie tworzenia kopii zapasowej.</li>
+  <li><strong>Włącz powiadomienia o zadaniu</strong>: Wybierz te opcję, aby otrzymywać informacje o stanie zadania przez e-mail, SMS lub usługę push.</li>
+  <li><strong>Włącz kopię zapasową konfiguracji</strong>: Tworzenie konfiguracji systemowych (np. poświadczeń użytkownika). To ustawienie jest domyślnie włączone we wszystkich zadaniach tworzenia kopii zapasowej.</li>
+  <li><strong>Kompresowanie danych z kopii zapasowej</strong>: skompresuj dane kopii zapasowej w celu zmniejszenia użycia miejsca w docelowym miejscu przechowywania. Tworzenie kopii zapasowej po wybraniu tej opcji będzie trwać dłużej.</li>
+  <li><strong>Włącz szyfrowanie przesyłania</strong> (dotyczy tylko zdalnego tworzenia kopii zapasowych): Wybierz tę opcję, aby zaszyfrować dane tworzenia kopii zapasowej podczas przesyłania ich do miejsca docelowego (na przykład serwera rsync lub publicznej chmury).</li>
+  <li><strong>Rozmiar elementów plików przesyłanych wieloczęściowo</strong> (tylko w przypadku serwerów zgodnych z S3): Dzielenie kopii zapasowej według określonych rozmiarów kawałków.</li>
+  <li><strong>Włącz szyfrowanie po stronie klienta</strong>: Wybierz tę opcję, aby zabezpieczyć hasłem dane kopii zapasowych, chroniąc je przed nieautoryzowanym dostępem w miejscu docelowym.</li>
+    
+  <li><strong>Włącz plan kopii zapasowej</strong>: Wybierz tę opcję, aby rozpocząć planowanie dla zadania tworzenia kopii zapasowej.</li>
+  </ul>
+  </li><img src="../../images/Backup/1x/Backup/5.png" width="600" alt=""/><li>Wybierz opcję <strong>Włącz rotację kopii zapasowych</strong> w celu przygotowania planu rotacji:<ul>
+  <li><strong>Od najwcześniejszych wersji</strong>: Usuń najwcześniejsze istniejące wersje kopii zapasowej po osiągnięciu określonej <strong>liczby wersji</strong>.</li>
+  <li><strong>Smart Recycle</strong>: System zachowa każdą wersję kopii zapasowej do momentu osiągnięcia określonej liczby wersji. Po włączeniu rotacji system rozpocznie pracę od wersji, które nie spełniają żadnych warunków. Jeśli wszystkie istniejące wersje spełniają poniższe warunki, system zrotuje najwcześniejszą wersję:<ul>
+  <li><strong>Cogodzinne wersje z ostatnich 24 godzin</strong>: System utrzymuje najwcześniejszą wersję utworzoną każdej godziny.</li>
+  <li><strong>Codzienne wersje od minionego 1 dnia do 1 miesiąca</strong>: System utrzymuje najwcześniejszą wersję utworzoną każdego dnia.</li>
+  <li><strong>Cotygodniowe wersje starsze niż 1 miesiąc</strong>: System utrzymuje najwcześniejszą wersję utworzoną każdego tygodnia.</li>
+  </ul>
+  
+  </li>
+  <li><strong>Liczba wersji</strong>: Określ górny limit przechowywanych wersji kopii zapasowych.</li>
+  <li>Oś czasu: Wyświetlanie prawdopodobnego wyniku działania rotacji kopii zapasowych na podstawie harmonogramu tworzenia kopii zapasowych i schematu rotacji:</li>
+  </ul>
+</li><img src="../../images/Backup/1x/Backup/6.png" width="600" alt=""/><li>Kliknij <strong>Zastosuj</strong>, aby zakończyć konfigurację.</li>
+<li>Aby natychmiast wykonać zadanie tworzenia kopii zapasowej, wykonuj polecenia wyświetlane przez Kreatora kopii zapasowej i kliknij <strong>Tak</strong>.</li>
+</ol>
+
+
+<h3 class="list_head">2. Przywróć pojedyncze pliki z lokalnego folderu współdzielonego / zewnętrznego urządzenia pamięci</h3>
+
+
+<ol>
+<li>Przejdź do pozycji <strong>Hyper Backup</strong>, wybierz żądane zadanie tworzenia kopii zapasowej w lewym panelu, a następnie kliknij ikonę <strong>eksploratora kopii zapasowych</strong> (ikonę szkła powiększającego). Wprowadź hasło, jeśli zadanie jest zaszyfrowane po stronie klienta.</li><img src="../../images/Backup/1x/Backup/Single_1.png" width="600" alt=""/><li>Znajdź i wybierz plik do odtworzenia. Można także wybrać z paska osi czasu konkretną wersję do odtworzenia.</li><img src="../../images/Backup/1x/Backup/Single_2.png" width="600" alt=""/><li>Kliknij przycisk <strong>Przywróć</strong>, aby przywrócić wybrany plik.</li>
+
+</ol>
+
+
+
+<h3 class="list_head">3. Przywróć pełne zadania do wyznaczonych punktów w czasie</h3>
+
+<ol>
+<li>Kliknij <strong>Przywróć</strong> w lewym dolnym rogu i kliknij <strong>Dane</strong>. Wprowadź hasło, jeśli zadanie jest zaszyfrowane po stronie klienta.</li><img src="../../images/Backup/1x/Backup/Restore_1.png" width="600" alt=""/><li>Wybierz zadanie do przywrócenia. Aby odzyskać dane z innych repozytoriów, wybierz <strong>Przywróć z innych repozytoriów</strong> i znajdź zadanie, które będzie przywracane.</li><img src="../../images/Backup/1x/Backup/Restore_2.png" width="600" alt=""/><li>Wybierz, czy przywrócić konfiguracje systemu. Jeśli wybierzesz pozycję <strong>Przywróć konfigurację systemu</strong>, wybierz z poniższej listy konfiguracje, które należy przywrócić.</li><img src="../../images/Backup/1x/Backup/Restore_3.png" width="600" alt=""/><li>Znajdź i wybierz pliki docelowe / zadanie do odtworzenia. Można także wybrać z paska osi czasu konkretną wersję do odtworzenia.</li><img src="../../images/Backup/1x/Backup/Restore_4.png" width="600" alt=""/><li>Wybierz aplikacje do przywrócenia.</li><img src="../../images/Backup/1x/Backup/Restore_4.5.png" width="600" alt=""/><li>Zostaną wyświetlone podstawowe informacje o odzyskiwaniu.</li><img src="../../images/Backup/1x/Backup/Restore_5.png" width="600" alt=""/><li>Kliknij <strong>Zastosuj</strong>, aby rozpocząć odtwarzanie.</li>
+</ol>
+
+
+
+
+
+
+<div class="page-info">
+  <ul>
+    <li>Poprzednio w tym temacie: <a href="backup_from_computer.html">Tworzenie kopii zapasowej danych na komputerze PC/Mac za pomocą Cloud Station</a> </li>
+  </ul>
+</div>
+</body>
+
+</html>

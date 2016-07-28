@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Hot Spare</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2>Hot Spare*</h2>
+<p>Hot spare 디스크는 오류 디스크를 자동으로 교체하여 문제가 발생한 볼륨/디스크 그룹/iSCSI LUN을 복구할 수 있는 대기 하드 디스크입니다. 볼륨/디스크 그룹/iSCSI LUN이 다음 기준에 일치하는 한 DiskStation 내에서 볼륨/디스크 그룹/iSCSI LUN을 보호할 수 있도록 Hot spare 디스크를 전체적으로 할당할 수 있습니다.</p>
+<ul>
+<li>볼륨/디스크 그룹/iSCSI LUN의 RAID 유형이 데이터 보호를 지원해야 합니다(예: RAID 1, RAID 5, RAID 6 및 RAID 10).</li>
+<li>Hot Spare 디스크 크기가 볼륨/디스크 그룹/iSCSI LUN에서 가장 작은 디스크 크기와 같거나 커야 합니다.</li>
+</ul>
+
+<h4>Hot Spare 디스크 설정하기:</h4>
+<ol>
+<li><b>관리</b>를 클릭합니다.</li>
+<li>각 볼륨/디스크 그룹/iSCSI LUN의 Hot Spare 상태와 사용 가능한 디스크가 표시되는 대화 상자가 나타납니다. 볼륨/디스크 그룹/iSCSI LUN 상태에 다음이 포함됩니다:</li>
+<ul>
+<li><strong>할당됨:</strong> 볼륨/디스크 그룹/iSCSI LUN이 하나 이상의 할당된 hot spare 디스크에 의해 보호됩니다.</li>
+<li><strong>사용 가능:</strong> 볼륨/디스크 그룹/iSCSI LUN을 보호할 수 있는 사용 가능한 디스크가 있지만 hot spare가 할당되어 있지 않습니다.</li>
+<li><strong>사용할 수 없음:</strong> 볼륨/디스크 그룹/iSCSI LUN을 보호할 수 있는 사용 가능한 hot spare 디스크가 없습니다.</li>
+</ul>
+<li><strong>사용 가능한 디스크</strong> 섹션에 hot spare 디스크로 할당할 수 있는 하드 디스크가 표시됩니다. hot spare 디스크를 할당하려면 hot spare로 할당할 디스크 옆에 있는 상자를 선택합니다.</li>
+<li><b>적용</b>을 클릭하여 설정을 저장합니다.</li>
+</ol>
+<div class="section">
+<h4>참고:</h4> 
+<ul>
+<li>하드 디스크가 hot spare 디스크로 할당되면 디스크에 있는 데이터가 모두 지워집니다. hot spare 디스크를 할당하기 전에 디스크에 중요한 데이터가 있는지 확인하십시오.</li>
+<li>HDD로 어셈블된 RAID는 SSD hot spare 디스크로 자동 복구되지 않으며 그 반대의 경우도 마찬가지입니다.</li>
+</ul>
+</div>
+
+<h4>volume/Disk Group/iSCSI LUN에 대한 hot spare 설정 구성하기:</h4>
+<ol>
+<li><b>구성</b>을 클릭하십시오.</li>
+<li><b>Hot Spare 대상</b> 탭에 Hot Spare 디스크로 보호할 수 있는 volumes/Disk Groups/iSCSI LUN이 나열됩니다. 상자를 선택 취소한 경우 저하되더라도 해당 volumes/Disk Groups/iSCSI LUN이 자동으로 복구되지 않습니다.</li>
+<li><b>장치 간 Hot Spare</b> 탭에서는 한 장치의 hot spare 디스크가 다른 장치에 있는 저하된 RAID를 복구하도록 할 수 있습니다.</li>
+<li><b>확인</b>을 클릭하여 설정을 저장합니다.</li>
+</ol>
+
+
+
+<p>____<br />*일부 모델에서만 사용할 수 있습니다.</p>
+
+</body>
+</html>

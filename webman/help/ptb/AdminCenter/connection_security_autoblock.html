@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Bloqueio Autom&aacute;tico - Ajuda do Synology DSM</title> 
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="The auto block feature helps improve the security of your DiskStation by blocking the IP addresses of clients with too many failed login attempts.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Bloqueio Autom&aacute;tico</h2>
+
+<p>O recurso de bloqueio autom&aacute;tico ajuda a melhorar a seguran&ccedil;a de seu DiskStation, bloqueando os endere&ccedil;os IP dos clientes com muitas tentativas de login. Isso ajuda a reduzir o risco de quebra de contas por ataques de for&ccedil;a bruta.</p>
+
+<p>Tamb&eacute;m &eacute; poss&iacute;vel criar e gerenciar uma lista de permiss&otilde;es para adicionar os endere&ccedil;os IP que voc&ecirc; confia ou uma lista de bloqueio para impedir que determinados endere&ccedil;os IP fa&ccedil;am login.</p>
+
+<div class="section">
+<h4>Nota:</h4>
+<p>V&aacute;rios servi&ccedil;os e pacotes suportam o bloqueio autom&aacute;tico, como os seguintes: DSM, SSH, Telnet, rsync, backup de rede, sincroniza&ccedil;&atilde;o de pastas compartilhadas, FTP, WebDAV, File Station, Photo Station, Audio Station, Video Station, Download Station, Mail Server, Mail Station, Time Backup, VPN Server, Cloud Station e aplicativos m&oacute;veis Synology.</p>
+</div>
+
+<h4>Para ativar o bloqueio autom&aacute;tico:</h4>
+<ol>
+
+<li>Abra o <strong>Painel de Controle</strong> e v&aacute; para <strong>Seguran&ccedil;a</strong> &gt; <strong>Bloqueio Autom&aacute;tico</strong>.</li>
+<li>Marque <b>Ativar bloqueio autom&aacute;tico</b>.</li>
+
+<li>Digite o n&uacute;mero de tentativas de login no campo <b>Tentativas de login</b> e o n&uacute;mero de minutos no campo <b>Per&iacute;odo (minutos)</b>. O endere&ccedil;o IP ser&aacute; bloqueado quando ele exceder o n&uacute;mero de falhas em tentativas de login dentro do n&uacute;mero especificado de minutos.</li>
+<li>Marque <b>Ativar expira&ccedil;&atilde;o de bloqueio</b> e digite um n&uacute;mero para remover um endere&ccedil;o IP bloqueado depois do n&uacute;mero de dias especificado.</li>
+
+<li>Clique em <b>Aplicar.</b></li>
+</ol>
+
+
+<h3>Gerenciamento de Lista de Bloqueio.</h3>
+<p>Clique em <strong>Lista de Permiss&otilde;es/Bloqueio</strong> e v&aacute; para a guia <strong>Lista de Bloqueio</strong>. </p>
+
+<h4>Para adicionar endere&ccedil;os IP:</h4>
+<p>Selecione um dos itens a seguir no menu suspenso <strong>Criar</strong>:</p>
+<ul>
+<li><strong>Adicionar endere&ccedil;o IP</strong><br> Digite um endere&ccedil;o IP e defina o tempo de expira&ccedil;&atilde;o.</li>
+<li><strong>Importar lista de endere&ccedil;os IP</strong><br> Importa um arquivo texto que lista os endere&ccedil;os IP para adicionar um n&uacute;mero de endere&ccedil;os IP e definir o tempo de expira&ccedil;&atilde;o ao mesmo tempo. Marque a caixa de sele&ccedil;&atilde;o se desejar sobrescrever os endere&ccedil;os IP existentes. Se essa op&ccedil;&atilde;o n&atilde;o estiver selecionada, os endere&ccedil;os IP duplicados ser&atilde;o ignorados.<br> Se o arquivo selecionado tiver um formato correto, voc&ecirc; ver&aacute; todos os endere&ccedil;os IP na &aacute;rea de visualiza&ccedil;&atilde;o. Clique em <strong>OK</strong> para importar.</li>
+
+<div class="section">
+<h4>Nota:</h4>
+<p>Para importar um arquivo, ele deve atender os seguintes crit&eacute;rios:</p>
+<ul>
+<li>O arquivo deve ser um arquivo de texto sem formata&ccedil;&atilde;o.</li>
+<li>Cada linha do arquivo pode conter apenas um endere&ccedil;o IP.</li>
+<li>As linhas de coment&aacute;rio come&ccedil;am com o s&iacute;mbolo #.</li>
+</ul>
+</div>
+</ul>
+
+<h4>Para remover endere&ccedil;os IP bloqueados:</h4>
+<p>Selecione os endere&ccedil;os IP que deseja remover da lista e clique em <b>Remover</b>.</p>
+
+
+<h3>Gerenciamento de Lista de Permiss&otilde;es</h3>
+
+<p>Clique em <strong>Lista de Permiss&otilde;es/Bloqueio</strong> e v&aacute; para a guia <strong>Lista de Permiss&otilde;es</strong>. </p>
+
+<h4>Para adicionar endere&ccedil;os IP:</h4>
+<p>Selecione um dos itens a seguir no menu suspenso <strong>Criar</strong>:</p>
+<ul>
+<li><strong>Adicionar endere&ccedil;o IP</strong><br> Digite um endere&ccedil;o IP.</li>
+<li><strong>Importar lista de endere&ccedil;os IP</strong><br> Importa um arquivo texto que lista os endere&ccedil;os IP para adicionar diversos endere&ccedil;os IP todos ao mesmo tempo. Marque a caixa de sele&ccedil;&atilde;o se desejar sobrescrever os endere&ccedil;os IP existentes. Se essa op&ccedil;&atilde;o n&atilde;o estiver selecionada, os endere&ccedil;os IP duplicados ser&atilde;o ignorados.<br> Se o arquivo selecionado tiver um formato correto, voc&ecirc; ver&aacute; todos os endere&ccedil;os IP na &aacute;rea de visualiza&ccedil;&atilde;o. Clique em <strong>OK</strong> para importar.</li>
+</ul>
+
+<div class="section"><h4>Nota:</h4>
+<p>Para importar um arquivo, ele deve atender os seguintes crit&eacute;rios:</p>
+<ul>
+<li>O arquivo deve ser um arquivo de texto sem formata&ccedil;&atilde;o.</li>
+<li>Cada linha do arquivo pode conter apenas um endere&ccedil;o IP.</li>
+<li>As linhas de coment&aacute;rio come&ccedil;am com o s&iacute;mbolo #.</li>
+</ul>
+</div>
+
+<h4>Para remover endere&ccedil;os IP:</h4>
+<p>Selecione os endere&ccedil;os IP que deseja remover da lista e clique em <b>Remover</b>.</p>
+
+<div class="section"><h4>Nota:</h4>
+<p>Se o seu dispositivo DiskStation estiver em um servidor proxy reverso, adicione o endere&ccedil;o IP do servidor proxy reverso &agrave; lista de permiss&otilde;es.</p>
+</div>
+
+</body>
+</html>

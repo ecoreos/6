@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+	<h2>HDD/SSD</h2>
+	<p>此区域可让您监视安装在 DiskStation 的 HDD/SSD 状态，提供管理和分析 HDD/SSD 性能和状态的选项。进入<strong>存储管理器</strong> &gt; <strong>HDD/SSD</strong> 可管理这些选项。</p>
+
+	<h4>若要检查 HDD/SSD 信息：</h4>
+	<ol>
+		<li>进入 <b>HDD/SSD</b> 选项卡。</li>
+		<li>从列表中选择一个硬盘对其进行扩充。您可以在此查看 S.M.A.R.T. 状态、卷信息、型号名称、序列号、固件版本及温度。</li>
+	</ol>	
+	
+	<h4>若要检查硬盘状况信息：</h4>
+    <ol>
+<li>进入 <b>HDD/SSD</b> 选项卡。</li>
+	  <li>选择一个硬盘。</li>
+<li>单击<b>状况信息</b>。</li>
+	  <li>进入<strong>概述</strong>选项卡。在此，您可找到该硬盘已开启小时数、当前温度、重新连接/重新识别次数、坏扇区数量以及整体 S.M.A.R.T. 状态。</li>
+<li>进入 <strong>S.M.A.R.T. 信息</strong>选项卡。内含的各项数值可帮助您对硬盘状态的进一步诊断。</li>
+    </ol>
+
+<div class="section">
+<h4>注：</h4>
+<p>
+SAS 硬盘不支持 S.M.A.R.T. 信息。
+</p>
+</div>
+
+	<h4>若要开始 S.M.A.R.T. 检测：</h4>
+	<P>S.M.A.R.T. 检测将检查硬盘，并回报硬盘的状态，警告可能发生的硬盘损毁。我们建议您在硬盘状况出现不良征状时，尽快更换有问题的硬盘，以保障数据的安全。</P>
+    <ol>
+<li>进入 <strong>HDD/SSD</strong> 选项卡。</li>
+<li>选择一个硬盘。</li>
+<li>单击 <b>S.M.A.R.T. 检测</b>。</li>
+<li>选择检测类型然后单击<strong>开始</strong>以开始检测。</li>
+<li>最新的检测结果会显示在<b>检测结果</b>区域中。</li>
+    </ol>
+    <div class="section">
+<h4>注：</h4>
+<p>检测时间根据系统环境而有所不同。</p>
+</div>
+<h4>若要计划 S.M.A.R.T. 检测：</h4>
+<p>可创建任务来计划自动运行 S.M.A.R.T. 检测。</p>
+    <ol>
+<li>进入<strong>检测计划程序</strong>选项卡。</li>
+<li>单击<strong>创建</strong>以设置新任务。</li>
+<li>在<strong>常规</strong>选项卡中对以下设置进行修改：</li>
+      <ul>
+<li><strong>任务：</strong>输入任务的名称。</li>
+<li><strong>S.M.A.R.T. 检测类型：</strong>选择执行快速检测或完整检测。</li>
+<li><strong>S.M.A.R.T. 检测范围：</strong>选择每次执行 S.M.A.R.T. 检测时测试的 HDD/SSD。</li>
+      </ul>
+<li>请在<strong>计划</strong>选项卡中修改以下设置：</li>
+      <ul>
+<li><strong>日期：</strong>指定执行 S.M.A.R.T. 检测的时间。可对 S.M.A.R.T. 制定计划以在此周的特定日（如每天、周末或每个周日等）或在特定日期（如 2015/10/21）运行。</li>
+<li><strong>次数：</strong>指定执行 S.M.A.R.T. 检测的次数，及每天首次和最后一次的检测。</li>
+      </ul>
+<li>单击<strong>确定</strong>来完成。</li>
+    </ol>
+
+<h4>若要执行 Secure Erase 功能：</h4>
+<ol>
+<li>进入 <b>HDD/SSD</b> 选项卡。</li>
+<li>选择驱动器并单击 <b>Secure Erase</b>。</li>
+</ol>
+
+
+<div class="section">
+<h4>注：</h4>
+<ul>
+<li>无法在扩展单元中的硬盘执行 Secure Erase。</li>
+<li>Secure Erase 将永久性清除存储在硬盘上的所有数据，请在执行此操作之前确认所选硬盘不在使用中，或已将数据备份。</li>
+<li>系统执行 Secure Erase 时，所选硬盘将暂时锁定，操作完成后自动解锁。</li>
+<li>如果操作过程中 Secure Erase 异常停止，您可在用户界面中直接重新执行 Secure Erase。如果硬盘仍被锁定时被移除或在别处使用，请输入密码&ldquo;synology&rdquo;为驱动器解锁。</li>
+</ul>
+</div>
+
+
+	<h3>启用 HDD 写入缓存支持功能</h3>
+	<p>启用写入缓存支持功能可提高 DiskStation 的性能。仅部分 HDD 型号支持此功能。为了确保数据安全，强烈建议您在使用此功能同时，使用不间断电源系统设备，并在每次使用后正常关机。若禁用写入缓存能降低意外停电而发生数据丢失的机会，但相对会降低系统性能。</p>
+
+	<h4>若要启用写入缓存支持功能：</h4>
+	<ol>
+		<li>请进入<b>硬盘缓存管理</b>选项卡。</li>
+		<li>勾选<b>启用硬盘写入缓存</b>。按照默认，此功能是启动的。</li>
+		<li>单击<b>应用</b>。</li>
+	</ol>
+	
+
+
+
+</body>
+</html>

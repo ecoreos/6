@@ -1,0 +1,130 @@
+ <!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Riparare un volume o Gruppo Disco - Guida DSM Synology</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="This article walks you through the steps to create a volume on DiskStation using Storage Manager.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Riparare un volume o Gruppo Disco</h2>
+
+<p>Gli errori di volume possono essere causati da vari problemi, come partizioni di sistema danneggiate o dischi rigidi bloccati.  In alcuni casi, è possibile seguire i passi seguenti per la diagnosi dell'errore e risolvere la causa.</p>
+
+<div class="section">
+<h4>Note.</h4>
+<ul>
+<li>La funzione <strong>Riparazione</strong> qui descritta è disponibile solo per tipi RAID con ridondanza dati (ad es. RAID 1, RAID 5, RAID 6, ecc.). Questa funzione non ripara dischi rigidi rotti, né garantisce il recupero dei dati da volumi danneggiati.</li>
+<li>Per volumi bloccati, si consiglia di contattare il <span class="last"><a href="https://account.synology.com/support/support_form.php?lang=enu" target="_blank">Supporto tecnico</a> per ottenere assistenza</span>.</li>
+</ul>
+</div>
+
+<h3>Partizioni sistema non riuscite</h3>
+
+<p>Quando le partizioni del sistema falliscono, dovrebbe essere visualizzato un messaggio che informa che non è possibile accedere alle partizioni del sistema.</p>
+<h4>Per riparare le partizioni di sistema:</h4>
+
+<ol>
+<li>Aprire <strong>Gestione archiviazione</strong>.</li>
+<img src="about:blank" class="help_image"/>
+
+<li>Andare a <strong>Panoramica</strong> e fare clic sul link contrassegnato con <strong>Riparazione</strong>. Il sistema riparerà le partizioni di sistema.</li>
+
+<img src="about:blank" class="help_image"/>
+</ol>
+
+
+<h3>Volumi danneggiati</h3>
+
+
+<p>Un volume o gruppo disco diventa <strong>Danneggiato</strong> quando un disco rigido si guasta, ma non si verifica perdita di dati. Questa situazione si verifica solo con i tipi di RAID che forniscono ridondanza di dati, come SHR, RAID 1, RAID 5, RAID 6 e RAID 10. </p>
+<p>Un volume o gruppo disco danneggiato può essere aggiustato sostituendo il disco rigido guasto con uno funzionante e riparare il volume o gruppo disco.</p>
+
+<div class="section">
+<h4>Nota:</h4>
+<ul>
+  <li>Le dimensioni del disco rigido di sostituzione devono essere uguali o superiori al disco più piccolo del volume.</li>
+  <li>Lo stato del disco rigido di sostituzione deve essere <strong>Inizializzato</strong> o <strong>Non inizializzato</strong></li>
+</ul>
+
+</div>
+
+<h4> Per riparare un volume o gruppo disco danneggiato:</h4>
+
+<ol>
+
+<li>Andare a <strong>Gestione archiviazione</strong> > <strong>Volume</strong> o <strong>Gruppo Disco</strong> per confermare che lo stato è modificato in <strong>Danneggiato</strong>.</li> 
+<img src="about:blank" class="help_image"/>
+
+<li>In questo caso, andare alla scheda <strong>HDD/SSD</strong> per vedere quali dischi rigidi sono danneggiati.</li>
+<img src="about:blank" class="help_image"/>
+
+<li>Rimuovere il disco rigido danneggiato e sostituirlo con uno nuovo.</li>
+
+<div class="section">
+<h4>Nota:</h4>
+<ul>
+<li>Se DiskStation non supporta l'hot-swap, spegnere l'unità prima di rimuovere e installare qualsiasi disco rigido.</li>
+<li>I dati esistenti sul disco rigido sostitutivo saranno eliminati.</li>
+</ul>
+</div>
+
+<li>Dopo l'installazione del disco rigido sostitutivo, tornare alla scheda <strong>Volume</strong> o <strong>Gruppo Disco</strong>.</li>
+
+<li>Selezionare il volume o gruppo disco danneggiato.</li>
+
+<li>Fare clic su <strong>Gestisci</strong>.</li>  
+<img src="about:blank" class="help_image"/>
+
+<li>Selezionare <strong>Ripara</strong> e fare clic su <strong>Avanti</strong>. </li>  
+<img src="about:blank" class="help_image"/>
+
+<li>Selezionare il disco rigido sostitutivo da aggiungere al volume. Quindi fare clic su <strong>Avanti.</strong></li>
+<img src="about:blank" class="help_image"/>
+
+<li> Seguire le istruzioni della procedura guidata per terminare. </li>
+</ol>
+
+
+
+
+<h3>Riparare volumi</h3>
+<p>Per riparare un volume danneggiato/Gruppo Disco/iSCSI LUN, è necessario sostituire il disco danneggiato con un disco disponibile che corrisponda ai criteri seguenti:</p>
+<ul>
+<li>Per i volumi RAID 1, RAID 5 o RAID 6, il volume danneggiato può essere riparato da un disco disponibile di dimensioni pari o superiori alle dimensioni del disco più piccolo nel volume RAID.</li>
+<li>Per i volumi SHR-1, il disco disponibile deve soddisfare uno dei criteri seguenti: (1) Le dimensioni devono essere uguali o maggiori delle dimensioni del disco danneggiato; (2) Con il disco più grande nel volume RAID escluso, le dimensioni devono essere uguali o maggiori delle dimensioni del disco più grande restante.
+
+<ol>
+<li>Esempio 1: SHR-1 è composto da dischi 3TB, 2TB, 2TB e 1TB. In caso di errore del disco da 3TB, è possibile ripararlo con un disco disponibile con dimensioni uguali o maggiori di 2TB.</li>
+<li>Esempio 2: SHR-1 è composto da dischi 4TB, 4TB, 2TB e 2TB. In caso di errore del disco da 4TB, è possibile ripararlo con un disco disponibile con dimensioni uguali o maggiori di 4TB.</li>
+<li>Esempio 3: SHR-1 è composto da dischi 4TB, 4TB, 2TB e 2TB. In caso di errore del disco da 2TB, è possibile ripararlo con un disco disponibile con dimensioni uguali o maggiori di 2TB.</li>
+</ol>
+</li>
+<li>Per i volumi SHR-2, il disco disponibile deve soddisfare uno dei criteri seguenti: (1) Le dimensioni devono essere uguali o maggiori delle dimensioni del disco danneggiato; (2) Con i due dischi più grandi nel volume RAID escluso, le dimensioni devono essere uguali o maggiori delle dimensioni del disco più grande restante.</li>
+</ul>
+<p>In caso di dischi configurati come hot spare che corrispondono ai summenzionati criteri, questi verranno utilizzati per la riparazione del volume/Gruppo RAID/iSCSI LUN.</p>
+
+
+<h3>Risoluzione dei problemi dei volumi danneggiati</h3>
+
+<p>Quando lo stato del volume diventa <strong>In crash</strong>, non è possibile riparare il volume autonomamente. Per risolvere questo problema, si consiglia di contattare il <a href="https://account.synology.com/support/support_form.php?lang=enu" target="_blank">Supporto tecnico</a> per ottenere aiuto.</p>
+
+<div class="section">
+<h4>Prima di contattare l'assistenza:</h4>
+
+<ul>
+<li>Recuperare i dati su DiskStation copiando i file nel computer o in unità esterne tramite File Station, Windows File Service, FTP o altri servizi di file.</li>
+<li>Mantenere lo stesso ordine dei dischi rigidi di quello relativo a quando il volume si è bloccato.</li>
+<li>Eseguire un test S.M.A.R.T. su dischi rigidi che presentano problemi. Per eseguire quest'azione, andare su <strong>Gestione archiviazione</strong> > <strong>HDD/SSD</strong>. Scegliere il disco rigido e fare clic su <strong>Test S.M.A.R.T.</strong>. <br />
+</li>
+</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>공유 폴더</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2>NFS 권한 할당</h2>
+<p>Linux 클라이언트가 공유 폴더에 접근할 수 있도록 모든 공유 폴더에 NFS 권한을 할당할 수 있습니다.</p>
+<h4>
+공유 폴더에 NFS 권한 할당하기:
+</h4>
+<ol>
+<li>공유 폴더 목록에서 편집하려는 공유 폴더를 선택합니다.</li>
+<li><strong>편집</strong> &gt; <strong>NFS 권한</strong>을 클릭합니다.</li>
+<li><b>생성</b>을 클릭하여 NFS 규칙을 추가합니다.</li>
+<li>팝업이 나타납니다. 아래 옵션을 정의합니다.</li>
+<li><strong>호스트 이름 또는 IP:</strong>&nbsp;공유 폴더에 액세스할 NFS 클라이언트의 IP 주소를 입력합니다. 세 가지 방식으로 호스트를 지정할 수 있습니다:
+<ul>
+<li><strong>단일 호스트:</strong> 완전한 도메인 이름이나 IP 주소.</li>
+<li><strong>와일드카드:</strong> *,* .synology.com</li>
+<li><strong>IP 네트워크:</strong> 203.74.205.32/255.255.252.0, /24</li>
+</ul>
+</li>
+<li><strong>권한:</strong> NFS 클라이언트의 읽기/쓰기 권한을 선택합니다.</li>
+<li> <strong>보안:</strong> 구현할 보안 기능을 지정합니다.
+  <ul>
+  <li><strong>AUTH_SYS:</strong> NFS 클라이언트의 UID(사용자 식별자) 및 GID(그룹 식별자)를 사용하여 액세스 권한을 확인합니다.</li>
+<li><strong>Kerberos 인증:</strong> NFS 클라이언트가 공유 폴더에 연결할 때 Kerberos 인증을 수행합니다. 해당 클라이언트는 Kerberos 인증을 통과해야 공유 폴더에 액세스할 수 있습니다.</li>
+<li><strong>Kerberos 무결성:</strong> Kerberos 인증을 수행하고 데이터 전송 중 패킷의 무결성을 보장합니다.</li>
+<li><strong>Kerberos 정보 보호:</strong> Kerberos 인증을 수행하고 데이터 전송 중 NFS 패킷을 암호화하여 누군가 악의를 갖고 NFS 트래픽을 부당으로 변경하는 것을 방지합니다.</li>
+</ul>
+</li>
+
+<li><strong>Squash:</strong> 이 필드에서 NFS 클라이언트의 사용자의 액세스 권한을 제어할 수 있습니다. 다음 중 하나를 선택하십시오:
+  <ul>
+    <li><strong>매핑 없음:</strong> root 사용자를 포함하여 NFS 클라이언트의 모든 사용자가 원래 액세스 권한을 유지할 수 있습니다.</li>
+    <li><strong>Admin에 root 매핑:</strong> 시스템의 admin 사용자 액세스 권한에 해당하는 액세스 권한을 NFS 클라이언트의 root 사용자에 할당합니다.</li>
+    <li><strong>Guest에 root 매핑:</strong> 시스템의 guest 액세스 권한에 해당하는 액세스 권한을 NFS 클라이언트의 root 사용자에 할당합니다.</li>
+    <li><strong>Admin에 모든 사용자 매핑:</strong> 시스템의 admin 사용자 액세스 권한에 해당하는 액세스 권한을 NFS 클라이언트의 모든 사용자에 할당합니다.</li>
+  </ul>
+</li>
+
+<li><strong>비동기 활성화:</strong> 이 옵션을 선택하면 파일 변경이 완료되기 전에 DiskStation이(가) NFS 클라이언트의 요청에 응답하여 성능이 향상됩니다.</li>
+<li><strong>권한없는 포트로부터 연결을 허용합니다(1024보다 높은 포트):</strong> 이 옵션을 선택하면 DiskStation에 연결할 때 NFS 클라이언트가 권한없는 포트(예: 1024보다 큰 포트)를 사용할 수 있습니다. </li>
+<li><strong>사용자에게 마운팅된 하위 폴더 액세스 허용:</strong> 이 옵션을 선택하면 NFS 클라이언트가 마운팅된 하위 폴더에 액세스할 수 있습니다.</li>
+<li><b>확인</b>을 클릭하여 마칩니다.</li>
+  <li><b>확인</b>을 클릭해서 NFS 권한을 적용합니다.</li>
+</ol>
+
+<div class="section">
+<h4>참고:</h4>
+<ul>
+<li>서버 이름의 형식이 <strong>*.domain</strong>이면 NFS 클라이언트의 IP 주소에 해당하는 DNS PTR 레코드가 있어야 합니다. 그래야 DiskStation에서 해당 IP 주소를 검색하여 이름 *.도메인을 찾을 수 있습니다.</li>
+</ul>
+</div>
+
+
+<div class="section">
+<h4>보안 기능:</h4>
+<p> 특정 사용자 계정으로 NFS를 통해 공유 폴더에 액세스할 때: </p>
+<ul>
+<li><strong>AUTH_SYS</strong> 보안 기능이 구현된 경우: 클라이언트가 NFS 클라이언트와 DiskStation에서 동일한 숫자 UID(사용자 식별자) 및 GID(그룹 식별자)를 갖고 있어야 합니다. 그렇지 않으면 공유 폴더에 액세스할 때 클라이언트에게 <strong>기타</strong>&nbsp;권한이 할당됩니다. 권한 충돌을 피하기 위해, <strong>스쿼시</strong>에서 <strong>Admin에 모든 사용자 매핑</strong>을 선택하거나 공유 폴더에 &quot;Everyone&quot; 권한을 부여할 수 있습니다.</li>
+<li><strong>Kerberos(krb5, krb5i, krb5p)</strong> 보안 기능이 구현된 경우: <strong>Win/Mac/NFS</strong> &gt; <strong>NFS 서비스</strong> &gt; <strong>Kerberos 설정</strong> &gt; <strong>ID 매핑</strong>으로 이동하여 NFS 클라이언트를 특정 사용자에 매핑하거나 해당 사용자 계정으로 Windows /LDAP 도메인에 가입해야 합니다. 그렇지 않으면 공유 폴더에 액세스할 때 클라이언트에게&nbsp;<strong>guest</strong>&nbsp;권한이 할당됩니다.</li>
+<li>공유 폴더가 생성된 외부 장치의 파일 시스템이 NTFS 또는 FAT이면, 옵션 <strong>admin에 모든 사용자 매핑</strong>이 강제로 적용됩니다.</li>
+</ul>
+<p>Kerberos 보안을 사용하여 DiskStation에 연결하려면 <strong>Win/Mac/NFS</strong> &gt; <strong>NFS 서비스</strong> &gt; <strong>Kerberos 설정</strong>으로 이동하여 Kerberos 인증을 구성해야 합니다.</p>
+</div>
+
+</body>
+</html>

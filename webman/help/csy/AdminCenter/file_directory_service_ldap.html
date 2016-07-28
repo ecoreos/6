@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>LDAP</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>LDAP</h2>
+<p>Protokol LDAP umožňuje zařízení DiskStation připojit se ke stávající adresářové službě jako klient LDAP a následně ze serveru LDAP (neboli „adresářového serveru“) načíst informace o uživatelích nebo skupinách. Přístupová oprávnění uživatelů nebo skupin LDAP k aplikacím a sdíleným složkám systému DSM je možné spravovat stejně, jako byste postupovali u místních uživatelů nebo skupin systému DSM. Další informace o protokolu LDAP najdete v <a href="http://en.wikipedia.org/wiki/LDAP" target="_blank">tomto odkazu</a>.</p>
+
+<p>Podporovaný standard LDAP je LDAP verze 3 (RFC 2251).</p>
+<h4>Připojení zařízení DiskStation k adresářové službě:</h4>
+<ol>
+<li>Přejděte do části <b>Ovládací panel</b> > <b>Adresářová služba</b>.</li><img src="about:blank" class="help_image"/><li>Přejděte na kartu <b>LDAP</b> a zaškrtněte možnost <b>Povolit klienta LDAP</b>.</li><img src="../../../online_img/dsm/AdminCenter/file_directory_service_ldap/howto465-2.png" class="help_image"/><li>Do pole <b>Adresa serveru LDAP</b> zadejte IP adresu nebo název domény serveru LDAP.</li><img src="../../../online_img/dsm/AdminCenter/file_directory_service_ldap/howto465-3.png" class="help_image"/><li>V rozevírací nabídce <b>Šifrování</b> zvolte typ šifrování připojení LDAP k serveru LDAP.</li><img src="../../../online_img/dsm/AdminCenter/file_directory_service_ldap/howto465-4.png" class="help_image"/><li>Do pole <b>Base DN</b> zadejte hodnotu Base DN serveru LDAP.</li><img src="../../../online_img/dsm/AdminCenter/file_directory_service_ldap/howto465-5.png" class="help_image"/><li>Podle toho, jaký máte server LDAP, vyberte patřičný <b>Profil</b>. Například pokud používáte server Synology Directory Server nebo Mac Open Directory, zvolte možnost <b>Standardní</b>.</li><img src="../../../online_img/dsm/AdminCenter/file_directory_service_ldap/howto465-6.png" class="help_image"/><li>Pokud chcete uživatelům serveru LDAP, který nepodporuje schéma Samba, povolit přístup k souborům zařízení DiskStation prostřednictvím systému CIFS, zaškrtněte možnost <b>Povolit ověření hesla CIFS pomocí prostého textu</b>. V níže uvedené části najdete postup, jak zajistit, aby uživatelé LDAP mohli své počítače používat k úspěšnému přístupu k souborům na zařízení DiskStation prostřednictvím systému CIFS.</li><img src="../../../online_img/dsm/AdminCenter/file_directory_service_ldap/howto465-7.png" class="help_image"/><li>Klikněte na možnost <b>Použít</b>.</li>
+<li>Zadejte do příslušných hodnotu Bind DN (nebo účet správce LDAP) a heslo a poté klikněte na možnost <b>OK</b>.</li><img src="about:blank" class="help_image"/></ol>
+
+
+<div class="section">
+<h4>O podpoře systému CIFS a nastavení klientských počítačů</h4>
+<p>Po povolení ověření hesla CIFS pomocí prostého textu bude možná nutné, aby uživatelé LDAP upravili nastavení svých počítačů tak, aby mohli mít přístup k souborům v zařízení DiskStation prostřednictvím systému CIFS:</p>
+<ul>
+<li>Pokud se zařízení DiskStation připojí k adresářové službě poskytované serverem Synology LDAP (nebo jiným zařízením DiskStation, které má nainstalovaný a spuštěný balíček <b>Directory Server</b>) nebo serverem LDAP podporujícím schéma Samba a všichni uživatelé LDAP mají správné atributy sambaNTPassword, získají uživatelé LDAP přístup k souborům zařízení DiskStation prostřednictvím systému CIFS bez nutnosti zaškrtnout možnost <b>Povolit ověření hesla CIFS pomocí prostého textu</b> nebo upravovat nastavení jejich počítačů. Jinak budou uživatelé LDAP muset na svých počítačích povolit podporu <a href="http://en.wikipedia.org/wiki/Pluggable_Authentication_Modules" target="_blank">PAM</a>, aby měli k souborům v zařízení DiskStation přístup prostřednictvím systému CIFS. Povede to však k přenosu hesla uživatelů LDAP na zařízení DiskStation ve formě prostého textu (bez šifrování), čímž se sníží úroveň zabezpečení.</li>
+
+</ul>
+<h4>Úprava nastavení systému Windows:</h4>
+<ol>
+<li>Přejděte k možnosti <b>Start</b> > <b>Spustit</b>, zadejte do pole text <b>regedit</b> a potom kliknutím na tlačítko <b>OK</b> otevřete Editor registru.</li>
+<li>Podle verze systému Windows najděte nebo vytvořte následující registr:</li>
+<ul>
+<li><b>Windows 2000, XP, Vista a Windows 7:</b><br> [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanWorkStation\Parameters]</li>
+<li><b>Windows NT:</b><br> [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Rdr\Parameters]</li>
+<li><b>Windows 95 (SP1), 98 a Me:</b><br> [HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\VxD\VNETSUP]</li>
+</ul>
+<li>Vytvořte nebo upravte hodnotu DWORD <b>EnablePlainTextPassword</b> a změňte její hodnotu z <b>0</b> na <b>1</b>.</li>
+<li>Aby se změna uplatnila, je nutné systém Windows restartovat.</li>
+</ol>
+<h4>Úprava nastavení systému Mac OS X:</h4>
+<ol>
+<li>Přejděte do části <b>Aplikace</b> > <b>Nástroje</b> a otevřete část <b>Terminál</b>.</li>
+<li>Vytvořte prázdný soubor <b>/etc/nsmb.conf</b>:<pre>sudo touch /etc/nsmb.conf</pre>
+</li>
+<li>Otevřete <b>/etc/nsmb.conf</b> pomocí editoru vi:<pre>sudo vi /etc/nsmb.conf</pre>
+</li>
+<li>Stiskněte klávesu „<b>i</b>“, abyste mohli zadávat text, a vložte následující text:<pre>[default]<br />> minauth=none</pre>
+</li>
+<li>Stiskněte klávesu Esc a potom zadejte „<b>ZZ</b>“ (velkými písmeny), tím změny uložíte a editor vi ukončíte.</li>
+</ol>
+<h4>Úprava nastavení systému Linux:</h4>
+<p>Pokud používáte klienta <b>smbclient</b>, doplňte do oddílu <b>[global]</b> souboru <b>smb.conf</b> následující klíče: <p style="font-family:sans; margin-top:0px; padding-left:20px;line-height:1.25em;"> encrypt passwords = no <br> client plaintext auth = yes <br> client lanman auth = yes <br> client ntlmv2 auth = no </p><p>Pokud používáte soubor <b>mount.cifs</b>, spusťte následující příkaz:</b>
+<p style="font-family:sans; margin-top:0px; padding-left:20px;line-height:1.25em;">echo 0x30030 > /proc/fs/cifs/SecurityFlags</p>
+<p>Další informace naleznete na adrese <a href="https://www.kernel.org/doc/readme/Documentation-filesystems-cifs-README" target=_blank>https://www.kernel.org/doc/readme/Documentation-filesystems-cifs-README</a></p>
+
+</p>
+</div>
+<div class="section">
+<h4>O profilech</h4>
+
+<p>Různé servery LDAP mohou používat pro názvy účtů, pro názvy skupin nebo k rozlišení účtů a skupin různé atributy. Možnost <b>Profil</b> umožňuje stanovit či upravit, jak se informace o uživateli a skupině vůči atributům LDAP mapuje. Podle toho, jaký máte server LDAP, je možné vybrat jeden z následujících profilů:</p>
+
+<ul>
+<li><b>Standardní:</b> U serverů se spuštěnými službami Synology Directory Server nebo Mac Open Directory.</li>
+<li><b>IBM Lotus Domino:</b> U serverů se spuštěnou službou IBM Lotus Domino 8.5.</li>
+<li><b>Vlastní:</b> Umožňuje upravit mapování. Podrobnosti naleznete v následující části.</li>
+</ul>
+
+<p>Před úpravou mapování atributů LDAP budete muset mít určité znalosti o pozadí. Systém Synology DSM i editor <strong>profilů</strong> splňují normu RFC 2307. Například je možné jako hodnotu <b>userFilter</b> stanovit <b>filter</b> > <b>passwd</b>, takže zařízení DiskStation bude záznamy s výrazem <b>objectClass=userFilter</b> na serveru LDAP interpretovat jako účty LDAP. Pokud jako hodnotu <b>username</b> nastavíte výraz <b>passwd</b> > <b>uid</b>, bude zařízení DiskStation interpretovat proměnnou <b>username</b> na serveru LDAP jako název účtu. Pokud zanecháte mapování prázdné, použijí se pravidla RFC 2307.</p>
+<p>Zařízení DiskStation vyžaduje, aby jako identifikátor účtu LDAP (<strong>uidNumber</strong>) nebo identifikátor skupiny (<strong>gidNumber</strong>) sloužilo fixní celé číslo. Ne všechny servery LDAP však používají k reprezentaci takovýchto atributů celá čísla. Proto se kvůli převodu takovýchto atributů na celá čísla používá klíčové slovo <b>HASH()</b>. Například server LDAP může jako jedinečný identifikátor účtu LDAP využívat atribut <b>userid</b> s šestnáctkovou hodnotou. V tomto případě je možné nastavit výraz <b>passwd</b> > <b>uidNumber</b> na hodnotu <b>HASH(userid)</b>. Zařízení DiskStation ho poté převede na celé číslo.</p>
+
+<p>Následuje shrnutí upravitelných atributů:</p>
+
+<ul>
+	<li><b>filter</b></li>
+	<ul>
+		<li><b>group</b>: vyžadovaná hodnota objectClass pro skupinu.</li>
+		<li><b>passwd</b>: vyžadovaná hodnota objectClass pro uživatele.</li>
+		<li><b>shadow</b>: vyžadovaná hodnota objectClass pro hesla uživatelů.</li>
+	</ul>
+	<li><b>group</b></li>
+	<ul>
+		<li><b>cn</b>: název skupiny.</li>
+		<li><b>gidNumber</b>: číslo GID této skupiny.</li>
+		<li><b>memberUid</b>: členové této skupiny.</li>
+	</ul>
+	<li><b>passwd</b></li>
+	<ul>
+		<li><b>uidNumber</b>: číslo UID tohoto uživatele.</li>
+		<li><b>uid</b>: jméno uživatele.</li>
+		<li><b>gidNumber</b>: primární číslo GID tohoto uživatele.</li>
+	</ul>
+	<li><b>shadow</b></li>
+	<ul>
+		<li><b>uid</b>: jméno uživatele.</li>
+		<li><b>userPassword</b>: heslo uživatele.</li>
+	</ul>
+</ul>
+</div>
+<div class="section">
+<h4>O posunu UID/GID</h4>
+<p>Aby nedocházelo ke konfliktům UID/GID mezi uživateli/skupinami LDAP a místními uživateli/skupinami, je možné povolit posun UID/GID uživatelů/skupin LDAP o 1000000. Tato možnost je určena pouze pro jiné servery LDAP než Synology a má jedinečný číselný atribut ID pro každého uživatele/skupinu.</p>
+</div>
+</body>
+</html>

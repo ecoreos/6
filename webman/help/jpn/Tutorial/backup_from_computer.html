@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+<meta content="en-us" http-equiv="Content-Language" />
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+<title>Cloud Station で PC/Mac のデータをバックアップする</title>
+</head>
+
+<body class="tutorial-content-box" >
+
+<h1>Cloud Station で PC/Mac のデータをバックアップする</h1>
+<div class="tutorials_content">
+<img src="../../images/Backup/1x/backup_from_PC/07_1_back_up_your_data_from_pc.png" />
+<h2>概要</h2>
+<p>Cloud Station Server はプラットフォームをまたぐ同期ソフトウェアだけではなく、パソコンのスマートなバックアップ方法としても機能します。&nbsp;リアルタイムのバックアップ ソリューショである Cloud Station Backup は、1個のファイルに対して最大 32 個の履歴バージョンを保持しています。</p>
+<h3 class="list_head">Synology NAS に Cloud Station Server を設定する</h3>
+<ol>
+
+<li><b>[パッケージセンター]</b> を選択し、<b>[Cloud Station Server]</b> を探したら、<strong>[インストール]</strong> をクリックします。</li>
+ 
+<li><strong>Cloud Station Server</strong> を起動します。</li>
+<li><strong>[概要]</strong> を選択し、<strong>[Cloud Station Backup]</strong> で <strong>[今すぐダウンロード]</strong> をクリックします(<a href="https://www.synology.com/en-us/support/download" target="_blank">Synology Download Center</a> から Cloud Station Backup をダウンロードすることができます)。</li>
+<img src="../../images/Backup/1x/backup_from_PC/download_backup.png" border="1" />
+<li>コンピュータでインストーラを実行し、画面の指示に従って Cloud Station Backup をインストールしてください </li>
+<li>インストール後は、コンピュータで <strong>Cloud Station Backup</strong> を実行します。<strong>[今すぐスタート]</strong> をクリックします。</li>
+<img src="../../images/Backup/1x/backup_from_PC/start_now.png" border="1" />
+<li>Cloud Station Server を起動している Synology NAS のアドレス（または QuickConnect ID）、ユーザー名、パスワードを入力します（右側の検索アイコンをクリックすると、Cloud Station Backup が LAN 内にある別の Synology NAS を検索します）。<strong>[次へ]</strong> をクリックします。</li>
+<img src="../../images/Backup/1x/backup_from_PC/enter_credentials.png" border="1" />
+<li>バックアップ ソースを選択し、同期したいサブフォルダのチェックマークを外します。</li>
+<img src="../../images/Backup/1x/backup_from_PC/backup_settings_source.png" border="1" />
+<li>Synology NAS でフォルダを選択し、<strong>[]選択</strong> をクリックします。Cloud Station Backup は、ご使用中のコンピュータ名を使って選択した場所にバックアップ フォルダを作成します。</li>
+<img src="../../images/Backup/1x/backup_from_PC/backup_destination.png" border="1" />
+<li>同期フォルダか規則を設定するには、<strong>[バックアップ規則]</strong> をクリックします。</li>
+
+<li><strong>[次へ]</strong> をクリックしてバックアップ設定を確認し、&nbsp;<strong>[完了]</strong> をクリックします。</li>
+<img src="../../images/Backup/1x/backup_from_PC/summary.png" border="1" />
+<li>メイン アプリでバックアップの進行状況を確認してください。</li>
+<img src="../../images/Backup/1x/backup_from_PC/progress.png" border="1" />
+</ol>
+
+<h3 class="list_head">同期したファイルの前のバージョンを Cloud Station からダウンロードまたは復元する</h3>
+<ol>
+<li><strong>[Cloud Station Server] </strong>&gt; <strong>[バージョン履歴]</strong> を選択し、復元したいファイルやフォルダを探します。はせ</li>
+  <img src="../../images/BuildCloud/1x/cloud_sync_files/version_history.png" />
+<li>取得するファイルを選択し、<strong>［操作］</strong>をクリックします。<strong>[以前のバージョンを参照]</strong> をクリックします。ファイルが誤ってコンピュータ上から削除された場合は、<strong>[復元]</strong> をクリックします。</li>
+  <img src="../../images/BuildCloud/1x/cloud_sync_files/browse_previous versions_server.png" />
+<li>ダウンロードしたいファイルのバージョンを選択し、<strong>[ダウンロード]</strong> をクリックします。または、選択したバージョンを復元したい場合は、<strong>[復元]</strong> をクリックすると、現在のバージョンに上書きされます。</li>
+    <img src="../../images/BuildCloud/1x/cloud_sync_files/previous_versions.png" />
+
+</ol>
+
+
+<h3 class="list_head">5.データをより安全に保護するために</h3>
+  
+<p>データを保護し、バックアップするための他の方法については、<a href="https://www.synology.com/knowledgebase/tutorials#BackupRestore" target="_blank">こちら</a>をクリックして DSM で提供されるその他のバックアップ サービスのチュートリアルをお読みください。</p>
+
+</div>
+<div class="page-info">
+  <ul>
+<li>このトピックで次：<a href="backup_backup.html">Synology NAS からデータをバックアップ</a> </li>
+  </ul>
+</div>
+</body>
+
+</html>

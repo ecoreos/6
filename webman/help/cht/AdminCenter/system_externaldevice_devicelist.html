@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>外接裝置</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>外接裝置</h2>
+
+<p>前往<strong>控制台</strong> &gt; <b>外接裝置</b> &gt; <b>外接裝置</b>來檢視連接至 DiskStation 的外接儲存裝置清單。</p>
+
+
+<h3><a name="usbdisk"></a><a name="esatadisk"></a>外接硬碟</h3>
+<p class="enable-eds14">將外接硬碟連上系統後，系統會自動建立一個名叫 <b>usbshare[編號]</b> (針對 USB 硬碟) 的共用資料夾，您可以用這個資料夾分享外接硬碟上的資料。退出外接硬碟之後，共用資料夾會被自動移除。</p>
+<p class="disable-eds14">將外接硬碟連上系統後，系統會自動建立一個名叫 <b>usbshare[編號]</b> (針對 USB 硬碟) 或 <b>satashare[編號]</b> (針對 eSATA 硬碟) 的共用資料夾，您可以用這個資料夾分享外接硬碟上的資料。退出外接硬碟之後，共用資料夾會被自動移除。</p>
+<p class="enable-eds14">DiskStation 支援的檔案系統格式為 <span style="display: inline;" class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64"><strong>Btrfs</strong>、</span><strong>ext3</strong>、<strong>ext4</strong>、<strong>FAT</strong>、<strong>FAT32</strong>、<strong>HFS</strong>、<strong>HFS Plus</strong> 以及 <strong>NTFS</strong>。無法辨識的外接硬碟必須先進行格式化才能使用。</p>
+<p class="disable-eds14">DiskStation 支援的檔案系統格式為 <span style="display: inline;" class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64"><strong>Btrfs</strong>、</span><strong>ext3</strong>、<strong>ext4</strong>、<strong>FAT</strong>、<strong>FAT32</strong>、<strong>exFAT</strong>、<strong>HFS</strong>、<strong>HFS Plus</strong> 以及 <strong>NTFS</strong>。無法辨識的外接硬碟必須先進行格式化才能使用。</p>
+
+<div class="section">
+<h4>注意：</h4>
+<ol class="enable-eds14">
+<li>部分機種僅支援 HFS/HFS Plus 讀取功能。</li>
+<li>HFS/HFS Plus 不支援日誌。</li>
+<li>請先在使用者介面上退出外接硬碟後再將其取下。</li>
+</ol>
+<ol class="disable-eds14">
+<li>部分機種僅支援 HFS/HFS Plus 讀取功能。</li>
+<li>HFS/HFS Plus 不支援日誌。</li>
+<li>您需從<strong>套件中心</strong>安裝 <strong>exFAT Access</strong> 來讓 DiskStation 支援 exFAT。</li>
+<li>請先在使用者介面上退出外接硬碟後再將其取下。</li>
+</ol>
+</div>
+
+<h4>若要格式化硬碟：</h4>
+
+<p>按一下<b>格式化</b>並跟隨精靈的指示。DiskStation 可將您的外接硬碟格式化成 <b>ext4</b> 及 <b>FAT32 </b>格式。</p>
+
+<div class="section">
+<h4>注意：</h4>
+<ol>
+<li>請確認您在格式化外接硬碟之前已將資料備份。所有資料在過程中會被刪除且無法還原。</li>
+
+<li>若要將外接硬碟格式化成 ext3 或 ext4 格式，硬碟容量必須大於 1 GB。</li>
+
+<li>格式化成 ext3 或 ext4 的硬碟只會被 DiskStation 辨識。如果您想直接透過 PC 或 Mac 讀取外接硬碟上的資料，請選擇 FAT32 格式。</li>
+</ol>
+</div>
+
+
+<h4>若要執行 S.M.A.R.T. 檢測：</h4>
+<P>硬碟 S.M.A.R.T. 檢測能檢查硬碟狀態並回報結果，在硬碟即將故障前提出預警。若偵測出任何錯誤，建議您更換硬碟。<br>若要執行 S.M.A.R.T. 檢測 若要執行 S.M.A.R.T. 檢測，只需按一下 <strong>S.M.A.R.T. 檢測按鈕並跟隨精靈指示即可。<br> 若要查看檢測結果，只需按一下 S.M.A.R.T. 資訊</strong>即可。</P>
+<div class="section">
+<h4>注意：</h4>
+<p>檢測所需時間會因您的系統環境而有所不同。</p>
+</div>
+
+
+<div class="section disable-eds14">
+<h4>限制</h4>
+
+<p>您無法在下列的情況下格式化硬碟：</p>
+
+<ul>
+<li>外接硬碟剛剛插入，正在執行初始化設定。</li>
+<li>外接硬碟容量小於 1GB (ext3 或 ext4 格式)。</li>
+<li>外接硬碟正在執行格式化。</li>
+<li>系統正在將檔案備份到外接硬碟。</li>
+<li>外接硬碟已損毀。</li>
+</ul>
+<h4>疑難排除</h4>
+<ol>
+<li>無法格式化外接硬碟。為什麼？</li>
+<ul>
+<li>請檢查外接硬碟是否已正確地連結在系統上。</li>
+<li>請檢查外接硬碟有沒有防寫。如果是，請先移除防寫保護再進行格式化。</li>
+</ul>
+<li>外接硬碟的檔案系統顯示為<b>不支援</b>，或系統沒有為外接硬碟建立 <b>usbshare[編號]</b> 或 <b>satashare[編號]</b> 共用資料夾。該如何處理？</li>
+<ul>
+<li>目前系統支援的檔案系統格式為 <span style="display: inline;" class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64">Btrfs、</span>ext3、ext4、FAT、FAT32、HFS、HFS Plus 以及 NTFS。使用其它檔案系統的外接硬碟無法被辨識，狀態上會顯示為<b>不支援</b>。</li>
+</ul>
+<li>我無法存取 <b>usbshare[編號]</b> 或 <b>satashare[編號]</b> 共用資料夾。該如何處理？</li>
+
+<ul>
+<li>這可能是因為外接硬碟上的檔案系統有問題。若要修復此問題，請將外接硬碟連接至 PC 以執行檔案系統檢查。</li>
+</ul>
+<li>ext3 或 ext4 格式的外接硬碟是否可連接至 PC 或 Mac 並直接進行資料存取？</li>
+<ul>
+<li>不可以，只有 DiskStation 可以識別 ext3 或 ext4。如果您想直接透過 PC 或 Mac 讀取外接硬碟上的資料，請選擇 FAT32 格式。</li>
+</ul>
+<li>為什麼我會在外接硬碟上看到一個名為「lost+found」的資料夾？</li>
+<ul>
+<li>這是使用 ext3 / ext4 檔案系統時，系統自動建立的預設資料夾。在外接硬碟看到這個資料夾是正常現象。系統管理者有存取與管理內容的權限，但我們強烈建議您不要為此資料夾進行任何動作。</li>
+
+</ul>
+
+</ol>
+</div>
+<div class="section enable-eds14">
+<h4>限制</h4>
+
+<p>您無法在下列的情況下格式化硬碟：</p>
+
+<ul>
+<li>外接硬碟剛剛插入，正在執行初始化設定。</li>
+<li>外接硬碟容量小於 1GB (ext3 或 ext4 格式)。</li>
+<li>外接硬碟正在執行格式化。</li>
+<li>系統正在將檔案備份到外接硬碟。</li>
+<li>外接硬碟已損毀。</li>
+</ul>
+<h4>疑難排除</h4>
+<ol>
+<li>無法格式化外接硬碟。為什麼？</li>
+<ul>
+<li>請檢查外接硬碟是否已正確地連結在系統上。</li>
+<li>請檢查外接硬碟有沒有防寫。如果是，請先移除防寫保護再進行格式化。</li>
+</ul>
+<li>外接硬碟的檔案系統顯示為<b>不支援</b>，或系統沒有為外接硬碟建立 <b>usbshare[編號]</b> 共用資料夾。該如何處理？</li>
+<ul>
+<li>目前系統支援的檔案系統格式為 ext3、ext4、FAT、FAT32、HFS、HFS Plus 以及 NTFS。使用其它檔案系統的外接硬碟無法被辨識，狀態上會顯示為<b>不支援</b>。</li>
+</ul>
+<li>我無法存取 <b>usbshare[編號]</b> 共用資料夾。該如何處理？</li>
+
+<ul>
+<li>這可能是因為外接硬碟上的檔案系統有問題。若要修復此問題，請將外接硬碟連接至 PC 以執行檔案系統檢查。</li>
+</ul>
+<li>ext3 或 ext4 格式的外接硬碟是否可連接至 PC 或 Mac 並直接進行資料存取？</li>
+<ul>
+<li>不可以，只有 DiskStation 可以識別 ext3 或 ext4。如果您想直接透過 PC 或 Mac 讀取外接硬碟上的資料，請選擇 FAT32 格式。</li>
+</ul>
+<li>為什麼我會在外接硬碟上看到一個名為「lost+found」的資料夾？</li>
+<ul>
+<li>這是使用 ext3 / ext4 檔案系統時，系統自動建立的預設資料夾。在外接硬碟看到這個資料夾是正常現象。系統管理者有存取與管理內容的權限，但我們強烈建議您不要為此資料夾進行任何動作。</li>
+
+</ul>
+
+</ol>
+</div>
+
+
+<h4>若要為所有外接裝置設定預設權限：</h4>
+<p>您可以按一下<strong>預設權限</strong>來設定預設權限，並指定哪些使用者或群組可以存取、檢視或修改外接裝置及其內容。當外接裝置接上 DiskStation 時，您所指定的權限將會自動指派給該外接裝置。</p>
+<p>在權限視窗中，請執行下列步驟來設定預設權限：</p>
+<ol>
+<li>從下拉式選單中選擇下列任何選項：
+<ul>
+<li><b>系統內部使用者帳號：</b>指派權限給預設的系統使用者，例如匿名 (Anonymous) FTP / WebDAV 使用者。</li>
+<li><b>本地使用者：</b>指派權限給本地使用者 (包含 <b>guest</b>)。</li>
+<li><b>本地群組：</b>指派權限給本地使用者群組。</li>
+</ul></li>
+
+<li>為使用者或使用者群組勾選、取消勾選相對應的核取方塊來自訂其對於外接裝置的存取權限：
+  <ul>
+<li><b>可讀寫</b>：使用者帳號或使用者群組可以存取並變更外接裝置上的檔案及資料夾。</li>
+<li><b>唯讀</b>：使用者帳號或使用者群組可以存取外接裝置上的檔案及資料夾。</li>
+<li><b>禁止存取</b>：使用者帳號或使用者群組無法存取外接裝置上的檔案及資料夾。</li>
+</ul></li>
+</ol>
+
+
+</body>
+</html>

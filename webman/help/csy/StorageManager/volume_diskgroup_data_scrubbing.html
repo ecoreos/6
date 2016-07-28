@@ -1,0 +1,44 @@
+﻿ <!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+
+<title>Scrubbing pole RAID – Nápověda Synology DSM</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="Data scrubbing is a data maintenance feature that inspects volumes or disk groups and repairs any detected data inconsistencies.">
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Scrubbing pole RAID*</h2>
+<p>Scrubbing pole RAID je funkce údržby dat, která zkontroluje svazky nebo diskové skupiny a opraví veškeré nekonzistence dat. Tuto funkci je možné použít u svazků nebo skupin disků s implementací typu SHR (skládající se ze tří nebo více disků), RAID 5 nebo RAID 6. </p>
+
+<p>Scrubbing pole RAID doporučujeme provádět pravidelně, aby zůstala zachována konzistence dat a předešlo se ztrátě kritických dat v případě závady pevného disku.</p>
+
+<h4>Provedení scrubbingu pole RAID:</h4>
+
+<ol>
+<li>Otevřete <strong>Správce úložiště</strong>.</li>
+<li>Přejděte k možnosti <strong>Svazek</strong> nebo <strong>Skupina disků</strong>.</li>
+<li>Vyberte svazek nebo skupinu disků, na kterých chcete scrubbing pole RAID provést.</li>
+<li>Klikněte na možnost <strong>Správa</strong>.</li>
+<li>Vyberte možnost <strong>Scrubbing pole RAID</strong>.</li>
+</ol>
+
+<div class="section">
+<h4>Poznámka:</h4>
+<ul>
+<li>Scrubbing pole RAID lze provést pouze tehdy, když je stav svazku nebo skupiny disků <strong>Normální</strong>.</li>
+<li>Nevypínejte systém, dokud se scrubbing pole RAID nedokončí. Pokud dojde před dokončením k vypnutí systému, je nutné spustit scrubbing pole RAID od začátku.</li>
+</ul></div>
+
+<p>____<br />*K dispozici pouze u některých modelů.</p>
+
+</body>
+</html>

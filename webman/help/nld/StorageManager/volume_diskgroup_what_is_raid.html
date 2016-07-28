@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Een RAID-type kiezen - Synology DSM Help</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="A brief overview describing what RAID types are supported by Synology DiskStation Manager (DSM).">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Selecteer een RAID-type</h2>
+
+<p>RAID (Redundant Array of Independent Disks) is een gegevensopslagtechnologie waarmee meerdere harde schijven in een enkele opslagruimte kunnen worden gecombineerd. Er zijn verschillende RAID-types, elk met verschillende prestaties, opslagcapaciteit en betrouwbaarheid.</p>
+
+<p>Dit artikel geeft een kort overzicht van de RAID-types die door DiskStation worden ondersteund, inclusief implementatievereisten en voor- en nadelen.</p>
+
+<!--1-->
+
+<h3>Ondersteunde RAID-types</h3>
+
+<p>Deze tabel geeft een kort overzicht van de verschillende RAID-types die door DiskStation worden ondersteund, inclusief de opslagcapaciteit, het minimum vereist aantal harde schijven per RAID-type en het aantal harde schijffouten die getolereerd worden tot optreding van gegevensverlies. </p>
+
+<table>
+
+  <tr>
+
+    <th>Volumetype</th>
+    <th>Aantal HHD's</th>
+
+    <th>Toegelaten aantal harde schijffouten</th>
+    <th>Beschrijving</th>
+
+    <th>Volumecapaciteit</th>
+
+  </tr>
+
+  <tr>
+
+    <td rowspan="3">SHR</td>
+    <td>1</td>
+
+    <td>0</td>
+    <td rowspan="3">
+    <div align="left">
+    <ul>
+    <li>Optimaliseert de volumegrootte als harde schijven met verschillende groottes worden gecombineerd.</li>
+    <li>Biedt gegevensredundantie als het volume uit twee of meer harde schijven bestaat.</li>
+    <li>Aanbevolen voor beginners.</li>
+    </ul>
+    </div>
+    </td>
+
+    <td>1 x (HDD-grootte)</td>
+
+  </tr>
+  <tr>
+    <td>2-3</td>
+    <td>1</td>
+    <td rowspan="2">Geoptimaliseerd door het systeem.</td>
+  </tr>
+  <tr>
+    <td>≧4</td>
+    <td>1-2</td>
+  </tr>
+  
+  <tr>
+
+    <td>Basic</td>
+    <td>1</td>
+
+    <td>0</td>
+    <td>
+    <div align="left">
+    <ul>
+    <li>Bestaat uit een harde schijf als onafhankelijke eenheid.</li>
+    <li>Geen ondersteuning van gegevensredundantie.</li>
+    </ul>
+    </div>
+    </td>
+
+    <td>1 x (HDD-grootte)</td>
+
+  </tr>
+
+  <tr>
+
+    <td>JBOD</td>
+    <td>≧1</td>
+
+    <td>0</td>
+    <td>
+    <div align="left">
+    <ul>
+    <li>Combineert een verzameling van harde schijven in een enkele opslagruimte met een capaciteit gelijk aan de som van alle harde schijven.</li>
+    <li>Geen ondersteuning van gegevensredundantie.</li>
+    </ul>
+    </div>
+    </td>
+
+    <td>Som van alle HDD-groottes</td>
+
+  </tr>
+
+  <tr>
+
+    <td>RAID 0</td>
+    <td>≧2</td>
+
+    <td>0</td>
+    <td>
+    <div align="left">
+    <ul>
+    <li>Biedt "striping", een procedure waarbij gegevens in blokken verdeeld worden en deze gegevensblokken over verschillende harde schijven worden verspreid om de prestaties te verbeteren.</li>
+    <li>Geen ondersteuning van gegevensredundantie.</li>
+    </ul>
+    </div>
+    </td>
+
+    <td>Som van alle HDD-groottes</td>
+
+  </tr>
+
+  <tr>
+
+    <td rowspan="3">RAID 1</td>
+    <td>2</td>
+
+    <td>1</td>
+    <td rowspan="3">
+    <div align="left">
+    <ul>
+    <li>Schrijft identieke gegevens gelijktijdig naar beide harde schijven.</li>
+    <li>Biedt gegevensredundantie.</li>
+    </ul>
+    </div>
+    </td>
+
+    <td rowspan="3">Kleinste HDD-grootte</td>
+
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>3</td>
+  </tr>
+
+  <tr>
+
+    <td>RAID 5</td>
+    <td>≧3</td>
+
+    <td>1</td>
+
+    <td>
+    <div align="left">
+    <ul>
+    <li>Implementeert blok-niveau-striping met verspreiding van pariteitsgegevens over alle harde schijven, waardoor een betere gegevensredundantie worden geboden dan bij RAID 1.</li>
+    </ul>
+    </div>
+    </td>
+
+    <td>(N – 1) x (kleinste HDD-grootte)</td>
+
+  </tr>
+
+  <tr>
+
+    <td>RAID 6</td>
+    <td>≧4</td>
+
+    <td>2</td>
+    <td>
+    <div align="left">
+    <ul>
+    <li>Implementeert twee lagen van pariteitsgegevens om redundante gegevens op te slaan op een ruimte die gelijk is aan de grootte van twee schijven. Biedt een grotere mate van gegevensredundantie dan RAID 5.</li>
+    </ul>
+    </div>
+    </td>
+
+    <td>(N – 2) x (kleinste HDD-grootte)</td>
+
+  </tr>
+
+  <tr>
+
+    <td>RAID 10</td>
+    <td>≧4<br /> (even getal)</td>
+
+    <td>Helft van het totaal aantal HDD</td>
+    <td>
+    <div align="left">
+    <ul>
+    <li>Biedt de prestaties van RAID 0 en het gegevensbeveiligingsniveau van RAID 1 door harde schijven in groepen van twee te combineren en gegevens te spiegelen.</li>
+    </ul>
+    </div>
+    </td>
+
+    <td>(N / 2) x (kleinste HDD-grootte)</td>
+
+  </tr>
+
+</table>
+
+
+<div class="section">
+<h4>Opmerking:</h4>
+<ul>
+<li>de RAID-types, behalve "Basic", zijn alleen beschikbaar op bepaalde modellen, afhankelijk van het aantal harde schijfsleuven en het aantal geïnstalleerde harde schijven.</li>
+<li>"N" staat voor het totaal aantal harde schijven binnen het volume.</li>
+</ul>
+</div>
+
+
+
+
+<!--2-->
+<h3>Synology Hybrid RAID (SHR)</h3>
+
+<p>Synology Hybrid RAID (SHR) is een geautomatiseerd RAID-beheersysteem dat speciaal is ontworpen om opslagbeheer te vergemakkelijken en tegemoet te komen aan de behoefte van nieuwe gebruikers zonder kennis over RAID-types. </p>
+<p>SHR kan harde schijven van verschillende groottes combineren om een opslagvolume te maken met geoptimaliseerde capaciteit en prestaties, waardoor minder harde schijfruimte wordt verspild en een flexibelere opslagoplossing wordt aangeboden.  Wanneer een toereikend aantal harde schijven is opgenomen, biedt SHR redundantie voor 1 of 2 schijven. Een SHR-volume kan dus maximaal een of twee fouten van harde schijven ondergaan zonder daarbij gegevens te verliezen.</p>
+<img src="about:blank" class="help_image"/>
+
+
+
+
+
+
+<!--3-->
+
+<h3>RAID 0</h3>
+<p>RAID 0 combineert twee of meer harde schijven om de prestaties en capaciteit te verhogen, maar biedt geen fouttolerantie. Een enkele harde schijffout resulteert in het verlies van alle gegevens op de array. RAID 0 is handig voor niet-cruciale systemen die een hoog prijs/prestatie-evenwicht vereisen.</p>
+<img src="about:blank" class="help_image"/>
+
+
+
+
+
+
+<!--4-->
+
+<h3>RAID 1</h3>
+<p>RAID 1 wordt vaak met twee harde schijven geïmplementeerd. De gegevens op de harde schijven worden gespiegeld en bieden zo fouttolerantie in geval van een defecte harde schijf. De leesprestaties worden verhoogd terwijl de schijfprestaties vergelijkbaar blijven met die van een enkele harde schijf. Een enkele harde schijffout leidt niet tot gegevensverlies. RAID 1 wordt vaak gebruikt wanneer fouttolerantie centraal staat, terwijl ruimte en prestaties geen cruciale vereisten zijn.</p>
+<img src="about:blank" class="help_image"/>
+
+
+
+<!--5-->
+
+<h3>RAID 5</h3>
+<p>RAID 5 biedt fouttolerantie en verbeterde leesprestaties. Een minimum van drie harde schijven wordt vereist. RAID 5 kan het verlies van een enkele harde schijf dragen. Bij een harde schijffout worden de gegevens van de beschadigde harde schijf hersteld door pariteits-striping van de resterende harde schijven. Dit wil zeggen dat zowel de lees- als de schrijfprestaties ernstig worden beïnvloed bij een RAID 5-array in beschadigde staat. RAID 5 is ideaal wanneer ruimte en kosten belangrijker zijn dan prestaties.</p>
+<img src="about:blank" class="help_image"/>
+
+
+
+<!--6-->
+
+<h3>RAID 6</h3>
+<p>RAID 6 is vergelijkbaar met RAID 5, maar biedt bovendien een extra striping-laag en kan twee schijfstoringen verdragen. Een minimum van vier harde schijven wordt vereist. Door deze aanvullende fouttolerantie zijn de prestaties van RAID 6 lager dan die van RAID 5. RAID 6 is interessant wanneer ruimte en kosten belangrijk zijn en fouttolerantie van meerdere harde schijven wordt vereist.</p>
+<img src="about:blank" class="help_image"/>
+
+
+
+<!--7-->
+
+<h3>RAID 10</h3>
+<p>RAID 10 combineert de voordelen van RAID 1 en RAID 0. Lees- en schrijfprestaties worden verbeterd, maar slechts de helft van de totale ruimte is beschikbaar voor gegevensopslag. Er zijn vier of meer harde schijven nodig waardoor het een dure aangelegenheid wordt, maar de prestaties zijn fantastisch en er wordt fouttolerantie geboden. Een RAID 10 kan meerdere harde schijffouten verdragen als de fouten niet binnen dezelfde subgroep optreden. RAID 10 is ideaal voor toepassingen met hoge in-/uitvoerverzoeken zoals databaseservers.</p>
+
+<img src="about:blank" class="help_image"/>
+
+
+</body>
+</html>

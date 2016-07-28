@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>R&eacute;seau</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2>Onglet G&eacute;n&eacute;ral</h2>
+
+<p>Les options g&eacute;n&eacute;riques de r&eacute;seau telles que la passerelle par d&eacute;faut, le DNS server, le proxy et le tunneling IPv6 sont disponibles dans <strong>Panneau de configuration</strong> &gt; <strong>R&eacute;seau</strong> &gt; <strong>G&eacute;n&eacute;ral</strong>.</p>
+
+
+<h3>Renommer l&apos;appareil DiskStation</h3>
+<p>Pour renommer votre machine DiskStation, saisissez le nouveau nom du serveur et cliquez sur <b>Appliquer</b>.</p>
+<p>Le nom du serveur n&apos;est pas sensible &agrave; la casse et peut inclure de 1 &agrave; 15 caract&egrave;res contenant des lettres, des nombres, des traits de soulignement et des signes moins (-). Le premier caract&egrave;re du nom doit &ecirc;tre une lettre.</p>
+
+
+<h3>Sp&eacute;cification de la passerelle par d&eacute;faut</h3>
+<p>Saisissez simplement l&apos;adresse IP pour la passerelle par d&eacute;faut et cliquez sur <b>Appliquer</b> pour sauvegarder les param&egrave;tres.</p>
+
+
+<h3>Sp&eacute;cification de l&apos;adresse IP du DNS server</h3>
+<p>Vous pouvez choisir de configurer manuellement l&apos;adresse IP de votre DNS server. Dans ce cas, l&apos;adresse IP de votre DNS server pr&eacute;f&eacute;r&eacute; doit &ecirc;tre saisie. Une adresse IP de DNS server auxiliaire peut &eacute;galement &ecirc;tre entr&eacute;e, fournissant une s&eacute;curit&eacute; si le DNS server pr&eacute;f&eacute;r&eacute; rencontre des probl&egrave;mes. Une fois les adresses IP des DNS server configur&eacute;es comme vous le souhaitez, veuillez cliquer sur <strong>Appliquer</strong> pour enregistrer vos param&egrave;tres.</p>
+
+
+<div class="section">
+<h4>Remarque&nbsp;:</h4>
+<p>Les champs DNS server et Passerelle par d&eacute;faut seront d&eacute;finis automatiquement et ne peuvent pas &ecirc;tre chang&eacute;s si toutes vos interfaces r&eacute;seau sont configur&eacute;es automatiquement ou quand vous utilisez une connexion PPPoE.</p>
+</div>
+
+
+
+<h3><a name="proxy"></a>Connexion via un serveur proxy</h3>
+<p>Pour permettre &agrave; votre DiskStation de se connecter via un serveur proxy, cochez <b>Se connecter via un serveur proxy</b>, entrez l&apos;<b>Adresse </b> et le <b>Port</b>, puis cliquez sur <b>Appliquer</b>.</p>
+
+
+<div class="section">
+<h4>Remarque&nbsp;:</h4>
+<ul>
+<li>Cliquez sur <strong>Param&egrave;tres avanc&eacute;s</strong> pour configurer le proxy HTTP, le proxy HTTPS et les informations d&apos;authentification.<li>Par d&eacute;faut, les param&eacute;trages du proxy HTTPS sont les m&ecirc;mes que ceux du proxy HTTP.</li>
+<li>Si vous cochez <b>Se connecter via un serveur proxy</b>, Mise &agrave; jour de DSM et Centre de paquets, avec d&apos;autres paquets, se connecteront toujours &agrave; Internet via un proxy.</li>
+<li>Si <b>Ignorer le serveur proxy pour les adresses locales</b> est coch&eacute;, assurez-vous que le DNS server utilis&eacute; par le DiskStation peut r&eacute;soudre les demandes d&apos;appareils dans le r&eacute;seau local.</li>
+</ul>
+</div>
+
+
+<h3>Activer le tunneling IPv6</h3>
+<p>Jusqu&apos;&agrave; ce que IPv6 supplante compl&egrave;tement IPv4, on utilise le tunneling IPv6 pour permettre aux h&ocirc;tes fonctionnant en IPv6 d&apos;acc&eacute;der aux services IPv4. Cette technique fournit une mani&egrave;re de transporter un trafic IPv6 dans des r&eacute;seaux IPv4 existants.<br> Si vous n&apos;&ecirc;tes pas s&ucirc;r de vous quant &agrave; la mani&egrave;re de configurer l&apos;IPv6 ou que vous rencontrez des probl&egrave;mes de connexion, contactez votre fournisseur d&apos;acc&egrave;s Internet.</p>
+<h4>Pour activer le Tunnel IPv6&nbsp;:</h4>
+<ol>
+<li>Cochez la case <b>Activer le tunnel</b> pour activer la prise en charge du tunnel.</li>
+
+<li>Dans <b>Adresse du serveur</b>, saisissez le nom d&apos;h&ocirc;te ou l&apos;adresse IP du fournisseur de service tunnel, par exemple : anonymous.freenet6.net.</li>
+
+<li>Choisissez entre <b>Se connecter en anonyme</b> ou <b>Se connecter avec un compte existant</b> selon vos pr&eacute;f&eacute;rences.</li>
+</ol>
+
+<div class="section">
+<h4>Remarque&nbsp;:</h4>
+<p>Votre adresse IPv6 externe pourra &ecirc;tre mise &agrave; jour automatiquement par le prestataire de service. Toutefois, l&apos;appareil DiskStation ne supprimera pas l&rsquo;ancienne adresse IPv6 imm&eacute;diatement.</p>
+</div>
+
+
+
+</body>
+</html>

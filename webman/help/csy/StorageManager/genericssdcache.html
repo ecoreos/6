@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2>Mezipaměť SSD*</h2>
+<p>Mezipaměť SSD může vylepšit výkon náhodného přístupu ukládáním často používaných dat v mezipaměti SSD. Mezipaměť SSD je možné instalovat na svazek nebo na jednotku iSCSI LUN (úroveň bloku). Existují dva typy mezipaměti SSD:</p>
+<ul>
+<li><strong>Mezipaměť jen pro čtení</strong> se může skládat z jedné až dvanácti mezipamětí SSD, které lze připojit v základní konfiguraci nebo v konfiguraci RAID 0 a zvýšit výkon náhodného čtení z připojeného úložiště.<div class="section"><h4>Poznámka:</h4>
+	<p>Mezipaměť SSD jen pro čtení ukládá kopie dat ze svazku, takže nedojde k žádné ztrátě dat ani v případě zhroucení mezipaměti jen pro čtení.</p>
+	</div>
+</li>
+<li><strong>Mezipaměť pro čtení-zápis</strong> lze v závislosti na počtu mezipamětí SSD (až 12 mezipamětí SSD) připojit ke konfiguraci RAID 1 / RAID 5 / RAID 6 a zvýšit výkon náhodného čtení a zápisu připojeného úložiště.</li>
+</ul>
+
+<p>Oba typy mezipaměti SSD využívají algoritmus mezipaměti LRU (Least Recently Used) pro výměnu dat v mezipaměti.</p>
+
+<div class="section">
+<h4>Důležité upozornění:</h4>
+<p>Než nainstalujete jakékoli disky SSD, které budete chtít využívat jako mezipaměť, přečtěte si následující poznámky:</p>
+<ul>
+<li>Cílem povolení mezipaměti SSD je zvýšení výkonu náhodného přístupu k malým částem dat, ke kterým se v úložném místě často přistupuje. Například rozsáhlé operace čtení i zápisu (např. datový proud HD videa) a zcela náhodné vzory čtení dat postrádají vzory pro znovunačítání, takže použití mezipaměti SSD žádné významné výhody nepřináší. U obecných aplikací se doporučuje povolit možnost <b>Přeskočit sekvenční vstup/výstup</b>, aby mohl sekvenční vstup/výstup stále procházet k jednotkám úložného místa.</li>
+<li>V seznamu kompatibilních zařízení na <a href="http://www.synology.com/" target=_blank>webových stránkách Synology</a> najdete informace o tom, které disky SSD lze použít jako mezipaměť zařízení DiskStation.</li>
+<li class="disable-alpine">Mezipaměť SSD vyžaduje v závislosti na velikosti mezipaměti určité množství systémové paměti. Připojením mezipaměti SSD s větší kapacitou bude pravděpodobně nutné upgradovat paměť zařízení DiskStation. Aby byl systém stabilní a rychlý, lze pro mezipaměť SSD využít pouze 1/4 předinstalované systémové paměti. Každý 1 GB mezipaměti SSD vyžaduje přibližně 416 KB systémové paměti (rozšiřitelnou paměť lze započítat)**. Pokud je tedy konfigurace mezipaměti jen pro čtení nastavena na 2 x 128 GB SSD, bude celková velikost činit 256 GB a bude vyžadovat alespoň 104 MB paměti; pokud je konfigurace mezipaměti pro čtení-zápis nastavena na 2 x 128 GB SSD, bude celková velikost mezipaměti činit 128 GB a bude vyžadovat alespoň 52 MB paměti. Pokud není k dispozici dostatek paměti, bude vytváření mezipaměti SSD omezeno, případně bude omezena velikost mezipaměti SSD.</li>
+<li class="enable-alpine">Každý 1 GB mezipaměti SSD vyžaduje přibližně 416 KB systémové paměti (rozšiřitelnou paměť lze započítat) a maximální velikost mezipaměti je 930 GB. Pokud je tedy konfigurace mezipaměti jen pro čtení nastavena na 2 x 128 GB SSD, bude celková velikost činit 256 GB a bude vyžadovat alespoň 104 MB paměti; pokud je konfigurace mezipaměti pro čtení-zápis nastavena na 2 x 128 GB SSD, bude celková velikost mezipaměti činit 128 GB a bude vyžadovat alespoň 52 MB paměti. Pokud není k dispozici dostatek paměti, bude vytváření mezipaměti SSD omezeno, případně bude omezena velikost mezipaměti SSD.</li>
+<li>V technických parametrech našich modelů na <a href="http://www.synology.com/" target=_blank>webových stránkách Synology</a> zjistíte maximální možnou velikost mezipaměti SSD pro vaše zařízení DiskStation.</li>
+<li>Pokud dojde k omezení mezipaměti SSD pro čtení-zápis, bude funkce mezipaměti vypnuta a systém začne zapisovat (tedy synchronizovat) data z mezipaměti SSD na disky HDD. Po dokončení synchronizace dat nedojde k žádné ztrátě dat, ani kdyby u mezipaměti pro čtení-zápis došlo k zhroucení.</li>
+<li>Mezipaměť pro čtení-zápis nelze používat společně se službou Time Backup. Pokud například vytvoříte mezipaměť SSD pro čtení-zápis, nebude možné spustit nástroj Time Backup. Naopak platí, že pokud spustíte nástroj Time Backup, nebudete moci vytvořit mezipaměť SSD pro čtení-zápis.</li>
+</ul>
+</div>
+
+<h4>Postup připojování mezipaměti SSD:</h4>
+<ol>
+  <li>Nainstalujte do zařízení DiskStation moduly SSD. Nejdříve si přečtěte poznámky uvedené výše.</li>
+  <li>Správu těchto nastavení provedete v části <strong>Správce úložiště</strong> > <strong>Mezipaměť SSD</strong>. Klikněte na možnost <b>Vytvořit</b>.</li>
+<li>Vyberte režim mezipaměti (k dispozici pouze u modelů s podporou mezipaměti pro čtení-zápis).</li>
+<li>Vyhledejte rozevírací nabídku a vyberte svazek nebo jednotku iSCSI LUN (úroveň bloku), ke které chcete připojit mezipaměť SSD.</li>
+<li>Vyberte ze seznamu moduly SSD. Data uložená na discích SSD budou vymazána. Ověřte, zda nebyla odstraněna důležitá data.</li>
+<li>Klikněte na možnost <b>Použít</b>.</li>
+</ol>
+
+<h4>Postup vynechání sekvenčního vstupu/výstupu: </h4>
+<p>Pokud má váš cílový svazek nebo jednotka iSCSI LUN (úroveň bloku) vynikající výkon vstupu/výstupu, můžete pro mezipaměť SSD pozastavit mezipaměťový sekvenční vstup/výstup a získat přímý přístup k datům na discích, vyšší rychlost a lepší výkon. </p>
+<ol>
+<li>Kliknutím na možnost <strong>Konfigurovat</strong> otevřete okno konfigurace.</li>
+<li>Zaškrtněte možnost <strong>Přeskočit sekvenční vstup/výstup</strong>. </li>
+</ol>
+
+
+<h4>Postup odebrání mezipaměti SSD:</h4>
+<ol>
+<li>Kliknutím na možnost <b>Odebrat</b> trvale odeberete tuto mezipaměť SSD ze zařízení DiskStation.</li>
+<li>V případě mezipaměti pro čtení-zápis ji musíte odebrat podle tohoto postupu (i pokud je zařízení DiskStation vypnuté), v opačném případě dojde k poruše svazku, protože část dat je uložena pouze v mezipaměti.</li>
+</ol>
+
+<div class="section">
+<h4>Poznámka:</h4>
+<ul>
+<li>Při připojování nebo odebírání mezipaměti SSD pozastaví systém všechny související služby (např. sdílené složky, instalované balíčky, aktuální připojení atd.)</li>
+<li>Pokud není během spouštění vyhledána na úložišti mezipaměť pro čtení-zápis, nebude úložiště připojeno. Vyhledejte a přeinstalujte disky SSD zařízení DiskStation a úložiště připojte opětovným spuštěním. Pokud disky SSD nemůžete najít, bude potřeba připojení úložiště vynutit. Informace najdete v části <a href="space.html">Svazek</a> nebo <a href="iscsilun.html">iSCSI LUN</a>.</li>
+</ul>
+</div>
+
+<h4>Postup opravy mezipaměti SSD:</h4>
+<ul>
+<li><strong>Mezipaměť pro čtení-zápis:</strong> Pokud došlo k poruše některého z disků SSD, můžete jej opravit podle níže uvedeného postupu.<ol>
+<li>Poškozený disk SSD nahraďte novým. (Nový disk SSD musí mít stejnou velikost jako původní disk a musí se jednat o stejný model).</li>
+<li>Klikněte na tlačítko <b>Opravit</b>.</li>
+<li>Vyberte disk SSD ze seznamu.</li>
+<li>Klikněte na možnost <b>Použít</b>.</li>
+</ol>
+</li>
+<li><strong>Mezipaměť jen pro čtení:</strong> Dojde-li k poruše jednoho z disků SSD, odeberte mezipaměť a vadný disk SSD vyměňte. Poté kliknutím na možnost <strong>Vytvořit</strong> vytvoříte novou konfiguraci mezipaměti.</li>
+</ul>
+
+
+<h3>Průvodce pamětí SSD</h3>
+<p>Díky této funkci můžete provést výpočet a zobrazení celkové velikosti a počtu naposledy otevíraných souborů na konkrétním svazku. Pokud jste ještě na vybraném svazku nevytvořili žádné mezipaměti SSD, lze tyto informace využít pro posouzení toho, kolik mezipaměti SSD je vhodné pro váš systém. Pokud jste předtím na vybraném svazku vytvořili mezipaměť SSD, budou zde zobrazeny údaje o analýze a využití mezipaměti.</p>
+
+<h4>Postup používání aplikace Průvodce pamětí SSD:</h4>
+
+<ol>
+<li>Kliknutím na možnost <b>Průvodce pamětí SSD</b> otevřete průvodce.</li>
+<li>Vyberte svazek pro výpočet a poté klikněte na možnost <b>Další</b>.</li>
+<li>Průvodce automaticky začne vypočítávat celkovou velikost a počet naposledy otevíraných souborů na vybraném svazku. Doba výpočtu se může lišit v závislosti na konkrétním prostředí.</li>
+</ol>
+<p>_____<br> * Mezipaměť SSD je k dispozici pouze u některých modelů.<br> <span class="disable-alpine" style="display: inline;">** Toto se netýká mezipamětí SSD pro čtení-zápis vytvořených v DSM verze 5.1 nebo starších. To znamená, že každý 1 GB mezipaměti SSD vytvořený v dřívější verzi než DSM 5.2 bude i v systému DSM 5.2 vyžadovat 4 MB systémové paměti.</span></p>
+</body>
+</html>

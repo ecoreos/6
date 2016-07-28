@@ -1,0 +1,149 @@
+
+[HA_ConfSyncError]
+Subject: Klaster wysokiej dostępności %HOSTNAME% wykrył błąd synchronizacji podczas sprawdzania konfiguracji systemu.
+
+Szanowny Użytkowniku,
+
+Klaster wysokiej dostępności %HOSTNAME% wykrył błąd synchronizacji podczas sprawdzania konfiguracji systemu serwera aktywnego i pasywnego. System podjął próbę naprawy błędu, przeprowadzając pełną synchronizację konfiguracji systemu. Więcej informacji można znaleźć w logach systemu lub na stronie dziennika High Availability Manager.
+
+Akcja: %HA_ACTION%
+Błąd: %HA_PARAM_1%
+
+Z poważaniem,
+%COMPANY_NAME%
+
+
+[HA_FailOver]
+Subject: Wykryto błąd w klastrze high-availability %HOSTNAME%.
+
+Szanowny Użytkowniku!
+
+W klastrze high-availability %HOSTNAME% wykryto błąd. System przełączy usługi na serwer pasywny. Aby uzyskać więcej informacji, zobacz logi systemu.
+
+Akcja: %HA_ACTION%
+Błąd: %HA_PARAM_1%
+
+Z poważaniem
+%COMPANY_NAME%
+
+
+[HA_MismatchedSsdCache]
+Subject: Dyski pamięci podręcznej SSD w klastrze wysokiej dostępności %HOSTNAME% nie są identyczne
+
+Szanowny Użytkowniku,
+
+Dyski należące do następującej pamięci podręcznej SSD serwera pasywnego %HA_PARAM_1% różnią się od dysków serwera aktywnego: Pamięć podręczna SSD %HA_PARAM_2%
+
+Więcej informacji można znaleźć na stronie dziennika High Availability Manager.
+
+Akcja: %HA_ACTION%
+
+Z poważaniem,
+%COMPANY_NAME%
+
+
+[HA_SplitBrain]
+Subject: Wykryto błąd rozdwojenia jaźni w klastrze high-availability %HOSTNAME%
+
+Szanowny Użytkowniku!
+
+Wykryto błąd rozdwojenia jaźni w klastrze high-availability %HOSTNAME%. Aby uzyskać więcej informacji, zobacz logi systemu.
+
+Akcja: %HA_ACTION%
+
+Z poważaniem
+%COMPANY_NAME%
+
+
+[HA_StatusChange]
+Subject: Stan klastra wysokiej dostępności %HOSTNAME% zmienił się z %HA_PARAM_1% na %HA_PARAM_2%.
+
+Szanowny Użytkowniku,
+
+Stan klastra wysokiej dostępności %HOSTNAME% zmienił się z %HA_PARAM_1% na %HA_PARAM_2%. Więcej informacji można znaleźć w logach systemu lub na stronie dziennika High Availability Manager.
+
+Akcja: %HA_ACTION%
+Opis: %HA_PARAM_3%
+
+Z poważaniem,
+%COMPANY_NAME%
+
+
+[HA_SwitchFail]
+Subject: Przełączanie usług klastra high-availability %HOSTNAME% nie powiodło się
+
+Szanowny Użytkowniku!
+
+Próba przełączenia usług na serwer pasywny klastra high-availability %HOSTNAME% nie powiodła się. Aby uzyskać więcej informacji, zobacz logi systemu.
+
+Akcja: %HA_ACTION%
+
+Z poważaniem
+%COMPANY_NAME%
+
+
+[HA_SwitchFinished]
+Subject: Klaster wysokiej dostępności %HOSTNAME% działa teraz na %HA_PARAM_1%.
+
+Szanowny Użytkowniku,
+
+Usługi klastra high-availability %HOSTNAME% są teraz uruchomione na %HA_PARAM_1%. Więcej informacji można znaleźć w logach systemu lub na stronie dziennika High Availability Manager.
+
+Akcja: %HA_ACTION%
+
+Z poważaniem,
+%COMPANY_NAME%
+
+
+[HA_SwitchOver]
+Subject: Przełączanie usług klastra high-availability %HOSTNAME% na %HA_PARAM_1%.
+
+Szanowny Użytkowniku!
+
+Zainicjowane zostało przełączenie usług klastra high-availability %HOSTNAME%. Usługi zostaną przełączone na %HA_PARAM_1%. Aby uzyskać więcej informacji, zobacz logi systemu.
+
+Akcja: %HA_ACTION%
+
+Z poważaniem
+%COMPANY_NAME%
+
+
+[HA_SwitchOver_With_Reason]
+Subject: Klaster high-availability %HOSTNAME% zainicjował przełączenie na %HA_PARAM_1%.
+
+Szanowny Użytkowniku!
+
+W klastrze high-availability %HOSTNAME% zostało zainicjowane przełączenie. Usługi zostaną przełączone na %HA_PARAM_1%. Aby uzyskać więcej informacji, zobacz logi systemu.
+
+Akcja: %HA_ACTION%
+Powód: %HA_PARAM_2%
+
+Z poważaniem
+%COMPANY_NAME%
+
+
+[HA_SyncComplete]
+Subject: Pełna replikacja danych klastra wysokiej dostępności %HOSTNAME% została zakończona.
+
+Szanowny Użytkowniku,
+
+Pełna replikacja danych klastra wysokiej dostępności %HOSTNAME% została zakończona. Serwer pasywny jest teraz gotowy do przejęcia usług, gdyby przełączenie było konieczne. Więcej informacji można znaleźć w logach systemu lub na stronie dziennika High Availability Manager.
+
+Akcja: %HA_ACTION%
+
+Z poważaniem,
+%COMPANY_NAME%
+
+
+[HA_UnbindLocal]
+Subject: Host lokalny został usunięty z klastra high-availability
+
+Szanowny Użytkowniku,
+
+Usunięto %HA_PARAM_1% z klastra High-availability %HA_PARAM_2%. Sprawdź pliki logów systemowych, aby uzyskać więcej informacji.
+
+Akcja: %HA_ACTION%
+
+Z poważaniem
+%COMPANY_NAME%
+

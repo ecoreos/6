@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>로그 센터</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+
+</head>
+<body>
+<h2>아카이브 설정</h2>
+
+<p><strong>아카이브 설정</strong> 페이지는 로그 센터에서 수신한 로그를 아카이브하는 방법과 장소를 구성하는 옵션을 제공합니다. 아래 옵션을 사용하여 로그의 아카이브를 자동으로 생성하는 규칙 및 저장 위치를 지정합니다.</p>
+
+
+<h3>아카이브용 저장소 대상</h3>
+
+<p>대상은 로그 센터에 의해 수신한 로그를 저장 및 아카이브하는 폴더를 가리킵니다. <strong>위치 선택</strong>을 클릭하고 폴더를 선택합니다.</p>
+<p>DiskStation의 로컬 로그가 동일한 대상에 아카이브되도록 하려면, <strong>위에 지정된 저장소 위치에 로컬 로그를 아카이브합니다.</strong> 상자를 선택합니다. 대부분의 경우, 이 옵션은 로컬 로그에 많은 저장 공간을 제공하여 사용자가 좀더 완전한 시스템 로그를 관리할 수 있도록 해줍니다.</p>
+
+
+<!--DSM#61793: Describe how logs are archived in data volume-->
+<div class="section">
+<h4>참고:</h4>
+<p>로컬 로그(시스템, 연결 및 파일 전송 로그)는 제한된 저장소를 가진 시스템 파티션에 저장됩니다. <strong>위에 지정된 저장소 위치에 로컬 로그를 아카이브합니다</strong>를 활성화하면 모든 로그가 <strong>아카이브 규칙</strong>에 따라 지정된 위치에 아카이브됩니다. 아카이브된 로컬 로그를 탐색하려면 <strong>로그 아카이브 열기</strong>를 클릭하고 <strong>SYNOSYSLOGDB__LOCALARCH.DB</strong>를 선택합니다.</p>
+</div>
+
+
+<h3>아카이브 규칙</h3>
+
+<p>로그는 <strong>아카이브 규칙</strong> 섹션에서 정의된 조건에 따라 자동으로 아카이브됩니다. 로그 데이터베이스 크기가 지정된 크기에 도달하고, 개별 로그의 총 수가 지정된 수에 도달하거나 로그가 지정된 수명에 달하면 자동으로 로그가 아카이브되도록 할 수 있습니다.</p>
+
+<h3>아카이브 형식</h3>
+<p>이 섹션은 다음 옵션을 포함합니다.</p>
+<ul>
+<li><strong>기본 형식 이외에 텍스트 형식으로 로그를 아카이브합니다:</strong> 기본 SQLite 파일 이외에 일반 텍스트 파일로 아카이브를 저장합니다.</li>
+<li><strong>로그 아카이브 압축:</strong> 로그 아카이브를 압축된 ZIP 형식의 파일로 저장합니다.</li>
+<li><strong>장치에 따라 별개로 로그 아카이브:</strong> DiskStation에 로그를 전달하는 개별 클라이언트 장치에 별도의 아카이브를 저장합니다.</li>
+</ul>
+
+</body>

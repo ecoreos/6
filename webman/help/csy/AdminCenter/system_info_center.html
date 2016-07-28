@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Informační centrum</title>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h1>Informační centrum</h1>
+<p>Informační centrum zobrazuje základní informace týkající se různých aspektů zařízení DiskStation, například specifikace hardwaru, sítě, úložiště a služeb. Informační centrum se nachází v části <strong>Ovládací panel</strong> > <strong>Informační centrum</strong>.</p>
+<h2><a name="general"></a>Obecné</h2>
+<p>Na kartě <b>Obecné</b> se zobrazují základní informace o zařízení DiskStation, například sériové číslo, název modelu, velikost fyzické paměti, verze systému DSM, informace o čase, teplota nebo externí zařízení.</p>
+
+<h3 class="disable-eds14">Teplota*</h3>
+<p class="disable-eds14">Teplota zařízení DiskStation se znázorňuje zelenými nebo oranžovými kontrolkami:</p>
+
+<ul class="disable-eds14">
+<li><strong>Zelená:</strong> Teplota je normální.</li>
+<li><strong>Oranžová</strong>: Teplota zařízení DiskStation je příliš vysoká. Pokud teplota zařízení DiskStation zůstane i nadále vysoká, může dojít k jeho vypnutí z důvodu přehřátí.</li>
+</ul>
+
+
+<h2><a name="network"></a>Síť</h2>
+<p>Na kartě <b>Síť</b> se zobrazují informace o síti, například server DNS, IP adresa, maska podsítě a další.</p>
+
+<h2><a name="storage"></a>Úložiště</h2>
+<p class="disable-eds14">Na kartě <b>Úložiště</b> se zobrazují informace o využití svazku a o stavu pevného disku.</p>
+<p class="enable-eds14">Na kartě <strong>Úložiště</strong> se zobrazují informace o využití úložiště a o stavu zařízení externích úložišť.</p>
+
+<h3 class="disable-eds14">Stav pevného disku</h3>
+
+<p class="disable-eds14">Níže jsou uvedeny možné stavy interního pevného disku:</p>
+
+<ul class="disable-eds14">
+<li><strong>Není nainstalován žádný disk:</strong> V příslušném slotu pro pevný disk není nainstalován žádný disk.</li>
+<li><strong>Není inicializováno:</strong> Na pevném disku nejsou vytvořeny systémový oddíl a svazek.</li>
+<li><strong>Normální:</strong> Na pevném disku je možné používat systémový oddíl a svazek.</li>
+<li><strong>Inicializováno:</strong> Je vytvořen systémový oddíl, ale není vytvořen žádný svazek.</li>
+<li><strong>Systémový oddíl selhal:</strong> Systémový oddíl na pevném disku není dostupný.</li>
+<li><strong>Zhroucení:</strong> Přístup k svazku na pevném disku se nezdařil. Doporučujeme pevný disk vyměnit.</li>
+</ul>
+
+
+
+
+<div class="section disable-eds14">
+
+<h4>Poznámka:</h4>
+<p>Aby systém fungoval normálně, musí být k dispozici alespoň jeden disk se stavem <b>Normální</b> nebo <b>Inicializováno</b>.</p>
+
+</div>
+
+
+<h2><a name="service"></a>Služba</h2>
+<p>Na kartě <b>Služba</b> se zobrazuje seznam služeb a nainstalovaných balíčků, včetně možností jednotlivé služby či balíčky zapnout nebo vypnout. U některých služeb a balíčků se navíc nacházejí možnosti testu připojení nebo volby, jestli má být k jednotlivým službám či balíčkům umožněn přístup přes bránu firewall.</p>
+
+<h4>Úprava nastavení služby nebo balíčku:</h4>
+<ol>
+<li>Zde jsou k dispozici následující možnosti:<ul>
+	  <li><strong>Povolit:</strong> Povolte nebo zakažte služby nebo balíček.</li>
+	  <li><strong>Povolit prostřednictvím brány firewall:</strong> V části <strong>Ovládací panel</strong> > <strong>Externí přístup</strong> > <strong>Konfigurace směrovače</strong> je možné přidávat nebo odebírat porty používané službou nebo balíčkem, a tak službě nebo balíčku umožnit průchod přes bránu firewall zařízení DiskStation.</li>
+	  <li><strong>Nastavení:</strong> Vyberte síťové rozhraní, jehož nastavení brány firewall chcete zobrazit a spravovat. Jestliže vyberete možnosti <strong>Vše</strong>, je možné zobrazit a spravovat nastavení brány firewall všech síťových rozhraní.</li>
+	  <li><strong>Vyzkoušet připojení:</strong> Vyzkoušejte porty používané službami a balíčky. Je možné vyzkoušet, jestli zařízení mají přístup ke službám a balíčkům z externí sítě.</li>
+    </ul>
+</li>
+<li>Kliknutím na možnost <strong>Uložit</strong> změny uložíte, kliknutím na možnost <strong>Obnovit</strong> změny zrušíte. </li>
+</ol>
+
+<h2>Účet Synology</h2>
+<p>Účet Synology je dobře integrovaná webová platforma, která uživatelům pomáhá používat následující služby nabízené společností Synology:</p>
+
+<ul>
+<li>Služby QuickConnect a DDNS pro zařízení DiskStation</li>
+<li>Správa softwarových licencí</li>
+<li>Naléhavá podpora Synology</li>
+<li>Přihlášení k odběru zpráv eNews</li>
+<li>Historie nákupů produktů Synology</li>
+</ul>
+
+<div class="section">
+<h4>Poznámka:</h4>
+<p>K účtu Synology je možné se přihlásit také pomocí účtu sociální sítě (Facebook, Google+ a LinkedIn).</p>
+</div>
+
+<h4>Registrace nebo přihlášení k účtu Synology:</h4>
+
+<ol>
+<li>Přejděte do části <strong>Ovládací panel</strong> > <strong>Informační centrum</strong> > <strong>Účet Synology</strong>.</li>
+<li>Klikněte na možnost <strong>Přihlásit se nebo zaregistrovat účet Synology</strong>.</li>
+<li>Zadejte přihlašovací údaje uživatele nebo si po kliknutí na možnost <strong>Zaregistrovat</strong> zaregistrujte si účet Synology. Případně se můžete přihlásit pomocí účtu sociální sítě.</li>
+</ol>
+
+
+<h4>Správa účtu Synology:</h4>
+
+<ol>
+<li>Kliknutím na možnost <strong>Správa účtu</strong> přejděte do webové platformy.</li>
+<li>Podle pokynů webu přejděte do části, ve které je možné provádět správu účtu Synology.</li>
+</ol>
+
+<h4>Odhlášení od účtu Synology:</h4>
+
+<p>Chcete-li se odhlásit od účtu Synology, klikněte na možnost <strong>Změnit účet</strong>.</p>
+
+<div class="section">
+<h4>Poznámka:</h4>
+<p>Odhlášení od účtu Synology může způsobit pozastavení přidružených služeb poskytovaných společností Synology (např. QuickConnect a DDNS).</p>
+</div>
+
+<p class="disable-eds14">____<br> * K dispozici pouze u některých modelů. </p>
+
+</body>
+</html>

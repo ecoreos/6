@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>File Station</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2>Mount Remote Folders</h2>
+
+<p>
+You can mount remote folders from remote servers (such as network computers or other Synology NAS devices) to navigate and manage the mounted folders via File Station.
+</p>
+
+
+
+
+
+<h4>To mount a remote CIFS shared folder*:</h4>
+<ol>
+<li>Click <b>Tools</b> > <b>Mount Remote Folder</b> > <strong>CIFS Shared Folder</strong>.</li>
+
+<img src="about:blank" class="help_image"/>
+
+<li>In the <b>Folder</b> field, specify the remote folder path in the format of <code>\\Remote_Server\Remote_Folder</code>, such as <code>\\192.168.0.2\share</code> or <code>\\chad\cheeseburger\pictures</code>.</li>
+<li>If the remote server requires access privileges to the remote folder, enter your user credentials of the remote server in the <b>Account name</b> and <b>Password</b> fields.</li>
+<li>Click <b>Browse</b> to select or create an empty destination folder on your DiskStation for mounting the remote folder.</li>
+
+<img src="about:blank" class="help_image"/>
+
+<li>Tick <b>Mount automatically on startup</b> if you want DiskStation to mount this remote folder on every system startup or reboot.</li>
+<li>Click <b>Mount</b> to have the remote folder mounted to the destination folder. You can now navigate and manage the remote folder from your DiskStation.</li>
+</ol>
+
+<h4>To mount a remote NFS shared folder:</h4>
+
+<ol>
+<li>Click <b>Tools</b> > <b>Mount Remote Folder</b> > <b>NFS Shared Folder</b>.</li>
+
+<img src="about:blank" class="help_image"/>
+
+<li>In the <b>Folder</b> field, specify the remote folder path in the format of <code>Remote_Server:/Remote_Folder_Path</code>, such as <code>192.168.0.2:/volume1/share</code>.</li>
+<li>Select the desired NFS version and transport protocol.</li>
+<li>Click <b>Browse</b> to select or create an empty destination folder on your DiskStation for mounting the remote folder.</li>
+
+<img src="about:blank" class="help_image"/>
+
+<li>Tick <b>Mount automatically on startup</b> if you want your DiskStation to mount this remote folder on every system startup or reboot.</li>
+<li>Click <b>Mount</b> to have the remote folder mounted to the destination folder. You can now navigate and manage the remote folder from your DiskStation.</li>
+</ol>
+
+<div class="section">
+<h4>Note:</h4>
+<p>NFSv4 only supports the TCP protocol.</p>
+</div>
+
+<h4>To unmount a remote folder:</h4>
+<ol>
+<li>Select the remote folder you want to unmount, and click <b>Tools</b> > <b>Unmount</b>.</li>
+
+<img src="about:blank" class="help_image"/>
+
+<li>Alternatively, simply right-click on the remote folder and select <b>Unmount</b>.</li>
+
+<img src="about:blank" class="help_image"/>
+
+</ol>
+
+<div class="section">
+<h4>Note:</h4>
+<ul>
+<li>The maximum number of concurrent remote folders is 100.</li>
+<li>You are only allowed to mount remote folders from a remote server that supports the CIFS or the NFS protocols.
+</li>
+<li>Remote folders can only be mounted to subfolders under shared folders.</li>
+<li class="enable-dockerx64">Mounting remote folders is only supported in high privilege mode. To use this feature, go to the Docker package on your host DSM, select the <strong>Docker DSM</strong> you want to enable encrypted shared folders for, click <strong>Edit</strong> and tick the box next to <strong>Execute container using high privileges</strong>.</li>
+</ul>
+</div>
+
+
+<p>____<br />* Available on specific models only.</p>
+
+</body>
+</html>

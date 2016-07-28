@@ -1,0 +1,95 @@
+ <!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Изменение типа RAID тома или группы дисков — Справка Synology DSM</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="This article provides instructions to change the RAID type of existing volumes and disk groups on your DiskStation."><link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Изменить тип RAID тома или группы дисков</h2>
+
+<p>Типы RAID тома и группы дисков можно изменять, не опасаясь того, что существующие данные будут утеряны. Например, можно создать том RAID 1 на DiskStation и позднее изменить его на RAID 5 в случае установки дополнительных жестких дисков. Эта статья содержит инструкции по изменению типа RAID существующих томов и групп дисков на DiskStation.</p>
+<h3>Ограничения, связанные с типом RAID</h3>
+
+<p>Только некоторые типы RAID можно изменить на определенные типы RAID. Для получения дополнительной информации см. таблицу ниже:</p>
+
+<table>
+  <tr>
+    <th width="50%">Тип RAID</th>
+    <th width="50%">Можно изменить на...</th>
+  </tr>
+  <tr>
+    <td>Basic</td>
+    <td>RAID 1<br /> RAID 5</td>
+  </tr>
+  <tr>
+    <td>RAID 1</td>
+    <td>RAID 5</td>
+  </tr>
+  <tr>
+    <td>RAID 5</td>
+    <td>RAID 6</td>
+  </tr>
+
+</table>
+
+<div class="section">
+<h4>Пример:</h4>
+<p>RAID 1 можно изменить на RAID 5, но RAID 5 нельзя изменить на RAID 1.</p>
+</div>
+
+
+<h3> Требования к жестким дискам</h3>
+
+<p>Чтобы изменить тип RAID тома или группы дисков, необходимо чтобы в DiskStation было установлено достаточное количество жестких дисков. Ниже перечислено минимальное количество дисков для каждого типа RAID.</p>
+
+<table>
+  <tr>
+    <th width="50%">Нужный тип RAID</th>
+    <th width="50%">Требуется жестких дисков</th>
+  </tr>
+  <tr>
+    <td>RAID 1</td>
+    <td>2 или 4</td>
+  </tr>
+  <tr>
+    <td>RAID 5</td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>RAID 6</td>
+    <td>4</td>
+  </tr>
+</table>
+
+<div class="section">
+<h4>Пример:</h4>
+<p>Для изменения тома RAID 1 на RAID 5 в целом потребуется не менее трех жестких дисков (т. е. два жестких диска, принадлежащих тому RAID 1, и один свободный жесткий диск для добавления к тому).</p>
+</div>
+
+<h3>Изменение типа RAID</h3>
+
+<p>В следующем примере мы изменим тип тома <strong>Базовый</strong> на <strong>RAID 1</strong>.</p>
+
+<div class="section">
+<h4>Перед началом работы:</h4>
+<ul>
+<li>Убедитесь, что состояние тома или группы дисков является <b>Нормальным</b>.</li>
+<li>При добавлении к тому или группе дисков новых жестких дисков их объем должен быть больше самого малого жесткого диска в томе или группе дисков.</li>
+<li>Состояние новых жестких дисков должно быть <b>Инициализировано</b> или <b>Не инициализировано</b>.</li></ul>
+</div>
+
+<h4>Изменение типа RAID тома:</h4>
+
+<ol>
+<li>Откройте <strong>Диспетчер хранения</strong>.</li><img src="about:blank" class="help_image"/><li>Откройте <b>Том</b>. В случае изменения типа RAID группы дисков откройте вкладку <b>Группа дисков</b>.</li>
+<li>Выберите том, который необходимо изменить, и нажмите <b>Управление</b>.</li><img src="about:blank" class="help_image"/><li>Когда откроется окно мастера настройки, выберите <b>Изменить тип RAID</b>. Затем нажмите <b>Далее</b>.</li><img src="../../../online_img/dsm/StorageManager/volume_diskgroup_change_raid_type/change_raid_type.png" class="help_image"/><li>Выберите новый тип RAID тома. Нажмите <b>Далее</b>.</li><img src="../../../online_img/dsm/StorageManager/volume_diskgroup_change_raid_type/choose_raid.png" class="help_image"/><li>Выберите жесткие диски, которые вы хотите добавить к существующему тому. Затем нажмите <b>Далее</b>.</li><img src="../../../online_img/dsm/StorageManager/volume_diskgroup_change_raid_type/choose_disks.png" class="help_image"/><li>Выполните инструкции мастера для завершения операции. Обратите внимание, что существующие данные на добавленном жестком диске будут удалены.</li></ol>
+
+</body>
+</html>

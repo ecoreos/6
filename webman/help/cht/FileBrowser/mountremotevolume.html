@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>File Station</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2>掛載遠端資料夾</h2>
+
+<p>您可以透過 File Station 掛載遠端伺服器 (例如網路上的電腦或其他 Synology NAS) 上的遠端資料夾，即可藉由 File Station 輕鬆瀏覽、管理掛載資料夾。</p>
+
+
+
+
+
+<h4>若要掛載遠端 CIFS 共用資料夾*：</h4>
+<ol>
+<li>按一下<b>工具</b> &gt; <b>掛載遠端資料夾</b> &gt; <strong>CIFS 共用資料夾</strong>。</li>
+<img src="about:blank" class="help_image"/>
+<li>在<b>資料夾</b>欄位中，以 <code>\\遠端伺服器\遠端資料夾</code>格式來指定遠端資料夾路徑，例如 <code>\\192.168.0.2\share</code> 或 <code>\\chad\cheeseburger\pictures</code>。</li>
+<li>如果遠端伺服器要求存取遠端資料夾的權限，請在<b>帳號名稱</b>及<b>密碼</b>欄位輸入遠端伺服器上的使用者帳號密碼。</li>
+<li>按一下<b>瀏覽</b>，在 DiskStation 上選擇或新增空白的目的地資料夾，用來掛載遠端資料夾。</li>
+<img src="about:blank" class="help_image"/>
+<li>如果希望 DiskStation 在每次系統開機或重新開機時自動掛載此遠端資料夾，請勾選<b>開機時自動掛載</b>。</li>
+<li>按一下<b>掛載</b>，即可掛載遠端資料夾至目的地資料夾。從 DiskStation 便可瀏覽、管理遠端資料夾。</li>
+</ol>
+
+<h4>若要掛載遠端 NFS 共用資料夾：</h4>
+
+<ol>
+<li>按一下<b>工具</b> &gt; <b>掛載遠端資料夾</b> &gt; <b>NFS 共用資料夾</b>。</li>
+<img src="about:blank" class="help_image"/>
+<li>在<b>資料夾</b>欄位中，以 <code>遠端伺服器:/遠端資料夾路徑</code>格式來指定遠端資料夾路徑，例如 <code>192.168.0.2:/volume1/share</code>。</li>
+<li>選擇想要的 NFS 版本及傳輸通訊協定。</li>
+<li>按一下<b>瀏覽</b>，在 DiskStation 上選擇或新增空白的目的地資料夾，用來掛載遠端資料夾。</li>
+<img src="about:blank" class="help_image"/>
+<li>如果希望 DiskStation 在每次系統開機或重新開機時自動掛載此遠端資料夾，請勾選<b>開機時自動掛載</b>。</li>
+<li>按一下<b>掛載</b>，即可掛載遠端資料夾至目的地資料夾。從 DiskStation 便可瀏覽、管理遠端資料夾。</li>
+</ol>
+
+<div class="section">
+<h4>注意：</h4>
+<p>NFSv4 僅支援 TCP 通訊協定。</p>
+</div>
+
+<h4>若要卸載遠程資料夾：</h4>
+<ol>
+<li>選擇想要卸載的遠端資料夾，接著按一下<b>工具</b> &gt; <b>卸載</b>。</li>
+<img src="about:blank" class="help_image"/>
+<li>另外，也可用右鍵按一下遠端資料夾，然後選擇<b>卸載</b>。</li>
+<img src="about:blank" class="help_image"/>
+</ol>
+
+
+<div class="section">
+<h4>注意：</h4>
+<ul>
+<li>同時間可掛載的最大遠端資料夾數量為 100。</li>
+<li>只有當遠端伺服器支援 CIFS 或 NFS 通訊協定時，才可以掛載它的遠端資料夾。</li>
+<li>遠端資料夾僅可掛載至共用資料夾下的子資料夾。</li>
+<li class="enable-dockerx64">僅有高權限模式支援掛載遠端資料夾。若要使用此功能，前往主機的 Docker 套件，選擇想在其中啟動加密共用資料夾的 <strong>Docker DSM</strong>，按一下<strong>編輯</strong>並勾選<strong>使用更高的權限執行容器</strong>。</li>
+</ul>
+</div>
+
+
+<p>____<br /> * 僅適用於特定機型。</p>
+
+</body>
+</html>

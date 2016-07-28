@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+	<h2>HDD/SSD</h2>
+	<p>このセクションでは、DiskStation にインストールされた HDD/SSD の状態を管理することができます。HDD/SSD の性能を管理したり、状態を分析したりするためのオプションがあります。<strong>[ストレージマネージャ]</strong> &gt; <strong>[HDD/SSD]</strong> を選択して、これらのオプションを管理してください。</p>
+
+	<h4>HDD/SSD 情報を確認する：</h4>
+	<ol>
+		<li><b>[HDD/SSD]</b> タブを開きます。</li>
+		<li>リストからドライブを選択して開きます。ここに S.M.A.R.T. の状態、ボリューム情報、ディスクのモデル名、シリアル番号、ファームウェアのバージョン、温度などが表示されます。</li>
+	</ol>	
+	
+	<h4>状態をチェックする：</h4>
+    <ol>
+<li><b>[HDD/SSD]</b> タブを開きます。</li>
+	  <li>ドライブを選択します。</li>
+<li><b>［健康状態］</b> をクリックします。</li>
+	  <li><strong>[概要]</strong> タブを選択します。ここでは、ドライブの連続稼働時間、現在の温度、再接続/再認証回数、不良セクタの数、全体的な S.M.A.R.T. の状態等を確認できます。</li>
+<li><strong>S.M.A.R.T. を選択します。情報</strong> タブ表示された番号は、ドライブの状態をより詳しく診断する際に役に立ちます。</li>
+    </ol>
+
+<div class="section">
+<h4>注意：</h4>
+<p>
+SAS ドライブは S.M.A.R.T. 情報に対応していません。
+</p>
+</div>
+
+	<h4>S.M.A.R.T. テストを開始する：</h4>
+	<P>S.M.A.R.T.テストは、ドライブの状態を調査、報告してドライブ不良の可能性を警告します。エラーが検出されたときには、直ちにドライブを交換するようお勧めします。</P>
+    <ol>
+<li><strong>[HDD/SSD]</strong> タブを開きます。</li>
+<li>ドライブを選択します。</li>
+<li><b>[S.M.A.R.T. テスト]</b> をクリックします。</li>
+<li>テストの種類を選択し、<strong>[開始]</strong> をクリックすると、テストが開始されます。</li>
+<li>最新のテストの結果は、<b>「テスト結果」</b>セクションに表示されます。</li>
+    </ol>
+    <div class="section">
+<h4>注意：</h4>
+<p>テスト回数は、システム環境によって異なります。</p>
+</div>
+<h4>S.M.A.R.T. テストを予約する：</h4>
+<p>タスクを作成すると、S.M.A.R.T テストを自動的に実行するように予約できます。</p>
+    <ol>
+<li><strong>[テスト スケジューラ]</strong> タブを開きます。</li>
+<li><strong>[作成]</strong> をクリックして新しいタスクを設定します。</li>
+<li>次の設定を <strong>[全般]</strong> タブで編集します。</li>
+      <ul>
+<li><strong>タスク：</strong> タスクの名前を入力します。</li>
+<li><strong>S.M.A.R.T.テストの種類：</strong> クイックテスト、または拡張テストを選択します。</li>
+<li><strong>S.M.A.R.T.テストの対象ディスク：</strong> S.M.A.R.T. テストの対象となる HDD/SSD を選択します。</li>
+      </ul>
+<li><strong>[スケジュール]</strong> タブでは、次の設定を編集できます。</li>
+      <ul>
+<li><strong>日付：</strong> S.M.A.R.T. テストを実行するときを指定します。タS.M.A.R.T. テストは特定の曜日（毎日、週末、毎週日曜日など）、または特定の日（2015/10/21）に実行するように予約することができます。</li>
+<li><strong>回数：</strong> S.M.A.R.T. テストを何回実行するかを指定し、初回と最終回の時間を指定します。</li>
+      </ul>
+<li><strong>[OK]</strong> をクリックして終了します。</li>
+    </ol>
+
+<h4>Secure Erase を実行する：</h4>
+<ol>
+<li><b>[HDD/SSD]</b> タブを開きます。</li>
+<li>ドライブを選択し、<b>[セキュア消去]</b> をクリックします。</li>
+</ol>
+
+
+<div class="section">
+<h4>注意：</h4>
+<ul>
+<li>Secure Erase を拡張ユニットのドライブで実行することはできません。</li>
+<li>Secure Erase はドライブに保管されている全てのデータを完全に消去してしまいます。選択したドライブが使用されていないか、データがバックアップされているか確認してから作業を行ってください。.</li>
+<li>システムが Secure Erase を実行しているときには、選択したドライブは一時的にロックされ、作業が完了すると自動的にロックが解除されます。</li>
+<li>作業中に Secure Erase が正しく停止されなかった場合は、ユーザーインターフェイスで直接 Secure Erase を再度実行することができます。ドライブがロックされているのに削除された、または使用されている場合は、「synology」というパスワードを入力してドライブをロック解除してください。</li>
+</ul>
+</div>
+
+
+	<h3>HDD のための書込みキャッシュ サポートを有効にする</h3>
+	<p>書込みキャッシュサポートを有効にすると、DiskStation の性能が向上します。この機能は特定のハード ディスク モデルでしかサポートされていません。書き込みキャッシュサポートを使用している間は、データを保護するために UPS デバイスをご使用になることを強くお勧めします。また使用後は毎回システムをシャットダウンするようお薦めします。書き込みキャッシュを無効にすると、突然の停電によりデータが消失するリスクを低減することができますが、システムの性能が劣化します。</p>
+
+	<h4>書込みキャッシュ サポートを有効にする： </h4>
+	<ol>
+		<li><b>[キャッシュ管理] </b>タブを開きます。</li>
+		<li><b>[書き込みキャッシュを有効にする]</b> にチェックマークを付けます。デフォルトでは、この機能は有効になってます。</li>
+		<li><b>[適用] </b>をクリックします。</li>
+	</ol>
+	
+
+
+</body>
+</html>

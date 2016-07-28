@@ -1,0 +1,197 @@
+
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Netzwerk</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2><a name="wireless_ap"></a>Hotspot*</h2>
+<p>Ihr DiskStation-Ger&auml;t unterst&uuml;tzt die Erstellung eines Hotspots zur gemeinsamen drahtlosen Nutzung seiner Internetverbindung mit anderen Ger&auml;ten, wenn Sie einen WLAN-USB-Adapter installiert haben oder der DiskStation ein integriertes WLAN besitzt. Sie k&ouml;nnen Ihren DiskStation so einstellen, dass er als drahtloser Zugangspunkt (AP) oder WLAN-Router funktioniert, je nachdem, wie Sie das Internet nutzen m&ouml;chten.</p>
+
+<table>
+<tr>
+<th width="23%">Hotspot-Modus</th>
+<th width="77%">Beschreibung</th>
+</tr>
+<tr>
+<th>WLAN-AP</th>
+<td>
+<ul>
+<li>Schlie&szlig;t Ihr LAN mit dem WLAN-Netzwerk zusammen.</li>
+<li>Ihre LAN- und WLAN-Clients befinden sich im selben lokalen Netzwerk.</li>
+<li>Trifft zu, wenn Sie bereits &uuml;ber einen Router verf&uuml;gen und den DiskStation als zus&auml;tzlichen Zugangspunkt in einem bestehenden Netzwerk verwenden m&ouml;chten.</li> 
+<li>Erm&ouml;glicht die gemeinsame Nutzung von Netzwerkressourcen, wie DLNA-Ger&auml;ten, Druckern, Synology Web Assistant oder anderen Diensten, welche die &Uuml;bertragung &uuml;ber das Netzwerk nutzen.</li>
+<li>Der DHCP Server wird auf DiskStation-Ger&auml;ten deaktiviert, die als WLAN-APs fungieren. Zur erneuten Aktivierung des DHCP Servers des DiskStation entfernen Sie die WLAN-Dongles und starten Sie DiskStation neu.</li>
+<li>Bei Modellen mit mehreren LAN-Ports wird nur LAN 1 zur Verbindung mit dem WLAN-AP verwendet.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>WLAN-Router</th>
+<td>
+<ul>
+<li>Richtet ein WLAN-Netzwerk ein, in dem sich die Ger&auml;te in einem privaten Subnetz befinden.</li>
+</ul>
+</td>
+</tr>
+</table>
+
+
+<div class="section">
+<h4>Hinweis:</h4>
+
+<ol>
+<li>Einige Modelle erfordern den Anschluss eines WLAN-Dongles, um Hotspots zu erstellen. Eine komplette Liste der unterst&uuml;tzten WLAN-Dongles finden Sie unter <a href="http://www.synology.com/support/faq/444" target=_blank>www.synology.com</a>.</li>
+<li>F&uuml;r Nicht-DS213air-Modelle wird die Option WLAN-Hotspot von DSM 4.3 zu &bdquo;Wireless Router&ldquo; in DSM 5.0 und h&ouml;her umbenannt.</li>
+</ul>
+</ol>
+
+</div>
+
+<h3>Hotspot Einstellungen verwalten</h3>
+<p>In diesem Abschnitt wird beschrieben, wie Sie die Hotspot-Einstellungen Ihres DiskStation aktivieren und verwalten k&ouml;nnen.</p>
+
+
+<h4>DiskStation in einen Hotspot verwandeln:</h4>
+<ol>
+<li>Gehen Sie zu <strong>Systemsteuerung</strong> &gt; <strong>WLAN-Netzwerk</strong> &gt; <strong>Netzwerkabbildung</strong>. W&auml;hlen Sie <strong>WLAN-AP</strong> oder <strong>WLAN-Router</strong>.</li>
+<li>Gehen Sie auf die Registerkarte <strong>WLAN</strong>, und klicken Sie auf <strong>Bearbeiten</strong>, um die folgenden Einstellungen zu verwalten:</li>
+<ul>
+<li><strong>Name (SSID):</strong> Geben Sie einen Namen f&uuml;r das WLAN-Netzwerk ein.</li>
+<li><strong>Anzeigen/Ausblenden:</strong> W&auml;hlen Sie, ob das WLAN-Netzwerk f&uuml;r andere Ger&auml;te sichtbar sein soll.</li>
+<li><strong>WLAN-Modus:</strong> W&auml;hlen Sie einen WLAN-Standard. Jeder Standard unterst&uuml;tzt unterschiedliche Bandbreiten und Frequenzen.</li>
+<li><strong>Kanalbreite:</strong> W&auml;hlen Sie eine Kanalbreite aus (nur verf&uuml;gbar, wenn der 802.11n WLAN-Modus verwendet wird).</li>
+<li><strong>Kanal:</strong> Geben Sie eine Frequenz f&uuml;r das WLAN-Netzwerk ein. W&auml;hlen Sie f&uuml;r eine bessere Leistung eine Frequenz aus, die sich von Netzwerken in der N&auml;he unterscheidet.</li>
+<li><strong>&Uuml;bertragungsleistung:</strong> W&auml;hlen Sie eine Signalst&auml;rke des WLAN-Netzwerks aus.</li>
+<li><strong>Max. Verbindungen:</strong> W&auml;hlen Sie, wie viele Client Ger&auml;te sich mit dem Netzwerk verbinden k&ouml;nnen. Die h&ouml;chste Verbindungseinstellung ist 256.</li>
+<li><strong>WMM QoS aktivieren:</strong> WLAN Multimedia (WMM) QoS (Quality of Service) &uuml;ber WLAN. Mit dieser Option wird dem WLAN-Netzwerk erm&ouml;glicht, Verkehr zu priorisieren und zu optimieren, wie Ressourcen zwischen Anwendungen geteilt werden.</li>
+</ul>
+</ol>
+
+
+
+<h4>So richten Sie einen WLAN-Zeitplan ein:*</h4>
+<p>Die Aktivierung eines WLAN-Zeitplans erm&ouml;glicht Ihnen die Systemsteuerung, wann das WLAN-Netzwerk von DiskStation aktiv und erreichbar ist.</p>
+<ol>
+<li>Gehen Sie zur Registerkarte <strong>WLAN</strong> und klicken Sie auf <strong>Bearbeiten</strong>. </li>
+<li>Markieren Sie das Kontrollk&auml;stchen <strong>Zeitplan aktivieren</strong>.</li>
+
+<li>Klicken Sie auf <strong>Zeitplan einstellen</strong>.</li>
+<li>W&auml;hlen Sie im Zeitplanfenster, wann das WLAN-Netzwerk aktiv sein soll.</li>
+</ol>
+
+
+<h3>Sicherheitseinstellungen</h3>
+<p><strong>Systemsteuerung</strong> &gt; <strong>WLAN-Netzwerk</strong> &gt; <strong>WLAN</strong> bietet Optionen, um die Sicherheitseinstellungen Ihres WLAN-Netzwerks zu bearbeiten.</p>
+
+
+<h4>So richten Sie die WLAN-Sicherheit ein:</h4>
+<ol>
+
+<li>Klicken Sie auf <strong>Bearbeiten</strong>.</li>
+<li>W&auml;hlen Sie eine der folgenden Sicherheitsprotokolle aus dem Drop-down-Men&uuml; <strong>Sicherheitseinstellungen</strong>:</li>
+<ul>
+<li><strong>WEP:</strong> Ein grundlegendes Sicherheitsprotokoll, bei dem der Benutzer ein Passwort f&uuml;r den Zugriff auf das WLAN-Netzwerk eingeben muss, aber nur geringen Schutz bietet.</li>
+<li><strong>WPA/WPA2 Personal:</strong> Empfehlenswert. Hier m&uuml;ssen Benutzer ein Passwort f&uuml;r den Zugriff auf das WLAN-Netzwerk eingeben und es ist sicherer als WEP.</li>
+<li><strong>WPA/WPA2 Enterprise:</strong>* Ein Sicherheitsprotokoll f&uuml;r Unternehmen, das eine Autorisierung von Benutzern &uuml;ber einen externen Autorisierungsserver verlangt.</li>
+
+</ul>
+</ol>
+
+<h4>So wird Wi-Fi Protected Setup aktiviert:*</h4>
+<p>WPS (Wi-Fi Protected Setup) ist eine Norm der Wi-Fi Alliance, um die WLAN-Sicherheitseinstellungen f&uuml;r Benutzer einfacher zu machen. Sie k&ouml;nnen eine Drucktaste oder eine PIN-Nummer verwenden, um Ihr WLAN-Netzwerk sicher zu halten. Klicken Sie auf <strong>WPS</strong>, um Wi-Fi Protected Setup zu aktivieren.</p>
+
+
+<h3>Gastnetzwerk*</h3>
+<p>Zus&auml;tzlich zum Hinzuf&uuml;gen eines Host-WLAN-Netzwerks unterst&uuml;tzt DiskStation auch die Erstellung eines Gast-WLAN-Netzwerks. Die Einstellungen des Gast-Netzwerks k&ouml;nnen den Benutzerzugang einschr&auml;nken, was f&uuml;r Unternehmen oder anderen Einrichtungen hilfreich ist, die ein WLAN-Netzwerk f&uuml;r Besucher anbieten, aber keine Zugriffe auf das Host-Netzwerk erlauben m&ouml;chten.</p>
+
+
+<h4>So aktivieren Sie das Gastnetzwerk:</h4>
+
+<ol>
+<li>Gehen Sie zu <strong>Systemsteuerung</strong> &gt; <strong>WLAN-Netzwerk</strong> &gt; <strong>WLAN</strong>. </li>
+<li>Klicken Sie auf <strong>Bearbeiten</strong>, um die folgenden Einstellungen auf der Registerkarte <strong>Gastnetzwerk</strong> zu verwalten:</li>
+
+<ul>
+<li><strong>Name (SSID):</strong> Geben Sie einen Namen f&uuml;r das WLAN-Netzwerk ein.</li>
+<li><strong>Anzeigen/Ausblenden:</strong> W&auml;hlen Sie, ob das WLAN-Netzwerk f&uuml;r andere Ger&auml;te sichtbar sein soll.</li>
+<li><strong>Max. Verbindungen:</strong> W&auml;hlen Sie, wie viele Client Ger&auml;te sich mit dem Netzwerk verbinden k&ouml;nnen. Die h&ouml;chste Verbindungseinstellung ist 256.</li>
+</ul>
+</ol>
+
+<h4>Einrichtung der Gastnetzwerk-Sicherheit:</h4>
+<p>W&auml;hlen Sie eine der folgenden Sicherheitsprotokolle aus dem Drop-down-Men&uuml; <strong>Sicherheitseinstellungen</strong>:</p>
+<ul>
+<li><strong>WEP:</strong> Ein grundlegendes Sicherheitsprotokoll, bei dem der Benutzer ein Passwort f&uuml;r den Zugriff auf das WLAN-Netzwerk eingeben muss, aber nur geringen Schutz bietet.</li>
+<li><strong>WPA/WPA2 Personal:</strong> Empfehlenswert. Hier m&uuml;ssen Benutzer ein Passwort f&uuml;r den Zugriff auf das WLAN-Netzwerk eingeben und es ist sicherer als WEP.</li>
+</ul>
+
+
+<h4>So richten Sie einen Gastnetzwerk-Zeitplan ein:</h4>
+<p>Die Aktivierung eines Gastnetzwerk-Zeitplans erm&ouml;glicht Ihnen die Systemsteuerung, wann das Gast-WLAN-Netzwerk von DiskStation aktiv und erreichbar ist.</p>
+
+<ol>
+<li>Markieren Sie das Kontrollk&auml;stchen <strong>Gastnetzwerkplan aktivieren</strong>.</li>
+<li>Klicken Sie auf <strong>Gastplan einstellen</strong>.</li>
+<li>W&auml;hlen Sie im Zeitplanfenster, wann das Gast-WLAN-Netzwerk aktiv sein soll.</li>
+</ol>
+
+<div class="section">
+<h4>Hinweis:</h4>
+<p>Das Gast-WLAN-Netzwerk kann nicht aktiv sein, wenn das Host-WLAN-Netzwerk deaktiviert ist.</p>
+</div>
+
+
+<h3>MAC-Filter-Einstellungen*</h3>
+<p>MAC-Filtereinstellungen (unter <strong>Systemsteuerung</strong> &gt; <strong>WLAN-Netzwerk</strong>) geben an, welchen MAC-Adressen der Zugriff auf das WLAN-Netzwerk erlaubt wird. Damit k&ouml;nnen Sie bestimmten Ger&auml;ten den Zugriff verweigern oder gew&auml;hren. Diese Funktion steuert nur den Netzwerkzugriff und keine anderen Verschl&uuml;sselungseinstellungen.</p>
+
+
+<h4>So werden MAC-Filterregeln erstellt:</h4>
+<ol>
+<li>Geben Sie die Beschreibung und die MAC-Adresse eines Ger&auml;ts ein.</li>
+<li>W&auml;hlen Sie eine Zugriffsrichtlinie:<ul>
+<li><strong>Verweigern:</strong> Verweigert den angegebenen MAC-Adressen den Zugriff auf das WLAN-Netzwerk.</li>
+<li><strong>Zulassen:</strong> Erlaubt den angegebenen MAC-Adressen den Zugriff auf das WLAN-Netzwerk.</li>
+</ul> 
+</ol>
+
+
+
+<h3>Kindersicherung*</h3>
+<p>Mit der Kindersicherungsfunktion k&ouml;nnen Sie steuern, wann ein Client-Ger&auml;t, das mit dem lokalen Netzwerk der DiskStation verbunden ist, auf das Internet zugreifen kann. Wenn zum Beispiel die Computer oder Mobilger&auml;te Ihrer Kinder die Verbindung zum Internet &uuml;ber die DiskStation herstellen, dann k&ouml;nnen Sie die Einstellungen der Kindersicherung konfigurieren, um ihre Internet-Nutzung nach bestimmten Ger&auml;ten und Zeiten zu beschr&auml;nken.</p>
+
+<h4>So aktivieren Sie die Kindersicherung:</h4>
+<ol>
+<li>Gehen Sie zu <strong>Systemsteuerung</strong> &gt; <strong>WLAN-Netzwerk</strong> &gt; <strong>Kindersicherungseinstellungen</strong>.</li>
+
+<li>Klicken Sie auf die Schaltfl&auml;che <strong>Hinzuf&uuml;gen</strong>, um ein Client-Ger&auml;t hinzuzuf&uuml;gen.</li>
+<ul>
+<li><strong>Client-Name:</strong> W&auml;hlen Sie ein Ger&auml;t, das mit dem DiskStation verbunden ist, oder geben Sie den Namen manuell ein (z. B. Louisas Laptop).</li>
+<li><strong>MAC-Adresse:</strong> Geben Sie die MAC-Adresse des Ger&auml;ts ein, dessen Internet-Nutzung Sie steuern m&ouml;chten.</li>
+<li><strong>Zeitplan einstellen:</strong> W&auml;hlen Sie, zu welcher Zeit das angegebene Ger&auml;t &uuml;ber die DiskStation auf das Internet zugreifen darf.</li>
+</ul>
+</ol>
+
+<h3>Verbindungsliste*</h3>
+<p>Die Verbindungsliste (unter <strong>Systemsteuerung</strong> &gt; <strong>WLAN-Netzwerk</strong>) zeigt Informationen &uuml;ber die Ger&auml;te an, die mit DiskStation verbunden sind. Von hier k&ouml;nnen Ger&auml;te direkt zur MAC-Filterliste hinzugef&uuml;gt werden.</p>
+
+<h4>Ger&auml;te zur MAC-Filterliste hinzuf&uuml;gen:</h4>
+<ol>
+<li>Aktivieren Sie das K&auml;stchen neben dem Ger&auml;t, das Sie zum MAC Filter hinzuf&uuml;gen m&ouml;chten.</li>
+<li>Klicken Sie auf <strong>Zu MAC-Filterliste hinzuf&uuml;gen</strong>.</li>
+</ol>
+
+
+
+<p>____<br> * Nur bei bestimmten Modellen verf&uuml;gbar.<br></body>
+</html>

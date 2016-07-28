@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>File Station</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2>Montar pastas remotas</h2>
+
+<p>
+Pode montar pastas remotas de servidores remotos (como computadores de rede ou outros dispositivos Synology NAS) para navegar e gerir pastas montadas através da File Station.
+</p>
+
+
+
+
+
+<h4>Para montar uma pasta remota partilhada CIFS*:</h4>
+<ol>
+<li>Clique em <b>Ferramentas</b> > <b>Montar Pasta Remota</b> > <strong>Pasta Partilhada CIFS</strong>..</li>
+
+<img src="about:blank" class="help_image"/>
+
+<li>No campo <b>Pasta</b>, especifique o caminho da pasta remota no formato <code>\\Remote_Server\Remote_Folder</code>, como <code>\\192.168.0.2\share</code> ou <code>\\chad\cheeseburger\pictures</code>.</li>
+<li>Se forem necessários privilégios de acesso à pasta remota pelo servidor remoto, introduza as suas credenciais de utilizador do servidor remoto nos campos <b>Nome da conta</b> e <b>Palavra-passe</b>.</li>
+<li>Clique em <b>Procurar</b> para seleccionar ou criar uma pasta de destino vazia em DiskStation para montar a pasta remota.</li>
+
+<img src="about:blank" class="help_image"/>
+
+<li>Seleccione <b>Montar automaticamente ao iniciar</b> caso deseje que DiskStation monte a pasta remota a cada início ou reinício de sistema.</li>
+<li>Clique em <b>Montar</b> para que a pasta remota seja montada na pasta de destino. Pode agora navegar e gerir a pasta remota do seu DiskStation.</li>
+</ol>
+
+<h4>Para montar uma pasta remota partilhada NFS:</h4>
+
+<ol>
+<li>Clique em <b>Ferramentas</b> > <b>Montar Pasta Remota</b> > <b>Pasta Partilhada NFS</b>.</li>
+
+<img src="about:blank" class="help_image"/>
+
+<li>No campo <b>Pasta</b>, especifique o caminho da pasta remota no formato <code>Remote_Server:/Remote_Folder_Path</code>, como por exemplo <code>192.168.0.2:/volume1/share</code>.</li>
+<li>Selecione a versão NFS e protocolo de transporte desejados. </li>
+<li>Clique em <b>Procurar</b> para seleccionar ou criar uma pasta de destino vazia em DiskStation para montar a pasta remota.</li>
+
+<img src="about:blank" class="help_image"/>
+
+<li>Assinale <b>Montar automaticamente ao iniciar</b> caso deseje que DiskStation monte a pasta remota a cada início ou reinício de sistema.</li>
+<li>Clique em <b>Montar</b> para que a pasta remota seja montada na pasta de destino. Pode agora navegar e gerir a pasta remota do seu DiskStation.</li>
+</ol>
+
+<div class="section">
+<h4>Nota:</h4>
+<p>NFSv4 suporta apenas o protocolo TCP.</p>
+</div>
+
+<h4>Para desmontar uma pasta remota:</h4>
+<ol>
+<li>Seleccione a pasta remota que deseja desmontar, e clique em <b>Ferramentas</b> > <b>Desmontar</b>.</li>
+
+<img src="about:blank" class="help_image"/>
+
+<li>Como alternativa, basta clicar com o botão direito na pasta remota e seleccionar <b>Desmontar</b>.</li>
+
+<img src="about:blank" class="help_image"/>
+
+</ol>
+
+<div class="section">
+<h4>Nota:</h4>
+<ul>
+<li>O número máximo de pastas remotas em simultâneo é de 100.</li>
+<li>Só poderá montar pastas remotas de um servidor remoto compatível com os protocolos CIFS e NFS.
+</li>
+<li>Pastas remotas podem apenas ser montadas em subpastas dentro de pastas partilhadas.</li>
+<li class="enable-dockerx64">Montar pastas remotas é apenas suportado no modo de privilégio elevado. Para usar esta funcionalidade, aceda ao pacote Docker no seu DSM anfitrião, selecione o <strong>Docker DSM</strong> que deseja para ativar pastas partilhadas encriptadas, clique em <strong>Editar</strong> e assinale a caixa junto de <strong>Executar contentor usando privilégios elevados</strong>.</li>
+</ul>
+</div>
+
+
+<p>____<br />* Apenas disponível em modelos específicos.</p>
+
+</body>
+</html>

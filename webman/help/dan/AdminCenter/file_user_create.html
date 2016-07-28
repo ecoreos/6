@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Opret en bruger - Synology DSM - Hjælp</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="This article shows you how to create users in DSM.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2><a name="leaf_user"></a>Opret en bruger</h2>
+<p>Du ka oprette og styre flere brugerkonti på din DiskStation.</p>
+
+
+<h4 class="disable-eds14">Sådan opretter du en bruger:</h4>
+<ol class="disable-eds14">
+<li>Gå til <strong>Kontrolpanel</strong> > <strong>Bruger</strong>.</li>
+<img src="about:blank" class="help_image"/>
+<li>Klik på knappen <b>Opret</b> og så på Opret bruger. Denne handling starter <b>Guide til oprettelse af bruger</b>.</li>
+<img src="about:blank" class="help_image"/>
+<li>Angiv følgende muligheder på siden <strong>Brugeroplysninger</strong>:
+<ul>
+<li><strong>Navn</strong>:  Indtast et navn på brugeren. Dette afsnit er påkrævet.</li>
+<li><strong>Beskrivelse:</strong> Indtast en kort beskrivelse af brugeren.</li>
+<li><strong>E-mail:</strong> Indtast en e-mailadresse for brugeren. Systemunderretninger, f.eks. nulstillingsmeddelelser for adgangskode, sendes til den adresse, der angives her.</li>
+<li><strong>Send en underretnings-mail til den nyoprettede bruger:</strong> Hvis denne mulighed er aktiveret, vil systemet sende en meddelelse til brugeren om ikke at underrette denne vedrørende den nye konto. Denne mulighed kræver aktivering af system-e-mailunderretninger under <b>Hovedmenu</b> > <b>Kontrolpanel</b> > <b>Underretning</b> > <strong>E-mail</strong>. Som standard vises brugerens adgangskode ikke i underretningsmeddelelsen. Hvis du dog vil vise adgangskoden i underretningsmeddelelsen, skal du markere feltet <strong>Vis brugeradgangskode i underretnings-mail</strong></li>
+<li><strong>Tillad ikke brugeren at ændre kontoadgangskode:</strong>  Hvis denne mulighed er aktiveret, kan brugeren ikke ændre dennes adgangskode til at logge ind på DSM.</li></ul>
+</li>
+<li>På siden <strong>Gruppe</strong> > <strong>Opret</strong> > <strong>Guide til oprettelse af gruppe</strong> angiver du de grupper, som den nye bruger skal tilhøre (f.eks. brugere, administrators osv.). </li>
+<li>På siden <strong>Tildel tilladelser til delte mapper</strong> vælger du de delte mapper, som den nye bruger kan åbne ved at ændre dennes adgangsprivilegier. Privilegieprioriteten er som følger: <strong>Ingen adgang</strong> > <strong>Læs/skriv</strong> > <strong>Skrivebeskyttet</strong>.
+  
+  <ul>
+    <li><strong>Eksempel:</strong> Denne kolonne viser brugerens faktiske delte mappeadgangsprivilegier ifølge aktuelle indstillinger og grupper, som brugeren tilhører.</li>
+  <li><strong>Gruppetilladelser:</strong> Denne kolonne viser brugerens tildelte delte mappeadgangsprivilegier ifølge brugergrupper, som brugeren tilhører.</li></ul>
+  <a name="userquota"></a>
+  <li class="disable-dockerx64">På siden <strong>Brugerkvoteindstilling</strong> kan du kontrollere, hvor meget lagerplads, der kan bruges af den nye bruger. Begræns den pladsmængde, som brugeren kan bruge, ved at markere feltet under <strong>Aktiver kvote</strong> for hver diskenhed<span style="display: inline;" class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64">/delt mappe</span>. Indtaste så den maksimale pladsmængde, der kan bruges, i feltet <strong>Kvote</strong> (f.eks. 10 GB).</li>
+<li>På siden <strong>Tildel progrmprivilegier</strong> kan du kontrollere de tjenester, som brugeren kan åbne.</li>
+<li>På siden <strong>Indstilling for gruppehastighedsgrænse</strong> kan du aktivere en hastighedsgrænse for forskellige tjenester (f.eks. File Station, FTP osv.) for at begrænse den båndbredde, der bruges af brugeren, når filer overføres. Du kan vælge en af følgende muligheder til hver tjeneste:
+  <ul>
+  <li><strong>Ingen:</strong> Indstillingerne for hastighedsgrænse bliver de samme som den gruppe, som brugeren hører til.</li>
+  <li><strong>Konstant:</strong> En fast, konstant hastighedsgrænse bliver anvendt. Du kan angive upload- og downloadhastighedsgrænser i felterne til venstre.</li>
+  <li><strong>Variabel:</strong> To forskellige hastighedsgrænser kan angives og anvendes til brugeren ifølge en plan. Klik på knappen <strong>Tilpas</strong> for at ændre indstillingerne for hastighedsgrænse og plan.</li></ul>
+<li>Når du har bekræftet indstillingerne, skal du klikke på <b>Anvend</b>.</li>
+</ol>
+
+<h4 class="enable-eds14">Sådan opretter du en bruger:</h4>
+<ol class="enable-eds14">
+<li>Gå til <strong>Kontrolpanel</strong> > <strong>Bruger</strong>.</li>
+<img src="about:blank" class="help_image"/>
+<li>Klik på knappen <b>Opret</b> og så på Opret bruger. Denne handling starter <b>Guide til oprettelse af bruger</b>.</li>
+<img src="about:blank" class="help_image"/>
+<li>Angiv følgende muligheder på siden <strong>Brugeroplysninger</strong>:
+<ul>
+<li><strong>Navn</strong>:  Indtast et navn på brugeren. Dette afsnit er påkrævet.</li>
+<li><strong>Beskrivelse:</strong> Indtast en kort beskrivelse af brugeren.</li>
+<li><strong>E-mail:</strong> Indtast en e-mailadresse for brugeren. Systemunderretninger, f.eks. nulstillingsmeddelelser for adgangskode, sendes til den adresse, der angives her.</li>
+<li><strong>Send en underretnings-mail til den nyoprettede bruger:</strong> Hvis denne mulighed er aktiveret, vil systemet sende en meddelelse til brugeren om ikke at underrette denne vedrørende den nye konto. Denne mulighed kræver aktivering af system-e-mailunderretninger under <b>Hovedmenu</b> > <b>Kontrolpanel</b> > <b>Underretning</b> > <strong>E-mail</strong>. Som standard vises brugerens adgangskode ikke i underretningsmeddelelsen. Hvis du dog vil vise adgangskoden i underretningsmeddelelsen, skal du markere feltet <strong>Vis brugeradgangskode i underretnings-mail</strong></li>
+<li><strong>Tillad ikke brugeren at ændre kontoadgangskode:</strong>  Hvis denne mulighed er aktiveret, kan brugeren ikke ændre dennes adgangskode til at logge ind på DSM.</li></ul>
+<li>På siden <strong>Gruppe</strong> > <strong>Opret</strong> > <strong>Guide til oprettelse af gruppe</strong> angiver du de grupper, som den nye bruger skal tilhøre (f.eks. brugere, administrators osv.). </li>
+<li>På siden <strong>Tildel tilladelser til delte mapper</strong> vælger du de delte mapper, som den nye bruger kan åbne ved at ændre dennes adgangsprivilegier. Privilegieprioriteten er som følger: <strong>Ingen adgang</strong> > <strong>Læs/skriv</strong> > <strong>Skrivebeskyttet</strong>.</li>  
+  <ul>
+    <li><strong>Eksempel:</strong> Denne kolonne viser brugerens faktiske delte mappeadgangsprivilegier ifølge aktuelle indstillinger og grupper, som brugeren tilhører.</li>
+  <li><strong>Gruppetilladelser:</strong> Denne kolonne viser brugerens tildelte delte mappeadgangsprivilegier ifølge brugergrupper, som brugeren tilhører.</li></ul>
+<li>På siden <strong>Tildel progrmprivilegier</strong> kan du kontrollere de tjenester, som brugeren kan åbne.</li>
+<li>På siden <strong>Indstilling for gruppehastighedsgrænse</strong> kan du aktivere en hastighedsgrænse for forskellige tjenester (f.eks. File Station, FTP osv.) for at begrænse den båndbredde, der bruges af brugeren, når filer overføres. Du kan vælge en af følgende muligheder til hver tjeneste:</li>
+  <ul>
+  <li><strong>Ingen:</strong> Indstillingerne for hastighedsgrænse bliver de samme som den gruppe, som brugeren hører til.</li>
+  <li><strong>Konstant:</strong> En fast, konstant hastighedsgrænse bliver anvendt. Du kan angive upload- og downloadhastighedsgrænser i felterne til venstre.</li>
+  <li><strong>Variabel:</strong> To forskellige hastighedsgrænser kan angives og anvendes til brugeren ifølge en plan. Klik på knappen <strong>Tilpas</strong> for at ændre indstillingerne for hastighedsgrænse og plan.</li></ul>
+</li>
+</ul>
+<li>Når du har bekræftet indstillingerne, skal du klikke på <b>Anvend</b>.</li>
+</ol>
+ 
+<div class="section">
+<h4>Brugernavnsbegrænsning:</h4>
+
+<ul>
+<li>Brugernavnet skelner ikke mellem store og små bogstaver og kan inkludere 1 til 64 Unicode-tegn. Følgende symboler kan ikke bruges:<br> ! " # $ % & ' ( ) * + , / : ; < = > ? @ [ ] \ ^ ` { } | ~</li>
+<li>Det første tegn må ikke være et minustegn eller et mellemrum, ligesom det sidste tegn ikke må være en tom plads.</li>
+<li>Følgende brugernavne er forbeholdt systembrug: mailer-daemon, postmaster.</li>
+<li>Brugerbeskrivelsen kan indeholde op til 64 synlige Unicode-tegn.</li>
+</ul>
+<h4>Begrænsning af adgangskode</h4>
+<ul>
+<li>Adgangskoden skelner mellem store og små bogstaver og er begrænset til 127 synlige tegn herunder bogstaver, tal, tegn og mellemrum.</li>
+</ul>
+<h4 class="disable-eds14 disable-dockerx64">Kvotebegrænsning:</h4>
+<ul class="disable-eds14 disable-dockerx64">
+<li>Den maksimale lagerforbrugskvote, som kan angives for hver bruger er ca. 4 TB (4095 GB).</li>
+</ul>
+</div>
+
+</body>
+</html>

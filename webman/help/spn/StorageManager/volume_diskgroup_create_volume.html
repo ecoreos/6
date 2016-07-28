@@ -1,0 +1,67 @@
+﻿ <!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Crear un volumen - Ayuda de Synology DSM</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="This article walks you through the steps to create a volume on DiskStation cómo utilizar el Administrador de almacenamiento."><link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Crear un volumen</h2>
+
+<p>Este articulo explica cómo crear un volumen en su DiskStation. Para crear un volumen, puede elegir uno de los siguientes métodos:</p>
+
+<ul>
+  <li><b>Rápida:</b> Esta es la mejor opción para principiantes. Elija este método si desea optimizar automáticamente la capacidad de almacenamiento y el rendimiento, sin tener que preocuparse por los aspectos técnicos, como los niveles de RAID. </li>
+
+<li><b>Personalizado:</b> Para usuarios avanzados que deseen controlar los aspectos más avanzados de la creación de volúmenes, como los tipos de RAID y la asignación de capacidad. Esta opción es compatible con varios tipos de RAID, le permite crear volúmenes individuales o múltiples, y le ofrece opciones para signar cantidades específicas de capacidad para cada volumen (solo al crear volúmenes múltiples en RAID).</li>
+</ul>
+
+<div class="section">
+<h4>¿Volúmenes únicos o múltiples en RAID?</h4>
+<p>Al crear un volumen con el modo personalizado, puede elegir uno de las siguientes opciones:</p>
+<ul>
+  <li><b>Volumen único en RAID</b><ul>
+      <li>Crea un volumen único con toda la capacidad disponible de las unidades de disco duro seleccionadas.</li>
+      <li>Ofrece una mejor velocidad y rendimiento.</li>
+      <li>Admite varios tipos de RAID.</li>
+    </ul>
+  </li>
+  <li><b>Volúmenes múltiples en RAID</b><ul>
+      <li>Le permite crear volúmenes múltiples en un grupo de discos.</li>
+      <li>Permite la asignación de determinadas cantidades de capacidad para cada volumen.</li>
+      <li>Ofrece una mayor flexibilidad de administración del almacenamiento.</li>
+      <li>Admite varios tipos de RAID.</li>
+    </ul>
+  </li>
+</ul>
+</div>
+
+
+<div class="section">
+<h4>Antes de comenzar:</h4>
+<ul>
+<li>Antes de comenzar, asegúrese de que no hay datos importantes en las unidades de disco duro. Todos los datos existentes se eliminarán durante el proceso de creación.</li>
+<li>Vaya a la página <b>HDD/SSD</b> y asegúrese de que el estado de cada unidad de disco duro es <b>Normal</b> o <strong>No iniciado</strong>.</li>
+</ul>
+</div>
+
+<div class="section enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64">
+<h4>Nota:</h4>
+<ul>
+<li>El tamaño mínimo para un volumen Btrfs es 10 GB.</li>
+<li>Los volúmenes Btrfs reservarán un 4 % de espacio para los metadatos.</li>
+</ul>
+</div>
+
+<h4>Para crear un volumen:</h4>
+<ol>
+<li>Abra <b>Administrador de almacenamiento</b>.</li><img src="about:blank" class="help_image"/><li>Vaya a <b>Volumen</b> y haga clic en <b>Crear</b>.</li><img src="../../../online_img/dsm/StorageManager/volume_diskgroup_create_volume/volume_create.png" class="help_image"/><li>Verá el asistente de creación de volúmenes. Seleccione <strong>Rápido</strong> o <strong>Personalizado</strong> según sus necesidades. A continuación siga los pasos del asistente para finalizar la creación de volúmenes.</li><img src="../../../online_img/dsm/StorageManager/volume_diskgroup_create_volume/choose_mode.png" class="help_image"/></ol>
+
+</body>
+</html>

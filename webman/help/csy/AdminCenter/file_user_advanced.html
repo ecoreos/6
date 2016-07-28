@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Rozšířená uživatelská nastavení</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Rozšířená uživatelská nastavení</h2>
+
+<p>Chcete-li upravit rozšířená uživatelská nastavení, přejděte do části <strong>Ovládací panel</strong> > <strong>Uživatel</strong> > <strong>Upřesnit</strong>. K dispozici jsou níže uvedené možnosti. </p>
+
+<h3>Povolení obnovení zapomenutých hesel uživatelů</h3>
+<p>Chcete-li uživatelům umožnit obnovení zapomenutých hesel e-mailem, můžete povolit možnost <strong>Povolit uživatelům, kteří nejsou správci, obnovení zapomenutých hesel prostřednictvím e-mailu</strong>. Pokud je tato možnost povolena, bude na stránce přihlášení k systému DSM uveden odkaz <strong>Zapomněli jste heslo?</strong>. Pokud uživatel zapomene heslo, může na tento odkaz kliknout a zadat uživatelské jméno. V takovém případě odešle systém uživateli e-mail obsahující odkaz s možností obnovení zapomenutého hesla. </p>
+
+<div class="section">
+<h4>Poznámka:</h4>
+<ul>
+<li>Dříve než povolíte tuto možnost, ověřte, zda jste povolili e-mailová upozornění SMTP. Tuto funkci nastavíte v části <strong>Ovládací panel</strong> > <strong>Upozornění</strong>.</li>
+<li>Pro příjem zpráv systému musí uživatelé v části s informacemi o účtu zadat e-mailovou adresu.</li>
+<li>Uživatelé ze skupiny <strong>administrators</strong> nemohou obnovit heslo na základě této možnosti.</li>
+<li>Pomocí této možnosti nemohou obnovit heslo ani uživatelé domény.</li>
+<li>Uživatelé LDAP mohou obnovit heslo pomocí této možnosti za předpokladu, že zařízení DiskStation plní funkci adresářového serveru LDAP.</li>
+
+</ul>
+</div>
+
+
+<h3>Síla hesla</h3>
+<p>Na zařízení DiskStation můžete nastavit pravidla síly hesla pro uživatele.</p>
+
+<div class="section">
+<h4>Poznámka:</h4>
+<p>Pravidla síly hesla platí pouze pro nová hesla. Pravidla síly hesla mohou tedy platit při vytváření nových účtů nebo také při změně hesla stávajícího uživatele. Pravidla týkající se nových hesel neplatí pro stávající hesla a importované uživatelské účty.</p>
+</div>
+<h4>Postup povolení pravidel síly hesla:</h4>
+<ol>
+<li>Zaškrtněte políčko <b>Použít pravidla pro sílu hesla</b> pro povolení omezení hesel.</li>
+<li>Z níže uvedených pravidel vyberte více než jedno omezení hesel:</li>
+<ul>
+<li><b>Heslo nesmí obsahovat jméno ani popis uživatele</b>: Heslo nesmí obsahovat uživatelské jméno ani popis uživatele. Znaky ve formátu UTF-8 jsou však vyloučeny.</li>
+<li><b>Povolit různou velikost písmen</b>: Heslo musí obsahovat velká a malá písmena.</li>
+<li><b>Použít znaky číslic</b>: Heslo musí obsahovat alespoň jednu číslici (0–9).</li>
+<li><b>Použít speciální znaky</b>: Heslo musí obsahovat alespoň jeden speciální znak ASCII (tzn. ~, `, !, @, #, $, %, ^, &, *, (, ), -, _, =, +, [, {, ], }, \, |, ;, :, ', ", <, >, /, ?).</li>
+<li><b>Minimální délka hesla</b>: Heslo musí obsahovat alespoň hodnotu uvedenou v textovém poli. Délka by měla mít hodnotu v rozmezí od 6 do 127.</li>
+</ul>
+<li>Nastavení uložíte kliknutím na možnost <b>Použít</b>.</li>
+</ol>
+
+
+
+<h3>Dvoufázové ověření</h3>
+<p>Dvoufázové ověření nabízí větší zabezpečení uživatelských účtů DSM. Z důvodu další ochrany účtů můžete u správců systému DSM nebo všech uživatelů DSM povolit dvoufázové ověření.</p>
+
+<h4>Postup povolení dvoufázového ověření pro uživatele systému DSM:</h4>
+
+<ol>
+<li>zaškrtněte políčko <strong>Vynutit dvoufázové ověření pro následující uživatele</strong> a vyberte, pro které uživatele chcete toto použít.</li>
+<div class="section">
+<h4>Poznámka:</h4>
+<p>Pokud jste ještě nenakonfigurovali dvoufázové ověřování v části <b>Osobní</b> > <b>Účet</b>, spustí se průvodce dvoufázovým ověřováním, který vám pomůže dokončit požadovaná nastavení ještě před použitím tohoto pravidla.</p>
+</div>
+
+<li>Díky tomuto pravidlu budou uživatelé, kteří si ještě neaktivovali možnost dvoufázového ověřování, požádáni o dokončení nastavení ještě dříve, než se přihlásí do systému DSM.</li>
+</ol>
+
+<div class="section">
+<h4>Poznámka:</h4>
+<p>Zakázání dvoufázového ověřování v této části neovlivní nebo nezakáže nastavení dvoufázového ověřování jednotlivých uživatelů. Uživatelé mohou nastavení dvoufázového ověřování ponechat nebo mohou tato nastavení zakázat v části <b>Osobní</b> > <b>Účet</b>.</p>
+</div>
+
+
+<h3>Složka uživatele</h3>
+
+<p>Povolením složek uživatelů vytvoříte složku <b>home</b> pro jednotlivé uživatele, s výjimkou uživatele <b>guest</b>. Všichni uživatelé mají ke své vlastní složce přístup prostřednictvím CIFS, AFP, FTP nebo zařízení File Station.</p>
+<p>Uživatelé ze skupiny <strong>administrators</strong> mají přístup ke všem osobním složkám ve výchozí sdílené složce <b>homes</b>. Název složky uživatele je stejný jako název uživatelského účtu.</p>
+
+<h4>Postup povolení služby Složka uživatele:</h4>
+<ol>
+<li>Zaškrtněte možnost <b>Povolit službu Složka uživatele</b>.</li>
+<li>Pokud je k dispozici několik svazků, zadejte, kam chcete složku <b>homes</b> uložit.</li>
+<li>Klikněte na možnost <b>Použít</b>.</li>
+</ol>
+
+<div class="section">
+<h4>Poznámka:</h4>
+<p>Při zákazu služby Složka místního uživatele bude současně zakázána také služba Složka uživatele domény.</p>
+</div>
+
+<h4>Postup zakázání služby Složka uživatele:</h4>
+<ol>
+<li>Zrušte zaškrtnutí možnosti <b>Povolit službu Složka uživatele</b>.</li>
+<li>Klikněte na možnost <b>Použít</b>.</li>
+</ol>
+<p>Jakmile bude služba Složka uživatele zakázána, sdílená složka <b>homes</b> bude zachována a bude k ní mít přístup uživatel administrator.  Uživatelé získají obnovený přístup ke složce tehdy, pokud bude opětovně povolena služba Složka uživatele.</p>
+
+<div class="section">
+<h4>Poznámka:</h4>
+<ol>
+<li>Sdílenou složku <b>homes</b> lze odstranit až po zakázání služby Složka uživatele.</li>
+<li>Pokud bude zakázána služba Složka místního uživatele, služba Složka uživatele domény bude rovněž zakázána.</li> 
+</ol> 
+</div>
+
+
+</body>	
+</html> 

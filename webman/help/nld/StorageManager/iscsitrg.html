@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Opslagbeheer</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2><a name="leaf_iscsitrg"></a>iSCSI Target*</h2>
+
+<p>iSCSI is een type Storage Area Networking-service (SAN) dat toegang biedt tot geconsolideerde blokniveau gegegevensopslag. Het vereenvoudigt gegevensoverdracht over intranets en opslagbeheer over lange afstanden. Door iSCSI LUN's toe te wijzen aan iSCSI Targets kunnen clients toegang krijgen tot de opslagruimte met behulp van de iSCSI initiator, op dezelfde manier als bij lokale schijven. Afhankelijk van het model ondersteunt het Synology-product het maken van meerdere iSCSI Targets op te mappen iSCSI LUN's.</p>
+
+<p><span class="note_head">Opmerking: </span>het aantal ondersteunde iSCSI Targets is afhankelijk van uw Synology-producten. Voor gedetailleerde productspecificaties verwijzen wij u naar de Synology website.</p>
+
+<h4>Om een iSCSI Target maken:</h4>
+<ol>
+<li>Klik op de knop <b>Maken</b>.</li>
+<li>Voer de gegevens van iSCSI Target, inclusief <b>Naam</b>, <b>IQN</b>, en of <b>CHAP-verificatie</b> moet worden ingeschakeld.</li>
+<li>Klik op <b>Volgende</b>.</li>
+<li>Stel iSCSI LUN-toewijzing in. Selecteer <b>Een nieuw iSCSI LUN maken</b> of <b>Bestaande iSCSI LUN’s toewijzen</b>.</li>
+<li>Klik op <b>Volgende</b>.</li>
+<li>Klik op <b>Terug</b> om te wijzigen of op <b>Toepassen</b> om instellingen te bevestigen.</li>
+</ol>
+
+<div class="section">
+<h4>Termen verklaard</h4>
+<ul>
+<li><b>IQN</b>: IQN (iSCSI Qualified Name) is een reeks van unieke namen voor een iSCSI Target. Het mag geen conflict veroorzaken met iSCSI Target IQN's op andere servers. IQN moet minder dan 128 tekens lang zijn en kan letters (hoofdletterongevoelig), nummers, dubbelpunten, schuine strepen en punten bevatten. Het is aanbevolen om de volgende indeling te gebruiken voor de naam: iqn.[datum].[domein]:[apparaat-ID], bijvoorbeeld: <i>iqn.2000-04.com.synology:storage.diskarray.1</i>.</li>
+<li><b>CHAP-verificatie</b>: als u <b>CHAP</b> selecteert, kan de server de identiteit van de client verifiëren. De gebruikersnaam kan samengesteld worden uit 1 ~ 12 letters en cijfers, en het wachtwoord kan samengesteld worden uit 12 ~ 16 letters en cijfers.</li>
+<li><b>Wederzijdse CHAP-verificatie</b>: In <b>Wederzijdse CHAP</b> verifiëren zowel de client als de server elkaar. Een CHAP-wachtwoord voor clientverificatie mag niet worden gebruikt voor verificatie met een server, en een CHAP-wachtwoord voor serververificatie mag niet worden gebruikt voor verificatie met een client.</li></ul></div>
+
+
+<h4>Een iSCSI Target verwijderen</h4>
+<p>U kunt een iSCSI Target en toegewezen iSCSI LUN's verwijderen. Wanneer u een iSCSI LUN verwijdert, worden alle gegevens op de iSCSI LUN verwijderd.</p>
+<ol>
+<li>Selecteer het iSCSI Target dat u wilt verwijderen.</li>
+<li>Klik op <b>Verwijderen</b>.</li>
+<li>Als u toegewezen iSCSI LUN's wilt verwijderen, selecteert u <b>Gekoppelde iSCSI LUN’s eveneens verwijderen</b> en selecteert u diegenen die u wilt verwijderen.</li>
+<li>Klik op <b>OK</b>.</li>
+</ol>
+
+<h4>Een iSCSI Target bewerken</h4>
+<ol>
+<li>Selecteer het iSCSI Target dat u wilt bewerken.</li>
+<li>Klik op <b>Bewerken</b>.</li>
+<li>Bewerk de instelling volgens uw voorkeur. Klik op <b>OK</b> om de wijzigingen op te slaan.</li>
+</ol>
+
+<div class="section">
+<h4>Termen verklaard</h4>
+<ul>
+<li><b>CRC-controlesom</b>: schakel CRC-controlesom in om te controleren of er fouten zijn opgetreden tijdens de gegevensoverdracht.</li>
+<li><b>Meerdere sessies</b>: meerdere sessies van een of meer initiators toelaten om gelijktijdig een verbinding te maken met hetzelfde iSCSI Target. Om uw bestanden te beschermen tegen corruptie of onverwacht gegevensverlies wordt aanbevolen dat u een gedeeld bestandssysteem gebruikt of clustersystemen zoals VMware Virtual Machine File System (VMFS) en Oracle Cluster File System (OCFS).</li>
+<li><b>Maskering</b>: maskering laat een iSCSI Target toe om exclusieve toegang te verlenen aan opgegevens iSCSI initiator IQN's.</li>
+</ul></div>
+
+<h4>Een iSCSI Target in- of uitschakelen</h4>
+<ol>
+<li>Selecteer het iSCSI Target dat u wilt in- of uitschakelen.</li>
+<li>Klik op <b>Inschakelen</b> of <b>Uitschakelen</b>.</li>
+</ol>
+<h4>iSCSI Targets met een iSNS-server registreren</h4>
+<p>iSNS (Internet Storage Name Service) biedt de mechanismen van gecentraliseerd beheer. U kunt alle iSCSI Targets met een iSNS-server synchroniseren.</p>
+<ol>
+<li>Klik op de knop <b>iSNS</b> en tik op het keuzevak van <b>iSNS inschakelen</b>.</li>
+<li>Voer het ip-adres van de iSNS-server in. Klik op <b>OK</b> om de instelling toe te passen.</li>
+</ol>
+<p>____<br />*Alleen beschikbaar op specifieke modellen.</p>
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Dossier partag&eacute;</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2>Attribuer les permissions NFS</h2>
+<p>Vous pouvez attribuer des privil&egrave;ges NFS sur n&apos;importe quel dossier partag&eacute;, permettant ainsi aux clients Linux d&apos;y acc&eacute;der.</p>
+<h4>Pour attribuer des privil&egrave;ges NFS &agrave; un dossier partag&eacute;&nbsp;:</h4>
+<ol>
+<li>S&eacute;lectionnez le dossier partag&eacute; que vous souhaitez modifier dans la liste de dossiers partag&eacute;s.</li>
+<li>Cliquez sur <strong>Modifier</strong> &gt; <strong>Permissions NFS</strong>.</li>
+<li>Cliquez sur <b>Cr&eacute;er</b>pour ajouter une r&egrave;gle NFS.</li>
+<li>Une fen&ecirc;tre popup appara&icirc;t. D&eacute;finissez les options ci-dessous.</li>
+<li><strong>Nom d&rsquo;h&ocirc;te ou IP statique :</strong>&nbsp;Entrez l&apos;adresse IP du client NFS qui acc&eacute;dera au dossier partag&eacute;. Vous pouvez nommer un h&ocirc;te de trois mani&egrave;res&nbsp;:<ul>
+<li><strong>H&ocirc;te unique&nbsp;:</strong> Le nom de domaine de mani&egrave;re tr&egrave;s pr&eacute;cise ou une adresse IP.</li>
+<li><strong>Les caract&egrave;res de remplacement&nbsp;:</strong> *, *.synology.com</li>
+<li><strong>Les r&eacute;seaux IP&nbsp;:</strong> 203.74.205.32/255.255.252.0, /24</li>
+</ul>
+</li>
+<li><strong>Privil&egrave;ges&nbsp;:</strong> S&eacute;lectionne les autorisations de lecture/&eacute;criture pour le client NFS.</li>
+<li> <strong> S&eacute;curit&eacute; :</strong> Sp&eacute;cifie le parfum de s&eacute;curit&eacute; &agrave; appliquer.<ul>
+  <li><strong>AUTH_SYS :</strong> Utilise l&apos;UID (identifiant utilisateur) du client NFS et le GID (identifiant du groupe) pour v&eacute;rifier les permissions d&apos;acc&egrave;s.</li>
+<li><strong>Authentification Kerberos&nbsp;:</strong> Effectue l&apos;authentification Kerberos lorsque le client NFS se connecte au dossier partag&eacute;. Le client ne peut acc&eacute;der au dossier partag&eacute; qu&apos;apr&egrave;s avoir r&eacute;ussi l&apos;authentification Kerberos.</li>
+<li><strong>Int&eacute;grit&eacute; de Kerberos&nbsp;:</strong> Effectue l&apos;authentification Kerberos et assure l&apos;int&eacute;grit&eacute; des paquets pendant le transfert de donn&eacute;es.</li>
+<li><strong>Confidentialit&eacute; de Kerberos :</strong> Effectue l&apos;authentification de Kerberos et crypte les paquets NFS pendant le transfert de donn&eacute;es, emp&ecirc;chant ainsi des personnes mal intentionn&eacute;es de falsifier le trafic NFS.</li>
+</ul>
+</li>
+
+<li><strong>Squash </strong>:&nbsp;Ce champ vous permet de contr&ocirc;ler les privil&egrave;ges d&apos;acc&egrave;s des utilisateurs root du client NFS. Veuillez s&eacute;lectionner l&apos;une des options suivantes&nbsp;:<ul>
+    <li><strong>Pas de mappage :</strong>&nbsp;Permet &agrave; tous les utilisateurs du client NFS, y compris les utilisateurs root, de maintenir les privil&egrave;ges d&apos;acc&egrave;s originaux.</li>
+    <li><strong>Mapper le root sur admin :</strong>&nbsp;Attribue des privil&egrave;ges d&apos;acc&egrave;s aux utilisateurs root du client NFS &eacute;quivalents aux privil&egrave;ges d&apos;acc&egrave;s des utilisateurs admin sur votre syst&egrave;me.</li>
+    <li><strong>Mapper le root sur invit&eacute; :</strong>&nbsp;Attribue des privil&egrave;ges d&apos;acc&egrave;s aux utilisateurs root du client NFS &eacute;quivalents aux privil&egrave;ges d&apos;acc&egrave;s des utilisateurs invit&eacute; sur votre syst&egrave;me.</li>
+    <li><strong>Mapper tous les utilisateurs sur admin :</strong>&nbsp;Attribue des privil&egrave;ges d&apos;acc&egrave;s &agrave; tous les utilisateurs root du client NFS &eacute;quivalents aux privil&egrave;ges d&apos;acc&egrave;s des utilisateurs admin sur votre syst&egrave;me.</li>
+  </ul>
+</li>
+
+<li><strong>Activer le mode asynchrone:</strong>&nbsp;Cocher cette option permet &agrave; votre DiskStation de r&eacute;pondre aux demandes des clients NFS avant que les modifications des fichiers ne soient termin&eacute;es, ce qui procure une meilleure performance.</li>
+<li><strong>Permettre les connexions à partir des ports non privilégiés (ports supérieurs à 1024):</strong> Si cette option est coch&eacute;e, les clients NFS peuvent utiliser des ports sans privil&egrave;ges (&agrave; savoir les ports sup&eacute;rieurs &agrave; 1024) lorsqu&apos;ils se connectent au DiskStation. </li>
+<li><strong>Autoriser les utilisateurs &agrave; acc&eacute;der aux sous-dossiers mont&eacute;s：</strong> Cocher cette option permet aux clients NFS d&apos;acc&eacute;der aux sous-dossiers mont&eacute;s.</li>
+<li>Cliquez sur <b>OK</b> pour terminer.</li>
+  <li>Cliquez sur <b>OK</b> pour appliquer les privil&egrave;ges NFS.</li>
+</ol>
+
+<div class="section">
+<h4>Remarque&nbsp;:</h4>
+<ul>
+<li>Lorsque le format du nom de serveur est <strong>*.domain</strong>, l&apos;adresse IP du client NFS doit avoir un enregistrement DNS PTR correspondant, afin d&apos;autoriser le DiskStation &agrave; trouver le nom *.domain en recherchant l&apos;adresse IP correspondante.</li>
+</ul>
+</div>
+
+
+<div class="section">
+<h4>Parfums de s&eacute;curit&eacute; :</h4>
+<p> Lorsque l&apos;on acc&egrave;de &agrave; un dossier partag&eacute; via NFS avec un compte utilisateur sp&eacute;cifique : </p>
+<ul>
+<li>Si le parfum de s&eacute;curit&eacute; <strong>AUTH_SYS</strong> est impl&eacute;ment&eacute;&nbsp;: Le client doit poss&eacute;der exactement le m&ecirc;me UID (identifiant utilisateur) et GID (identifiant groupe) sur le client NFS et le DiskStation, sinon le client se verra affecter les permissions de <strong>autres</strong> lorsqu&apos;il acc&egrave;de au dossier partag&eacute;. Afin d&apos;&eacute;viter tout conflit de permissions, vous pouvez s&eacute;lectionner <strong>Regrouper tous les utilisateurs vers admin</strong> &agrave; partir de <strong>Squash</strong> ou donner &agrave; &quot;Tout le monde&quot; les permissions pour acc&eacute;der au dossier partag&eacute;.</li>
+<li>Si le parfum de s&eacute;curit&eacute; <strong>Kerberos (krb5, krb5i, krb5p)</strong> est impl&eacute;ment&eacute;&nbsp;: Vous devez aller dans <strong>Win/Mac/NFS</strong> &gt; <strong>Service NFS</strong> &gt; <strong>Param&egrave;tres Kerberos</strong> &gt; <strong>Mappage ID </strong> pour mapper le client NFS sur un utilisateur sp&eacute;cifique, ou pour joindre un domaine Windows/LDAP avec le compte utilisateur correspondant, sinon le client se verra affecter les permissions de <strong>Invit&eacute;</strong> lorsqu&apos;il acc&egrave;de au dossier partag&eacute;.</li>
+<li>Si le syst&egrave;me de fichiers de l&apos;appareil externe sur lequel les dossiers partag&eacute;s sont cr&eacute;&eacute;s est NTFS ou FAT, l&apos;option <strong>Mapper tous les utilisateurs sur admin</strong> sera appliqu&eacute;e d&apos;office.***</li>
+</ul>
+<p>Pour pouvoir se connecter au DiskStation avec les parfums de s&eacute;curit&eacute; Kerberos, l&apos;authentification Kerberos doit &ecirc;tre configur&eacute;e dans <strong>Win/Mac/NFS</strong> &gt; <strong>Service NFS</strong> &gt; <strong>Param&egrave;tres Kerberos</strong>.</p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+ <head>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>High Availability</title>
+
+
+ </head>
+ <body>
+<h2>Stav úložiště</h2>
+	<p>Na této stránce najdete podrobnosti o stavu svazků úložiště a jednotek iSCSI LUN (na úrovni bloků) na aktivním a pasivním serveru clusteru high-availability.</p>
+    <p>Vzhledem k tomu, že kapacita a konfigurace příslušných svazků a jednotek iSCSI LUN (na úrovni bloků) musí být na aktivním a pasivním serveru stejná, jsou svazky a jednotka iSCSI LUN (na úrovni bloků) na obou serverech zobrazovány společně jako samostatné jednotky. Pokud tedy chcete zobrazit stav svazků a jednotek iSCSI LUN (na úrovni bloků) aktivního i pasivního serveru, přejděte na stránku <b>Stav úložiště</b> [během přístupu ke clusteru high-availability jsou v části <b>Správce úložiště</b> zobrazeny pouze svazky a jednotky iSCSI LUN (na úrovni bloků) aktivního serveru].</p>
+
+    <p>Tato stránka obsahuje následující informace:</p>
+		<ul>
+			<li><b>Název:</b> Zobrazuje názvy svazků a jednotek iSCSI LUN (na úrovni bloků).</li>
+			<li><b>Využito:</b> Zobrazuje procentuální využití kapacity svazků a jednotek iSCSI LUN (na úrovni bloků).</li>
+			<li><b>Využito/Celková velikost:</b>  Zobrazuje celkovou velikost a procentuální využití kapacity svazků a jednotek iSCSI LUN (na úrovni bloků).</li>
+            <li><b>Stav:</b> Zobrazuje stav svazků, jednotek iSCSI LUN (na úrovni bloků) a mezipamětí SSD.</li>
+            <li><b>Popis:</b> Zobrazuje popis chyb a další informace související se svazkem, jednotkou iSCSI LUN (na úrovni bloků) a mezipamětí SSD.</li>
+		</ul>
+<h4>Oprava nefunkčního svazku nebo jednotky iSCSI LUN (na úrovni bloků):</h4>
+	<ul>
+		<li>Pokud dojde k poruše pevného disku některého ze serverů, můžete na stránce <a href="disk.html">Stav disku</a> zjistit, který pevný disk byl poškozen a je potřeba jej vyměnit. V takovém případě postupujte následujícím způsobem:
+        	<ol>
+            	<li>Vyměňte poškozený pevný disk (postup instalace pevného disku najdete v části <i>Stručná instalační příručka</i> pro produkt společnosti Synology).</li>
+                <li>Přejděte na stránku <b>Stav úložiště</b> a klikněte na možnost <b>Opravit</b>.</li>
+            </ol>
+        </li>
+        <li>Pokud je pasivní server v režimu offline, bude stav svazků nebo jednotek iSCSI LUN (na úrovni bloků) označovat chybu a na stránce Stav disku nebude uveden žádný z disků pasivního serveru. V takovém případě se můžete pokusit vyřešit tento problém následujícím způsobem:
+        	<ol>
+            	<li>Přesvědčte se, zda je pasivní server zapnutý.</li>
+                <li>Zkontrolujte všechny zdroje napájení.</li>
+                <li>Ověřte všechna připojení.</li>
+            </ol>
+        </li>
+        <li>Pokud na svazku nebo jednotce iSCSI LUN (na úrovni bloků) jednoho ze serverů dojde k chybě systému souborů, postupujte následujícím způsobem:
+        	<ul>
+            	<li>Přejděte na stránku <b>Stav úložiště</b>.</li>
+                <li>Klikněte na možnost <b>Opravit</b>.</li>
+            </ul>
+        </li>
+	</ul>
+
+<p><span class="note_head">Poznámka:</span>  Počet svazků a jednotek iSCSI LUN (na úrovni bloků) clusteru high-availability byl stanoven na 64.</p>
+
+ </body>
+</html>

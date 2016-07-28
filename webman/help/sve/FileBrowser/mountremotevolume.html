@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>File Station</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2>Montera fjärrmappar</h2>
+
+<p>
+Du kan montera fjärrmappar från fjärrservrar (t.ex. nätverksdatorer eller andra Synology NAS-enheter) för att enkelt navigera och hantera de monterade mapparna via File Station.
+</p>
+
+
+
+
+
+<h4>Att montera en delad fjärrmapp i CIFS:</h4>
+<ol>
+<li>Klicka på <b>Verktyg</b> > <b>Montera fjärrmapp</b> > <strong>CIFS Delad mapp</strong>.</li>
+
+<img src="about:blank" class="help_image"/>
+
+<li>I fältet <b>Mapp</b>, specificera sökvägen till fjärrmappen i formatet <code>\\Remote_Server\Remote_Folder</code>, exempelvis <code>\\192.168.0.2\share</code> eller <code>\\chad\cheeseburger\pictures</code>.</li>
+<li>Om fjärrservern kräver åtkomstprivilegier till fjärrmappen, ange dina användaruppgifter för fjärrservern i fälten <b>Kontonamn</b> och <b>Lösenord</b>.</li>
+<li>Klicka på <b>Bläddra</b> för att välja eller skapa en tom målmapp på din DiskStation för montering av fjärrmappen.</li>
+
+<img src="about:blank" class="help_image"/>
+
+<li>Markera <b>Montera automatiskt vid start</b> om du vill att DiskStation ska montera den här fjärrmappen vid varje systemstart eller omstart.</li>
+<li>Klicka på <b>Montera</b> för att montera fjärrmappen i målmappen. Du kan nu navigera och hantera fjärrmappar från din DiskStation.</li>
+</ol>
+
+<h4>Att montera en delad fjärrmapp i NFS:</h4>
+
+<ol>
+<li>Klicka på <b>Verktyg</b> > <b>Montera fjärrmapp</b> > <b>NFS Delad mapp</b>.</li>
+
+<img src="about:blank" class="help_image"/>
+
+<li>I fältet <b>Mapp</b>, specificera sökvägen till fjärrmappen i formatet <code>Remote_Server:/Remote_Folder_Path</code>, exempelvis <code>192.168.0.2:/volume1/share</code>.</li>
+<li>Välj den önskade NFS-versionen och transportprotokollet.</li>
+<li>Klicka på <b>Bläddra</b> för att välja eller skapa en tom målmapp på din DiskStation för montering av fjärrmappen.</li>
+
+<img src="about:blank" class="help_image"/>
+
+<li>Markera <b>Montera automatiskt vid start</b> om du vill att din DiskStation ska montera den här fjärrmappen vid varje systemstart eller omstart.</li>
+<li>Klicka på <b>Montera</b> för att montera fjärrmappen i målmappen. Du kan nu navigera och hantera fjärrmappar från din DiskStation.</li>
+</ol>
+
+<div class="section">
+<h4>Obs:</h4>
+<p>NFSv4 stöder endast TCP-protokollet.</p>
+</div>
+
+<h4>Avmontera en fjärrmapp:</h4>
+<ol>
+<li>Välj den fjärrmapp du vill avmontera och klicka på <b>Verktyg</b> > <b>Avmontera</b>.</li>
+
+<img src="about:blank" class="help_image"/>
+
+<li>Alternativt, högerklicka helt enkelt på fjärrmappen och välj <b>Avmontera</b>.</li>
+
+<img src="about:blank" class="help_image"/>
+
+</ol>
+
+<div class="section">
+<h4>Obs:</h4>
+<ul>
+<li>Max antal samtidiga fj&auml;rrmappar &auml;r 100.</li>
+<li>Du f&aring;r bara montera fj&auml;rrmappar fr&aring;n en fj&auml;rrserver som st&ouml;der CIFS- eller NFS-protokollet.
+</li>
+<li>Fj&auml;rrmappar kan bara monteras till undermappar under delade mappar.</li>
+<li class="enable-dockerx64">Montering av fj&auml;rrmappar st&ouml;ds endast i l&auml;get h&ouml;gt privilegie. F&ouml;r att anv&auml;nda den h&auml;r funktionen, g&aring; till filpaketet Docker p&aring; din DSM som &auml;r v&auml;rd, v&auml;lj den <strong>Docker DSM</strong> som du vill aktivera krypterade delade mappar f&ouml;r, klicka p&aring; <strong>Redigera</strong> och markera rutan bredvid <strong>K&ouml;r container med h&ouml;gt privilegie</strong>.</li>
+</ul>
+</div>
+
+
+<p>____<br /> * Endast tillgängligt för vissa modeller.</p>
+
+</body>
+</html>

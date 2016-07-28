@@ -1,0 +1,85 @@
+ <!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>将硬盘添加到卷或硬盘组 - Synology DSM 帮助</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="This article walks you through the steps to add an additional hard drive to an existing volume or disk group on your DiskStation.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>添加硬盘以扩充存储容量</h2>
+
+<p>如果 DiskStation 上有空置的硬盘插槽，您可安装其它硬盘并将其添加到已有的卷或硬盘组。本章节提供了通过安装其它硬盘来扩充已有卷或硬盘组的说明。</p>
+
+<h3>开始进行之前的准备</h3>
+
+<p>开始之前，请先确认您要添加的硬盘符合以下大小要求。</p>
+<ul>
+<li><strong>对于 SHR：</strong>您要添加硬盘的容量必须等于或大于存储卷或硬盘组中的最大硬盘容量，或者等于卷或硬盘组中任何硬盘之一。例如，如果您的 SHR 卷有三个硬盘 (分别为 2 TB、1.5 TB 和 1 TB) 构成，则新硬盘的容量必须至少为 2 TB 或等于 1.5 TB 或 1 TB。</li>
+<li><strong>对于 RAID 5 和 RAID 6：</strong>您要添加硬盘的容量必须等于或大于存储卷或硬盘组中的最小硬盘容量。例如，如果您的卷有三个硬盘 (分别为 2 TB、1.5 TB 和 1 TB) 构成，则新硬盘的容量必须至少为 1 TB。</li>
+</ul>
+
+<div class="section">
+<h4>检查卷状态</h4>
+
+<p>请先确认卷或硬盘组的状态为<strong>正常</strong>。如果不是，则必须先修复。</p>
+</div>
+
+
+<h3>  将硬盘添加到卷或硬盘组</h3>
+
+<p>硬盘可添加到以下 RAID 类型： </p>
+
+<ul>
+<li>Synology 混合式 RAID (SHR)</li>
+<li>JBOD</li>
+<li>RAID 5</li>
+<li>RAID 6</li>
+</ul>
+
+<div class="section">
+<h4>注：</h4>
+<p>对于 SHR，硬盘添加至的卷必须由两个以上的硬盘构成才能扩充存储容量。</p>
+</ul>
+</div>
+
+<h4>将硬盘添加到卷或硬盘组：</h4>
+
+<ol>
+<li>关闭 DiskStation。(如果您的 DiskStation 支持热交换，可跳过此步骤。)</li>
+<li>将新硬盘安装到空置的硬盘插槽。</li>
+
+<div class="section">
+<h4>注：</h4>
+<p>为避免让自己或 DiskStation 遭受损伤，请按 Synology <i>快速安装指南</i>中的硬盘安装说明进行操作。</p>
+</div>
+
+<li>打开 DiskStation。</li>
+<li>使用属于 <strong>administrators</strong> 群组的帐户登录 DSM。</li>
+<li>打开<strong>存储管理器</strong>。</li>
+<img src="about:blank" class="help_image"/>
+
+<li>此时，请进行以下操作：</li>
+  <ul class="list_abc">
+    
+<li>如果您要扩充单一卷，请进入<strong>卷</strong>选项卡。选择您想要扩充的卷。单击<strong>管理</strong>并进入下一个步骤。 </li>
+<img src="about:blank" class="help_image"/>
+    
+<li>如果您要扩充硬盘组，请进入<strong>硬盘组</strong>选项卡。选择您想要扩充的硬盘组。单击<strong>管理</strong>并进入下一个步骤。</li>
+<img src="about:blank" class="help_image"/>
+  </ul>
+<li>选择<strong>添加硬盘来扩充卷 (或硬盘组)</strong>。然后单击<strong>下一步</strong>。</li>
+<img src="about:blank" class="help_image"/>
+<li>选择要用于扩充卷或硬盘组的硬盘。勾选相应的复选框来添加硬盘。然后单击<strong>下一步</strong>。</li>
+<img src="about:blank" class="help_image"/>
+<li>按照设置向导的步骤完成操作。</li>
+</ol>
+</body>
+</html>

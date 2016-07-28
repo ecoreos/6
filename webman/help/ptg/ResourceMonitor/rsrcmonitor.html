@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Monitoriza&ccedil;&atilde;o de Recursos</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h1><a name="leaf_update"></a>Monitor de Recurso</h1>
+<p class="disable-dockerx64">A Monitoriza&ccedil;&atilde;o de Recursos permite-lhe monitorizar a utiliza&ccedil;&atilde;o da CPU, mem&oacute;ria, disco e tr&aacute;fego de rede. Pode optar por monitorizar em tempo real ou visualizar os dados anteriores.</p>
+<p class="enable-dockerx64">A monitoriza&ccedil;&atilde;o de recursos permite-lhe monitorizar a utiliza&ccedil;&atilde;o da CPU, a utiliza&ccedil;&atilde;o da mem&oacute;ria e o fluxo da rede. Pode optar por monitorizar em tempo real ou visualizar os dados anteriores.</p>
+<div class="section">
+<h4>Nota:</h4>
+<ul>
+<li>Os dados anteriores s&atilde;o exibidos apenas se a op&ccedil;&atilde;o <strong>Ativar hist&oacute;rico de utiliza&ccedil;&atilde;o</strong> estiver assinalada no separador <strong>Defini&ccedil;&otilde;es</strong>.</li>
+<li class="enable-dockerx64">Para Docker DSM, <strong>CPU e mem&oacute;ria</strong> indica as informa&ccedil;&otilde;es de utiliza&ccedil;&atilde;o acerca do <strong>Anfitri&atilde;o Docker</strong>.</li>
+</ul>
+</div>
+<h2>Desempenho</h2>
+<p>Clique no separador <strong>Desempenho</strong> para visualizar os dados de utiliza&ccedil;&atilde;o de recursos. Quando passar com o rato por cima do gr&aacute;fico ser&atilde;o mostradas a data e informa&ccedil;&atilde;o detalhadas.</p>
+
+<h3>CPU</h3>
+<p>Pode ver a utiliza&ccedil;&atilde;o global do CPU do&nbsp;<strong>Utilizador</strong>,&nbsp;<strong>Sistema</strong>&nbsp;e&nbsp;<strong>Espera I/O</strong>. A carga da CPU pode ser elevada quando a a&ccedil;&atilde;o Monitor de Recursos for iniciada pela primeira vez, porque o sistema necessita de recolher os dados dos recursos e, simultaneamente, carregar a p&aacute;gina UI.</p>
+<p><strong>Utilizador</strong> mostra a percentagem do CPU utilizada para executar aplica&ccedil;&otilde;es do utilizador. <strong>Sistema</strong> mostra a percentagem da CPU utilizada no n&uacute;cleo do sistema e IRQs do hardware/software. <strong>Espera I/O</strong> mostra a percentagem da CPU utilizada na espera I/O.</p>
+<p><strong>Utiliza&ccedil;&atilde;o</strong> &eacute; a soma da utiliza&ccedil;&atilde;o do CPU por <strong>Utilizador</strong> e <strong>Sistema</strong>.</p>
+<p>A M&eacute;dia de Carga dentro de 1, 5 e 15 minutos &eacute; apresentada, mostrando o comprimento da fila de execu&ccedil;&atilde;o (ou seja, a soma do n&uacute;mero de processos que est&atilde;o actualmente a ser executados mais o n&uacute;mero que aguardam ser executados). </p>
+<div class="section">
+<h4>Explica&ccedil;&atilde;o dos Termos</h4>
+<ul>
+<li><b>Espera I/O</b>: A Espera I/O indica que a CPU est&aacute; inativa e n&atilde;o est&aacute; a ser usada por qualquer programa. </li>
+<p>A Espera I/O &eacute; um comportamento normal. Dado que a velocidade da CPU &eacute; muito mais r&aacute;pida que a de I/O, &eacute; comum que a CPU aguarde pela conclus&atilde;o da transmiss&atilde;o dos discos ou da rede. No entanto, se a percentagem da espera I/O for extremamente grande, significa que a CPU passa a maior parte do tempo em espera I/O e poder&aacute; n&atilde;o ser bem usado. Pode usar configura&ccedil;&atilde;o de grupos de disco mais eficientes (por exemplo, SHR ou RAID 5) ou configura&ccedil;&otilde;es de rede (por exemplo, Bonding) para obter um melhor desempenho do sistema.</p> 
+</ul>
+</div>
+<h3>Mem&oacute;ria</h3>
+<p>A utiliza&ccedil;&atilde;o geral de mem&oacute;ria da mem&oacute;ria f&iacute;sica e espa&ccedil;o de troca (swap) ser&atilde;o mostrados. A utiliza&ccedil;&atilde;o da mem&oacute;ria mant&eacute;m-se elevada porque o sistema guarda frequentemente os dados acedidos na cache, para que os dados possam ser rapidamente obtidos sem aceder ao disco r&iacute;gido. A mem&oacute;ria cache ser&aacute; libertada quando a mem&oacute;ria global for insuficiente.</p>
+<p>Uma elevada utiliza&ccedil;&atilde;o do espa&ccedil;o de troca indica mem&oacute;ria de sistema insuficiente e tamb&eacute;m afeta o desempenho do sistema. Pode visualizar a velocidade de swap in e de swap out, selecionando <strong>Swap</strong> no menu pendente, no topo. </p>
+
+<h3>Rede</h3>
+<p>O gr&aacute;fico do fluxo da rede indica a taxa de dados enviados e recebidos em KB por segundo. Se a op&ccedil;&atilde;o PPPoE estiver ativada, tamb&eacute;m ser&aacute; exibida no gr&aacute;fico a respetiva taxa de transfer&ecirc;ncia.</p>
+
+<h3 class="disable-dockerx64">Disco</h3>
+<p class="disable-dockerx64">Pode optar por visualizar a utiliza&ccedil;&atilde;o geral do disco, velocidade de transfer&ecirc;ncia ou IOPS clicando no menu pendente no topo do gr&aacute;fico. Pode clicar em <strong>Visualizar Todas</strong> no fundo para selecionar mais discos, marcando as caixas de verifica&ccedil;&atilde;o para adicionar os seus dados no gr&aacute;fico.</p>
+
+
+<h3 class="disable-eds14 disable-dockerx64">Volume</h3>
+<p class="disable-eds14 disable-dockerx64">Esta p&aacute;gina apresenta o estado global de transfer&ecirc;ncia dos volumes. Clique no menu de contexto, acima do gr&aacute;fico, para ver a utiliza&ccedil;&atilde;o de transfer&ecirc;ncia, taxa de transfer&ecirc;ncia ou IOPS. Clique no bot&atilde;o <strong>Visualizar tudo</strong> para selecionar volumes individuais e adicion&aacute;-los ao gr&aacute;fico.</p>
+
+<h3 class="disable-eds14 disable-dockerx64">iSCSI</h3>
+<p class="disable-eds14 dixable-dockerx64">Esta p&aacute;gina apresenta o estado global dos iSCSI LUNs em execu&ccedil;&atilde;o. Clique no menu de contexto, acima do gr&aacute;fico, para selecionar um LUN e ver o seu estado. S&atilde;o apresentados tr&ecirc;s gr&aacute;ficos por predefini&ccedil;&atilde;o, que s&atilde;o <strong>Rendimento</strong>, <strong>IOPS</strong> e <strong>Lat&ecirc;ncia</strong>. Para informa&ccedil;&otilde;es mais detalhadas, clique no bot&atilde;o <strong>Escolher Gr&aacute;ficos</strong> para selecionar outros gr&aacute;ficos que desejar ver.</p>
+
+
+<h2>Processo</h2>
+<p>Clique no separador <strong>Processo</strong> para visualizar a utiliza&ccedil;&atilde;o da CPU e da mem&oacute;ria de cada processo por ordem descendente de carga da CPU.</p>
+<p>O processo <strong>Estado</strong> inclui <strong>Em execu&ccedil;&atilde;o</strong>, <strong>Em suspens&atilde;o</strong> e <strong>Parado</strong>. Os equivalentes Linux do estado do processo s&atilde;o <strong>running</strong>, <strong>stopped/tracing</strong>, <strong>sleeping</strong>. </p>
+<p><strong>Em suspens&atilde;o</strong> pode ser seguido por uma letra para informa&ccedil;&atilde;o detalhada, por exemplo &apos;D&apos; para suspens&atilde;o do disco, &apos;Z&apos; para zombie, &apos;X&apos; para morto.</p>
+
+<h2>Utilizadores Ligados</h2>
+<p> Neste separador, pode visualizar e gerir os clientes que est&atilde;o atualmente ligados ao sistema e a aceder a recursos. Esta sec&ccedil;&atilde;o exibe clientes que estejam ligados atrav&eacute;s de HTTP, TELNET, SSH, SMB/CIFS, AFP, FTP e NFS.</p>
+<h4>Para gerir as liga&ccedil;&otilde;es atuais, proceda de uma das seguintes formas:</h4>
+<ul>
+<li>Clique em <b>Guardar</b> para exportar a lista atual para um ficheiro HTML.</li>
+<li>Clique em <b>Atualizar</b> para atualizar a lista.</li>
+<li>Clique em <b>Terminar liga&ccedil;&atilde;o</b> para impedir que o utilizador aceda ao recurso. O utilizador desligado tem de ser novamente autorizado para aceder ao recurso.</li>
+<li>Clique em <b>Desativar utilizador</b> para desativar o utilizador. Para ativar novamente o utilizador, aceda a <b>Menu Principal</b> &gt; <b>Painel de Controlo</b> &gt; <b>Utilizador</b>.</li>
+</ul>
+<div class="section">
+<h4>Nota:</h4>
+<ul>
+<li>A op&ccedil;&atilde;o <strong>Terminar liga&ccedil;&atilde;o</strong> n&atilde;o funciona com clientes NFS.</li>
+<li>Se os clientes NFS n&atilde;o desmontarem adequadamente as pastas partilhadas, podem continuar a ser apresentados na lista de utilizadores ligados.</li>
+<li>Se o DiskStation reiniciar, os clientes NFS que estavam anteriormente ligados n&atilde;o ser&atilde;o apresentados na lista de utilizadores ligados.</li>
+</ul>
+</div>
+
+
+<h2>Limite de Velocidade</h2>
+<p>No separador <strong>Limite de velocidade</strong> pode visualizar e gerir a lista de processos de transfer&ecirc;ncia de ficheiros que aplicaram limite de velocidade no DiskStation.</p>
+<h4>Para atualizar a lista:</h4>
+<p>Clique em <strong>Atualizar</strong> para recarregar a p&aacute;gina e obter os registos mais atualizados.</p>
+<h4>Para interromper um processo de transfer&ecirc;ncia de ficheiros:</h4>
+<p>Clique em <b>Terminar liga&ccedil;&atilde;o</b>&nbsp;para parar a transfer&ecirc;ncia de ficheiros. Dever&aacute; iniciar de novo a transfer&ecirc;ncia de ficheiros para concluir o processo com &ecirc;xito.</p>
+
+
+<h2>Defini&ccedil;&otilde;es</h2>
+<p>Clique em <strong>Defini&ccedil;&otilde;es</strong> para configurar as seguintes op&ccedil;&otilde;es:</p>
+<ul>
+<li>Escolha a <strong>Dura&ccedil;&atilde;o em tempo real</strong>,&nbsp;em minutos, no menu pendente.</li>
+<li>Marque&nbsp;<strong>Ativar hist&oacute;rico de utiliza&ccedil;&atilde;o</strong>&nbsp;se desejar visualizar os dados anteriores. Quando ativado, pode alternar entre <strong>Tempo real</strong>, <strong>1 Dia</strong>, <strong>1 Semana</strong>, <strong>1 M&ecirc;s</strong> e <strong>1 Ano</strong> no menu pendente no canto superior direito quando visualizar os gr&aacute;ficos de desempenho.</li> 
+</ul>
+<p>Clique em <strong>Apply</strong> para guardar as defini&ccedil;&otilde;es.</p>
+</body>
+</html>

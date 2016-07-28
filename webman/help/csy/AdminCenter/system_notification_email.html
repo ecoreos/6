@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>E-mail – Nápověda Synology DSM</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="Enabling email notifications allows your DiskStation to send messages to your email when specified events occur."><link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>E-mail</h2>
+<p class="disable-eds14">Povolením upozornění e-mailem umožníte zařízení DiskStation posílat zprávy na váš e-mail, když nastanou specifické události, například chyby systému, ztráta připojení k síti, chování ventilátoru, výpadek napájení nebo selhání úlohy zálohování.</p>
+
+<p class="enable-eds14">Povolením upozornění e-mailem umožníte zařízení DiskStation posílat zprávy na váš e-mail, když nastanou specifické události, například chyby systému, ztráta připojení k síti, výpadek napájení nebo selhání úlohy zálohování.</p>
+
+
+<h4>Povolení e-mailových upozornění:</h4>
+<ol>
+<li>Přejděte do části <strong>Ovládací panel</strong> > <strong>Upozornění</strong> > <strong>E-mail</strong>.</li>
+<li>Zaškrtněte políčko <strong>Povolit e-mailová upozornění</strong>.</li>
+<li>Do pole <strong>Příjemci</strong> zadejte jednu či více e-mailových adres. Na zde zadané adresy budou posílána upozornění systému. Jsou povoleny dvě adresy. Více adres můžete oddělit středníkem (;).</li>
+<li>V případě potřeby můžete v poli <strong>Předpona předmětu</strong> zadat předponu předmětu. Tato předpona bude přidána do předmětu každé zprávy odeslané ze stanice DiskStation a umožní vám tak rozpoznat a vyfiltrovat zprávy.</li>
+<li>Chcete-li k přenášení zpráv používat e-mailový server třetí strany (např. Gmail, Outlook, Yahoo!) podívejte se níže do části „e-mailová služba třetí strany“. Chcete-li používat vlastní server, přejděte do části „vlastní server SMTP“. </li>
+</ol>
+
+
+
+
+<h4>Používání e-mailové služby třetí strany:</h4>
+<ol>
+
+
+<li>V nabídce <strong>Poskytovatel služeb</strong> vyberte e-mailovou službu třetí strany, jako je například Gmail, Yahoo nebo Outlook.</li>
+<li>Zadejte své uživatelské jméno a heslo pro vybranou e-mailovou službu.</li>
+<li>Nastavení uložíte kliknutím na možnost <strong>Použít</strong>.</li>
+<li>Kliknutím na možnost <strong>Poslat zkušební e-mail</strong> můžete zkontrolovat správnost svých nastavení.</li>
+</ol>
+
+<h4>Používání vlastního serveru SMTP:</h4>
+<ol>
+
+
+<li>V nabídce <strong>Poskytovatel služeb</strong> vyberte možnost <strong>Vlastní server SMTP</strong>.</li>
+<li>Do pole <strong>Server SMTP</strong> zadejte název nebo IP adresu serveru SMTP. </li>
+<li>Do pole <strong>Port SMTP</strong> zadejte číslo portu SMTP. (Pokud jste při nastavení pravidel předávání portů nastavili jiný port SMTP, použijte toto číslo.)</li>
+<li>Pokud váš server SMTP vyžaduje ověření, zaškrtněte možnost <strong>Je požadováno ověření</strong> a zadejte <strong>Uživatelské jméno</strong> a <strong>Heslo</strong> pro server SMTP. </li>
+<li>Pokud server SMTP vyžaduje připojení SSL/TLS, zaškrtněte možnost <strong>Je vyžadováno zabezpečené připojení (SSL/TLS)</strong>.<li>Chcete-li přizpůsobit jméno odesílatele uvedené v e-mailových zprávách odeslaných zařízením DiskStation, zadejte jméno do pole <strong>Jméno odesílatele</strong>. Chcete-li přizpůsobit e-mailovou adresu odesílatele, zadejte e-mailovou adresu do pole <strong>E-mail odesílatele</strong>. Pokud zůstane toto pole prázdné, použije se v poli <strong>Příjemci</strong> první e-mailová adresa.</li>
+<li>Nastavení uložíte kliknutím na možnost <strong>Použít</strong>.</li>
+<li>Kliknutím na možnost <strong>Poslat zkušební e-mail</strong> můžete zkontrolovat správnost svých nastavení.</li>
+</ol>
+
+
+
+
+
+
+<div class="section">
+<h4>Poznámka:</h4>
+<ul>
+<li>Chcete-li posílat uvítací zprávu každému nově vytvořenému uživatelskému účtu, zaškrtněte možnost <strong>Odeslat uvítací zprávu novým uživatelům</strong> a každý uživatel při vytvoření účtu obdrží uvítací zprávu.</li>
+<li>Jazyk pro upozornění e-mailem lze nastavit v části <strong>Jazyk oznámení</strong>. Pokud chcete změnit jazyk upozornění e-mailem, přejděte do části <strong>Hlavní nabídka</strong> > <strong>Ovládací panel</strong> > <strong>Místní nastavení</strong>, klikněte na kartu <strong>Jazyk</strong> a vyberte preferovaný jazyk z rozevírací nabídky v části <strong>Jazyk oznámení</strong>.</li>
+<li>Používáte-li server SMTP systému Gmail a povolili jste dvoufázové ověření, nezapomeňte použít „heslo specifické pro aplikaci“ poskytnuté společností Google pro ověření SMTP.</li>
+</ul>
+</div>
+
+<div class="section">
+<h4>Název domény serveru SMTP:</h4>
+<p>Server SMTP lze zadat jako IP adresu nebo název domény. Pokud použijete název domény, zadejte na stránce <b>Hlavní nabídka</b> > <b>Ovládací panel</b> > <b>Síť</b> platnou IP adresu serveru DNS a zkontrolujte, zda je server připojen k Internetu. </p>
+
+
+</div>
+</body>
+</html>

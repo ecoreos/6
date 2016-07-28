@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Win/Mac/NFS</title>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Domaine</h2>
+<p>Votre DiskStation peut rejoindre un domaine Windows. Après avoir rejoint un domaine, les utilisateurs du domaine peuvent se connecter sur le DiskStation à l'aide de leurs comptes et mots de passe de domaine, ce qui leur permet d'accéder et d'utiliser les applications DSM sans devoir mémoriser d'autres noms d'utilisateurs et mots de passe.</p>
+<h4>Pour rejoindre un domaine :</h4>
+<ol>
+<li>Accédez à <strong>Panneau de configuration</strong> > <strong>Service d'annuaire</strong> > <strong>Domaine</strong>.</li>
+<li>Cochez la case <strong>Rejoindre le domaine</strong>.</li>
+<li>Entrez le nom de domaine et spécifiez le serveur DNS dans les champs appropriés.</li>
+<li>Si nécessaire, cochez la case <b>Options de domaine avancées</b>. (Voir ci-dessous pour plus de détails.)</li>
+<li>Cliquez sur <b>Appliquer</b>.</li>
+<li>Dans la fenêtre déroulante, saisissez le nom d'utilisateur et le mot de passe de l'administrateur du serveur de domaine.</li>
+<li>Cliquez sur <b>OK</b>.</li>
+</ol>
+<div class="section">
+<h4>DNS Server</h4>
+<p>Il est conseillé de spécifier un serveur DNS pour aider le DiskStation à rechercher le domaine. Toutefois, si le domaine n'est pas enregistré sur le serveur DNS, la procédure pour rejoindre le domaine peut échouer.</p>
+<h4>Type de serveur de domaine</h4>
+<p>Ce champ affiche le type de domaine lorsque le DiskStation rejoint un domaine. Le type de domaine sera « Domaine AD ».</p>
+<h4>Mode de gestion</h4>
+<p>Cette option déterminera la façon dont vous gérer les privilèges des utilisateurs et groupes de domaine. </p>
+<ul>
+<li><b>Trusted Domain</b>: Vous pouvez gérer les utilisateurs et les groupes dans le domaine joint ainsi que les domaines de confiance. Les utilisateurs et les groupes peuvent être filtrés avec la liste déroulante de domaine.</li>
+<li><b>Domaine seul avec OU</b>: Seuls les utilisateurs et les groupes dans le domaine joint seront affichés dans ce mode. Ce mode vous permet de filtrer les utilisateurs de domaine/groupes de domaine avec la liste déroulante OU (Unité organisationnelle).</li>
+</ul>
+<h4>Options avancées du domaine</h4>
+<p>Dans la plupart des cas, vous n'avez pas besoin de remplir les options avancées du domaine. Les options avancées du domaine ne sont nécessaires que dans des environnements de domaine spécifiques. </p>
+<ul>
+<li><b>DC IP/FQDN</b>: Spécifiez une adresse IP pour le DC (contrôleur de domaine) ou FQDN et le DiskStation essaiera de communiquer avec celui-ci. S'il y a plusieurs adresses IP ou FQDN, insérez une virgule (,) entre chacune d'entre elles. Ajoutez un astérisque (*) après la dernière adresse IP de DC ou FQDN si vous voulez, et DiskStation essaiera de communiquer avec un autre DC quand tous ceux qui ont été spécifiés ont échoué. Vous devez ajouter une virgule entre l'astérisque et la dernière adresse IP ou FQDN.</li>
+<li><b>Nom de domaine NetBIOS</b> : Spécifiez le nom NetBIOS du domaine.</li>
+<li><b>FQDN du domaine (nom DNS)</b> : Spécifiez le FQDN (nom DNS) du domaine.</li>
+<li><b>Enregistrer l'interface DNS :</b> Lorsque vous rejoingez un domaine, la NIC (Network Interface Card) spécifiée ici est enregistrée sur le DNS server. Veuillez noter que si le nom d'hôte du DiskStation comprend un trait de soulignement (_), l'enregistrement échouera car les traits de soulignement (_) ne peuvent pas être utilisés avec DNS.</li>
+<li><b>Mettre à jour la liste utilisateur/groupe</b> : Spécifiez la fréquence avec laquelle le DiskStation doit mettre à jour automatiquement la liste des utilisateurs/groupes du domaine. Vous pouvez définir une fréquence de mise à jour quotidienne, hebdomadaire ou mensuelle. De plus, les listes d'utilisateurs du domaine/groupes peuvent être mises à jour manuellement dans l'onglet <strong>Utilisateur du domaine</strong>, en cliquant sur <strong>Mettre à jour tous les domaines</strong>. Veuillez noter que les mises à jour automatiques affecteront l'hibernation du système.</li>
+</ul>
+<h4>Comment rejoindre un Contrôleur de domaine en lecture seule</h4>
+<p>Pour joindre votre DiskStation à un contrôleur de domaine en lecture seulement (RODC), vous devez spécifier le "nom complet de l'ordinateur" (FQDN) de votre contrôleur de domaine en lecture seulement (RWDC) dans le champ <strong>DC IP/FQDN</strong>. Le nom complet de l'ordinateur doit être au format suivant : <strong>ComputerName.Domain</strong>, p. ex. « ad01.synology.com ».</p>
+</div>
+<div class="section">
+<h4>Remarque :</h4>
+<ul>
+<li>Si votre nom d'utilisateur de domaine comprend les caractères « % » ou « $ », il se peut que vous ne puissiez pas accéder à votre dossier d'accueil. Demandez à votre administrateur de domaine de vous donner un nouveau nom d'utilisateur.</li>
+<li>Les groupes de domaine <strong>Domain Admins</strong> et <strong>Enterprise Admins</strong> seront automatiquement ajoutés au groupe local <strong>administrateurs</strong>. Par conséquent, les utilisateurs de domaine appartenant à ces groupes posséderont des privilèges administratifs sur le DiskStation, notamment l'accès aux services de fichiers comme CIFS/FTP/AFP/WebDAV et d'autres applications DSM.</li>
+<li>Vous pouvez également configurer les privilèges d'accès aux dossiers partagés du DiskStation pour les utilisateurs du domaine Voir <a href="file_directory_service_user_group.html">ici</a> pour plus d’informations.</li>
+</ul>
+</div>
+<h3>Options du domaine</h3>
+<p>Cette section inclut les options de domaine supplémentaires ci-dessous.</p>
+<ul>
+<li><b>Le DiskStation se synchronisera avec un serveur NTP chaque fois qu'un utilisateur de domaine se connecte :</b> Cette option force le moment de synchronisation entre le DiskStation et le serveur NTP.</li>
+<li><b>Activer la signature serveur :</b> Si la connexion client est activée sur le client, il faut alors activer la connexion serveur sur le DiskStation, de sorte que les utilisateurs puissent utiliser le domaine normalement.</li>
+<li><b>Obtenir les listes utilisateurs/groupes avec le mode compatible NT4</b> Cette option permet au système d'obtenir les listes d'utilisateurs/groupes à l'aide du mode NT4 RPC. Cette option peut être activée si certaines listes d'utilisateurs/groupes du domaine ne sont pas accessibles à l'aide des paramètres par défaut.</li>
+<li><b> Désactiver les permissions administrateur pour les admins de domaine et d'entreprise :</b> Un utilisateur avec des autorisations administrator peut avoir un contrôle complet de votre DiskStation et de ses fichiers. L'activation de cette option vous permettra de restreindre les autorisations des Domain Admins et Enterprise Admins pour être de même à un utilisateur normal</li>
+<li><strong>Énumérer les niveaux de groupes imbriqués :</strong> Spécifiez le nombre de membres de groupe de domaine imbriqués qui peuvent être énumérés.</li>
+</ul>
+</body>
+</html>

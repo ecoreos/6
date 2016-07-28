@@ -1,0 +1,149 @@
+
+[HA_ConfSyncError]
+Subject: Der high-availability-Cluster %HOSTNAME% hat einen Synchronisierungsfehler während der Systemkonfigurationsprüfung erkannt.
+
+Sehr geehrter Benutzer,
+
+Der high-availability-Cluster %HOSTNAME% hat einen Synchronisierungsfehler während der Systemkonfigurationsprüfung des aktiven und des passiven Servers erkannt. Das System hat versucht, den Fehler durch die Durchführung einer vollständigen Synchronisierung der Systemkonfigurationen zu beheben. Überprüfen Sie die Systemprotokolle oder die Seite "Protokolle" in High Availability Manager, um weitere Informationen zu erhalten.
+
+Aktion: %HA_ACTION%
+Fehler: %HA_PARAM_1%
+
+Mit freundlichen Grüßen
+%COMPANY_NAME%
+
+
+[HA_FailOver]
+Subject: Fehler erkannt auf High-Availability-Cluster %HOSTNAME%.
+
+Sehr geehrte/r Benutzer/in,
+
+Ein Fehler wurde auf dem High-Availability-Cluster %HOSTNAME% erkannt. Das System wird die Dienste an den passiven Server übergeben. Bitte prüfen Sie die Systemprotokolle, um weitere Informationen zu erhalten.
+
+Aktion: %HA_ACTION%
+Fehler: %HA_PARAM_1%
+
+Mit freundlichen Grüßen
+%COMPANY_NAME%
+
+
+[HA_MismatchedSsdCache]
+Subject: SSD Cache-Festplatten im high-availability-Cluster %HOSTNAME% sind nicht identisch
+
+Sehr geehrter Benutzer,
+
+Die zum SSD-Cache %HA_PARAM_2% gehörenden Festplatten auf dem passiven Server %HA_PARAM_1% sind nicht identisch mit den Festplatten auf dem aktiven Server.
+
+Überprüfen Sie die Seite "Protokolle" in High Availability Manager, um weitere Informationen zu erhalten.
+
+Aktion: %HA_ACTION%
+
+Mit freundlichen Grüßen
+%COMPANY_NAME%
+
+
+[HA_SplitBrain]
+Subject: Ein Split-Brain-Fehler ist auf dem High-Availability-Cluster aufgetreten. %HOSTNAME%
+
+Sehr geehrte/r Benutzer/in,
+
+Ein Split-Brain-Fehler ist auf dem High-Availability-Cluster %HOSTNAME% aufgetreten. Bitte prüfen Sie die Systemprotokolle, um weitere Informationen zu erhalten.
+
+Aktion: %HA_ACTION%
+
+Mit freundlichen Grüßen
+%COMPANY_NAME%
+
+
+[HA_StatusChange]
+Subject: Status von high-availability-Cluster %HOSTNAME% hat von %HA_PARAM_1% zu %HA_PARAM_2% gewechselt.
+
+Sehr geehrter Benutzer,
+
+Der Status des high-availability-Clusters %HOSTNAME% hat von %HA_PARAM_1% zu %HA_PARAM_2% gewechselt. Überprüfen Sie die Systemprotokolle oder die Seite "Protokolle" in High Availability Manager, um weitere Informationen zu erhalten.
+
+Aktion: %HA_ACTION%
+Beschreibung: %HA_PARAM_3%
+
+Mit freundlichen Grüßen
+%COMPANY_NAME%
+
+
+[HA_SwitchFail]
+Subject: Die Übergabe der Dienste des High-Availability-Clusters sind fehlgeschlagen %HOSTNAME%
+
+Sehr geehrte/r Benutzer/in,
+
+Das System hat versucht, Dienste des passiven Servers an den High-Availability-Cluster %HOSTNAME% zu übergeben, aber dies ist fehlgeschlagen. Bitte prüfen Sie die Systemprotokolle, um weitere Informationen zu erhalten.
+
+Aktion: %HA_ACTION%
+
+Mit freundlichen Grüßen
+%COMPANY_NAME%
+
+
+[HA_SwitchFinished]
+Subject: High-availability-Cluster %HOSTNAME% führt jetzt Dienste auf %HA_PARAM_1% aus.
+
+Sehr geehrter Benutzer,
+
+Die Dienste des high-availability-Clusters %HOSTNAME% werden jetzt auf %HA_PARAM_1% ausgeführt. Überprüfen Sie die Systemprotokolle oder die Seite "Protokolle" in High Availability Manager, um weitere Informationen zu erhalten.
+
+Aktion: %HA_ACTION%
+
+Mit freundlichen Grüßen
+%COMPANY_NAME%
+
+
+[HA_SwitchOver]
+Subject: Übergabe des High-Availability-Clusters %HOSTNAME% an %HA_PARAM_1%.
+
+Sehr geehrte/r Benutzer/in,
+
+Jemand hat eine Übergabe des High-Availability-Clusters %HOSTNAME% eingeleitet. Dienste werden an %HA_PARAM_1% übergeben. Bitte prüfen Sie die Systemprotokolle, um weitere Informationen zu erhalten.
+
+Aktion: %HA_ACTION%
+
+Mit freundlichen Grüßen
+%COMPANY_NAME%
+
+
+[HA_SwitchOver_With_Reason]
+Subject: Switchover (Umschaltung) zu %HOSTNAME% von High-Availability-Cluster%HA_PARAM_1% initiiert.
+
+Sehr geehrte/r Benutzer/in,
+
+Auf dem High-Availability-Cluster %HOSTNAME% wurde ein Switchover (Umschaltung) initiiert. Alle Dienste werden auf %HA_PARAM_1% verschoben. Bitte prüfen Sie die Systemprotokolle, um weitere Informationen zu erhalten.
+
+Aktion: %HA_ACTION%
+Grund: %HA_PARAM_2%
+
+Mit freundlichen Grüßen
+%COMPANY_NAME%
+
+
+[HA_SyncComplete]
+Subject: Vollständige Datenreplikation des high-availability-Clusters %HOSTNAME% ist abgeschlossen.
+
+Sehr geehrter Benutzer,
+
+Vollständige Datenreplikation des high-availability-Clusters %HOSTNAME% ist abgeschlossen. Der passive Server kann jetzt die Dienste übernehmen, falls eine Übergabe erforderlich sein sollte. Überprüfen Sie die Systemprotokolle oder die Seite "Protokolle" in High Availability Manager, um weitere Informationen zu erhalten.
+
+Aktion: %HA_ACTION%
+
+Mit freundlichen Grüßen
+%COMPANY_NAME%
+
+
+[HA_UnbindLocal]
+Subject: Localhost wurde vom high-availability-Cluster entfernt
+
+Sehr geehrter Benutzer,
+
+%HA_PARAM_1% wurde vom high-availability-Cluster %HA_PARAM_2% entfernt. Bitte prüfen Sie die Systemprotokolle, um weitere Informationen zu erhalten.
+
+Aktion: %HA_ACTION%
+
+Mit freundlichen Grüßen
+%COMPANY_NAME%
+

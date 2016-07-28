@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Aktualizace DSM</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h1><a name="leaf_update"></a>Aktualizace DSM</h1>
+<p>Společnost Synology pravidelně vydává bezplatné aktualizace DSM. Aktualizace mohou obsahovat nové funkce, vylepšení funkcí a vylepšení výkonnosti.</p>
+<p><span class="note_head">Důležité upozornění:</span> Upgrade systému DSM normálně nemá vliv na data v systému DiskStation. Přesto se kvůli zabezpečení dat důrazně doporučuje před aktualizací zálohovat data.</p>
+
+<h2>Provedení ruční aktualizace systému DSM</h2>
+<p>
+Soubor PAT s aktualizací můžete stáhnout z <a href="http://www.synology.com/support/download.php" target="_blank">Centra pro stahování</a> společnosti Synology a poté ručně aktualizovat systém DSM.
+</p>
+<h4>Provedení ruční aktualizace systému DSM:</h4>
+
+<ol>
+<li>Nejnovější aktualizaci DSM můžete stáhnout ze stránek <a href="http://www.synology.com" target="_blank">www.synology.com</a>. Rozbalte komprimovaný soubor, abyste získali soubor PAT s aktualizací.</li>
+<li>Kliknutím na možnost <b>Ruční aktualizace systému DSM</b> otevřete stránku Ruční aktualizace systému DSM</li>
+<li>Klikněte na možnost <b>Procházet</b> a vyberte soubor s aktualizací.</li>
+<li>Kliknutím na tlačítko <b>Použít</b> zahájíte aktualizaci firmwaru DSM. Po dokončení aktualizace se systém automaticky restartuje.</li>
+</ol>
+<div class="section">
+<h4>Odstraňování potíží:</h4>
+<p>Pokud firmware DSM nelze aktualizovat, mohou vám pomoci následující rady:</p>
+<ul>
+<li>Zkontrolujte, zda byl upgrade přerušen uživateli nebo jinými nečekanými událostmi, jako je například výpadek napájení.</li>
+<li>Zkontrolujte verzi systému DSM. Systém lze aktualizovat pouze s novější verzí firmwaru DSM.</li>
+<li>Stáhněte aktualizaci systému DSM znovu, protože soubor může být poškozen.</li>
+</ul>
+<p>Pokud problém přetrvává, obraťte se na <a href="https://account.synology.com/support/support_form.php" target="_blank">technickou podporu</a> společnosti Synology.</p>
+</div>
+
+<h2>Provedení automatické aktualizace systému DSM</h2>
+<p>
+Vedle ruční aktualizace existuje i automatická možnost. Při každém otevření oblasti <b>Aktualizace DSM</b> systém zkontroluje, zda společnost Synology nabízí ke stažení novou verzi systému DSM, a poté zobrazí výsledek pomocí zeleného nebo červeného textu. Pokud zjistíte, že je možné stáhnout nejnovější verzi DSM, můžete systém nechat tuto nejnovější verzi stáhnout a poté provést aktualizaci. 
+</p>
+<h4>Stažení nejnovější verze DSM systémem a provedení aktualizace:</h4>
+<ol>
+<li>Pokud je možné stáhnout nejnovější verzi DSM, nechte systém stáhnout nejnovější verzi DSM kliknutím na odkaz <b>Stáhnout</b>.</li>
+<li>Systém oznámí výsledek stahování zobrazením jednoho z následujících upozornění: <b>Stahování systému DSM dokončeno</b> nebo <b>Stažení systému DSM se nezdařilo</b>.</li>
+<li>
+Kliknutím na okno s upozorněním přejdete do části <b>Aktualizace DSM</b>.
+</li>
+<li>
+Proveďte některou z následujících akcí:
+<ul>
+<li>
+Pokud byl systém DSM stažen, zahajte aktualizaci systému DSM kliknutím na možnost <b>Aktualizovat</b>.
+</li>
+<li>
+Pokud se stažení systému DSM nezdařilo, nechte systém stáhnout znovu nejnovější verzi systému DSM od společnosti Synology kliknutím na možnost <b>Zkusit znovu</b>.
+</li>
+</ul>
+</li>
+</ol>
+<h4>Pravidelná kontrola aktualizací:</h4>
+<ol>
+<li>Zaškrtněte možnost <b>Automaticky kontrolovat aktualizace systému DSM</b>.</li>
+<li>Vyberte plán aktualizací a nastavte možnost <b>Plán instalace</b>.</li>
+<li>Klikněte na možnost <b>OK</b>.</li>
+</ol>
+<p>Jakmile stáhnete aktualizaci systému DSM, která je připravena k instalaci, zobrazí se upozornění na ploše. Chcete-li zastavit automatické aktualizace systému DSM, můžete je zrušit v upozornění na ploše nebo v části <strong>Nastavení aktualizací</strong>. Aktualizace systému DSM budou nainstalovány před plánovaným vypnutím, pokud povolíte možnost <strong>Vypnout</strong> v části <strong>Plán napájení</strong>.</p>
+
+<div class="section">
+<h4>Odstraňování potíží:</h4>
+<p>Pokud se v průběhu kontroly dostupnosti nebo v průběhu stahování nejnovější verze DSM zobrazují chybové zprávy (červený text), může vám s řešením problému pomoci toto:</p>
+<ul>
+<li>Zkontrolujte, zda je zařízení DiskStation připojené k Internetu.</li>
+<li>Server Synology pro stahování může být momentálně zaneprázdněný. Problém může vyřešit pozdější stažení.</li>
+</ul>
+<p>Pokud problém přetrvává, obraťte se na <a href="https://account.synology.com/support/support_form.php" target="_blank">technickou podporu</a> společnosti Synology.</p>
+</div>
+
+</body>
+</html>

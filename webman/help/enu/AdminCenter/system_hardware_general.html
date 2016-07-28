@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Power</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>General</h2>
+
+<p>
+<strong>Control Panel</strong> > <strong>Hardware & Power</strong> > <strong>General</strong> provides options to enable power recovery, Wake on LAN (WOL) and Memory Compression. You can also modify beep control and fan speed mode here.
+</p>
+
+<h3>
+Power Recovery
+</h3>
+<p>If the system shuts down due to unexpected power failure, the power recovery function allows the system to boot up automatically once power has been restored.</p>
+<h3>Wake on LAN*</h3>
+<p>Enabling Wake on LAN (WOL) allows you to turn on your DiskStation over local area network or the Internet by entering the IP address (or DDNS hostname) and the MAC address of your DiskStation using a WOL application, such as Synology Assistant, DS finder or any other WOL applications.</p>
+<p>Wake on LAN works only after the DiskStation is shut down properly by pressing the physical <b>Power</b> button or clicking <b>Shutdown</b> on the DSM interface. Keep the power cord plugged into a working power outlet after shutdown.</p>
+<div class="section">
+	<h4>Note:</h4>
+	<p class="disable-rc18015xsp">The WOL feature is not supported on 10GbE LAN ports (if available on your DiskStation).</p>
+	<ul class="enable-rc18015xsp">
+		<li>The WOL feature is not supported on 10GbE LAN ports (if available on your DiskStation).</li>
+		<li>The WOL feature is by default enabled on 1GbE LAN ports for DiskStation, and cannot be disabled.</li>
+	</ul>
+</div>
+<h3>Fan Speed Mode*</h3>
+<p>The following fan speed options are available:</p>
+<ul>
+<li><strong>Cool Mode:</strong> Fan operates at higher speed, keeping the DiskStation cooler, but producing more noise.</li>
+<li><strong>Quiet Mode:</strong> Fan operates at lower speed, producing less noise, but the DiskStation might become warmer.</li>
+<li><strong>Low-power:</strong> Fan operates at lower speed, producing less noise, but the DiskStation might become warmer. In addition, when the DiskStation is cool, the fan will stop in order to save power. Low-power mode is only available on some models.</li>
+</ul>
+<h3>Beep Control</h3>
+<p>DiskStation can emit a beeping sound when certain events or errors occur. Click the checkboxes of listed events to allow DiskStation to alert you when errors occur.</p>
+
+<h4>To stop the beeping sound:</h4>
+<ul>
+<li>If the DiskStation is beeping, click the <strong>Beep off</strong> button to deactivate it. </li>
+</ul>
+
+
+
+<h3>Memory Compression*</h3>
+<p>You can enable Memory Compression to improve general system responsiveness under load by compressing the least recently used data in memory.</p>
+<p>When you have multiple applications running and the memory begins to fill up, the dynamic Memory Compression shrinks the size of seldom-used items in memory, minimizing memory usage. When the items are needed again, they can be instantly uncompressed. This reduces the need to read and write memory swap files on disk, improving efficiency and responsiveness.</p>
+<p>To enable Memory Compression, simply tick the checkbox.</p>
+
+<h3>LED*</h3>
+
+<p>At <strong>Control Panel</strong> > <strong>Hardware & Power</strong> > <strong>General</strong> > <strong>LED Brightness Control</strong>, you can adjust brightness of the LED indicators on your DiskStation.</p>
+
+<div class="section">
+<h4>Note:</h4>
+<p>The brightness settings are applied to all LED indicators on your DiskStation (i.e. Power, STATUS, LAN, drive status, and so on).</p>
+</div>
+
+
+<h4>To adjust LED brightness:</h4>
+<p>Four brightness levels are now available for the LED indicators on your DiskStation.</p>
+<ol>
+<li>Click and drag the pointer on the brightness scale in either direction:
+  <ul>
+<li>Rightward: Increase LED brightness.</li>
+<li>Leftward: Decrease LED brightness.</li>
+</ul>
+</li>
+<li>Click <strong>Apply</strong> to save the setting.</li>
+</ol>
+
+
+
+<h4>To adjust LED brightness by schedule:</h4>
+<p>The LED indicators  can change their brightness level in the scheduled time.</p>
+
+<ol>
+<li>Click <strong>Set Schedule</strong>.</li>
+<li>Click either brightness type below:
+<ul>
+<li><strong>Default brightness</strong>: The fullest brightness</li>
+<li><strong>Adjusted brightness</strong>: The brightness level specified on the brightness scale</li>
+</ul>
+</li>
+<li>Click on the desired periods to customize the brightness schedule.</li>
+<li>Click <strong>OK</strong> and <strong>Apply</strong> to save the settings.</li>
+</ol>
+
+
+
+<p>____<br>
+* Available on specific models only. </p>
+</body>
+</html>

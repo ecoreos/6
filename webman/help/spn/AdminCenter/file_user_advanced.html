@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Configuraci&oacute;n de usuario avanzado</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Configuraci&oacute;n de usuario avanzado</h2>
+
+<p>Para modificar la configuraci&oacute;n de usuario avanzado, puede ir a <strong>Panel de control</strong> &gt; <strong>Usuario</strong> &gt; <strong>Avanzado</strong>. Las opciones disponibles son las siguientes. </p>
+
+<h3>Permitir a usuarios restablecer contrase&ntilde;as olvidadas</h3>
+<p>Si dese permitir a los usuarios que restablezcan contrase&ntilde;as olvidadas por correo electr&oacute;nico, puede habilitar <strong>Permitir que usuarios no administradores restablezcan contrase&ntilde;as olvidadas por correo electr&oacute;nico</strong>. Cuando esta opci&oacute;n est&eacute; habilitada, un enlace marcado como <strong>¿Ha olvidado la contrase&ntilde;a?</strong>  aparecer&aacute; en la p&aacute;gina de inicio de sesi&oacute;n de DSM. Si un usuario olvida su contrase&ntilde;a, puede hacer clic en este enlace e introducir su nombre de usuario. En este caso, el sistema enviar&aacute; un correo electr&oacute;nico al usuario con un enlace para restablecer su contrase&ntilde;a olvidada. </p>
+
+<div class="section">
+<h4>Nota:</h4>
+<ul>
+<li>Antes de habilitar esta opci&oacute;n, aseg&uacute;rese de haber habilitado primero las notificaciones por correo electr&oacute;nico de SMTP. Para hacer esto, vaya a <strong>Panel de control</strong> &gt; <strong>Notificaci&oacute;n</strong>.</li>
+<li>Para recibir mensajes del sistema, los usuarios deben proporcionar una direcci&oacute;n de correo electr&oacute;nico en la secci&oacute;n de informaci&oacute;n de usuario de sus cuentas.</li>
+<li>Los usuarios que pertenezcan al grupo de <strong>administrators</strong> no puede restablecer sus contrase&ntilde;as con esta opci&oacute;n.</li>
+<li>Los usuarios de dominio no pueden restablecer contrase&ntilde;as con esta opci&oacute;n.</li>
+<li>Los usuarios de LDAP pueden restablecer contrase&ntilde;as con esta opci&oacute;n, siempre que DiskStation funcione como servidor de directorio de LDAP.</li>
+
+</ul>
+</div>
+
+
+<h3>Fortaleza de contrase&ntilde;a</h3>
+<p>Puede definir reglas de fortaleza de contrase&ntilde;a para los usuarios en DiskStation.</p>
+
+<div class="section">
+<h4>Nota:</h4>
+<p>Las reglas de fortaleza de contrase&ntilde;a solo ser&aacute;n aplicables a las contrase&ntilde;as nuevas. Por ejemplo, las reglas de fortaleza de contrase&ntilde;as solo se aplican al crear nuevas cuentas de usuario o cuando un usuario existente cambia su contrase&ntilde;a. Las contrase&ntilde;as existentes y aquellas pertenecientes a cuentas de usuario importadas, est&aacute;n excluidas de las nuevas reglas de contrase&ntilde;as.</p>
+</div>
+<h4>Para habilitar las reglas de fortaleza de contrase&ntilde;a:</h4>
+<ol>
+<li>Marque la casilla de verificaci&oacute;n <b>Aplicar reglas de fortaleza de contrase&ntilde;a</b> para habilitar las restricciones de contrase&ntilde;a.</li>
+<li>Seleccione m&aacute;s de una restricci&oacute;n de contrase&ntilde;a de las siguientes reglas:</li>
+<ul>
+<li><b>Excluir de la contrase&ntilde;a el nombre y descripci&oacute;n del usuario</b>: La contrase&ntilde;a no debe contener el nombre del usuario o la descripci&oacute;n del usuario. Pero se excluyen los caracteres codificados UTF-8.</li>
+<li><b>Incluir may&uacute;sculas y min&uacute;sculas mezcladas</b>: La contrase&ntilde;a debe contener letras may&uacute;sculas y min&uacute;sculas.</li>
+<li><b>Car&aacute;cter num&eacute;rico incluido</b>: La contrase&ntilde;a debe contener, como m&iacute;nimo, un car&aacute;cter num&eacute;rico (0~9).</li>
+<li><b>Incluir car&aacute;cter especial</b>: La contrase&ntilde;a debe contener al menos uno de los caracteres especiales ASCII (por ejemplo, ~, `, !, @, #, $, %, ^, &amp;, *, (, ), -, _, =, +, [, {, ], }, \, |, ;, :, &apos;, &quot;, <, >, /, ?).</li>
+<li><b>Longitud m&iacute;nima de la contrase&ntilde;a</b>: La contrase&ntilde;a debe tener al menos el valor especificado en el campo de texto. La longitud deber&aacute; ser un n&uacute;mero situado entre el 6 y el 127.</li>
+</ul>
+<li>Haga clic en <b>Aplicar</b> para guardar la configuraci&oacute;n.</li>
+</ol><h3>Verificaci&oacute;n en 2 pasos</h3>
+<p>La verificaci&oacute;n en 2 pasos ofrece una seguridad mejorada para las cuentas de usuario de DSM. Puede forzar a los administradores de DSM o a todos los usuarios de DSM a habilitar la verificaci&oacute;n en 2 pasos para proteger mejor sus cuentas.</p>
+
+<h4>Para habilitar la verificaci&oacute;n en 2 pasos usuarios de DSM:</h4>
+
+<ol>
+<li>Marque la casilla <strong>Aplicar la verificaci&oacute;n de 2 pasos para los siguientes usuarios</strong> y seleccione los usuarios a los que desea aplicar esto.</li>
+<div class="section">
+<h4>Nota:</h4>
+<p>Si todav&iacute;a no ha configurado la verificaci&oacute;n de 2 pasos en <b>Personal</b> &gt; <b>Cuenta</b>, se abrir&aacute; el asistente de configuraci&oacute;n de la misma para ayudarle a completar los ajustes necesarios antes de que pueda aplicar esta restricci&oacute;n.</p>
+</div>
+
+<li>Cuando se aplique esta restricci&oacute;n, a los usuarios que no hayan habilitado la verificaci&oacute;n de 2 pasos se les pedir&aacute; que completen la configuraci&oacute;n antes de iniciar sesi&oacute;n en DSM.</li>
+</ol>
+
+<div class="section">
+<h4>Nota:</h4>
+<p>Si se deshabilita la aplicaci&oacute;n de la verificaci&oacute;n de 2 pasos aqu&iacute;, no tendr&aacute; ning&uacute;n efecto ni deshabilitar&aacute; la configuraci&oacute;n de verificaci&oacute;n de 2 pasos para cada usuario. Los usuarios pueden mantener su configuraci&oacute;n de verificaci&oacute;n de 2 pasos o ir a <b>Personal</b> &gt; <b>Cuenta</b> para deshabilitar dicha configuraci&oacute;n.</p>
+</div><h3>Inicio de usuario</h3>
+
+<p>Habilite inicios de usuario para crear una carpeta de <b>home</b> personal para cada usuario, salvo para <b>guest</b>. Cada usuario puede acceder exclusivamente a su propia carpeta home mediante CIFS, AFP, FTP o File Station.</p>
+<p>Los usuarios que pertenezcan al grupo de <strong>administrators</strong> pueden acceder a todas las carpetas personales ubicadas en la carpeta compartida por defecto <b>homes</b>. El nombre de la carpeta de inicio es el mismo que el de la cuenta de usuario.</p>
+
+<h4>Para habilitar el servicio de inicio de usuario:</h4>
+<ol>
+<li>Active <b>Habilitar servicio inicio de usuario</b>.</li>
+<li>Si hay varios vol&uacute;menes, seleccione d&oacute;nde desea almacenar la carpeta <b>homes</b>.</li>
+<li>Haga clic en <b>Aplicar</b>.</li>
+</ol>
+
+<div class="section">
+<h4>Nota:</h4>
+<p>Una vez que el servicio inicio de usuario local se deshabilite, el servicio home de usuario de dominio tambi&eacute;n se deshabilitar&aacute; simult&aacute;neamente.</p>
+</div>
+
+<h4>Para deshabilitar el servicio inicio de usuario:</h4>
+<ol>
+<li>Desactive <b>Habilitar servicio inicio de usuario</b>.</li>
+<li>Haga clic en <b>Aplicar</b>.</li>
+</ol>
+<p>Una vez deshabilitado el servicio inicio de usuario, la carpeta compartida <b>homes</b> se conservar&aacute; para el acceso del administrador.  Los usuarios podr&aacute;n acceder a sus carpetas de inicio de nuevo cuando el servicio home de usuario vuelva a habilitarse.</p>
+
+<div class="section">
+<h4>Nota:</h4>
+<ol>
+<li>Para eliminar la carpeta compartida <b>homes</b>, primero es necesario deshabilitar el servicio inicio de usuario.</li>
+<li>El servicio inicio de usuario de dominio deber&aacute; deshabilitarse si el servicio inicio de usuario local est&aacute; deshabilitado.</li> 
+</ol> 
+</div>
+
+
+</body>	
+</html> 

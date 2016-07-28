@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Služby zálohování – Nápověda Synology DSM</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="Allow other users to back up data from their Synology NAS or rsync-compatible clients to your Synology NAS.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>rsync</h2>
+
+<p>Můžete povolit, aby jiní uživatelé zálohovali data prostřednictvím služby rsync ze zařízení Synology NAS nebo klientů kompatibilních se službou rsync do vašeho zařízení DiskStation.</p>
+
+<h3>Povolení služby zálohování rsync</h3>
+
+<h4>Povolení služby rsync:</h4>
+
+<p>Přejděte do části <strong>Ovládací panel</strong> > <strong>Souborové služby</strong> > <strong>rsync</strong> a vyberte možnost <strong>Povolit službu rsync</strong>.</p>
+
+
+<h4>Přiřazení oprávnění zálohování rsync:</h4>
+
+
+<p>Přidělte uživatelům správná oprávnění pro službu rsync, aby mohli zálohovat data ze zdrojového zařízení Synology NAS nebo serveru kompatibilního se službou rsync do cílového zařízení Synology NAS.</p>
+
+<ol>
+<li>Přejděte do části <b>Ovládací panel</b> > <b>Oprávnění</b>, klikněte na možnost <strong>rsync (synchronizace sdílených složek, záloha jednotky LUN na podporovaných modelech)</strong> > <strong>Upravit</strong>.</li>
+<li>Přiřaďte požadovaným uživatelům (uživatelům systému DSM pro šifrovanou službu rsync nebo účtům rsync pro nešifrovanou službu rsync) oprávnění <strong>Povolit</strong> nebo zadejte povolené IP adresy pro určité uživatele.</li>
+</ol>
+
+
+
+<div class="section">
+<h4>Poznámka:</h4>
+<p>Chcete-li provést zálohu rsync ze zařízení DiskStation s verzí systému DSM nižší než 3.0 nebo z klienta, který není zařízením DiskStation, a chcete zachovat informace <b>majitel</b> a <b>skupina</b> obsažené ve zdrojových datech, musíte přidat účty rsync do skupiny <b>správci</b> a zálohovat data do sdílené složky <b>NetBackup</b>.</p>
+</div>
+
+<h3>Povolení účtů rsync</h3>
+<p>Provádíte-li zálohování rsync z klienta, který není zařízením Synology NAS, musíte v cílovém zařízení Synology NAS vytvořit účty rsync, které umožní uživatelům služby rsync zálohovat data do vašeho zařízení Synology NAS.</p>
+
+<h4>Povolení účtů rsync:</h4>
+<ol>
+<li>Přejděte do části <b>Ovládací panel</b> > <b>Souborové služby</b> > <strong>rsync</strong> a vyberte možnost <b>Povolit účet rsync</b>.</li>
+<li>Klikněte na možnost <b>Upravit účet rsync</b> a nastavte uživatele a odpovídající hesla pro ověřování.</li>
+<li>Klikněte na možnost <b>Použít</b>.</li>
+</ol>
+
+<div class="section">
+<h4>Poznámka:</h4>
+<ul>
+<li>Pokud je služba rsync šifrovaná (to znamená, že má zadaný port šifrování SSH), použije systém jako účty rsync automaticky uživatelská jména a hesla uživatelů systému DSM.</li>
+<li>Pokud není služba rsync šifrovaná, musíte pro ně vytvořit odpovídající účty rsync.</li>
+</ul>
+</div>
+
+
+<h3>Použití vlastní konfigurace rsync</h3>
+
+<p>Můžete použít vlastní konfiguraci rsync a nastavit uživatelská oprávnění a cíl zálohování na zařízení DiskStation. Jiní lidé tedy mohou provádět zálohování rsync ze svých zařízení DiskStation nebo klientských zařízení kompatibilních s nástrojem rsync do cílových sdílených složek (neboli „zálohovacích modulů“) vašeho zařízení DiskStation.</p>
+
+<h4>Použití vlastní konfigurace rsync:</h4>
+
+<ol>
+<li>Přihlaste se do svého zařízení DiskStation přes Telnet nebo SSH.</li>
+<li>Zadejte do konfiguračního souboru rsync „<b><code>/etc/rsyncd.conf</code></b>“ zálohovací modul a oprávněné uživatele. Více informací získáte v příručce na stránce <b>rsyncd.conf</b> vašeho klientského zařízení rsync nebo <a href="http://rsync.samba.org/ftp/rsync/rsyncd.conf.html" target="_blank">zde</a>.</li>
+</ol>
+
+<div class="section">
+<h4>Poznámka:</h4>
+<p>Pokud zálohovací modul a sdílená složka sdílejí stejný název, použije se nastavení zálohovacího modulu.</p>
+</div>
+
+
+<h3>Povolení omezení rychlosti</h3>
+<p>Pro uživatele a skupiny můžete ovládat maximální využitelnou šířku pásma zálohování rsync.</p>
+
+<h4>Povolení omezení rychlosti:</h4>
+<ol>
+  <li>Přejděte do části <b>Ovládací panel</b> > <b>Souborové služby</b> > <strong>rsync</strong>. Vyberte některou z následujících možností:<ul>
+  <li><strong>Bez omezení rychlosti</strong></li>
+  <li><strong>Aktivovat omezení rychlosti</strong></li>
+  <li><strong>Povolit omezení rychlosti podle plánu</strong> (kliknutím na možnost <strong>Nastavit plán</strong> můžete provést další změnu.)</li>
+  </ul>
+  
+<div class="section">
+<h4>Poznámka:</h4>
+<p>Jedná se o nastavení na straně serveru, které přepíše nastavení jednotlivých uživatelů a skupin. Například výběrem možnosti <strong>Bez omezení rychlosti</strong> vypnete nastavení omezení rychlosti všech uživatelů a skupin.</p>
+</div>
+  </li>
+
+  <li>Pokud jste povolili omezení rychlosti, klikněte na možnost <strong>Nastavení omezení rychlosti</strong> a kliknutím na požadovaného uživatele nebo skupinu změňte nastavení:<ul>
+       <li><strong>Žádné:</strong> Při přenosu souborů členy skupiny pomocí této služby nebude uplatněno žádné omezení rychlosti.</li>
+      <li><strong>Použít nastavení skupin</strong>: Uživatel bude sdílet stejné nastavení omezení rychlosti s přidruženou skupinou.</li>
+      <li><strong>Konstantní</strong>: Pro uživatele nebo členy skupiny bude uplatněno pevné, konstantní omezení rychlosti. Omezení rychlosti odesílání a stahování lze zadat do polí vlevo.</li>
+      <li><strong>Přizpůsobeno</strong>: Pro uživatele nebo členy skupiny lze zadat a uplatnit dva typy omezení rychlosti podle plánu. Kliknutím na možnost <strong>Nastavit</strong> změníte nastavení omezení rychlosti a nastavíte plán.</li>
+    </ul>
+  </li>
+ <li>Klikněte na možnost <b>Použít</b>.</li> 
+
+</ol>
+<div class="section">
+  <h4>Poznámka:</h4>
+    <p>V části <strong>Výsledek (OD/ST)</strong> naleznete skutečný limit odesílání a stahování pro daného uživatele na základě nastavení pro jednotlivce a pro skupinu. Pokud má například uživatel „Achilles“ nastaveno individuální omezení stahování na 100 kB/s, ale patří do uživatelské skupiny s omezením stahování nastaveným na 500 kB/s, zobrazí se v části <strong>Výsledek (OD/ST)</strong> hodnota „0/500“.</p>
+</div>
+
+</body>
+</html>

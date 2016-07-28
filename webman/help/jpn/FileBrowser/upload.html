@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>File Station</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>ファイルまたはフォルダのアップロード</h2>
+<p>以下の方法のいずれかを使ってファイルまたはフォルダをコンピュータから DiskStation にアップロードします。</p>
+<p>下に示すアップロード機能を使用するためには、最新の Java Runtime Environment (JRE) と Flash Player を先にインストールしてください。 </p>
+
+
+<h4>方法 1：</h4>
+<ol>
+<li>
+左側パネルの上部で Synology DiskStation の保存フォルダを選択します。 
+</li>
+<li>
+<b>[アップロード]</b> をクリックして <strong>[アップロード - スキップ]</strong> または <strong>[アップロード - 上書き]</strong> を選択します。次にローカル コンピュータからファイルかフォルダを選択します。 </li>
+</ol>
+<h4>方法 2：</h4>
+<ol>
+	<li><strong>[設定]</strong> を選択し、<strong>[File Station でローカル コンピュータからファイルを参照]</strong> にチェックマークを付けてウェブページを更新すると、ローカル コンピュータのフォルダが左側のパネルの下側に表示されます。</li>
+<div class="section">
+<h4>注：</h4>
+<p><strong>[File Station でローカル コンピュータからファイルを参照]</strong> オプションは、コンピュータに JRE をインストールして有効にしなければ使用できません。</p>
+</div>
+	<li>左側パネルの下部分で、ローカルコンピュータのフォルダを選択します。メインセクションに選択したフォルダのコンテンツが表示されます。
+	</li>
+	<li>メインセクションでファイルまたはフォルダを選択してから、<b>[アップロード]</b> を選択します。 
+</li>
+	<li>表示されるウィンドウの DiskStation の保存先フォルダを選択します。
+	</li>
+	<li>保存先フォルダと同じ名前のファイルまたはフォルダを上書きする場合は、画面右上の <b>[上書き]</b> を選択します。それ以外の場合は、<b>[スキップ]</b> を選択します。
+</li>
+	<li><b>[OK]</b> をクリックすると、アップロードが開始されます。
+</li>
+</ol>
+<h4>方法 3：</h4>
+<ol>
+<li><strong>[設定]</strong> を選択し、<strong>[File Station でローカル コンピュータからファイルを参照]</strong> にチェックマークを付けてウェブページを更新すると、ローカル コンピュータのフォルダが左側のパネルの下側に表示されます。</li>
+<li>
+左側パネルで、コンピュータ（下部）からフォルダを DiskStation（上部）のフォルダにドラッグします。
+</li>
+<li>
+開いたポップアップ メニューで、目的のフォルダに同じ名前を持つファイル/フォルダがある場合、それを上書きするか、スキップするかを選択してください。
+</li>
+</ol>
+<h4>方法 4：</h4>
+<ol>
+<li>
+左側パネルの上部で Synology DiskStation の保存フォルダを選択します。
+</li>
+
+<li>
+コンピュータのデスクトップかファイル エクスプローラー（Windows Explorer や Mac Finder など）でファイルを選択して、ウェブ ブラウザで File Station にドラッグします。
+</li>
+
+<li>
+目的のフォルダに同じ名前を持つファイルがある場合、ファイルを上書きするか、スキップするかを開いたダイアログで選択してください。</li>
+<div class="section">
+<h4>注：</h4>
+<ul>
+<li><b>方法 4</b> は、次のブラウザでしか使用できません。Chrome、Firefox、Safari 5.1、またはそれ以降です。ただし、<strong>[File Station でローカル コンピュータからファイルを参照]</strong> にチェックマークが付いているときは、Mac ではサポートされません。</li>
+<li>
+フォルダをドラッグ アンド ドロップしたり、ファイルを空にしたりすることはできますが、上記のブラウザに対して <strong>[File Station でローカル コンピュータからファイルを参照]</strong> が選択されている場合に限ります。それ以外は、<strong>方法 4</strong> でフォルダをアップロードしたり、ファイルを空にしたりすることはできません。</li>
+	<li>
+Chrome for Linux を使って HTTPS プロトコルで DSM に接続する場合は、信頼できる証明書をインポートして（<b>[コントロール パネル]</b> &gt; <strong>[セキュリティ]</strong> &gt; <b>[証明書]</b>）<b>方法 4</b>を使ってアップロードできるようにする必要があります。
+</li>
+</ul>
+</div>
+</ol>
+
+<div class="section">
+<h4>注：</h4>
+<ol>
+<li>
+アップロード キューには、最大で 1000 個までファイルを追加できます。
+</li>
+	<li>
+	Google Chrome、Firefox、Safari 5.1 またはそれ以上のバージョンを使用するか、<strong>[File Station でローカル コンピュータからファイルを参照]</strong> が選択されている場合は、4GB 以上のファイルをアップロードできます。それ以外は、1 回に最大 2GB のファイルしかアップロードできません。</li>
+	<li>
+非暗号化した共有フォルダ内のファイル/フォルダ名は最大 255 文字（ラテン系言語以外は最大 80 文字）とし、暗号化した共有フォルダ内では最大 143 文字（ラテン系言語以外は最大 47 文字）としてください。
+</li>
+<li>
+ファイル/フォルダ名には、 \ / : * ? &quot; &gt; | などの文字を使用することはできません。
+</li>
+<li>
+ファイル/フォルダ名を「._」で開始することはできません。
+</li>
+<li>0KB のファイルは、JRE をインストールしなければアップロードできません。</li>
+</ol>
+</div>
+
+
+<div class="section">
+<h4>トラブルシューティング</h4>
+<p>Safari を使って Mac に保管されているローカル アイテムを参照するには、次の手順に従ってください。</p>
+<ol>
+<li>Mac で Safari を開き、Safari メニューから <strong>[環境設定]</strong> を開きます。</li>
+<li><strong>[セキュリティ]</strong> タブで <strong>[ウェブサイト設定を管理]</strong> をクリックします。</li>
+<li><strong>[Java]</strong> で DSM のウェブサイトを選択します。</li>
+<li><strong>[危険なモードで実行]</strong> を選択します。</li>
+</ol>
+</div>
+
+
+
+</body>
+</html>

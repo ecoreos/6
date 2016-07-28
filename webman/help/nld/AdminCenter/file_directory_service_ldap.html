@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>LDAP</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script> <script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>LDAP</h2>
+<p>Met LDAP kunt u uw DiskStation aanmelden bij een aanwezige adreslijstdienst als een LDAP-client. Vervolgens kunt u gebruikers- of groepsgegevens van een LDAP-server (of "directory server") ophalen. U kunt toegangsrechten van LDAP-gebruikers of -groepen voor DSM-toepassingen en gedeelde mappen instellen, net als bij lokale DSM-gebruikers of -groepen. Meer informatie over LDAP vindt u <a href="http://en.wikipedia.org/wiki/LDAP" target="_blank">hier</a>.</p>
+
+<p>De ondersteunde LDAP-standaard is LDAP-versie 3 (RFC 2251).</p>
+<h4>Uw DiskStation aan directory-service toevoegen:</h4>
+<ol>
+<li>Ga naar <b>Configuratiescherm</b> &gt; <b>Adreslijstservice</b></li>
+<img src="about:blank" class="help_image"/>
+<li>Ga naar het tabblad <b>LDAP</b> en schakel het selectievakje <b>LDAP-client inschakelen</b> in.</li>
+<img src="about:blank" class="help_image"/>
+<li>Voer het ip-adres of domeinnaam van de LDAP-server in bij het veld <b>LDAP-serveradres</b>.</li>
+<img src="about:blank" class="help_image"/>
+<li>Kies een coderingstype in de keuzelijst <b>Codering</b> om de LDAP-verbinding met de LDAP-server te versleutelen.</li>
+<img src="about:blank" class="help_image"/>
+<li>Voer in het veld <b>Base DN</b> de Base DN van de LDAP-server in.</li>
+<img src="about:blank" class="help_image"/>
+<li>Selecteer het geschikte <b>Profiel</b> in overstemming met uw LDAP-server. Bijvoorbeeld: selecteer <b>Standaard</b> als u Synology Directory Server of Mac Open Directory gebruikt.</li>
+<img src="about:blank" class="help_image"/>
+<li>Schakel het selectievakje <b>CIFS-platte tekst wachtwoordverificatie inschakelen</b> in zodat gebruikers van een LDAP-server die geen Samba-schema ondersteunt via CIFS toegang krijgen tot DiskStation. Zie onderstaande sectie om te verzekeren dat LDAP-gebruikers via hun computer via CIFS toegang hebben tot bestanden op DiskStation.</li>
+<img src="about:blank" class="help_image"/>
+<li>Klik op <b>Toepassen</b>.</li>
+<li>
+  Voer Bind DN (of LDAP administrator-account) en het wachtwoord in de velden in en klik vervolgens op <b>OK</b>.
+</li>
+<img src="about:blank" class="help_image"/>
+</ol>
+
+
+<div class="section">
+<h4>Info over CIFS-ondersteuning en de instellingen van de clientcomputer</h4>
+<p>
+Na het inschakelen van CIFS-platte tekst wachtwoordverificatie moeten LDAP-gebruikers eventueel de instellingen van hun computer aanpassen zodat ze via CIFS toegang krijgen tot bestanden op DiskStation:
+</p>
+<ul>
+<li>
+Als uw DiskStation aan de adreslijstdienst van een Synology LDAP-server (of andere DiskStation met het pakket <b>Directory Server</b>) wordt gekoppeld of de LDAP-server die het Samba-schema ondersteunt en alle LDAP-gebruikers hebben correcte sambaNTPassword-kenmerken, hebben LDAP-gebruikers via CIFS toegang tot de bestanden op uw DiskStation zonder dat het selectievakje <b>CIFS-platte tekst wachtwoordverificatie inschakelen</b> moet zijn ingeschakeld of zonder hun computerinstellingen te moeten wijzigen. Zo niet, moeten LDAP-gebruikers de <a href="http://en.wikipedia.org/wiki/Pluggable_Authentication_Modules" target="_blank">PAM</a>-ondersteuning op hun computer inschakelen om via CIFS toegang te hebben tot de bestanden op DiskStation. Hierdoor worden wachtwoorden van LDAP-gebruikers echter in platte tekst (zonder versleuteling) naar DiskStation gestuurd, waardoor het veiligheidsniveau dus lager is.
+</li>
+
+</ul>
+<h4>Om de Windows-instellingen te wijzigen:</h4>
+<ol>
+<li>Ga naar <b>Start</b> > <b>Uitvoeren</b>, voer in het veld <b>regedit</b> in en klik op <b>OK</b> om de Register-editor te openen.</li>
+<li>
+Afhankelijk van uw Windows-versie, zoekt of maakt u het volgende:
+</li>
+<ul>
+<li>
+<b>Windows 2000, XP, Vista en Windows 7:</b><br> [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanWorkStation\Parameters]
+</li>
+<li>
+<b>Windows NT:</b><br> [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Rdr\Parameters]
+</li>
+<li>
+<b>Windows 95 (SP1), 98 en Me:</b><br> [HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\VxD\VNETSUP]
+</li>
+</ul>
+<li>
+Maak of verander de DWORD-waarde <b>EnablePlainTextPassword</b> en wijzig de waarde van <b>0</b> in <b>1</b>.
+</li>
+<li>
+Start Windows opnieuw op om de wijziging te activeren.
+</li>
+</ol>
+<h4>Om Mac OS X-instellingen aan te passen:</h4>
+<ol>
+<li>Ga naar <b>Toepassingen</b> > <b>Hulpprogramma's</b> om <b>Terminal</b> te openen.
+</li>
+<li>
+Maak een leeg bestand <b>/etc/nsmb.conf</b>:
+<pre>
+sudo touch /etc/nsmb.conf
+</pre>
+</li>
+<li>
+Open <b>/etc/nsmb.conf</b> met vi:
+<pre>
+sudo vi /etc/nsmb.conf
+</pre>
+</li>
+<li>
+Voer "<b>i</b>" in om tekst te bewerken en plak de volgende tekst:
+<pre>
+[default]<br / >
+minauth=none
+</pre>
+</li>
+<li>
+Druk op de Esc-toets en voer "<b>ZZ</b>" in om de wijzigingen op te slaan en vi te sluiten.
+</li>
+</ol>
+<h4>Om Linux-instellingen aan te passen:</h4>
+<p>Als u <b>smbclient</b> gebruikt, voegt u de volgende sleutels toe in het gedeelte <b>[global]</b> van <b>smb.conf</b>:
+
+<p style="font-family:sans; margin-top:0px; padding-left:20px;line-height:1.25em;"> encrypt passwords = no <br> client plaintext auth = yes <br> client lanman auth = yes <br> client ntlmv2 auth = no</p>
+<p>Als u <b>mount.cifs</b> gebruikt, voer dan de volgende opdracht uit:</b>
+<p style="font-family:sans; margin-top:0px; padding-left:20px;line-height:1.25em;">echo 0x30030 > /proc/fs/cifs/SecurityFlags</p>
+<p>Voor meer informatie zie <a href="https://www.kernel.org/doc/readme/Documentation-filesystems-cifs-README" target=_blank>https://www.kernel.org/doc/readme/Documentation-filesystems-cifs-README</a></p>
+
+</p>
+</div>
+<div class="section">
+<h4>Over profielen</h4>
+
+<p>Verschillende LDAP-servers kunnen verschillende kenmerken gebruiken voor accountnamen, groepnamen of om accounts en groepen te onderscheiden. Met de optie <b>Profiel</b> kunt u aangeven of aanpassen hoe gebruikers- en groepsinformatie worden toegewezen aan LDAP-kenmerken. Afhankelijk van uw LDAP-server kunt u een van de volgende profielen selecteren:</p>
+
+<ul>
+<li><b>Standaard:</b> voor servers met Synology Directory Server of Mac Open Directory.</li>
+<li><b>IBM Lotus Domino:</b> voor servers met IBM Lotus Domino 8.5.</li>
+<li><b>Aangepast:</b> maakt het aanpassen toewijzingen mogelijk. Raadpleeg het gedeelte hieronder voor gedetailleerde informatie.</li>
+</ul>
+
+<p>Het aanpassen van LDAP-kenmerktoewijzingen vereist enige basiskennis. Synology DSM en de <strong>Profiel</strong>-editor volgen RFC 2307. U kunt bijvoorbeeld <b>filter</b> > <b>passwd</b> als <b>userFilter</b> toewijzen waardoor DiskStation records met <b>objectClass=userFilter</b> op uw LDAP-server interpreteert als LDAP-accounts. Specificeert u <b>passwd</b> > <b>uid</b> als <b>username</b> dan zal DiskStation de record <b>username</b> op uw LDAP-server interpreteren als accountsnaam. Door de toewijzing leeg te laten worden de RFC 2307-regels van toepassing.</p>
+<p>DiskStation vereist een vaste integer (gehele getal) die als een LDAP-account-id (<strong>uidNumber</strong>) of een groeps-id (<strong>gidNumber</strong>) fungeert. Maar niet alle LDAP-servers gebruiken integers (gehele getallen) om dergelijke kenmerken te vertegenwoordigen. Daarom bestaat een trefwoord <b>HASH()</b> om dergelijke kenmerken in integers om te zetten. Zo kan bijvoorbeeld uw LDAP-server het kenmerk <b>userid</b> met een hexadecimale waarde gebruiken als unieke id voor een LDAP-account. In dit geval kunt u <b>passwd</b> > <b>uidNumber</b> instellen op <b>HASH(userid)</b> en vervolgens zal DiskStation het omzetten naar een integer.</p>
+
+<p>Hieronder vindt u een samenvatting van eigenschappen die kunnen worden aangepast:</p>
+
+<ul>
+	<li><b>filter</b></li>
+	<ul>
+		<li><b>groep</b>: vereist objectClass voor groep.</li>
+		<li><b>passwd</b>: vereist objectClass voor gebruiker.</li>
+		<li><b>shadow</b>: vereist objectClass voor gebruikerwachtwoorden.</li>
+	</ul>
+	<li><b>groep</b></li>
+	<ul>
+		<li><b>cn</b>: groepsnaam.</li>
+		<li><b>gidNumber</b>: GID-nummer van deze groep.</li>
+		<li><b>memberUid</b>: leden van deze groep.</li>
+	</ul>
+	<li><b>passwd</b></li>
+	<ul>
+		<li><b>uidNumber</b>: UID-nummer van deze gebruiker.</li>
+		<li><b>uid</b>: gebruikersnaam.</li>
+		<li><b>gidNumber</b>: primair GID-nummer van deze gebruiker.</li>
+	</ul>
+	<li><b>shadow</b></li>
+	<ul>
+		<li><b>uid</b>: gebruikersnaam.</li>
+		<li><b>userPassword</b>: gebruikerswachtwoord.</li>
+	</ul>
+</ul>
+</div>
+<div class="section">
+<h4>Over UID/GID-verschuiving</h4>
+<p>Om UID/GID-conflicten tussen LDAP-gebruikers/groepen en lokale gebruiker/groepen te voorkomen, kunt u UID/GID-verschuiving inschakelen om UID/GID van LDAP-gebruikers/groepen te verschuiven met 1000000. Deze optie is alleen voor LDAP-servers die non-Synology LDAP-servers zijn en die een unieke numerieke ID toewijzen aan elke gebruiker/groep.</p>
+</div>
+</body>
+</html>

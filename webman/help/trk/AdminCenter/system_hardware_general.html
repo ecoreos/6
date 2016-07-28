@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Güç</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Genel</h2>
+
+<p>
+<strong>Denetim Masası</strong> > <strong>Donanım ve Güç</strong> > <strong>Genel</strong> öğesi, güç toparlanması, Wake on LAN (WOL) veya Bellek Sıkıştırmayı etkinleştirmeye yönelik seçenekler sağlar. Burada aynı zamanda bip kontrolünü ve fan hızı modunu da değiştirebilirsiniz.
+</p>
+
+<h3>
+Güç Toparlanması
+</h3>
+<p>Sistem beklenmeyen güç kesilmesinden dolayı kapanırsa, güç geri geldikten sonra güç toparlanması işlevi sayesinde sistem otomatik olarak önyükleme yapar.</p>
+<h3>Yerel Ağda Uyandırma*</h3>
+<p>Wake on LAN (WOL) öğesinin etkinleştirilmesi, Synology Assistant, DS finder veya diğer WOL uygulamaları gibi bir WOL uygulamasını kullanarak DiskStation ürününüzün IP adresi (veya DDNS ana makine adı) ile MAC adresini girerek yerel alan ağı veya İnternet üzerinden DiskStation ürününüzü açmanıza olanak tanır.</p>
+<p>Wake on LAN yalnızca <b>Güç</b> düğmesine basarak veya DSM arayüzünde <b>Kapanış</b>'ı seçerek DiskStation ürününün düzgün bir şekilde kapatılmasından sonra çalışır. Kapanıştan sonra elektrik kablosunu çalışan bir prize takılı şekilde tutun.</p>
+<div class="section">
+	<h4>Not:</h4>
+	<p class="disable-rc18015xsp">WOL özelliği 10GbE LAN bağlantı noktalarında desteklenmez (DiskStation sunucunuzda mevcutsa).</p>
+	<ul class="enable-rc18015xsp">
+		<li>WOL özelliği 10GbE LAN bağlantı noktalarında desteklenmez (DiskStation sunucunuzda mevcutsa).</li>
+		<li>WOL özelliği varsayılan olarak DiskStation için olan 1 GbE LAN portlarında etkindir ve devre dışı bırakılamaz.</li>
+	</ul>
+</div>
+<h3>Fan Hızı Modu*</h3>
+<p>Aşağıdaki fan hızı seçenekleri bulunmaktadır:</p>
+<ul>
+<li><strong>Soğutma Modu:</strong> Fan, daha yüksek hızda çalışarak DiskStation ürününü soğutur ama daha fazla ses çıkarır.</li>
+<li><strong>Sessiz Modu:</strong> Fan, daha düşük hızda çalışarak az ses çıkarır ama DiskStation ısınabilir.</li>
+<li><strong>Düşük güç:</strong> Fan, daha düşük hızda çalışarak az ses çıkarır ama DiskStation ısınabilir. Bunun yanı sıra, DiskStation soğukken, güç tasarrufu yapmak için fan duracaktır. Düşük güç modu yalnızca bazı modellerde vardır.</li>
+</ul>
+<h3>Bip Denetimi</h3>
+<p>DiskStation sunucusu belirli olaylar veya hatalar olduğunda bir bipleme sesi yayabilir. Hatalar meydana geldiğinde DiskStation ürününüzün sizi ikaz etmesine izin vermek için listelenen onayların onay kutularına tıklayın.</p>
+
+<h4>Bip sesini durdurmak için:</h4>
+<ul>
+<li>DiskStation bip sesi veriyorsa, devre dışı bırakmak için <strong>Bip kapalı</strong> düğmesine tıklayın. </li>
+</ul>
+
+
+
+<h3>Bellek Sıkıştırma*</h3>
+<p>En eski kullanılan verileri belleğe sıkıştırmak suretiyle genel sistem tepkiselliğini iyileştirmek üzere Bellek Sıkıştırmasını etkinleştirebilirsiniz.</p>
+<p>Birden çok uygulamanız çalışır ve bellek dolmaya başlarken dinamik Bellek Sıkıştırma, bellekte az kullanılan öğelerin boyutunu küçülterek bellek kullanımını asgari düzeye indirir. Öğelere tekrar gerek olduğunda bunlar hemen açılabilir. Bu da diskteki bellek değişimli dosyaların okunması ve yazılması ihtiyacını azaltarak verimi ve tepkiselliği iyileştirir.</p>
+<p>Bellek Sıkıştırmasını etkinleştirmek için onay kutusunu işaretleyin.</p>
+
+
+<h3>LED*</h3>
+
+<p><strong>Denetim Masası</strong> > <strong>Donanım ve Güç</strong> > <strong>Genel</strong> > <strong>LED Parlaklık Kontrolü</strong> öğesinde, DiskStation sunucunuzda LED göstergelerin parlaklığını ayarlayabilirsiniz.</p>
+
+<div class="section">
+<h4>Not:</h4>
+<p>Parlaklık ayarları DiskStation sunucunuzdaki tüm LED göstergelere uygulanır (ör. Power, STATUS, LAN, sürücü durumu vb.).</p>
+</div>
+
+
+<h4>LED parlaklığını ayarlamak için:</h4>
+<p>DiskStation sunucunuzdaki LED göstergeler için dört parlaklık seviyesi mevcuttur.</p>
+<ol>
+<li>Parlaklık ölçeğindeki ibreyi herhangi bir yönde tıklayıp sürükleyin:
+  <ul>
+<li>Sağa doğru: LED parlaklığını artırın.</li>
+<li>Sola doğru: LED parlaklığını azaltın.</li>
+</ul>
+</li>
+<li>Ayarı kaydetmek için <strong>Uygula</strong>'ya tıklayın.</li>
+</ol>
+
+
+
+<h4>LED parlaklığını programa göre ayarlamak için:</h4>
+<p>LED göstergeler parlaklık seviyelerini programlanan sürede değiştirebilirler.</p>
+
+<ol>
+<li><strong>Program Ayarla</strong>'ya tıklayın.</li>
+<li>Aşağıdaki parlaklık türünden birisine tıklayın:
+<ul>
+<li><strong>Varsayılan parlaklık</strong>: En tam parlaklık</li>
+<li><strong>Ayarlanan parlaklık</strong>: Parlaklık ölçeğinde belirtilen parlaklık seviyesi</li>
+</ul>
+</li>
+<li>Parlaklık programını özelleştirmek için istenilen periyotlara tıklayın.</li>
+<li>Ayarları kaydetmek için <strong>Tamam</strong> ve <strong>Uygula</strong>'ya tıklayın.</li>
+</ol>
+
+
+
+<p>____<br> * Sadece belirli modellerde vardır. </p>
+</body>
+</html>

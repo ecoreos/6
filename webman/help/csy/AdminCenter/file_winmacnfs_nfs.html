@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Win/Mac/NFS</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+
+
+
+<h2>Služba NFS</h2>
+<p>Služba NFS umožňuje přístup k datům na tomto zařízení DiskStation klientům se systémem Linux.</p>
+<h4>Povolení služby NFS:</h4>
+<ol>
+<li>Přejděte do části <strong>Ovládací panel</strong> > <strong>Souborové služby</strong> > <strong>Win/Mac/NFS</strong> a zaškrtněte možnost <b>Povolit NFS</b>.</li>
+<li>Klikněte na možnost <b>Použít</b>.</li>
+</ol>
+
+
+<div class="section">
+  <h4>Poznámka:</h4>
+<ul>
+<li> DiskStation aktuálně podporuje NFSv2, NFSv3 a NFSv4.</li>
+<li>Při připojování můžete do příkazu připojení přidat parametr <strong>-o vers=2</strong>, <strong>-o vers=3</strong> nebo <strong>-o vers=4</strong> a určit tak, která verze NFS se má používat.</li>
+</ul>
+</div>
+
+
+<h4>Konfigurace oprávnění pro přístup ke sdíleným složkám u klientů se systémem Linux:</h4>
+<p>Přejděte do části <b>Ovládací panel</b> > <b>Sdílená složka</b>. Vyberte sdílenou složku a kliknutím na možnost <strong>Upravit</strong> můžete zahájit správu pravidel NFS a regulaci přístupových práv k této sdílené složce pro klienty systému Linux.</p>
+
+
+<h3>Nastavení podpory NFSv4 </h3>
+<p>Můžete určit, jestli váš server NFS podporuje NFSv4. Pokud je tato možnost povolena, bude server NFS podporovat NFSv2, NFSv3 a NFSv4; jinak bude podporováno pouze NFSv2 a NFSv3.</p>
+
+<h4>Povolení podpory NFSv4:</h4>
+<ol>
+<li>Zaškrtněte políčko <b>Povolit podporu NFSv4</b>.</li>
+<li>Do pole <b>Doména NFSv4</b> zadejte název domény NFSv4, kterou chcete používat. Toto pole je volitelné a může zůstat prázdné.</li>
+<li>Klikněte na možnost <b>Použít</b>.</li>
+</ol>
+
+<div class="section">
+<h4>Poznámka:</h4>
+<p>Při používání NFSv4 k připojení sdílené složky pamatujte na následující skutečnosti. Jinak může dojít k selhání operace se soubory asociované s uživatelským jménem.</p>
+<ul>
+<li>Klient NFS musí povolit idmapd.</li>
+<li>Nastavení domény NFSv4 v souboru idmapd.conf v klientovi NFS musí odpovídat poli <b>Doména NFSv4</b> v zařízení DiskStation.</li>
+</ul>
+
+</div>
+
+<h3>Rozšířená nastavení</h3>
+
+<h4>Použití výchozích oprávnění UNIX</h4>
+<p> Když je zaškrtnutá možnost <strong>Použití výchozích oprávnění UNIX</strong>, použijí se při odesílání nebo vytváření souborů či složek místo oprávnění Windows ACL výchozí oprávnění systému UNIX nastavená v klientovi systému Linux. Použitá oprávnění jsou stejná jako oprávnění použitá příkazem <strong>umask</strong> systému UNIX. Pokud je tato možnost povolená, má oprávnění UNIX pro soubory hodnotu 644 a pro složky hodnotu 755. Pokud je tato možnost zakázána, má oprávnění UNIX pro soubory hodnotu 666 a pro složky hodnotu 777. Výchozí hodnota příkazu unmask je 022.</p><div class="section">
+<h4>Poznámka:</h4>
+<ul>
+  <li>U sdílených složek s povoleným Windows ACL (všechny sdílené složky s výjimkou složky „photo“ a sdílené složky na externích jednotkách) proveďte pomocí příkazu <strong>chmod</strong> na klientovi se systémem Linux nebo v klientovi FTP změnu typů oprávnění složek a souborů z Windows ACL na UNIX.</li>
+  <li>Povolení této možnosti může způsobit problémy s konzistencí oprávnění napříč různými protokoly. Chcete-li zamezit nekonzistenci, doporučujeme, aby tato možnost byla i nadále zakázána.</li>
+</ul>
+</div>
+
+<h4>Vlastní port</h4>
+<p>Můžete přizpůsobit čísla portů pro služby statd a nlockmgr.</p>
+
+<ol>
+<li>Vyberte možnost <strong>Přizpůsobené porty</strong>.</li>
+<li>Do polí <strong>Port statd</strong> a <strong>Port nlockmgr</strong> zadejte čísla portů.</li>
+<li>Klikněte na možnost <b>Použít</b>.</li>
+</ol>
+
+<div class="section">
+<h4>Poznámka:</h4>
+<ul>
+<li>Chcete-li používat služby NFSv3, přejděte do nabídky <strong>Ovládací panel</strong> > <strong>Zabezpečení</strong> > <strong>Brána firewall</strong> a vytvořte ze seznamu integrovaných aplikací pravidlo pro bránu firewall povolující „Souborový server Mac/Linux“.</li>
+</ul>
+</div>
+<h4>Nastavení velikosti paketu pro čtení/zápis</h4>
+<p>Pokud nelze velikost paketu pro čtení/zápis nastavit na klientu NFS, můžete výchozí hodnotu zadat do tohoto pole.</p>
+
+
+<ol>
+<li>V polích <strong>Velikost paketu pro čtení</strong> a <strong>Velikost paketu pro zápis</strong> vyberte požadovanou velikost paketů.</li>
+<li>Klikněte na možnost <b>Použít</b>.</li>
+<li>Znovu připojte sdílenou složku.</li>
+</ol>
+
+<div class="section">
+<h4>Poznámka:</h4>
+<ul>
+<li>Po změně velikosti paketu pro čtení/zápis je nutné sdílenou složku znovu připojit, protože teprve poté se nová nastavení projeví.</li>
+<li>Tato nastavení ovlivňují pouze klienty NFS připojující se prostřednictvím UDP (User Datagram Protocol).</li>
+</ul>
+</div>
+
+
+
+
+<h3>Nastavení Kerberos*</h3>
+<p>Kerberos je protokol ověřování v síti. Umožňuje klientům a serverům komunikujícím v nezabezpečené síti, aby se ověřili a bezpečně si vzájemně prokázali svoji identitu. DiskStation Nabízí možnosti pro import existujícího klíče Kerberos. Po importu mohou klienti NFS používat ověřovací protokol Kerberos k připojení do zařízení DiskStation.</p>
+
+<h4> Import klíče Kerberos: </h4>
+<ol>
+<li>Klikněte na možnost <strong>Nastavení Kerberos</strong>.</li>
+<li>Klikněte na tlačítko <b>Importovat</b>.</li>
+<li>Vyberte klíč Kerberos, který chcete importovat.</li>
+<li>Klikněte na možnost <b>OK</b>.</li>
+</ol>
+
+<h3><a name="idmap"></a>Mapování ID Kerberos</h3>
+<p>Jednotlivé objekty Kerberos můžete mapovat do místních uživatelských účtů zařízení DSM.</p>
+<h4> Mapování objektů Kerberos a místních uživatelských účtů: </h4>
+<ol>
+<li>Klikněte na možnost <strong>Nastavení Kerberos</strong>.</li>
+<li>Přejděte na kartu <strong>Mapování ID</strong>.</li>
+<li> Klikněte na tlačítko <b>Přidat</b>. Vyberte jednu z následujících možností.</li>
+<ul>
+<li><strong>Mapování ID:</strong> Zadejte objekt Kerberos a místní uživatelský účet, do kterého má být namapován.</li>
+<li><strong>Navrhovaný seznam mapování:</strong> Tato možnost zobrazuje seznam navrhovaných možností mapování objektů Kerberos a místních uživatelů vytvořený systémem.</li>
+</ul>
+</ol>
+<div class="section disable-eds14">
+  <h4> Poznámka: </h4>
+<ul>
+<li>Pokud chcete namapovat klienta NFS připojujícího se prostřednictvím protokolu Kerberos do existujícího uživatelského účtu domény nebo LDAP, musíte se připojit do adresářové služby. Directory Server musí navíc obsahovat atribut zahrnující odpovídající objekt Kerberos.</li>
+<ul>
+<li><strong>Uživatel domény:</strong> Formát odpovídajícího atributu by měl vypadat následovně: <strong>userPrincipalName</strong>.</li>
+<li><strong>Uživatel LDAP:</strong> Formát odpovídajícího atributu by měl vypadat následovně: <strong>GSSAuthName</strong>.</li>
+</ul>
+<li>Pokud nelze uživatele úspěšně namapovat do místního uživatele nebo uživatele domény/LDAP, bude uživatel namapován do role „guest“.<li>Priorita mapování je následující: Místní uživatel > Uživatel domény/LDAP > Guest. </li>
+<li>Chcete-li změnit přístupová oprávnění klientů NFS, použijte seznam řízení přístupu (ACL) systému Windows. Možnosti oprávnění nacházející se v části <strong>Ovládací panel</strong> > <strong>Uživatel</strong> se nevztahují na klienty NFS.</li>
+</ul>
+</div>
+<p><br>____<br> * K dispozici pouze u některých modelů.</p>
+
+
+
+</body>
+</html>

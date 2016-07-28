@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>File Station</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Dateien oder Ordner kopieren und verschieben</h2>
+<p>File Station bietet mehrere Möglichkeiten der Übertragung von Dateien/Ordnern zwischen zwei DiskStation, innerhalb einer DiskStation oder zu einem lokalen Computer.</p>
+<h3>Dateien/Ordner zwischen Browsern ziehen und ablegen</h3>
+<p>Ohne aufwändige Einrichtung von Dateiübertragungsprotokollen können Sie mit File Station Dateien/Ordner direkt von einer DiskStation zu einer anderen hochladen.</p>
+<h4>Ziegen und Ablegen zwischen Browsern aktivieren:</h4>
+<ol>
+<li>Gehen Sie zu <strong>Einstellungen</strong> > <strong>Allgemein</strong> > <strong>File Station</strong>.</li>
+<li>Aktivieren Sie <strong>Ziegen und Ablegen zwischen Browsern aktivieren</strong>.</li>
+<li>Klicken Sie auf <strong>OK</strong>.</li>
+<li>Öffnen Sie zwei gleiche Webbrowser (z. B. Firefox) und stellen Sie mit ihnen die Verbindung zur Quell- bzw. zur Ziel- DiskStation her.</li>
+<li>Starten Sie File Station auf beiden DiskStation. Sie können jetzt über File Station Dateien/Ordner direkt zwischen Ihnen ziehen und ablegen.</li>
+</ol>
+
+<div class="section">
+<h4>Hinweis:</h4>
+<ul>
+<li>Sie können auch Dateien/Ordner zwischen zwei Registerkarten desselben Browsers ziehen und ablegen.</li>
+<li>Von Internet Explorer wird Drag-and-Drop zwischen Browsern oder Tabs nicht unterstützt.</li>
+<li>Werden mehrere Dateien/Ordner zum Ziehen und Ablegen ausgewählt, werden sie zum Hochladen in einem Archiv komprimiert.</li>
+<li>Die maximale Dateigröße für das Ziehen und Ablegen unterscheidet sich je nach Webbrowser: Safari (1 GB).</li>
+</ul>
+</div>
+<h3>Dateien/Ordner in einer DiskStation oder zu einem lokalen Computer kopieren oder verschieben</h3>
+<p>Gehen Sie folgendermaßen vor, um Dateien oder Ordner in einer DiskStation oder zu Ihrem Computer zu verschieben oder zu kopieren.</p>
+<h4>Methode 1:</h4>
+<ol>
+<li>Wählen Sie die Dateien oder Ordner aus, die Sie verschieben oder kopieren möchten. (Halten Sie die Umsch- oder Strg-Taste gedrückt, wenn Sie mehrere Dateien oder Ordner auswählen möchten.)</li>
+<li>Wählen Sie <b>Ausschneiden</b> oder <b>Kopieren</b> aus dem Dropdown-Menü <b>Aktion</b> aus.</li>
+<li>Wechseln Sie zum Zielordner auf der DiskStation oder Ihrem Computer.</li>
+<li>Wählen Sie <b>Einfügen</b> - <b>Überschreiben</b> oder <b>Einfügen</b> - <b>Überspringen</b> aus dem Dropdown-Menü <b>Aktion</b> aus, je nachdem, ob Sie Dateien oder Ordner mit dem gleichen Namen im Zielordner überschreiben möchten oder nicht.</li>
+</ol>
+<h4>Methode 2:</h4>
+<ol>
+<li>Wählen Sie die Dateien oder Ordner aus, die Sie verschieben oder kopieren möchten. (Halten Sie die Umsch- oder Strg-Taste gedrückt, wenn Sie mehrere Dateien oder Ordner auswählen möchten.)</li>
+<li>Ziehen Sie die Ordner oder Dateien vom Hauptbereich in einen anderen Ordner auf der linken Seite.</li>
+<li>Wählen Sie im angezeigten Popup-Menü <b>Kopieren</b> - <b>Überschreiben</b>, <b>Kopieren</b> - <b>Überspringen</b>, <b>Verschieben</b> - <b>Überschreiben</b> oder <b>Verschieben</b> - <b>Überspringen</b> aus, um Dateien oder Ordner mit demselben Namen im Zielordner zu überschreiben oder zu überspringen.</li>
+</ol>
+
+<h4>Methode 3</h4>
+<ol>
+<li>Wählen Sie die Dateien oder Ordner aus, die Sie verschieben oder kopieren möchten. (Halten Sie die Umsch- oder Strg-Taste gedrückt, wenn Sie mehrere Dateien oder Ordner auswählen möchten.)</li>
+<li>Drücken Sie Strg + X zum Ausschneiden oder Strg + C zum Kopieren der Dateien/Ordner. Mac-Benutzer drücken auf cmd + X und cmd + C.</li>
+<li>Wechseln Sie zum Zielordner auf der DiskStation oder Ihrem Computer.</li>
+<li>Drücken Sie Strg + V, um die Dateien/Ordner einzufügen (cmd + V für Mac).</li>
+<li>Wählen Sie im angezeigten Dialogfeld, ob Sie Dateien mit identischem Namen im Zielordner überschreiben oder überspringen möchten.</li>
+</ol>
+
+<div class="section">
+<h4>Tastenkombinationen:</h4>
+<p>Die folgenden Tastaturkombinationen können beim Verschieben/Kopieren von Dateien und Ordnern in File Station nützlich sein.</p>
+<ul>
+<li>F2: Umbenennen</li>
+<li>Entf: Löschen</li>
+<li>Strg + A: Alle auswählen</li>
+<li>Strg + X: Ausschneiden</li>
+<li>Strg + C: Kopieren</li>
+<li>Strg + V: Einfügen</li>
+</ul>
+</div>
+
+
+<div class="section">
+<h4>Hinweis:</h4>
+<ul>
+<li>Beim Kopieren oder Verschieben von Dateien/Ordnern in ein Verzeichnis in einem FAT-Dateisystem werden die Zeichen <span class="note_content">\ *?">|</span> im Dateinamen durch <span class="note_content">–</span> ersetzt und die Metadaten von Mac-Dateien werden gelöscht.</li>
+<li>Wenn Sie Dateien auf Ihrem lokalen Computer ausschneiden und in Ordner einer DiskStation einfügen, bleiben die Dateien auf dem lokalen Computer erhalten.</li>
+<li>Beim Verschieben einer Datei oder eines Ordners bleibt der „Eigentümer“ gleich. Wenn eine Datei oder ein Ordner aber kopiert wird, wechselt der „Eigentümer“ zu dem Benutzer, der die Kopie angefertigt hat.</li>
+</ul>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Win/Mac/NFS</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>도메인</h2>
+<p>DiskStation은(는) Windows 도메인에 가입할 수 있습니다. 도메인에 가입한 후, 도메인 사용자는 도메인 계정과 패스워드를 사용하여 DiskStation에 로그인하여 파일에 액세스하고 또다른 사용자 이름과 패스워드 세트를 기억할 필요없이 DSM 응용 프로그램을 사용할 수 있습니다.</p>
+<h4>도메인에 가입하기:</h4>
+<ol>
+<li><strong>제어판</strong> &gt; <strong>디렉터리 서비스</strong> &gt; <strong>도메인</strong>으로 이동합니다.</li>
+<li><strong>도메인에 가입</strong> 상자를 선택합니다.</li>
+<li>도메인 이름을 입력하고 적절한 필드에 DNS 서버를 지정합니다.</li>
+<li>필요에 따라 <b>고급 도메인 옵션</b> 상자를 선택합니다. (자세한 내용은 아래를 참조하십시오.)</li>
+<li><b>적용</b>을 클릭합니다.</li>
+<li>팝업 창에서 도메인 서버의 관리자 사용자 이름과 패스워드를 입력합니다.</li>
+<li><b>확인</b>을 클릭합니다.</li>
+</ol>
+<div class="section">
+<h4>DNS Server</h4>
+<p>DiskStation의 도메인 검색을 쉽게 하기 위해 DNS 서버를 지정하는 것이 좋습니다. 그러나 도메인이 DNS 서버에 등록되지 않은 경우 도메인 가입 절차가 실패할 수 있습니다.</p>
+<h4>도메인 서버 유형</h4>
+<p>이 필드는 DiskStation이 도메인에 가입할 때 도메인 유형을 보여줍니다. 도메인 유형은 &quot;AD 도메인&quot;입니다.</p>
+<h4>관리 모드</h4>
+<p>이 옵션은 도메인 사용자 및 그룹 권한을 어떻게 관리할지 결정합니다. </p>
+<ul>
+<li><b>트러스트된 도메인</b>: 가입된 도메인 및 트러스트된 도메인에서 사용자 및 그룹을 관리할 수 있습니다. 사용자 및 그룹을 도메인 드롭다운 목록으로 필터링할 수 있습니다.</li>
+<li><b>OU가 있는 단일 도메인</b>: 가입된 도메인의 사용자 및 그룹만 이 모드에 표시됩니다. 이 모드에서 OU(조직 유니트) 드롭다운 목록으로 도메인 사용자/도메인 그룹을 필터링할 수 있습니다.</li>
+</ul>
+<h4>고급 도메인 옵션</h4>
+<p>대부분의 경우 고급 도메인 옵션을 채울 필요가 없습니다. 고급 도메인 옵션은 특정 도메인 환경에서만 필요합니다. </p>
+<ul>
+<li><b>DC IP/FQDN</b>: DC(도메인 컨트롤러) IP 주소 또는 FQDN을 지정하면 DiskStation이(가) 통신을 시도합니다. 둘 이상의 IP 주소 또는 FQDN이 있는 경우 이들 사이에 쉼표(,)를 삽입합니다. 원하는 경우 마지막 DC IP 주소 또는 FQDN 다음에 별표(*)를 추가하면 지정된 모든 DC가 실패했을 때 DiskStation이(가) 다른 DC와 통신을 시도합니다. 별표와 마지막 IP 주소 또는 FQDN 사이에 쉼표를 추가해야 합니다.</li>
+<li><b>도메인 NetBIOS 이름</b>: 도메인의 NetBIOS 이름을 지정합니다.</li>
+<li><b>도메인 FQDN (DNS 이름)</b>: 도메인의 FQDN (DNS 이름)을 지정합니다.</li>
+<li><b>DNS 인터페이스 등록:</b> 도메인에 가입할 때 여기에 지정된 NIC(네트워크 인터페이스 카드)가 DNS 서버로 등록됩니다. DiskStation 호스트 이름에 밑줄(_)이 있는 경우, 밑줄(_)은 DNS에 사용할 수 없기 때문에 등록이 실패한다는 점에 유의하십시오.</li>
+<li><b>사용자/그룹 목록 업데이트</b>: DiskStation에서 얼마나 자주 도메인 사용자/그룹 목록을 자동으로 업데이트할지 지정합니다. 업데이트를 수행할 기간을 매일, 매주 또는 매월로 사용자 지정할 수 있습니다. 또한, <strong>도메인 사용자</strong> 탭으로 이동하고 <strong>모든 도메인 업데이트</strong>를 클릭하여 도메인 사용자/그룹 목록을 수동으로 업데이트할 수 있습니다. 자동 업데이트는 시스템 대기에 영향을 준다는 점에 유의하십시오.</li>
+</ul>
+
+<h4>읽기 전용 도메인 컨트롤러에 가입</h4>
+<p>DiskStation을(를) 읽기 전용 도메인 컨트롤러(RODC)에 가입하려면, 읽기 쓰기 도메인 컨트롤러(RWDC)의 &quot;전체 컴퓨터 이름&quot;(FQDN)을 <strong>DC IP/FQDN</strong> 필드에 지정해야 합니다. 전체 컴퓨터 이름은 다음 형식을 따라야 합니다: <strong>ComputerName.Domain</strong>, 예: &quot;ad01.synology.com&quot;.</p>
+
+</div>
+
+
+<div class="section">
+<h4>참고:</h4>
+<ul>
+<li>도메인 사용자 이름에 &quot;%&quot; 또는 &quot;$&quot;이 포함된 경우, home 폴더에 접근할 수 없습니다. 도메인 관리자에게 문의하여 새 사용자 이름을 제공받으십시오.</li>
+<li><strong>Domain Admins</strong> 및 <strong>Enterprise Admins</strong> 도메인 그룹이 로컬 <strong>administrators</strong> 그룹에 자동으로 추가됩니다. 따라서, 이들 그룹의 도메인 사용자는 CIFS/FTP/AFP/WebDAV 같은 파일 서비스에 액세스 및 기타 DSM 응용 프로그램 사용을 포함하여 DiskStation에 대한 관리 권한을 갖습니다.</li>
+<li>또한 DiskStation에 있는 공유 폴더에 대한 도메인 사용자의 접근 권한을 구성할 수 있습니다. 자세한 정보는 <a href="file_directory_service_user_group.html">여기</a>를 참조하십시오.</li>
+</ul>
+</div>
+
+
+
+<h3>도메인 옵션</h3>
+<p>이 섹션은 아래와 같은 추가 도메인 옵션을 포함합니다.</p>
+<ul>
+<li><b>도메인 사용자가 로그인할 때마다 DiskStation이 NTP 서버와 동기화합니다:</b> 이 옵션을 활성화하면 DiskStation 및 NTP 서버 간에 강제로 시간을 동기화합니다.</li>
+<li><b>서버 등록 활성화:</b> 클라이언트가 클라이언트 등록을 활성화한 경우, DiskStation에서도 서버 등록이 활성화되어야 사용자가 정상적으로 도메인 서비스를 사용할 수 있습니다.</li>
+<li><b>NT4 호환 모드가 있는 사용자/그룹 목록 가져오기:</b> 이 옵션을 활성화하면 시스템이 NT4 RPC 모드를 사용하는 사용자/그룹 목록을 가져올 수 있습니다. 기본 설정을 사용하여 특정 도메인 사용자/그룹 목록을 가져올 수 없는 경우 이 옵션을 활성화할 수 있습니다.</li>
+<li><b> Domain Admins 및 Enterprise Admins에 대한 관리자 권한을 비활성화합니다:</b> Administrator 권한을 가진 사용자는 DiskStation 및 그 안의 파일에 대한 완전한 제어 권한을 가질 수 있습니다. 이 옵션을 활성화하면 Domain Admins 및 Enterprise Admins 권한을 일반 사용자와 같게 만들어 일반 사용자 파일/폴더 권한을 상속하게 할 수 있습니다.</li>
+<li><strong>중첩된 그룹 수준 열거:</strong> 열거할 수 있는 중첩된, 도메인 그룹 멤버의 수를 지정합니다.</li>
+</ul>
+
+</body>
+</html>

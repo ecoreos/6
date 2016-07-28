@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>通知</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>短信</h2>
+<p class="disable-eds14">当出现连接丢失、风扇动作改变、电源故障、存储卷不足或备份和还原失败等系统状态改变或系统错误发生时，您可以启用短信通知功能，来让 DiskStation 通过短信发送通知信息。</p>
+
+<p class="enable-eds14">当出现连接丢失、断电、存储卷不足或备份和还原失败等系统状态改变或系统错误发生时，您可以启用短信通知功能，来让 DiskStation 通过短信发送通知信息。</p>
+
+
+<h4>若要启用 SMS 通知：</h4>
+<p>请勾选<b>启用短信通知</b>并完成下列设置：</p>
+<ol>
+<li>从<b>短信服务供应商</b>下拉列表选择短信供应商。默认服务提供商为“clickatell”。</li>
+<li>单击<b>添加短信服务供应商</b>来创建新的短信供应商配置，或单击<b>删除</b>来删除所选的短信供应商配置。</li>
+<li>在<b>用户名</b>栏中，输入您的短信服务帐户的用户名。</li>
+<li>在<b>密码</b>和<b>确认密码</b>栏中，输入并确认短信服务帐户的密码。</li>
+<li>输入您的<b>主要电话号码</b>或<b>次要电话号码</b>。如果您已输入两组号码，则短信通知信息将发送到两组号码。</li>
+<li>如果您不想收到太多信息，请勾选<b>启用短信间隔限制</b>，并限制在您指定的间隔时间内只能收到一个通知信息。</li>
+<li>单击<b>发送测试短信信息</b>将测试短信信息发送到您所指定的电话号码。若您未收到信息，表示配置不正确。</li>
+<li>单击<b>应用</b>来保存配置，或单击<b>重置</b>来取消该设置。</li>
+</ol>
+<p>
+<span class="note_head">注：</span>短信通知的语言在<strong>通知语言</strong>中设置。若要更改短信通知语言，请进入<strong>主菜单</strong> > <strong>通知面板</strong> > <strong>区域选项</strong>，单击<strong>语言</strong>选项卡，从<strong>通知语言</strong>区域的下拉菜单中选择偏好的语言。</p>
+<ol>
+<span class="note_head">限制：</span>
+<li>用户名：有大小写之分，必须在 1 到 32 个 Unicode 字符之间。</li>
+<li>密码：有大小写之分，必须在 0 - 128 个可显示 Unicode 字符之间，包括字母、数字、符号和空格。</li>
+<li>短信间隔限制必须在 1 至 10000 分钟之间。</li>
+</ol>
+<h4>若要创建短信供应商配置：</h4>
+<ol>
+<li>请单击<b>添加短信服务供应商</b>。</li>
+<li>在<b>供应商名称</b>栏输入短信服务供应商的名称。</li>
+<li>在<b>短信 URL</b> 栏中输入一则短信 URL，内容为“Hello world”。您可以从短信供应商处取得短信 URL。</li>
+<li>单击<b>下一步</b>。</li>
+<li>系统将会把短信 URL 拆分成几个参数。选择相应类别来定义每一个参数。除了<b>其他</b>以外，每个参数类别只能使用一次。</li>
+</ol>
+<ol>
+<a name='smshowto'></a><span class="note_head">限制：</span>
+<li>供应商名称：有大小写之分，必须在 1 到 32 个 Unicode 字符之间。</li>
+<li>短信 URL：有大小写之分，必须在 1 到 500 个 Unicode 字符之间。参数数量必须介于 4 至 10 个。此短信 URL 仅供设置之用。设置完成后不会发送任何短信通知。URL 的格式由短信服务供应商提供，该 URL 必须包括以下参数：用户名、密码、目的地电话以及信息内容。例如，Clickatell 可能的 URL 为：https://api.clickatell.com/http/sendmsg?user=TestUser&password=TestPassword&api_id=3148203&to=886123456789&text=Hello+world.请注意“信息内容”参数中，“Hello”与“world”之间的空格会被服务供应商定义的特定字符替换。	
+</li>	
+
+</ol>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Win/Mac/NFS</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Mac Dosya Hizmeti</h2>
+
+<p>
+<strong>Denetim Masası</strong> > <strong>Dosya Hizmetleri</strong> > <strong>Win/Mac/NFS</strong> öğesinden DiskStation aygıtınızı bir Mac dosya sunucusu (AFP sunucusu) yapmak için Mac dosya hizmetini etkinleştirebilirsiniz.</p>
+
+<h4>Mac dosya hizmetini etkinleştirmek için:</h4>
+<ol>
+<li>
+DiskStation ürününü bir Mac sunucusu (AFP sunucusu) yapmak için <b>Mac dosya hizmetini etkinleştir</b>'i işaretleyin.
+</li>
+<li>
+Gerekirse bir <b>Time Machine</b> yedekleme klasörü kurun. (Daha fazla bilgi için aşağıdaki bölüme bakın.)
+</li>
+
+<li>
+<b>Uygula</b>'ya tıklayın.
+</li>
+
+</ol>
+
+<div class="section">
+<h4>Not:</h4>
+<ul>
+<li>Time Machine'den DiskStation ürününe veri yedeklemek için, açılan menüden bir paylaşımlı klasör seçin. </li>
+<li> Diğer hizmetler tarafından kullanılan paylaşılan klasörler Time Machine için kullanılamaz.</li>
+</ul>
+
+</div>
+
+
+
+<h3>Aktarım Günlüğünü Etkinleştirme</h3>
+<p>Bu seçeneğin işaretlenmesi dosyaları veya klasörleri, Apple Filing Protocol olarak ta bilinen AFP aracılığıyla oluşturma, silme, okuma, yazma, taşıma ve yeniden adlandırma dahil olmak üzere dosya erişim işlemlerine giriş yapmaya olanak sağlar.</p>
+
+
+<h3>Gelişmiş Ayarlar</h3>
+<h4>Varsayılan UNIX izinlerini uygula:</h4>
+<p>Bu seçeneğin etkinleştirilmesi dosyaları ve klasörleri yüklerken veya oluştururken varsayılan UNIX izinlerini uygular. Uygulanan izinler UNIX komutu <strong>umask</strong> tarafından uygulanan izinlerin aynısıdır. Bu seçenek etkinleştirildiğinde, UNIX izinleri dosyalar için 644 ve klasörler için 755'dir. Bu seçenek devre dışı bırakıldığında, UNIX izinleri dosyalar için 666 ve klasörler için 777'dir. Varsayılan umask değeri 022'dir.</p>
+
+<div class="section">
+<h4>Not:</h4>
+<p>Bu seçeneğin etkinleştirilmesi farklı protokoller arasında tutarsız izin sorunlarına neden olabilir. Tutarsızlıkları önlemek için, bu seçeneği devre dışı bırakmanızı öneririz.</p>
+</div>
+
+<h4>Bağlantı kesme sonrasında kaynakları hemen bırak:</h4>
+<p>Bu seçeneğin etkinleştirilmesi AFP sunucu bağlantısı beklenmedik şekilde kesildiğinde kaynakları bırakır. Time Machine kullanırken "Birim kullanımda" hata mesajlarını alırsanız, lütfen bu seçeneği etkinleştirin.</p>
+<h4>Bonjour yazıcı yayınını etkinleştirmek için:</h4>
+<p>Mac istemcilerinin DiskStation cihazına bağlı yazıcıyı tarayıp bulmalarını sağlamak için <b>Bonjour Yazıcı Yayınını Etkinleştir</b> seçeneğini işaretleyin.</p>
+
+<h4 class="disable-hi3535">Spotlight on Finder yoluyla dosya içeriğini aramak için:</h4>
+<p class="disable-hi3535">Mac bilgisayarınıza klasörler tam olarak indekslenir ve ardından tanıtılırsa, mevcut dosyaları ve içeriklerini aramak için Spotlight on Finder kullanabilirsiniz.</p>
+<ol class="disable-hi3535">
+<li>Belirli klasörleri ve mevcut dosyaları dosya türüne göre indekslemek için <strong>Denetim Masası</strong> > <strong>İndeksleme Hizmeti</strong> > <strong>Dosya İndeksleme</strong> > <strong>İndekslenmiş Klasör Listesi</strong> > <strong>Oluştur</strong>'a gidin.</li>
+<li>İndekslemeyi yapmak için <strong>Tamam</strong>'a tıklayın.</li>
+<li>İndekslenen klasörleri Mac bilgisayarınıza bağlayın.</li>
+<li>Mac bilgisayarınızda, Finder'ın sol panelinde istenilen bağlı klasöre tıklayın ve mevcut dosyaları aramak için Spotlight on Finder kullanın.</li>
+
+</ol>
+
+<div class="section disable-hi3535">
+<h4>Not:</h4>
+<ul>
+<li>Tanıtılan klasörler dahilinde arama yapmak için, Spotlight on Finder kullanın. Mac masaüstünde Spotlight sadece yerel dosyaların aranmasını sağlar.</li>
+<li>Mac OS X 10.9 ve sonraki sürümlerde, Spotlight on Finder etiket adı ve kategoriye göre bağlı klasörlerde arama yapmayı destekler.</li>
+</ul>
+</div>
+
+</body>
+</html>

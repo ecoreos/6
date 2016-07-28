@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+	<h2>全般</h2>
+	<p>Storage Manager は Synology 製品上のすべてのストレージ スペースを管理するために使用します。ストレージ管理を簡略化して、データ保護を備えた柔軟なストレージ スペースを作成するために、Synology DSM は複数タイプの RAID グループに対応しています。</p>
+
+<h4><a href="raid.html">RAID Group</a></h4>
+	<p> DiskStation では、複数のハードディスクを「RAID グループ」と呼ばれる 1 つのストレージ単位にまとめることができます。DiskStation は次のタイプの RAID グループを提供します。</p>
+	<ul>
+		<li><b>1 つのボリュームまたは iSCSI LUN (ブロックレベル) の RAID グループ</b>：
+			<ul>
+				<li>使用可能な容量をすべて 1 つのボリュームまたは iSCSI LUN（ブロックレベル）に割り当てます。</li>
+				<li>性能は高まりますが、管理上の柔軟性に欠けます。</li>
+<li>ボリューム上に複数の iSCSI LUN（通常ファイル）を作成できます。</li>
+<li>最大で 1 つの RAID アレイに対応します。</li>
+			</ul>
+		</li>
+		<li><b>複数のボリュームまたは iSCSI LUN (ブロックレベル) の RAID グループ</b>：
+			<ul>
+				<li>RAID Group 上で複数のボリュームまたは iSCSI LUN（ブロックレベル）を作成できます。</li>
+<li>管理上の柔軟性が高まります。</li>
+<li>ボリューム上に複数の iSCSI LUN（通常ファイル）を作成できます。</li>
+				<li>1 つの RAID Group に複数の RAID アレイを作成できます（RAID 5 または RAID 6 に構成する場合）。</li>
+			</ul>
+            </li>
+	</ul>
+
+<h4>RAID タイプ</h4>    
+<p>RAID グループを作成する場合、まず RAID タイプを選択します。RAID タイプにより、データ保護のレベル、ストレージ機能、性能が異なります。DiskStation は次のタイプの RAID に対応しています：</p>
+	<ul>
+	  <li><b>ベーシック</b>：1 台のハードディスクを使って 1 つの RAID グループを作成します。Basic RAID グループはデータの冗長性を提供しません。</li>
+	  <li><b>JBOD*</b>：2 台以上のハードディスクを組み合わせて RAID グループを構築します。JBOD RAID グループはデータの冗長性を提供しません。JBOD RAID グループで使用可能な容量は、このグループに含まれるすべてのディスクの合計容量となります。JBOD は異なるサイズのハードディスクを統合できます。</li>
+	  <li><b>RAID 0*</b>：2 台以上のハードディスクを組み合わせて RAID グループを構築します。RAID 0 はデータの冗長性を提供しません。1 台のディスクが故障した場合、RAID グループのデータが失われます。RAID 0 グループの使用可能な容量は、構成された全ディスクの合計容量と同じです。RAID 0 では、異なるサイズのハードディスクを組み合わせることができます。</li>
+	  <li><b>RAID 1*</b>：2 から 4 台のハードディスクを組み合わせて RAID グループを構成します。システムは同じデータを各ハード ディスクに書き込みます。RAID 1 は 1 台のディスクが正常に作動している限り、データ保護を提供します。RAID 1 グループの使用可能な容量は、構成ディスクのうち最も小さいもののサイズと同じです。</li>
+	  <li><b>RAID 5*</b>：少なくとも 3 台のハードディスクを組み合わせて 1 つの RAID グループを構築します。ディスク全体のデータとパリティ情報を保存します。RAID 5 はデータの冗長性を提供します。1 台のディスクが故障した場合、システムは他のメンバー ディスク上にあるパリティ情報を使って再構築する場合があります。複数の RAID アレイを組み合わせて、複数のボリュームまたは iSCSI LUN (ブロックレベル) で構成された 1 つの RAID グループを作成することができます。RAID 5 グループの容量 = <span class="note_content">組み合わせた RAID アレイの合計。RAID アレイの容量 = (ハードディスクの数 - 1) x (最小ハードディスクの容量)</span></li>
+	  <li><b>RAID 6*</b>：少なくとも 4 台のハードディスクを組み合わせて 1 つの RAID グループを構築します。ディスク全体のデータとパリティ情報を保存します。RAID 6 はデータの冗長性を提供します。2 台のディスクが故障したとしても、システムは他のメンバー ディスク上にあるパリティ情報を使って再構築する場合があります。複数の RAID アレイを組み合わせて、複数のボリュームまたは iSCSI LUN (ブロックレベル) で構成された 1 つの RAID グループを作成することができます。RAID 6 グループの容量 = <span class="note_content">組み合わせた RAID アレイの合計。RAID アレイの容量 = (ハードディスクの数 - 2) x (最小ハードディスクの容量)</span></li>
+	  <li><b>RAID 10*</b>：4 台以上のハードディスクを組み合わせて RAID グループを構築します。ディスクの数は偶数でなければなりません。RAID 10 は RAID 0 の性能に加え、RAID 1 と同等のデータ保護を提供します。RAID 10 グループの使用可能な容量= <span class="note_content">（最小ハードディスクの容量） x （ハードディスクの数 - 2）</span></li>
+	</ul>
+	<p>
+		<span class="note_head">注意：</span> アスタリスク (*) が付いた RAID タイプは、十分な数のハードディスク ベイを備えた NAS モデルでのみ有効です。
+</p>
+
+
+<h4><a href="space.html">ボリュームタイプ</a></h4>
+	<p>RAID グループのタイプによって、2 種類のボリューム タイプがあります。</p>
+	<ul>
+		<li><b>1 つのボリュームまたは iSCSI LUN（ブロックレベル）で構成される RAID Group 上のボリューム</b>
+        	<ul>
+	<li>RAID グループ上の全ストレージ領域を 1 つのボリュームに割り当てます。性能は高まりますが、管理の柔軟性に欠けます。</li>
+<li>ボリューム上に複数の iSCSI LUN（通常ファイル）を作成できます。</li>
+            </ul></li>
+		<li><b>複数のボリュームまたは iSCSI LUN（ブロックレベル）で構成される RAID Group 上のボリューム</b>
+        	<ul>
+	<li>RAID Group に指定した割合の容量を割り当ててボリュームを作成します。管理上の柔軟性が高められ、必要に応じてボリュームのサイズを拡張したり、ボリュームを追加したりすることができます。</li>
+<li>ボリューム上に複数の iSCSI LUN（通常ファイル）を作成できます。</li>
+            </ul></li>
+	</ul>
+
+<h4 class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64">ボリューム フォーマット</h4>
+<p class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64">使用しているファイル システムによって、2種類のボリューム フォーマットがあります。</p>
+<ul class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64">
+	<li><strong>新しいボリューム フォーマット</strong>：このフォーマットは、<b>Btrfs</b> ファイル システムを使用します。このフォーマットのボリュームの最小サイズは、最低でも 10 GB でなければなりません。データをより簡単に管理できる新しい機能がサポートされています。
+		<ul>
+			<li><strong><a href="../DisasterRecovery/snapshots.html">共有フォルダのスナップショット</a>：</strong> スナップショットを撮影した時点で、データ全体の状態が録画されます。スナップショットが保管されたボリューム上のデータをユーザーが誤って変更したり、削除してしまったりしても、スナップショットを撮影した時点にすばやく戻すことができます。</li>
+			<li><strong><a href="../AdminCenter/file_share_create.html#sharequota">共有フォルダの割り当て量</a>：</strong> 各フォルダの最大容量を設定できます。</li>
+			<li><strong><a href="../AdminCenter/file_user_create.html#userquota">共有フォルダに基づいた割り当て量</a>：</strong> それぞれのユーザーが共有フォルダ内で使用できるスペースの量を調整できます。</li>
+			<li><strong><a href="../AdminCenter/file_share_create.html#integrity_protection">高度なデータ整合保護</a>：</strong> 共有フォルダが CRC32 checksum とコピー オン ライト戦略で保護されます。</li>
+		</ul>
+	</li>
+	<li><strong>従来のボリューム フォーマット</strong>：このフォーマットは、<b>ext4</b> ファイル システムを使用します。このフォーマットのボリュームの最小サイズは、最低でも 10 GB でなければなりません。ext4 ファイル システムはほとんどの Synology 製品がサポートしているため、このフォーマットのボリュームを別の Synology 製品に簡単にマイグレートすることができます。</li>
+</ul>
+</body>
+</html>

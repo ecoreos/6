@@ -1,0 +1,197 @@
+
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Rede</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2><a name="wireless_ap"></a>Hotspot*</h2>
+<p>O dispositivo DiskStation suporta a cria&ccedil;&atilde;o de um hotspot para compartilhar sua conex&atilde;o de Internet com outros dispositivos sem fio, se voc&ecirc; tiver instalado um adaptador USB Wi-Fi ou se seu DiskStation tiver Wi-Fi integrado. Voc&ecirc; pode configurar seu DiskStation para ser um ponto de acesso sem fio (AP) ou roteador sem fio, dependendo de como desejar usar a Internet.</p>
+
+<table>
+<tr>
+<th width="23%">Modo Hotspot</th>
+<th width="77%">Descri&ccedil;&atilde;o</th>
+</tr>
+<tr>
+<th>AP Sem Fio</th>
+<td>
+<ul>
+<li>Serve como ponte entre sua rede LAN e Wi-Fi.</li>
+<li>Seus clientes da LAN e sem fio ficar&atilde;o na mesma rede local.</li>
+<li>Aplic&aacute;vel quando voc&ecirc; j&aacute; tem um roteador e deseja usar seu DiskStation como um ponto de acesso adicional para uma rede existente.</li> 
+<li>Permite o compartilhamento de recursos de rede, como dispositivos DLNA, impressoras, Synology Web Assistant ou outros servi&ccedil;os que dependem de transmiss&otilde;es de rede.</li>
+<li>O DHCP server ser&aacute; desativado nos dispositivos DiskStation que atuam como AP sem fio. Para reativar o DHCP server para o seu DiskStation, remova dongles Wi-Fi e reinicie o DiskStation.</li>
+<li>Para modelos com m&uacute;ltiplas portas LAN, apenas 1 LAN ser&aacute; usada para servir como ponte do AP sem fio.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Roteador sem fio</th>
+<td>
+<ul>
+<li>Configura uma rede sem fio onde os dispositivos ficar&atilde;o em uma sub-rede privada.</li>
+</ul>
+</td>
+</tr>
+</table>
+
+
+<div class="section">
+<h4>Observa&ccedil;&atilde;o:</h4>
+
+<ol>
+<li>Alguns modelos necessitam de dongles de conex&atilde;o sem fio para criar hotspots. Para obter uma lista completa dos dongles sem fio suportados, visitem <a href="http://www.synology.com/support/faq/444" target=_blank>www.synology.com</a>.</li>
+<li>Para modelos que n&atilde;o sejam o DS213air, a op&ccedil;&atilde;o de Hostpot Sem Fio no DSM 4.3 foi renomeada como &quot;Roteador Sem Fio&quot; no DSM 5.0 em diante.</li>
+</ul>
+</ol>
+
+</div>
+
+<h3>Gerenciamento das configura&ccedil;&otilde;es do hotspot</h3>
+<p>Esta se&ccedil;&atilde;o explica como habilitar e gerenciar as configura&ccedil;&otilde;es de hotspot do DiskStation.</p>
+
+
+<h4>Para transformar o DiskStation em um hotspot:</h4>
+<ol>
+<li>V&aacute; para <strong>Painel de Controle</strong> &gt; <strong>Sem Fio</strong> &gt; <strong>Mapa de Rede</strong>. Selecione <strong>AP Sem Fio</strong> ou <strong>Roteador Sem Fio.</strong></li>
+<li>V&aacute; para a aba <strong>Wi-Fi</strong> e clique em <strong>Editar</strong> para gerenciar as seguintes configura&ccedil;&otilde;es:</li>
+<ul>
+<li><strong>Nome (SSID):</strong> Digite um nome para a rede sem fio.</li>
+<li><strong>Exibir/Ocultar:</strong> Selecione se deseja ou n&atilde;o que a rede sem fio fique vis&iacute;vel para outros dispositivos.</li>
+<li><strong>Modo sem fio:</strong> Selecione um padr&atilde;o sem fio. Cada padr&atilde;o suporta v&aacute;rias frequ&ecirc;ncias e larguras de banda.</li>
+<li><strong>Largura do canal:</strong> Selecione uma largura de canal (dispon&iacute;vel apenas ao usar o modo sem fio 802.11n).</li>
+<li><strong>Canal:</strong> Selecione uma frequ&ecirc;ncia para a rede sem fio. Para obter um desempenho melhor, selecione uma frequ&ecirc;ncia diferente daquelas usadas por redes pr&oacute;ximas.</li>
+<li><strong>Pot&ecirc;ncia de transmiss&atilde;o:</strong> Selecione a for&ccedil;a de sinal da rede sem fio.</li>
+<li><strong>Conex&otilde;es m&aacute;x.:</strong> Selecione quantos dispositivos clientes podem se conectar &agrave; rede. A configura&ccedil;&atilde;o de conex&atilde;o mais alta &eacute; 256.</li>
+<li><strong>Habilitar WMM QoS:</strong> Wi-Fi Multim&iacute;dia (WMM) QoS (Qualidade de Servi&ccedil;o) atrav&eacute;s de Wi-Fi. Essa op&ccedil;&atilde;o permite que a rede sem fio priorize o tr&aacute;fego e otimize o modo como os recursos s&atilde;o compartilhados entre os aplicativos.</li>
+</ul>
+</ol>
+
+
+
+<h4>Para configurar um agendamento sem fio:*</h4>
+<p>A habilita&ccedil;&atilde;o do agendamento de uma rede sem fio permite que voc&ecirc; controle quando a rede sem fio do seu DiskStation est&aacute; ativa e acess&iacute;vel.</p>
+<ol>
+<li>V&aacute; para a aba <strong>Wi-Fi</strong> e clique em <strong>Editar</strong>. </li>
+<li>Marque a caixa <strong>Habilitar agendamento</strong>.</li>
+
+<li>Clique em <strong>Definir agendamento</strong>.</li>
+<li>Na tela agendamento, selecione quando a rede sem fio estar&aacute; ativa.</li>
+</ol>
+
+
+<h3>Configura&ccedil;&otilde;es de seguran&ccedil;a</h3>
+<p><strong>Painel de Controle</strong> &gt; <strong>Sem Fio</strong> &gt; <strong>Wi-Fi</strong> fornece op&ccedil;&otilde;es para editar as configura&ccedil;&otilde;es de seguran&ccedil;a da rede sem fio.</p>
+
+
+<h4>Para configurar a seguran&ccedil;a sem fio:</h4>
+<ol>
+
+<li>Clique em <b>Editar</b>.</li>
+<li>Selecione um dos protocolos de seguran&ccedil;a a seguir no menu suspenso <b>Configura&ccedil;&otilde;es de Seguran&ccedil;a</b>:</li>
+<ul>
+<li><strong>WEP:</strong> Um protocolo de seguran&ccedil;a b&aacute;sico que exige que os usu&aacute;rios digitem uma senha para acessar a rede sem fio, mas fornece prote&ccedil;&atilde;o m&iacute;nima.</li>
+<li><strong>WPA/WPA2 Pessoal:</strong> Recomendado. Exige que os usu&aacute;rios digitem uma senha para acessar a rede sem fio e &eacute; mais segura do que WEP.</li>
+<li><strong>WPA/WPA2 Enterprise:</strong>* Um protocolo de seguran&ccedil;a projetado para empresas, que exige a autentica&ccedil;&atilde;o dos usu&aacute;rios com um servidor de autentica&ccedil;&atilde;o externo.</li>
+
+</ul>
+</ol>
+
+<h4>Para habilitar o Wi-Fi Protected Setup:*</h4>
+<p>O recurso Wi-Fi Protected Setup &eacute; um padr&atilde;o promovido pela Wi-Fi Alliance para simplificar as configura&ccedil;&otilde;es de seguran&ccedil;a sem fio para os usu&aacute;rios. Voc&ecirc; pode usar um bot&atilde;o ou um n&uacute;mero PIN para manter sua rede Wi-Fi segura. Clique em <strong>WPS</strong> para habilitar o Wi-Fi Protected Setup.</p>
+
+
+<h3>Rede de convidado*</h3>
+<p>Al&eacute;m de criar uma rede sem fio de host, seu DiskStation tamb&eacute;m suporta a cria&ccedil;&atilde;o de uma rede sem fio de convidado. As configura&ccedil;&otilde;es da rede de convidado podem ser limitadas para restringir o acesso de usu&aacute;rios, o que &eacute; &uacute;til para empresas ou outras institui&ccedil;&otilde;es que desejam fornecer uma rede sem fio para os visitantes, mas impedi-los de acessar a rede de host.</p>
+
+
+<h4>Para habilitar a rede de convidado:</h4>
+
+<ol>
+<li>V&aacute; para <strong>Painel de Controle</strong> &gt; <strong>Sem Fio</strong> &gt; <strong>Wi-Fi</strong>. </li>
+<li>Clique em <strong>Editar</strong> para gerenciar as seguintes configura&ccedil;&otilde;es na guia <strong>Rede de Convidado</strong>:</li>
+
+<ul>
+<li><strong>Nome (SSID):</strong> Digite um nome para a rede sem fio.</li>
+<li><strong>Exibir/Ocultar:</strong> Selecione se deseja ou n&atilde;o que a rede sem fio fique vis&iacute;vel para outros dispositivos.</li>
+<li><strong>Conex&otilde;es m&aacute;x.:</strong> Selecione quantos dispositivos clientes podem se conectar &agrave; rede. A configura&ccedil;&atilde;o de conex&atilde;o m&aacute;xima &eacute; 256.</li>
+</ul>
+</ol>
+
+<h4>Para configurar a seguran&ccedil;a da rede de convidado:</h4>
+<p>Selecione um dos protocolos de seguran&ccedil;a a seguir no menu suspenso <b>Configura&ccedil;&otilde;es de Seguran&ccedil;a</b>:</p>
+<ul>
+<li><strong>WEP:</strong> Um protocolo de seguran&ccedil;a b&aacute;sico que exige que os usu&aacute;rios digitem uma senha para acessar a rede sem fio, mas fornece prote&ccedil;&atilde;o m&iacute;nima.</li>
+<li><strong>WPA/WPA2 Pessoal:</strong> Recomendado. Exige que os usu&aacute;rios digitem uma senha para acessar a rede sem fio e &eacute; mais segura do que WEP.</li>
+</ul>
+
+
+<h4>Para configurar um agendamento da rede de convidado:</h4>
+<p>A habilita&ccedil;&atilde;o do agendamento de uma rede de convidado permite que voc&ecirc; controle quando a rede sem fio de convidados do DiskStation est&aacute; ativa e acess&iacute;vel.</p>
+
+<ol>
+<li>Marque a caixa <strong>Habilitar agendamento de rede de convidado</strong>.</li>
+<li>Clique em <strong>Definir agendamento de convidados</strong>.</li>
+<li>Na tela agendamento, selecione quando a rede sem fio de convidados estar&aacute; ativa.</li>
+</ol>
+
+<div class="section">
+<h4>Observa&ccedil;&atilde;o:</h4>
+<p>A rede sem fio de convidados n&atilde;o pode estar ativa durante os per&iacute;odos em que a rede sem fio do host estiver desativada.</p>
+</div>
+
+
+<h3>Configura&ccedil;&atilde;o do filtro MAC*</h3>
+<p>O filtro MAC (em <strong>Painel de Controle</strong> &gt; <strong>Sem Fio</strong>) especifica quais endere&ccedil;os MAC t&ecirc;m permiss&atilde;o para acessar a rede sem fio, permitindo que voc&ecirc; bloqueie ou conceda acesso a dispositivos espec&iacute;ficos. Esse recurso controla apenas o acesso &agrave; rede, n&atilde;o a outras configura&ccedil;&otilde;es de criptografia.</p>
+
+
+<h4>Para criar regras de filtro MAC:</h4>
+<ol>
+<li>Digite a descri&ccedil;&atilde;o e o endere&ccedil;o MAC de um dispositivo.</li>
+<li>Selecione a pol&iacute;tica de acesso.<ul>
+<li><strong>Negar:</strong> Restringe o acesso &agrave; rede sem fio ao endere&ccedil;o MAC especificado.</li>
+<li><strong>Permitir:</strong> Permite o acesso &agrave; rede sem fio aos endere&ccedil;os MAC especificados.</li>
+</ul> 
+</ol>
+
+
+
+<h3>Controle dos pais*</h3>
+<p>O recurso de controle dos pais permite controlar quando cada dispositivo cliente conectado &agrave; rede local do DiskStation pode acessar a Internet. Por exemplo, se os computadores ou dispositivos m&oacute;veis do seu filho se conectarem &agrave; Internet atrav&eacute;s do DiskStation, voc&ecirc; pode definir as configura&ccedil;&otilde;es do controle dos pais para restringir o uso da Internet de acordo com dispositivos e hor&aacute;rios espec&iacute;ficos.</p>
+
+<h4>Para ativar o Controle dos pais:</h4>
+<ol>
+<li>V&aacute; para <strong>Painel de Controle</strong> &gt; <strong>Sem Fio</strong> &gt; <strong>Configura&ccedil;&atilde;o de Controle dos Pais</strong>.</li>
+
+<li>Clique no bot&atilde;o <strong>Adicionar</strong> para adicionar um dispositivo cliente.</li>
+<ul>
+<li><strong>Nome do cliente:</strong> Selecione um dispositivo que esteja conectado ao DiskStation ou digite o nome manualmente (por exemplo: Laptop de Luisa).</li>
+<li><strong>Endere&ccedil;o MAC:</strong> Digite o endere&ccedil;o MAC do dispositivo cujo uso da Internet voc&ecirc; deseja controlar.</li>
+<li><strong>Definir programa&ccedil;&atilde;o:</strong> Selecione o hor&aacute;rio em que o dispositivo especificado ter&aacute; permiss&atilde;o para acessar a Internet atrav&eacute;s do DiskStation.</li>
+</ul>
+</ol>
+
+<h3>Lista de conex&otilde;es*</h3>
+<p>A lista de conex&otilde;es (em <strong>Painel de Controle</strong> &gt; <strong>Sem Fio)</strong> exibe informa&ccedil;&otilde;es sobre os dispositivos conectados ao DiskStation. Os dispositivos podem ser adicionados diretamente &agrave; lista de filtro MAC aqui.</p>
+
+<h4>Para adicionar dispositivos &agrave; lista de filtro MAC:</h4>
+<ol>
+<li>Marque a caixa ao lado do dispositivo que deseja adicionar ao filtro MAC.</li>
+<li>Clique em <strong>Adicionar &aacute; Lista de Filtros MAC</strong>.</li>
+</ol>
+
+
+
+<p>____<br> * Dispon&iacute;vel apenas em modelos espec&iacute;ficos.<br></body>
+</html>

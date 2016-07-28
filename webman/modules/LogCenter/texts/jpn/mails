@@ -1,0 +1,122 @@
+
+[SYNOSYSLOG_DB_CORRUPT]
+Subject: ログ センターのデータベース %DBPATH% が壊れています。
+
+お客様各位
+
+ログセンターで、壊れているデータベース「%DBPATH%.corrupt」が見つかりました。詳しくは、Synology サポートにお問い合わせください。
+
+敬具
+%COMPANY_NAME%
+
+
+[SYNOSYSLOG_EPS_EXCEED]
+Subject: %HOSTNAME% 上の 1 秒間あたりのログ数が %EPS% 件以上です
+
+お客様各位、
+
+%HOSTNAME% 上の 1 秒間あたりのログ数が %EPS% 件以上です。詳しくはシステムで確認してください。
+
+敬具。
+%COMPANY_NAME%
+
+
+[SYNOSYSLOG_KEYWORD_MATCH]
+Subject: %HOST% 上に %KEYWORD% というキーワードを含むログが 1 つあります。
+
+お客様各位、
+
+%HOST% 上に %KEYWORD% というキーワードを含むシステム ログが 1 つあります。詳しくはシステムで確認してください。
+
+ログの内容は次のとおりです。
+
+%SYSLOG_CONTENT%
+
+敬具。
+%COMPANY_NAME%
+
+
+[SYNOSYSLOG_LogSend]
+Subject: %HOSTNAME% で一部のログが上限に達しました
+
+お客様各位、
+
+%HOSTNAME% で一部のログが上限に達しました。詳しくはシステムで確認してください。
+
+ログの内容は次のとおりです。
+
+%SYSLOG_CONTENT%
+
+敬具。
+%COMPANY_NAME%
+
+
+[SYNOSYSLOG_SEV_EXCEED]
+Subject: %HOST% 上に優先度 %SEV% のログが 1 つあります
+
+お客様各位、
+
+%HOST% 上に優先度 %SEV% のログが 1 つあります。詳しくはシステムで確認してください。
+
+ログの内容は次のとおりです。
+
+%SYSLOG_CONTENT%
+
+敬具。
+%COMPANY_NAME%
+
+
+[SYNOSYSLOG_ShareEncMount]
+Subject: %HOSTNAME% のログセンターのログ アーカイブが再開されました
+
+お客様各位
+
+ログ データベースの保存に使用する暗号化された共有フォルダ「%SHARED_FOLDER%」がマウントされましたので、%HOSTNAME% のログ センターのログ アーカイブが再開されました。
+
+敬具
+%COMPANY_NAME%
+
+
+[SYNOSYSLOG_ShareEncUnmount]
+Subject: %HOSTNAME% のログセンターのログ アーカイブが停止しました
+
+お客様各位
+
+ログ データベースの保存に使用する暗号化された共有フォルダ「%SHARED_FOLDER%」がアンマウントされたため、%HOSTNAME% のログ センターのログ アーカイブが停止しました。ログ アーカイブを再開するには、共有フォルダをマウントしてください。
+
+敬具
+%COMPANY_NAME%
+
+
+[SYNOSYSLOG_ShareRemove]
+Subject: %HOSTNAME% のログセンターのログ アーカイブが無効になりました
+
+お客様各位
+
+ログ データベースの保存に使用する共有フォルダ「%SHARED_FOLDER%」が削除されたため、%HOSTNAME% のログ センターのログ アーカイブが無効になりました。%OSNAME% にログインして、[メイン メニュー] > [ログ センター] > [ストレージ設定] の順に選択して別の共有フォルダを選択してください。
+
+敬具
+%COMPANY_NAME%
+
+
+[SYNOSYSLOG_ShareRename]
+Subject: %HOSTNAME% のログ センターのデータベースの場所が更新されました
+
+お客様各位
+
+%HOSTNAME% のログ センターのログ データベースの場所が更新されました。データベースの保存用に使用する共有フォルダ「%SHARED_FOLDER%」が変更されています。
+
+敬具
+%COMPANY_NAME%
+
+
+[SYNOSYSLOG_VOL_FULL]
+Subject: %HOSTNAME% のログ センターの保存領域が不足しています
+
+お客様各位
+
+%HOSTNAME% のログ センターの保存領域が不足しています。ログ センターの共有フォルダを変更してください。
+
+敬具
+%COMPANY_NAME%
+

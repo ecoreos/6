@@ -1,0 +1,71 @@
+﻿ <!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Merevlemez hozzáadása kötethez vagy lemezcsoporthoz – Synology DSM Súgó</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="This article walks you through the steps to add an additional hard drive to an existing volume or disk group on your DiskStation."><link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Merevlemez hozzáadása a tárolókapacitás bővítése érdekében</h2>
+
+<p>Amennyiben DiskStation eszköze üres lemezfiókokkal is rendelkezik, további merevlemezeket szerelhet be, melyeket hozzáadhatja egy meglévő kötethez vagy lemezcsoporthoz. Ez a jelen cikk a meglévő kötet vagy lemezcsoport további merevlemezekkel történő bővítésére vonatkozó utasításokat tartalmazza.</p>
+
+<h3>Kezdés előtt</h3>
+
+<p>Mielőtt nekifogna, győződjön meg arról, hogy a hozzáadni kívánt merevlemezek teljesítik-e a méretre vonatkozó követelményeket:</p>
+<ul>
+  <li><strong>SHR esetén:</strong> A hozzáadni kívánt merevlemez kapacitásának egyenlőnek vagy nagyobbnak kell lennie a kötet vagy lemezcsoport legnagyobb merevlemezének kapacitásával, vagy egyenlőnek kell lennie a kötet vagy a lemezcsoport bármely merevlemezének kapacitásával. Ha például az SHR kötet három, egyenként 2 TB, 1,5 TB, és 1 TB méretű merevlemezből áll, akkor az új merevlemez kapacitásának legalább 2 TB-nak vagy 1,5 TB -tal, illetve 1 TB-tal megegyezőnek kell lennie.</li>
+  <li><strong>RAID 5 és RAID 6 esetében:</strong> A hozzáadni kívánt merevlemez kapacitásának egyenlőnek vagy nagyobbnak kell lennie a kötet vagy lemezcsoport legkisebb merevlemezének kapacitásával. Ha például a kötet három, egyenként 2 TB, 1,5 TB, és 1 TB méretű merevlemezből áll, akkor az új merevlemez kapacitásának legalább 1 TB-nak kell lennie.</li>
+</ul>
+
+<div class="section">
+<h4>A kötet állapotának ellenőrzése</h4>
+
+<p>Győződjön meg róla, hogy a kötet vagy lemezcsoport állapota <strong>Normál</strong>-e. Ha nem, először ki kell javítania.</p>
+</div>
+
+
+<h3>  Merevlemez hozzáadása kötethez vagy lemezcsoporthoz</h3>
+
+<p>Merevlemezek a következő RAID-típusokhoz adhatók hozzá: </p>
+
+<ul>
+<li>Synology Hybrid RAID (SHR)</li>
+<li>JBOD</li>
+<li>RAID 5</li>
+<li>RAID 6</li>
+</ul>
+
+<div class="section">
+<h4>Megjegyzés:</h4>
+<p>SHR kötetek esetében a tárolókapacitás csak akkor terjeszthető ki, ha két vagy több lemezel rendelkező kötetet bővít újabb merevlemezekkel.</p>
+</ul>
+</div>
+
+<h4>Merevlemez hozzáadása kötethez vagy lemezcsoporthoz:</h4>
+
+<ol>
+<li>Kapcsolja ki a(z) DiskStation eszközt. (Amennyiben DiskStation eszköze támogatja a hot swap funkciót, ezt a lépést kihagyhatja.)</li>
+<li>Helyezze be az új merevlemezt az üres merevlemezhelyre.</li>
+
+<div class="section">
+<h4>Megjegyzés:</h4>
+<p>A személyi sérülések és DiskStation eszköze károsodásának elkerülése érdekében kövesse a Synology termék <i>Gyorstelepítési útmutatójában</i> található merevlemez-telepítési utasításokat.</p>
+</div>
+
+<li>Kapcsolja be DiskStation eszközét.</li>
+<li>Jelentkezzen be a DSM rendszerbe egy, az <strong>administrators</strong> csoporthoz tartozó fiókkal.</li>
+<li>Nyissa meg a <strong>Tároláskezelő</strong> alkalmazást.</li><img src="about:blank" class="help_image"/><li>Kérjük, tegye a következőket:</li>
+  <ul class="list_abc">
+    
+  <li>Ha egyetlen kötetet kíván kiterjeszteni, lépjen a <strong>Kötet</strong> lapra. Jelölje ki a kiterjeszteni kívánt kötetet. Kattintson a <strong>Kezelés</strong> lehetőségre, és folytassa a következő lépéssel. </li><img src="about:blank" class="help_image"/><li>Ha lemezcsoportot kíván kiterjeszteni, lépjen a <strong>Lemezcsoport</strong> lapra. Jelölje ki a kiterjeszteni kívánt lemezcsoportot. Kattintson a <strong>Kezelés</strong> lehetőségre, és folytassa a következő lépéssel.</li><img src="../../../online_img/dsm/StorageManager/volume_diskgroup_expand_add_disk/diskgroup_manage.png" class="help_image"/></ul>
+<li>Jelölje ki <strong>Kötet (lemezcsoport) bővítése merevlemezek hozzáadásával.</strong> lehetőséget. Ezt követően kattintson a <strong>Tovább</strong> gombra.</li><img src="about:blank" class="help_image"/><li>Jelölje ki a merevlemezeket, amelyekkel a kötetet vagy lemezcsoportot szeretné kiterjeszteni. A merevlemezeket a megfelelő jelölőnégyzetek bejelölésével adhatja hozzá. Ezt követően kattintson a <strong>Tovább</strong> gombra.</li><img src="../../../online_img/dsm/StorageManager/volume_diskgroup_expand_add_disk/choose_disks.png" class="help_image"/><li>A befejezéshez kövesse a varázsló lépéseit.</li>
+</ol>
+</body>
+</html>

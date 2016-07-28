@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Blocage auto - Aide Synology DSM</title> 
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="The auto block feature helps improve the security of your DiskStation by blocking the IP addresses of clients with too many failed login attempts.">
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Blocage auto</h2>
+<p>La propriété de blocage automatique aide à améliorer la sécurité de votre DiskStation en bloquant les adresses IP des clients ayant de trop nombreux échecs de tentatives de connexion. Ceci aide à réduire le risque des comptes étant rompus en utilisant des attaques brutales par la force.</p>
+<p>Vous pouvez également créer et gérer une liste d'autorisations pour ajouter des adresses IP auxquelles vous faites confiance, ou une liste de blocage pour toujours empêcher que certaines adresses IP ne se connectent.</p>
+<div class="section">
+<h4>Remarque :</h4>
+<p>Différents services et paquets prennent en charge le blocage automatique comme ceux qui suivent : DSM, SSH, Telnet, rsync, network backup, shared folder sync, FTP, WebDAV, File Station, Photo Station, Audio Station, Video Station, Download Station, Mail Server, Mail Station, Time Backup, VPN Server, Cloud Station et les applications mobiles Synology.</p>
+</div>
+<h4>Pour activer le blocage automatique :</h4>
+<ol>
+<li>Ouvrez le <strong>Panneau de configuration</strong> et allez dans <strong>Sécurité</strong> > <strong>Blocage auto</strong>.</li>
+<li>Cochez <b>Activer le blocage auto</b>.</li>
+<li>Entrez un nombre d'échecs de tentatives de connexion dans le champ <b>Tentatives de connexion</b> et un nombre de minutes dans le champ <b>Sous (minutes)</b> . Une adresse IP sera bloquée si elle dépasse le nombre d'échecs de tentatives de connexion dans le nombre de minutes spécifiées.</li>
+<li>Cochez <b>Activer l'expiration des blocages</b> et entrez un numéro pour supprimer une adresse IP bloquée après le nombre de jours spécifié.</li>
+<li>Cliquez sur <b>Appliquer.</b></li>
+</ol>
+<h3>Gérer la liste des blocages</h3>
+<p>Cliquez sur <strong>Liste des permissions/blocages</strong> et accédez à l'onglet <strong>Liste de blocage</strong>. </p>
+<h4>Pour ajouter des adresses IP :</h4>
+<p>Choisissez l'un des éléments suivants dans le menu déroulant <strong>Créer</strong> :</p>
+<ul>
+<li><strong>Ajouter une adresse IP</strong><br> Entrez une adresse IP et définissez le délai d'expiration.</li>
+<li><strong>Importer une liste d'adresses IP</strong><br> Importez un fichier texte répertoriant les adresses IP pour ajouter un certain nombre d'adresses IP et définir le délai d'expiration en même temps. Cochez la case si vous souhaitez écraser les adresses IP existantes. Si cette option n'est pas sélectionnée, les adresses IP en double seront ignorées.<br> Si le fichier que vous avez sélectionné a un format correct, vous verrez toutes les adresses IP dans la zone d'aperçu. Cliquez sur <strong>OK</strong> pour importer.</li>
+<div class="section">
+<h4>Remarque :</h4>
+<p>Pour importer un fichier, le fichier doit répondre aux critères suivants :</p>
+<ul>
+<li>Le fichier doit être un fichier texte.</li>
+<li>Chaque ligne du fichier ne peut contenir qu’une seule adresse IP.</li>
+<li>Les lignes de commentaires commencent par un # (dièse).</li>
+</ul>
+</div>
+</ul>
+<h4>Pour supprimer des adresses IP bloquées :</h4>
+<p>Sélectionnez les adresses IP que vous souhaitez supprimer de la liste et cliquez sur <b>Supprimer</b>.</p>
+<h3>Gestion de la liste des permissions</h3>
+<p>Cliquez sur <strong>Liste des permissions/blocages</strong> et allez sur l'onglet <strong>Liste des permissions</strong>. </p>
+<h4>Pour ajouter des adresses IP :</h4>
+<p>Choisissez l'un des éléments suivants dans le menu déroulant <strong>Créer</strong> :</p>
+<ul>
+<li><strong>Ajouter une adresse IP</strong><br> Entrez une adresse IP.</li>
+<li><strong>Importer une liste d'adresses IP</strong><br> Importez un fichier texte répertoriant les adresses IP pour ajouter un certain nombre d'adresses IP en même temps. Cochez la case si vous souhaitez écraser les adresses IP existantes. Si cette option n'est pas sélectionnée, les adresses IP en double seront ignorées.<br> Si le fichier que vous avez sélectionné a un format correct, vous verrez toutes les adresses IP dans la zone d'aperçu. Cliquez sur <strong>OK</strong> pour importer.</li>
+</ul>
+<div class="section"><h4>Remarque :</h4>
+<p>Pour importer un fichier, le fichier doit répondre aux critères suivants :</p>
+<ul>
+<li>Le fichier doit être un fichier texte.</li>
+<li>Chaque ligne du fichier ne peut contenir qu’une seule adresse IP.</li>
+<li>Les lignes de commentaires commencent par un # (dièse).</li>
+</ul>
+</div>
+<h4>Pour supprimer des adresses IP :</h4>
+<p>Sélectionnez les adresses IP que vous souhaitez supprimer de la liste et cliquez sur <b>Supprimer</b>.</p>
+<div class="section"><h4>Remarque :</h4>
+<p>Si votre appareil DiskStation est derrière un serveur proxy inversé, veuillez ajouter l'adresse IP de ce serveur proxy inversé à la liste d'autorisation.</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Zarządzanie przechowywaniem</title>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2><a name="leaf_iscsilun"></a>iSCSI LUN*</h2>
+<p>iSCSI to usługa sieciowa pamięci masowej, która ułatwia przesyłanie danych za pośrednictwem sieci lokalnych i na dalekie odległości. Po odwzorowaniu jednostek iSCSI LUN do obiektów iSCSI Target klienty mogą uzyskiwać dostęp do miejsc w pamięci masowej jak do dysków lokalnych. iSCSI LUN (numer jednostki logicznej) można odwzorować na jeden lub wiele obiektów iSCSI Target w celu udostępniania usług pamięci masowej iSCSI. Wybierz opcję <strong>Zarządzanie przechowywaniem</strong> > <strong>iSCSI LUN</strong>, aby zarządzać jednostkami iSCSI LUN.</p>
+
+<div class="section"><h4>Uwaga:</h4>
+<p>Liczba obsługiwanych jednostek iSCSI LUN zależy od modeli serwerów DiskStation. Więcej informacji o danych technicznych produktu można znaleźć w witrynie <a href="http://www.synology.com/" target="_blank">www.synology.com</a>.</p>
+</div>
+
+<p>DiskStation obsługuje obecnie następujące typy jednostek iSCSI LUN:</p>
+<ul>
+	<li><b>iSCSI LUN (zwykłe pliki)</b>: jednostkę iSCSI LUN tworzy się, przeznaczając na nią część miejsca woluminu. Można ją później powiększać stosownie do potrzeb. Ten typ jednostek iSCSI LUN zapewnia elastyczność dynamicznego zarządzania pojemnością przy użyciu funkcji Thin Provisioning, obsługi przyspieszenia sprzętowego VMware VAAI, funkcji Windows ODX, migawek jednostek LUN i klonowania jednostek LUN.</li>
+	<li class="disable-bromolow disable-grantley disable-avoton disable-braswell disable-broadwell disable-kvmx64"><b>iSCSI LUN (poziom bloku) — pojedyncza LUN w RAID</b>: Jednostkę iSCSI LUN tworzy się z wykorzystaniem całego miejsca na woluminie. Można ją naprawiać lub powiększać albo zmieniać jej typ RAID, jak w przypadku woluminu. Więcej informacji można znaleźć na stronie <a href="space.html">Wolumin</a>.</li>
+	<li class="disable-bromolow disable-grantley disable-avoton disable-braswell disable-broadwell disable-kvmx64"><b>iSCSI LUN (poziom bloku) — wiele LUN w RAID</b>: Jednostkę iSCSI LUN tworzy się przez wyznaczenie określonego miejsca w grupie dysków. Jednostkę iSCSI LUN można później powiększyć jeżeli w grupie dysków jest dostępne miejsce. Więcej informacji można znaleźć na stronie <a href="raid.html">Grupa dysków</a>.</li>
+	<li class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64"><b>iSCSI LUN (poziom bloku)</b>: ten typ jednostki iSCSI LUN tworzy się w grupie RAID Group. Oferuje on funkcje dynamicznego zarządzania pojemnością w połączeniu ze zoptymalizowaną wydajnością dostępu. Jednostkę iSCSI LUN tego typu można później powiększyć, wykorzystując nieprzydzielone miejsce w grupie RAID Group. Więcej informacji można znaleźć na stronie <a href="raid.html">Grupa RAID Group</a>.</li>
+</ul>
+
+<div class="section"><h4>Uwaga:</h4>
+<p>Jednostki iSCSI LUN z zaawansowanymi funkcjami LUN są obsługiwane tylko w systemie plików ext4<span style="display: inline;" class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64">/Btrfs</span>.</p>
+</div>
+
+<h4>Aby utworzyć jednostkę iSCSI LUN:</h4>
+<ol>
+	<li>Kliknij przycisk <b>Utwórz</b>.</li>
+	<li>Wybierz typ iSCSI LUN, który ma być utworzony.</li>
+	<li>Postępuj zgodnie z instrukcjami kreatora, aby zakończyć proces.</li>
+</ol>
+
+<div class="section"><h4>Uwaga:</h4>
+<p>Zaawansowane funkcje LUN można włączyć tylko podczas początkowego tworzenia jednostki iSCSI LUN. Tego ustawienia nie można później zmieniać.</p>
+</div>
+
+<p>Rozmiar jednostki alokacji zaawansowanej jednostki LUN można zoptymalizować pod kątem pewnych funkcji serwera aplikacji, np. Microsoft Exchange lub SQL Server albo serwerów wirtualizacji i technologii przyspieszających pamięć masową, takich jak Windows ODX lub VMware VAAI. Aby to zrobić, wykonaj jedną z następujących czynności:</p>
+<ul>
+	<li>Ustaw rozmiar jednostki alokacji podczas tworzenia pierwszej zaawansowanej jednostki LUN woluminu.</li>
+	<li>Ustaw rozmiar jednostki alokacji w obszarze <strong>Konfiguruj</strong> przed utworzeniem pierwszej zaawansowanej jednostki LUN woluminu.</li>
+</ul>
+
+<p>Zaleca się określenie rozmiaru jednostki alokacji na potrzeby aplikacji podczas używania jednej z następujących metod pracy z zaawansowanymi jednostkami iSCSI LUN na serwerze DiskStation: bezpośredniego połączenia z serwerem aplikacji lub RDM (pass-through). Aby wykorzystać technologię Synology Advanced LUN do klonowania na potrzeby funkcji Windows ODX, zaleca się sformatowanie woluminu NTFS z jednostką alokacji o rozmiarze równym (lub większym) temu, który został określony w systemie DSM lub większym.</p>
+
+<div class="section"><h4>Uwaga:</h4>
+<p>Jednostkę alokacji zaawansowanej jednostki LUN można ustawić tylko raz.</p>
+</div>
+
+<h4>Aby usunąć jednostkę iSCSI LUN:</h4>
+<p>Usunięcie jednostki iSCSI LUN spowoduje usunięcie wszystkich danych przechowywanych na tej jednostce iSCSI LUN. Zostaną utracone także połączenia między jednostką iSCSI LUN a wszystkimi odwzorowanymi obiektami iSCSI Target.</p>
+<ol>
+	<li>Wybierz jednostkę iSCSI LUN, która ma być usunięta.</li>
+	<li>Kliknij przycisk <b>Usuń</b> i postępuj zgodnie z instrukcjami kreatora, aby ukończyć proces.</li>
+</ol>
+
+<div class="section"><h4>Uwaga:</h4>
+<p>Usuwanie jednostek VAAI LUN na serwerze DiskStation nie powoduje natychmiastowego zwolnienia miejsca na dyskach. Dane są przenoszone do zarezerwowanego przez system folderu <strong>@EP_trash</strong> i stopniowo usuwane. Jeżeli na przykład jednostka VAAI LUN o wielkości 100 GB zostanie usunięta z serwera DiskStation, zwolnienie 100 GB miejsca na woluminie może potrwać około 15–20 minut.</p>
+</div>
+
+<h4>Aby wymusić montowanie jednostki iSCSI LUN (na poziomie bloku):</h4>
+<p>Jeżeli na jednostce iSCSI LUN (na poziomie bloku) nie ma pamięci podręcznej, jednostka iSCSI LUN (na poziomie bloku) nie zostanie zamontowana przez system podczas uruchamiania. Jeżeli pamięci podręcznej nie można odzyskać, dostęp do jednostki iSCSI LUN (na poziomie bloku) można uzyskać, klikając przycisk <b>Wymuś montowanie</b>.</p>
+
+<div class="section"><h4>Uwaga:</h4>
+<p>Ta funkcja jest dostępna tylko w niektórych modelach.</p>
+</div>
+
+<h4>Aby edytować jednostkę iSCSI LUN:</h4>
+<ol>
+	<li>Wybierz jednostkę iSCSI LUN, która ma być edytowana.</li>
+	<li>Kliknij <b>Edytuj</b>.</li>
+	<li>Dokonaj edycji odpowiednich właściwości.</li>
+	<li>Kliknij <b>OK</b>, aby zapisać ustawienia.</li>
+</ol>	
+
+<div class="section"><h4>Uwaga:</h4>
+<p>Aby zapobiec utracie danych podczas edycji wielkości jednostki iSCSI LUN, można ją tylko powiększać.</p>
+</div>
+
+<h4>Aby zrobić migawkę jednostki iSCSI LUN:</h4>
+<p>Migawkę jednostki iSCSI LUN to kopia jednostki iSCSI LUN odzwierciedlająca określony punkt w czasie i przeznaczona tylko do odczytu.</p>
+<ol>
+	<li>Wybierz jednostkę iSCSI LUN, której migawki mają być utworzone.</li>
+	<li>Kliknij przycisk <strong>Migawka</strong> i wybierz polecenie <strong>Zrób migawkę</strong>.</li>
+	<li>Wprowadź opis migawki.</li>
+	<li>Wybierz jeden z typów migawki stosownie do potrzeb:<ul>
+			<li><strong>Spójne z aplikacjami</strong>: Migawki tego typu można tworzyć wyłącznie przy użyciu programu Synology Snapshot Manager zainstalowanego na serwerze Windows lub VMware vCenter Server (w zależności od środowiska operacyjnego komunikującego się z systemem DSM). Po uruchomieniu procesu tworzenia migawki spójnej z aplikacjami w systemie DSM zostanie przesłane odpowiednie powiadomienie do aplikacji o tym, aby wszystkie dane z pamięci zostały zapisane w jednostce LUN, której ma być utworzona migawka. Zapewni to spójność danych.</li>
+			<li><strong>Spójne przy awarii</strong>: Jeżeli narzędzie Synology Snapshot Manager nie jest zainstalowane na żadnym z klientów, można tworzyć wyłącznie migawki jednostek LUN zachowujące spójność przy awarii. Po przesłaniu sygnału uruchamiającego wykonanie takiego zrzutu obrazu aplikacje nie otrzymają powiadomienia o konieczności zapisania stanu pamięci w jednostce LUN. Może to spowodować niespójność danych.</li>
+		</ul>
+	</li>
+	<li>Kliknij przycisk <strong>OK</strong>.</li>
+</ol>
+
+<h4>Aby przywrócić jednostkę iSCSI LUN:</h4>
+<p>Wybierz migawkę z określonego punktu w czasie, aby przywrócić dane w jednostce iSCSI LUN.</p>
+<ol>
+	<li>Wybierz jednostkę iSCSI LUN, która ma być przywrócona.</li>
+	<li>Kliknij przycisk <strong>Migawkę</strong> i wybierz polecenie <strong>Snapshot Manager</strong>.</li>
+	<li>Wybierz migawkę, który ma być użyty do przywrócenia danych, a następnie kliknij <strong>Przywróć</strong>.</li>
+</ol>
+
+<h4>Aby sklonować jednostkę iSCSI LUN lub migawkę:</h4>
+<p>Utwórz kopię jednostki iSCSI LUN do zapisu lub migawkę jednostki iSCSI LUN.</p>
+<ul>
+	<li>Z listy wybierz jednostkę iSCSI LUN i kliknij przycisk <strong>Klonuj</strong>.</li>
+	<li>W oknie narzędzia <strong>Snapshot Manager</strong> wybierz migawkę jednostki iSCSI LUN i kliknij przycisk <strong>Klonuj</strong>.</li>
+</ul>
+
+<div class="section"><h4>Uwaga:</h4>
+<ul>
+<li>W niektórych modelach należy przejść do <b>Centrum pakietów</b> i zainstalować narzędzie <b>Migawka i replikacja</b>, które zawiera funkcje umożliwiające przywracanie jednostek iSCSI LUN oraz wykonywanie i klonowanie migawek iSCSI LUN.</li>
+	<li>Jeżeli występuje co najmniej jedna połączona sesja iSCSI skojarzona z jednostką LUN i jest używana przez Windows Server lub VMware ESXi Server, zaleca się zainstalowanie dodatku <b>Synology Snapshot Manager</b>, aby uniknąć ewentualnych niespójności danych. W przeciwnym razie trzeba najpierw zatrzymać wszelkie aplikacje i wylogować te sesje z inicjatorów.</li>
+	<li>Funkcje zrzutów obrazu, przywracania i klonowania jednostek LUN są dostępne tylko w przypadku jednostek iSCSI LUN z zaawansowanymi funkcjami LUN.</li>
+	<li>Jeżeli zostanie zrobiona migawka lub utworzony klon jednostki, która ma stan <strong>Nienormalny</strong>/<strong>Uszkodzony</strong>, usuń ten migawkę lub klon i utwórz nowe.</li>
+	<li>Wszystkie zmiany jednostki LUN dokonane po utworzeniu migawki zostaną utracone po przywróceniu jednostki LUN do stanu migawki.</li>
+	<li>Jeżeli stan jednostki iSCSI LUN zmieni się na <b>Niedostępna</b>, będzie to oznaczać, że wystąpiły błędy związane z danymi podczas uzyskiwania dostępu do jednostki iSCSI LUN. Aby uniknąć poważnej utraty danych w systemie, ta jednostka iSCSI LUN będzie tymczasowo niedostępna. Skontaktuj się jak najszybciej z firmą Synology w celu uzyskania pomocy.</li>
+</ul>
+</div>
+
+
+<div class="section"><h4>Słowniczek:</h4>
+<ul>
+	<li><b>Thin Provisioning</b>: Thin Provisioning to metoda optymalizacji wykorzystania pamięci przez alokowanie miejsca w pamięci dynamicznie i na żądanie. To ustawienie jest dostępne tylko w przypadku typu <b>iSCSI LUN (zwykłe pliki)</b>.</li>
+	<li><b>VMware VAAI</b>: technologia VMware vStorage APIs for Array Integration (VAAI) umożliwia przenoszenie zadań związanych ze standardowymi operacjami na wirtualnych macierzach pamięci masowej na urządzenie iSCSI w środowisku VMware vSphere i optymalizowanie wydajności pamięci masowej.</li>
+	<li><b>Windows ODX</b>: nowa technologia transferu danych w systemach Windows Server 2012 i Windows 8 o nazwie Offload Data Transfer (ODX). ODX umożliwia zwiększenie wydajności transferu przez przeniesienie części obciążenia na macierz pamięci masowej.<br />Jeżeli zarówno źródło danych, jak i miejsce docelowe znajdują się w jednostkach LUN na tym samym woluminie, klonowanie odbywa się przy użyciu technologii Synology Advanced LUN, która pozwala oszczędzić do 99,9% używanego miejsca, a jednocześnie przyspiesza klonowanie.</li>
+	<li><b>Mapowanie iSCSI Target</b>: mapowanie iSCSI LUN do jednego lub większej liczby obiektów iSCSI Target.</li>
+	<li><b>Synology Snapshot Manager</b>: Synology Snapshot Manager to dodatek umożliwiający tworzenie migawek spójnych z aplikacjami bezpośrednio z systemu DiskStation Manager (DSM).<ul>
+		    <li>W środowisku VMware należy zainstalować narzędzie Synology Snapshot Manager na serwerze Windows, na którym zainstalowano VMware vCenter Server. Po uruchomieniu procesu tworzenia migawki w systemie DSM zostanie przesłane odpowiednie powiadomienie do VMware vCenter Server o tym, aby wszystkie dane z pamięci zostały zapisane w jednostce LUN, której ma być utworzona migawka. Zapewni to spójność danych. Po ukończeniu tworzenia migawki na serwerze VMware vCenter Server zostanie przywrócone normalne działanie we/wy magazynu danych VMware. Synology Snapshot Manager for VMware vCenter Server obsługuje oprogramowanie vSphere 5.1 i nowsze wersje.</li>
+		    <li>W środowisku Windows należy zainstalować narzędzie Synology Snapshot Manager na serwerze Windows. Po uruchomieniu procesu tworzenia migawki w systemie DSM narzędzie Synology Snapshot Manager wykorzysta technologię Microsoft Volume Shadow Copy Service (VSS) do tworzenia spójnych kopii danych z punktu w czasie. Synology Snapshot Manager for Windows obsługuje systemy Windows Server 2008 R2, 2012 i 2012 R2.</li>
+			<li>Synology Snapshot Manager można pobrać bezpłatnie z witryny <a href="http://www.synology.com/" target="_blank">www.synology.com</a>.</li>
+		</ul>
+	</li>
+</ul>
+</div>
+<p>____<br />*Ta funkcja jest dostępna tylko w niektórych modelach.</p>
+
+
+</body>
+</html>

@@ -1,0 +1,100 @@
+﻿
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Sledování zdrojů</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h1><a name="leaf_update"></a>Sledování zdrojů</h1>
+<p class="disable-dockerx64">Funkce Sledování zdrojů umožňuje sledovat využití procesoru, paměti, disku a síťový provoz. Můžete volit mezi sledováním v reálném čase nebo prohlížením dat z minulosti.</p>
+<p class="enable-dockerx64">Sledování zdrojů umožňuje sledovat využití CPU (procesoru), využití paměti a síťový provoz. Můžete volit mezi sledováním v reálném čase nebo prohlížením dat z minulosti.</p>
+<div class="section">
+<h4>Poznámka:</h4>
+<ul>
+<li>Data z minulosti si můžete zobrazit zaškrtnutím možnosti <strong>Povolit historii využití</strong> na kartě <strong>Nastavení</strong>.</li>
+<li class="enable-dockerx64">V případě aplikace Docker DSM obsahuje část <strong>Procesor a paměť</strong> informace o využití <strong>hostitele dockeru</strong>.</li>
+</ul>
+</div>
+<h2>Výkon</h2>
+<p>Klepnutím na kartu <strong>Výkon</strong> můžete zobrazit data o využití zdrojů. Přesunutím myši zobrazíte na grafu podrobné datum, čas a údaje.</p>
+
+<h3>CPU</h3>
+<p>Celkové využití procesoru zjistíte v části <strong>Uživatel</strong>, <strong>Systém</strong> a <strong>Ček. I/O</strong>. Při prvním spuštění Sledování zdrojů může být využití CPU vysoké, protože systém musí shromáždit data o zdrojích a současně načíst stránku rozhraní.</p>
+<p>Kategorie <strong>Uživatel</strong> zobrazuje procentuální hodnoty využití procesoru pro spouštění uživatelských aplikací. Kategorie <strong>Systém</strong> zobrazuje procentuální hodnoty využití CPU v jádru systému, požadavky IRQ hardwaru/softwaru. <strong>Ček. I/O</strong> zobrazuje procentuální hodnotu výkonu CPU (procesoru) využitou na čekání I/O.</p>
+<p><strong>Využití</strong> je součet <strong>uživatelského</strong> a <strong>systémového</strong> využití CPU.</p>
+<p>V intervalu 1, 5 a 15 minut bude zobrazena průměrná hodnota zatížení, která označuje délku fronty (tj. součet aktuálně spuštěných procesů plus počet čekajících procesů). </p>
+<div class="section">
+<h4>Vysvětlení pojmů</h4>
+<ul>
+<li><b>Ček. I/O</b>: Ček. I/O označuje, že je CPU (procesor) nečinný a není využíván žádným programem. </li>
+<p>Ček. I/O je normální chování. Jelikož je rychlost procesoru mnohem vyšší než rychlost I/O, je běžné, že procesor čeká na dokončení přenosů na discích nebo po síti. Pokud je ale procentuální hodnota čekání I/O extrémně velká, znamená to, že procesor stráví většinu doby čekáním na I/O a není tedy dobře využitý. Lepšího výkonu systému dosáhnete efektivnější konfigurací diskových skupin (např. SHR nebo RAID 5) nebo konfigurací sítě (např. propojením Bond).</p> 
+</ul>
+</div>
+<h3>Paměť</h3>
+<p>Zobrazuje celkové využití fyzické paměti a odloženého místa. Využití paměti zůstává vysoké, protože systém do paměti ukládá data, ke kterým se často přistupuje. Data jsou tak rychle k dispozici bez toho, aby byl nutný přístup k pevnému disku. V případě nedostatku paměti budou data z paměti uvolněna.</p>
+<p>Vysoká míra využití odloženého místa značí nedostatek systémové paměti a bude mít vliv na výkon systému. Frekvenci sepnutí a vypnutí zobrazíte v rozevírací nabídce <strong>Přepnout</strong> v horní části. </p>
+
+<h3>Síť</h3>
+<p>Graf síťového provozu zobrazuje rychlost odesílání a příjmu dat v kB za sekundu. Pokud je aktivní připojení PPPoE, v grafu je uvedena také přenosová rychlost připojení.</p>
+
+<h3 class="disable-dockerx64">Disk</h3>
+<p class="disable-dockerx64">Klepnutím na rozevírací nabídku v horní části grafu můžete zobrazit celkové využití disku, přenosovou rychlost nebo hodnoty IOPS. Klepnutím na možnost <strong>Zobrazit vše</strong> v dolní části vyberete více disků a zaškrtnutím políček můžete přidat jejich data do grafu.</p>
+
+
+<h3 class="disable-eds14 disable-dockerx64">Svazek</h3>
+<p class="disable-eds14 disable-dockerx64">Na této stránce se zobrazuje celkový stav přenosu u svazků. Kliknutím na rozevírací nabídku nad grafem si můžete zobrazit využití přenosů, přenosovou rychlost a IOPS. Kliknutím na tlačítko <strong>Zobrazit vše</strong> je možné vybrat jednotlivé svazky a přidat je do grafu.</p>
+
+<h3 class="disable-eds14 disable-dockerx64">iSCSI</h3>
+<p class="disable-eds14 dixable-dockerx64">Na této stránce se zobrazuje celkový stav aktuálně spuštěných jednotek iSCSI LUN. Kliknutím na rozevírací nabídku nad grafem vyberte jednotku LUN a zobrazíte její stav. Podle výchozího nastavení se zobrazují tři grafy, a to<strong>Propustnost</strong>, <strong>IOPS</strong> a <strong>Latence</strong>. Podrobnější informace najdete po kliknutí na tlačítko <strong>Vybrat grafy</strong> a výběru dalších grafů, které chcete zobrazit.</p>
+
+
+<h2>Proces</h2>
+<p>Klepnutím na kartu <strong>Proces</strong> zobrazíte využití procesoru a paměti každého procesu. Tím můžete snížit zatížení procesoru.</p>
+<p><strong>Stav</strong> procesu zahrnuje <strong>Spuštěn</strong>, <strong>Spánek</strong> a <strong>Zastaven</strong>. Ekvivalentem stavu procesu v systému Linux je <strong>running</strong>, <strong>stopped/tracing</strong>, <strong>sleeping</strong>. </p>
+<p><strong>Sleeping</strong> může být následováno písmenem pro zjištění podrobných informací, například „D“ pro spánek disku, „Z“ pro zombie a „X“ pro mrtvé.</p>
+
+<h2>Připojení uživatelé</h2>
+<p> Na této kartě si můžete zobrazit a spravovat klienty, kteří jsou aktuálně připojení k systému a využívají zdroje. V této části jsou zobrazeni klienti připojení prostřednictvím protokolů HTTP, TELNET, SSH, SMB/CIFS, AFP, FTP a NFS.</p>
+<h4>Chcete-li spravovat seznam aktuálních připojení, postupujte jedním z těchto způsobů:</h4>
+<ul>
+<li>Klepnutím na možnost <b>Uložit</b> provedete export aktuálního seznamu do souboru HTML.</li>
+<li>Klepnutím na možnost <b>Aktualizovat</b> provedete aktualizaci seznamu.</li>
+<li>Klepnutím na možnost <b>Deaktivovat připojení</b> zamítnete uživateli přístup ke zdrojům. Před přístupem ke zdrojům musí uživatel provést opětovnou autorizaci.</li>
+<li>Klepnutím na tlačítko <b>Deaktivovat uživatele</b> tohoto uživatele deaktivujete. Pokud chcete uživatele opět aktivovat, přejděte do části <b>Hlavní nabídka</b> > <b>Ovládací panel</b> > <b>Uživatel</b>.</li>
+</ul>
+<div class="section">
+<h4>Poznámka:</h4>
+<ul>
+<li>Možnost <strong>Deaktivovat připojení</strong> nefunguje u klientů NFS.</li>
+<li>Pokud klienti NFS správně neodpojí sdílené složky, mohou se i nadále zobrazovat v seznamu připojených uživatelů.</li>
+<li>Pokud dojde k restartování zařízení DiskStation, nebudou se dříve připojení klienti NFS již zobrazovat v seznamu připojených uživatelů.</li>
+</ul>
+</div>
+
+
+<h2>Omezení rychlosti</h2>
+<p>Na kartě <strong>Omezení rychlosti</strong> můžete zobrazit nebo provést správu seznamu procesů přenosu souborů, pro které bylo na zařízení DiskStation stanoveno omezení rychlosti.</p>
+<h4>Aktualizace seznamu:</h4>
+<p>Klepnutím na možnost <strong>Aktualizovat</strong> stránku znovu načtete a získáte aktuální záznamy.</p>
+<h4>Zastavení procesu přenosu souborů:</h4>
+<p>Klepnutím na možnost <b>Deaktivovat připojení</b> zastavíte přenos souborů. Chcete-li proces úspěšně dokončit, je potřeba přenos souborů znovu spustit.</p>
+
+
+<h2>Nastavení</h2>
+<p>Kliknutím na možnost <strong>Nastavení</strong> můžete nastavit následující možnosti:</p>
+<ul>
+<li>Vyberte z rozevírací nabídky hodnotu <strong>Trvání reálného času</strong> (v minutách).</li>
+<li>Chcete-li obrazit data z minulosti, zaškrtněte možnost <strong>Povolit historii využití</strong>. Je-li tato možnost povolena, můžete při prohlížení grafů výkonu přepínat v rozevírací nabídce v pravém horním rohu nabídky mezi možnostmi <strong>Reálný čas</strong>, <strong>1 den</strong>, <strong>1 týden</strong>, <strong>1 měsíc</strong> a <strong>1 rok</strong>.</li> 
+</ul>
+<p>Nastavení uložte kliknutím na možnost <strong>Apply</strong> (Použít).</p>
+</body>
+</html>

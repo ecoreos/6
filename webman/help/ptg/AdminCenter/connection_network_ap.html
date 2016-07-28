@@ -1,0 +1,197 @@
+
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Rede</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2><a name="wireless_ap"></a>Hotspot*</h2>
+<p>O seu dispositivo DiskStation suporta a cria&ccedil;&atilde;o de um hotspot para partilhar a sua liga&ccedil;&atilde;o de Internet com outros dispositivos atrav&eacute;s de liga&ccedil;&atilde;o sem fios, se tiver instalado um adaptador USB Wi-Fi ou o seu Synology NAS tiver Wi-Fi integrado. Pode definir o seu DiskStation para ser um ponto de acesos sem fios (AP) ou router sem fios, dependendo da forma como pretende utilizar a Internet.</p>
+
+<table>
+<tr>
+<th width="23%">Modo Hotspot</th>
+<th width="77%">Descri&ccedil;&atilde;o</th>
+</tr>
+<tr>
+<th>AP sem fios</th>
+<td>
+<ul>
+<li>Faz a liga&ccedil;&atilde;o entre a sua rede LAN e Wi-Fi.</li>
+<li>Os seus clientes LAN e sem fios estar&atilde;o na mesma rede local.</li>
+<li>Aplic&aacute;vel quando j&aacute; possui um router e pretende utilizar o seu DiskStation como um ponto de acesso adicional para uma rede existente.</li> 
+<li>Permite a partilha de recursos da rede, como dispositivos DLNA, impressoras, Synology Web Assistant ou outros servi&ccedil;os que dependem de transmiss&otilde;es de rede.</li>
+<li>O DHCP Server ser&aacute; desativado nos dispositivos DiskStation que atuam como APs sem fios. Para reativar o DHCP Server para o seu DiskStation, remova os dongles Wi-Fi e reinicie o DiskStation.</li>
+<li>Para modelos com m&uacute;ltiplas portas LAN, ser&aacute; utilizada apenas a porta LAN 1 para fazer a liga&ccedil;&atilde;o com o AP sem fios.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Router sem fios</th>
+<td>
+<ul>
+<li>Configura uma rede sem fios onde os dispositivos estejam numa sub-rede privada.</li>
+</ul>
+</td>
+</tr>
+</table>
+
+
+<div class="section">
+<h4>Nota:</h4>
+
+<ol>
+<li>Alguns modelos requerem a liga&ccedil;&atilde;o de dongles sem fios para criar hotspots. Para um lista completa dos dongles sem fios compat&iacute;veis, visite <a href="http://www.synology.com/support/faq/444" target=_blank>www.synology.com</a>.</li>
+<li>Para os modelos que n&atilde;o sejam DS213air, a op&ccedil;&atilde;o Hotspot sem fios no DSM 4.3 &eacute; renomeada para &quot;Wireless Router&quot; a partir do DSM 5.0.</li>
+</ul>
+</ol>
+
+</div>
+
+<h3>Gerir Defini&ccedil;&otilde;es de Hotspot</h3>
+<p>Esta sec&ccedil;&atilde;o explica como ativar e gerir as defini&ccedil;&otilde;es hotspot do seu DiskStation.</p>
+
+
+<h4>Para transformar o DiskStation num hotspot:</h4>
+<ol>
+<li>Aceda a <strong>Painel de Controlo</strong> &gt; <strong>Sem fios</strong> &gt; <strong>Mapa de Rede</strong>. Escolha <strong>AP sem fios</strong> ou <strong>Router sem fios</strong>.</li>
+<li>Aceda ao separador <strong>Wi-Fi</strong> e clique em <strong>Editar</strong> para gerir as seguintes defini&ccedil;&otilde;es:</li>
+<ul>
+<li><strong>Nome (SSID):</strong> Introduza um nome para a rede sem fios.</li>
+<li><strong>Mostrar/Ocultar:</strong> Opte por ocultar ou n&atilde;o a rede sem fios a outros dispositivos.</li>
+<li><strong>Modo sem fios:</strong> Selecione um padr&atilde;o sem fios. Cada padr&atilde;o suporta v&aacute;rias larguras de banda e frequ&ecirc;ncias.</li>
+<li><strong>Largura do canal:</strong> Selecione uma largura de canal (apenas dispon&iacute;vel quando usa o modo sem fios 802.11n).</li>
+<li><strong>Canal:</strong> Selecione uma frequ&ecirc;ncia para a rede sem fios. Para melhor desempenho, escolha uma frequ&ecirc;ncia diferente das usadas por redes por perto.</li>
+<li><strong>Pot&ecirc;ncia de transmiss&atilde;o:</strong> Escolha a pot&ecirc;ncia do sinal da rede sem fios.</li>
+<li><strong>Liga&ccedil;&otilde;es m&aacute;ximas:</strong> Escolha quantos dispositivos cliente se podem ligar &agrave; rede. A defini&ccedil;&atilde;o mais elevada de liga&ccedil;&atilde;o &eacute; 256.</li>
+<li><strong>Ativar WMM QoS:</strong> Multim&eacute;dia Wi-Fi (WMM) QoS (Qualidade do Servi&ccedil;o) por Wi-Fi. Esta op&ccedil;&atilde;o permite &agrave; rede sem fios priorizar tr&aacute;fego e otimizar a forma como s&atilde;o partilhados os recursos pelas aplica&ccedil;&otilde;es.</li>
+</ul>
+</ol>
+
+
+
+<h4>Para configurar um agendamento sem fios:*</h4>
+<p>Ativar um agendamento de rede sem fios permite-lhe controlar quando a rede sem fios do seu DiskStation est&aacute; ativa e acess&iacute;vel.</p>
+<ol>
+<li>Aceda ao separador <strong>Wi-Fi</strong> e clique em <strong>Editar</strong>. </li>
+<li>Assinale a caixa <strong>Ativar agendamento</strong>.</li>
+
+<li>Clique em <strong>Definir agendamento</strong>.</li>
+<li>No ecr&atilde; de agendamento, selecione quando ficar&aacute; ativa a rede sem fios.</li>
+</ol>
+
+
+<h3>Defini&ccedil;&otilde;es de Seguran&ccedil;a</h3>
+<p>Em <strong>Painel de Controlo</strong> &gt; <strong>Sem fios</strong> &gt; <strong>Wi-Fi</strong> s&atilde;o disponibilizadas op&ccedil;&otilde;es para editar as defini&ccedil;&otilde;es de seguran&ccedil;a da sua rede sem fios.</p>
+
+
+<h4>Para configurar seguran&ccedil;a sem fios:</h4>
+<ol>
+
+<li>Clique em <strong>Editar</strong>.</li>
+<li>Escolha um dos seguintes protocolos de seguran&ccedil;a a partir do menu pendente <strong>Defini&ccedil;&otilde;es de Seguran&ccedil;a</strong>:</li>
+<ul>
+<li><strong>WEP:</strong> Um protocolo b&aacute;sico de seguran&ccedil;a que requer aos utilizadores introduzirem uma palavra-passe para aceder &agrave; rede sem fios, mas integra uma prote&ccedil;&atilde;o m&iacute;nima.</li>
+<li><strong>WPA/WPA2 Personal:</strong> Recomendado. Requer que os utilizadores introduzam uma palavra-passe para aceder &agrave; rede sem fios, e &eacute; mais segura que WEP.</li>
+<li><strong>WPA/WPA2 Empresa:</strong>* Um protocolo de seguran&ccedil;a concebido para empresas, que requer que os utilizadores se autentiquem com um servidor de autentica&ccedil;&atilde;o externo.</li>
+
+</ul>
+</ol>
+
+<h4>Para ativar a Wi-Fi Protected Setup (Configura&ccedil;&atilde;o Protegida Wi-Fi):*</h4>
+<p>Wi-Fi Protected Setup &eacute; um padr&atilde;o promovido pela Wi-Fi Alliance para simplificar as defini&ccedil;&otilde;es de seguran&ccedil;a sem fios para utilizadores. Pode utilizar um bot&atilde;o de press&atilde;o ou um n&uacute;mero PIN para manter a sua rede Wi-Fi segura. Clique em <strong>WPS</strong> para activar a Wi-Fi Protected Setup.</p>
+
+
+<h3>Rede Convidada*</h3>
+<p>Para al&eacute;m de criar uma rede sem fios anfitri&atilde;, o seu DiskStation suporta tamb&eacute;m a cria&ccedil;&atilde;o de uma rede sem fios convidada. As defini&ccedil;&otilde;es da rede convidada podem ser limitadas para restringir o acesso de utilizadores, &uacute;til para empresas ou outras institui&ccedil;&otilde;es que desejam proporcionar uma rede sem fios a visitantes, mas negando-lhes acesso &agrave; rede anfitri&atilde;.</p>
+
+
+<h4>Para ativar a rede convidada:</h4>
+
+<ol>
+<li>Aceda a <strong>Painel de Controlo</strong> &gt; <strong>Sem fios</strong> &gt; <strong>Wi-Fi</strong>. </li>
+<li>Clique em <strong>Editar</strong> para gerir as seguintes defini&ccedil;&otilde;es no separador <strong>Rede Convidada</strong>:</li>
+
+<ul>
+<li><strong>Nome (SSID):</strong> Introduza um nome para a rede sem fios.</li>
+<li><strong>Mostrar/Ocultar:</strong> Opte por ocultar ou n&atilde;o a rede sem fios a outros dispositivos.</li>
+<li><strong>Liga&ccedil;&otilde;es m&aacute;ximas:</strong> Escolha quantos dispositivos cliente se podem ligar &agrave; rede. A defini&ccedil;&atilde;o m&aacute;xima de liga&ccedil;&atilde;o &eacute; 256.</li>
+</ul>
+</ol>
+
+<h4>Para configurar a seguran&ccedil;a da rede convidada:</h4>
+<p>Escolha um dos seguintes protocolos de seguran&ccedil;a a partir do menu pendente <strong>Defini&ccedil;&otilde;es de Seguran&ccedil;a</strong>:</p>
+<ul>
+<li><strong>WEP:</strong> Um protocolo b&aacute;sico de seguran&ccedil;a que requer aos utilizadores introduzirem uma palavra-passe para aceder &agrave; rede sem fios, mas integra uma prote&ccedil;&atilde;o m&iacute;nima.</li>
+<li><strong>WPA/WPA2 Personal:</strong> Recomendado. Requer que os utilizadores introduzam uma palavra-passe para aceder &agrave; rede sem fios, e &eacute; mais segura que WEP.</li>
+</ul>
+
+
+<h4>Para configurar um agendamento de rede convidada:</h4>
+<p>Ativar um agendamento de rede convidada permite-lhe controlar quando a rede sem fios convidada do seu DiskStation est&aacute; ativa e acess&iacute;vel.</p>
+
+<ol>
+<li>Assinale a caixa <strong>Ativar agendamento de rede convidada</strong>.</li>
+<li>Clique em <strong>Definir agendamento de convidado</strong>.</li>
+<li>No ecr&atilde; de agendamento, selecione quando ficar&aacute; ativa a rede sem fios convidada.</li>
+</ol>
+
+<div class="section">
+<h4>Nota:</h4>
+<p>A rede sem fios convidada n&atilde;o pode estar ativa quando a rede sem fios anfitri&atilde; est&aacute; desativada.</p>
+</div>
+
+
+<h3>Defini&ccedil;&atilde;o de Filtro MAC*</h3>
+<p>O filtro MAC (em <strong>Painel de Controlo</strong> &gt; <strong>Sem fios</strong>) especifica que endere&ccedil;os MAC t&ecirc;m autoriza&ccedil;&atilde;o para aceder &agrave; rede sem fios, permitindo-lhe bloquear ou conceder acesso a dispositivos espec&iacute;ficos. Esta funcionalidade apenas controla o acesso &agrave; rede, n&atilde;o outras defini&ccedil;&otilde;es de encripta&ccedil;&atilde;o.</p>
+
+
+<h4>Para criar regras do filtro MAC:</h4>
+<ol>
+<li>Introduza a descri&ccedil;&atilde;o e o endere&ccedil;o MAC de um dispositivo.</li>
+<li>Escolha uma pol&iacute;tica de acesso:<ul>
+<li><strong>Negar:</strong> Restringe o endere&ccedil;o MAC especificado, evitando que aceda &agrave; rede sem fios.</li>
+<li><strong>Permitir:</strong> Permite os endere&ccedil;os MAC especificados dando-lhes acesso &agrave; rede sem fios.</li>
+</ul> 
+</ol>
+
+
+
+<h3>Limita&ccedil;&atilde;o de Acesso*</h3>
+<p>A funcionalidade de limita&ccedil;&atilde;o de acesso permite controlar quando &eacute; que cada dispositivo cliente ligado &agrave; rede local de DiskStation pode aceder &agrave; Internet. Por exemplo, se os computadores ou dispositivos m&oacute;veis dos seus filhos estiverem ligados &agrave; Internet atrav&eacute;s de DiskStation, pode configurar as defini&ccedil;&otilde;es de limita&ccedil;&atilde;o de acesso para restringir a utiliza&ccedil;&atilde;o da Internet de acordo com dispositivos e hor&aacute;rios espec&iacute;ficos.</p>
+
+<h4>Para ativar a Limita&ccedil;&atilde;o de Acesso:</h4>
+<ol>
+<li>Aceda a <strong>Painel de Controlo</strong> &gt; <strong>Sem fios</strong> &gt; <strong>Defini&ccedil;&otilde;es da Limita&ccedil;&atilde;o de Acesso</strong>.</li>
+
+<li>Clique no bot&atilde;o <strong>Adicionar</strong> para adicionar um dispositivo cliente.</li>
+<ul>
+<li><strong>Nome do Cliente:</strong> Escolha um dispositivo que esteja ligado ao DiskStation ou introduza um nome manualmente (por exemplo, port&aacute;til da Lu&iacute;sa).</li>
+<li><strong>Endere&ccedil;o MAC:</strong> Introduza o endere&ccedil;o MAC do dispositivo cuja utiliza&ccedil;&atilde;o da Internet pretende controlar.</li>
+<li><strong>Definir hor&aacute;rio:</strong> Escolha a hora em que o dispositivo especificado ter&aacute; permiss&atilde;o para aceder &agrave; Internet atrav&eacute;s de DiskStation.</li>
+</ul>
+</ol>
+
+<h3>Lista de liga&ccedil;&otilde;es*</h3>
+<p>A lista de liga&ccedil;&otilde;es (em <strong>Painel de controlo</strong> &gt; <strong>Sem fios</strong>) apresenta as informa&ccedil;&otilde;es relativas aos dispositivos ligados a DiskStation. Os dispositivos podem ser adicionados diretamente &agrave; lista de filtro MAC a partir daqui.</p>
+
+<h4>Para adicionar dispositivos &agrave; lista de filtro MAC:</h4>
+<ol>
+<li>Assinale a caixa junto do dispositivo que deseja adicionar ao filtro MAC.</li>
+<li>Clique em <strong>Adicionar &agrave; Lista de Filtros MAC</strong>.</li>
+</ol>
+
+
+
+<p>_____ <br> * Apenas dispon&iacute;vel em modelos espec&iacute;ficos.<br></body>
+</html>

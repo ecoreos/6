@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>LDAP</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script> <script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>LDAP</h2>
+<p>LDAP ermöglicht es der DiskStation, einem bestehenden Verzeichnisdienst als ein LDAP-Client beizutreten und anschließend Benutzer- oder Gruppeninformationen von einem LDAP-Server (oder Directory Server) abzurufen. Sie können die Berechtigungen von LDAP-Benutzern oder -Gruppen für den Zugriff auf DSM-Anwendungen und freigegebene Ordner verwalten, so wie dies auch bei lokalen DSM-Benutzern oder -Gruppen möglich ist. Weitere Informationen über LDAP finden Sie <a href="http://en.wikipedia.org/wiki/LDAP" target="_blank">hier</a>.</p>
+
+<p>Beim unterstützten LDAP-Standard handelt es sich um LDAP Version 3 (RFC 2251).</p>
+<h4>DiskStation in einen Verzeichnisdienst einbinden:</h4>
+<ol>
+<li>Gehen Sie zu <b>Systemsteuerung</b> &gt; <b>Verzeichnisdienst</b></li>
+<img src="about:blank" class="help_image"/>
+<li>Gehen Sie zu Registerkarte <b>LDAP</b> und aktivieren Sie <b>LDAP-Client aktivieren</b>.</li>
+<img src="about:blank" class="help_image"/>
+<li>Geben Sie die IP-Adresse oder den Domainnamen des LDAP-Servers in das Feld <b>LDAP-Server-Adresse</b> ein.</li>
+<img src="about:blank" class="help_image"/>
+<li>Wählen Sie im Dropdown-Menü <b>Verschlüsselung</b> einen Verschlüsselungstyp aus, um die LDAP-Verbindung zum LDAP-Server zu verschlüsseln.</li>
+<img src="about:blank" class="help_image"/>
+<li>Geben Sie die Base DN des LDAP-Servers in das Feld <b>Base DN</b> ein.</li>
+<img src="about:blank" class="help_image"/>
+<li>Wählen Sie je nach LDAP-Server das korrekte <b>Profil</b> aus. Wählen Sie etwa <b>Standard</b> aus, wenn Sie Synology Directory Server oder Mac Open Directory verwenden.</li>
+<img src="about:blank" class="help_image"/>
+<li>Wenn Sie Benutzern eines LDAP-Servers, der kein Samba-Schema unterstützt, den Zugriff auf Dateien des DiskStation über CIFS erlauben möchten, aktivieren Sie die Option <b>CIFS-Klartext-Kennwort-Authentifizierung aktivieren</b>. Lesen Sie den folgenden Abschnitt, um sicherzustellen, dass LDAP-Benutzer mit ihren Computern erfolgreich über CIFS auf Dateien des DiskStation zugreifen können.</li>
+<img src="about:blank" class="help_image"/>
+<li>Klicken Sie auf <b>Übernehmen</b>.</li>
+<li>
+  Geben Sie die Bind DN (oder das LDAP-Administrator-Konto) und das Kennwort in die Felder ein und klicken Sie anschließend auf <b>OK</b>.
+</li>
+<img src="about:blank" class="help_image"/>
+</ol>
+
+
+<div class="section">
+<h4>CIFS-Unterstützung und Einstellungen des Client-Computers</h4>
+<p>
+Nachdem die CIFS-Klartext-Kennwort-Authentifizierung aktiviert wurde, müssen LDAP-Benutzer möglicherweise die Einstellungen ihrer Computer ändern, um über CIFS auf Dateien des DiskStation zugreifen zu können:
+</p>
+<ul>
+<li>
+Wenn der DiskStation mit dem durch einen Synology LDAP-Server (oder einen anderen DiskStation, auf dem das Paket <b>Directory Server</b> installiert ist) bereitgestellten Verzeichnisdienst verbunden ist, oder der das Samba-Schema unterstützende LDAP-Server und alle LDAP-Benutzer die korrekten „sambaNTPassword“-Attribute haben, können LDAP-Benutzer über CIFS auf die Dateien Ihres DiskStation zugreifen, ohne <b>CIFS-Klartext-Kennwort-Authentifizierung aktivieren</b> zu aktivieren oder die Einstellungen ihrer Computer zu ändern. Andernfalls müssen LDAP-Benutzer die <a href="http://en.wikipedia.org/wiki/Pluggable_Authentication_Modules" target="_blank">PAM</a>-Unterstützung für ihre Computer aktivieren, um über CIFS auf Dateien des DiskStation zugreifen zu können. Dabei wird allerdings das Kennwort der LDAP-Benutzer in reiner Textform (ohne Verschlüsselung) zum DiskStation übertragen, sodass die Sicherheitsstufe sinkt.
+</li>
+
+</ul>
+<h4>Windows-Einstellungen ändern:</h4>
+<ol>
+<li>Gehen Sie zu <b>Start</b> > <b>Ausführen</b>, geben Sie <b>regedit</b> in das Feld ein und klicken Sie auf <b>OK</b>, um den Registrierungs-Editor zu öffnen.</li>
+<li>
+Suchen oder erstellen Sie, je nach Windows-Version, folgende Registrierungseinträge:
+</li>
+<ul>
+<li>
+<b>Windows 2000, XP, Vista und Windows 7:</b><br> [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanWorkStation\Parameters]
+</li>
+<li>
+<b>Windows NT:</b><br> [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Rdr\Parameters]
+</li>
+<li>
+<b>Windows 95 (SP1), 98 und Me:</b><br> [HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\VxD\VNETSUP]
+</li>
+</ul>
+<li>
+Erstellen oder ändern Sie den DWORD-Wert <b>EnablePlainTextPassword</b> von <b>0</b> nach <b>1</b>.
+</li>
+<li>
+Starten Sie Windows neu, um die Änderungen zu übernehmen.
+</li>
+</ol>
+<h4>Einstellungen von Mac OS X ändern:</h4>
+<ol>
+<li>Gehen Sie zu <b>Anwendungen</b> > <b>Dienstprogramme</b>, um <b>Terminal</b> zu öffnen.
+</li>
+<li>
+Erstellen Sie eine leere Datei <b>/etc/nsmb.conf</b>:
+<pre>
+sudo touch /etc/nsmb.conf
+</pre>
+</li>
+<li>
+Öffnen Sie <b>/etc/nsmb.conf</b> mit vi:
+<pre>
+sudo vi /etc/nsmb.conf
+</pre>
+</li>
+<li>
+Geben Sie „<b>i</b>“ ein, um Text einzufügen, und fügen Sie Folgendes ein:
+<pre>
+[default]<br / > minauth=none
+</pre>
+</li>
+<li>
+Drücken Sie die Esc-Taste und geben Sie anschließend „<b>ZZ</b>“ ein, um die Änderungen zu speichern und vi zu verlassen.
+</li>
+</ol>
+<h4>Einstellungen unter Linux ändern:</h4>
+<p>Fügen Sie, wenn Sie <b>smbclient</b> verwenden, die folgenden Schlüssel in den Bereich <b>[global]</b> von <b>smb.conf</b> ein:
+
+<p style="font-family:sans; margin-top:0px; padding-left:20px;line-height:1.25em;"> encrypt passwords = no <br> client plaintext auth = yes <br> client lanman auth = yes <br> client ntlmv2 auth = no </p>
+<p>Wenn Sie <b>mount.cifs</b> verwenden, führen Sie den folgenden Befehl aus:</b>
+<p style="font-family:sans; margin-top:0px; padding-left:20px;line-height:1.25em;">echo 0x30030 > /proc/fs/cifs/SecurityFlags</p>
+<p>Weitere Informationen finden Sie unter <a href="https://www.kernel.org/doc/readme/Documentation-filesystems-cifs-README" target=_blank>https://www.kernel.org/doc/readme/Documentation-filesystems-cifs-README.</a></p>
+
+</p>
+</div>
+<div class="section">
+<h4>Details zu Profilen</h4>
+
+<p>Verschiedene LDAP-Server können unterschiedliche Attribute für Konto- und Gruppennamen verwenden oder zwischen Konten und Gruppen unterscheiden. Mit der Option <b>Profil</b> können Sie festlegen oder anpassen, wie Benutzer- und Gruppeninformationen den LDAP-Attributen zugeordnet werden. Je nach LDAP-Server kann eines der folgenden Profile ausgewählt werden:</p>
+
+<ul>
+<li><b>Standard:</b> Für Server mit Synology Directory Server oder Mac Open Directory.</li>
+<li><b>IBM Lotus Domino:</b> Für Server mit IBM Lotus Domino 8.5.</li>
+<li><b>Benutzerdefiniert:</b> Erlaubt die Anpassung der Zuordnungen. Nähere Einzelheiten finden Sie im folgenden Abschnitt.</li>
+</ul>
+
+<p>Bevor Sie die LDAP-Attributzuordnungen anpassen, benötigen Sie etwas Hintergrundwissen. Synology DSM und der <strong>Profil</strong>-Editor entsprechen RFC 2307. Zum Beispiel können Sie <b>filter</b> > <b>passwd</b> als <b>userFilter</b> festlegen, dann interpretiert der DiskStation die Datensätze mit <b>objectClass=userFilter</b> auf Ihrem LDAP-Server als LDAP-Konten. Wenn Sie <b>passwd</b> > <b>uid</b> als <b>Benutzername</b> festlegen, interpretiert der DiskStation <b>Benutzername</b> auf Ihrem LDAP-Server als Kontonamen. Bleibt die Zuordnung leer, gelten die RFC 2307-Regeln.</p>
+<p>Der DiskStation benötigt eine feste Ganzzahl als LDAP-Konto-ID (<strong>uidNumber</strong>) oder eine Gruppen-ID (<strong>gidNumber</strong>). Allerdings verwenden nicht alle LDAP-Server Zahlen, um solche Attribute darzustellen. Daher wird ein Schlüsselwort <b>HASH</b>() bereitgestellt, um solche Attribute in Ganzzahlen umzuwandeln. Ihr LDAP-Server könnte beispielsweise das Attribut <b>userid</b> mit einem Hexadezimalwert als eindeutige ID für ein LDAP-Konto verwenden. In diesem Fall können Sie <b>passwd</b> > <b>uidNumber</b> auf <b>HASH(userid)</b> einstellen, dann wandelt der DiskStation das Attribut in eine Ganzzahl um.</p>
+
+<p>Es folgt eine Zusammenfassung der anpassbaren Attribute:</p>
+
+<ul>
+	<li><b>filter</b></li>
+	<ul>
+		<li><b>group</b>: Erforderliche objectClass für Gruppe.</li>
+		<li><b>passwd</b>: Erforderliche objectClass für Benutzer.</li>
+		<li><b>shadow</b>: Erforderliche objectClass für Benutzer-Passwörter.</li>
+	</ul>
+	<li><b>group</b></li>
+	<ul>
+		<li><b>cn</b>: Gruppenname.</li>
+		<li><b>gidNumber</b>: GID-Nummer dieser Gruppe</li>
+		<li><b>memberUid</b>: Mitglieder dieser Gruppe.</li>
+	</ul>
+	<li><b>passwd</b></li>
+	<ul>
+		<li><b>uidNumber</b>: UID-Nummer des Benutzers</li>
+		<li><b>uid</b>: Benutzername.</li>
+		<li><b>gidNumber</b>: Primäre GID-Nummer des Benutzers.</li>
+	</ul>
+	<li><b>shadow</b></li>
+	<ul>
+		<li><b>uid</b>: Benutzername.</li>
+		<li><b>userPassword</b>: Benutzer-Passwort.</li>
+	</ul>
+</ul>
+</div>
+<div class="section">
+<h4>Über UID/GID-Verschiebung</h4>
+<p>Um UID/GID-Konflikte zwischen LDAP-Benutzern/-Gruppen und lokalen Benutzern/Gruppen zu vermeiden, können Sie die UID/GID-Verschiebung aktivieren, um die UID/GID von LDAP-Benutzern/-Gruppen um 1000000 zu verschieben. Diese Option gilt nur für LDAP-Server, die keine LDAP-Server von Synology sind und ein eindeutiges numerisches ID-Attribute für jede(n) Benutzer/Gruppe besitzen.</p>
+</div>
+</body>
+</html>

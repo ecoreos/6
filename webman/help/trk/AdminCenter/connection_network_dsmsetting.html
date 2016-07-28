@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>DSM Ayarları</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script> <script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2><a name="https"></a>DSM Ayarları</h2>
+
+<p><strong>Denetim Masası</strong> > <strong>Ağ</strong> > <strong>DSM Ayarları</strong> seçeneğinden istemcilerin DiskStation sunucunuza erişmek için kullandığı bağlantı noktası numarasını değiştirebilirsiniz.</p>
+
+<h4>Varsayılan bağlantı noktası numarasını değiştirmek için:</h4>
+<p>Hem HTTP hem de HTTPS bağlantıları her zaman DSM'de etkindir. Varsayılan HTTP bağlantı noktası 5000 ve varsayılan HTTPS bağlantı noktası 5001'dir.</p>
+<ol>
+<li><b>HTTP</b> veya <b>HTTPS</b> alanına bağlantı noktası numarasını girin.</li>
+<li><b>Uygula</b>'ya tıklayın.</li>
+</ol>
+
+<h4>HTTP ve HTTPS bağlantılarını yeniden yönlendirmek için:</h4>
+<p>HTTP bağlantı noktası yoluyla DiskStation sunucunuza erişmek istediklerinde istemcileri HTTPS bağlantı noktasına yeniden yönlendirirler.</p>
+<ol>
+<li><b>HTTP bağlantılarını otomatik olarak HTTPS'e yeniden yönlendir (Web Station ve Photo Station hariç)</b> öğesini seçin.</li>
+<li>
+<b>Uygula</b>'ya tıklayın.
+</li>
+</ol>
+
+<div class="section">
+<h4>HTTPS bağlantısı için kullanılan bağlantı noktaları:</h4>
+<ul>
+  <li><b>DSM</b>: Varsayılan bağlantı noktası numarası 5001 olduğundan, aşağıdaki adresi girerek DSM'ye güvenli bir şekilde erişebilirsiniz: https://server-hostname:5001/</li>
+<li><b>Web Station ve Photo Station</b>: Varsayılan bağlantı noktası numarası 443 olduğundan, aşağıdaki adresi girerek Web Station ve Photo Station'a güvenli bir şekilde erişebilirsiniz: https://server-hostname/</li>
+</ul>
+
+</div>
+
+<h4>Ağ üzerinde DiskStation sunucusunu bulmak için:</h4>
+
+<p>DiskStation sunucunuzu Windows ağ bulucu veya Bonjour hizmet bulucu yoluyla bulabilirsiniz.</p>
+<ol>
+<li>Ağ üzerinde DiskStation sunucunuzu bulmak için bir hizmet seçin:
+
+  <ul>
+<li><strong>Windows ağ bulucuyu etkinleştir</strong></li>
+<li><strong>Bonjour hizmet keşfini etkinleştir</strong></li>
+</ul>
+</li>
+
+<li>
+<b>Uygula</b>'ya tıklayın.
+</li>
+</ol>
+
+
+
+<h2>Etki Alanı</h2>
+<p><strong>Etki alanı</strong> altında, DiskStation sunucusuna erişmek için özelleştirilen bir etki alanı adını belirleyebilirsiniz.
+</p>
+<h4>Özelleştirilen etki alanını etkinleştirmek için:</h4>
+<ol>
+<li>
+<b>Özelleştirilen etki alanını etkinleştir</b>'i işaretleyin.
+</li>
+<li>
+DiskStation sunucunuz için uygulanan bir etki alanı adını belirleyin.
+</li>
+<li>
+Bu etki alanı üzerinde HTTPS şifreli bağlantılarını zorunlu tutmak için <b>HSTS'yi etkinleştir</b> öğesini de işaretleyebilirsiniz.
+</li>
+<li>
+<b>Uygula</b>'ya tıklayın.
+</li>
+</ol>
+
+<div class="section">
+<h4>Not:</h4>
+<ul>
+<li>Her etki alanı adı DiskStation sunucunuzda sadece bir farklı uygulama için kullanılabilir.</li>
+<li>Etki alanı adının uzunluğu 15 karakteri aşmıyorsa ve <a href="https://support.microsoft.com/kb/909264" target="_blank">NetBIOS adlandırma kuralları</a> ile uyumluysa, sistem etki alanı adını (ör. MyDSM) otomatik olarak kaydeder ve yayınlar. Windows kullanıcıları DSM masaüstüne benzer bir URL ile aynı yerel ağ içinde erişebilirler: <code>http://MyDSM</code> veya <code>https://MyDSM</code></li>
+<li>Etki alanı adlarını kullanan URL'ler yoluyla uygulamalara eriştiğinizde, standart HTTP bağlantı noktası (80) veya standart HTTPS bağlantı noktası (443) üzerinden gidersiniz.</li>
+</ul>
+
+</div>
+
+</body>
+</html>
+

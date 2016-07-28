@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+	<h2>概述</h2>
+	<p>概述显示了存储空间的整体状态，包括所有空间的整体状况、硬盘利用率、最高卷使用率以及 iSCSI LUN 使用率。</p>
+
+		<h4>系统状况</h4>
+        <p>有三种状态：</p>
+	  	<ul>
+				<li><b>正常</b>：所有存储空间正常。</li>
+				<li><B>注意</B>：存储空间（卷或 iSCSI LUN）为堪用，SSD 缓存已损毁，或系统分区已失败。</li>
+				<li><b>危险</b>：存储空间（卷或 iSCSI LUN）已损毁。</li>
+			</ul>
+			<p>如果同时出现多个异常情况，正常状态将按以下顺序显示：1) 存储空间（卷或 iSCSI LUN）；2) SSD 缓存；3) 系统分区。如果出现问题，请按状态下方的建议操作。</p>
+		
+		<h4>硬盘信息</h4>
+        <p>此区域显示硬盘和硬件信息。您可检查什么存储空间使用的多少硬盘、备援硬盘的数量以及可用硬盘插槽的数量。</p>
+        
+		<h4>最高卷使用率</h4>
+        <p>此区域显示卷已使用容量。如果总使用率达到 90%，则圆饼图将为红色；超过 80% 为黄色；79% 以下为蓝色。</p>
+        
+		<h4>iSCSI LUN 使用率</h4>
+        <p>本区域显示以下信息：</p>
+        <ul>
+         		<li><b>已报告</b>： DiskStation 中所有 iSCSI LUN（段落分块）和 iSCSI LUN（一般文件）加在一起的的总分配容量。</li>
+                <li><b>已用</b>： iSCSI LUN（一般文件）上的总分配容量和 iSCSI LUN（段落分块）上加在一起的总容量。</li>
+                <li><b>已保存</b>：<b>已报告</b>总容量加上<b>已使用</b>总容量，显示了保存在存储空间数量的购买和管理成本。</li>
+</ul>
+        </li>
+</body>
+</html>

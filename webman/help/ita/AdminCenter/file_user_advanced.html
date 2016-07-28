@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Impostazioni utente avanzate</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Impostazioni utente avanzate</h2>
+
+<p>Per modificare le impostazioni utente avanzate, &egrave; possibile andare su <strong>Pannello di controllo</strong> &gt; <strong>Utente</strong> &gt; <strong>Avanzate</strong>. Sono disponibili le seguenti opzioni. </p>
+
+<h3>Consenti agli utenti di ripristinare le password dimenticate</h3>
+<p>Se si vuole consentire agli utenti di ripristinare le password dimenticate via e-mail, &egrave; possibile abilitare <strong>Consentire agli utenti non amministratore di ripristinare le password dimenticate via e-mail</strong>. Se questa opzione &egrave; abilitata, un collegamento <strong>Dimenticato la password?</strong>  verr&agrave; visualizzato sulla pagina di accesso del DSM. Se un utente dimentica la password, pu&ograve; fare clic su questo collegamento e immettere il proprio nome utente. In questo caso, il sistema invier&agrave; una e-mail all&apos;utente contenente un collegamento per ripristinare la sua password dimenticata. </p>
+
+<div class="section">
+<h4>Nota.</h4>
+<ul>
+<li>Prima di abilitare questa opzione, assicurarsi di avere gi&agrave; abilitato le notifiche e-mail SMTP. Per far ci&ograve;, andare su <strong>Pannello di controllo</strong> &gt; <strong>Notifiche</strong>.</li>
+<li>Per ricevere i messaggi dal sistema, gli utenti devono fornire un indirizzo e-mail nella sezione informazioni utente dei loro account.</li>
+<li>Gli utenti che appartengono al gruppo <strong>administrators</strong> non possono ripristinare le password con questa opzione.</li>
+<li>Gli utenti del dominio non possono ripristinare le password con questa opzione.</li>
+<li>Gli utenti LDAP possono ripristinare le password con questa funzione, finch&eacute; DiskStation funge da directory server LDAP.</li>
+
+</ul>
+</div>
+
+
+<h3>Resistenza password</h3>
+<p>&Egrave; possibile impostare le regole di forza della password per gli utenti su DiskStation.</p>
+
+<div class="section">
+<h4>Nota.</h4>
+<p>Le regole di forza della password si applicano solo a nuove password. Ad esempio, le regole di forza della nuova password si applicano solo quando si crea un nuovo account utente o quando un utente esistente modifica la sua password. Le password esistenti e quelle relative ad account utenti importati sono escluse dalle regole della nuova password.</p>
+</div>
+<h4>Abilitare le regole di forza della password:</h4>
+<ol>
+<li>Spuntare la casella <b>Applicare le regole di forza della password</b> per attivare le limitazioni della password.</li>
+<li>Selezionare pi&ugrave; di una limitazione della password dalle regole di seguito:</li>
+<ul>
+<li><b>Escludere nome e descrizione dell&apos;utente dalla password</b>: la password non deve contenere il nome utente o la descrizione dell&apos;utente. Sono esclusi i caratteri codificati UTF-8.</li>
+<li><b>Includi maiuscole e minuscole</b>: la password deve contenere maiuscole e minuscole.</li>
+<li><b>Carattere numerico incluso</b>: la password deve contenere almeno un carattere numerico (0~9).</li>
+<li><b>Carattere speciale incluso</b>: la password deve contenere almeno un carattere speciale ASCII (p.e., ~, `, !, @, #, $, %, ^, &amp;, *, (, ), -, _, =, +, [, {, ], }, \, |, ;, :, &apos;, &quot;, <, >, /, ?).</li>
+<li><b>Lunghezza minima della password</b>: &egrave; necessario specificare almeno un valore per la password nel campo di testo. La lunghezza deve essere un numero compreso tra 6 e 127.</li>
+</ul>
+<li>Fare clic su <b>Applica</b> per salvare le impostazioni.</li>
+</ol><h3>Verifica in due passaggi</h3>
+<p>La verifica in due passaggi offre una maggiore sicurezza per gli account DSM. &Egrave; possibile richiedere agli amministratori DSM e a tutti gli utenti DSm di abilitare la verifica in due passaggi per poter ulteriormente proteggere i propri account.</p>
+
+<h4>Per abilitare la verifica in due passaggi per gli utenti DSM:</h4>
+
+<ol>
+<li>Mettere il segno di spunta sulla casella <strong>Abilita verifica in due passaggi per i seguenti utenti</strong> e scegliere gli utenti su cui si vuole abilitare la funzione.</li>
+<div class="section">
+<h4>Nota.</h4>
+<p>Se la verifica in due passaggi non &egrave; ancora stata configurata in <b>Pers.</b> &gt; <b>Account</b>, verr&agrave; avviata la procedura guidata di configurazione a diue passaggi per aiutare a completare le impostazioni richieste prima di poter applicare questa funzione.</p>
+</div>
+
+<li>Con l&apos;applicazione di questa funzione, se non si &egrave; abilitata la verifica a due passaggi, verr&agrave; richiesto di terminare di regolare le impostazioni prima di accedere a DSM.</li>
+</ol>
+
+<div class="section">
+<h4>Nota.</h4>
+<p>Disabilitando la funzione della verifica a due passaggi qui, non verranno disabilitate anche le impostazioni con verifica a due passaggi di ciascun utente. &Egrave; possibile mantenere le impostazioni a due passaggi o andare su <b>Pers.</b> &gt; <b>Account</b> per disabilitare queste impostazioni.</p>
+</div><h3>Sede utente</h3>
+
+<p>Abilita homes utente per creare una cartella personale <b>home</b> per ogni utente, tranne per <b>guest</b>. Tutti gli utenti possono accedere alla propria cartella principale via CIFS, AFP, FTP o File Station.</p>
+<p>Gli utenti che appartengono al gruppo <strong>administrators</strong> possono accedere a tutte le cartelle personali archiviate nella cartella condivisa predefinita <b>homes</b>. Il nome della cartella principale &egrave; lo stesso dell&apos;account utente.</p>
+
+<h4>Per abilitare il servizio sede utente:</h4>
+<ol>
+<li>Selezionare <b>Abilita il servizio sede utente</b>.</li>
+<li>Se ci sono pi&ugrave; volumi, selezionare in quale cartella <b>homes</b> si desidera archiviare.</li>
+<li>Fare clic su <b>Applica</b>.</li>
+</ol>
+
+<div class="section">
+<h4>Nota.</h4>
+<p>Se si disattiva il servizio sede utente locale, verr&agrave; disattivato anche il servizio sede cliente di dominio.</p>
+</div>
+
+<h4>Per disabilitare il servizio sede utente:</h4>
+<ol>
+<li>Deselezionare<b>Abilita il servizio sede utente</b>.</li>
+<li>Fare clic su <b>Applica</b>.</li>
+</ol>
+<p>Dopo avere disabilitato il servizio sede utente, admin potr&agrave; accedere alle cartelle condivise <b>homes</b>.  Gli utenti saranno nuovamente in grado di accedere alle loro cartelle principali quando verr&agrave; riabilitato il servizio sede utente.</p>
+
+<div class="section">
+<h4>Nota.</h4>
+<ol>
+<li>Per eliminare la cartella condivisa <b>homes</b>, il servizio sede utente deve prima essere disabilitato.</li>
+<li>Il servizio sede utente di dominio sar&agrave; disattivato se il servizio sede locale &egrave; disattivato.</li> 
+</ol> 
+</div>
+
+
+</body>	
+</html> 

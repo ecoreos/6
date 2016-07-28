@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+ <head>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>High Availability</title>
+
+
+ </head>
+ <body>
+  <h2>Apagado y reinicio</h2>
+  <p>Las siguientes instrucciones le guiar&aacute;n en el proceso de apagado, eliminaci&oacute;n o reinicio de un cl&uacute;ster high-availability.</p>
+
+  <h4> Para apagar el cl&uacute;ster high-availability utilizando Synology High Availability:</h4>
+  <p>Si desea apagar un cl&uacute;ster high-availability para transportar los servidores a una nueva ubicaci&oacute;n f&iacute;sica o realizar labores de mantenimiento, pero no quiere eliminar las configuraciones del cl&uacute;ster high-availability, siga estas instrucciones.</p>
+  <ol>
+   <li>Inicie sesi&oacute;n en DSM.</li>
+   <li>Abra Synology High Availability.</li>
+   <li>Haga clic en el bot&oacute;n <b>Gestionar</b>.</li>
+   <li>Seleccione <b>Apagar cl&uacute;ster HA</b>.</li>
+   <li>Aparecer&aacute; un mensaje de confirmaci&oacute;n. Haga clic en <b>S&iacute;</b> para confirmar.</li>
+  </ol>
+
+  <h4>Para apagar manualmente un cl&uacute;ster high-availability:</h4>
+  <p> El cl&uacute;ster high-availability tambi&eacute;n se puede apagar pulsando los botones de encendido de cada servidor. </p>
+  <ol>
+   <li>Mantenga pulsado el bot&oacute;n de encendido de un servidor (activo o pasivo) hasta que emita un pitido.</li>
+   <li>Una vez que se haya apagado por completo un servidor, espere al menos 30 segundos (el servidor que sigue en l&iacute;nea necesita tiempo para guardar la configuraci&oacute;n).</li>
+   <li>Mantenga pulsado el bot&oacute;n de encendido del otro servidor hasta que emita un pitido.</li>
+   <li>Espere a que el servidor se apague por completo.</li>
+  </ol>
+<div class="section">
+<h4>Encender servidores:</h4>   
+<p>Cuando quiera volver a encender los servidores, deber&iacute;a encender el servidor activo y el servidor pasivo al mismo tiempo (o con un intervalo de cinco minutos entre ellos). Si solo enciende uno de los servidores, este intentar&aacute; encender el otro servidor enviando un mensaje de Despertar con LAN.</p>
+<h4>Apagado anormal:</h4>
+<p>Cuando se crea un cl&uacute;ster high-availability, se habilita autom&aacute;ticamente la opci&oacute;n de reinicio tras corte de electricidad en el Panel de control. Si los servidores se apagan de forma anormal debido a un corte de electricidad, se encender&aacute;n autom&aacute;ticamente una vez que se restablezca la electricidad.</p>
+</div>
+
+<h4>Para eliminar un cl&uacute;ster de high-availability:</h4>
+ <p>Cuando desee desvincular ambos servidores y eliminar un cl&uacute;ster high-availability para vincular otro servidor, siga estas instrucciones.</p>
+  <ol>
+   <li>Vaya a la p&aacute;gina <b>Visi&oacute;n general</b>.</li>
+   <li>Haga clic en el bot&oacute;n <b>Gestionar</b>.</li> 
+   <li>Seleccione <b>Eliminar cl&uacute;ster HA</b>.</li>
+  </ol>
+  <p>Tras la confirmaci&oacute;n, el sistema eliminar&aacute; el cl&uacute;ster high-availability. El campo de estado muestra el progreso del proceso de eliminaci&oacute;n. Cuando el cl&uacute;ster high-availability se haya eliminado correctamente, se le redirigir&aacute; a la direcci&oacute;n IP original del servidor activo. El estado de ambos servidores cambiar&aacute; a <b>Independiente</b>.</li>
+  
+ <h4>Para reiniciar un cl&uacute;ster high-availability que funciona mal:</h4>
+  <p>En caso de que no pueda acceder a DSM o al High Availability de Synology, debido a un error de &quot;split brain&quot; o a otro tipo de fallo, puede intentar forzar el cl&uacute;ster high-availability para que se desvincule pulsando el bot&oacute;n <b>Restablecer</b> ubicado en sus servidores.</p>
+  <ol>
+   <li>Mantenga pulsado el bot&oacute;n <b>Restablecer</b> (normalmente ubicado en el panel posterior de un servidor) hasta que el servidor emita un pitido.
+   <li>El sistema eliminar&aacute; el cl&uacute;ster high-availability, y el estado de ambos servidores cambiar&aacute; a <b>Independiente</b></li>
+   <li>Al pulsar el bot&oacute;n <b>Restablecer</b>, tambi&eacute;n se restaurar&aacute;n algunos valores de configuraci&oacute;n predeterminados, como la direcci&oacute;n IP, el DNS y la contrase&ntilde;a de admin, adem&aacute;s de lo siguiente:</li>
+   <ul>
+    <li>La contrase&ntilde;a de admin quedar&aacute; vac&iacute;a.</li>
+    <li>La cuenta de invitado se deshabilitar&aacute;.</li>
+    <li>Se habilitar&aacute; DHCP en IP, DNS, pasarela y otras interfaces de red.</li>
+    <li>Se deshabilitar&aacute; JumboFrames y MTU se ajustar&aacute; en 1500.</li>
+    <li>El puerto de administraci&oacute;n se restablecer&aacute; en 5000/5001.</li>
+    <li>PPPoE se restablecer&aacute; a los valores predeterminados.</li>
+    <li>El bloqueo autom&aacute;tico de IP se deshabilitar&aacute; (la direcci&oacute;n IP bloqueada no se borrar&aacute;).</li>
+    <li>Link Aggregation se deshabilitar&aacute;.</li>
+    <li>Las reglas de cortafuegos se deshabilitar&aacute;n (pero no se borrar&aacute;n).</li>
+   </ul>
+  </ol>
+
+<div class="section">
+<h4>Nota:</h4>
+<p>Durante el proceso de eliminaci&oacute;n de un cl&uacute;ster high-availability, pueden quedar algunas operaciones de escritura de datos incompletas. Para garantizar la integridad de los datos, realice la replicaci&oacute;n de datos basada en el servidor activo, ya que puede que los datos del servidor pasivo no est&eacute;n del todo actualizados.</p>
+</div>
+ </body>
+</html>

@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+<meta content="en-us" http-equiv="Content-Language" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>備份您的 Synology NAS 以保障資料安全</title>
+</head>
+
+<body class="tutorial-content-box" >
+
+<h1>備份您的 Synology NAS</h1>
+<div class="tutorials_content"><img src="../../images/Backup/1x/Backup/back_up_your_data_on_synology_nas_to_ensure_data_security.jpg" />
+<h2>概述</h2>
+<p>硬碟毀損或天然災害可能造成資料意外遺失，如果缺乏可靠的備份方案，更對您的寶貴資料構成潛在威脅。<strong>Hyper Backup</strong> 提供符合使用直覺、完美整合的備份 / 還原解決方案，協助您保存 / 取回寶貴資料的複本，隨時隨地可在下列的本地及遠端儲存空間進行存取。下列儲存空間目的地皆可支援：</p>
+
+<ul>
+<li><strong>本地共用資料夾 (含連接至 DiskStation 的外接儲存裝置)</strong></li>
+<li><strong>遠端 Synology NAS</strong></li>
+<li><strong>遠端 rsync 伺服器</strong></li>
+<li><strong>遠端 OpenStack Swift 伺服器</strong></li>
+<li><strong>公有雲端空間 (Amazon S3、Microsoft Azure 及 OpenStack Swift 等)</strong></li>
+</ul>
+</div>
+
+<div class="section">
+<h4>注意：</h4>
+<p>Hyper Backup 僅可備份特定的系統設定及應用程式。如需更多資訊，請參閱 Hyper Backup 的說明文件。</p>
+</div>
+
+
+<h3 class="list_head">1. 建立本地備份任務至本地共用資料夾 / 外接儲存裝置</h3>
+<p><strong>Hyper Backup</strong> 為不同類型的目的地提供類似的備份及還原流程。以下示範如何進行本地資料備份及還原，可作為其他類型任務的參考。</p>
+
+<ol>
+<li>登入 DSM 並找到 <strong>Hyper Backup</strong> 套件。</li>
+<li>按一下左下角的 <strong>+</strong>，選擇<strong>資料備份任務</strong>。</li>
+<li>若要建立本地備份任務，選擇<strong>本地共用資料夾</strong>。</li>
+<img src="../../images/Backup/1x/Backup/1.png" width="600" alt=""/>
+<li>選擇<strong>建立備份任務</strong>，然後選擇共用資料夾或是連接至 DiskStation 的外接儲存裝置。</li>
+<img src="../../images/Backup/1x/Backup/2.png" width="600" alt=""/>
+<li>選擇來源端資料夾來備份內部資料。如果選擇加密共用資料夾，該資料夾在備份過程中必須維持掛載。如果來源端及目的地皆位於同一個儲存空間，來源端資料夾將出現橘色驚嘆號的標記。</li>
+<img src="../../images/Backup/1x/Backup/3.png" width="600" alt=""/>
+<li>選擇要備份的應用程式。</li><img src="../../images/Backup/1x/Backup/4.png" width="600" alt=""/>
+<li>指定下列的備份設定，以符合使用需求：
+  <ul>
+  <li><strong>任務名稱</strong>：命名備份任務。</li>
+  <li><strong>啟動任務通知</strong>：選擇此選項，便可透過電子郵件、簡訊或推播服務取得任務狀態。</li>
+  <li><strong>啟動系統設定備份</strong>：備份系統設定 (例如使用者帳號密碼)。依照預設，此設定強制套用至所有的備份任務。</li>
+  <li><strong>壓縮備份資料</strong>：壓縮備份資料來減少目的地儲存空間的使用量。如果選取此選項，備份過程將需更多時間。</li>
+  <li><strong>啟動傳輸加密</strong> (僅供遠端備份使用)：選擇此選項，備份資料在傳輸至遠端目的地 (例如 rsync 伺服器或公共雲端空間) 時便會受到加密保護。</li>
+  <li><strong>Multipart Upload 檔案分割大小</strong> (僅供 S3 相容伺服器使用)：依照指定的區塊大小分割備份資料。</li>
+  <li><strong>啟動用戶端加密</strong>：選擇此選項，便可透過密碼保護備份資料，使目的地資料免於不當存取。</li>
+    
+  <li><strong>啟動備份排程</strong>：選擇此選項，便可規劃自動執行備份任務的排程。</li>
+  </ul>
+  </li>
+  <img src="../../images/Backup/1x/Backup/5.png" width="600" alt=""/>
+  <li>選擇<strong>啟動自動刪除備份版本</strong>，便可設定自動刪除的配置方式：<ul>
+  <li><strong>從最早版本開始刪除</strong>：一旦超出指定的<strong>版本數量</strong>，便會刪除現有的最早備份版本。</li>
+  <li><strong>Smart Recycle</strong>：在超出指定的版本數量前，系統將會保存每項備份版本。觸發自動刪除後，完全不符合下列任一條件的版本，將被系統先行刪除；如果現存的所有版本皆符合下列條件，系統將自動刪除最早版本。
+  <ul>
+  <li><strong>過去 24 小時內，每小時保留一個版本</strong>：系統會保留每小時最早建立的備份版本。</li>
+  <li><strong>過去 1 天至 1 個月內，每天保留一個版本</strong>：系統會保留每天最早建立的備份版本。</li>
+  <li><strong>過去 1 個月之前，每週保留一個版本</strong>： 系統會保留每週最早建立的備份版本。</li>
+  </ul>
+  
+  </li>
+  <li><strong>版本數量</strong>：設定保留備份版本的數量上限。</li>
+  <li>時間軸：依據備份排程及自動刪除配置，顯示可能的備份保留結果。</li>
+  </ul>
+</li><img src="../../images/Backup/1x/Backup/6.png" width="600" alt=""/><li>按一下<strong>套用</strong>來完成設定。</li>
+<li>若要立即執行備份任務，請依照備份精靈的指示進行，然後按一下<strong>是</strong>。</li>
+</ol>
+
+
+<h3 class="list_head">2. 從本地共用資料夾 / 外接儲存裝置還原單份檔案</h3>
+
+
+<ol>
+<li>請前往 <strong>Hyper Backup</strong>，在左側面板選擇備份任務，按一下<strong>備份瀏覽器</strong> (放大鏡圖示)。如果該任務受到用戶端加密保護，請輸入密碼。</li>
+<img src="../../images/Backup/1x/Backup/Single_1.png" width="600" alt=""/>
+<li>找到並選取想要還原的檔案。更可使用時間軸橫桿選取想要還原的版本。</li>
+<img src="../../images/Backup/1x/Backup/Single_2.png" width="600" alt=""/>
+<li>按一下<strong>還原</strong>，便可還原選取的檔案 / 資料夾。</li>
+
+</ol>
+
+
+
+<h3 class="list_head">3. 還原完整任務至特定時間點</h3>
+
+<ol>
+<li>按一下左下角的<strong>還原</strong>，然後按一下<strong>資料</strong>。如果該任務受到用戶端加密保護，請輸入密碼。</li>
+<img src="../../images/Backup/1x/Backup/Restore_1.png" width="600" alt=""/>
+<li>選擇想要還原的任務。若要自其他資料庫還原資料，請選擇<strong>從現存資料庫還原</strong>，然後找到要還原的任務。</li>
+<img src="../../images/Backup/1x/Backup/Restore_2.png" width="600" alt=""/>
+<li>選擇是否還原系統設定。如果選擇<strong>還原系統設定</strong>，在下方清單中，請選擇想要還原的特定設定。</li>
+<img src="../../images/Backup/1x/Backup/Restore_3.png" width="600" alt=""/>
+<li>找到並選取想要還原的檔案 / 任務。更可使用時間軸橫桿選取想要還原的版本。</li>
+<img src="../../images/Backup/1x/Backup/Restore_4.png" width="600" alt=""/>
+<li>選擇想要還原的應用程式。</li>
+<img src="../../images/Backup/1x/Backup/Restore_4.5.png" width="600" alt=""/>
+<li>基本的還原資訊便會顯示。</li>
+<img src="../../images/Backup/1x/Backup/Restore_5.png" width="600" alt=""/>
+<li>按一下<strong>套用</strong>來啟動還原。</li>
+</ol>
+
+
+
+
+
+
+<div class="page-info">
+  <ul>
+    <li>同主題上一篇：<a href="backup_from_computer.html">如何使用 Cloud Station 備份 Mac/PC 上的資料</a> </li>
+  </ul>
+</div>
+</body>
+
+</html>

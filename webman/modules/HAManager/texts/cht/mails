@@ -1,0 +1,138 @@
+
+[HA_ConfSyncError]
+Subject: High-availability 叢集 %HOSTNAME% 在檢查系統設定時偵測到同步錯誤
+
+親愛的使用者，您好：
+
+在為主伺服器及副伺服器進行系統設定檢查時，high-availability 叢集 %HOSTNAME% 偵測到同步錯誤。系統嘗試透過完整的系統設定同步來修復此錯誤。請檢查系統日誌或 High Availability Manager 的日誌頁面以取得更多資訊。
+
+動作：%HA_ACTION%
+錯誤：%HA_PARAM_1%
+
+%COMPANY_NAME% 敬上
+
+
+[HA_FailOver]
+Subject: High-availability 叢集 %HOSTNAME% 偵測到錯誤
+
+親愛的使用者，您好：
+
+High-availability 叢集 %HOSTNAME% 偵測到錯誤。系統會將服務轉移至副伺服器上。請檢查系統日誌以取得更多資訊。
+
+動作：%HA_ACTION%
+錯誤：%HA_PARAM_1%
+
+%COMPANY_NAME% 敬上
+
+
+[HA_MismatchedSsdCache]
+Subject: High-availability 叢集 %HOSTNAME% 上的 SSD 快取硬碟不一致
+
+親愛的使用者，您好：
+
+副伺服器 %HA_PARAM_1% 上的下列 SSD 快取所使用的硬碟與主伺服器上的硬碟不一致：SSD 快取 %HA_PARAM_2%。
+
+請檢查 High Availability Manager 的日誌頁面以取得更多資訊。
+
+動作：%HA_ACTION%
+
+%COMPANY_NAME% 敬上
+
+
+[HA_SplitBrain]
+Subject: High-availability 叢集 %HOSTNAME% 發生 split-brain 錯誤
+
+親愛的使用者，您好：
+
+High-availability 叢集 %HOSTNAME% 發生 split-brain 錯誤。請檢查系統日誌以取得更多資訊。
+
+動作：%HA_ACTION%
+
+%COMPANY_NAME% 敬上
+
+
+[HA_StatusChange]
+Subject: High-availability 叢集 %HOSTNAME% 狀態已從 %HA_PARAM_1% 變為 %HA_PARAM_2%
+
+親愛的使用者，您好：
+
+High-availability 叢集 %HOSTNAME% 狀態已從 %HA_PARAM_1% 變為 %HA_PARAM_2%。請檢查系統日誌或 High Availability Manager 的日誌頁面以取得更多資訊。
+
+動作：%HA_ACTION%
+描述：%HA_PARAM_3%
+
+%COMPANY_NAME% 敬上
+
+
+[HA_SwitchFail]
+Subject: High-availability 叢集 %HOSTNAME% 服務轉移失敗
+
+親愛的使用者，您好：
+
+系統欲將服務轉移至 high-availability 叢集 %HOSTNAME% 副伺服器，然而轉移失敗。請檢查系統日誌以取得更多資訊。
+
+動作：%HA_ACTION%
+
+%COMPANY_NAME% 敬上
+
+
+[HA_SwitchFinished]
+Subject: High-availability 叢集 %HOSTNAME% 正於 %HA_PARAM_1% 上執行服務
+
+親愛的使用者，您好：
+
+High-availability 叢集 %HOSTNAME% 的服務目前正於 %HA_PARAM_1% 上執行。請檢查系統日誌或 High Availability Manager 的日誌頁面以取得更多資訊。
+
+動作：%HA_ACTION%
+
+%COMPANY_NAME% 敬上
+
+
+[HA_SwitchOver]
+Subject: High-availability 叢集 %HOSTNAME% 轉移至 %HA_PARAM_1%
+
+親愛的使用者，您好：
+
+使用者已啟動 high-availability 叢集 %HOSTNAME% 服務轉移。服務將會轉移至 %HA_PARAM_1%。請檢查系統日誌以取得更多資訊。
+
+動作：%HA_ACTION%
+
+%COMPANY_NAME% 敬上
+
+
+[HA_SwitchOver_With_Reason]
+Subject: High-availability 叢集 %HOSTNAME% 轉移至 %HA_PARAM_1%
+
+親愛的使用者，您好：
+
+使用者已啟動 high-availability 叢集 %HOSTNAME% 服務轉移。服務將會轉移至 %HA_PARAM_1%。請檢查系統日誌以取得更多資訊。
+
+動作：%HA_ACTION%
+原因：%HA_PARAM_2%
+
+%COMPANY_NAME% 敬上
+
+
+[HA_SyncComplete]
+Subject: High-availability 叢集 %HOSTNAME% 已完成完整的資料複製
+
+親愛的使用者，您好：
+
+High-availability 叢集 %HOSTNAME% 已完成完整的資料複製。副伺服器已準備就緒，在需要轉移服務時可立即接替主伺服器。請檢查系統日誌或 High Availability Manager 的日誌頁面以取得更多資訊。
+
+動作：%HA_ACTION%
+
+%COMPANY_NAME% 敬上
+
+
+[HA_UnbindLocal]
+Subject: 本機已從 high-availability 叢集移除
+
+親愛的使用者，您好：
+
+%HA_PARAM_1% 已從 high-availability 叢集 %HA_PARAM_2% 中移除。請檢查系統日誌以取得更多資訊。
+
+動作：%HA_ACTION%
+
+%COMPANY_NAME% 敬上
+

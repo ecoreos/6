@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2>SSD-cache*</h2>
+<p>SSD-cache kan förbättra prestanda för tillfällig åtkomst genom att lagra data som ofta används på SSD-cache. SSD-cache kan monteras på en volym eller iSCSI LUN (Blocknivå). Det finns två typer av SSD-cache:</p>
+<ul>
+<li><strong>Endast läsbar cache</strong> kan bestå av 1 till 12 SSD:er som kan monteras i konfiguration basic eller RAID 0 respektive för att förbättra den icke-sekventiella skrivningen för lagringsutrymmet på vilket det är monterat.
+<div class="section"><h4>Obs:</h4>
+	<p>Endast läsbar SSD-cache lagrar kopior av data från volymen, på så sätt uppstår inte någon dataförlust även om endast läsbar cache har kraschat.</p>
+	</div>
+</li>
+<li><strong>Läs-skriv-cache</strong> kan monteras i en konfiguration med RAID 1 / RAID 5 / RAID 6, beroende på antalet SSD:er (upp till 12 SSD:er) för att förbättra läs- och skrivprestandan vid tillfällig åtkomst, för lagringsutrymmet på vilket det är monterat.</li>
+</ul>
+
+<p>Båda typerna av SSD-cache implementerar en algoritm med LRU (Last Recently Used, översatt senast använda) för att utföra swap av data i cachen.</p>
+
+<div class="section">
+<h4>Viktigt:</h4>
+<p>Efter installation av några SSD:er för användning som cache, vänligen se följande meddelanden:</p>
+<ul>
+<li>Syftet med att aktivera SSD-cache är att öka prestandan vid tillfällig åtkomst till en liten del data i lagringsutrymmet som ofta används. Till exempel både stora sekventiella läs- eller skrivåtgärder (t.ex. HD-videoströmning) och helt tillfälliga dataläsningsmönster som saknar återläsningsmönster och på sätt har de inte någon signifikant nytta av SSD-cachning. För allmänna tillämpningar rekommenderas att alternativet <b>Hoppa över sekventiell I/O</b> aktiveras så att sekventiell I/O fortfarande kan passera genom diskarna på lagringsutrymmet.</li>
+<li>Vänligen se kompatibilitetslista på <a href="http://www.synology.com/" target=_blank>Synology:s webbplats</a> för att se vilka SSD som kan väljas för att användas som cache för din DiskStation.</li>
+<li class="disable-alpine">SSD-cache kräver en viss mängd systemminne beroende på cachestorleken, så montering av större SSD-cache kan innebära att det behövs en minnesuppgradering på DiskStation. För att hålla systemet stabilt och snabbt kan endast 1/4 av det förinstallerade systemminnet användas för SSD-cache. Varje 1 GB av SSD-cache kräver ungefär 416 KB systemminne (utökningsbart minne kan inräknas)**. Därför, om konfiguration för endast läsbar cache är 2 x 128 GB SSD kommer den totala storleken på cache att vara 256 GB och kräva minst 104 MB av minnet; om konfigurationen för läs-skriv-cache är 2 x 128 GB SSD kommer den totala storleken på cache att vara 128 GB och kräva minst 52 MB av minnet. Om minnet är otillräckligt kommer skapandet av SSD-cache att bli begränsat eller så blir storleken på SSD-cache begränsat.</li>
+<li class="enable-alpine">Varje 1 GB av SSD-cache kräver ungefär 416 KB systemminne (utökningsbart minne kan inräknas) och den maximala storleken för cache är 930 GB. Därför, om konfiguration för endast läsbar cache är 2 x 128 GB SSD kommer den totala storleken på cache att vara 256 GB och kräva minst 104 MB av minnet, om konfigurationen för läs-skriv-cache är 2 x 128 GB SSD kommer den totala storleken på cache att vara 128 GB och kräva minst 52 MB av minnet. Om minnet är otillräckligt kommer skapandet av SSD-cache att bli begränsat eller så blir storleken på SSD-cache begränsat.</li>
+<li>Vänligen se produktspecifikationerna för din modell på <a href="http://www.synology.com/" target=_blank>Synology:s webbplats</a> för den maximala storleken av SSD-cache som är tillåten på din DiskStation.</li>
+<li>När en läs-skriv-SSD-cache blir trasig avaktiveras funktionen cachning och systemet börjar skriva (dvs. synkronisera) cachad data från SSD:erna till hårddiskarna. Efter att synkroniseringen av data är slutförd inträffar inte någon dataförlust även efter att läs-skriv-cachen har kraschat.</li>
+<li>Läs-skriv-cache kan inte användas tillsammans med Time Backup. Till exempel när du skapar en läs-skriv-SSD-cache kommer du inte att kunna köra Time Backup. Även omvänt, om du kör Time Backup kommer du inte att kunna skapa ett läs-skriv-SSD-cache.</li>
+</ul>
+</div>
+
+<h4>För att montera SSD-cache:</h4>
+<ol>
+  <li>Installera SSD:erna på din DiskStation. Vänligen se meddelanden här ovanför först.</li>
+  <li>Gå till <strong>Lagringshanterare</strong> > <strong>SSD-cache</strong>. Klicka på <b>Skapa</b>.</li>
+<li>Välj läget för cache (endast tillgängligt för modeller som har stöd för läs-skriv-cache).</li>
+<li>Lokalisera rullgardinsmenyn och välj den volym eller iSCSI LUN (blocknivå) som du vill montera SSD-cache på.</li>
+<li>Välj SSD:erna från listan. Data på SSD:erna kommer att raderas, så vänligen tillse att inga viktiga data raderas.</li>
+<li>Klicka på <b>Tillämpa</b>.</li>
+</ol>
+
+<h4>För att stoppa cashning av sekventiell I/O: </h4>
+<p>OM din volym som är mål eller iSCSI LUN (blocknivå) har utmärkt sekventiell I/O-prestanda kan du göra så att SSD-cache slutar cacha sekventiell I/O och har åtkomst till data direkt från dina diskar, för högre hastighet och bättre prestanda. </p>
+<ol>
+<li>Klicka på <strong>Konfigurera</strong> för att öppna konfigurationsfönstret.</li>
+<li>Markera <strong>Hoppa över sekventiell I/O</strong>. </li>
+</ol>
+
+
+<h4>För att ta bort SSD-cache:</h4>
+<ol>
+<li>Klicka på <b>Ta bort</b> för att permanent ta bort detta SSD-cache från DiskStation.</li>
+<li>För läs-skriv-cache måste du ta bort det med denna procedur (även om din DiskStation är avstängd), i annat fall inträffar en volymkrasch eftersom endast partiell data finns på detta cache.</li>
+</ol>
+
+<div class="section">
+<h4>Obs:</h4>
+<ul>
+<li>Vid montering eller borttagning av SSD-cache stoppar systemet alla relaterade tjänster (t.ex. delade mappar, installerade filpaket, aktuella anslutningar etc.)</li>
+<li>Om ett läs-skriv-cache på ett lagringsutrymme inte upptäcks vid uppstart, kommer inte systemet att montera det lagringsutrymmet. Vänligen lokalisera och installera om SSD:erna på DiskStation och starta om för att montera lagringsutrymmet. Om du inte kan lokalisera SSD:erna, kan du behöva framtvinga montering av lagringsutrymmet. Vänligen se <a href="space.html">Volym</a> eller <a href="iscsilun.html">iSCSI LUN</a>.</li>
+</ul>
+</div>
+
+<h4>Reparera SSD-cache:</h4>
+<ul>
+<li><strong>För läs-skriv-cache:</strong> Om en av SSD:erna har kraschat, vänligen följ stegen här nedanför för att reparera det.
+  <ol>
+<li>Byt ut trasig SSD mot en ny. (Ny SSD måste vara av samma modell och storlek som den gamla).</li>
+<li>Klicka på knappen <b>Reparera</b>.</li>
+<li>Välj en SSD från listan.</li>
+<li>Klicka på <b>Tillämpa</b>.</li>
+</ol>
+</li>
+<li><strong>För endast läsbar cache:</strong> Om en av SSD:erna har kraschat, vänligen ta bort aktuellt cache och ersätt felaktigt SSD. Klicka därefter på <strong>Skapa</strong> för att göra en ny konfiguration av cache.</li>
+</ul>
+
+
+<h3>Rådgivare för SSD-cache</h3>
+<p>Denna funktion låter dig beräkna och se den totala storleken på antalet filer till vilka systemet senast haft åtkomst. Om du ännu inte har skapat några SSD-cachar på den valda volymen kan den här informationen användas som referens vid utvärdering av hur mycket SSD-cache som är lämpligt för ditt system. Om du tidigare har skapat en SSD-cache på den valda volym visas även analys och användning av cachen här.</p>
+
+<h4>Att använda Rådgivare för SSD-cache:</h4>
+
+<ol>
+<li>Klicka på <b>Rådgivare för SSD-cache</b> för att öppna guiden.</li>
+<li>Välj en volym för beräkning och klicka sedan på <b>Nästa</b>.</li>
+<li>Guiden kommer automatiskt att påbörja summeringen av de filerna till vilka systemet senast haft åtkomst på den valda volymen. Tiden för beräkning varierar beroende på din individuella miljö.</li>
+</ol>
+<p>_____<br> *SSD-cache är endast tillgängligt för vissa modeller.<br> <span class="disable-alpine" style="display: inline;">**Det här gäller inte för läs-skriv-SSD-cachar som skapats på DSM 5.1 eller tidigare versioner. Det betyder att varje 1 GB av SSD-cache som skapats innan DSM 5.2 fortfarande kräver 4 MB systemminne även när den används i miljön DSM 5.2.</span>
+  </p>
+</body>
+</html>

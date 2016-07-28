@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Externa enheter</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2><a name="usbprinter"></a>Skrivare</h2>
+<p>DiskStation kan bli en skrivarserver, vilket tillåter klientdatorer eller mobila enheter att få åtkomst till skrivare som är ansluta till DiskStation. Dessutom har Apple Wireless Printing och Google Cloud Print stöd för att tillåta dig att göra fjärrutskrift genom att använda iOS-enheter eller Googleprodukter och -tjänster.</p>
+<p>Besök <a href="http://www.synology.com" target="_blank">www.synology.com</a> för kompatibla skrivare.</p>
+
+<h3>Installera skrivare</h3>
+<p>Se instruktionerna här nedanför för att installera och ansluta en <span style="display: inline;" class="disable-rc18015xsp">USB- eller </span>nätverksskrivare till din DiskStation.</p>
+
+
+<h4 class="disable-rc18015xsp">Installera en USB-skrivare:</h4>
+<ol class="disable-rc18015xsp">
+<li>Slå på och anslut skrivaren till en USB-port på DiskStation.</li>
+<li>Gå till <strong>Kontrollpanel</strong> > <strong>Externa enheter</strong> > <strong>Skrivare</strong>.</li>
+<li>Välj den skrivare du vill installera. Vänligen notera att DiskStation inte kan känna igen skrivare som anslutits via USB-hubbar.</li>
+<li>Klicka på <b>Skrivarhanterare</b> och välj <b>Installera skrivare</b>.</li>
+<li>I dialogrutan, välj ett av följande lägen:
+<ul>
+<li><b>Nätverk MFP:</b> Tillåter klienter i det lokala nätverket att använda funktionerna utskrift, skanna och fax från din multifunktionsskrivare. Funktionerna skanna och faxa är endast tillgängliga för Windows-datorer.</li>
+<li><b>Nätverksskrivare:</b> Välj detta läge för skrivare som endast har stöd för utskrift om du vill klienterna endast ska kunna använda funktionen för utskrift.</li>
+</ul>
+</li>
+<li>Konfigurera inställningar för Apple Wireless eller Google Cloud Print (valfritt).</li>
+<li>Klicka på <b>Spara</b>.</li>
+</ol>
+
+<div class="section disable-rc18015xsp">
+<h4>Obs:</h4>
+<p>Endast en klient i taget kan ha åtkomst till en nätverks-MFP.</p>
+</div>
+
+
+<h4>Installera en nätverksskrivare:</h4>
+<ol>
+<li>Slå på och anslut nätverksskrivaren till samma lokala nätverk som din DiskStation.</li>
+<li>Gå till <strong>Kontrollpanel</strong> > <strong>Externa enheter</strong> > <strong>Skrivare</strong>.</li>
+<li>Klicka på <b>Lägg till nätverksskrivare</b> och följ instruktionerna i installationsguiden.</li>
+</ol>
+
+<div class="section">
+<h4>Obs:</h4>
+<ul>
+<li><strong>Skrivarnamn:</strong> Ett skrivarnamn måste anges vid installation och kan innehålla upp till 32 tecken, inklusive bokstäver, siffror och understreck.</li>
+	<li><strong>Protokoll:</strong> I allmänhet använder HP:s nätverksskrivare Socket; Canon:s nätverksskrivare använder BJNP; de övriga använder överlag LPR.</li>
+<li><strong>Könamn:</strong> Att ange ett könamn krävs för nätverksskrivare som använder LPR och IPP men är inte applicerbart för skrivare som använder Socket eller BJNP.</li>
+<li><strong>Inte Nätverk MFP:</strong> Nätverksskrivare anslutna till DiskStation kan för närvarande inte använda läget nätverk MFP.</li>
+<li><strong>Inte USB-skrivare:</strong> USB-skrivare som delas med en Synology-produkt kan inte ställas in som nätverksskrivare.</li>
+</ul>
+</div>
+
+
+<h3>Hantera skrivare</h3>
+<p>Fliken skrivare innehåller följande alternativ för att hantera <span style="display: inline;" class="disable-rc18015xsp">USB- eller </span>nätverksskrivare anslutna till DiskStation.</p>
+
+<ul>
+<li><b>Hämta information:</b> Visar information om den valda skrivaren såsom enhetsnamn, tillverkare, status, etc.</li>
+<li><strong>Ta bort:</strong> Tar bort och kopplar från en skrivare från DiskStation.</li>
+<li><strong>Skrivarhanterare:</strong> Innehåller följande alternativ:
+<ul>
+<li><strong>Installera skrivare</strong>: Redigera printerinställningar såsom Apple Wireless Printing eller Google Cloud Print (se här nedanför för instruktioner).</li>
+<li><strong>Rengöra skrivarens rullar:</strong> Avbryter alla utskrifter på alla skrivare.</li>
+<li><strong>Skriv ut testsida:</strong> Skriver ut en testsida för att säkerställa att alla inställningar är korrekta.</li>
+<li><b>Frigör skrivare:</b> Kopplar från skrivare och klient (endast för läget nätverk MFP). När en klient ansluter till en multifunktionsskrivare för att ta emot fax eller skanna filer kan denna uppgift ta lång tid. Om nödvändigt kan anslutningen avbrytas för att tillåta nästa klient i kö att få åtkomst till skrivaren.</li>
+</ul></li>
+</ul>
+
+
+<h4>Att aktivera Apple Wireless Printing:</h4>
+<ol>
+<li>Gå till <strong>Kontrollpanel</strong> > <strong>Externa enheter</strong> > <strong>Skrivare</strong>.</li>
+<li>Välj skrivare från enhetslistan.</li>
+<li>Klicka på <b>Skrivarhanterare</b> > <b>Installera skrivare</b>.</li>
+<li>Markera kryssrutan <b>Aktivera Apple Wireless Printing</b>.</li>
+<li>Välj din skrivares märke och drivrutin.</li>
+<li>Klicka på <b>Spara</b>.</li>
+</ol>
+
+<p>När installationen är klar kan du skriva ut en testsida genom att klicka på <b>Skrivarhanterare</b> > <b>Skriv ut testsida</b>.</li>
+
+<div class="section">
+<h4>Obs:</h4>
+<ul>
+<li>Aktivering av Apple Wireless Printing aktiverar också Bonjour Skrivarsändning för DSM.</li>
+<li>Apple Wireless Printing finns tillgängligt för iOS 4.2 eller senare.</li>
+</ul>
+</div>
+
+
+<h4>Aktivera Google Cloud Print:</h4>
+<ol>
+<li>Gå till <strong>Kontrollpanel</strong> > <strong>Externa enheter</strong> > <strong>Skrivare</strong>.</li>
+<li>Välj skrivare från enhetslistan.</li>
+<li>Klicka på <b>Skrivarhanterare</b> > <b>Installera skrivare</b>.</li>
+<li>Markera rutan <b>Aktivera Google Cloud Print</b>.</li>
+<li>Ange följande detaljer:
+<ul>
+
+<li>Information om ditt Google-konto.</li>
+<li>Din skrivares märke och drivrutin.</li>
+</ul>
+<li>Klicka på <b>Spara</b>.</li>
+</ol>
+<p>När installationen är klar kan du skriva ut en testsida genom att klicka på <b>Skrivarhanterare</b> > <b>Skriv ut testsida</b>.</li>
+</p>
+<p>För att hantera uppgifter för Google Cloud Print, klicka på länken <a href="http://www.google.com/cloudprint/manage.html" target="_blank">Google Cloud Print</a>.</p>
+
+
+<h3>Åtkomst till skrivare</h3>
+<p>Se avsnittet här nedanför för att få åtkomst till skrivare med PC eller Mac.</p>
+<h4><a name="others"></a>Åtkomst till skrivare med en Windowsdator:</h4>
+<p>
+Bästa sättet att få åtkomst till utskriftstjänsten i DiskStation-enheten är att upprätta anslutningen till skrivaren med Synology Assistant. Gå till dess Hjälp för detaljerade anvisningar.
+</p>
+
+<p>Om Synology Assistant inte är installerat i datorn, se här nedanför, för andra sätt att få åtkomst till utskriftstjänsten i DiskStation-enheten.</p>
+<p><strong>Typ 1. Delad nätverksskrivare</strong></p>
+<ol>
+<li>På din PC, öppna <b>Nätverk </b>i Filutforskaren och dubbelklicka på DiskStation.</li>
+
+<li>Dubbelklicka på <span style="display: inline;" class="disable-rc18015xsp"><b>usbprinter</b> eller </span><b>nätverksskrivarnamn</b>; systemet uppmanar dig att installera den korrekta drivrutinen, klicka sedan på <b>Ja</b>.</li>
+
+<li>Vänligen erhåll skrivarens drivrutin från tillverkarens CD eller webbsida. Välj tillverkare och modell för skrivaren, eller klicka på <strong>Har disk</strong> för att välja drivrutinens plats. Klicka sedan på <b>OK</b>.</li>
+<li>Systemet startar nätverksskrivarens installation. När installationen är klar kan du börja använda skrivaren. </li>
+</ol>
+
+
+<p><strong>Typ 2. LPR-port (rekommenderas)</strong></p>
+<ol>
+<li>På din PC, klicka på <b>Start</b> och gå till <b>Enheter och skrivare.</b></li>
+<li>Klicka på <b>Lägg till skrivare</b>. </li>
+	<li>Välj <strong>Lägg till en nätverksskrivare, trådlös skrivare eller Bluetooth-skrivare.</strong> </li>
+	<li>Välj <strong>Skrivaren jag vill använda finns inte med i listan.</strong></li>
+<li>Välj <b>Lägg till en skrivare med TCP/IP-adress eller värdnamn</b>. Klicka på <b>Nästa</b> för att fortsätta.</li>
+<li>Välj att Enheten ska vara <b>TCP/IP-enhet.</b></li>
+<li>Ange IP-adress för DiskStation. Klicka på <b>Nästa</b> för att fortsätta.</li>
+<li>Välj <b>Typ av enhet:</b> <strong>Anpassa</strong> > <strong>Inställningar</strong> > …. Klicka på <b>Nästa</b> för att fortsätta.</li>
+
+<li>Välj <b>LPR</b> som protokoll; Ange <span style="display: inline;" class="disable-rc18015xsp"><b>usbprinter</b> eller </span><b>nätverksskrivarnamn</b> som könamn,och markera kryssrutan <b>Byte-räkning för LPR aktiverad</b>. Klicka på <b>OK</b> för att fortsätta.</li>
+
+<li>Vänligen erhåll skrivarens drivrutin från tillverkarens CD eller webbsida. Välj tillverkare och modell för skrivaren, eller klicka på <strong>Har disk</strong> för att välja drivrutinens plats. Klicka sedan på <b>OK</b>.</li>
+	<li>Systemet startar nätverksskrivarens installation. När installationen är klar kan du börja använda skrivaren.</li>
+</ol>
+
+<h4>Åtkomst till skrivare med en Mac:</h4>
+<p>
+Mac-användare kan få åtkomst till utskriftstjänsten på DiskStation-enheten genom att aktivera DSM:s Bonjour-skrivarsändning och lägga till skrivaren i Systeminställningar.</p>
+<P>Se till att din DiskStation använder Postscript-skrivare innan du fortsätter.
+</p>
+<p><strong>Steg 1. Aktivera DSM:s Bonjour-skrivarsändning</strong></p>
+<ol>
+<li>
+Logga in på DSM som <b>admin</b> eller som en användare tillhörande gruppen <b>administrators</b>.
+</li>
+<li>
+Gå till <b>Kontrollpanel</b> > <strong>Filtjänster</strong> > <b>Win/Mac/NFS</b>.
+</li>
+<li>
+Markera <b>Aktivera Bonjour Skrivarsändning</b>.
+</li>
+</ol>
+
+<p><strong>Steg 2. Åtkomst till skrivare med Mac</strong></p>
+<ol>
+<li>
+På din Mac, gå till <b>Systeminställningar</b> > <b>Skriv ut Skanna</b> och klicka sedan på <b>+</b>.
+</li>
+
+<li>
+Välj <span style="display: inline;" class="disable-rc18015xsp"><b>usbprinter[nummer]</b> eller </span><b>nätverksskrivarnamn</b> från rullgardinsmenyn. Din Mac konfigurerar skrivaren automatiskt.
+</li>
+
+</ol>
+</div>
+</body>
+</html>

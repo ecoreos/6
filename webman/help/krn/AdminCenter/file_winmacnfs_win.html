@@ -1,0 +1,149 @@
+﻿<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Win/Mac/NFS</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Windows 파일 서비스</h2>
+
+<p>Windows 파일 서비스는 SMB/CIFS를 지원하는 Windows, Mac 및 Linux 클라이언트가 DiskStation에 저장된 데이터에 액세스할 수 있도록 합니다. Windows 탐색기를 통해 DiskStation의 파일을 검색하거나 공유 폴더를 네트워크 드라이브로 마운트하려면 <strong>제어판</strong> > <strong>파일 서비스</strong> > <strong>Win/Mac/NFS</strong>에서 이 옵션을 활성화합니다.</p>
+
+
+<h4>Windows 파일 서비스 활성화하기:</h4>
+<ol>
+<li>
+<b>Windows 파일 서비스 활성화</b>를 선택합니다.
+</li>
+<li>
+<b>적용</b>을 클릭합니다.
+</li>
+</ol>
+
+<div class="section disable-hi3535">
+<h4>참고:</h4>
+<p>Windows 파일 서비스를 활성화한 후 SMB를 통해 Mac 컴퓨터로 색인이 지정된 폴더를 마운트한 다음 Finder에서 Spotlight를 사용하여 마운트된 폴더 내에서 파일 내용을 검색할 수 있습니다.</p>
+</div>
+
+
+<h3>작업 그룹</h3>
+<p>이 옵션을 사용하여 네트워크 관리 목적으로 시스템을 특정 작업 그룹의 구성원으로 지정할 수 있습니다.</p>
+
+<div class="section">
+
+<h4>참고:</h4>
+<ul>
+<li>작업 그룹 이름은 1~15자를 포함할 수 있습니다. 이름에 다음 문자는 포함할 수 없습니다: [ ] ; : &quot; < > * + = \ / | ? ,</li>
+<li>OS X 10.9를 실행하는 Mac을 사용 중이며 DiskStation이(가) Windows 도메인에 가입되어 있는 경우, Windows 파일 서비스를 통해 DiskStation에 저장된 파일에 액세스하기 위해 DiskStation 로컬 사용자 이름 앞에 <strong>localhost\</strong>을 추가하여 로그인할 수 있습니다.</li>
+</ul>
+</div>
+
+<h3 class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64">이전 버전에 대한 액세스 허용 안 함</h3>
+<p class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64">Windows 탐색기에서, 사용자가 공유 폴더 내에서 <strong>이전 버전</strong> 탭을 클릭하여 폴더 또는 파일의 스냅샷에 액세스할 수 있으므로, 관리자의 도움을 받지 않고 데이터를 복원 또는 복사할 수 있습니다. <strong>이전 버전에 대한 액세스 허용 안 함</strong>을 선택하면, "이전 버전" 페이지에 아무 정보도 표시되지 않습니다.</p>
+
+<div class="section enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64"><h4>참고:</h4>
+<ul>
+	<li>이전 버전에 상응하는 스냅샷 촬영 당시, 사용자 계정이 생성되었고 상응하는 스냅샷이 촬영된 공유 폴더에 대한 읽기 권한이 사용자에게 부여된 경우에만 사용자가 이전 버전에 대한 액세스가 허용됩니다.</li>
+</ul>
+</div>
+
+<h3>전송 로깅 활성화</h3>
+<p>이 옵션을 선택하면, Windows 파일 전송 프로토콜과 유사한 CIFS/SMB 프로토콜을 통한 파일 또는 폴더의 생성, 삭제, 읽기, 쓰기, 이동 및 이름 변경을 비롯하여 파일 액세스 작업에 대한 로그가 활성화됩니다.</p>
+
+<h3>고급 설정</h3>
+<p><strong>고급 설정</strong> 단추를 클릭하여 아래 옵션을 볼 수 있습니다.</p>
+<ul>
+<li><strong>WINS 서버</strong>: Microsoft Windows Internet Name Service (WINS) 는 NetBIOS 이름 - IP 주소 대응 서비스입니다. Window 사용자들은 이 시스템이 WINS 서버에 등록되도록 구성되었을 경우 TCP/IP 네트워크에서 보다 쉽게 시스템을 찾을 수 있습니다.</li>
+<li><strong>Windows 파일 서비스용 최대 프로토콜</strong>: 네트워크 구성에 따라 DiskStation에서 지원하는 가장 높은 프로토콜 수준을 설정할 수 있습니다.
+  <ul>
+    <li><strong>SMB 2 활성화</strong>: SMB(서버 메시지 블록) 2는 Windows Vista부터 지원되었으며, SMB의 고급 버전입니다. SMB 2는 네트워크 패킷 수를 줄이고 성능을 강화하기 위해 여러 SMB 작업을 단일 요청에 통합하는 능력을 추가합니다.</li>
+    <li><strong>Large MTU로 SMB 2 활성화</strong>: MTU(Maximum transmission unit)는 통신 프로토콜에서 전달될 수 있는 가장 큰 데이터 단위를 말합니다. 1 또는 10기가비트 이더넷 같은 좀더 빠른 네트워크 인터페이스를 이용하기 위해 Large MTU는 MTU를 1메가바이트(MB)로 늘립니다. Large MTU를 활성화하면 처리해야할 패킷 수가 줄어들어 대형 파일 전송 속도와 효율성이 향상됩니다.</li>
+    <li><strong>SMB 3 활성화</strong>: Windows 8 및 Windows Server 2012부터 SMB 3이 지원되었습니다. SMB 3은 SMB 2의 향상된 버전입니다. SMB 3은 AES 기반 파일 암호화 전송을 지원하므로 피어-투-피어 파일 전송의 보안을 강화합니다.</li>
+</ul>
+<div class="section">
+  <h4>참고:</h4>
+  <ul>
+    <li>SMB 2는 Windows Vista, Windows Server 2008 R2, Windows 7 이상에서 지원됩니다.</li>
+    <li>Large MTU는 Windows Server 2008 R2, Windows 7 이상에서 지원됩니다.</li>
+    <li>Windows 컴퓨터에서 Large MTU를 효과적으로 만들려면 컴퓨터의 레지스트리 설정을 수정해야 합니다. 자세한 내용은 Microsoft 기술 지원(이 <a href="http://technet.microsoft.com/en-us/library/ff625695(v=ws.10).aspx" target="_blank">게시물</a> 등)을 참조하십시오.</li>
+    </ul>
+</div>
+<li><strong>암호화 전송 모드</strong>: SMB 3가 활성화되어 있으면 Windows 파일 서비스에서는 전송 암호화를 추가하여 파일 전송 보안을 강화합니다.
+  <ul>
+    <li><b>비활성화</b>: 전송 암호화가 적용되지 않습니다.</li>
+    <li><b>자동</b>: 전송 암호화는 이 기능을 지원하는 클라이언트에만 적용됩니다.</li>
+    <li><b>강제</b>: 전송 암호화가 항상 적용됩니다. 따라서 전송 암호화를 지원하지 않는 클라이언트가 Windows 파일 서비스를 사용할 수 없습니다.</li>
+  </ul>
+</li>
+<div class="section">
+  <h4>참고:</h4>
+  <ul>
+    <li>전송 암호화는 Windows 8, Windows 2012 이상에서 지원됩니다.</li>
+    <li>전송 암호화가 활성화되어 있으면 Windows 파일 서비스에 대한 익명 로그온이 지원되지 않습니다.</li>
+    <li>전송 암호화가 활성화되어 있을 때, 응용 프로그램 시간 초과를 피하기 위해 <b>Opportunistic Locking 비활성화</b>를 선택 해제된 상태로 두십시오.</li>
+    </ul>
+</div>
+<li><strong>Opportunistic Locking 비활성화</strong>: 이 옵션을 선택하면 CIFS의 &quot;Opportunistic Locking&quot;이 비활성화되어 데이터베이스 응용 프로그램이 네트워크를 통해 DiskStation 장치의 공유 폴더 상의 데이터베이스 파일에 접근할 때 성능이 증가합니다.</li>
+<li>
+  <strong>Local Master Browser 활성화</strong>: 동일한 서브넷 안에 복수의 Windows 컴퓨터가 있으면 이들 중 한 컴퓨터를 &quot;Local Master Browser&quot;로 선택합니다. Local Master Browser는 서브넷 내의 다른 컴퓨터 및 해당 공유 리소스의 목록을 유지하고, 이러한 목록을 다른 컴퓨터와 공유합니다. 이 옵션은 DiskStation이(가) Local Master Browser 역할로 간주되도록 허용합니다.
+</li>
+
+<div class="section">
+<h4>참고:</h4>
+<p>이 기능을 활성화하면 하드 디스크 대기 기능이 비활성화되고 패스워드 없이 guest 계정이 활성화됩니다.</p>
+</div>
+
+
+<li><strong>DirSort VFS 모듈 활성화</strong>: 폴더 이름을 정렬하여 알파벳순으로 나열합니다. 이 옵션을 활성화하면 시스템 성능에 영향을 미칩니다.</li>
+
+<li><strong>거부 파일</strong>: 지정한 기준에 따라 파일을 숨깁니다. 기준은 와일드카드(*)를 포함할 수 있으며 항목이 여러 개인 경우 슬래시(/)로 구분합니다. 예: <i>/abc*/*.txt/*.conf/</i>. 이 옵션을 활성화하면 시스템 성능에 영향을 미칩니다.</li>
+
+<li><strong>공유 폴더 내의 기호 링크 허용</strong>: 이 옵션을 활성화하면 기호 링크가 동일한 공유 폴더 내의 파일이나 폴더를 가리키게 됩니다. DSM 터미널을 사용하여 기호 링크를 만들 수 있습니다.</li>
+
+<li><strong>공유 폴더 전반의 기호 링크 허용</strong>: 이 옵션을 활성화하면 기호 링크가 다른 공유 폴더 내의 타겟을 가리키게 됩니다. DSM 터미널을 사용하여 기호 링크를 만들 수 있습니다. 이 옵션을 활성화하면 사용자는 액세스 권한 없이도 기호 링크의 타겟인 공유 폴더를 볼 수 있고 이에 접근할 수 있게 됩니다.</li>
+
+<li><strong>MSDFS VFS 모듈 활성화</strong>: 기호 링크가 다른 SMB 서버에 위치한 파일이나 폴더를 가리키도록 합니다. Windows XP와 같은 Windows 구 버전을 사용하는 경우, 클라이언트 및 DiskStation는 이 옵션을 활성화하기 전에 Windows 도메인에 가입해야 합니다. MSDFS 링크 생성에 대한 자세한 정보는 <a href="http://www.samba.org/samba/docs/man/Samba-HOWTO-Collection/msdfs.html" target=_blank>여기</a>를 참조하십시오. 이 옵션을 비활성화하기 전에 클라이언트 장치의 캐시를 삭제해야 합니다. 그렇지 않으면 정상적인 성능이 영향을 받을 수 있습니다.</li>
+
+<li><strong>동일한 IP 주소로부터의 다중 연결 비활성화</strong>: 이 옵션이 활성화되면, DiskStation는 Windows 파일 서비스를 사용한 클라이언트에서 IP 주소 당 하나의 연결만 허용합니다. IP 주소가 동일한 다중 클라이언트가 Windows 파일 서비스를 사용하는 경우, DiskStation는 최신 연결을 유지하고 기존 연결들을 중지시킵니다. NAT 환경에서 클라이언트는 단일 IP 주소를 사용할 수 있는데, 이 경우 이 옵션이 정상 성능에 영향을 미칠 수 있습니다.</li>
+
+<li><strong>디버그 로그 수집</strong>: 이 옵션을 활성화하면 디버깅을 위해 상세한 로그가 저장됩니다. 이 옵션을 활성화하면 시스템 성능에 영향을 미칩니다.</li>
+<li><strong>기본 UNIX 권한 적용</strong>: 이 옵션을 활성화하면 파일 및 폴더를 업로드하거나 생성할 때 기본 UNIX 권한에 적용됩니다. UNIX 권한은 파일의 경우 744, 폴더의 경우 755입니다. 이 옵션을 비활성화하면, UNIX 권한은 파일과 폴더에 대해 777입니다.</li>
+<div class="section enable-eds14">
+<h4>참고:</h4>
+<ul>
+<li>이 옵션을 활성화하면 다른 프로토콜 사이에서 권한 문제가 일관되지 않을 수 있습니다. 일관성을 유지하려면 이 옵션을 비활성화 상태를 유지하는 것이 좋습니다.</li>
+</ul>
+</div>
+<div class="section disable-eds14">
+<h4>참고:</h4>
+<ul>
+  <li>Windows ACL 가능 공유 폴더(&quot;photo&quot;를 제외한 모든 공유 및 외부 드라이브의 공유)의 경우, Linux 또는 FTP 클라이언트에서 <strong>chmod</strong> 명령을 실행하여 폴더 및 파일 권한 유형을 Windows ACL에서 UNIX로 변경하십시오.</li>
+  <li>이 옵션을 활성화하면 다른 프로토콜 사이에서 권한 문제가 일관되지 않을 수 있습니다. 일관성을 유지하려면 이 옵션을 비활성화 상태를 유지하는 것이 좋습니다.</li>
+</ul>
+</div>
+<li><b>파일 생성 시 디스크 공간 유지 안 함</b>: DiskStation에 파일을 만들 때 디스크 공간이 예약되는 것을 허용하지 않으려면 이 옵션을 활성화합니다.</li>
+<li><strong>SMB 캐시 지우기</strong>: 이 단추를 클릭하여 문제 해결 목적으로 아래의 SMB 캐시 파일을 삭제합니다:
+  <ul>
+
+<li>/var/cache/samba/netsamlogon_cache.tdb</li>
+<li>/var/lib/samba/winbindd_cache.tdb</li>
+<li>/var/lib/samba/share_info.tdb</li>
+<li>/var/lib/samba/registry.tdb</li>
+<li>/run/samba/connections.tdb</li>
+<li>/run/samba/gencacche.tdb</li>
+<li>/run/samba/gencache_notran.tdb</li>
+</ul>
+</li>
+
+</ul>
+
+</body>
+</html>

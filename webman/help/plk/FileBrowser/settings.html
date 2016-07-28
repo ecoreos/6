@@ -1,0 +1,170 @@
+﻿
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Zarządzanie opcjami aplikacji File Station – Pomoc Synology DSM</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="Learn how to customize File Station settings related to file management, shared links, and security.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Zarządzanie ustawieniami aplikacji File Station</h2>
+<p>Aby zarządzać ustawieniami aplikacji File Station, otwórz aplikację <strong>File Station</strong> i kliknij przycisk <b>Ustawienia</b>.</p>
+
+<h3>Ogólne</h3>
+<p>Tutaj można włączyć rejestr programu File Station w celu rejestrowania działań wszystkich użytkowników. Działania użytkowników to <b>Utwórz folder</b>, <b>Prześlij</b>, <b>Pobierz</b>, <b>Usuń</b>, <b>Zmień nazwę</b>, <b>Przenieś</b>, <b>Kopiuj</b> i <b>Właściwość ustawiona</b>.</p>
+<h4>Aby włączyć rejestr aplikacji File Station:</h4>
+<ol>
+<li>Jeżeli chcesz rejestrować działania wszystkich użytkowników, zaznacz pole <b>Włącz rejestr programu File Station</b>.</li>
+<li>Kliknij przycisk <b>OK</b>.</li>
+</ol>
+<h4>Aby wyświetlić rejestr programu File Station:</h4>
+<ol>
+<li>Kliknij <b>Zobacz logi</b>, aby przejść do pozycji <strong>Centrum logów</strong>.</li>
+<li>Kliknij kartę <b>Transfer plików</b>.</li>
+</ol>
+
+<h4>Aby automatycznie nadpisać pliki przesyłane za pomocą metody przeciągania i upuszczania lub za pomocą skrótów klawiszowych:</h4>
+<p>Zaznacz opcję <strong>Zawsze zastępuj pliki, kiedy przeciągam je i upuszczam na przeglądarkę internetową lub wklejam je przy użyciu skrótów klawiszowych</strong>, jeśli chcesz automatycznie nadpisać pliki o tej samej nazwie, gdy przeciągasz je i upuszczasz je z pulpitu komputera do przeglądarki lub wklejasz je przy użyciu skrótów klawiszowych w aplikacji File Station.</p>
+
+
+<h4>Aby włączyć inteligentne przeciąganie i upuszczanie:</h4>
+<p>Po przeciągnięciu i upuszczeniu plików w aplikacji File Station ta funkcja automatycznie określi, czy to zadanie przesyłania jest kopiowaniem czy przenoszeniem.</p>
+
+<ol>
+<li>Zaznacz opcję <strong>Włącz inteligentne przeciąganie i upuszczanie</strong>.</li>
+<li>Wybierz akcję, która będzie wykonywana, jeśli w tym samym czasie inny użytkownik będzie przenosił pliki posiadające tę samą nazwę do tej samej lokalizacji:<ul>
+<li><strong>Nadpisz</strong>: przesyłane pliki nadpiszą pliki posiadające tę samą nazwę.</li>
+<li><strong>Pomiń</strong>: przesyłane pliki zostaną pomięte i nie nadpiszą plików posiadających tę samą nazwę.</li>
+</ul>
+</li>
+<li>Kliknij przycisk <strong>OK</strong>.</li>
+</ol>
+
+<div class="section">
+<h4>Uwaga:</h4>
+<p>Jeśli chcesz zmienić funkcję kopiowania lub przenoszenia określoną przez inteligentną funkcję przeciągania i upuszczania, dostosuj według potrzeb następujące klawisze skrótu:</p>
+<ul>
+<li>Aby przełączyć do funkcji kopiowania: Podczas przeciągania i upuszczania wciśnij klawisz Ctrl.</li>
+<li>Aby przełączyć do funkcji przenoszenia: Podczas przeciągania i upuszczania wciśnij klawisz Shift.</li>
+</ul>
+</div>
+
+
+<h4>Aby przeglądać pliki z komputera lokalnego i zarządzać nimi za pomocą programu File Station:</h4>
+<ol>
+<li>Zaznacz pole wyboru <b>Przeglądaj pliki z komputera lokalnego za pomocą programu File Station</b>.</li>
+<li>Kliknij przycisk <b>OK</b>.</li>
+</ol>
+
+
+<h4>Aby udostępnić listę użytkowników DSM użytkownikom innym niż administratorzy:</h4>
+<p>Dzięki tej opcji użytkownicy niebędący administratorami mogą uzyskać dostęp do pełnej listy użytkowników systemu DSM w przypadku, gdy chcą wyszukać pliki należące do określonych użytkowników/grupy systemu DSM lub jeśli chcą udostępniać łącza do plików innym użytkownikom systemu DSM.</p>
+
+<ol>
+<li>Zaznacz opcję <strong>Udostępnij listę użytkowników DSM użytkownikom niebędącym administratorami</strong>.</li>
+<li>Kliknij przycisk <strong>OK</strong>.</li>
+</ol>
+
+
+<h3>Stosowanie domyślnych uprawnień systemu UNIX</h3>
+<p>Kliknij przycisk <strong>Ustawienia zaawansowane</strong> i zaznacz tą opcję, aby zastosować domyślne ustawienia systemu UNIX podczas przesyłania lub tworzenia plików i folderów. Nadane uprawnienia są identyczne z uprawnieniami nadanymi przez parametr <strong>umask</strong> polecenia UNIX. Po włączeniu tej opcji uprawnienia systemu UNIX są ustawione na 644 dla plików i 755 dla folderów. Po wyłączeniu tej opcji uprawnienia systemu UNIX są ustawione na 666 dla plików i 777 dla folderów. Domyślna wartość umask to 022.</p>
+<div class="section">
+<h4>Uwaga:</h4>
+<ul>
+  <li>W przypadku folderów współdzielonych z obsługą listy kontroli dostępu systemu Windows (ACL) (wszystkie udostępnienia z wyłączeniem udostępnień „photo” i udostępnień na zewnętrznych dyskach) należy uruchomić polecenie <strong>chmod</strong> w kliencie Linux lub FTP, aby zmienić rodzaje uprawnień dotyczące folderów i plików z listy kontroli dostępu systemu Windows (ACL) na UNIX.</li>
+  <li>Włączenie tej opcji może spowodować problemy z niespójnością uprawnień między różnymi protokołami. Aby uniknąć niespójności, nie zaleca się włączania tej opcji.</li>
+</ul>
+</div>
+<h3 class="disable-eds14">Montowanie/połączenia</h3>
+<p class="disable-eds14">Wszyscy użytkownicy mogą domyślnie montować zdalne foldery lub dyski wirtualne. Tutaj można ograniczyć dostęp do zarządzania zdalnymi folderami lub dyskami wirtualnymi tylko do administratorów.</p>
+
+<div class="disable-eds14 section">
+<h4>Uwaga:</h4>
+<p>Użytkownicy inni niż administratorzy mogą montować zdalne foldery tylko w swoim folderze <b>home</b>.</p>
+</div>
+<h4 class="disable-eds14">Aby pozwolić wszystkim użytkownikom domyślnie montować zdalne foldery lub dyski wirtualne:</h4>
+<ol class="disable-eds14">
+<li>Wybierz <b>Wszyscy użytkownicy</b> lub <b>Administratorzy</b> w sekcji <b>Folder zdalny</b> lub <b>Dysk wirtualny</b>.</li>
+<li>Kliknij przycisk <b>OK</b>.</li>
+</ol>
+<h4 class="disable-eds14">Aby zezwolić różnym użytkownikom na montowanie serwerów i usług chmury:</h4>
+<ol class="disable-eds14">
+  <li>Wybierz <b>Wszyscy użytkownicy</b>, <b>Administratorzy</b> lub <strong>Określony użytkownik</strong>. </li>
+  <li>Wybranie opcji <strong>Określony użytkownik</strong> spowoduje otwarcie okna, które umożliwi skonfigurowanie uprawnień montowania dla różnych użytkowników. Aby umożliwić określonemu użytkownikowi dostęp, upewnij się, że zaznaczone jest pole <strong>Włączone</strong>. Aby ograniczyć określonemu użytkownikowi dostęp, upewnij się, że pole <strong>Włączone</strong> nie jest zaznaczone. Po zakończeniu działań kliknij przycisk <strong>OK</strong>, aby zamknąć okno.</li>
+  <div class="section">
+    <h4>Uwaga:</h4>
+    <ul>
+      <li>Użytkownicy należący do grupy <strong>administratorzy</strong> mogą używać tej funkcji, ale nie mogą wprowadzać żadnych zmian. Użytkownicy logujący się jako <strong>gość</strong> nie mogą używać tej funkcji i wprowadzać żadnych zmian. Służy do określania uprawnień dla wszystkich innych użytkowników</li>
+    </ul>
+  </div>
+  <li>Kliknij przycisk <strong>OK</strong>.</li>
+</ol>
+<h3>Udostępnione łącza</h3>
+<p>Domyślnie wszyscy użytkownicy mogą udostępniać łącza do plików. Tutaj można ograniczyć dostęp do zarządzania udostępnionymi łączami tylko do administratorów.</p>
+<h4>Aby zezwolić różnym użytkownikom na udostępnianie łączy do plików:</h4>
+<ol>
+<li>Wybierz <b>Wszyscy użytkownicy</b>, <b>Administratorzy</b> lub <strong>Określony użytkownik</strong>.</li>
+<li>Kliknij przycisk <b>OK</b>.</li>
+</ol>
+
+<h4>Aby otworzyć pliki HTML jako zwykły tekst:</h4>
+
+<ol>
+<li>Zaznacz pole <strong>Zawsze otwieraj pliki HTML w formacie zwykłego tekstu</strong>. Gdy ta opcja jest włączona, pliki HTML (np. HTM, HTML, JSP, XHTML) są wyświetlane jako zwykły tekst, gdy użytkownicy otwierają je za pomocą łącza udostępniania plików. Ta opcja chroni przed przechwyceniem sesji logowania przy użyciu osadzonego skryptu w plikach HTML.</li>
+<li>Kliknij przycisk <strong>OK</strong>.</li>
+</ol>
+
+<h3>Limit prędkości</h3>
+<p>Możesz ustawić limit prędkości, aby kontrolować maksymalną przepustowość łącza dla użytkowników lub grup, którzy przesyłają dane za pośrednictwem aplikacji File Station.</p>
+
+
+<h4>Aby włączyć limit prędkości:</h4>
+<ol>
+  <li>Zaznacz pole <b>Włącz limit prędkości</b> lub <strong>Włącz limit prędkości zgodnie z harmonogramem</strong>, jeśli chcesz włączyć limit prędkości tylko w niektórych okresach. Jest to globalne ustawienie serwera, które zastąpi ustawienia poszczególnych użytkowników i grup. Wybranie opcji <strong>Brak limitu prędkości</strong> dezaktywuje ustawienia limitu prędkości dla wszystkich użytkowników i grup.</li>
+  <li>Kliknij przycisk <strong>Ustawienia limitu prędkości</strong>, aby zmodyfikować ustawienia dla poszczególnych użytkowników lub grup. W przypadku każdego użytkownika lub grupy można wybrać jedną z następujących opcji:  </li>
+    <ul>
+      <li><strong>Zastosuj ustawienia grupy:</strong> ustawienia limitu prędkości będą takie same jak w przypadku grupy, do której należy użytkownik. </li>
+      <li><strong>Brak limitu prędkości:</strong> brak limitu prędkości, gdy członkowie grupy przesyłają pliki za pomocą tej usługi.</li>
+      <li><strong>Stały:</strong> zastosowanie stałego limitu prędkości dla użytkownika lub członków grupy. Ograniczenia prędkości przesyłania i pobierania można określić w polach po lewej stronie.</li>
+      <li><strong>Zmienny:</strong> określanie dwóch różnych limitów szybkości oraz stosowanie ich dla użytkownika i członków grupy zgodnie z harmonogramem. Kliknij przycisk <strong>Dostosuj</strong>, aby zmodyfikować ustawienia limitu prędkości i ustalić harmonogram.</li>
+    </ul>
+
+  <li>Kliknij przycisk <b>Zastosuj</b>.</li>
+</ol>
+<div class="section">
+  <h4>Uwaga:</h4>
+  <ul>
+    <li>Więcej szczegółów dotyczących dynamiki limitów prędkości w grupach można znaleźć <a href="../AdminCenter/file_group_edit.html">tutaj</a>.</li>
+    <li>Podczas ustawiania ograniczania prędkości dla użytkownika w części <strong>Rezultat</strong> będzie można zobaczyć rzeczywiste ograniczenie prędkości zgodne z ustawieniami indywidualnymi lub grupy. Jeśli na przykład użytkownik Achilles ma przypisany limit pobierania 100 KB/s, ale należy do grupy z limitem pobierania 500 KB/s, w części <strong>Wyniki</strong> wyświetlana będzie wartość „0/500”.</li>
+  </ul>
+</div>
+
+
+
+<h3>Bezpieczeństwo</h3>
+
+<p>Tutaj można znaleźć poniższe ustawienia zabezpieczeń.</p>
+
+<h4>Aby otworzyć pliki HTML jako zwykły tekst:</h4>
+
+<ol>
+<li>Zaznacz pole <strong>Zawsze otwieraj pliki HTML w formacie zwykłego tekstu</strong>. Gdy ta opcja jest włączona, pliki HTML (np. HTM, HTML, JSP, XHTML) są wyświetlane jako zwykły tekst, gdy użytkownicy otwierają je za pomocą aplikacji File Station. Ta opcja chroni przed przechwyceniem sesji logowania przy użyciu osadzonego skryptu w plikach HTML.</li>
+<div class="section">
+<h4>Uwaga:</h4>
+<ul>
+<li>Nie jest to ustawienie globalne. Każdy użytkownik może włączyć lub wyłączyć tę opcje stosownie do swoich potrzeb.</li>
+</ul>
+</div>
+<li>Kliknij przycisk <strong>OK</strong>.</li>
+</ol>
+
+</body>
+</html>

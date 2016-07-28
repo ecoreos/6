@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>File Station</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2>Připojení vzdálených složek</h2>
+
+<p>Prostřednictvím služby File Station máte možnost připojit vzdálené složky ze vzdálených serverů (například ze síťových počítačů nebo jiných zařízení Synology NAS) a procházet dostupné síťové zdroje.</p>
+
+
+
+
+
+<h4>Připojení vzdálené sdílené složky CIFS*:</h4>
+<ol>
+<li>Klikněte na možnost <b>Nástroje</b> > <b>Připojit vzdálenou složku</b> > <strong>Sdílená složka CIFS</strong>.</li><img src="about:blank" class="help_image"/><li>V poli <b>Složka</b> zadejte cestu ke vzdálené složce ve formátu <code>\\Vzdálený_server\Vzdálená_složka</code>, například <code>\\192.168.0.2\share</code> nebo <code>\\chad\cheeseburger\pictures</code>.</li>
+<li>Pokud vzdálený server vyžaduje oprávnění pro přístup ke vzdálené složce, zadejte přihlašovací údaje pro vzdálený server do polí <b>Název účtu</b> a <b>Heslo</b>.</li>
+<li>Klikněte na možnost <b>Procházet</b> a v zařízení DiskStation vyberte nebo vytvořte prázdnou cílovou složku pro připojení vzdálené složky.</li><img src="about:blank" class="help_image"/><li>Pokud chcete, aby zařízení DiskStation tuto vzdálenou složku připojovalo při každém spuštění nebo restartování systému, zaškrtněte políčko <b>Automaticky připojit při spuštění</b>.</li>
+<li>Kliknutím na možnost <b>Připojit</b> připojíte vzdálenou složku k cílové složce. Nyní je možné se ke vzdálené složce dostat a spravovat ji ze zařízení DiskStation.</li>
+</ol>
+
+<h4>Připojení vzdálené sdílené složky NFS:</h4>
+
+<ol>
+<li>Klikněte na možnost <b>Nástroje</b> > <b>Připojit vzdálenou složku</b> > <b>Sdílená složka NFS</b>.</li><img src="about:blank" class="help_image"/><li>V poli <b>Složka</b> zadejte cestu ke vzdálené složce ve formátu <code>\\Vzdálený_server\Vzdálená_složka</code>, například <code>192.168.0.2:/volume1/share</code>.</li>
+<li>Vyberte požadovanou verzi NFS a protokolu přenosu.</li>
+<li>Klikněte na možnost <b>Procházet</b> a v zařízení DiskStation vyberte nebo vytvořte prázdnou cílovou složku pro připojení vzdálené složky.</li><img src="about:blank" class="help_image"/><li>Pokud chcete, aby zařízení DiskStation tuto vzdálenou složku připojovalo při každém spuštění nebo restartování systému, zaškrtněte políčko <b>Automaticky připojit při spuštění</b>.</li>
+<li>Kliknutím na možnost <b>Připojit</b> připojíte vzdálenou složku k cílové složce. Nyní je možné se ke vzdálené složce dostat a spravovat ji ze zařízení DiskStation.</li>
+</ol>
+
+<div class="section">
+<h4>Poznámka:</h4>
+<p>systém NFSv4 podporuje pouze protokol TCP.</p>
+</div>
+
+<h4>Odpojení vzdálené složky:</h4>
+<ol>
+<li>Vyberte vzdálenou složku, kterou chcete odpojit, a klikněte na možnost <b>Nástroje</b> > <b>Odpojit</b>.</li><img src="about:blank" class="help_image"/><li>Případně stačí na vzdálenou složku kliknout pravým tlačítkem a vybrat možnost <b>Odpojit</b>.</li><img src="../../../online_img/dsm/FileStation/mountremotevolume/04.png" class="help_image"/></ol>
+
+<div class="section">
+<h4>Poznámka:</h4>
+<ul>
+<li>Maximální počet souběžných vzdálených složek je 100.</li>
+<li>Vzdálené složky je možné připojit pouze ze vzdáleného serveru, který podporuje protokoly CIFS nebo NFS.</li>
+<li>Vzdálené složky lze připojit pouze do podsložek pod sdílenými složkami.</li>
+<li class="enable-dockerx64">Připojování vzdálených složek je podporováno pouze v režimu s vysokým oprávněním. Chcete-li používat tuto funkci, přejděte do balíčku Docker v hostitelském systému DSM, vyberte systém <strong>Docker DSM</strong>, u kterého chcete šifrované sdílené složky povolit, klikněte na možnost <strong>Upravit</strong> a zaškrtněte políčko vedle možnosti <strong>Spustit kontejner s vysokými oprávněními</strong>.</li>
+</ul>
+</div>
+
+<p>____<br />* K dispozici pouze u některých modelů.</p>
+
+</body>
+</html>

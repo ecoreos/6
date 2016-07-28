@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Pesquisar arquivos ou pastas</title>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2>Pesquisar arquivos ou pastas</h2>
+<p>O <strong>Filtro </strong>do File Station fornece opções para pesquisar e exibir arquivos ou pastas que atendam seus critérios.Você pode filtrar através de arquivos ou pastas na pasta atual ou executar a pesquisa avançada que cobre todas as subpastas para obter resultados de pesquisa mais refinados.</p>
+
+<h4>Para pesquisar os arquivos ou pastas na pasta atual:</h4>
+<ol>
+	<li>Use o File Station para ir até a pasta cujo conteúdo deseja pesquisar.</li>
+	<li>No campo <b>Filtro </b>no canto superior direito, digite uma palavra-chave e veja o resultado filtrado na área principal da janela.</li>
+</ol>
+
+<h4>Para executar uma pesquisa avançada:</h4>
+<ol>
+	<li>Use o File Station para ir até a pasta cujo conteúdo deseja pesquisar.</li>
+<li>Clique na lupa ao lado do campo <b>Filtro </b>no canto superior direito para revelar o menu de pesquisa avançado.</li>
+	<li>Especifique os critérios de pesquisa abaixo ou selecione dos menus suspensos:
+		<ul>
+			<li><b>Palavra-chave</b>:Digite uma palavra-chave para pesquisar arquivos ou pastas com nomes correspondentes.
+				<div class="section"><h4>Nota:</h4>
+				<ul>
+					<li>Você pode usar curingas [*] (ou seja, zero ou mais caracteres) e [?] (um caractere aleatório) em suas palavras-chave.Por exemplo, [a<span class="note_content">*</span>n] pode representar [a<span class="note_content">ctio</span>n], [a<span class="note_content">ttentio</span>n], ou [an].</li>
+					<li>Você pode usar espaços para separar as palavras-chave.Por exemplo, a palavra-chave [File Station] leva a resultados de pesquisa que contêm [File], [Station] ou ambas.</li>
+					<li>Você pode adicionar aspas duplas ["] no início e no final da palavra-chave para pesquisar correspondências exatas, sem diferenciação de maiúsculas e minúsculas.Por exemplo, [<span class="note_content">"Synology Inc."</span>] pode representar [<span class="note_content">Synology Inc.</span>], mas não pode representar [<span class="note_content">Synology Incorporation</span>].
+					</li>
+					<li class="disable-hi3535">Os operadores abaixo podem ser usados para refinar os resultados da pesquisa:
+						<table width="84%" border="1">
+							<tbody>
+								<tr>
+									<th width="147" align="center">Operador</th>
+									<th width="229" align="center">Exemplo</th>
+									<th width="926" align="center">Uso</th>
+								</tr>
+								<tr>
+									<td align="center">&&</td>
+									<td align="center">[X] && [Y]</td>
+									<td><li>Listar correspondências que contèm [X] e [Y]</li></td>
+								</tr>
+								<tr>
+									<td align="center">||</td>
+									<td align="center">[X] || [Y]</td>
+									<td>
+										<li>Listar correspondências que contèm [X], [Y] ou ambos</li>
+										<li>Correspondências que contêm [X] e [Y] serão listadas na parte superior</li>
+									</td>
+								</tr>
+								<tr>
+									<td align="center">+</td>
+									<td align="center">+[X]</td>
+									<td><li>Lista as correspondências que contêm [X]</li></td>
+								</tr>
+								<tr>
+									<td align="center">-</td>
+									<td align="center">-[X]</td>
+									<td><li>Lista as correspondências que não contêm [X]</li></td>
+								</tr>
+								<tr>
+									<td align="center">!</td>
+									<td align="center">![X]</td>
+									<td><li>Lista as correspondências que não contêm [X]</li></td>
+								</tr>
+								<tr>
+									<td align="center">\</td>
+									<td align="center">\[Caracterespecial]</td>
+									<td>
+										<li>caracteres especiais: <span class="note_content">&nbsp; + &nbsp;&nbsp;-&nbsp;&nbsp; &&	&nbsp;&nbsp;|| &nbsp;&nbsp; ! &nbsp;&nbsp; ( &nbsp;&nbsp; ) &nbsp;&nbsp; { &nbsp;&nbsp; } &nbsp;&nbsp; [ &nbsp;&nbsp; ] &nbsp;&nbsp; ^ &nbsp;&nbsp; " &nbsp;&nbsp; ~ &nbsp;&nbsp; * &nbsp;&nbsp; ? &nbsp;&nbsp; : &nbsp;&nbsp;\</span></li>
+										<li>Lista as correspondências que contêm um caractere especial acima</li>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</li>
+				</ul>
+				</div>
+			</li>
+			<li class="disable-hi3535"><strong>Habilitar pesquisa de conteúdo de arquivo</strong>:Pesquisar arquivos indexados com o conteúdo ou metadados do arquivo que coincidam com as palavras-chave.</li>
+			<li><b>Localização</b>:Selecione do menu suspenso para definir a faixa e a profundidade da pesquisa avançada.Você também pode personalizar o escopo da pesquisa selecionando outras pastas compartilhadas listadas.</li>
+			<li><b>Tipo de Arquivo</b>:Selecione a <b>Extensão </b>para limitar o alcance da pesquisa a tipos específicos de arquivos, ou selecione <b>Qualquer Pasta </b>para pesquisar apenas por pastas.</li>
+			<li><strong>Data</strong>:Selecione <b>Data de Modificação</b>, <b>Data de Criação </b>ou <strong>Último Acesso </strong>e selecione a data no calendário para pesquisar arquivos com datas correspondentes.</li>
+			<li><b>Tamanho (MB)</b>:Selecione <b>igual a</b>, <b>maior que </b>e <b>menor que </b>e digite um valor para pesquisar arquivos com tamanhos correspondentes.(Ao selecionar <strong>igual a</strong>, os resultados da pesquisa incluirão arquivos com aproximadamente o mesmo tamanho especificado.)</li>
+			<li><b>Proprietário/Grupo</b>:Selecione <b>Proprietário</b> ou <b>Grupo </b>e selecione no menu suspenso para pesquisar arquivos ou pastas que pertençam ao proprietário ou grupo selecionado.
+				<div class="section"><h4>Nota:</h4>
+				<ul>
+					<li>Para realizar a pesquisa avançada, é necessário especificar <b>Localização</b> e pelo menos um outro critério de pesquisa.</li>
+					<li>Se uma pasta ISO ou uma pasta remota não estiver montada na pasta compartilhada indexada, você não conseguirá encontrar os arquivos dentro dela através da pesquisa avançada.</li>
+				</ul>
+				</div>
+			</li>
+		</ul>
+	</li>
+	<li>Clique em <b>Pesquisar </b>para iniciar a pesquisa ou clique em <b>Redefinir </b>e especifique novamente o critério de pesquisa.Quando a pesquisa estiver concluída, os arquivos correspondentes serão listados na área principal do File Station.</li>
+</ol>
+
+</body>
+</html>

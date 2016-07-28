@@ -1,0 +1,199 @@
+
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Hálózat</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2><a name="wireless_ap"></a>Hotspot*</h2>
+<p>A(z) DiskStation eszköz támogatja hotspot létrehozását, és ezzel az internet-kapcsolatának vezeték nélküli megosztását egyéb eszközökkel, amennyiben ön telepített egy Wi-Fi USB adaptert vagy a(z) DiskStation beépített Wi-Fi-vel rendelkezik. Beállíthatja a(z) DiskStation eszközét vezeték nélküli hozzáférési pontnak (access point - AP) vagy vezeték nélküli routernek, attól függően, hogyan szeretné használni az internetet.</p>
+
+<table>
+<tr>
+<th width="23%">Hotspot üzemmód</th>
+<th width="77%">Leírás</th>
+</tr>
+<tr>
+<th>Vezeték nélküli AP</th>
+<td>
+<ul>
+<li>Összeköti a LAN és a Wi-Fi hálózatot.</li>
+<li>A LAN és a vezeték nélküli kliensek ugyanazon a helyi hálózaton lesznek.</li>
+<li>Akkor alkalmazható, ha ön már rendelkezik egy routerrel, és a(z) DiskStation eszközt egy létező hálózat kiegészítő hozzáférési pontjaként szeretné használni.</li> 
+<li>Lehetővé teszi a hálózati erőforrások, például DLNA-eszközök, nyomtatók, Synology Web Assistant, illetve egyéb, hálózati sugárzásokra épülő szolgáltatások megosztását.</li>
+<li>A DHCP kiszolgáló letiltásra kerül a vezeték nélküli AP-kként szolgáló DiskStation eszközökön. A DHCP kiszolgáló DiskStation eszköz számára történő újraaktiválásához távolítsa el a Wi-Fi-adaptereket, majd indítsa újra a(z) DiskStation eszközt.</li>
+<li>A több LAN porttal rendelkező modellek esetén csak a LAN 1 használható a vezeték nélküli AP összekötéséhez.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Vezeték nélküli router</th>
+<td>
+<ul>
+<li>Vezeték nélküli hálózatot állít be ott, ahol az eszközök privát alhálózaton vannak.</li>
+</ul>
+</td>
+</tr>
+</table>
+
+
+<div class="section">
+<h4>Megjegyzés:</h4>
+
+<ol>
+<li>Egyes modellek hotspot létrehozása érdekében megkövetelik vezeték nélküli adapter csatlakoztatását. A támogatott vezeték nélküli adapterek teljes listájának megtekintéséhez látogasson el ide: <a href="http://www.synology.com/support/faq/444" target=_blank>www.synology.com</a>.</li>
+<li>Nem-DS213air modellek esetén a DSM 4.3 Vezeték nélküli hotspot opciója a DSM 5.0 és újabb modellek esetén "Vezeték nélküli router"-re változott.</li>
+</ul>
+</ol>
+
+</div>
+
+<h3>Hotspot-beállítások kezelése</h3>
+<p>Ez a fejezet elmagyarázza, hogyan engedélyezze és kezelje a(z) DiskStation hotspot-beállításait.</p>
+
+
+<h4>A(z) DiskStation hotspottá alakítása:</h4>
+<ol>
+<li>Válassza a <strong>Vezérlőpult</strong> > <strong>Kábel nélküli</strong> > <strong>Hálózati térkép</strong> opciót. Válassza a <strong>Vezeték nélküli AP</strong> vagy <strong>Vezeték nélküli router</strong> lehetőséget.</li>
+<li>A következő beállítások kezeléséhez menjen a <strong>Wi-Fi</strong> fülre és kattintson a <strong>Szerkesztés</strong> lehetőségre:</li>
+<ul>
+<li><strong>Név (SSID):</strong> Adjon meg egy nevet a vezeték nélküli hálózat számára.</li>
+<li><strong>Megjelenítés/Elrejtés:</strong> Válassza ki, hogy a vezeték nélküli hálózat más eszközök számára látható legyen-e vagy sem.</li>
+<li><strong>Vezeték nélküli mód:</strong> Válasszon ki egy vezeték nélküli szabványt. Minden egyes szabvány különböző sávszélességeket és frekvenciákat támogat.</li>
+<li><strong>Csatorna szélessége:</strong> Válasszon ki egy csatornaszélességet (csak a 802.11n vezeték nélküli üzemmód használata esetén elérhető).</li>
+<li><strong>Csatorna:</strong> Válasszon ki egy frekvenciát a vezeték nélküli hálózat számára. A jobb teljesítmény érdekében válasszon a közeli hálózatok által használtaktól eltérő frekvenciát.</li>
+<li><strong>Átviteli teljesítmény:</strong> Válassza ki a vezeték nélküli hálózat jelerősségét.</li>
+<li><strong>Kapcsolat maximum:</strong> Válassza ki, hány ügyféleszköz csatlakozhat a hálózathoz. A legmagasabb kapcsolatbeállítás 256.</li>
+<li><strong>WMM QoS engedélyezése:</strong> Wi-Fi multimédia (WMM) QoS (minőségi szolgáltatás) Wi-Fi-n keresztül. Ez az opció lehetővé teszi a vezeték nélküli hálózat számára a forgalom priorizálását, és az erőforrások alkalmazások közti megosztásának optimalizálását.</li>
+</ul>
+</ol>
+
+
+
+<h4>Vezeték nélküli ütemezés beállítása:*</h4>
+<p>Egy vezeték nélküli hálózati ütemezés engedélyezése lehetővé teszi annak vezérlését, hogy mikor aktív és elérhető a(z) DiskStation vezeték nélküli hálózata.</p>
+<ol>
+<li>Menjen a <strong>Wi-Fi</strong> fülre és kattintson a <strong>Szerkesztés</strong> lehetőségre. </li>
+<li>Jelölje ki az <strong>Ütemezés engedélyezése</strong> mezőt.</li>
+
+<li>Kattintson az <strong>Időzítés beállítása</strong> gombra.</li>
+<li>Az ütemezési képernyőn válassza ki, mikor lesz aktív a vezeték nélküli hálózat.</li>
+</ol>
+
+
+<h3>Biztonsági beállítások</h3>
+<p>A <strong>Vezérlőpult</strong> > <strong>Kábel nélküli</strong> > <strong>Wi-Fi</strong> menüpont lehetőségeket biztosít a vezeték nélküli hálózat biztonsági beállításainak szerkesztéséhez.</p>
+
+
+<h4>Vezeték nélküli biztonság beállítása:</h4>
+<ol>
+
+<li>Kattintson a <strong>Szerkesztés</strong> gombra.</li>
+<li>Válassza ki a következő biztonsági protokollok egyikét a <strong>Biztonsági beállítások</strong> legördülő menüből:</li>
+<ul>
+<li><strong>WEP:</strong> Alapvető biztonsági protokoll, aminél a felhasználóknak a vezeték nélküli hálózat eléréséhez meg kell adniuk egy jelszót, de minimális védelmet nyújt.</li>
+<li><strong>WPA/WPA2 személyes:</strong> Ajánlott. A felhasználóknek a vezeték nélküli hálózat eléréséhez meg kell adniuk egy jelszót, és biztonságosabb, mint a WEP.</li>
+<li><strong>WPA/WPA2 Enterprise:</strong>* Vállalatok számára tervezett biztonsági protokoll, ami a felhasználók külső hitelesítő kiszolgáló segítségével történő hitelesítését igényli.</li>
+
+</ul>
+</ol>
+
+<h4>Wi-Fi Protected Setup engedélyezése:*</h4>
+<p>A Wi-Fi Protected Setup a Wi-Fi Alliance által kifejlesztett, a vezeték nélküli biztonsági beállításokat a felhasználók számára megkönnyítő szabvány. A Wi-Fi hálózat biztonságpsan tartásához használhat egy Nyomógombot vagy egy PIN-számot. A Wi-Fi Protected Setup engedélyezéséhez kattintson a <strong>WPS</strong> lehetőségre.</p>
+
+
+<h3>Vendéghálózat*</h3>
+<p>A vezeték nélküli gazdahálózat létrehozásán kívül a(z) DiskStation vezeték nélküli vendéghálózat létrehozását is támogatja. A vendéghálózat beállításai korlátozhatók a felhasználói hozzáférések korlátozására is, ami az olyan vállalatok és egyéb intézmények számára hasznos, akik vezeték nélküli hálózatot akarnak biztosítani a látogatók számára, ám távol szeretnék tartani őket a gazdahálózat elérésétől.</p>
+
+
+<h4>A vendéghálózat engedélyezése:</h4>
+
+<ol>
+<li>Válassza a <strong>Vezérlőpult</strong> > <strong>Kábel nélküli</strong> > <strong>Wi-Fi</strong> opciót. </li>
+<li>Kattintson a <strong>Szerkesztés</strong> lehetőségre a következő beállításoknak a <strong>Vendéghálózat</strong> fülön történő kezeléséhez:</li>
+
+<ul>
+<li><strong>Név (SSID):</strong> Adjon meg egy nevet a vezeték nélküli hálózat számára.</li>
+<li><strong>Megjelenítés/Elrejtés:</strong> Válassza ki, hogy a vezeték nélküli hálózat más eszközök számára látható legyen-e vagy sem.</li>
+<li><strong>Kapcsolat maximum:</strong> Válassza ki, hány ügyféleszköz csatlakozhat a hálózathoz. A legmagasabb maximális kapcsolatbeállítás 256.</li>
+</ul>
+</ol>
+
+<h4>Vendéghálózat biztonságának beállítása:</h4>
+<p>Válassza ki a következő biztonsági protokollok egyikét a <strong>Biztonsági beállítások</strong> legördülő menüből:</p>
+<ul>
+<li><strong>WEP:</strong> Alapvető biztonsági protokoll, aminél a felhasználóknak a vezeték nélküli hálózat eléréséhez meg kell adniuk egy jelszót, de minimális védelmet nyújt.</li>
+<li><strong>WPA/WPA2 személyes:</strong> Ajánlott. A felhasználóknek a vezeték nélküli hálózat eléréséhez meg kell adniuk egy jelszót, és biztonságosabb, mint a WEP.</li>
+</ul>
+
+
+<h4>Vendéghálózat ütemezésének beállítása:</h4>
+<p>Egy vendéghálózat ütemezésének engedélyezése lehetővé teszi annak vezérlését, hogy mikor aktív és elérhető a(z) DiskStation vezeték nélküli vendéghálózata.</p>
+
+<ol>
+<li>Jelölje ki a <strong>Vendéghálózat ütemezésének engedélyezése</strong> mezőt.</li>
+<li>Kattintson a <strong>Vendégütemezés beállítása</strong> gombra.</li>
+<li>Az ütemezési képernyőn válassza ki, mikor lesz aktív a vezeték nélküli vendéghálózat.</li>
+</ol>
+
+<div class="section">
+<h4>Megjegyzés:</h4>
+<p>A vezeték nélküli vendéghálózat nem lehet aktív olyan időszakokban, amikor a vezeték nélküli gazdahálózat ki van kapcsolva.</p>
+</div>
+
+
+<h3>MAC-szűrő beállítása*</h3>
+<p>A MAC-szűrő (<strong>Vezérlőpult</strong> > <strong>Kábel nélküli</strong>) határozza meg, hogy melyik MAC-címek férhessenek hozzá a vezeték nélküli hálózathoz, és ezzel lehetővé teszi a meghatározott eszközökhöz való hozzáférés letiltását vagy engedélyezését. Ez a funkció csak a hálózati hozzáférést vezérli, a többi titkosítási beállítást nem.</p>
+
+
+<h4>MAC-szűrő szabályok létrehozása:</h4>
+<ol>
+<li>Adja meg egy eszköz leírását és MAC-címét.</li>
+<li>Válasszon ki egy hozzáférési eljárásmódot:
+<ul>
+<li><strong>Tilt:</strong> Korlátozza a meghatározott MAC-cím hozzáférését a vezeték nélküli hálózathoz.</li>
+<li><strong>Engedélyez:</strong> Engedélyezi a meghatározott MAC-címek hozzáférését a vezeték nélküli hálózathoz.</li>
+</ul> 
+</ol>
+
+
+
+<h3>Szülői felügyelet*</h3>
+<p>A szülői felügyelet funkció lehetővé teszi önnek annak vezérlését, hogy az egyes, a(z) DiskStation eszköz helyi hálózatához csatlakoztatott klienseszközök mikor férhessenek hozzá az internethez. Ha például a gyermekei számítógépei vagy mobil eszközei a(z) DiskStation segítségével kapcsolódnak az internethez, akkor szülői felügyeleti beállításokat konfigurálhat annak érdekében, hogy meghatározott eszközök és időpontok szerint korlátozza az internethasználatot.</p>
+
+<h4>Szülői felügyelet engedélyezése:</h4>
+<ol>
+<li>Válassza a <strong>Vezérlőpult</strong> > <strong>Kábel nélküli</strong> > <strong>Szülői felügyelet beállításai</strong> opciót.</li>
+
+<li>Klienseszköz hozzáadásához kattintson a <strong>Hozzáadás</strong> gombra.</li>
+<ul>
+<li><strong>Kliensnév:</strong> Válasszon ki egy, a(z) DiskStation eszközhöz csatlakoztatott eszközt, vagy adjon meg egy nevet manuálisan (pl. Louisa laptopja).</li>
+<li><strong>MAC-cím:</strong> Adja meg annak az eszköznek a MAC-címét, amelynek internethasználatát felügyelni kívánja.</li>
+<li><strong>Időzítés beállítása:</strong> Válassza ki, hogy a megadott eszköz mikor férhet hozzá az internethez a(z) DiskStation segítségével.</li>
+</ul>
+</ol>
+
+<h3>Csatlakozási lista*</h3>
+<p>A csatlakozási lista (<strong>Vezérlőpult</strong> > <strong>Kábel nélküli</strong>) a(z) DiskStation eszközhöz csatlakoztatott eszközökre vonatkozó információkat jelenít meg. Az eszközök innen közvetlenül hozzáadhatók a MAC-szűrő listához.</p>
+
+<h4>Eszközök hozzáadása a MAC-szűrő listához:</h4>
+<ol>
+<li>Jelölje be a MAC-szűrőhöz hozzáadni kívánt eszköz melletti mezőt.</li>
+<li>Kattintson a <strong>Hozzáadás MAC-szűrési listához</strong> lehetőségre.</li>
+</ol>
+
+
+
+<p>____<br> * Csak bizonyos modelleken érhető el.<br>
+</body>
+</html>

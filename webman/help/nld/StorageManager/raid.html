@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+	<h2>RAID Group*</h2>
+	<p>Met DiskStation kunt u meerdere harde schijven combineren in een enkele opslageenheid, de zogenaamde RAID Group. Volumes of iSCSI LUN's (blokniveau) kunnen bovenop de RAID Groups worden aangemaakt. U kunt volumes of iSCSI LUN's uitbreiden indien een RAID Group over toe te wijzen ruimte beschikt. Verschillende RAID-types bieden verschillende niveaus van gegevensbescherming. Voor een algemene lijst van RAID-types die door uw DiskStation worden ondersteund, zie <a href="general.html">Algemeen</a>.
+</p>
+
+<h4>Om een RAID Group te maken:</h4>
+	<ol>
+		<li>Klik op de knop <b>Maken</b>.</li>
+		<li>Selecteer een van de volgende opties: 
+	  <ul>
+				<li>RAID Group voor een enkel volume of iSCSI LUN (blokniveau): Biedt betere prestaties.</li>
+				<li>RAID Group voor meerdere volumes of iSCSI LUN's (blokniveau): Biedt betere managementflexibiliteit.</li>
+			</ul>
+		</li>
+		<li>Volg de wizard om het proces te voltooien.</li>
+	</ol>
+<div class="section">
+<h4>Opmerking: </h4>
+<ul>
+<li>Een RAID Group moet uit harde schijven van hetzelfde schijftype bestaan. Bij het maken van een RAID is het niet mogelijk om gelijktijdig SATA- en SAS-harde schijven of SSD en HDD te gebruiken.</li>
+<li>Een RAID Group voor meerdere volumes of iSCSI LUN's (blokniveau) die <b>RAID 5</b> of <b>RAID 6</b> gebruiken kan meerdere <b>RAID-arrays</b> bevatten. Elke RAID-array die tot dezelfde RAID Group behoort is van hetzelfde RAID-type (bijv. RAID 5 of RAID 6). De maximale schijfaantal voor iedere RAID Array kan 6, 12 of 24. U kunt het maximale schijfaantal instellen bij het aanmaken van de RAID Group, maar dat aantal kan nadien niet worden gewijzigd. Wanneer er een maximum aantal schijven aan een RAID-array is toegekend, zal de volgende aan de RAID Group toegevoegde schijf toegewezen worden aan een nieuwe RAID-array. De nieuwe RAID-array moet het minimum aantal schijven voor dat specifieke RAID-type bevatten (d.w.z. drie schijven voor RAID 5 en vier schijven voor RAID 6).
+</li>
+<li>Als u een RAID Group met een bepaalde harde schijf wilt maken die niet in de <b>Wizard RAID Group maken</b> verschijnt, controleert u de status van de harde schijf in <b>HDD-beheer</b>.</li>
+</ul>
+</div>
+
+	<h4>Om een RAID Group te verwijderen:</h4>
+	<ol>
+		<li>Selecteer de RAID Group die u wilt verwijderen.</li>
+		<li>Klik op <b>Verwijderen</b> en volg de wizard om het proces te voltooien.</li>
+	</ol>
+
+<div class="section">
+<h4>Opmerking: </h4>
+<ul>
+<li>volumes en iSCSI LUN's op de RAID Group worden verwijderd als u de RAID Group verwijdert. Zorg dat geen belangrijke gegevens worden verwijderd.</li>
+</ul>
+</div>
+
+
+	<h4>Om een RAID Group te repareren:</h4>
+	<p>een RAID Group met de status <b>Beschadigd</b> kan worden gerepareerd als de RAID Group een van de volgende types is: RAID 1, RAID 5, RAID 6 en RAID 10. Bestaande gegevens op de RAID Group worden niet verwijderd.</p>
+	<p>Volg onderstaande stappen om uw RAID Group te repareren:</p>
+	<ol>
+		<li>Zet uw DiskStation uit. (Sla deze stap over als uw model hot-swapping ondersteunt).</li>
+		<li>Verwijder de defecte harde schijf zoals aangegeven bij Schijfgegevens in de RAID Group-status.</li>
+		<li>Klik op <b>Beheren</b>.</li>
+		<li>Selecteer <b>Herstellen</b>.</li>
+		<li>Volg de wizard om het proces te voltooien.</li>
+        </ol>
+        
+<div class="section">
+<h4>Opmerking:</h4>
+<ul>
+<li>De grootte van de vervangende harde schijf moet gelijk of groter zijn aan de grootte van de kleinste schijf in de RAID Group.</li>
+<li>De status van de vervangende harde schijf moet "Geïnitialiseerd" of "Niet-geïnitialiseerd" zijn.</li>
+</ul>
+</div>
+
+	<h4>Om het RAID-type van een RAID Group te wijzigen</h4>
+	<p>Om het RAID-type van een RAID Group te wijzigen, moeten er beschikbare schijven op uw DiskStation zijn geïnstalleerd. Momenteel worden de volgende types van RAID-wijziging ondersteund:</p>
+	<ul>
+		<li>Basic naar RAID 1 of RAID 5</li>
+		<li>RAID 1 naar RAID 5</li>
+		<li>RAID 5 naar RAID 6</li>
+      <li>Mirror-schijf toevoegen aan RAID 1</li>
+	</ul>
+	<p>Volg onderstaande stappen om het RAID-type van uw RAID Group te wijzigen:</p>
+	<ol>
+		<li>Selecteer de RAID Group die u wilt wijzigen.</li>
+		<li>Klik op <b>Beheren</b>.</li>
+		<li>Selecteer <b>RAID-type wijzigen</b>.</li>
+		<li>Volg de wizard om het proces te voltooien.</li>
+        </ol>
+<div class="section">
+<h4>Opmerking: </h4>
+<ul>
+<li>om het RAID-type te kunnen wijzigen moet de status van de RAID Group de status <b>Normaal</b> hebben. Zo niet, zullen er gegevens verloren gaan. Als de status van de RAID Group <b>Beschadigd</b> is, repareert u het eerst.</li>
+<li>Om het RAID-type van een RAID Group te wijzigen, moeten er voldoende harde schijven in uw DiskStation zijn geïnstalleerd. De grootte van de nieuwe schijf moet groter zijn dan de kleinste schijf in de RAID Group.</li>
+<li>De status van de nieuwe schijf moet "Geïnitialiseerd" of "Niet-geïnitialiseerd" zijn.</li>
+<li>Het RAID-type van een RAID Group met meerdere RAID-arrays kan niet worden gewijzigd.</li>
+</ul>
+</div>
+
+	<h4>Om de grootte van een RAID Group uit te breiden</h4>
+	<p>U kunt de grootte van een RAID Group uitbreiden door bestaande harde schijven te vervangen met grotere harde schijven of door harde schijven toe te voegen.</p>
+
+<div class="section">
+<h4>Opmerking: </h4>
+<ul>
+  <li>om een RAID Group met 3 TB of nog grotere schijven uit te breiden, moet u nagaan of uw RAID-groep met versie DSM 3.0 of een recentere versie is gemaakt.
+</ul>
+</div>
+
+	<h4>Breid een RAID Group uit door grotere harde schijven te gebruiken:</h4>
+	<p>U kunt een RAID Group uitbreiden door aanwezige harde schijven te vervangen met grotere harde schijven in de volgende RAID-types: RAID 1, RAID 5 en RAID 6. Geassocieerde volumes of iSCSI LUN op RAID Group voor enkel volume of iSCSI LUN worden automatisch uitgebreid.  Volg onderstaande stappen:</p>
+	<ol>
+    <li>Zet uw DiskStation uit. Sla deze stap over als uw model hot-swapping ondersteunt.</li>
+		<li>Vervang een harde schijf door een grotere harde schijf.</li>
+		<li>Zet de DiskStation aan en herstel de RAID Group.</li>
+		<li>Herhaal stap 1 tot en met 3 tot alle harde schijven zijn vervangen.</li>
+		<li>Het systeem zal de RAID Group automatisch uitbreiden.</li>
+	</ol>
+
+<div class="section">
+<h4>Opmerking: </h4>
+<ul>
+<li>Alle diensten van Opslagbeheer worden tijdens het uitbreiden tijdelijk stopgezet.</li> 
+<li>U kunt de harde schijf enkel uitbreiden als de status van de RAID Group <b>Normaal</b> is, omdat anders gegevens verloren kunnen gaan. Als de status van de RAID Group <b>Beschadigd</b> is, repareert u het eerst.</li>
+	</ul>
+</div>
+
+	<h4>Een RAID Group uitbreiden door harde schijven toe te voegen:</h4>
+	<p>Deze functie is van toepassing op RAID's van het type JBOB, RAID 5 en RAID 6. Volg hiervoor deze procedure:</p>
+	<ol>
+		<li>Selecteer de RAID Group die u wilt uitbreiden.</li>
+		<li>Klik op <b>Beheren</b>.</li>
+		<li>Selecteer <b>Schijf toevoegen</b>.</li>
+		<li>Volg de wizard om de instelling te voltooien.</li>
+</ol>
+<div class="section">
+<h4>Opmerking: </h4>
+<ul>
+		<li>De status van de RAID Group moet <b>Normaal</b> zijn.</li>
+		<li>Voor RAID Group-types RAID 5 en RAID 6 moet de harde schijf groter zijn dan de kleinste schijf in de RAID Group.</li>
+		<li>De status van de geselecteerde harde schijf moet "Geïnitialiseerd" of "Niet-geïnitialiseerd" zijn.</li>
+	</ul>
+    </div>
+
+	<h4>Om de beschrijving van de RAID Group te bewerken:</h4>
+	<ol>
+		<li>Selecteer de RAID Group die u wilt bewerken</li>
+		<li>Klik op <b>Beheren</b>.</li>
+		<li>Selecteer <b>Beschrijving bewerken</b>.</li>
+		<li>Bewerk de beschrijving en klik op <b>OK</b> om het resultaat op te slaan.</li>
+	</ol>
+	<h3>RAID-reiniging</h3>
+    <p>RAID-reiniging is een gegevensonderhoudsfunctie die RAID-groepen inspecteert en gedetecteerde inconsistenties van gegevens herstelt. Deze functie kan bij RAID-groepen worden gebruikt die RAID 5 of RAID 6 gebruiken. </p>
+    <p>Wij raden aan om de RAID-reiniging regelmatig uit te voeren om gegevensconsistentie te behouden en verlies van belangrijke gegevens ten gevolge van een defecte harde schijf te voorkomen.</p>
+    <h4>De RAID-reiniging uitvoeren:</h4>
+    <ol>
+      <li>Selecteer de RAID-groep waarop u de RAID-reiniging wilt uitvoeren.</li>
+      <li>Klik op <strong>Beheren</strong></li>
+      <li>Selecteer <strong>RAID-reiniging</strong>.</li>
+    </ol>
+    <div class="section">
+      <h4>Opmerking:</h4>
+      <ul>
+        <li>RAID-reiniging kan alleen worden uitgevoerd wanneer de RAID-groep de status <strong>Normaal</strong> heeft.</li>
+        <li>Schakel het systeem niet uit voordat de RAID-reiniging is voltooid. Wordt het systeem voor het voltooien van de RAID-reiniging uitgeschakeld, dan moet de procedure opnieuw worden uitgevoerd.</li>
+      </ul>
+    </div>
+    
+<p>____<br />*Alleen beschikbaar op bepaalde modellen.</p>    
+</body>
+</html>

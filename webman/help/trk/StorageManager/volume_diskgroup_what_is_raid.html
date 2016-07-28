@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>RAID Tipi Seç - Synology DSM Yardım</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="A brief overview describing what RAID types are supported by Synology DiskStation Manager (DSM).">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>RAID Tipi Seç</h2>
+
+<p>RAID (Yedek Bağımsız Diskler Dizisi) çok sayıda sabit diskin tek bir depolama alanına kombine edilmesini sağlayan bir veri depolama teknolojisidir. Her biri farklı seviyelerde performans, depolama kapasitesi ve güvenilirlik sunan farklı tiplerde RAID vardır.</p>
+
+<p>Bu yazı, uygulama gereksinimleri ile birlikte avantajlar ve dezavantajlar dahil olmak üzere DiskStation tarafından desteklenen RAID tiplerinin kısa bir özetini sunar.</p>
+
+<!--1-->
+
+<h3>Desteklenen RAID Tipleri</h3>
+
+<p>Bu tablo, depolama kapasitesi, RAID tipi için gerekli sabit disklerin minimum sayısı, veri kaybı olmadan önce tolere edilebilecek sabit disk arızalarının sayısı dahil olmak üzere DiskStation tarafından desteklenen farklı RAID tiplerinin kısa bir özetini sunar. </p>
+
+<table>
+
+  <tr>
+
+    <th>Birim Tipi</th>
+    <th>HDD Sayısı</th>
+
+    <th>Tolere Edilebilir Sabit Disk Arızaları</th>
+    <th>Açıklama</th>
+
+    <th>Birim Kapasitesi</th>
+
+  </tr>
+
+  <tr>
+
+    <td rowspan="3">SHR</td>
+    <td>1</td>
+
+    <td>0</td>
+    <td rowspan="3">
+    <div align="left">
+    <ul>
+    <li>Farklı boyutlardaki sabit diskleri birleştirirken birim boyutunu optimize eder.</li>
+    <li>Birim iki veya daha fazla sabit diskten oluşursa veri yedeklemesi sunar.</li>
+    <li>Yeni başlayan kullanıcılar için önerilir.</li>
+    </ul>
+    </div>
+    </td>
+
+    <td>1 x (HDD boyutu)</td>
+
+  </tr>
+  <tr>
+    <td>2-3</td>
+    <td>1</td>
+    <td rowspan="2">Sistem tarafından optimize edilir.</td>
+  </tr>
+  <tr>
+    <td>≧4</td>
+    <td>1-2</td>
+  </tr>
+  
+  <tr>
+
+    <td>Temel</td>
+    <td>1</td>
+
+    <td>0</td>
+    <td>
+    <div align="left">
+    <ul>
+    <li>Bağımsız bir ünite olarak bir sabit diskten oluşur.</li>
+    <li>Veri yedeklemesi sunmaz.</li>
+    </ul>
+    </div>
+    </td>
+
+    <td>1 x (HDD boyutu)</td>
+
+  </tr>
+
+  <tr>
+
+    <td>JBOD</td>
+    <td>≧1</td>
+
+    <td>0</td>
+    <td>
+    <div align="left">
+    <ul>
+    <li>Tüm sabit disklerin kapasitesinin toplamına eşit kapasite ile bir sabit disk koleksiyonunu tek bir depolama alanında birleştirir.</li>
+    <li>Veri yedeklemesi sunmaz.</li>
+    </ul>
+    </div>
+    </td>
+
+    <td>Tüm HDD boyutlarının toplamı</td>
+
+  </tr>
+
+  <tr>
+
+    <td>RAID 0</td>
+    <td>≧2</td>
+
+    <td>0</td>
+    <td>
+    <div align="left">
+    <ul>
+    <li>Performansı arttırmak için verinin bloklara bölünmesi ve veri bloklarının birkaç sabit sürücü üzerine dağıtılması işlemi olan "striping" özelliğini içerir.</li>
+    <li>Veri yedeklemesi sunmaz.</li>
+    </ul>
+    </div>
+    </td>
+
+    <td>Tüm HDD boyutlarının toplamı</td>
+
+  </tr>
+
+  <tr>
+
+    <td rowspan="3">RAID 1</td>
+    <td>2</td>
+
+    <td>1</td>
+    <td rowspan="3">
+    <div align="left">
+    <ul>
+    <li>Benzer verileri her iki sabit diske eşzamanlı olarak yazar.</li>
+    <li>Veri yedeklemesi sunar.</li>
+    </ul>
+    </div>
+    </td>
+
+    <td rowspan="3">En küçük HDD boyutu</td>
+
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>3</td>
+  </tr>
+
+  <tr>
+
+    <td>RAID 5</td>
+    <td>≧3</td>
+
+    <td>1</td>
+
+    <td>
+    <div align="left">
+    <ul>
+    <li>Parite verilerinin tüm üye sabit disklere dağıtıldığı blok seviyesi striping özelliğini uygular ve bu sayede veri yedeklemesini RAID 1'den daha etkin bir şekilde sunar.</li>
+    </ul>
+    </div>
+    </td>
+
+    <td>(N – 1) x (En küçük HDD boyutu)</td>
+
+  </tr>
+
+  <tr>
+
+    <td>RAID 6</td>
+    <td>≧4</td>
+
+    <td>2</td>
+    <td>
+    <div align="left">
+    <ul>
+    <li>İki sabit diskin boyutuna eşit yedek verileri saklamak için iki katman halinde veri paritesi uygulayarak RAID 5'e göre daha yüksek derecede veri yedeklemesi sunar.</li>
+    </ul>
+    </div>
+    </td>
+
+    <td>(N – 2) x (En küçük HDD boyutu)</td>
+
+  </tr>
+
+  <tr>
+
+    <td>RAID 10</td>
+    <td>≧4<br /> (çift sayı)</td>
+
+    <td>Toplam HDD'nin yarısı</td>
+    <td>
+    <div align="left">
+    <ul>
+    <li>Sabit diskleri verilerin ikizlendiği iki grup halinde birleştirerek RAID 0 performansını ve RAID 1 veri koruma seviyesini sunar.</li>
+    </ul>
+    </div>
+    </td>
+
+    <td>(N / 2) x (En küçük HDD boyutu)</td>
+
+  </tr>
+
+</table>
+
+
+<div class="section">
+<h4>Not:</h4>
+<ul>
+<li>"Basic" haricindeki RAID tipleri sabit disk yuvalarına ve kurulu sabit disklerin sayısına bağlı olarak sadece belirli modellerde mevcuttur.</li>
+<li>"N", birim içindeki toplam sabit sürücü sayısını temsil eder.</li>
+</ul>
+</div>
+
+
+
+
+<!--2-->
+<h3>Synology Hybrid RAID (SHR)</h3>
+
+<p>Synology Hybrid RAID (SHR), depolama yönetimini basitleştirmek ve RAID tiplerine alışık olmayan yeni kullanıcıların ihtiyaçlarını karşılamak için tasarlanan otomatik bir RAID yönetim sistemidir. </p>
+<p>SHR, daha az sabit disk alanı tüketen ve daha esnek bir depolama çözümü sunacak şekilde optimize edilmiş kapasite ve performansa sahip bir depolama birimini oluşturmak için farklı boyutta sabit diskleri birleştirebilir.  Yeterli sabit diskler dahil edildiğinde, SHR 1 veya 2 diskli yedeklemeye olanak tanır - yani SHR Birimi veri kaybı yaşamadan bir veya iki adede kadar arızalı sabit diski kaldırabilir.</p>
+<img src="about:blank" class="help_image"/>
+
+
+
+
+
+
+<!--3-->
+
+<h3>RAID 0</h3>
+<p>RAID 0 performansı ve kapasiteyi arttırmak için iki veya daha fazla sabit diski birleştirir ancak arıza toleransı sunmaz. Tek bir sabit disk arızası dizideki tüm verinin kaybolmasına yol açar. RAID 0 yüksek bir fiyat/performans dengesinin gerekli olduğu kritik olmayan sistemler için faydalıdır.</p>
+<img src="about:blank" class="help_image"/>
+
+
+
+
+
+
+<!--4-->
+
+<h3>RAID 1</h3>
+<p>RAID 1 genellikle iki sabit diskle uygulanır. Sabit disklerdeki veriler ikizlenir, bu sayede sabit disk arızası durumunda arıza toleransı sunar. Okuma performansı arttırılırken yazma performansı tekli sabit diske benzerdir. Tekli bir sabit disk arızası veri kaybı olmadan kaldırılabilir. RAID 1 genellikle arıza toleransı önemli iken, alan ve performans kritik gereksinimler olmadığında kullanılır.</p>
+<img src="about:blank" class="help_image"/>
+
+
+
+<!--5-->
+
+<h3>RAID 5</h3>
+<p>RAID 5 arıza toleransı ve arttırılan okuma performansı sunar. Asgari üç sabit disk gereklidir. RAID 5 tek bir sabit diskin kaybını kaldırabilir. Bir sabit disk arızası durumunda, arızalı sabit disk verileri kalan sabit disklerden edinilen pariteden yeniden yapılandırılır. Sonuç olarak, bir RAID 5 dizisi kapasitesi düşmüş bir durumda iken hem okuma hem de yazma performansı ciddi derecede etkilenir. RAID 5 alan ve maliyetin performanstan daha önemli olduğu durumlarda idealdir.</p>
+<img src="about:blank" class="help_image"/>
+
+
+
+<!--6-->
+
+<h3>RAID 6</h3>
+<p>RAID 6, başka bir striping katmanı sunması ve iki sürücü arızasını kaldırabilmesi dışında RAID 5 ile benzerdir. Asgari dört sabit disk gereklidir. RAID 6'nın performansı ilave arıza toleransı nedeniyle RAID 5'in performansından daha düşüktür. RAID 6 alan ve maliyet önemli olduğunda ve çok sayıda sabit disk arızasının kaldırılması gerekli olduğunda çekici hale gelir.</p>
+<img src="about:blank" class="help_image"/>
+
+
+
+<!--7-->
+
+<h3>RAID 10</h3>
+<p>RAID 10, RAID 1 ve RAID 0'ın avantajlarını bir araya getirir. Okuma veya yazma performansı arttırılır ancak sadece toplam alanın yarısı veri depolaması için kullanılabilir. Maliyeti göreceli olarak yükseltecek şekilde dört veya daha fazla sürücü gerekir ancak aynı zamanda arıza toleransı da sunulurken performans harikadır. Gerçekte, bir RAID 10 çok sayıda sabit disk arızasını kaldırabilir -- arızaların aynı alt grup dahilinde olmaması koşuluyla. RAID 10 veritabanı sunucuları gibi yüksek giriş/çıkış talebine sahip uygulamalar için idealdir.</p>
+
+<img src="about:blank" class="help_image"/>
+
+
+</body>
+</html>

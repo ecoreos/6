@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Hot Spare</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2>Hot Spare*</h2>
+<p>I dischi hot spare sono dischi rigidi di standby in grado di riparare un volume/Gruppo Disco/iSCSI LUN danneggiato sostituendo automaticamente il disco danneggiato. I dischi hot spare possono esser assegnati globalmente per proteggere qualsiasi volume/Gruppo Disco/iSCSI LUN nella DiskStation, non appena il volume/Gruppo Disco/iSCSI LUN soddisfa i seguenti criteri:</p>
+<ul>
+<li>Il tipo di RAID del volume/Gruppo disco/iSCSI LUN deve disporre di una protezione dati (ad esempio RAID 1, RAID 5, RAID 6, RAID 10).</li>
+<li>La dimensione del disco hot spare deve essere pari o superiore a quella del disco più piccolo del volume/Gruppo disco/iSCSI LUN.</li>
+</ul>
+
+<h4>Per impostare i dischi hot spare:</h4>
+<ol>
+<li>Fare clic su <b>Gestisci</b>.</li>
+<li>Viene visualizzata una finestra che mostra lo stato hot spare di ciascun volume/Gruppo Disco/iSCSI LUN oltre i dischi disponibili. Lo stato volume/Gruppo disco/iSCSI LUN include quanto segue:</li>
+<ul>
+<li><strong>Assegnato:</strong> il volume/Gruppo Disco/iSCSI LUN è protetto da almeno un disco hot spare assegnato.</li>
+<li><strong>Disponibile:</strong> sono disponibili dischi che possono proteggere il volume/Gruppo Disco/iSCSI LUN, ma nessun hot spare è stato ancora assegnato.</li>
+<li><strong>Non disponibile:</strong> non sono disponibili dischi hot spare che possono proteggere il volume/Gruppo Disco/iSCSI LUN.</li>
+</ul>
+<li>Le sezioni <strong>Dischi disponibili</strong> visualizzano i dischi rigidi che possono essere assegnati come dischi hot spare. Per assegnare un disco hot spare, selezionare la casella accanto al disco da assegnare come hot spare.</li>
+<li>Fare clic su <b>Applica</b> per salvare le impostazioni.</li>
+</ol>
+<div class="section">
+<h4>Nota:</h4> 
+<ul>
+<li>quando un disco rigido viene assegnato come disco hot spare, tutti i dati sul disco saranno cancellati. Prima di assegnare un disco hot spare, verificare che il disco non contenga dati importanti.</li>
+<li>Un RAID assemblato da HDD non sarà riparato automaticamente dai dischi hot spare SSD e viceversa.</li>
+</ul>
+</div>
+
+<h4>Per configurare le impostazioni hot spare per volume/Gruppo disco/iSCSI LUN:</h4>
+<ol>
+<li>Fare clic su <b>Configura</b>.</li>
+<li>Nella scheda <b>Hot Spare Targets</b>, saranno elencati i volumi/Gruppi disco/iSCSI LUN che potranno essere protetti mediante dischi hot spare. Se si deselezionano le caselle, i volumi/Gruppi disco/iSCSI LUN corrispondenti non saranno riparati automaticamente dai dischi hot spare in caso di danneggiamento.</li>
+<li>Nella scheda <b>Dispositivo incrociato Hot Spare</b>, è possibile consentire ai dischi hot spare in un dispositivo di riparare un RAID danneggiato in un dispositivo differente.</li>
+<li>Fare clic su <b>OK</b> per salvare le impostazioni.</li>
+</ol>
+
+
+
+<p>____<br /> * Disponibile solo su alcuni modelli.</p>
+
+</body>
+</html>

@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Ressursovervåker</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script> <script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h1><a name="leaf_update"></a>Ressursovervåker</h1>
+<p class="disable-dockerx64">Ressursovervåkeren gir deg muligheten til å overvåke CPU-bruk, minnebruk, diskutnyttelse og nettverksflyt. Du kan velge å overvåke i sanntid eller vise tidligere data.</p>
+<p class="enable-dockerx64">Ressursovervåker gir deg muligheten til å overvåke CPU-bruk, minnebruk og nettverksflyt. Du kan velge å overvåke i sanntid eller vise tidligere data.</p>
+<div class="section">
+<h4>Merk:</h4>
+<ul>
+<li>Tidligere data vil kun bli vist hvis det er merket av for <strong>Aktiver brukshistorikk</strong> under fanen <strong>Innstillinger</strong>.</li>
+<li class="enable-dockerx64">For Docker DSM indikerer <strong>CPU og minne</strong> bruksinformasjon om <strong>Docker-vert</strong>.</li>
+</ul>
+</div>
+<h2>Ytelse</h2>
+<p>Klikk på kategorien <strong>Ytelse</strong> for å vise data for ressursutnyttelse. Detaljert dato, tidspunkt og informasjon i tabellen vises når du beveger musen over.</p>
+
+<h3>CPU</h3>
+<p>Du kan se det samlede CPU-forbruket for <strong>Bruker</strong>, <strong>System</strong> og <strong>I/O Vent</strong>. CPU-belastningen kan være høy når ressursovervåkeren først startes, siden systemet må samle inn sine ressursdata og laste inn grensesnittsiden samtidig.</p>
+<p><strong>Bruker</strong> viser prosentandel av CPU som brukes for å kjøre programmer. <strong>System</strong> viser prosentandel av CPU som brukes i systemets kjerne, maskinvare-/programvare-IRQ. <strong>I/O Vent</strong> viser prosentandel av CPU som brukes på I/O Vent.</p>
+<p><strong>Utnyttelse</strong> er summen av CPU-forbruk for <strong>Bruker</strong> og <strong>System</strong>.</p>
+<p>Belastningsgjennomsnitt innenfor 1, 5 og 15 minutter vises med kjørekølengde (dvs. summen av antall prosesser som kjører pluss antallet som venter på å kjøre). </p>
+<div class="section">
+<h4>Begrepsforklaring</h4>
+<ul>
+<li><b>I/O Vent</b>: I/O Vent indikerer at CPU er inaktiv og ikke brukes av noen programmer. </li>
+<p>I/O Vent er normalt. Siden hastigheten til CPU er raskere enn hastigheten til I/O, er det normalt at CPU må vente på at overføringen av disker eller nettverk skal fullføres. Men hvis prosentandelen av I/O Vent er ekstremt høy, betyr det at CPU bruker mesteparten av tiden sin på I/O Vent og er muligens ikke godt utnyttet. Du kan bruke mer effektive diskgruppekonfigurasjoner (for eksempel SHR eller RAID 5) eller nettverkskonfigurasjoner (for eksempel Bonding) for å oppnå bedre systemytelse.</p> 
+</ul>
+</div>
+<h3>Minne</h3>
+<p>Det samlede minneforbruket for det fysiske minnet og veksleplass vil bli vist. Minebruken holder seg høy fordi systemet lagrer data som det bruker ofte i bufferen, slik at det får rask tilgang til dataene uten å bruke harddisken. Bufferminnet frigis hvis det generelle minnet er utilstrekkelig.</p>
+<p>Høyt forbruk av veksleplass indikerer utilstrekkelig systemminne og vil også påvirke systemytelsen. Du kan vise hastigheten for bytt inn og bytt ut ved å velge <strong>Bytt</strong> fra rullegardinmenyen øverst. </p>
+
+<h3>Nettverk</h3>
+<p>Nettverksflyttabellen viser hastighet for sendte og mottatte data i KB per sekund. Hvis PPPoE er aktivert, vil overføringshastigheten også vise i tabellen.</p>
+
+<h3 class="disable-dockerx64">Disk</h3>
+<p class="disable-dockerx64">Du kan velge å vise den samlede diskutnyttelsen, overføringshastighet eller IOPS ved å klikke på rullegardinmenyen øverst i tabellen. Du kan klikke på <strong>Vis alle</strong> nederst for å velge flere disker ved å merke av for å legge til deres data i tabellen.</p>
+
+
+<h3 class="disable-eds14 disable-dockerx64">Volum</h3>
+<p class="disable-eds14 disable-dockerx64">Denne siden viser volumenes generelle status. Klikk i rullegardinmenyen ovenfor tabellen for å vise overføringsbruk, overføringshastighet eller IOPS. Klikk på knappen <strong>Vis alle</strong> for å velge enkeltvolum og legge dem til i tabellen.</p>
+
+<h3 class="disable-eds14 disable-dockerx64">iSCSI</h3>
+<p class="disable-eds14 dixable-dockerx64">Denne siden viser kjørende iSCSI LUN-ers generelle status. Klikk på rullegardinmenyen ovenfor tabellen for å velge et LUN og se statusen. Tre tabeller vises som standard, nemlig <strong>Gjennomstrømming</strong>, <strong>IOPS</strong> og <strong>Ventetid</strong>. For mer detaljert informasjon, kan du klikke på <strong>Velg tabeller</strong>-knappen for å velge andre tabeller.</p>
+
+
+<h2>Prosess</h2>
+<p>Klikk på kategorien <strong>Prosess</strong> for å vise CPU- og minneforbruk for hver prosess i rekkefølge etter minkende CPU-belastning.</p>
+<p>Prosessen <strong>Status</strong> inkluderer <strong>Kjører</strong>, <strong>Sover</strong> og <strong>Stoppet</strong>. Linux-ekvivalenter av prosesstatus er <strong>kjører</strong>, <strong>stoppet/sporer</strong>, <strong>sover</strong>. </p>
+<p><strong>Sover</strong> kan etterfølges av en bokstav for detaljert informasjon, for eksempel 'D' for disksøvn, 'Z' for zombie, 'X' for død.</p>
+
+<h2>Tilkoblede brukere</h2>
+<p> Under denne fanen kan du vise og administrere klientene som for tiden er tilkoblet systemet og bruker ressurser. Denne seksjonen viser klienter som er tilkoblet via HTTP, TELNET, SSH, SMB/CIFS, AFP, FTP og NFS.</p>
+<h4>Hvis du vil administrere gjeldende tilkoblinger, gjør du ett av følgende:</h4>
+<ul>
+<li>Klikk på <b>Lagre</b> for å eksportere listen til en HTML-fil.</li>
+<li>Klikk på <b>Oppdater</b> for å oppdatere listen.</li>
+<li>Klikk på <b>Avslutt tilkobling</b> for å stoppe brukerens tilgang til ressursen. Den frakoblede brukeren må autoriseres på nytt for å få tilgang til ressursen.</li>
+<li>Klikk på <b>Deaktiver bruker</b> for å deaktivere brukeren. Hvis du vil aktivere brukeren på nytt, går du til <b>Hovedmeny</b> > <b>Kontrollpanel</b> > <b>Bruker</b>.</li>
+</ul>
+<div class="section">
+<h4>Merk:</h4>
+<ul>
+<li>Alternativet <strong>Avslutt tilkobling</strong> fungerer ikke med NFS-klienter.</li>
+<li>Hvis NFS-klienter ikke demonterer delte mapper på riktig måte, kan de fortsatt vises på listen over tilkoblede brukere.</li>
+<li>Hvis DiskStation starter på nytt, vil ikke NFS-klienter som var tilkoblet tidligere vises på listen over tilkoblede brukere.</li>
+</ul>
+</div>
+
+
+<h2>Hastighetsgrense</h2>
+<p>Under kategorien <strong>Hastighetsgrense</strong> kan du vise og administrere listen over overføringsprosesser som tok i bruk hastighetsgrense på DiskStation.</p>
+<h4>Slik oppdaterer du listen:</h4>
+<p>Klikk på <strong>Oppdater</strong> for å laste siden på nytt og hente frem de mest oppdaterte oppføringene.</p>
+<h4>Slik stopper du en filoverføringsprosess:</h4>
+<p>Klikk på <b>Avslutt tilkobling</b> for å stoppe filoverføringen. Du må starte filoverføringen på nytt for å fullføre prosessen.</p>
+
+
+<h2>Innstillinger</h2>
+<p>Klikk på <strong>Innstillinger</strong> for å sette opp følgende alternativer:</p>
+<ul>
+<li>Velg <strong>Sanntidsvarighet</strong> i minutter fra rullegardinmenyen.</li>
+<li>Merk av for<strong> Aktiver brukshistorikk</strong> hvis du vil vise tidligere data. Når dette er aktivert, kan du bytte mellom <strong>Sanntid</strong>, <strong>1 dag</strong>, <strong>1 uke</strong>, <strong>1 måned</strong> og <strong>1 år</strong> fra rullegardinmenyen øverst til høyre ved visning av ytelsestabeller.</li> 
+</ul>
+<p>Klikk på <strong>Bruk</strong> for å lagre innstillingene.</p>
+</body>
+</html>

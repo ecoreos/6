@@ -1,0 +1,81 @@
+ <!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Sustituir una unidad de disco duro en un volumen o grupo de discos - Ayuda de Synology DSM</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="This article walks you through the steps to replace a hard drive of an existing volume or disk group on DiskStation in order to increase storage capacity."><link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Sustituir discos duros para ampliar la capacidad de almacenamiento</h2>
+
+<p>Cuando se utilizan ciertos tipos de RAID, es posible ampliar la capacidad de almacenamiento de un volumen o grupo de discos mediante la sustitución de unidades de disco duro existentes por otras de mayor tamaño. Este artículo proporciona información importante acerca del proceso de ampliación, además de un ejemplo de cómo sustituir unidades de disco duro existentes para ampliar la capacidad de almacenamiento.</p>
+
+<div class="section">
+  <h4>Nota:</h4>
+<p>El procedimiento descrito en este artículo solo funciona con SHR, RAID 1, RAID 5 y RAID 6. Si está pensando en sustituir varias unidades de disco duro, debe tener cuidado y hacerlo una por una. Después de sustituir una unidad de disco duro, deberá reparar el volumen o grupo de discos antes de sustituir la siguiente. Para RAID 1, RAID 5 y RAID 6 la capacidad del volumen se ampliará cuando todas las unidades de disco duro se hayan sustituido.</p>
+
+</div>
+
+
+<h3 class="list_head"><a name="t1"></a>  Antes de comenzar</h3>
+
+<p>Antes de sustituir una unidad de disco duro, lea las siguientes notas:<br/><ul>
+<li><b>Copia de seguridad de datos:</b> aunque el proceso de expansión no eliminará ningún dato existente, recomendamos encarecidamente realizar una copia de seguridad de sus datos antes de continuar.</li>
+<li><b>Estado del volumen o grupo de discos:</b> antes de comenzar, asegúrese de que el estado de su volumen o grupo de discos es <b>Normal</b>. De lo contrario, primero deberá repararlo.</li>
+<li><b>¿Se sigue pudiendo acceder a los datos durante la expansión?</b> Los datos de su sistema seguirán siendo accesibles durante la expansión de volúmenes o grupos de discos, aunque es posible que el sistema suspenda las conexiones temporalmente al iniciar el proceso por primera vez.</li>
+</ul>
+
+<div class="section">
+<h4>SHR (Synology Hybrid RAID)</h4>
+
+<p>Los volúmenes SHR optimizan la capacidad de almacenamiento en base al número y al tamaño de las unidades de disco duro instaladas, por tanto, siga las instrucciones siguientes para ampliar la capacidad correctamente:</p>
+
+<ul>
+<li>Si la capacidad de todas las unidades de disco duro existentes es igual, deberá sustituir al menos dos de ellas por otras mayores para poder ampliar la capacidad de almacenamiento. Por ejemplo, si su volumen SHR consta de tres unidades de disco duro de 2 TB, debe sustituir al menos dos unidades de disco duro para ampliar la capacidad del volumen.</li>
+<li>Si la capacidad de las unidades de disco duro es diferente, las nuevas unidades de disco duro de sustitución deberán ser iguales o mayores que la unidad de disco duro existente más grande. Además, debería sustituir primero las unidades de disco duro más pequeñas para optimizar el uso de la capacidad. Por ejemplo, si su volumen SHR contiene tres unidades de disco duro de 4 TB, 3 TB y 2 TB respectivamente, las nuevas unidades de disco duro de sustitución deberán ser de al menos 4 TB. Además, deberá sustituir primero las unidades de disco duro de 3 TB o 2 TB.</i>
+</li>
+</ul>
+</div>
+
+<div class="section">
+<h4>RAID 5 y RAID 6</h4>
+
+<p>Cuando sustituya unidades de disco duro de volúmenes o grupos de discos RAID 5 o RAID 6, debe sustituir siempre primero la unidad de disco duro más pequeña. La capacidad de almacenamiento de un volumen RAID 5 es (número de discos duros – 1) x (tamaño de la unidad de disco duro más pequeña), y de un volumen RAID 6 es (número de unidades de disco duro – 2) x (tamaño de la unidad de disco duro más pequeña). Por tanto, la unidad de disco duro más pequeña debería sustituirse siempre en primer lugar para maximizar el uso de la unidad de disco duro.</p>
+
+<p>Por ejemplo, si su volumen RAID 5 contiene tres unidades de disco duro de 4 TB, 3 TB y 2 TB respectivamente, la capacidad disponible de su volumen será de 4 TB. Si sustituye las unidades de disco duro de 4 TB o 3 TB, la capacidad del volumen no cambiará. Para aumentar la capacidad de su volumen, se debe sustituir primero la unidad de disco duro de 2 TB.</p>
+</div>
+
+
+
+<h3>Sustituir discos duros para ampliar la capacidad de almacenamiento</h3>
+
+<p>En los siguientes pasos proporcionaremos un ejemplo de sustitución de unidades de disco duro en un volumen SHR.</p>
+
+<h4>Para sustituir las unidades de disco duro:</h4>
+<ol>
+<li>Abra <b>Administrador de almacenamiento</b>.</li><img src="about:blank" class="help_image"/><li>Vaya a <strong>Volumen</strong> para ver cuál es la unidad de disco duro más pequeña.</li><img src="../../../online_img/dsm/StorageManager/volume_diskgroup_expand_replace_disk/check_disk.png" class="help_image"/><li>Apague su DiskStation. (Omita este paso si su DiskStation admite el intercambio en caliente).</li>
+<li>Retire la unidad de disco duro más pequeña de las integrantes e instale una nueva de mayor tamaño.</li>
+
+<div class="section">
+<h4>Nota:</h4>
+<p>Para evitar lesionarse o dañar su DiskStation, siga las instrucciones de instalación de la unidad de disco duro disponibles en la <i>Guía rápida de instalación</i> de su producto de Synology.</p>
+</div>
+
+<li>Encienda su DiskStation.</li>
+<li>Abra <strong>Administrador de almacenamiento</strong> de nuevo.</li>
+<li>Vaya a <strong>HDD/SSD</strong> para asegurarse de que se reconoce la nueva unidad de disco duro.</li><img src="about:blank" class="help_image"/><li>El estado de su volumen debería ser <b>Degradado</b>. Seleccione el volumen y haga clic en <strong>Administrar</strong>.</li><img src="../../../online_img/dsm/StorageManager/volume_diskgroup_expand_replace_disk/volume_manage.png" class="help_image"/><li>Seleccione <b>Reparar</b>.</li><img src="../../../online_img/dsm/StorageManager/volume_diskgroup_expand_replace_disk/manage_repair.png" class="help_image"/><li>Seleccione las unidades de disco duro nuevas que va a agregar al volumen. A continuación siga los pasos del asistente para finalizar.</li><img src="../../../online_img/dsm/StorageManager/volume_diskgroup_expand_replace_disk/choose_disks.png" class="help_image"/><li>Repita el proceso anterior hasta que todas las unidades de disco duro deseadas hayan sido sustituidas por otras de mayor tamaño.</li>
+</ol>
+
+
+
+
+
+
+</body>
+</html>

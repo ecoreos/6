@@ -1,0 +1,2647 @@
+
+[]
+
+
+
+[AutoBlockAdd]
+Category: System
+Title: Blockerad IP-adress
+Subject: IP adress [%CLIENT_IP%] på %HOSTNAME% har blockerats av %SERVICE%
+
+Bäste användare,
+
+IP-adressen [%CLIENT_IP%] har %AUTOBLOCK_ATTEMPTS% misslyckade försök att logga in på %SERVICE% som körs på %HOSTNAME% inom %AUTOBLOCK_ATTEMPT_MIN% minuter och blockerades vid %AUTOBLOCK_TIME%.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[BackupTaskCanceled]
+Category: Backup/Restore,Important
+Title: Säkerhetskopiering avbruten
+Subject: %TASK_TYPE% - %TASK_NAME% avbröts på %HOSTNAME%
+
+Bäste användare,
+
+Datasäkerhetskopiering på %HOSTNAME% har avbrutits.
+
+Säkerhetskopieringsuppgift: %TASK_NAME%
+Säkerhetskopieringsmål: %DESTINATION_IP% %DESTINATION_PATH%
+Starttid: %START_TIME%
+Längd: %DURATION%
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[BackupTaskFailed]
+Category: Backup/Restore,Important
+Title: Säkerhetskopieringen misslyckades
+Subject: %TASK_TYPE% - %TASK_NAME% misslyckades på %HOSTNAME%
+
+Bäste användare,
+
+Säkerhetskopiering av data på %HOSTNAME% har misslyckats.
+
+Vänligen kontrollera loggfilen för säkerhetskopiering i Hyper Backup > Loggfil för ytterligare information.
+
+Säkerhetskopieringsuppgift: %TASK_NAME%
+Säkerhetskopieringsmål: %DESTINATION_IP% %DESTINATION_PATH%
+Starttid: %START_TIME%
+Längd: %DURATION%
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[BackupTaskFinished]
+Category: Backup/Restore
+Title: Säkerhetskopieringen är slutförd
+Subject: %TASK_TYPE% - %TASK_NAME% lyckades på %HOSTNAME%
+
+Bäste användare,
+
+Din säkerhetskopieringsuppgift %TASK_NAME% är nu slutförd.
+
+Säkerhetskopieringsuppgift: %TASK_NAME%
+Säkerhetskopieringsmål: %DESTINATION_IP%  %DESTINATION_PATH%
+Starttid: %START_TIME%
+Längd: %DURATION%
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[BackupTaskPartial]
+Category: Backup/Restore,Important
+Title: Säkerhetskopiering delvis genomförd
+Subject: %TASK_TYPE% - %TASK_NAME% lyckades delvis på %HOSTNAME%
+
+Bäste användare,
+
+Din säkerhetskopieringsuppgift %TASK_NAME% är nu slutförd med mindre undantag.
+
+Vänligen kontrollera loggfilen för säkerhetskopiering i Hyper Backup > Loggfil för ytterligare information.
+
+Säkerhetskopieringsuppgift: %TASK_NAME%
+Säkerhetskopieringsmål: %DESTINATION_IP% %DESTINATION_PATH%
+Starttid: %START_TIME%
+Längd: %DURATION%
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[CMSClientConnectFailed]
+Category: CMS
+Title: Anslutning till CMS-värd misslyckades
+Subject: %HOSTNAME% kan inte ansluta till CMS-värd(%CMS_SERVER%).
+
+Bäste användare,
+
+Servern %HOSTNAME% kan inte ansluta till CMS-värd (%CMS_SERVER%). Vänligen kontrollera nätverksanslutningen och inställningarna för båda servrarna.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[CMSClientDetachSuccess]
+Category: CMS
+Title: Borttagning av anslutning från CMS-värd lyckades
+Subject: Borttagning av anslutning mellan %HOSTNAME% och CMS-värd (%CMS_SERVER%).
+
+Bäste användare,
+
+Anslutningen mellan servern %HOSTNAME% och CMS-värd (%CMS_SERVER%) har tagits bort.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[CMSClientJoinSuccess]
+Category: CMS
+Title: Anslutning till CMS-värd lyckades
+Subject: %HOSTNAME% anslöt till CMS-värd (%CMS_SERVER%).
+
+Bäste användare,
+
+Servern %HOSTNAME% har med lyckat resultat anslutits till CMS-värd (%CMS_SERVER%). En del inställningar kommer att hanteras av CMS-värden.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[CpuFanResume]
+Category: System
+Title: CPU-fläkt återupptagen
+Subject: CPU-fläkt %FANID% på %HOSTNAME% (SN: %HOST_SN%) har återupptagits
+
+Bäste användare,
+
+CPU-fläkt %FANID% på %HOSTNAME% (SN: %HOST_SN%) är återupptagen.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[CpuFanStop]
+Category: System,Important
+Title: CPU-fläkt stoppad
+Subject: CPU-fläkt %FANID% på %HOSTNAME% (SN: %HOST_SN%) har slutat fungera
+
+Bäste användare,
+
+CPU-fläkt %FANID% på %HOSTNAME% (SN: %HOST_SN%) har slutat fungera.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[DDNSFail]
+Category: System
+Title: DDNS-registrering misslyckades
+Subject: DDNS-tjänsten kunde inte registrera IP-adressen %EXTERNAL_IP% till %DDNS_HOST_NAME% [%FAIL_REASON%]
+
+Bäste användare,
+
+Systemet lyckades inte registrera den externa IP-adressen %EXTERNAL_IP% till %DDNS_HOST_NAME% i DDNS-server %DDNS_NAME%. Den angivna orsaken är [%FAIL_REASON%].
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[DRLunScheduleSnapshotFail]
+Category: Snapshot Replication,Important
+Title: Kunde inte ta ett snapshot för iSCSI LUN
+Subject: Kunde inte ta ett snapshot för LUN %LUNNAME% på %HOSTNAME%
+
+Bäste användare,
+
+Kunde inte ta ett snapshot för LUN på %HOSTNAME%. Vänligen kontrollera loggfilerna i Snapshot Replication för detaljerad information.
+
+LUN: %LUNNAME%
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[DRReplicationCleanupTestFailoverCompletion]
+Category: Snapshot Replication,Important
+Title: Rensat testredundans för replikeringsuppgift
+Subject: Rensat testredundans för %DRSITE_TARGET_NAME% på %DRSITE_HOSTNAME%
+
+Bäste användare,
+
+Systemet rensade testredundans för %DRSITE_TARGET_NAME% på målservern (%DRSITE_HOSTNAME%). Vänligen kontrollera sidan Loggfil för Snapshot Replication för detaljerad information.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[DRReplicationCleanupTestFailoverFail]
+Category: Snapshot Replication,Important
+Title: Kunde inte rensa testredundans för replikeringsuppgift
+Subject: Kunde inte rensa testredundans för %DRSITE_TARGET_NAME% på %DRSITE_HOSTNAME%
+
+Bäste användare,
+
+Systemet kunde inte rensa testredundans för %DRSITE_TARGET_NAME% på %DRSITE_HOSTNAME%. Vänligen kontrollera sidan Loggfil för Snapshot Replication för detaljerad information.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[DRReplicationExportCompletion]
+Category: Snapshot Replication,Important
+Title: Exporterade replikeringsuppgift med lyckat resultat
+Subject: Exporterade %MAINSITE_TARGET_NAME%
+
+Bäste användare,
+
+Systemet har exporterat %MAINSITE_TARGET_NAME%. Vänligen kontrollera sidan Loggfil för Snapshot Replication för detaljerad information.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[DRReplicationExportFail]
+Category: Snapshot Replication,Important
+Title: Kunde inte exportera replikeringsuppgift
+Subject: Kunde inte exportera %MAINSITE_TARGET_NAME%
+
+Bäste användare,
+
+Systemet kunde inte exportera %MAINSITE_TARGET_NAME%. Vänligen kontrollera sidan Loggfil för Snapshot Replication för detaljerad information.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[DRReplicationFailoverCompletion]
+Category: Snapshot Replication,Important
+Title: Utförde redundans för replikeringsuppgift
+Subject:Utförde redundans för %DRSITE_TARGET_NAME% till %DRSITE_HOSTNAME% med lyckat resultat
+
+Bäste användare,
+
+Systemet utförde redundans för %DRSITE_TARGET_NAME% till målservern (%DRSITE_HOSTNAME%). Vänligen kontrollera sidan Loggfil för Snapshot Replication för detaljerad information.
+
+Redundansversion: %SNAPSHOT_VERSION%
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[DRReplicationFailoverFail]
+Category: Snapshot Replication,Important
+Title: Kunde inte utföra redundans för replikeringsuppgift
+Subject: Kunde inte utföra redundans för %DRSITE_TARGET_NAME% till %DRSITE_HOSTNAME%
+
+Bäste användare,
+
+Systemet kunde inte utföra redundans för %DRSITE_TARGET_NAME% till målservern (%DRSITE_HOSTNAME%). Vänligen kontrollera sidan Loggfil för Snapshot Replication för detaljerad information.
+
+Redundansversion: %SNAPSHOT_VERSION%
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[DRReplicationImportCompletion]
+Category: Snapshot Replication,Important
+Title: Importerade replikeringsuppgift med lyckat resultat
+Subject: Importerade %DRSITE_TARGET_NAME% med lyckat resultat
+
+Bäste användare,
+
+Systemets import av %DRSITE_TARGET_NAME% lyckades. Vänligen kontrollera sidan Loggfil för Snapshot Replication för detaljerad information.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[DRReplicationImportFail]
+Category: Snapshot Replication,Important
+Title: Kunde inte importera replikeringsuppgift
+Subject: Kunde inte importera %DRSITE_TARGET_NAME%
+
+Bäste användare,
+
+Systemet kunde inte importera %DRSITE_TARGET_NAME%. Vänligen kontrollera sidan Loggfil för Snapshot Replication för detaljerad information.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[DRReplicationInitialSyncCompletion]
+Category: Snapshot Replication,Important
+Title: Initial replikering slutförd
+Subject: Replikeringsuppgift har slutfört den initiala replikeringen från %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%) till %DRSITE_HOSTNAME% (%DRSITE_TARGET_NAME%)
+
+Bäste användare,
+
+Replikeringsuppgiften har slutfört den initiala replikeringen. Vänligen kontrollera sidan Loggfil för Snapshot Replication för detaljerad information.
+
+Källserver: %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%)
+Målserver: %DRSITE_HOSTNAME% (%DRSITE_TARGET_NAME%)
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[DRReplicationInitialSyncFail]
+Category: Snapshot Replication,Important
+Title: Kunde inte utföra initial replikering
+Subject: Replikeringsuppgift kunde inte utföra initial replikering till %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%)
+
+Bäste användare,
+
+Replikeringsuppgiften kunde inte utföra initial replikering till %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%). Vänligen kontrollera sidan Loggfil för Snapshot Replication för detaljerad information.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[DRReplicationReprotectCompletion]
+Category: Snapshot Replication,Important
+Title: Återskyddade framgångsrikt replikeringsuppgift
+Subject: Skyddad replikeringsuppgift (%NEW_MAINSITE_TARGET_NAME%) lyckades
+
+Bäste användare,
+
+Systemet återskyddade replikeringsuppgiften (%NEW_MAINSITE_TARGET_NAME%) till den nya källservern (%NEW_MAINSITE_HOSTNAME%) med replikerat data (%NEW_DRSITE_TARGET_NAME%) på den nya målservern (%NEW_DRSITE_HOSTNAME%). Vänligen kontrollera sidan Loggfil för Snapshot Replication för detaljerad information.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[DRReplicationReprotectFail]
+Category: Snapshot Replication,Important
+Title: Kunde inte återskydda replikeringsuppgift
+Subject: Kunde inte återskydda replikeringsuppgift (%NEW_MAINSITE_TARGET_NAME%)
+
+Bäste användare,
+
+Systemet kunde inte återskydda replikeringsuppgiften (%NEW_MAINSITE_TARGET_NAME%) till den nya källservern (%NEW_MAINSITE_HOSTNAME%) med replikerat data (%NEW_DRSITE_TARGET_NAME%) på den nya målservern (%NEW_DRSITE_HOSTNAME%). Vänligen kontrollera sidan Loggfil för Snapshot Replication för detaljerad information.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[DRReplicationScheduleSyncCompletion]
+Category: Snapshot Replication,Important
+Title: Schemalagd replikering slutförd
+Subject: Replikeringsuppgiften har slutfört den schemalagda replikeringen från %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%) till %DRSITE_HOSTNAME% (%DRSITE_TARGET_NAME%)
+
+Bäste användare,
+
+Replikeringsuppgiften har slutfört den schemalagda replikeringen. Vänligen kontrollera Sidan med Loggfiler för Snapshot Replication för mer information.
+
+Källserver: %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%)
+Målserver: %DRSITE_HOSTNAME% (%DRSITE_TARGET_NAME%)
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[DRReplicationScheduleSyncFail]
+Category: Snapshot Replication,Important
+Title: Kunde inte utföra schemalagd replikering
+Subject: Replikeringsuppgiften kunde inte utföra schemalagd replikering till %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%)
+
+Bäste användare,
+
+Replikeringsuppgiften kunde inte utföra schemalagd replikering till %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%). Vänligen kontrollera Sidan med Loggfiler för Snapshot Replication för mer information.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[DRReplicationSwitchoverCompletion]
+Category: Snapshot Replication,Important
+Title: Utförde övergång för replikeringsuppgift
+Subject: Utförde övergång för %NEW_DRSITE_HOSTNAME% (%NEW_DRSITE_TARGET_NAME%) to %NEW_MAINSITE_HOSTNAME%
+
+Bäste användare,
+
+Systemet utförde övergång för %NEW_DRSITE_HOSTNAME% (%NEW_DRSITE_TARGET_NAME%) to till målservern (%NEW_MAINSITE_HOSTNAME%). Vänligen kontrollera sidan Loggfil för Snapshot Replication för detaljerad information.
+
+Ny källserver: %NEW_MAINSITE_HOSTNAME% (%NEW_MAINSITE_TARGET_NAME%)
+Ny målserver: %NEW_DRSITE_HOSTNAME% (%NEW_DRSITE_TARGET_NAME%)
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[DRReplicationSwitchoverFail]
+Category: Snapshot Replication,Important
+Title: Kunde inte utföra övergång för replikeringsuppgift
+Subject: Kunde inte utföra övergång för %NEW_DRSITE_HOSTNAME% (%NEW_DRSITE_TARGET_NAME%) till %NEW_MAINSITE_HOSTNAME%
+
+Bäste användare,
+
+Systemet kunde inte utföra övergång för %NEW_DRSITE_HOSTNAME% (%NEW_DRSITE_TARGET_NAME%) till målservern (%NEW_MAINSITE_HOSTNAME%). Vänligen kontrollera sidan Loggfil för Snapshot Replication för detaljerad information.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[DRReplicationSyncFail]
+Category: Snapshot Replication,Important
+Title: Kunde inte utföra replikering
+Subject: Replikeringsuppgiften kunde inte utföra replikering till %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%)
+
+Bäste användare,
+
+Replikeringsuppgiften kunde inte utföra replikering till %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%). Vänligen kontrollera Sidan med Loggfiler för Snapshot Replication för mer information.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[DRReplicationSyncNotFinishInNotifyTime]
+Category: Snapshot Replication,Important
+Title: Replikeringsuppgift inte slutförd
+Subject: Replikeringsuppgift %MAINSITE_TARGET_NAME% till %DRSITE_HOSTNAME% (%DRSITE_TARGET_NAME%) är inte slutförd
+
+Bäste användare,
+
+Replikeringsuppgiften har inte slutförts inom %NOTIFY_TIME% minuter. Vänligen kontrollera sidan Loggfil för Snapshot Replication för detaljerad information.
+
+Källserver: %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%)
+Målserver: %DRSITE_HOSTNAME% (%DRSITE_TARGET_NAME%)
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[DRReplicationSyncStop]
+Category: Snapshot Replication,Important
+Title: Replikering är stoppad
+Subject: Replikeringsuppgiften som utförde replikering till %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%) är stoppad
+
+Bäste användare,
+
+Replikeringsuppgiften som utför replikering till %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%) är stoppad. Vänligen kontrollera Sidan med Loggfiler för Snapshot Replication för mer information.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[DRReplicationTestFailoverCompletion]
+Category: Snapshot Replication,Important
+Title: Utförde testredundans för replikeringsuppgift
+Subject: Testredundans för %TEST_TARGET_NAME% är nu tillgänglig
+
+Bäste användare,
+
+Testredundans för %TEST_TARGET_NAME% är nu tillgänglig. Vänligen kontrollera sidan Loggfil för Snapshot Replication för detaljerad information.
+
+Testserver: %DRSITE_HOSTNAME%
+Namn på test av delad mapp/iSCSI LUN: %TEST_TARGET_NAME%
+Testversion: %SNAPSHOT_VERSION%
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[DRReplicationTestFailoverFail]
+Category: Snapshot Replication,Important
+Title: Kunde inte starta testredundans för replikeringsuppgift
+Subject: Kunde inte starta testredundans för %TEST_TARGET_NAME% på %DRSITE_HOSTNAME%
+
+Bäste användare,
+
+Systemet kunde inte starta en testredundans på målservern (%DRSITE_HOSTNAME%). Vänligen kontrollera sidan Loggfil för Snapshot Replication för detaljerad information.
+
+Testserver: %DRSITE_HOSTNAME%
+Namn på test av delad mapp/iSCSI LUN: %TEST_TARGET_NAME%
+Testversion: %SNAPSHOT_VERSION%
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[DRShareTakeSnapshotFail]
+Category: Snapshot Replication,Important
+Title: Kunde inte ta ett snapshot för delad mapp
+Subject: Kunde inte ta ett snapshot för delad mapp %SHARE% på %HOSTNAME%
+
+Bäste användare,
+
+Kunde inte ta ett snapshot för delad mapp på %HOSTNAME%. Vänligen kontrollera loggfilerna i Snapshot Replication för detaljerad information.
+
+Delad mapp: %SHARE%
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[DRSnapshotScheduleTaskTooDenseFail]
+Category: Snapshot Replication,Important
+Title: Tidigare schemalagd snapshotuppgift bearbetas fortfarande
+Subject: Tidigare schemalagd snapshotuppgift körs fortfarande på %MAINSITE_TARGET_NAME%.
+
+Bäste användare,
+
+Kunde inte utföra schemalagd snapshotuppgift på %MAINSITE_TARGET_NAME% eftersom tidigare schemalagd snapshotuppgift fortfarande körs. Vänligen kontrollera Sidan med Loggfiler för Snapshot Replication för mer information.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[DSMAutoUpdateReady]
+Category: System,Important
+Title: Automatisk uppdatering av system
+Subject: Automatisk uppdatering av %OSNAME% startar automatiskt på %HOSTNAME% om %COUNTDOWN_MINUTE% minuter
+
+Bäste användare,
+
+%NEW_VERSION% installeras automatiskt om %COUNTDOWN_MINUTE% minuter. Om du vill avbryta installationen, vänligen logga in på %HOSTNAME% och gör det i meddelandeområdet.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[DSMAutoUpdateShutdownStart]
+Category: System,Important
+Title: Systemuppdateringar som installeras före den schemalagda avstängningen
+Subject: %OSNAME%-uppdateringar installeras på %HOSTNAME% före den schemalagda avstängningen
+
+Bäste användare,
+
+%NEW_VERSION% kommer att installeras före den schemalagda avstängningen och %HOSTNAME% stängs av efter att installationen är slutförd. Vänligen stäng inte av din %DISKSTATION% innan det är slutfört.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[DSMUpdateAvailable]
+Category: System,Important
+Title: Ny %OSNAME%-uppdatering klar
+Subject: %OSNAME%-uppdatering är klar för installation på %HOSTNAME%
+
+Bäste användare,
+
+En ny version av %OSNAME% har laddats ned och är klar för installation. Vänligen logga in på %HOSTNAME% och gå till Kontrollpanel > Uppdatera & Återställa, för att installera %NEW_VERSION%. För att lära mer om %OSNAME%-uppdatering, vänligen se %HTTP_URL%.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[DeviceEjectedImproperly]
+Category: External Storage
+Title: Extern enhet matades inte ut på rätt sätt
+Subject: Extern enhet %DEVICE_NAME% på %HOSTNAME% matades inte ut på rätt sätt.
+
+Bäste användare,
+
+Externa enheten %DEVICE_NAME% på %HOSTNAME% matades inte ut på rätt sätt. För att undvika dataförlust rekommenderar vi att enheten matas ut innan den kopplas ur.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[DiskTemperatureAbnormal]
+Category: Storage,Important
+Title: Diskens temperatur är inte inom sin arbetstemperatur
+Subject: Disken %DISK_ID% har en temperatur som inte är inom dess arbetstemperatur
+
+Bäste användare,
+
+Temperaturen på disken %DISK_ID% [%MODEL%] är %REAL_TEMPERATURE% ºC, vilket inte är inom arbetstemperaturen, %MIN_TEMPERATURE% ºC ~ %MAX_TEMPERATURE% ºC.
+Håll dina diskar inom acceptabel arbetstemperatur.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[DiskTemperatureNormal]
+Subject: Disken %DISK_ID% har en temperatur som är inom dess arbetstemperatur
+
+Bäste användare,
+
+Temperaturen på disken %DISK_ID% [%MODEL%] är nu inom acceptabel arbetstemperatur, %MIN_TEMPERATURE% ºC ~ %MAX_TEMPERATURE% ºC.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[DriveSlotDisabled]
+Category: Storage,Important
+Title: Diskfack är avaktiverat
+Subject: Diskfack [%DISK_ID%] är avaktiverat
+
+Bäste användare,
+
+Ett enhetsfack har blivit inaktiverad på grund av fel på hårddisken [%DISK_ID%]. Vänligen byt ut disken, aktivera den och reparera, om så behövs, alla trasiga volymer.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[DsmProtectionCheckFailed]
+Category: System,Important
+Title: Systemfelaktigheter upptäckta
+Subject: Felaktighet upptäckt på %HOSTNAME%. Alla volymer har avmonterats.
+
+Bäste användare,
+
+Systemet har upptäckt en felaktighet på %HOSTNAME%. För att skydda dina data har alla volymer avmonterats. Kontakta Synology support för ytterligare assistans.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[EBoxHDEcc]
+Category: Storage,Important
+Title: I/O-fel i expanstionsenhetsdisk
+Subject: I/O-fel skedde på disken %DISK_ID% av %EUNIT_ID% på %HOSTNAME%
+
+Bäste användare,
+
+Hårddisken %DISK_ID% på %EUNIT_ID% på %HOSTNAME% hade ett I/O-fel men den fungerar nu efter flera försök. Detta kan ha orsakats av felaktiga sektorer. Om felet uppstår igen, var vänlig säkerhetskopiera dina data och kör S.M.A.R.T.-testet på din hårddisk för att undersöka hårddiskens status.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[ESATADiskFull]
+Category: External Storage
+Title: eSATA-disk full
+Subject: Det börjar bli ont om ledigt utrymme eSATA-disken %DISK_NUMBER% på %HOSTNAME%
+
+Bäste användare,
+
+eSATA-disken %DISK_NUMBER% på %HOSTNAME% börjar få ont om utrymme. Läs informationen nedan och vidta lämpliga korrigeringsåtgärder.
+
+Total kapacitet: %DISK_SIZE% GB
+Tillgänglig kapacitet: %FREE_SPACE% GB (%USAGE%%)
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[ESATAPartitionFull]
+Category: External Storage
+Title: eSATA-partition full
+Subject: Det finns ont om ledigt utrymme på partitionen %PARTITION_NUMBER% på eSATA-disken %DISK_NUMBER% på %HOSTNAME%
+
+Bäste användare,
+
+Partitionen %PARTITION_NUMBER% på eSATA-disken %DISK_NUMBER% på %HOSTNAME% börjar få ont om utrymme. Läs informationen nedan och vidta lämpliga korrigeringsåtgärder.
+
+Total kapacitet: %DISK_SIZE% GB
+Tillgänglig kapacitet: %FREE_SPACE% GB (%USAGE%%)
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[EUnitPowerFail]
+Category: System,Important
+Title: Utökningsenhetens reservströmkälla fungerar inte
+Subject: Strömtillförsel nr.%POWERID% på %EUNIT_ID% på %HOSTNAME% fungerar inte
+
+Bäste användare,
+
+Strömtillförsel nr.%POWERID% på %EUNIT_ID% på %HOSTNAME% fungerar inte.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[EUnitPowerResume]
+Category: System,Important
+Title: Utökningsenhetens reservströmkällora har återupptagit driften
+Subject: Strömkälla nr.%POWERID% av %EUNIT_ID% på %HOSTNAME% har återställts
+
+Bäste användare,
+
+Strömkälla nr.%POWERID% av %EUNIT_ID% på %HOSTNAME% har återställts.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[EboxFanResume]
+Category: System,Important
+Title: Utökningsenhetens fläkt har startats om
+Subject: %EBOX_ID% fläkt %FAN_ID% på %HOSTNAME% har återupptagits
+
+Bäste användare,
+
+%EBOX_ID% fläkt %FAN_ID% på %HOSTNAME% har återupptagits.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[EboxFanStop]
+Category: System,Important
+Title: Utökningsenhetens fläkt har stoppats
+Subject: %EBOX_ID% fläkt %FAN_ID% på %HOSTNAME% har slutat arbeta
+
+Bäste användare,
+
+%EBOX_ID% fläkt %FAN_ID% på %HOSTNAME% har slutat arbeta.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[EboxLinkFail]
+Category: System,Important
+Title: Anslutningsfel på utökningsenhet
+Subject: Anslutningsfel uppstod på utökningsenheten %EBOX_ID%(SAS Out - %LINK_ID%) på %HOSTNAME% (SN: %HOST_SN%)
+
+Bäste användare,
+
+Anslutningsfel uppstod på utökningsenheten %EBOX_ID%(SAS Out - %LINK_ID%) på %HOSTNAME% (SN: %HOST_SN%).
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[EboxLinkResume]
+Category: System,Important
+Title: Anslutning till utökningsenhet återställdes
+Subject: Återställde anslutningen på utökningsenheten %EBOX_ID% (SAS Out - %LINK_ID%) på %HOSTNAME% (SN: %HOST_SN%)
+
+Bäste användare,
+
+Anslutningen på utökningsenheten %EBOX_ID% (SAS Out - %LINK_ID%) på %HOSTNAME% (SN: %HOST_SN%) har återställts.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[ExpansionFrmInconsistent]
+Category: System,Important
+Title: Fast programvara på expansionsenhet är inkonsekvent
+Subject: Fast programvara på expansionsenhet i %HOSTNAME% är inkonsekvent.
+
+Bäste användare:
+
+Fasta programvaran på expansionsenhet i %HOSTNAME% är inkonsekvent. För att åtgärda detta problem, vänligen kontakta onlinesupporten hos Synology på www.synology.com.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[ForgetPassword]
+Subject: Återställ glömt lösenord
+Bäste %USER%,
+
+Du kan klicka på länken här nedanför för att återställa ditt lösenord:
+%URL%
+
+Denna länk fungerar under 24 timmar. Om du inte begärt ändring av ditt lösenord, vänligen ignorera detta meddelande.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[HA_AbleSwitchover]
+Category: HA,Important
+Title: Övergång för high-availability-klustret fungerar igen
+Subject: Övergång för high-availability-klustret %HOSTNAME% fungerar igen
+
+Bäste användare,
+
+Övergången för high-availability-klustret %HOSTNAME% fungerar igen. Vänligen kontrollera systemloggar på sidan Loggfiler i High Availability Manager för ytterligare information.
+
+Åtgärd: %HA_ACTION%
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[HA_FailOver]
+Category: HA,Important
+Title: Fel på high-availability-kluster upptäcktes
+Subject: Fel upptäcktes på high-availability-klustret %HOSTNAME%
+
+Bäste användare,
+
+Ett fel har upptäckts på high-availability-klustret %HOSTNAME%. Systemet kommer att utföra redundans till den passiva servern. Vänligen se systemloggar för ytterligare information.
+
+Åtgärd: %HA_ACTION%
+Fel: %HA_PARAM_1%
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[HA_PassiveTimeout]
+Category: HA,Important
+Title: Localhost kunde inte upptäcka den aktiva servern
+Subject: [%HA_PARAM_1%] kunde under en tidsperiod inte upptäcka den aktiva servern
+
+Bäste användare,
+
+Den passiva servern [%HA_PARAM_1%] har stängts av eftersom den under en tidsperiod inte kunde upptäcka den aktiva servern [%HA_PARAM_2%]. Vänligen starta först den aktiva servern [%HA_PARAM_2%]. Om den aktiva servern [%HA_PARAM_2%] inte längre finns tillgänglig, vänligen följ nedanstående instruktioner för att ta bort high-availabilityklustret: Starta [%HA_PARAM_1%] och vänta 5 minuter. Tryck och håll kvar på RESET-knappen, som finns på den bakre panelen av din %DISKSTATION%, under 4 sekunder tills %DISKSTATION% ger ifrån sig ett pip-ljud. Släpp omedelbart. (Varning: Att kontinuerligt trycka på RESET-knappen gör att operativsystemet installeras om.) För mer information om vilka systeminställningar som återställs, vänligen se den här självstudien: https://www.synology.com/knowledgebase/DSM/tutorial/General/How_to_reset_your_Synology_NAS.
+
+Åtgärd: %HA_ACTION%
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[HA_SwitchFail]
+Category: HA,Important
+Title: Kunde inte utföra redundans av tjänster
+Subject: Misslyckades med att utföra redundans av tjänster för high-availability-klustret %HOSTNAME%
+
+Bäste användare,
+
+Systemet försökte utföra en redundans av tjänster till den passiva servern på high-availability-klustret %HOSTNAME% men misslyckades. Vänligen se systemloggar för ytterligare information.
+
+Åtgärd: %HA_ACTION%
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[HA_SwitchFinished]
+Category: HA,Important
+Title: High-availability-klustret körs nu
+Subject: High-availability-klustret %HOSTNAME% körs nu på %HA_PARAM_1%
+
+Bäste användare,
+
+Tjänsterna för high-availability-klustret %HOSTNAME% körs nu på %HA_PARAM_1%. Vänligen kontrollera systemloggar på sidan Loggfiler i High Availability Manager för ytterligare information.
+
+Åtgärd: %HA_ACTION%
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[HA_SwitchOver]
+Category: HA,Important
+Title: Övergång för high-availability-kluster
+Subject: Övergång för high-availability-kluster %HOSTNAME% till %HA_PARAM_1%
+
+Bäste användare,
+
+En övergång har initierats på high-availability-klustret %HOSTNAME%. Tjänster håller på att föras över till %HA_PARAM_1%. Vänligen se systemloggar för ytterligare information.
+
+Åtgärd: %HA_ACTION%
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[HA_SyncComplete]
+Category: HA,Important
+Title: Fullständig datareplikering är komplett
+Subject: Fullständig datareplikering av high-availability-klustret %HOSTNAME% har slutförts
+
+Bäste användare,
+
+Fullständig datareplikering av high-availability-klustret %HOSTNAME% har slutförts. Den passiva servern är nu klar att ta över tjänster om en övergång eller redundans behövs. Vänligen kontrollera systemloggar på sidan Loggfiler i High Availability Manager för ytterligare information.
+
+Åtgärd: %HA_ACTION%
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[HA_UnableSwitchover]
+Category: HA,Important
+Title: Övergång för high-availability-klustret avaktiverat
+Subject: Övergång för high-availability-klustret %HOSTNAME% har avaktiverats
+
+Bäste användare,
+
+Övergången för high-availability-klustret %HOSTNAME% har avaktiverats. Vänligen kontrollera systemloggar på sidan Loggfiler i High Availability Manager för ytterligare information.
+
+Åtgärd: %HA_ACTION%
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[HA_UnbindLocal]
+Category: HA,Important
+Title: Localhost togs bort från high-availability-klustret
+Subject: %HA_PARAM_1% har tagits bort från high-availability-klustret %HA_PARAM_2%
+
+Bäste användare,
+
+%HA_PARAM_1% har tagits bort från high-availability-klustret %HA_PARAM_2%. Vänligen se systemloggar för ytterligare information.
+
+Åtgärd: %HA_ACTION%
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[HDEcc]
+Category: Storage,Important
+Title: Disk I/O-fel
+Subject: I/O fel uppstod för hårddisk %DISK_ID% på %HOSTNAME%
+
+Bäste användare,
+
+Hårddisken %DISK_ID% på %HOSTNAME% hade ett I/O-fel men den fungerar nu efter flera försök. Detta kan ha orsakats av felaktiga sektorer. Om felet uppstår igen, var vänlig säkerhetskopiera dina data och kör S.M.A.R.T.-testet på din hårddisk för att undersöka hårddiskens status.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[HotSpareDiskPlugout]
+Category: Storage,Important
+Title: Global Hot Spare-disk är inte inkopplad.
+Subject: Hot Spare-disk(%DISK_ID%) är inte inkopplad
+
+Bäste användare,
+
+Systemet har upptäckt att Hot Spare-disken (%DISK_ID%) hade kopplats ifrån.
+Det är att rekommendera att lägga till diskar till Hot Spare för att skydda lagringsutrymmet.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[HotSpareRepairDone]
+Category: Storage,Important
+Title: Reparation av global Hot Spare har slutförts
+Subject: Reparation av lagringsutrymme (%STORAGE_ID%) har slutförts
+
+Bäste användare,
+
+Systemet har slutfört reparation av det trasiga lagringsutrymmet (%STORAGE_ID%) med Hot Spare-disk (%DISK_ID%).
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[HotSpareRepairFailed]
+Category: Storage,Important
+Title: Reparation av global Hot Spare har misslyckats
+Subject: Misslyckades att reparera lagringsutrymme (%STORAGE_ID%)
+
+Bäste användare,
+
+Systemet misslyckades att reparera det degraderade lagringsutrymmet (%STORAGE_ID%) med Hot Spare-disk (%DISK_ID%).
+Se systemloggar för mer information.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[HotSpareRepairNoProtect]
+Category: Storage,Important
+Title: Global Hot Spare: påminn om vilka utrymmen som inte är skyddade
+Subject: Vissa lagringsutrymmen är inte skyddade av Hot Spare
+
+Bäste användare,
+
+Vissa lagringsutrymmen (%STORAGE_ID%) är inte skyddade av Hot Spare.
+Det är att rekommendera att lägga till diskar till Hot Spare för att skydda lagringsutrymmet.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[HotSpareRepairStart]
+Category: Storage,Important
+Title: Reparation av global Hot Spare pågår
+Subject: Systemet använder Hot Spare-diskar för att reparera trasigt lagringsutrymme (%STORAGE_ID%)
+
+Bäste användare,
+
+Systemet använder nu Hot Spare-disk (%DISK_ID%) för att reparera det trasiga lagringsutrymmet (%STORAGE_ID%).
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[ImproperShutdown]
+Category: System,Important
+Title: Felaktig avstängning
+Subject: %HOSTNAME% råkade ut för felaktig avstängning
+
+Bäste användare,
+
+%HOSTNAME% fick ett strömavbrott och stängdes därför inte av korrekt.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[InternalFanResume]
+Category: System
+Title: Serverfläkt omstartad
+Subject: Fläkt %FANID% på servern %HOSTNAME% (SN: %HOST_SN%) har återupptagits
+
+Bäste användare,
+
+Fläkten %FANID% på servern %HOSTNAME% (SN: %HOST_SN%) är återupptagen.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[InternalFanStop]
+Category: System,Important
+Title: Serverfläkt stoppad
+Subject: Fläkten %FANID% på servern %HOSTNAME% (SN: %HOST_SN%) har slutat fungera
+
+Bäste användare,
+
+Fläkten %FANID% på servern %HOSTNAME% (SN: %HOST_SN%) har slutat fungera.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[LocalLUNBkpError]
+Category: Backup/Restore,Important
+Title: Lokal säkerhetskopiering av LUN misslyckades
+Subject: Misslyckades - Säkerhetskopiering av LUN på %HOSTNAME%
+
+Bäste användare,
+
+Säkerhetskopiering av LUN på %HOSTNAME% till lokal delad mapp har misslyckats. Vänligen kontrollera loggfilen för säkerhetskopiering i DSM i Säkerhetskopiering & Replikering > Loggfil för ytterligare information.
+
+LUN-namn: %LUN%
+Säkerhetskopieringsuppgift: %BKP_TASK%
+Säkerhetskopieringsmål: %BKP_DST%  %PATH%
+Starttid: %TIME%
+Längd: %DUR%
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[LocalLUNBkpFinished]
+Category: Backup/Restore
+Title: Lokal säkerhetskopiering av LUN slutförd
+Subject: Slutfördes - Säkerhetskopiering av LUN på %HOSTNAME%
+
+Bäste användare,
+
+Säkerhetskopiering av LUN på %HOSTNAME% till lokal delad mapp har slutförts.
+
+LUN-namn: %LUN%
+Säkerhetskopieringsuppgift: %BKP_TASK%
+Säkerhetskopieringsmål: %BKP_DST%  %PATH%
+Starttid: %TIME%
+Längd: %DUR%
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[LocalLUNRecoverError]
+Category: Backup/Restore,Important
+Title: Lokal återställning av LUN misslyckades
+Subject: Misslyckades - Återställning av LUN på %HOSTNAME%
+
+Bäste användare,
+
+Återställning av LUN på %HOSTNAME% från lokal delad mapp har misslyckats. Vänligen kontrollera loggfilen för säkerhetskopiering i DSM i Säkerhetskopiering & Replikering > Loggfil för ytterligare information.
+
+LUN-namn: %LUN%
+Återställningskälla: %BKP_SRC%  %SRC_PATH%
+Starttid: %TIME%
+Längd: %DUR%
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[LocalLUNRecoverFinished]
+Category: Backup/Restore
+Title: Lokal återställning av LUN slutförd
+Subject: Slutförd - Återställning av LUN på %HOSTNAME%
+
+Bäste användare,
+
+Återställning av LUN på %HOSTNAME% från lokal delad mapp har slutförts.
+
+LUN-namn: %LUN%
+Återställningskälla: %BKP_SRC%  %SRC_PATH%
+Starttid: %TIME%
+Längd: %DUR%
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[MyDSPasswordChanged]
+Category: System,Important
+Title: Lösenordet för Synology-konto ändrades
+Subject: Ditt lösenord för Synology-konto på %HOSTNAME% har ändrats
+
+Bäste användare,
+
+Det här är en bekräftelse att lösenordet för ditt Synology-konto [%MYDS_ACCOUNT%] har ändrats via Synology-konto på %HOSTNAME%.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[NetLUNBkpError]
+Category: Backup/Restore,Important
+Title: Säkerhetskopiering av nätverks-LUN har misslyckats
+Subject: Misslyckades - Säkerhetskopiering av LUN på %HOSTNAME%
+
+Bäste användare,
+
+Säkerhetskopiering av LUN på %HOSTNAME% till delad fjärrmapp har misslyckats. Vänligen kontrollera loggfilen för säkerhetskopiering i DSM i Säkerhetskopiering & Replikering > Loggfil för ytterligare information.
+
+LUN-namn: %LUN%
+Säkerhetskopieringsuppgift: %BKP_TASK%
+Säkerhetskopieringsmål: %BKP_DST%  %PATH%
+Starttid: %TIME%
+Längd: %DUR%
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[NetLUNBkpOK]
+Category: Backup/Restore
+Title: Säkerhetskopiering av nätverks-LUN har slutförd
+Subject: Slutfördes - Säkerhetskopiering av LUN på %HOSTNAME%
+
+Bäste användare,
+
+Säkerhetskopiering av LUN på %HOSTNAME% till delad fjärrmapp har slutförts.
+
+LUN-namn: %LUN%
+Säkerhetskopieringsuppgift: %BKP_TASK%
+Säkerhetskopieringsmål: %BKP_DST%  %PATH%
+Starttid: %TIME%
+Längd: %DUR%
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[NetLUNRecoverError]
+Category: Backup/Restore,Important
+Title: Återställning av nätverks-LUN har misslyckats
+Subject: Misslyckades - Återställning av LUN på %HOSTNAME%
+
+Bäste användare,
+
+Återställning av LUN på %HOSTNAME% från delad fjärrmapp har misslyckats. Vänligen kontrollera loggfilen för säkerhetskopiering i DSM i Säkerhetskopiering & Replikering > Loggfil för ytterligare information.
+
+LUN-namn: %LUN%
+Återställningskälla: %BKP_SRC%  %SRC_PATH%
+Starttid: %TIME%
+Längd: %DUR%
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[NetLUNRecoverFinished]
+Category: Backup/Restore,Important
+Title: Återställning av nätverks-LUN har slutförd
+Subject: Slutförd - Återställning av LUN på %HOSTNAME%
+
+Bäste användare,
+
+Återställning av LUN på %HOSTNAME% från delad fjärrmapp har slutförts.
+
+LUN-namn: %LUN%
+Återställningskälla: %BKP_SRC%  %SRC_PATH%
+Starttid: %TIME%
+Längd: %DUR%
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[OTP_emergency_mail]
+Subject: Nödverifikationskod för %USER_NAME% på %HOSTNAME%
+
+Bäste användare,
+
+Följande är en nödverifikationskod som går att använda en gång för att logga in på %HOSTNAME% och återställa dina 2-stegs verifikationsinställningar. Vänligen ange denna 8-siffriga kod när du ombedes att ange en verifikationskod.
+
+Nödverifikationskod: %EMG_CODE%
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[OTP_emergency_mail_warning]
+Subject: Nödverifikationskod för %USER_NAME% på %HOSTNAME%
+
+Bäste användare,
+
+Följande är en nödverifikationskod som går att använda en gång för att logga in på %HOSTNAME% och återställa dina 2-stegs verifikationsinställningar. Vänligen ange denna 8-siffriga kod när du ombedes att ange en verifikationskod.
+
+Obs: Du har nått gränsen för din nödverifikationskod. Vänligen återställ din 2-stegs verifikationsinställning så snart som möjligt.
+
+Nödkod för inloggning: %EMG_CODE%
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[OverheatShutdownCPU]
+Category: System,Important
+Title: Överhettningsavstängning CPU
+Subject: %HOSTNAME% (SN: %HOST_SN%) stängdes av på grund av CPU-överhettning
+
+Bäste användare,
+
+%HOSTNAME% (SN: %HOST_SN%) stängdes av automatiskt beroende på CPU-överhettning (över %SHUTDOWN_TMP%°C).
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[OverheatShutdownDisk]
+Category: System,Important
+Title: Överhettningsavstängning hårddisk
+Subject: %HOSTNAME% stängdes av på grund av disk-överhettning.
+
+Bäste användare,
+
+%HOSTNAME% stängdes av automatiskt eftersom disk %DISK_NUM% var överhettad och hade uppnått en temperatur om %SHUTDOWN_TMP%°C.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[OverheatShutdownThermal]
+Category: System,Important
+Title: Överhettningsavstängning
+Subject: %HOSTNAME% (SN: %HOST_SN%) stängdes av på grund av överhettning
+
+Bäste användare,
+
+%HOSTNAME% (SN: %HOST_SN%) stängdes av automatiskt beroende på överhettning (över %SHUTDOWN_TMP%°C).
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[PKGUpgrade]
+Subject: Filpaketuppgraderingsinformation för %HOSTNAME%
+
+Bäste användare,
+
+Följande filpaket är klara för uppdatering på %HOSTNAME%. Du kan starta Paketcenter i %OSNAME% för att uppdatera dem.
+
+Filpaket att uppdatera:
+%PKG_SET%
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[Raid5SpareChanged]
+Category: Storage,Important
+Title: RAID5+spare-volym trasig
+Subject: RAID5+spare-volym %VOLUME_ID% på %HOSTNAME% är trasig
+
+Bäste användare,
+
+Volymen %VOLUME_ID% på %HOSTNAME% är trasig och har gått från RAID5+spare till RAID5. Du kan ändra tillbaka volymen till RAID5+spare genom att förbereda en reservdisk och sedan gå in på ”Huvudmeny” > ”Lagringshanterare” > ”Volym” > ”Hantera” för att byta ut den trasiga disken.
+
+För vidare hjälp, vänligen kontakta Synology Online Support: http://www.synology.com.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[RaidDiskFail]
+Category: Storage,Important
+Title: Ett fel uppstod på hårddisken i diskgruppen
+Subject: Ett fel uppstod på hårddisken %DISK_ID% i RAID Group på %HOSTNAME%
+
+Bäste användare,
+
+Ett fel uppstod på hårddisken %DISK_ID% i RAID Group på %HOSTNAME%; vänligen ersätt den.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[RaidGroupCrashed]
+Category: Storage,Important
+Title: RAID Group kraschade
+Subject: RAID Group %RAID_ID% på %HOSTNAME% har kraschat
+
+Bäste användare,
+
+RAID Group %RAID_ID% på %HOSTNAME% har kraschat. Systemet kan inte starta upp.
+
+För vidare hjälp, vänligen kontakta Synology Online Support: http://www.synology.com.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[RaidGroupDegraded]
+Category: Storage,Important
+Title: RAID Group trasig
+Subject: RAID Group %RAID_ID% på %HOSTNAME% har gått in i läget trasig [%ACTIVE_DISK%/%TOTAL_DISK%]
+
+Bäste användare,
+
+RAID Group %RAID_ID% på %HOSTNAME% har gått in i läget trasig. (Totalt antal hårddiskar: %TOTAL_DISK%; Antal aktiva hårddiskar: %ACTIVE_DISK%) Vänligen identifiera orsaken till detta och lös problemet.
+
+För vidare hjälp, vänligen kontakta Synology Online Support: http://www.synology.com.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[RaidGroupDiskFail]
+Category: Storage,Important
+Title: Ett fel uppstod på hårddisken i RAID Group
+Subject: Hårdisken %DISK_ID% i RAID Group på %HOSTNAME% fungerar inte
+
+Bäste användare,
+
+Hårddisken %DISK_ID% i RAID Group på %HOSTNAME% fungerar inte; vänligen byt ut den.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[RaidGroupSyncDone]
+Category: Storage
+Title: Synkronisering av RAID Group är klar
+Subject: Överensstämmelsekontroll för RAID Group %RAID_ID% på %HOSTNAME% är klar
+
+Bäste användare,
+
+Överensstämmelsekontroll för RAID Group %RAID_ID% på %HOSTNAME% är klar. Systemet är nu klart för användning.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[RaidGroupVolumeBadSector]
+Category: Storage,Important
+Title: Ett fel uppstod på RAID Group-volymen
+Subject: RAID Group-volym (%VOLUME_ID%) på %HOSTNAME% fungerar inte
+
+Bäste användare,
+
+En del filer är korrupta eftersom RAID Group-volymen (%VOLUME_ID%) på %HOSTNAME% inte fungerar. Filer riskerar att skadas i trasigt läge. Var vänlig reparera volymen så snart som möjligt. Du kan gå till Huvudmeny > Systemloggar för mer detaljer.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[RaidGroupiScsiBadSector]
+Category: Storage,Important
+Title: iSCSI LUN i RAID Group fungerar inte
+Subject: iSCSI LUN i RAID Group på %HOSTNAME% fungerar inte
+
+Bäste användare,
+
+En del filer är korrupta eftersom iSCSI LUN i RAID Group på %HOSTNAME% inte fungerar. Filer riskerar att skadas i trasigt läge. Var vänlig reparera volymen så snart som möjligt.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[RaidSuggestDataScrubbing]
+Category: Storage
+Title: Påminnelse om RAID-skrubbning
+Subject: Påminnelse om dataskrubbning på %HOSTNAME%
+
+Bäste användare,
+
+Dataskrubbning på %HOSTNAME% har inte utförts på en månad. Vi rekommenderar att du utför RAID-skrubbning för att säkerställa dataintegritet.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[RaidSystemVolumeCrashed]
+Category: Storage,Important
+Title: Systemvolym har kraschat
+Subject: Systemvolymen (%SYSTEM_ID%) på %HOSTNAME% har kraschat
+
+Bäste användare,
+
+Systemvolymen (%SYSTEM_ID%) på %HOSTNAME% har kraschat. Systemet kan inte starta upp.
+För vidare hjälp, vänligen kontakta Synology Online Support: http://www.synology.com.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[RaidSystemVolumeDegrade]
+Category: Storage,Important
+Title: Systemvolym nedklassad
+Subject: Systemvolym (%SYSTEM_ID%) på %HOSTNAME% har gått in i läget trasig [%ACTIVE_DISK%/%TOTAL_DISK%]
+
+Bäste användare,
+
+Systemvolymen (%SYSTEM_ID%) på %HOSTNAME% har gått in i trasigt läge. (Totalt antal hårddiskar: %TOTAL_DISK%; antal aktiva hårddiskar: %ACTIVE_DISK%)
+
+Var vänlig starta om systemet så kommer den att reparera sig själv under uppstart.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[RaidSystemVolumeSyncDone]
+Category: Storage
+Title: Överensstämmelsekontrollen på systemet är slutförd
+Subject: Överensstämmelsekontrollen av systemvolymen (%SYSTEM_ID%) på %HOSTNAME% är klar
+
+Bäste användare,
+
+%HOSTNAME% har slutfört överensstämmelsekontrollen på systemvolymen (%SYSTEM_ID%). Systemet är nu klart för användning.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[RaidVolumeBadSector]
+Category: Storage,Important
+Title: Ett fel uppstod på diskgruppvolymen
+Subject: Diskgrupp-volym (%VOLUME_ID%) på %HOSTNAME% fungerar inte
+
+Bäste användare,
+
+En del filer är korrupta eftersom Diskgrupp-volymen (%VOLUME_ID%) på %HOSTNAME% inte fungerar. Filer riskerar att skadas i trasigt läge. Var vänlig reparera volymen så snart som möjligt. Du kan gå in på ”Huvudmeny” > ”Systeminformation” > ”Logg” > ”Systemloggfil” för mer detaljer.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[RaidVolumeCrashed]
+Category: Storage,Important
+Title: Volymen kraschade
+Subject: Volymen %VOLUME_ID% på %HOSTNAME% har kraschat
+
+Bäste användare,
+
+Volymen %VOLUME_ID% på %HOSTNAME% har kraschat. Systemet kan inte starta upp.
+
+För vidare hjälp, vänligen kontakta Synology Online Support: http://www.synology.com.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[RaidVolumeDegrade]
+Category: Storage,Important
+Title: Volymen är trasig
+Subject: Volymen %VOLUME_ID% på %HOSTNAME% har gått in i trasigt läge [%ACTIVE_DISK%/%TOTAL_DISK%]
+
+Bäste användare,
+
+Volymen %VOLUME_ID% på %HOSTNAME% har gått in i trasigt läge. (Totalt antal hårddiskar: %TOTAL_DISK%; Antal aktiva hårddiskar: %ACTIVE_DISK%) Vänligen identifiera orsaken till detta och lös problemet.
+
+Ersätt de felaktiga diskarna med nya för att reparera volymen. För mer information, besök Synology: s kunskapsdatabas på vår officiella webbplats.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[RaidVolumeFull]
+Category: Storage,Important
+Title: Volymen är full
+Subject: Volymen %VOLUME_ID% på %HOSTNAME% börjar få ont om ledigt utrymme
+
+Bäste användare,
+
+Det tillgängliga utrymmet på volym %VOLUME_ID% på %HOSTNAME% börjar ta slut; radera några filer för att frigöra utrymme.
+
+Total kapacitet: %VOLUME_SIZE% GB
+Tillgänglig kapacitet: %FREE_SPACE% GB (%USAGE%%)
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[RaidVolumeSyncDone]
+Category: Storage
+Title: Överensstämmelsekontrollen genomförd
+Subject: Överensstämmelsekontrollen av volymen %VOLUME_ID% på %HOSTNAME% har slutförts
+
+Bäste användare,
+
+%HOSTNAME% har slutfört överensstämmelsekontrollen på volymen %VOLUME_ID%. Systemet är nu klart för användning.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[RaidiScsiBadSector]
+Category: Storage,Important
+Title: iSCSI LUN i Diskgruppen fungerar inte
+Subject: iSCSI LUN i Diskgruppen på %HOSTNAME% fungerar inte
+
+Bäste användare,
+
+En del filer är korrupta eftersom iSCSI LUN i Diskgrupp på %HOSTNAME% inte fungerar. Filer riskerar att skadas i trasigt läge. Var vänlig reparera volymen så snart som möjligt.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[RaidiScsiCrashed]
+Category: Storage,Important
+Title: iSCSI LUN kraschade
+Subject: iSCSI LUN (%LUN_NAME%) på %HOSTNAME% har kraschat
+
+Bäste användare,
+
+iSCSI LUN (%LUN_NAME%) på %HOSTNAME% har kraschat. Systemet kan inte starta upp.
+
+För vidare hjälp, kontakta Synology Online Support: http://www.synology.com.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[RaidiScsiDegraded]
+Category: Storage,Important
+Title: iSCSI LUN trasig
+Subject: iSCSI LUN (%LUN_NAME%) på %HOSTNAME% har gått in i trasigt läge [%ACTIVE_DISK%/%TOTAL_DISK%]
+
+Bäste användare,
+
+iSCSI LUN (%LUN_NAME%) på %HOSTNAME% har gått in i trasigt läge. (Totalt antal hårddiskar: %TOTAL_DISK%; Antal aktiva hårddiskar: %ACTIVE_DISK%) Vänligen identifiera orsaken till detta och lös problemet.
+
+För att reparera iSCSI LUN, vänligen byt ut de trasiga diskarna mot nya. För mer information, besök Synology:s kunskapsdatabas på vår officiella webbplats.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[RedundantPowerRecoveredProvide]
+Category: Power System
+Title: Återställde avbrottsfri strömkälla
+Subject: Strömtillförseln nr.%POWERID% på %HOSTNAME% (SN: %HOST_SN%) har återställts
+
+Bäste användare,
+
+Strömtillförseln nr.%POWERID% på %HOSTNAME% (SN: %HOST_SN%) har återställts.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[RedundantPowerStopProvide]
+Category: Power System,Important
+Title: Reservströmkällan har gått sönder
+Subject: Strömtillförseln nr.%POWERID% på %HOSTNAME% (SN: %HOST_SN%) fungerar inte
+
+Bäste användare,
+
+Strömtillförseln nr.%POWERID% på %HOSTNAME% (SN: %HOST_SN%) fungerar inte.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[RestoreTaskCanceled]
+Category: Backup/Restore,Important
+Title: Återställning avbröts
+Subject: %TASK_TYPE% avbröts på %HOSTNAME%
+
+Bäste användare,
+
+Dataåterställning på %HOSTNAME% har avbrutits.
+
+Återställningskälla: %DESTINATION_IP% %DESTINATION_PATH%
+Starttid: %START_TIME%
+Längd: %DURATION%
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[RestoreTaskFailed]
+Category: Backup/Restore,Important
+Title: Återställningen misslyckades
+Subject: %TASK_TYPE% kunde inte återställas från %HOSTNAME%
+
+Bäste användare,
+
+Säkerhetskopieringsdata kunde inte återställas från %HOSTNAME%.
+
+Vänligen kontrollera loggfilen för säkerhetskopiering i Hyper Backup > Loggfil för ytterligare information.
+
+Återställningskälla: %DESTINATION_IP% %DESTINATION_PATH%
+Starttid: %START_TIME%
+Längd: %DURATION%
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[RestoreTaskFinished]
+Category: Backup/Restore
+Title: Återställning slutförd
+Subject: %TASK_TYPE% lyckades på %HOSTNAME%
+
+Bäste användare,
+
+Din återställningsuppgift %TASK_NAME% är nu slutförd.
+
+Återställningskälla: %DESTINATION_IP% %DESTINATION_PATH%
+Starttid: %START_TIME%
+Längd: %DURATION%
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[SDCardFull]
+Category: External Storage
+Title: SD-kort fullt
+Subject: SD-kortet på %DISK_NUMBER% på %HOSTNAME% börjar få ont om ledigt utrymme
+
+Bäste användare,
+
+Det tillgängliga utrymmet på SD-kortet %DISK_NUMBER% på %HOSTNAME% börjar ta slut. Läs informationen nedan och vidta lämpliga korrigeringsåtgärder.
+
+Total kapacitet: %DISK_SIZE% GB
+Tillgänglig kapacitet: %FREE_SPACE% GB (%USAGE%%)
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[SDCardPartitionFull]
+Category: External Storage
+Title: SD-kortpartition full
+Subject: Partitionen %PARTITION_NUMBER% på SD-kortet %DISK_NUMBER% på %HOSTNAME% börjar få ont om utrymme
+
+Bäste användare,
+
+Partitionen %PARTITION_NUMBER% på SD-kortet %DISK_NUMBER% på %HOSTNAME% börjar få ont om utrymme. Vänligen lös problemet.
+
+Total kapacitet: %DISK_SIZE% GB
+Tillgänglig kapacitet: %FREE_SPACE% GB (%USAGE%%)
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[SFPModuleUnsupported]
+Category: System,Important
+Title: Modul SFP+ saknar stöd
+Subject: En SFP+-modul %LAN% som saknar stöd upptäcktes
+
+Bäste användare,
+
+En SFP+-modul %LAN% som saknar stöd upptäcktes och drivrutinen för nätverkskortet har avaktiverats.
+Vänligen installera en modul som har stöd och starta om din %DISKSTATION%.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[SSDCacheCrashed]
+Category: Storage,Important
+Title: SSD-cache kraschade
+Subject: SSD-cache %SSD_ID% på %HOSTNAME% har kraschat
+
+Bäste användare,
+
+SSD-cache %SSD_ID% på %HOSTNAME% har kraschat. För vidare hjälp, vänligen kontakta Synology Online Support: http://www.synology.com.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[SSDCacheDegraded]
+Category: Storage,Important
+Title: SSD-cache trasigt
+Subject: SSD-cache %SSD_ID% på %HOSTNAME% är trasigt
+
+Bäste användare,
+
+SSD-cache %SSD_ID% på %HOSTNAME% är trasigt. För vidare hjälp, vänligen kontakta Synology Online Support: http://www.synology.com.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[SSDCacheMissing]
+Category: Storage,Important
+Title: Läs-skriv-cache saknas
+Subject: Läs-skriv-cache för %SPACE_ID% på %HOSTNAME% saknas
+
+Bäste användare,
+
+Läs-skriv-cache för %SPACE_ID% på %HOSTNAME% saknas. För vidare hjälp, vänligen kontakta Synology Online Support: http://www.synology.com.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[SecurityScanAlarm]
+Category: System,Important
+Title: Säkerhetsrisker har hittats
+Subject: Säkerhetsrisker hittades på %HOSTNAME%
+
+Bäste användare,
+
+Security Advisor har nyss avslutat en schemalagd skanning på %HOSTNAME%. Flera säkerhetsrisker som kräver din uppmärksamhet hittades. Vänligen logga in på %OSNAME% på %HOSTNAME% och visa rapporten i Security Advisor.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[SecurityScanDSMOutOfDate]
+Category: System,Important
+Title: Systemet är föråldrat
+Subject: %OSNAME% på %HOSTNAME% är föråldrad från Security Advisor
+
+Bäste användare,
+
+%OSNAME% som körs på %HOSTNAME% är föråldrad. Vänligen logga in på %OSNAME% på %HOSTNAME%, öppna Kontrollpanel och installera senaste versionen av DSM. För en detaljerad rapport, vänligen gå till Huvudmeny > Security Advisor.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[SecurityScanDSMPackageOutOfDate]
+Category: System,Important
+Title: System och filpaket är föråldrade
+Subject: %OSNAME% och filpaket på %HOSTNAME% är föråldrade från Security Advisor
+
+Bäste användare,
+
+%OSNAME% och %NUMBER% filpaket som körs på %HOSTNAME% är föråldrade. Vänligen logga in på %OSNAME% på %HOSTNAME% och gör följande:
+- Öppna Kontrollpanel och installera den senaste versionen av %OSNAME%.
+- Öppna Paketcenter och installera den senaste versionen av dina filpaket.
+
+För en detaljerad rapport, vänligen gå till Huvudmeny > Security Advisor.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[SecurityScanDanger]
+Category: System,Important
+Title: Sabotageprogram upptäckt
+Subject: Sabotageprogram upptäcktes på %HOSTNAME%
+
+Bäste användare,
+
+Sabotageprogram upptäcktes på %HOSTNAME%. Vänligen logga in på %OSNAME% på %HOSTNAME% och öppna Security Advisor för att åtgärda detta.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[SecurityScanPackageOutOfDate]
+Category: System,Important
+Title:  Filpaket är föråldrade
+Subject: Filpaket på %HOSTNAME% är föråldrade
+
+Bäste användare,
+
+%NUMBER% filpaket som körs på %HOSTNAME% är föråldrad(e). Vänligen logga in på %OSNAME% på %HOSTNAME% och öppna Paketcenter för att installera senaste versionen av dina filpaket.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[ShareSyncError]
+Category: Backup/Restore,Important
+Title: Tjänsten Synkronisera delade mappar har misslyckats
+Subject: Misslyckades - Synkronisera delade mappar
+
+Bäste användare,
+
+Synkronisera delade mappar på %HOSTNAME% har misslyckats. Vänligen kontrollera loggfilen för säkerhetskopiering i DSM för ytterligare information.
+
+Synka uppgifter: %S2S_TASK%
+Synkserver: %S2S_SERVER%
+Starttid: %TIME%
+Längd: %DUR%
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[ShareSyncSuccess]
+Category: Backup/Restore
+Title: Tjänsten Synkronisera delade mappar slutförd
+Subject: Slutfördes - Synkronisera delade mappar
+
+Bäste användare,
+
+Tjänsten Synkronisera delade mappar på %HOSTNAME% har slutförts.
+
+Synka uppgifter: %S2S_TASK%
+Synkserver: %S2S_SERVER%
+Starttid: %TIME%
+Längd: %DUR%
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[SmartEBoxAbnor]
+Category: Storage,Important
+Title: S.M.A.R.T.-status för utökningsenheten är avvikande
+Subject: S.M.A.R.T.-status för Disk %DISK_ID% på %EUNIT_ID% ansluten till %HOSTNAME% är avvikande
+
+Bäste användare,
+
+S.M.A.R.T.-status för Disk %DISK_ID% på %EUNIT_ID% ansluten till %HOSTNAME% är avvikande. Detta kan indikera ett nära förestående fel. Vänligen säkerhetskopiera dina data och byt ut disken snarast möjligt.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[SmartESataAbnor]
+Category: External Storage,Important
+Title: S.M.A.R.T.-status för eSATA-disk är avvikande
+Subject: S.M.A.R.T.-status för eSATA-disk på %HOSTNAME% är avvikande
+
+Bäste användare,
+
+S.M.A.R.T.-statusen för eSATA-disken på %HOSTNAME% är avvikande. Detta kan indikera ett nära förestående fel. Vänligen säkerhetskopiera dina data och byt ut disken snarast möjligt.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[SmartIntAbnor]
+Category: Storage,Important
+Title: S.M.A.R.T.-status för intern disk är avvikande
+Subject: S.M.A.R.T.-status för Disk %DISK_ID% på %HOSTNAME% är avvikande
+
+Bäste användare,
+
+S.M.A.R.T.-statusen för den interna Disken %DISK_ID% på %HOSTNAME% är avvikande. Detta kan indikera ett nära förestående fel. Vänligen säkerhetskopiera dina data och byt ut disken snarast möjligt.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[SmartTestEBoxErr]
+Category: Storage,Important
+Title: S.M.A.R.T.-test misslyckat för disk tillhörande expansionsenhet
+Subject: Disk %DISK_ID% på %EUNIT_ID% ansluten till %HOSTNAME% har misslyckats i S.M.A.R.T.-test
+
+Bäste användare,
+
+Hårddisken %DISK_ID% på %EUNIT_ID% ansluten till %HOSTNAME% har misslyckats i S.M.A.R.T.-test. Vänligen säkerhetskopiera dina data och byt ut disken snarast möjligt.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[SmartTestESataErr]
+Category: External Storage,Important
+Title: S.M.A.R.T.-test misslyckat för eSATA-disk
+Subject: eSATA-disk på %HOSTNAME% har misslyckats i S.M.A.R.T.-test
+
+Bäste användare,
+
+eSATA-disk på %HOSTNAME% har misslyckats i S.M.A.R.T.-test. Vänligen säkerhetskopiera dina data och byt ut disken snarast möjligt.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[SmartTestIntErr]
+Category: Storage,Important
+Title: S.M.A.R.T.-test misslyckat för intern disk
+Subject: Disk %DISK_ID% på %HOSTNAME% har misslyckat S.M.A.R.T.-test
+
+Bäste användare,
+
+Hårddisken %DISK_ID% på %HOSTNAME% har misslyckats i S.M.A.R.T.­test. Vänligen säkerhetskopiera dina data och byt ut disken snarast möjligt.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[StoragePoolCrashed]
+Category: Storage,Important
+Title: Diskgrupp kraschade
+Subject: Diskgruppen %RAID_ID% på %HOSTNAME% har kraschat
+
+Bäste användare,
+
+Diskgruppen %RAID_ID% på %HOSTNAME% har kraschat. Systemet kan inte starta upp.
+
+För vidare hjälp, vänligen kontakta Synology Online Support: http://www.synology.com.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[StoragePoolDegraded]
+Category: Storage,Important
+Title: Diskgrupp reducerad
+Subject: Diskgrupp %RAID_ID% på %HOSTNAME% har gått in i läget trasig [%ACTIVE_DISK%/%TOTAL_DISK%]
+
+Bäste användare,
+
+Diskgrupp %RAID_ID% på %HOSTNAME% har gått in i läget trasig. (Totalt antal hårddiskar: %TOTAL_DISK%; Antal aktiva hårddiskar: %ACTIVE_DISK%) Vänligen identifiera orsaken till detta och lös problemet.
+
+För vidare hjälp, vänligen kontakta Synology Online Support: http://www.synology.com.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[StoragePoolRaid5SpareChanged]
+Category: Storage,Important
+Title: Diskgrupp - Raid5+spare trasig
+Subject: Diskgrupp %RAID_ID% på %HOSTNAME% är trasig och har ändrats till RAID5
+
+Bäste användare,
+
+Diskgruppen %RAID_ID% på %HOSTNAME% är trasig och har ändrats från RAID5+spare till RAID5. För att ändra tillbaka den till RAID5+spare, var vänlig förbered en reservdisk och gå sedan till ”Huvudmeny” > ”Lagringshanterare” > ”Diskgrupp” för att byta ut den trasiga disken.
+
+För vidare hjälp, vänligen kontakta Synology Online Support: http://www.synology.com.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[StoragePoolSyncDone]
+Category: Storage
+Title: Synkronisering av diskgrupp slutförd
+Subject: Överensstämmelsekontroll för Diskgrupp %RAID_ID% på %HOSTNAME% är klar
+
+Bäste användare,
+
+Överensstämmelsekontroll för Diskgrupp %RAID_ID% på %HOSTNAME% är klar. Systemet är nu klart för användning.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[SynoReport]
+Subject: Diskanvändningsrapport har genererats
+
+Bäste användare,
+
+Diskanvändningsrapporten för %PROFILE% har genererats. För att se rapporten, vänligen se här nedanför:
+%LINK%
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[SynoReportFail]
+Subject: Kunde inte skapa rapporten för lagringsutnyttjande
+
+Bäste användare,
+
+Ett fel inträffade när rapporten över användning för %PROFILE% skapades.
+
+Orsak: %MSG%
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[SystemInodeFull]
+Category: System
+Title: Antalet filer på systemet närmar sig gränsen
+Subject: Antalet filer på systempartitionen på  %HOSTNAME% närmar sig gränsen
+
+Bäste användare,
+
+Antalet filer på systempartitionen på %HOSTNAME% närmar sig gränsen. Kontakta supporten hos Synology för hjälp.
+
+Det maximala antalet filer: %TOTAL_INODE%
+Kvarvarande antal filer: %FREE_INODE% (%USAGE%%)
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[SystemVolumeCrashed]
+Category: System
+Title: Systemlagringsutrymme kraschat
+Subject: Systemlagringsutrymme på %HOSTNAME% har kraschat
+
+Bäste användare,
+
+Systemlagringsutrymme på %HOSTNAME% har kraschat.
+
+För vidare hjälp, vänligen kontakta Synology Online Support på http://www.synology.com
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[SystemVolumeFull]
+Category: System
+Title: Systemlagringsutrymme är fullt
+Subject: Systemlagringsutrymme på %HOSTNAME% har håller på att ta slut
+
+Bäste användare,
+
+Det lediga utrymmet på %HOSTNAME% börjar ta slut. Läs informationen här nedanför och frigör utrymme.
+
+Total kapacitet: %VOLUME_SIZE% GB
+Tillgänglig kapacitet: %FREE_SPACE% GB (%USAGE%%)
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[TPLUNReachSoftLimit]
+Category: Storage,Important
+Title: Otillräckligt LUN-lagring
+Subject: LUN %LUN_NAME%-lagring på %HOSTNAME% börjar ta slut
+
+Bäste användare,
+
+Den lediga kapaciteten på LUN %LUN_NAME% på %HOSTNAME% börjar ta slut. Vänligen utöka volymen för mer kapacitet.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[TaskSchedulerResult]
+Subject: Schemaläggare för uppgifter har slutfört en planerad uppgift
+
+Bäste användare,
+
+Schemaläggare för uppgifter har slutfört en planerad uppgift.
+
+Uppgift: %TASK_ID%
+Starttid: %START_TIME%
+Stopptid: %STOP_TIME%
+Nuvarande status: %EXIT_CODE%
+Standardutmatning/fel:
+%OUTPUT%
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[TestMail]
+Subject: Testmeddelande från %HOSTNAME%
+
+Bäste användare,
+
+Grattis! Du har nu ställt in funktionen för e-postmeddelanden på %HOSTNAME%.
+För vidare systemkonfigurationer, besök %HTTP_URL%.
+(Om du inte kan ansluta till servern, kontakta administratören.)
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[UPSConnected]
+Category: Power System
+Title: UPS ansluten
+Subject: %HOSTNAME% har anslutits till UPS.
+
+Bäste användare,
+
+%HOSTNAME% har anslutits till UPS.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[UPSDisconnect]
+Category: Power System,Important
+Title: UPS frånkopplad
+Subject: %HOSTNAME% har förlorat anslutningen till UPS.
+
+Bäste användare,
+
+%HOSTNAME% har förlorat anslutningen till UPS. Kontrollera serverinställningarna.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[UPSOnAC]
+Category: Power System,Important
+Title: UPS har återgått till AC-läge
+Subject: UPS-enhet ansluten till %HOSTNAME% har återgått till AC-läge.
+
+Bäste användare,
+
+Den UPS-enhet som är ansluten till %HOSTNAME% har återgått till AC-läge.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[UPSOnBattery]
+Category: Power System,Important
+Title: UPS har gått in i batteriläge
+Subject: UPS-enhet ansluten till %HOSTNAME% har gått in i batteriläge.
+
+Bäste användare,
+
+Den UPS-enhet som är ansluten till %HOSTNAME% har gått in i batteriläge. %HOSTNAME% kommer att stängas av när UPS-enhetens batteri har laddats ur. Vänligen stäng av %HOSTNAME% manuellt eller återställ den externa strömförsörjningen så snart det är möjligt.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[UPSPowerFail]
+Category: Power System,Important
+Title: UPS har lite batteri kvar
+Subject: UPS ansluten till %HOSTNAME% har lågt batteri
+
+Bäste användare,
+
+UPS ansluten till %HOSTNAME% har lågt batteri. Alla tjänster stängs ner. Tjänsterna kommer att återupptas när UPS har återställts.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[USBCOPYDisconnect]
+Category: USB Copy
+Title: USBCopy frånkopplad
+Subject: Extern enhet är frånkopplad på %HOSTNAME%
+
+Bäste användare,
+
+%COPY% på %HOSTNAME% misslyckades eftersom externa enheten inte var ansluten.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[USBCOPYError]
+Category: USB Copy,Important
+Title: USBCopy misslyckades
+Subject: %COPY% på %HOSTNAME% misslyckades
+
+Bäste användare,
+
+%COPY% på %HOSTNAME% misslyckades på grund av okända fel.
+Felkoden är %ERR%. Kontrollera USBCopy/SDCopy loggfil för mer information.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[USBCOPYFinished]
+Category: USB Copy
+Title: USBCopy genomförd
+Subject: %COPY% på %HOSTNAME% har genomförts
+
+Bäste användare,
+
+%COPY% på %HOSTNAME% har genomförts.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[USBCOPYNospace]
+Category: USB Copy,Important
+Title: USBCopy avbrutet
+Subject: %COPY% på %HOSTNAME% är avbruten
+
+Bäste användare,
+
+%COPY% på %HOSTNAME% har avbrutits eftersom ledigt utrymme tog slut för målmappen.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[USBDiskFail]
+Category: External Storage
+Title: USB-diskfel
+Subject: USB-disk %DISK_ID% på %HOSTNAME% fungerar inte
+
+Bäste användare,
+
+USB-disk %DISK_ID% på %HOSTNAME% fungerar inte.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[USBDiskFull]
+Category: External Storage
+Title: USB-disken full
+Subject: Det finns ont om ledigt utrymme på USB-enheten %DISK_NUMBER% på %HOSTNAME%
+
+Bäste användare,
+
+USB-disken %DISK_NUMBER% på %HOSTNAME% har ont om ledigt utrymme, vänligen lös problemet.
+
+Total kapacitet: %DISK_SIZE% GB
+Tillgänglig kapacitet: %FREE_SPACE% GB (%USAGE%%)
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[USBPartitionFull]
+Category: External Storage
+Title: USB-partition full
+Subject: Det finns ont om ledigt utrymme på partitionen %PARTITION_NUMBER% på USB-disken %DISK_NUMBER% på %HOSTNAME%
+
+Bäste användare,
+
+Partitionen %PARTITION_NUMBER% på USB-disken %DISK_NUMBER% på %HOSTNAME% börjar få ont om utrymme. Vänligen lös problemet.
+
+Total kapacitet: %DISK_SIZE% GB
+Tillgänglig kapacitet: %FREE_SPACE% GB (%USAGE%%)
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[UserChangePassword]
+Subject: Ditt lösenord på %HOSTNAME% har ändrats
+
+Bäste %USER_NAME%,
+
+Detta är en bekräftelse på att ditt lösenord på %HOSTNAME% har ändrats.
+
+För att ändra dina kontoinställningar, vänligen gå till %HTTP_URL% i din webbläsare. (Om du inte kan ansluta till servern, kontakta administratören.)
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[UserWelcome]
+Category: System
+Title: Välkommen nya användaren
+Subject: Välkommen %USER_NAME% på server %HOSTNAME%
+
+Bäste användare,
+
+Välkommen till %HOSTNAME%!
+Du kan gå till %HTTP_URL% för att ändra din personliga profil.
+(Om du inte kan ansluta till servern, kontakta administratören.)
+
+Ditt användarnamn: %USER_NAME%
+Ditt lösenord: %PASSWD%
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[VolumeInodeFull]
+Category: Storage,Important
+Title: Antalet filer på volymen närmar sig gränsen
+Subject: Antalet filer på volym %VOLUME_ID% på %HOSTNAME% närmar sig gränsen
+
+Bäste användare,
+
+Antalet filer på volym %VOLUME_ID% på %HOSTNAME% närmar sig gränsen. Vänligen radera några filer för att minska antalet.
+
+Det maximala antalet filer: %TOTAL_INODE%
+Kvarvarande antal filer: %FREE_INODE% (%USAGE%%)
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[VpncReconnectFail]
+Category: System
+Title: Ett fel uppstod vid återuppringning av VPN-klient
+Subject: Ett fel uppstod vid återanslutning av VPN-profil [%VPN_CLIENT%] på %HOSTNAME%
+
+Bäste användare,
+
+Ett fel uppstod efter frånkoppling av återanslutning av VPN-profil [%VPN_CLIENT%] på %HOSTNAME%. Kontrollera anslutningen mellan VPN-klient och server.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[aha_reboot_active]
+Category: AHA,Important
+Title: Starta om aktiv server
+Subject: Den aktiva servern på high-availability-klustret %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) har startats om
+
+Bäste användare,
+
+En administrator har startat om den aktiva servern på high-availability-klustret %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%).
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[aha_reboot_active_fail]
+Category: AHA,Important
+Title: Kunde inte starta om den aktiva servern
+Subject: Kunde inte starta om den aktiva servern på high-availability-klustret %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%)
+
+Bäste användare,
+
+Den aktiva servern på high-availability-klustret %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) kunde inte startas om. Vänligen kontrollera Loggsidan för High Availability Manager för mer information.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[aha_reboot_passive]
+Category: AHA
+Title: Starta om passiv server
+Subject: Den passiva servern på high-availability-klustret %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) har startats om.
+
+Bäste användare,
+
+En användare har startat om den passiva servern på high-availability-klustret %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%).
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[aha_reboot_passive_fail]
+Category: AHA
+Title: Kunde inte starta om den passiva servern.
+Subject: Kunde inte starta om den passiva servern på high-availability-klustret %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%)
+
+Bäste användare,
+
+Den passiva servern på high-availability-klustret %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) kunde inte startas om. Vänligen kontrollera Loggsidan för High Availability Manager för mer information.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[aha_reboot_remote]
+Category: AHA
+Title: Starta om okänd server
+Subject: Den okända servern anslöt till high-availability-klustret %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) har startats om
+
+Bäste användare,
+
+En användare har startat om den okända serven som är ansluten till high-availability-klustret %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%).
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[aha_reboot_remote_fail]
+Category: AHA
+Title: Kunde inte starta om den okända servern
+Subject: Kunde inte starta om den okända serven som är ansluten till high-availability-klustret %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%)
+
+Bäste användare,
+
+Den okända servern anslöt till high-availability-klustret %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) kunde inte startas om. Vänligen kontrollera Loggsidan för High Availability Manager för mer information.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[aha_recover_remote]
+Category: AHA,Important
+Title: Lägg till en ny server
+Subject: Lägger till en ny server till high-availability-klustret
+
+Bäste användare,
+
+En administrator har initierad återställning av den okända servern. Servern ansluter för närvarande till high-availability-klustret %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) som den passiva servern. Vänligen kontrollera Loggsidan för High Availability Manager för mer information.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[aha_recover_remote_fail]
+Category: AHA,Important
+Title: Kunde inte lägga till en ny server
+Subject: Kunde inte lägga till en ny server till high-availability-klustret
+
+Bäste användare,
+
+Den okända servern kunde inte ansluta till high-availability-klustret %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) som den passiva servern. Vänligen kontrollera Loggsidan för High Availability Manager för mer information.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[aha_shutdown]
+Category: AHA,Important
+Title: Stäng av high-availability-klustret
+Subject: High-availability-klustret %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) har stängts av
+
+Bäste användare,
+
+En användare har stängt av high-availability-klustret %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%).
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[aha_shutdown_active]
+Category: AHA,Important
+Title: Stänger av aktiv server
+Subject: Den aktiva servern på high-availability-klustret %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) har stängts av
+
+Bäste användare,
+
+En administrator har stängt av den aktiva serven på high-availability-klustret %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%).
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[aha_shutdown_active_fail]
+Category: AHA,Important
+Title: Kunde inte stänga av den aktiva servern
+Subject: Kunde inte stänga av den aktiva serven på high-availability-klustret %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%)
+
+Bäste användare,
+
+Den aktiva servern på high-availability-klustret %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) kunde inte stängas av. Vänligen kontrollera Loggsidan för High Availability Manager för mer information.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[aha_shutdown_fail]
+Category: AHA,Important
+Title: Kunde inte stänga av high-availability-klustret
+Subject: Kunde inte stänga av high-availability-klustret %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%)
+
+Bäste användare,
+
+High-availability-klustret %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) kunde inte stängas av. Vänligen kontrollera Loggsidan för High Availability Manager för mer information.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[aha_shutdown_passive]
+Category: AHA,Important
+Title: Stänger av passiv server
+Subject: Den passiva servern på high-availability-klustret %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) har stängts av
+
+Bäste användare,
+
+En administrator har stängt av den passiva servern på high-availability-klustret %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%).
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[aha_shutdown_passive_fail]
+Category: AHA,Important
+Title: Kunde inte stänga av den passiva servern
+Subject: Kunde inte stänga av den passiva servern på high-availability-klustret %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%)
+
+Bäste användare,
+
+Den passiva servern på high-availability-klustret %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) kunde inte stängas av. Vänligen kontrollera Loggsidan för High Availability Manager för mer information.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[aha_shutdown_remote]
+Category: AHA
+Title: Stänger av okänd server
+Subject: Den okända servern anslöt till high-availability-klustret %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) har stängts av.
+
+Bäste användare,
+
+En användare har stängt av den okända serven som är ansluten till high-availability-klustret %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%).
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[aha_shutdown_remote_fail]
+Category: AHA,Important
+Title: Kunde inte stänga av den okända servern
+Subject: Kunde inte stänga av den okända serven som är ansluten till high-availability-klustret %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%)
+
+Bäste användare,
+
+Den okända servern anslöt till high-availability-klustret %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) kunde inte stängas av. Vänligen kontrollera Loggsidan för High Availability Manager för mer information.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[aha_switchover]
+Category: AHA,Important
+Title: Övergång för high-availability-klustret
+Subject: Tjänster på high-availability-klustret %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) har gjort en övergång till %HA_REMOTE_HOST_SN%
+
+Bäste användare,
+
+Systemet har initierat en övergång för high-availability-klustret %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%). Tjänster kommer att överföras till %HA_REMOTE_HOST_SN%. Vänligen kontrollera Loggsidan för High Availability Manager för mer information.
+
+Orsak: %HA_FAILOVER_REASON%
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[aha_switchover_fail]
+Category: AHA,Important
+Title: Kunde inte genomföra en övergång för high-availability-klustret
+Subject: Tjänster på high-availability-klustret %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) kunde inte göra en övergång till %HA_REMOTE_HOST_SN%
+
+Bäste användare,
+
+Systemet har försökt att utföra en övergång till high-availability-klustret %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%). Dock kunde inte tjänsterna överföras till den passiva servern (SN: %HA_REMOTE_HOST_SN%). Vänligen kontrollera Loggsidan för High Availability Manager för mer information.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[aha_takeover]
+Category: AHA,Important
+Title: High-availability-klustrets redundans
+Subject: Upptäckte fel på high-availability-klustret %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%)
+
+Bäste användare,
+
+Fel har upptäckts på high-availability-klustret %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%). Tjänsterna kommer att föras över till den passiva servern. Vänligen kontrollera Loggsidan för High Availability Manager för mer information.
+
+Fel: %HA_FAILOVER_REASON%
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[aha_upgrade_fail]
+Category: AHA,Important
+Title: Kunde inte uppgradera high-availability-klustret
+Subject: Kunde inte uppgradera high-availability-klustret %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%)
+
+Bäste användare,
+
+High-availability-klustret %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) kunde inte uppgraderas. Vänligen kontrollera Loggsidan för High Availability Manager för mer information.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[aha_upgrade_passive_fail]
+Category: AHA,Important
+Title: Det gick inte att uppgradera passiv server
+Subject: Kunde inte uppgradera den passiva servern på high-availability-klustret %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%)
+
+Bäste användare,
+
+Den passiva servern på high-availability-klustret %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) kunde inte uppgraderas. Vänligen kontrollera Loggsidan för High Availability Manager för mer information.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[aha_welcome]
+Category: AHA
+Title: High-availability-klustrets körs
+Subject: High-availability-klustret %HOSTNAME% kör nu tjänster på %HA_LOCAL_HOST_SN%
+
+Bäste användare,
+
+Tjänsterna för high-availability-klustret %HOSTNAME% körs nu på %HA_LOCAL_HOST_SN%. Vänligen kontrollera Loggsidan för High Availability Manager för mer information.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[disk_health_monthly_report]
+Subject: Månatlig rapport över diskhälsa från %HOSTNAME%
+
+Bäste användare,
+
+Följande är din månatliga rapport för diskhälsa på %HOSTNAME%. Du kan också kontrollera hälsan för enskilda diskar i Lagringshanterare > HDD/SSD > Hälsoinformation.
+
+%CONTENT%
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[eSynoscheduler_complete_task]
+Subject: Schemaläggare för uppgifter har slutfört en utlöst uppgift
+
+Bäste användare,
+
+Schemaläggare för uppgifter har slutfört en utlöst uppgift.
+
+Uppgift: %TASK%
+Starttid: %START_TIME%
+Stopptid: %END_TIME%
+Nuvarande status: %EXIT_CODE%
+Standardutmatning/fel:
+%OUT_PUT%
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[ext4_fs_err]
+Category: System,Important
+Title: Filsystemfel
+Subject: Filsystemfel upptäcktes på %HOSTNAME%
+
+Bäste användare,
+
+Ett filsystemfel upptäcktes på volym %VOLUME_ID%. Vänligen gå till Lagringshanterare för att reparera snarast möjligt.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[file_cksum_err]
+Category: System,Important
+Title: Checksummefel
+Subject: Checksummefel på %HOSTNAME%. Vänligen se i Loggcentral för mer information.
+
+Bäste användare,
+
+Ett checksummefel upptäcktes i filen %FILE_PATH%. Vänligen använd en tidigare säkerhetskopierad version för att reparera filen.
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[iSCSILunScheduleSnapshotFail]
+Category: Storage,Important
+Title: Kunde inte ta ett snapshot för iSCSI LUN
+Subject: Kunde inte ta ett snapshot för iSCSI LUN %LUNNAME% på %HOSTNAME%
+
+Bäste användare,
+
+Kunde inte ta ett snapshot för iSCSI LUN på %HOSTNAME%. Vänligen kontrollera Lagringshanterare för mer detaljerad information.
+
+LUN: %LUNNAME%
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+

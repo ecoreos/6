@@ -1,0 +1,77 @@
+ <!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Birim Oluştur - Synology DSM Yardımı</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="This article walks you through the steps to create a volume on DiskStation using Storage Manager.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script> <script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Birim Oluştur</h2>
+
+<p>Bir yazı DiskStation sunucunuzda bir birimin nasıl oluşturulacağını açıklar. Yeni bir birim oluştururken, aşağıdaki yöntemlerden birisini seçebilirsiniz:</p>
+
+<ul>
+  <li><b>Hızlı:</b> Bu yeni başlayanlar için en iyi seçenektir. RAID seviyeleri gibi teknik unsurları düşünmeden depolama kapasitesini ve performansını otomatik olarak optimize etmek istiyorsanız bu yöntemi seçin. </li>
+
+<li><b>Özel:</b> RAID tipleri ve kapasite tahsisi gibi birim oluşturmanın daha hassas unsurlarını kontrol etmek isteyen ileri kullanıcılar için. Bu seçenek farklı RAID tiplerini destekleyerek tek veya çok sayıda birim oluşturmanızı sağlar ve her birim için belirli miktarlarda kapasiteyi tahsis etmeniz için seçenekler sunar (sadece RAID üzerinde çok sayıda birim oluştururken).
+</li>
+</ul>
+
+<div class="section">
+<h4>RAID üzerinde Tekli ya da Çoklu Birimler?</h4>
+<p>Özel mod ile bir birim oluştururken, aşağıdaki seçeneklerden bir tanesini seçebilirsiniz:</p>
+<ul>
+  <li><b>RAID’de Tekli Birim</b>
+    <ul>
+      <li>Seçilen sabit disklerin mevcut kapasitesinin tümünü kullanarak tek bir birim oluşturur.</li>
+      <li>Daha iyi hız ve performans sağlar.</li>
+      <li>Farklı RAID tiplerini destekler.</li>
+    </ul>
+  </li>
+  <li><b>RAID’de Çoklu Birimler</b>
+    <ul>
+      <li>Bir disk grubu üzerinde çoklu birimler oluşturmanıza olanak tanır.</li>
+      <li>Her bir birime belirli kapasite miktarları ayırmayı destekler.</li>
+      <li>Daha iyi depolama yönetimi esnekliği sağlar.</li>
+      <li>Farklı RAID tiplerini destekler.</li>
+    </ul>
+  </li>
+</ul>
+</div>
+
+
+<div class="section">
+<h4>Başlamadan Önce:</h4>
+<ul>
+<li>Başlamadan önce, sabit disklerde önemli veri bulunmadığından emin olun. Mevcut tüm veriler oluşturma süreci sırasında silinecektir.</li>
+<li><b>HDD/SSD</b> sayfasına gidin ve her sabit diskin durumunun <b>Normal</b> veya <strong>İlk Kullanıma Hazırlanmadı</strong> olduğundan emin olun.</li>
+</ul>
+</div>
+
+<div class="section enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64">
+<h4>Not:</h4>
+<ul>
+<li>Bir Btrfs birimi için minimum boyut 10 GB'dır.</li>
+<li>Btrfs birimleri metaveri için alanın %4'ünü rezerve eder.</li>
+</ul>
+</div>
+
+<h4>Bir birim oluşturmak için:</h4>
+<ol>
+<li><b>Depolama Yöneticisi</b>'ni açın.</li>
+<img src="about:blank" class="help_image"/>
+<li><b>Birim</b> öğesine gidin ve <b>Oluştur</b> üzerine tıklayın.</li>
+<img src="about:blank" class="help_image"/>
+<li>Birim oluşturma sihirbazını göreceksiniz. İhtiyaçlarınıza göre <strong>Hızlı</strong> veya <strong>Özel</strong> seçimini yapın. Ardından biriminin oluşturulmasını tamamlamak için sihirbazın adımlarını izleyin.</li>
+<img src="about:blank" class="help_image"/>
+</ol>
+
+</body>
+</html>

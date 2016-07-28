@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script> <script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+<meta content="en-us" http-equiv="Content-Language" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Eseguire il backup dei dati in Synology NAS per assicurarne la sicurezza</title>
+</head>
+
+<body class="tutorial-content-box" >
+
+<h1>Eseguire il backup di Synology NAS</h1>
+<div class="tutorials_content">
+<img src="../../images/Backup/1x/Backup/back_up_your_data_on_synology_nas_to_ensure_data_security.jpg" />
+<h2>Panoramica</h2>
+<p>La perdita imprevista di dati a causa di guasti nel disco rigido o altre contingenze comporta potenziali minacce ai dati, soprattutto quando non ci sono soluzioni di backup affidabili. <strong>Hyper Backup</strong> fornisce una soluzione di backup/ripristino intuitiva e integrata che consente di mantenere/recuperare copie di dati importanti e di ripristinare applicazioni e configurazioni del sistema da un punto nel tempo. Sono supportate le seguenti destinazione di archiviazione:</p>
+
+<ul>
+<li><strong>Cartelle condivise locali (inclusi dispositivi di archiviazione esterna collegati a DiskStation)</strong></li>
+<li><strong>NAS Synology remoto</strong></li>
+<li><strong>Server rsync remoti</strong></li>
+<li><strong>Server OpenStack Swift remoti</strong></li>
+<li><strong>Cloud pubblici (Amazon S3, Microsoft Azure e OpenStack Swift, ecc.)</strong></li>
+</ul>
+</div>
+
+<div class="section">
+<h4>Nota:</h4>
+<p>Hyper Backup esegue il backup solo di specifiche applicazioni e configurazioni di sistema. Per maggiori informazioni, consultare la documentazione di supporto per Hyper Backup.</p>
+</div>
+
+
+<h3 class="list_head">1. Creare attività di backup locali in una cartella condivisa locale/dispositivo di archiviazione esterna</h3>
+<p><strong>Hyper Backup</strong> offre procedure simili di backup e ripristino in tipi di destinazione differenti. Di seguito, viene descritto come eseguire il backup e il ripristino locale dei dati, come riferimento per altri tipi di attività.</p>
+
+<ol>
+<li>Accedere a DSM e individuare il pacchetto <strong>Hyper Backup</strong>.</li>
+<li>Fare clic su <strong>+</strong>, nell'angolo in basso a sinistra, e selezionare <strong>Attività di backup dat</strong>i.</li>
+<li>Per configurare un'attività di backup locale, selezionare <strong>Cartella condivisa locale</strong>.</li>
+<img src="../../images/Backup/1x/Backup/1.png" width="600" alt=""/>
+<li>Selezionare <strong>Crea attività di backup</strong> e selezionare una cartella condivisa o un dispositivo di archiviazione esterna collegato a DiskStation.</li>
+<img src="../../images/Backup/1x/Backup/2.png" width="600" alt=""/>
+<li>Selezionare le cartelle di origine per eseguire il backup dei dati contenuti. Le cartelle condivise crittografate, se selezionate, devono essere montate durante il processo di backup. Se l'origine e la destinazione sono nello stesso volume, il sistema contrassegnerà tali cartelle di origine con dei punti esclamativi arancioni.</li>
+<img src="../../images/Backup/1x/Backup/3.png" width="600" alt=""/>
+<li>Selezionare le applicazioni per il backup.</li>
+<img src="../../images/Backup/1x/Backup/4.png" width="600" alt=""/>
+<li>Specificare le impostazioni di backup di seguito, a seconda delle esigenze:
+  <ul>
+  <li><strong>Attività</strong>: denominare l'attività di backup.</li>
+  <li><strong>Abilita notifica attività</strong>: selezionare per ricevere la comunicazione dello stato dell'attività tramite e-mail, SMS o servizio push.</li>
+  <li><strong>Abilita backup configurazione</strong>: eseguire il backup delle configurazioni di sistema (es. credenziali utente). Queste impostazioni sono inserite, per impostazione predefinite, su tutte le attività di backup.</li>
+  <li><strong>Comprimi dati backup</strong>: comprimere i dati di backup per ridurre l'uso dell'archivio di destinazione. Se quest'opzione è selezionata, sarà necessario più tempo per il backup.</li>
+  <li><strong>Abilita codifica trasferimento</strong> (solo per backup remoto): selezionare per crittografare i dati durante il trasferimento in una destinazione remota (es. un server rsync o un cloud pubblico).</li>
+  <li><strong>Dimensione parte Multipart Upload</strong> (solo per server compatibili S3): dividere i dati di backup per le dimensioni di blocco specificate.</li>
+  <li><strong>Abilita crittografia lato client</strong>: selezionare per proteggere i dati di backup con password dall'accesso indesiderato sul lato destinazione.</li>
+    
+  <li><strong>Abilita la programmazione Backup</strong>: selezionare per programmare quando eseguire automaticamente l'attività di backup.</li>
+  </ul>
+  </li>
+  
+<img src="../../images/Backup/1x/Backup/5.png" width="600" alt=""/>
+<li>Selezionare <strong>Abilita rotazione backup</strong> per configurare lo schema di rotazione:
+  
+  <ul>
+  <li><strong>Dalle versioni più recenti</strong>: eliminare le versioni backup più recenti quando viene superato il <strong>Numero di versioni</strong>.</li>
+  <li><strong>Smart Recycle</strong>: il sistema conserverà ogni versione di backup fino a quando viene superato il numero di versioni specificato. Quando viene azionata la rotazione, il sistema ruoterà innanzitutto le versioni che non corrispondono ad alcuna delle condizioni; se tutte le versioni presenti corrispondono alle versioni presenti, il sistema ruoterà la versione più recente:
+  <ul>
+  <li><strong>Versioni orarie dalle 24 ore passate</strong>: il sistema mantiene la versione più recente creata ogni ora.</li>
+  <li><strong>Versioni giornaliere da 1 giorno trascorso a 1 mese</strong>: il sistema mantiene la versione più recente creata ogni giorno.</li>
+  <li><strong>Versione settimanale dopo 1 mese</strong>: il sistema mantiene la versione più recente creata ogni settimana.</li>
+  </ul>
+  
+  </li>
+  <li><strong>Numero delle versioni</strong>: impostare il limite superiore di possibili versioni di backup mantenute.</li>
+  <li>Sequenza temporale: Visualizzare il risultato possibile della conservazione di backup in base al programma di backup e allo schema di rotazione.</li>
+  </ul>
+</li>
+
+<img src="../../images/Backup/1x/Backup/6.png" width="600" alt=""/>
+<li>Fare clic su <strong>Applica</strong> per completare la configurazione.</li>
+<li>Per eseguire subito l'attività di backup, seguire le istruzioni della procedura guidata di backup e fare clic su <strong>Sì</strong>.</li>
+</ol>
+
+
+<h3 class="list_head">2. Ripristinare file singoli da una cartella condivisa locale/dispositivo di archiviazione esterna</h3>
+
+
+<ol>
+<li>Andare su <strong>Hyper Backup</strong>, selezionare l'attività di backup ne riquadro sinistro e fare clic su <strong>Backup di Explorer</strong> (icona lente di ingrandimento). Inserire la password se l'attività è protetta con crittografia lato client.</li>
+<img src="../../images/Backup/1x/Backup/Single_1.png" width="600" alt=""/>
+<li>Individuare e selezionare il file da ripristinare. È possibile selezionare anche la versione desiderata da ripristinare con la barra della sequenza temporale.</li>
+<img src="../../images/Backup/1x/Backup/Single_2.png" width="600" alt=""/>
+<li>Fare clic su <strong>Ripristina</strong> per ripristinare il file/cartella selezionata.</li>
+
+</ol>
+
+
+
+<h3 class="list_head">3. Ripristinare tutte le attività ai punti nel tempo desiderati</h3>
+
+<ol>
+<li>Fare clic su <strong>Ripristina</strong>, nell'angolo in basso a sinistra, e fare clic su <strong>Dati</strong>. Inserire la password se l'attività è protetta con crittografia lato client.</li>
+
+<img src="../../images/Backup/1x/Backup/Restore_1.png" width="600" alt=""/>
+<li>Selezionare un'attività da ripristinare. Per ripristinare i dati dai repository, selezionare <strong>Ripristina da altri repository</strong> e individuare l'attività da ripristinare.</li>
+<img src="../../images/Backup/1x/Backup/Restore_2.png" width="600" alt=""/>
+<li>Scegliere se ripristinare le configurazioni di sistema. Se si selezionare <strong>Ripristina configurazione di sistema</strong>, selezionare configurazioni specifiche nell'elenco da ripristinare.</li>
+<img src="../../images/Backup/1x/Backup/Restore_3.png" width="600" alt=""/>
+
+<li>Individuare e selezionare i file/attività di destinazione da ripristinare. È possibile selezionare anche la versione desiderata da ripristinare con la barra della sequenza temporale.</li>
+<img src="../../images/Backup/1x/Backup/Restore_4.png" width="600" alt=""/>
+<li>Selezionare le applicazioni da ripristinare.</li>
+<img src="../../images/Backup/1x/Backup/Restore_4.5.png" width="600" alt=""/>
+<li>Saranno visualizzate le informazioni di ripristino di base.</li>
+<img src="../../images/Backup/1x/Backup/Restore_5.png" width="600" alt=""/>
+<li>Fare clic su <strong>Applica</strong> per avviare il ripristino.</li>
+</ol>
+
+
+
+
+
+
+<div class="page-info">
+  <ul>
+    <li>In precedenza in questo argomento: <a href="backup_from_computer.html">Backup dei dati su PC/Mac utilizzando Cloud Station</a> </li>
+  </ul>
+</div>
+</body>
+
+</html>

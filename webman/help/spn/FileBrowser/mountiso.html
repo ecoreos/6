@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>File Station</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Montar unidades virtuales</h2>
+
+<p>Puede montar unidades virtuales para acceder al contenido de imágenes de disco con File Station.</p>
+
+<h4>Para montar una unidad virtual:</h4>
+<ol>
+<li>Seleccione una imagen de disco y elija <b>Herramientas</b> > <b>Montar unidad virtual</b>.</li><img src="about:blank" class="help_image"/><li>Haga clic en <b>Examinar</b> para seleccionar o crear una carpeta de destino vacía en su DiskStation para montar la unidad virtual.</li><img src="../../../online_img/dsm/FileStation/mountiso/02.png" class="help_image"/><li>Marque <b>Montar automáticamente al arrancar</b> si desea que DiskStation monte la unidad virtual en cada reinicio o arranque del sistema. Haga clic en <b>Montar</b> para continuar. Ahora puede desplazarse hasta la carpeta de destino en la que está montada la unidad virtual y acceder al contenido de la imagen de disco.</li><img src="../../../online_img/dsm/FileStation/mountiso/03.png" class="help_image"/></ol>
+
+<div class="section">
+<h4>Nota:</h4>
+<p>Las unidades virtuales y los archivos .iso solo se puede montar en subcarpetas de las carpetas compartidas.</p>
+</div>
+
+
+
+<h4>Para desmontar una unidad virtual:</h4>
+<ol>
+<li>Haga clic con el botón derecho en la carpeta de destino en la que está montada la unidad virtual y seleccione <b>Desmontar</b>.</li><img src="about:blank" class="help_image"/></ol>
+<ol><span class="note_head">Nota: </span><li>Formato de imagen de archivo compatible: archivos "<b>.iso</b>" con ISO 9660 y sistema de archivos UDF.</li>
+<li>El número máximo de unidades virtuales simultáneas es 16.</li>
+<li class="enable-dockerx64">Solo es posible montar unidades virtuales en el modo con privilegios altos. Para usar esta función vaya al paquete Docker de su DSM host, seleccione el <strong>Docker DSM</strong> para el que desea habilitar las carpetas compartidas cifradas, haga clic en <strong>Editar</strong> y marque la casilla junto a <strong>Ejecutar contenedor usando privilegios altos</strong>.</li>
+
+</ol>
+</body>
+</html>

@@ -1,0 +1,167 @@
+﻿<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+	<h2>RAID Group*</h2>
+	<p>通过 DiskStation，您可以将多个硬盘合并为一个称之为 RAID Group 的存储设备。您可在 RAID Group 的顶层创建存储卷或 iSCSI LUN (段落分块)。如果 RAID Group 已分配空间，可扩充卷或 iSCSI LUN。不同类型的 RAID 可提供不同级别的数据保护。对于 DiskStation 支持的一般 RAID 类型列表，请参见<a href="general.html">常规</a>。
+</p>
+
+<h4>创建 RAID Group：</h4>
+	<ol>
+		<li>单击<b>创建</b>按钮。</li>
+		<li>选择下列其中一个选项： 
+	  <ul>
+				<li>用于单个卷或 iSCSI LUN (段落分块) 的 RAID Group：提供较佳的运行性能。</li>
+				<li>用于多个卷或 iSCSI LUN (段落分块) 的 RAID Group：提供较佳的管理灵活性。</li>
+			</ul>
+		</li>
+		<li>按照向导完成此过程。</li>
+	</ol>
+<div class="section">
+<h4>注： </h4>
+<ul>
+<li>一个 RAID Group 必须由相同硬盘驱动器类型的硬盘组成。您无法同时使用 SATA 和 SAS 硬盘，也不能同时使用 SSD 和 HDD 来创建 RAID。</li>
+<li>适用于多个卷或 iSCSI LUN 的 RAID Group (段落分块) (使用 <b>RAID 5</b> 或 <b>RAID 6</b>) 可能含有多个 <b>RAID 阵列</b>。每个属于同一 RAID Group 的 RAID 阵列应是相同的 RAID 类型 (如 RAID 5 或 RAID 6)。每个 RAID 阵列的最大硬盘数为 6、12 或 24。您可在创建 RAID Group 时设置硬盘数上限，该数字不可在以后修改。当指定 RAID 阵列的硬盘数上限后，添加到 RAID Group 的下一个硬盘可能被指定为新的 RAID 阵列。新 RAID 阵列必须含有该特定 RAID 类型所需的最低硬盘数 (即 RAID 5 为三个硬盘，RAID 6 为四个硬盘)。
+</li>
+<li>如果您要创建一个有特定硬盘的 RAID Group，而该硬盘却未显示在 <b>RAID Group 创建向导</b>中，请在<b>硬盘管理</b>中检查硬盘状态。</li>
+</ul>
+</div>
+
+	<h4>删除 RAID Group：</h4>
+	<ol>
+		<li>选择您想要删除的 RAID Group。</li>
+		<li>单击<b>删除</b>按钮并按照向导完成设置。</li>
+	</ol>
+
+<div class="section">
+<h4>注： </h4>
+<ul>
+<li>RAID Group 上的卷和 iSCSI LUN 将在删除 RAID Group 时被删除。请确认驱动器中没有重要数据。</li>
+</ul>
+</div>
+
+
+	<h4>修复 RAID Group：</h4>
+	<p>如果 RAID Group 为以下类型之一，则可以修复状态为<b>堪用</b>的 RAID Group：RAID 1、RAID 5、RAID 6 和 RAID 10。RAID Group 上的已有数据不会被删除。</p>
+	<p>请按照下列步骤修复 RAID Group：</p>
+	<ol>
+		<li>关闭 DiskStation。(如果您的型号支持热交换，可跳过此步骤。)</li>
+		<li>按 RAID Group 状态的硬盘信息中的指示更换故障硬盘。</li>
+		<li>单击<b>管理</b>。</li>
+		<li>选择<b>修复</b>。</li>
+		<li>按照向导完成此过程。</li>
+        </ol>
+        
+<div class="section">
+<h4>注：</h4>
+<ul>
+<li>用于更换的硬盘容量必须等于或大于卷或 RAID Group 中的最小硬盘容量。</li>
+<li>用于更换的硬盘状态必须为“已初始化”或“未初始化”。</li>
+</ul>
+</div>
+
+	<h4>更改 RAID Group 的 RAID 类型</h4>
+	<p>要更改 RAID Group 的 RAID 类型，DiskStation 中必须安装有可用的硬盘。我们目前提供以下的 RAID 更改方式：</p>
+	<ul>
+		<li>Basic 至 RAID 1 或 RAID 5</li>
+		<li>RAID 1 转换到 RAID 5</li>
+		<li>RAID 5 转换到 RAID 6</li>
+<li>添加映射硬盘到 RAID 1</li>
+	</ul>
+	<p>请按照下列步骤更改 RAID Group 的 RAID 类别：</p>
+	<ol>
+		<li>选择您想要更改的 RAID Group。</li>
+		<li>单击<b>管理</b>。</li>
+		<li>选择<b>更改 RAID 类型</b>。</li>
+		<li>按照向导完成此过程。</li>
+        </ol>
+<div class="section">
+<h4>注： </h4>
+<ul>
+<li>RAID Group 的 RAID 更改之前，RAID Group 的状态必须为<b>正常</b>。否则可能造成数据丢失。如果 RAID Group 处于<b>堪用</b>状态，请先进行修复。</li>
+<li>可更改 RAID Group 的 RAID 类别，DiskStation 上必须安装有足够的硬盘，新硬盘的容量必须大于 RAID Group 中的最小硬盘。</li>
+<li>新硬盘的状态必须为“已初始化”或“未初始化”。</li>
+<li>有多个 RAID 阵列的 RAID Group 的 RAID 类别不能更改。</li>
+</ul>
+</div>
+
+	<h4>扩充 RAID Group 的容量</h4>
+	<p>您可通过以较大容量的硬盘更换已有的硬盘或添加硬盘来扩充 RAID Group 的容量。</p>
+
+<div class="section">
+<h4>注： </h4>
+<ul>
+<li>若要以 3 TB 或更大容量的硬盘来扩充 RAID Group，请确认您的 RAID Group 是使用 DSM 3.0 或更高版本所创建的。
+</ul>
+</div>
+
+	<h4>以更大容量的硬盘来更换已有的硬盘来扩充 RAID Group：</h4>
+	<p>您可用以下 RAID 类型中更大容量的硬盘来更换已有的硬盘来扩充 RAID Group：RAID 1、RAID 5 和 RAID 6。适用于单个卷或 iSCSI LUN 的 RAID Group 中的相关卷或 iSCSI LUN 将自动扩充。请按照下列步骤来操作：</p>
+	<ol>
+<li>关闭 DiskStation。如果您的型号支持热交换，可跳过此步骤。</li>
+		<li>将一颗硬盘更换成较大容量的硬盘。</li>
+		<li>开启 DiskStation 并维修 RAID Group。</li>
+		<li>重复步骤 1 至步骤 3 直到所有的硬盘都更换成容量较大的硬盘。</li>
+		<li>系统会自动扩充 RAID Group。</li>
+	</ol>
+
+<div class="section">
+<h4>注： </h4>
+<ul>
+<li>在扩充过程中，存储管理器的所有服务将暂停。</li> 
+<li>您必须在 RAID Group 的状态为<b>正常</b>时才能扩充硬盘；否则会造成数据丢失。如果 RAID Group 处于<b>堪用</b>状态，请先进行修复。</li>
+	</ul>
+</div>
+
+	<h4>通过添加硬盘来扩充 RAID Group：</h4>
+	<p>此功能适用于 JBOD、RAID 5 和 RAID 6 型 RAID 组。按照下列步骤进行：</p>
+	<ol>
+		<li>选择您想要扩充的 RAID Group。</li>
+		<li>单击<b>管理</b>。</li>
+		<li>选择<b>添加硬盘</b>。</li>
+		<li>按照向导指示完成设置。</li>
+</ol>
+<div class="section">
+<h4>注： </h4>
+<ul>
+		<li>RAID Group 的状态必须为<b>正常</b>。</li>
+		<li>对于 RAID 5 和 RAID 6 型 RAID 组，硬盘容量必须大于该 RAID Group 中最小硬盘的容量。</li>
+		<li>所选硬盘的状态必须为“已初始化”或“未初始化”。</li>
+	</ul>
+    </div>
+
+	<h4>编辑 RAID Group 说明：</h4>
+	<ol>
+		<li>选择您想要编辑的 RAID Group</li>
+		<li>单击<b>管理</b>。</li>
+		<li>选择<b>编辑说明</b>。</li>
+		<li>编辑说明并单击<b>确定</b>以保存结果。</li>
+	</ol>
+	<h3>RAID 清理</h3>
+<p>RAID 清理是数据维护功能，它能够检查 RAID Group 并修复任何检测到的数据不一致情况。此功能可与执行 RAID 5 或 RAID 6 的 RAID Group 一起使用。</p>
+<p>建议您定期执行 RAID 清理以维护数据一致性，避免重要的数据在硬盘发生故障时丢失。</p>
+<h4>若要执行 RAID 清理：</h4>
+    <ol>
+<li>选择您要执行 RAID 清理的 RAID Group。</li>
+<li>单击<strong>管理</strong>。</li>
+<li>选择 <strong>RAID 清理</strong>。</li>
+    </ol>
+    <div class="section">
+<h4>注：</h4>
+      <ul>
+<li>只有在 RAID Group 的状态为<strong>正常</strong>时才能执行 RAID 清理。</li>
+<li>请不要在 RAID 清理完成之前关闭系统。如果在完成之前系统关机，必须重新再一次执行 RAID 清理。</li>
+      </ul>
+    </div>
+    
+<p>____<br />* 仅适用于特定机型。</p>    
+</body>
+</html>

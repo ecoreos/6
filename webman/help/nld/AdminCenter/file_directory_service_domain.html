@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Win/Mac/NFS</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Domein</h2>
+<p>Het is mogelijk om uw DiskStation aan een Windows-domein te koppelen. Na koppeling aan het domein, kunnen domeingebruikers zich op uw DiskStation aanmelden met hun domeinaccounts en wachtwoorden, hebben ze toegang tot bestanden en kunnen ze DSM-toepassingen gebruiken zonder daarvoor een extra account en wachtwoord te moeten onthouden.</p>
+<h4>Om lid te worden van een domein:</h4>
+<ol>
+<li>Ga naar <strong>Configuratiescherm</strong> > <strong>Adreslijstservice</strong> > <strong>Domein</strong>.</li>
+<li>Schakel het selectievakje <strong>Lid maken van domein</strong> in.</li>
+<li>Voer de domeinnaam in en geef de DNS-server in de geschikte velden in.</li>
+<li>Schakel indien nodig het selectievakje <b>Geavanceerde domeinopties</b> in. (zie hieronder voor gedetailleerde informatie).</li>
+<li>Klik op <b>Toepassen</b>.</li>
+<li>Voer de gebruikersnaam en het wachtwoord van de systeembeheerder op de domeinserver in het pop-upvenster in.</li>
+<li>Klik op <b>OK</b>.</li>
+</ol>
+<div class="section">
+<h4>DNS Server</h4>
+<p>Het is aanbevolen een DNS-server op te geven om uw DiskStation te helpen het domein te zoeken. Als het domein nog echter niet is geregistreerd op de DNS-server, kan de aansluitingsprocedure mislukken.</p>
+<h4>Domeinservertype</h4>
+<p>Dit veld toont het domeintype nadat uw DiskStation lid van een domein is geworden. Het domeintype zal een "AD-domein" zijn.</p>
+<h4>Beheermodus</h4>
+<p>Deze optie bepaalt hoe rechten van domeingebruikers en groepen worden beheerd. </p>
+<ul>
+<li><b>Vertrouwd domein</b>: u kunt gebruikers en groepen in gekoppelde en vertrouwse domeinen beheren. Gebruikers en groepen kunnen in de vervolgkeuzelijst Domein worden gefilterd.</li>
+<li><b>Enkel domein met OU</b>: alleen gebruikers en groepen in het gekoppelde domein worden weergegeven in deze modus. In deze modus kunt domeingebruikers/groepen met OU (Organizational Unit) filteren in het vervolgkeuzemenu.</li>
+</ul>
+<h4>Geavanceerde domeinopties</h4>
+<p>In de meeste situaties hoeft u geen van de geavanceerde domeinopties in te voeren. De geavanceerde domeinopties zijn enkel vereist voor specifieke domeinomgevingen. </p>
+<ul>
+<li><b>DC IP/FQDN</b>: geef een IP-adres of FQDN voor de DC (domeincontroller) op en uw DiskStation zal proberen om ermee te communiceren. Als er meer dan een IP-adres of FQDN is, moet u ze scheiden door middel van een komma (,). U kunt een asterisk (*) toevoegen na de laatste DC IP-adres of FQDN en uw DiskStation zal proberen de communicatie tot stand te brengen met de andere DC als dit niet lukt met de aangegeven DC's. U moet een komma toevoegen tussen de asterisk en het laatste IP-adres of FQDN.</li>
+<li><b>Domein NetBIOS-naam</b>: Geef de NetBIOS-naam van het domein op.</li>
+<li><b>Domein FQDN (DNS-naam)</b>: Geef de FQDN (DNS-naam) van het domein op.</li>
+<li><b>DNS-interface registreren:</b> bij het toevoegen van een domein wordt de hier gespecificeerde NIC (Network Interface Card) geregistreerd bij de DNS-server. Denk eraan dat als de hostnaam van uw DiskStation een liggend streepje (_) bevat, zal de registratie mislukken omdat liggende streepjes (_) niet kunnen worden gebruikt bij DNS.</li>
+<li><b>Gebruikers-/groeplijst bijwerken</b>: geef aan hoe vaak uw DiskStation automatisch de domeingebruikers-/groeplijst moet bijwerken. U kunt de tijdsduur aanpassen om updates dagelijks, wekelijks of maandelijks uit te voeren. Daarnaast kunnen domeingebruikers-/groeplijsten handmatig worden bijgewerkt in het tabblad <strong>Domeingebruiker</strong> bij <strong>Alle domeinen bijwerken</strong>. Denk eraan dat automatische updates van invloed zijn op de systeemslaapstand.</li>
+</ul>
+
+<h4>Toevoeging aan Read-Only Domein Controller</h4>
+<p>Om uw DiskStation toe te voegen aan een Read-Only Domein Controller (RODC) moet u de "volledige computernaam" (FQDN) van uw Read-Write Domein Controller (RWDC) invoeren in het veld <strong>DC IP/FQDN</strong>. De volledige computernaam moet de volgende indeling hebben: <strong>ComputerNaam.Domein</strong>, bijv. "ad01.synology.com".</p>
+
+</div>
+
+
+<div class="section">
+<h4>Opmerking:</h4>
+<ul>
+<li>als uw domeingebruikersnaam “%” of “$” bevat, krijgt u mogelijk geen toegang tot uw basismap. Vraag uw domeinbeheerder om u een nieuwe gebruikersnaam te geven.</li>
+<li>Domeingroepen <strong>Domain Admins</strong> en <strong>Bedrijfsadmins</strong> worden automatisch aan de lokale groep <strong>Administrators</strong> toegevoegd. Hiermee hebben domeingebruikers in deze groepen beheerdersrechten op uw DiskStation, inclusief toegang tot bestandsservices zoals CIFS/FTP/AFP/WebDAV- en andere DSM-toepassingen.</li>
+<li>U kunt ook de toegangsrechten van domeingebruikers tot gedeelde mappen op uw DiskStation configureren. Zie <a href="file_directory_service_user_group.html">hier</a> voor meer informatie.</li>
+</ul>
+</div>
+
+
+
+<h3>Domeinopties</h3>
+<p>Dit gedeelte omvat de onderstaande extra domeinopties.</p>
+<ul>
+<li><b>Telkens als een domeingebruiker zich aanmeldt, synchroniseert DiskStation met een NTP-server:</b> door deze optie in te schakelen wordt de tijdssynchronisatie geforceerd tussen uw DiskStation en de NTP-server.</li>
+<li><b>Serverondertekening inschakelen:</b> als de client clientondertekening inschakelt, moet serverondertekening op uw DiskStation ook worden ingeschakeld zodat gebruikers de domeinservices normaal kunnen gebruiken.</li>
+<li><b>Gebruikers-/groeplijsten ophalen met NT4-compatibele modus:</b> door deze optie in te schakelen, kan het systeem via de NT4 RPC-modus de gebruikers-/groepslijsten verkrijgen. U kunt deze optie inschakelen wanneer bepaalde domeingebruikers-/groeplijsten niet worden verkregen met de standaardinstellingen.</li>
+<li><b> Administratormachtigingen voor domein- en bedrijfsadmins uitschakelen:</b> een gebruiker met administratormachtigingen heeft volledige controle over uw DiskStation en bestanden. Door deze optie in te schakelen, kunt u de machtigingen van domein- en bedrijfsadmins beperken tot dezelfde machtigingen van een normale gebruiker, waardoor de bestands-/mapmachtigingen van de normale gebruiker worden overgenomen.</li>
+<li><strong>Geneste groepsniveaus opsommen:</strong> geef het aantal geneste domeingroepliden op die kunnen worden opgesomd.</li>
+</ul>
+
+</body>
+</html>

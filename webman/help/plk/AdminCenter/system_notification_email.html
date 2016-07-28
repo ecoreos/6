@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>E-mail — pomoc systemu Synology DSM</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="Enabling email notifications allows your DiskStation to send messages to your email when specified events occur."><link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>E-mail</h2>
+<p class="disable-eds14">Włączenie powiadomień e-mail umożliwia wysyłanie przez urządzenie DiskStation wiadomości na podany adres e-mail w przypadku wystąpienia określonych zdarzeń, takich jak błędy systemu, utrata połączenia sieciowego, zachowanie wentylatora, awaria zasilania lub błąd zadania kopii zapasowej.</p>
+
+<p class="enable-eds14">Włączenie powiadomień e-mail umożliwia wysyłanie przez urządzenie DiskStation wiadomości na podany adres e-mail w przypadku wystąpienia określonych zdarzeń, takich jak błędy systemu, utrata połączenia sieciowego, awaria zasilania lub błąd zadania kopii zapasowej.</p>
+
+
+<h4>Aby włączyć powiadomienia e-mail:</h4>
+<ol>
+<li>Wybierz <strong>Panel sterowania</strong> > <strong>Powiadomienia</strong> > <strong>E-mail</strong>.</li>
+<li>Zaznacz opcję <strong>Włącz powiadomienia e-mail</strong>.</li>
+<li>Wprowadź jeden lub więcej adresów e-mail w polu <strong>Odbiorcy</strong>. Powiadomienia systemowe będą przesyłane na wprowadzone tu adresy. Dozwolone są dwa adresy. Adresy można rozdzielić znakiem średnika (;).</li>
+<li>W razie potrzeby można dodać prefiks tematu w polu <strong>Prefiks tematu</strong>. Ten prefiks będzie dodawany do tematów wiadomości wysyłanych przez DiskStation, co ułatwia identyfikowanie i filtrowanie wiadomości.</li>
+<li>Jeśli chcesz korzystać z innego serwera e-mail (np. Gmail, Outlook, Yahoo!) do przekazywania wiadomości, zapoznaj się z poniższą sekcją dotyczącą innej usługi e-mail. Jeśli chcesz korzystać z niestandardowego serwera, zapoznaj się z poniższą sekcją dotyczącą niestandardowego serwera SMTP. </li>
+</ol>
+
+
+
+
+<h4>Aby skorzystać z innej usługi e-mail:</h4>
+<ol>
+
+
+<li>W menu <strong>Dostawca usługi</strong> wybierz inną usługę e-mail np. Gmail, Yahoo lub Outlook.</li>
+<li>Wprowadź nazwę użytkownika i hasło wybranej usługi e-mail.</li>
+<li>Kliknij przycisk <strong>Zastosuj</strong>, aby zapisać ustawienia.</li>
+<li>Aby sprawdzić, czy ustawienia są prawidłowe, możesz kliknąć <strong>Wyślij testowy e-mail</strong>.</li>
+</ol>
+
+<h4>Aby skorzystać z niestandardowego serwera SMTP:</h4>
+<ol>
+
+
+<li>W menu <strong>Dostawca usługi</strong> wybierz opcję <strong>Niestandardowy serwer SMTP</strong>.</li>
+<li>Wprowadź nazwę lub adres IP serwera SMTP w polu <strong>Serwer SMTP</strong>. </li>
+<li>Wprowadź numer portu SMTP w polu <strong>Port SMTP</strong>. (Jeśli podczas konfiguracji reguł przekierowania portów został określony inny port SMTP, wprowadź ten numer).</li>
+<li>Jeżeli używany serwer SMTP wymaga uwierzytelnienia, zaznacz opcję <strong>Wymagane uwierzytelnienie</strong>, a następnie wprowadź <strong>Nazwę użytkownika</strong> i <strong>Hasło</strong> do konta na serwerze e-mail. </li>
+<li>Jeżeli serwer SMTP wymaga połączenia SSL/TLS, zaznacz opcję <strong>Wymagane bezpieczne połączenie (SSL/TLS)</strong>.<li>Aby dostosować nazwę nadawcy wyświetlaną w wiadomościach e-mail z urządzenia DiskStation, wprowadź odpowiednią nazwę w polu <strong>Imię i nazwisko nadawcy</strong>. Aby dostosować adres e-mail nadawcy, wprowadź adres e-mail w polu <strong>Adres e-mail nadawcy</strong>. Jeśli pole pozostanie puste, zostanie wykorzystany pierwszy adres e-mail w polu <strong>Odbiorcy</strong>.</li>
+<li>Kliknij przycisk <strong>Zastosuj</strong>, aby zapisać ustawienia.</li>
+<li>Aby sprawdzić, czy ustawienia są prawidłowe, możesz kliknąć <strong>Wyślij testowy e-mail</strong>.</li>
+</ol>
+
+
+
+
+
+
+<div class="section">
+<h4>Uwaga:</h4>
+<ul>
+<li>Jeśli chcesz wysłać wiadomość powitalną do każdego nowo utworzonego konta użytkownika, zaznacz opcję <strong>Wysyłaj powitalne wiadomości nowym użytkownikom</strong>, a każdy użytkownik otrzyma wiadomość e-mail, z chwilą utworzenia jego konta.</li>
+<li>Język powiadomień e-mail można ustawić w polu <strong>Język powiadamiania</strong>. Aby zmienić język powiadomień e-mail, wybierz <strong>Menu główne</strong> > <strong>Panel sterowania</strong> > <strong>Opcje regionalne</strong>, kliknij kartę <strong>Język</strong>, a następnie wybierz preferowany język z menu rozwijanego w sekcji <strong>Język powiadamiania</strong>.</li>
+<li>W przypadku korzystania z serwera SMTP Gmail i włączenia weryfikacji dwuetapowej pamiętaj, aby używać hasła określonego dla aplikacji podanego przez Google do uwierzytelniania SMTP.</li>
+</ul>
+</div>
+
+<div class="section">
+<h4>Nazwa domeny serwera SMTP:</h4>
+<p>Serwer SMTP może być adresem IP lub nazwą domeny. Jeśli jest to nazwa domeny, sprawdź, czy wprowadzono prawidłowy adres IP serwera DNS w obszarze <b>Menu główne</b> > <b>Panel sterowania</b> > <b>Sieć</b> i upewnij się, że serwer jest w Internecie. </p>
+
+
+</div>
+</body>
+</html>

@@ -1,0 +1,195 @@
+
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Administrere alternativer for File Station - Synology DSM Hjelp</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="Learn how to customize File Station settings related to file management, shared links, and security.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Administrer File Station-innstillinger</h2>
+<p>For å administrere innstillinger for File Station, åpner du <strong>File Station</strong> og klikker på knappen <b>Innstillinger</b>.</p>
+
+<h3>Generelt</h3>
+<p>
+Her kan du aktivere File Station-logger hvis du vil registrere aktiviteten til alle brukere. Brukeraktivitetene omfatter <b>Opprett mappe</b>, <b>Last opp</b>, <b>Last ned</b>, <b>Slett</b>, <b>Gi nytt navn</b>, <b>Flytt</b>, <b>Kopier</b> og <b>Egenskaper stilt inn</b>.
+</p>
+<h4>Slik aktiverer du File Station-loggen:</h4>
+<ol>
+<li>Dersom du ønsker å registrere aktiviteten til alle brukerne, merk av for <b>Aktiver File Station-logg</b>.
+</li>
+<li>
+Klikk på <b>OK</b>.
+</li>
+</ol>
+<h4>For å se loggen til File Station:</h4>
+<ol>
+<li>
+Klikk på <b>Se på loggene</b>, som fører deg til <strong>Loggsenter</strong>.</li>
+<li>
+Klikk på fanen <b>Filoverføring</b>.
+</li>
+</ol>
+
+<h4>Slik overskriver du filer automatisk med dra-og-slipp-opplasting eller tastatursnarveier:</h4>
+<p>Merk av for <strong>Overskriv alltid filer når jeg drar og slipper dem inn i nettleseren eller limer dem inn med skrivebordssnarveier</strong> hvis du vil overskrive filer med samme navn automatisk når du drar og slipper filer fra skrivebordet og inn i nettleseren, eller limer inn filer med tastatursnarveier i File Station.</p>
+
+
+<h4>Slik aktiverer du smart dra-og-slipp:</h4>
+<p>Når du drar og slipper filer i File Station, vil denne funksjonen automatisk avgjøre om overføringshandlingen er kopiering eller flytting.</p>
+
+<ol>
+<li>Velg <strong>Aktiver smart dra-og-slipp</strong>.</li>
+<li>Velg en av handlingene som alltid skal utføres i tilfelle en annen bruker overfører filer med samme navn til den samme plasseringen samtidig:
+  <ul>
+<li><strong>Overskriv</strong>: De overførte filene overskriver filer med samme navn.</li>
+<li><strong>Hopp over</strong>: De overførte filene hoppes over og overskriver ikke filer med samme navn.</li>
+</ul>
+</li>
+<li>Klikk på <strong>OK</strong>.</li>
+</ol>
+
+<div class="section">
+<h4>Merk:</h4>
+<p>Hvis du vil endre handlingen som avgjøres av smart dra-og-slipp, bruker du følgende hurtigtaster etter behov:</p>
+<ul>
+<li>For å bytte til kopieringshandling: Trykk på Ctrl mens du utfører dra-og-slipp.</li>
+<li>For å bytte til flyttingshandling: Trykk på Shift mens du utfører dra-og-slipp.</li>
+</ul>
+</div>
+
+
+<h4>Slik blar du gjennom og administrerer filer fra lokal datamaskin med File Station:</h4>
+<ol>
+<li>
+Merk av for <b>Bla gjennom filer fra lokal datamaskin med File Station</b>.
+</li>
+<li>
+Klikk på <b>OK</b>.
+</li>
+</ol>
+
+
+<h4>Slik deler du DSM-brukerlisten med brukere som ikke er admin:</h4>
+<p>Dette alternativet gir brukere som ikke er admin tilgang til den fullstendige DSM-brukerlisten hvis de vil søke etter filer som eies av spesifikke DSM-brukere/-grupper, eller hvis de vil dele filkoblinger med andre DSM-brukere.</p>
+
+<ol>
+<li>Velg <strong>Del DSM-brukerlisten med brukere som ikke er admin</strong>.</li>
+<li>Klikk på <strong>OK</strong>.</li>
+</ol>
+
+
+<h3>Bruke standard UNIX-tillatelser</h3>
+<p>Klikk på <strong>Avanserte innstillinger</strong> og merk av for alternativet for å bruke standard UNIX-tillatelser når du laster opp eller oppretter filer og mapper. Tillatelser som brukes er de samme som tillatelsene som brukes av UNIX-kommandoen <strong>umask</strong>. Når dette alternativet er aktivert, er UNIX-tillatelser 644 for filer og 755 for mapper. Når dette alternativet er deaktivert, er UNIX-tillatelser 666 for filer og 777 for mapper. Standard umask-verdi er 022.</p>
+<div class="section">
+<h4>Merk:</h4>
+<ul>
+  <li>For Windows ACL-aktiverte delte mapper (alle delinger utenom &quot;photo&quot; og delinger på eksterne disker) kjører du <strong>chmod</strong>-kommandoen på Linux- eller FTP-klienten din for å endre tillatelsestypen for mapper og filer fra Windows ACL til UNIX.</li>
+  <li>Aktivering av dette alternativet kan forårsake problemer med inkonsekvente tillatelser mellom forskjellige protokoller. For å unngå inkonsekvens, foreslår vi at dette alternativet er deaktivert.</li>
+</ul>
+</div>
+<h3 class="disable-eds14">Montering/tilkoblinger</h3>
+<p class="disable-eds14">
+Som standard kan alle brukere montere eksterne mapper eller virtuelle stasjoner. Her kan du gi tilgang til eksterne mapper eller administrasjon av virtuelle stasjoner bare til administratorer.
+</p>
+
+<div class="disable-eds14 section">
+<h4>Merk:</h4>
+<p>Ikke-administratorbrukere kan bare montere eksterne mapper i deres <b>home</b>-mappe.</p>
+</div>
+<h4 class="disable-eds14">Slik lar du forskjellige brukere montere eksterne mapper eller virtuelle disker:</h4>
+<ol class="disable-eds14">
+<li>
+Velg <b>Alle brukere</b> eller <b>Administrators</b> i seksjonen <b>Ekstern mappe</b> eller <b>Virtuell stasjon</b>.
+</li>
+<li>
+Klikk på <b>OK</b>.
+</li>
+</ol>
+<h4 class="disable-eds14">Slik lar du forskjellige brukere montere servere og skytjenester:</h4>
+<ol class="disable-eds14">
+  <li>Velg blant <b>Alle brukere</b>, <b>Administrators</b> eller <strong>Bestemt bruker</strong>. </li>
+  <li>Valg av <strong>Bestemt bruker</strong> vil åpne et vindu som lar deg konfigurere monteringstillatelser for ulike brukere. For å aktivere tilgang for en bestemt bruker, forsikrer du deg om at det er merket av i boksen under kolonnen <strong>Aktivert</strong>. For å deaktivere tilgang for en bestemt bruker, forsikrer du deg om at det ikke er merket av i boksen under kolonnen <strong>Aktivert</strong>. Når du er ferdig, klikker du på <strong>OK</strong> for å avslutte dette vinduet.</li>
+  <div class="section">
+    <h4>Merk:</h4>
+    <ul>
+      <li>Brukere som tilhører gruppen <strong>administrators</strong> kan bruke denne funksjonen, men ikke gjøre endringer. Brukere som logger inn som <strong>guest</strong> kan hverken bruke funksjonen eller gjøre endringer. Tillatelser for alle brukere kan angis her.</li>
+    </ul>
+  </div>
+  <li>Klikk på <strong>OK</strong>.</li>
+</ol>
+<h3>Delte koblinger</h3>
+<p>
+Som standard kan alle brukere dele filkoblinger. Her kan du gi tilgang til administrasjon av delte mapper bare til administratorer.
+</p>
+<h4>Slik lar du forskjellige brukere dele filkoblinger:</h4>
+<ol>
+<li>
+Velg <b>Alle brukere</b>, <b>Administrators</b> eller <strong>Bestemt bruker</strong>.
+</li>
+<li>
+Klikk på <b>OK</b>.
+</li>
+</ol>
+
+<h4>Slik åpner du HTML-filer som vanlig tekst:</h4>
+
+<ol>
+<li>Merk av for <strong>Alltid åpne HTML-filer i vanlig tekstformat</strong>. Hvis dette alternativet er aktivert, vises HTML-filer (dvs. HTM-, HTML-, JSP-, XHTML-filer) i vanlig tekstformat når brukere åpner dem via en fildelingskobling. Dette alternativet bidrar til å hindre ondsinnede parter i å kapre brukeres innloggingsøkter ved å bruke integrert skript i HTML-filer.</li>
+<li>Klikk på <strong>OK</strong>.</li>
+</ol>
+
+<h3>Hastighetsgrense</h3>
+<p>Du kan aktivere en hastighetsgrense for å kontrollere maksimum båndbredde som kan brukes av brukere og grupper som overfører data via File Station.</p>
+
+
+<h4>Slik aktiverer du hastighetsgrense:</h4>
+<ol>
+  <li>Merk av i boksen for <b>Aktiver hastighetsgrense</b>, eller <strong>Aktiver hastighetsgrense i henhold til en tidstabell</strong> hvis du kun vil benytte deg av en hastighetsgrense ved spesifikke tidspunkt. Dette er en serveromsluttende innstilling og vil overskrive innstillingene til individuelle brukere og grupper. Ved å velge <strong>Ingen hastighetsgrense</strong>, deaktiverer du innstillingene for hastighetsgrense for alle brukere og grupper.</li>
+  <li>Klikk på <strong>Innstillinger for hastighetsgrense</strong> for å endre innstillingene for individuelle brukere eller grupper. For hver bruker og gruppe, kan du velge ett av følgende:  </li>
+    <ul>
+      <li><strong>Bruk gruppeinnstillinger:</strong> Innstillingene for hastighetsgrense vil være de samme som for gruppen som hver bruker hører til. </li>
+      <li><strong>Ingen hastighetsgrense:</strong> Ingen hastighetsgrense vil være i bruk når gruppemedlemmer overfører filer med tjenesten.</li>
+      <li><strong>Konstant:</strong> En fastsatt, konstant hastighetsgrense vil gjelde for brukeren eller gruppemedlemmene. Hastighetsgrenser for opplasting og nedlasting kan spesifiseres i feltene til venstre.</li>
+      <li><strong>Variabel:</strong> To forskjellige hastighetsgrenser kan spesifiseres og tas i bruk for brukeren eller gruppemedlemmene i henhold til en tidstabell. Klikk på knappen <strong>Tilpass</strong> for å endre innstillingene for hastighetsgrense og angi en tidstabell.</li>
+    </ul>
+
+  <li>Klikk på <b>Bruk</b>.</li>
+</ol>
+<div class="section">
+  <h4>Merk:</h4>
+  <ul>
+    <li>For mer informasjon om dynamikken i hastighetsgrense for grupper, kan du se <a href="../AdminCenter/file_group_edit.html">her</a>.</li>
+    <li>Når du angir en hastighetsgrense for en bruker, vil seksjonen <strong>Resultater</strong> vise brukerens faktiske hastighetsgrense i henhold til hans individuelle innstillinger og gruppeinnstillinger. For eksempel, hvis brukeren "Achilles" har en indiviudell nedlastingsgrense på 100 KB/s, men tilhører en gruppe med en nedlastingsgrense på 500 KB/s, vil seksjonen <strong>Resultater</strong> vise "0/500".</li>
+  </ul>
+</div>
+
+
+
+<h3>Sikkerhet</h3>
+
+<p>Her finner du sikkerhetsinnstillingene nedenfor.</p>
+
+<h4>Slik åpner du HTML-filer som vanlig tekst:</h4>
+
+<ol>
+<li>Merk av for <strong>Alltid åpne HTML-filer i vanlig tekstformat</strong>. Hvis dette alternativet er aktivert, vises HTML-filer (dvs. HTM-, HTML-, JSP-, XHTML-filer) i vanlig tekstformat når de åpnes i File Station. Dette alternativet bidrar til å hindre ondsinnede parter i å kapre brukeres innloggingsøkter ved å bruke integrert skript i HTML-filer.</li>
+<div class="section">
+<h4>Merk:</h4>
+<ul>
+<li>Dette er ikke en global innstilling. Hver bruker kan velge om de vil aktivere dette alternativet eller ikke, i henhold til deres behov.</li>
+</ul>
+</div>
+<li>Klikk på <strong>OK</strong>.</li>
+</ol>
+
+</body>
+</html>

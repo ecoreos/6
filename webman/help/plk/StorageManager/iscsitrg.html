@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Narzędzie Zarządzanie przechowywaniem</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2><a name="leaf_iscsitrg"></a>iSCSI Target*</h2>
+
+<p>iSCSI jest typem usługi sieci pamięci masowej (SAN), który zapewnia dostęp do skonsolidowanej pamięci masowej danych na poziomie bloków. Ułatwia przesyłanie danych w sieciach Intranet i zarządzanie pamięciami masowymi na duże odległości. Po odwzorowaniu jednostek iSCSI LUN do obiektów iSCSI Target klienty i serwery mogą uzyskiwać dostęp do miejsc w pamięci masowej przez inicjator iSCSI, podobnie jak w przypadku dysków lokalnych. W zależności od modelu, urządzenia Synology obsługują tworzenie wielu obiektów iSCSI Target na których można odwzorować jednostki iSCSI LUN.</p>
+
+<p><span class="note_head">Uwaga: </span>Liczba obsługiwanych obiektów iSCSI Target jest różna dla różnych urządzeń Synology. Szczegółową specyfikację produktu można znaleźć w witrynie internetowej firmy Synology.</p>
+
+<h4>Aby utworzyć obiekt iSCSI Target:</h4>
+<ol>
+<li>Kliknij przycisk <b>Utwórz</b> .</li>
+<li>Wprowadź informacje o obiekcie iSCSI Target, takie jak <b>Nazwa</b>, <b>IQN</b>, a także określ, czy włączyć funkcję <b>Uwierzytelnianie CHAP</b>.</li>
+<li>Kliknij <b>Dalej</b>.</li>
+<li>Skonfiguruj mapowanie iSCSI LUN. Wybierz opcję <b>Utwórz nowy iSCSI LUN</b> lub <b>Mapuj istniejące iSCSI LUN</b>.</li>
+<li>Kliknij <b>Dalej</b>.</li>
+<li>Kliknij <b>Wstecz</b>, aby zmodyfikować, ewentualnie <b>Zastosuj</b>, aby potwierdzić ustawienia.</li>
+</ol>
+
+<div class="section">
+<h4>Objaśnienie terminów</h4>
+<ul>
+<li><b>IQN</b>: IQN (iSCSI Qualified Name — nazwa kwalifikowana iSCSI) to unikatowa nazwa obiektu docelowego iSCSI (iSCSI Target). Nie powinna ona kolidować z innymi nazwami IQN obiektów iSCSI Target na innych serwerach. IQN musi składać się z mniej niż 128 znaków i może zawierać litery (wielkość liter jest nieistotna), cyfry, dwukropki, łączniki i kropki. Zalecana konwencja nazewnictwa to iqn.[data].[domena]:[id urządzenia], na przykład: <i>iqn.2000-04.com.synology:storage.diskarray.1</i>.</li>
+<li><b>Uwierzytelnianie CHAP</b>: Jeśli wybierzesz <b>CHAP</b>, serwer będzie mógł sprawdzić tożsamość klienta. Nazwa użytkownika może zawierać od 1 do 12 liter i cyfr, a hasło może zawierać od 12 do 16 liter i cyfr.</li>
+<li><b>Wzajemne uwierzytelnianie CHAP</b>: W trybie <b>Wzajemny CHAP</b> zarówno klient, jak i serwer uwierzytelniają się nawzajem. Żadne z haseł CHAP używanych do uwierzytelniania klienta nie może być skonfigurowane do uwierzytelniania jakiegokolwiek serwera, a żadne z haseł CHAP używanych do uwierzytelniania serwera nie może być skonfigurowane do uwierzytelniania żadnego z klientów.</li></ul></div>
+
+
+<h4>Aby usunąć obiekt iSCSI Target:</h4>
+<p>Obiekt iSCSI Target i wszelkie zamapowane iSCSI LUN można usunąć. Uwaga: usunięcie iSCSI LUN spowoduje usunięcie wszystkich danych na tym iSCSI LUN.</p>
+<ol>
+<li>Wybierz obiekt iSCSI Target do usunięcia.</li>
+<li>Kliknij opcję <b>Usuń</b>.</li>
+<li>Jeśli chcesz usunąć zamapowane jednostki iSCSI LUN, wybierz <b>Usuń także zamapowane iSCSI LUN</b>, a następnie wybierz jednostki do usunięcia.</li>
+<li>Kliknij <b>OK</b>.</li>
+</ol>
+
+<h4>Aby edytować obiekt iSCSI Target:</h4>
+<ol>
+<li>Wybierz obiekt iSCSI Target do edycji.</li>
+<li>Kliknij <b>Edytuj</b>.</li>
+<li>Dokonaj edycji ustawień zgodnie z preferencjami. Kliknij przycisk <b>OK</b>, aby zapisać zmiany.</li>
+</ol>
+
+<div class="section">
+<h4>Objaśnienie terminów</h4>
+<ul>
+<li><b>Suma kontrolna CRC</b>: Włącz sumę kontrolną CRC, aby sprawdzić, czy w czasie transmisji danych nie wystąpił żaden błąd.</li>
+<li><b>Wiele sesji</b>: Zezwól na jednoczesne łączenie wielu sesji z co najmniej jednego inicjatora z tym samym obiektem iSCSI Target. W celu ochrony plików przed uszkodzeniem lub nieoczekiwaną utratą danych zdecydowanie zaleca się używanie wspólnego systemu plików lub systemu klastrowego, takiego jak VMware Virtual Machine File System (VMFS) i Oracle Cluster File System (OCFS).</li>
+<li><b>Maskowanie</b>: Umożliwia dostęp do obiektu iSCSI Target wyłącznie określonym IQN inicjatorów iSCSI.</li>
+</ul></div>
+
+<h4>Aby włączyć lub wyłączyć obiekt iSCSI Target:</h4>
+<ol>
+<li>Wybierz obiekt docelowy iSCSI, który chcesz włączyć lub wyłączyć.</li>
+<li>Kliknij <b>Włącz</b> lub <b>Wyłącz</b>.</li>
+</ol>
+<h4>Aby zarejestrować obiekty iSCSI Target w serwerze iSNS</h4>
+<p>iSNS (Internet Storage Name Service) oferuje mechanizm zarządzania centralnego. Wszystkie obiekty iSCSI Target można zarejestrować w serwerze iSNS.</p>
+<ol>
+<li>Kliknij przycisk <b>iSNS</b>, a następnie zaznacz pole wyboru <b>Włącz iSNS</b>.</li>
+<li>Wprowadź adres IP serwera iSNS. Kliknij <b>OK</b>, aby zastosować ustawienie.</li>
+</ol>
+<p>____<br /> *Funkcja dostępna tylko w niekt&oacute;rych modelach.</p>
+
+</body>
+</html>

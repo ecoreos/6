@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>儲存空間管理員</title>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2><a name="leaf_iscsilun"></a>iSCSI LUN*</h2>
+<p>iSCSI 是一種可藉由區域網路或遠距離傳送資料的儲存空間網路服務。只要將 iSCSI LUN 連結至 iSCSI Target，用戶端便可以存取儲存空間，如同存取本機磁碟一樣。您可以將 iSCSI LUN (邏輯單元數) 連結至多個 iSCSI Targets 來進行檔案的讀寫。請前往<strong>儲存空間管理員</strong> &gt; <strong>iSCSI LUN</strong> 來管理 iSCSI LUN。</p>
+
+<div class="section"><h4>注意：</h4>
+<p>不同 DiskStation 機型支援的 iSCSI LUN 數不同。請參閱 <a href="http://www.synology.com/" target="_blank">www.synology.com</a> 取得詳細產品規格訊息。</p>
+</div>
+
+<p>DiskStation 目前支援下列類型的 iSCSI LUN：</p>
+<ul>
+	<li><b>iSCSI LUN (一般檔案)</b>：在一個儲存空間上劃分一塊空間而建立的 iSCSI LUN。您可在需要時擴充其容量。這類型的 iSCSI LUN 可額外提供具 Thin Provisioning 功能的彈性容量管理、VMware VAAI 硬體加速支援、Windows ODX 支援、LUN 快照和 LUN 複製功能。</li>
+	<li class="disable-bromolow disable-grantley disable-avoton disable-braswell disable-broadwell disable-kvmx64"><b>iSCSI LUN (段落分塊) - 使用所有硬碟容量的 LUN</b>：使用整個儲存空間建立而成的 iSCSI LUN。您可以修復、擴充或更改 RAID 類型，就像是一般儲存空間一樣。請參閱<a href="space.html">儲存空間</a>頁面來瞭解詳細資訊。</li>
+	<li class="disable-bromolow disable-grantley disable-avoton disable-braswell disable-broadwell disable-kvmx64"><b>iSCSI LUN (段落分塊) - 可彈性使用部份磁碟群組容量的 LUN</b>：在一個磁碟群組上劃分一塊空間而建立的 iSCSI LUN。如果磁碟群組上還有可用的空間，您可依需要擴充 iSCSI LUN 的容量。請參閱<a href="raid.html">磁碟群組</a>頁面來瞭解詳細資訊。</li>
+	<li class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64"><b>iSCSI LUN (段落分塊)</b>：在 RAID Group 上建立的 iSCSI LUN，提供動態容量管理以及最佳化存取效能。如果 RAID Group 上還有可用的空間，您可依需要擴充 iSCSI LUN 的容量。請參閱 <a href="raid.html">RAID Group</a> 頁面來瞭解詳細資訊。</li>
+</ul>
+
+<div class="section"><h4>注意：</h4>
+<p>具備進階 LUN 功能的 iSCSI LUN，目前僅支援於 ext4<span style="display: inline;" class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64">/Btrfs</span> 檔案系統上使用。</p>
+</div>
+
+<h4>若要新增 iSCSI LUN：</h4>
+<ol>
+	<li>按一下<b>新增</b>。</li>
+	<li>選擇您想新增的 iSCSI LUN 類別。</li>
+	<li>跟隨精靈的指示來完成流程。</li>
+</ol>
+
+<div class="section"><h4>注意：</h4>
+<p>進階 LUN 功能僅可在創建 iSCSI LUN 時啟動。無法在事後進行變更。</p>
+</div>
+
+<p>您可以為某些應用程式伺服器功能，例如 Microsoft Exchange、SQL Server，或是為 Microsoft Windows ODX、VMware VAAI 等虛擬化伺服器和儲存加速技術，設定最佳化的進階 LUN 配置空間大小。請操作下列其中之一：</p>
+<ul>
+	<li>在建立儲存空間的第一個進階 LUN 時，設定配置單元大小。</li>
+	<li>在建立儲存空間的第一個進階 LUN 之前，在<strong>設定</strong>中設定配置單元大小。</li>
+</ul>
+
+<p>在 DiskStation 上的 iSCSI 進階 LUN 從應用程式伺服器直接連線，或使用原始裝置對應 (RDM Pass-through) 模式時，建議您為應用程式設定適合的配置單元大小。若要利用 Synology 進階 LUN 技術搭配 Windows ODX 進行複製，建議您將 NTFS 儲存空間格式化為大於 (或等同於) 您在 DSM 上設定的配置單元大小。</p>
+
+<div class="section"><h4>注意：</h4>
+<p>每個進階 LUN 的配置單元大小只可設定一次。</p>
+</div>
+
+<h4>若要移除 iSCSI LUN：</h4>
+<p>移除 iSCSI LUN 時，上面所有資料將會被刪除。iSCSI LUN 和 iSCSI Target 的連結也會遺失。</p>
+<ol>
+	<li>選擇您要移除的 iSCSI LUN。</li>
+	<li>按一下<b>移除</b>按鈕並跟隨精靈的指示來完成流程。</li>
+</ol>
+
+<div class="section"><h4>注意：</h4>
+<p>刪除 DiskStation 上的 VAAI LUN 並不會立即釋放硬碟空間。資料會被移至名為 <strong>@EP_trash</strong> 的系統保留資料夾，而後逐一刪除。例如，刪除 DiskStation 上 100 GB 的 VAAI LUN 後，大約需 15 到 20 分鐘來釋放此 100 GB 的硬碟儲存空間。</p>
+</div>
+
+<h4>若要強制掛載 iSCSI LUN (段落分塊)：</h4>
+<p>若 iSCSI LUN (段落分塊) 上的快取遺失，系統開機時將不會掛載此 iSCSI LUN (段落分塊)。若快取無法復原，而您又希望存取此 iSCSI LUN (段落分塊)，您可以按一下<b>強制掛載</b>。</p>
+
+<div class="section"><h4>注意：</h4>
+<p>此功能僅適用於特定機種。</p>
+</div>
+
+<h4>若要編輯 iSCSI LUN：</h4>
+<ol>
+	<li>選擇您要編輯的 iSCSI LUN。</li>
+	<li>按一下<b>編輯</b>。</li>
+	<li>依需求編輯屬性。</li>
+	<li>按<b>確定</b>以儲存設定。</li>
+</ol>	
+
+<div class="section"><h4>注意：</h4>
+<p>為避免編輯 iSCSI LUN 容量時造成檔案遺失，您只能將容量調整成比現在更大，而不能縮小。</p>
+</div>
+
+<h4>若要拍攝 iSCSI LUN 快照：</h4>
+<p>iSCSI LUN 快照為 iSCSI LUN 在某一時間點的唯讀複本。</p>
+<ol>
+	<li>選擇您要拍攝快照的 iSCSI LUN。</li>
+	<li>按下<strong>快照</strong>並選擇<strong>拍攝快照</strong>。</li>
+	<li>輸入此快照的描述。</li>
+	<li>根據您的需求，選擇以下任一快照類型：<ul>
+			<li><strong>應用程式一致</strong>：只有在您的 Windows 伺服器或 VMware vCenter 伺服器 (根據您用來連接 DSM 的操作環境) 上已安裝 Synology Snapshot Manager 時可拍攝此類型快照。DSM 觸發應用程式一致性快照時，應用程式會接到通知，並將所有記憶體資料排清到要拍攝快照的 LUN 上，以保持資料一致性。</li>
+			<li><strong>損毀一致</strong>：若您的用戶端尚未安裝 Synology Snapshot Manager，您將只能拍攝此類型的 LUN 快照。觸發損毀一致性快照時，將不會通知應用程式將記憶體的資料排清至 LUN，而無法確保資料一致。</li>
+		</ul>
+	</li>
+	<li>按一下<strong>確定</strong>。</li>
+</ol>
+
+<h4>若要還原 iSCSI LUN：</h4>
+<p>選擇某一時間點的快照，將 iSCSI LUN 還原為當時的資料狀態。</p>
+<ol>
+	<li>選擇您要還原的 iSCSI LUN。</li>
+	<li>按下<strong>快照</strong>並選擇<strong>快照管理員</strong>。</li>
+	<li>選擇您要還原至哪份快照，並按下<strong>還原</strong>。</li>
+</ol>
+
+<h4>若要複製 iSCSI LUN 或快照：</h4>
+<p>為 iSCSI LUN 或 iSCSI LUN 快照建立可讀寫的複本。</p>
+<ul>
+	<li>從清單中選擇 iSCSI LUN 並按一下<strong>複製</strong>。</li>
+	<li>從快照管理員中選擇 iSCSI LUN 快照並按一下複製。</li>
+</ul>
+
+
+<div class="section"><h4>注意：</h4>
+<ul>
+<li>針對特定機種，您須前往<b>套件中心</b>並安裝<b>快照 & 複寫</b>套件以取得 iSCSI LUN 還原、iSCSI LUN 快照拍攝及複製功能。</li>
+	<li>如有任何 Windows Server 或 VMware ESXi Server 所使用的、已連接的 iSCSI 連線與您的 LUN 相關，為避免資料不一致，在您繼續之前，建議您安裝 <b>Synology Snapshot Manager</b> 外掛程式，否則您必須從啟動器中登出，並停止所有相關的應用程式。</li>
+	<li>具備進階 LUN 功能的 iSCSI LUN 才能提供 LUN 快照、還原及複製功能。</li>
+	<li>如果您在拍攝快照或建立複本後，發現其狀態為<strong>異常</strong> / <strong>已損毀</strong>，請刪除此快照 / 複本並重新建立。</li>
+	<li>當您將 LUN 還原至某快照的時間點時，在此快照建立後您對 LUN 所作的變更將會全部遺失。</li>
+	<li>若 iSCSI LUN 狀態變更為<b>無法使用</b>，表示在存取過程中發生資料錯誤。為了避免更嚴重的資料錯誤或遺失，暫時無法存取此 iSCSI LUN。請儘快聯繫 Synology 以取得技術支援。</li>
+</ul>
+</div>
+
+
+<div class="section"><h4>詞彙解釋：</h4>
+<ul>
+	<li><b>Thin Provisioning</b>：Thin Provisioning (資源隨需分配) 是視需求、機動性地分配儲存空間以達到儲存使用優化的一種方式。這個設定只適用於 <b>iSCSI LUN (一般檔案)</b>。</li>
+	<li><b>VMware VAAI</b>：支援 vStorage APIs for Array Integration (VAAI) 可讓 iSCSI 裝置分擔 VMware vSphere 環境中虛擬儲存陣列標準操作的工作量，並最佳化儲存空間效能。</li>
+	<li><b>Windows ODX</b>：Windows 在 Windows Server 2012 及 8 新開發的資料傳輸技術，稱作卸載式資料傳輸 (Offload Data Transfer，ODX)。ODX 可讓儲存陣列分擔一些工作量，提升傳輸效能。<br />若資料傳輸的來源與目的地 LUN 位於同一個儲存空間，複製過程會透過 Synology 進階 LUN 技術來處理，節省至多 99.9% 的儲存空間消耗，並加速複製的過程。</li>
+	<li><b>iSCSI Target 連結</b>：將 iSCSI LUN 連結至一個或多個 iSCSI Targets。</li>
+	<li><b>Synology Snapshot Manager</b>：Synology Snapshot Manager 是一款外掛程式，可讓您直接從 DiskStation Manager (DSM) 拍攝與應用程式一致的快照。<ul>
+		    <li>在 VMware 環境下，您必須於已安裝 VMware vCenter Server 的 Windows 伺服器上安裝 Synology Snapshot Manager。DSM 觸發快照時，VMware vCenter Server 會接到通知，並將所有記憶體資料排清到要拍攝快照的 LUN 上，以保持資料一致性。快照拍攝完畢後，VMware vCenter Server 會繼續進行 VMware 資料存放區的正常 I/O 操作。適用於 VMware vCenter Server 的 Synology Snapshot Manager 支援 vSphere 5.1 或以上版本。</li>
+		    <li>在 Windows 環境下，您必須於 Windows 伺服器上安裝 Synology Snapshot Manager。DSM 觸發快照時，Synology Snapshot Manager 會運用 Microsoft Volume Shadow Copy Service (VSS) 技術來產生一致的資料時間點複本。適用於 Windows 的 Synology Snapshot Manager 支援 Windows Server 2008 R2、2012 及 2012 R2。</li>
+			<li>您可於 <a href="http://www.synology.com/" target="_blank">www.synology.com</a> 免費下載 Synology Snapshot Manager。</li>
+		</ul>
+	</li>
+</ul>
+</div>
+<p>____<br /> * 僅適用於特定機型。</p>
+
+</body>
+</html>

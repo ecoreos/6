@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>SNMP</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>SNMP</h2>
+
+<p>Le service SNMP (dans <strong>Panneau de configuration</strong> &gt; <strong>Terminal &amp; SNMP</strong> &gt; <strong>SNMP</strong>) permet aux utilisateurs de surveiller le DiskStation avec le logiciel de gestion du r&eacute;seau. Actuellement, les protocoles SNMPv1, SNMPv2c et SNMPv3 sont pris en charge. </p>
+
+
+<h3>Activation du service SNMP</h3>
+
+<p>Cochez <b>Activer le service SNMP</b> et suivez les &eacute;tapes ci-dessous.</p>
+<h4>Pour activer le service SNMPv1, SNMPv2c&nbsp;:</h4>
+<ol>
+<li>Cochez <b>Service SNMPv1, SNMPv2c</b>.<li>Entrez un nom de <b><b>Communaut&eacute;</b></b>.<li>Cliquez sur <b>Appliquer.</b></ol>
+<h4>Pour activer le service SNMPv3&nbsp;:</h4>
+<ol>
+<li>Cochez <b>Service SNMPv3</b>.<li>Entrez un <b>Nom d&apos;utilisateur</b> et <b>Mot de passe</b>. Entrez votre mot de passe &agrave; nouveau pour <b>Confirmer le mot de passe</b>.<li>Cliquez sur <b>Appliquer</b>.</ol>
+<p>De plus, entrer le <b>Nom</b>, l&apos;<b>Emplacement</b>, et le <b>Contact</b> vous permettra d&apos;identifier votre DiskStation. Ces champs sont optionnels.</p>
+
+
+<div class="section">
+<h4>Remarque&nbsp;:</h4>
+<ol>
+<li>IPv4 et IPv6 sont pris en charge par le service SNMP. </li>
+<li>Le service SNMP prend en charge SNMPv1, SNMPv2c et SNMPv3 simultan&eacute;ment. </li>
+</ol>
+</div>
+
+
+<div class="section">
+<h4>Limite de communaut&eacute; de SNMPv1, SNMPv2c&nbsp;:</h4>
+<p>Le nom de communaut&eacute; doit &ecirc;tre dans la plage de 1 &agrave; 64 caract&egrave;res affichables. Les caract&egrave;res suivants ne sont pas autoris&eacute;s&nbsp;: <br>&quot; &apos; \ et espace.</p>
+<h4>Limite de nom d&apos;utilisateur de SNMPv3&nbsp;:</h4>
+<p>Le nom d&apos;utilisateur doit &ecirc;tre dans la plage de 1 &agrave; 64 caract&egrave;res affichables. Les caract&egrave;res suivants ne sont pas autoris&eacute;s&nbsp;: <br>&quot; &apos; \ et espace.</p>
+<h4>Limite du mot de passe de SNMPv3&nbsp;:</h4>
+<p>Le mot de passe respecte la casse et doit &ecirc;tre compris dans la plage de 8 et 127 caract&egrave;res affichables, y compris les lettres, chiffres et signes. Les caract&egrave;res suivants ne sont pas autoris&eacute;s&nbsp;: <br>&quot; &apos; \ et espace.</p>
+<p>&nbsp;</p>
+</div>
+<h3>T&eacute;l&eacute;charger les fichiers Synology MIB</h3>
+<p class="disable-eds14">Synology offre la possibilit&eacute; de surveiller le DiskStation via les syst&egrave;mes de gestion du r&eacute;seau, y compris les &eacute;tats du syst&egrave;me, des disques et le statut des volumes RAID.</p>
+
+<p class="enable-eds14">Synology offre la possibilit&eacute; de surveiller le DiskStation via les syst&egrave;mes de gestion du r&eacute;seau, y compris les &eacute;tats du syst&egrave;me, des disques et le statut des volumes.</p>
+
+<p>Veuillez visiter le <a href="http://www.synology.com/support/snmp_mib" target="_blank">Site web de Synology</a> pour plus d&apos;informations et pour t&eacute;l&eacute;charger les fichiers concern&eacute;s.</p>
+
+<div class="section">
+<h4>Remarque&nbsp;:</h4>
+<p>Les syst&egrave;mes de gestion du r&eacute;seau s&apos;appuient sur les fichiers MIB pour les d&eacute;finitions des p&eacute;riph&eacute;riques de surveillance. Pour plus d&apos;informations, veuillez visiter&nbsp;: <a href="http://en.wikipedia.org/wiki/Management_information_base" target="_blank">ici</a>.</p>
+</div>
+
+</body>
+</html>

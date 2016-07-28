@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Win/Mac/NFS</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+
+
+
+<h2>NFS-tjeneste</h2>
+<p>Med NFS-tjenesten kan Linux-klienter få tilgang til data på denne DiskStation-enheten.</p>
+<h4>Slik aktiverer du NFS-tjeneste:</h4>
+<ol>
+<li>Gå til <strong>Kontrollpanel</strong> > <strong>Filtjenester</strong> > <strong>Win/Mac/NFS</strong> og merk av for <b>Aktiver NFS</b>.</li>
+<li>Klikk på <b>Bruk</b>.</li>
+</ol>
+
+
+<div class="section">
+  <h4>Merk:</h4>
+<ul>
+<li> DiskStation støtter for tiden NFSv2, NFSv3 og NFSv4.</li>
+<li>Ved montering, kan parameteren <strong>-o vers=2</strong>, <strong>-o vers=3</strong> eller <strong>-o vers=4</strong> legges til i monteringskommandoen for å spesifisere hvilken NFS-versjon som skal brukes.</li>
+</ul>
+</div>
+
+
+<h4>Slik gir du Linux-klienter tilgangrettigheter til delte mapper:</h4>
+<p>Gå til <b>Kontrollpanel</b> > <b>Delt mappe</b>. Velg en delt mappe og klikk på <strong>Rediger</strong> for å administrere NFS-regler og regulere tilgangsrettigheter til denne delte mappen for Linux-klienter.</p>
+
+
+<h3>Stille inn støtte for NFSv4</h3>
+<p>Du kan bestemme om NFS-serveren din skal støtte NFSv4. Hvis dette alternativet er aktivert, vil NFS-server støtte NFSv2, NFSv3 og NFSv4. Hvis ikke, vil kun NFSv2 og NFSv3 støttes.</p>
+
+<h4>Slik aktiverer du NFSv4-støtte:</h4>
+<ol>
+<li>Merk av for <b>Aktiver NFSv4-støtte</b>.
+</li>
+<li>
+I feltet <b>NFSv4-domene</b> angir du navnet på NFSv4-domenet du ønsker å bruke. Dette feltet er valgfritt og kan stå tomt.</li>
+<li>
+Klikk på <b>Bruk</b>.
+</li>
+</ol>
+
+<div class="section">
+<h4>Merk:</h4>
+<p>Når du bruker NFSv4 til å montere den delte mappen, må du være oppmerksom på følgende. Hvis ikke, vil filhandlingene tilknyttet brukernavnet mislykkes.</p>
+<ul>
+<li>NFS-klienten må aktivere idmapd.</li>
+<li>Innstillinger for NFSv4-domene i idmapd.conf-filen på NFS-klienten din må være i tråd med feltet <b>NFSv4-domene</b> på DiskStation.</li>
+</ul>
+
+</div>
+
+<h3>Avanserte innstillinger</h3>
+
+<h4>Bruke standard UNIX-tillatelser</h4>
+<p> Når det er merket av for <strong>Bruk standard UNIX-tillatelser</strong>, vil standard UNIX-tillatelser angitt i Linux-klienten bli tatt i bruk i stedet for Windows ACL-tillatelser ved opplasting og oppretting av filer og mapper. Tillatelser som brukes er de samme som tillatelsene som brukes av UNIX-kommandoen <strong>umask</strong>. Når dette alternativet er aktivert, er UNIX-tillatelser 644 for filer og 755 for mapper. Når dette alternativet er deaktivert, er UNIX-tillatelser 666 for filer og 777 for mapper. Standard umask-verdi er 022.</p><div class="section">
+<h4>Merk:</h4>
+<ul>
+  <li>For Windows ACL-aktiverte delte mapper (alle delinger utenom &quot;photo&quot; og delinger på eksterne disker) kjører du <strong>chmod</strong>-kommandoen på Linux- eller FTP-klienten din for å endre tillatelsestypen for mapper og filer fra Windows ACL til UNIX.</li>
+  <li>Aktivering av dette alternativet kan forårsake problemer med inkonsekvente tillatelser mellom forskjellige protokoller. For å unngå inkonsekvens, foreslår vi at dette alternativet er deaktivert.</li>
+</ul>
+</div>
+
+<h4>Tilpass port</h4>
+<p>Du kan tilpasse portnumre for statd- og nlockmgr-tjenester.</p>
+
+<ol>
+<li>Velg <strong>Tilpassede porter</strong>.</li>
+<li>Angi portnumre i <strong>statd-port</strong> og <strong>nlockmgr-port</strong>.</li>
+<li>
+Klikk på <b>Bruk</b>.
+</li>
+</ol>
+
+<div class="section">
+<h4>Merk:</h4>
+<ul>
+<li>Hvis du vil bruke NFSv3-tjenester, går du til <strong>Kontrollpanel</strong> &gt; <strong>Sikkerhet</strong> &gt; <strong>Brannmur</strong> og oppretter en brannmurregel som aktiverer &quot;Mac-/Linux-filserver&quot; fra listen over innebygde programmer.</li>
+</ul>
+</div>
+<h4>Stille inn størrelse på lese-/skrivepakke</h4>
+<p>Når størrelsen på lese-/skrivepakken ikke kan angis på din NFS-klient, kan du spesifisere standardverdien i dette feltet.</p>
+
+<ol>
+<li>Velg ønsket pakkestørrelse fra feltene <strong>Lesepakkestørrelse</strong> og <strong>Skrivepakkestørrelse</strong>.</li>
+<li>
+Klikk på <b>Bruk</b>.
+</li>
+<li>
+Monter delingen på nytt.
+</li>
+</ol>
+
+<div class="section">
+<h4>Merk:</h4>
+<ul>
+<li>Etter at du har endret størrelse på lese-/skrivepakken, må den delte mappen monteres på nytt før de nye innstillingene tas i bruk.</li>
+<li>Disse innstillingene påvirker kun NFS-klienter som kobler seg til via UDP (User Datagram Protocol).</li>
+</ul>
+</div>
+
+
+
+
+<h3>Kerberos-innstillinger*</h3>
+<p>Kerberos er en nettverksautentiseringsprotokoll. Den lar klienter og servere kommunisere med hverandre over et usikret nettverk for å autentisere eller bevise identitetene sine til hverandre på en sikker måte. DiskStation gir deg alternativer for å importere en eksisterende Kerberos-nøkkel. Når den er importert, kan NFS-klienter bruke Kerberos-autentiseringsprotokollen til å koble seg til DiskStation.</p>
+
+<h4> Slik importerer du en Kerberos-nøkkel: </h4>
+<ol>
+<li>Klikk på <strong>Kerberos-innstillinger</strong>.</li>
+<li>Klikk på <b>Importer</b>-knappen.</li>
+<li>Velg den Kerberos-nøkkelen du ønsker å importere.</li>
+<li>Klikk på <b>OK</b>.</li>
+</ol>
+
+<h3><a name="idmap"></a>Kerberos ID-tilordning</h3>
+<p>Du kan tilordne individuelle Kerberos-fullmakter til lokale DSM-brukerkontoer.</p>
+<h4> Slik tilordner du Kerberos-fullmakter til lokale brukerkontoer: </h4>
+<ol>
+<li>Klikk på <strong>Kerberos-innstillinger</strong>.</li>
+<li>Gå til fanen<strong>ID-tilordning</strong>.</li>
+<li> Klikk på <b>Legg til</b>-knappen. Velg ett av følgende.</li>
+<ul>
+<li><strong>ID-tilordning:</strong> Angi Kerberos-fullmakten og den lokale brukerkontoen den skal tilordnes til.</li>
+<li><strong>Foreslått tilordningsliste:</strong> Dette alternativet viser en liste over foreslåtte Kerberos-fullmakt/lokal bruker-tilordningsalternativer som genereres av systemet.</li>
+</ul>
+</ol>
+<div class="section disable-eds14">
+  <h4> Merk: </h4>
+<ul>
+<li>Hvis du vil tilordne en NFS-klient som kobler seg til gjennom Kerberos til en eksisterende domene-/LDAP-brukerkonto, må du forsikre deg om at du er tilknyttet katalogtjenesten. I tillegg må katalogserveren ha en attributt som inkluderer den korresponderende Kerberos-fullmakten.</li>
+<ul>
+<li><strong>Domenebruker:</strong> Formatet for den korresponderende attributten skal være <strong>userPrincipalName</strong>.</li>
+<li><strong>LDAP-bruker:</strong> Formatet for den korresponderende attributten skal være <strong>GSSAuthName</strong>.</li>
+</ul>
+<li>Hvis brukeren ikke kan tilordnes til en lokal bruker eller en domene-/LDAP-bruker, skal brukeren tilordnes til &quot;guest.&quot;
+<li>Tilordningsprioritet er som følger: Lokal bruker > domene-/LDAP-bruker > Guest. </li>
+<li>Hvis du vil endre tilgangstillatelsene for NFS-klienter, bruker du Windows Access Control List (ACL). Rettighetsalternativene i <strong>Kontrollpanel</strong> > <strong>Bruker</strong> gjelder ikke for NFS-klienter.</li>
+</ul>
+</div>
+<p>
+<br>____<br> * Kun tilgjengelig på enkelte modeller.
+
+</p>
+
+
+
+</body>
+</html>

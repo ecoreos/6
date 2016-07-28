@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>File Station</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script> <script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Monter virtuelle stasjoner</h2>
+
+<p>
+Du kan montere virtuelle stasjoner for å få tilgang til innholdet av diskbilder med File Station.
+</p>
+
+<h4>Slik monterer du en virtuell stasjon:</h4>
+<ol>
+<li>
+Velg et diskbilde og klikk på <b>Verktøy</b> > <b>Monter virtuell stasjon</b>.
+</li>
+<img src="about:blank" class="help_image"/>
+<li>
+Klikk på <b>Bla gjennom</b> for å velge eller opprette en tom destinasjonsmappe på din DiskStation for montering av den virtuelle stasjonen.
+</li>
+<img src="about:blank" class="help_image"/>
+<li>
+Merk av for <b>Automatisk montering ved oppstart</b> hvis du vil at din DiskStation skal montere den virtuelle stasjonen ved hver oppstart eller omstart av systemet. Klikk på <b>Monter</b> for å fortsette. Nå kan du navigere til destinasjonsmappen der den virtuelle stasjonen er montert, og administrere innholdet av diskbildet.
+</li>
+<img src="about:blank" class="help_image"/>
+</ol>
+
+<div class="section">
+<h4>Merk:</h4>
+<p>Virtuelle stasjoner og .iso-filer kan kun monteres i undermapper i delte mapper.</p>
+</div>
+
+
+
+<h4>Slik demonterer du en virtuell stasjon:</h4>
+<ol>
+<li>Høyreklikk på målmappen der den virtuelle stasjonen er montert og velg <b>Demonter</b>.</li>
+<img src="about:blank" class="help_image"/>
+</ol>
+<ol>
+<span class="note_head">Merk: </span>
+<li>
+Støttet diskbildeformat: "<b>.iso</b>"-filer ved hjelp av ISO 9660- og UDF-filsystemet.
+</li>
+<li>
+Det maksimale antallet samtidige virtuelle stasjoner er 16.
+</li>
+<li class="enable-dockerx64">Montering av virtuelle stasjoner støttes kun i utvidede rettigheter-modus. For å bruke denne funksjonen, går du til Docker-pakken på verts-DSM, velger den <strong>Docker DSM</strong> du vil aktivere krypterte delte mapper for, klikker på <strong>Rediger</strong> og merker av for <strong>Utfør container med utvidede rettigheter</strong>.</li>
+
+</ol>
+</body>
+</html>

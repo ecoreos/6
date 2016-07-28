@@ -1,0 +1,77 @@
+ <!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Opprette et volum - Synology DSM Hjelp</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="This article walks you through the steps to create a volume on DiskStation using Storage Manager.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script> <script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Opprette et Volum</h2>
+
+<p>Denne artikkelen forklarer hvordan du oppretter et volum på din DiskStation. Når du skal opprette et nytt volum, kan du velge en av følgende metoder:</p>
+
+<ul>
+  <li><b>Hurtig:</b> Dette er det beste alternativet for nybegynnere. Velg denne metoden hvis du vil optimalisere lagringskapasitet og ytelse automatisk, uten å måtte tenke på tekniske aspekter, som RAID-nivåer. </li>
+
+<li><b>Tilpass:</b> For avanserte brukere som vil kontrollere de mer detaljerte aspektene ved volumoppretting, som RAID-typer og kapasitettilordning. Dette alternativet støtter ulike RAID-typer, lar deg opprette et enkeltvolum eller flere volum, og gir deg alternativer for å tilordne spesifikke mengder med kapasitet til hvert volum (kun ved oppretting av flere volum på RAID).
+</li>
+</ul>
+
+<div class="section">
+<h4>Enkeltvolum eller flere volum på RAID?</h4>
+<p>Ved oppretting av et volum i tilpasningsmodus, kan du velge ett av følgende alternativ:</p>
+<ul>
+  <li><b>Enkeltvolum på RAID</b>
+    <ul>
+      <li>Oppretter et enkeltvolum med hele den tilgjengelige kapasiteten til de valgte harddiskene.</li>
+      <li>Gir bedre hastighet og ytelse.</li>
+      <li>Støtter forskjellige RAID-typer.</li>
+    </ul>
+  </li>
+  <li><b>Flere volumer på RAID</b>
+    <ul>
+      <li>Lar deg opprette flere volum på en diskgruppe.</li>
+      <li>Støtter tilordning av bestemte mengder med kapasitet til hvert volum.</li>
+      <li>Gir bedre lagringshåndteringsfleksibilitet.</li>
+      <li>Støtter forskjellige RAID-typer.</li>
+    </ul>
+  </li>
+</ul>
+</div>
+
+
+<div class="section">
+<h4>Før du starter:</h4>
+<ul>
+<li>Før du starter, må du kontrollere at det ikke finnes viktig data på harddiskene. All eksisterende data vil bli slettet under opprettingsprosessen.</li>
+<li>Gå til siden <b>HDD/SSD</b> og kontroller at statusen til hver harddisk er <b>Normal</b> eller <strong>Ikke startet</strong>.</li>
+</ul>
+</div>
+
+<div class="section enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64">
+<h4>Merk:</h4>
+<ul>
+<li>Minimum størrelse for Btrfs-volum er 10 GB.</li>
+<li>Btrfs-volum reserverer 4 % av plassen til metadata.</li>
+</ul>
+</div>
+
+<h4>Slik oppretter du et volum:</h4>
+<ol>
+<li>Åpne <b>Lagringshåndtering</b>.</li>
+<img src="about:blank" class="help_image"/>
+<li>Gå til <b>Volum</b> og klikk på <b>Opprett</b>.</li>
+<img src="about:blank" class="help_image"/>
+<li>Veiviseren for volumoppretting vil åpnes. Velg <strong>Hurtig</strong> eller <strong>Tilpass</strong> i henhold til dine behov. Deretter følger du trinnene i veiviseren for å fullføre opprettingen av volumet.</li>
+<img src="about:blank" class="help_image"/>
+</ol>
+
+</body>
+</html>

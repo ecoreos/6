@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+ <head>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>High&nbsp;Availability</title>
+
+
+ </head>
+ <body>
+  <h2>Vypnut&iacute; a&nbsp;resetov&aacute;n&iacute;</h2>
+  <p>N&iacute;že uveden&eacute; pokyny představuj&iacute; popis vypnut&iacute;, odebr&aacute;n&iacute; nebo resetov&aacute;n&iacute; clusteru high-availability.</p>
+
+  <h4> Vypnut&iacute; clusteru high-availability pomoc&iacute; n&aacute;stroje Synology High&nbsp;Availability:</h4>
+  <p>Chcete-li vypnout cluster high-availability z&nbsp;důvodu přem&iacute;stěn&iacute; serverů do nov&eacute;ho fyzick&eacute;ho um&iacute;stěn&iacute; a&nbsp;proveden&iacute; &uacute;držby bez odebr&aacute;n&iacute; konfigurac&iacute; clusteru high-availability, postupujte na z&aacute;kladě n&aacute;sleduj&iacute;c&iacute;ch pokynů.</p>
+  <ol>
+   <li>Přihlaste se do syst&eacute;mu&nbsp;DSM.</li>
+   <li>Otevřete n&aacute;stroj Synology High&nbsp;Availability.</li>
+   <li>Klepněte na tlač&iacute;tko s&nbsp;označen&iacute;m <b>Spr&aacute;va</b>.</li>
+   <li>Vyberte možnost <b>Vypnout cluster&nbsp;HA</b>.</li>
+   <li>Zobraz&iacute; se potvrzovac&iacute; zpr&aacute;va. Potvrďte klepnut&iacute;m na možnost <b>Ano</b>.</li>
+  </ol>
+
+  <h4>Ručn&iacute; vypnut&iacute; clusteru high-availability:</h4>
+  <p> Cluster high-availability lze vypnout tak&eacute; ručně pomoc&iacute; tlač&iacute;tek nap&aacute;jen&iacute; um&iacute;stěn&yacute;ch na obou serverech. </p>
+  <ol>
+   <li>Stiskněte a&nbsp;podržte tlač&iacute;tko nap&aacute;jen&iacute; na jednom serveru (aktivn&iacute;m nebo pasivn&iacute;m), dokud nezazn&iacute; zvukov&yacute; sign&aacute;l.</li>
+   <li>Po &uacute;pln&eacute;m vypnut&iacute; jednoho serveru vyčkejte alespoň 30&nbsp;sekund (u&nbsp;serveru, kter&yacute; je st&aacute;le v&nbsp;režimu online, může ukl&aacute;d&aacute;n&iacute; nastaven&iacute; nějakou dobu trvat).</li>
+   <li>Stiskněte a&nbsp;podržte tlač&iacute;tko nap&aacute;jen&iacute; na druh&eacute;m serveru, dokud nezazn&iacute; zvukov&yacute; sign&aacute;l.</li>
+   <li>Vyčkejte, dokud server nebude &uacute;plně vypnut.</li>
+  </ol>
+<div class="section">
+<h4>Zapnut&iacute; serverů:</h4>   
+<p>Pokud chcete servery opět zapnout, je potřeba zapnout aktivn&iacute; i&nbsp;pasivn&iacute; server současně (př&iacute;padně s&nbsp;rozestupem do pěti minut). Pokud zapnete pouze jeden ze serverů, pokus&iacute; se zapnout druh&yacute; server odesl&aacute;n&iacute;m zpr&aacute;vy Probuzen&iacute; přes&nbsp;LAN.</p>
+<h4>Neobvykl&eacute; vypnut&iacute;:</h4>
+<p>Po vytvořen&iacute; clusteru high-availability bude v&nbsp;č&aacute;sti Ovl&aacute;dac&iacute; panel automaticky povoleno restartov&aacute;n&iacute; po poru&scaron;e nap&aacute;jen&iacute;. Pokud dojde k&nbsp;vypnut&iacute; serverů z&nbsp;důvodu poruchy nap&aacute;jen&iacute;, budou servery po obnoven&iacute; nap&aacute;jen&iacute; automaticky zapnuty.</p>
+</div>
+
+<h4>Odebr&aacute;n&iacute; clusteru high-availability:</h4>
+ <p>Chcete-li oba servery odpojit a&nbsp;odebrat cluster high-availability z&nbsp;důvodu propojen&iacute; s&nbsp;jin&yacute;m serverem, postupujte na z&aacute;kladě n&aacute;sleduj&iacute;c&iacute;ch pokynů.</p>
+  <ol>
+   <li>Přejděte na str&aacute;nku <b>Přehled</b>.</li>
+   <li>Klepněte na tlač&iacute;tko <b>Spr&aacute;va</b>.</li> 
+   <li>Vyberte možnost <b>Odebrat cluster&nbsp;HA</b>.</li>
+  </ol>
+  <p>Po potvrzen&iacute; provede syst&eacute;m odebr&aacute;n&iacute; clusteru high-availability. Pole s&nbsp;informacemi o&nbsp;stavu zobrazuje &uacute;daje o&nbsp;průběhu odeb&iacute;r&aacute;n&iacute;. Po &uacute;spě&scaron;n&eacute;m odebr&aacute;n&iacute; clusteru high-availability budete přesměrov&aacute;n&iacute; na původn&iacute; IP&nbsp;adresu aktivn&iacute;ho serveru. Stav obou serverů bude změněn na hodnotu <b>Samostatn&yacute;</b>.</li>
+  
+ <h4>Resetov&aacute;n&iacute; nefunkčn&iacute;ho clusteru high-availability:</h4>
+  <p>V&nbsp;př&iacute;padě, že se v&aacute;m z&nbsp;důvodu chyby split brain nebo jin&eacute; poruchy nepodař&iacute; z&iacute;skat př&iacute;stup k&nbsp;syst&eacute;mu&nbsp;DSM nebo n&aacute;stroji High Availability Manager, můžete stisknut&iacute;m tlač&iacute;tka <b>Reset</b> na někter&eacute;m ze serverů vynutit odpojen&iacute; clusteru high-availability.</p>
+  <ol>
+   <li>Stiskněte a&nbsp;podržte tlač&iacute;tko <b>Reset</b> (vět&scaron;inou se nach&aacute;z&iacute; na zadn&iacute;m panelu serveru), dokud neusly&scaron;&iacute;te zvukov&yacute; sign&aacute;l.
+   <li>Syst&eacute;m odebere cluster high-availability a&nbsp;stav obou serverů se změn&iacute; na hodnotu <b>Samostatn&yacute;</b></li>
+   <li>Stisknut&iacute;m tlač&iacute;tka <b>Reset</b> obnov&iacute;te tak&eacute; v&yacute;choz&iacute; nastaven&iacute; někter&yacute;ch parametrů, jako je např&iacute;klad IP&nbsp;adresa, DNS a&nbsp;heslo spr&aacute;vce admin. D&aacute;le budou obnoveny tyto položky:</li>
+   <ul>
+    <li>Heslo uživatele admin bude pr&aacute;zdn&eacute;.</li>
+    <li>&Uacute;čet typu guest bude deaktivov&aacute;n.</li>
+    <li>Protokol&nbsp;DHCP bude aktivov&aacute;n pro IP&nbsp;adresu, DNS, br&aacute;nu a&nbsp;dal&scaron;&iacute; s&iacute;ťov&aacute; rozhran&iacute;.</li>
+    <li>JumboFrames budou zak&aacute;z&aacute;ny a&nbsp;hodnota&nbsp;MTU bude nastavena na 1500.</li>
+    <li>Hodnota portu pro spr&aacute;vu bude m&iacute;t hodnotu 5000/5001.</li>
+    <li>Bude obnoveno v&yacute;choz&iacute; nastaven&iacute; protokolu&nbsp;PPPoE.</li>
+    <li>Funkce blokov&aacute;n&iacute; IP&nbsp;adresy bude zak&aacute;z&aacute;na (blokovan&eacute; IP&nbsp;adresy nebudou vymaz&aacute;ny).</li>
+    <li>Funkce Link Aggregation bude zak&aacute;z&aacute;na.</li>
+    <li>Pravidla br&aacute;ny firewall budou deaktivov&aacute;na (pravidla nebudou smaz&aacute;na).</li>
+   </ul>
+  </ol>
+
+<div class="section">
+<h4>Pozn&aacute;mka:</h4>
+<p>Během odstraňov&aacute;n&iacute; clusteru high-availability mohou b&yacute;t někter&eacute; operace z&aacute;pisu dat nekompletn&iacute;. Chcete-li zajistit kompletn&iacute; přenos dat, proveďte replikaci dat na aktivn&iacute;m serveru, protože na pasivn&iacute;m serveru mohou někter&eacute; aktualizace dat chybět.</p>
+</div>
+ </body>
+</html>

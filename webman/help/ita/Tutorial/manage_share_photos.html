@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+<meta content="en-us" http-equiv="Content-Language" />
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+<title>Creare album per gestire e scorrere le foto con Photo Station</title>
+</head>
+
+<body class="tutorial-content-box" >
+
+<h1>Creare album per gestire e scorrere le foto con Photo Station</h1>
+<div class="tutorials_content">
+
+<img src="../../images/ManagePhotos/1x/manage_share_photos/Create_Albums_to_Manage_and_Browse_Photos_with_Photo_Station.jpg"/>
+
+<h2>Panoramica</h2>
+<p>Photo Station è un'applicazione basata sul web studiata per aiutare a organizzare e visualizzare le foto archiviate sul Synology NAS tramite Internet. Grazie alla sua interfaccia utente ridefinita e facile da usare, Photo Station consente di caricare, scorrere, gestire e condividere gli album di foto in pochi e semplici clic.</p>
+
+<h3 class="list_head">1. Installare Photo Station</h3>
+<p>Per installare Photo Station, andare su <b>Centro pacchetti</b>, trovare <b>Photo Station</b>, quindi fare clic su <b>Installa</b>.</p>
+
+<img src="../../images/ManagePhotos/1x/manage_share_photos/1.png" border="1"/>
+
+<h3 class="list_head">2. Caricare le foto</h3>
+<p>Prima di poter caricare e gestire le foto in Photo Station, è necessario creare gli albume e caricare le foto utilizzando uno dei seguenti metodi.</p>
+
+<h4>2.1 Caricare le foto utilizzando Photo Station Uploader (per Windows e Mac)</h4>
+<p>Consigliamo di utilizzare Photo Station Uploader perché durante il processo di caricamento sanno generate le miniature di ciascuna foto da visualizzare. Caricando i file tramite Photo Station Uploader sarà possibile sfruttare le capacità di calcolo del computer per velocizzare la conversione.</p>
+<ol>
+<li>Scaricare e installare <b>Photo Station Uploader</b> (disponibile sul <a href="https://www.synology.com/support/download/DS713+" target="_blank">Centro download di Synology</a>).</li>
+<li>Sul computer, fare clic con il tasto destro sulla foto da caricare e scegliere <b>Carica su Photo Station</b> > <b>Crea nuovo profilo</b> per aprire la procedura guidata.</li>
+<li>Inserire un nome a propria scelta e l'indirizzo IP/nome server del Synology NAS di destinazione per il nuovo profilo.</li>
+
+<img src="../../images/ManagePhotos/1x/manage_share_photos/2.png" border="1"/>
+
+<div class="code_div">
+<b>Nota:</b>
+<p>Le informazioni del server e le credenziali utente specificate per il profilo saranno salvate per usi futuri. È possibile impostare diversi profili in relazione alle diverse regole e destinazioni. Invece di inserire le informazioni server tutte le volte che viene usato Photo Station Uploader, è possibile selezionare un profilo esistente e usare le configurazioni impostare in precedenza per caricare le foto nella stessa destinazione.</p>
+</div>
+
+<li>Scegliere se caricare i file su Photo Station o su Photo Station personale.</li>
+
+<li>Inserire le credenziali utente per il Synology NAS di destinazione.</li>
+
+<li>Fare clic su <b>Sfoglia</b> per scegliere la cartella di destinazione o creare un sottocartella nella cartella condivisa <b>photo</b>.</li>
+
+<img src="../../images/ManagePhotos/1x/manage_share_photos/3.png" border="1"/>
+
+<li>Una volta completato il caricamento, è possibile avviare Photo Station sul Synology NAS e visualizzare i file caricati in diverse modalità o modificare le altre informazioni, ad esempio le proprietà dell'album e i privilegi di accesso.</li>
+</ol>
+
+
+<h4>2.2 Creare gli album e caricare le foto tramite Photo Station</h4>
+<p>Avviare <b>Photo Station</b>, quindi fare clic su <b>Aggiungi</b> per creare un nuovo album o caricare le foto dal computer o Synology NAS negli album esistenti.</p>
+
+<img src="../../images/ManagePhotos/1x/manage_share_photos/4.png" border="1"/>
+
+<div class="code_div">
+<b>Nota:</b>
+<p>Se si preferisce caricare le foto tramite l'interfaccia di Photo Station, si consiglia vivamente di abilitare il servizio QuickConnect. Sia quando ci si trova a casa o quando si è in giro, QuickConnect consente di accedere al Synology NAS e Photo Station da qualunque luogo tramite Internet utilizzando un ID personalizzato senza dover impostare configurazioni di rete complesse, ad esempio le regole di invio porta. Per ulteriori informazioni su QuickConnect, consultare il <a class="launch-app" href="cloud_set_up_quickconnect.html">questo tutorial</a>.</p>
+</div>
+
+<h3 class="list_head">3. Condividere le foto</h3>
+<p>Grazie alla funzione di condivisione, è possibile condividere in modo semplice le foto archiviate su Photo Station con gli amici o caricare le foto sui social network più conosciuti come Facebook, Picasa e Flickr.</p>
+
+<h4>3.1 Condividere pubblicamente le foto</h4>
+<ol>
+<li>Scorrere fino all'album e selezionare le foto da condividere.</li>
+<li>Fare clic su <b>Condividi</b> > <b>Condividi pubblicamente</b> per ottenere il collegamento.</li>
+<ul>
+<li>Se è stata selezionata una sola foto da condividere, la foto sarà aggiunta all'album condiviso predefinito con il nome <b>Foto condivise</b>. Da qui è possibile gestire tutte le foto condivise una alla volta.</li>
+<li>Se sono state selezionate più foto da condividere, le foto saranno raggruppate in un nuovo album condiviso.</li>
+</ul>
+<li>In alternativa, è anche possibile fare clic su <b>Condividi</b> > <b>Aggiungi a un album condiviso</b> per aggiungere le foto selezionate a un album condiviso esistente (se disponibile).</li>
+<img src="../../images/ManagePhotos/1x/manage_share_photos/5.png" border="1"/>
+<li>Inserire un nome per il nuovo album condiviso, quindi specificarne il periodo di validità, se necessario.</li>
+<li>Copiare e incollare il collegamento in una e-mail, messaggio immediato e pagina web per condividere le foto selezionate con tutti.</li>
+</ol>
+
+<div class="code_div">
+<b>Nota:</b>
+<ul>
+<li>Tutte le foto condivise saranno accessibili pubblicamente a tutti tramite il collegamento.</li>
+<li>È possibile specificare quali utenti dispongono dei privilegi di condivisione pubblica degli elementi di Photo Station su <b>Impostazioni</b> > <b>Condivisione</b>.</li>
+</ul>
+</div>
+
+<h4>3.2 Condividere le foto con i social network</h4>
+<ol>
+<li>Selezionare le foto da caricare, quindi scegliere <b>Condividi</b> > <b>Carica su [siti web di social network]</b>.</li>
+
+<img src="../../images/ManagePhotos/1x/manage_share_photos/6.png" border="1"/>
+
+<li>Nella finestra visualizzata, fare clic su <b>Connetti con [siti web di social network]</b> e autorizzare l'account di social network. È possibile scegliere di caricare le foto in un album nuovo o esistente.</li>
+</ol>
+
+<h3 class="list_head">4. Organizzare e scorrere le foto sui dispositivi mobile</h3>
+<p>Per connettersi a Photo Station e caricare le foto tramite i dispositivi mobile, è possibile installare <b>DS photo+</b> sui dispositivi mobile utilizzando i seguenti codici QR.</p>
+
+<img src="../../images/ManagePhotos/1x/manage_share_photos/7.png"/>
+
+
+</div>
+
+</body>
+</html>

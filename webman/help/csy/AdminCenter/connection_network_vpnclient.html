@@ -1,0 +1,208 @@
+﻿<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Připojení k síti VPN – Nápověda Synology DSM</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="Turn your DiskStation into a VPN client and create profiles to connect your DiskStation to a VPN server.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h1>Připojení k síti VPN</h1>
+<p>Zařízení DiskStation je možné jednoduše přeměnit na klienta VPN a připojit ho ke stávajícímu serveru VPN (Virtual Private Network) prostřednictvím protokolů PPTP, OpenVPN nebo L2TP/IPSec. Pokud máte více serverů VPN, je možné pro každý server vytvořit specifický profil VPN a tyto profily pak rychle přepínat a připojovat se k různým serverům VPN jedním kliknutím.</p>
+
+
+<div class="section">
+<h4>Co je to VPN?</h4>
+<p>Síť VPN (Virtual Private Network) umožňuje splnit požadavky bezpečného přístupu ke zdrojům umístěným v soukromé síti z internetu. Pro podniky i některé uživatele, kteří potřebují rozšířit možnosti své sítě, náklady na systém fyzické sítě a technickou podporu exponenciálně narostou. Když porovnáme hospodárnost a dlouhodobou údržbu, je síť VPN chytrým a stále atraktivnějším řešením. Díky šifrování a dalším bezpečnostním mechanismům umožňuje technologie VPN členům podniku získat snadno přístup do centrální sítě společnosti a využívat její zdroje stejně jako u sítě LAN. Uživatelé také mohou získat přístup ke zdrojům ve vlastní domácí síti LAN, i když jsou daleko od domova.</p>
+</div>
+
+
+<div class="section">
+<h4>Poznámka:</h4>
+<ul>
+<li> Zařízení DiskStation lze připojit pouze k serverům OpenVPN, které podporují tunely typu TUN ve vrstvě 3.</li>
+<li>Před instalací balíčku VPN se ujistěte, že máte k dispozici server VPN, ke kterému se připojit. Pokud chcete zajistit lepší kompatibilitu, doporučujeme se připojit ke službám VPN hostovaným na zařízení DiskStation, na kterém je spuštěný balíček <strong>VPN Server</strong>. Pokud chcete nastavit jako server VPN další zařízení DiskStation, najdete pokyny v části <b>Nápověda systému DSM</b> > <b>VPN Server</b> > <b>Nastavení služby VPN Server</b>.</li>
+</ul>
+</div>
+
+
+<h4>Vytváření profilů VPN:</h4>
+<ol>
+<li>Přejděte do části <b>Ovládací panel</b> > <b>Síť</b>.</li><img src="about:blank" class="help_image"/><li>Na kartě <b>Síťové rozhraní</b> klikněte na možnost <b>Vytvořit</b> a vyberte položku <b>Vytvořit profil VPN</b>.</li><img src="../../../online_img/dsm/AdminCenter/connection_network_vpnclient/02.png" class="help_image"/><li>Při vytváření nového profilu VPN si můžete vybrat jeden z následujících typů připojení:<ul>
+		<li><b>PPTP</b>: PPTP (Point-to-Point Tunneling Protocol) je běžně používané řešení VPN podporované většinou klientů (včetně systému Windows, Mac i Linux a mobilních zařízení).</li>
+		<li><b>OpenVPN</b>: OpenVPN je řešení typu open source pro službu VPN. Zabezpečuje připojení VPN pomocí šifrovacího mechanismu SSL/TLS.</li>
+		<li><b>L2TP/IPSec</b>: Protokol L2TP (Layer 2 Tunneling Protocol) over IPSec nabízí virtuálním privátním sítím vyšší zabezpečení a podporuje ho většina klientů (včetně systémů Windows, Mac i Linux a mobilních zařízení).</li>
+	</ul>
+</li><img src="about:blank" class="help_image"/><li>Při nastavování kteréhokoli ze tří typů připojení VPN postupujte podle níže uvedených pokynů.</li>
+</ul>
+</ol>
+
+<h4>Vytvoření profilu PPTP:</h4>
+
+  <ol>
+  <li>Po zobrazení výzvy k volbě metody připojení k síti VPN vyberte možnost <b>PPTP</b> a poté klikněte na možnost <b>Další</b>.</li>
+  <li>Pojmenujte nový profil, upřesněte adresu serveru VPN, se kterým chcete navázat připojení, a zadejte uživatelské jméno a heslo pro server. Pokračujte kliknutím na možnost <b>Další</b>.</li>
+
+<div class="section">
+<h4>Poznámka:</h4>
+
+<ul>
+<li>Uživatelské jméno, heslo a adresu serveru VPN by vám měl poskytnout správce serveru VPN.</li>
+</ul>
+</div>
+
+  <li>Výběrem jednoho z následujících protokolů ověření v nabídce <b>Ověření</b> je možné stanovit zabezpečení hesla VPN klienta během ověření:<ul>
+		<li><b>PAP</b>: Heslo se nebude při ověřování šifrovat.</li>
+		<li><b>CHAP</b>: Heslo se bude šifrovat pomocí protokolu CHAP (Challenge-Handshake Authentication Protocol).</li>
+		<li><b>MS CHAP</b>: Heslo se bude šifrovat pomocí protokolu Microsoft CHAP verze 1.</li>
+		<li><b>MS CHAP v2</b>: Heslo se bude šifrovat pomocí protokolu Microsoft CHAP verze 2.</li>
+	</ul>
+  </li>
+  <li>Pokud jste vybrali protokol <b>MS CHAP</b> nebo <b>MS CHAP v2</b>, vyberte následně v nabídce <b>Šifrování</b> jednu z následujících možností šifrování připojení k síti VPN:<ul>
+		<li><b>Bez MPPE</b>: Připojení k síti VPN nebude chráněno pomocí šifrování Microsoft Point to Point Encryption.</li>
+		<li><b>Vyžadovat MPPE (40/128 bitů)</b>: Připojení k síti VPN bude chráněno pomocí 40bitového nebo 128bitového šifrování Microsoft Point to Point Encryption.</li>
+		<li><b>Maximální MPPE (128 bitů)</b>: Připojení k síti VPN bude chráněno pomocí 128bitového šifrování Microsoft Point to Point Encryption, které zajišťuje nejvyšší úroveň zabezpečení.</li>
+	</ul>
+  </li>
+    <div class="section">
+    <h4>Poznámka:</h4>
+  
+    <ul>
+    <li>Nastavení ověření a šifrování musí být shodné s nastavením stanoveným na serveru VPN. Další informace získáte u správce serveru VPN.</li>
+    </ul>
+    </div>
+   
+<li>Podle potřeby zaškrtněte některé z následujících políček:<ul>
+		<li><b>Použít výchozí bránu na vzdálené síti</b>: Povolení této možnosti bude směrovat síťový provoz zařízení DiskStation na stanovený server VPN.</li>
+		<li><b>Povolit ostatním síťovým zařízením připojení přes internetové připojení serveru Synology</b>: Povolením této možnosti umožníte síťovým zařízením v rámci stejné místní sítě jako zařízení DiskStation připojit se ke stejnému serveru VPN.</li>
+		<li><b>Znovu připojit při přerušení připojení VPN</b>: Pokud se připojení k síti VPN nečekaně přeruší, systém se pokusí znovu navázat připojení, celkem pětkrát, jednou každých 30 sekund.</li>
+	</ul>
+</li>
+
+<li>Klikněte na možnost <b>Použít</b>.</li>
+</ol>
+<h4>Vytvoření profilu OpenVPN:</h4>
+<ol>
+<li>Po zobrazení výzvy k volbě metody připojení k síti VPN vyberte možnost <b>OpenVPN</b> a poté klikněte na možnost <b>Další</b>.</li>
+<li>Pojmenujte nový profil, upřesněte adresu serveru VPN, se kterým chcete navázat připojení, a zadejte uživatelské jméno a heslo pro server.</li>
+<li>Kliknutím na tlačítko <strong>Procházet</strong> v poli <b>Certifikát</b> najděte a importujte soubor certifikátu (např. <b>ca.crt</b>), který byl vyexportovaný ze serveru VPN. Pokračujte kliknutím na možnost <b>Další</b>.</li>
+
+<div class="section">
+<h4>Poznámka:</h4>
+
+<ul>
+<li>Uživatelské jméno, heslo, adresu a certifikát serveru VPN by vám měl poskytnout správce serveru VPN.</li>
+</ul>
+</div>
+
+<li>Podle potřeby zaškrtněte některé z následujících políček:<ul>
+		<li><b>Povolit kompresi na lince VPN</b>: Povolením této možnosti před zahájením přenosu dat přes síť VPN provedete jejich kompresi. Tato možnost může zvýšit rychlost přenosu, povede však k většímu využití systémových prostředků.</li>
+		<li><b>Použít výchozí bránu na vzdálené síti</b>: Povolení této možnosti bude směrovat síťový provoz zařízení DiskStation na stanovený server VPN.</li>
+		<li><b>Povolit ostatním síťovým zařízením připojení přes internetové připojení serveru Synology</b>: Povolením této možnosti umožníte síťovým zařízením v rámci stejné místní sítě jako zařízení DiskStation připojit se ke stejnému serveru VPN.</li>
+		<li><b>Znovu připojit při přerušení připojení VPN</b>: Pokud se připojení k síti VPN nečekaně přeruší, systém se pokusí znovu navázat připojení, celkem pětkrát, jednou každých 30 sekund.</li>
+	</ul>
+</li>
+<li>Klikněte na možnost <b>Použít</b>.</li>
+</ol>
+
+
+
+<h4>Vytvoření profilu připojení OpenVPN (prostřednictvím souboru .ovpn):</h4>
+<ol>
+<li>Po zobrazení výzvy k volbě metody připojení k síti VPN vyberte možnost <b>OpenVPN (prostřednictvím importu souboru .ovpn)</b> a poté klikněte na možnost <b>Další</b>.</li>
+<li>Vyberte název nového profilu, v poli <strong>Importovat soubor .ovpn</strong> klikněte na položku <strong>Procházet</strong>, vyberte soubor .ovpn exportovaný ze serveru VPN a importujte ho.</li>
+<li>Zadejte následující informace poskytnuté správcem serveru VPN: vaše <strong>uživatelské jméno</strong>, <strong>heslo</strong> a importujte soubor <b>Certifikát CA</b> (např. ca.crt).</li>
+<li>Pokud vám poskytovatel serveru VPN předal také <b>klíč ověření TLS</b>, <b>klíč klienta</b>, <b>certifikát klienta</b> nebo <b>seznam odvolaných certifikátů</b>, klikněte na položku <strong>Pokročilé funkce</strong> a naimportujte je do odpovídajících polí.</li>
+<li>Pokračujte kliknutím na možnost <b>Další</b>. </li>
+
+<div class="section">
+<h4>Poznámka:</h4>
+<ul>
+<li>Uživatelské jméno, heslo, adresu a všechny další soubory, například certifikáty nebo klíče, by vám měl poskytnout správce serveru VPN.</li>
+</ul>
+</div>
+
+<li>Podle potřeby zaškrtněte některé z následujících políček:</li>
+<ul>
+<li><b>Povolit kompresi na lince VPN</b>: Povolením této možnosti před zahájením přenosu dat přes síť VPN provedete jejich kompresi. Tato možnost může zvýšit rychlost přenosu, povede však k většímu využití systémových prostředků.</li>
+<li><b>Použít výchozí bránu na vzdálené síti</b>: Povolení této možnosti bude směrovat síťový provoz zařízení DiskStation na stanovený server VPN.</li>
+<li><b>Povolit ostatním síťovým zařízením připojení přes internetové připojení serveru Synology</b>: Povolením této možnosti umožníte síťovým zařízením v rámci stejné místní sítě jako zařízení DiskStation připojit se ke stejnému serveru VPN.</li>
+<li><b>Znovu připojit při přerušení připojení VPN</b>: Pokud se připojení k síti VPN nečekaně přeruší, systém se pokusí znovu navázat připojení, celkem pětkrát, jednou každých 30 sekund.</li>
+</ul>
+<li>Klikněte na možnost <b>Použít</b>.</li>
+</ol>
+
+
+
+
+
+<h4>Vytvoření profilu L2TP/IPSec:</h4>
+<ol>
+<li>Po zobrazení výzvy k volbě metody připojení k síti VPN vyberte možnost <b>L2TP/IPSec</b> a poté klikněte na možnost <b>Další</b>.</li>
+<li>Pojmenujte nový profil, upřesněte adresu serveru VPN, se kterým chcete navázat připojení, a zadejte uživatelské jméno a heslo pro server. Je také potřeba zadat předsdílený klíč pro server VPN. Potom klikněte na možnost <strong>Další</strong>.</li>
+
+<div class="section">
+<h4>Poznámka:</h4>
+
+<ul>
+<li>Uživatelské jméno, heslo, adresu a předsdílený klíč serveru VPN by vám měl poskytnout správce serveru VPN.</li>
+</ul>
+</div>
+
+<li>Výběrem jednoho z následujících protokolů ověření v nabídce <b>Ověření</b> je možné stanovit zabezpečení hesla VPN klienta během ověření:<ul>
+		<li><b>PAP</b>: Heslo se nebude šifrovat.</li>
+		<li><b>CHAP</b>: Heslo se bude šifrovat pomocí protokolu CHAP (Challenge-Handshake Authentication Protocol).</li>
+		<li><b>MS CHAP</b>: Heslo se bude šifrovat pomocí protokolu Microsoft CHAP verze 1.</li>
+		<li><b>MS CHAP v2</b>: Heslo se bude šifrovat pomocí protokolu Microsoft CHAP verze 2.</li>
+	</ul>
+</li>
+
+<div class="section"><h4>Poznámka:</h4>
+<ul>
+	<li>Nastavení ověření a šifrování musí být shodné s nastavením stanoveným na serveru VPN. Další informace získáte u správce serveru VPN.</li>
+</ul>
+</div>
+
+<li>Podle potřeby zaškrtněte některé z následujících políček:<ul>
+		<li><b>Použít výchozí bránu na vzdálené síti</b>: Povolení této možnosti bude směrovat síťový provoz zařízení DiskStation na stanovený server VPN.</li>
+		<li><b>Povolit ostatním síťovým zařízením připojení přes internetové připojení serveru Synology</b>: Povolením této možnosti umožníte síťovým zařízením v rámci stejné místní sítě jako zařízení DiskStation připojit se ke stejnému serveru VPN.</li>
+		<li><strong>Server je umístěn za zařízením NAT</strong>: Protokol L2TP/IPSec neumožňuje ve výchozím nastavení připojení k serveru VPN za zařízením NAT. Povolením této možnosti obejdete zmíněné omezení a povolíte zařízení DiskStation připojit se k serveru VPN L2TP/IPSec za zařízením NAT.</li>
+		<li><b>Znovu připojit při přerušení připojení VPN</b>: Pokud se připojení k síti VPN nečekaně přeruší, systém se pokusí znovu navázat připojení, celkem pětkrát, jednou každých 30 sekund.</li>
+	</ul>
+</li>
+<li>Klikněte na možnost <b>Použít</b>.</li>
+</ol>
+
+
+<h4>Připojení nebo odpojení od serveru VPN:</h4>
+
+<ol>
+<li>Vyberte profil VPN.</li>
+<li>Klikněte na možnost <b>Připojit</b> nebo <b>Odpojit</b>.</li><img src="about:blank" class="help_image"/></ol>
+
+
+<div class="section">
+<h4>Poznámka:</h4>
+<ul>
+<li>Připojený může být v jednu chvíli pouze jeden profil.</li>
+</ul>
+</div>
+
+<h4>Úprava profilu VPN:</h4>
+
+<ol>
+<li>Vyberte profil VPN.</li>
+<li>Klikněte na možnost <strong>Upravit</strong>.</li>
+
+</ol>
+
+
+</body>
+</html>

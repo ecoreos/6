@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Napájení</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+
+
+<h2>UPS</h2>
+
+<p class="disable-eds14">UPS (Uninterruptible Power Supply) představuje záložní energetické zařízení, díky němuž může DiskStation krátkou dobu pracovat i v případě výpadku proudu. Tato funkce, nacházející se v části <strong>Ovládací panel</strong> > <strong>Hardware a napájení</strong> > <strong>UPS</strong>, pomáhá předcházet ztrátě dat tím, že dá zařízení DiskStation k dispozici dostatek času k uložení dat a odpojení svazků před výpadkem napájení a vypnutím.</p>
+
+<p class="enable-eds14">UPS (Uninterruptible Power Supply) představuje záložní energetické zařízení, díky němuž může DiskStation krátkou dobu pracovat i v případě výpadku proudu. Tato funkce, nacházející se v části <strong>Ovládací panel</strong> > <strong>Hardware a napájení</strong> > <strong>UPS</strong>, pomáhá předcházet ztrátě dat tím, že dá zařízení DiskStation k dispozici dostatek času k uložení dat a odpojení svazků před výpadkem napájení a zastavením.</p>
+
+<div class="section">
+<h4>Nouzový režim</h4>
+<p class="disable-eds14">Když zařízení DiskStation přejde do nouzového režimu, zastaví všechny služby a odpojí svazky, aby nedošlo ke ztrátě dat a systém mohl být bezpečně vypnut dříve než dojde k vybití zařízení UPS. Ve výchozím nastavení systém přejde do nouzového režimu, jakmile začne zařízení UPS docházet energie. Můžete také určit dobu, po které zařízení DiskStation přejde po výpadku napájení do nouzového režimu. Pokud ale poklesne množství energie v baterii zařízení UPS před uplynutím této doby, přejde systém do nouzového režimu okamžitě.</p>
+
+<p class="enable-eds14">Když zařízení DiskStation přejde do nouzového režimu, zastaví všechny služby a odpojí svazky, aby nedošlo ke ztrátě dat a systém mohl být bezpečně zastaven dříve než dojde k vybití zařízení UPS. Ve výchozím nastavení systém přejde do nouzového režimu, jakmile začne zařízení UPS docházet energie. Můžete také určit dobu, po které zařízení DiskStation přejde po výpadku napájení do nouzového režimu. Pokud ale poklesne množství energie v baterii zařízení UPS před uplynutím této doby, přejde systém do nouzového režimu okamžitě.</p>
+
+
+<p></p>
+<p class="disable-eds14">Povolíte-li možnost <strong>Po selhání napájení automaticky restartovat</strong> (nachází se v části <strong>Ovládací panel</strong> > <strong>Hardware a napájení</strong> > <strong>Obecné</strong>), zařízení DiskStation se po obnovení napájení automaticky zapne, pokud došlo k jeho vypnutí v rámci nouzového režimu.</p>
+
+<p></p>
+</div>
+
+
+
+
+<h3>Místní podpora UPS</h3>
+
+<p>Podrobnosti o instalaci hardwaru naleznete v uživatelské příručce k zařízení UPS. Po dokončení instalace a připojení zařízení DiskStation k zařízení UPS můžete pomocí následujících kroků povolit podporu UPS.</p>
+<h4>Povolení místní podpory UPS:</h4>
+<OL>
+<li>Připojte zařízení UPS do portu USB zařízení DiskStation.</li>
+<LI>Na kartě <strong>UPS</strong> zaškrtněte políčko <b>Povolit podporu UPS</b>.</LI>
+<LI>Vyberte, kdy má zařízení DiskStation přejít po výpadku napájení do nouzového režimu.</LI>
+<LI>Vyberte, zda se má vyslat signál k vypnutí zařízení UPS, když systém přejde do nouzového režimu. Většina zařízení UPS se dokáže po obnovení napájení automaticky zapnout.</LI>
+<LI>Klikněte na možnost <b>Použít</b>.</LI>
+</OL>
+
+<h3>Podpora SNMP UPS</h3>
+
+<p>Vaše zařízení DiskStation také podporuje připojení k zařízením SNMP (Simple Network Management Protocol) UPS. Podrobnosti o instalaci hardwaru naleznete v uživatelské příručce k zařízení SNMP UPS. Po připojení zařízení DiskStation do tohoto zařízení a připojení se do stejné sítě můžete pomocí následujících kroků povolit podporu UPS.</p>
+<h4>Povolení podpory SNMP UPS:</h4>
+<ol>
+<LI>Na kartě <strong>UPS</strong> zaškrtněte políčko <b>Povolit podporu UPS</b>.</LI>
+<li>V rozevírací nabídce <strong>Typ síťového zařízení UPS</strong> vyberte možnost <strong>SNMP UPS</strong>.</li>
+<li>Do pole <strong>IP adresa zařízení SNMP UPS</strong> zadejte IP adresu zařízení SNMP UPS.</li>
+<LI>Vyberte, kdy má zařízení DiskStation přejít po výpadku napájení do nouzového režimu.</LI>
+<li>Do pole <strong>Komunita SNMP</strong> zadejte řetězec komunity pro zařízení SNMP UPS.</li>
+<LI>Klikněte na možnost <b>Použít</b>.</LI>
+</ol>
+
+<div class="section">
+<h4>Poznámka:</h4>
+<ul>
+<li>Systém <b>SNMP UPS</b> důrazně doporučujeme používat u nasazení Synology High Availability (SHA).</li>
+<li>Zařízení DiskStation podporuje zařízení UPS SNMPv1 a SNMPv2c.</li>
+</ul>
+</div>
+
+
+<h3>Podpora síťového UPS</h3>
+
+<p>Pokud je zařízení UPS s jedním portem USB používáno dvěma produkty Synology, může informace o stavu zařízení UPS získávat pouze jedno zařízení DiskStation. V takovém případě může jedno zařízení DiskStation sloužit jako „síťový server UPS“ a připojovat se k zařízení UPS prostřednictvím USB nebo sítě (záleží na daném zařízení). Síťový server UPS získává informace o UPS a předává je do druhého „klienta“ zařízení DiskStation.</p>
+<h4>Povolení síťové podpory UPS:</h4>
+<OL>
+<li>Přihlaste se do zařízení DiskStation připojeného k zařízení UPS (prostřednictvím USB nebo sítě). Pokud u tohoto zařízení DiskStation ještě nebyla povolena místní podpora UPS, podívejte se na předchozí část tohoto článku.</li>
+<LI>Zaškrtnutím položky <strong>Povolit síťový server UPS</strong> na kartě <strong>UPS</strong> povolte zařízení DiskStation přenášet informace o UPS do klienta DiskStation.</li>
+<li>Klikněte na tlačítko <strong>Povolená zařízení DiskStation</strong>.</li>
+<li>Zobrazí se okno, ve kterém zadejte IP adresy druhého zařízení DiskStation používajícího toto zařízení UPS, ale nepřipojeného prostřednictvím USB nebo sítě. Klikněte na možnost <strong>OK</strong>.</li>
+<li>Nastavení uložíte kliknutím na možnost <strong>Použít</strong>.</li>
+</OL>
+<p>Nyní může síťový server UPS získávat informace o UPS a předávat je do druhého zařízení DiskStation používajícího zařízení UPS. Podle níže uvedených pokynů povolte podporu UPS na druhém zařízení DiskStation.</p>
+<h4>Povolení podpory UPS na klientovi DiskStation:</h4>
+<ol>
+<li>Přihlaste se do druhého zařízení DiskStation používajícího zařízení UPS, ale nepřipojeného prostřednictvím USB nebo sítě.</li>
+<li>Na kartě <strong>UPS</strong> zaškrtněte políčko <strong>Povolit podporu UPS</strong>.</li>
+<li>V rozevírací nabídce <strong>Server Synology UPS</strong> vyberte možnost <strong>Typ síťového zařízení UPS</strong>.</li>
+<li>Do pole <strong>IP adresa síťového serveru UPS</strong> zadejte IP adresu síťového serveru UPS (tj. zařízení DiskStation připojeného k zařízení UPS).</li>
+<LI>Vyberte, kdy má zařízení DiskStation přejít po výpadku napájení do nouzového režimu. Chcete-li zjednodušit nastavení nouzového režimu, můžete vybrat možnost <strong>Stejné jako server</strong>.</LI>
+<LI>Nastavení uložíte kliknutím na možnost <b>Použít</b>.</LI>
+</OL>
+<div class="section">
+<h4>Požadavky pro síťové UPS:</h4>
+<UL>
+<LI>Aby bylo možné přenášet informace o zařízení UPS, musí být jednotlivá zařízení DiskStation připojena do stejné sítě.</LI>
+<LI>Síťové zařízení (např. přepínač nebo rozbočovač), ke kterému jsou jednotlivá zařízení DiskStation připojena, musí být připojeno do stejného zařízení UPS. Jinak nebudou zařízení DiskStation schopna v případě výpadku napájení přenášet informace o zařízení UPS.</LI>
+</UL>
+</div>
+</body>
+</html>

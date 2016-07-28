@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>File Station</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Vytváření požadavků na soubor</h2>
+
+<p>Požadavky na soubory jsou pozvání k odeslání souborů odeslaná uživatelům mimo systém DSM. Pomocí odkazů požadavků na soubory mohou uživatelé mimo systém DSM přímo odesílat více souborů do služby File Station ve vašem zařízení DiskStation, aniž by museli mít odpovídající uživatelské účty a oprávnění k odesílání souborů.</p>
+
+<h4>Vytváření odkazů požadavků na soubory:</h4>
+<ol>
+<li>Přejděte do služby <strong>File Station</strong> a vyberte složku, která bude cílem odeslání.</li>
+<li>Klikněte na možnost <strong>Akce</strong> nebo klikněte pravým tlačítkem na cílovou složku a vyberte možnost <strong>Vytvořit požadavek na soubor</strong>.</li>
+<li>Zobrazí se okno, ve kterém můžete vyhledat nebo změnit následující informace:<ul>
+<li><strong>Cesta souboru</strong>: Vypíše cestu cílového adresáře.</li>
+<li><strong>Odkaz</strong>: Vypíše odkaz na požadavek na soubor pro sdílení s cílovými uživateli.</li>
+<li><strong>Vaše jméno</strong>: Zadejte jméno označující identitu žadatele. Výchozí hodnotou je vaše uživatelské jméno.</li>
+<li><strong>Zpráva</strong>: Přizpůsobte zprávu pro cílové uživatele.</li>
+<li><strong>Povolit ochranu heslem</strong>: Tuto možnost vyberte, aby mohli soubory prostřednictvím vytvořeného odkazu odeslat pouze uživatelé s heslem. Do níže uvedeného pole zadejte heslo.</li>
+<li><strong>Doba platnosti</strong>: Kliknutím na toto tlačítko přizpůsobíte dobu trvání tohoto odkazu požadavku na soubor:<ul>
+<li><strong>Nastavit koncový čas</strong>: Vyberte tuto možnost a určete datum a čas, kdy přestane být odkaz funkční pro odeslání souboru.</li>
+<li><strong>Nastavit počáteční čas</strong>: Vyberte tuto možnost a určete datum a čas, kdy začne být odkaz funkční pro odeslání souboru.</li>
+<li><strong>Počet povolených přístupů</strong>: Vyberte tuto možnost a určete kolikrát může být odkaz použit.</li>
+</ul>
+
+</li>
+
+</ul>
+
+
+</li>
+<li>Nastavení dokončíte kliknutím na možnost <strong>Uložit</strong>.</li>
+</ol>
+
+
+<h4>Sdílení odkazů požadavků na soubory:</h4>
+<p>Chcete-li vyhledat adresu URL požadavku na soubor, přejděte do služby <strong>File Station</strong> > <strong>Nástroje</strong> > <strong>Správce sdílených odkazů</strong> a dvojitě klikněte na požadovaný odkaz. Odkaz můžete sdílet některým z následujících způsobů:</p>
+
+<ul>
+<li>Jednoduše nakopírujte adresu URL do cílových uživatelů.</li>
+<li>Rozešlete odkaz prostřednictvím <strong>výchozího e-mailu</strong> (vašeho e-mailového účtu v systému DSM) nebo prostřednictvím <strong>pošty</strong> (e-mailové aplikace třetí strany). Při prvním použití postupujte podle pokynů průvodce a nastavte e-mailový účet, který chcete používat.</li>
+</ul>
+
+<h4>Odeslání souborů:</h4>
+<p>Pokud budete požádáni o odeslání souborů prostřednictvím odkazu, postupujte následovně:</p>
+<ol>
+<li>Otevřete uvedenou adresu URL v místním počítači nebo na mobilním zařízení (Android nebo iOS). V případě potřeby zadejte heslo.</li>
+<li>Na stránce pro odeslání zadejte jméno označující vaši identitu.</li>
+<li>Jednoduše přetáhněte soubory, které chcete odeslat, nebo klikněte na možnost <strong>Přidat soubory</strong> a vyberte soubory.</li>
+<li>Požadavek dokončíte kliknutím na možnost <strong>Odeslat</strong>.</li>
+</ol>
+
+<div class="section">
+<h4>Poznámka:</h4>
+<ul>
+<li>Prostřednictvím odkazu požadavku na soubor nelze odesílat složky.</li>
+<li>Složky nacházející se ve sdílené složce „web“ nelze určit jako cílovou složku.</li>
+<li>Funkce odeslání se u jednotlivých webových prohlížečů liší:<ul>
+<li>Prohlížeče Internet Explorer 8 a Internet Explorer 9 nepodporují odesílání souborů přetažením.</li>
+<li>Prohlížeč Chrome na zařízeních se systémem iOS podporuje pouze odesílání obrázků.</li>
+<li>Prohlížeč Safari na zařízeních se systémem iOS podporuje pouze odesílání obrázků a videa.</li>
+<li>Webové prohlížeče na zařízeních se systémem Android nemají žádná omezení týkající se typů souborů.</li>
+</ul>
+</li>
+
+</ul>
+
+</div>
+
+
+<h4>Vyhledání odeslaných souborů:</h4>
+<p>Všechny soubory odeslané jedním uživatelem se zobrazí ve stejné složce v cílovém umístění. Ve výchozím nastavení bude název této složky <strong>Jméno_odesílatele (Jméno_žadatele)</strong>.</p>
+<p>Pokud jsou například soubory odeslány uživatelem <strong>Watson</strong> uživateli <strong>Holmes</strong>, naleznete soubory ve složce s názvem <strong>Watson (Holmes)</strong>.</p>
+
+
+<h3>Správa odkazů požadavků na soubory</h3>
+
+<h4>Změna odkazů požadavků na soubory:</h4>
+<p>Po vytvoření odkazu požadavku na soubor můžete jeho nastavení změnit v části <strong>File Station</strong> > <strong>Nástroje</strong> > <strong>Správce sdílených odkazů</strong>.</p>
+
+<ol>
+<li>Dvojitě klikněte na požadovaný odkaz nebo vyberte odkaz a klikněte na možnost <strong>Upravit</strong>.</li>
+<li>V zobrazeném okně upravte příslušné nastavení.</li>
+<li>Nastavení aktivujete kliknutím na tlačítko <strong>Uložit</strong>.</li>
+</ol>
+
+<h4>Odstranění odkazů požadavků na soubory:</h4>
+<ol>
+<li>Přejděte do části <strong>File Station</strong> > <strong>Nástroje</strong> > <strong>Správce sdílených odkazů</strong>.</li>
+<li>Vyberte požadované odkazy a klikněte na možnost <strong>Odstranit</strong>. Odpovídající adresy URL požadavků na soubory okamžitě přestanou fungovat.</li>
+</ol>
+
+<h4>Přiřazení oprávnění pro vytváření požadavků:</h4>
+<p>Jako uživatel <strong>admin</strong> nebo uživatel patřící do skupiny <strong>administrators</strong> můžete přiřazovat oprávnění uživatelům, aby mohli vytvářet odkazy požadavků na soubory.</p>
+
+
+<ol>
+<li>Přejděte do části <strong>File Station</strong> > <strong>Nastavení</strong> > <strong>Sdílené odkazy</strong> > <strong>Odkazy požadavků na soubory</strong>.</li>
+<li>Vyberte typ uživatelů, kterým chcete udělit oprávnění k vytváření odkazů požadavků.</li>
+<li>Nastavení uložíte kliknutím na tlačítko <strong>OK</strong>.</li>
+</ol>
+
+
+
+
+
+</body>
+</html>

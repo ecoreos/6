@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>通知</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>SMS</h2>
+<p class="disable-eds14">接続の切断、ファン動作の変化、停電、ストレージ ボリューム不足、バックアップ/復元失敗など、システムの状態が変わったり、エラーが発生したりしたときのために、SMS 通知を有効にして DiskStation に通知メッセージを送信させることができます。</p>
+
+<p class="enable-eds14">接続の切断、停電、ストレージ ボリューム不足、バックアップ/復元失敗など、システムの状態が変わったり、エラーが発生したりしたときのために、SMS 通知を有効にして DiskStation に通知メッセージを送信させることができます。</p>
+
+
+<h4>SMS 通知を有効にする:</h4>
+<p><b>[SMS 通知を有効にする]</b> を選択してから以下の設定を行います。</p>
+<ol>
+<li><b>[SMS サービスプロバイダ]</b> ドロップダウンリストから SMS プロバイダを選択します。デフォルトのサービスプロバイダは、「clickatell」です。</li>
+<li><b>[SMS サービスプロバイダの追加]</b> をクリックして新しい SMS プロバイダ設定を作成します。または、<b>[削除]</b> をクリックすると、選択した SMS プロバイダ設定が削除されます。</li>
+<li><b>[ユーザー名]</b> の欄に、SMS サービスアカウントのユーザー名を入力します。</li>
+<li><b>[パスワード]</b> と <b>[パスワードの確認]</b> の欄に SMS サービスアカウントのパスワードを入力して確認します。</li>
+<li><b>メイン電話番号</b>または<b>サブ電話番号</b>を入力します。両方の番号を入力すると、両方の番号に SMS 通知メッセージが送信されます。</li>
+<li>あまりたくさんのメッセージを受信したくない場合は、<b>[SMS 間隔制限を有効にする]</b> を選択して、指定した時間間隔で 1 つのメッセージを受信するよう通知メッセージの数を制限します。</li>
+<li><b>[SMS テストメッセージを送信]</b> をクリックすると、SMS テストメッセージを指定した電話番号に送信します。正しく設定されていないと、メッセージが受信できません。</li>
+<li><b>[適用]</b> をクリックすると、設定を保存し、<b>[リセット]</b> をクリックすると、設定をリセットします。</li>
+</ol>
+<p>
+<span class="note_head">注：</span>SMS 通知の言語は、<strong>[通知言語]</strong> で設定できます。SMS 通知の言語を変更するには、<strong>[メイン メニュー]</strong> &gt; <strong>[コントロール パネル]</strong> &gt; <strong>[地域オプション]</strong> を選択し、<strong>[言語]</strong> タブをクリックした後、<strong>[通知言語]</strong> セクションのドロップダウンメニューから優先言語を選択してください。</p>
+<ol>
+<span class="note_head">制限：</span>
+<li>ユーザー名：大文字と小文字を区別します。1～32 文字 (Unicode) で指定します。</li>
+<li>パスワード：大文字と小文字を区別します。文字、数字、記号、スペースを含む 0～128 字の表示可能な文字を使用してください。</li>
+<li>SMS インターバル限界は、必ず 1～10000 分で指定します。</li>
+</ol>
+<h4>SMS プロバイダ設定を作成する：</h4>
+<ol>
+<li><b>[SMS サービスプロバイダの追加]</b> をクリックします。.</li>
+<li><b>[プロバイダ名]</b> 欄に SMS サービスプロバイダの名前を入力します。</li>
+<li><b>[SMS URL]</b> フィールドで、メッセージ本文を「Hello world」にして SMS URL を入力します。SMS URL は、SMS サービスプロバイダから入手できます。</li>
+<li><b>[次へ]</b> をクリックします。</li>
+<li>システムは SMS URL を複数のパラメータに分割します。対応するカテゴリを選択して各パラメータを定義します。<b>[その他]</b> 以外のパラメータカテゴリは 1 回しか使用できません。</li>
+</ol>
+<ol>
+<a name='smshowto'></a><span class="note_head">制限：</span>
+<li>プロバイダ名：大文字と小文字を区別します。1～32 文字 (Unicode) で指定します。</li>
+<li>SMS URL：大文字と小文字を区別します。1～500 文字 (Unicode) で指定します。パラメータの数は、4～10 です。この SMS URL は設定専用です。設定が完了しても SMS メッセージは送信されません。この URL の形式は、SMS サービスプロバイダが提供します。URL には次のパラメータが含まれます。ユーザー名、パスワード、相手先電話番号、メッセージ本文。Clickatell を使用した場合の URL：https://api.clickatell.com/http/sendmsg?user=TestUser&amp;password=TestPassword&amp;api_id=3148203&amp;to=886123456789&amp;text=Hello+world「メッセージ本文」パラメータで、「Hello」と「world」の間のスペースは、サービスプロバイダ定義の特殊文字に置き換わります。	
+</li>	
+
+</ol>
+</body>
+</html>

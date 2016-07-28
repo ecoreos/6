@@ -1,0 +1,149 @@
+
+[HA_ConfSyncError]
+Subject: 在系统配置检查中，High-availability 集群 %HOSTNAME% 检测到同步错误。
+
+亲爱的用户：
+
+在活动和无源服务器系统配置检查中，high-availability 集群 %HOSTNAME% 检测到同步错误。系统尝试通过执行全面系统配置同步以修复错误。请查看系统日志或 High Availability Manager 日志页面了解更多信息。
+
+动作：%HA_ACTION%
+错误：%HA_PARAM_1%
+
+您诚挚的，
+%COMPANY_NAME%
+
+
+[HA_FailOver]
+Subject: high-availability 集群 %HOSTNAME% 上检测到错误。
+
+亲爱的用户：
+
+high-availability 集群 %HOSTNAME% 上检测到错误。系统将把服务切换到无源服务器。请检查系统日志获得更多信息。
+
+动作：%HA_ACTION%
+错误：%HA_PARAM_1%
+
+您诚挚的，
+%COMPANY_NAME%
+
+
+[HA_MismatchedSsdCache]
+Subject: 在 high-availability 集群 %HOSTNAME% 中 SSD 缓存硬盘不一致
+
+亲爱的用户：
+
+属于无源服务器 %HA_PARAM_1% 上以下 SSD 缓存的硬盘与活动服务器上的硬盘不一致：SSD 缓存 %HA_PARAM_2%。
+
+请查看 High Availability Manager 日志页面以了解更多信息。
+
+动作：%HA_ACTION%
+
+您诚挚的，
+%COMPANY_NAME%
+
+
+[HA_SplitBrain]
+Subject: high-availability 集群 %HOSTNAME% 发生 Split-brain 错误
+
+亲爱的用户：
+
+high-availability 集群 %HOSTNAME% 发生 split-brain 错误。请检查系统日志获得更多信息。
+
+动作：%HA_ACTION%
+
+您诚挚的，
+%COMPANY_NAME%
+
+
+[HA_StatusChange]
+Subject: High-availability 集群 %HOSTNAME% 的状态已经从 %HA_PARAM_1% 切换至 %HA_PARAM_2%。
+
+亲爱的用户：
+
+High-availability 集群 %HOSTNAME% 的状态已经从 %HA_PARAM_1% 切换至 %HA_PARAM_2%。请查看系统日志或 High Availability Manager 日志页面了解更多信息。
+
+动作：%HA_ACTION%
+描述：%HA_PARAM_3%
+
+您诚挚的，
+%COMPANY_NAME%
+
+
+[HA_SwitchFail]
+Subject: 未能切换 high-availability 集群 %HOSTNAME% 的服务。
+
+亲爱的用户：
+
+系统尝试将服务切换至 high-availability 集群 %HOSTNAME% 的无源服务器，但是未能成功。请检查系统日志获得更多信息。
+
+动作：%HA_ACTION%
+
+您诚挚的，
+%COMPANY_NAME%
+
+
+[HA_SwitchFinished]
+Subject: High-availability 集群 %HOSTNAME% 现在在 %HA_PARAM_1% 上运行服务。
+
+亲爱的用户：
+
+High-availability 集群 %HOSTNAME% 现在在 %HA_PARAM_1% 上运行服务。请查看系统日志或 High Availability Manager 日志页面了解更多信息。
+
+动作：%HA_ACTION%
+
+您诚挚的，
+%COMPANY_NAME%
+
+
+[HA_SwitchOver]
+Subject: 切换 high-availability 集群 %HOSTNAME% 至 %HA_PARAM_1%。
+
+亲爱的用户：
+
+有人启用了 high-availability 集群 %HOSTNAME% 的切换。服务将移转至 %HA_PARAM_1%。请检查系统日志获得更多信息。
+
+动作：%HA_ACTION%
+
+您诚挚的，
+%COMPANY_NAME%
+
+
+[HA_SwitchOver_With_Reason]
+Subject: High-availability 集群 %HOSTNAME% 移转至 %HA_PARAM_1%
+
+亲爱的用户：
+
+用户已启用 high-availability 集群 %HOSTNAME% 移转服务。服务将移转至 %HA_PARAM_1%。请检查系统日志获得更多信息。
+
+动作：%HA_ACTION%
+原因：%HA_PARAM_2%
+
+您诚挚的，
+%COMPANY_NAME%
+
+
+[HA_SyncComplete]
+Subject: High-availability 集群 %HOSTNAME% 的全部数据复制完成。
+
+亲爱的用户：
+
+High-availability 集群 %HOSTNAME% 的全部数据复制完成。现在如果需要进行服务切换，无源服务器已准备就绪。请查看系统日志或 High Availability Manager 日志页面了解更多信息。
+
+动作：%HA_ACTION%
+
+您诚挚的，
+%COMPANY_NAME%
+
+
+[HA_UnbindLocal]
+Subject: 本地主机已经从 high-availability 集群中删除
+
+亲爱的用户：
+
+%HA_PARAM_1% 已经从 high-availability 集群 %HA_PARAM_2% 中删除。 请检查系统日志获得更多信息。
+
+动作： %HA_ACTION%
+
+您诚挚的，
+%COMPANY_NAME%
+

@@ -1,0 +1,167 @@
+﻿<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+	<h2>RAID Group*</h2>
+	<p>DiskStation에서는 여러 개의 하드 디스크를 RAID Group이라고 하는 단일 저장소 유니트로 결합할 수 있습니다. 볼륨 또는 iSCSI LUN(블록 수준)은 RAID Group 위에 생성할 수 있습니다. RAID Group에 확장 가능한 공간이 있는 경우 볼륨 또는 iSCSI LUN을 확장할 수 있습니다. RAID 유형마다 제공하는 데이터 보호 수준이 다릅니다. DiskStation에서 지원하는 RAID 유형의 일반 목록을 보려면 <a href="general.html">일반</a>을 참조하십시오.
+</p>
+
+<h4>RAID Group 생성하기:</h4>
+	<ol>
+		<li><b>생성</b> 단추를 클릭합니다.</li>
+		<li>다음 옵션 중 하나를 선택합니다: 
+	  <ul>
+				<li>단일 볼륨 또는 iSCSI LUN(블록 수준)용 RAID Group: 보다 향상된 성능을 제공합니다.</li>
+				<li>여러 볼륨 또는 iSCSI LUN(블록 수준)용 RAID Group: 보다 향상된 유연한 관리 기능을 제공합니다.</li>
+			</ul>
+		</li>
+		<li>마법사를 따라 프로세스를 완료합니다.</li>
+	</ol>
+<div class="section">
+<h4>참고: </h4>
+<ul>
+<li>RAID Group은 하드 드라이브 유형이 같은 하드 디스크로 구성해야 합니다. RAID를 생성하는 데 SATA 및 SAS 하드 디스크를 동시에 사용할 수 없고 SSD 및 HDD도 동시에 사용할 수 없습니다.</li>
+<li><b>RAID 5</b> 또는 <b>RAID 6</b>을 사용하는 여러 볼륨 또는 iSCSI LUN(블록 수준)용 RAID Group에는 여러 개의 <b>RAID 어레이</b>를 포함할 수 있습니다. 동일한 RAID Group에 속하는 모든 RAID 어레이는 같은 RAID 유형(예: RAID 5 또는 RAID 6)이 됩니다. 각 RAID 어레이의 최대 디스크 수는 6, 12 또는 24개 일 수 있습니다. RAID Group을 생성하는 동안 최대 디스크 수를 설정할 수 있으며, 나중에 숫자를 변경할 수 없습니다. RAID 어레이에 최대 개수의 디스크가 할당되었을 때, RAID Group에 추가한 다음 디스크는 새 RAID 어레이에 할당됩니다. 새 RAID 어레이에는 특정 RAID 유형에 필요한 최소 디스크 수를 포함해야 합니다(예: RAID 5에는 디스크 3개, RAID 6에는 디스크 4개).
+</li>
+<li>특정 하드 디스크로 RAID Group을 생성할 때 <b>RAID Group 생성 마법사</b>에 해당 디스크가 나타나지 않는 경우 <b>HDD 관리</b>에서 하드 디스크의 상태를 확인하십시오.</li>
+</ul>
+</div>
+
+	<h4>RAID Group 제거하기:</h4>
+	<ol>
+		<li>제거할 RAID Group을 선택합니다.</li>
+		<li><b>제거</b> 버튼을 클릭하고 마법사를 따라 프로세스를 완료합니다.</li>
+	</ol>
+
+<div class="section">
+<h4>참고: </h4>
+<ul>
+<li>RAID Group을 제거하면 해당 RAID Group의 볼륨과 iSCSI LUN이 삭제됩니다. 중요한 데이터가 삭제되지 않도록 하십시오.</li>
+</ul>
+</div>
+
+
+	<h4>RAID Group 복구하기:</h4>
+	<p>RAID Group이 다음 중 하나이면 이 RAID Group이 <b>문제 발생</b> 상태일 때 복구할 수 있습니다: RAID 1, RAID 5, RAID 6, RAID 10. 이 RAID Group의 기존 데이터는 삭제되지 않습니다.</p>
+	<p>RAID Group을 복구하려면 다음 단계를 따릅니다:</p>
+	<ol>
+		<li>DiskStation을(를) 끕니다. (모델이 핫 스와핑을 지원하는 경우 이 단계를 건너뛸 수 있습니다.)</li>
+		<li>RAID Group 상태에 있는 디스크 정보에 오류 발생으로 표시되는 하드 디스크를 교체합니다.</li>
+		<li><b>관리</b>를 클릭합니다.</li>
+		<li><b>복구</b>를 선택합니다.</li>
+		<li>마법사를 따라 프로세스를 완료합니다.</li>
+        </ol>
+        
+<div class="section">
+<h4>참고:</h4>
+<ul>
+<li>교체할 하드 디스크 크기는 RAID Group에서 가장 작은 디스크의 크기보다 크거나 같아야 합니다.</li>
+<li>교체할 때 하드 디스크 상태는 "초기화됨" 또는 "초기화되지 않음"이어야 합니다.</li>
+</ul>
+</div>
+
+	<h4>RAID Group의 RAID 유형 변경하기</h4>
+	<p>RAID Group의 RAID 유형을 변경하려면 DiskStation에 사용 가능한 하드 디스크가 설치되어 있어야 합니다. 현재 다음과 같은 RAID 유형 변경이 가능합니다:</p>
+	<ul>
+		<li>Basic에서 RAID 1 또는 RAID 5로</li>
+		<li>RAID 1에서 RAID 5로</li>
+		<li>RAID 5에서 RAID 6로</li>
+      <li>RAID 1에 미러 디스크 추가</li>
+	</ul>
+	<p>RAID Group의 RAID 유형을 변경하려면 아래 단계를 수행합니다:</p>
+	<ol>
+		<li>변경할 RAID Group을 선택합니다.</li>
+		<li><b>관리</b>를 클릭합니다.</li>
+		<li><b>RAID 유형 변경</b>을 선택합니다.</li>
+		<li>마법사를 따라 프로세스를 완료합니다.</li>
+        </ol>
+<div class="section">
+<h4>참고: </h4>
+<ul>
+<li>RAID 유형을 변경하기 전에 RAID Group의 상태가 <b>정상</b>이어야 합니다. 그렇지 않으면 데이터가 손실됩니다. RAID Group이 <b>문제 발생</b> 상태이면 이것을 먼저 복구하십시오.</li>
+<li>RAID Group의 RAID 유형을 변경하려면 DiskStation에 충분한 하드 디스크가 설치되어야 하고, 새 디스크 크기가 RAID Group에서 가장 작은 디스크보다 커야 합니다.</li>
+<li>새 디스크의 상태는 "초기화됨" 또는 "초기화되지 않음"이어야 합니다.</li>
+<li>RAID 어레이가 여러 개인 RAID Group의 RAID 유형은 변경할 수 없습니다.</li>
+</ul>
+</div>
+
+	<h4>RAID Group의 크기 확장하기</h4>
+	<p>기존 하드 디스크를 크기가 큰 디스크로 교체하거나 하드 디스크를 추가하여 RAID Group의 크기를 확장할 수 있습니다.</p>
+
+<div class="section">
+<h4>참고: </h4>
+<ul>
+  <li>RAID Group을 3TB 이상의 디스크로 확장하려면, RAID Group을 DSM 3.0 이상을 사용해서 만들어야 합니다.
+</ul>
+</div>
+
+	<h4>기존 하드 디스크를 크기가 큰 디스크로 교체하여 RAID Group 확장하기:</h4>
+	<p>다음과 같은 RAID 유형은 기존 하드 디스크를 크기가 큰 디스크로 교체하여 RAID Group을 확장할 수 있습니다: RAID 1, RAID 5, RAID 6. 단일 볼륨 또는 iSCSI LUN용 RAID Group의 연결된 볼륨 또는 iSCSI LUN은 자동으로 확장됩니다.  아래 단계를 따르십시오:</p>
+	<ol>
+    <li>DiskStation을(를) 끕니다. 모델이 핫 스와핑을 지원하는 경우 이 단계를 건너뛸 수 있습니다.</li>
+		<li>하나의 하드 디스크를 크기가 큰 다른 것으로 교체합니다.</li>
+		<li>DiskStation을(를) 켜고 RAID Group을 복구합니다.</li>
+		<li>1에서 3 단계를 반복하여 모든 하드 디스크를 더 큰 것으로 교체합니다.</li>
+		<li>시스템에서 RAID Group을 자동으로 확장합니다.</li>
+	</ol>
+
+<div class="section">
+<h4>참고: </h4>
+<ul>
+<li>확장 작업 중 저장소 관리자의 모든 서비스가 일시 중지됩니다.</li> 
+<li>하드 디스크는 RAID Group이 <b>정상</b> 상태일 때에만 확장할 수 있습니다. 그렇지 않으면 데이터가 손실됩니다. RAID Group이 <b>문제 발생</b> 상태이면 이것을 먼저 복구하십시오.</li>
+	</ul>
+</div>
+
+	<h4>하드 디스크를 추가하여 RAID Group 확장하기:</h4>
+	<p>이 기능은 JBOD, RAID 5, RAID 6 유형의 RAID에 적용할 수 있습니다. 이렇게 하려면 다음을 수행하십시오.</p>
+	<ol>
+		<li>확장할 RAID Group을 선택합니다.</li>
+		<li><b>관리</b>를 클릭합니다.</li>
+		<li><b>디스크 추가</b>를 선택합니다.</li>
+		<li>마법사를 따라 설정을 완료합니다.</li>
+</ol>
+<div class="section">
+<h4>참고: </h4>
+<ul>
+		<li>RAID Group 상태가 <b>정상</b>이어야 합니다.</li>
+		<li>RAID Group의 RAID 5와 RAID 6 유형에서는 하드 디스크 크기가 RAID Group에서 가장 작은 디스크보다 커야 합니다.</li>
+		<li>선택한 하드 디스크 상태는 "초기화됨" 또는 "초기화되지 않음"이어야 합니다.</li>
+	</ul>
+    </div>
+
+	<h4>RAID Group 설명 편집하기:</h4>
+	<ol>
+		<li>편집할 RAID Group을 선택합니다</li>
+		<li><b>관리</b>를 클릭합니다.</li>
+		<li><b>설명 편집</b>을 선택합니다.</li>
+		<li>설명을 편집한 후에 <b>확인</b>을 클릭하여 결과를 저장합니다.</li>
+	</ol>
+	<h3>RAID 스크럽</h3>
+    <p>RAID 스크럽은 RAID Group을 조사하여 발견된 데이터 불일치를 복구하는 데이터 유지 관리 기능입니다. 이 기능은 RAID 5 또는 RAID 6를 구현하는 RAID Group에 사용할 수 있습니다. </p>
+    <p>데이터 일관성을 유지하고 디스크 오류 발생 시 중요한 데이터를 잃지 않도록 하기 위해 정기적으로 RAID 스크럽을 수행하는 것이 좋습니다.</p>
+    <h4>RAID 스크럽 수행하기:</h4>
+    <ol>
+      <li>RAID 스크럽을 수행할 RAID Group을 선택합니다.</li>
+      <li><strong>관리</strong>를 클릭합니다</li>
+      <li><strong>RAID 스크럽</strong>을 선택합니다.</li>
+    </ol>
+    <div class="section">
+      <h4>참고:</h4>
+      <ul>
+        <li>RAID Group의 상태가 <strong>정상</strong>일 때만 RAID 스크럽을 수행할 수 있습니다.</li>
+        <li>RAID 스크럽을 완료하기 전에는 시스템을 종료시키지 마십시오. 완료 전에 시스템이 종료된 경우 RAID 스크럽을 처음부터 다시 시작해야 합니다.</li>
+      </ul>
+    </div>
+    
+<p>____<br />*일부 모델에서만 사용할 수 있습니다.</p>    
+</body>
+</html>

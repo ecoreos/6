@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>DSM 設定</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2><a name="https"></a>DSM 設定</h2>
+
+<p><strong>[コントロール パネル]</strong> > <strong>[ネットワーク]</strong> > <strong>[DSM 設定]</strong> を選択すると、クライアントが DiskStation にアクセスするために使うポート番号を変更できます。</p>
+
+<h4>デフォルトのポート番号を変更する：</h4>
+<p>HTTP 接続および HTTPS 接続は、DSM で常に有効になっています。デフォルトの HTTP ポートは 5000 であり、デフォルトの HTTPS ポートは 5001 です。</p>
+<ol>
+<li><b>[HTTP]</b> または <b>[HTTPS]</b> 欄に任意のポート番号を入力します。</li>
+<li><b>[適用]</b> をクリックします。</li>
+</ol>
+
+<h4>HTTP を HTTPS 接続に転送：</h4>
+<p>HTTP ポートを介して DiskStation にアクセスするとき、クライアントを HTTPS ポートに転送することができます。</p>
+<ol>
+<li><b>[HTTP 接続を HTTPS に自動リダイレクトする（Web Station および Photo Station を除く）]</b> を選択します。</li>
+<li>
+<b>[適用]</b> をクリックします。
+</li>
+</ol>
+
+<div class="section">
+<h4>HTTPS 接続で使用するポート：</h4>
+<ul>
+  <li><b>DSM</b>：デフォルトのポート番号は 5001 ですので、次のアドレスを入力すると DSM に安全にアクセスできます：https://server-hostname:5001/</li>
+<li><b>Web Station および Photo Station</b>：デフォルトのポート番号は 443 ですので、次のアドレスを入力すると Web Station と Photo Station に安全にアクセスできます：https://server-hostname/</li>
+</ul>
+
+</div>
+
+<h4>ネットワーク上で DiskStation を発見する：</h4>
+
+<p>Windows ネットワーク検出や Bonjour サービス検出を介して DiskStation を検出することができます。</p>
+<ol>
+<li>ネットワーク上で DiskStation を検出するサービスを選択する：
+
+  <ul>
+<li><strong>Windows ネットワーク探索を有効にする</strong></li>
+<li><strong>Bonjour サービスの検出を有効にする</strong></li>
+</ul>
+</li>
+
+<li>
+<b>[適用]</b> をクリックします。
+</li>
+</ol>
+
+
+
+<h2>ドメイン</h2>
+<p><strong>[ドメイン]</strong> では、DiskStation にアクセスするためにカスタマイズしたドメイン名を指定できます。
+</p>
+<h4>カスタマイズしたドメインを有効にする：</h4>
+<ol>
+<li>
+<b>[カスタマイズしたドメインを有効にする]</b> にチェックマークを付けます。
+</li>
+<li>
+DiskStation に適用したドメイン名を指定します。
+</li>
+<li>
+<b>[HSTS を有効にする]</b> にチェックマークを付けて、このドメインでは HTTPS 暗号化接続を強制します。
+</li>
+<li>
+<b>[適用]</b> をクリックします。
+</li>
+</ol>
+
+<div class="section">
+<h4>注意：</h4>
+<ul>
+<li>各ドメイン名は、DiskStation で単独のアプリケーションにしか使用できません。</li>
+<li>ドメイン名が 15 文字以下になり、<a href="https://support.microsoft.com/kb/909264" target="_blank">NetBIOS naming conventions</a> に準拠しているとき、システムがドメイン名（例：MyDSM）を自動的に登録し、ブロードキャストします。Windows ユーザーは類似した URL を使って同一ローカル ネットワーク内にある DSM デスクトップにアクセスすることができます。<code>http://MyDSM</code> または <code>https://MyDSM</code></li>
+<li>ドメイン名を使う URL を介してアプリケーションにアクセスするとき、標準 HTTP ポート (80) または標準 HTTPS ポート (443) を介します。</li>
+</ul>
+
+</div>
+
+</body>
+</html>
+

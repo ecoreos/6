@@ -1,0 +1,95 @@
+ <!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Změna typu pole RAID svazku nebo skupiny disků – Nápověda Synology DSM</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="This article provides instructions to change the RAID type of existing volumes and disk groups on your DiskStation."><link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Změna typu pole RAID svazku nebo skupiny disků</h2>
+
+<p>Svazky a skupiny disků lze převést z jednoho typu RAID na jiný bez ztráty existujících dat. Na svém zařízení DiskStation můžete například vytvořit svazek typu RAID 1 a později jej změnit na typ RAID 5 poté, co nainstalujete více pevných disků. Tento článek poskytuje informace o změně typu pole RAID stávajících svazků nebo skupin disků v zařízení DiskStation.</p>
+<h3>Omezení týkající typu svazku RAID</h3>
+
+<p>Pouze některé typy RAID lze změnit na určité jiné typy RAID. Podrobnosti naleznete v následující tabulce.</p>
+
+<table>
+  <tr>
+    <th width="50%">Typ RAID</th>
+    <th width="50%">Lze změnit na...</th>
+  </tr>
+  <tr>
+    <td>Základní</td>
+    <td>RAID 1<br /> RAID 5</td>
+  </tr>
+  <tr>
+    <td>RAID 1</td>
+    <td>RAID 5</td>
+  </tr>
+  <tr>
+    <td>RAID 5</td>
+    <td>RAID 6</td>
+  </tr>
+
+</table>
+
+<div class="section">
+<h4>Příklad:</h4>
+<p>RAID 1 lze změnit na RAID 5, ale RAID 5 nelze změnit na RAID 1.</p>
+</div>
+
+
+<h3>Požadavky na pevné disky</h3>
+
+<p>Pro změnu typu RAID u svazku nebo skupiny disků je třeba, abyste měli na svém zařízení DiskStation k dispozici dostatečný počet nainstalovaných pevných disků. Níže jsou uvedeny minimální počty pevných disků vyžadované jednotlivými typy RAID.</p>
+
+<table>
+  <tr>
+    <th width="50%">Požadovaný typ pole RAID</th>
+    <th width="50%">Požadované pevné disky</th>
+  </tr>
+  <tr>
+    <td>RAID 1</td>
+    <td>2 nebo 4</td>
+  </tr>
+  <tr>
+    <td>RAID 5</td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>RAID 6</td>
+    <td>4</td>
+  </tr>
+</table>
+
+<div class="section">
+<h4>Příklad:</h4>
+<p>Chcete-li změnit svazek RAID 1 na RAID 5, budete potřebovat minimálně tři pevné disky (tj. dva pevné disky patřící do svazku RAID 1 plus jeden volný pevný disk pro přidání do svazku).</p>
+</div>
+
+<h3>Změna typu pole RAID</h3>
+
+<p>V níže uvedeném příkladu bude změněn typ svazku <strong>Základní</strong> na <strong>RAID 1</strong>.</p>
+
+<div class="section">
+<h4>Než začnete:</h4>
+<ul>
+<li>Ujistěte se, že stav vašeho svazku nebo skupiny disků je <b>Normální</b>.</li>
+<li>Pokud přidáváte nové pevné disky do svazku nebo skupiny disků, musejí být nové pevné disky větší než nejmenší pevný disk ve svazku nebo skupině disků.</li>
+<li>Nové pevné disky musejí mít buď stav <b>Inicializováno</b> nebo <b>Není inicializováno</b>.</li></ul>
+</div>
+
+<h4>Změna typu pole RAID svazku:</h4>
+
+<ol>
+<li>Otevřete <strong>Správce úložiště</strong>.</li><img src="about:blank" class="help_image"/><li>Přejděte do části <b>Svazek</b>. (Pokud chcete změnit typ RAID skupiny disků, přejděte na kartu <b>Disková skupina</b>.)</li>
+<li>Vyberte svazek, který chcete změnit, a klikněte na možnost <b>Správa</b>.</li><img src="about:blank" class="help_image"/><li>Když se objeví průvodce nastavením, zvolte <b>Změnit typ pole RAID</b>. Potom klikněte na možnost <b>Další</b>.</li><img src="../../../online_img/dsm/StorageManager/volume_diskgroup_change_raid_type/change_raid_type.png" class="help_image"/><li>Vyberte typ RAID, na který si přejete svazek změnit. Klikněte na možnost <b>Další</b>.</li><img src="../../../online_img/dsm/StorageManager/volume_diskgroup_change_raid_type/choose_raid.png" class="help_image"/><li>Vyberte pevné disky, kterými chcete svazek rozšířit. Potom klikněte na možnost <b>Další</b>.</li><img src="../../../online_img/dsm/StorageManager/volume_diskgroup_change_raid_type/choose_disks.png" class="help_image"/><li>Dokončete postup podle pokynů v průvodci. Pamatujte si, že stávající data na přidaném pevném disku budou odstraněna.</li></ol>
+
+</body>
+</html>

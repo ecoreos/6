@@ -1,0 +1,85 @@
+ <!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>新增硬碟至儲存空間或磁碟群組 - Synology DSM 說明</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="This article walks you through the steps to add an additional hard drive to an existing volume or disk group on your Synology NAS.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>新增硬碟來擴充儲存容量</h2>
+
+<p>若您的 DiskStation 上有未使用的硬碟插槽，您可以安裝更多硬碟並將其新增至現有的儲存空間或磁碟群組。本文章將引導您安裝更多硬碟來擴充現有儲存空間或磁碟群組。</p>
+
+<h3>開始進行之前的準備</h3>
+
+<p>在您開始之前，請確認您欲新增的硬碟符合下列容量需求：</p>
+<ul>
+  <li><strong>針對 SHR：</strong>您要新增的硬碟容量必須等於或大於儲存空間或磁碟群組中最大的硬碟容量，或是等於儲存空間或磁碟群組中任一硬碟的容量。例如，若您的 SHR 儲存空間由三顆硬碟組成，大小分別為 2 TB、1.5 TB 及 1 TB，則新硬碟的容量必須至少為 2 TB，或是等於 1.5 TB 或 1 TB。</li>
+  <li><strong>針對 RAID 5 及 RAID 6：</strong>您要新增的硬碟容量必須等於或大於儲存空間或磁碟群組中最小的硬碟容量。例如，若您的儲存空間由三顆硬碟組成，大小分別為 2 TB、1.5 TB 及 1 TB，則新硬碟的容量必須至少為 1 TB。</li>
+</ul>
+
+<div class="section">
+<h4>檢查儲存空間狀態</h4>
+
+<p>請確認儲存空間或磁碟群組狀態為<strong><strong>正常</strong></strong>。若出現不正常狀態，請先進行修復。</p>
+</div>
+
+
+<h3>  新增硬碟至儲存空間或磁碟群組</h3>
+
+<p>您可以將硬碟新增至以下 RAID 類型中： </p>
+
+<ul>
+<li>Synology Hybrid RAID (SHR)</li>
+<li>JBOD</li>
+<li>RAID 5</li>
+<li>RAID 6</li>
+</ul>
+
+<div class="section">
+<h4>注意：</h4>
+<p>針對 SHR 儲存空間，唯有在兩顆以上硬碟構成的儲存空間中新增硬碟才會擴充儲存容量。</p>
+</ul>
+</div>
+
+<h4>若要新增硬碟至儲存空間或磁碟群組：</h4>
+
+<ol>
+<li>關閉 DiskStation。(若您的 DiskStation 支援硬碟熱抽換，可略過此步驟。)</li>
+<li>將新的硬碟裝進空的硬碟插槽中。</li>
+
+<div class="section">
+<h4>注意：</h4>
+<p>為避免傷及自身或毀損 DiskStation，請跟隨 Synology 產品之<i>快速安裝指南</i>中的硬碟安裝指示。</p>
+</div>
+
+<li>開啟 DiskStation。</li>
+<li>以屬於 <strong>administrators</strong> 群組的帳號登入 DSM。</li>
+<li>開啟<strong>儲存空間管理員</strong>。</li>
+<img src="about:blank" class="help_image"/>
+
+<li>這個時候，請執行下列操作：</li>
+  <ul class="list_abc">
+    
+  <li>若您要擴充單一儲存空間，請前往<strong>儲存空間</strong>頁籤。點選要擴充的儲存空間。按一下<strong>管理</strong>並繼續下一步。 </li>
+<img src="about:blank" class="help_image"/>
+    
+  <li>若您要擴充磁碟群組，請前往<strong>磁碟群組</strong>頁籤。點選要擴充的磁碟群組。按一下<strong>管理</strong>並繼續下一步。</li>
+<img src="about:blank" class="help_image"/>
+  </ul>
+<li>選擇<strong>加入硬碟來擴充儲存空間 (或磁碟群組)</strong>。然後按一下<strong>下一步</strong>。</li>
+<img src="about:blank" class="help_image"/>
+<li>選擇您想要用來擴充儲存空間或磁碟群組的硬碟。勾選相對應的核取方塊來新增硬碟。然後按一下<strong>下一步</strong>。</li>
+<img src="about:blank" class="help_image"/>
+<li>依照精靈的步驟來完成操作。</li>
+</ol>
+</body>
+</html>

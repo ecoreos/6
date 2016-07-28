@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Auto Block- Synology DSM Hjälp</title> 
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="The auto block feature helps improve the security of your DiskStation by blocking the IP addresses of clients with too many failed login attempts.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Auto Block</h2>
+
+<p>Funktionen auto block hjälper till att förbättra säkerheten för din DiskStation genom att blockera IP-adresser för klienter med för många misslyckade inloggningsförsök. Det hjälper till att minska risken för intrång på konton med brute-force-attacker.</p>
+
+<p>Du kan också skapa och hantera en tillåten lista för att lägga till IP-adresser som du betror eller en blockeringslista för att alltid förhindra särskilda IP-adresser från att logga in.</p>
+
+<div class="section">
+<h4>Obs:</h4>
+<p>Ett urval tjänster och filpaket har stöd för auto block, exempelvis följande: DSM, SSH, Telnet, rsync, nätverkssäkerhetskopiering, synkronisera delade mappar, FTP, WebDAV, File Station, Photo Station, Audio Station, Video Station, Download Station, Mail Server, Mail Station, Time Backup, VPN Server, Cloud Station och Synology mobile apps.</p>
+</div>
+
+<h4>Aktivera auto block:</h4>
+<ol>
+
+<li>Öppna <strong>Kontrollpanel</strong> och gå till <strong>Säkerhet</strong> > <strong>Auto Block</strong>.</li>
+<li>Markera <b>Aktivera auto block</b>.</li>
+
+<li>Ange antal misslyckade inloggningsförsök i fältet <b>Inloggningsförsök</b> och antal minuter i fältet <b>Inom (minuter)</b>. En IP-adress ska blockeras när den överskrider antal felaktiga inloggningsförsök inom det specificerade antalet minutrarna.</li>
+<li>Markera <b>Aktivera förfallotid för blockering</b> och ange en siffra för att ta bort en blockerad IP-adress efter angivet antal dagar.</li>
+
+<li>Klicka på <b>Tillämpa.</b></li>
+</ol>
+
+
+<h3>Hantera Blockeringslista</h3>
+<p>Klicka på <strong>Tillåten lista/blockeringslista</strong> och gå till fliken <strong>Blockeringslista</strong>. </p>
+
+<h4>Lägga till IP-adresser:</h4>
+<p>Välj någon av följande från rullgardinsmenyn <strong>Skapa</strong>:</p>
+<ul>
+<li><strong>Lägg till IP-adress</strong><br> Ange en IP-adress och ställ in utgångstid.</li>
+<li><strong>Importera lista med IP-adresser</strong><br> Importera en textfil som listar IP-adresser för att lägga till ett antal IP-adresser och ställa in utgångstiden för dem på samma gång. Markera kryssrutan om du vill skriva över befintliga IP-adresser. Om detta alternativ inte är vald kommer dubbletter av IP-adress att hoppas över.<br> Om filen du valt har ett korrekt format kommer du att se alla IP-adresser i området för förhandsgranskning. Klicka på <strong>OK</strong> för att importera.</li>
+
+<div class="section">
+<h4>Obs:</h4>
+<p>För att importera en fil måste filen uppfylla följande kriteria:</p>
+<ul>
+<li>Filen måste vara en enkel textfil.</li>
+<li>Varje rad i filen kan endast innehållen en IP-adress.</li>
+<li>Linjer som kommenterats ut börjar med en # (brädgårdstecknet).</li>
+</ul>
+</div>
+</ul>
+
+<h4>Radera blockerade IP-adresser:</h4>
+<p>Välj de IP-adresser som du vill ta bort från listan och klicka på <b>Ta bort</b>.</p>
+
+
+<h3>Hantera Tillåten lista</h3>
+
+<p>Klicka på <strong>Tillåten lista/blockeringslista</strong> och gå till fliken <strong>Tillåten lista</strong>. </p>
+
+<h4>Lägga till IP-adresser:</h4>
+<p>Välj någon av följande från rullgardinsmenyn <strong>Skapa</strong>:</p>
+<ul>
+<li><strong>Lägg till IP-adress</strong><br> Ange till en IP-adress.</li>
+<li><strong>Importera lista med IP-adresser</strong><br> Importera en textfil som listar IP-adresser för att lägga till ett antal IP-adresser på samma gång. Markera kryssrutan om du vill skriva över befintliga IP-adresser. Om detta alternativ inte är vald kommer dubbletter av IP-adress att hoppas över.<br> Om filen du valt har ett korrekt format kommer du att se alla IP-adresser i området för förhandsgranskning. Klicka på <strong>OK</strong> för att importera.</li>
+</ul>
+
+<div class="section"><h4>Obs:</h4>
+<p>För att importera en fil måste filen uppfylla följande kriteria:</p>
+<ul>
+<li>Filen måste vara en enkel textfil.</li>
+<li>Varje rad i filen kan endast innehållen en IP-adress.</li>
+<li>Linjer som kommenterats ut börjar med en # (brädgårdstecknet).</li>
+</ul>
+</div>
+
+<h4>Ta bort IP-adresser:</h4>
+<p>Välj de IP-adresser som du vill ta bort från listan och klicka på <b>Ta bort</b>.</p>
+
+<div class="section"><h4>Obs:</h4>
+<p>Om din DiskStation-enhet befinner sig bakom en omvänd proxyserver, vänligen lägg till IP-adressen för den omvända proxyservern till tillåten lista.</p>
+</div>
+
+</body>
+</html>

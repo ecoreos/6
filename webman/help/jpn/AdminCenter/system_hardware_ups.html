@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>電源</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+
+
+<h2>UPS</h2>
+
+<p class="disable-eds14">UPS（無停電電源装置）は、停電になってもしばらくの間であれば DiskStation を作動し続けられるバックアップ用電源装置です。この機能は、電源が切れてシャットオフしてしまう前に DiskStation がデータを保存し、ボリュームをアンマウントするのに十分な時間を与えることで、データの消失を防止します。<strong>[コントロール パネル]</strong> &gt; <strong>[ハードウェアと電源]</strong> &gt; <strong>[UPS]</strong> の順に選択してください。</p>
+
+<p class="enable-eds14">UPS（無停電電源装置）は、停電になってもしばらくの間であれば DiskStation を作動し続けられるバックアップ用電源装置です。この機能は、電源が切れて停止してしまう前に DiskStation がデータを保存し、ボリュームをアンマウントするのに十分な時間を与えることで、データの消失を防止します。<strong>[コントロール パネル]</strong> &gt; <strong>[ハードウェアと電源]</strong> &gt; <strong>[UPS]</strong> の順に選択してください。</p>
+
+<div class="section">
+<h4>セーフモード</h4>
+<p class="disable-eds14">DiskStation がセーフモードに入ると、UPS から電力が供給されている間にすべてのサービスを停止してボリュームをアンマウントします。このようにしてデータの消失を防止し、安全にシャットダウンします。デフォルトでは、UPS 装置の電力が残り少なくなるとシステムがセーフモードに入ります。また、停電時に DiskStation がセーフモードに入るまでの時間を指定することもできます。ただし、指定した時間に達する前に UPS 装置の残量が少なくなると、システムは即座にセーフモードに入ります。</p>
+
+<p class="enable-eds14">DiskStation がセーフモードに入ると、UPS から電力が供給されている間にすべてのサービスを停止してボリュームをアンマウントします。このようにしてデータの消失を防止し、安全に停止します。デフォルトでは、UPS 装置の電力が残り少なくなるとシステムがセーフモードに入ります。また、停電時に DiskStation がセーフモードに入るまでの時間を指定することもできます。ただし、指定した時間に達する前に UPS 装置の残量が少なくなると、システムは即座にセーフモードに入ります。</p>
+
+
+<p></p>
+<p class="disable-eds14">DiskStation がセーフモードでシャットダウンした場合、<strong>[停電後自動的に再起動する]</strong> オプション（<strong>[コントロール パネル]</strong> &gt; <strong>[ハードウェアと電源]</strong> &gt; <strong>[全般]</strong>）が選択されていると、電源が復帰すると自動的にオンになります。</p>
+
+<p></p>
+</div>
+
+
+
+
+<h3>ローカル UPS サポート</h3>
+
+<p>UPS 装置のインストールについては、装置の取扱説明書をお読みください。インストールが完了し、DiskStation を UPS 装置に接続したら、次の手順に従って UPS サポートを有効にしてください。</p>
+<h4>ローカル UPS サポートを有効にする：</h4>
+<OL>
+<li>UPS 装置をDiskStation の USB ポートに繋ぎます。</li>
+<LI><strong>[UPS]</strong> タブで、<b>[UPS サポートを有効にする]</b> のチェックボックスを選択します。</LI>
+<LI>停電になったら DiskStation がセーフモードに入るように選択します。</LI>
+<LI>システムがセーフモードになったとき、UPS に停止信号を送信するかどうかを設定します。ほとんどの UPS 装置は、電源が復旧すると自動的にオンになります。</LI>
+<LI><b>[適用] </b>をクリックします。</LI>
+</OL>
+
+<h3>SNMP UPS サポート</h3>
+
+<p>この DiskStation は、SNMP (Simple Network Management Protocol) UPS 装置にも接続できます。SNMP UPS 装置のインストールについては、装置の取扱説明書をお読みください。DiskStation を装置に接続し、同じネットワークに繋いだら、次の手順に従って UPS サポートを有効にしてください。</p>
+<h4>SNMP UPS サポートを有効にする：</h4>
+<ol>
+<LI><strong>[UPS]</strong> タブで、<b>[UPS サポートを有効にする]</b> のチェックボックスを選択します。</LI>
+<li><strong>[ネットワーク UPS のタイプ]</strong> ドロップダウン メニューから <strong>[SNMP UPS]</strong> を選択します。</li>
+<li><strong>[SNMP UPS IP アドレス]</strong> 欄で SNMP UPS デバイスの IP アドレスを入力します。</li>
+<LI>停電になったら DiskStation がセーフモードに入るように選択します。</LI>
+<li><strong>[SNMP コミュニティ]</strong> 欄に、SNMP UPS 装置のコミュニティ ストリングを入力します。</li>
+<LI><b>[適用] </b>をクリックします。</LI>
+</ol>
+
+<div class="section">
+<h4>注意：</h4>
+<ul>
+<li>Synology High Availability (SHA) の導入の際は、<b>SNMP UPS</b> をお使いになることを強くお薦めします。</li>
+<li>DiskStation は SNMPv1 と SNMPv2c UPS デバイスに対応しています。</li>
+</ul>
+</div>
+
+
+<h3>ネットワーク UPS サポート</h3>
+
+<p>USB ポートが 1 つしかない UPS 装置に 2 台の Synology 製品を接続すると、1 台の DiskStation しか UPS 装置の状態を得ることができません。この場合は、1 台の DiskStation を「ネットワーク UPS サーバー」として機能させ、USB またはネットワーク（装置によります）を介して UPS 装置に接続するようにします。ネットワーク UPS サーバーは UPS 情報を取得して、もう 1 台の「クライアント」DiskStation にその情報を引き渡します。</p>
+<h4>ネットワーク UPS サポートを有効にする：</h4>
+<OL>
+<li>UPS 装置（USB またはネットワーク経由）に繋いでいる DiskStation にログインします。この DiskStation でローカル UPS サポートがまだ有効になっていない場合は、上記の手順に従ってこれを有効にしてください。</li>
+<LI><strong>[UPS]</strong> タブで <strong>[ネットワーク UPS サーバーを有効にする]</strong> オプションを選択し、DiskStation がクライアントの DiskStation に UPS 情報を引き渡せるようにしてください。</li>
+<li><strong>[許可された DiskStation デバイス]</strong> ボタンをクリックします。</li>
+<li>開いた画面で、UPS 装置を使用しているが、USB またはネットワークに接続されていない別の DiskStation の IP アドレスを入力します。<strong>[OK]</strong> をクリックします。</li>
+<li><strong>[適用] </strong>をクリックして、設定を保存します。</li>
+</OL>
+<p>これでネットワーク UPS サーバーが UPS 情報を取得し、UPS 装置を使用しているもう 1 台の DiskStation に情報を引き渡すことができます。もう 1 台の DiskStation で UPS サポートを有効にする手順については、下記の説明をお読みください。</p>
+<h4>クライアントの DiskStation で UPS サポートを有効にするには：</h4>
+<ol>
+<li>UPS 装置を使用しているが、USB またはネットワークに接続されていない別の DiskStation にログインします。</li>
+<li><strong>[UPS]</strong> タブで、<strong>[UPS サポートを有効にする]</strong> のチェックボックスを選択します。</li>
+<li><strong>[ネットワーク UPS のタイプ]</strong> ドロップダウン メニューから <strong>[Synology UPS サーバー]</strong> を選択します。</li>
+<li><strong>[ネットワーク UPS サーバー IP]</strong> 欄に、ネットワーク UPS サーバー（UPS 装置に繋いである DiskStation など）の IP アドレスを入力します。</li>
+<LI>停電になったら DiskStation がセーフモードに入るように選択します。<strong>[サーバーに合わせる]</strong> を選択すると、セーフモードの設定を簡単に済ませることができます。</LI>
+<LI><b>[適用] </b>をクリックして、設定を保存します。</LI>
+</OL>
+<div class="section">
+<h4>ネットワーク UPS の必要条件：</h4>
+<UL>
+<LI>UPS 装置の情報をリレーできるように、それぞれの DiskStation が同じネットワークに繋がれていなければなりません。</LI>
+<LI>各 DiskStation を接続するネットワーク装置（スイッチやハブなど）は、同じ UPS 装置に繋いでください。そうしなければ、DiskStation が停電時に UPS 装置の情報をリレーすることができません。</LI>
+</UL>
+</div>
+</body>
+</html>

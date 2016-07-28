@@ -1,0 +1,161 @@
+﻿<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>외부 장치</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>외부 장치</h2>
+
+<p><strong>제어판</strong> &gt; <b>외부 장치</b> &gt; <b>외부 장치</b>로 이동하여 DiskStation에 연결된 외부 저장 장치 목록을 확인합니다.</p>
+
+
+<h3><a name="usbdisk"></a><a name="esatadisk"></a>외부 디스크</h3>
+<p class="enable-eds14">외부 디스크를 시스템에 연결함으로써 디스크 용량을 <b>usbshare[number]</b>라고 하는 시스템이 생성한 공유 폴더를 통해 공유할 수 있습니다(USB 디스크의 경우). 공유 폴더는 외부 디스크를 시스템에서 연결 해제 할 때 자동으로 제거됩니다.</p>
+<p class="disable-eds14">외부 디스크를 시스템에 연결하면 디스크 용량을 <b>usbshare[number]</b>(USB 디스크) 또는 <b>satashare[number]</b>(eSATA 디스크)라는 시스템이 생성한 공유 폴더를 통해 공유할 수 있습니다. 공유 폴더는 외부 디스크를 시스템에서 연결 해제 할 때 자동으로 제거됩니다.</p>
+<p>DiskStation에서는 다음 형식을 인식합니다: <span style="display: inline;" class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64"><b>Btrfs</b>, </span><b>ext3</b>, <b>ext4</b>, <b>FAT</b>, <b>FAT32</b>, <b>HFS</b>, <b>HFS Plus</b> 및 <b>NTFS</b> 인식되지 않은 외부 디스크는 시스템에서 사용하기 전에 먼저 포맷해야 합니다.</p>
+<div class="section">
+<h4>참고:</h4>
+<ol>
+<li>일부 모델은 읽기 전용으로 HFS/HFS Plus를 지원합니다.</li>
+<li>저널은 HFS/HFS Plus에서 지원되지 않습니다.</li>
+<li>연결을 분리하기 전에 외부 디스크를 꺼냈는지 확인하십시오.</li>
+</ol>
+</div>
+
+<h4>디스크 포맷하기:</h4>
+
+<p><b>포맷</b>을 클릭하고 마법사를 따릅니다. 외부 디스크를 DiskStation에서 <b>ext4</b> 및 <b>FAT32</b>로 포맷할 수 있습니다.</p>
+
+<div class="section">
+<h4>참고:</h4>
+<ol>
+<li>외부 디스크를 포맷하기 전에 반드시 데이터를 백업하십시오. 이 절차 중에는 모든 데이터가 삭제되며 다시 복원할 수 없습니다.</li>
+
+<li>외부 디스크를 ext3 또는 ext4 형식으로 포맷하려면 디스크 크기가 1GB 이상이어야 합니다.</li>
+
+<li>디스크를 ext3 또는 ext4 형식으로 포맷하면 DiskStation에서만 인식 가능합니다. PC 및 Mac으로 외부 디스크에서 직접 데이터를 읽으려면 FAT32 형식을 선택합니다.</li>
+</ol>
+</div>
+
+
+<h4>S.M.A.R.T. 테스트 수행하기:</h4>
+<P>디스크 S.M.A.R.T. 테스트는 하드 디스크 상태를 검사한 후 보고하여 급박한 디스크 오류에 대해 조기 경고를 보냅니다. 오류가 발견되면 디스크를 바꾸는 것이 좋습니다. <br> S.M.A.R.T. 테스트를 수행하려면 <strong>S.M.A.R.T. 테스트</strong> 단추를 클릭하고 마법사를 따릅니다.<br> 테스트 결과를 확인하려면 <strong>S.M.A.R.T. 정보</strong>를 클릭합니다.</P>
+<div class="section">
+<h4>참고:</h4>
+<p>테스트 시간은 시스템 환경에 따라 달라질 수 있습니다.</p>
+</div>
+
+
+<div class="section disable-eds14">
+<h4>제한 사항</h4>
+
+<p>다음 상황에서는 디스크 포맷을 사용할 수 없습니다:</p>
+
+<ul>
+<li>외부 디스크가 초기화 중인 경우(예: 외부 장치가 아직 연결되지 않은 경우).</li>
+<li>외부 디스크 용량이 1GB 이하인 경우(ext3 또는 ext4 형식).</li>
+<li>외부 디스크가 포맷 중인 경우.</li>
+<li>시스템이 파일을 외부 디스크에 백업 중인 경우.</li>
+<li>외부 디스크가 손상된 경우.</li>
+</ul>
+<h4>문제 해결</h4>
+<ol>
+<li>외부 디스크 포맷이 실패했습니다. 그 이유는 무엇입니까?</li>
+<ul>
+<li>외부 디스크가 올바로 연결되었는지 확인해 주십시오.</li>
+<li>외부 디스크에 쓰기 금지가 설정되었는지 확인해 주십시오. 그럴 경우 포맷 작업 전에 제거해 주십시오. </li>
+</ul>
+<li>외부 디스크의 파일 시스템이 <b>지원되지 않음</b>으로 표시되거나 시스템이 외부 디스크에 대한 <b>usbshare[number]</b> 또는 <b>satashare[number]</b> 공유 폴더를 만들지 않습니다. 어떻게 해야 합니까? </li>
+<ul>
+<li>현재 시스템에서는 <span style="display: inline;" class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64">Btrfs, </span>ext3, ext4, FAT, FAT32, HFS, HFS Plus 및 NTFS 형식을 인식할 수 있습니다. 위의 형식으로 포맷되지 않은 외부 디스크는 인식되지 않으며 따라서 상태가 <b>지원되지 않음</b>으로 표시됩니다.</li>
+</ul>
+<li><b>usbshare[number]</b> 또는 <b>satashare[number]</b> 공유 폴더에 액세스할 수 없습니다. 어떻게 해야 합니까? </li>
+
+<ul>
+<li>이것은 외부 디스크의 파일 시스템에 있는 문제 때문에 발생할 수 있습니다. 이를 고치려면 외부 디스크를 PC에 연결한 후 파일 시스템 검사를 수행하십시오.</li>
+</ul>
+<li>ext3 또는 ext4 형식의 내 외부 디스크를 내 PC 및 Mac에 연결하여 직접 액세스할 수 있습니까?</li>
+<ul>
+<li>불가능합니다. ext3 또는 ext4는 DiskStation에서만 인식 가능합니다. PC 및 Mac으로 외부 디스크에서 직접 데이터를 읽으려면 FAT32 형식을 선택합니다. </li>
+</ul>
+<li>외부 디스크에 &quot;lost+found&quot;라는 이름의 폴더가 있는 이유는 무엇입니까?</li>
+<ul>
+<li>이 폴더는 ext3/ext4 파일 시스템을 사용할 때 자동으로 생성되는 시스템 기본 폴더입니다. 외부 디스크에 이 폴더가 표시되는 것은 정상적인 현상입니다. 관리자가 해당 폴더 내의 내용에 액세스하여 관리할 수 있는 권한이 있더라도 폴더를 수정하지 않고 그대로 두는 것이 권장됩니다.</li>
+
+</ul>
+
+</ol>
+</div>
+<div class="section enable-eds14">
+<h4>제한 사항</h4>
+
+<p>다음 상황에서는 디스크 포맷을 사용할 수 없습니다:</p>
+
+<ul>
+<li>외부 디스크가 초기화 중인 경우(예: 외부 장치가 아직 연결되지 않은 경우).</li>
+<li>외부 디스크 용량이 1GB 이하인 경우(ext3 또는 ext4 형식).</li>
+<li>외부 디스크가 포맷 중인 경우.</li>
+<li>시스템이 파일을 외부 디스크에 백업 중인 경우.</li>
+<li>외부 디스크가 손상된 경우.</li>
+</ul>
+<h4>문제 해결</h4>
+<ol>
+<li>외부 디스크 포맷이 실패했습니다. 그 이유는 무엇입니까?</li>
+<ul>
+<li>외부 디스크가 올바로 연결되었는지 확인해 주십시오.</li>
+<li>외부 디스크에 쓰기 금지가 설정되었는지 확인해 주십시오. 그럴 경우 포맷 작업 전에 제거해 주십시오. </li>
+</ul>
+<li>외부 디스크의 파일 시스템이 <b>지원되지 않음</b>으로 표시되거나 시스템이 외부 디스크에 대한 <b>usbshare[number]</b> 공유 폴더를 만들지 않습니다. 어떻게 해야 합니까? </li>
+<ul>
+<li>현재 시스템에서는 ext3, ext4, FAT, FAT32, HFS, HFS Plus 및 NTFS 형식을 인식할 수 있습니다. 위의 형식으로 포맷되지 않은 외부 디스크는 인식되지 않으며 따라서 상태가 <b>지원되지 않음</b>으로 표시됩니다.</li>
+</ul>
+<li><b>usbshare[number]</b> 공유 폴더에 액세스할 수 없습니다. 어떻게 해야 합니까? </li>
+
+<ul>
+<li>이것은 외부 디스크의 파일 시스템에 있는 문제 때문에 발생할 수 있습니다. 이를 고치려면 외부 디스크를 PC에 연결한 후 파일 시스템 검사를 수행하십시오.</li>
+</ul>
+<li>ext3 또는 ext4 형식의 내 외부 디스크를 내 PC 및 Mac에 연결하여 직접 액세스할 수 있습니까?</li>
+<ul>
+<li>불가능합니다. ext3 또는 ext4는 DiskStation에서만 인식 가능합니다. PC 및 Mac으로 외부 디스크에서 직접 데이터를 읽으려면 FAT32 형식을 선택합니다. </li>
+</ul>
+<li>외부 디스크에 &quot;lost+found&quot;라는 이름의 폴더가 있는 이유는 무엇입니까?</li>
+<ul>
+<li>이 폴더는 ext3/ext4 파일 시스템을 사용할 때 자동으로 생성되는 시스템 기본 폴더입니다. 외부 디스크에 이 폴더가 표시되는 것은 정상적인 현상입니다. 관리자가 해당 폴더 내의 내용에 액세스하여 관리할 수 있는 권한이 있더라도 폴더를 수정하지 않고 그대로 두는 것이 권장됩니다.</li>
+
+</ul>
+
+</ol>
+</div>
+
+
+<h4>모든 외부 장치에 대한 기본 권한 설정하기:</h4>
+<p><strong>기본 권한</strong>을 클릭하고 외부 장치 및 해당 내용을 액세스, 보기 또는 수정할 수 있는 사용자나 그룹을 지정하여 기본 권한을 설정할 수 있습니다. 외부 장치를 DiskStation에 삽입하면 사용자가 지정한 권한이 자동으로 이 외부 장치에 할당됩니다.</p>
+<p>권한 창에서 다음을 수행하여 기본 권한을 설정할 수 있습니다:</p>
+<ol>
+<li>드롭다운 메뉴에서 다음 중 하나를 선택합니다:</li>
+<ul>
+<li><b>시스템 내부 사용자:</b> Anonymous FTP/WebDAV 사용자 같이 기본 시스템 사용자에 액세스 권한을 할당합니다.</li>
+<li><b>로컬 사용자:</b> 로컬 사용자에 권한을 할당합니다(<b>guest</b> 포함).</li>
+<li><b>로컬 그룹:</b> 로컬 그룹에 권한을 할당합니다.</li>
+</ul>
+
+<li>각 사용자 또는 그룹에 대한 적절한 상자를 선택 또는 선택 해제하여 외부 장치에 대한 액세스 권한을 사용자 지정합니다:</li>
+  <ul>
+<li><b>읽기/쓰기</b>: 사용자 또는 그룹이 외부 장치에 있는 파일과 폴더에 접근하여 변경할 수 있습니다.</li>
+<li><b>읽기 전용</b>: 사용자 또는 그룹이 외부 장치에 있는 파일과 폴더에 접근할 수 있습니다.</li>
+<li><b>접근 금지</b>: 사용자 또는 그룹이 외부 장치에 있는 파일과 폴더에 접근할 수 없습니다.</li>
+</ul>
+</ol>
+
+
+</body>
+</html>

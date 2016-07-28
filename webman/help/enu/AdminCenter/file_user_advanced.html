@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Advanced User Settings</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Advanced User Settings</h2>
+
+<p>To modify advanced user settings, you can go to <strong>Control Panel</strong> > <strong>User</strong> > <strong>Advanced</strong>. The below options are available. </p>
+
+<h3>Allow Users to Reset Forgotten Passwords</h3>
+<p>If you want to allow users to reset forgotten passwords via email, you can enable <strong>Allow non-admin users to reset forgotten passwords via email</strong>. When this option is enabled, a link marked <strong>Forgot your password?</strong>  appears on the DSM login page. If a user forgets his password, he can click this link and enter his username. In this case, the system will send an email to the user containing a link to reset his forgotten password. </p>
+
+<div class="section">
+<h4>Note:</h4>
+<ul>
+<li>Before enabling this option, make sure you have already enabled SMTP email notifications. To do so, go to <strong>Control Panel</strong> > <strong>Notification</strong>.</li>
+<li>To receive messages from the system, users must provide an email address in the user information section of their accounts.</li>
+<li>Users who belong to the <strong>administrators</strong> group cannot reset passwords with this option.</li>
+<li>Domain users cannot reset passwords with this option.</li>
+<li>LDAP users can reset passwords with this option, as long as the DiskStation serves as the LDAP directory server.</li>
+
+</ul>
+</div>
+
+
+<h3>Password Strength</h3>
+<p>You can set up password strength rules for users on your DiskStation.</p>
+
+<div class="section">
+<h4>Note:</h4>
+<p>Password strength rules only apply to new passwords. For example, new password strength rules are only applied when creating a new user account or when an existing user changes his password. Existing passwords and those belonging to imported user accounts are excluded from new password rules.</p>
+</div>
+<h4>To enable password strength rules:</h4>
+<ol>
+<li>Check the <b>Apply password strength rules</b> checkbox to enable password restrictions.</li>
+<li>Select more than one of the password restrictions from the rules below:</li>
+<ul>
+<li><b>Exclude name and description of user from password</b>: The password must not contain the user name or the user description. But UTF-8 encoded characters are excluded.</li>
+<li><b>Include mixed case</b>: The password must contain both upper and lower case letters.</li>
+<li><b>Include numeric character</b>: The password must contain at least one numeric character (0~9).</li>
+<li><b>Include special character</b>: The password must contain at least one ASCII special character (i.e., ~, `, !, @, #, $, %, ^, &, *, (, ), -, _, =, +, [, {, ], }, \, |, ;, :, ', ", <, >, /, ?).</li>
+<li><b>Minimal password length</b>: The password must be at least the value specified in the text field. The  length should be a number between 6 and 127.</li>
+</ul>
+<li>Click <b>Apply</b> to save settings.</li>
+</ol>
+
+
+
+<h3>2-Step Verification</h3>
+<p>2-step verification provides improved security for DSM user accounts. You can force DSM administrators or all DSM users to enable their 2-step verification in order to further protect their accounts.</p>
+
+<h4>To enforce 2-step verification for DSM users:</h4>
+
+<ol>
+<li>Tick the <strong>Enforce 2-step verification for the following users</strong> box, and select which users you want to apply this to.</li>
+<div class="section">
+<h4>Note:</h4>
+<p>If you have not yet configured 2-step verification at <b>Personal</b> > <b>Account</b>, the 2-step verification setup wizard will be launched to help you complete the required settings before you can apply this enforcement.</p>
+</div>
+
+<li>With this enforcement applied, users that have not enabled their 2-step verification will be asked to finish the settings before they can log in to DSM.</li>
+</ol>
+
+<div class="section">
+<h4>Note:</h4>
+<p>Disabling 2-step verification enforcement here will not affect or disable the 2-step verification settings of each user. Users can keep their 2-step verification settings, or go to <b>Personal</b> > <b>Account</b> to disable these settings.</p>
+</div>
+
+
+<h3>User Home</h3>
+
+<p>Enable user homes to create a personal <b>home</b> folder for each user, except for <b>guest</b>. All users can access their own home folder via CIFS, AFP, FTP, or File Station.</p>
+<p>Users belonging to the <strong>administrators</strong> group can access all personal folders located in the <b>homes</b> default shared folder. The name of home folder is the same as the user account.</p>
+
+<h4>To enable the user home service:</h4>
+<ol>
+<li>Check <b>Enable user home service</b>.</li>
+<li>If there are multiple volumes, select where you want the <b>homes</b> folder to be stored.</li>
+<li>Click <b>Apply</b>.</li>
+</ol>
+
+<div class="section">
+<h4>Note:</h4>
+<p>Once the local user home service is disabled, the domain user home service will also be disabled concurrently.</p>
+</div>
+
+<h4>To disable the user home service:</h4>
+<ol>
+<li>Uncheck <b>Enable user home service</b>.</li>
+<li>Click <b>Apply</b>.</li>
+</ol>
+<p>After the user home service is disabled, the <b>homes</b> shared folder will be preserved for administrator access.  Users will be able to access their home folders again when  the user home service is enabled again.</p>
+
+<div class="section">
+<h4>Note:</h4>
+<ol>
+<li>To delete the <b>homes</b> shared folder, user  home service must be disabled first.</li>
+<li>The domain user home service would be disabled if the local user home service is disabled.</li> 
+</ol> 
+</div>
+
+
+</body>	
+</html> 

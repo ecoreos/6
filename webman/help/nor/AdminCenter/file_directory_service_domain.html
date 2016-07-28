@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Win/Mac/NFS</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Domene</h2>
+<p>Din DiskStation kan knytte seg til et Windows-domene. Når domenet er tilknyttet, kan domenebrukere logge inn på DiskStation ved hjelp av domenekontoene og passordene sine, slike at de kan få tilgang til filer og bruke DSM-programmer uten å måtte huske et nytt sett med brukernavn og passord.</p>
+<h4>Slik kobler du deg til et domene:</h4>
+<ol>
+<li>Gå til <strong>Kontrollpanel</strong> > <strong>Katalogtjeneste</strong> > <strong>Domene</strong>.</li>
+<li>Merk av for <strong>Koble til domene</strong>.</li>
+<li>Angi domenenavnet og spesifiser DNS Server i egnede felt.</li>
+<li>Om nødvendig, merker du av for <b>Avanserte domenealternativer</b>. (Se nedenfor for detaljer.)</li>
+<li>Klikk på <b>Bruk</b>.</li>
+<li>Skriv inn brukernavn og passord til administratoren til domeneserveren i popup-vinduet.</li>
+<li>Klikk på <b>OK</b>.</li>
+</ol>
+<div class="section">
+<h4>DNS Server</h4>
+<p>Det anbefales at du angir en DNS-server for å hjelpe DiskStation med å søke etter domenet. Hvis domenet ikke er registrert på DNS Server, kan imidlertid fremgangsmåten for å knytte seg til et domene mislykkes.</p>
+<h4>Domeneservertype</h4>
+<p>Dette feltet viser domenetypen når DiskStation blir koblet til et domene. Domenetypen vil være "AD-domene".</p>
+<h4>Administrasjonsmodus</h4>
+<p>Dette alternativet vil avgjøre hvordan du administrerer rettighetene til domenebrukere og grupper. </p>
+<ul>
+<li><b>Pålitelig domene</b>: Du kan administrere brukere og grupper i det felles domenet og i pålitelige domener. Brukere og grupper kan filtreres med rullegardinlisten for domene.</li>
+<li><b>Enkelt domene med OE</b>: Kun brukere og grupper i det felles domenet vil vises i denne modusen. Denne modusen lar deg filtrere domenebrukere/domenegrupper med rullegardinlisten OE (Organisatorisk Enhet).</li>
+</ul>
+<h4>Avanserte domenealternativer</h4>
+<p>I de fleste tilfeller trenger du ikke fylle ut noen av de avanserte domenealternativene. Avanserte domenealternativer er bare nødvendige i visse nettverksmiljøer. </p>
+<ul>
+<li><b>DC IP/FQDN</b>: Angi en DC (Domain Controller) IP-adresse eller FQDN, så vil DiskStation prøve å kommunisere med den. Hvis det er mer enn én IP-adresse eller FQDN, må du sette inn et komma (,) mellom hver av dem. Hvis du vil, kan du legge til en stjerne (*) etter siste DC IP-adresse eller FQDN, så vil DiskStation prøve å kommunisere med den andre DC-en hvis alle de angitte mislykkes. Du må legge til et komma mellom stjernen og siste IP-adresse eller FQDN.</li>
+<li><b>Domene-NetBIOS-navn</b>: Angi NetBIOS-navnet til domenet.</li>
+<li><b>Domene-FQDN (DNS-navn)</b>: Angi FQDN (DNS-navnet) til domenet.</li>
+<li><b>Registrer DNS-grensesnitt:</b> Når man knytter seg til et domene, vil NIC (Network Interface Card) som er spesifisert her bli registrert med DNS Server. Vær oppmerksom på at dersom vertsnavnet til DiskStation inkluderer en understrek (_), vil registreringen mislykkes fordi understreker (_) ikke kan brukes med DNS.</li>
+<li><b>Oppdater bruker-/gruppeliste</b>: Spesifiser hvor ofte DiskStation skal oppdatere liste over domenebrukere/-grupper. Du kan egendefinere tidsperioden til å utføre oppdateringer daglig, ukentlig eller månedlig. I tillegg kan lister over domenebrukere/-grupper oppdateres manuelt ved å gå til fanen <strong>Domenebruker</strong> og klikke på <strong>Oppdater alle domener</strong>. Vær oppmerksom på at automatiske oppdateringer vil ha innvirkning på systemdvale.</li>
+</ul>
+
+<h4>Koble til skrivebeskyttet domenekontroller</h4>
+<p>For å koble din DiskStation til en skrivebeskyttet domenekontroller (RODC), må du spesifisere "fullt datamaskinnavn" (FQDN) for din skrivebeskyttede domenekontroller (RWDC) i feltet <strong>DC IP/FQDN</strong>. Det fulle datamaskinnavnet må være i følgende format: <strong>Datamaskinnavn.Domene</strong>, f.eks. "ad01.synology.com".</p>
+
+</div>
+
+
+<div class="section">
+<h4>Merk:</h4>
+<ul>
+<li>Hvis brukernavnet for domenet inkluderer “%” eller “$”, vil du kanskje ikke få tilgang til home-mappen. Be domeneadministratoren gi deg et nytt brukernavn.</li>
+<li>Domenegruppene <strong>Domeneadminer</strong> og <strong>Selskapsadminer</strong> vil automatisk bli lagt til den lokale gruppen <strong>administrators</strong>. Derfor vil domenebrukere i disse gruppene ha administrative rettigheter på DiskStation, inkludert tilgang til filtjenester som CIFS/FTP/AFP/WebDAV og andre DSM-programmer.</li>
+<li>Du kan også konfigurere domenebrukernes tilgangsrettigheter til de delte mappene på DiskStation. Se <a href="file_directory_service_user_group.html">her</a> for mer informasjon.</li>
+</ul>
+</div>
+
+
+
+<h3>Domenealternativer</h3>
+<p>Dette avsnittet inkluderer de ytterligere domenealternativene nedenfor.</p>
+<ul>
+<li><b>DiskStation vil synkronisere med en NTP-server hver gang når en domenebruker logger seg på:</b> Aktivering av dette alternativet vil tvangssynkronisere tiden mellom DiskStation og NTP-server.</li>
+<li><b>Aktiver serversignering:</b> Hvis klienten har aktivert klientsignering, må serversignering også være aktivert på DiskStation, slik at brukere kan bruke domenetjenestene som normalt.</li>
+<li><b>Få bruker-/gruppelister med NT4-kompatibelmodus:</b> Aktivering av dette alternativet lar systemet hente lister over brukere/grupper ved hjelp av NT4 RPC-modus. Dette alternativet kan aktiveres hvis enkelte lister over domenebrukere/-grupper ikke kan hentes med vanlige innstillinger.</li>
+<li><b> Deaktiver administratorrettigheter for domene- og virksomhetsadminer:</b> En bruker med administratorrettigheter kan ha fullstendig kontroll over din DiskStation og filene på den. Aktivering av dette alternativet vil la deg begrense rettighetene til domene- og virksomhetsadminer til de samme som for en normal bruker, og dermed gi dem alle fil-/mappetillatelser som normale brukere får.</li>
+<li><strong>Spesifiser nestede gruppenivåer:</strong> Spesifiser antall nestede domenegruppemedlemmer som kan listes opp.</li>
+</ul>
+
+</body>
+</html>

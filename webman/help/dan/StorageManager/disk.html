@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+	<h2>Harddisk/SSD</h2>
+	<p>Dette afsnit sætter dig i stand til at overvåge status for de Harddisk/SSD, der er installeret på DiskStation og giver muligheder for at styre og analyse Harddisk/SSD-ydelse og -sundhed. Gå til <strong>Lagerstyring</strong> > <strong>Harddisk/SSD</strong> for at administrere disse valgmuligheder.</p>
+
+	<h4>Sådan kontrollerer du Harddisk/SSD-oplysninger:</h4>
+	<ol>
+		<li>Gå til fanen <b>HDD/SSD</b>.</li>
+		<li>Vælg et drev i listen, og udvid det. Her kan du se S.M.A.R.T.-status, diskenhedsoplysninger, modelnavn, serienummer, firmwareversion og temperatur.</li>
+	</ol>	
+	
+	<h4>Sådan kontrollerer du check sundhedsoplysninger:</h4>
+    <ol>
+      <li>Gå til fanen <b>HDD/SSD</b>.</li>
+	  <li>Vælg et drev.</li>
+      <li>Klik på <b>Sundhedsoplysninger</b>.</li>
+	  <li>Gå til fanen <strong>Oversigt</strong>. Her kan du finde ud af, hvor mange timer drevet har været tændt, den aktuelle temperatur, antal gentilslutninger/genidentifikationer, antal dårlige sektorer og generel S.M.A.R.T.-status.</li>
+      <li>Gå til fanen <strong>S.M.A.R.T.-oplysninger</strong>. De angivne tal kan hjælpe med at diagnosticere status for drevet.</li>
+    </ol>
+
+<div class="section">
+<h4>Bemærk:</h4>
+<p>
+   SAS-drev understøtter ikke S.M.A.R.T.-oplysninger.
+</p>
+</div>
+
+	<h4>Sådan starter du en S.M.A.R.T.-test:</h4>
+	<P>S.M.A.R.T.-test vil undersøge og rapportere status for dine drev og advare dig om mulige diskfejl. Vi anbefaler, at du med det samme ændrer drevene, hvis der registreres fejl. </P>
+    <ol>
+      <li>Gå til fanen <strong>HDD/SSD</strong>.</li>
+      <li>Vælg et drev.</li>
+      <li>Klik på <b>S.M.A.R.T.-test</b>.</li>
+      <li>Vælg en testtype, og klik på <strong>Start</strong> for at starte testen.</li>
+      <li>De sidste testresultater vises i afsnittet <b>Testresultat</b>.</li>
+    </ol>
+    <div class="section">
+<h4>Bemærk:</h4>
+    <p>Testtid varierer, afhængigt af systemmiljøet.</p>
+</div>
+    <h4>Sådan planlægger du S.M.A.R.T.-test:</h4>
+    <p>S.M.A.R.T.-test kan planlægges til at køre automatisk ved at oprette opgaver.</p>
+    <ol>
+      <li>Gå til fanen <strong>Testplanlægger</strong>.</li>
+      <li>Klik på <strong>Opret</strong> for at konfigurere en ny opgave.</li>
+      <li>Ret følgende indstillinger på fanen <strong>Generelt</strong>:</li>
+      <ul>
+        <li><strong>Opgave:</strong> Indtast et navn på opgaven.</li>
+        <li><strong>S.M.A.R.T.-testtype:</strong>  Vælg at udføre en hurtigtest eller udvidet test.</li>
+        <li><strong>S.M.A.R.T.-testinterval:</strong> Vælg de HDD/SSD, der skal testes hver gang S.M.A.R.T.-testen udføres.</li>
+      </ul>
+      <li>På fanen <strong>Plan</strong> ændrer du følgende indstillinger:</li>
+      <ul>
+        <li><strong>Dato:</strong> Angiv, hvornår du vil udføre S.M.A.R.T.-testen. S.M.A.R.T.-test kan planlægges til at køre på bestemte dage i ugen (f.eks. dagligt, ugentligt eller hver søndag osv.) eller på bestemte datoer (f.eks. 2015/10/21).</li>
+        <li><strong>Tid:</strong> Angiv, hvor mange gange S.M.A.R.T.-testen udføres samt den første og sidste gang hver dag.</li>
+      </ul>
+      <li>Klik på <strong>OK</strong> for at afslutte.</li>
+    </ol>
+
+<h4>Sådan udfører du Secure Erase:</h4>
+<ol>
+<li>Gå til fanen <b>HDD/SSD</b>.</li>
+<li>Vælg et drev, og klik på <b>Secure Erase</b>.</li>
+</ol>
+
+
+<div class="section">
+<h4>Bemærk:</h4>
+<ul>
+<li>Secure Erase kan ikke udføres på diske i udvidelsesenheder.</li>
+<li>Secure Erase vil fjerne alle data fuldstændigt fra dit drev. Sørg for, at den valgte disk ikke bruges, eller der er udført backup på data, før du gør det.</li>
+<li>Når systemet udfører Secure Erase, bliver den valgte disk midlertidigt låst og så automatisk låst op, når operationen er fuldført.</li>
+<li>Hvis Secure Erase standset ukorrekt under operationen, kan du genudføre Secure Erase direkte fra brugerinterfacet. Hvis diskene fjernes eller bruges andetsteds, når de stadig er låst, skal du indtaste adgangskoden "synology" for at låse diskene op.</li>
+</ul>
+</div>
+
+
+	<h3>Aktivering af skrive-cache-understøttelse for HDD</h3>
+	<p>Aktivering af skrive-cache-understøttelse forbedrer ydelse på din DiskStation. Kun visse harddiskmodeller understøtter denne funktion. Hvis du vil sikre databeskyttelsen med skrive-cache-understøtter, anbefales brug af en UPS-enhed kraftigt. Vi foreslår også, at systemet slukkes korrekt hver gang efter brug. Deaktivering af skrive-cache vil reducere mulighederne for datatab, der skyldes unormale strømudfald, men systemydelsen vil falde.</p>
+
+	<h4>Sådan aktiverer du skrive-cache-understøttelse: </h4>
+	<ol>
+		<li>Gå til fanen <b>Cache-styring</b>.</li>
+		<li>Marker <b>Aktiver skrive-cache</b>. Som standard er denne funktion aktiveret.</li>
+		<li>Klik på <b>Anvend</b>.</li>
+	</ol>
+	
+
+ 
+
+</body>
+</html>

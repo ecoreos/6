@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+	<h2>Allgemein</h2>
+	<p>Mit dem Speicher-Manager können alle Speicherbereiche auf Synology-Produkten verwaltet werden. Um die Speicherverwaltung zu vereinfachen und flexible Speicherbereiche mit Datenschutz zu erstellen, unterstützt Synology DSM verschiedene RAID-Gruppen.</p>
+
+<h4><a href="raid.html">RAID-Gruppe</a></h4>
+	<p>Mit dem DiskStation können Sie mehrere Festplatten in einer als RAID Group bezeichneten Speichereinheit organisieren. DiskStation stellt folgende Arten von RAID Groups bereit:</p>
+	<ul>
+		<li><b>RAID-Gruppe für einzelnes Volume oder iSCSI LUN (Block-Ebene)</b>:
+			<ul>
+				<li>Weist die gesamte verfügbare Kapazität einem Volume oder iSCSI LUN (Block-Niveau) zu.</li>
+				<li>Bietet bessere Leistung, aber weniger Flexibilität bei der Speicherverwaltung.</li>
+                <li>Ermöglicht die Erstellung von mehreren iSCSI LUNs (reguläre Datei) auf Volumes.</li>
+                <li>Unterstützt maximal ein RAID Array.</li>
+			</ul>
+		</li>
+		<li><b>RAID-Gruppe für mehrere Volumes oder iSCSI LUNs (Block-Ebene)</b>:
+			<ul>
+				<li>Unterstützt die Erstellung mehrerer Volumes oder iSCSI LUNs (Block-Ebene) in einer RAID-Gruppe.</li>
+                <li>Bietet bessere Flexibilität bei der Speicherverwaltung.</li>
+                <li>Ermöglicht die Erstellung von mehreren iSCSI LUNs (reguläre Datei) auf Volumes.</li>
+				<li>Unterstützt die Kombination mehrerer RAID Arrays unter einer RAID Group (falls als RAID 5 oder RAID 6 konfiguriert).</li>
+			</ul>
+            </li>
+	</ul>
+
+<h4>RAID-Typ</h4>    
+<p>Wähle Sie beim Erstellen einer RAID-Gruppe zuerst einen RAID-Typ aus. Verschiedene RAID-Typen bieten unterschiedliche Stufen des Datenschutzes, Speicherfunktionen und Leistung. DiskStation unterstüzt derzeit folgende RAID-Typen:</p>
+	<ul>
+	  <li><b>Standard</b>: Verwendet eine Festplatte zum Erstellen einer RAID-Gruppe. RAID-Gruppen des Typs "Basic" bieten keine Datenredundanz.</li>
+	  <li><b>JBOD*</b>: Kombiniert mindestens zwei Festplatten, um eine RAID-Gruppe zu erstellen. RAID-Gruppen des Typs "JBOD" bieten keine Datenredundanz. Die verfügbare Kapazität einer RAID-Gruppe des Typs "JBOD" entspricht der Gesamtkapazität aller in der Gruppe enthaltenen Festplatten. JBOD unterstützt die Kombination von Festplatten unterschiedlicher Größe.</li>
+	  <li><b>RAID 0*</b>: Kombiniert mindestens zwei Festplatten, um eine RAID-Gruppe zu erstellen. RAID 0 bietet keine Datenredundanz. Wenn eine Festplatte ausfällt, gehen die Daten in der RAID-Gruppe verloren. Die verfügbare Kapazität einer RAID-0-Gruppe ist gleich der Gesamtkapazität aller beteiligten Festplatten. RAID 0 unterstützt die Kombination von Festplatten unterschiedlicher Größe.</li>
+	  <li><b>RAID 1*</b>: Kombiniert 2-4 Festplatten zur Erstellung einer RAID-Gruppe. Das System schreibt auf alle Festplatten identische Daten. RAID 1 bietet Datenschutz, solange eine Festplatte normal funktioniert. Die verfügbare Kapazität der RAID-1-Gruppe ist gleich der Größe der kleinsten beteiligten Festplatte.</li>
+	  <li><b>RAID 5*</b>: Kombiniert mindestens drei Festplatten für die Erstellung einer RAID-Gruppe und speichert sowohl die Daten als auch die Paritätsinformationen auf allen Festplatten. RAID 5 bietet Datenredundanz. Wenn eine Festplatte ausfällt, kann das System mit den Paritätsinformationen auf den anderen Festplatten wiederhergestellt werden. Unterstützt die Kombination mehrerer RAID Arrays, wenn Sie als RAID-Gruppe für mehrere Volumes oder iSCSI LUNs (Block-Ebene) erstellt werden. Die verfügbare Kapazität einer RAID-5-Gruppe = <span class="note_content"> Gesamtkapazität kombinierter RAID Arrays. RAID-Array-Kapazität = (Anzahl der Festplatten - 1) x (Kapazität der kleinsten Festplatte)</span></li>
+	  <li><b>RAID 6*</b>: Kombiniert mindestens vier Festplatten für die Erstellung einer RAID-Gruppe und speichert sowohl die Daten als auch die Paritätsinformationen auf allen Festplatten. RAID 6 bietet Datenredundanz. Wenn zwei Festplatten ausfallen, kann das System mit den Paritätsinformationen auf den anderen Festplatten wiederhergestellt werden. Unterstützt die Kombination mehrerer RAID Arrays, wenn Sie als RAID-Gruppe für mehrere Volumes oder iSCSI LUNs (Block-Ebene) erstellt werden. Die verfügbare Kapazität einer RAID-6-Gruppe = <span class="note_content"> Gesamtkapazität kombinierter RAID Arrays. RAID-Array-Kapazität = (Anzahl der Festplatten - 2) x (Kapazität der kleinsten Festplatte)</span></li>
+	  <li><b>RAID 10*</b>: Kombiniert mindestens vier Festplatten, um eine RAID-Gruppe zu erstellen. Die Anzahl der Festplatten muss gerade sein. RAID 10 bietet die Leistung von RAID 0 sowie die Datenschutzebene von RAID 1. Die verfügbare Kapazität einer RAID-10-Gruppe = <span class="note_content">(Kapazität der kleinsten Festplatte) x (Anzahl der Festplatten / 2)</span></li>
+	</ul>
+	<p>
+		<span class="note_head">Hinweis:</span> RAID-Typen mit "*" sind nur für NAS-Modelle mit ausreichend vielen Festplattenschächten verfügbar.
+</p>
+
+
+<h4><a href="space.html">Volume-Typ</a></h4>
+	<p>Je nach zugrundeliegendem Typ der RAID-Gruppe gibt es zwei Arten von Volumes:</p>
+	<ul>
+		<li><b>Volume auf RAID Group für einzelnes Volume oder einzelne iSCSI LUN (Block-Ebene)</b>
+        	<ul>
+            	<li>Weist die gesamte Speicherkapazität einer RAID-Gruppe einem Volume zu. Bietet bessere Leistung, aber weniger Flexibilität bei der Verwaltung.</li>
+                <li>Ermöglicht die Erstellung von mehreren iSCSI LUNs (reguläre Datei) auf Volumes.</li>
+            </ul></li>
+		<li><b>Volume auf RAID Group für mehrere Volumes oder iSCSI LUNs (Block-Ebene)</b>
+        	<ul>
+            	<li>Weist einen bestimmten Bereich der Speicherkapazität einer RAID-Gruppe zu, um ein Volume zu erstellen.  Bietet eine bessere Flexibilität bei der Verwaltung. Sie können nach Bedarf die Größe des Volumes erhöhen oder zusätzliche Volumes erstellen.</li>
+                <li>Ermöglicht die Erstellung von mehreren iSCSI LUNs (reguläre Datei) auf Volumes.</li>
+            </ul></li>
+	</ul>
+
+<h4 class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64">Volume-Format</h4>
+<p class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64">Je nach dem verwendeten Dateisystem sind zwei Volume-Formate verfügbar:</p>
+<ul class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64">
+	<li><strong>Neues Volume-Format</strong>: Dieses Format nutzt das Dateisystem <b>Btrfs</b>. Die Größe eines Volumes dieses Formats muss mindestens 10 GB betragen. Es unterstützt die folgenden neuen Funktionen, die die Dateiverwaltung erleichtern:
+		<ul>
+			<li><strong><a href="../DisasterRecovery/snapshots.html">Schnappschuss von freigegebenem Ordner</a>:</strong> Beim Erstellen des Schnappschusses wird der gesamte Datenstatus erfasst. Werden auf einem Volume mit Schnappschüssen versehentlich Daten geändert oder gelöscht, können sie in der Version, die vom Schnappschuss aufgezeichnet wurde, schnell wiederhergestellt werden.</li>
+			<li><strong><a href="../AdminCenter/file_share_create.html#sharequota">Kontingent von freigegebenem Ordner</a>:</strong> Für jeden Ordner kann eine maximale Kapazität festgelegt werden.</li>
+			<li><strong><a href="../AdminCenter/file_user_create.html#userquota">Benutzerquote</a> basierend auf freigegebenem Ordner:</strong> Sie können festlegen, wie viel Speicherplatz in einem freigegebenen Ordner von jedem Benutzer verwendet werden darf.</li>
+			<li><strong><a href="../AdminCenter/file_share_create.html#integrity_protection">Erweiterter Datenintegritätsschutz</a>:</strong> Der freigegebene Ordner wird über die Strategien "CRC32-Prüfsumme" und "Kopieren-nach-Schreiben" geschützt.</li>
+		</ul>
+	</li>
+	<li><strong>Herkömmliches Volume-Format</strong>: Dieses Format nutzt das Dateisystem <b>ext4</b>. Die Größe eines Volumes dieses Formats muss mindestens 10 GB betragen. Da das Dateisystem ext4 von den meisten Synology-Produkten unterstützt wird, können Sie Ihr Volume in diesem Format mühelos zu einem anderen Synology-Produkt migrieren.</li>
+</ul>
+</body>
+</html>

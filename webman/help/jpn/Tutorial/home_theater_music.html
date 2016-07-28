@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+<meta content="en-us" http-equiv="Content-Language" />
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+<title>ローカル ネットワーク内で Windows PC から Synology NAS にファイルを保存する</title>
+</head>
+
+<body class="tutorial-content-box" >
+
+<h1>Audio Station で Synology NAS に保存された音楽を楽しむ</h1>
+<div class="tutorials_content">
+<img src="../../images/HomeTheater/1x/home_theater_music/03_3_set_up_your_home_theater_AudeoStation.png" />
+<h2>概要</h2>
+<p>Audio Station を活用すると、インターネットを介して Synology NAS に保管された音楽を参照したり、再生したりすることができます。Audio Station はさまざまなファイル形式に対応していますので、好きなフォーマットの音楽を自由に楽しむことができます。Audio Station を補足するモバイルアプリケーション、DS Audio もダウンロードできます。これをダウンロードしておくと、外出先でも Synology NAS にある音楽にアクセスできます。
+</p>
+<h3 class="list_head">1.Audio Station をインストールする</h3>
+<ol>
+<li><b>[パッケージセンター]</b> を選択し、<b>Audio Station</b>を探します。<b>[インストール]</b>をクリックします。</li>
+<img src="../../images/HomeTheater/1x/home_theater_music/01.png" />
+</ol>
+
+<h3 class="list_head">2.music フォルダにオーディオファイルを保管する</h3>
+<ol>
+<li><b>[File Station]</b> &gt; <b>[音楽]</b> を選択し、<b>[アップロード]</b> をクリックします。</li> <img src="../../images/HomeTheater/1x/home_theater_music/03.png" />
+<li><b>music</b> フォルダにアップロードしたいファイルをローカル コンピュータから選択します。</li>
+</ol>
+
+<h3 class="list_head">3.音楽を参照する</h3>
+<p>音楽ファイルをアップロードしたら、Audio Station で音楽を再生したり、参照したりすることができます。ローカル ネットワーク外から音楽ファイルにアクセスしたり、参照したりするには、<b>[コントロール パネル]</b> &gt; <b>[QuickConnect]</b> で QuickConnect を有効にしてください。Synology アカウントをまだお持ちでない方は、数分で設定できますので、DiskStation に <b>QuickConnect ID</b> を設定してください。このオプションを有効にすると、DSM にログインして好きな場所で音楽を楽しめるようになります。また、<strong>QuickConnect ID</strong> を使って DS audio にログインすることもできます。この方法なら、IP アドレスをいちいち覚えておく手間が省けます。</p>
+<h4>3.1 ライブラリ</h4>
+<p> ライブラリには、<b>music</b> 共有フォルダや Synology NAS の別のインデックス付きフォルダに音楽が保管されています。<b>[ライブラリ]</b> タブにあなたの音楽がカテゴリー別に保管されています。必要に応じて音楽を簡単に参照できるように、さまざまなオプションが用意されています。他にも、探したい曲を即座に探し出す機能もあります。各カテゴリーをクリックすると、検索バーのドロップダウン メニューから検索を行ったり、検索したいカテゴリーを選択したりすることができます。</p>
+
+  <img src="../../images/HomeTheater/1x/home_theater_music/08.png" width="640" height="392" />
+</ul>
+<div class="code_div"><b>注意：</b> フォルダをインデックス付きフォルダとして追加するには、<strong>admin</strong> （または <strong>administrators</strong> グループに属するユーザー）として DSM にログインし、<b>[コントロール パネル]</b> &gt; <strong>[インデックス  サービス]</strong> &gt; <b>[メディア インデックス]<b> &gt; <b>[インデックス付きフォルダ]</b> を選択します。</div>
+<h4>3.2.表示モード</h4>
+<p>Audio Station の右上にあるアイコンは、ミュージック ライブラリを参照するときに表示モードを切り換えるためのものです。</p>
+<ul>
+<li><b>リスト ビュー</b>では、音楽が題名、アーティスト、アルバム、時間、トラック番号、評価などと一緒にリストされます。</li>
+<img src="../../images/HomeTheater/1x/home_theater_music/05.png" width="640" height="392" />
+<li><b>アートワーク</b>には、トラック名、アルバム名、アルバム アートワークが表示されます。</li>
+<img src="../../images/HomeTheater/1x/home_theater_music/06.png" width="640" height="392" />
+<li><b>再生キュー</b>では、アルバムのカバーと音楽の題名、または歌詞と一緒に全画面に再生キューが表示されます。</li>
+<img src="../../images/HomeTheater/1x/home_theater_music/07.png" width="640" height="392" />
+</ul>
+<h3 class="list_head">4.公開共有</h3>
+<p>Audio Station の公開共有機能を使うと、別のネットワークにいる人や Synology NAS を持っていない人にリンクを送信することで、好きな音楽を公開で共有することが可能になります。相手がリンクを受け取ると、相手も音楽を聴けるようになります。</p>
+<h4>4.1.音楽を公開して共有</h4>
+<ol>
+<li>共有したい音楽を右クリックし、<b>[公開して共有]</b> を選択します。</li>
+<img src="../../images/HomeTheater/1x/home_theater_music/09.png" width="640" height="392" />
+<li>公開で音楽を共有する場合、2つのオプションがあります。<ul>
+<li>1曲だけを共有する場合は、開いたダイアログ ボックスで <b>[公開して共有]</b> の横にあるボックスにチェックマークを付けて共有リンクを有効にします。</li> 
+  <img src="../../images/HomeTheater/1x/home_theater_music/10.png" width="561" height="190" />
+<li>複数の音楽を共有する場合は、プレイリストが作成されます。プレイリストに名前を付けたり、リンクに有効期限を設けたりすることができます。<b>[有効期間をカスタマイズ]</b> にチェックマークを付けて、[OK] をクリックします。</li>
+  <img src="../../images/HomeTheater/1x/home_theater_music/11.png" width="560" height="320" /></ul>
+<li>リンクをコピーして、プレイリストを共有したい相手に貼り付けます。または、<b>[リンクを開く]</b> をクリックすると、直接そのリンクにアクセスします。</li>
+</ol>
+<div class="code_div"><b>注意：</b> <b>[プレイリスト]</b> タブを開くと、作成した共有プレイリストが表示されます。1つずつ共有された音楽は、デフォルトの<b>「共有音楽」</b>というプレイリストに追加されます。これもそこからアクセスできます。
+  </div>
+
+<h3 class="list_head">5.モバイル デバイスで音楽を整理したり、楽しんだりする</h3>
+<p>DS audio は、iPad/iPhone/iPod touch と Android デバイス、Windows Phone で使用できます。アプリは&nbsp;<a href="http://itunes.apple.com/us/app/ds-audio/id321495303?mt=8" target="_blank">Apple App Store</a>、<a href="https://play.google.com/store/apps/details?id=com.synology.DSaudio&amp;hl=en" target="_blank">Google Play</a>、&nbsp;<a href="http://www.windowsphone.com/en-US/apps/30d353e3-9ca6-458a-a88e-c972fc3e04d6" target="_blank">Windows Phone Store</a> から無償でダウンロードできます。以下の QR コードをスキャンすると、簡単にダウンロードできます。</p>
+<img src="../../images/HomeTheater/1x/home_theater_music/12.png" width="758" height="217" /></div>
+<div class="page-info">
+  <ul>
+<li>このトピックの前のセクション：<a href="home_theater_videos.html">Video Station でビデオを整理、再生する</a> </li>
+  </ul>
+</div>
+</body>
+
+</html>

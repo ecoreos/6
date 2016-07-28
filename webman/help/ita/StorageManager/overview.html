@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+	<h2>Panoramica</h2>
+	<p>Panoramica visualizza lo stato globale degli spazi di archiviazione, inclusa l'integrit&agrave; globale di tutti gli spazi, l'utilizzo del disco rigido, l'utilizzo massimo del volume e l'utilizzo iSCSI LUN.</p>
+
+		<h4>Integrit&agrave; dell'archiviazione</h4>
+        <p>Esistono tre tipi di stati:</p>
+	  	<ul>
+				<li><b>Integrit&agrave;</b>: tutti gli spazi di archiviazione sono Normali.</li>
+				<li><B>Attenzione</B>: uno spazio di archiviazione (volume o iSCSI LUN) &egrave; danneggiato, la cache SSD &egrave; in crash o una partizione del sistema non funziona correttamente.</li>
+				<li><b>Pericolo</b>: uno spazio di archiviazione (volume o iSCSI LUN) &egrave; in crash.</li>
+			</ul>
+			<p>Nel caso di pi&ugrave; anomalie contemporaneamente, lo stato di integrit&agrave; sar&agrave; visualizzato nel seguente ordine: 1) Spazi di archiviazione (volume o iSCSI LUN); 2) Cache SSD; e 3) Partizione sistema. In caso di problemi, attenersi alle istruzioni consigliate sotto lo stato.</p>
+		
+		<h4>Informazioni disco</h4>
+        <p>Questa sezione visualizza le informazioni su disco rigido e hardware. &Egrave; possibile verificare il numero di dischi rigidi utilizzati e da quali spazi di archiviazione, il numero di dischi di riserva e il numero di slot disco rigido disponibili.</p>
+        
+		<h4>Utilizzo massimo volume</h4>
+        <p>Questa sezione visualizza la capacit&agrave; utilizzata di un volume. Se l'utilizzo totale raggiunge l'90%, il grafico a torta diventa di colore rosso; oltre il 80% diventa di colore giallo; e sotto il 79% rimane di colore blu.</p>
+        
+		<h4>Utilizzo iSCSI LUN</h4>
+        <p>Questa sezione visualizza le seguenti informazioni:</p>
+        <ul>
+         		<li><b>Riportato</b>:  la capacit&agrave; totale allocata di tutti gli iSCSI LUN (Livello blocco) e iSCSI LUN (File normale) sul DiskStation.</li>
+                <li><b>Utilizzato</b>: la capacit&agrave; totale allocata su iSCSI LUN (File normali) e la capacit&agrave; totale su iSCSI LUN (Livello blocco).</li>
+                <li><b>Salvato</b>:  la dimensione totale di <b>Riportato</b> meno la dimensione totale di <b>Utilizzato</b>, visualizza i risparmi effettuati sull'acquisto dello spazio di archiviazione e sui costi di gestione.</li>
+</ul>
+        </li>
+</body>
+</html>

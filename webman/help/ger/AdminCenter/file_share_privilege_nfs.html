@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Gemeinsamer Ordner</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2>NFS-Berechtigungen zuweisen</h2>
+<p>Sie k&ouml;nnen jedem gemeinsamen Ordner NFS-Berechtigungen zuweisen. Dadurch k&ouml;nnen Linux-Clients darauf zugreifen.</p>
+<h4>NFS-Berechtigungen f&uuml;r einen gemeinsamen Ordner zuweisen:</h4>
+<ol>
+<li>W&auml;hlen Sie den gemeinsamen Ordner, der bearbeitet werden soll, aus der Ordnerliste aus.</li>
+<li>Klicken Sie auf <strong>Bearbeiten</strong> &gt; <strong>NFS-Berechtigungen</strong>.</li>
+<li>Klicken Sie auf <b>Erstellen</b>, um eine NFS-Regel hinzuzuf&uuml;gen.</li>
+<li>Ein Popup-Fenster wird angezeigt. Legen Sie die unten stehenden Optionen fest.</li>
+<li><strong>Hostname oder IP:</strong>&nbsp;Geben Sie die IP-Adresse des NFS-Clients ein, der auf den gemeinsamen Ordner zugreifen wird. Sie k&ouml;nnen den Hostnamen auf drei Arten festlegen:<ul>
+<li><strong>Single Host:</strong> Den vollen Domainnamen oder eine IP-Adresse.</li>
+<li><strong>Platzhalter:</strong> *, *.synology.com</li>
+<li><strong>IP-Netzwerke:</strong> 203.74.205.32/255.255.252.0, /24</li>
+</ul>
+</li>
+<li><strong>Berechtigung:</strong> W&auml;hlen Sie Lese-/Schreib-Berechtigungen f&uuml;r den NFS-Client.</li>
+<li> <strong> Sicherheit:</strong> Geben Sie die zu implementierende Sicherheitsvariante an.<ul>
+  <li><strong>AUTH_SYS:</strong> Verwenden Sie die UID (Benutzer-ID) und GID (Gruppen-ID) des NFS-Clients, um die Zugangsbefugnisse zu &uuml;berpr&uuml;fen.</li>
+<li><strong>Kerberos-Authentifizierung:</strong> F&uuml;hren Sie die Kerberos-Authentifizierung durch, wenn der NFS-Client eine Verbindung zu dem gemeinsamen Ordner herstellt. Der Client kann nur nach der bestandenen Kerberos-Authentifizierung auf den gemeinsamen Ordner zugreifen.</li>
+<li><strong>Kerberos-Integrit&auml;t:</strong> F&uuml;hren Sie die Kerberos-Authentifizierung durch, und gew&auml;hrleisten Sie so die Integrit&auml;t der Pakete w&auml;hrend der Daten&uuml;bertragung.</li>
+<li><strong>Kerberos-Datenschutz:</strong> F&uuml;hren Sie die Kerberos-Authentifizierung durch, und verschl&uuml;sseln Sie die NFS-Pakete w&auml;hrend der Daten&uuml;bertragung, um die Manipulation des NFS-Verkehrs durch b&ouml;sartige Dritte zu unterbinden.</li>
+</ul>
+</li>
+
+<li><strong>Squash</strong>:&nbsp;In diesem Feld k&ouml;nnen Sie die Zugriffsberechtigungen der Benutzer f&uuml;r den NFS-Client regeln. Bitte w&auml;hlen Sie eine der folgenden Optionen:<ul>
+    <li><strong>Keine Zuordnung:</strong>&nbsp;Erlaubt allen Benutzern von NFS-Client (einschlie&szlig;lich der Root-Benutzer) die Beibehaltung der urspr&uuml;nglichen Zugriffsberechtigungen.</li>
+    <li><strong>Root zu &bdquo;Admin&ldquo; zuordnen:</strong>&nbsp;Weist den Root-Benutzern Zugriffsberechtigungen f&uuml;r den NFS-Client zu, die identisch sind mit den Zugriffsberechtigungen des Admin-Benutzers auf Ihrem System.</li>
+    <li><strong>Root zu &bdquo;Guest&ldquo; zuordnen:</strong>&nbsp;Weist den Root-Benutzern Zugriffsberechtigungen f&uuml;r den NFS-Client zu, die identisch sind mit den Guest-Zugriffsberechtigungen auf Ihrem System.</li>
+    <li><strong>Alle Benutzer zu &bdquo;Admin&ldquo; zuordnen:</strong>&nbsp;Vergibt an alle Benutzer Zugriffsberechtigungen f&uuml;r den NFS-Client, die identisch sind mit den Zugriffsberechtigungen des Admin-Benutzers auf Ihrem System.</li>
+  </ul>
+</li>
+
+<li><strong>Asynchron aktivieren:</strong>&nbsp;Wenn diese Option aktiviert ist, antwortet DiskStation auf Anfragen von NFS-Clients, bevor &Auml;nderungen an Dateien durchgef&uuml;hrt worden sind, wodurch die Leistung verbessert wird.</li>
+<li><strong>Verbindungen von nicht-privilegierten Ports (Ports über 1024) zulassen:</strong> Durch die Markierung dieser Option k&ouml;nnen NFS-Clients nicht-privilegierte Ports (d. h. Ports &uuml;ber 1024) f&uuml;r die Verbindung zu DiskStation verwenden. </li>
+<li><strong>Benutzern den Zugriff auf bereitgestellte Unterordner erlauben:</strong> Wenn Sie diese Option markieren, k&ouml;nnen NFS-Clients auf bereitgestellte Unterordner zugreifen.</li>
+<li>Klicken Sie zum Beenden auf <b>OK</b>.</li>
+  <li>Klicken Sie auf <b>OK</b>, um die NFS-Berechtigungen anzuwenden.</li>
+</ol>
+
+<div class="section">
+<h4>Hinweis:</h4>
+<ul>
+<li>Wenn das Format des Servernamens <strong>*.domain</strong> ist, muss die IP-Adresse des NFS-Clients einen entsprechenden DNS-PTR-Bericht umfassen, damit DiskStation den Namen *.domain durch die Suche nach der entsprechenden IP-Adresse finden kann.</li>
+</ul>
+</div>
+
+
+<div class="section">
+<h4>Sicherheitsvarianten:</h4>
+<p> Beim Zugriff auf einen gemeinsamen Ordner &uuml;ber NFS mit einem bestimmten Benutzerkonto: </p>
+<ul>
+<li>Wenn die Sicherheitsvariante <strong>AUTH_SYS</strong> angewendet wird: Der Client muss genau dieselbe numerische UID (Benutzer-ID) und GID (Gruppen-ID) auf dem NFS-Client und DiskStation verwenden, sonst werden dem Client beim Zugriff auf den gemeinsamen Ordner die Berechtigungen von <strong>others/Sonstige</strong>&ldquo; zugewiesen. Um alle Berechtigungskonflikte zu vermeiden, k&ouml;nnen Sie <strong>Alle Benutzer zu Admin zuordnen</strong> aus <strong>Squash</strong> ausw&auml;hlen, oder Sie geben &bdquo;Everyone/Jedem&ldquo; die Berechtigungen f&uuml;r den gemeinsamen Ordner.</li>
+<li>Wenn die Sicherheitsvariante <strong>Kerberos (krb5, krb5i, krb5p)</strong> angewendet wird: Gehen Sie zu <strong>Win/Mac/NFS</strong> &gt; <strong>NFS-Dienst</strong> &gt; <strong>Kerberos-Einstellungen</strong> &gt; <strong>ID-Zuordnung</strong>, um den NFS-Client einem bestimmten Benutzer zuzuordnen, oder treten Sie einer Windows/LDAP-Domain mit dem entsprechenden Benutzerkonto bei, sonst werden dem Client beim Zugriff auf den freigegebenen Ordner die Berechtigungen von <strong>guest/Gast</strong> zugewiesen.</li>
+<li>Wenn das Dateisystem des externen Ger&auml;ts, auf dem gemeinsame Ordner erstellt werden, NTFS oder FAT ist, wird die Option <strong>Alle Benutzer zu Admin zuordnen</strong> zwangsweise angewendet.</li>
+</ul>
+<p>F&uuml;r die Verwendung der Kerberos-Sicherheitsvarianten zur Verbindung mit DiskStation muss die Kerberos-Authentifizierung unter <strong>Win/Mac/NFS</strong> &gt; <strong>NFS-Dienst</strong> &gt; <strong>Kerberos-Einstellungen</strong> konfiguriert werden.</p>
+</div>
+
+</body>
+</html>

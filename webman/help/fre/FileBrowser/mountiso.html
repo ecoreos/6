@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>File Station</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script> <script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Monter les lecteurs virtuels</h2>
+
+<p>
+Vous pouvez monter des lecteurs virtuels pour accéder au contenu des images de disque avec File Station.
+</p>
+
+<h4>Pour monter un lecteur virtuel :</h4>
+<ol>
+<li>
+Sélectionnez une image de disque et cliquez sur <b>Outils</b> > <b>Monter le lecteur virtuel</b>.
+</li>
+<img src="about:blank" class="help_image"/>
+<li>
+Cliquez sur <b>Parcourir</b> pour sélectionner ou créer un dossier de destination vide sur votre DiskStation pour monter le disque virtuel.
+</li>
+<img src="about:blank" class="help_image"/>
+<li>
+Cochez <b>Monter automatiquement au démarrage</b> si vous souhaitez que votre DiskStation monte le lecteur virtuel à chaque démarrage ou redémarrage du système. Cliquez sur <b>Monter</b> pour continuer. Maintenant, vous pouvez naviguer vers le dossier de destination où le lecteur virtuel est monté, et accéder au contenu de l'image de disque.
+</li>
+<img src="about:blank" class="help_image"/>
+</ol>
+
+<div class="section">
+<h4>Remarque :</h4>
+<p>Les disques virtuels et les fichiers .iso ne peuvent être montés que dans des sous-dossiers sous des dossiers partagés.</p>
+</div>
+
+
+
+
+<h4>Pour démonter un lecteur virtuel :</h4>
+<ol>
+<li>Cliquez avec le bouton droit sur ​​le dossier de destination où le lecteur virtuel est monté et sélectionnez <b>Démonter</b>.</li>
+<img src="about:blank" class="help_image"/>
+</ol>
+<ol>
+<span class="note_head">Remarque : </span>
+<li>
+Format d'image de disque pris en charge : "<b>.iso</b> » utilisant le système de fichiers ISO 9660 et UDF.
+</li>
+<li>
+Le nombre maximum de lecteurs virtuels simultanés est de 16.
+</li>
+<li class="enable-dockerx64">Le montage de lecteurs virtuels n'est pris en charge qu'en mode à privilèges élevés. Pour utiliser cette fonction, accédez au paquet Docker sur votre DSM hôte, sélectionnez le <strong>Docker DSM</strong> pour lequel vous souhaitez activer des dossiers partagés chiffrés, cliquez sur <strong>Modifier</strong> et cochez la case en regard de <strong>Exécuter le conteneur à l'aide de privilèges élevés</strong>.</li>
+
+</ol>
+</body>
+</html>

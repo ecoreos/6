@@ -1,0 +1,114 @@
+ <!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Endre RAID-typen til et volum eller en diskgruppe - Synology DSM Hjelp</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="This article provides instructions to change the RAID type of existing volumes and disk groups on your DiskStation.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Endre RAID-typen til et volum eller en diskgruppe</h2>
+
+<p>Volum og diskgrupper kan endres fra en RAID-type til en annen uten å miste eksisterende data. For eksempel, du kan opprette et RAID 1-volum på DiskStation og senere endre det til RAID 5, hvis du installerer flere harddisker. Denne artikkelen gir deg instruksjoner for hvordan du skal endre RAID-typen til eksisterende diskgrupper på din DiskStation.</p>
+<h3>RAID-typebegrensninger</h3>
+
+<p>Kun enkelte RAID-typer kan endres til enkelte andre RAID-typer. Se tabellen nedenfor for detaljer.</p>
+
+<table>
+  <tr>
+    <th width="50%">RAID-type</th>
+    <th width="50%">Kan endres til...</th>
+  </tr>
+  <tr>
+    <td>Grunnleggende</td>
+    <td>RAID 1<br /> RAID 5</td>
+  </tr>
+  <tr>
+    <td>RAID 1</td>
+    <td>RAID 5</td>
+  </tr>
+  <tr>
+    <td>RAID 5</td>
+    <td>RAID 6</td>
+  </tr>
+
+</table>
+
+<div class="section">
+<h4>Eksempel:</h4>
+<p>RAID 1 kan endres til RAID 5, men RAID 5 kan ikke endres til RAID 1.</p>
+</div>
+
+
+<h3>Krav til harddisker</h3>
+
+<p>For å endre RAID-typen for et volum eller en diskgruppe, må du ha et tilstrekkelig antall tilgjengelige harddisker installert på din DiskStation. Se nedenfor for minimum antall harddisker som kreves for hver RAID-type.</p>
+
+<table>
+  <tr>
+    <th width="50%">Ønsket RAID-type</th>
+    <th width="50%">Påkrevde harddisker</th>
+  </tr>
+  <tr>
+    <td>RAID 1</td>
+    <td>2 eller 4</td>
+  </tr>
+  <tr>
+    <td>RAID 5</td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>RAID 6</td>
+    <td>4</td>
+  </tr>
+</table>
+
+<div class="section">
+<h4>Eksempel:</h4>
+<p>Hvis du vil endre et RAID 1-volum til RAID 5, må du ha totalt minst tre harddisker (dvs. de to harddiskene som tilhører RAID 1-volumet, pluss en ledig harddisk som skal legges til i volumet).</p>
+</div>
+
+<h3>Endre RAID-type</h3>
+
+<p>I eksempelet nedenfor, vil vi endre et <strong>Basic</strong>-volum til et <strong>RAID 1</strong>-volum.</p>
+
+<div class="section">
+<h4>Før du starter:</h4>
+<ul>
+<li>Kontroller at statusen til volumet eller diskgruppen er <b>Normal</b>.</li>
+<li>Når du legger til nye harddisker i et volum eller en diskgruppe, må de nye harddiskene være større enn den minste harddisken i volumet eller diskgruppen.</li>
+<li>Statusen til nye harddisker må være <b>Startet</b> eller <b>Ikke startet</b>.</li></ul>
+</div>
+
+<h4>For å endre RAID-type volum:</h4>
+
+<ol>
+<li>Åpne <strong>Lagringshåndtering</strong>.</li>
+<img src="about:blank" class="help_image"/>
+<li>Gå til <b>Volum</b>.  (Hvis du vil endre RAID-typen til en diskgruppe, går du til fanen <b>Diskgruppe</b>.)</li>
+<li>Velg volumet du ønsker å endre og klikk på <b>Administrer</b>.</li>
+<img src="about:blank" class="help_image"/>
+
+<li>Når installasjonsveiviseren åpnes, velger du <b>Endre RAID-type</b>. Deretter klikker du på <b>Neste</b>.</li>
+<img src="about:blank" class="help_image"/>
+
+
+<li>Velg RAID-typen du ønsker å endre volumet til. Klikk på <b>Neste</b>.</li>
+<img src="about:blank" class="help_image"/>
+
+
+<li>Velg hvilke harddisker du vil legge til i det eksisterende volumet. Deretter klikker du på <b>Neste</b>.</li>
+<img src="about:blank" class="help_image"/>
+
+
+<li>Følg instruksjonene i veiviseren for å fullføre. Vær oppmerksom på at eksisterende data på den tillagte harddisken vil bli slettet.</li></ol>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<root xmlns="urn:schemas-upnp-org:device-1-0">
+	<specVersion>
+		<major>1</major>
+		<minor>0</minor>
+	</specVersion>
+	<device>
+		<deviceType>urn:schemas-upnp-org:device:Basic:1</deviceType>
+		<friendlyName>eCore (DS3615xs)</friendlyName>
+		<manufacturer>Synology</manufacturer>
+		<manufacturerURL>http://www.synology.com</manufacturerURL>
+		<modelDescription>Synology NAS</modelDescription>
+		<modelName>DS3615xs</modelName>
+		<modelNumber>DS3615xs 6.0-7393</modelNumber>
+		<modelURL>http://www.synology.com</modelURL>
+		<modelType>NAS</modelType>
+		<serialNumber>000c2956bb12</serialNumber>
+		<UDN>uuid:73796E6F-6473-6D00-0000-000c2956bb12</UDN>
+		<serviceList>
+			<service>
+				<URLBase>http://192.168.29.30:5000</URLBase>
+				<serviceType>urn:schemas-dummy-com:service:Dummy:1</serviceType>
+				<serviceId>urn:dummy-com:serviceId:dummy1</serviceId>
+				<controlURL>/dummy</controlURL>
+				<eventSubURL>/dummy</eventSubURL>
+				<SCPDURL>/ssdp/dummy.xml</SCPDURL>
+			</service>
+		</serviceList>
+		<presentationURL>http://192.168.29.30:5000/</presentationURL>
+	</device>
+</root>
+

@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script> <script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+<meta content="en-us" http-equiv="Content-Language" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Maak een back-up van uw gegevens op Synology NAS om uw gegevens te beveiligen</title>
+</head>
+
+<body class="tutorial-content-box" >
+
+<h1>Uw Synology NAS back-uppen</h1>
+<div class="tutorials_content">
+<img src="../../images/Backup/1x/Backup/back_up_your_data_on_synology_nas_to_ensure_data_security.jpg" />
+<h2>Overzicht</h2>
+<p>Onverwacht gegevensverlies door harde schijfstoringen of natuurlijke rampen zijn potentiële bedreigingen voor uw gegevens, vooral bij een ontbrekende betrouwbare back-upoplossing. <strong>Hyper Backup</strong> biedt een intuïtive en geïntegreerde back-up/hersteloplossing om kopieën van uw belangrijke gegevens te behouden/op te halen en toepassingen en systeemconfiguraties vanaf een herstelpunt te herstellen. De volgende opslagdoelen worden ondersteund:</p>
+
+<ul>
+<li><strong>Lokale gedeelde mappen (inclusief met uw DiskStation verbonden externe opslagapparaten)</strong></li>
+<li><strong>Externe Synology NAS</strong></li>
+<li><strong>Externe rsync-servers</strong></li>
+<li><strong>Externe OpenStack Swift-servers</strong></li>
+<li><strong>Openbare clouds (Amazon S3, Microsoft Azure, OpenStack Swift etc.)</strong></li>
+</ul>
+</div>
+
+<div class="section">
+<h4>Opmerking:</h4>
+<p>Hyper Backup maakt alleen een back-up van specifieke systeemconfiguraties en toepassingen. Voor meer informatie raadpleeg de helpdocumentatie van Hyper Backup.</p>
+</div>
+
+
+<h3 class="list_head">1. Lokale back-uptaken naar een lokaal gedeelde map/extern opslagapparaat maken</h3>
+<p><strong>Hyper Backup</strong> biedt vergelijkbare back-up en herstelprocedures voor verschillende soorten doelen. Hieronder beschrijven we hoe u gegevens lokaal kunt back-uppen en terugzetten, en andere taaktypes.</p>
+
+<ol>
+<li>Meld u aan bij DSM en zoek het pakket <strong>Hyper Backup</strong>.</li>
+<li>Klik op <strong>+</strong> in de linkerbenedenhoek en selecteer <strong>Gegevensback-uptaak</strong>.</li>
+<li>Stel een lokale back-uptaak in en selecteer <strong>Lokale gedeelde map</strong>.</li>
+<img src="../../images/Backup/1x/Backup/1.png" width="600" alt=""/>
+<li>Selecteer <strong>Een back-uptaak maken</strong> en selecteer een lokaal gedeelde map of een extern opslagapparaat dat verbonden is met uw DiskStation.</li>
+<img src="../../images/Backup/1x/Backup/2.png" width="600" alt=""/>
+<li>Selecteer de bronmap(mappen) om de gegevens te back-uppen. Gecodeerde gedeelde mappen, indien geselecteerd, moeten tijdens het back-upproces gekoppeld blijven. Wanneer de bron en doel op hetzelfde volume staan, dan markeert het systeem dergelijke bronmappen met oranje uitroeptekens.</li>
+<img src="../../images/Backup/1x/Backup/3.png" width="600" alt=""/>
+<li>Selecteer de toepassing(en) die u wilt back-uppen.</li>
+<img src="../../images/Backup/1x/Backup/4.png" width="600" alt=""/>
+<li>Specificeer de onderstaande back-upinstellingen naar behoefte:
+  <ul>
+  <li><strong>Taak</strong>: naam van de back-uptaak.</li>
+  <li><strong>Taakmelding inschakelen</strong>: selecteer om via e-mail, SMS of pushservice te worden geïnformeerd over de taakstatus.</li>
+  <li><strong>Configuratieback-up inschakelen</strong>: back-up van systeemconfiguraties (bijv. gebruikersgegevens). Deze instelling wordt standaard opgelegd aan alle back-uptaken.</li>
+  <li><strong>Back-upgegevens comprimeren</strong>: comprimeer back-upgegevens om het gebruik van de doelopslag te beperken. Deze optie vereist meer back-uptijd.</li>
+  <li><strong>Overdrachtcodering inschakelen</strong> (alleen voor externe back-up): selecteren om back-upgegevens te coderen tijdens overdracht naar een extern doel (bijv. een rsync-server of publieke cloud).</li>
+  <li><strong>Multipart upload-partitiegrootte</strong> (alleen voor S3-compatibele servers): verdeelt de back-upgegevens in een specifieke partitiegrootte.</li>
+  <li><strong>Codering aan clientzijde inschakelen</strong>: selecteren om back-upgegevens te beveiligen met een wachtwoord om onbevoegde toegang aan doelzijde te voorkomen.</li>
+    
+  <li><strong>Back-upschema inschakelen</strong>: selecteren om een schema in te stellen om automatisch de back-uptaak uit te voeren.</li>
+  </ul>
+  </li>
+  
+<img src="../../images/Backup/1x/Backup/5.png" width="600" alt=""/>
+<li>Selecteer <strong>Back-uprotatie inschakelen</strong> om de rotatieplanning in te stellen:
+  
+  <ul>
+  <li><strong>Vanaf de oudste versies</strong>: verwijder de oudste back-upversies nadat het gespecificeerd <strong>Aantal versies</strong> wordt overschreden.</li>
+  <li><strong>Smart Recycle</strong>: het systeem bewaart elke back-upversie tot het gespecificeerd aantal versies wordt overschreden. Bij activering van de rotatie zal het systeem eerst de versies roteren die aan geen enkele voorwaarde voldoen. Wanneer alles bestaande versies aan onderstaande voorwaarden voldoen, zal het systeem het oudste versie roteren:
+  <ul>
+  <li><strong>Uurversies van de afgelopen 24 uur</strong>: het systeem behoudt de laatste versie die om het uur wordt gemaakt.</li>
+  <li><strong>Dagelijkse versies van 1 dag tot 1 maand terug</strong>: het systeem behoudt de laatste versie die dagelijks wordt gemaakt.</li>
+  <li><strong>Wekelijkse versie ouder dan 1 maand</strong>: het systeem behoudt de laatste versie die om wekelijks wordt gemaakt.</li>
+  </ul>
+  
+  </li>
+  <li><strong>Aantal versies</strong>: stel de bovenlimiet voor het aantal behouden back-upversies in.</li>
+  <li>Tijdlijn: toont het mogelijke resultaat van back-upbewaarbeleid volgens uw back-upplanning en rotatieplanning.</li>
+  </ul>
+</li>
+
+<img src="../../images/Backup/1x/Backup/6.png" width="600" alt=""/>
+<li>Klik op <strong>Toepassen</strong> om de installatie te voltooien.</li>
+<li>Om onmiddellijk een back-uptaak uit te voeren, volg de instructies van de Backup Wizard en klik op <strong>Ja</strong>.</li>
+</ol>
+
+
+<h3 class="list_head">2. Enkele bestanden vanaf een lokaal gedeelde map/extern opslagapparaat terugzetten</h3>
+
+
+<ol>
+<li>Ga naar <strong>Hyper Backup</strong>, selecteer de gewenste back-uptaak in het linkerpaneel en klik op <strong>Back-upverkenner</strong> (het vergrootglaspictogram). Voer het wachtwoord in indien de taak wordt beveiligd door codering aan clientzijde.</li>
+<img src="../../images/Backup/1x/Backup/Single_1.png" width="600" alt=""/>
+<li>Zoek en selecteer het gewenste bestand dat u wilt terugzetten. U kunt de terug te zetten versie ook selecteren met de tijdlijnbalk.</li>
+<img src="../../images/Backup/1x/Backup/Single_2.png" width="600" alt=""/>
+<li>Klik op <strong>Terugzetten</strong> om het geselecteerde bestand/map terug te zetten.</li>
+
+</ol>
+
+
+
+<h3 class="list_head">3. Complete taken terugzetten naar de gewenste tijdstippen</h3>
+
+<ol>
+<li>Klik op <strong>Terugzetten</strong> in de linkerbenedenhoek en klik op <strong>Gegevens</strong>. Voer het wachtwoord in indien de taak wordt beveiligd door clientzijdige codering.</li>
+
+<img src="../../images/Backup/1x/Backup/Restore_1.png" width="600" alt=""/>
+<li>Selecteer een taak die u wilt terugzetten. Om gegevens vanaf andere opslagplaatsen terug te zetten, selecteer <strong>Terugzetten vanaf andere opslagplaatsen</strong> en lokaliseer de terug te zetten taak.</li>
+<img src="../../images/Backup/1x/Backup/Restore_2.png" width="600" alt=""/>
+<li>Kies of u de systeemconfiguraties wilt terugzetten. Selecteert u <strong>Systeemconfiguratie terugzetten</strong>, selecteer de specifieke configuraties in de onderstaande lijst die u wilt terugzetten.</li>
+<img src="../../images/Backup/1x/Backup/Restore_3.png" width="600" alt=""/>
+
+<li>Zoek en selecteer het(de) bestand(en)/taak die u wilt terugzetten. U kunt de terug te zetten versie ook selecteren met de tijdlijnbalk.</li>
+<img src="../../images/Backup/1x/Backup/Restore_4.png" width="600" alt=""/>
+<li>Selecteer de applicaties die u wilt terugzetten.</li>
+<img src="../../images/Backup/1x/Backup/Restore_4.5.png" width="600" alt=""/>
+<li>Basisherstelinformatie wordt weergegeven.</li>
+<img src="../../images/Backup/1x/Backup/Restore_5.png" width="600" alt=""/>
+<li>Klik op <strong>Toepassen</strong> om het terugzetten te starten.</li>
+</ol>
+
+
+
+
+
+
+<div class="page-info">
+  <ul>
+    <li>Vorige in dit onderwerp: <a href="backup_from_computer.html">Hoe maak ik met Cloud Station een back-up van de gegevens op mijn pc/Mac</a> </li>
+  </ul>
+</div>
+</body>
+
+</html>

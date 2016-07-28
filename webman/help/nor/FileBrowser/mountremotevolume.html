@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>File Station</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2>Montere eksterne mapper</h2>
+
+<p>
+Du kan montere eksterne mapper fra eksterne servere (f.eks. nettverksdatamaskiner eller andre Synology NAS-enheter) for å bla gjennom og administrere de monterte mappene via File Station.
+</p>
+
+
+
+
+
+<h4>Slik monterer du en ekstern, delt CIFS-mappe*:</h4>
+<ol>
+<li>Klikk på <b>Verktøy</b> > <b>Monter ekstern mappe</b> > <strong>Delt CIFS-mappe</strong>.</li>
+
+<img src="about:blank" class="help_image"/>
+
+<li>I <b>Mappe</b>-feltet spesifiserer du den eksterne mappebanen med formatet <code>\\Remote_Server\Remote_Folder</code>, f.eks. <code>\\192.168.0.2\share</code> eller <code>\\chad\cheeseburger\pictures</code>.</li>
+<li>Hvis den eksterne serveren krever tilgangsrettigheter til den ekstene mappen, angir du innloggingsdetaljene dine til den eksterne serveren i feltene <b>Kontonavn</b> og <b>Passord</b>.</li>
+<li>Klikk på <b>Bla gjennom</b> for å velge eller opprette en tom destinasjonsmappe på din DiskStation for montering av den eksterne mappen.</li>
+
+<img src="about:blank" class="help_image"/>
+
+<li>Merk av for <b>Automatisk montering ved oppstart</b> hvis du vil at DiskStation skal montere denne eksterne mappen ved hver oppstart eller omstart av systemet.</li>
+<li>Klikk på <b>Monter</b> for å montere den eksterne mappen på målmappen. Du kan nå bla gjennom og administrere den eksterne mappen fra din DiskStation.</li>
+</ol>
+
+<h4>Slik monterer du en ekstern, delt NFS-mappe:</h4>
+
+<ol>
+<li>Klikk på <b>Verktøy</b> > <b>Monter ekstern mappe</b> > <b>Delt NFS-mappe</b>.</li>
+
+<img src="about:blank" class="help_image"/>
+
+<li>I <b>Mappe</b>-feltet spesifiserer du den eksterne mappebanen med formatet <code>Remote_Server:/Remote_Folder_Path</code>, f.eks. <code>192.168.0.2:/volume1/share</code>.</li>
+<li>Velg ønsket NFS-versjon og transportprotokoll.</li>
+<li>Klikk på <b>Bla gjennom</b> for å velge eller opprette en tom destinasjonsmappe på din DiskStation for montering av den eksterne mappen.</li>
+
+<img src="about:blank" class="help_image"/>
+
+<li>Merk av for <b>Automatisk montering ved oppstart</b> hvis du vil at DiskStation skal montere denne eksterne mappen ved hver oppstart eller omstart av systemet.</li>
+<li>Klikk på <b>Monter</b> for å montere den eksterne mappen på målmappen. Du kan nå bla gjennom og administrere den eksterne mappen fra din DiskStation.</li>
+</ol>
+
+<div class="section">
+<h4>Merk:</h4>
+<p>NFSv4 støtter kun TCP-protokollen.</p>
+</div>
+
+<h4>Slik demonterer du en ekstern mappe:</h4>
+<ol>
+<li>Velg den eksterne mappen du vil demontere og klikk på <b>Verktøy</b> > <b>Demonter</b>.</li>
+
+<img src="about:blank" class="help_image"/>
+
+<li>Eller så kan du bare høyreklikke på den eksterne mappen og velge <b>Demonter</b>.</li>
+
+<img src="about:blank" class="help_image"/>
+
+</ol>
+
+<div class="section">
+<h4>Merk:</h4>
+<ul>
+<li>Maksimalt antall samtidige eksterne mapper er 100.</li>
+<li>Du har bare lov til &aring; montere eksterne mapper fra en ekstern server som st&oslash;tter CIFS- eller NFS-protokollen.
+</li>
+<li>Eksterne mapper kan kun monteres i undermapper i delte mapper.</li>
+<li class="enable-dockerx64">Montering av eksterne mapper st&oslash;ttes kun i utvidede rettigheter-modus. For &aring; bruke denne funksjonen, g&aring;r du til Docker-pakken p&aring; verts-DSM, velger den <strong>Docker DSM</strong> du vil aktivere krypterte delte mapper for, klikker p&aring; <strong>Rediger</strong> og merker av for <strong>Utf&oslash;r container med utvidede rettigheter</strong>.</li>
+</ul>
+</div>
+
+<p>____<br /> * Bare tilgjengelig på bestemte modeller.</p>
+
+</body>
+</html>

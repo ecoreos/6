@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+ <head>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>High Availability</title>
+
+
+ </head>
+ <body>
+  <h2>Arr&ecirc;t et r&eacute;initialisation</h2>
+  <p>Les instructions ci-dessous vous guideront dans la proc&eacute;dure d'arr&ecirc;t, de suppression ou de r&eacute;initialisation d'un cluster high-availability.</p>
+
+  <h4> Pour arr&ecirc;ter un cluster high-availability en utilisant Synology High Availability&nbsp;:</h4>
+  <p>Lorsque vous souhaitez arr&ecirc;ter un cluster high-availability pour transporter les serveurs &agrave; un nouvel emplacement physique ou effectuer un entretien, mais que vous ne voulez pas supprimer les configurations du cluster high-availability, veuillez suivre ces instructions.</p>
+  <ol>
+   <li>Connectez-vous &agrave; DSM.</li>
+   <li>Ouvrez Synology High Availability.</li>
+   <li>Cliquez sur le bouton marqu&eacute; <b>Gestion</b>.</li>
+   <li>S&eacute;lectionnez <b>Arr&ecirc;ter le cluster HA</b>.</li>
+   <li>Un message de confirmation appara&icirc;t. Cliquez sur <b>Oui</b> pour confirmer.</li>
+  </ol>
+
+  <h4>Pour arr&ecirc;ter manuellement un cluster high-availability&nbsp;:</h4>
+  <p> Le cluster high-availability peut &eacute;galement &ecirc;tre arr&ecirc;t&eacute; manuellement en utilisant les boutons d'alimentation situ&eacute;s sur chaque serveur. </p>
+  <ol>
+   <li>Appuyez le bouton d'alimentation sur un serveur (actif ou passif) et maintenez-le enfonc&eacute; jusqu'&agrave; ce qu'il &eacute;mette un bip.</li>
+   <li>Une fois qu'un serveur est compl&egrave;tement &eacute;teint, attendez au moins 30 secondes (le serveur qui est toujours en ligne n&eacute;cessite du temps pour enregistrer les param&egrave;tres).</li>
+   <li>Appuyez sur le bouton d'alimentation sur l'autre serveur et maintenez-le enfonc&eacute; jusqu'&agrave; ce qu'il &eacute;mette un bip.</li>
+   <li>Attendez que le serveur soit compl&egrave;tement &eacute;teint.</li>
+  </ol>
+<div class="section">
+<h4>Allumer les serveurs&nbsp;:</h4>   
+<p>Quand vous voulez allumer les serveurs &agrave; nouveau, vous devez allumer simultan&eacute;ment le serveur actif et le serveur passif (ou &agrave; cinq minutes d'intervalle maximum). Si vous n'allumez que l'un des serveurs, il essaiera d'allumer l'autre serveur en diffusant un message Wake-on-LAN.</p>
+<h4>Arr&ecirc;t anormal&nbsp;:</h4>
+<p>Quand un cluster high-availability est cr&eacute;&eacute;, l'option de red&eacute;marrage apr&egrave;s une coupure de courant du Panneau de configuration est automatiquement activ&eacute;e. Si les serveurs s'arr&ecirc;tent de mani&egrave;re anormale suite &agrave; une panne, ils s'allumeront automatiquement une fois le courant r&eacute;tabli.</p>
+</div>
+
+<h4>Pour supprimer un cluster high-availability&nbsp;:</h4>
+ <p>Quand vous souhaitez d&eacute;lier les deux serveurs et supprimer un cluster high-availability afin de lier un serveur diff&eacute;rent, veuillez suivre ces instructions.</p>
+  <ol>
+   <li>Allez &agrave; la page <b>Vue d'ensemble</b>.</li>
+   <li>Cliquez sur le bouton <b>Gestion</b>.</li> 
+   <li>S&eacute;lectionnez <b>Supprimer le cluster HA</b>.</li>
+  </ol>
+  <p>Apr&egrave;s confirmation, le syst&egrave;me supprime le cluster high-availability. Le champ d'&eacute;tat affiche la progression du processus de suppression. Lorsque le cluster high-availability a &eacute;t&eacute; supprim&eacute; avec succ&egrave;s, vous serez dirig&eacute; vers l'adresse IP d'origine du serveur actif. L'&eacute;tat des deux serveurs deviendra <b>Autonome</b>.</li>
+  
+ <h4>Pour r&eacute;initialiser un cluster high-availability d&eacute;fectueux&nbsp;:</h4>
+  <p>Si vous ne parvenez pas &agrave; acc&eacute;der &agrave; DSM ou au Synology High Availability Manager, du fait d'une erreur de d&eacute;doublement du cerveau ou d'autres d&eacute;faillances, vous pouvez essayer de forcer le cluster high-availability pour le d&eacute;lier en appuyant sur le bouton <b>R&eacute;initialiser</b> situ&eacute; sur vos serveurs.</p>
+  <ol>
+   <li>Appuyez sur le bouton <b>R&eacute;initialiser</b> (habituellement situ&eacute; sur la face arri&egrave;re d'un serveur) et maintenez-le enfonc&eacute; jusqu&rsquo;&agrave; ce que le serveur &eacute;mette un bip.
+   <li>Le syst&egrave;me supprimera le cluster high-availability, et l'&eacute;tat des deux serveurs deviendra <b>Autonome</b></li>
+   <li>Appuyer sur le bouton <b>R&eacute;initialiser</b> restaurera &eacute;galement certains param&egrave;tres par d&eacute;faut, comme l'adresse IP, le DNS et le mot de passe admin, en plus de ce qui suit&nbsp;:</li>
+   <ul>
+    <li>Le mot de passe admin sera r&eacute;initialis&eacute; &agrave; vide.</li>
+    <li>Le compte guest sera d&eacute;sactiv&eacute;.</li>
+    <li>DHCP sera activ&eacute; sur IP, DNS, Passerelle et autres interfaces r&eacute;seau.</li>
+    <li>Les Jumbo Frames seront d&eacute;sactiv&eacute;es, et MTU sera d&eacute;fini &agrave; 1500.</li>
+    <li>Le port de gestion sera r&eacute;initialis&eacute; &agrave; 5000/5001.</li>
+    <li>PPPoE sera r&eacute;initialis&eacute; &agrave; la valeur par d&eacute;faut.</li>
+    <li>Le blocage automatique d'IP sera d&eacute;sactiv&eacute; (l'adresse IP bloqu&eacute;e ne sera pas effac&eacute;e).</li>
+    <li>Link Aggregation sera d&eacute;sactiv&eacute;.</li>
+    <li>Les r&egrave;gles de pare-feu seront d&eacute;sactiv&eacute;es (les r&egrave;gles ne seront pas effac&eacute;es).</li>
+   </ul>
+  </ol>
+
+<div class="section">
+<h4>Remarque&nbsp;:</h4>
+<p>Pendant la proc&eacute;dure de suppression d'un cluster high-availability, il peut y avoir quelques op&eacute;rations d'&eacute;criture de donn&eacute;es incompl&egrave;tes. Pour assurer l'exhaustivit&eacute; des donn&eacute;es, veuillez effectuer la r&eacute;plication de donn&eacute;es bas&eacute;e sur le serveur actif, car le serveur passif manque peut-&ecirc;tre quelques mises &agrave; jour de donn&eacute;es.</p>
+</div>
+ </body>
+</html>

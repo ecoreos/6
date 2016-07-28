@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>DSM Help - SSO Client</title>
+<meta name="author" content="Synology Inc.">
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2>SSO Client</h2>
+
+<p>If your DiskStation has joined the same domain or LDAP service as the SSO server, you can set your DiskStation as an SSO client. Users can access the services provided by your DiskStation once they login to the SSO server with their credentials.</p>
+
+<p>Before you start, make sure your DiskStation has joined the same domain or LDAP service as the SSO server.</p>
+
+<h4>To set your DiskStation as an SSO client:</h4>
+<ol>
+	<li>Go to <strong>Control Panel</strong> > <strong>Domain/LDAP</strong> > <strong>SSO Client</strong>.</li>
+	<li>Tick the <strong>Enable SSO service</strong> checkbox.</li>
+	<li>Specify the <strong>SSO server URL</strong> and <strong>Application ID</strong> in the fields below the checkbox.
+<div class="section"><h4>Note:</h4>
+	<p>To get the Application ID, choose either of the following mothods:</p>
+	<ul>
+		<li><strong>Method 1:</strong>
+			<ol>
+				<li>Login to the DSM which runs as the SSO server.</li>
+				<li>Add your DiskStation which will serve as the client application to the Application List in SSO Server. For detailed steps, please refer to the Help article for <strong>SSO Server</strong> > <strong>Application List</strong>.</li>
+				<li>Copy and paste the Application ID allocated by SSO Server once your DiskStation has been added to the SSO server.</li>
+			</ol>
+		</li>
+		<li><strong>Method 2:</strong>
+			<ol>
+				<li>After entering the <strong>SSO server URL</strong>*, click <strong>Quick Registration</strong> beside the Application ID field.</li>
+				<li>In the registration box, enter the credentials of an administrator account of the SSO server in <strong>Server administrator</strong> and <strong>Password</strong> fields.</li>
+				<li>Specify the name of your client application in <strong>Application Name</strong> field.</li>
+				<li>Make sure the <strong>Redirect URI</strong> refers exactly to the login page of your DiskStation.</li>
+				<li>Click <strong>OK</strong>, and your DiskStation will be added to SSO Server, with the Application ID being filled in automatically.</li>
+			</ol>
+		</li>
+	</ul>
+<p>______</p><p style="margin-left: 20px; text-indent: -10px;">* You are required to enter the identical SSO server URL (either hostname or IP) when configuring every SSO client.</p>
+</div>
+	</li>
+	<li>Click <strong>Apply</strong> to save your settings.</li>
+</ol>
+
+<div class="section"><h4>Note:</h4>
+<ul>
+	<li>If the SSO server uses HTTPS protocol, the SSO login may be blocked by browsers in default of a trusted certificate.</li>
+	<li>When the SSO server is accessed via HTTP protocol, if your DiskStation (set as an SSO client) uses HTTPS connection, users need to configure the settings of their browsers to allow the use of an unsecure connection.</li>
+	<li>The IP address of the SSO server in the IPv6 format will not be supported if you have ticked the <strong>Improve security with HTTP Content Security Policy (CSP) header</strong> checkbox in <strong>Control Panel</strong> &gt; <strong>Security</strong> &gt; <strong>Security</strong> on your DSM.</li>
+</ul>
+</div>
+
+</body>
+</html>

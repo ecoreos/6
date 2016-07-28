@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>网络</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2><a name="link_aggr"></a>Link Aggregation*</h2>
+<p>DiskStation 支持多个局域网，使您可以使用 Link Aggregation 技术组合各局域网接口。Link Aggregation 通过再聚合多个网络接口提高了 DiskStation 的的带宽，并提供了流量故障移转以在连接中断的情况下保持网络连接。</p>
+<p>Link Aggregation（链路聚合）接口组合后，您将在<b>控制面板</b> &gt; <b>网络</b> &gt; <b>网络接口</b>看到名为 <b>Bond</b> 的新接口，该接口可以和其他接口（例如局域网或 PPPoE）一样进行配置。</p>
+
+
+<div class="section">
+<h4>注：</h4>
+<ul>
+<li>通过启用 Link Aggregation，网络流量将自动调整，并在各连接的设备中取得平衡。</li>
+<li>如果网络接口连接到多个交换机，请确认端口在同一 LAN 或 VLAN 中。</li>
+</ul>
+</div>
+
+
+<h4>若要用 Link Aggregation 组合多个局域网：</h4>
+<ol>
+<li>请进入<strong>控制面板</strong> &gt; <strong>网络</strong> &gt; <strong>网络接口</strong>。请单击<strong>创建</strong> &gt; <strong>创建 Bond</strong>。</li>
+
+<img src="about:blank" class="help_image"/>
+
+
+<li>选择您想要的模式。
+
+<div class="section">
+<h4>模式说明：</h4>
+<ul>
+<li><strong>自适应负载平衡</strong>：此模式优化了 DiskStation 接收和发送的网络流量，而与交换机是否支持 Link Aggregation 无关。为避免意外错误，即便交换机支持 Link Aggregation 也不要启用交换机上的 Link Aggregation。</li>
+<li><strong>IEEE 802.3ad 动态 Link Aggregation</strong>：此模式优化了 DiskStation 接收和发送的网络流量，并需要启用交换机上的 IEEE 802.3ad（动态）Link Aggregation （LACP，802.1AX）。如果使用多个交换机，这些交换机必须为堆叠式并正确配置。</li>
+<li><strong>平衡 XOR</strong>：此模式平衡了 DiskStation 接收和发送的网络流量，并需要启用交换机上的静态 Link Aggregation。如果使用多个交换机，这些交换机必须为堆叠式并正确配置。如果交换机不支持 Link Aggregation，而 DiskStation 接收和发送的网络流量仍可平衡。通过此模式，可检测到丢失的链接，但检测不到原因（例如，以太网什么时候拨出的或交换机什么时候被错误配置的）。</li>
+<li><strong>活动/备用</strong>：此模式为您的 DiskStation 提供了网络容错功能。即，当激活网络接口出现故障后，其它局域网端口之一将接管以保持网络连接。您可选择此模式而无需配置交换机，或通过支持 IEEE 802.3ad Link Aggregation 的交换机。</li>
+</ul>
+</div>
+</li>
+
+<img src="about:blank" class="help_image"/>
+
+<li>选择接口以创建 Link Aggregation。</li>
+
+<img src="about:blank" class="help_image"/>
+
+<li>配置 IP 设置。如需要，您还可启用 VLAN。单击<b>完成</b>来完成设置。</li>
+
+<img src="about:blank" class="help_image"/>
+
+<li>完成后，您可在<b>网络接口</b>列表中看到名为 <b>Bond 1</b> 的新接口。</li>
+
+<img src="about:blank" class="help_image"/>
+
+</ol>
+
+<h4>若要编辑 Link Aggregation 设置：</h4>
+<ol>
+<li>要更改 Link Aggregation 模式或查看物理硬盘的信息，请进入<b>控制面板</b> &gt; <b>网络</b> &gt; <b>网络接口</b>。</li>
+<li>选择接口 <b>Bond 1</b>，然后单击<b>编辑</b>按钮。</li>
+
+<img src="about:blank" class="help_image"/>
+
+<li>进入相应的选项卡以修改所需设置。</li>
+</ol>
+
+<h4>若要删除 Link Aggregation：</h4>
+<ol>
+<li>请进入<b>控制面板</b> &gt; <b>网络</b> &gt; <b>网络接口</b>。</li>
+<li>选择接口 <b>Bond 1</b>，然后单击<b>删除</b>按钮。</li>
+
+<img src="about:blank" class="help_image"/>
+
+<li>完成后，您交看到 <b>Bond 1</b> 现在被两个 LAN 接口替代。</li>
+
+<img src="about:blank" class="help_image"/>
+
+</ol>
+
+<p>____<br> * 仅适用于特定机型。</p>
+
+</body>
+</html>
+

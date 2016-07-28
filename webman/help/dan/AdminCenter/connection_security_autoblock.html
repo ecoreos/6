@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Automatisk blokering - Synology DSM - Hjælp</title> 
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="The auto block feature helps improve the security of your DiskStation by blocking the IP addresses of clients with too many failed login attempts.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Automatisk blokering</h2>
+
+<p>Den automatisk blokeringsfunktion forbedrer sikkerheden i din DiskStation ved at blokere IP-adresser for klienter med for mange fejlede pålogningsforsøg. Det hjælper med at reducere risikoen for, at der brydes ind på kontoen med voldelige angreb.</p>
+
+<p>Du kan også oprette og administrere en tilladelsesliste for at tilføje IP-adresser, som du har tillid til, eller en blokeringsliste for altid at forhindre visse IP-adresser i at logge ind.</p>
+
+<div class="section">
+<h4>Bemærk:</h4>
+<p>Forskellige tjenester og pakker understøtter automatisk blokering, f.eks. følgende: DSM, SSH, Telnet, rsync, netværksbackup, synkroisering af delt mappe, FTP, WebDAV, File Station, Photo Station, Audio Station, Video Station, Download Station, Mail Server, Mail Station, Time Backup, VPN Server, Cloud Station og Synologys mobile apps.</p>
+</div>
+
+<h4>Sådan aktiveres automatisk blokering:</h4>
+<ol>
+
+<li>Åbn <strong>Kontrolpanel</strong>, og gå til <strong>Sikkerhed</strong> > <strong>Automatisk blokering</strong>.</li>
+<li>Marker <b>Aktiver automatisk blokering</b>.</li>
+
+<li>Indtast et antal mislykkedes pålogningsforsøg i feltet <b>Login-forsøg</b> og et antal min. i feltet <b>Inden for (minutter)</b>. En IP-adresse skal blokeres, når den overstiger antal mislykkede login-forsøg inden for det angivne antal minutter.</li>
+<li>Marker <b>Aktiver blokeringsudløb</b>, og indtast et tal, der vil fjerne en blokeret IP-adresse efter det angivne antal dage.</li>
+
+<li>Klik på <b>Anvend</b>.</li>
+</ol>
+
+
+<h3>Administration af blokeringsliste</h3>
+<p>Klik på <strong>Tilladelses-/blokeringsliste</strong>, og gå til fanen <strong>Blokeringsliste</strong>. </p>
+
+<h4>Sådan tilføjer du IP-adresser:</h4>
+<p>Vælg en af følgende i rullemenuen <strong>Opret</strong>:</p>
+<ul>
+<li><strong>Tilføj IP-adresse</strong><br> Indtast en IP-adresse, og angive udløbstiden.</li>
+<li><strong>Importer IP-adresseliste</strong><br> Importer en tekstfil, der viser IP-adresser for at tilføje et antal IP-adresse og angive udløbsdato på samme tid. Marker afkrydsningsfeltet, hvis du vil overskrive eksisterende IP-adresser. Hvis denne mulighed ikke er valgt, bliver kopierede IP-adresser sprunget over.<br> Hvis den valgte fil har korrekt format, vil du se alle IP-adresserne i forhåndsvisningsområdet. Klik på <strong>OK</strong> for at importere.</li>
+
+<div class="section">
+<h4>Bemærk:</h4>
+<p>For at importere en fil skal filen opfylde følgende kriterier:</p>
+<ul>
+<li>Filen skal være en almindelig tekstfil.</li>
+<li>Hver linje i filen kan kun indeholde én IP-adresse.</li>
+<li>Kommentarlinjer begynder med et # (pundtegn).</li>
+</ul>
+</div>
+</ul>
+
+<h4>Sådan fjerner du blokerede IP-adresser:</h4>
+<p>Vælg de IP-adresser, du vil fjerne fra listen, og klik på <b>Fjern</b>.</p>
+
+
+<h3>Administration af tilladelsesliste</h3>
+
+<p>Klik på <strong>Tilladelses-/blokeringsliste</strong>, og gå til fanen <strong>Tilladelsesliste</strong>. </p>
+
+<h4>Sådan tilføjer du IP-adresser:</h4>
+<p>Vælg en af følgende i rullemenuen <strong>Opret</strong>:</p>
+<ul>
+<li><strong>Tilføj IP-adresse</strong><br> Indtast en IP-adresse.</li>
+<li><strong>Importer IP-adresseliste</strong><br> Importer en tekstfil, der viser IP-adresser for at tilføje et antal IP-adresse på samme tid. Marker afkrydsningsfeltet, hvis du vil overskrive eksisterende IP-adresser. Hvis denne mulighed ikke er valgt, bliver kopierede IP-adresser sprunget over.<br> Hvis den valgte fil har korrekt format, vil du se alle IP-adresserne i forhåndsvisningsområdet. Klik på <strong>OK</strong> for at importere.</li>
+</ul>
+
+<div class="section"><h4>Bemærk:</h4>
+<p>For at importere en fil skal filen opfylde følgende kriterier:</p>
+<ul>
+<li>Filen skal være en almindelig tekstfil.</li>
+<li>Hver linje i filen kan kun indeholde én IP-adresse.</li>
+<li>Kommentarlinjer begynder med et # (pundtegn).</li>
+</ul>
+</div>
+
+<h4>Sådan fjerner du IP-adresser:</h4>
+<p>Vælg de IP-adresser, du vil fjerne fra listen, og klik på <b>Fjern</b>.</p>
+
+<div class="section"><h4>Bemærk:</h4>
+<p>Hvis din DiskStation-enhed ligger bag en omvendt proxy-server, skal du tilføje IP-adressen på den omvendte proxy-server til tilladelseslisten.</p>
+</div>
+
+</body>
+</html>

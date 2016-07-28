@@ -1,0 +1,77 @@
+ <!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Ein Volume erstellen - Synology DSM Hilfe</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="This article walks you through the steps to create a volume on DiskStation using Storage Manager.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script> <script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Ein Volume erstellen</h2>
+
+<p>Dieser Artikel beschreibt die Erstellung eines Volumes auf Ihrem DiskStation. Für die Erstellung eines neuen Volumes stehen die folgenden Methoden zur Auswahl:</p>
+
+<ul>
+  <li><b>Schnell:</b> Dies ist die beste Option für Anfänger. Wählen Sie diese Methode, wenn Sie Speicherkapazität und Leistung automatisch optimieren möchten, ohne sich Gedanken über technische Aspekte, wie RAID-Ebenen, machen zu müssen. </li>
+
+<li><b>Benutzerdefiniert:</b> Für fortgeschrittene Benutzer, welche die feineren Aspekte der Volume-Erstellung, wie RAID-Typen und Kapazitätszuweisung kontrollieren wollen. Diese Option unterstützt verschiedene RAID-Typen, erlaubt die Erstellung einzelner oder mehrerer Volumes und bietet Optionen, um jedem Volume bestimmte Kapazitätsmengen zuzuweisen (nur, wenn Sie mehrere Volumes unter RAID erstellen).
+</li>
+</ul>
+
+<div class="section">
+<h4>Einzelne oder mehrere Volumes auf einem RAID?</h4>
+<p>Wenn Sie ein Volume im benutzerdefinierten Modus erstellen möchten, stehen die folgenden Optionen zur Auswahl:</p>
+<ul>
+  <li><b>Einzelnes Volume auf RAID</b>
+    <ul>
+      <li>Erstellt ein einzelnes Volume und verwendet die gesamte verfügbare Kapazität der ausgewählten Festplatten.</li>
+      <li>Bietet eine höhere Geschwindigkeit und eine bessere Leistung.</li>
+      <li>Unterstützt unterschiedliche RAID-Typen.</li>
+    </ul>
+  </li>
+  <li><b>Mehrere Volumes auf RAID</b>
+    <ul>
+      <li>Ermöglicht Ihnen das Erstellen mehrerer Volumes in einer Diskgruppe.</li>
+      <li>Unterstützt die Zuweisung bestimmter Kapazitäten zu jedem Volume.</li>
+      <li>Bietet größere Flexibilität bei der Speicherverwaltung.</li>
+      <li>Unterstützt unterschiedliche RAID-Typen.</li>
+    </ul>
+  </li>
+</ul>
+</div>
+
+
+<div class="section">
+<h4>Bevor Sie beginnen:</h4>
+<ul>
+<li>Stellen Sie zunächst sicher, dass sich auf den Festplatten keine wichtigen Daten befinden. Alle auf den Festplatten vorhandenen Daten werden im Verlauf des Erstellungsvorgangs gelöscht.</li>
+<li>Gehen Sie zur Seite <b>HDD/SSD</b> und vergewissern Sie sich, dass der Status der Festplatten <b>Normal</b> oder <strong>Nicht initialisiert</strong> ist.</li>
+</ul>
+</div>
+
+<div class="section enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64">
+<h4>Hinweis:</h4>
+<ul>
+<li>Die Mindestgröße eines Volumes beträgt 10 GB.</li>
+<li>Btrfs-Volumes reservieren 4 % des Speicherplatzes für Metadaten.</li>
+</ul>
+</div>
+
+<h4>Volume erstellen:</h4>
+<ol>
+<li>Öffnen Sie den <b>Speicher-Manager</b>.</li>
+<img src="about:blank" class="help_image"/>
+<li>Gehen Sie zu <b>Volume</b>, und klicken Sie auf <b>Erstellen</b>.</li>
+<img src="about:blank" class="help_image"/>
+<li>Der Assistent zur Volume-Erstellung wird angezeigt. Wählen Sie abhängig von Ihren Anforderungen <strong>Schnell</strong> oder <strong>Benutzerdefiniert</strong> aus. Dann folgen Sie den Schritten des Assistenten, um die Erstellung des Volumes abzuschließen.</li>
+<img src="about:blank" class="help_image"/>
+</ol>
+
+</body>
+</html>

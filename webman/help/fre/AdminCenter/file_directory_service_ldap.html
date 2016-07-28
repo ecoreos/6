@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>LDAP</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script> <script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>LDAP</h2>
+<p>LDAP permet à votre DiskStation de rejoindre un service d'annuaire existant en tant que client LDAP, puis de récupérer les informations d'utilisateur ou de groupe depuis un serveur LDAP (ou « Directory Server »). Vous pouvez gérer les privilèges d'accès des utilisateurs ou groupes LDAP aux applications DSM et dossiers partagés, exactement comme vous le feriez pour les utilisateurs ou groupes locaux DSM. Pour plus d'informations sur le LDAP, voir <a href="http://en.wikipedia.org/wiki/LDAP" target="_blank">ici</a>.</p>
+
+<p>Le standard LDAP pris en charge est LDAP version 3 (RFC2251).</p>
+<h4>Pour joindre un DiskStation à un service d'annuaire :</h4>
+<ol>
+<li>Accédez à <b>Panneau de configuration</b> &gt; <b>Service d'annuaire</b></li>
+<img src="about:blank" class="help_image"/>
+<li>Cliquez sur l'onglet <b>LDAP</b>, et cochez <b>Activer le client LDAP</b>.</li>
+<img src="about:blank" class="help_image"/>
+<li>Saisissez l'adresse IP ou nom de domaine du serveur LDAP dans le champ <b>Adresse du serveur LDAP</b>.</li>
+<img src="about:blank" class="help_image"/>
+<li>Choisissez un type de chiffrement dans le menu déroulant <b>Chiffrement</b> pour chiffrer la connexion LDAP au serveur LDAP.</li>
+<img src="about:blank" class="help_image"/>
+<li>Entrez le DN Base du serveur LDAP dans le champ <b>Base DN</b>.</li>
+<img src="about:blank" class="help_image"/>
+<li>Sélectionnez le <b>Profil</b> approprié en fonction de votre serveur LDAP. Par exemple, sélectionnez <b>Standard</b> si vous utilisez Synology Directory Server or Mac Open Directory.</li>
+<img src="about:blank" class="help_image"/>
+<li>Pour permettre aux utilisateurs d'un serveur LDAP qui ne prend pas en charge le schéma Samba d'accéder aux fichiers du DiskStation via CIFS, cochez <b>Activer l'authentification par mot de passe en texte brut CIFS</b>. Voir la section ci-dessous pour s'assurer que les utilisateurs LDAP peuvent utiliser leurs ordinateurs pour accéder aux fichiers du DiskStation via CIFS.</li>
+<img src="about:blank" class="help_image"/>
+<li>Cliquez sur <b>Appliquer</b>.</li>
+<li>
+  Entrez le Bind DN (ou compte administrateur LDAP) et le mot de passe dans les champs, puis cliquez sur <b>OK</b>.
+</li>
+<img src="about:blank" class="help_image"/>
+</ol>
+
+
+<div class="section">
+<h4>À propos de la prise en charge de CIFS et des paramètres de l'ordinateur client</h4>
+<p>
+Après l'activation de l'authentification par mot de passe en texte brut de CIFS, les utilisateurs LDAP devront peut-être modifier les paramètres de leurs ordinateurs pour pouvoir accéder aux fichiers du DiskStation via CIFS :
+</p>
+<ul>
+<li>
+Si votre DiskStation rejoint le service d'annuaire par un serveur LDAP Synology (ou un autre DiskStation sur lequel a été installé et exécuté le paquet <b>Directory Server</b>) ou le serveur LDAP qui prend en charge le schéma Samba et tous les utilisateurs LDAP ayant des attributs sambaNTPassword corrects, les utilisateurs LDAP peuvent accéder à vos fichiers DiskStation via CIFS sans cocher <b>Activer l'authentification par mot de passe en texte brut CIFS</b> ni modifier les paramètres de leurs ordinateurs. Sinon, les utilisateurs LDAP doivent activer la prise en charge de <a href="http://en.wikipedia.org/wiki/Pluggable_Authentication_Modules" target="_blank">PAM</a> de leur ordinateur pour pouvoir accéder aux fichiers de votre DiskStation via CIFS. Cependant, cela transférera le mot de passe des utilisateurs LDAP au DiskStation en texte brut (sans chiffrement), réduisant ainsi le niveau de sécurité.
+</li>
+
+</ul>
+<h4>Pour modifier les paramètres Windows :</h4>
+<ol>
+<li>Sélectionnez <b>Démarrer</b> > <b>Exécuter</b>, saisissez <b>regedit</b> dans le champ, puis cliquez sur <b>OK</b> pour ouvrir l'Éditeur de registres.</li>
+<li>
+Selon votre version de Windows, trouvez ou créez le registre suivant :
+</li>
+<ul>
+<li>
+<b>Windows 2000, XP, Vista et Windows 7 :</b><br> [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanWorkStation\Parameters]
+</li>
+<li>
+<b>Windows NT :</b><br> [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Rdr\Parameters]
+</li>
+<li>
+<b>Windows 95 (SP1), 98 et Me :</b><br> [HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\VxD\VNETSUP]
+</li>
+</ul>
+<li>
+Créez ou modifiez la valeur DWORD <b>EnablePlainTextPassword</b> et changez sa donnée de valeur de <b>0</b> à <b>1</b>.
+</li>
+<li>
+Redémarrez Windows pour que la modification prenne effet.
+</li>
+</ol>
+<h4>Pour modifier les paramètres de Mac OS X :</h4>
+<ol>
+<li>Accédez à <b>Applications</b> > <b>Utilitaires</b> pour ouvrir <b>Terminal</b>.
+</li>
+<li>
+Créez un fichier vide <b>/etc/nsmb.conf</b>:
+<pre>
+sudo touch /etc/nsmb.conf
+</pre>
+</li>
+<li>
+Ouvrez <b>/etc/nsmb.conf</b> avec vi:
+<pre>
+sudo vi /etc/nsmb.conf
+</pre>
+</li>
+<li>
+Saisissez « <b>i</b> » pour insérer du texte et collez ce qui suit :
+<pre>
+[default]<br / >
+minauth=none
+</pre>
+</li>
+<li>
+Appuyez sur la touche Échap, puis saisissez « <b>ZZ</b> » pour enregistrer les modifications et quitter vi.
+</li>
+</ol>
+<h4>Pour modifier les paramètres de Linux :</h4>
+<p>Si utilisez <b>smbclient</b>, veuillez ajouter les clés suivantes dans la section <b>[global]</b> de <b>smb.conf</b> :
+
+<p style="font-family:sans; margin-top:0px; padding-left:20px;line-height:1.25em;"> encrypt passwords = no <br> client plaintext auth = yes <br> client lanman auth = yes <br> client ntlmv2 auth = no </p>
+<p>Si vous utilisez <b>mount.cifs</b>, exécutez la commande suivante :</b>
+<p style="font-family:sans; margin-top:0px; padding-left:20px;line-height:1.25em;">echo 0x30030 > /proc/fs/cifs/SecurityFlags</p>
+<p>Pour plus de renseignements, veuillez consulter<a href="https://www.kernel.org/doc/readme/Documentation-filesystems-cifs-README" target=_blank>https://www.kernel.org/doc/readme/Documentation-filesystems-cifs-README</a></p>
+
+</p>
+</div>
+<div class="section">
+<h4>À propos des profils</h4>
+
+<p>Des serveurs LDAP différents peuvent utiliser des attributs différents pour les noms de compte, les noms de groupes ou pour différencier les comptes et les groupes. L'option <b>Profil</b> vous permet de spécifier ou de personnaliser la manière dont les informations sur les utilisateurs et les groupes sont mappées avec les attributs LDAP. Vous pouvez sélectionner l'un des profils suivants en fonction de votre serveur LDAP :</p>
+
+<ul>
+<li><b>Standard :</b> Pour les serveurs exécutant Synology Directory Server ou Mac Open Directory.</li>
+<li><b>IBM Lotus Domino :</b> Pour les serveurs exécutant IBM Lotus Domino 8.5.</li>
+<li><b>Personnalisé :</b> Vous permet de personnaliser les mappages personnalisés. Consultez la section ci-dessous pour plus de détails.</li>
+</ul>
+
+<p>Avant de personnaliser les mappages d'attributs LDAP, vous avez besoin de quelques connaissances de base. Synology DSM et l'éditeur du <strong>Profil</strong> adhèrent tous les deux à la norme RFC 2307. Par exemple, vous pouvez spécifier <b>filter</b> > <b>passwd</b> en tant que <b>userFilter</b>, auquel cas le DiskStation interprétera les enregistrements à l'aide de <b>objectClass=userFilter</b> sur votre serveur LDAP comme des comptes LDAP. Si vous spécifiez <b>passwd</b> > <b>uid</b> comme <b>username</b>, le DiskStation interprétera <b>username</b> sur votre serveur LDAP comme un nom de compte. Si le mappage est laissé vide, les règles RFC 2307 s'appliqueront.</p>
+<p>DiskStation requiert un nombre entier fixe pour faire office d'identifiant de compte LDAP (<strong>uidNumber</strong>) ou d'identifiant de groupe (<strong>gidNumber</strong>). Cependant, certains servers LDAP n'utilisent pas les nombres entiers pour représenter ces attributs. Par conséquent, un mot-clé <b>HASH()</b> est fourni pour convertir ces attributs en nombres entiers. Par exemple, votre serveur LDAP peut utiliser l'attribut <b>userid</b> avec une valeur hexadécimale en tant qu'identifiant unique pour un compte LDAP. Dans ce cas, vous pouvez définir <b>passwd</b> > <b>uidNumber</b> sur <b>HASH(userid)</b>, et le DiskStation le convertira alors en un nombre entier.</p>
+
+<p>Ce qui suit est un résumé des attributs personnalisables :</p>
+
+<ul>
+	<li><b>filtre</b></li>
+	<ul>
+		<li><b>groupe</b> : objectClass requis pour un groupe.</li>
+		<li><b>passwd</b> : objectClass requis pour un utilisateur.</li>
+		<li><b>shadow</b> : objectClass requis pour les mots de passe utilisateur.</li>
+	</ul>
+	<li><b>groupe</b></li>
+	<ul>
+		<li><b>cn</b> : nom du groupe.</li>
+		<li><b>gidNumber</b> : le numéro GID de ce groupe.</li>
+		<li><b>memberUid</b> : membres de ce groupe.</li>
+	</ul>
+	<li><b>passwd</b></li>
+	<ul>
+		<li><b>uidNumber</b> : numéro UID de cet utilisateur.</li>
+		<li><b>uid</b> : nom d'utilisateur.</li>
+		<li><b>gidNumber</b> : le numéro GID primaire de cet utilisateur.</li>
+	</ul>
+	<li><b>shadow</b></li>
+	<ul>
+		<li><b>uid</b> : nom d'utilisateur.</li>
+		<li><b>userPassword</b> : mot de passe utilisateur</li>
+	</ul>
+</ul>
+</div>
+<div class="section">
+<h4>À propos du changement UID/GID</h4>
+<p>Pour éviter les conflits entre les utilisateurs/groupes LDAP et les utilisateurs/groupes locaux, vous pouvez activer le changement UID/GID des utilisateurs/groupes LDAP par 1000000. Cette option est uniquement destinée aux serveurs LDAP qui sont des serveurs LDAP non Synology et qui ont un attribut numérique unique pour chaque utilisateur/groupe.</p>
+</div>
+</body>
+</html>

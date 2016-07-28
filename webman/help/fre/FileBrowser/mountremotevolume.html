@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>File Station</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2>Monter les dossiers distants</h2>
+
+<p>
+Vous pouvez monter les dossiers distants depuis les serveurs distants (comme les ordinateurs en réseau d'autres Synology NAS) pour les parcourir et gérer les dossiers montés via File Station.
+</p>
+
+
+
+
+
+<h4>Pour monter un dossier partagé CIFS* :</h4>
+<ol>
+<li>Cliquez sur <b>Outils</b> > <b>Monter le dossier distant</b> > <strong>Dossier partagé CIFS</strong>.</li>
+
+<img src="about:blank" class="help_image"/>
+
+<li>Dans le champ <b>Dossier</b>, spécifiez le chemin d'accès du dossier distant au format <code>\\Remote_Server\Remote_Folder</code>, tel que<code>\\192.168.0.2\share</code> ou <code>\\chad\cheeseburger\pictures</code>.</li>
+<li>Si le serveur distant nécessite des privilèges d'accès au dossier distant, saisissez vos identifiants de serveur distant dans les champs <b>Nom de compte</b> et <b>Mot de passe</b>.</li>
+<li>Cliquez sur <b>Parcourir</b> pour sélectionner ou créer un dossier de destination vide sur votre DiskStation pour monter le dossier distant.</li>
+
+<img src="about:blank" class="help_image"/>
+
+<li>Cochez <b>Monter automatiquement au démarrage</b> si vous souhaitez que DiskStation monte ce dossier distant à chaque démarrage ou redémarrage du système.</li>
+<li>Cliquez sur <b>Monter</b> pour que le dossier distant soit monté dans le dossier de destination. Vous pouvez maintenant naviguer dans votre dossier distant et le gérer depuis votre DiskStation.</li>
+</ol>
+
+<h4>Pour monter un dossier partagé NFS :</h4>
+
+<ol>
+<li>Cliquez sur <b>Outils</b> > <b>Monter le dossier distant</b> > <b>Dossier partagé NFS</b>.</li>
+
+<img src="about:blank" class="help_image"/>
+
+<li>Dans le champ <b>Dossier</b>, spécifiez le chemin d'accès du dossier distant au format <code>Remote_Server:/Remote_Folder_Path</code>, tel que <code>192.168.0.2:/volume1/share</code>.</li>
+<li>Sélectionnez la version NFS souhaitée et le protocole de transport.</li>
+<li>Cliquez sur <b>Parcourir</b> pour sélectionner ou créer un dossier de destination vide sur votre DiskStation pour monter le dossier distant.</li>
+
+<img src="about:blank" class="help_image"/>
+
+<li>Cochez <b>Monter automatiquement au démarrage</b> si vous souhaitez que votre DiskStation monte ce dossier distant à chaque démarrage ou redémarrage du système.</li>
+<li>Cliquez sur <b>Monter</b> pour que le dossier distant soit monté dans le dossier de destination. Vous pouvez maintenant naviguer dans votre dossier distant et le gérer depuis votre DiskStation.</li>
+</ol>
+
+<div class="section">
+<h4>Remarque :</h4>
+<p>NFSv4 ne prend en charge le protocole TCP.</p>
+</div>
+
+<h4>Pour démonter un dossier distant :</h4>
+<ol>
+<li>Sélectionnez le dossier distant que vous souhaitez démonter et cliquez sur <b>Outils</b> > <b>Démonter</b>.</li>
+
+<img src="about:blank" class="help_image"/>
+
+<li>Vous pouvez également tout simplement cliquer sur le bouton droit sur le dossier distant et sélectionner <b>Démonter</b>.</li>
+
+<img src="about:blank" class="help_image"/>
+
+</ol>
+
+<div class="section">
+<h4>Remarque&nbsp;:</h4>
+<ul>
+<li>Le nombre maximum de dossiers distants simultan&eacute;s est de 100.</li>
+<li>Vous &ecirc;tes seulement autoris&eacute; &agrave; monter les dossiers distants depuis un serveur distant qui prend en charge le protocole CIFS ou les protocoles NFS.
+</li>
+<li>Les dossiers distants ne peuvent &ecirc;tre mont&eacute;s que dans des sous-dossiers sous des dossiers partag&eacute;s.</li>
+<li class="enable-dockerx64">Le montage de dossiers distants n'est pris en charge qu'en mode &agrave; privil&egrave;ges &eacute;lev&eacute;s. Pour utiliser cette fonction, acc&eacute;dez au paquet Docker sur votre DSM h&ocirc;te, s&eacute;lectionnez le <strong>Docker DSM</strong> pour lequel vous souhaitez activer des dossiers partag&eacute;s chiffr&eacute;s, cliquez sur <strong>Modifier</strong> et cochez la case en regard de <strong>Ex&eacute;cuter le conteneur &agrave; l'aide de privil&egrave;ges &eacute;lev&eacute;s</strong>.</li>
+</ul>
+</div>
+
+
+<p>____<br /> * Uniquement disponible sur certains modèles.</p>
+
+</body>
+</html>

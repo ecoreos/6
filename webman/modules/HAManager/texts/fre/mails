@@ -1,0 +1,149 @@
+
+[HA_ConfSyncError]
+Subject: Le clusterHigh-availability %HOSTNAME% a détecteé une erreur de synchronisation pendant la vérification de la configuration du système.
+
+Cher utilisateur,
+
+Le cluster high-availability %HOSTNAME% a détecté une erreur synchronisation pendant la vérification de la configuration du système du serveur actif et du serveur passif. Le système a essayé de corriger l’erreur en effectuant une synchronisation complète des configurations système. Veuillez vérifier les journaux système ou la page Journaux de High Availability Manager pour plus d’informations.
+
+Action : %HA_ACTION%
+Erreur : %HA_PARAM_1%
+
+Sincères salutations,
+%COMPANY_NAME%
+
+
+[HA_FailOver]
+Subject: Erreur détectée sur le cluster high-availability %HOSTNAME%.
+
+Cher utilisateur,
+
+Une erreur a été détectée sur le cluster high-availability %HOSTNAME%. Le système basculera les services sur le serveur passif. Veuillez vérifier les journaux système pour plus d’informations.
+
+Action : %HA_ACTION%
+Erreur : %HA_PARAM_1%
+
+Sincères salutations,
+%COMPANY_NAME%
+
+
+[HA_MismatchedSsdCache]
+Subject: Les disques du cache SSD ne sont pas identiques sur le cluster high-availability %HOSTNAME%
+
+Cher utilisateur,
+
+Les disques appartenant au cache SSD suivant sur le serveur passif %HA_PARAM_1% ne sont pas identiques aux disques sur le serveur actif : Cache SSD %HA_PARAM_2%.
+
+Veuillez vérifier la page Journaux de High Availability Manager pour plus d’informations.
+
+Action : %HA_ACTION%
+
+Sincères salutations,
+%COMPANY_NAME%
+
+
+[HA_SplitBrain]
+Subject: Erreur de dédoublement du cerveau sur le cluster high-availability  %HOSTNAME%
+
+Cher utilisateur,
+
+Une erreur de dédoublement du cerveau s’est produite sur le cluster high-availability %HOSTNAME%. Veuillez vérifier les journaux système pour plus d’informations.
+
+Action : %HA_ACTION%
+
+Sincères salutations,
+%COMPANY_NAME%
+
+
+[HA_StatusChange]
+Subject: L'état du cluster high-availability %HOSTNAME% a changé de %HA_PARAM_1% à %HA_PARAM_2%.
+
+Cher utilisateur,
+
+L'état du cluster high-availability %HOSTNAME% a changé de %HA_PARAM_1% à %HA_PARAM_2%. Veuillez vérifier les journaux système ou la page Journaux de High Availability Manager pour plus d’informations.
+
+Action : %HA_ACTION%
+Description : %HA_PARAM_3%
+
+Sincères salutations,
+%COMPANY_NAME%
+
+
+[HA_SwitchFail]
+Subject: Échec de basculement des services du cluster high-availability  %HOSTNAME%
+
+Cher utilisateur,
+
+Le système a essayé de basculer les services au serveur passif du cluster high-availability %HOSTNAME%, mais a échoué. Veuillez vérifier les journaux système pour plus d’informations.
+
+Action : %HA_ACTION%
+
+Sincères salutations,
+%COMPANY_NAME%
+
+
+[HA_SwitchFinished]
+Subject: Le cluster High-availability %HOSTNAME% exécute maintenant des services sur %HA_PARAM_1%.
+
+Cher utilisateur,
+
+Les services du cluster high-availability %HOSTNAME% fonctionnent désormais sur %HA_PARAM_1%. Veuillez vérifier les journaux système ou la page Journaux de High Availability Manager pour plus d’informations.
+
+Action : %HA_ACTION%
+
+Sincères salutations,
+%COMPANY_NAME%
+
+
+[HA_SwitchOver]
+Subject: Basculement des services du cluster high-availability %HOSTNAME% à %HA_PARAM_1%.
+
+Cher utilisateur,
+
+Quelqu’un a initié le basculement du cluster high-availability %HOSTNAME%. Les services seront basculés sur %HA_PARAM_1%. Veuillez vérifier les journaux système pour plus d’informations.
+
+Action : %HA_ACTION%
+
+Sincères salutations,
+%COMPANY_NAME%
+
+
+[HA_SwitchOver_With_Reason]
+Subject: Le cluster high-availability %HOSTNAME% a initié un basculement vers %HA_PARAM_1%.
+
+Cher utilisateur,
+
+Un basculement a été initié sur le cluster high-availability %HOSTNAME%. Les services seront basculés sur %HA_PARAM_1%. Veuillez vérifier les journaux système pour plus d’informations.
+
+Action : %HA_ACTION%
+Raison : %HA_PARAM_2%
+
+Sincères salutations,
+%COMPANY_NAME%
+
+
+[HA_SyncComplete]
+Subject: La réplication complète des données du cluster high-availability %HOSTNAME% est terminée.
+
+Cher utilisateur,
+
+La réplication complète des données du cluster high-availability %HOSTNAME% est terminée. Le serveur passif est maintenant prêt à prendre le relais des services dans le cas où un basculement est nécessaire. Veuillez vérifier les journaux système ou la page Journaux de High Availability Manager pour plus d’informations.
+
+Action : %HA_ACTION%
+
+Sincères salutations,
+%COMPANY_NAME%
+
+
+[HA_UnbindLocal]
+Subject: L'hôte local a été supprimé du cluster high-availability
+
+Cher utilisateur,
+
+%HA_PARAM_1% a été supprimé du cluster high-availability %HA_PARAM_2%. Veuillez vérifier les journaux système pour plus d’informations.
+
+Action : %HA_ACTION%
+
+Sincères salutations,
+%COMPANY_NAME%
+

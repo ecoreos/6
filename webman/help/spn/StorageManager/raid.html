@@ -1,0 +1,163 @@
+﻿<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+	<h2>RAID Group*</h2>
+	<p>Puede combinar varios discos duros en una única unidad de almacenamiento llamada RAID Group con DiskStation. Se pueden crear volúmenes o iSCSI LUN (nivel de bloques) en la parte superior de los RAID Group. Los volúmenes o iSCSI LUN se pueden ampliar si un RAID Group tiene espacio asignable. Cada tipo de RAID ofrece un nivel de protección de datos diferente. Para obtener una lista general de los tipos de RAID compatibles con DiskStation, consulte la sección <a href="general.html">General</a>.</p>
+
+<h4>Para crear un RAID Group:</h4>
+	<ol>
+		<li>Haga clic en el botón <b>Crear</b>.</li>
+		<li>Elija cualquiera de las siguientes opciones:<ul>
+				<li>RAID Group para un único volumen o iSCSI LUN (nivel de bloques): ofrece un mejor rendimiento.</li>
+				<li>RAID Group para varios volúmenes o iSCSI LUN (nivel de bloques): ofrece una mejor flexibilidad de gestión.</li>
+			</ul>
+		</li>
+		<li>Siga el asistente para completar el proceso.</li>
+	</ol>
+<div class="section">
+<h4>Nota: </h4>
+<ul>
+<li>Un RAID Group debe estar formado por discos duros del mismo tipo. No puede utilizar discos duros SATA y SAS simultáneamente ni SSD y HDD simultáneamente para crear RAID.</li>
+<li>Un RAID Group para varios volúmenes o iSCSI LUN (nivel de bloques) que utiliza <b>RAID 5</b> o <b>RAID 6</b> puede contener varias <b>matrices RAID</b>. Cada una de las matrices RAID que pertenece al mismo RAID Group será del mismo tipo (p. ej., RAID 5 o RAID 6). El número máximo de discos para cada matriz RAID es 6, 12 o 24. Puede fijar el número máximo de discos mientras crea el RAID Group y el número no podrá modificarse posteriormente. Cuando se asigna un número máximo de discos a una matriz RAID, el siguiente disco que se añada al RAID Group puede asignarse a una nueva matriz RAID. La nueva matriz RAID debe contener el número mínimo de discos necesarios para ese tipo de RAID concreto (p. ej., tres discos para RAID 5 y cuatro discos para RAID 6).</li>
+<li>Si desea crear un RAID Group con un disco duro que no aparece en el <b>Asistente de creación de RAID Group</b>, compruebe el estado del disco duro en <b>Administración de disco duro</b>.</li>
+</ul>
+</div>
+
+	<h4>Para quitar un RAID Group:</h4>
+	<ol>
+		<li>Seleccione el RAID Group que desea quitar.</li>
+		<li>Haga clic en el botón <b>Quitar</b> y siga el asistente para completar el proceso.</li>
+	</ol>
+
+<div class="section">
+<h4>Nota: </h4>
+<ul>
+<li>Los volúmenes e iSCSI LUN del RAID Group se eliminarán cuando quite el RAID Group. Asegúrese de que no se eliminará ningún dato importante.</li>
+</ul>
+</div>
+
+
+	<h4>Para reparar un RAID Group:</h4>
+	<p>Un RAID Group con estado <b>Degradado</b> se puede reparar si el RAID Group es de uno de los siguientes tipos: RAID 1, RAID 5, RAID 6 y RAID 10. Los datos existentes del RAID Group no se eliminarán.</p>
+	<p>Para reparar el RAID Group, siga estos pasos:</p>
+	<ol>
+		<li>Apague su DiskStation (puede omitir este paso si su modelo admite el intercambio en caliente).</li>
+		<li>Sustituya el disco duro que ha fallado de la forma que se indica en Información del disco en Estado del RAID Group.</li>
+		<li>Haga clic en <b>Administrar</b>.</li>
+		<li>Seleccione <b>Reparar</b>.</li>
+		<li>Siga el asistente para completar el proceso.</li>
+        </ol>
+        
+<div class="section">
+<h4>Nota:</h4>
+<ul>
+<li>El tamaño del disco duro de sustitución debe ser igual o superior al tamaño del disco más pequeño del RAID Group.</li>
+<li>El estado del disco duro de sustitución debe ser "Iniciado" o "No iniciado".</li>
+</ul>
+</div>
+
+	<h4>Para cambiar el tipo de RAID de un RAID Group</h4>
+	<p>Para cambiar el tipo de RAID de un RAID Group, debe haber discos duros disponibles instalados en su DiskStation. Actualmente, se admiten los siguientes tipos de cambio de RAID:</p>
+	<ul>
+		<li>Basic a RAID 1 o RAID 5</li>
+		<li>RAID 1 a RAID 5</li>
+		<li>RAID 5 a RAID 6</li>
+      <li>Agregar disco reflejado a RAID 1</li>
+	</ul>
+	<p>Siga estos pasos para cambiar el tipo de RAID del RAID Group:</p>
+	<ol>
+		<li>Seleccione el RAID Group que desea cambiar.</li>
+		<li>Haga clic en <b>Administrar</b>.</li>
+		<li>Seleccione <b>Cambiar el tipo de RAID</b>.</li>
+		<li>Siga el asistente para completar el proceso.</li>
+        </ol>
+<div class="section">
+<h4>Nota: </h4>
+<ul>
+<li>El estado de un RAID Group debe ser <b>Normal</b> para poder cambiar su tipo de RAID. De lo contrario, se perderán datos. Si el RAID Group se encuentra en estado <b>Degradado</b>, repárelo primero.</li>
+<li>Para cambiar el tipo de RAID de un RAID Group, debe haber suficientes discos duros instalados en su DiskStation y el tamaño del nuevo disco debe ser superior al disco más pequeño del RAID Group.</li>
+<li>El estado del nuevo disco debe ser "Iniciado" o "No iniciado".</li>
+<li>El tipo de RAID de un RAID Group con varias matrices RAID no se puede modificar.</li>
+</ul>
+</div>
+
+	<h4>Para ampliar el tamaño de un RAID Group</h4>
+	<p>Puede ampliar el tamaño de un RAID Group sustituyendo los discos duros existentes por unos de mayor tamaño o añadiendo discos duros.</p>
+
+<div class="section">
+<h4>Nota: </h4>
+<ul>
+  <li>Para ampliar un RAID Group con discos de 3 TB o más, asegúrese de que su RAID Group se ha creado utilizando DSM 3.0 o posterior.</ul>
+</div>
+
+	<h4>Para ampliar un RAID Group sustituyendo los discos duros existentes por unos de mayor tamaño:</h4>
+	<p>Puede ampliar un RAID Group sustituyendo los discos duros existentes por unos de mayor tamaño en los siguientes tipos de RAID: RAID 1, RAID 5 y RAID 6. Los volúmenes o iSCSI LUN asociados en el RAID Group para un único volumen o iSCSI LUN se ampliarán automáticamente. Siga estos pasos:</p>
+	<ol>
+    <li>Apague su DiskStation (puede omitir este paso si su modelo admite el intercambio en caliente).</li>
+		<li>Sustituya un disco duro por otro de mayor tamaño.</li>
+		<li>Encienda DiskStation y repare el RAID Group.</li>
+		<li>Repita el paso 1 a 3 hasta que todos los discos duros se sustituyan por unos de mayor tamaño.</li>
+		<li>El sistema ampliará el RAID Group automáticamente.</li>
+	</ol>
+
+<div class="section">
+<h4>Nota: </h4>
+<ul>
+<li>Se detendrán temporalmente todos los servicios de Administrador de almacenamiento durante el proceso de ampliación.</li> 
+<li>Solo puede ampliar el disco duro si el RAID Group se encuentra en estado <b>Normal</b>; en caso contrario, se perderán los datos. Si el RAID Group se encuentra en estado <b>Degradado</b>, repárelo primero.</li>
+	</ul>
+</div>
+
+	<h4>Para ampliar un RAID Group añadiendo discos duros:</h4>
+	<p>Esta función se puede aplicar a los tipos de RAID JBOD, RAID 5 y RAID 6. Para ello:</p>
+	<ol>
+		<li>Seleccione el RAID Group que desea ampliar.</li>
+		<li>Haga clic en <b>Administrar</b>.</li>
+		<li>Seleccione <b>Agregar disco</b>.</li>
+		<li>Siga el asistente para completar la configuración.</li>
+</ol>
+<div class="section">
+<h4>Nota: </h4>
+<ul>
+		<li>El estado del RAID Group debe ser <b>Normal</b>.</li>
+		<li>Para los tipos de RAID Group RAID 5 y RAID 6, el tamaño del disco duro deberá ser mayor que el disco de menor tamaño del RAID Group.</li>
+		<li>El estado del disco duro seleccionado debe ser "Iniciado" o "No iniciado".</li>
+	</ul>
+    </div>
+
+	<h4>Para editar la descripción del RAID Group:</h4>
+	<ol>
+		<li>Seleccione el RAID Group que desea editar.</li>
+		<li>Haga clic en <b>Administrar</b>.</li>
+		<li>Seleccione <b>Editar descripción</b>.</li>
+		<li>Edite la descripción y haga clic en <b>OK</b> para guardar el resultado.</li>
+	</ol>
+	<h3>Depuración de RAID</h3>
+    <p>La depuración de RAID es una función de mantenimiento de datos que inspecciona los RAID Group y repara cualquier inconsistencia que detecte en los datos. Esta función se puede usar con RAID Group que implementen RAID 5 o RAID 6. </p>
+    <p>Le recomendamos que realice regularmente una depuración de RAID para mantener la consistencia de los datos y evitar perder cualquier dato crítico en el caso de que falle un disco.</p>
+    <h4>Para realizar una depuración de RAID:</h4>
+    <ol>
+      <li>Seleccione el RAID Group en el que desea realizar la depuración de RAID.</li>
+      <li>Haga clic en <strong>Administrar</strong></li>
+      <li>Seleccione <strong>Depuración de RAID</strong>.</li>
+    </ol>
+    <div class="section">
+      <h4>Nota:</h4>
+      <ul>
+        <li>La depuración de RAID solo se puede realizar cuando el estado del RAID Group es <strong>Normal</strong>.</li>
+        <li>No apague el sistema hasta que finalice la depuración de RAID. Si el sistema se apaga antes de que finalice el proceso, se debe volver a iniciar la depuración de RAID desde el principio.</li>
+      </ul>
+    </div>
+    
+<p>____<br />*Solo disponible en ciertos modelos.</p>    
+</body>
+</html>

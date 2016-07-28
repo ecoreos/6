@@ -1,0 +1,115 @@
+ <!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Change RAID Type of a Volume or Disk Group - Synology DSM Help</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="This article provides instructions to change the RAID type of existing volumes and disk groups on your DiskStation.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Change RAID Type of a Volume or Disk Group</h2>
+
+<p>Volumes and disk groups can be changed from one RAID type to another without losing existing data. For example, you can create a RAID 1 volume on your DiskStation, and later change to RAID 5 if you install more hard drives. This article provides instructions to change the RAID type of existing volumes and disk groups on your DiskStation.</p>
+<h3>RAID Type Limitations</h3>
+
+<p>Only some RAID types can be changed to certain other RAID types. See the table below for details.</p>
+
+<table>
+  <tr>
+    <th width="50%">RAID type</th>
+    <th width="50%">Can be changed to…</th>
+  </tr>
+  <tr>
+    <td>Basic</td>
+    <td>RAID 1<br />
+      RAID 5</td>
+  </tr>
+  <tr>
+    <td>RAID 1</td>
+    <td>RAID 5</td>
+  </tr>
+  <tr>
+    <td>RAID 5</td>
+    <td>RAID 6</td>
+  </tr>
+
+</table>
+
+<div class="section">
+<h4>Example:</h4>
+<p>RAID 1 can be changed to RAID 5, but RAID 5 cannot be changed to RAID 1.</p>
+</div>
+
+
+<h3>Hard Drive Requirements</h3>
+
+<p>In order to change the RAID type of a volume or disk group, you must have a sufficient number of available hard drives installed in your DiskStation. Please see below for the minimum number of hard drives required for each RAID type.</p>
+
+<table>
+  <tr>
+    <th width="50%">Desired RAID type</th>
+    <th width="50%">Required hard  drives</th>
+  </tr>
+  <tr>
+    <td>RAID 1</td>
+    <td>2 or 4</td>
+  </tr>
+  <tr>
+    <td>RAID 5</td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>RAID 6</td>
+    <td>4</td>
+  </tr>
+</table>
+
+<div class="section">
+<h4>Example:</h4>
+<p>If you want to change a RAID 1 volume to RAID 5, you'll need at least three hard drives in total (i.e. the two hard drives belonging to the RAID 1 volume, plus one free hard drive to add to the volume).</p>
+</div>
+
+<h3>Change RAID Type</h3>
+
+<p>In the example below, we will change a <strong>Basic</strong> volume to a <strong>RAID 1</strong> volume.</p>
+
+<div class="section">
+<h4>Before You Start:</h4>
+<ul>
+<li>Make sure the status of your volume or disk group is <b>Normal</b>.</li>
+<li>When adding new hard drives to a volume or disk group, the new hard drives must be larger than the smallest hard drive in the volume or disk group.</li>
+<li>The status of new hard drives must be <b>Initialized</b> or <b>Not Initialized</b>.</li></ul>
+</div>
+
+<h4>To change the RAID type of a volume:</h4>
+
+<ol>
+<li>Open <strong>Storage Manager</strong>.</li>
+<img src="about:blank" class="help_image"/>
+<li>Go to <b>Volume</b>.  (If you want to change the RAID type of a disk group, then go to the <b>Disk Group</b> tab.)</li>
+<li>Select the volume you wish to change and click <b>Manage</b>.</li>
+<img src="about:blank" class="help_image"/>
+
+<li>When the setup wizard appears, select <b>Change RAID type</b>. Then click <b>Next</b>.</li>
+<img src="about:blank" class="help_image"/>
+
+
+<li>Select the RAID type to which you want to change the volume. Click <b>Next</b>.</li>
+<img src="about:blank" class="help_image"/>
+
+
+<li>Select which hard drive(s) to add to the existing volume. Then click <b>Next</b>.</li>
+<img src="about:blank" class="help_image"/>
+
+
+<li>Follow the instructions of the wizard to finish. Please note existing data on the added hard drive shall be deleted.</li></ol>
+
+</body>
+</html>

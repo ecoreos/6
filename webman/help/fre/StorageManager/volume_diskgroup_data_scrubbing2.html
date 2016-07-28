@@ -1,0 +1,50 @@
+ <!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+
+<title>Nettoyage des données</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="Data scrubbing is a data maintenance feature that inspects volumes or disk groups and repairs any detected data inconsistencies.">
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Nettoyage des données*</h2>
+<p>Le nettoyage des données est un paramètre de maintenance des données qui inspecte les volumes ou groupes de disques. Il y a deux types de nettoyage des données :</p>
+
+<ul>
+<li><strong>Nettoyage du RAID :</strong> Cette fonction peut être utilisée avec les volumes ou groupes de disques qui implémentent SHR (comportant trois disques ou plus), RAID 5 ou RAID 6. Elle peut réparer toutes les incohérences de données détectées.</li>
+<li><strong>Nettoyage du système de fichiers :</strong> Vous pouvez utiliser cette fonction avec des volumes dans le système de fichiers Btrfs. Si des données sont incohérentes avec la somme de contrôle détectée, le chemin du fichier est enregistré dans le centre des journaux. Nous vous recommandons vivement d'utiliser une sauvegarde pour réparer les données.</li>
+</ul>
+
+<p>Nous recommandons d'effectuer régulièrement le nettoyage des données afin d'assurer la cohérence des données et d'éviter de perdre des données en cas de panne de disque dur.</p>
+
+<h4>Pour effectuer le nettoyage des données :</h4>
+
+<ol>
+<li>Ouvrez <strong>Gestionnaire de stockage</strong>.</li>
+<li>Accédez à <strong>Volume</strong> ou <strong>Groupe de disques</strong>.</li>
+<li>Sélectionnez le volume ou groupe de disques sur lequel vous souhaitez effectuer le nettoyage des données.</li>
+<li>Cliquez sur <strong>Gérer.</strong></li>
+<li>Sélectionnez <strong>Nettoyage des données</strong>.</li>
+<li>Sélectionnez le type de nettoyage souhaité pour les données. (Le système ignore automatiquement cette étape si un seul type est disponible.)</li>
+</ol>
+
+<div class="section">
+<h4>Remarque :</h4>
+<ul>
+<li>Le nettoyage des données ne peut être effectué que lorsque le statut du volume ou groupe de disques est <strong>Normal</strong>.</li>
+<li>Si le système est arrêté avant la fin, vous devrez redémarrer manuellement le nettoyage des données depuis le début.</li>
+</ul></div>
+
+<p>____<br /> *Uniquement pris en charge sur certains modèles.</p>
+
+</body>
+</html>

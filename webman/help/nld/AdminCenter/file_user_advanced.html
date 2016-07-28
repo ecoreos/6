@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Geavanceerde gebruikersinstellingen</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Geavanceerde gebruikersinstellingen</h2>
+
+<p>Om de geavanceerde gebruikersintellingen te wijzigen, gaat u naar <strong>Configuratiescherm</strong> > <strong>Gebruiker</strong> > <strong>Geavanceerd</strong>. De onderstaande opties zijn beschikbaar. </p>
+
+<h3>Gebruikers toestaan om vergeten wachtwoorden te herstellen</h3>
+<p>Als u gebruikers wilt toestaan om via e-mail vergeten wachtwoorden opnieuw in te stellen, schakelt u het selectievakje <strong>Niet-systeembeheerders toestaan om vergeten wachtwoorden via e-mail te herstellen</strong> in. Na inschakeling van deze optie verschijnt de gemarkeerde koppeling <strong>Bent u uw wachtwoord vergeten?</strong> op de DSM-aanmeldingspagina. Als een gebruiker zijn wachtwoord vergeet, kan hij op deze koppeling klikken en zijn gebruikersnaam invoeren. In dit geval zal het systeem een e-mailbericht naar de gebruiker sturen met een koppeling om zijn vergeten wachtwoord te herstellen. </p>
+
+<div class="section">
+<h4>Opmerking:</h4>
+<ul>
+<li>voor deze optie in te schakelen, moet SMTP-e-mailmeldingen al zijn ingeschakeld. Ga hiervoor naar <strong>Configuratiescherm</strong> > <strong>Melding</strong>.</li>
+<li>Om berichten van het systeem te ontvangen, moeten gebruikers een e-mailadres opgeven in het gedeelte gebruikersinformatie van hun accounts.</li>
+<li>Gebruikers die deel uitmaken van de groep <strong>administrators</strong> kunnen met deze optie geen wachtwoorden herstellen.</li>
+<li>Domeingebruikers kunnen met deze optie geen wachtwoorden herstellen.</li>
+<li>LDAP-gebruikers kunnen met deze optie wachtwoorden herstellen maar daarvoor moet DiskStation als LDAP directory-server fungeren.</li>
+
+</ul>
+</div>
+
+
+<h3>Wachtwoordsterkte</h3>
+<p>U kunt wachtwoordsterkteregels opstellen voor gebruikers op uw DiskStation.</p>
+
+<div class="section">
+<h4>Opmerking:</h4>
+<p>Wachtwoordsterkteregels zijn alleen van toepassing op nieuwe wachtwoorden. Zo worden bijvoorbeeld nieuwe wachtwoordsterkteregels alleen van toepassing bij het maken van een nieuwe gebruikersaccount of wanneer een bestaande gebruiker zijn wachtwoord wijzigt. Bestaande wachtwoorden en die tot geïmporteerde gebruikeraccounts behoren worden uitgesloten van de nieuwe wachtwoordregels.</p>
+</div>
+<h4>De wachtwoordsterkteregels inschakelen:</h4>
+<ol>
+<li>Vink het keuzevak <b>Regels voor wachtwoordsterkte toepassen</b> aan om wachtwoordbeperkingen in te schakelen.</li>
+<li>Selecteer meer dan een wachtwoordbeperking uit onderstaande regels:</li>
+<ul>
+<li><b>Naam en beschrijving van gebruiker uit wachtwoord uitsluiten</b>: het wachtwoord mag niet de gebruikersnaam of een beschrijving van de gebruiker bevatten. Tekens van de UTF-8-codering worden uitgesloten.</li>
+<li><b>Kleine/hoofdletters opnemen</b>: het wachtwoord moet uit hoofdletters en kleine letters bestaan.</li>
+<li><b>Numeriek teken opnemen</b>: het wachtwoord moet ten minste één numeriek teken bevatten (0~9).</li>
+<li><b>Speciaal teken opnemen</b>: Het wachtwoord moet ten minste één speciaal ASCII-teken bevatten (zoals ~, `, !, @, #, $, %, ^, &, *, (, ), -, _, =, +, [, {, ], }, \, |, ;, :, ', ", <, >, /, ?).</li>
+<li><b>Minimale lengte voor het wachtwoord</b>: Het wachtwoord moet minstens de opgegeven waarde in het tekstveld zijn. De lengte moet overeenstemmen met een getal tussen 6 en 127.</li>
+</ul>
+<li>Klik op <b>Toepassen</b> om de instellingen op te slaan.</li>
+</ol>
+
+
+
+<h3>2-stapsverficatie</h3>
+<p>De 2-stapsverificatie biedt verbeterde beveiliging voor DSM-gebruikeraccounts. U kunt DSM-administrators of alle DSM-gebruikers dwiningen om hun 2-stapsverificatie in te schakelen om hun accounts beter te beveiligen.</p>
+
+<h4>2-stapsverificatie voor DSM-gebruikers implementeren:</h4>
+
+<ol>
+<li>Schakel het selectievakje <strong>2-stapsverificatie instellen voor de volgende gebruikers</strong> in en selecteer voor welke gebruikers dit van toepassing moet worden.</li>
+<div class="section">
+<h4>Opmerking:</h4>
+<p>Hebt u 2-stapsverificatie nog niet geconfigureerd bij <b>Pers.</b> > <b>Account</b> dan wordt de wizard 2-stapsverificatie automatisch opgestart om u te helpen om de vereiste instellingen in te stellen en de procedure toe te passen.</p>
+</div>
+
+<li>Bij toegepaste procedure worden gebruikers, die hun 2-stapsverificatie niet hebben ingeschakeld, verzocht om hun instellingen te voltooien voor aanmelding bij DSM.</li>
+</ol>
+
+<div class="section">
+<h4>Opmerking:</h4>
+<p>de 2-stapsverificatie voor gebruikers wordt niet uitgeschakeld als u de 2-stapsverificatieprocedure hier uitschakelt. De 2-stapsverificatieinstellingen van gebruikers blijft behouden. Om deze instellingen uit te schakelen gaat u naar <b>Pers.</b> > <b>Account</b>.</p>
+</div>
+
+
+<h3>Gebruiker basismap</h3>
+
+<p>Schakel de gebruiker basismappen in om een persoonlijke <b>basismap</b> aan te maken voor iedere gebruiker, behalve voor <b>guest</b>. Iedere gebruiker heeft exclusief toegang tot zijn eigen basismap via CIFS, AFP, FTP of File Station.</p>
+<p>Gebruikers van de groep <strong>administrators</strong> hebben toegang tot alle persoonlijke mappen in de standaard gedeelde map <b>homes</b>. De naam van de basismap in dezelfde als de gebruikersaccount.</p>
+
+<h4>Om de gebruiker basismapservice in te schakelen:</h4>
+<ol>
+<li>Vink <b>Gebruiker basismapservice inschakelen</b> aan.</li>
+<li>Bestaan er meerdere volumes, selecteer dan het volume waar u de map <b>homes</b> wilt opslaan.</li>
+<li>Klik op <b>Toepassen</b>.</li>
+</ol>
+
+<div class="section">
+<h4>Opmerking:</h4>
+<p>zodra de basismapservice voor de lokale gebruiker is uitgeschakeld, wordt de basismapservice voor de domeingebruiker ook uitgeschakeld.</p>
+</div>
+
+<h4>Om de basismapservice voor gebruiker uit te schakelen:</h4>
+<ol>
+<li>Schakel het selectievakje <b>Gebruiker basismapservice inschakelen</b> uit.</li>
+<li>Klik op <b>Toepassen</b>.</li>
+</ol>
+<p>Wanneer de gebruiker basismapservice uitgeschakeld is, wordt de gedeelde map <b>homes</b> voorbehouden voor toegang door de admin.  Gebruikers hebben opnieuw toegang tot hun basismappen als de gebruiker basismap opnieuw ingeschakeld wordt.</p>
+
+<div class="section">
+<h4>Opmerking:</h4>
+<ol>
+<li>als u de gedeelde map <b>homes</b> wilt verwijderen, moet de gebruiker basismap service eerst worden uitgeschakeld.</li>
+<li>De basismapservice voor domeingebruiker zou worden uitgeschakeld als de basismapservice voor de lokale gebruiker is uitgeschakeld.</li> 
+</ol> 
+</div>
+
+
+</body>	
+</html> 

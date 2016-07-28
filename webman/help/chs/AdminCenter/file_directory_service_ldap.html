@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>LDAP</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>LDAP</h2>
+<p>LDAP 可让您的 DiskStation 以 LDAP 客户端的身分加入现有的目录服务，并从 LDAP 服务器 (或称“目录服务器”) 检索用户及组信息。您可以管理 LDAP 用户或群组对 DSM 应用程序及共享共享文件夹的访问权限，就像管理 DSM 本地用户或群组一样容易。如需更多有关 LDAP 的信息，请参阅<a href="http://en.wikipedia.org/wiki/LDAP" target="_blank">此处</a>。</p>
+
+<p>支持的 LDAP 标准为 LDAP 第 3 版 (RFC 2251)。</p>
+<h4>若要将 DiskStation 加入目录服务：</h4>
+<ol>
+<li>请进入<b>控制面板</b> &gt; <b>目录服务</b></li>
+<img src="about:blank" class="help_image"/>
+<li>进入 <b>LDAP</b> 选项卡并勾选<b>启用 LDAP 客户端</b>。</li>
+<img src="about:blank" class="help_image"/>
+<li>在 <b>LDAP 服务器地址</b>栏中输入 LDAP 服务器的 IP 地址或域名。</li>
+<img src="about:blank" class="help_image"/>
+<li>从<b>加密</b>下拉菜单中选择加密类型，藉此加密连接至 LDAP 服务器的 LDAP 连接。</li>
+<img src="about:blank" class="help_image"/>
+<li>在 <b>Base DN</b> 栏中输入 LDAP 服务器的 Base DN。</li>
+<img src="about:blank" class="help_image"/>
+<li>根据您的 LDAP 服务器来选择适当的<b>配置文件</b>。例如,如果您使用 Synology Directory Server 或 Mac Open Directory，请选择<b>标准</b>。</li>
+<img src="about:blank" class="help_image"/>
+<li>若要允许 LDAP 服务器的用户不支持 Samba schema 通过 CIFS 访问 DiskStation 文件，请勾选<b>启用 CIFS 纯文本密码验证</b>。请参阅下一区块的说明来确认 LDAP 用户可以使用他们的计算机通过 CIFS 成功访问 DiskStation 文件。</li>
+<img src="about:blank" class="help_image"/>
+<li>单击<b>应用</b>。</li>
+<li>
+在栏中输入 Bind DN (或 LDAP 管理员帐户) 和密码，然后单击<b>确定</b>。
+</li>
+<img src="about:blank" class="help_image"/>
+</ol>
+
+
+<div class="section">
+<h4>关于 CIFPS 支持及客户端计算机的设置</h4>
+<p>
+启用 CIFS 纯文本密码验证后, LDAP 用户可能需要修改计算机的设置才能通过 CIFS 访问 DiskStation 文件。
+</p>
+<ul>
+<li>
+如果您的 DiskStation 所加入的目录服务是由 Synology LDAP 服务器 (也就是已安装并运行 <b>Directory Server</b> 套件的另一部 DiskStation) 提供的，或 LDAP 服务器支持 Samba schema 且 LDAP 用户皆有正确的 sambaNTPassword 属性，则 LDAP 用户可以通过 CIFS 访问 DiskStation 文件而无需勾选<b>启用 CIFS 纯文本密码验证</b>或修改计算机设置。否则，LDAP 用户需要启用其计算机的 <a href="http://en.wikipedia.org/wiki/Pluggable_Authentication_Modules" target="_blank">PAM</a> 支持通过 CIFS 访问 DiskStation 文件。然而，这样做会以纯文本的未加密格式传送 LDAP 用户的密码到 DiskStation，因而降低安全层级。
+</li>
+
+</ul>
+<h4>若要修改 Windows 设置：</h4>
+<ol>
+<li>请进入<b>开始</b> > <b>运行</b>，在栏中输入 <b>regedit</b>，然后单击<b>确定</b>来打开“注册表编辑器”。</li>
+<li>
+视您使用的 Windows 版本，查找或创建下列注册表：
+</li>
+<ul>
+<li>
+<b>Windows 2000、XP、Vista 和 Windows 7：</b><br>[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanWorkStation\Parameters]
+</li>
+<li>
+<b>Windows NT：</b><br>[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Rdr\Parameters]
+</li>
+<li>
+<b>Windows 95 (SP1)、98 和 Me：</b><br>[HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\VxD\VNETSUP]
+</li>
+</ul>
+<li>
+创建或修改 DWORD 值 <b>EnablePlainTextPassword</b>，并将其数值数据从 <b>0</b> 变更为 <b>1</b>。
+</li>
+<li>
+重新启动 Windows 来让变更生效。
+</li>
+</ol>
+<h4>若要修改 Mac OS X 设置：</h4>
+<ol>
+<li>请进入<b>应用程序</b> > <b>实用工具</b>打开<b>终端机</b>。
+</li>
+<li>
+创建空文件 <b>/etc/nsmb.conf</b>：
+<pre>
+sudo touch /etc/nsmb.conf
+</pre>
+</li>
+<li>
+使用 vi 打开 <b>/etc/nsmb.conf</b>：
+<pre>
+sudo vi /etc/nsmb.conf
+</pre>
+</li>
+<li>
+输入“<b>i</b>”来插入文本，并贴上下列文本：
+<pre>
+[default]<br / >
+minauth=none
+</pre>
+</li>
+<li>
+按下 Esc 键然后按下“<b>ZZ</b>”来保存变更并退出 vi。
+</li>
+</ol>
+<h4>若要修改 Linux 设置：</h4>
+<p>如果您正在使用 <b>smbclient</b>，请在 <b>smb.conf</b> 的 <b>[global]</b> 区域添加下列密钥：
+
+<p style="font-family:sans; margin-top:0px; padding-left:20px;line-height:1.25em;"> encrypt passwords = no <br> client plaintext auth = yes <br> client lanman auth = yes <br> client ntlmv2 auth = no</p>
+<p>如果您正在使用 <b>mount.cifs</b>，请执行以下命令：</b>
+<p style="font-family:sans; margin-top:0px; padding-left:20px;line-height:1.25em;">echo 0x30030 > /proc/fs/cifs/SecurityFlags</p>
+<p>要了解更多信息，请参阅 <a href="https://www.kernel.org/doc/readme/Documentation-filesystems-cifs-README" target=_blank>https://www.kernel.org/doc/readme/Documentation-filesystems-cifs-README</a>。</p>
+
+</p>
+</div>
+<div class="section">
+<h4>关于配置文件</h4>
+
+<p>不同的 LDAP 服务器可能使用不同属性的帐户名和群组名来区别帐户和群组。<b>配置文件</b>选项可让您指定或自定义用户和群组信息映射至 LDAP 属性的方式。可根据您的 LDAP 服务器类型选择以下配置文件之一：</p>
+
+<ul>
+<li><b>标准：</b>适用于运行 Synology Directory Server 或 Mac Open Directory 的服务器。</li>
+<li><b>IBM Lotus Domino：</b>适用于运行 IBM Lotus Domino 8.5 的服务器。</li>
+<li><b>自定义：</b>可让您自定义映射。请参阅以下部分来了解详情。</li>
+</ul>
+
+<p>在自定义 LDAP 属性映射之前，您需要了解一些背景知识。Synology DSM 与<strong>配置文件</strong>编辑器都符合 RFC 2307 规定。例如，您可将 <b>filter</b> > <b>passwd</b> 指定为 <b>userFilter</b>，在此情况下，DiskStation 会将 LDAP 服务器上的 <b>objectClass=userFilter</b> 记录解析为 LDAP 帐户。如果您将 <b>passwd</b> > <b>uid</b> 指定为 <b>username</b>，则 DiskStation 会将 LDAP 服务器上的<b>用户帐户</b>解析为帐户名。让映射保留为空将应用 RFC 2307 规则。</p>
+<p>DiskStation 需要固定整数来用作 LDAP 帐户标识符 (<strong>uidNumber</strong>) 或群组标识符 (<strong>gidNumber</strong>)。然而，并非所有的 LDAP 服务器均使用整数来表示此类属性。因此，提供关键字 <b>HASH()</b> 可将此类属性转换为整数。例如，您的 LDAP 服务器可能将一个十六进制值的属性 <b>userid</b> 用作 LDAP 帐户的唯一标识符。在此情况下，您可以将 <b>passwd</b> > <b>uidNumber</b> 设置为 <b>HASH(userid)</b>，然后 DiskStation 会将其转换为整数。</p>
+
+<p>以下为可自定义属性的简介：</p>
+
+<ul>
+	<li><b>过滤器</b></li>
+	<ul>
+		<li><b>group</b>：群组所需的 objectClass 属性。</li>
+		<li><b>passwd</b>：用户所需的 objectClass 属性。</li>
+		<li><b>shadow</b>：用户密码所需的 objectClass 属性。</li>
+	</ul>
+	<li><b>群组</b></li>
+	<ul>
+		<li><b>cn</b>：群组名称。</li>
+		<li><b>gidNumber</b>：该群组的 GID 号。</li>
+		<li><b>memberUid</b>：该群组的成员。</li>
+	</ul>
+	<li><b>passwd</b></li>
+	<ul>
+		<li><b>uidNumber</b>：该用户的 UID 号。</li>
+		<li><b>uid</b>：用户名。</li>
+		<li><b>gidNumber</b>：该用户的主 GID 号。</li>
+	</ul>
+	<li><b>shadow</b></li>
+	<ul>
+		<li><b>uid</b>：用户名。</li>
+		<li><b>userPassword</b>：用户密码。</li>
+	</ul>
+</ul>
+</div>
+<div class="section">
+<h4>关于 UID/GID 转换</h4>
+<p>为避免 LDAP 用户/群组和本地用户/群组之间的 UID/GID 冲突，您可启用 UID/GID 转换以将 LDAP 用户/群组的 UID/GID 转换 1000000。此选项仅适用于 LDAP 服务器，该服务器为非 Synology LDAP 服务器，并使每个用户/群组有唯一的数值 ID 属性。</p>
+</div>
+</body>
+</html>

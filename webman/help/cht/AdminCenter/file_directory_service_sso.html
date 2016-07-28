@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>DSM Help - SSO 用戶端</title>
+<meta name="author" content="Synology Inc.">
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2>SSO 用戶端</h2>
+
+<p>您的 DiskStation 加入與 SSO 伺服器相同的網域或 LDAP 服務後，即可設定為 SSO 用戶端。使用者只要以帳號密碼登入 SSO 伺服器後即可存取您 DiskStation 提供的服務。</p>
+
+<p>開始之前，請確定您的 DiskStation 已加入與 SSO 伺服器相同的網域或 LDAP 服務。</p>
+
+<h4>若要將您的 DiskStation 設定為 SSO 用戶端：</h4>
+<ol>
+	<li>前往<strong>控制台</strong> &gt; <strong>網域/LDAP</strong> &gt; <strong>SSO 用戶端</strong>。</li>
+	<li>勾選<strong>啟動 SSO 服務</strong>核取方塊。</li>
+	<li>在核取方塊下方的欄位中指定 <strong>SSO 伺服器 URL</strong> 及<strong>應用程式 ID</strong>。<div class="section"><h4>注意：</h4>
+	<p>若要取得應用程式 ID，選擇下列其中一種方法：</p>
+	<ul>
+		<li><strong>方法 1：</strong><ol>
+				<li>登入作為 SSO 伺服器的 DSM。</li>
+				<li>將您即將作為用戶端應用程式的 DiskStation 加入 SSO Server 的應用程式清單。若要了解詳細步驟，請參閱 <strong>SSO Server</strong> 說明 &gt; <strong>應用程式清單</strong>。</li>
+				<li>您的 DiskStation 加入至 SSO 伺服器後，將 SSO Server 分配的應用程式 ID 複製並貼上。</li>
+			</ol>
+		</li>
+		<li><strong>方法 2：</strong><ol>
+				<li>輸入 <strong>SSO 伺服器 URL</strong>* 後，按一下應用程式 ID 欄位旁的<strong>快速註冊</strong>。</li>
+				<li>在註冊方塊中，在<strong>伺服器管理員</strong>和<strong>密碼</strong>欄位中輸入 SSO 伺服器管理員帳號的帳號密碼。</li>
+				<li>在<strong>應用程式名稱</strong>中指定用戶端應用程式名稱。</li>
+				<li>確認<strong>重新導向 URI</strong> 將指向您的 DiskStation 登入頁面。</li>
+				<li>按一下<strong>確定</strong>，您的 DiskStation 將加入至 SSO Server，並將自動填入應用程式 ID。</li>
+			</ol>
+		</li>
+	</ul>
+<p>______</p><p style="margin-left: 20px; text-indent: -10px;">* 設定每一台 SSO 用戶端時，請輸入完全相同的 SSO 伺服器 URL (主機名稱或 IP 位址，兩者擇一)。</p>
+</div>
+	</li>
+	<li>按一下<strong>套用</strong>來儲存設定。</li>
+</ol>
+
+<div class="section"><h4>注意：</h4>
+<ul>
+	<li>若 SSO 伺服器使用 HTTPS 通訊協定，瀏覽器可能會因缺乏受信任的憑證而封鎖 SSO 登入。</li>
+	<li>當 SSO 伺服器以 HTTP 通訊協定存取時，若您的 DiskStation (設定為 SSO 用戶端) 使用 HTTPS 連線，使用者需要設定瀏覽器來允許使用不安全的連線。</li>
+	<li>若您在 DSM 的<strong>控制台</strong> &gt; <strong>安全性</strong> &gt; <strong>安全性</strong>中勾選了<strong>啟動 HTTP 內容安全政策 (CSP) 標頭來提升安全性</strong>核取方塊，將無法支援 IPv6 格式的 SSO 伺服器 IP 位址。</li>
+</ul>
+</div>
+
+</body>
+</html>

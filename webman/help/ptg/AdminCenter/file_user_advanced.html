@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Defini&ccedil;&otilde;es de Utilizador Avan&ccedil;adas</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Defini&ccedil;&otilde;es de Utilizador Avan&ccedil;adas</h2>
+
+<p>Para modificar as defini&ccedil;&otilde;es de utilizador avan&ccedil;adas, pode aceder a <strong>Painel de Controlo</strong> &gt; <strong>Utilizador</strong> &gt; <strong>Avan&ccedil;ado</strong>. Encontram-se dispon&iacute;veis as op&ccedil;&otilde;es abaixo indicadas. </p>
+
+<h3>Permitir aos utilizadores a reposi&ccedil;&atilde;o de palavras-passe esquecidas</h3>
+<p>Se pretende permitir aos utilizadores a reposi&ccedil;&atilde;o de palavras-passe esquecidas atrav&eacute;s de e-mail, pode ativar <strong>Permitir que utilizadores n&atilde;o admin reponham palavras-passe esquecidas atrav&eacute;s de e-mail</strong>. Quando esta op&ccedil;&atilde;o estiver ativada, ser&aacute; apresentado o link <strong>Esqueceu-se da sua palavra-passe?</strong>  na p&aacute;gina de in&iacute;cio de sess&atilde;o do DSM. Se um utilizador esquecer a palavra-passe, pode clicar neste link e introduzir o nome de utilizador. Neste caso, o sistema envia uma mensagem de e-mail ao utilizador com um link para repor a palavra-passe esquecida. </p>
+
+<div class="section">
+<h4>Nota:</h4>
+<ul>
+<li>Antes de ativar esta op&ccedil;&atilde;o, certifique-se de que j&aacute; ativou as notifica&ccedil;&otilde;es por e-mail de SMTP. Para isso, aceda a <strong>Painel de Controlo</strong> &gt; <strong>Notifica&ccedil;&atilde;o</strong>.</li>
+<li>Para receber as mensagens do sistema, os utilizadores t&ecirc;m de fornecer um endere&ccedil;o de e-mail na sec&ccedil;&atilde;o de informa&ccedil;&otilde;es do utilizador das respetivas contas.</li>
+<li>Os utilizadores que pertencem ao grupo <strong>administrators</strong> n&atilde;o podem repor as palavras-passe com esta op&ccedil;&atilde;o.</li>
+<li>Os utilizadores do dom&iacute;nio n&atilde;o podem repor as palavras-passe com esta op&ccedil;&atilde;o.</li>
+<li>Os utilizadores LDAP podem repor as palavras-passe com esta op&ccedil;&atilde;o, desde que DiskStation funcione como directory server LDAP.</li>
+
+</ul>
+</div>
+
+
+<h3>Qualidade da Palavra-passe</h3>
+<p>Pode configurar regras da qualidade da palavra-passe para os utilizadores no DiskStation.</p>
+
+<div class="section">
+<h4>Nota:</h4>
+<p>As regras da qualidade da palavra-passe s&oacute; se aplicam a novas palavras-passe. Por exemplo, as regras de qualidade da nova palavra-passe s&oacute; s&atilde;o aplicadas quando criar uma nova conta de utilizador ou quando um utilizador existente alterar a respetiva palavra-passe. As palavras-passe existentes e as palavras-passe que pertencem a contas de utilizador importadas s&atilde;o exclu&iacute;das das regras da nova palavra-passe.</p>
+</div>
+<h4>Para ativar regras de qualidade da palavra-passe:</h4>
+<ol>
+<li>Marque a caixa de verifica&ccedil;&atilde;o <b>Aplicar regras de qualidade da palavra-passe</b> para ativar as restri&ccedil;&otilde;es da palavra-passe.</li>
+<li>Selecione mais do que uma das restri&ccedil;&otilde;es de palavra-passe das regras abaixo:</li>
+<ul>
+<li><b>Excluir o nome e descri&ccedil;&atilde;o do utilizador da palavra-passe</b>: A palavra-passe n&atilde;o deve conter o nome do utilizador ou a descri&ccedil;&atilde;o do utilizador. Excluem-se caracteres codificados em UTF-8.</li>
+<li><b>Incluir mistura de mai&uacute;sculas e min&uacute;sculas</b>: A palavra-passe deve conter letras mai&uacute;sculas e min&uacute;sculas.</li>
+<li><b>Incluir caractere num&eacute;rico</b>: A palavra-passe deve conter, pelo menos, um caractere num&eacute;rico (0~9).</li>
+<li><b>Incluir caractere especial</b>: A palavra-passe tem de conter, pelo menos, um caractere especial ASCII (por exemplo, ~, `, !, @, #, $, %, ^, &amp;, *, (, ), -, _, =, +, [, {, ], }, \, |, ;, :, &apos;, &quot;, <, >, /, ?).</li>
+<li><b>Comprimento m&iacute;nimo da palavra-passe</b>: A palavra-passe tem de ter, pelo menos, o valor especificado no campo de texto. O comprimento dever&aacute; estar entre 6 e 127.</li>
+</ul>
+<li>Clique em <b>Aplicar</b> para guardar as defini&ccedil;&otilde;es.</li>
+</ol><h3>Verifica&ccedil;&atilde;o de 2 passos</h3>
+<p>A verifica&ccedil;&atilde;o de 2 passos constitui uma seguran&ccedil;a melhorada para as contas do utilizador DSM. Pode for&ccedil;ar os administradores DSM ou todos os utilizadores do DSM a ativarem as respetivas verifica&ccedil;&otilde;es de 2 passos para uma prote&ccedil;&atilde;o adicional das suas contas.</p>
+
+<h4>Para for&ccedil;ar a verifica&ccedil;&atilde;o de 2 passos para todos os utilizadores do DSM:</h4>
+
+<ol>
+<li>Marque a caixa <strong>For&ccedil;ar a verifica&ccedil;&atilde;o de 2 passos para os seguintes utilizadores</strong> e selecione os utilizadores a quem pretende aplicar esta condi&ccedil;&atilde;o.</li>
+<div class="section">
+<h4>Nota:</h4>
+<p>Se ainda n&atilde;o tiver ativado a verifica&ccedil;&atilde;o de 2 passos em <b>Pessoais</b> &gt; <b>Conta</b>, o assistente de configura&ccedil;&atilde;o da verifica&ccedil;&atilde;o de 2 passos ser&aacute; iniciado para o ajudar a concluir as defini&ccedil;&otilde;es necess&aacute;rias antes de poder aplicar esta obriga&ccedil;&atilde;o.</p>
+</div>
+
+<li>Com esta obriga&ccedil;&atilde;o aplicada, ser&aacute; solicitado aos utilizadores que ainda n&atilde;o tiverem ativado a respetiva verifica&ccedil;&atilde;o de 2 passos que concluam as defini&ccedil;&otilde;es antes de poderem iniciar sess&atilde;o no DSM.</li>
+</ol>
+
+<div class="section">
+<h4>Nota:</h4>
+<p>A desativa&ccedil;&atilde;o da obriga&ccedil;&atilde;o da verifica&ccedil;&atilde;o de 2 passos aqui n&atilde;o ir&aacute; afetar ou desativar as defini&ccedil;&otilde;es da verifica&ccedil;&atilde;o de 2 passos de cada utilizador. Os utilizadores podem manter as respetivas defini&ccedil;&otilde;es de verifica&ccedil;&atilde;o de 2 passos ou aceder a <b>Pessoais</b> &gt; <b>Conta</b> para desativar essas defini&ccedil;&otilde;es.</p>
+</div><h3>Home do Utilizador</h3>
+
+<p>Ativar a home do utilizador para criar uma pasta <b>home</b> pessoal para cada utilizador, exceto para o <b>guest</b>. Todos os utilizadores podem aceder &agrave; sua pasta home atrav&eacute;s de CIFS, AFP, FTP ou da File Station.</p>
+<p>Os utilizadores pertencentes ao grupo <strong>administrators</strong> podem aceder a todas as pastas pessoais localizadas na pasta partilhada predefinida, <b>homes</b>. O nome da pasta home &eacute; o mesmo da conta do utilizador.</p>
+
+<h4>Para ativar o servi&ccedil;o home do utilizador:</h4>
+<ol>
+<li>Marque <b>Ativar o servi&ccedil;o home do utilizador</b>.</li>
+<li>Se existirem v&aacute;rios volumes, selecione onde pretende que seja armazenada a pasta <b>homes</b>.</li>
+<li>Clique em <b>Aplicar</b>.</li>
+</ol>
+
+<div class="section">
+<h4>Nota:</h4>
+<p>Quando o servi&ccedil;o home do utilizador for desativado, o servi&ccedil;o home do utilizador no dom&iacute;nio ser&aacute; tamb&eacute;m desativado.</p>
+</div>
+
+<h4>Para desativar o servi&ccedil;o home do utilizador:</h4>
+<ol>
+<li>Desmarque a op&ccedil;&atilde;o <b>Ativar o servi&ccedil;o home do utilizador</b>.</li>
+<li>Clique em <b>Aplicar</b>.</li>
+</ol>
+<p>Depois de desativar o servi&ccedil;o home do utilizador, a pasta partilhada <b>homes</b> ser&aacute; preservada para acesso do administrador.  Os utilizadores ter&atilde;o novamente acesso &agrave;s respetivas pastas home, quando o servi&ccedil;o home do utilizador for novamente ativado.</p>
+
+<div class="section">
+<h4>Nota:</h4>
+<ol>
+<li>Para eliminar a pasta partilhada <b>homes</b>, o servi&ccedil;o home do utilizador deve ser desativado primeiro.</li>
+<li>O servi&ccedil;o home do utilizador do dom&iacute;nio ser&aacute; desativado se o servi&ccedil;o home do utilizador local estiver desativado.</li> 
+</ol> 
+</div>
+
+
+</body>	
+</html> 

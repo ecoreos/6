@@ -1,0 +1,170 @@
+﻿
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>File Station beállításainak kezelése – Synology DSM Súgó</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="Learn how to customize File Station settings related to file management, shared links, and security.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>File Station beállításainak kezelése</h2>
+<p>A File Station beállításainak kezeléséhez nyissa meg a <strong>File Station</strong> alkalmazást, majd kattintson a <b>Beállítások</b> gombra.</p>
+
+<h3>Általános</h3>
+<p>Itt engedélyezheti a File Station alkalmazás számára az összes felhasználói tevékenység rögzítését. A felhasználói tevékenységek a következők: <b>Mappa létrehozása</b>, <b>Feltöltés</b>, <b>Letöltés</b>, <b>Törlés</b>, <b>Átnevezés</b>, <b>Áthelyezés</b>, <b>Másolás</b> és <b>Tulajdonság beállítva</b>.</p>
+<h4>File Station napló engedélyezése:</h4>
+<ol>
+<li>Ha valamennyi felhasználó tevékenységét rögzíteni szeretné, jelölje be a <b>File Station napló engedélyezése</b> jelölőnégyzetet.</li>
+<li>Kattintson az <b>OK</b> gombra.</li>
+</ol>
+<h4>A File Station napló megtekintése:</h4>
+<ol>
+<li>Kattintson a <b>Naplók megtekintése</b> elemre. Megnyílik a <strong>Napló központ</strong> oldal.</li>
+<li>Kattintson a <b>Fájlátvitel</b> lapra.</li>
+</ol>
+
+<h4>Fájlok automatikus felülírása húzásos feltöltéssel vagy billentyűparanccsal:</h4>
+<p>Jelölje be a <strong>Mindig írja felül a fájlokat, ha a webböngészőre húzom vagy gyorsbillentyűkkel illesztem be azokat</strong> lehetőséget, ha automatikusan felül szeretné írni az ugyanolyan nevű fájlokat, amikor a számítógép asztaláról a webböngészőre húz fájlokat, vagy a File Station alkalmazáson belül gyorsbillentyűkkel illeszt be fájlokat.</p>
+
+
+<h4>Intelligens húzás engedélyezése:</h4>
+<p>Amikor húzással mozgat fájlokat a File Station rendszerben, ez a funkció automatikusan meghatározza, hogy másolás vagy áthelyezés műveletet kíván elvégezni.</p>
+
+<ol>
+<li>Jelölje be az <strong>Intelligens húzás engedélyezése</strong> jelölőnégyzetet.</li>
+<li>Válassza ki, hogy a rendszer mely műveletet végezze el, amikor egy másik felhasználó azonos nevű fájlokat helyez ugyanarra a helyre:<ul>
+<li><strong>Felülírás</strong>: A rendszer felülírja a fájlokat ugyanazon a néven.</li>
+<li><strong>Kihagyás</strong>: A rendszer kihagyja a fájlokat, és nem végez felülírást.</li>
+</ul>
+</li>
+<li>Kattintson az <strong>OK</strong> gombra.</li>
+</ol>
+
+<div class="section">
+<h4>Megjegyzés:</h4>
+<p>Ha szeretné módosítani az intelligens húzás által végzett műveletet (másolás vagy áthelyezés), használja az alábbi gyorsgombokat:</p>
+<ul>
+<li>Váltás másolásra: Húzás közben nyomja meg a Ctrl billentyűt.</li>
+<li>Váltás áthelyezésre: Húzás közben nyomja meg a Shift billentyűt.</li>
+</ul>
+</div>
+
+
+<h4>Helyi számítógép fájljainak tallózása és kezelése File Station alkalmazással:</h4>
+<ol>
+<li>Jelölje be a <b>Helyi számítógép fájljainak tallózása a File Station alkalmazással</b> jelölőnégyzetet.</li>
+<li>Kattintson az <b>OK</b> gombra.</li>
+</ol>
+
+
+<h4>DSM felhasználólistájának megosztása nem rendszergazda felhasználókkal:</h4>
+<p>Ezen opció lehetővé teszi a nem rendszergazda felhasználók számára a DSM teljes felhasználólistájának elérését, ami például akkor lehet hasznos, ha a felhasználó szeretne a DSM adott felhasználói/csoportjai által birtokolt fájlok között keresni, illetve szeretne fájlhivatkozásokat megosztani más DSM-felhasználókkal.</p>
+
+<ol>
+<li>Jelölje be a <strong>DSM felhasználólistájának megosztása nem rendszergazda felhasználókkal</strong> jelölőnégyzetet.</li>
+<li>Kattintson az <strong>OK</strong> gombra.</li>
+</ol>
+
+
+<h3>Alapértelmezett UNIX engedélyek alkalmazása</h3>
+<p>Kattintson a <strong>Speciális beállítások</strong> lehetőségre, majd jelölje be az opciót. Ezt követően a rendszer fájlok és mappák feltöltésekor vagy létrehozásakor az alapértelmezett UNIX engedélyeket alkalmazza. A rendszer ugyanazokat az engedélyeket alkalmazza, mintha a <strong>umask</strong> UNIX-parancsot használná. Az opció engedélyezése esetén a UNIX engedélyfájlok esetén 644, mappák esetén 755. Az opció letiltása esetén a UNIX engedélyfájlok esetén 666, mappák esetén 777. Az alapértelmezett umask érték: 022.</p>
+<div class="section">
+<h4>Megjegyzés:</h4>
+<ul>
+  <li>A Windows ACL-t használó megosztott mappák esetében (a külső meghajtókon lévő megosztásokon és a „photo” mappán kívül az összes megosztás) futtassa a <strong>chmod</strong> parancsot Linux rendszerén vagy FTP-kliensén, amennyiben a Windows ACL mappa- és fájlengedélyeit UNIX-ra szeretné állítani.</li>
+  <li>Az opció engedélyezése inkonzisztens engedélyekkel kapcsolatos problémákat okozhat a különböző protokollok között. Az inkonzisztenciák elkerülése érdekében azt javasoljuk, hogy ne kapcsolja be ezt az opciót.</li>
+</ul>
+</div>
+<h3 class="disable-eds14">Csatlakoztatás/kapcsolatok</h3>
+<p class="disable-eds14">Alapértelmezés szerint az összes felhasználó csatlakoztathat távoli mappákat és virtuális meghajtókat. Itt a távoli mappákhoz való hozzáférést, illetve a virtuális meghajtók kezelését a rendszergazdákra (administrators csoport) korlátozhatja.</p>
+
+<div class="disable-eds14 section">
+<h4>Megjegyzés:</h4>
+<p>A nem rendszergazda felhasználók csak saját <b>home</b> mappájukon belül csatlakoztathatnak távoli mappákat.</p>
+</div>
+<h4 class="disable-eds14">Távoli mappák és virtuális meghajtók csatlakoztatásának engedélyezése különböző felhasználó számára:</h4>
+<ol class="disable-eds14">
+<li>Válassza a <b>Valamennyi felhasználó</b> vagy <b>Administrators</b> lehetőséget a <b>Távoli mappa</b>, illetve <b>Virtuális meghajtó</b> lehetőségnél.</li>
+<li>Kattintson az <b>OK</b> gombra.</li>
+</ol>
+<h4 class="disable-eds14">Szerverek és felhőszolgáltatások csatlakoztatásának engedélyezése különböző felhasználó számára:</h4>
+<ol class="disable-eds14">
+  <li>Válasszon a <b>Valamennyi felhasználó</b>, <b>Administrators</b> és <strong>Megadott felhasználó</strong> lehetőségek közül. </li>
+  <li>A <strong>Megadott felhasználó</strong> lehetőség kiválasztása esetén megjelenik egy ablak, melyben megadhatja az egyes felhasználók csatlakoztatási jogosultságait. Adott felhasználó hozzáférésének engedélyezéséhez mindenképp jelölje be az <strong>Engedélyez</strong> oszlop alatti jelölőnégyzetet. Adott felhasználó hozzáférésének letiltásához mindenképp törölje az <strong>Engedélyez</strong> oszlop alatti jelölőnégyzetet. Befejezést követően az <strong>OK</strong> gombra kattintva bezárhatja az ablakot.</li>
+  <div class="section">
+    <h4>Megjegyzés:</h4>
+    <ul>
+      <li>Az <strong>administrators</strong> csoportba tartozó felhasználók használhatják a funkciót, de nem végezhetnek módosításokat. A <strong>vendég</strong> fiókkal bejelentkező felhasználók nem használhatják a funkciót és módosításokat sem végezhetnek. Itt adhatja meg a felhasználókhoz tartozó jogosultságokat.</li>
+    </ul>
+  </div>
+  <li>Kattintson az <strong>OK</strong> gombra.</li>
+</ol>
+<h3>Megosztott hivatkozások</h3>
+<p>Alapértelmezés szerint fájlhivatkozásokat az összes felhasználó megoszthat. Itt azonban az administrators csoport tagjaira korlátozhatja a megosztott hivatkozások kezelését.</p>
+<h4>Fájlhivatkozások megosztásának engedélyezése különböző felhasználók számára:</h4>
+<ol>
+<li>Válassza a <b>Valamennyi felhasználó</b>, <b>Administrators</b> vagy <strong>Megadott felhasználó</strong> lehetőséget.</li>
+<li>Kattintson az <b>OK</b> gombra.</li>
+</ol>
+
+<h4>HTML-fájlok egyszerű szövegként való megnyitása:</h4>
+
+<ol>
+<li>Jelölje be a <strong>HTML fájlok megnyitása mindig egyszerű szöveges formátum használatával</strong> jelölőnégyzetet. A beállítás bekapcsolása esetén a HTML-fájlok (pl. HTM-, HTML-, JSP-, XHTML-fájlok) fájlmegosztási hivatkozásról való megnyitás esetén egyszerű szöveges formátumban jelennek meg. Ez az opció segít megakadályozni, hogy rosszindulatú felek a HTML-fájlokba beágyazott parancsfájl használatával a saját céljaikra használják fel az Ön bejelentkezett munkamenetét.</li>
+<li>Kattintson az <strong>OK</strong> gombra.</li>
+</ol>
+
+<h3>Sebességhatár</h3>
+<p>A sebességhatár bekapcsolásával megszabhatja, hogy mekkora sávszélességet használhassanak fel a felhasználók és csoportok a File Station alkalmazáson keresztül történő adatátvitel során.</p>
+
+
+<h4>Sebességhatár engedélyezése:</h4>
+<ol>
+  <li>Jelölje be a <b>Sebességhatár engedélyezése</b> opciót, illetve, amennyiben csak bizonyos időpontokban szeretne sebességhatárt alkalmazni, a <strong>Sebességhatár engedélyezése ütemterv alapján</strong> jelölőnégyzetet. Ez a beállítás a szerver egészére vonatkozik, így az egyes felhasználók és csoportok esetleges egyéni beállításait is felülírja. A <strong>Nincs sebességhatár</strong> opció kiválasztásával kikapcsolja az összes felhasználó és csoport sebességhatár-beállításait.</li>
+  <li>A <strong>Sebességhatár-beállítások</strong> lehetőségre kattintva módosíthatja az egyes felhasználók vagy csoportok sebességhatár-beállításait. Minden felhasználó és csoport esetében megadhatja a következők egyikét:  </li>
+    <ul>
+      <li><strong>Csoportbeállítások alkalmazása:</strong> A sebességhatár-beállítások meg fognak egyezni azon csoportéval, amelyhez a felhasználó tartozik. </li>
+      <li><strong>Nincs sebességhatár:</strong> A rendszer nem alkalmaz sebességhatárt, amikor a csoport tagjai a szolgáltatás használatával továbbítanak fájlokat.</li>
+      <li><strong>Állandó:</strong> Fix, állandó sebességhatár kerül alkalmazásra a felhasználó, illetve csoporttagok esetében. A bal oldali mezőkben feltöltési és letöltési sebességhatárt is megadhat.</li>
+      <li><strong>Változó:</strong> Egy ütemterv szerint két különböző sebességhatár határozható meg és alkalmazható a felhasználókra vagy a csoporttagokra. A sebességhatár-beállítások módosításához és az ütemterv megadásához kattintson a <strong>Testreszabás</strong> gombra.</li>
+    </ul>
+
+  <li>Kattintson az <b>Alkalmaz</b> gombra.</li>
+</ol>
+<div class="section">
+  <h4>Megjegyzés:</h4>
+  <ul>
+    <li>A csoportra vonatkozó sebességhatár működésével kapcsolatos további részleteket lásd <a href="../AdminCenter/file_group_edit.html">itt</a>.</li>
+    <li>Felhasználóra vonatkozó sebességhatár beállítása esetén az <strong>Eredmény</strong> szakaszban a felhasználóra egyéni és csoportos beállításai alapján vonatkozó tényleges sebességhatár jelenik meg. Ha például az „Achilles” nevű felhasználó egyedi letöltési korlátja 100 KB/s, ám felhasználói csoportjára 500 KB/s-os letöltési korlát vonatkozik, akkor az <strong>Eredmények</strong> szakaszban a „0/500” szám látható.</li>
+  </ul>
+</div>
+
+
+
+<h3>Biztonság</h3>
+
+<p>Itt találja az alább részletezett biztonsági beállításokat.</p>
+
+<h4>HTML-fájlok egyszerű szövegként való megnyitása:</h4>
+
+<ol>
+<li>Jelölje be a <strong>HTML fájlok megnyitása mindig egyszerű szöveges formátum használatával</strong> jelölőnégyzetet. A beállítás bekapcsolása esetén a HTML-fájlok (pl. HTM-, HTML-, JSP-, XHTML-fájlok) a File Station alkalmazásban való megnyitás esetén egyszerű szöveges formátumban jelennek meg. Ez az opció segít megakadályozni, hogy rosszindulatú felek a HTML-fájlokba beágyazott parancsfájl használatával a saját céljaikra használják fel az Ön bejelentkezett munkamenetét.</li>
+<div class="section">
+<h4>Megjegyzés:</h4>
+<ul>
+<li>Ez a beállítás nem globális érvényű. A felhasználók saját igényeik szerint választhatják meg, hogy bekapcsolják-e ezt a beállítást.</li>
+</ul>
+</div>
+<li>Kattintson az <strong>OK</strong> gombra.</li>
+</ol>
+
+</body>
+</html>

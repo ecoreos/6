@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+ <head>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>High Availability</title>
+
+
+ </head>
+ <body>
+<h2>Estado do armazenamento</h2>
+	<p>Esta p&aacute;gina apresenta detalhes sobre o estado dos volumes de armazenamento e dos iSCSI LUNs (n&iacute;vel do bloco) nos servidores ativo e passivo do cluster de high-availability.</p>
+    <p>Porque a capacidade e configura&ccedil;&otilde;es nos volumes e iSCSI LUNs (n&iacute;vel de bloco) correspondentes nos servidores ativo e passivo devem ser id&ecirc;nticas, os volumes e iSCSI LUN (n&iacute;vel de bloco) nos dois servidores s&atilde;o apresentados em conjunto como unidades individuais. Assim, se pretender visualizar o estado dos volumes e iSCSI LUNs (n&iacute;vel do bloco) de ambos os servidores ativo e passivo, deve ir para a p&aacute;gina <b>Estado de Armazenamento</b> [quando aceder a um cluster de high-availability, s&oacute; os volumes e iSCSI LUNs (n&iacute;vel de bloco) no servidor ativo s&atilde;o vis&iacute;veis em <b>Espa&ccedil;o de Armazenamento</b>],</p>
+
+    <p>Esta p&aacute;gina cont&eacute;m as seguintes informa&ccedil;&otilde;es:</p>
+		<ul>
+			<li><b>Nome:</b> Apresenta os nomes dos volumes e iSCSI LUNs (n&iacute;vel do bloco).</li>
+			<li><b>Utilizado:</b> Apresenta a percentagem da capacidade utilizada dos volumes e iSCSI LUNs (n&iacute;vel do bloco).</li>
+			<li><b>Tamanho Utilizado/Total:</b>  Apresenta a capacidade total e utilizada dos volumes e iSCSI LUNs (n&iacute;vel do bloco).</li>
+            <li><b>Estado:</b> Apresenta o estado dos volumes e iSCSI LUNs (n&iacute;vel do bloco) e caches SSD.</li>
+            <li><b>Descri&ccedil;&atilde;o:</b> Apresenta descri&ccedil;&otilde;es dos erros ou outra informa&ccedil;&atilde;o relativa ao volume e iSCSI LUN (n&iacute;vel de bloco) e cache SSD.</li>
+		</ul>
+<h4>Para reparar um volume ou iSCSI LUN (N&iacute;vel do Bloco) com avaria:</h4>
+	<ul>
+		<li>Se um disco r&iacute;gido num dos servidores sofreu uma falha fatal, pode ir para a p&aacute;gina <a href="disk.html">Estado do Disco</a> para determinar que disco r&iacute;gido sofreu a falha fatal e que precisa de ser substitu&iacute;do. Neste caso, fa&ccedil;a o seguinte:<ol>
+            	<li>Substitua o disco r&iacute;gido com a falha fatal (para saber os passos para instala&ccedil;&atilde;o do disco r&iacute;gido, consulte o <i>Guia de Instala&ccedil;&atilde;o R&aacute;pida</i> do seu produto Synology).</li>
+                <li>V&aacute; para a p&aacute;gina <b>Estado do Armazenamento</b> e clique em <b>Reparar</b>.</li>
+            </ol>
+        </li>
+        <li>Se o servidor passivo estiver off-line, o estado status dos volumes e iSCSI LUNs (n&iacute;vel do bloco) indicar&aacute; que ocorreu um erro e nenhum dos discos no servidor passivo ser&aacute; apresentado na p&aacute;gina Estado do Disco. Neste caso, pode tentar resolver o problema fazendo o seguinte:<ol>
+            	<li>Certifique-se de que o servidor passivo est&aacute; ligado.</li>
+                <li>Verifique todas as fontes de alimenta&ccedil;&atilde;o.</li>
+                <li>Examine todas as liga&ccedil;&otilde;es.</li>
+            </ol>
+        </li>
+        <li>Se um erro do sistema de ficheiros ocorrer num volume ou iSCSI LUN (n&iacute;vel de bloco) de um dos servidores, fa&ccedil;a o seguinte:<ul>
+            	<li>V&aacute; para a p&aacute;gina <b>Estado do Armazenamento</b>.</li>
+                <li>Clique em <b>Reparar</b>.</li>
+            </ul>
+        </li>
+	</ul>
+
+<p><span class="note_head">Nota:</span>  O limite dos volumes e iSCSI LUNs (n&iacute;vel de bloco) num cluster de high-availability &eacute; 64.</p>
+
+ </body>
+</html>

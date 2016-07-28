@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Oprettelse af forbindelse til forskellige filservere med File Station - Synology DSM - Hjælp</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="Learn how to customize File Station settings related to file management, shared links, and security.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Fjernforbindelse</h2>
+
+<p>I File Station kan du oprette forbindelse til offentlige skytjenester (Box, Dropbox, Google Drive og Microsoft OneDrive) og filservere via en række forskellige protokoller (FTP, STFP, WebDAV og WebDAV HTTPS).</p>
+
+<h4>Sådan opretter du forbindelse til en skytjeneste:</h4>
+<ol>
+  <li>Gå til <strong>Værktøj</strong> > <strong>Fjernforbindelse</strong> > <strong>Konfiguration af forbindelse</strong>.</li>
+  <li>Vælg en ønsket skytjeneste ved at klikke på ikonet og klikke på <strong>Næste</strong>.</li>
+  <li>I pop op-vinduet følger du guidens vejledning om kontogodkendelse.</li>
+  <li>Når konfigurationen er færdig, vil målskytjenesten vises i venstre panel.</li>
+</ol>
+
+
+<div class="section">
+<h4>Skyspecifikke begrænsninger:</h4>
+<ul>
+<li><strong>Box</strong>:
+<ul>
+  <li>Et katalog, der deles med andre, får et suffiks med ejerens brugernavn.</li>
+  <li>Hvis kataloger, der deles med andre, bruger et identisk navn (et katalognavn med suffiks med ejerens brugernavn), vises kun sådanne kataloger.</li>
+  <li>Du kan kun via Box åbne filer med disse filtyper: .gdoc, .gsheet, and .boxnote.</li>
+  <li>Filnavnene skelner ikke mellem store og små bogstaver.</li>
+  <li>Der henvises til <a href="https://support.box.com/hc/articles/200523728-Configuring-a-Firewall-for-Box-or-Box-Sync"  target="_blank">denne artikel</a> for at få korrekte firewallindstillinger.</li>
+</ul>
+</li>
+
+<li><strong>Dropbox</strong>:
+<ul>
+<li>Et Dropbox-katalog kan ikke vises, hvis det indeholder over 25.000 filer.</li>
+<li>Et Dropbox-katalog kan ikke omdøbes, hvis det indeholder over 10.000 filer.</li>
+<li>Filer over 10 GB kan ikke uploades.</li>
+<li>En uploadopgave mislykkes, hvis målfilerne tager mere end 24 timer at uploade.</li>
+<li>Filnavnene skelner ikke mellem store og små bogstaver.</li>
+<li>Der henvises til <a href="https://www.dropbox.com/help/23"  target="_blank">denne artikel</a> for at få korrekte firewallindstillinger.</li>
+</ul>
+</li>
+
+<li><strong>Google Drive</strong>:
+<ul>
+  <li>Filer/mapper med en sti længere end 2048 tegn vises ikke.</li>
+  <li>Filer/mapper med en filnavn længere end 255 tegn vises ikke.</li>
+  <li>Filer/kataloger med identiske navne bliver markeret med individuel oprettelsestid.</li>
+<li>Hvis du åbner en Google-specifik fil (f.eks. Google Docs og Google Slides) via File Station, vises en URL, hvor du får adgang til målfilen.</li>
+<li>Mapperne <strong>Mit drev</strong> og <strong>Med stjerne</strong>, der vises i File Station, svarer til mapperne "Mit drev" og "Med stjerne" på Google Drive.</li>
+<li>Der henvises til <a href="https://support.google.com/drive/answer/2589954"  target="_blank">denne artikel</a> for at få korrekte firewallindstillinger.</li>
+</ul>
+</li>
+
+<li><strong>Microsoft OneDrive</strong>:
+<ul>
+<li>OneNote-notesbogsfiler vises ikke.</li>
+<li>Filer over 10 GB kan ikke uploades.</li>
+<li>Filer (f.eks. .png, .jpg, .docx, .pdf) kan vise større filstørrelser (oprindelige størrelser plus miniaturestørrelse). Det vil ikke påvirke deres oprindelige filstørrelser, når de downloades.</li>
+<li>Filnavnene skelner ikke mellem store og små bogstaver.</li>
+
+</ul>
+</li>
+</ul>
+
+<p>Vi foreslår, at du besøger det officielle websted for den bestemte skytjeneste for at få mere at vide om begrænsninger.</p>
+
+
+</div>
+
+
+<h4>Sådan opretter du forbindelse til en filserver:</h4>
+<ol>
+  <li>Gå til <strong>Værktøj</strong> > <strong>Fjernforbindelse</strong> > <strong>Konfiguration af forbindelse</strong>.</li>
+  <li>Vælg en ønsket serverprotokol ved at klikke på ikonet og klikke på <strong>Næste</strong>.</li>
+  <li>Angiv følgende oplysninger for at fuldføre konfigurationen:
+  <ul>
+  <li><strong>Værtsnavn eller IP:</strong> Indtast værtsnavnet eller IP for målfilserveren.</li>
+  <li><strong>Port</strong>: Indtast portnummeret for målfilserveren.</li>
+  <li><strong>Bruger</strong> og <strong>adgangskode</strong>: Indtast disse loginoplysninger, hvis målfilserveren kræver en konto/adgangskode.</li>
+  <li><strong>Tegntabel</strong>: Vælg tegnkodningen for målfilserveren for at vise filnavnene korrekt.</li>
+  <li><strong>Profilnavn</strong>: Indtast et entydigt navn for nemt at identificere filserveren.</li>
+  <li><strong>Brug WebDAV HTTPS-forbindelse</strong>: Denne valgmulighed er kun tilgængelig, når du konfigurerer en WebDAV-protokol, og når både klienten og filserveren understøtter WebDAV HTTPS.</li>
+  <li><strong>Tillad kun én forbindelse pr. bruger</strong>: Denne valgmulighed er kun tilgængelig, når du konfigurerer en FTP- eller SFTP-protokol. Marker denne valgmulighed for at optimere forbindelsen, når serveren har begrænsninger på antallet af forbindelser.</li>
+  </ul>
+  </li>
+<li>Klik på <strong>Anvend</strong> for af gemme indstillingerne. Målfilserveren vises i venstre panel.</li> 
+</ol>
+<h4>Sådan retter du eksisterende profil til skytjeneste eller filserver:</h4>
+<ol>
+  <li>Gå til <strong>Værktøj</strong> > <strong>Fjernforbindelse</strong> > <strong>Forbindelsesliste</strong>.</li>
+  <li>Klik på målskytjenesten eller filserveren til at styre følgende:
+    <ul>
+      <li>Redigering: Klik på <strong>Rediger</strong>, ret den aktuelle profilkonfiguration, og klik på <strong>OK</strong>.</li>
+      <li>Afbrydelse: Klik på <strong>Afbryd</strong> for at afbryde forbindelsen.</li>
+  <li>Genoprettelse af forbindelse: Klik på <strong>Opret forbindelse</strong> for at genoprette forbindelsen. (klik alternativt på målet i venstre panel i File Station for at genoprette forbindelsen).</li>
+  <li>Sletning: Klik på <strong>Slet</strong>, og bekræft så for at forlade profilen. (klik alternativt på målet i venstre panel i File Station, og klik på <strong>Slet</strong> for at slette).</li>
+    </ul>
+  </li>
+  </ol>
+  
+  
+<div class="section">
+  <h4>Bemærk:</h4>
+<ul>
+  <li>Hver bruger kan ikke samtidigt oprette forbindelse til mere end 100 skytjenester og filservere.</li>
+  <li>Sørg for, at du vælger den korrekte servertegntabel for at undgå uventede fejl. Unicode anbefales, hvis du ikke kender serverens tegntabel.</li>
+  <li>Visse File Station-funktioner (f.eks. Komprimer til, Udpak, Eksempel osv.) kan ikke bruges på filer, der er gemt i skytjenester eller på filservere.</li>
+<li>Individuelle overførselshastigheder for hver tilsluttet skytjeneste eller filserver er underlagt indstillinger for brugerhastighedsgrænser.</li>
+<li>Hver bruger er begrænset til tre samtidige filoverførsler på tværs af alle skytjenester og filservere.</li>
+<li>Hvis du vil konfigurere WebDAV, WebDAV HTTPS- og skytjenesteproxyindstillinger, skal du gå til <strong>Kontrolpanel</strong> > <strong>Netværk</strong> > <strong>Generelt</strong> > <strong>Proxy</strong>. Hvis du har ændret proxyindstillinger under oprettelse af forbindelse til skytjeneste eller filserver, skal du afbryde og så oprette forbindelse igen.</li>
+<li>Ændring af oplysninger om tilsluttede skytjenester eller filservere påvirker ikke forbindelsesstatus.</li>
+<li>Hvis du vil frigøre forbindelsesressource, bliver en skytjeneste/filserver automatisk afbrudt, hvis de indeholdte filer forbliver uberørt i over 30 minutter. Klik på skytjeneste/filserver for at gendanne forbindelse.</li>
+<li>Systemet kan ikke vise filer/mapper, der følger følgende navngivningsformater:
+  <ul>
+    <li>Begynder med <strong>._</strong> eller <strong>.SYNOPPSDB</strong></li>
+    <li>Herunder <strong>/</strong></li>
+<li>Navngivet nøjagtigt som <strong>.</strong>&nbsp;&nbsp;&nbsp;&nbsp;<strong>..</strong>&nbsp;&nbsp;&nbsp;&nbsp;<strong>'</strong>&nbsp;&nbsp;&nbsp;&nbsp;<strong>"</strong>&nbsp;&nbsp;&nbsp;&nbsp;<strong>.DS_Store</strong>&nbsp;&nbsp;&nbsp;&nbsp;<strong>@eaDir</strong>&nbsp;&nbsp;&nbsp;&nbsp;<strong>@sharebin</strong>&nbsp;&nbsp;&nbsp;&nbsp;<strong>@tmp</strong>&nbsp;&nbsp;&nbsp;&nbsp;<strong>.SynologyWorkingDirectory</strong></li>
+  </ul>
+</li>
+<li class="enable-dockerx64">Fjernforbindelse understøttes kun i tilstand med højt privilegium. Hvis du vil bruge denne funktion, skal du gå til Docker-pakken på din værts-DSM, vælge den <strong>Docker DSM</strong>, du vil aktivere krypterede delte mapper for, klikke på <strong>Rediger</strong> og markere feltet ved siden af <strong>Udfør container med høje privilegier</strong>.</li>
+
+</ul>
+</div>
+</body>
+</html>

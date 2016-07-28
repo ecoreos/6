@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Powiadomienia</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>SMS</h2>
+<p class="disable-eds14">Aby serwer DiskStation wysyłał powiadomienia o zmianie statusu lub wystąpieniu błędów w systemie, na przykład o utracie połączenia, zmianie działania wentylatora, awarii zasilania, braku miejsca na wolumenie lub niepowodzeniu tworzenia kopii zapasowej i przywracania danych itp., można włączyć powiadomienia SMS.</p>
+
+<p class="enable-eds14">Aby serwer DiskStation wysyłał powiadomienia o zmianie statusu lub wystąpieniu błędów w systemie, na przykład o utracie połączenia, awarii zasilania, braku miejsca w wolumenie pamięci masowej lub niepowodzeniu tworzenia kopii zapasowej i przywracania danych itp., można włączyć powiadomienia SMS.</p>
+
+
+<h4>Aby włączyć powiadomienia SMS:</h4>
+<p>Zaznacz pole wyboru <b>Włącz powiadomienia SMS</b> i wypełnij następujące ustawienia:</p>
+<ol>
+<li>Wybierz dostawcę SMS z listy rozwijanej <b>Dostawca usługi SMS</b>. Domyślnym dostawcą usługi jest „clickatell”.</li>
+<li>Kliknij <b>Dodaj dostawcę usługi SMS</b>, aby utworzyć nową konfigurację dostawcy SMS, lub kliknij <b>Usuń</b>, aby usunąć wybraną konfigurację dostawcy SMS.</li>
+<li>W polu <b>Nazwa użytkownika</b> wprowadź nazwę użytkownika swojego konta usługi SMS.</li>
+<li>W polach <b>Hasło</b> i <b>Potwierdź hasło</b> wprowadź nazwę użytkownika i hasło swojego konta usługi SMS.</li>
+<li>Wprowadź swój <b>Podstawowy numer telefonu</b> lub <b>Drugi numer telefonu</b>. Jeżeli zostaną wprowadzone oba numery, wiadomości SMS z powiadomieniem będą wysyłane na oba numery.</li>
+<li>Jeżeli nie chcesz otrzymywać zbyt wielu wiadomości, zaznacz <b>Włącz limit interwału SMS</b> i ogranicz ilość wiadomości powiadomień do jednej na określony czas.</li>
+<li>Kliknij <b>Wyślij testową wiadomość SMS</b>, aby wysłać testową wiadomość SMS na określony przez siebie numer telefonu. Jeżeli nie otrzymasz wiadomości, oznacza to, że konfiguracja jest nieprawidłowa.</li>
+<li>Kliknij <b>Zastosuj</b>, aby zapisać konfigurację, lub <b>Resetuj</b>, aby anulować konfigurację.</li>
+</ol>
+<p>
+<span class="note_head">Uwaga: </span>Do ustawiania języka powiadomień SMS służy pozycja <strong>Język powiadamiania</strong>. Aby zmienić język powiadomień SMS, przejdź do pozycji <strong>Menu główne</strong> > <strong>Panel sterowania</strong> > <strong>Opcje regionalne</strong>, kliknij kartę <strong>Język</strong> i wybierz preferowany język z menu rozwijanego w sekcji <strong>Język powiadamiania</strong>.</p>
+<ol>
+<span class="note_head">Ograniczenia:</span>
+<li>Nazwa użytkownika: rozróżniana jest wielkość liter, od 1 do 32 znaków Unicode.</li>
+<li>Hasło: rozróżniana jest wielkość liter i powinno to być od 0 do 128 widocznych znaków, z uwzględnieniem liter, cyfr, symboli i spacji.</li>
+<li>Limit interwału SMS musi zawierać się między 1 a 10 000 minut.</li>
+</ol>
+<h4>Aby utworzyć konfigurację dostawcy SMS:</h4>
+<ol>
+<li>Kliknij <b>Dodaj dostawcę usługi SMS</b>.</li>
+<li>W polu <b>Nazwa dostawcy</b> wprowadź nazwę dostawcy usługi SMS.</li>
+<li>W polu <b>SMS URL</b> wprowadź SMS URL z treścią wiadomości: „Hello world”. SMS URL można uzyskać od swojego dostawcy usługi SMS.</li>
+<li>Kliknij przycisk <b>Dalej</b>.</li>
+<li>System podzieli SMS URL na kilka parametrów. Zdefiniuj każdy parametr, wybierając odpowiednią kategorię. Każdej kategorii parametru oprócz <b>Inne</b> można użyć tylko raz.</li>
+</ol>
+<ol>
+<a name='smshowto'></a><span class="note_head">Ograniczenia:</span>
+<li>Nazwa dostawcy: rozróżniana jest wielkość liter, od 1 do 32 znaków Unicode.</li>
+<li>SMS URL: rozróżniana jest wielkość liter, a długość musi wynosić od 1 do 500 znaków Unicode. Liczba parametrów musi się zawierać pomiędzy 4 a 10. Ten SMS URL służy tylko do celów konfiguracji. Żadna wiadomość SMS nie zostanie wysłana po zakończeniu konfiguracji. Format tego URL jest zapewniony przez dostawcę usługi SMS, URL musi zawierać następujące parametry: nazwa użytkownika, hasło, docelowy numer telefonu oraz treść wiadomości. Przykładowo URL firmy Clickatell może wyglądać następująco: https://api.clickatell.com/http/sendmsg?user=TestUser&password=TestPassword&api_id=3148203&to=886123456789&text=Hello+world. Zauważ, że w parametrze „treść wiadomości” spacja pomiędzy „Hello” a „world” zostanie zamieniona na określony znak zdefiniowany przez dostawcę.	
+</li>	
+
+</ol>
+</body>
+</html>

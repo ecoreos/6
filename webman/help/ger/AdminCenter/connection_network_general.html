@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Netzwerk</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2>Allgemein</h2>
+
+<p>Generische Netzwerkoptionen wie Standard-Gateway, DNS Server, Proxy und IPv6-Tunneling sind verf&uuml;gbar unter <strong>Systemsteuerung</strong> &gt; <strong>Netzwerk</strong> &gt; <strong>Allgemein</strong>.</p>
+
+
+<h3>Umbenennen eines DiskStation-Ger&auml;ts</h3>
+<p>Um Ihr DiskStation-Ger&auml;t umzubenennen, geben Sie den neuen Servernamen ein, und klicken Sie auf <b>&Uuml;bernehmen</b>.</p>
+<p>Der Servername ber&uuml;cksichtigt die Gro&szlig;- und Kleinschreibung nicht und kann zwischen 1 und 15 Zeichen enthalten, die aus Buchstaben, Zahlen, Unterstrichen und Minuszeichen bestehen k&ouml;nnen. Das erste Zeichen des Namens muss ein Buchstabe sein.</p>
+
+
+<h3>Festlegen von Standard-Gateway</h3>
+<p>Geben Sie einfach die IP-Adresse des Standard-Gateway ein und klicken Sie auf <b>&Uuml;bernehmen</b>, um die Einstellung zu speichern.</p>
+
+
+<h3>Festlegen der IP-Adresse des DNS Servers</h3>
+<p>Sie k&ouml;nnen w&auml;hlen, die IP-Adresse des DNS Servers manuell zu konfigurieren. In diesem Fall muss die IP-Adresse des bevorzugten DNS Servers eingegeben werden. Es kann auch eine alternative IP-Adresse f&uuml;r den DNS Server eingegeben werden, die verwendet werden kann, wenn der bevorzugte DNS Server Probleme hat. Klicken Sie nach der Konfiguration der IP-Adressen der DNS Server bitte auf <strong>&Uuml;bernehmen</strong>, um Ihre Einstellungen zu speichern.</p>
+
+
+<div class="section">
+<h4>Hinweis:</h4>
+<p>Die Felder &bdquo;DNS Server&ldquo; und &bdquo;Standard-Gateway&ldquo; werden automatisch gef&uuml;llt und k&ouml;nnen nicht ge&auml;ndert werden, wenn alle Netzwerkschnittstellen automatisch konfiguriert werden oder Sie die PPPoE-Verbindung nutzen.</p>
+</div>
+
+
+
+<h3><a name="proxy"></a>&Uuml;ber einen Proxy-Server verbinden</h3>
+<p>Damit Ihr DiskStation-Ger&auml;t eine Verbindung &uuml;ber einen Proxy-Server herstellen kann, markieren Sie <b>&Uuml;ber einen Proxy-Server verbinden</b>, geben Sie die <b>Adresse</b> und den <b>Port</b> ein, und klicken Sie dann auf <b>&Uuml;bernehmen</b>.</p>
+
+
+<div class="section">
+<h4>Hinweis:</h4>
+<ul>
+<li>Klicken Sie auf <strong>Erweiterte Einstellungen</strong>, um den HTTP-Proxy, HTTPS-Proxy und die Authentifizierungsinformationen zu konfigurieren.<li>Standardm&auml;&szlig;ig sind die HTTPS-Proxy-Einstellungen identisch mit HTTP-Proxy.</li>
+<li>Wenn <b>&Uuml;ber einen Proxy-Server verbinden</b> markiert ist, werden DSM-Aktualisierung und Paket-Zentrum zusammen mit anderen Paketen immer &uuml;ber einen Proxy mit dem Internet verbunden.</li>
+<li>Falls <b>Proxy-Server f&uuml;r lokale Adressen &uuml;berbr&uuml;cken</b> markiert ist, achten Sie bitte darauf, dass der vom DiskStation genutzte DNS Server die Abfragen f&uuml;r Ger&auml;te im lokalen Netzwerk aufl&ouml;sen kann.</li>
+</ul>
+</div>
+
+
+<h3>Aktivieren von IPv6-Tunneling</h3>
+<p>Bis IPv6 vollst&auml;ndig IPv4 ersetzt, wird IPv6-Tunneling ben&ouml;tigt, damit Hosts mit IPv6-Adressen IPv4-Dienste erreichen k&ouml;nnen. Diese Technik bietet die M&ouml;glichkeit, den IPv6-Datenverkehr innerhalb der bestehenden IPv4-Netzwerke zu &uuml;bertragen.<br> Wenn Sie sich nicht sicher sind, wie Sie IPv6 konfigurieren sollen, oder Probleme auftreten, setzten Sie sich bitte mit Ihrem Internet-Serviceanbieter in Verbindung.</p>
+<h4>So wird IPv6-Tunnel aktiviert:</h4>
+<ol>
+<li>Markieren Sie das K&auml;stchen <b>Tunnel aktivieren</b>, um die Tunnelunterst&uuml;tzung zu aktivieren.</li>
+
+<li>Unter <b>Server-Adresse</b> geben Sie den Hostnamen oder die IP-Adresse des Tunnel-Serviceanbieters an, z.&nbsp;B. anonymous.freenet6.net.</li>
+
+<li>Je nach Wunsch w&auml;hlen Sie <b>Anonym verbinden</b> oder <b>Mit bestehendem Konto verbinden</b>.</li>
+</ol>
+
+<div class="section">
+<h4>Hinweis:</h4>
+<p>Ihre externe IPv6-Adresse wird eventuell automatisch vom Serviceanbieter aktualisiert. Das DiskStation-Ger&auml;t entfernt nicht sofort die alte IPv6-Adresse.</p>
+</div>
+
+
+
+</body>
+</html>

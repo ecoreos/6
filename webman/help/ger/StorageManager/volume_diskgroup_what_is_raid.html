@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>RAID-Typ auswählen - Hilfe zu Synology DSM</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="A brief overview describing what RAID types are supported by Synology DiskStation Manager (DSM).">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>RAID-Typ auswählen</h2>
+
+<p>RAID (Redundant Array of Independent Disks) ist eine Datenspeichertechnologie, bei der mehrere Festplatten zu einem Speicherplatz kombiniert werden können. Es gibt verschiedene Typen von RAID, die sich durch unterschiedliche Leistung, Speicherkapazität und Zuverlässigkeit auszeichnen.</p>
+
+<p>Dieser Artikel enthält eine kurze Übersicht über RAID-Typen, die vom DiskStation unterstützt werden, sowie der Implementierungsanforderungen und der Vor- und Nachteile.</p>
+
+<!--1-->
+
+<h3>Unterstützte RAID-Typen</h3>
+
+<p>Diese Tabelle gibt einen kurzen Überblick über die verschiedenen vom DiskStation unterstützten RAID-Typen, einschließlich der folgenden Angaben: Speicherkapazität, erforderliche Mindestanzahl von Festplatten für den RAID-Typ sowie die Anzahl der Festplattenfehler, die toleriert werden können, bevor ein Datenverlust auftritt. </p>
+
+<table>
+
+  <tr>
+
+    <th>Volume-Typ</th>
+    <th>Anzahl der Festplatten</th>
+
+    <th>Tolerierbare Festplattenfehler</th>
+    <th>Beschreibung</th>
+
+    <th>Volume-Kapazität</th>
+
+  </tr>
+
+  <tr>
+
+    <td rowspan="3">SHR</td>
+    <td>1</td>
+
+    <td>0</td>
+    <td rowspan="3">
+    <div align="left">
+    <ul>
+    <li>Optimiert Volume-Größe durch Kombinieren von Festplatten verschiedener Größe.</li>
+    <li>Bietet Datenredundanz, wenn das Volume aus zwei oder mehr Festplatten besteht.</li>
+    <li>Empfohlen für Anfänger.</li>
+    </ul>
+    </div>
+    </td>
+
+    <td>1 x (Festplattengröße)</td>
+
+  </tr>
+  <tr>
+    <td>2-3</td>
+    <td>1</td>
+    <td rowspan="2">Durch das System optimiert.</td>
+  </tr>
+  <tr>
+    <td>≧4</td>
+    <td>1-2</td>
+  </tr>
+  
+  <tr>
+
+    <td>Basic</td>
+    <td>1</td>
+
+    <td>0</td>
+    <td>
+    <div align="left">
+    <ul>
+    <li>Bestehend aus einer Festplatte als unabhängiger Einheit.</li>
+    <li>Bietet keine Datenredundanz.</li>
+    </ul>
+    </div>
+    </td>
+
+    <td>1 x (Festplattengröße)</td>
+
+  </tr>
+
+  <tr>
+
+    <td>JBOD</td>
+    <td>≧1</td>
+
+    <td>0</td>
+    <td>
+    <div align="left">
+    <ul>
+    <li>Kombiniert eine Gruppe von Festplatten in einem Speicherplatz mit einer Speicherkapazität, die gleich der Summe aller Festplattenkapazitäten ist.</li>
+    <li>Bietet keine Datenredundanz.</li>
+    </ul>
+    </div>
+    </td>
+
+    <td>Summe aller Festplattengrößen</td>
+
+  </tr>
+
+  <tr>
+
+    <td>RAID 0</td>
+    <td>≧2</td>
+
+    <td>0</td>
+    <td>
+    <div align="left">
+    <ul>
+    <li>Bietet „Striping“, einen Vorgang, bei dem Daten in Blöcke unterteilt und auf mehrere Festplatten verteilt werden, um die Leistung zu verbessern.</li>
+    <li>Bietet keine Datenredundanz.</li>
+    </ul>
+    </div>
+    </td>
+
+    <td>Summe aller Festplattengrößen</td>
+
+  </tr>
+
+  <tr>
+
+    <td rowspan="3">RAID 1</td>
+    <td>2</td>
+
+    <td>1</td>
+    <td rowspan="3">
+    <div align="left">
+    <ul>
+    <li>Schreibt identische Daten gleichzeitig auf beide Festplatten.</li>
+    <li>Bietet Datenredundanz.</li>
+    </ul>
+    </div>
+    </td>
+
+    <td rowspan="3">Kleinste Festplattengröße</td>
+
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>3</td>
+  </tr>
+
+  <tr>
+
+    <td>RAID 5</td>
+    <td>≧3</td>
+
+    <td>1</td>
+
+    <td>
+    <div align="left">
+    <ul>
+    <li>Implementiert Striping auf Block-Ebene mit Paritätsdaten, die über alle eingeschlossenen Festplatten verteilt sind, wodurch die Datenredundanz effizienter ist als bei RAID 1.</li>
+    </ul>
+    </div>
+    </td>
+
+    <td>(N – 1) x (Kleinste Festplattengröße)</td>
+
+  </tr>
+
+  <tr>
+
+    <td>RAID 6</td>
+    <td>≧4</td>
+
+    <td>2</td>
+    <td>
+    <div align="left">
+    <ul>
+    <li>Implementiert zwei Datenparitätsschichten, um redundante Daten gleich der Größe von zwei Festplatten zu speichern, und bietet ein höheres Maß an Datenredundanz als RAID 5.</li>
+    </ul>
+    </div>
+    </td>
+
+    <td>(N – 2) x (Kleinste Festplattengröße)</td>
+
+  </tr>
+
+  <tr>
+
+    <td>RAID 10</td>
+    <td>≧4<br /> (gerade Zahl)</td>
+
+    <td>Hälfte der gesamten Festplatten</td>
+    <td>
+    <div align="left">
+    <ul>
+    <li>Bietet die Leistung von RAID 0 und das Datenschutzniveau von RAID 1, kombiniert Festplatten in Gruppen von zwei, in denen die Daten gespiegelt werden.</li>
+    </ul>
+    </div>
+    </td>
+
+    <td>(N / 2) x (Kleinste Festplattengröße)</td>
+
+  </tr>
+
+</table>
+
+
+<div class="section">
+<h4>Hinweis:</h4>
+<ul>
+<li>RAID-Typen außer „Basic“ sind nur bei bestimmten Modellen je nach Anzahl der Festplatteneinschübe und der Anzahl der installierten Festplatten verfügbar.</li>
+<li>„N“ steht für die Gesamtzahl der Festplatten im Volume.</li>
+</ul>
+</div>
+
+
+
+
+<!--2-->
+<h3>Synology Hybrid RAID (SHR)</h3>
+
+<p>Synology Hybrid RAID (SHR) ist ein automatisiertes RAID-Verwaltungssystem, das entwickelt wurde, um die Speicherverwaltung zu vereinfachen, und ist auf die Anforderungen neuer Benutzer zugeschnitten, die nicht mit RAID-Typen vertraut sind. </p>
+<p>SHR kann verschieden große Festplatten kombinieren, um ein Speicher-Volume mit optimierter Kapazität und Leistung zu schaffen, sodass weniger Festplattenspeicher verschwendet wird und eine flexiblere Speicherlösung verfügbar ist.  Wenn ausreichend Festplatten vorhanden sind, gestattet SHR die 1- oder 2-Festplattenredundanz. Dies bedeutet, dass im SHR-Volume ein oder zwei Festplatten ausfallen können, ohne dass ein Datenverlust auftritt.</p>
+<img src="about:blank" class="help_image"/>
+
+
+
+
+
+
+<!--3-->
+
+<h3>RAID 0</h3>
+<p>RAID 0 kombiniert zwei oder mehr Festplatten, um die Leistung und die Kapazität zu erhöhen, bietet jedoch keine Fehlertoleranz. Der Ausfall einer Festplatte führt zum Verlust aller Daten auf dem Array. RAID 0 eignet sich für nicht-kritische Systeme, bei denen ein gutes Preis-Leistungs-Verhältnis gefordert wird.</p>
+<img src="about:blank" class="help_image"/>
+
+
+
+
+
+
+<!--4-->
+
+<h3>RAID 1</h3>
+<p>RAID 1 wird am häufigsten mit zwei Festplatten implementiert. Daten auf den Festplatten werden gespiegelt, wodurch sich bei Ausfall einer Festplatte eine Fehlertoleranz ergibt. Die Leseleistung wird erhöht, während die Schreibleistung ähnlich wie bei einer Festplatte ist. Der Ausfall einer Festplatte hat keinen Datenverlust zur Folge. RAID 1 wird häufig verwendet, wenn die Fehlertoleranz sehr wichtig ist, und Platz und Leistung keine wichtigen Anforderungen sind.</p>
+<img src="about:blank" class="help_image"/>
+
+
+
+<!--5-->
+
+<h3>RAID 5</h3>
+<p>RAID 5 bietet Fehlertoleranz und höhere Leseleistung. Ein Minimum von drei Festplatten ist erforderlich. RAID 5 gestattet den Verlust einer Festplatte. Bei Ausfall einer Festplatte werden deren Daten aus der Parität, die auf den verbleibenden Festplatten gestript ist, rekonstruiert. Dadurch wird sowohl die Lese- als auch die Schreibleistung stark beeinträchtigt, während ein RAID 5-Array einen fehlerhaften Status hat. RAID 5 ist ideal, wenn Platz und Kosten wichtiger sind als Leistung.</p>
+<img src="about:blank" class="help_image"/>
+
+
+
+<!--6-->
+
+<h3>RAID 6</h3>
+<p>RAID 6 ist RAID 5 ähnlich, außer dass es eine weitere Striping-Schicht bietet und zwei ausgefallene Festplatten unbeschadet übersteht. Ein Minimum von vier Festplatten ist erforderlich. Die Leistung von RAID 6 ist aufgrund dieser zusätzlichen Fehlertoleranz geringer als die von RAID 5. RAID 6 wird attraktiv, wenn Platz und Kosten wichtig sind, und der Ausfall mehrerer Festplatten unbeschadet überstanden werden muss.</p>
+<img src="about:blank" class="help_image"/>
+
+
+
+<!--7-->
+
+<h3>RAID 10</h3>
+<p>RAID 10 verbindet die Vorteile von RAID 1 und RAID 0. Die Lese- und Schreibleistung ist erhöht, aber es steht nur die Hälfte des gesamten Speicherplatzes für die Datenspeicherung zur Verfügung. Vier oder mehr Festplatten werden benötigt, wodurch die Kosten relativ hoch sind. Jedoch wird eine herausragende Leistung geboten und Fehlertoleranz ist verfügbar. Ein RAID 10 kann den Ausfall mehrerer Festplatten unbeschadet überstehen - sofern die Ausfälle nicht in derselben Untergruppe auftreten. RAID 10 ist ideal für Anwendungen mit einem hohen Input/Output-Bedarf, z. B. Datenbankserver.</p>
+
+<img src="about:blank" class="help_image"/>
+
+
+</body>
+</html>

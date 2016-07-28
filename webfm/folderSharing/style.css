@@ -1,0 +1,33 @@
+.x-window-tl .x-window-tr .x-window-tc .webfm2-folder-sharing-title-icon.x-panel-icon {
+    height: 20px;
+    padding-left: 31px !important;
+    padding-top: 7px;
+    margin-top: 3px;
+    background-image: url(../../images/1x/file_browser_24.png);
+    font-size: 16px;
+    color: #282828;
+}
+
+.webfm2-folder-sharing-login {
+    position: absolute;
+    top: 15px;
+    right: 12px;
+    z-index: 1;
+    font-size: 11px;
+    cursor: pointer;
+	padding: 5px 6px 3px 6px;
+}
+
+.active-win.syno-sds-fs-win .x-window-body {
+	border: 0;
+	background-color: #FFFFFF;
+}
+
+.sds-window .x-toolbar-right {
+    padding-right: 16px;
+}
+
+.webfm2-folder-sharing-paging-toolbar {
+	width: auto !important;
+	margin: 0 12px 12px 12px;
+}

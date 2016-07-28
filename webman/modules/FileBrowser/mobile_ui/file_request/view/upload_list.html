@@ -1,0 +1,29 @@
+<ion-view title=" {{title}} ">
+	<div class="bar bar-header upload-list-bar">
+		<h1 class="title">{{upload_list_text}}</h1>
+	</div>
+	<ion-content class="upload-list-ct">
+		<ion-list>
+			<ion-item ng-repeat="obj in list | orderBy:orderFile" ng-show="obj.status !== 'CANCEL'" class="upload-item-wrap">
+				<div class="item item-thumbnail-left item-button-right"  ng-click="showError(obj)">
+					<img src="{{obj.ext_path}}" class="upload-item-img"></img>
+					<p ellipse-item index="{{$index}}" class="upload-filename">{{obj.ellipsisName}}</p>
+					<div class="upload-status-wrap">
+						<div class="progress-wrap">
+							<div class="progress-content" style="width:{{obj.progress}}%;"></div>
+						</div>
+					</div>
+					<div class="status-button success" ng-show="obj.status === 'SUCCESS'"></div>
+					<div class="status-button fail" ng-show="obj.status === 'FAIL'"></div>
+					<ion-option-button class="button-positive" ng-click="deleteItem(item)"></ion-option-button>
+					<button class="button delete-icon" ng-click="deleteItem(obj)" ng-show="obj.status != 'SUCCESS' && obj.status != 'FAIL'"></button>
+				</div>
+			</ion-item>
+		</ion-list>
+		<input type="file" id="{{add_more_file_btn_id}}" name="add_more_file_btn" add="true" uploadbtn="filelist" multiple ng-show="false">
+	</ion-content>
+	<ion-footer-bar align-title="left" class="bar-positive upload-bar">
+		<button class="button" ng-click="addFiles()" ng-show="list && list.length" ng-disabled="uploading">{{add_text}}</button>
+		<button class="button" ng-click="uploadFiles()" ng-show="list && list.length" ng-disabled="!has_new_files">{{upload_text}}</button>
+	</ion-footer-bar>
+</ion-view>

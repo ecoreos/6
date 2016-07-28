@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script> <script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+	<h2>Volume</h2>
+	<p>Les volumes sont des espaces de stockage de base sur lesquels l'utilisateur peut créer des dossiers partagés, des iSCSI LUN (fichier courant), enregistrer des données, ou installer des paquets. Avant de créer des volumes, veuillez vous assurer que vous avez déjà créé un Groupe RAID. Pour plus d'informations sur les Groupes RAID, veuillez consulter le <a href="raid.html">Groupe RAID</a>.
+</p>
+
+	<h4>Pour créer un volume :</h4>
+<ol>
+  <li>Assurez-vous que votre DiskStation dispose d'un groupe RAID existant avec espace pouvant être alloué.</li>
+  <li>Cliquez sur le bouton <strong>Créer</strong>.</li>
+		<li>Choisissez un Groupe RAID sur lequel vous souhaitez créer le volume.</li>
+		<li>Modifiez les paramètres désirés.</li>
+		<li>Définissez l'allocation de taille pour le volume. (La définition de l'allocation de la taille n'est pas disponible avec les volumes créés sur un Groupe RAID pour un seul volume ou iSCSI LUN)
+		</li>
+</ol>
+
+<div class="section">
+<h4>Remarque :</h4>
+<ul>
+	<li>La taille maximale du volume qui peut être allouée est de 200 To.</li>
+	<li class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64">La taille minimale allouée à un volume Btrfs doit être de 10 Go.</li>
+    <li class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64">Les volumes Btrfs réservent 4 % de l'espace pour les métadonnées.</li>
+</ul>
+</div>
+
+
+<h4>Pour supprimer un volume :</h4>
+	<ol>
+		<li>Sélectionnez le volume que vous désirez supprimer.</li>
+		<li>Cliquez sur le bouton <b>Supprimer</b> et suivez l'assistant pour terminer le processus.</li>
+	</ol>
+<div class="section">
+<h4>Remarque :</h4>
+<ul>
+<li>La suppression d'un volume efface toutes les données existantes sur ce volume.</li>
+</ul>
+</div>
+
+<h4>Pour forcer un volume :</h4>
+<p>Si le cache sur un volume est manquant, le système ne monter pas le volume lors du démarrage. Si le cache n'est pas récupérable, et que vous voulez accéder au volume, vous pouvez cliquer sur <b>Montage en force</b>. </p>
+
+<div class="section">
+<h4>Remarque :</h4>
+<ul>
+<li>Cette fonction n'est disponible que sur certains modèles.</li>
+</ul>
+</div>
+
+	<h4>Pour réparer un volume :</h4>
+	<p>Si le statut du volume indique <b>Dégradé</b>, veuillez aller à l'onglet <b>Groupe RAID</b>, et trouvez le RAID Group approprié. Puis suivez les instructions suggérées pour le réparer.
+</p>
+
+	<h4>Pour étendre la taille d'un volume</h4>
+	<ul>
+		<li>Pour les volumes créés sur un RAID Group à volumes multiples ou iSCSI LUN (niveau bloc). 
+<ol>
+				<li>Sélectionnez le volume à étendre.</li>
+				<li>Cliquez sur <b>Modifier</b>.</li>
+				<li>Saisissez la nouvelle taille et cliquez sur <b>OK</b> pour étendre.</li>
+			</ol>
+		<li>Pour les volumes créés sur un RAID Group pour un seul volume ou iSCSI LUN (niveau bloc), veuillez consulter la section <b>Pour étendre la taille d'un groupe RAID</b> de <a href="raid.html">Groupe RAID</a>, la taille du volume sera étendue après que le RAID Group sous-jacent aura été étendu.
+	  </li>
+	</ul>
+
+
+<h3>SSD TRIM</h3>
+
+<p>Si un volume est constitué entièrement de SSD (Solid State Drives), nous recommandons d'activer SSD TRIM. Cette fonction améliore la performance de lecture et écriture des volumes créés sur des SSD, en augmentant l'efficacité et en étendant la durée de vie de vos SSD.</p>
+
+<h4>Pour activer le SSD TRIM :</h4>
+
+<ol>
+  <li>Ouvrez <b>Gestionnaire de stockage</b> et accédez à <b>Volume</b>.</li>
+  <li>Sélectionnez un volume qui est entièrement composé de SSD et ensuite cliquez sur la touche <b>Configurer</b>.</li>
+  <li>Dans la fenêtre qui apparaît, allez à l'onglet <b>SSD TRIM</b>, et cochez la case <b>Activer TRIM</b>.</li>
+<li>Cliquez sur le bouton <strong>Définir la programmation</strong> pour déterminer le moment où le système exécutera SSD TRIM.</li>
+<li>Cliquez sur <strong>OK</strong>.</li>
+</ol>
+
+<div class="section">
+<h4>Remarque :</h4>
+<ul>
+
+<li>SSD TRIM n'est disponible que sur certains modèles DiskStation et types RAID. </li>
+
+
+<li>Certains modèles SSD ne sont pas capables d'exécuter SSD TRIM sur les volumes RAID 5 et RAID 6. Veuillez consulter <a href="http://www.synology.com/" target=_blank>www.synology.com</a> pour la liste de compatibilité.</li>
+
+
+<li>SSD TRIM ne peut être activé dans les situations suivantes :
+  <ul>
+    <li>Le volume est monté avec un cache SSD.</li>
+    <li>Le paquet <strong>Time Backup</strong> est installé.</li>
+    <li>Un cluster high-availability a été créé avec le <strong>Gestionnaire High Availability</strong>.</li>
+  </ul>
+</li>
+<li>SSD TRIM ne peut être activé sur les iSCSI LUN de niveau bloc.</li>
+<li>La performance du système est affectée lorsque SSD TRIM est exécuté. Le temps nécessaire pour finir d'exécuter TRIM varie selon la taille de volume et le modèle SSD.</li>
+
+<li>Lorsque la fonction TRIM est activée sur un volume, elle est également activée sur d'autres volumes créés sur le même Disk Group ou RAID Group.</li>
+
+</ul>
+</div>
+
+
+<h3>Nettoyage du système de fichiers*</h3>
+<p>Le nettoyage du système de fichiers est un paramètre de maintenance des données qui inspecte les volumes. Si des données sont incohérentes par rapport à la somme de contrôle détectée, le chemin du fichier est enregistré dans le centre des journaux et il est recommandé d'utiliser une sauvegarde pour réparer les données.</p>
+<p>Nous recommandons de procéder régulièrement au nettoyage du système de fichiers afin d'assurer la cohérence des données.</p>
+
+<h4>Pour procéder au nettoyage du système de fichiers :</h4>
+<ol>
+<li>Ouvrez <b>Gestionnaire de stockage</b> et accédez à <b>Volume</b>.</li>
+<li>Sélectionnez le volume sur lequel vous souhaitez effectuer le nettoyage du système de fichiers.</li>
+<li>Cliquez sur <b>Gérer.</b></li>
+<li>Sélectionnez <b>Nettoyage du système de fichiers</b>.</li>
+</ol>
+
+<div class="section">
+<h4>Remarque :</h4>
+<ul>
+<li>Le nettoyage du système de fichiers ne peut être effectué que sur des volumes du système de fichiers <b>Btrfs</b>.</li>
+<li>Le nettoyage du système de fichiers ne peut être effectué que lorsque l'état du volume est <strong>Normal</strong>.</li>
+<li>N'éteignez pas le système avant la fin du nettoyage du système de fichiers. Si le système est arrêté avant la fin, vous devrez redémarrer manuellement le nettoyage du système de fichiers depuis le début.</li>
+</ul></div>
+
+<h3>Défragmentation du système de fichiers*</h3>
+<p>Si vos données sont constamment modifiées, la quantité de fichiers fragmentés augmente dans le système de fichiers, ce qui entraîne un ralentissement des performances d'accès aux fichiers sur les disques durs. L'exécution de la défragmentation du système de fichiers peut améliorer les performances.</p>
+
+<h4>Pour procéder à l'exécution de la défragmentation du système de fichiers :</h4>
+
+<ol>
+<li>Ouvrez <strong>Gestionnaire de stockage</strong> et accédez à <b>Volume</b>.</li>
+<li>Sélectionnez le volume sur lequel effectuer la défragmentation du système de fichiers.</li>
+<li>Cliquez sur <strong>Gérer.</strong></li>
+<li>Sélectionnez <strong>Défragmentation du système de fichiers</strong>.</li>
+</ol>
+
+<div class="section">
+<h4>Remarque :</h4>
+<ul>
+<li>Le défragmentation du système de fichiers ne peut être effectuée que sur des volumes du système de fichiers <b>Btrfs</b>.</li>
+<li>La défragmentation du système de fichiers ne peut être effectuée que lorsque l'état du volume est <strong>Normal</strong>.</li>
+<li>N'éteignez pas le système avant la fin de la défragmentation du système de fichiers. Si le système est arrêté avant la fin, vous devrez redémarrer manuellement la défragmentation du système de fichiers depuis le début.</li>
+<li>L'utilisation du volume peut augmenter s'il contient des instantanés de dossiers partagés.</li>
+</ul>
+</div>
+
+<p>____<br /> *Uniquement pris en charge sur certains modèles.</p>
+
+
+
+</body>
+</html>

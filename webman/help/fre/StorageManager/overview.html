@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+	<h2>Vue d'ensemble</h2>
+	<p>La Vue d'ensemble affiche le statut global de vos espaces de stockage, y compris la sant&eacute; globale de tous les espaces, l'utilisation des disques durs, la plus grande utilisation du volume, et l'utilisation iSCSI LUN.</p>
+
+		<h4>Sant&eacute; du stockage</h4>
+        <p>Il y a trois types de statut&nbsp;:</p>
+	  	<ul>
+				<li><b>Sain&nbsp;</b>: Tous les espaces de stockage sont normaux.</li>
+				<li><B>Attention&nbsp;</B>: Un espace de stockage (volume ou iSCSI LUN) est d&eacute;grad&eacute;, le cache SSD est plant&eacute;, ou &eacute;chec de partition syst&egrave;me.</li>
+				<li><b>Danger&nbsp;</b>: Un espace de stockage (volume ou iSCSI LUN) est plant&eacute;.</li>
+			</ul>
+			<p>Si des anomalies multiples se produisent en m&ecirc;me temps, l'&eacute;tat de sant&eacute; sera affich&eacute; dans l'ordre suivant&nbsp;: 1) espace de stockage (volume ou iSCSI LUN)&nbsp;; 2) cache SSD&nbsp;; et 3) partition syst&egrave;me. En cas de probl&egrave;me, veuillez suivre les instructions sugg&eacute;r&eacute;es dessous le statut.</p>
+		
+		<h4>Info du disque</h4>
+        <p>Cette section affiche les informations du disque dur et du mat&eacute;riel. Vous pouvez v&eacute;rifier combien de disques durs sont utilis&eacute;s par quels espaces de stockage, le nombre de disques durs de secours, et le nombre de fentes de disques durs disponibles.</p>
+        
+		<h4>Plus grande utilisation du volume</h4>
+        <p>Cette section affiche la capacit&eacute; utilis&eacute;e d'un volume. Si l'utilisation totale atteint 90%, le graphique devient rouge&nbsp;; plus de 80% sera jaune&nbsp;; et en dessous de 79% restera bleu.</p>
+        
+		<h4>Utilisation iSCSI LUN</h4>
+        <p>Cette section affiche les informations suivantes&nbsp;:</p>
+        <ul>
+         		<li><b>Rapport&eacute;&nbsp;</b>:  La capacit&eacute; allou&eacute;e totale de tous les iSCSI LUN (niveau bloc) et iSCSI LUN (fichier courant) sur le DiskStation additionn&eacute;e.</li>
+                <li><b>Utilis&eacute;&nbsp;</b>: La capacit&eacute; allou&eacute;e totale sur iSCSI LUN (fichiers courants) et la capacit&eacute; totale sur iSCSI LUN (niveau bloc) additionn&eacute;es.</li>
+                <li><b>&Eacute;conomis&eacute;&nbsp;</b>:  Taille totale de <b>Rapport&eacute;</b> moins la taille totale d'<b>Utilis&eacute;</b>, affichant la quantit&eacute; &eacute;conomis&eacute;e sur les co&ucirc;ts d'achat et de gestion de l'espace de stockage.</li>
+</ul>
+        </li>
+</body>
+</html>

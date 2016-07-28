@@ -1,0 +1,114 @@
+﻿ <!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>更改卷或硬盘组的 RAID 类型 - Synology DSM 帮助</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="This article provides instructions to change the RAID type of existing volumes and disk groups on your DiskStation.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>更改卷或硬盘组的 RAID 类型</h2>
+
+<p>卷和硬盘组可从一种 RAID 更改为另一种 RAID 而不会丢失已有的数据。例如，您可以在 DiskStation 上创建 RAID 1 存储卷，如果以后安装更多的硬盘可将其更改为 RAID 5。本章节将指导您更改 DiskStation 中已有卷或硬盘组的 RAID 类型。</p>
+<h3>RAID 类型限制</h3>
+
+<p>仅部分 RAID 类型可更改为特定的其他 RAID 类型。请参阅下表以了解详情。</p>
+
+<table>
+  <tr>
+<th width="50%">RAID 类型</th>
+<th width="50%">可更改为...</th>
+  </tr>
+  <tr>
+<td>Basic</td>
+<td>RAID 1<br /> RAID 5</td>
+  </tr>
+  <tr>
+<td>RAID 1</td>
+<td>RAID 5</td>
+  </tr>
+  <tr>
+<td>RAID 5</td>
+<td>RAID 6</td>
+  </tr>
+
+</table>
+
+<div class="section">
+<h4>例如：</h4>
+<p>RAID 1 可更改为 RAID 5，但 RAID 5 无法更改为 RAID 1。</p>
+</div>
+
+
+<h3>硬盘要求</h3>
+
+<p>如需更改存储卷或硬盘组的 RAID 类型，DiskStation 必须安装足够数量的可用硬盘。请参见以下内容来了解各 RAID 类型所需的硬盘数下限。</p>
+
+<table>
+  <tr>
+<th width="50%">所需的 RAID 类型</th>
+<th width="50%">所需的硬盘</th>
+  </tr>
+  <tr>
+<td>RAID 1</td>
+<td>2 或 4</td>
+  </tr>
+  <tr>
+<td>RAID 5</td>
+    <td>3</td>
+  </tr>
+  <tr>
+<td>RAID 6</td>
+    <td>4</td>
+  </tr>
+</table>
+
+<div class="section">
+<h4>例如：</h4>
+<p>如果要将 RAID 1 卷更改为 RAID 5，您总共需要至少三颗硬盘（即二颗硬盘属于 RAID 1 卷，增加一颗空闲硬盘以添加到卷）。</p>
+</div>
+
+<h3>更改 RAID 类型</h3>
+
+<p>在下例中，我们将把一个 <strong>Basic</strong> 卷更改为 <strong>RAID 1</strong> 卷。</p>
+
+<div class="section">
+<h4>开始进行之前的准备：</h4>
+<ul>
+<li>请先确认卷或硬盘组的状态为<b>正常</b>。</li>
+<li>在将新硬盘添加到卷或硬盘组时，新硬盘必须大于该卷或硬盘组中最小的硬盘。</li>
+<li>新硬盘的状态必须为<b>已初始化</b>或<b>未初始化</b>。</li></ul>
+</div>
+
+<h4>更改卷的 RAID 类型：</h4>
+
+<ol>
+<li>打开<strong>存储管理器</strong>。</li>
+<img src="about:blank" class="help_image"/>
+<li>进入<b>卷</b>。（如果您要更改硬盘组的 RAID 类型，进入<b>硬盘组</b>选项卡。）</li>
+<li>选择您要更改的卷，并单击<b>管理</b>。</li>
+<img src="about:blank" class="help_image"/>
+
+<li>出现设置向导时，选择<b>更改 RAID 类型</b>。然后单击<b>下一步</b>。</li>
+<img src="about:blank" class="help_image"/>
+
+
+<li>选择您要更改卷的 RAID 类型。单击<b>下一步</b>。</li>
+<img src="about:blank" class="help_image"/>
+
+
+<li>选择要添加到现有卷的硬盘。然后单击<b>下一步</b>。</li>
+<img src="about:blank" class="help_image"/>
+
+
+<li>按照设置向导的指示完成操作。请注意，添加的硬盘中的已有数据将被删除。</li></ol>
+
+</body>
+</html>

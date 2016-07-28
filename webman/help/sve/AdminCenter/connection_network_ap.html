@@ -1,0 +1,199 @@
+
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Nätverk</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2><a name="wireless_ap"></a>Hotspot*</h2>
+<p>Din DiskStation-enhet stöder att skapa en hotspot för att dela dess Internetanslutning med andra enheter trådlöst, om du har installerat en Wi-Fi USB-adapter eller om din DiskStation har inbyggt Wi-Fi. Du kan ställa in din DiskStation att vara en trådlös åtkomstpunkt (access point (AP)) eller trådlös router beroende på hur du vill använda Internet.</p>
+
+<table>
+<tr>
+<th width="23%">Hotspotläge</th>
+<th width="77%">Beskrivning</th>
+</tr>
+<tr>
+<th>Trådlös AP</th>
+<td>
+<ul>
+<li>Bryggar ditt LAN och WiFi-nätverk tillsammans.</li>
+<li>Ditt LAN och dina trådlösa klienter kommer att vara på samma lokala nätverk.</li>
+<li>Användbart när du redan har en router och vill använda din DiskStation som en extra åtkomstpunkt till ett befintligt nätverk.</li> 
+<li>Tillåter delning av nätverksresurser, exempelvis DLNA-enheter, skrivare, Synology Web Assistant eller andra tjänster som förlitar sig på utsändningar i nätverket.</li>
+<li>DHCP-server kommer att avaktiveras på DiskStation-enheter som agerar trådlösa AP:s. För att återaktivera DHCP-server för din DiskStation, ta bort Wi-Fi-donglar och starta om DiskStation.</li>
+<li>För modeller med flera LAN-portar används endast LAN 1 för att brygga trådlös AP.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Trådlös router</th>
+<td>
+<ul>
+<li>Ställer in ett trådlöst nätverk där enheterna finns på ett privat subnät.</li>
+</ul>
+</td>
+</tr>
+</table>
+
+
+<div class="section">
+<h4>Obs:</h4>
+
+<ol>
+<li>En del modeller kräver anslutning av trådlösa donglar för att skapa hotspots. En komplett lista över trådlösa donglar som stöds finns på <a href="http://www.synology.com/support/faq/444" target=_blank>www.synology.com</a>.</li>
+<li>För modeller som inte är DS213air har alternativet för Trådlös hotspot i DSM 4.3 bytt namn till "Trådlös router" i DSM 5.0 och senare.</li>
+</ul>
+</ol>
+
+</div>
+
+<h3>Hantera hotspotinställningar</h3>
+<p>Detta avsnitt förklarar hur inställningarna för hotspot aktiveras och hanteras på din DiskStation.</p>
+
+
+<h4>Att göra DiskStation till en hotspot:</h4>
+<ol>
+<li>Gå till <strong>Kontrollpanel</strong> > <strong>Trådlöst</strong> > <strong>nätverkskarta</strong>. Välj <strong>Trådlös AP</strong> eller <strong>Trådlös router</strong>.</li>
+<li>Gå till fliken <strong>Wi-Fi</strong> och klicka på <strong>Redigera</strong> för att hantera följande inställningar:</li>
+<ul>
+<li><strong>Namn (SSID):</strong> Ange ett namn för det trådlösa nätverket.</li>
+<li><strong>Visa/Dölj:</strong> Välj huruvida det trådlösa nätverket är synligt för andra enheter eller inte.</li>
+<li><strong>Trådlöst läge:</strong> Välj trådlös standard. Varje standard har stöd för olika bandbredder och frekvenser.</li>
+<li><strong>Kanalbredd:</strong> Välj en kanalbredd (endast tillgängligt om 802.11n trådlöst läge används).</li>
+<li><strong>Kanal:</strong> Välj en kanal för det trådlösa nätverket. För bättre prestanda, välj en frekvens annan än den som används av närliggande nätverk.</li>
+<li><strong>Överföringsstyrka:</strong> Välj en signalstyrka för det trådlösa nätverket.</li>
+<li><strong>Maximalt antal anslutningar:</strong> Välj hur många klienter som ska kunna ansluta till nätverket. Den högsta inställningen för anslutningar är 256.</li>
+<li><strong>Aktivera WMM QoS:</strong> Wi-Fi Multimedia (WMM) QoS (Quality of Service) över Wi-Fi. Detta alternativ tillåter det trådlösa nätverket att prioritera trafik och optimera hur resurser delas mellan program.</li>
+</ul>
+</ol>
+
+
+
+<h4>Ställa in ett trådlöst schema:*</h4>
+<p>Att aktivera ett trådlöst nätverksschema tillåter dig att ha kontroll över när det trådlösa nätverket för din DiskStation är aktivt och åtkomligt.</p>
+<ol>
+<li>Gå till fliken <strong>Wi-Fi</strong> och klicka på <strong>Redigera</strong>. </li>
+<li>Markera rutan <strong>Aktivera schema</strong>.</li>
+
+<li>Klicka på <strong>Lägg till schema</strong>.</li>
+<li>På skärmen för schema, välj när det trådlösa nätverket ska vara aktivt.</li>
+</ol>
+
+
+<h3>Säkerhetsinställningar</h3>
+<p><strong>Kontrollpanel</strong> > <strong>Trådlöst</strong> > <strong>Wi-Fi</strong> ger dig alternativ för att redigera säkerhetsinställningarna för ditt trådlösa nätverk.</p>
+
+
+<h4>Ställa in ett trådlös säkerhet:</h4>
+<ol>
+
+<li>Klicka på <strong>Redigera</strong>.</li>
+<li>Välj ett av följande säkerhetsprotokoll från rullgardinsmenyn <strong>Säkerhetsinställningar</strong>:</li>
+<ul>
+<li><strong>WEP:</strong> Ett grundläggande säkerhetsprotokoll som kräver att användare anger ett lösenord för att få åtkomst till det trådlösa nätverket men erbjuder minimalt med skydd.</li>
+<li><strong>WPA/WPA2 Personlig:</strong> Rekommenderas. Kräver att användaren anger ett lösenord för att få åtkomst till det trådlösa nätverket och är mer säkert än WEP.</li>
+<li><strong>WPA/WPA2 Företag:</strong>* Ett säkerhetsprotokoll som designats för företag som kräver att användarna autentiserar sig mot en extern autentiseringsserver.</li>
+
+</ul>
+</ol>
+
+<h4>För att aktivera Wi-Fi Protected Setup:*</h4>
+<p>Wi-Fi Protected Setup är en standard som förespråkas av Wi-Fi Alliance för att förenkla trådlösa säkerhetsinställningar för användare. Du kan använda en Push-knapp eller en PIN-kod för att se till att ditt Wi-Fi-nätverk är säkert. Klicka på <strong>WPS</strong> för att aktivera Wi-Fi Protected Setup.</p>
+
+
+<h3>Gästnätverk*</h3>
+<p>Förutom att skapa ett trådlöst värdnätverk har din DiskStation också stöd för att skapa ett trådlöst gästnätverk. Inställningarna för gästnätverk kan begränsas till att begränsa åtkomst för användare, vilket är användbart för företag eller andra institutioner som vill ge sina besökare åtkomst till trådlöst nätverk men vill förhindra dem från att få åtkomst till värdnätverket.</p>
+
+
+<h4>För att aktivera gästnätverk:</h4>
+
+<ol>
+<li>Gå till <strong>Kontrollpanel</strong> > <strong>Trådlöst</strong> > <strong>Wi-Fi</strong>. </li>
+<li>Klicka på <strong>Redigera</strong> för att hantera följande inställningar på fliken <strong>Gästnätverk</strong>:</li>
+
+<ul>
+<li><strong>Namn (SSID):</strong> Ange ett namn för det trådlösa nätverket.</li>
+<li><strong>Visa/Dölj:</strong> Välj huruvida det trådlösa nätverket är synligt för andra enheter eller inte.</li>
+<li><strong>Maximalt antal anslutningar:</strong> Välj hur många klienter som ska kunna ansluta till nätverket. Den högsta maximala inställningen för anslutningar är 256.</li>
+</ul>
+</ol>
+
+<h4>Inställningar för säkerhet i gästnätverket:</h4>
+<p>Välj ett av följande säkerhetsprotokoll från rullgardinsmenyn <strong>Säkerhetsinställningar</strong>:</p>
+<ul>
+<li><strong>WEP:</strong> Ett grundläggande säkerhetsprotokoll som kräver att användare anger ett lösenord för att få åtkomst till det trådlösa nätverket men erbjuder minimalt med skydd.</li>
+<li><strong>WPA/WPA2 Personlig:</strong> Rekommenderas. Kräver att användaren anger ett lösenord för att få åtkomst till det trådlösa nätverket och är mer säkert än WEP.</li>
+</ul>
+
+
+<h4>Inställningar för schema i gästnätverket:</h4>
+<p>Att aktivera ett schema för gästnätverket tillåter dig att ha kontroll över när det trådlösa gästnätverket för din DiskStation är aktivt och åtkomligt.</p>
+
+<ol>
+<li>Markera kryssrutan <strong>Aktivera schema för gästnätverk</strong>.</li>
+<li>Klicka på <strong>Sätt gästschema</strong>.</li>
+<li>På skärmen för schema, välj när det trådlösa gästnätverket ska vara aktivt.</li>
+</ol>
+
+<div class="section">
+<h4>Obs:</h4>
+<p>Det trådlösa gästnätverket kan inte vara aktivt under tidsperioder när det trådlösa värdnätverket är inaktiverat.</p>
+</div>
+
+
+<h3>MAC-filterinställning*</h3>
+<p>MAC-filtrering (i <strong>Kontrollpanel</strong> > <strong>Trådlöst</strong>) specificerar vilka MAC-adresser som är tillåtna att få åtkomst till det trådlösa nätverket, vilket tillåter dig att blockera eller tillåta åtkomst för specifika enheter. Denna funktion styr bara åtkomst till nätverket och inga övriga krypteringsinställningar.</p>
+
+
+<h4>Skapa regler för MAC-filtrering:</h4>
+<ol>
+<li>Ange beskrivningen och MAC-adressen för en enhet.</li>
+<li>Välj en åtkomstpolicy:
+<ul>
+<li><strong>Neka:</strong> Förhindrar att den specifika MAC-adressen får åtkomst till det trådlösa nätverket.</li>
+<li><strong>Tillåt:</strong> Tillåter att de specifika MAC-adresserna får åtkomst till det trådlösa nätverket.</li>
+</ul> 
+</ol>
+
+
+
+<h3>Föräldrakontroll*</h3>
+<p>Funktionen föräldrakontroll låter dig kontrollera när varje klientenhet, ansluten till det lokala nätverket för DiskStation får ha åtkomst till Internet. Till exempel, om dina barns datorer eller mobila enheter ansluter till Internet genom DiskStation, kan du konfigurera inställningarna i föräldrakontrollen att begränsa deras Internetanvändning i enlighet med specifika enheter och tider.</p>
+
+<h4>Aktivera föräldrakontroll:</h4>
+<ol>
+<li>Gå till <strong>Kontrollpanel</strong> > <strong>Trådlöst</strong> > <strong>Inställningar för föräldrakontroll</strong>.</li>
+
+<li>Klicka på knappen <strong>Lägg till</strong> för att lägga till en klientenhet.</li>
+<ul>
+<li><strong>Klientnamn:</strong> Välj en enheten som är ansluten till DiskStation eller ange ett namn manuellt (t.ex. Louisas Laptop).</li>
+<li><strong>MAC-adress:</strong> Ange MAC-adressen för den enhet vars Internetanvändning du vill kontrollera.</li>
+<li><strong>Ställa in schema:</strong> Välj vilka tider den specificerade enhet ska vara tillåten att ha åtkomst till Internetåtkomst genom DiskStation.</li>
+</ul>
+</ol>
+
+<h3>Anslutningslista*</h3>
+<p>Listan med anslutningar (i <strong>Kontrollpanel</strong> > <strong>Trådlöst</strong>) visar information om enheter anslutna till DiskStation. Enheter kan läggas till direkt i MAC-filter härifrån.</p>
+
+<h4>För att lägga till enheter i MAC-filterlista:</h4>
+<ol>
+<li>Markera kryssrutan invid enheten du vill lägga till i MAC-filter.</li>
+<li>Klicka på <strong>Lägg till i MAC-filterlista</strong>.</li>
+</ol>
+
+
+
+<p>____<br> * Endast tillgängligt för vissa modeller.<br>
+</body>
+</html>

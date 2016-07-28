@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script> <script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+<meta content="en-us" http-equiv="Content-Language" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Sauvegarder vos données sur un Synology NAS pour assurer la sécurité des données</title>
+</head>
+
+<body class="tutorial-content-box" >
+
+<h1>Sauvegarder votre Synology NAS</h1>
+<div class="tutorials_content">
+<img src="../../images/Backup/1x/Backup/back_up_your_data_on_synology_nas_to_ensure_data_security.jpg" />
+<h2>Vue d'ensemble</h2>
+<p>Des pertes inattendues de données découlant de panne de disque dur ou de catastrophes naturelles sont des menaces potentielles pour vos données primordiales, en particulier lorsqu'aucune solution fiable de sauvegarde n'est disponible. <strong>Hyper Backup</strong> offre une solution intuitive et intégrée de sauvegarde/restauration qui vous aide à conserver/récupérer des copies de vos précieuses données et à restaurer des applications et des configurations système à partir d'un moment donné. Les destinations de stockage suivantes sont prises en charge :</p>
+
+<ul>
+<li><strong>Dossiers locaux partagés (notamment les périphériques de stockage externes connectés à votre DiskStation)</strong></li>
+<li><strong>Synology NAS distant</strong></li>
+<li><strong>Serveurs rsync à distance</strong></li>
+<li><strong>Serveurs distants OpenStack Swift</strong></li>
+<li><strong>Clouds publics (Amazon S3, Microsoft Azure et OpenStack Swift, etc.)</strong></li>
+</ul>
+</div>
+
+<div class="section">
+<h4>Remarque :</h4>
+<p>Hyper Backup de sauvegarde que les applications et configurations système spécifiques. Pour plus d'informations, consultez la documentation de l'aide d'Hyper Backup.</p>
+</div>
+
+
+<h3 class="list_head">1. Créer des tâches de sauvegarde locale dans un dossier partagé local/sur un périphérique de stockage externe</h3>
+<p><strong>Hyper Backup</strong> offre des procédures de sauvegarde et de restauration similaire pour les différents types de destination. Ci-dessous, nous allons vous montrer comment sauvegarder et restaurer localement des données à titre de référence pour les autres types de tâches.</p>
+
+<ol>
+<li>Connectez-vous à DSM et recherchez le paquet <strong>Hyper Backup</strong>.</li>
+<li>Cliquez sur <strong>+</strong> dans le coin inférieur gauche et sélectionnez <strong>Tâche de sauvegarde des données</strong>.</li>
+<li>Pour configurer une tâche de sauvegarde locale, sélectionnez <strong>Dossier local partagé</strong>.</li>
+<img src="../../images/Backup/1x/Backup/1.png" width="600" alt=""/>
+<li>Sélectionnez <strong>Créer une tâche de sauvegarde</strong> et sélectionnez un dossier partagé local ou un périphérique de stockage externe connecté à votre DiskStation.</li>
+<img src="../../images/Backup/1x/Backup/2.png" width="600" alt=""/>
+<li>Sélectionnez le ou les dossiers source pour sauvegarder les données qui s'y trouvent. Si vous avez sélectionné des dossiers partagés chiffrés, ils doivent rester montés pendant le processus de sauvegarde. Si la source et la destination se trouvent sur le même volume, le système marque les dossiers source avec des points d'exclamation oranges.</li>
+<img src="../../images/Backup/1x/Backup/3.png" width="600" alt=""/>
+<li>Sélectionnez la ou les applications à sauvegarder.</li>
+<img src="../../images/Backup/1x/Backup/4.png" width="600" alt=""/>
+<li>Spécifiez les paramètres de sauvegarde ci-dessous en fonction de vos besoins :
+  <ul>
+  <li><strong>Tâche</strong> : Nom de la tâche de sauvegarde.</li>
+  <li><strong>Activer la notification des tâches</strong> : Indiquez si vous souhaitez être informé de l'état de la tâche par e-mail, SMS ou service push.</li>
+  <li><strong>Activer la sauvegarde de la configuration</strong> : Sauvegardez les configurations système (par ex. : identifiants initiateur). Ce réglage est appliqué pour toutes les tâches par défaut.</li>
+  <li><strong>Compresser les données de sauvegarde</strong> : Compresser les données de sauvegarde afin de réduire l'espace utilisé sur le stockage de destination. Davantage de temps est nécessaire si vous sélectionnez cette option.</li>
+  <li><strong>Activer le chiffrement du transfert</strong> (uniquement pour la sauvegarde distante) : Sélectionnez cette option pour chiffrer les données de sauvegarde pendant le transfert sur une destination distante (par ex. : un serveur rsync ou un cloud public).</li>
+  <li><strong>Taille de partie Multipart Upload</strong> (uniquement pour les serveurs compatibles S3) : Diviser les données de sauvegarde en fonction de la taille spécifiée des morceaux.</li>
+  <li><strong>Activer le chiffrement côté client</strong> : Sélectionnez cette option pour protéger les données de la sauvegarde de tout accès indésirable à l'aide d'un mot de passe côté destination.</li>
+    
+  <li><strong>Activer le calendrier de sauvegarde</strong> : Sélectionnez cette option pour planifier l'exécution automatique de la tâche de sauvegarde.</li>
+  </ul>
+  </li>
+  
+<img src="../../images/Backup/1x/Backup/5.png" width="600" alt=""/>
+<li>Sélectionnez <strong>Activer la rotation des sauvegardes</strong> pour configurer le schéma de rotation :
+  
+  <ul>
+  <li><strong>À partir des versions les plus anciennes</strong> : Supprime les versions de sauvegarde les plus anciennes une fois que le <strong>Nombre de versions</strong> est dépassé.</li>
+  <li><strong>Smart Recycle</strong> : Le système conserve chaque version de sauvegarde jusqu'à ce que le nombre de versions soit dépassé. Lorsque la rotation est déclenchée, le système commence par la rotation des versions qui ne répondent à aucune des conditions ; si toutes les versions existantes répondent aux conditions ci-dessous, le système lance la rotation de la version la plus ancienne :
+  <ul>
+  <li><strong>Les versions horaires depuis les dernières 24 heures</strong> : Le système conserve la version la plus récente créée à chaque heure.</li>
+  <li><strong>Versions quotidiennes de la veille à un mois</strong> : Le système conserve la version la plus récente créée à chaque jour.</li>
+  <li><strong>Les versions hebdomadaires de plus de 1 mois</strong> : Le système conserve la version la plus récente créée à chaque semaine.</li>
+  </ul>
+  
+  </li>
+  <li><strong>Nombre de versions</strong> : Configurez la limite supérieure des versions de sauvegarde qui est possible de conserver.</li>
+  <li>Tableau chronologique : Affiche le résultat possible de la conservation des sauvegardes en fonction de votre planification de sauvegarde et de votre modèle de rotation.</li>
+  </ul>
+</li>
+
+<img src="../../images/Backup/1x/Backup/6.png" width="600" alt=""/>
+<li>Cliquez sur <strong>Appliquer </strong>pour achever l'installation.</li>
+<li>Pour procéder immédiatement à la tâche de sauvegarde, suivez les instructions de l'assistant de sauvegarde et cliquez sur <strong>Oui</strong>.</li>
+</ol>
+
+
+<h3 class="list_head">2. Restaurer les fichiers uniques à partir d'un dossier partagé local/périphérique de stockage externe</h3>
+
+
+<ol>
+<li>Accédez à <strong>Hyper Backup</strong>, sélectionnez la tâche de sauvegarde souhaitée dans le volet de gauche et cliquez sur <strong>Explorateur de sauvegardes</strong> (l'icône de la loupe). Saisissez le mot de passe si la tâche est protégée par un chiffrement côté client.</li>
+<img src="../../images/Backup/1x/Backup/Single_1.png" width="600" alt=""/>
+<li>Recherchez et sélectionnez le fichier de restauration souhaité. Vous pouvez également sélectionner la version que vous souhaitez restaurer dans la barre chronologique.</li>
+<img src="../../images/Backup/1x/Backup/Single_2.png" width="600" alt=""/>
+<li>Cliquez sur <strong>Restaurer</strong> pour restaurer le fichier ou le dossier sélectionné.</li>
+
+</ol>
+
+
+
+<h3 class="list_head">3. Restaurer des tâches complètes aux points temporels souhaités</h3>
+
+<ol>
+<li>Cliquez sur <strong>Restaurer</strong> dans le coin inférieur gauche et cliquez sur <strong>Données</strong>. Saisissez le mot de passe si la tâche est protégée par un chiffrement côté client.</li>
+
+<img src="../../images/Backup/1x/Backup/Restore_1.png" width="600" alt=""/>
+<li>Sélectionnez une tâche à restaurer. Pour restaurer des données provenant d'autres référentiels, sélectionnez <strong>Restaurer à partir d'autres référentiels</strong> et localisez la tâche à restaurer.</li>
+<img src="../../images/Backup/1x/Backup/Restore_2.png" width="600" alt=""/>
+<li>Indiquez si vous souhaitez restaurer les configurations système. Si vous sélectionnez <strong>Restaurer la configuration système</strong>, sélectionnez les configurations spécifiques à restaurer dans la liste ci-dessous.</li>
+<img src="../../images/Backup/1x/Backup/Restore_3.png" width="600" alt=""/>
+
+<li>Recherchez et sélectionnez les fichiers/tâches cible à restaurer. Vous pouvez également sélectionner la version que vous souhaitez restaurer dans la barre chronologique.</li>
+<img src="../../images/Backup/1x/Backup/Restore_4.png" width="600" alt=""/>
+<li>Sélectionnez les applications à restaurer.</li>
+<img src="../../images/Backup/1x/Backup/Restore_4.5.png" width="600" alt=""/>
+<li>Les informations de base sur la restauration s'affichent.</li>
+<img src="../../images/Backup/1x/Backup/Restore_5.png" width="600" alt=""/>
+<li>Cliquez sur <strong>Appliquer</strong> pour lancer la restauration.</li>
+</ol>
+
+
+
+
+
+
+<div class="page-info">
+  <ul>
+    <li>Précédent dans cette rubrique : <a href="backup_from_computer.html">Sauvegarder les données sur votre PC/Mac en utilisant Cloud Station</a> </li>
+  </ul>
+</div>
+</body>
+
+</html>

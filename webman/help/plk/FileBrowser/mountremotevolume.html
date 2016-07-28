@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>File Station</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2>Montowanie folderów zdalnych</h2>
+
+<p>Za pomocą aplikacji File Station można montować zdalne foldery ze zdalnych serwerów (takich jak komputery w sieci lub inne urządzenia Synology NAS) w celu nawigacji po zamontowanych folderach i zarządzania nimi.</p>
+
+
+
+
+
+<h4>Aby zamontować zdalny folder współdzielony CIFS*:</h4>
+<ol>
+<li>Kliknij <b>Narzędzia</b> > <b>Montuj folder zdalny</b> > <strong>Folder współdzielony CIFS</strong>.</li><img src="about:blank" class="help_image"/><li>W polu <b>Folder</b> określ ścieżkę folderu zdalnego w formacie <code>\\Remote_Server\Remote_Folder</code>, np. <code>\192.168.0.2\share</code> lub <code>\\chad\cheeseburger\pictures</code>.</li>
+<li>Jeśli serwer zdalny wymaga uprawnień dostępu do folderu zdalnego, wprowadź poświadczenia użytkownika zdalnego serwera w polach <b>Nazwa konta</b> i <b>Hasło</b>.</li>
+<li>Kliknij <b>Przeglądaj</b>, aby wybrać lub utworzyć pusty folder docelowy w urządzeniu DiskStation w celu zamontowania folderu zdalnego.</li><img src="about:blank" class="help_image"/><li>Zaznacz opcję <b>Zamontuj automatycznie przy uruchamianiu</b>, aby serwer DiskStation montował ten folder zdalny przy każdym uruchomieniu lub ponownym uruchomieniu systemu.</li>
+<li>Kliknij <b>Montuj</b>, aby zamontować folder zdalny w folderze docelowym. Teraz możesz nawigować po folderze zdalnym i zarządzać nim z poziomu DiskStation.</li>
+</ol>
+
+<h4>Aby zamontować zdalny folder współdzielony NFS:</h4>
+
+<ol>
+<li>Kliknij <b>Narzędzia</b> > <b>Montuj folder zdalny</b> > <b>Folder współdzielony NFS</b>.</li><img src="about:blank" class="help_image"/><li>W polu <b>Folder</b> określ ścieżkę folderu zdalnego w formacie <code>Remote_Server:/Remote_Folder_Path</code>, np. <code>192.168.0.2/volume1/share</code>.</li>
+<li>Wybierz żądaną wersję NFS i protokołu transportowego.</li>
+<li>Kliknij <b>Przeglądaj</b>, aby wybrać lub utworzyć pusty folder docelowy w urządzeniu DiskStation w celu zamontowania folderu zdalnego.</li><img src="about:blank" class="help_image"/><li>Zaznacz opcję <b>Montuj automatycznie przy uruchamianiu</b>, aby serwer DiskStation montował ten folder zdalny przy każdym uruchomieniu lub ponownym uruchomieniu systemu.</li>
+<li>Kliknij <b>Montuj</b>, aby zamontować folder zdalny w folderze docelowym. Teraz możesz nawigować po folderze zdalnym i zarządzać nim z poziomu DiskStation.</li>
+</ol>
+
+<div class="section">
+<h4>Uwaga:</h4>
+<p>NFSv4 obsługuje tylko protokół TCP.</p>
+</div>
+
+<h4>Aby odmontować folder zdalny:</h4>
+<ol>
+<li>Wybierz folder zdalny, który ma być odmontowany, a następnie kliknij <b>Narzędzia</b> > <b>Odmontuj</b>.</li><img src="about:blank" class="help_image"/><li>Ewentualnie kliknij prawym przyciskiem myszy folder zdalny, a następnie wybierz opcję <b>Odmontuj</b>.</li><img src="../../../online_img/dsm/FileStation/mountremotevolume/04.png" class="help_image"/></ol>
+
+<div class="section">
+<h4>Uwaga:</h4>
+<ul>
+<li>Maksymalna liczba równoczesnych folderów zdalnych to 100.</li>
+<li>Foldery zdalne można montować wyłącznie z serwera zdalnego obsługującego protokoły CIFS lub NFS.</li>
+<li>Foldery zdalne mogą być zamontowane tylko do podfolderów w folderach współdzielonych.</li>
+<li class="enable-dockerx64">Montowanie folderów zdalnych jest obsługiwane tylko w trybie wysokich uprawnień. Aby użyć tej funkcji, przejdź do strony Docker w systemie DSM hosta, wybierz system <strong>Docker DSM</strong>, dla którego chcesz włączyć szyfrowane foldery współdzielone, kliknij <strong>Edytuj</strong>, a następnie zaznacz pole obok <strong>Uruchom kontener przy użyciu wysokich uprawnień</strong>.</li>
+</ul>
+</div>
+
+
+<p>____<br />* Funkcja dostępna tylko w niektórych modelach.</p>
+
+</body>
+</html>

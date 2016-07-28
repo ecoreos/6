@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>File Station</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Mount Virtual Drives</h2>
+
+<p>
+You can mount virtual drives to access the contents of disc images with File Station.
+</p>
+
+<h4>To mount a virtual drive:</h4>
+<ol>
+<li>
+Select a disc image and click <b>Tools</b> > <b>Mount Virtual Drive</b>.
+</li>
+<img src="about:blank" class="help_image"/>
+<li>
+Click <b>Browse</b> to select or create an empty destination folder on your DiskStation for mounting the virtual drive.
+</li>
+<img src="about:blank" class="help_image"/>
+<li>
+Tick <b>Mount automatically on startup</b> if you want your DiskStation to mount the virtual drive on every system startup or reboot. Click <b>Mount</b> to continue. Now you can navigate to the destination folder where the virtual drive is mounted, and access the contents of the disc image.
+</li>
+<img src="about:blank" class="help_image"/>
+</ol>
+
+<div class="section">
+<h4>Note:</h4>
+<p>Virtual drives and .iso files can only be mounted to subfolders under shared folders.</p>
+</div>
+
+
+
+<h4>To unmount a virtual drive:</h4>
+<ol>
+<li>Right-click on the destination folder where the virtual drive is mounted and select <b>Unmount</b>.</li>
+<img src="about:blank" class="help_image"/>
+</ol>
+<ol>
+<span class="note_head">Note: </span>
+<li>
+Supported disc image format: "<b>.iso</b>" files using the ISO 9660 and UDF file system.
+</li>
+<li>
+The maximum number of concurrent virtual drives is 16.
+</li>
+<li class="enable-dockerx64">Mouting virtual drives is only supported in high privilege mode. To use this feature, go to the Docker package on your host DSM, select the <strong>Docker DSM</strong> you want to enable encrypted shared folders for, click <strong>Edit</strong> and tick the box next to <strong>Execute container using high privileges</strong>.</li>
+
+</ol>
+</body>
+</html>

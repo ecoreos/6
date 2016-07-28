@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+	<h2>General</h2>
+	<p>Storage Manager allows users to manage all the storage spaces on their Synology products. In order to simplify storage management and create flexible storage spaces with data protection, Synology DSM supports multiple types of RAID Groups.</p>
+
+<h4><a href="raid.html">RAID Group</a></h4>
+	<p>With DiskStation, you may combine multiple hard disks into a single storage unit called a RAID Group. DiskStation provides the following types of RAID Groups:</p>
+	<ul>
+		<li><b>RAID Group for Single Volume or iSCSI LUN (Block-Level)</b>:
+			<ul>
+				<li>Allocates all available capacity to a single volume or iSCSI LUN (Block-Level).</li>
+				<li>Provides better performance but less storage management flexibility.</li>
+                <li>Allows creation of multiple iSCSI LUNs (Regular File) on volumes.</li>
+                <li>Supports maximum of one RAID Array.</li>
+			</ul>
+		</li>
+		<li><b>RAID Group for Multiple Volumes or iSCSI LUNs (Block-Level)</b>:
+			<ul>
+				<li>Supports creating multiple volumes or iSCSI LUNs (Block-Level) on a RAID Group.</li>
+                <li>Provides better storage management flexibility.</li>
+                <li>Allows creation of multiple iSCSI LUNs (Regular File) on volumes.</li>
+				<li>Supports combining multiple RAID Arrays under a RAID Group (when configured as RAID 5 or RAID 6).</li>
+			</ul>
+            </li>
+	</ul>
+
+<h4>RAID Type</h4>    
+<p>When creating a RAID Group, first choose a RAID type. Different RAID types provide different levels of data protection, storage features, and performance. DiskStation currently supports the following RAID types:</p>
+	<ul>
+	  <li><b>Basic</b>: Uses one hard disk to create a RAID Group. Basic RAID Groups do not offer data redundancy.</li>
+	  <li><b>JBOD*</b>: Combines at least two hard disks to create a RAID Group. JBOD RAID Groups do not offer data redundancy. The available capacity of a JBOD RAID Group equals the total capacity of all disks included in the group. JBOD supports combining hard disks of varying sizes.</li>
+	  <li><b>RAID 0*</b>: Combines at least two hard disks to create a RAID Group. RAID 0 does not offer data redundancy. If a single member disks fails, the data in the RAID Group will be lost. The available capacity of a RAID 0 Group equals the total capacity of all the member disks. RAID 0 supports combining hard disks of differing sizes.</li>
+	  <li><b>RAID 1*</b>: Combines 2-4 hard disks to create a RAID Group. The system will write identical data to each hard disk. RAID 1 provides data protection as long as one disk is operating normally. The available capacity of a RAID 1 Group equals the size of the smallest member disk.</li>
+	  <li><b>RAID 5*</b>: Combines at least three hard disks to create a RAID Group, striping both data and parity information across all member disks. RAID 5 provides data redundancy. If one member disk fails, the system may be rebuilt using parity information on the other member disks. Supports combining multiple RAID Arrays when created on a RAID Group for Multiple Volumes or iSCSI LUNs (Block-Level). The available capacity of a RAID 5 Group = <span class="note_content"> Total capacity of combined RAID Arrays. RAID Array capacity = (number of hard disks - 1) x (Capacity of smallest hard disk)</span></li>
+	  <li><b>RAID 6*</b>: Combines at least four hard disks to create a RAID Group, striping both data and parity information across all member disks. RAID 6 provides data redundancy. Even if two member disks fail, the system may  be  rebuilt  using  parity information on other member disks. Supports combining multiple RAID Arrays when created on a RAID Group for Multiple Volumes or iSCSI LUNs (Block-Level). The available capacity of a RAID 6 Group = <span class="note_content">Total capacity of combined RAID Arrays. RAID Array capacity = (number of hard disks - 2) x (Capacity of smallest hard disk)</span></li>
+	  <li><b>RAID 10*</b>: Combines at least four hard disks to create a RAID Group. The number of  disks must be even. RAID 10 provides the performance of RAID 0 in addition to the same data protection level as RAID 1. The available capacity of a RAID 10 Group = <span class="note_content">(capacity of the smallest hard disk) X (number of hard disks / 2)</span></li>
+	</ul>
+	<p>
+		<span class="note_head">Note:</span>
+		RAID types with “*” are only available on NAS models with sufficient hard disk bays.
+</p>
+
+
+<h4><a href="space.html">Volume Type</a></h4>
+	<p>Depending on the underlying RAID Group type, there are two types of volumes:</p>
+	<ul>
+		<li><b>Volume on RAID Group for Single Volume or iSCSI LUN (Block-Level)</b>
+        	<ul>
+            	<li>Allocates all storage capacity on a RAID Group to a single volume. Provides better performance but less management flexibility.</li>
+                <li>Allows creation of multiple iSCSI LUNs (Regular File) on volumes.</li>
+            </ul></li>
+		<li><b>Volume on RAID Group for Multiple Volumes or iSCSI LUNs (Block-Level)</b>
+        	<ul>
+            	<li>Allocates a designated portion of the storage capacity on a RAID Group to create a volume.  Provides better management flexibility, allowing you to expand volume size or create additional volumes as needed.</li>
+                <li>Allows creation of multiple iSCSI LUNs (Regular File) on volumes.</li>
+            </ul></li>
+	</ul>
+
+<h4 class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64">Volume Format</h4>
+<p class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64">Depending on the file system in use, there are two volume formats:</p>
+<ul class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64">
+	<li><strong>New volume format</strong>: This format uses <b>Btrfs</b> file system. The minimum size of a volume in this format must be at least 10 GB. It supports following new features with which you can manage your data more easily:
+		<ul>
+			<li><strong><a href="../DisasterRecovery/snapshots.html">Shared folder snapshot</a>:</strong> The snapshot records the whole data status at the time upon being taken. If a user accidentally modifies or deletes data on a volume with snapshots, you are able to quickly restore the data back to the previous time at which the snapshot was taken.</li>
+			<li><strong><a href="../AdminCenter/file_share_create.html#sharequota">Shared folder quota</a>:</strong> You can set the maximum capacity for each folder.</li>
+			<li><strong><a href="../AdminCenter/file_user_create.html#userquota">User quota</a> based on shared folder:</strong> You can control how much space within a shared folder can be used by every user.</li>
+			<li><strong><a href="../AdminCenter/file_share_create.html#integrity_protection">Advanced data integrity protection</a>:</strong> Shared folder is protected with CRC32 checksum and copy-on-write strategies.</li>
+		</ul>
+	</li>
+	<li><strong>Traditional volume format</strong>: This format uses <b>ext4</b> file system. The minimum size of a volume in this format must be at least 10 GB. Since ext4 file system is supported by most Synology products, you can easily migrate your volume in this format to another Synology product.</li>
+</ul>
+</body>
+</html>

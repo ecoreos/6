@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Opções</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2><a name="leaf_user"></a>Conta</h2>
+
+<p>O separador Conta fornece opções de edição de definições básicas da conta, tais como a descrição, a palavra-passe, o e-mail e a verificação de 2 passos. Para ver este separador, clique no ícone em forma de pessoa, na parte superior direita do ambiente de trabalho e selecione <strong>Pessoais</strong>.</p>
+
+
+
+<h3>Modificar Definições da Conta</h3>
+
+<p>Podem ser editadas as seguintes definições de conta:</p>
+<ul>
+<li><strong>Descrição:</strong> Introduza uma descrição para a sua conta. As descrições do utilizador podem incluir até 64 caracteres Unicode apresentáveis.</li>
+<li><strong>Nova Palavra-passe:</strong> Se não pretender alterar a palavra-passe da sua conta, introduza aqui uma nova e confirme-a no campo <strong>Confirmar palavra-passe</strong> abaixo. As palavras-passe são sensíveis a maiúsculas e minúsculas e estão limitadas a 127 caracteres apresentáveis, incluindo letras, números, símbolos e espaços.</li>
+<li><strong>E-mail:</strong> Introduza um endereço de e-mail (apenas para utilizadores não admin).</li>
+<li><strong>Idioma de exibição:</strong> Especifique o idioma de exibição da sua conta. As definições do idioma de exibição que aqui especificar têm prioridade sobre quaisquer outras especificadas em <b>Painel de Controlo</b> > <b>Opções Regionais</b> > <b>Idioma</b>.</li>
+</ul>
+<p>Depois de modificar as definições de conta, clique em <b>OK</b> para guardar as alterações.</p>
+
+
+<h3>Verificação de 2 passos</h3>
+
+<p>A verificação de 2 passos constitui uma segurança melhorada para a sua conta DSM. Se a verificação de 2 passos estiver ativada, terá de introduzir a sua palavra-passe para além de um código de verificação, uma única vez, quando inicia a sessão no DSM. Os códigos de verificação são obtidos a partir de aplicações de autenticação instaladas no seu dispositivo móvel. Por isso, caso alguém queira aceder à sua conta, não só precisa do seu nome de utilizador e palavra-passe, mas também do seu dispositivo móvel.</p>
+
+<div class="section">
+<h4>Requisitos:</h4>
+<p>A verificação de 2 passos requer um dispositivo móvel e uma aplicação de autenticação que suporte o protocolo Time-based One-Time Password (TOTP). Entre as aplicações de autenticação encontram-se o Google Authenticator (Android/iPhone/BlackBerry) ou Authenticator (Windows Phone).</p>
+</div>
+
+<h4>Para ativar a verificação de 2 passos:</h4>
+
+<ol>
+<li>Aceda ao separador <strong>Pessoais</strong> > <strong>Conta</strong> e assinale a caixa <strong>Ativar verificação de 2 passos</strong> para abrir o assistente de verificação de 2 passos.</li>
+<li>No primeiro ecrã, introduza um endereço de e-mail. Podem ser enviados para este e-mail códigos de verificação de emergência, caso perca o seu dispositivo móvel.</li>
+<li>Transfira e instale uma aplicação autenticadora, como o Google Authenticator (Android/iPhone/BlackBerry) ou Authenticator (Windows Phone).</li>
+<li>No ecrã seguinte, abra a sua aplicação autenticadora e digitalize o código QR. Como alternativa, pode clicar na ligação para introduzir manualmente uma chave secreta.</li>
+<li>Em seguida, a sua aplicação autenticadora gera um código de verificação de 6 dígitos. Introduza este código no campo de texto do assistente, para confirmar que as configurações estão corretas. Se ocorrer um erro, certifique-se de que a hora de sistema do seu dispositivo móvel está sincronizada com a hora de sistema do DSM. Como os códigos de verificação são atualizados periodicamente, certifique-se de que o código introduzido não expirou.</li>
+<li>Assim que o assistente de configuração terminar, clique em <strong>OK</strong> para guardar as definições.</li>
+</ol>
+
+
+
+<h4>Para iniciar sessão no DSM com a verificação de 2 passos:</h4>
+
+<p>Quando a verificação de 2 passos estiver ativada, ser-lhe-á pedido que introduza um código de verificação de 6 dígitos quando iniciar sessão no DSM.</p>
+
+<ol>
+<li>No ecrã de início de sessão do DSM, introduza o seu nome de utilizador e a palavra-passe, como habitualmente.</li>
+<li>Quando lhe for pedido que introduza um código de verificação, abra a aplicação autenticadora no seu dispositivo móvel.</li>
+<li>Localize e introduza o código de verificação de 6 dígitos para a sua conta. Se perder o seu dispositivo móvel, pode clicar na ligação <b>Perdeu o telefone?</b> e será enviado para o seu endereço de e-mail um código de emergência.</li>
+</ol>
+
+<div class="section">
+<h4>Nota:</h4>
+<ul>
+<li><strong>Definições SMTP:</strong> Para receber códigos de emergência por e-mail, as definições do servidor SMTP em <b>Painel de Controlo</b> > <b>Notificação</b> têm de estar devidamente configuradas.</li>
+<li><strong>Limite de Códigos de Emergência:</strong> Cada utilizador tem um limite de 5 códigos de emergência. Se ultrapassar o seu limite, terá de desativar e reativar a verificação de 2 passos antes de receber mais códigos de emergência.</li>
+<li>A verificação de 2 passos pode ser solicitada no DSM e todas as aplicações Synology móveis relacionadas (por ex., DSM mobile e DS file).</li>
+
+</ul>
+</div>
+
+
+<h4>Para repor as definições de utilizador da verificação de 2 passos:</h4>
+
+<p>Os utilizadores do grupo <strong>administrators</strong> podem repor as definições de verificação de 2 passos de outros utilizadores. 
+<ol>
+<li>Aceda a <strong>Painel de Controlo</strong> > <strong>Utilizador</strong>.</li>
+<li>Clique duas vezes no utilizador cuja verificação de 2 passos deseja repor.</li>
+<li>No separador <strong>Informação de Utilizador</strong>, clique no botão <strong>Repor Verificação de 2 Passos</strong>.</li>
+</ol>
+
+<div class="section">
+<h4>Nota:</h4>
+<p>Se um utilizador do grupo <strong>administrators</strong> não estiver disponível, pode premir o botão de reposição no seu DiskStation para repor as definições do DSM e desativar a verificação de 2 passos.</p>
+</div>
+
+
+<h3>Atividade da Conta</h3>
+<p>A atividade da conta mostra a atividade de início de sessão da sua conta DSM, incluindo ligações atuais, dispositivos de confiança e histórico de início de sessão.</p>
+
+
+<h4>Para verificar a atividade da sua conta:</h4>
+<p>Clique no botão <strong>Atividade da Conta</strong>. É apresentada uma janela com os seguintes separadores:
+
+<ul>
+<li><strong>Utilizadores Ligados:</strong> Este separador mostra as seguintes informações:
+  <ul>
+<li><strong>Data e Hora:</strong> Quando a conta foi acedida.</li>
+<li><strong>Nome e IP cliente:</strong> O nome e endereço IP do dispositivo que acedeu à conta. O nome cliente apenas aparece quando a conta é acedida com o protocolo CIFS.</li>
+<li><strong>Serviço:</strong> O protocolo utilizado para aceder à conta.</li>
+<li><strong>Recurso:</strong> Os recursos de sistema utilizados pela conta.</li>
+</ul></li>
+
+<li><strong>Dispositivos de confiança:</strong> Este separador mostra a página de gestão de dispositivos de confiança:
+   <ul>
+<li><strong>O dispositivo atual é / não é de confiança:</strong> Clique em <strong>Confiar neste dispositivo</strong> se optar por confiar no dispositivo atual, e não mais será necessária verificação de 2 passos quando inicia a sessão no DSM neste dispositivo.</li>
+
+<li><strong>Não confiar noutros dispositivos:</strong> Pode não confiar noutros dispositivos (por ex., outros computadores ou dispositivos móveis) nos quais tenha confiado. Isto significa que a verificação de 2 passos será necessária quando iniciar a sessão na DSM nestes dispositivos.</li>
+</ul></li>
+
+
+<li><strong>Histórico de Início de Sessão:</strong> Este separador mostra as sessões recentes de início de sessão e as seguintes informações:
+<ul>
+<li><strong>Data e Hora:</strong> Quando a conta foi acedida.</li>
+<li><strong>Evento:</strong> Mostra o nome de utilizador e o endereço IP.</li>
+</ul>
+</li>
+</ul>
+
+
+<div class="section">
+<h4>Nota:</h4>
+<p>O dispositivo que assinalar como de confiança será recordado apenas quando iniciar a sessão na mesma conta e no mesmo navegador. Terá ainda de introduzir uma OTP (palavra-passe de utilização única) para verificação de 2 passos nos cenários que se seguem, mesmo que tenha confiado anteriormente num dispositivo:</p>
+<ul>
+<li>Inicia a sessão com a mesma conta, mas num navegador diferente.</li>
+<li>Os seus cookies foram removidos do navegador.</li>
+<li>Confia num dispositivo quando inicia a sessão como Utilizador A, e depois confia no mesmo dispostivo quando inicia a sessão como Utilizador B. Quando inicia a sessão novamente como Utilizador A, tem ainda de introduzir uma palavra-passe para a verificação de 2 passos.</li>
+</ul>
+
+</div>
+
+
+</body>
+</html>

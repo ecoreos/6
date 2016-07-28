@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Správce úložiště</title>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2><a name="leaf_iscsilun"></a>iSCSI LUN*</h2>
+<p>iSCSI je služba síťového úložiště, která zajišťuje přenos dat v rámci místních sítí nebo na velké vzdálenosti. Namapováním jednotek iSCSI LUN k cílům iSCSI Target mohou klientská zařízení získat přístup ke kapacitě úložiště, jako by se jednalo o pevné disky. Jednotka iSCSI LUN (číslo logické jednotky) může být namapována k většímu počtu cílů iSCSI Target a zajišťovat služby úložiště iSCSI. Správa jednotek iSCSI LUN se provádí v části <strong>Správce úložiště</strong> > <strong>iSCSI LUN</strong>.</p>
+
+<div class="section"><h4>Poznámka:</h4>
+<p>Počet podporovaných jednotek iSCSI LUN se u různých modelů DiskStation liší. Další podrobnosti o parametrech produktů najdete na stránkách <a href="http://www.synology.com/" target="_blank">www.synology.com</a>.</p>
+</div>
+
+<p>Zařízení DiskStation v současnosti podporuje následující typy jednotek iSCSI LUN:</p>
+<ul>
+	<li><b>Jednotka iSCSI LUN (běžné soubory)</b>: Jednotku iSCSI LUN lze vytvořit tak, že vyhradíte část svazku. Velikost je možné později podle potřeby zvětšit. Tento typ jednotky iSCSI LUN zajišťuje flexibilitu dynamické správy kapacity, včetně funkce Thin Provisioning a podpory hardwarové akcelerace VMware VAAI, technologie Windows ODX, snímku LUN a klonu LUN.</li>
+	<li class="disable-bromolow disable-grantley disable-avoton disable-braswell disable-broadwell disable-kvmx64"><b>Jednotka iSCSI LUN (na úrovni bloku) – jedna jednotka LUN v systému RAID</b>: Jednotka iSCSI LUN se vytváří s využitím veškerého prostoru svazku. Můžete ji opravit či rozšířit nebo můžete změnit typ pole RAID podobně jako při používání svazku. Více informací najdete na stránce <a href="space.html">Svazek</a>.</li>
+	<li class="disable-bromolow disable-grantley disable-avoton disable-braswell disable-broadwell disable-kvmx64"><b>Jednotka iSCSI LUN (na úrovni bloku) – více jednotek LUN v systému RAID</b>: Jednotku iSCSI LUN se vytváří vyhrazením určitého prostoru skupiny disků. Později je možné jednotku iSCSI LUN rozšířit, pokud je ve skupině disků dostatečný prostor. Další informace najdete na stránce <a href="raid.html">Skupina disků</a>.</li>
+	<li class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64"><b>Jednotka iSCSI LUN (na úrovni bloku)</b>: Tento typ jednotky iSCSI LUN se vytváří ve skupině RAID Group a nabízí flexibilitu dynamické správy kapacity s optimalizovaným výkonem přístupu. Později je možné tento typ jednotky iSCSI LUN rozšířit, a to pomocí nepřiděleného místa ve skupině RAID Group. Více informací najdete na stránce <a href="raid.html">Skupina RAID Group</a>.</li>
+</ul>
+
+<div class="section"><h4>Poznámka:</h4>
+<p>Jednotky iSCSI LUN s rozšířenými funkcemi LUN jsou k dispozici pouze v souborovém systému ext4<span style="display: inline;" class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64">/Btrfs</span>.</p>
+</div>
+
+<h4>Vytvoření jednotky iSCSI LUN:</h4>
+<ol>
+	<li>Klikněte na možnost <b>Vytvořit</b>.</li>
+	<li>Vyberte typ jednotky iSCSI LUN, kterou chcete vytvořit.</li>
+	<li>Proces dokončete pomocí průvodce.</li>
+</ol>
+
+<div class="section"><h4>Poznámka:</h4>
+<p>Rozšířené funkce LUN lze povolit pouze při počátečním vytvoření jednotky iSCSI LUN. Toto nastavení nelze později změnit.</p>
+</div>
+
+<p>Pro některé funkce v rámci aplikačního serveru, například Microsoft Exchange nebo SQL Server, nebo virtualizační servery a technologie akcelerace úložiště, například Microsoft Windows ODX nebo VMware VAAI, lze velikost rozšířené alokační jednotky LUN optimalizovat, a to jedním z následujících postupů:</p>
+<ul>
+	<li>Při vytvoření první rozšířené jednotky LUN svazku nastavte velikost alokační jednotky.</li>
+	<li>Před vytvořením první rozšířené jednotky LUN svazku vyberte z nabídky <strong>Konfigurovat</strong> velikost alokační jednotky.</li>
+</ul>
+
+<p>Pokud používáte přímé připojení z aplikačního serveru nebo metod RDM (pass-through) práce s rozšířenými jednotkami iSCSI LUN ze zařízení DiskStation, doporučujeme zadat velikost alokačních jednotek pro vaši aplikaci. Chcete-li pro klonování serveru Windows ODX využít technologii Synology Advanced LUN, doporučujeme svazek NTFS naformátovat se stejnou (nebo větší) velikostí alokační jednotky oproti té, která je uvedena v systému DSM.</p>
+
+<div class="section"><h4>Poznámka:</h4>
+<p>Rozšířenou alokační jednotku LUN jednotlivých svazků lze nastavit pouze jednou.</p>
+</div>
+
+<h4>Odebrání jednotky iSCSI LUN:</h4>
+<p>Pokud odeberete jednotku iSCSI LUN, odstraní se z jednotky iSCSI LUN všechna data. Současně se přeruší spojení mezi jednotkou iSCSI LUN a veškerými namapovanými cíli iSCSI Target.</p>
+<ol>
+	<li>Vyberte jednotku iSCSI LUN, kterou chcete odebrat.</li>
+	<li>Klikněte na tlačítko <b>Odebrat</b> a pomocí průvodce proces dokončete.</li>
+</ol>
+
+<div class="section"><h4>Poznámka:</h4>
+<p>Odstraněním jednotek VAAI LUN ze zařízení DiskStation nedojde k okamžitému vytvoření volného místa na disku. Data se přesunou do složky vyhrazené systémem s názvem <strong>@EP_trash</strong>. Data pak budou odstraňována jednotlivě. Pokud například odstraníte ze zařízení DiskStation jednotku VAAI LUN o kapacitě 100 GB, bude trvat zhruba 15 až 20 minut, než se na disku dojde vytvoří volné místo s kapacitou 100 GB.</p>
+</div>
+
+<h4>Vynucení připojení jednotky iSCSI LUN (na úrovni bloků):</h4>
+<p>Pokud mezipaměť jednotky iSCSI LUN (na úrovni bloků) není k dispozici, jednotka iSCSI LUN (na úrovni bloků) se při spuštění nepřipojí. Pokud nelze mezipaměť obnovit a pokud chcete k jednotce iSCSI LUN (na úrovni bloků) získat přístup, klikněte na možnost <b>Vynutit připojení</b>.</p>
+
+<div class="section"><h4>Poznámka:</h4>
+<p>Tato funkce je k dispozici pouze u některých modelů.</p>
+</div>
+
+<h4>Úprava jednotky iSCSI LUN:</h4>
+<ol>
+	<li>Vyberte jednotku iSCSI LUN, kterou chcete upravit.</li>
+	<li>Klikněte na možnost <b>Upravit</b>.</li>
+	<li>Upravte požadované vlastnosti.</li>
+	<li>Nastavení uložíte kliknutím na možnost <b>OK</b>.</li>
+</ol>	
+
+<div class="section"><h4>Poznámka:</h4>
+<p>Aby nedošlo ke ztrátě dat, lze při změně kapacity jednotky iSCSI LUN kapacitu pouze zvětšit.</p>
+</div>
+
+<h4>Vytvoření snímku jednotky iSCSI LUN:</h4>
+<p>Snímek jednotky iSCSI LUN je konkrétní časový okamžik, který představuje kopii jednotky iSCSI LUN určenou pouze pro čtení.</p>
+<ol>
+	<li>Vyberte jednotku iSCSI LUN, jejíž snímek chcete vytvořit.</li>
+	<li>Klikněte na možnost <strong>Snímek</strong> a vyberte možnost <strong>Pořídit snímek</strong>.</li>
+	<li>Zadejte popis tohoto snímku.</li>
+	<li>Podle svých potřeb vyberte některý z následujících typů snímků:<ul>
+			<li><strong>Application consistent (Konzistentní s aplikací)</strong>: Tento typ snímku lze vytvořit pouze tehdy, je-li na serveru Windows nebo VMware vCenter Server, v závislosti na provozním prostředí, ke komunikaci se systémem DSM nainstalován nástroj Synology Snapshot Manager. Pokud jsou v systému DSM aktivovány snímky konzistentní s aplikací, aplikace obdrží upozornění a přesune veškerá data z paměti na jednotku LUN, na které byl snímek vytvořen, aby byla zaručena konzistence dat.</li>
+			<li><strong>Konzistentní v případě poruch</strong>: Pokud na žádném z klientů není nainstalován nástroj Synology Snapshot Manager, můžete vytvářet pouze snímky jednotek LUN konzistentní v případě poruch. Po aktivaci neobdrží aplikace upozornění k přesunu dat z paměti na jednotku LUN a konzistence dat tak není zaručena.</li>
+		</ul>
+	</li>
+	<li>Klikněte na možnost <strong>OK</strong>.</li>
+</ol>
+
+<h4>Obnovení jednotky iSCSI LUN:</h4>
+<p>Vyberte snímek časového bodu, ze kterého chcete obnovit data jednotky iSCSI LUN.</p>
+<ol>
+	<li>Vyberte jednotku iSCSI LUN, kterou chcete obnovit.</li>
+	<li>Klikněte na možnost <strong>Snímek</strong> a vyberte možnost <strong>Správa snímků</strong>.</li>
+	<li>Vyberte snímek, který chcete použít při obnovení, a klikněte na možnost <strong>Obnovit</strong>.</li>
+</ol>
+
+<h4>Klonování jednotky iSCSI LUN nebo snímku:</h4>
+<p>Vytvořte zapisovatelnou kopii jednotky iSCSI LUN nebo snímek iSCSI LUN.</p>
+<ul>
+	<li>Vyberte ze seznamu jednotku iSCSI LUN a klikněte na možnost <strong>Klonovat</strong>.</li>
+	<li>V části <strong>Správa snímků</strong> vyberte snímek iSCSI LUN a klikněte na možnost <strong>Klonovat</strong>.</li>
+</ul>
+
+<div class="section"><h4>Poznámka:</h4>
+<ul>
+<li>Abyste mohli u některých modelů používat funkce jako obnovení jednotky iSCSI LUN a pořízení a klonování snímků iSCSI LUN, budete muset přejít do <b>Centra balíčků</b> a nainstalovat aplikaci <b>Snímek a replikace</b>.</li>
+	<li>Pokud je k jednotce LUN přidružená alespoň jedna připojená relace iSCSI, kterou využívá systém Windows Server nebo VMware ESXi Server, je možné instalací nástroje <b>Synology Snapshot Manager</b> zamezit případným problémům s konzistencí dat. Jinak je před pokračováním nutné zastavit veškeré aplikace a z těchto relací se odhlásit.</li>
+	<li>Funkce snímku, obnovení a klonování jednotky LUN jsou k dispozici pouze u jednotek iSCSI LUN s rozšířenými funkcemi LUN.</li>
+	<li>Pokud vytvoříte snímek nebo klon a stav vykazuje hodnotu <strong>Nenormální</strong>/<strong>Zhroucení</strong>, tento snímek či klon odstraňte a vytvořte nový.</li>
+	<li>Pokud obnovíte jednotku LUN z tohoto snímku, budou všechny změny jednotky LUN po vytvoření snímku ignorovány.</li>
+	<li>Pokud se stav jednotky iSCSI LUN změní na hodnotu <b>Není k dispozici</b>, znamená to, že při přístupu k jednotce iSCSI LUN došlo k určitým chybám dat. Aby nedošlo k závažným ztrátám dat v systému, bude jednotka iSCSI LUN dočasně nedostupná. Co nejdříve se obraťte na podporu společnosti Synology.</li>
+</ul>
+</div>
+
+
+<div class="section"><h4>Glosář:</h4>
+<ul>
+	<li><b>Thin Provisioning</b>: Thin Provisioning je způsob optimalizace využití úložného prostoru, při kterém se místo na disku přiděluje dynamicky a podle aktuálních potřeb. Toto nastavení je k dispozici pouze u možnosti <b>Jednotka iSCSI LUN (běžné soubory)</b>.</li>
+	<li><b>VMware VAAI</b>: Funkce VMware vStorage APIs for Array Integration (VAAI – rozhraní VMware vStorage pro integraci polí) dokáže snížit zatížení běžných operací v polích virtuálních úložišť, přesunout toto zatížení na zařízení iSCSI v prostředí VMware vSphere a optimalizovat tak výkon úložiště.</li>
+	<li><b>Windows ODX</b>: Nová technologie přenosu dat vyvinutá v rámci Windows pro systémy Windows Server 2012 a Windows 8, která se označuje jako „Offload Data Transfer“ (ODX). Technologie ODX zvyšuje výkon přenosu snížením zatížení na pole úložiště.<br />Pokud jsou zdroj a cíl dat uloženy na jednotkách LUN, které se nacházejí na stejném svazku, bude klonování zpracováno technologií Synology Advanced LUN, která šetří až 99,9 % nároků na kapacitu úložiště a zároveň nabízí vyšší rychlost klonování.</li>
+	<li><b>Mapování cíle iSCSI Target</b>: Namapování jednotky iSCSI LUN k jednomu nebo většímu počtu cílů iSCSI Target.</li>
+	<li><b>Synology Snapshot Manager</b>: Synology Snapshot Manager je softwarový modul plug-in, který umožňuje aplikačně konzistentní snímkování přímo ze systému DiskStation Manager (DSM).<ul>
+		    <li>V případě prostředí VMware bude potřeba na server Windows, na kterém je nainstalován server VMware vCenter Server, nainstalovat nástroj Synology Snapshot Manager. Pokud je v systému DSM aktivován snímek, server VMware vCenter Server obdrží upozornění a přesune veškerá data z paměti na jednotku LUN, na které byl snímek vytvořen, aby byla zaručena konzistence dat. Jakmile je snímek dokončen, server VMware vCenter Server obnoví běžné vstupně-výstupní operace datového úložiště VMware. Nástroj Synology Snapshot Manager for VMware vCenter Server podporuje systém vSphere 5.1 nebo novější verze.</li>
+		    <li>V případě prostředí Windows bude potřeba nainstalovat nástroj Synology Snapshot Manager na serveru Windows. Pokud je v systému DSM aktivován snímek, využije nástroj Synology Snapshot Manager technologii služby Stínová kopie svazku (Volume Shadow Copy Service, VSS) společnosti Microsoft, která vytváří konzistentní kopie dat k určitému bodu v čase. Nástroj Synology Snapshot Manager for Windows lze spustit pouze v systému Windows Server 2008 R2, 2012 a 2012 R2.</li>
+			<li>Nástroj Synology Snapshot Manager je možné stáhnout zdarma ze stránek <a href="http://www.synology.com/" target="_blank">www.synology.com</a>.</li>
+		</ul>
+	</li>
+</ul>
+</div>
+<p>____<br />*K dispozici pouze u některých modelů.</p>
+
+
+</body>
+</html>

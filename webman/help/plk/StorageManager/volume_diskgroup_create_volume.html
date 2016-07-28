@@ -1,0 +1,67 @@
+﻿ <!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Tworzenie wolumenu — pomoc systemu Synology DSM</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="This article walks you through the steps to create a volume on DiskStation używając aplikacji Zarządzanie przechowywaniem."><link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Tworzenie wolumenu</h2>
+
+<p>W niniejszym artykule został opisany sposób tworzenia wolumenu w urządzeniu DiskStation. Podczas tworzenia nowego wolumenu należy wybrać jedną z poniższych metod:</p>
+
+<ul>
+  <li><b>Szybka:</b> Opcja ta jest najlepsza dla początkujących użytkowników. Wybierz tę metodę, jeśli chcesz automatycznie zoptymalizować pojemność i wydajność pamięci masowej, nie zagłębiając się w aspekty techniczne, takie jak poziomy RAID. </li>
+
+<li><b>Niestandardowy:</b> Opcja dla zaawansowanych użytkowników, którzy chcą kontrolować więcej aspektów tworzenia wolumenu, takich jak rodzaje RAID i przydział pojemności. Ta opcja obsługuje różne rodzaje macierzy RAID, umożliwia tworzenie pojedynczego lub wielu wolumenów i zapewnia opcje przydzielania określonej ilości miejsca dla każdego wolumenu (tylko w przypadku tworzenia wielu wolumenów w macierzy RAID).</li>
+</ul>
+
+<div class="section">
+<h4>Jeden czy wiele wolumenów w macierzy RAID?</h4>
+<p>Podczas tworzenia wolumenu w trybie niestandardowym można wybrać jedną z poniższych opcji:</p>
+<ul>
+  <li><b>Pojedynczy wolumen w macierzy RAID</b><ul>
+      <li>Tworzy pojedynczy wolumen, używając całej dostępnej pojemności wybranych dysków twardych.</li>
+      <li>Zapewnia lepszą szybkość i wydajność.</li>
+      <li>Obsługuje różne typy macierzy RAID.</li>
+    </ul>
+  </li>
+  <li><b>Wiele wolumenów w macierzy RAID</b><ul>
+      <li>Umożliwia tworzenie wielu wolumenów w grupie dysków.</li>
+      <li>Obsługuje przydzielanie określonej ilości miejsca do każdego wolumenu.</li>
+      <li>Zapewnia większą elastyczność zarządzania pamięcią masową.</li>
+      <li>Obsługuje różne typy macierzy RAID.</li>
+    </ul>
+  </li>
+</ul>
+</div>
+
+
+<div class="section">
+<h4>Przed rozpoczęciem:</h4>
+<ul>
+<li>Najpierw upewnij się, że na dysku twardym nie ma żadnych ważnych danych. Podczas procesu tworzenia wszystkie dane zostaną usunięte.</li>
+<li>Przejdź do strony <b>HDD/SSD</b> i upewnij się, że stan poszczególnych dysków twardych jest <b>Normalny</b> lub <strong>Nie zainicjowany</strong>.</li>
+</ul>
+</div>
+
+<div class="section enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64">
+<h4>Uwaga:</h4>
+<ul>
+<li>Minimalny rozmiar wolumenu Btrfs wynosi 10 GB.</li>
+<li>Wolumeny Btrfs rezerwują 4% miejsca dla metadanych.</li>
+</ul>
+</div>
+
+<h4>Aby utworzyć wolumen:</h4>
+<ol>
+<li>Otwórz aplikację <b>Zarządzanie przechowywaniem</b>.</li><img src="about:blank" class="help_image"/><li>Wybierz <b>Wolumen</b>, a następnie kliknij przycisk <b>Utwórz</b>.</li><img src="../../../online_img/dsm/StorageManager/volume_diskgroup_create_volume/volume_create.png" class="help_image"/><li>Zostanie wyświetlony „Kreator tworzenia wolumenu”. W zależności od potrzeb wybierz tryb <strong>Szybki</strong> lub <strong>Niestandardowy</strong>. Następnie postępuj zgodnie z instrukcjami kreatora, aby zakończyć tworzenie wolumenu.</li><img src="../../../online_img/dsm/StorageManager/volume_diskgroup_create_volume/choose_mode.png" class="help_image"/></ol>
+
+</body>
+</html>

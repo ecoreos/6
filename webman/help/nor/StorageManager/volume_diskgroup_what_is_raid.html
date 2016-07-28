@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Velg en RAID-type - Synology DSM Hjelp</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="A brief overview describing what RAID types are supported by Synology DiskStation Manager (DSM).">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Velg en RAID-type</h2>
+
+<p>RAID (Redundant Array of Independent Disks) er en datalagringsteknologi som kombinerer flere harddisker til ett enkelt lagringsområde. Det finnes ulike typer RAID, som hver gir ulike nivåer av ytelse, lagringskapasitet og pålitelighet.</p>
+
+<p>Denne artikkelen gir deg en kort oversikt over RAID-typer som støttes av DiskStation, inkludert krav til bruk og fordeler og bakdeler.</p>
+
+<!--1-->
+
+<h3>Støttede RAID-typer</h3>
+
+<p>Denne tabellen gir deg en kort oversikt over ulike RAID-typer som støttes av DiskStation, med informasjon om lagringskapasitet, minimum antall harddisker som kreves for RAID-typen og antall harddisksvikter som tolereres før tap av data inntreffer. </p>
+
+<table>
+
+  <tr>
+
+    <th>Volumtype</th>
+    <th>Antall HDD</th>
+
+    <th>Toleransegrense for harddisksvikt</th>
+    <th>Beskrivelse</th>
+
+    <th>Volumkapasitet</th>
+
+  </tr>
+
+  <tr>
+
+    <td rowspan="3">SHR</td>
+    <td>1</td>
+
+    <td>0</td>
+    <td rowspan="3">
+    <div align="left">
+    <ul>
+    <li>Optimaliserer volumstørrelsen når du kombinerer harddisker med forskjellige størrelser.</li>
+    <li>Yter dataredundans hvis volumet består av to eller flere harddisker.</li>
+    <li>Anbefales for nybegynnere.</li>
+    </ul>
+    </div>
+    </td>
+
+    <td>1 x (HDD-størrelse)</td>
+
+  </tr>
+  <tr>
+    <td>2-3</td>
+    <td>1</td>
+    <td rowspan="2">Optimaliseres av systemet.</td>
+  </tr>
+  <tr>
+    <td>≧4</td>
+    <td>1-2</td>
+  </tr>
+  
+  <tr>
+
+    <td>Grunnleggende</td>
+    <td>1</td>
+
+    <td>0</td>
+    <td>
+    <div align="left">
+    <ul>
+    <li>Består av én harddisk som en uavhengig enhet.</li>
+    <li>Yter ikke dataredundans.</li>
+    </ul>
+    </div>
+    </td>
+
+    <td>1 x (HDD-størrelse)</td>
+
+  </tr>
+
+  <tr>
+
+    <td>JBOD</td>
+    <td>≧1</td>
+
+    <td>0</td>
+    <td>
+    <div align="left">
+    <ul>
+    <li>Kombinerer en samling av harddisker til ett enkelt lagringsområde, med kapasitet som er lik summen av alle harddiskenes kapasitet.</li>
+    <li>Yter ikke dataredundans.</li>
+    </ul>
+    </div>
+    </td>
+
+    <td>Summen av alle HDD-størrelser</td>
+
+  </tr>
+
+  <tr>
+
+    <td>RAID 0</td>
+    <td>≧2</td>
+
+    <td>0</td>
+    <td>
+    <div align="left">
+    <ul>
+    <li>Kommer med "striping", en prosess for å dele data inn i blokker og spre datablokker på tvers av flere harddisker for å forbedre ytelsen.</li>
+    <li>Yter ikke dataredundans.</li>
+    </ul>
+    </div>
+    </td>
+
+    <td>Summen av alle HDD-størrelser</td>
+
+  </tr>
+
+  <tr>
+
+    <td rowspan="3">RAID 1</td>
+    <td>2</td>
+
+    <td>1</td>
+    <td rowspan="3">
+    <div align="left">
+    <ul>
+    <li>Skriver identiske data til begge harddiskene samtidig.</li>
+    <li>Yter dataredundans.</li>
+    </ul>
+    </div>
+    </td>
+
+    <td rowspan="3">Minste HDD-størrelse</td>
+
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>3</td>
+  </tr>
+
+  <tr>
+
+    <td>RAID 5</td>
+    <td>≧3</td>
+
+    <td>1</td>
+
+    <td>
+    <div align="left">
+    <ul>
+    <li>Tar i bruk blokknivåstriping med paritetsdata fordelt på tvers av alle medlemsharddiskene, og yter dermed mer effektiv dataredundans enn RAID 1.</li>
+    </ul>
+    </div>
+    </td>
+
+    <td>(N – 1) x (minste HDD-størrelse)</td>
+
+  </tr>
+
+  <tr>
+
+    <td>RAID 6</td>
+    <td>≧4</td>
+
+    <td>2</td>
+    <td>
+    <div align="left">
+    <ul>
+    <li>Tar i bruk to lag med dataparitet for å lagre redundant data lik størrelsen på de to harddiskene, og yter dermed en større grad av dataredundans enn RAID 5.</li>
+    </ul>
+    </div>
+    </td>
+
+    <td>(N – 2) x (minste HDD-størrelse)</td>
+
+  </tr>
+
+  <tr>
+
+    <td>RAID 10</td>
+    <td>≧4<br /> (partall)</td>
+
+    <td>Halve totalen av HDD</td>
+    <td>
+    <div align="left">
+    <ul>
+    <li>Gir deg ytelsen til RAID 0 og databeskyttelsesnivået til RAID 1 ved å kombinere harddisker inn i grupper på to hvor data speiles. </li>
+    </ul>
+    </div>
+    </td>
+
+    <td>(N / 2) x (minste HDD-størrelse)</td>
+
+  </tr>
+
+</table>
+
+
+<div class="section">
+<h4>Merk:</h4>
+<ul>
+<li>RAID-typer unntatt "Basic" er kun tilgjengelige på enkelte modeller avhengig av antall harddiskåpninger og antall installerte harddisker.</li>
+<li>"N" representerer det totale antall harddisker i volumet.</li>
+</ul>
+</div>
+
+
+
+
+<!--2-->
+<h3>Synology Hybrid RAID (SHR)</h3>
+
+<p>Synology Hybrid RAID (SHR) er et automatisert RAID-administrasjonssystem, utviklet for å forenkle lagringsadministrering og imøtegå behovene til nye brukere som ikke er kjent med RAID-typer. </p>
+<p>SHR kan kombinere harddisker med ulike størrelser for å opprette et lagringsvolum med optimalisert kapasitet og ytelse, slik at du kaster bort mindre harddiskplass og får en mer fleksibel lagringsløsning.  Når tilstrekkelige harddisker er inkludert, vil SHR yte 1- eller 2-disksredundans - hvilket betyr at SHR-volumet kan tåle opp til én eller to sviktede harddisker uten at tap av data oppstår.</p>
+<img src="about:blank" class="help_image"/>
+
+
+
+
+
+
+<!--3-->
+
+<h3>RAID 0</h3>
+<p>RAID 0 kombinerer to eller flere harddisker for å øke ytelsen og kapasiteten, men yter ingen feiltoleranse. Én enkel harddisksvikt vil resultere i tap av all data i matrisen. RAID 0 er nyttig for ikke-kritiske systemer som krever høy ytelse i forhold til pris.</p>
+<img src="about:blank" class="help_image"/>
+
+
+
+
+
+
+<!--4-->
+
+<h3>RAID 1</h3>
+<p>RAID 1 brukes mest med to harddisker. Data på harddiskene blir speilet, og gir deg dermed feiltoleranse ved harddisksvikt.  Leseytelsen økes, mens skriveytelsen vil være den samme som for én enkel harddisk. Én enkel harddisksvikt kan oppstå uten at tap av data inntreffer. RAID 1 brukes som oftes når feiltoleranse er viktig, men plass og ytelse ikke er viktige krav.</p>
+<img src="about:blank" class="help_image"/>
+
+
+
+<!--5-->
+
+<h3>RAID 5</h3>
+<p>RAID 5 gir deg feiltoleranse og økt leseytelse. Et minimum av tre harddisker kreves. RAID 5 tåler tap av én enkel harddisk. Hvis en harddisksvikt oppstår, blir data fra den sviktede harddisken rekonstruert fra paritet som er stripet på tvers av de gjenstående harddiskene. Som resultat vil både lese- og skriveytelsen bli kraftig påvirket mens en RAID 5-matrise er degradert. RAID 5 er ideell når plass og kostnad er viktigere enn ytelse.</p>
+<img src="about:blank" class="help_image"/>
+
+
+
+<!--6-->
+
+<h3>RAID 6</h3>
+<p>RAID 6 er lik RAID 5, med unntak av at den gir deg enda et lag med striping og kan tolerere to disksvikter. Et minimum av fire harddisker kreves. Ytelsen til RAID 6 er lavere enn RAID 5 pga. denne ytterligere feiltoleransen. RAID 6 er nyttig når plass og kostnad er viktig og toleranse for flere harddisksvikter kreves.</p>
+<img src="about:blank" class="help_image"/>
+
+
+
+<!--7-->
+
+<h3>RAID 10</h3>
+<p>RAID 10 kombinerer fordelene ved RAID 1 og RAID 0. Lese- og skriveytelsen økes, men kun halvparten av den totale plassen er tilgjengelig for datalagring. Fire eller flere harddisker kreves, så kostnaden er relativ høy, men ytelsen er utmerket samtidig som den yter feiltoleranse. Faktisk kan en RAID 10 tolerere flere harddisksvikter - så sant sviktene ikke er innenfor den samme undergruppen. RAID 10 er ideell for programmer med høye krav til inndata/utdata, som databaseservere.</p>
+
+<img src="about:blank" class="help_image"/>
+
+
+</body>
+</html>

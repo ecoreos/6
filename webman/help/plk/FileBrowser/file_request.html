@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>File Station</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Tworzenie żądań plików</h2>
+
+<p>Żądania plików to zaproszenia do przesłania plików wysyłane do osób nie będących użytkownikami systemu DSM. Dzięki łączom żądania plików, użytkownicy spoza systemu DSM mogą bezpośrednio przesyłać wiele plików do aplikacji File Station na serwerze DiskStation, bez konieczności posiadania odpowiedniego konta użytkownika oraz uprawnień do przesyłania plików.</p>
+
+<h4>Aby utworzyć łącze żądania pliku:</h4>
+<ol>
+<li>Przejdź do aplikacji <strong>File Station</strong> i wybierz folder, który posłuży za miejsce docelowe dla przesyłania.</li>
+<li>Kliknij przycisk <strong>Akcja</strong> lub kliknij prawym przyciskiem na folderze docelowym , a następnie wybierz opcję <strong>Utwórz żądanie pliku</strong>.</li>
+<li>W wyskakującym oknie możesz znaleźć/zmodyfikować poniższe informacje:<ul>
+<li><strong>Ścieżka pliku</strong>: wyświetla ścieżkę docelowego katalogu.</li>
+<li><strong>Łącze</strong>: wyświetla łącze żądanie plików, które można udostępnić docelowym użytkownikom.</li>
+<li><strong>Twoje imię i nazwisko</strong>: pozwala wprowadzić imię i nazwisko osoby proszącej o pliki. Domyślna wartość to nazwa użytkownika.</li>
+<li><strong>Wiadomość</strong>: pozwala dostosować wiadomość wysyłaną do docelowych użytkowników.</li>
+<li><strong>Włącz ochronę hasłem</strong>: wybierz tą opcję, aby przesyłać pliki za pośrednictwem łącza mogli tylko ci użytkownicy, którzy znają hasło. Określ hasło w polu znajdującym się poniżej.</li>
+<li><strong>Okres ważności</strong>: kliknij ten przycisk, aby dostosować okres ważności łącza żądania pliku:<ul>
+<li><strong>Godzina zakończenia konfiguracji</strong>: Wybierz tą opcję, aby określić datę i godzinę kiedy łącze przestanie pozwalać na przesyłanie pliku.</li>
+<li><strong>Godzina rozpoczęcia konfiguracji</strong>: Wybierz tą opcję, aby określić datę i godzinę kiedy łącze zacznie pozwalać na przesyłanie pliku.</li>
+<li><strong>Liczba zezwoleń na dostęp</strong>: Wybierz tą opcję, aby określić jak wiele razy można skorzystać z łącza.</li>
+</ul>
+
+</li>
+
+</ul>
+
+
+</li>
+<li>Kliknij przycisk <strong>Zapisz</strong>, aby zakończyć konfigurację.</li>
+</ol>
+
+
+<h4>Aby udostępnić łącza żądań plików:</h4>
+<p>Aby odszukać adres URL żądania plików, przejdź do aplikacji <strong>File Station</strong> > <strong>Narzędzia</strong> > <strong>Menedżer udostępnionych łączy</strong> i kliknij dwukrotnie żądane łącze. Możesz udostępnić łącze w dowolny z wymienionych poniżej sposobów:</p>
+
+<ul>
+<li>Po prostu skopiuj adres URL i przekaż go docelowym użytkownikom.</li>
+<li>Wyślij łącze za pośrednictwem <strong>Domyślnego adresu e-mail</strong> (konto e-mail DSM) lub za pomocą aplikacji <strong>Poczta</strong> (aplikacji e-mailowej innego producenta). W przypadku nowych użytkowników postępuj zgodnie z instrukcjami kreatora w celu konfiguracji konta e-mail.</li>
+</ul>
+
+<h4>Aby przesłać pliki:</h4>
+<p>Jeśli otrzymasz prośbę o przesłanie plików za pośrednictwem łącza, postępuj zgodnie z poniższymi instrukcjami:</p>
+<ol>
+<li>Przejdź pod otrzymany adres URL za pomocą lokalnego komputera lub urządzenia mobilnego (Android lub iOS). Zgodnie z potrzebą wprowadź hasło.</li>
+<li>Na stronie przesyłania wprowadź imię i nazwisko pozwalające na identyfikację.</li>
+<li>Po prostu przeciągnij i upuść pliki do przesłania lub kliknij opcję <strong>Dodaj pliki</strong>, aby je wybrać.</li>
+<li>Kliknij przycisk <strong>Prześlij</strong>, aby zakończyć żądanie.</li>
+</ol>
+
+<div class="section">
+<h4>Uwaga:</h4>
+<ul>
+<li>Za pośrednictwem łącz żądania pliku nie można przesyłać folderów.</li>
+<li>Nie można określić folderów w folderze współdzielonym „web” jako folderów docelowych.</li>
+<li>Funkcja przesyłania różni się w zależności od przeglądarki:<ul>
+<li>Internet Explorer 8 oraz Internet Explorer 9 nie obsługują plików za pomocą przeciągania i upuszczania.</li>
+<li>Przeglądarka Chrome na urządzeniach iOS obsługuje tylko przesyłanie obrazów.</li>
+<li>Przeglądarka Safari na urządzeniach iOS obsługuje tylko przesyłanie obrazów i wideo.</li>
+<li>Przeglądarki internetowe na urządzeniach z systemem Android nie podlegają żadnym ograniczeniom typów plików.</li>
+</ul>
+</li>
+
+</ul>
+
+</div>
+
+
+<h4>Aby odszukać przesłane pliki:</h4>
+<p>Pliki przesłane przez tego samego użytkownika znajdują się w jednym folderze w miejscu docelowym. Domyślną nazwą folderu będzie <strong>Nazwa_przesyłającego (Nazwa_proszącego)</strong>.</p>
+<p>Na przykład jeśli pliki przesyłał <strong>Watson</strong>, a odbiorcą był <strong>Holmes</strong>, pliki można będzie znaleźć w folderze <strong>Watson (Holmes)</strong>.</p>
+
+
+<h3>Zarządzanie łączami żądań pliku</h3>
+
+<h4>Aby modyfikować łącza żądań plików:</h4>
+<p>Po utworzeniu łącza żądania pliku możesz modyfikować jego ustawienia, wybierając kolejno <strong>File Station</strong> > <strong>Narzędzia</strong> > <strong>Menedżer udostępnionych łączy</strong>.</p>
+
+<ol>
+<li>Kliknij dwukrotnie żądane łącze lub wybierz łącze i kliknij <strong>Edytuj</strong>.</li>
+<li>W wyskakującym oknie zmodyfikuj odpowiednie ustawienia.</li>
+<li>Kliknij przycisk <strong>Zapisz</strong>, aby zastosować nowe ustawienia.</li>
+</ol>
+
+<h4>Aby usunąć łącza żądania plików:</h4>
+<ol>
+<li>Wybierz pozycje <strong>File Station</strong> > <strong>Narzędzia</strong> > <strong>Menedżer udostępnionych łączy</strong>.</li>
+<li>Wybierz żądane łącza i kliknij <strong>Usuń</strong>. Odpowiedni adres URL żądania pliku natychmiast przestanie działać.</li>
+</ol>
+
+<h4>Aby przypisać uprawnienia do tworzenia żądań:</h4>
+<p>Jako użytkownik <strong>admin</strong> lub użytkownik należący do grupy <strong>Administratorzy</strong> możesz przypisywać uprawnienia użytkownikom tak, a by mogli oni tworzyć łącza żądania plików.</p>
+
+
+<ol>
+<li>Wybierz pozycje <strong>File Station</strong> > <strong>Ustawienia</strong> > <strong>Udostępnione łącza</strong> > <strong>Łącza żądań plików</strong>.</li>
+<li>Wybierz typ użytkowników, aby nadać im uprawnienia do tworzenia żądań.</li>
+<li>Kliknij <strong>OK</strong>, aby zapisać ustawienia.</li>
+</ol>
+
+
+
+
+
+</body>
+</html>

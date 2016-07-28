@@ -1,0 +1,135 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+<meta content="en-us" http-equiv="Content-Language" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Back up your data on Synology NAS to ensure data security</title>
+</head>
+
+<body class="tutorial-content-box" >
+
+<h1>Back up your Synology NAS</h1>
+<div class="tutorials_content">
+<img src="../../images/Backup/1x/Backup/back_up_your_data_on_synology_nas_to_ensure_data_security.jpg" />
+<h2>Overview</h2>
+<p>Unexpected data loss from hard drive failures or natural disasters poses potential threats to your paramount data, especially when no reliable backup solution is available. <strong>Hyper Backup</strong> provides an intuitive and integrated backup/restoration solution to help you retain/retrieve copies of your precious data and restore applications and system configurations from a point in time. The following storage destinations are supported:</p>
+
+<ul>
+<li><strong>Local shared folders (including external storage devices attached to your DiskStation)</strong></li>
+<li><strong>Remote Synology NAS</strong></li>
+<li><strong>Remote rsync servers</strong></li>
+<li><strong>Remote OpenStack Swift servers</strong></li>
+<li><strong>Public clouds (Amazon S3, Microsoft Azure, and OpenStack Swift, etc.)</strong></li>
+</ul>
+</div>
+
+<div class="section">
+<h4>Note:</h4>
+<p>Hyper Backup backs up only specific system configurations and applications. For more information, please consult the help documentation for Hyper Backup.</p>
+</div>
+
+
+<h3 class="list_head">1. Create local backup tasks to a local shared folder/external storage device</h3>
+<p><strong>Hyper Backup</strong> offers similar backup and restoration procedures across different destination types. Below we demonstrate how to back up and restore data locally for your reference of other task types.</p>
+
+<ol>
+<li>Log in to DSM and find the package <strong>Hyper Backup</strong>.</li>
+<li>Click <strong>+</strong> on the bottom left corner, and select <strong>Data backup task</strong>.</li>
+<li>To set up a local backup task, select <strong>Local Shared Folder</strong>.</li>
+<img src="../../images/Backup/1x/Backup/1.png" width="600" alt=""/>
+<li>Select <strong>Create backup task</strong> and select a local shared folder or  an  external storage device attached to your DiskStation.</li>
+<img src="../../images/Backup/1x/Backup/2.png" width="600" alt=""/>
+<li>Select the source folder(s) to back up the contained data. Encrypted shared folders, if selected, must stay mounted during the backup process. If the source and destination are in the same volume, the system will mark such source folders with orange exclamation marks.</li>
+<img src="../../images/Backup/1x/Backup/3.png" width="600" alt=""/>
+<li>Select the application(s) to back up.</li>
+<img src="../../images/Backup/1x/Backup/4.png" width="600" alt=""/>
+<li>Specify the backup settings below to fit your needs:
+  <ul>
+  <li><strong>Task</strong>: Name the backup task.</li>
+  <li><strong>Enable task notification</strong>: Select to have you informed  of the task status via email, SMS, or push service.</li>
+  <li><strong>Enable configuration backup</strong>: Back up the system configurations (e.g. user credentials). This setting is enforced on all backup tasks by default.</li>
+  <li><strong>Compress backup data</strong>: Compress backup data to reduce the usage of destination storage. More backup time is needed if this option is selected.</li>
+  <li><strong>Enable transfer encryption</strong> (for remote backup only): Select to encrypt the backup data during the transfer to a remote destination (e.g. an rsync server or public cloud).</li>
+  <li><strong>Multipart Upload part size</strong> (for S3-compatible servers only): Divide backup data by the specified chunk size.</li>
+  <li><strong>Enable client-side encryption</strong>: Select to protect the backup data with password from unwanted access on the destination side.</li>
+    
+  <li><strong>Enable backup schedule</strong>: Select to schedule when to automatically perform the backup task.</li>
+  </ul>
+  </li>
+  
+<img src="../../images/Backup/1x/Backup/5.png" width="600" alt=""/>
+<li>Select <strong>Enable backup rotation</strong> to set up the rotation scheme:
+  
+  <ul>
+  <li><strong>From the earliest versions</strong>: Delete the earliest existing backup versions once the specified <strong>Number of versions</strong> is exceeded.</li>
+  <li><strong>Smart Recycle</strong>: The system will retain every backup version until the specified number of versions is exceeded. When rotation is triggered, the system will first rotate the versions that do not meet any of the conditions; if all the existing versions meet the conditions below, the system will rotate the earliest version:
+  <ul>
+  <li><strong>Hourly versions from the past 24 hours</strong>: The system keeps the earliest version that is created each hour.</li>
+  <li><strong>Daily versions from the past 1 day to 1 month</strong>: The system keeps the earliest version that is created each day.</li>
+  <li><strong>Weekly version older 1 month</strong>: The system keeps the earliest version that is created each week.</li>
+  </ul>
+  
+  </li>
+  <li><strong>Number of versions</strong>: Set the upper limit of possible retained backup versions.</li>
+  <li>Timeline: Display the possible result of backup retention according to your backup schedule and rotation scheme.</li>
+  </ul>
+</li>
+
+<img src="../../images/Backup/1x/Backup/6.png" width="600" alt=""/>
+<li>Click <strong>Apply</strong> to complete the setup.</li>
+<li>To perform the backup task immediately, follow the Backup Wizard's instructions and click <strong>Yes</strong>.</li>
+</ol>
+
+
+<h3 class="list_head">2. Restore single files from a local shared folder/external storage device</h3>
+
+
+<ol>
+<li>Go to <strong>Hyper Backup</strong>, select the desired backup task on the left panel, and click <strong>Backup Explorer</strong> (the magnifying glass icon). Enter password if the task is protected by client-side encryption.</li>
+<img src="../../images/Backup/1x/Backup/Single_1.png" width="600" alt=""/>
+<li>Find and select the desired file to restore. You can also select the desired version to restore with the timeline bar.</li>
+<img src="../../images/Backup/1x/Backup/Single_2.png" width="600" alt=""/>
+<li>Click <strong>Restore</strong> to restore the selected file/folder.</li>
+
+</ol>
+
+
+
+<h3 class="list_head">3. Restore full tasks to the desired time points</h3>
+
+<ol>
+<li>Click <strong>Restore</strong> on the bottom left corner and click <strong>Data</strong>. Enter the password if the task is protected by client-side encryption.</li>
+
+<img src="../../images/Backup/1x/Backup/Restore_1.png" width="600" alt=""/>
+<li>Select a task to restore. To restore data from other repositories, select <strong>Restore from other repositories</strong> and locate the task to restore.</li>
+<img src="../../images/Backup/1x/Backup/Restore_2.png" width="600" alt=""/>
+<li>Choose whether to restore the system configurations. If you select <strong>Restore system configuration</strong>, select specific configurations in the list below to restore.</li>
+<img src="../../images/Backup/1x/Backup/Restore_3.png" width="600" alt=""/>
+
+<li>Find and select the target file(s)/task to restore. You can also select the desired version to restore with the timeline bar.</li>
+<img src="../../images/Backup/1x/Backup/Restore_4.png" width="600" alt=""/>
+<li>Select applications to restore.</li>
+<img src="../../images/Backup/1x/Backup/Restore_4.5.png" width="600" alt=""/>
+<li>Basic restoration information will be displayed.</li>
+<img src="../../images/Backup/1x/Backup/Restore_5.png" width="600" alt=""/>
+<li>Click <strong>Apply</strong> to start the restoration.</li>
+</ol>
+
+
+
+
+
+
+<div class="page-info">
+  <ul>
+    <li>Previous in this topic: <a href="backup_from_computer.html">Back up the data on your PC/Mac using Cloud Station</a> </li>
+  </ul>
+</div>
+</body>
+
+</html>

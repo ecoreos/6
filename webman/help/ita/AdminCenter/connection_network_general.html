@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Rete</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2>Generale</h2>
+
+<p>Opzioni di rete generiche come gateway predefinito, server DNS, proxy e tunneling IPv6 sono disponibili su <strong>Pannello di controllo</strong> &gt; <strong>Rete</strong> &gt; <strong>Generale</strong>.</p>
+
+
+<h3>Rinominare il dispositivo DiskStation</h3>
+<p>Per rinominare il dispositivo DiskStation, inserire il nuovo nome del server e fare clic su <b>Applica</b>.</p>
+<p>Il nome del server non fa distinzione tra maiuscole e minuscole e pu&ograve; contenere da 1 a 15 caratteri, che possono essere lettere, numeri, trattino basso o segni meno. Il primo carattere del nome deve essere una lettera.</p>
+
+
+<h3>Specificare gateway predefinito</h3>
+<p>Basta inserire l&apos;indirizzo IP del gateway predefinito e fare clic su <b>Applica</b> per salvare le impostazioni.</p>
+
+
+<h3>Specificare indirizzo IP server DNS</h3>
+<p>&Egrave; possibile scegliere di configurare manualmente l&apos;indirizzo IP del server DNS. In questo caso, &egrave; necessario inserire l&apos;indirizzo IP del server DNS preferito. &Egrave; possibile inserire anche un indirizzo IP di un server DNS alternativo da utilizzare per il backup in caso di problemi con il server DNS preferito. Una volta configurato l&apos;indirizzo IP del server DNS, fare clic su <strong>Applica</strong> per salvare le impostazioni.</p>
+
+
+<div class="section">
+<h4>Nota.</h4>
+<p>I campi Server DNS e gateway predefinito verranno impostati automaticamente e non possono essere modificati nel caso vengano configurate automaticamente tutte le interfacce di rete o se si sta utilizzando la connessione PPPoE.</p>
+</div>
+
+
+
+<h3><a name="proxy"></a>Collegamento tramite Server Proxy</h3>
+<p>Per consentire al dispositivo DiskStation di collegarsi tramite un server proxy, spuntare <b>Connetti tramite server proxy</b>, immettere l&apos;<b>Indirizzo</b> e la <b>Porta</b> e quindi fare clic su <b>Applica</b>.</p>
+
+
+<div class="section">
+<h4>Nota.</h4>
+<ul>
+<li>Fare clic su&nbsp;<strong>Impostazioni avanzate</strong>&nbsp;per configurare il proxy HTTP, proxy HTTPS e le informazioni di autenticazione.<li>Come impostazione predefinita, le impostazioni proxy HTTPS sono le stesse del proxy HTTP.</li>
+<li>Se <b>Connetti tramite server proxy</b> ha un segno di spunta, Aggiornamento DSM e Centro pacchetti insieme ad altri pacchetti si connetteranno a Internet tramite un proxy.</li>
+<li>Se <b>Bypassa server proxy per indirizzi locali</b>, ha un segno di spunta, assicurarsi che il server DNS usato da DiskStation pu&ograve; risolvere le query per i dispositivi nella rete locale.</li>
+</ul>
+</div>
+
+
+<h3>Abilitare Tunneling IPv6</h3>
+<p>Finch&eacute; IPv6 soppianta completamente IPv4, il tunneling IPv6 &egrave; necessario per abilitare gli host con indirizzi IPv6 per raggiungere i dispositivi IPv4. Questa tecnica fornisce un modo per portare il traffico IPv6 nelle reti IPv4 esistenti.<br> Se non si &egrave; sicuri di come configurare IPv6 o si riscontrano problemi di connessione, contattare il proprio provider di servizi Internet.</p>
+<h4>Per abilitare IPv6 Tunnel:</h4>
+<ol>
+<li>Mettere il segno di spunta sulla casella <b>Abilita tunnel</b> per abilitare il supporto di tunnel.</li>
+
+<li>In <b>Indirizzo server</b>, inserire il nome host o l&apos;indirizzo IP del provider del servizio tunnel, ad esempio: anonymous.freenet6.net.</li>
+
+<li>Selezionare se si desidera la <b>Connessione anonima</b> o <b>Connettere a un account esistente</b>.</li>
+</ol>
+
+<div class="section">
+<h4>Nota.</h4>
+<p>Il proprio indirizzo IPv6 esterno potrebbe essere aggiornato automaticamente dal provider del servizio. Tuttavia, DiskStation non rimuover&agrave; immediatamente il vecchio indirizzo IPv6.</p>
+</div>
+
+
+
+</body>
+</html>

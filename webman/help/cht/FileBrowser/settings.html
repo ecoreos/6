@@ -1,0 +1,170 @@
+
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>管理 File Station 選項 - Synology DSM Help</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="Learn how to customize File Station settings related to file management, shared links, and security.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>管理 File Station 設定</h2>
+<p>若要管理 File Station 設定，請開啟 <strong>File Station</strong> 並按一下<b>設定</b>按鈕。</p>
+
+<h3>一般</h3>
+<p>您可以在此啟動 File Station 日誌來記錄所有使用者的操作資訊。使用者的操作包含<b>建立資料夾</b>、<b>上傳</b>、<b>下載</b>、<b>刪除</b>、<b>重新命名</b>、<b>移動</b>、<b>複製</b>及<b>屬性設定</b>。</p>
+<h4>若要啟動 File Station 日誌：</h4>
+<ol>
+<li>如果您想查看所有使用者的操作記錄，請勾選啟動 <b>File Station 日誌</b>。</li>
+<li>按一下<b>確定</b>。</li>
+</ol>
+<h4>若要查看 File Station 日誌：</h4>
+<ol>
+<li>按一下<b>檢視日誌</b>來前往<strong>日誌中心</strong>。</li>
+<li>按一下<b>檔案傳輸</b>頁籤。</li>
+</ol>
+
+<h4>若要在使用拖拉上傳或快速鍵時自動覆寫檔案：</h4>
+<p>如果您要在拖拉電腦桌面的檔案到瀏覽器、或在 File Station 中使用快速鍵貼上檔案時自動覆寫檔名相同的檔案，請勾選<strong>將檔案拖拉至瀏覽器上傳或使用快速鍵貼上時總是覆寫檔案</strong>。</p>
+
+
+<h4>若要啟動智慧拖拉：</h4>
+<p>在 File Station 內拖拉檔案時，此功能將會自動將檔案傳輸的動作判定為複製或移動。</p>
+
+<ol>
+<li>選擇<strong>啟動智慧拖拉</strong>。</li>
+<li>如果同時也有其他使用者傳輸同名的檔案至相同地點，選擇任一動作便會在此情況下執行：<ul>
+<li><strong>覆寫</strong>：您傳輸的檔案將會覆寫同名檔案。</li>
+<li><strong>略過</strong>：您傳輸的檔案將被略過，不會覆寫同名檔案。</li>
+</ul>
+</li>
+<li>按一下<strong>確定</strong>。</li>
+</ol>
+
+<div class="section">
+<h4>注意：</h4>
+<p>如果想要改變智慧拖拉功能判定的複製或移動動作，請使用下列快速鍵以符合需求：</p>
+<ul>
+<li>若要切換至複製：按住 Ctrl 並進行拖拉。</li>
+<li>若要切換至移動：按住 Shift 並進行拖拉。</li>
+</ul>
+</div>
+
+
+<h4>若要使用 File Station 瀏覽並管理本機電腦上的檔案：</h4>
+<ol>
+<li>勾選<b>使用 File Station 瀏覽本機電腦的檔案</b>。</li>
+<li>按一下<b>確定</b>。</li>
+</ol>
+
+
+<h4>若要分享 DSM 使用者清單給非 admin 使用者：</h4>
+<p>如果非 admin 使用者希望依特定 DSM 使用者 / 群組來搜尋所擁有的檔案，或和其他 DSM 使用者分享檔案連結，此選項可讓非 admin 使用者存取完整的 DSM 使用者清單。</p>
+
+<ol>
+<li>選擇<strong>分享 DSM 使用者清單給非 admin 使用者</strong>。</li>
+<li>按一下<strong>確定</strong>。</li>
+</ol>
+
+
+<h3>套用 UNIX 預設權限</h3>
+<p>按一下<strong>進階設定</strong>並勾選該選項來在上傳或建立檔案及資料夾時套用 UNIX 預設權限。所套用的權限和透過 UNIX 指令 <strong>umask</strong> 設定的權限完全相同。此選項啟動時，檔案的 UNIX 權限為 644，資料夾為 755。此選項停用時，檔案的 UNIX 權限為 666，資料夾為 777。預設的 umask 值為 022。</p>
+<div class="section">
+<h4>注意：</h4>
+<ul>
+  <li>針對已啟動 Windows ACL 的共用資料夾 (所有共用資料夾，但不包含「photo」及外接硬碟上的共用資料夾)，請在您的 Linux 或 FTP 用戶端執行 <strong>chmod</strong> 指令來將資料夾及檔案權限類型從 Windows ACL 改為 UNIX。</li>
+  <li>啟動此選項可能會導致不同通訊協定間出現權限不一致的情況。若要避免不一致的情況，建議您停用此選項。</li>
+</ul>
+</div>
+<h3 class="disable-eds14">掛載 / 連線</h3>
+<p class="disable-eds14">根據預設，所有的使用者皆可掛載遠端資料夾或虛擬裝置。您可在此限制只有管理者才能擁有遠端資料夾或虛擬裝置的存取權限。</p>
+
+<div class="disable-eds14 section">
+<h4>注意：</h4>
+<p>非管理者的使用者只能在他們的 <b>home</b> 資料夾中掛載遠端資料夾。</p>
+</div>
+<h4 class="disable-eds14">若要允許不同使用者掛載遠端資料夾或虛擬裝置：</h4>
+<ol class="disable-eds14">
+<li>在<b>遠端資料夾</b>或<b>虛擬裝置</b>區塊中選擇<b>所有使用者</b>或<b>管理者</b>。</li>
+<li>按一下<b>確定</b>。</li>
+</ol>
+<h4 class="disable-eds14">若要允許不同使用者掛載伺服器及雲端服務：</h4>
+<ol class="disable-eds14">
+  <li>選擇<b>所有使用者</b>、<b>管理者</b>或<strong>特定使用者</strong>。 </li>
+  <li>選擇<strong>特定使用者</strong>會開啟讓您為不同的使用者設定掛載權限的視窗。若要為特定使用者啟動權限，請確認<strong>已啟動</strong>欄位下的核取方塊已被勾選。若要為特定使用者停用權限，確定您取消勾選<strong>已啟動</strong>欄位下的方塊。調整完畢後，按一下<strong>確定</strong>來關閉本視窗。</li>
+  <div class="section">
+    <h4>注意：</h4>
+    <ul>
+      <li>屬於 <strong>administrators</strong> 群組的使用者可以使用此功能，但無法進行任何變更。使用 <strong>guest</strong> 帳號登入的使用者無法使用此功能或進行任何變更。您也能在此為其他所有使用者設定權限。</li>
+    </ul>
+  </div>
+  <li>按一下<strong>確定</strong>。</li>
+</ol>
+<h3>分享連結</h3>
+<p>根據預設，所有使用者皆可分享檔案連結。您可在此限制只有管理者才能使用分享連結的管理功能。</p>
+<h4>若要允許不同使用者分享檔案連結：</h4>
+<ol>
+<li>選擇<b>所有使用者</b>、<b>管理者</b>或<strong>特定使用者</strong>。</li>
+<li>按一下<b>確定</b>。</li>
+</ol>
+
+<h4>若要以純文字開啟 HTML 檔案：</h4>
+
+<ol>
+<li>勾選<strong>總是以純文字格式開啟 HTML 檔案</strong>核取方塊。若啟動此選項，當使用者透過檔案分享連結開啟 HTML 檔案 (如 HTM、HTML、JSP、XHTML 檔案) 時，會以純文字格式顯示。此選項可協助避免惡意人士在 HTML 檔案中嵌入指令碼來劫持使用者的登入工作階段。</li>
+<li>按一下<strong>確定</strong>。</li>
+</ol>
+
+<h3>速度限制</h3>
+<p>您可以啟動速度限制來控制使用者或群組透過 File Station 傳輸檔案時的最大可用頻寬。</p>
+
+
+<h4>若要啟動速度限制：</h4>
+<ol>
+  <li>勾選<b>啟動速度限制</b>；或者，如果您希望速度限制僅在特定時間執行，勾選<strong>根據排程啟動速限</strong>。此設定會套用至全伺服器，且會覆寫個別使用者及群組的設定。選擇<strong>關閉速限</strong>將停用所有使用者及群組的速度限制。</li>
+  <li>按一下<strong>速度限制設定</strong>來修改個別使用者或群組的設定。針對每個使用者及群組，您可以選擇下列其一：</li>
+    <ul>
+      <li><strong>套用群組設定：</strong>速度限制設定會與使用者所屬的群組相同。</li>
+      <li><strong>無：</strong>群組成員傳輸檔案時將不會套用任何速度限制。</li>
+      <li><strong>固定：</strong>固定的速度限制將會套用至使用者或群組成員。您可在左側欄位中指定上傳及下載之速度限制。</li>
+      <li><strong>變換：</strong>您可指定兩種不同速度限制，並根據排程套用至使用者或群組成員。按一下<strong>自訂</strong>按鈕來修改速度限制設定並設定排程。</li>
+    </ul>
+
+  <li>按一下<b>套用</b>。</li>
+</ol>
+<div class="section">
+  <h4>注意：</h4>
+  <ul>
+    <li>如需更多群組速度限制設定的資訊，請參閱<a href="../AdminCenter/file_group_edit.html">此處</a>。</li>
+    <li>為使用者設定速度限制時，根據使用者本身及群組設定所計算出的實際速度限制會顯示在<strong>結果</strong>區塊。例如，使用者「Achilles」本身的下載限制為 100 KB/s，但其所屬的群組下載限制為 500 KB/s，則<strong>結果</strong>區塊會顯示「0/500」。</li>
+  </ul>
+</div>
+
+
+
+<h3>安全性</h3>
+
+<p>您可在此處找到下列安全性設定。</p>
+
+<h4>若要以純文字開啟 HTML 檔案：</h4>
+
+<ol>
+<li>勾選<strong>總是以純文字格式開啟 HTML 檔案</strong>核取方塊。若啟動此選項，當使用者在 File Station 中開啟 HTML 檔案 (如 HTM、HTML、JSP、XHTML 檔案) 時，會以純文字格式顯示。此選項可協助避免惡意人士在 HTML 檔案中嵌入指令碼來劫持使用者的登入工作階段。</li>
+<div class="section">
+<h4>注意：</h4>
+<ul>
+<li>此選項並非通用設定。每位使用者均可依據其個別需求，選擇是否要啟動此選項。</li>
+</ul>
+</div>
+<li>按一下<strong>確定</strong>。</li>
+</ol>
+
+</body>
+</html>

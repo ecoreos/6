@@ -1,0 +1,199 @@
+
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Netværk</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2><a name="wireless_ap"></a>Hotspot*</h2>
+<p>Din DiskStation-enhed understøtter oprettelse af et hotspot til at dele internetforbindelsen trådløst med andre enheder, hvis du har installeret en USB Wi-Fi-adapter eller din DiskStation har indbygget Wi-Fi. Du kan indstille din DiskStation til at være et trådløst adgangspunkt (AP) eller trådløs router, afhængigt af hvordan du vil bruge internettet.</p>
+
+<table>
+<tr>
+<th width="23%">Hotspot-tilstand</th>
+<th width="77%">Beskrivelse</th>
+</tr>
+<tr>
+<th>Trådløst AP</th>
+<td>
+<ul>
+<li>Bygger bro fra dit LAN til dit Wi-Fi-netværk.</li>
+<li>Både LAN og trådløse klienter skal være på samme lokalnetværk.</li>
+<li>Gælder, når du allerede har en router og vil bruge din DiskStation som yderligere adgangspunkt på et eksisterende netværk.</li> 
+<li>Tillader deling af netværksressourcer, f.eks. DLNA-enheder, printere, Synology Web Assistant eller andre tjenester, der skal bruge netværksudsendelser.</li>
+<li>DHCP Server bliver deaktiveret på DiskStation-enheder, som fungerer som trådløse AP'er. Genaktiver DHCP-serveren til din DiskStation, fjern Wi-Fi-dongles, og genstart DiskStation.</li>
+<li>For modeller med flere LAN-porte bruges kun LAN 1 til at bygge bro med det trådløse AP.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Trådløs router</th>
+<td>
+<ul>
+<li>Konfigurerer et trådløst netværk, hvor enheder er på et privat undernet.</li>
+</ul>
+</td>
+</tr>
+</table>
+
+
+<div class="section">
+<h4>Bemærk:</h4>
+
+<ol>
+<li>Nogle modeller kræver tilslutning af trådløse dongles for at oprette hotspots. En komplet liste over understøttede trådløse dongles findes på <a href="http://www.synology.com/support/faq/444" target=_blank>www.synology.com</a>.</li>
+<li>For ikke-DS213air-modeller er den trådløse hotspot-mulighed i DSM 4.3 omdøbt til "Trådløs router" i DSM 5.0 og senere.</li>
+</ul>
+</ol>
+
+</div>
+
+<h3>Administration af indstillinger for hotspot</h3>
+<p>Dette afsnit forklarer, hvordan du aktiverer og administrerer indstillinger for din DiskStation.</p>
+
+
+<h4>Sådan gør du din DiskStation til et hotspot:</h4>
+<ol>
+<li>Gå til <strong>Kontrolpanel</strong> > <strong>Trådløs</strong> > <strong>Netværkstilknytning</strong>. Vælg <strong>Trådløst AP</strong> eller <strong>Trådløs router</strong>.</li>
+<li>Gå til fanen <strong>Wi-Fi</strong> og klik på <strong>Rediger</strong> for at administrere følgende indstillinger:</li>
+<ul>
+<li><strong>Navn (SSID):</strong> Indtast et navn på det trådløse netværk.</li>
+<li><strong>Vis/skjul:</strong> Vælg, om det trådløse netværk er synligt for andre enheder eller ej.</li>
+<li><strong>Trådløs tilstand:</strong> Vælg en trådløs standard. Hver standard understøtter forskellige båndbredder og frekvenser.</li>
+<li><strong>Kanalbredde:</strong> Vælg en kanalbredde (kun tilgængelig ved brug af 802.11n trådløs tilstand).</li>
+<li><strong>Kanal:</strong> Vælg a frekvens til et trådløse netværk. Få bedre ydelse ved at vælge en frekvens, der er forskellig fra dem, der bruges af netværk i nærheden.</li>
+<li><strong>Overførselskraft:</strong> Vælg en signalstyrke til det trådløse netværk.</li>
+<li><strong>Maks. antal forbindelser:</strong> Vælg, hvor mange klientenheder, der kan tilsluttes til netværket. Den højeste forbindelsesindstilling er 256.</li>
+<li><strong>Aktiver WMM QoS:</strong> Wi-Fi-multimedier (WMM) QoS (Tjenestekvalitet) over Wi-Fi. Denne mulighed sætter det trådløse netværk i stand til at prioritere trafik og optimere, hvordan ressourcer deles blandt programmer.</li>
+</ul>
+</ol>
+
+
+
+<h4>Sådan konfigurer du en trådløs plan:*</h4>
+<p>Aktivering af en trådløs netværksplan sætter dig i stand til at kontrollere, hvornår det trådløse netværk på din DiskStation er aktivt og åbent.</p>
+<ol>
+<li>Gå til fanen <strong>Wi-Fi</strong>, og klik på <strong>Rediger direkte visning</strong>. </li>
+<li>Marker feltet <strong>Aktiver plan</strong>.</li>
+
+<li>Klik på <strong>Angiv plan</strong>.</li>
+<li>På planskærmen vælger du, hvornår det trådløse netværk vil være aktivt.</li>
+</ol>
+
+
+<h3>Sikkerhedsindstillinger</h3>
+<p><strong>Kontrolpanel</strong> > <strong>Trådløs</strong> > <strong>Wi-Fi</strong> indeholder valgmuligheder til redigering af sikkerhedsindstillinger for dit trådløse netværk.</p>
+
+
+<h4>Sådan konfigurerer du trådløs sikkerhed:</h4>
+<ol>
+
+<li>Klik på <strong>Rediger</strong>.</li>
+<li>Vælg en af følgende sikkerhedsprotokoller fra rullemenuen <strong>Sikkerhedsindstillinger</strong>:</li>
+<ul>
+<li><strong>WEP:</strong> En grundlæggende sikkerhedsprotokol, der kræver, at brugere indtaster en adgangskode for at få adgang til det trådløse netværk, men giver minimal beskyttelse.</li>
+<li><strong>WPA/WPA2 Personlig:</strong> Anbefales. Kræver, at bruger indtaster en adgangskode for at få adgang til det trådløse netværk, og er mere sikker end WEP.</li>
+<li><strong>WPA/WPA2 Enterprise:</strong>* En sikkerhedsprotokol, der er designet til virksomheder, som kræver godkendelse af brugere med en ekstern godkendelsesserver.</li>
+
+</ul>
+</ol>
+
+<h4>Sådan aktiverer du Wi-Fi Protected Setup:*</h4>
+<p>Wi-Fi Protected Setup (WPS) er en standard, der markedsføres af Wi-Fi Alliance til forenkling af trådløse sikkerhedsindstillinger for brugere. Du kan bruge en trykknap eller en pinkode til at holde dit Wi-Fi-netværk sikkert. Klik på <strong>WPS</strong> for at aktivere Wi-Fi Protected Setup.</p>
+
+
+<h3>Gæstenetværk*</h3>
+<p>Ud over at oprette et trådløst værtsnetværk understøtter din DiskStation også oprettelse af trådløst gæstenetværk. Indstillingerne for gæstenetværk kan begrænses til at begrænse brugeres adgang, som er nyttigt i virksomheder eller andre institutioner, hvor man vil yde trådløst netværk til besøgende, men holde dem ude af værtsnetværket.</p>
+
+
+<h4>Sådan aktiverer du gæstenetværk:</h4>
+
+<ol>
+<li>Gå til <strong>Kontrolpanel</strong> > <strong>Trådløs</strong> > <strong>Wi-Fi</strong>. </li>
+<li>Klik på <strong>Rediger</strong> for at administrere følgende indstillinger på fanen <strong>Gæstenetværk</strong> tab:</li>
+
+<ul>
+<li><strong>Navn (SSID):</strong> Indtast et navn på det trådløse netværk.</li>
+<li><strong>Vis/skjul:</strong> Vælg, om det trådløse netværk er synligt for andre enheder eller ej.</li>
+<li><strong>Maks. antal forbindelser:</strong> Vælg, hvor mange klientenheder, der kan tilsluttes til netværket. Den højeste forbindelsesindstilling er 256.</li>
+</ul>
+</ol>
+
+<h4>Sådan konfigurerer du sikkerhed på gæstenetværk:</h4>
+<p>Vælg en af følgende sikkerhedsprotokoller fra rullemenuen <strong>Sikkerhedsindstillinger</strong>:</p>
+<ul>
+<li><strong>WEP:</strong> En grundlæggende sikkerhedsprotokol, der kræver, at brugere indtaster en adgangskode for at få adgang til det trådløse netværk, men giver minimal beskyttelse.</li>
+<li><strong>WPA/WPA2 Personlig:</strong> Anbefales. Kræver, at bruger indtaster en adgangskode for at få adgang til det trådløse netværk, og er mere sikker end WEP.</li>
+</ul>
+
+
+<h4>Sådan konfigurer du en plan til gæstenetværk:</h4>
+<p>Aktivering af en gæstenetværksplan sætter dig i stand til at kontrollere, hvornår det trådløse gæstenetværk på din DiskStation er aktivt og åbent.</p>
+
+<ol>
+<li>Marker feltet <strong>Aktiver plan for gæstenetværk</strong>.</li>
+<li>Klik på <strong>Angiv gæsteplan</strong>.</li>
+<li>På planskærmen vælger du, hvornår det trådløse gæstenetværk vil være aktivt.</li>
+</ol>
+
+<div class="section">
+<h4>Bemærk:</h4>
+<p>Det trådløse gæstenetværk kan ikke være aktivt i tidsperioder, hvor det trådløse værtsnetværk er deaktiveret.</p>
+</div>
+
+
+<h3>MAC-filterindstilling*</h3>
+<p>MAC-filterindstillinger (under <strong>Kontrolpanel</strong> > <strong>Trådløs</strong>) angiver, hvilke MAC-adresser der giver adgang til det trådløse netværk, så du kan blokere eller give adgang til bestemte enheder. Denne funktion kontrollerer kun netværksadgang og ikke andre krypteringsindstillinger.</p>
+
+
+<h4>Sådan opretter du Mac-filterregler:</h4>
+<ol>
+<li>Indtast beskrivelsen og MAC-adressen på en enhed.</li>
+<li>Vælg an adgangspolitik:
+<ul>
+<li><strong>Afvis:</strong> Begrænser den angivne MAC-adresse fra at få adgang til det trådløse netværk.</li>
+<li><strong>Tillad:</strong> Tillader den angivne MAC-adresse til at få adgang til det trådløse netværk.</li>
+</ul> 
+</ol>
+
+
+
+<h3>Forældrekontrol*</h3>
+<p>Funktionen Forældrekontol sætter dig i stand til at kontrollere, når hver klientenhed, der er tilsluttet til DiskStations lokale netværk kan få adgang til internettet. Hvis f.eks. dine børns computere eller mobilenheder opretter forbindelse til internettet via DiskStation, kan du konfigurere indstillinger for forældrekontrol for at begrænse deres internetbrug i overensstemmelse med bestemt enheder og tidspunkter.</p>
+
+<h4>Sådan aktiverer du Forældrekontrol:</h4>
+<ol>
+<li>Gå til <strong>Kontrolpanel</strong> > <strong>Trådløs</strong> > <strong>Indstillinger for forældrekontrol</strong>.</li>
+
+<li>Klik på knappen <strong>Tilføj</strong> for at tilføje en klientenhed.</li>
+<ul>
+<li><strong>Klientnavn:</strong> Vælg en enhed, der har forbindelse til DiskStation, eller indtast et navn manuelt (f.eks. Louisas bærbare).</li>
+<li><strong>MAC-adresse:</strong> Indtast MAC-adressen for den enhed, hvis internetbrug du vil kontrollere.</li>
+<li><strong>Angiv plan:</strong> Vælg det tidspunkt, den bestemt enhed har tilladelse til at få adgang til internettet via DiskStation.</li>
+</ul>
+</ol>
+
+<h3>Forbindelsesliste*</h3>
+<p>Forbindelseslisten (under <strong>Kontrolpanel</strong> > <strong>Trådløs</strong>) viser oplysninger om enheder, der har forbindelse til DiskStation. Enheder kan tilføjes direkte til MAC-filterlisten herfra.</p>
+
+<h4>Sådan tilføje du enheder til MAC-filterlisten:</h4>
+<ol>
+<li>Marker feltet ved siden af den enhed, som du vil tilføje til MAC-filteret.</li>
+<li>Klik på <strong>Tilføj til MAC-filterlisten</strong>.</li>
+</ol>
+
+
+
+<p>____<br> * Findes kun på bestemte modeller.<br>
+</body>
+</html>

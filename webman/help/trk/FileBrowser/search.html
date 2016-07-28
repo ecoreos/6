@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Dosyaları veya Klasörleri Arayın</title>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script> <script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2>Dosyaları veya Klasörleri Arayın</h2>
+<p>File Station'ın <strong>Filtre</strong> özelliği, kriterinizi karşılayan dosyaları veya klasörleri aramanızı ve görüntülemenizi sağlayan seçenekler sunar. Mevcut klasördeki dosyalar veya klasörler içinde filtreleme yapabilir veya daha ayrıntılı arama sonuçları için tüm alt klasörleri kapsayan gelişmiş arama yapabilirsiniz.</p>
+
+<h4>Geçerli klasördeki dosyaları veya klasörleri aramak için:</h4>
+<ol>
+	<li>File Station'ı kullanarak aramak istediğiniz içeriği kapsayan klasöre gidin.</li>
+	<li>Sağ üst köşedeki <b>Filtre</b> alanına bir anahtar sözcük girin ve filtre edilen sonuçları pencerenin ana alanında görün.</li>
+</ol>
+
+<h4>Gelişmiş arama yapmak için:</h4>
+<ol>
+	<li>File Station'ı kullanarak aramak istediğiniz içeriği kapsayan klasöre gidin.</li>
+  <li>Gelişmiş arama menüsünü açmak için sağ üst köşedeki <b>Filtre</b> alanının yanındaki büyüteç simgesine tıklayın.</li>
+	<li>Aşağıda arama kriterini belirleyin ya da açılır menülerden seçin:
+		<ul>
+			<li><b>Anahtar kelime</b>: Uyan adlara sahip dosya veya klasörleri aramak için bir anahtar sözcük girin.
+				<div class="section"><h4>Not:</h4>
+				<ul>
+					<li>Anahtar kelimelerinizde [*] (sıfır veya daha fazla karakter anlamında) ve [?] (bir rastgele karakter anlamında) joker karakterleri kullanabilirsiniz. Örneğin, [a<span class="note_content">*</span>n] belirtimi [a<span class="note_content">ctio</span>n], [a<span class="note_content">ttentio</span>n] veya [an] anlamına gelebilir.</li>
+					<li>Anahtar kelimeleri ayırmak için boşluklar kullanabilirsiniz. Örneğin, anahtar kelime [File Station], [File], [Station] veya her ikisini içeren arama sonuçları verir.</li>
+					<li>Tam, büyük-küçük harfe duyarlı olmayan eşleşmeleri aramak için anahtar sözcüklerin başında ve sonunda çift tırnak ["] kullanabilirsiniz. Örneğin, [<span class="note_content">"Synology Inc."</span>], [<span class="note_content">Synology Inc.</span>] öğesini temsil edebilir ancak [<span class="note_content">Synology Incorporation</span>] öğesini temsil edemez.
+					</li>
+					<li class="disable-hi3535">Aşağıdaki operatörler rafine arama sonuçları için kullanılabilir:
+						<table width="84%" border="1">
+							<tbody>
+								<tr>
+									<th width="147" align="center">Operatör</th>
+									<th width="229" align="center">Örnek</th>
+									<th width="926" align="center">Kullanım</th>
+								</tr>
+								<tr>
+									<td align="center">&&</td>
+									<td align="center">[X] && [Y]</td>
+									<td><li>Hem [X] hem de [Y] içeren eşleşmeleri listeler</li></td>
+								</tr>
+								<tr>
+									<td align="center">||</td>
+									<td align="center">[X] || [Y]</td>
+									<td>
+										<li>[X], [Y] veya her ikisini içeren eşleşmeleri listeler</li>
+										<li>Hem [X] hem de [Y] içeren eşleşmeler üstte listelenecektir</li>
+									</td>
+								</tr>
+								<tr>
+									<td align="center">+</td>
+									<td align="center">+[X]</td>
+									<td><li>[X] içeren eşleşmeleri listele</li></td>
+								</tr>
+								<tr>
+									<td align="center">-</td>
+									<td align="center">-[X]</td>
+									<td><li>[X] içermeyen eşleşmeleri listele</li></td>
+								</tr>
+								<tr>
+									<td align="center">!</td>
+									<td align="center">![X]</td>
+									<td><li>[X] içermeyen eşleşmeleri listele</li></td>
+								</tr>
+								<tr>
+									<td align="center">\</td>
+									<td align="center">\[ÖzelKarakter]</td>
+									<td>
+										<li>Özel karakterler:  <span class="note_content">&nbsp; + &nbsp;&nbsp;-&nbsp;&nbsp; &&	&nbsp;&nbsp;|| &nbsp;&nbsp; ! &nbsp;&nbsp; ( &nbsp;&nbsp; ) &nbsp;&nbsp; { &nbsp;&nbsp; } &nbsp;&nbsp; [ &nbsp;&nbsp; ] &nbsp;&nbsp; ^ &nbsp;&nbsp; " &nbsp;&nbsp; ~ &nbsp;&nbsp; * &nbsp;&nbsp; ? &nbsp;&nbsp; : &nbsp;&nbsp;\</span></li>
+										<li>Yukarıdaki hedeflenen bir özel karakteri içeren eşleşmeleri listeler</li>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</li>
+				</ul>
+				</div>
+			</li>
+			<li class="disable-hi3535"><strong>Dosya içeriği aramasını etkinleştir</strong>: Anahtar kelimelere uyan dosya içeriği veya metaveri ile indeksli dosyalar için arama yapın.</li>
+			<li><b>Konum</b>: Gelişmiş aramanın aralığını ve kapsamını ayarlamak için açılır menüden seçim yapın. Arama kapsamını ayrıca listelenen başka bir paylaşımlı klasörü seçerek özelleştirebilirsiniz.</li>
+			<li><b>Dosya Türü</b>: Arama aralığını belirli dosya türleriyle sınırlamak için <b>Uzantı</b> seçimini veya yalnız klasörleri aramak için <b>Herhangi Bir Klasör</b> seçimini yapın.</li>
+			<li><strong>Tarih</strong>: <b>Değiştirme Tarihi</b>, <b>Oluşturma Tarihi</b> veya <strong>Son Erişim</strong> seçimini yaptıktan sonra, uyumlu tarihlere sahip dosyaları aramak üzere takvimden bir tarih seçin.</li>
+			<li><b>Boyut (MB)</b>: <b>eşittir</b>, <b>büyüktür</b> ve <b>küçüktür</b> arasından seçim yapın ve ardından eşleşen boyutlara sahip dosyaları aramak için bir boyut girin. (<strong>eşittir</strong> seçimi yaptığınızda, arama sonuçları belirtilen yaklaşık aynı boyuttaki dosyaları içerecektir.)</li>
+			<li><b>Sahibi/Grup</b>: <b>Sahibi</b> veya <b>Grup</b> seçimini yapın ve ardından seçilen sahip veya gruba ait dosya ya da klasörleri aramak için açılan menüden seçim yapın.
+				<div class="section"><h4>Not:</h4>
+				<ul>
+					<li>Gelişmiş arama yapmak için, <b>Konum</b> ve en az bir diğer arama kriterini belirtmeniz gerekir.</li>
+					<li>ISO klasörü veya bir uzak klasör indekslenmiş bir paylaşımlı klasöre tanıtılırsa, gelişmiş arama yoluyla içindeki dosyaları bulamazsınız.</li>
+				</ul>
+				</div>
+			</li>
+		</ul>
+	</li>
+	<li>Aramayı başlatmak için <b>Ara</b> üzerine tıklayın ya da <b>Sıfırla</b> üzerine tıklayarak arama kriterini yeniden belirleyin. Arama tamamlandığında, uyan dosyalar File Station'ın ana alanında listelenecektir.</li>
+</ol>
+
+</body>
+</html>

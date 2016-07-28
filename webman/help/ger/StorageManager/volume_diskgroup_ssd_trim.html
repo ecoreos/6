@@ -1,0 +1,44 @@
+ <!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>SSD TRIM - Synology DSM Hilfe</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="SSD TRIM improves the read and write performance of volumes created on SSDs, increasing efficiency as well as extending the lifetime of your SSDs.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>SSD TRIM</h2>
+<p>Wenn ein Datentr&auml;ger ausschlie&szlig;lich aus SSDs (Solid State Drives) besteht, empfehlen wir die Aktivierung von SSD TRIM. Diese Funktion verbessert die Lese- und Schreibleistung von Volumes, die auf SSDs erstellt wurden, wobei die Effizienz und auch die Lebensdauer Ihrer SSDs verbessert werden.</p>
+<h4>So aktivieren Sie SSD TRIM:</h4>
+<ol>
+  <li>&Ouml;ffnen Sie <strong>Speicher-Manager</strong>, und gehen Sie zu <strong>Volume</strong>. </li>
+  <li>W&auml;hlen Sie ein Volume, das ausschlie&szlig;lich aus SSDs besteht, und klicken Sie dann auf die Schaltfl&auml;che <b>Konfigurieren</b>.</li>
+  <li>Wechseln Sie im angezeigten Fenster zur Registerkarte <b>SSD TRIM</b>, und markieren Sie das Kontrollk&auml;stchen <strong>TRIM aktivieren</strong>.</li>
+  <li>Klicken Sie auf die Schaltfl&auml;che <strong>Zeitplan einstellen</strong>, um festzulegen, wann das System SSD TRIM ausf&uuml;hrt.</li>
+  <li>Klicken Sie auf <strong>OK</strong>.</li>
+</ol>
+<div class="section">
+  <h4>Hinweis:</h4>
+  <ul>
+    <li>SSD TRIM ist nur auf bestimmten DiskStation-Modellen und RAID-Typen verf&uuml;gbar. </li>
+    <li>Einige SSD-Modelle unterst&uuml;tzen die Ausf&uuml;hrung von SSD TRIM auf RAID 5- und RAID 6-Volumes nicht. Bitte beachten Sie die Kompatibilit&auml;tsliste auf <a href="http://www.synology.com/" target=_blank>www.synology.com</a>.</li>
+    <li>SSD TRIM kann in den folgenden Situationen nicht aktiviert werden:<ul>
+        <li>Das Volume wurde mit SSD Cache bereitgestellt.</li>
+        <li>Das Paket <strong>Time Backup</strong> ist installiert.</li>
+        <li>Ein High-Availability-Cluster wurde mit dem <strong>High Availability Manager</strong> erstellt.</li>
+      </ul>
+    </li>
+    <li>SSD TRIM kann nicht auf Block-Niveau-iSCSI LUNs aktiviert werden.</li>
+    <li>Die Systemleistung wird durch das Ausf&uuml;hren von SSD TRIM beeintr&auml;chtigt. Die ben&ouml;tigte Zeit bis zum Ende der TRIM-Ausf&uuml;hrung variiert je nach Volume-Gr&ouml;&szlig;e und SSD-Modell.</li>
+    <li>Wenn TRIM auf einem Volume aktiviert ist, wird es auch auf anderen Volumes der gleichen Diskgruppe oder RAID Group aktiviert.</li>
+  </ul>
+</div>
+</body>
+</html>

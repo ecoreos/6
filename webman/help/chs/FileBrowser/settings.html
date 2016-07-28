@@ -1,0 +1,195 @@
+﻿
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>管理 File Station 选项 - Synology DSM 帮助</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="Learn how to customize File Station settings related to file management, shared links, and security.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>管理 File Station 设置</h2>
+<p>若要管理 File Station 设置，打开 <strong>File Station</strong>，然后单击<b>设置</b>按钮。</p>
+
+<h3>常规设置</h3>
+<p>
+您可以在此启用 File Station 日志来记录所有用户的操作。包括<b>创建文件夹</b>、<b>上传</b>、<b>下载</b>、<b>删除</b>、<b>重命名</b>、<b>移动</b>、<b>复制</b>和<b>属性设置</b>等用户操作。
+</p>
+<h4>若要启用 File Station 日志：</h4>
+<ol>
+<li>如果您想查看所有用户的操作记录，请勾选<b>启用 File Station 日志</b>。
+</li>
+<li>
+单击<b>确定</b>。
+</li>
+</ol>
+<h4>若要查看 File Station 日志：</h4>
+<ol>
+<li>
+请单击<b>查看日志</b>，将引导您前往<strong>日志中心</strong>。</li>
+<li>
+单击<b>文件传输</b>选项卡。
+</li>
+</ol>
+
+<h4>若要使用拖放操作上传或键盘快捷键自动覆盖文件：</h4>
+<p>如果您在从计算机桌面将文件拖放到网页浏览器或用键盘快捷键在 File Station 中粘贴文件时要自动覆盖名称相同的文件，请勾选<strong>当我将这些文件拖放到网页浏览器或用键盘快捷键粘贴这些文件时始终覆盖文件</strong>。</p>
+
+
+<h4>若要启用智能拖放：</h4>
+<p>当您在 File Station 中进行拖放文件时，此功能将自动决定传输的是复制还是移动操作的问题。</p>
+
+<ol>
+<li>选择<strong>启用智能拖放</strong>。</li>
+<li>选择如果恰好有另一个用户同时传输相同名称的文件至相同位置时始终执行的操作：
+  <ul>
+<li><strong>覆盖</strong>：您传输的文件将覆盖有相同名称的文件。</li>
+<li><strong>跳过</strong>：您传输的文件将被跳过，且不会覆盖有相同名称的文件。</li>
+</ul>
+</li>
+<li>单击<strong>确定</strong>。</li>
+</ol>
+
+<div class="section">
+<h4>注：</h4>
+<p>如果您要更改智能拖放决定的复制或移动操作，请应用以下热键来满足您的需要：</p>
+<ul>
+<li>若要切换到复制操作：按 Ctrl 同时执行拖放操作。</li>
+<li>若要切换到移动操作：按 Shift 同时执行拖放操作。</li>
+</ul>
+</div>
+
+
+<h4>若要通过 File Station 浏览和管理本地计算机中的文件：</h4>
+<ol>
+<li>
+请勾选<b>通过 File Station 浏览本地计算机中的文件</b>。
+</li>
+<li>
+单击<b>确定</b>。
+</li>
+</ol>
+
+
+<h4>若要与非 admin 用户共享 DSM 用户列表：</h4>
+<p>此选项可让非 admin 用户在需要搜索特定 DSM 用户/群组拥有的文件或要与其他 DSM 用户共享文件链接时访问完整的 DSM 用户列表。</p>
+
+<ol>
+<li>选择<strong>与非 admin 用户共享 DSM 用户列表</strong>。</li>
+<li>单击<strong>确定</strong>。</li>
+</ol>
+
+
+<h3>应用默认的 UNIX 权限</h3>
+<p>单击<strong>高级设置</strong>并勾选此选项，在上传或创建文件或文件夹时应用默认的 UNIX 权限。所应用的权限将与 UNIX <strong>umask</strong> 命令所应用的权限相同。启用此选项后，文件的 UNIX 权限为 644，而文件夹为 755。禁用此选项后，文件的 UNIX 权限为 666，而文件夹为 777。默认 umask 值为 022。</p>
+<div class="section">
+<h4>注：</h4>
+<ul>
+  <li>对于启用 Windows ACL 的共享文件夹（外部设备上的 &quot;照片&quot; 和共享文件除外），请在 Linux 或 FTP 客户端上运行 <strong>chmod</strong> 命令，以将 Windows ACL 上的文件夹和文件权限类型更改到 UNIX。</li>
+  <li>启动此选项可能会导致不同协议之间发生权限不一致的问题。为避免不一致问题，建议您保持禁用此选项。</li>
+</ul>
+</div>
+<h3 class="disable-eds14">装载/连接</h3>
+<p class="disable-eds14">
+默认时，所有用户可以装载远程文件夹或虚拟驱动器。您可在此将远程文件夹或虚拟驱动器的管理权限设置为仅限管理员。
+</p>
+
+<div class="disable-eds14 section">
+<h4>注：</h4>
+<p>非管理员用户只能在 <b>home</b> 文件夹中装载远程文件夹。</p>
+</div>
+<h4 class="disable-eds14">若要允许不同用户装载远程文件夹或虚拟驱动器：</h4>
+<ol class="disable-eds14">
+<li>
+请在<b>远程文件夹</b>或<b>虚拟硬盘</b>区块中选择<b>所有用户</b>或<b>管理员</b>。
+</li>
+<li>
+单击<b>确定</b>。
+</li>
+</ol>
+<h4 class="disable-eds14">若要允许不同用户装载服务器和云服务：</h4>
+<ol class="disable-eds14">
+  <li>从<b>所有用户</b>、<b>管理员</b>或<strong>特定用户</strong>中进行选择。</li>
+  <li>选择<strong>特定用户</strong>将打开一个窗口，让您为不同用户配置装载权限。若要启用特定用户的访问权限，请确认已勾选<strong>已启用</strong>栏下的复选框。若要禁用特定用户的访问权限，请确认未勾选<strong>已启用</strong>栏下的复选框。完成后，单击<strong>确定</strong>以关闭窗口。</li>
+  <div class="section">
+    <h4>注：</h4>
+    <ul>
+      <li>属于 <strong>administrators</strong> 群组的用户可使用此功能，但不可进行任何修改。使用<strong>访客</strong>身份登录的用户既不能使用此功能，也不可进行任何更改。在此可设置任何其他用户的权限。</li>
+    </ul>
+  </div>
+  <li>单击<strong>确定</strong>。</li>
+</ol>
+<h3>共享链接</h3>
+<p>
+默认时，所有用户皆可共享文件链接。您可在此将共享链接管理的访问权限设置为仅限管理员。
+</p>
+<h4>若要允许不同用户共享文件链接：</h4>
+<ol>
+<li>
+请选择<b>所有用户</b>、<b>管理员</b>或<strong>特定用户</strong>。
+</li>
+<li>
+单击<b>确定</b>。
+</li>
+</ol>
+
+<h4>若要以纯文本格式打开 HTML 文件：</h4>
+
+<ol>
+<li>勾选<strong>始终以纯文本格式打开 HTML 文件</strong>复选框。如果启用此选项，当用户通过文件共享链接打开 HTML 文件（即 HTM、HTML、JSP、XHTML 文件）时，这些文件都将以纯文本格式显示。此选项有助于防止恶意者使用 HTML 文件中内嵌的脚本黑入用户的登录会话。</li>
+<li>单击<strong>确定</strong>。</li>
+</ol>
+
+<h3>速度限制</h3>
+<p>您可启用速度限制来控制用户和群组通过 File Station 传输数据的最大可用带宽。</p>
+
+
+<h4>若要启用速度限制：</h4>
+<ol>
+  <li>如果您只要在特定时间启用速度限制，请勾选标示为<b>启用速度限制</b>或<strong>根据计划启用速度限制</strong>的复选框。此将应用至整个服务器，并覆盖服务器中的各用户和群组的设置。选择<strong>无速度限制</strong>可禁用所有用户和群组的速度限制设置。</li>
+  <li>单击<strong>速度限制设置</strong>可修改单个用户或群组的速度限制。您可为每个用户和群组选择下列其中一个选项：</li>
+    <ul>
+      <li><strong>应用群组设置：</strong>速度限制设置将与用户所属群组的设置相同。</li>
+      <li><strong>禁用速度限制：</strong>当群组成员用此服务传输文件时不应用速度限制。</li>
+      <li><strong>恒定：</strong>一个固定速度限制常量将应用到用户或群组成员。可在左侧栏中指定上传与下载的速度限制。</li>
+      <li><strong>可变：</strong>可根据计划指定两种不同的速度限制并应用到用户或群组成员。单击<strong>自定义</strong>按钮可修改速度限制设置并设置计划。</li>
+    </ul>
+
+  <li>单击<b>应用</b>。</li>
+</ol>
+<div class="section">
+  <h4>注：</h4>
+  <ul>
+    <li>要了解有关群组速度限制动态详情，请参阅<a href="../AdminCenter/file_group_edit.html">此处</a>。</li>
+    <li>设置用户的速度限制后，<strong>结果</strong>区域会根据单个和群组设置显示用户的实际速度限制。例如，如果用户 “Achilles” 有 100 KB/秒的具体下载限制，但该用户所属的群组的下载限制为 500 KB/秒，则<strong>结果</strong>区域将显示 “0/500”。</li>
+  </ul>
+</div>
+
+
+
+<h3>安全性</h3>
+
+<p>您可在此找到以下安全设置。</p>
+
+<h4>若要以纯文本格式打开 HTML 文件：</h4>
+
+<ol>
+<li>勾选<strong>始终以纯文本格式打开 HTML 文件</strong>复选框。如果启用此选项，当在 File Station 中打开 HTML 文件（即 HTM、HTML、JSP、XHTML 文件）时，这些文件都将以纯文本格式显示。此选项有助于防止恶意者使用 HTML 文件中内嵌的脚本黑入用户的登录会话。</li>
+<div class="section">
+<h4>注：</h4>
+<ul>
+<li>这不会更改全局设置。每个用户都可根据自身需要选择是否启用此选项。</li>
+</ul>
+</div>
+<li>单击<strong>确定</strong>。</li>
+</ol>
+
+</body>
+</html>

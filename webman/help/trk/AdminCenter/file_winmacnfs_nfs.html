@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Win/Mac/NFS</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+
+
+
+<h2>NFS Hizmeti</h2>
+<p>NFS hizmeti Linux istemcilerinin DiskStation üzerindeki verilere erişmesine izin verir.</p>
+<h4>NFS hizmetini etkinleştirmek için:</h4>
+<ol>
+<li><strong>Denetim Masası</strong> > <strong>Dosya Hizmetleri</strong> > <strong>Win/Mac/NFS</strong> bölümüne giderek <b>NFS'i Etkinleştir</b>'i işaretleyin.</li>
+<li><b>Uygula</b>'ya tıklayın.</li>
+</ol>
+
+
+<div class="section">
+  <h4>Not:</h4>
+<ul>
+<li> DiskStation şu anda NFSv2, NFSv3 ve NFSv4 desteklemektedir.</li>
+<li>Tanıtırken, hangi NFS versiyonunun kullanılması gerektiğini belirlemek için <strong>-o vers=2</strong>, <strong>-o vers=3</strong> veya <strong>-o vers=4</strong> parametresi tanıtma komutuna eklenebilir.</li>
+</ul>
+</div>
+
+
+<h4>Linux istemcilerinin paylaşımlı klasörlere erişimini yapılandırmak için:</h4>
+<p><b>Denetim Masası</b> > <b>Paylaşımlı Klasör</b> öğesine gidin. NFS kurallarını yönetmek ve Linux istemcilerinin o paylaşımlı klasöre erişim hakkını düzenlemek için paylaşımlı bir klasör seçerek <strong>Düzenle</strong>'ye tıklayın.</p>
+
+
+<h3>NFSv4 Desteğini Ayarlama</h3>
+<p>NFS sunucunuzun NFSv4 destekleyip desteklemeyeceğini belirleyebilirsiniz. Bu seçenek etkinleştirildiğinde, NFS sunucusu NFSv2, NFSv3 ve NFSv4 destekler; aksi taktirde, sadece NFSv2 ve NFSv3 desteklenecektir.</p>
+
+<h4>NFSv4 desteğini etkinleştirmek için:</h4>
+<ol>
+<li><b>NFSv4 desteğini etkinleştir</b> öğesini işaretleyin.
+</li>
+<li>
+<b>NFSv4 etki alanı</b> alanında, kullanmak istediğiniz NFSv4 etki alanının adını girin. Bu alan isteğe bağlıdır ve boş bırakılabilir.</li>
+<li>
+<b>Uygula</b>'ya tıklayın.
+</li>
+</ol>
+
+<div class="section">
+<h4>Not:</h4>
+<p>Paylaşımlı klasörü tanıtmak için NFSv4 kullandığınızda, lütfen aşağıdakilere dikkat edin. Aksi taktirde, kullanıcı adı ile ilişkili dosya işlemleri başarısız olacaktır.</p>
+<ul>
+<li>NFS istemcisi idmapd etkinleştirmelidir.</li>
+<li>NFS istemcinizdeki idmapd.conf dosyasında yer alan NFSv4 etki alanı ayarları DiskStation sunucunuzdaki <b>NFSv4 etki alanı</b> alanı ile uyumlu olmalıdır.</li>
+</ul>
+
+</div>
+
+<h3>Gelişmiş Ayarlar</h3>
+
+<h4>Varsayılan UNIX izinlerini uygulama</h4>
+<p> <strong>Varsayılan UNIX izinlerini uygula</strong> işaretlendiğinde, dosyaların ve klasörlerin karşıya yüklenmesi veya oluşturulması sırasında Linux istemcisinde ayarlanan varsayılan UNIX izinleri Windows ACL izinleri yerine uygulanır. Uygulanan izinler UNIX komutu <strong>umask</strong> tarafından uygulanan izinlerin aynısıdır. Bu seçenek etkinleştirildiğinde, UNIX izinleri dosyalar için 644 ve klasörler için 755'dir. Bu seçenek devre dışı bırakıldığında, UNIX izinleri dosyalar için 666 ve klasörler için 777'dir. Varsayılan umask değeri 022'dir.</p><div class="section">
+<h4>Not :</h4>
+<ul>
+  <li>Windows ACL etkin paylaşımlı klasörler (harici sürücülerde bulunan &quot;photo&quot; ve paylaşımlar hariç tüm paylaşımlar) için, klasör ve dosya izni tiplerini Windows ACL'den UNIX'e değiştirmek amacıyla <strong>chmod</strong> komutunu Linux veya FTP istemcinizde çalıştırın.</li>
+  <li>Bu seçeneğin etkinleştirilmesi farklı protokoller arasında tutarsız izin sorunlarına neden olabilir. Tutarsızlıkları önlemek için, bu seçeneği devre dışı bırakmanızı öneririz.</li>
+</ul>
+</div>
+
+<h4>Özel bağlantı noktası</h4>
+<p>Statd ve nlockmgr hizmetleri için bağlantı noktası numaralarını özelleştirebilirsiniz.</p>
+
+<ol>
+<li><strong>Özelleştirilen bağlantı noktaları</strong> öğesini seçin.</li>
+<li><strong>statd bağlantı noktası </strong>ve<strong> nlockmgr bağlantı noktası</strong> öğesine bağlantı noktası numaralarını girin.</li>
+<li>
+<b>Uygula</b>'ya tıklayın.
+</li>
+</ol>
+
+<div class="section">
+<h4>Not :</h4>
+<ul>
+<li>NFSv3 hizmetlerini kullanmak istiyorsanız, <strong>Denetim Masası</strong> &gt; <strong>Güvenlik</strong> &gt; <strong>Güvenlik Duvarı</strong> öğesine gidin ve kurulu uygulamalar listesinden &quot;Mac/Linux dosya sunucusu&quot; öğesini etkinleştiren bir güvenlik duvarı kuralını oluşturun.</li>
+</ul>
+</div>
+<h4>Okuma/Yazma Paketi Boyutunu Ayarlama</h4>
+<p>Okuma/yazma paketi boyutu NFS sunucunuzda ayarlanamadığında, varsayılan değeri bu alanda belirleyebilirsiniz.</p>
+
+<ol>
+<li><strong>Okuma paketi boyutu</strong> ve <strong>Yazma paketi boyutu</strong> alanlarından istenen paket boyutunu seçin.</li>
+<li>
+<b>Uygula</b>'ya tıklayın.
+</li>
+<li>
+Paylaşımı yeniden tanıtın.
+</li>
+</ol>
+
+<div class="section">
+<h4>Not:</h4>
+<ul>
+<li>Okuma/yazma paketi boyutunu değiştirdikten sonra, paylaşımlı klasör yeni ayarların etkin olması öncesinde yeniden tanıtılmalıdır.</li>
+<li>Bu ayarlar UDP (Kullanıcı Datagram Protokolü) yoluyla bağlanan NFS istemcilerini etkiler.</li>
+</ul>
+</div>
+
+
+
+
+<h3>Kerberos Ayarları*</h3>
+<p>Kerberos bir ağ doğrulama protokolüdür. Güvenli olmayan bir ağ üzerinden iletişim kuran istemcilerin ve sunucuların güvenli bir şekilde kendi kimliklerini doğrulamalarına ve kanıtlamalarına olanak tanır. DiskStation mevcut bir Kerberos anahtarının alınması için seçenekler sunar. Başarıyla alındığında, NFS istemcileri DiskStation sunucusuna bağlanmak için Kerberos doğrulama protokolünü kullanabilirler.</p>
+
+<h4> Bir Kerberos anahtarını içeri aktarmak için: </h4>
+<ol>
+<li><strong>Kerberos Ayarları</strong> üzerine tıklayın.</li>
+<li><b>İçeri Aktar</b> düğmesine tıklayın.</li>
+<li>İçeri aktarmak istediğiniz Kerberos anahtarını seçin.</li>
+<li><b>Tamam</b>'a tıklayın.</li>
+</ol>
+
+<h3><a name="idmap"></a>Kerberos ID Haritalama</h3>
+<p>Münferit Kerberos ilkelerini yerel DSM kullanıcı hesaplarına haritalayabilirsiniz.</p>
+<h4> Kerberos ilkelerini ve yerel kullanıcı hesaplarını haritalamak için: </h4>
+<ol>
+<li><strong>Kerberos Ayarları</strong> üzerine tıklayın.</li>
+<li><strong>ID Haritalama</strong> sekmesine gidin.</li>
+<li> <b>Ekle</b> düğmesine tıklayın. Aşağıdakilerden birisini seçin.</li>
+<ul>
+<li><strong>ID Haritalama:</strong> Kerberos ilkesini ve haritalanması gereken yerel kullanıcı hesabını girin.</li>
+<li><strong>Önerilen Haritalama Listesi:</strong> Bu seçenek sistem tarafından oluşturulmuş önerilen Kerberos ilkesi/yerel kullanıcı haritalama seçeneklerinin bir listesini görüntüler.</li>
+</ul>
+</ol>
+<div class="section disable-eds14">
+  <h4> Not: </h4>
+<ul>
+<li>Kerberos yoluyla mevcut bir Etki Alanı/LDAP kullanıcı hesabına bağlanan bir NFS istemcisini haritalamak istiyorsanız, dizin hizmetine katıldığınızdan emin olun. Ayrıca, dizin sunucusunun ilgili Kerberos ilkesini içeren bir özniteliğe sahip olması gerekir.</li>
+<ul>
+<li><strong>Etki Alanı Kullanıcısı:</strong> İlgili özniteliğin formatı <strong>userPrincipalName</strong> olmalıdır.</li>
+<li><strong>LDAP Kullanıcısı:</strong> İlgili özniteliğin formatı <strong>GSSAuthName</strong> olmalıdır.</li>
+</ul>
+<li>Kullanıcı yerel bir kullanıcıya veya etki alanı/LDAP kullanıcısına başarıyla haritalanamazsa, kullanıcının &quot;guest&quot;e haritalanması gerekir.
+<li>Haritalanmış öncelik şu şekildedir: Yerel kullanıcı > Etki alanı/LDAP kullanıcısı > Guest. </li>
+<li>NFS istemcilerinin erişim izinlerini değiştirmek istiyorsanız, lütfen Windows Erişim Denetleme Listesini (ACL) kullanın. <strong>Denetim Masası</strong> > <strong>Kullanıcı</strong> konumundaki ayrıcalıklar seçenekleri NFS istemcileri için uygulanamaz.</li>
+</ul>
+</div>
+<p>
+<br>____<br> * Yalnızca bazı modellerde mevcuttur.
+
+</p>
+
+
+
+</body>
+</html>

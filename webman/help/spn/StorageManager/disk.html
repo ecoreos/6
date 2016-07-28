@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+	<h2>HDD/SSD</h2>
+	<p>Esta sección le permite realizar un seguimiento del estado del HDD/SSD instalado en su DiskStation y le proporciona opciones para administrar y analizar el rendimiento y el estado de HDD/SSD. Vaya a <strong>Administrador de almacenamiento</strong> > <strong>HDD/SSD</strong> para administrar estas opciones.</p>
+
+	<h4>Para comprobar la información de HDD/SSD:</h4>
+	<ol>
+		<li>Vaya a la pestaña <b>HDD/SSD</b>.</li>
+		<li>Seleccione una unidad de la lista y expándala. Aquí verá el estado S.M.A.R.T., la información del volumen, el nombre del modelo, el número de serie, la versión de firmware y la temperatura.</li>
+	</ol>	
+	
+	<h4>Para comprobar la información de salud:</h4>
+    <ol>
+      <li>Vaya a la pestaña <b>HDD/SSD</b>.</li>
+	  <li>Seleccione una unidad.</li>
+      <li>Haga clic en <b>Información de salud</b>.</li>
+	  <li>Vaya a la pestaña <strong>Visión general</strong>. Aquí encontrará el número de horas que la unidad ha estado encendida, la temperatura actual, el recuento de reconexiones/reidentificaciones, el recuento de sectores erróneos y el estado de S.M.A.R.T. general.</li>
+      <li>Vaya a la ficha <strong>Información de S.M.A.R.T.</strong>. Los números que aparecen pueden ayudarle más a diagnosticar el estado de la unidad.</li>
+    </ol>
+
+<div class="section">
+<h4>Nota:</h4>
+<p>Las unidades SAS no son compatibles con la información de S.M.A.R.T.</p>
+</div>
+
+	<h4>Para iniciar una prueba de S.M.A.R.T.:</h4>
+	<P>S.M.A.R.T. La prueba examinará las unidades y notificará su estado para avisarle de posibles errores de las mismas. Si se detecta algún error, le recomendamos que cambie las unidades lo antes posible. </P>
+    <ol>
+      <li>Vaya a la pestaña <strong>HDD/SSD</strong>.</li>
+      <li>Seleccione una unidad.</li>
+      <li>Haga clic en <b>Prueba de S.M.A.R.T.</b>.</li>
+      <li>Elija un tipo de prueba y haga clic en <strong>Iniciar</strong> para comenzar la prueba.</li>
+      <li>Los resultados de la última prueba se muestran en la sección <b>Resultado de la prueba</b>.</li>
+    </ol>
+    <div class="section">
+<h4>Nota:</h4>
+    <p>El tiempo de la prueba varía dependiendo del entorno del sistema.</p>
+</div>
+    <h4>Para programar pruebas de S.M.A.R.T.:</h4>
+    <p>Las pruebas S.M.A.R.T. se pueden programar para que se ejecuten automáticamente mediante la creación de tareas.</p>
+    <ol>
+      <li>Vaya a la pestaña <strong>Programador de pruebas</strong>.</li>
+      <li>Haga clic en <strong>Crear</strong> para configurar una nueva tarea.</li>
+      <li>Modifique las siguientes opciones en la ficha <strong>General</strong>:</li>
+      <ul>
+        <li><strong>Tarea:</strong> escriba un nombre para la tarea.</li>
+        <li><strong>Tipo de prueba de S.M.A.R.T.:</strong> elija entre realizar una prueba rápida o una prueba ampliada.</li>
+        <li><strong>Intervalo de prueba de S.M.A.R.T.:</strong> elija qué HDD/SSD probar cada vez que se realice la prueba de S.M.A.R.T.</li>
+      </ul>
+      <li>En la pestaña <strong>Programa</strong>, modifique las siguientes opciones:</li>
+      <ul>
+        <li><strong>Fecha:</strong> Especifique la manera de realizar la prueba de S.M.A.R.T. Las pruebas de S.M.A.R.T. se pueden programar para que se ejecuten determinados días de la semana (por ejemplo, diariamente, los fines de semana o todos los domingos, etc.) o en determinadas fechas (p. ej., 21/10/2015).</li>
+        <li><strong>Hora:</strong> Indique cuántas veces se debe realizar la prueba de S.M.A.R.T., así como la primera y la última vez cada día.</li>
+      </ul>
+      <li>Haga clic en <strong>OK</strong> para terminar.</li>
+    </ol>
+
+<h4>Para ejecutar Secure Erase:</h4>
+<ol>
+<li>Vaya a la pestaña <b>HDD/SSD</b>.</li>
+<li>Seleccione una unidad y haga clic en <b>Secure Erase</b>.</li>
+</ol>
+
+
+<div class="section">
+<h4>Nota:</h4>
+<ul>
+<li>Secure Erase no se puede ejecutar en discos en unidades de expansión.</li>
+<li>Secure Erase eliminará permanentemente todos los datos almacenados en su disco. Asegúrese de que el disco elegido no está en uso y de que se han realizado copias de seguridad de los datos antes hacerlo.</li>
+<li>Cuando el sistema ejecuta Secure Erase, el disco seleccionado se bloqueará temporalmente y se desbloqueará automáticamente cuando la operación se haya completado.</li>
+<li>Si Secure Erase se detiene de manera incorrecta durante la operación, se puede volver a ejecutar directamente en la interfaz de usuario. Si los discos se eliminan o se utilizan en otras partes, todavía estarán bloqueados; introduzca la contraseña "synology" para desbloquear los discos.</li>
+</ul>
+</div>
+
+
+	<h3>Habilitación de la compatibilidad con escritura en caché para HDD</h3>
+	<p>Al habilitar la compatibilidad con escritura en caché, se mejora el rendimiento de su DiskStation. Solo ciertos modelos de HDD son compatibles con esta función. Para garantizar la protección de los datos al usar la compatibilidad con escritura en caché, se recomienda el uso de un dispositivo UPS. También sugerimos que el sistema se apague correctamente después de cada uso. Al deshabilitar la escritura en caché, se reducen las posibilidades de perder datos debido a cortes de corriente anómalos, pero el rendimiento del sistema se verá reducido.</p>
+
+	<h4>Para habilitar la compatibilidad con escritura en caché: </h4>
+	<ol>
+		<li>Vaya a la pestaña <b>Administración de caché</b>.</li>
+		<li>Marque <b>Habilitar caché de escritura</b>. De forma predeterminada, esta función está habilitada.</li>
+		<li>Haga clic en <b>Aplicar</b>.</li>
+	</ol>
+	
+
+
+
+</body>
+</html>

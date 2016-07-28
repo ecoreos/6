@@ -1,0 +1,136 @@
+﻿<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>File Station で別のファイル サーバーに接続する - Synology DSM ヘルプ</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="Learn how to customize File Station settings related to file management, shared links, and security.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>リモート接続</h2>
+
+<p>File Station では、さまざまなプロトコル（FTP、STFP、WebDAV、WebDAV HTTPS）を介してパブリック クラウド サービス（Box、Dropbox、Google Drive、Microsoft OneDrive）とファイル サーバーに接続することができます。</p>
+
+<h4>クラウド サービスに接続する：</h4>
+<ol>
+<li><strong>[ツール]</strong> &gt; <strong>[リモート接続]</strong> &gt; <strong>[接続設定]</strong> を選択します。</li>
+<li>アイコンをクリックしてクラウド サービスを選択し、<strong>[次へ]</strong> をクリックします。</li>
+<li>ポップアップ画面でウィザードの指示に従ってアカウントの認証を行ってください。</li>
+<li>設定が完了したら、ターゲットのクラウド サービスが左パネルに表示されます。</li>
+</ol>
+
+
+<div class="section">
+<h4>クラウド特有の制約：</h4>
+<ul>
+<li><strong>Box</strong>:
+<ul>
+<li>他の協働者と共有しているカタログには、所有者のユーザー名が接尾辞として付けられます。</li>
+<li>他の協働者と共有しているカタログが同じ名前（所有者のユーザー名が接尾辞として使われたカタログ名）を使用している場合、カタログ等が1つだけ表示されます。</li>
+<li>次の拡張子のファイルは、Boxを介してのみ開くことができます。.gdoc、.gsheet、.boxnote.</li>
+<li>ファイル名は大文字と小文字を区別します。</li>
+<li>ファイアウォール設定を適切に行うには、<a href="https://support.box.com/hc/articles/200523728-Configuring-a-Firewall-for-Box-or-Box-Sync"  target="_blank">この説明</a>をお読みください。</li>
+</ul>
+</li>
+
+<li><strong>Dropbox</strong>:
+<ul>
+<li>Dropbox に25000 個以上のファイルがある場合は、カタログは表示できません。</li>
+<li>Dropbox に10000 個以上のファイルがある場合は、カタログの名前を変更することはできません。</li>
+<li>10 GB を超えるファイルはアップロードできません。</li>
+<li>ターゲットのファイルがアップロードに24時間以上かかる場合は、アップロードできません。</li>
+<li>ファイル名は大文字と小文字を区別します。</li>
+<li>ファイアウォール設定を適切に行うには、<a href="https://www.dropbox.com/help/23"  target="_blank">この説明</a>をお読みください。</li>
+</ul>
+</li>
+
+<li><strong>Google ドライブ</strong>:
+<ul>
+<li>2048 文字以上のパスを持つファイル/フォルダは表示されません。</li>
+<li>255 文字以上のファイル名を持つファイルは表示されません。</li>
+<li>同じ名前を持つファイル/カタログは、それぞれの作成時間で区別されます。</li>
+<li>File Station で Google 専用ファイル（Google Docs や Google Slides）などを開くと、ターゲットのファイルにアクセスできるように URL が表示されます。</li>
+<li>File Station で表示される<strong>[マイドライブ]</strong> と <strong>[評価済み]</strong> フォルダは、Google ドライブの [マイドライブ] と [評価済み] フォルダに相当します。</li>
+<li>ファイアウォール設定を適切に行うには、<a href="https://support.google.com/drive/answer/2589954"  target="_blank">この説明</a>をお読みください。</li>
+</ul>
+</li>
+
+<li><strong>Microsoft OneDrive</strong>:
+<ul>
+<li>OneNote メモ帳ファイルは表示されません。</li>
+<li>10 GB を超えるファイルはアップロードできません。</li>
+<li>ファイル（例：.png、.jpg、.docx、.pdf）は、大きいファイル サイズで表示される場合があります（本来のサイズとサムネイル サイズ）。このこと自体は、元のファイルがダウンロードされても、そのサイズには影響しません。</li>
+<li>ファイル名は大文字と小文字を区別します。</li>
+
+</ul>
+</li>
+</ul>
+
+<p>その他の制約については、当該クラウド サービスの公式ウェブサイトをご覧ください。</p>
+
+
+</div>
+
+
+<h4>ファイル サーバーに接続する：</h4>
+<ol>
+<li><strong>[ツール]</strong> &gt; <strong>[リモート接続]</strong> &gt; <strong>[接続設定]</strong> を選択します。</li>
+<li>アイコンをクリックしてサーバー プロトコルを選択し、<strong>[次へ]</strong> をクリックします。</li>
+<li>次の情報を提供してセットアップを完了してください。
+  <ul>
+<li><strong>ホスト名またはIP</strong>：ターゲットのファイル サーバーのホスト名または IP を入力します。</li>
+<li><strong>ポート</strong>：ターゲットのファイル サーバーのポート番号を入力します。</li>
+<li><strong>ユーザー</strong> と <strong>パスワード</strong>:ターゲットのファイル サーバーがアカウント/パスワードを必要とする場合は、このログイン情報を入力してください。</li>
+<li><strong>文字コード</strong>：ファイル名を正しく表示するために、ターゲットのファイル サーバーの文字エンコードを選択します。</li>
+<li><strong>プロファイル名</strong>：このファイル サーバーを簡単に識別できるように、独自の名前を入力します。</li>
+<li><strong>WebDAV HTTPS 接続を使う</strong>:WebDAV プロトコルを設定するときと、クライアントとファイル サーバーの両方が WebDAV HTTPS に対応している場合に限り、このオプションを使用できます。</li>
+<li><strong>1ユーザーにつき1接続のみ許可</strong>：FTP または SFTP プロトコルを設定する場合に限り、このオプションを使用できます。このオプションを有効にすると、サーバーに接続数について制約があるときに、接続を最適化します。</li>
+  </ul>
+  </li>
+<li><strong>[適用] </strong>をクリックして、設定を保存します。ターゲットのファイル サーバーは左パネルに表示されます。</li> 
+</ol>
+<h4>既存のクラウド サービスまたはファイル サーバーのプロファイルを変更する：</h4>
+<ol>
+<li><strong>[ツール]</strong> &gt; <strong>[リモート接続]</strong> &gt; <strong>[接続リスト]</strong> を選択します。</li>
+<li>次の管理を行うには、ターゲットのクラウド サービスをクリックするか、ファイル サーバーをクリックしてください。
+    <ul>
+<li>編集：<strong>[編集]</strong> をクリックして、現在のプロファイル構成を変更した後で <strong>[OK]</strong> をクリックします。</li>
+<li>接続解除：<strong>[接続解除]</strong> をクリックすると、接続が終了します。</li>
+<li>再接続：.<strong>［接続］</strong> をクリックすると、再度接続します。(または、File Station の左パネルでターゲットをクリックすると再接続します)</li>
+<li>削除：<strong>[削除]</strong>をクリックして、プロファイルの破棄を確定してください。(または、File Station の左パネルで <strong>[削除]</strong> をクリックします)</li>
+    </ul>
+  </li>
+  </ol>
+  
+  
+<div class="section">
+<h4>注意：</h4>
+<ul>
+<li>ユーザーは、1人につき100件以上のクラウドサービスとファイルサーバーに同時接続することはできません。</li>
+<li>不測のエラーが発生しないように、必ず正しいサーバー コードページを選択してください。サーバーのコードページが分からない場合は、Unicode をお薦めします。</li>
+<li>クラウド サービスまたはファイル サーバーに保存されたファイルでは、一部の File Station の機能（例：圧縮先、解凍、プレビュー）を使用できない場合があります。</li>
+<li>接続したクラウド サービスまたはファイル サーバーのそれぞれの転送速度は、ユーザーの速度制限設定によります。</li>
+<li>各ユーザーは、すべてのクラウド サービスおよびファイル サーバーの間で同時に3件のファイル転送しか実行できません。</li>
+<li>WebDAV、WebDAV HTTPS、クラウド サービス プロキシの設定を行うには、<strong>[コントロールパネル]</strong> &gt; <strong>[ネットワーク]</strong> &gt; <strong>[全般]</strong> &gt; <strong>[プロキシ]</strong> を選択します。クラウド サービスまたはファイル サーバーへの接続中にプロキシ設定を変更した場合は、一旦接続を解除してから再度接続してください。</li>
+<li>接続したクラウド サービスやファイル サーバーの情報を変更しても、接続状態には影響しません。</li>
+<li>接続リソースをリリースするには、含まれるファイルが30分間変更されずにいると、クラウド サービス/ファイル サーバーが自動的に接続解除されます。接続を再開するには、クラウド サービス/ファイル サーバーをクリックします。</li>
+<li>次の名前付けフォーマットが適用されたファイル/フォルダは表示できません。
+  <ul>
+<li><strong>._</strong> または <strong>.SYNOPPSDB で始まる</strong></li>
+<li><strong>/ を含む</strong></li>
+<li><strong> という名前</strong>&nbsp;&nbsp;&nbsp;&nbsp;<strong>..</strong>&nbsp;&nbsp;&nbsp;&nbsp;<strong>'</strong>&nbsp;&nbsp;&nbsp;&nbsp;<strong>&quot;</strong>&nbsp;&nbsp;&nbsp;&nbsp;<strong>.DS_Store</strong>&nbsp;&nbsp;&nbsp;&nbsp;<strong>@eaDir</strong>&nbsp;&nbsp;&nbsp;&nbsp;<strong>@sharebin</strong>&nbsp;&nbsp;&nbsp;&nbsp;<strong>@tmp</strong>&nbsp;&nbsp;&nbsp;&nbsp;<strong>.SynologyWorkingDirectory</strong></li>
+  </ul>
+</li>
+<li class="enable-dockerx64">リモート接続は、高権限モードでのみサポートされています。この機能を使用するには、ホスト DSM で Docker パッケージを選択し、暗号化した共有フォルダを有効にする <strong>Docker DSM</strong> を選択します。次に、<strong>[編集]</strong> をクリックし、<strong>[高権限実行コンテナを使う]</strong> にチェックマークを付けます。</li>
+
+</ul>
+</div>
+</body>
+</html>

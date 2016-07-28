@@ -1,0 +1,195 @@
+
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Options de gestion de File Station - Aide Synology DSM</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="Learn how to customize File Station settings related to file management, shared links, and security.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Gestion des paramètres de File Station</h2>
+<p>Pour gérer les paramètres File Station, ouvrez <strong>File Station</strong> et cliquez sur le bouton <b>Paramètres</b>.</p>
+
+<h3>Généralités</h3>
+<p>
+Ici vous pouvez activer le journal de File Station pour enregistrer les activités de tous les utilisateurs. Les activités de l’utilisateur comprennent <b>Créer dossier</b>, <b>Transférer</b>, <b>Télécharger</b>, <b>Supprimer</b>, <b>Renommer</b>, <b>Déplacer</b>, <b>Copier</b> et <b>Propriété définie</b>.
+</p>
+<h4>Pour activer le journal de File Station :</h4>
+<ol>
+<li>Si vous voulez enregistrer les activités de tous les utilisateurs, cochez <b>Activer le journal de File Station</b>.
+</li>
+<li>
+Cliquez sur <b>OK</b>.
+</li>
+</ol>
+<h4>Pour voir le journal de File Station :</h4>
+<ol>
+<li>
+Cliquez sur <b>Afficher les journaux</b>, ce qui affiche le <strong>Centre des journaux</strong>.</li>
+<li>
+Cliquez sur l’onglet <b>Transfert de fichiers</b>.
+</li>
+</ol>
+
+<h4>Pour écraser automatiquement les fichiers avec le glisser-déposer ou les raccourcis du clavier :</h4>
+<p>Cochez <strong>Toujours écraser les fichiers lorsque je les fais glisser-déplacer sur le navigateur Web ou je les colle avec les raccourcis clavier</strong> si vous voulez écraser automatiquement les fichiers portant le même nom lorsque vous glissez et déposez des fichiers depuis le bureau de votre ordinateur sur le navigateur, ou collez des fichiers avec les raccourcis clavier dans File Station.</p>
+
+
+<h4>Pour activer le glisser et déposer intelligent :</h4>
+<p>Lorsque vous glissez et déposez des fichiers avec File Station, cette fonction détermine automatiquement si le transfert est une action de copie ou de déplacement.</p>
+
+<ol>
+<li>Sélectionnez <strong>Activer le glisser et déposer intelligent</strong>.</li>
+<li>Indiquez si l'action doit toujours être effectuée s'il arrive qu'un autre utilisateur transfère simultanément des fichiers portant le même nom au même emplacement :
+  <ul>
+<li><strong>Écraser</strong> : Vos fichiers transférés remplacent les fichiers portant le même nom.</li>
+<li><strong>Ignorer</strong> : Vos fichiers transférés sont ignorés et ne remplacent pas les fichiers portant le même nom.</li>
+</ul>
+</li>
+<li>Cliquez sur <strong>OK</strong>.</li>
+</ol>
+
+<div class="section">
+<h4>Remarque :</h4>
+<p>Si vous souhaitez modifier l'action de copie ou de déplacement déterminé par le glisser et déposer intelligent, appliquez les touches de raccourci suivantes selon vos besoins :</p>
+<ul>
+<li>Pour passer à une action de copie : Appuyez sur la touche Ctrl en effectuant le glisser et déposer.</li>
+<li>Pour passer à une action de déplacement : Appuyez sur la touche Maj en effectuant le glisser et déposer.</li>
+</ul>
+</div>
+
+
+<h4>Pour parcourir et gérer les fichiers depuis l'ordinateur local avec File Station :</h4>
+<ol>
+<li>
+Cochez <b>Parcourir les fichiers sur l'ordinateur local avec File Station</b>.
+</li>
+<li>
+Cliquez sur <b>OK</b>.
+</li>
+</ol>
+
+
+<h4>Pour partager la liste des utilisateurs de DSM avec les utilisateurs non administrateurs :</h4>
+<p>Cette option permet aux utilisateurs non administrateurs d'accéder à la liste complète des utilisateurs de DSM s'ils souhaitent rechercher des fichiers appartenant à des utilisateurs/groupes spécifiques de DSM ou s'ils souhaitent partager des liens de fichiers avec d'autres utilisateurs de DSM.</p>
+
+<ol>
+<li>Sélectionnez <strong>Partager la liste des utilisateurs de DSM avec les utilisateurs non administrateurs</strong>.</li>
+<li>Cliquez sur <strong>OK</strong>.</li>
+</ol>
+
+
+<h3>Application des permissions UNIX par défaut</h3>
+<p>Cliquez sur <strong>Paramètres avancés</strong> et cochez l'option pour appliquez les permissions UNIX par défaut lors du partage ou la création de fichiers et de dossiers. Les autorisations appliquées sont les mêmes que les autorisations appliquées par la commande UNIX <strong>umask</strong>. Lorsque cette option est activée, les permissions UNIX sont de 644 pour les fichiers et de 755 pour les dossiers. Lorsque cette option est désactivée, les permissions UNIX sont de 666 pour les fichiers et de 777 pour les dossiers. La valeur umask par défaut est 022.</p>
+<div class="section">
+<h4>Remarque :</h4>
+<ul>
+  <li>Pour les dossiers partagés avec Windows ACL activé (tous les partages sauf les « photos » et les partages sur des disques externes), veuillez exécuter la commande <strong>chmod</strong> sur votre client Linux ou FTP pour changer les types de permissions de dossier et de fichier depuis Windows ACL vers UNIX.</li>
+  <li>L'activation de cette option pourrait provoquer des problèmes d'incohérence de permission entre différents protocoles. Afin d'éviter les incohérences, nous suggérons de laisser cette option désactivée.</li>
+</ul>
+</div>
+<h3 class="disable-eds14">Montage/Connexions</h3>
+<p class="disable-eds14">
+Par défaut, tous les utilisateurs peuvent monter des dossiers distants ou des lecteurs virtuels. Ici vous pouvez limiter l’accès à la gestion des dossiers distants ou des lecteurs virtuels aux administrateurs seulement.
+</p>
+
+<div class="disable-eds14 section">
+<h4>Remarque :</h4>
+<p>Les utilisateurs qui ne sont pas administrateurs ne peuvent monter les dossiers distants que dans leur dossier personnel <b>accueil</b>.</p>
+</div>
+<h4 class="disable-eds14">Pour autoriser différents utilisateurs à monter des dossiers distants ou des lecteurs virtuels :</h4>
+<ol class="disable-eds14">
+<li>
+Choisissez <b>Tous les utilisateurs</b> ou <b>Administrators</b> dans le <b>Dossier distant</b> ou <b>Lecteur virtuel</b>.
+</li>
+<li>
+Cliquez sur <b>OK</b>.
+</li>
+</ol>
+<h4 class="disable-eds14">Pour autoriser différents utilisateurs à monter des serveurs et des services cloud :</h4>
+<ol class="disable-eds14">
+  <li>Sélectionnez à partir de <b>Tous les utilisateurs</b>, <b>Administrators</b>, ou <strong>Utilisateur spécial</strong>. </li>
+  <li>La sélection de <strong>Utilisateur spécial</strong> ouvre une fenêtre qui vous permet de configurer les autorisations de montage pour les différents utilisateurs. Pour activer l'accès à un utilisateur spécifique, assurez-vous que la case est cochée dans la colonne <strong>Activé</strong>. Pour désactiver l'accès à un utilisateur spécifique, assurez-vous que la case n'est pas cochée dans la colonne <strong>Activé</strong>. Une fois terminé, cliquez sur <strong>OK</strong> pour fermer cette fenêtre.</li>
+  <div class="section">
+    <h4>Remarque :</h4>
+    <ul>
+      <li>Les utilisateurs appartenant au groupe <strong>administrators</strong> peuvent utiliser cette fonction mais ne peuvent pas faire n'importe quels changements. Les utilisateurs connectés en tant que <strong>Guest</strong> ne peuvent ni utiliser cette fonction ni procéder à la moindre modification. Les autorisations pour tous les autres utilisateurs peuvent être configurées ici.</li>
+    </ul>
+  </div>
+  <li>Cliquez sur <strong>OK</strong>.</li>
+</ol>
+<h3>Liens partagés</h3>
+<p>
+Par défaut, tous les utilisateurs peuvent partager des liens vers les fichiers. Ici vous pouvez limiter l’accès à la gestion des liens partagés aux administrateurs seulement.
+</p>
+<h4>Pour autoriser différents utilisateurs à partager des liens de fichier :</h4>
+<ol>
+<li>
+Sélectionnez <b>Tous les utilisateurs</b>, <b>Administrators</b>, ou <strong>Utilisateurs spéciaux</strong>.
+</li>
+<li>
+Cliquez sur <b>OK</b>.
+</li>
+</ol>
+
+<h4>Pour ouvrir les fichiers HTML en texte brut :</h4>
+
+<ol>
+<li>Cochez la case <strong>Toujours ouvrir les fichiers HTML utilisant le format texte brut</strong>. Si cette option est activée, les fichiers HTML (c.-à-d. les fichiers HTM, HTML, JSP, XHTML) sont affichés en utilisant le format texte brut lorsque les utilisateurs les ouvrent via un fichier de lien partagé. Cette option empêche les parties malicieuses de pirater des sessions de connexion d'utilisateur en utilisant le script intégré dans les fichiers HTML.</li>
+<li>Cliquez sur <strong>OK</strong>.</li>
+</ol>
+
+<h3>Limite de vitesse</h3>
+<p>Vous pouvez limiter la vitesse pour contrôler le débit maximal utilisable par les utilisateurs et les groupes qui transfèrent des données via File Station.</p>
+
+
+<h4>Pour activer la limite de vitesse :</h4>
+<ol>
+  <li>Cochez la case <b>Activer la limite de vitesse</b>, ou <strong>Activer la limite de vitesse selon un programme</strong> si vous désirez appliquer une limite de vitesse à certaines heures seulement. Ceci est un paramétrage à l'échelle du serveur qui remplace les paramétrages des utilisateurs individuels et groupes. L'option <strong>Pas de limite de vitesse</strong> désactive les paramétrages de limite de vitesse de tous les utilisateurs et groupes.</li>
+  <li>Cliquez sur <strong>Paramètres de limite de vitesse</strong> pour modifier les paramètres des utilisateurs individuels ou groupes. Pour chaque utilisateur et groupe, vous pouvez sélectionner l'une des options suivantes :  </li>
+    <ul>
+      <li><strong>Appliquer les paramètres de groupe :</strong> Les paramètres de limite de vitesse sont les mêmes que ceux du groupe auquel l'utilisateur appartient. </li>
+      <li><strong>Pas de limite de vitesse :</strong> Aucune limite de vitesse ne sera appliquée lorsque les membres du groupe transfèrent les fichiers avec le service.</li>
+      <li><strong>Constante :</strong> Une limite de vitesse fixe, constante sera appliquée à l'utilisateur ou aux membres du groupe. Les vitesses de chargement et de téléchargement peuvent être spécifiées dans les champs sur la gauche.</li>
+      <li><strong>Variable :</strong> Deux limites de vitesse différentes peuvent être spécifiées et appliquées à l'utilisateur ou aux membres du groupe en fonction d'un horaire. Cliquez sur le bouton <strong>Personnaliser</strong> pour modifier les paramètres de limite de vitesse et définir un planning.</li>
+    </ul>
+
+  <li>Cliquez sur <b>Appliquer</b>.</li>
+</ol>
+<div class="section">
+  <h4>Remarque :</h4>
+  <ul>
+    <li>Pour plus de détails concernant la dynamique de limitation de la vitesse des groupes, veuillez voir <a href="../AdminCenter/file_group_edit.html">ici</a>.</li>
+    <li>Lorsqu'une limite de vitesse est définie pour un utilisateur, la section <strong>Résultat</strong> affiche la limite de vitesse réelle de l'utilisateur selon les paramètres individuels et de groupe. Par exemple, si un utilisateur « Achille » est affecté d'une limite de vitesse de téléchargement de 100 Ko/s, mais qu'il appartient à un groupe d'utilisateurs affecté d'une limite de téléchargement de 500 Ko/s, la section <strong>Résultats</strong> affiche alors « 0/500 ».</li>
+  </ul>
+</div>
+
+
+
+<h3>Sécurité</h3>
+
+<p>Ici vous pouvez trouver les paramètres de sécurité ci-dessous.</p>
+
+<h4>Pour ouvrir les fichiers HTML en texte brut :</h4>
+
+<ol>
+<li>Cochez la case <strong>Toujours ouvrir les fichiers HTML utilisant le format texte brut</strong>. Si cette option est activée, les fichiers HTML (c.-à-d. les fichiers HTM, HTML, JSP, XHTML) sont affichés en utilisant le format texte simple lorsqu'ils sont ouverts dans File Station. Cette option empêche les parties malicieuses de pirater des sessions de connexion d'utilisateur en utilisant le script intégré dans les fichiers HTML.</li>
+<div class="section">
+<h4>Remarque :</h4>
+<ul>
+<li>Il ne s'agit pas d'un paramètre global. Chaque utilisateur peut choisir s'il active ou pas cette option selon ses besoins individuels.</li>
+</ul>
+</div>
+<li>Cliquez sur <strong>OK</strong>.</li>
+</ol>
+
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Info-Center</title>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h1>Info-Center</h1>
+<p>Info-Center zeigt grundlegende Informationen über verschiedene Aspekte Ihres DiskStation an, wie Hardware-Spezifikationen, Netzwerk, Speicher und Dienste. Info-Center befindet sich unter<strong> Systemsteuerung</strong> &gt; <strong>Info-Center</strong>.</p>
+<h2><a name="general"></a>Allgemein</h2>
+<p>
+Auf der Registerkarte <b>Allgemein</b> werden allgemeine Informationen über den DiskStation, einschließlich Seriennummer, Modellname, Größe des physischem Speicher, DSM-Version, Zeitinformationen, Temperaturzustand oder externe Geräte angezeigt.</p>
+
+<h3 class="disable-eds14">Thermal-Status*</h3>
+<p class="disable-eds14">Der Thermal-Status von DiskStation wird entweder grün oder orange hervorgehoben:</p>
+
+<ul class="disable-eds14">
+<li><strong>Grün:</strong> Der Thermal-Status ist normal.</li>
+<li><strong>Orange</strong>: Die Temperatur des DiskStation ist zu hoch. Wenn die Temperatur von DiskStation hoch bleibt, könnte das Gerät wegen Überhitzung heruntergefahren werden.</li>
+</ul>
+
+
+<h2><a name="network"></a>Netzwerk</h2>
+<p>Die Registerkarte<b> Netzwerk </b>zeigt die Netzwerkinformationen, z. B. DNS-Server, IP-Adresse, Subnet-Maske und mehr.</p>
+
+<h2><a name="storage"></a>Speicher</h2>
+<p class="disable-eds14">Die Registerkarte<b> Speicher</b> zeigt Informationen zu Volume-Nutzung und zum Festplattenstatus.</p>
+<p class="enable-eds14">Die Registerkarte <strong>Speicher</strong> zeigt Informationen zur Speichernutzung und den Status externer Speichergeräte an.</p>
+
+<h3 class="disable-eds14">Festplattenstatus</h3>
+
+<p class="disable-eds14">Es gibt die folgenden möglichen Statusmeldungen für interne Festplatten:</p>
+
+<ul class="disable-eds14">
+<li><strong>Keine Festplatte installiert:</strong> Im entsprechenden Festplatteneinschub befindet sich keine Platte.</li>
+<li><strong>Nicht initialisiert:</strong> Systempartition und Volume sind nicht auf der Festplatte erstellt worden.</li>
+<li><strong>Normal:</strong> Systempartition und Volume sind auf der Festplatte verfügbar.</li>
+<li><strong>Initialisiert:</strong> Systempartition verfügbar, aber kein Volume erstellt.</li>
+<li><strong>Systempartitionierung fehlgeschlagen:</strong> Systempartitionierung auf der Festplatte ist nicht verfügbar.</li>
+<li><strong>Abgestürzt:</strong> Auf das Volume der Festplatte konnte nicht zugegriffen werden. Wir empfehlen, die Festplatte auszutauschen.</li>
+</ul>
+
+
+
+
+<div class="section disable-eds14">
+
+<h4>Hinweis:</h4>
+<p>Damit das System normal funktioniert, muss mindestens eine Festplatte den Status <b>Normal</b> oder <b>Initialisiert</b> haben.</p>
+
+</div>
+
+
+<h2><a name="service"></a>Dienst</h2>
+<p>
+  Die Registerkarte<b> Dienst</b> zeigt eine Liste der Dienste und installierten Pakete, einschließlich der Optionen, die einzelnen Dienste und Pakete zu aktivieren oder deaktivieren. Darüber hinaus gibt es für einige Dienste und Pakete bestimmte Optionen, um die Verbindung zu testen oder festzulegen, ob über die Firewall auf einen Dienst oder ein Paket zugegriffen werden kann.
+</p>
+
+<h4>So ändern Sie die Einstellungen von Diensten oder Paketen:</h4>
+<ol>
+<li>Die folgenden Optionen sind verfügbar:
+	<ul>
+	  <li><strong>Aktivieren:</strong> Aktiviert oder deaktiviert den Dienst oder das Paket.</li>
+	  <li><strong>Durch Firewall zulassen:</strong> Fügt vom Dienst oder der Anwendung verwendete Ports hinzu oder entfernt sie unter<strong> Systemsteuerung</strong> > <strong>Externer Zugriff</strong> > <strong>Routerkonfiguration</strong>, sodass dem Dienst oder dem Paket der Pass-through durch die Firewall von DiskStation erlaubt wird.</li>
+	  <li><strong>Einstellungen:</strong> Wählen Sie die Netzwerk-Schnittstelle, deren Firewall-Einstellungen angezeigt und verwaltet werden sollen. Sie können<strong> Alle </strong>auswählen, um die Firewall-Einstellungen aller Netzwerk-Schnittstellen anzuzeigen und zu verwalten.</li>
+	  <li><strong>Verbindung testen:</strong> Testet die von Diensten und Paketen verwendeten Ports. So können Sie testen, ob Geräte auf die Dienste und Pakete von einem externen Netzwerk aus zugreifen können.</li>
+    </ul>
+</li>
+<li>Klicken Sie auf <strong>Speichern</strong>, um die Änderungen zu speichern oder auf <strong>Zurücksetzen</strong>, um die Änderungen zu verwerfen. </li>
+</ol>
+
+<h2>Synology-Konto</h2>
+<p>Das Synology-Konto ist eine integrierte Plattform, über die Benutzer auf die folgenden von Synology angebotenen Dienste zugreifen können:</p>
+
+<ul>
+<li>QuickConnect und DDNS-Dienste für Ihr DiskStation</li>
+<li>Software-Lizenzverwaltung</li>
+<li>Synology Urgent Support</li>
+<li>eNews abonnieren</li>
+<li>Kaufverlauf von Synology-Produkten</li>
+</ul>
+
+<div class="section">
+<h4>Hinweis:</h4>
+<p>Sie können sich auch mit einem Konto eines sozialen Netzwerks (Facebook, Google+ und LinkedIn) bei Ihrem Synology-Konto anmelden.</p>
+</div>
+
+<h4>Registrieren oder bei Ihrem Synology-Konto anmelden:</h4>
+
+<ol>
+<li>Gehen Sie zu <strong>Systemsteuerung</strong> > <strong>Info-Center</strong> > <strong>Synology-Konto</strong>.</li>
+<li>Klicken Sie auf <strong>Bei einem Synology-Konto anmelden oder ein Konto registrieren</strong>.</li>
+<li>Geben Sie Ihre Anmeldeinformationen an oder klicken Sie auf <strong>Registrieren</strong>, um ein Synology-Konto zu registrieren. Alternativ können Sie sich auch mit einem Konto eines sozialen Netzwerks anmelden.</li>
+</ol>
+
+
+<h4>Ihr Synology-Konto verwalten:</h4>
+
+<ol>
+<li>Klicken Sie auf <strong>Konto verwalten</strong>, um zur Web-Plattform zu gelangen.</li>
+<li>Folgen Sie den Anweisungen, um auf Ihr Synology-Konto zuzugreifen und dieses zu verwalten.</li>
+</ol>
+
+<h4>Von Ihrem Synology-Konto abmelden:</h4>
+
+<p>Klicken sie auf <strong>Konto wechseln</strong>, um sich von Ihrem Synology-Konto abzumelden.</p>
+
+<div class="section">
+<h4>Hinweis:</h4>
+<p>Nach der Abmeldung von Ihrem Synology-Konto können auch die damit verbundenen Dienste von Synology (z. B. QuickConnect oder DDNS) ausgesetzt werden.</p>
+</div>
+
+<p class="disable-eds14">____<br> * Nur bei bestimmten Modellen verfügbar. </p>
+
+</body>
+</html>

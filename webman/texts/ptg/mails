@@ -1,0 +1,2650 @@
+
+[]
+
+
+
+[AutoBlockAdd]
+Category: System
+Title: Endereço IP bloqueado
+Subject: Endereço IP [%CLIENT_IP%] de %HOSTNAME% foi bloqueado por %SERVICE%
+
+Caro utilizador,
+
+O endereço IP [%CLIENT_IP%] experienciou %AUTOBLOCK_ATTEMPTS% tentativas falhadas quando tentou iniciar a sessão em %SERVICE% no %HOSTNAME% no espaço de %AUTOBLOCK_ATTEMPT_MIN% minutos, e foi bloqueado às %AUTOBLOCK_TIME%.
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[BackupTaskCanceled]
+Category: Backup/Restore,Important
+Title: Cópia de segurança cancelada
+Subject: %TASK_TYPE% - %TASK_NAME% cancelada em %HOSTNAME%
+
+Caro utilizador,
+
+Cancelada cópia de segurança de dados em %HOSTNAME%.
+
+Tarefa de cópia de segurança: %TASK_NAME%
+Destino da cópia de segurança: %DESTINATION_IP% %DESTINATION_PATH%
+Hora de início: %START_TIME%
+Duração: %DURATION%
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[BackupTaskFailed]
+Category: Backup/Restore,Important
+Title: Falha na cópia de segurança
+Subject: %TASK_TYPE% - %TASK_NAME% falhou em %HOSTNAME%
+
+Caro utilizador,
+
+Falha na cópia de segurança de dados em %HOSTNAME%.
+
+Consulte o registo de cópias de segurança em Hyper Backup > Registo
+para obter mais informações.
+
+Tarefa de cópia de segurança: %TASK_NAME%
+Destino da cópia de segurança: %DESTINATION_IP% %DESTINATION_PATH%
+Hora de início: %START_TIME%
+Duração: %DURATION%
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[BackupTaskFinished]
+Category: Backup/Restore
+Title: Cópia de segurança completa
+Subject: %TASK_TYPE% - %TASK_NAME% com êxito em %HOSTNAME%
+
+Caro utilizador,
+
+A tarefa de cópia de segurança %TASK_NAME% está agora concluída.
+
+Tarefa de cópia de segurança: %TASK_NAME%
+Destino da cópia de segurança: %DESTINATION_IP% %DESTINATION_PATH%
+Hora de início: %START_TIME%
+Duração: %DURATION%
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[BackupTaskPartial]
+Category: Backup/Restore,Important
+Title: Cópia de segurança parcialmente concluída
+Subject: %TASK_TYPE% - %TASK_NAME% com êxito parcial em %HOSTNAME%
+
+Caro utilizador,
+
+A tarefa de cópia de segurança %TASK_NAME% está agora concluída, com pequenas exceções.
+
+Consulte o registo de cópias de segurança em Hyper Backup > Registo
+para obter mais informações.
+
+Tarefa de cópia de segurança: %TASK_NAME%
+Destino da cópia de segurança: %DESTINATION_IP% %DESTINATION_PATH%
+Hora de início: %START_TIME%
+Duração: %DURATION%
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[CMSClientConnectFailed]
+Category: CMS
+Title: Falha na Ligação ao Anfitrião CMS
+Subject: %HOSTNAME% não consegue ligar ao Anfitrião CMS (%CMS_SERVER%).
+
+Caro utilizador,
+
+O servidor %HOSTNAME% não consegue ligar ao Anfitrião CMS (%CMS_SERVER%). Verifique as definições e a ligação de rede dos dois servidores.
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[CMSClientDetachSuccess]
+Category: CMS
+Title: Remover adesão do CMS Host bem sucedida
+Subject: %HOSTNAME% saiu do Anfitrião CMS (%CMS_SERVER%).
+
+Caro utilizador,
+
+O servidor %HOSTNAME% saiu do Anfitrião CMS (%CMS_SERVER%).
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[CMSClientJoinSuccess]
+Category: CMS
+Title: Adesão ao CMS Host bem sucedida
+Subject: %HOSTNAME% adesão ao CMS Host (%CMS_SERVER%).
+
+Caro utilizador,
+
+O servidor %HOSTNAME% aderiu com sucesso ao CMS Host (%CMS_SERVER%). Algumas definições serão geridas pelo CMS Host.
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[CpuFanResume]
+Category: System
+Title: Retomada ventoinha da CPU
+Subject: Ventoinha da CPU %FANID% em %HOSTNAME% (NS: %HOST_SN%) foi retomada
+
+Caro utilizador,
+
+Ventoinha da CPU %FANID% em %HOSTNAME% (NS: %HOST_SN%) foi retomada.
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[CpuFanStop]
+Category: System,Important
+Title: Parada ventoinha da CPU
+Subject: Ventoinha da CPU %FANID% em %HOSTNAME% (NS: %HOST_SN%) parou de funcionar
+
+Caro utilizador,
+
+Ventoinha da CPU %FANID% em %HOSTNAME% (NS: %HOST_SN%) parou de funcionar.
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[DDNSFail]
+Category: System
+Title: O registo de DDNS falhou
+Subject: O serviço DDNS não conseguiu registar o endereço IP %EXTERNAL_IP% para o %DDNS_HOST_NAME% [%FAIL_REASON%]
+
+Caro utilizador,
+
+O sistema não conseguiu registar o endereço IP externo %EXTERNAL_IP% para o %DDNS_HOST_NAME% no servidor DDNS %DDNS_NAME%. A razão reportada é [%FAIL_REASON%].
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[DRLunScheduleSnapshotFail]
+Category: Snapshot Replication,Important
+Title: Falha ao tirar um instantâneo para um iSCSI LUN
+Subject: Falha ao tirar um instantâneo para LUN %LUNNAME% em %HOSTNAME%
+
+Caro utilizador,
+
+Falha ao tirar um instantâneo LUN em %HOSTNAME%. Consulte a página de registos de Snapshot Replication para informações detalhadas.
+
+LUN: %LUNNAME%
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[DRReplicationCleanupTestFailoverCompletion]
+Category: Snapshot Replication,Important
+Title: Failover de teste de tarefa de replicação limpo
+Subject: Failover de teste de %DRSITE_TARGET_NAME% em %DRSITE_HOSTNAME% limpo com êxito
+
+Caro utilizador,
+
+O sistema limpou com êxito o failover de teste de %DRSITE_TARGET_NAME% no servidor de destino (%DRSITE_HOSTNAME%). Consulte a página Snapshot Replication para informações detalhadas.
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[DRReplicationCleanupTestFailoverFail]
+Category: Snapshot Replication,Important
+Title: Falha a limpar o failover de teste da tarefa de replicação
+Subject: Falha ao limpar failover de deste de %DRSITE_TARGET_NAME% em %DRSITE_HOSTNAME%
+
+Caro utilizador,
+
+Falha do sistema ao limpar failover de teste de %DRSITE_TARGET_NAME% em %DRSITE_HOSTNAME%. Consulte a página Snapshot Replication para informações detalhadas.
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[DRReplicationExportCompletion]
+Category: Snapshot Replication,Important
+Title: Tarefa de replicação exportada com sucesso
+Subject: %MAINSITE_TARGET_NAME% exportado com sucesso
+
+Caro utilizador,
+
+O sistema exportou %MAINSITE_TARGET_NAME% com sucesso. Consulte a página Snapshot Replication para informações detalhadas.
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[DRReplicationExportFail]
+Category: Snapshot Replication,Important
+Title: Falha ao exportar a tarefa de replicação
+Subject: Falha ao exportar %MAINSITE_TARGET_NAME%
+
+Caro utilizador,
+
+O sistema não conseguiu exportar %MAINSITE_TARGET_NAME%. Consulte a página Snapshot Replication para informações detalhadas.
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[DRReplicationFailoverCompletion]
+Category: Snapshot Replication,Important
+Title: Realizado com êxito failover de tarefa de replicação
+Subject: Failover de %DRSITE_TARGET_NAME% para %DRSITE_HOSTNAME% com êxito
+
+Caro utilizador,
+
+O sistema realizou com êxito o failover de %DRSITE_TARGET_NAME% no servidor de destino (%DRSITE_HOSTNAME%). Consulte a página Snapshot Replication para informações detalhadas.
+
+Versão de failover: %SNAPSHOT_VERSION%
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[DRReplicationFailoverFail]
+Category: Snapshot Replication,Important
+Title: Falha ao realizar o failover da tarefa de replicação
+Subject: Falha ao limpar failover de %DRSITE_TARGET_NAME% para %DRSITE_HOSTNAME%
+
+Caro utilizador,
+
+O sistema não teve êxito ao realizar o failover de %DRSITE_TARGET_NAME% no servidor de destino (%DRSITE_HOSTNAME%). Consulte a página Snapshot Replication para informações detalhadas.
+
+Versão de failover: %SNAPSHOT_VERSION%
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[DRReplicationImportCompletion]
+Category: Snapshot Replication,Important
+Title: Tarefa de replicação importada com sucesso
+Subject: %DRSITE_TARGET_NAME% importado com sucesso
+
+Caro utilizador,
+
+O sistema importou %DRSITE_TARGET_NAME% com sucesso. Consulte a página Snapshot Replication para informações detalhadas.
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[DRReplicationImportFail]
+Category: Snapshot Replication,Important
+Title: Falha ao importar a tarefa de replicação
+Subject: Falha ao importar %DRSITE_TARGET_NAME%
+
+Caro utilizador,
+
+O sistema não conseguiu importar %DRSITE_TARGET_NAME%. Consulte a página Snapshot Replication para informações detalhadas.
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[DRReplicationInitialSyncCompletion]
+Category: Snapshot Replication,Important
+Title: Concluída replicação inicial
+Subject: Tarefa de replicação concluiu a replicação inicial de %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%) para %DRSITE_HOSTNAME% (%DRSITE_TARGET_NAME%)
+
+Caro utilizador,
+
+A tarefa de replicação concluiu a replicação inicial. Consulte a página Snapshot Replication para informações detalhadas.
+
+Servidor de origem: %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%)
+Servidor de destino: %DRSITE_HOSTNAME% (%DRSITE_TARGET_NAME%)
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[DRReplicationInitialSyncFail]
+Category: Snapshot Replication,Important
+Title: Falha a realizar replicação inicial
+Subject: Tarefa de replicação não realizou a replicação inicial para %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%)
+
+Caro utilizador,
+
+A tarefa de replicação não realizou a replicação inicial para %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%). Consulte a página Snapshot Replication para informações detalhadas.
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[DRReplicationReprotectCompletion]
+Category: Snapshot Replication,Important
+Title: Tarefa de replicação protegida novamente com êxito
+Subject: Tarefa de replicação (NEW_MAINSITE_TARGET_NAME%) protegida novamente com êxito
+
+Caro utilizador,
+
+O sistema protegeu noamente a tarefa de replicação (%NEW_MAINSITE_TARGET_NAME%) para o novo servidor de origem (%NEW_MAINSITE_HOSTNAME%) com os dados replicados (%NEW_DRSITE_TARGET_NAME%) no novo servidor de destino (%NEW_DRSITE_HOSTNAME%). Consulte a página Snapshot Replication para informações detalhadas.
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[DRReplicationReprotectFail]
+Category: Snapshot Replication,Important
+Title: Falha a proteger novamente a tarefa de replicação
+Subject: Falha a proteger novamente a tarefa de replicação (%NEW_MAINSITE_TARGET_NAME%)
+
+Caro utilizador,
+
+O sistema falhou a proteger noamente a tarefa de replicação (%NEW_MAINSITE_TARGET_NAME%) para o novo servidor de origem (%NEW_MAINSITE_HOSTNAME%) com os dados replicados (%NEW_DRSITE_TARGET_NAME%) no novo servidor de destino (%NEW_DRSITE_HOSTNAME%). Consulte a página Snapshot Replication para informações detalhadas.
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[DRReplicationScheduleSyncCompletion]
+Category: Snapshot Replication,Important
+Title: Concluída duplicação agendada
+Subject: A tarefa de duplicação concluíu a duplicação agendada de %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%) para %DRSITE_HOSTNAME% (%DRSITE_TARGET_NAME%)
+
+Caro utilizador,
+
+A tarefa de replicação concluiu a replicação agendada. Consulte a página Snapshot Replication para informações detalhadas.
+
+Servidor de origem: %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%)
+Servidor de destino: %DRSITE_HOSTNAME% (%DRSITE_TARGET_NAME%)
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[DRReplicationScheduleSyncFail]
+Category: Snapshot Replication,Important
+Title: Falha a realizar duplicação agendada
+Subject: Falha na tarefa de duplicação para realizar duplicação agendada para %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%)
+
+Caro utilizador,
+
+Falha na tarefa de duplicação para realizar duplicação agendada para %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%). Consulte a página Snapshot Replication para informações detalhadas.
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[DRReplicationSwitchoverCompletion]
+Category: Snapshot Replication,Important
+Title: Realizado com êxito o switchover de tarefa de replicação
+Subject: Realizado switchover de %NEW_DRSITE_HOSTNAME% (%NEW_DRSITE_TARGET_NAME%) para %NEW_MAINSITE_HOSTNAME% com êxito
+
+Caro utilizador,
+
+O sistema realizou o switchover de %NEW_DRSITE_HOSTNAME% (%NEW_DRSITE_TARGET_NAME%) para o servidor de destino (%NEW_MAINSITE_HOSTNAME%) com êxito. Consulte a página Snapshot Replication para informações detalhadas.
+
+Novo servidor de origem: %NEW_MAINSITE_HOSTNAME% (%NEW_MAINSITE_TARGET_NAME%)
+Novo servidor de destino: %NEW_DRSITE_HOSTNAME% (%NEW_DRSITE_TARGET_NAME%)
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[DRReplicationSwitchoverFail]
+Category: Snapshot Replication,Important
+Title: Falha ao realizar o switchover da tarefa de replicação
+Subject: Falha ao realizar o switchover de %NEW_DRSITE_HOSTNAME% (%NEW_DRSITE_TARGET_NAME%) para %NEW_MAINSITE_HOSTNAME%
+
+Caro utilizador,
+
+O sistema não conseguiu realizar o switchover de %NEW_DRSITE_HOSTNAME% (%NEW_DRSITE_TARGET_NAME%) para o servidor de destino (%NEW_MAINSITE_HOSTNAME%). Consulte a página Snapshot Replication para informações detalhadas.
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[DRReplicationSyncFail]
+Category: Snapshot Replication,Important
+Title: Falha a realizar duplicação
+Subject: Falha na tarefa de duplicação para realizar duplicação para %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%)
+
+Caro utilizador,
+
+Falha na tarefa de duplicação para realizar duplicação para %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%). Consulte a página Snapshot Replication para informações detalhadas.
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[DRReplicationSyncNotFinishInNotifyTime]
+Category: Snapshot Replication,Important
+Title: Tarefa de replicação não concluída
+Subject: A tarefa de replicação %MAINSITE_TARGET_NAME% para %DRSITE_HOSTNAME% (%DRSITE_TARGET_NAME%) não foi concluída
+
+Caro utilizador,
+
+A tarefa de replicação não foi concluída em %NOTIFY_TIME% minutos. Consulte a página Snapshot Replication para informações detalhadas.
+
+Servidor de origem: %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%)
+Servidor de destino: %DRSITE_HOSTNAME% (%DRSITE_TARGET_NAME%)
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[DRReplicationSyncStop]
+Category: Snapshot Replication,Important
+Title: Duplicação interrompida
+Subject: A tarefa de duplicação a executar duplicação %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%) interrompida
+
+Caro utilizador,
+
+A tarefa de duplicação que realiza duplicação para %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%) foi interrompida. Consulte a página Snapshot Replication para informações detalhadas.
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[DRReplicationTestFailoverCompletion]
+Category: Snapshot Replication,Important
+Title: Iniciado com êxito failover de teste de tarefa de replicação
+Subject: Failover de teste de %TEST_TARGET_NAME% agora disponível
+
+Caro utilizador,
+
+Failover de teste de %TEST_TARGET_NAME% agora disponível. Consulte a página Snapshot Replication para informações detalhadas.
+
+Servidor de teste: %DRSITE_HOSTNAME%
+Nome de pasta partilhada de teste/iSCSI LUN: %TEST_TARGET_NAME%
+Versão de teste: %SNAPSHOT_VERSION%
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[DRReplicationTestFailoverFail]
+Category: Snapshot Replication,Important
+Title: Falha a iniciar o failover de teste da tarefa de replicação
+Subject: Falha ao iniciar o failover de teste de %TEST_TARGET_NAME% em %DRSITE_HOSTNAME%
+
+Caro utilizador,
+
+Falha do sistema ao iniciar um failover de teste no servidor de destino (%DRSITE_HOSTNAME%). Consulte a página Snapshot Replication para informações detalhadas.
+
+Servidor de teste: %DRSITE_HOSTNAME%
+Nome de pasta partilhada de teste/iSCSI LUN: %TEST_TARGET_NAME%
+Versão de teste: %SNAPSHOT_VERSION%
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[DRShareTakeSnapshotFail]
+Category: Snapshot Replication,Important
+Title: Falha a tirar um instantâneo para pasta partilhada
+Subject: Falha a tirar um instantâneo para pasta partilhada %SHARE% em %HOSTNAME%
+
+Caro utilizador,
+
+Falha ao tirar um instantâneo de pasta partilhada em %HOSTNAME%. Consulte a página de registos de Snapshot Replication para informações detalhadas.
+
+Pasta partilhada: %SHARE%
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[DRSnapshotScheduleTaskTooDenseFail]
+Category: Snapshot Replication,Important
+Title: A tarefa de instantâneo agendado anterior ainda está em curso
+Subject: A tarefa de instantâneo agendado anterior ainda está em curso %MAINSITE_TARGET_NAME%.
+
+Caro utilizador,
+
+Falha ao realizar a tarefa de instantâneo agendada em %MAINSITE_TARGET_NAME% porque a tarefa de instantâneo agendado anterior ainda está em execução. Consulte a página Snapshot Replication para informações detalhadas.
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[DSMAutoUpdateReady]
+Category: System,Important
+Title: Atualização automática do sistema
+Subject: A Atualização Automática de %OSNAME% irá iniciar automaticamente em %HOSTNAME% dentro de %COUNTDOWN_MINUTE% minutos
+
+Caro utilizador,
+
+%NEW_VERSION% será automaticamente instalada dentro de %COUNTDOWN_MINUTE% minutos. Se pretender cancelar a instalação, inicie sessão em %HOSTNAME% e faça-o na área de notificações.
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[DSMAutoUpdateShutdownStart]
+Category: System,Important
+Title: Atualizações do sistema a instalar automaticamente antes do encerramento agendado
+Subject: Atualizações de %OSNAME% serão instaladas em %HOSTNAME% antes do encerramento agendado
+
+Caro utilizador,
+
+%NEW_VERSION% será instalada antes do encerramento agendado e %HOSTNAME% será desligado depois da instalação estar concluída. Não desligue o seu %DISKSTATION% antes de estar concluída a instalação.
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[DSMUpdateAvailable]
+Category: System,Important
+Title: Nova actualização de %OSNAME% pronta
+Subject: A actualização %OSNAME% está preparada para ser instalada no %HOSTNAME%
+
+Caro utilizador,
+
+Uma nova versão de %OSNAME% foi transferida e está pronta para ser instalada. Inicie sessão no %HOSTNAME% e aceda a painel de Controlo > Actualizar e Restaurar para instalar %NEW_VERSION%. Para saber mais acerca da actualização %OSNAME%, consulte %HTTP_URL%.
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[DeviceEjectedImproperly]
+Category: External Storage
+Title: O dispositivo externo não foi ejectado correctamente
+Subject: O dispositivo externo %DEVICE_NAME% em %HOSTNAME% não foi ejectado correctamente.
+
+Caro utilizador,
+
+O dispositivo externo %DEVICE_NAME% em %HOSTNAME% não foi ejectado correctamente. Para evitar a perda de dados, recomendamos a ejecção do dispositivo antes de desligá-lo.
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[DiskTemperatureAbnormal]
+Category: Storage,Important
+Title: A temperatura do disco não é a temperatura de funcionamento
+Subject: O disco %DISK_ID% não está dentro da temperatura de funcionamento
+
+Caro utilizador,
+
+A temperatura do disco %DISK_ID% [%MODEL%] é %REAL_TEMPERATURE% ºC, o que não está dentro da temperatura de funcionamento, %MIN_TEMPERATURE% ºC ~ %MAX_TEMPERATURE% ºC.
+Mantenha os discos dentro da temperatura de funcionamento aceitável.
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[DiskTemperatureNormal]
+Subject: O disco %DISK_ID% está dentro da temperatura de funcionamento
+
+Caro utilizador,
+
+A temperatura do disco %DISK_ID% [%MODEL%] está agora dentro da temperatura de operação aceitável, %MIN_TEMPERATURE% ºC ~ %MAX_TEMPERATURE% ºC.
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[DriveSlotDisabled]
+Category: Storage,Important
+Title: Entrada de unidade desactivada
+Subject: Entrada de unidade [%DISK_ID%] desactivada
+
+Caro utilizador,
+
+Uma entrada de unidade foi desactivada devido a erros no disco rígido [%DISK_ID%]. Substitua a unidade, active-a e repare qualquer volume degradado, se necessário.
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[DsmProtectionCheckFailed]
+Category: System,Important
+Title: Anomalia do sistema detectada
+Subject: Detectada anomalia em %HOSTNAME% Todos os volumes foram desmontados.
+
+Caro utilizador,
+
+O sistema detetou uma anomalia em %HOSTNAME%. Para proteger os dados, todos os volumes foram desmontados. Contacte a equipa de suporte Synology para obter assistência.
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[EBoxHDEcc]
+Category: Storage,Important
+Title: Erro I/O no disco da unidade de expansão
+Subject: Erro I/O ocorreu no disco %DISK_ID% de %EUNIT_ID% em %HOSTNAME%
+
+Caro utilizador,
+
+O disco rígido %DISK_ID% de %EUNIT_ID% em %HOSTNAME% teve um erro I/O , mas está agora a funcionar corretamente após várias tentativas. Pode ter sido causado por setores estragados. Se o erro ocorrer novamente, salvaguarde os seus dados e execute o teste S.M.A.R.T. no seu disco rígido para examinar o estado do mesmo.
+
+Atentamente,
+%COMPANY_NAME%
+
+
+[ESATADiskFull]
+Category: External Storage
+Title: Disco eSATA cheio
+Subject: Disco eSATA %DISK_NUMBER% no %HOSTNAME% está a ficar sem espaço
+
+Caro utilizador,
+
+O disco eSATA %DISK_NUMBER% no %HOSTNAME% está a ficar sem espaço. Consulte a informação que se segue e tome medidas de correção.
+
+Capacidade Total: %DISK_SIZE% GB
+Capacidade disponível: %FREE_SPACE% GB (%USAGE%%)
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[ESATAPartitionFull]
+Category: External Storage
+Title: Partição eSATA cheia
+Subject: Partição %PARTITION_NUMBER% do disco eSATA %DISK_NUMBER% no %HOSTNAME% está a ficar sem espaço.
+
+Caro utilizador,
+
+A partição %PARTITION_NUMBER% do disco eSATA %DISK_NUMBER% no %HOSTNAME% está a ficar sem espaço. Consulte a informação que se segue e tome medidas de correção.
+
+Capacidade Total: %DISK_SIZE% GB
+Capacidade disponível: %FREE_SPACE% GB (%USAGE%%)
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[EUnitPowerFail]
+Category: System,Important
+Title: Fonte de alimentação redundante da unidade de expansão avariou
+Subject: A fonte de alimentação Nº.%POWERID% de %EUNIT_ID% em %HOSTNAME% falhou.
+
+Caro utilizador,
+
+A fonte de alimentação Nº.%POWERID% de %EUNIT_ID% em %HOSTNAME% falhou.
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[EUnitPowerResume]
+Category: System,Important
+Title: A fonte de alimentação redundante da unidade de expansão recuperou
+Subject: A fonte de alimentação nº %POWERID% de %EUNIT_ID% em %HOSTNAME% recuperou
+
+Caro utilizador,
+
+A fonte de alimentação nº %POWERID% de %EUNIT_ID% em %HOSTNAME% recuperou
+
+Atentamente,
+%COMPANY_NAME%
+
+
+[EboxFanResume]
+Category: System,Important
+Title: Retomada ventoinha da unidade de expansão
+Subject: %EBOX_ID% ventoinha %FAN_ID% no %HOSTNAME% foi retomado
+
+Caro utilizador,
+
+%EBOX_ID% ventoinh %FAN_ID% no %HOSTNAME% foi retomado.
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[EboxFanStop]
+Category: System,Important
+Title: Parou a ventoinha da unidade de expansão
+Subject: %EBOX_ID% ventoinha %FAN_ID% no %HOSTNAME% parou de funcionar
+
+Caro utilizador,
+
+%EBOX_ID% ventoinha %FAN_ID% no %HOSTNAME% parou de funcionar.
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[EboxLinkFail]
+Category: System,Important
+Title: Erro de ligação na unidade de expansão
+Subject: Ocorreu um erro de ligação na unidade de expansão %EBOX_ID% (SAS Out - %LINK_ID%) de %HOSTNAME% (SN: %HOST_SN%)
+
+Caro utilizador,
+
+Ocorreu um erro de ligação na unidade de expansão %EBOX_ID% (SAS Out - %LINK_ID%) de %HOSTNAME% (SN: %HOST_SN%).
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[EboxLinkResume]
+Category: System,Important
+Title: Recuperada ligação da unidade de expansão
+Subject: Recuperada a ligação na unidade de expansão %EBOX_ID% (SAS Out - %LINK_ID%) de %HOSTNAME% (SN: %HOST_SN%)
+
+Caro utilizador,
+
+A ligação na unidade de expansão %EBOX_ID% (SAS Out - %LINK_ID%) de %HOSTNAME% (SN: %HOST_SN%) foi recuperada
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[ExpansionFrmInconsistent]
+Category: System,Important
+Title: Firmware inconsistente na unidade de expansão
+Subject: O firmware na unidade de expansão %HOSTNAME% é inconsistente.
+
+Caro utilizador:
+
+O firmware da unidade de expansão %HOSTNAME% é inconsistente. Para resolver esta questão, contacte o Suporte Online da Synology em www.synology.com.
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[ForgetPassword]
+Subject: Repor Palavra-passe Esquecida
+Caro(a) %USER%,
+
+Pode clicar na ligação abaixo para repor a palavra-passe:
+%URL%
+
+Esta ligação irá funcionar durante 24 horas. Se não solicitou a alteração da palavra-passe, ignore esta mensagem.
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[HA_AbleSwitchover]
+Category: HA,Important
+Title: Mudança de cluster de high-availability novamente funcional
+Subject: Mudança de cluster de high-availability %HOSTNAME% novamente funcional
+
+Caro utilizador,
+
+Mudança de cluster de high-availability %HOSTNAME% está novamente funcional. Consulte os registos de sistema ou a página de Registos do Gestor de High Availability para obter mais informações.
+
+Ação: %HA_ACTION%
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[HA_FailOver]
+Category: HA,Important
+Title: Detetado erro no high-availability cluster
+Subject: Detetado erro no high-availability cluster %HOSTNAME%
+
+Caro utilizador,
+
+Foi detetado um erro no high-availability cluster %HOSTNAME%. O sistema irá realizar um failover para o servidor passivo. Verifique os Registos de sistema para obter mais informações.
+
+Ação: %HA_ACTION%
+Erro: %HA_PARAM_1%
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[HA_PassiveTimeout]
+Category: HA,Important
+Title: Localhost não detetou o servidor ativo
+Subject: [%HA_PARAM_1%] não conseguiu detetar o servidor ativo por um período de tempo
+
+Caro utilizador,
+
+O servidor passivo [%HA_PARAM_1%] foi encerrado porque não detetou o servidor ativo [%HA_PARAM_2%] por um período de tempo. Ligue primeiro o servidor ativo [%HA_PARAM_2%]. Se o servidor ativo [%HA_PARAM_2%] não mais estiver disponível, siga as instruções abaixo para remover o cluster high-availability: Faça o arranque [%HA_PARAM_1%] e aguarde 5 minutos. Prima longamente o botão RESET localizado no painel traseiro da sua %DISKSTATION% durante 4 segundos até a %DISKSTATION% emitir um bip. Liberte imediatamente. (Aviso: Premir o botão RESET continuamente poderá provocar a reinstalação do sistema operativo.) Para mais informações acerca das definições de sistema a repor, consulte este tutorial: https://www.synology.com/knowledgebase/DSM/tutorial/General/How_to_reset_your_Synology_NAS.
+
+Ação: %HA_ACTION%
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[HA_SwitchFail]
+Category: HA,Important
+Title: Falha ao realizar failover dos serviços
+Subject: Falha ao realizar failover do serviços do high-availability cluster %HOSTNAME%
+
+Caro utilizador,
+
+O sistema tentou realizar um failover dos serviços para o servidor passivo do high-availability cluster %HOSTNAME%, mas não teve êxito. Verifique os Registos de sistema para obter mais informações.
+
+Ação: %HA_ACTION%
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[HA_SwitchFinished]
+Category: HA,Important
+Title: O cluster de high-availability está agora em execução.
+Subject: O cluster de High-availability %HOSTNAME% está agora em execução em %HA_PARAM_1%.
+
+Caro utilizador,
+
+Os serviços do high-availability cluster %HOSTNAME% estão agora a ser executados em %HA_PARAM_1%. Consulte os registos de sistema ou a página de Registos do Gestor de High Availability para obter mais informações.
+
+Ação: %HA_ACTION%
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[HA_SwitchOver]
+Category: HA,Important
+Title: Mudança de cluster de high-availability
+Subject: Mudança de cluster de high-availability %HOSTNAME% para %HA_PARAM_1%
+
+Caro utilizador,
+
+Foi iniciada uma mudança no cluster de high-availability %HOSTNAME%. Os serviços estão a ser mudados para %HA_PARAM_1%. Verifique os Registos de sistema para obter mais informações.
+
+Ação: %HA_ACTION%
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[HA_SyncComplete]
+Category: HA,Important
+Title: Concluída replicação total dos dados
+Subject: A duplicação total dos dados do cluster de high-availability %HOSTNAME% está concluída
+
+Caro utilizador,
+
+A duplicação total dos dados do high-availability cluster %HOSTNAME% está concluída. O servidor passivo está agora pronto a tomar controlo dos serviços caso seja necessária uma mudança ou failover. Consulte os registos de sistema ou a página de Registos do Gestor de High Availability para obter mais informações.
+
+Ação: %HA_ACTION%
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[HA_UnableSwitchover]
+Category: HA,Important
+Title: Mudança de cluster de high-availability desativado
+Subject: Mudança de cluster de high-availability %HOSTNAME% foi desativado
+
+Caro utilizador,
+
+Mudança de cluster de high-availability %HOSTNAME% foi desativado. Consulte os registos de sistema ou a página de Registos do Gestor de High Availability para obter mais informações.
+
+Ação: %HA_ACTION%
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[HA_UnbindLocal]
+Category: HA,Important
+Title: Localhost removido do cluster de high-availability
+Subject: %HA_PARAM_1% foi removido do cluster de high-availability %HA_PARAM_2%
+
+Caro utilizador,
+
+%HA_PARAM_1% foi removido do cluster de high-availability %HA_PARAM_2%. Verifique os Registos de sistema para obter mais informações.
+
+Ação: %HA_ACTION%
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[HDEcc]
+Category: Storage,Important
+Title: Erro de I/O de disco
+Subject: Erro I/O ocorreu no disco rígido %DISK_ID% em %HOSTNAME%
+
+Caro utilizador,
+
+O disco rígido %DISK_ID% em %HOSTNAME% teve um erro I/O, mas está agora a funcionar corretamente após várias tentativas. Pode ter sido causado por setores estragados. Se o erro ocorrer novamente, salvaguarde os seus dados e execute o teste S.M.A.R.T. no seu disco rígido para examinar o estado do mesmo.
+
+Atentamente,
+%COMPANY_NAME%
+
+
+[HotSpareDiskPlugout]
+Category: Storage,Important
+Title: O disco Global Hot Spare está desligado.
+Subject: O disco Hot Spare (%DISK_ID%) está desligado
+
+Caro utilizador,
+
+O sistema detetou que o disco Hot Spare (%DISK_ID%) foi desligado.
+Recomendamos que adicione discos ao Hot Spare para proteger o espaço de armazenamento.
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[HotSpareRepairDone]
+Category: Storage,Important
+Title: Reparação do Global Hot Spare completada
+Subject: A reparação do espaço de armazenamento (%STORAGE_ID%) está concluída
+
+Caro utilizador,
+
+O sistema completou a reparação do espaço de armazenamento degradado (%STORAGE_ID%) com disco Hot Spare (%DISK_ID%).
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[HotSpareRepairFailed]
+Category: Storage,Important
+Title: Reparação do Global Hot Spare falhou
+Subject: Erro ao reparar o espaço de armazenamento (%STORAGE_ID%)
+
+Caro utilizador,
+
+O sistema não conseguiu reparar o espaço de armazenamento degradado (%STORAGE_ID%) com disco Hot Spare (%DISK_ID%).
+Para mais informações, consulte os registos do sistema.
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[HotSpareRepairNoProtect]
+Category: Storage,Important
+Title: Global Hot Spare: lembrar que espaços não estão protegidos
+Subject: Alguns espaços não estão protegidos pelo Hot Spare
+
+Caro utilizador,
+
+Alguns espaços (%STORAGE_ID%) não estão protegidos pelo Hot Spare
+Recomendamos que adicione discos ao Hot Spare para proteger o espaço de armazenamento.
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[HotSpareRepairStart]
+Category: Storage,Important
+Title: A reparação do Global Hot Spare está em progresso
+Subject: O sistema está a utilizar discos Hot Spare para reparar espaço de armazenamento (%STORAGE_ID%) degradado
+
+Caro utilizador,
+
+O sistema está agora a utilizar um disco Hot Spare (%DISK_ID%) para reparar o espaço de armazenamento (%STORAGE_ID%) degradado.
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[ImproperShutdown]
+Category: System,Important
+Title: Encerramento indevido
+Subject: %HOSTNAME% sofreu um encerramento indevido
+
+Caro utilizador,
+
+%HOSTNAME% sofreu uma quebra de energia e foi encerrado indevidamente.
+
+Atentamente,
+%COMPANY_NAME%
+
+
+[InternalFanResume]
+Category: System
+Title: Retomada ventoinha do servidor
+Subject: Ventoinha %FANID% do servidor %HOSTNAME% (NS: %HOST_SN%) foi retomada.
+
+Caro utilizador,
+
+Ventoinha %FANID% no servidor %HOSTNAME% (NS: %HOST_SN%) foi retomada.
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[InternalFanStop]
+Category: System,Important
+Title: Ventoinha do servidor parada
+Subject: Ventoinha %FANID% no servidor %HOSTNAME% (NS: %HOST_SN%) parou de funcionar.
+
+Caro utilizador,
+
+Ventoinha %FANID% no servidor %HOSTNAME% (NS: %HOST_SN%) parou de funcionar.
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[LocalLUNBkpError]
+Category: Backup/Restore,Important
+Title: Falha na Cópia de Segurança LUN local
+Subject: Falha - Cópia de segurança LUN em %HOSTNAME%
+
+Caro utilizador,
+
+Falhou a cópia de segurança LUN em %HOSTNAME% para a pasta partilhada local. Verifique o registo da cópia de segurança no DSM em Cópia de Segurança e Replicação > Registo para mais informações.
+
+Nome LUN: %LUN%
+Tarefa de cópia de segurança: %BKP_TASK%
+Destino da cópia de segurança: %BKP_DST%  %PATH%
+Hora de início: %TIME%
+Duração: %DUR%
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[LocalLUNBkpFinished]
+Category: Backup/Restore
+Title: Cópia de Segurança LUN local concluída
+Subject: Concluída - Cópia de segurança LUN em %HOSTNAME%
+
+Caro utilizador,
+
+Concluída cópia de segurança LUN em %HOSTNAME% para a pasta partilhada local.
+
+Nome LUN: %LUN%
+Tarefa de cópia de segurança: %BKP_TASK%
+Destino da cópia de segurança: %BKP_DST%  %PATH%
+Hora de início: %TIME%
+Duração: %DUR%
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[LocalLUNRecoverError]
+Category: Backup/Restore,Important
+Title: Falha no restauro de LUN local
+Subject: Falha - Restauro LUN em %HOSTNAME%
+
+Caro utilizador,
+
+Falhou o restauro LUN em %HOSTNAME% de pasta partilhada local. Verifique o registo da cópia de segurança no DSM em Cópia de Segurança e Replicação > Registo para mais informações.
+
+Nome LUN: %LUN%
+Origem de restauro: %BKP_SRC%  %SRC_PATH%
+Hora de início: %TIME%
+Duração: %DUR%
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[LocalLUNRecoverFinished]
+Category: Backup/Restore
+Title: Restauro de LUN local concluído
+Subject: Concluído - Restauro LUN em %HOSTNAME%
+
+Caro utilizador,
+
+Concluído restauro LUN em %HOSTNAME% de pasta partilhada local.
+
+Nome LUN: %LUN%
+Origem de restauro: %BKP_SRC%  %SRC_PATH%
+Hora de início: %TIME%
+Duração: %DUR%
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[MyDSPasswordChanged]
+Category: System,Important
+Title: Palavra-passe de Conta Synology alterada
+Subject: A palavra-passe da sua Conta Synology em %HOSTNAME% foi alterada
+
+Caro utilizador,
+
+Esta é uma confirmação de que a palavra-passe da sua Conta Synology [%MYDS_ACCOUNT%] foi alterada através da Conta Synology em %HOSTNAME%.
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[NetLUNBkpError]
+Category: Backup/Restore,Important
+Title: Falha na cópia de segurança LUN de rede
+Subject: Falha - Cópia de segurança LUN em %HOSTNAME%
+
+Caro utilizador,
+
+Falhou a cópia de segurança LUN em %HOSTNAME% para a pasta partilhada remota. Verifique o registo da cópia de segurança no DSM em Cópia de Segurança e Replicação > Registo para mais informações.
+
+Nome LUN: %LUN%
+Tarefa de cópia de segurança: %BKP_TASK%
+Destino da cópia de segurança: %BKP_DST%  %PATH%
+Hora de início: %TIME%
+Duração: %DUR%
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[NetLUNBkpOK]
+Category: Backup/Restore
+Title: Cópia de segurança LUN de rede concluída
+Subject: Concluída - Cópia de segurança LUN em %HOSTNAME%
+
+Caro utilizador,
+
+Concluída cópia de segurança LUN em %HOSTNAME% para a pasta partilhada remota.
+
+Nome LUN: %LUN%
+Tarefa de cópia de segurança: %BKP_TASK%
+Destino da cópia de segurança: %BKP_DST%  %PATH%
+Hora de início: %TIME%
+Duração: %DUR%
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[NetLUNRecoverError]
+Category: Backup/Restore,Important
+Title: Falha no restauro de LUN de rede
+Subject: Falha - Restauro LUN em %HOSTNAME%
+
+Caro utilizador,
+
+Falhou o restauro LUN em %HOSTNAME% de pasta partilhada remota. Verifique o registo da cópia de segurança no DSM em Cópia de Segurança e Replicação > Registo para mais informações.
+
+Nome LUN: %LUN%
+Origem de restauro: %BKP_SRC%  %SRC_PATH%
+Hora de início: %TIME%
+Duração: %DUR%
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[NetLUNRecoverFinished]
+Category: Backup/Restore,Important
+Title: Restauro de LUN de rede concluído
+Subject: Concluído - Restauro LUN em %HOSTNAME%
+
+Caro utilizador,
+
+Concluído restauro LUN em %HOSTNAME% de pasta partilhada remota.
+
+Nome LUN: %LUN%
+Origem de restauro: %BKP_SRC%  %SRC_PATH%
+Hora de início: %TIME%
+Duração: %DUR%
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[OTP_emergency_mail]
+Subject: Código de verificação de emergênca para %USER_NAME% de %HOSTNAME%
+
+Caro utilizador,
+
+O seguinte código de verificação de emergência de uma só utilização pode ser usado para iniciar a sessão em %HOSTNAME% e repor as definições de verificação de 2 passos. Introduza este código de 8 dígitos quando pedido que introduza um código de verificação.
+
+Código de verificação de emergência: %EMG_CODE%
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[OTP_emergency_mail_warning]
+Subject: Código de verificação de emergênca para %USER_NAME% de %HOSTNAME%
+
+Caro utilizador,
+
+O seguinte código de verificação de emergência de uma só utilização pode ser usado para iniciar a sessão em %HOSTNAME% e repor as definições de verificação de 2 passos. Introduza este código de 8 dígitos quando pedido que introduza um código de verificação.
+
+Nota: Atingiu o limite de código de emergência. Reponha as definições de verificação de 2 passos assim que possível.
+
+Código de início de sessão de emergência: %EMG_CODE%
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[OverheatShutdownCPU]
+Category: System,Important
+Title: Encerramento por sobreaquecimento da CPU
+Subject: %HOSTNAME% (SN: %HOST_SN%) encerrou devido a sobreaquecimento da CPU
+
+Caro utilizador,
+
+%HOSTNAME% (SN: %HOST_SN%) encerrou automaticamente devido ao sobreaquecimento da CPU (acima de %SHUTDOWN_TMP%°C).
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[OverheatShutdownDisk]
+Category: System,Important
+Title: Encerramento por sobreaquecimento do disco
+Subject: %HOSTNAME% foi encerrado devido a sobreaquecimento do disco.
+
+Caro utilizador,
+
+%HOSTNAME% encerrou automaticamente, porque o disco %DISK_NUM% estava em sobreaquecimento e atingiu a temperatura de %SHUTDOWN_TMP%°C.
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[OverheatShutdownThermal]
+Category: System,Important
+Title: Encerramento por sobreaquecimento
+Subject: %HOSTNAME% (SN: %HOST_SN%) encerrou devido a sobreaquecimento
+
+Caro utilizador,
+
+%HOSTNAME% (SN: %HOST_SN%) encerrou automaticamente devido ao sobreaquecimento (acima de %SHUTDOWN_TMP%°C).
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[PKGUpgrade]
+Subject: Informação de pacote de actualização para %HOSTNAME%
+
+Caro utilizador,
+
+Os pacotes seguintes estão prontos para actualizar em %HOSTNAME%. Pode iniciar o Centro de Pacotes em %OSNAME% para os actualizar.
+
+Pacotes a actualizar:
+%PKG_SET%
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[Raid5SpareChanged]
+Category: Storage,Important
+Title: Volume RAID5+spare degradado
+Subject: Volume RAID5+spare %VOLUME_ID% no %HOSTNAME% ficou degradado
+
+Caro utilizador,
+
+O volume %VOLUME_ID% em %HOSTNAME% degradou-se de RAID5+spare para RAID5. Para voltar a colocar o volume em RAID5+spare, prepare um disco de reserva, e aceda ao "Menu Principal" > "Gestor de Armazenamento" > "Volume" > "Gerir" para substituir o disco defeituoso.
+
+Para obter mais assistência, contacte o Suporte Online Synology: http://www.synology.com.
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[RaidDiskFail]
+Category: Storage,Important
+Title: Falha no HDD do Grupo de Disco
+Subject: Disco Rígido %DISK_ID% no Grupo de Discos em %HOSTNAME% avariou
+
+Caro utilizador,
+
+O disco rígido %DISK_ID% no Grupo de Disco em %HOSTNAME% avariou; por favor substitua-o.
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[RaidGroupCrashed]
+Category: Storage,Important
+Title: RAID Group teve falha fatal
+Subject: RAID Group %RAID_ID% em %HOSTNAME% teve uma falha fatal
+
+Caro utilizador,
+
+RAID Group %RAID_ID% em %HOSTNAME% teve uma falha fatal. O sistema poderá não arrancar.
+
+Para obter mais assistência, contacte o Suporte Online Synology: http://www.synology.com.
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[RaidGroupDegraded]
+Category: Storage,Important
+Title: RAID Group degradado
+Subject: RAID Group %RAID_ID% em %HOSTNAME% entrou em modo degradado [%ACTIVE_DISK%/%TOTAL_DISK%]
+
+Caro utilizador,
+
+RAID Group %RAID_ID% em %HOSTNAME% entrou em modo degradado. (Número total de discos rígidos: %TOTAL_DISK%; Número de discos rígidos activos: %ACTIVE_DISK%) Identifique a causa da degradação e tome a acção correctiva.
+
+Para obter mais assistência, contacte o Suporte Online Synology: http://www.synology.com.
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[RaidGroupDiskFail]
+Category: Storage,Important
+Title: Falha no HDD do RAID Group
+Subject: Disco Rígido %DISK_ID% no RAID Group em %HOSTNAME% avariou
+
+Caro utilizador,
+
+O disco rígido %DISK_ID% no RAID Group em %HOSTNAME% avariou; por favor substitua-o.
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[RaidGroupSyncDone]
+Category: Storage
+Title: Sincronização do RAID Group terminada
+Subject: A verificação da consistência do RAID Group %RAID_ID% em %HOSTNAME% foi concluída
+
+Caro utilizador,
+
+A verificação da consistência do RAID Group %RAID_ID% em %HOSTNAME% foi concluída. O sistema está agora pronto a ser usado.
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[RaidGroupVolumeBadSector]
+Category: Storage,Important
+Title: Volume do RAID Group avariou
+Subject: Volume do RAID Group (%VOLUME_ID%) em %HOSTNAME% avariou
+
+Caro utilizador,
+
+Alguns ficheiros foram corrompidos porque o volume do RAID Group (%VOLUME_ID%) em %HOSTNAME% avariou. Os ficheiros correm o risco de serem danificados quando no modo degradado. Repare o volume assim que possível. Vá para o Menu Principal > Registos do Sistema para mais informações.
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[RaidGroupiScsiBadSector]
+Category: Storage,Important
+Title: Avaria iSCSI LUN do RAID Group
+Subject: Avaria iSCSI LUN do RAID Group em %HOSTNAME%
+
+Caro utilizador,
+
+Alguns ficheiros forram corrompidos porque houve uma avaria iSCSI LUN do RAID Group em %HOSTNAME%. Os ficheiros correm o risco de serem danificados quando no modo degradado. Repare o volume assim que possível.
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[RaidSuggestDataScrubbing]
+Category: Storage
+Title: Lembrete de análise RAID
+Subject: Lembrete para análise RAID em %HOSTNAME%
+
+Caro utilizador,
+
+A análise RAID em %HOSTNAME% não é realizada há um mês. Recomendamos que execute uma análise RAID para garantir a integridade dos dados.
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[RaidSystemVolumeCrashed]
+Category: Storage,Important
+Title: Volume de sistema encravou
+Subject: Volume do sistema (%SYSTEM_ID%) no %HOSTNAME% teve uma falha fatal
+
+Caro utilizador,
+
+Volume do sistema (%SYSTEM_ID%) no %HOSTNAME% teve uma falha fatal. O sistema poderá não arrancar.
+Para obter mais assistência, contacte o Suporte Online Synology: http://www.synology.com.
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[RaidSystemVolumeDegrade]
+Category: Storage,Important
+Title: Volume de sistema degradou-se
+Subject: Volume do sistema (%SYSTEM_ID%) no %HOSTNAME% entrou em modo degradado [%ACTIVE_DISK%/%TOTAL_DISK%]
+
+Caro utilizador,
+
+O volume do sistema (%SYSTEM_ID%) no %HOSTNAME% entrou em modo degradado (Número total de discos rígidos: %TOTAL_DISK%; número de discos rígidos ativos: %ACTIVE_DISK%)
+
+Reinicie o sistema, e será automaticamente reparado no arranque.
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[RaidSystemVolumeSyncDone]
+Category: Storage
+Title: Concluída verificação de consistência no sistema
+Subject: Verificação da consistência do volume do sistema (%SYSTEM_ID%) no %HOSTNAME% foi concluída.
+
+Caro utilizador,
+
+%HOSTNAME% terminou de verificar a consistência no volume do sistema (%SYSTEM_ID%). O sistema está agora pronto a ser usado.
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[RaidVolumeBadSector]
+Category: Storage,Important
+Title: Avaria no volume do Grupo de Disco
+Subject: Volume do Grupo de Disco (%VOLUME_ID%) em %HOSTNAME% avariou
+
+Caro utilizador,
+
+Alguns ficheiros foram corrompidos porque o volume do Grupo de Disco (%VOLUME_ID%) em %HOSTNAME% avariou. Os ficheiros correm o risco de serem danificados quando no modo degradado. Repare o volume assim que possível. Pode aceder ao "Menu Principal" > "Informação de Sistema" > "Registo" > "Registo de sistema" para mais detalhes.
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[RaidVolumeCrashed]
+Category: Storage,Important
+Title: Volume avariado
+Subject: Volume %VOLUME_ID% no %HOSTNAME% teve uma falha fatal
+
+Caro utilizador,
+
+Volume %VOLUME_ID% no %HOSTNAME% teve uma falha fatal. O sistema poderá não arrancar.
+
+Para obter mais assistência, contacte o Suporte Online Synology: http://www.synology.com.
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[RaidVolumeDegrade]
+Category: Storage,Important
+Title: Volume degradado
+Subject: O volume %VOLUME_ID% no %HOSTNAME% entrou em modo degradado [%ACTIVE_DISK%/%TOTAL_DISK%]
+
+Caro utilizador,
+
+O volume %VOLUME_ID% no %HOSTNAME% tenrou em modo degradado. (Número total de discos rígidos: %TOTAL_DISK%; Número de discos rígidos activos: %ACTIVE_DISK%) Identifique a causa da degradação e tome a acção correctiva.
+
+Para reparar o volume, substitua os discos com defeito. Para mais informações, visite a Base de Conhecimento Synology no nosso site oficial.
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[RaidVolumeFull]
+Category: Storage,Important
+Title: Volume cheio
+Subject: Volume %VOLUME_ID% no %HOSTNAME% está a ficar sem espaço
+
+Caro utilizador,
+
+O espaço disponível do volume %VOLUME_ID% em %HOSTNAME% está a ficar reduzido; elimine alguns ficheiros para libertar espaço.
+
+Capacidade Total: %VOLUME_SIZE% GB
+Capacidade disponível: %FREE_SPACE% GB (%USAGE%%)
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[RaidVolumeSyncDone]
+Category: Storage
+Title: Concluída verificação de consistência
+Subject: Verificação da consistência do volume %VOLUME_ID% no %HOSTNAME% foi concluída
+
+Caro utilizador,
+
+%HOSTNAME% terminou de verificar a consistência no Volume %VOLUME_ID%. O sistema está agora pronto a ser usado.
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[RaidiScsiBadSector]
+Category: Storage,Important
+Title: Avaria iSCSI LUN do Grupo de Disco
+Subject: Avaria iSCSI LUN do Grupo de Disco em %HOSTNAME%
+
+Caro utilizador,
+
+Alguns ficheiros forram corrompidos porque houve uma avaria iSCSI LUN do Grupo de Disco em %HOSTNAME%. Os ficheiros correm o risco de serem danificados quando no modo degradado. Repare o volume assim que possível.
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[RaidiScsiCrashed]
+Category: Storage,Important
+Title: iSCSI LUN avariou
+Subject: iSCSI LUN (%LUN_NAME%) em %HOSTNAME% avariou
+
+Caro utilizador,
+
+iSCSI LUN (%LUN_NAME%) em %HOSTNAME% avariou. O sistema poderá não arrancar.
+
+Para obter mais assistência, contacte o Suporte Online Synology: http://www.synology.com.
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[RaidiScsiDegraded]
+Category: Storage,Important
+Title: iSCSI LUN degradado
+Subject: iSCSI LUN (%LUN_NAME%) no %HOSTNAME% entrou em modo degradado [%ACTIVE_DISK%/%TOTAL_DISK%]
+
+Caro utilizador,
+
+iSCSI LUN (%LUN_NAME%) em %HOSTNAME% entrou no modo degradado. (Número total de discos rígidos: %TOTAL_DISK%; Número de discos rígidos activos: %ACTIVE_DISK%) Identifique a causa da degradação e tome a acção correctiva.
+
+Para reparar o iSCSI LUN, substitua os discos com defeito. Para mais informações, visite a Base de Conhecimento Synology no nosso site oficial.
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[RedundantPowerRecoveredProvide]
+Category: Power System
+Title: Fonte de alimentação reduntante recuperada
+Subject: Fonte de alimentação Nº.%POWERID% no %HOSTNAME% (NS: %HOST_SN%) recuperou
+
+Caro utilizador,
+
+Fonte de alimentação Nº.%POWERID% no %HOSTNAME% (NS: %HOST_SN%) recuperou.
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[RedundantPowerStopProvide]
+Category: Power System,Important
+Title: A fonte de alimentação redundante avariou
+Subject: Fonte de alimentação Nº.%POWERID% no %HOSTNAME% (NS: %HOST_SN%) recuperou
+
+Caro utilizador,
+
+Fonte de alimentação Nº.%POWERID% no %HOSTNAME% (NS: %HOST_SN%) recuperou.
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[RestoreTaskCanceled]
+Category: Backup/Restore,Important
+Title: Restauro cancelado
+Subject: %TASK_TYPE% cancelada em %HOSTNAME%
+
+Caro utilizador,
+
+Cancelado restauro de dados em %HOSTNAME%.
+
+Origem do restauro: %DESTINATION_IP% %DESTINATION_PATH%
+Hora de início: %START_TIME%
+Duração: %DURATION%
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[RestoreTaskFailed]
+Category: Backup/Restore,Important
+Title: A restauração falhou
+Subject: %TASK_TYPE% falhou o restauro de %HOSTNAME%
+
+Caro utilizador,
+
+Não foi possível restaurar os dados de cópia de segurança de %HOSTNAME%.
+
+Consulte o registo de cópias de segurança em Hyper Backup > Registo
+para obter mais informações.
+
+Origem de restauro: %DESTINATION_IP% %DESTINATION_PATH%
+Hora de início: %START_TIME%
+Duração: %DURATION%
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[RestoreTaskFinished]
+Category: Backup/Restore
+Title: Restauro concluído
+Subject: %TASK_TYPE% com êxito em %HOSTNAME%
+
+Caro utilizador,
+
+A tarefa de restauro %TASK_NAME% está agora concluída.
+
+Origem do restauro: %DESTINATION_IP% %DESTINATION_PATH%
+Hora de início: %START_TIME%
+Duração: %DURATION%
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[SDCardFull]
+Category: External Storage
+Title: Cartão SD cheio
+Subject: Cartão SD %DISK_NUMBER% no %HOSTNAME% está a ficar sem espaço
+
+Caro utilizador,
+
+O espaço disponível do cartão SD %DISK_NUMBER% em %HOSTNAME% está a ficar reduzido. Consulte a informação que se segue e tome medidas de correção.
+
+Capacidade Total: %DISK_SIZE% GB
+Capacidade disponível: %FREE_SPACE% GB (%USAGE%%)
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[SDCardPartitionFull]
+Category: External Storage
+Title: Partição do cartão SD cheia
+Subject: Partição %PARTITION_NUMBER% do cartão SD %DISK_NUMBER% no %HOSTNAME% está a ficar sem espaço
+
+Caro utilizador,
+
+Partição %PARTITION_NUMBER% do cartão SD %DISK_NUMBER% no %HOSTNAME% está a ficar sem espaço. Tome medidas de correcção.
+
+Capacidade Total: %DISK_SIZE% GB
+Capacidade disponível: %FREE_SPACE% GB (%USAGE%%)
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[SFPModuleUnsupported]
+Category: System,Important
+Title: Módulo SFP+ não suportado
+Subject: Foi detetado um módulo SFP+ %LAN% não suportado
+
+Caro utilizador,
+
+Foi detetado um módulo SFP+ %LAN% não suportado e a unidade da placa de Interface de rede foi desativada.
+Instale um módulo suportado e reinicie a sua %DISKSTATION%.
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[SSDCacheCrashed]
+Category: Storage,Important
+Title: Cache SSD teve falha fatal
+Subject: SSD Cache %SSD_ID% em %HOSTNAME% avariou
+
+Caro utilizador,
+
+SSD Cache %SSD_ID% em %HOSTNAME% avariou. Para obter mais assistência, contacte o Suporte Online Synology: http://www.synology.com.
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[SSDCacheDegraded]
+Category: Storage,Important
+Title: Cache SSD degradada
+Subject: SSD Cache %SSD_ID% em %HOSTNAME% ficou degradada
+
+Caro utilizador,
+
+SSD Cache %SSD_ID% em %HOSTNAME% ficou degradada. Para obter mais assistência, contacte o Suporte Online Synology: http://www.synology.com.
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[SSDCacheMissing]
+Category: Storage,Important
+Title: Cache de leitura-escrita em falta
+Subject: Cache de leitura-escrita de %SPACE_ID% em %HOSTNAME% está em falta
+
+Caro utilizador,
+
+Cache de leitura-escrita de %SPACE_ID% em %HOSTNAME% está em falta. Para obter mais assistência, contacte o Suporte Online Synology: http://www.synology.com.
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[SecurityScanAlarm]
+Category: System,Important
+Title: Riscos de segurança encontrados
+Subject: Riscos de segurança encontrados em %HOSTNAME%
+
+Caro utilizador,
+
+O Consultor de segurança terminou uma análise programada em %HOSTNAME%. Foram encontrados vários riscos de segurança que precisam da sua atenção. Inicie sessão no %OSNAME% em %HOSTNAME% e veja o relatório no Consultor de segurança.
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[SecurityScanDSMOutOfDate]
+Category: System,Important
+Title: Sistema desatualizado
+Subject: %OSNAME% no %HOSTNAME% está desatualizado relativamente ao Consultor de Segurança
+
+Caro utilizador,
+
+%OSNAME% em execução em %HOSTNAME% está desactualizado. Inicie a sessão em %OSNAME% em %HOSTNAME%, abra o Painel de Controlo, e instale a versão mais recente de %OSNAME%. Para obter um relatório detalhado, aceda a Menu Principal > Consultor de Segurança.
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[SecurityScanDSMPackageOutOfDate]
+Category: System,Important
+Title: Sistema e pacotes desatualizados
+Subject: %OSNAME% e pacotes em %HOSTNAME% estão desactualizados relativamente ao Consultor de Segurança
+
+Caro utilizador,
+
+o(s) pacote(s) %OSNAME% e %NUMBER% em execução em %HOSTNAME% está(estão) desactualizados. Inicie sessão no %OSNAME% em %HOSTNAME% e faça o seguinte:
+- Abra o Painel de Controlo e instale a versão mais recente do %OSNAME%.
+- Abra o Centro de pacotes e instale a versão mais recente do(s) seu(s) pacote(s).
+
+Para obter um relatório detalhado, aceda a Menu Principal > Consultor de Segurança.
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[SecurityScanDanger]
+Category: System,Important
+Title: Malware detetado
+Subject: Detectado malware em %HOSTNAME%
+
+Caro utilizador,
+
+Detectado malware em %HOSTNAME%. Inicie sessão em %OSNAME% em %HOSTNAME% e abra o Consultor de segurança para corrigir o problema.
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[SecurityScanPackageOutOfDate]
+Category: System,Important
+Title:  Pacotes desatualizados
+Subject: Os pacotes em %HOSTNAME% estão desactualizados
+
+Caro utilizador,
+
+o(s) pacote(s) %NUMBER% em execução em %HOSTNAME% está(estão) desactualizados. Inicie sessão no %OSNAME% em %HOSTNAME%, abra o Centro de pacotes para instalar a versão mais recente do(s) seu(s) pacote(s).
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[ShareSyncError]
+Category: Backup/Restore,Important
+Title: Falha na sincronização da pasta partilhada
+Subject: Falha - Sincronização de Pasta Partilhada
+
+Caro utilizador,
+
+Falhou a sincronização de pasta partilhada em %HOSTNAME%. Verifique o registo da cópia de segurança no DSM em Centro de Registos para mais informações.
+
+Tarefa de sincronização: %S2S_TASK%
+Servidor de sincronização: %S2S_SERVER%
+Hora de início: %TIME%
+Duração: %DUR%
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[ShareSyncSuccess]
+Category: Backup/Restore
+Title: Sincronização de pasta partilhada concluída
+Subject: Concluída - Sincronização de Pasta Partilhada
+
+Caro utilizador,
+
+Concluída Sincronização de Pasta Partilhada em %HOSTNAME%.
+
+Tarefa de sincronização: %S2S_TASK%
+Servidor de sincronização: %S2S_SERVER%
+Hora de início: %TIME%
+Duração: %DUR%
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[SmartEBoxAbnor]
+Category: Storage,Important
+Title: O estado S.M.A.R.T. do disco da unidade de expansão é anormal
+Subject: O estado S.M.A.R.T. do Disco %DISK_ID% em %EUNIT_ID% ligado a %HOSTNAME% está anormal
+
+Caro utilizador,
+
+O estado S.M.A.R.T. do Disco %DISK_ID% em %EUNIT_ID% ligado a %HOSTNAME% está anormal. Isto poderá indicar uma falha iminente. Efetue uma cópia de segurança dos seus dados e substitua o disco assim que possível.
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[SmartESataAbnor]
+Category: External Storage,Important
+Title: O estado S.M.A.R.T. do disco eSATA é anormal
+Subject: O estado S.M.A.R.T. do disco eSATA em %HOSTNAME% é anormal
+
+Caro utilizador,
+
+O estado S.M.A.R.T. do disco eSATA em %HOSTNAME% é anormal. Isto poderá indicar uma falha iminente. Efetue uma cópia de segurança dos seus dados e substitua o disco assim que possível.
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[SmartIntAbnor]
+Category: Storage,Important
+Title: O estado S.M.A.R.T. do disco interno é anormal
+Subject: O estado S.M.A.R.T. do Disco %DISK_ID% em %HOSTNAME% é anormal
+
+Caro utilizador,
+
+O estado S.M.A.R.T. do Disco interno em %DISK_ID% em %HOSTNAME% é anormal. Isto poderá indicar uma falha iminente. Efetue uma cópia de segurança dos seus dados e substitua o disco assim que possível.
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[SmartTestEBoxErr]
+Category: Storage,Important
+Title: Falha do teste S.M.A.R.T. no disco da unidade de expansão
+Subject: O disco %DISK_ID% em %EUNIT_ID% ligado a %HOSTNAME% falhou o teste S.M.A.R.T.
+
+Caro utilizador,
+
+O disco rígido %DISK_ID% em %EUNIT_ID% ligado a %HOSTNAME% falhou no teste S.M.A.R.T. Crie uma cópia de seguraça dos seus dados e substitua o disco assim que possível.
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[SmartTestESataErr]
+Category: External Storage,Important
+Title: Falha do teste S.M.A.R.T. no disco eSATA
+Subject: O disco eSATA em %HOSTNAME% falhou o teste S.M.A.R.T.
+
+Caro utilizador,
+
+O disco eSATA em %HOSTNAME% falhou no teste S.M.A.R.T. Crie uma cópia de seguraça dos seus dados e substitua o disco assim que possível.
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[SmartTestIntErr]
+Category: Storage,Important
+Title: Falha do teste S.M.A.R.T. no disco interno
+Subject: O disco %DISK_ID% em %HOSTNAME% falhou o teste S.M.A.R.T.
+
+Caro utilizador,
+
+O disco rígido %DISK_ID% em %HOSTNAME% falhou no teste S.M.A.R.T. Crie uma cópia de seguraça dos seus dados e substitua o disco assim que possível.
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[StoragePoolCrashed]
+Category: Storage,Important
+Title: Encravou o grupo de discos
+Subject: Grupo de disco %RAID_ID% em %HOSTNAME% teve uma falha fatal
+
+Caro utilizador,
+
+Grupo de disco %RAID_ID% em %HOSTNAME% teve uma falha fatal. O sistema poderá não arrancar.
+
+Para obter mais assistência, contacte o Suporte Online Synology: http://www.synology.com.
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[StoragePoolDegraded]
+Category: Storage,Important
+Title: Degradação no grupo de discos
+Subject: Grupo de disco %RAID_ID% em %HOSTNAME% entrou em modo degradado [%ACTIVE_DISK%/%TOTAL_DISK%]
+
+Caro utilizador,
+
+Grupo de disco %RAID_ID% em %HOSTNAME% entrou em modo degradado. (Número total de discos rígidos: %TOTAL_DISK%; Número de discos rígidos activos: %ACTIVE_DISK%) Identifique a causa da degradação e tome a acção correctiva.
+
+Para obter mais assistência, contacte o Suporte Online Synology: http://www.synology.com.
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[StoragePoolRaid5SpareChanged]
+Category: Storage,Important
+Title: Grupo de discos - Raid5+spare degradado
+Subject: Grupo de disco %RAID_ID% em %HOSTNAME% ficou degradado para RAID5
+
+Caro utilizador,
+
+Grupo de disco %RAID_ID% em %HOSTNAME% ficou degradado de RAID5+spare para RAID5. Para voltar a colocar o volume em RAID5+spare, prepare um disco de reserva, e aceda ao "Menu Principal" > "Gestor de armazenamento" > "Disco de Grupo" para substituir o disco defeituoso.
+
+Para obter mais assistência, contacte o Suporte Online Synology: http://www.synology.com.
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[StoragePoolSyncDone]
+Category: Storage
+Title: Concluída sincronização do grupo de discos
+Subject: A verificação da consistência do Grupo de disco %RAID_ID% em %HOSTNAME% foi concluída
+
+Caro utilizador,
+
+A verificação da consistência do Grupo de disco %RAID_ID% em %HOSTNAME% foi concluída. O sistema está agora pronto a ser usado.
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[SynoReport]
+Subject: O relatório de utilização de disco foi gerado
+
+Caro utilizador,
+
+O relatório de utilização de disco do %PROFILE% foi gerado. Para visualizar o relatório, consulte abaixo:
+%LINK%
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[SynoReportFail]
+Subject: Falha a gerar relatório de utilização de armazenamento
+
+Caro utilizador,
+
+Ocorreu um erro a gerar o relatório de utilização de %PROFILE%.
+
+Razão: %MSG%
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[SystemInodeFull]
+Category: System
+Title: Contagem de ficheiros no sistema a atingir o limite
+Subject: Contagem de ficheiros na partição de sistema em %HOSTNAME% está a atingir o limite
+
+Caro utilizador,
+
+A contagem de ficheiros na partição de sistema em %HOSTNAME% está a atingir o limite Por favor, contacte o Apoio da Synology para obter ajuda.
+
+Contagem máxima de ficheiros: %TOTAL_INODE%
+Contagem restante de ficheiros: %FREE_INODE% (%USAGE%%)
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[SystemVolumeCrashed]
+Category: System
+Title: O espaço de armazenamento de sistema avariou
+Subject: Espaço de armazenamento em %HOSTNAME% de sistema no avariou
+
+Caro utilizador,
+
+Espaço de armazenamento em %HOSTNAME% de sistema no avariou.
+
+Para obter mais assistência, contacte o Suporte Online da Synology em http://www.synology.com
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[SystemVolumeFull]
+Category: System
+Title: O espaço de armazenamento de sistema está cheio
+Subject: O espaço de armazenamento de sistema do %HOSTNAME% está a acabar
+
+Caro utilizador,
+
+O espaço disponível do volume de sistema %HOSTNAME% está a esgotar-se. Consulte a informação abaixo e liberte espaço.
+
+Capacidade Total: %VOLUME_SIZE% GB
+Capacidade disponível: %FREE_SPACE% GB (%USAGE%%)
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[TPLUNReachSoftLimit]
+Category: Storage,Important
+Title: Armazenamento LUN insuficiente
+Subject: Armazenamento LUN %LUN_NAME% em %HOSTNAME% está a ficar cheio
+
+Caro utilizador,
+
+A capacidade livre de LUN %LUN_NAME% em %HOSTNAME% está a ficar fraca. Expanda o volume para maior capacidade.
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[TaskSchedulerResult]
+Subject: O Agendamento de tarefas concluiu uma tarefa agendada
+
+Caro utilizador,
+
+o Agendamento de tarefas concluiu uma tarefa agendada.
+
+Tarefa: %TASK_ID%
+Hora de início: %START_TIME%
+Hora do fim: %STOP_TIME%
+Estado atual: %EXIT_CODE%
+Erro/Saída padrão:
+%OUTPUT%
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[TestMail]
+Subject: Mensagem de teste do %HOSTNAME%
+
+Caro utilizador,
+
+Parabéns! Configurou a notificação por e-mail no %HOSTNAME% com sucesso.
+Para mais configurações do sistema, visite %HTTP_URL%.
+(Se não for possível ligar ao servidor, contacte o administrador.)
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[UPSConnected]
+Category: Power System
+Title: UPS ligada
+Subject: %HOSTNAME% foi ligada à UPS.
+
+Caro utilizador,
+
+%HOSTNAME% foi ligada à UPS.
+
+Atentamente,
+%COMPANY_NAME%
+
+
+[UPSDisconnect]
+Category: Power System,Important
+Title: UPS desligada
+Subject: %HOSTNAME% perdeu a ligação à UPS.
+
+Caro utilizador,
+
+%HOSTNAME% perdeu a ligação à UPS. Verifique as definições do servidor.
+
+Atentamente,
+%COMPANY_NAME%
+
+
+[UPSOnAC]
+Category: Power System,Important
+Title: A UPS regressou ao modo AC
+Subject: O dispositivo UPS ligado a %HOSTNAME% regressou ao modo AC.
+
+Caro utilizador,
+
+O dispositivo UPS ligado a %HOSTNAME% regressou ao modo AC.
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[UPSOnBattery]
+Category: Power System,Important
+Title: A UPS entrou em modo de bateria
+Subject: O dispositivo UPS ligado a %HOSTNAME% entrou em modo de bateria.
+
+Caro utilizador,
+
+O dispositivo UPS ligado a %HOSTNAME% entrou em modo de bateria. %HOSTNAME% irá encerrar assim que a bateria do dispositivo UPS se esgotar. Desligue manualmente %HOSTNAME% ou restaure o fornecimento externo de energia o mais depressa possível.
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[UPSPowerFail]
+Category: Power System,Important
+Title: Ponto de bateria fraca no UPS atingido
+Subject: A bateria da UPS ligada a %HOSTNAME% atingiu o seu ponto fraco
+
+Caro utilizador,
+
+A bateria da UPS ligada a %HOSTNAME% atingiu o seu ponto fraco. Todos os serviços estão encerrados. Os serviços serão reiniciados quando o UPS recuperar.
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[USBCOPYDisconnect]
+Category: USB Copy
+Title: USBCopy desligado
+Subject: Dispositivo externo desligado em %HOSTNAME%
+
+Caro utilizador,
+
+O %COPY% em %HOSTNAME% falhou porque o dispositivo externo foi desligado.
+
+Atentamente,
+%COMPANY_NAME%
+
+
+[USBCOPYError]
+Category: USB Copy,Important
+Title: Falha de USBCopy
+Subject: Falhou a %COPY% em %HOSTNAME%
+
+Caro utilizador,
+
+O %COPY% em %HOSTNAME% falhou devido a erros desconhecidos.
+O código de erro é %ERR%. Verifique o registo USBCopy/SDCopy para mais informação.
+
+Atentamente,
+%COMPANY_NAME%
+
+
+[USBCOPYFinished]
+Category: USB Copy
+Title: USBCopy concluído
+Subject: O %COPY% em %HOSTNAME% foi concluído com sucesso.
+
+Caro utilizador,
+
+O %COPY% em %HOSTNAME% foi concluído com sucesso.
+
+Atentamente,
+%COMPANY_NAME%
+
+
+[USBCOPYNospace]
+Category: USB Copy,Important
+Title: USBCopy cancelado
+Subject: A %COPY% em%HOSTNAME% foi cancelada
+
+Caro utilizador,
+
+A %COPY% em %HOSTNAME% foi cancelada porque o espaço disponível da pasta partilhada de destino esgotou-se.
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[USBDiskFail]
+Category: External Storage
+Title: Avaria no disco USB
+Subject: Disco USB %DISK_ID% em %HOSTNAME% teve uma falha fatal
+
+Caro utilizador,
+
+Disco USB %DISK_ID% em %HOSTNAME% teve uma falha fatal.
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[USBDiskFull]
+Category: External Storage
+Title: Disco USB cheio
+Subject: Disco USB %DISK_NUMBER% em %HOSTNAME%a ficar sem espaço
+
+Caro utilizador,
+
+O disco USB %DISK_NUMBER% em %HOSTNAME% está a ficar sem espaço; tome medidas de correção.
+
+Capacidade Total: %DISK_SIZE% GB
+Capacidade disponível: %FREE_SPACE% GB (%USAGE%%)
+
+Atentamente,
+%COMPANY_NAME%
+
+
+[USBPartitionFull]
+Category: External Storage
+Title: Partição USB cheia
+Subject: Partição %PARTITION_NUMBER% do disco USB %DISK_NUMBER% no %HOSTNAME% está a ficar sem espaço
+
+Caro utilizador,
+
+A partição %PARTITION_NUMBER% do disco USB %DISK_NUMBER% no %HOSTNAME% está a ficar sem espaço. Tome medidas de correcção.
+
+Capacidade Total: %DISK_SIZE% GB
+Capacidade disponível: %FREE_SPACE% GB (%USAGE%%)
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[UserChangePassword]
+Subject: A sua palavra-passe em %HOSTNAME% foi alterada
+
+Caro(a) %USER_NAME%,
+
+Isto é uma confirmação de que a sua palavra-passe em %HOSTNAME% foi alterada.
+
+Para modificar as suas definições de conta, insira no seu browser %HTTP_URL%. (Se não for possível ligar ao servidor, contacte o administrador.)
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[UserWelcome]
+Category: System
+Title: Bem-vindo novo utilizador
+Subject: Bem-vindo %USER_NAME% no servidor %HOSTNAME%
+
+Caro utilizador,
+
+Bem-vindo a %HOSTNAME%!
+Pode direccionar o seu navegador para %HTTP_URL% para alterar o seu perfil pessoal.
+(Se não for possível ligar ao servidor, contacte o administrador.)
+
+O seu nome de utilizador: %USER_NAME%
+A sua palavra-passe: %PASSWD%
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[VolumeInodeFull]
+Category: Storage,Important
+Title: Contagem de ficheiros no volume a atingir o limite
+Subject: Contagem de ficheiros no volume %VOLUME_ID% em %HOSTNAME% está a atingir o limite
+
+Caro utilizador,
+
+A contagem de ficheiros no volume %VOLUME_ID% em %HOSTNAME% está a atingir o limite Elimine alguns ficheiros para reduzir o número.
+
+Contagem máxima de ficheiros: %TOTAL_INODE%
+Contagem restante de ficheiros: %FREE_INODE% (%USAGE%%)
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[VpncReconnectFail]
+Category: System
+Title: A remarcação do Cliente VPN falhou
+Subject: A nova ligação do perfil VPN [%VPN_CLIENT%] em %HOSTNAME% avariou
+
+Caro utilizador,
+
+A nova ligação do perfil VPN [%VPN_CLIENT%] em %HOSTNAME% avariou depois de desligar. Verifique a ligação entre o cliente VPN e o servidor.
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[aha_reboot_active]
+Category: AHA,Important
+Title: Reiniciar servidor activo
+Subject: O servidor ativo do high-availability cluster %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) reiniciou
+
+Caro utilizador,
+
+O administrador reiniciou o servidor activo do high-availability cluster %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%).
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[aha_reboot_active_fail]
+Category: AHA,Important
+Title: Falha a reiniciar o servidor activo
+Subject: Falha a reiniciar o servidor activo do high-availability cluster %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%)
+
+Caro utilizador,
+
+O servidor ativo do high-availability cluster %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) não reiniciou. Consulte a página de Registos do High Availability Manager para informações detalhadas.
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[aha_reboot_passive]
+Category: AHA
+Title: Reiniciar servidor passivo
+Subject: O servidor ativo do high-availability cluster %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) reiniciou.
+
+Caro utilizador,
+
+Um utilizador reiniciou o servidor passivo do high-availability cluster %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%).
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[aha_reboot_passive_fail]
+Category: AHA
+Title: Falha a reiniciar o servidor passivo.
+Subject: Falha a reiniciar o servidor activo do high-availability cluster %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%)
+
+Caro utilizador,
+
+O servidor ativo do high-availability cluster %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) não reiniciou. Consulte a página de Registos do High Availability Manager para informações detalhadas.
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[aha_reboot_remote]
+Category: AHA
+Title: Reiniciar servidor desconhecido
+Subject: O servidor desconhecido ligado ao high-availability cluster %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) reiniciou
+
+Caro utilizador,
+
+Um utilizador reiniciou o servidor desconhecido ligado ao high-availability cluster %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%).
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[aha_reboot_remote_fail]
+Category: AHA
+Title: Falha a reiniciar o servidor desconhecido
+Subject: Falha a reiniciar o servidor desconhecido ligado ao high-availability cluster %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%)
+
+Caro utilizador,
+
+O servidor desconhecido ligado ao high-availability cluster %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) não reiniciou. Consulte a página de Registos do High Availability Manager para informações detalhadas.
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[aha_recover_remote]
+Category: AHA,Important
+Title: Adicionar um novo servidor
+Subject: Adicionar um novo servidor ao high-availability cluster
+
+Caro utilizador,
+
+Um administrador iniciou a recuperação do servidor desconhecido. O servidor está a aderir ao high-availability cluster %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) como servidor passivo. Consulte a página de Registos do High Availability Manager para informações detalhadas.
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[aha_recover_remote_fail]
+Category: AHA,Important
+Title: Falha ao adicionar uma novo servidor
+Subject: Falha a adicionar um novo servidor ao high-availability cluster
+
+Caro utilizador,
+
+O servidor desconhecido não conseguiu aderir ao high-availability cluster %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) como servidor passivo. Consulte a página de Registos do High Availability Manager para informações detalhadas.
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[aha_shutdown]
+Category: AHA,Important
+Title: Desligar high-availability cluster
+Subject: High-availability cluster %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) foi desligado
+
+Caro utilizador,
+
+Um utilizador desligou o high-availability cluster %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%).
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[aha_shutdown_active]
+Category: AHA,Important
+Title: Desligar servidor ativo
+Subject: O servidor ativo do high-availability cluster %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) foi desligado
+
+Caro utilizador,
+
+O administrador reiniciou o servidor activo do high-availability cluster %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%).
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[aha_shutdown_active_fail]
+Category: AHA,Important
+Title: Falha a desligar o servidor activo
+Subject: Falha a desligar o servidor ativo do high-availability cluster %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%)
+
+Caro utilizador,
+
+O servidor ativo do high-availability cluster %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) não foi desligado. Consulte a página de Registos do High Availability Manager para informações detalhadas.
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[aha_shutdown_fail]
+Category: AHA,Important
+Title: Não foi possível desligar high-availability cluster
+Subject: Falha a desligar o high-availability cluster %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%)
+
+Caro utilizador,
+
+O high-availability cluster %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) não foi desligado. Consulte a página de Registos do High Availability Manager para informações detalhadas.
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[aha_shutdown_passive]
+Category: AHA,Important
+Title: Desligar servidor passivo
+Subject: O servidor ativo do high-availability cluster %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) foi desligado
+
+Caro utilizador,
+
+O administrador reiniciou o servidor activo do high-availability cluster %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%).
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[aha_shutdown_passive_fail]
+Category: AHA,Important
+Title: Falha a desligar o servidor passivo
+Subject: Falha a desligar o servidor ativo do high-availability cluster %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%)
+
+Caro utilizador,
+
+O servidor ativo do high-availability cluster %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) não foi desligado. Consulte a página de Registos do High Availability Manager para informações detalhadas.
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[aha_shutdown_remote]
+Category: AHA
+Title: Desligar servidor desconhecido
+Subject: O servidor desconhecido ligado ao high-availability cluster %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) foi desligado.
+
+Caro utilizador,
+
+Um utilizador reiniciou o servidor desconhecido ligado ao high-availability cluster %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%).
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[aha_shutdown_remote_fail]
+Category: AHA,Important
+Title: Falha a desligar o servidor desconhecido
+Subject: Falha a desligar o servidor desconhecido ligado ao high-availability cluster %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%)
+
+Caro utilizador,
+
+O servidor desconhecido ligado ao high-availability cluster %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) não foi desligado. Consulte a página de Registos do High Availability Manager para informações detalhadas.
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[aha_switchover]
+Category: AHA,Important
+Title: Mudança de cluster de high-availability
+Subject: Os serviços do high-availability cluster %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) mudaram para %HA_REMOTE_HOST_SN%
+
+Caro utilizador,
+
+O sistema iniciou uma mudança do high-availability cluster %HOSTNAME%  (SN: %HA_LOCAL_HOST_SN%). Os serviços serão mudados para %HA_REMOTE_HOST_SN%. Consulte a página de Registos do High Availability Manager para informações detalhadas.
+
+Razão: %HA_FAILOVER_REASON%
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[aha_switchover_fail]
+Category: AHA,Important
+Title: Não foi possível mudar o high-availability cluster
+Subject: Os serviços do high-availability cluster %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) não foram mudados para %HA_REMOTE_HOST_SN%
+
+Caro utilizador,
+
+O sistema tentou realizar uma mudança no high-availability cluster %HOSTNAME%  (SN: %HA_LOCAL_HOST_SN%). No entanto, não foi possível mudar os serviços para o servidor passivo (SN: %HA_REMOTE_HOST_SN%). Consulte a página de Registos do High Availability Manager para informações detalhadas.
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[aha_takeover]
+Category: AHA,Important
+Title: Failover do High-availability cluster
+Subject: Detetados erros no high-availability cluster %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%)
+
+Caro utilizador,
+
+Foram detetados erros no high-availability cluster %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%). Os serviços serão mudados para o servidor passivo. Consulte a página de Registos do High Availability Manager para informações detalhadas.
+
+Erro: %HA_FAILOVER_REASON%
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[aha_upgrade_fail]
+Category: AHA,Important
+Title: Erro ao actualizar o high-availability cluster
+Subject: Falha a atualizar o high-availability cluster %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%).
+
+Caro utilizador,
+
+O high-availability cluster %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) não foi atualizado. Consulte a página de Registos do High Availability Manager para informações detalhadas.
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[aha_upgrade_passive_fail]
+Category: AHA,Important
+Title: Erro ao actualizar servidor passivo
+Subject: Falha a reiniciar o servidor activo do high-availability cluster %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%)
+
+Caro utilizador,
+
+O servidor passivo do high-availability cluster %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) não foi atualizado. Consulte a página de Registos do High Availability Manager para informações detalhadas.
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[aha_welcome]
+Category: AHA
+Title: High-availability cluster em execução
+Subject: O high-availability cluster %HOSTNAME% está agora a gerir os serviços em %HA_LOCAL_HOST_SN%
+
+Caro utilizador,
+
+Os serviços do high-availability cluster %HOSTNAME% estão agora a ser executados em %HA_LOCAL_HOST_SN%. Consulte a página de Registos do High Availability Manager para informações detalhadas.
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[disk_health_monthly_report]
+Subject: Relatório Mensal do Estado do Disco em %HOSTNAME%
+
+Caro utilizador,
+
+Segue-se o seu relatório mensal relativamente ao estado dos discos em %HOSTNAME%. também pode verificar o estado de cada disco em Gestor de Armazenamento > HDD/SSD > Informação do Estado.
+
+%CONTENT%
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[eSynoscheduler_complete_task]
+Subject: O Agendamento de tarefas concluiu uma tarefa accionada
+
+Caro utilizador,
+
+O Agendamento de tarefas concluiu uma tarefa accionada.
+
+Tarefa: %TASK%
+Hora de início: %START_TIME%
+Hora do fim: %END_TIME%
+Estado actual: %EXIT_CODE%
+Erro/Saída padrão:
+%OUT_PUT%
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[ext4_fs_err]
+Category: System,Important
+Title: Erro no sistema de ficheiros
+Subject: Erro do sistema de ficheiros detectado em %HOSTNAME%
+
+Caro utilizador,
+
+Foi detetado um erro de sistema de ficheiros no volume %VOLUME_ID%. Aceda ao Gestor de Armazenamento para proceder à reparação o mais depressa possível.
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[file_cksum_err]
+Category: System,Important
+Title: Erro de soma de verificação
+Subject: Erro de soma de verificação em %HOSTNAME%. Verifique o Centro de Registo para mais detalhes.
+
+Caro utilizador,
+
+Foi detetado um erro de soma de verificação no ficheiro %FILE_PATH%. Use uma cópia de segurança da versão anterior para reparar o ficheiro.
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[iSCSILunScheduleSnapshotFail]
+Category: Storage,Important
+Title: Falha ao tirar um instantâneo para um iSCSI LUN
+Subject: Falha ao tirar um instantâneo para iSCSI LUN %LUNNAME% em %HOSTNAME%
+
+Caro utilizador,
+
+Falha ao tirar um instantâneo iSCSI LUN em %HOSTNAME%. Consulte o Gestor de Armazenamento para informações detalhadas.
+
+LUN: %LUNNAME%
+
+Atenciosamente,
+%COMPANY_NAME%
+

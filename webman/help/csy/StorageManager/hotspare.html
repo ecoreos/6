@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Hot Spare</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2>Hot Spare*</h2>
+<p>Disky Hot Spare jsou pohotovostní pevné disky, které dokážou opravit poškozený svazek / skupinu disků / jednotku iSCSI LUN automatickým nahrazením poškozeného disku. Disky Hot Spare lze globálně přidělovat jako ochranu libovolného svazku / skupiny disků / jednotky iSCSI LUN v zařízení DiskStation, pokud takový svazek / skupina disků / jednotka iSCSI LUN splňuje následující kritéria:</p>
+<ul>
+<li>Typem RAID daného svazku / skupiny disků / jednotky iSCSI LUN musí být typ s ochranou dat (např. RAID 1, RAID 5, RAID 6, RAID 10).</li>
+<li>Velikost disku Hot Spare musí být stejná nebo větší než velikost nejmenšího disku ve svazku / skupině disků / jednotce iSCSI LUN.</li>
+</ul>
+
+<h4>Nastavení disků Hot Spare:</h4>
+<ol>
+<li>Klikněte na možnost <b>Správa</b>.</li>
+<li>Zobrazí se dialogové okno zobrazující stav Hot Spare všech svazků / skupin disků / iSCSI LUN i dostupných disků. Stav svazku / skupiny disků / jednotky iSCSI LUN obsahuje následující údaje:</li>
+<ul>
+<li><strong>Přiděleno:</strong> Svazek / skupina disků / jednotka iSCSI LUN je chráněna minimálně jedním přiděleným diskem Hot Spare.</li>
+<li><strong>K dispozici:</strong> Jsou k dispozici disky, které mohou chránit svazek / skupinu disků / jednotku iSCSI LUN, nebyl přidělen ale ještě žádný disk Hot Spare.</li>
+<li><strong>Není k dispozici:</strong> Nejsou k dispozici žádné disky Hot Spare, které by mohly chránit svazek / skupinu disků / jednotku iSCSI LUN.</li>
+</ul>
+<li>V části <strong>Dostupné disky</strong> jsou uvedeny pevné disky, které lze přidělit jako disky Hot Spare. Disk Hot Spare přidělíte zaškrtnutím políčka vedle disku, který chcete přidělit jako disk Hot Spare.</li>
+<li>Nastavení uložíte kliknutím na možnost <b>Použít</b>.</li>
+</ol>
+<div class="section">
+<h4>Poznámka:</h4> 
+<ul>
+<li>Po přidělení disku jako disku Hot Spare se všechna data na tomto disku vymažou. Před přidělením disku Hot Spare zajistěte, aby se na tomto disku nenacházela žádná důležitá data.</li>
+<li>Svazek RAID sestavený z pevných disků HDD nebude automaticky opraven disky SSD Hot Spare a opačně.</li>
+</ul>
+</div>
+
+<h4>Konfigurace nastavení disků Hot Spare pro svazek / skupinu disků / jednotku iSCSI LUN:</h4>
+<ol>
+<li>Klikněte na možnost <b>Konfigurovat</b>.</li>
+<li>Na kartě <b>Cíle disků Hot Spare</b> jsou uvedeny svazky / skupiny disků / jednotky iSCSI LUN, které lze chránit pomocí disků Hot Spare. Zrušíte-li zaškrtnutí těchto políček, nebudou příslušné svazky / skupiny disků / jednotky iSCSI LUN v případě poškození automaticky opraveny pomocí disků Hot Spare.</li>
+<li>Na kartě <b>Disky Hot Spare pro různá zařízení</b> je možné povolit, aby disky Hot Spare na jednom zařízení opravily poškozený svazek RAID nacházející se na jiném zařízení.</li>
+<li>Nastavení uložíte kliknutím na možnost <b>OK</b>.</li>
+</ol>
+
+
+
+<p>____<br />*K dispozici pouze u některých modelů.</p>
+
+</body>
+</html>

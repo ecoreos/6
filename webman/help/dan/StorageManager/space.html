@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script> <script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+	<h2>Diskenhed</h2>
+	<p>Diskeenheder er grundlæggende lagerpladser, hvor brugere kan oprette delte mapper, iSCSI LUN (almindelige filer), gemme data eller installere pakker. Før diskenheder oprettes, skal du sørge for, at du allerede har oprettet en RAID Group. Yderligere oplysninger om RAID-grupper findes under <a href="raid.html">RAID Group</a>.
+</p>
+
+	<h4>Sådan opretter du en diskenhed:</h4>
+<ol>
+  <li>Sørg for, at din DiskStation har en eksisterende RAID Group med plads, der kan allokeres.</li>
+  <li>Klik på knappen <strong>Opret</strong>.</li>
+		<li>Vælg en RAID Group, som du kan oprette diskenheden på.</li>
+		<li>Ret ønskede indstillinger.</li>
+		<li>Angiv størrelsesallokeringen for diskenheden. (indstilling af størrelse er utilgængelig med diskenheder oprettet på RAID Group for enkelte diskenheder eller iSCSI LUN)
+		</li>
+</ol>
+
+<div class="section">
+<h4>Bemærk:</h4>
+<ul>
+	<li>Den maksimale diskenhedsstørrelse, der kan allokeres, er 200 TB.</li>
+	<li class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64">Mindste allokerede størrelse til en Btrfs-diskenhed skal være mindst 10 GB.</li>
+    <li class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64">Btrfs-diskenheder vil reservere 4 % af pladsen til metadata.</li>
+</ul>
+</div>
+
+
+<h4>Sådan fjerner du en diskenhed:</h4>
+	<ol>
+		<li>Vælg den diskenhed, du vil fjerne.</li>
+		<li>Klik på knappen <b>Fjern</b>, og følg guiden for at fuldføre processen.</li>
+	</ol>
+<div class="section">
+<h4>Bemærk:</h4>
+<ul>
+<li>Fjernelse af en diskenhed vil slette alle eksisterende data på denne diskenhed.</li>
+</ul>
+</div>
+
+<h4>Sådan gennemtvinger du tilknytning af en diskenhed:</h4>
+<p>Hvis cachen på en diskenhed mangler, vil systemet ikke tilknytte diskenheden ved start. Hvis cachen ikke kan gendannes, og du vil have adgang til diskenheden, kan du klikke på <b>Gennemtving tilknytning</b>. </p>
+
+<div class="section">
+<h4>Bemærk:</h4>
+<ul>
+<li>Denne funktion er kun tilgængelig på bestemte modeller.</li>
+</ul>
+</div>
+
+	<h4>Sådan repareres en diskenhed:</h4>
+	<p>Hvis diskenhedens status er <b>Degraderet</b>, skal du gå til fanen <b>RAID Group</b> og finde den relevante RAID Group. Følg så de foreslåede instruktioner til at repareret den.
+</p>
+
+	<h4>Sådan udvider du størrelsen af en diskenhed</h4>
+	<ul>
+		<li>For diskenheden, der er oprettet på en RAID Group til flere diskenheder eller iSCSI LUN'er (blokniveau) 
+<ol>
+				<li>Vælg den diskenhed, du vil udvide.</li>
+				<li>Klik på <b>Rediger</b>.</li>
+				<li>Indtast den ny størrelse, og klik på <b>OK</b> for at udvide.</li>
+			</ol>
+		<li>Ved diskenhed oprettet på en RAID Group til én diskenhed eller iSCSI LUN (blokniveau) skal du se i afsnittet <b>Sådan udvider du størrelsen af en RAID Group</b> under <a href="raid.html">RAID Group</a>. Diskenheden bliver udvidet efter den underliggende RAID Group er udvidet.
+	  </li>
+	</ul>
+
+
+<h3>SSD TRIM</h3>
+
+<p>Hvis en diskenhed kun består af SSD'er (Solid State Drives), anbefaler vi at aktivere SSD TRIM. Denne funktion forbedrer læse- og skriveydelsen af diskenheder, der er oprettet på SSD'er, forøger effektiviteten samt forlænger levetiden for dine SSD'er.</p>
+
+<h4>Sådan aktiverer du SSD TRIM:</h4>
+
+<ol>
+  <li>Åbn <b>Lagerstyring</b>, og gå til <b>Diskenhed</b>.</li>
+  <li>Vælg en diskenhed, som kun består af SSD'er, og klik på knappen <b>Konfigurer</b>.</li>
+  <li>I det vindue, der vises, går du til fanen <b>SSD TRIM</b> og markerer feltet <b>Aktiver TRIM</b>.</li>
+<li>Klik på knappen <strong>Angiv plan</strong> for at vælge, hvornår systemet vil udføre SSD TRIM.</li>
+<li>Klik på <strong>OK</strong>.</li>
+</ol>
+
+<div class="section">
+<h4>Bemærk:</h4>
+<ul>
+
+<li>SSD TRIM er kun tilgængelig på visse DiskStation-modeller og RAID-typer. </li>
+
+
+<li>Nogle SSD-modeller kan ikke udføre SSD TRIM på RAID 5- og RAID 6-diskenheder. Der henvises til kompatibilitetslisten på <a href="http://www.synology.com/" target=_blank>www.synology.com</a>.</li>
+
+
+<li>SSD TRIM kan ikke aktiveres i følgende situationer:
+  <ul>
+    <li>Diskenheden tilknyttes med SSD-cache.</li>
+    <li>Pakken <strong>Time Backup</strong> installeres.</li>
+    <li>En high-availability-klynge er oprettet med pakken <strong>Høj tilgængelighedsstyring</strong>.</li>
+  </ul>
+</li>
+<li>SSD TRIM kan ikke aktiveres på iSCSI LUN'er med blokniveau.</li>
+<li>Systemydelse bliver påvirket, når der udføres SSD TRIM. Den tid, der er brug for, til at færdiggøre udførelsen af TRIM varierer, afhængigt af diskenhedsstørrelsen og SSD-modellen.</li>
+
+<li>Når TRIM er aktiveret på en diskenhed, bliver den også aktiveret på andre diskenheder, der er oprettet i den samme diskgruppe eller RAID-gruppe.</li>
+
+</ul>
+</div>
+
+
+<h3>Scrubbing af filsystem*</h3>
+<p>Scrubbing af filsystem er en datavedligeholdelsesfunktion, der undersøger diskenheder. Hvis der registreres data, der er inkonsekvente med kontrolsummen, vil filstien bliver optaget i Logcenter, og det anbefales, at du bruger en backup til at reparere dataene.</p>
+<p>Vi anbefaler regelmæssig udførelse af scrubbing af filsystem for at sikre datakonsekvens.</p>
+
+<h4>Sådan udfører du scrubbing af filsystem:</h4>
+<ol>
+<li>Åbn <b>Lagerstyring</b>, og gå til <b>Diskenhed</b>.</li>
+<li>Vælg den diskenhed, hvor du vil udføre scrubbing af filsystem.</li>
+<li>Klik på <b>Administrer</b>.</li>
+<li>Vælg <b>Scrubbing af filsystem</b>.</li>
+</ol>
+
+<div class="section">
+<h4>Bemærk:</h4>
+<ul>
+<li>Scrubbing af filsystem kan kun udføres på diskenheder i filsystemet <b>Btrfs</b>.</li>
+<li>Scrubbing af filsystem kan kun udføres, når status for diskenheden er <strong>Normal</strong>.</li>
+<li>Luk ikke systemet, før scrubbing af filsystem er færdig. Hvis systemet lukkes ned før fuldførelse, skal du manuelt genstarte scrubbing af filsystemet fra starten.</li>
+</ul></div>
+
+<h3>Defragmentering af filsystem*</h3>
+<p>Hvis dine data ændres hele tiden, vil mængden af defragmenterede filer øges i filsystemet, så du får langsommere adgang til filer på harddisken. Udførelse af defragmentering af filsystem kan forbedre ydelsen.</p>
+
+<h4>Sådan udfører du defragmentering af filsystem:</h4>
+
+<ol>
+<li>Åbn <strong>Lagerstyring</strong>, og gå til <b>Diskenhed</b>.</li>
+<li>Vælg den diskenhed, hvor du vil udføre defragmentering af filsystem.</li>
+<li>Klik på <strong>Administrer</strong>.</li>
+<li>Vælg <strong>Defragmentering af filsystem</strong>.</li>
+</ol>
+
+<div class="section">
+<h4>Bemærk:</h4>
+<ul>
+<li>Defragmentering af filsystem kan kun udføres på diskenheder i filsystemet <b>Btrfs</b>.</li>
+<li>Defragmentering af filsystem kan kun udføres, når status for diskenheden er <strong>Normal</strong>.</li>
+<li>Luk ikke systemet, før defragmentering af filsystem er færdig. Hvis systemet lukkes ned før fuldførelse, skal du manuelt genstarte defragmentering af filsystemet fra starten.</li>
+<li>Diskenhedsbrug kan forøges, hvis diskenheden indeholder billeder af delte mapper.</li>
+</ul>
+</div>
+
+<p>____<br /> *Kun tilgængeligt på visse modeller.</p>
+
+
+
+</body>
+</html>

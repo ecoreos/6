@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Notification</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>SMS</h2>
+<p class="disable-eds14">You can enable SMS notifications in order for DiskStation to send you  notification messages via SMS when status changes or errors occur to the system, such as connection loss, fan behavior change,  power failure, storage volume running out of space, or back/restoration failure, etc.</p>
+
+<p class="enable-eds14">You can enable SMS notifications in order for DiskStation to send you  notification messages via SMS when status changes or errors occur to the system, such as connection loss, power failure, storage volume running out of space, or back/restoration failure, etc.</p>
+
+
+<h4>To enable SMS notifications:</h4>
+<p>Tick <b>Enable SMS notifications</b> and complete the following settings:</p>
+<ol>
+<li>Select a SMS provider from the <b>SMS service provider</b> drop down list. The default service provider is "clickatell".</li>
+<li>Click <b>Add SMS service provider</b> to create a new SMS provider configuration or click <b>Delete</b> to delete the selected SMS provider configuration.</li>
+<li>In the <b>Username</b> field, enter the username of your SMS service account.</li>
+<li>In the <b>Password</b>  and <b>Confirm password</b> field, enter and confirm the password of your SMS service account.</li>
+<li>Enter your <b>Primary phone number</b> or <b>Secondary phone number</b>. If both numbers are entered, SMS notification messages will  be sent to both numbers.</li>
+<li>If you do not wish to receive too many messages, tick <b>Enable SMS interval limit</b> and limit the number of notification messages to one message per the time interval you specified.</li>
+<li>Click <b>Send a test SMS message</b> to send a test SMS message to the phone number you specified. If no message is received, it means the configuration is incorrect.</li>
+<li>Click <b>Apply</b> to save the configuration, or click <b>Reset</b> to cancel the setup.</li>
+</ol>
+<p>
+<span class="note_head">Note: </span>The language of SMS notification is set at <strong>Notification Language</strong>. To change your SMS notification language, go to <strong>Main Menu</strong> &gt; <strong>Control Panel</strong> &gt; <strong>Regional Options</strong>,  click the <strong>Language</strong> tab, and choose your preferred language from the drop-down menu in the <strong>Notification Language</strong> section.</p>
+<ol>
+<span class="note_head">Limitations:</span>
+<li>Username: case sensitive and must be between 1 and 32 Unicode characters.</li>
+<li>Password: case sensitive and must be between 0 and 128 displayable characters, including letters, numbers, signs, and space.</li>
+<li>The SMS interval limit  must be between 1 and 10000 minutes.</li>
+</ol>
+<h4>To create a SMS provider configuration:</h4>
+<ol>
+<li>Click <b>Add SMS service provider</b>.</li>
+<li>In the <b>Provider name</b> field, enter the name of your SMS service provider.</li>
+<li>In <b>SMS URL</b> field, enter a SMS URL with the message content set to "Hello world." You can obtain the SMS URL from your SMS service provider.</li>
+<li>Click <b>Next</b>.</li>
+<li>The system will break down the SMS URL into several parameters. Define each parameter by selecting the corresponding category. Each parameter category can be used only once except <b>Other</b>.</li>
+</ol>
+<ol>
+<a name='smshowto'></a><span class="note_head">Limitations:</span>
+<li>Provider name: case sensitive and must be between 1 and 32 Unicode characters.</li>
+<li>SMS URL: case sensitive and must be between 1 and 500 Unicode characters. The number of parameters must be between 4 and 10.
+This SMS URL is only for setup purposes. No SMS message will be sent after setup is completed. The format of this URL is provided by the SMS service provider, and the URL must include the following parameters: username, password, destination phone, and message content. Using Clickatell as an example, a possible URL is: https://api.clickatell.com/http/sendmsg?user=TestUser&password=TestPassword&api_id=3148203&to=886123456789&text=Hello+world. Please note that in "message content" parameter, the space between "Hello" and "world" will be replaced by the particular character defined by the service provider.	
+</li>	
+
+</ol>
+</body>
+</html>

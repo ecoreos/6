@@ -1,0 +1,84 @@
+ <!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Ajouter un disque dur dans un Volume ou un groupe de disques - Aide Synology DSM</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="This article walks you through the steps to add an additional hard drive to an existing volume or disk group on your DiskStation.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script> <script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Ajouter un disque dur pour étendre la capacité de stockage</h2>
+
+<p>S'il y a des fentes de disque dur vides sur votre DiskStation, vous pouvez installer des disques durs supplémentaires et les ajouter à un volume ou un groupe de disques existant. Cet article fournit les instructions pour étendre un volume existant ou un groupe de disques en installant des disques durs supplémentaires.</p>
+
+<h3>Avant de commencer</h3>
+
+<p>Avant de commencer, assurez-vous que les disques durs que vous désirez ajouter répondent aux caractéristiques minimales suivantes :</p>
+<ul>
+  <li><strong>Pour SHR :</strong> La capacité du disque dur que vous souhaitez ajouter doit être égale ou plus grande que le plus gros disque dur du volume ou du groupe de disques ou égale à l'un des disques durs du volume ou du groupe de disques. Par exemple, si votre volume SHR est composé de trois disques durs de 2 To, 1,5 To et 1 To respectivement, alors la capacité du nouveau disque dur doit être d'au moins 2 To ou égale à 1,5 To ou 1 To.</li>
+  <li><strong>Pour RAID 5 et RAID 6 :</strong> La capacité du disque dur que vous souhaitez ajouter doit être égale ou plus grande que le plus petit disque dur du volume ou du groupe de disques. Par exemple, si votre volume est composé de trois disques durs de 2 To, 1,5 To et 1 To respectivement, alors la capacité du nouveau disque dur doit être d'au moins 1 To.</li>
+</ul>
+
+<div class="section">
+<h4>Vérifier le statut du volume</h4>
+
+<p>Assurez-vous que l'état de votre volume ou du groupe de disques est <strong>Normal</strong>. Si ce n'est pas le cas, vous devez le réparer.</p>
+</div>
+
+
+<h3>  Ajouter un disque dur dans un Volume ou un groupe de disques</h3>
+
+<p>Des disques durs peuvent être ajoutés aux types RAID suivants : </p>
+
+<ul>
+<li>Synology Hybrid RAID (SHR)</li>
+<li>JBOD</li>
+<li>RAID 5</li>
+<li>RAID 6</li>
+</ul>
+
+<div class="section">
+<h4>Remarque :</h4>
+<p>Pour les volumes SHR, la capacité de stockage ne peut être étendue qu'en ajoutant des disques durs à un volume comportant au moins deux disques.</p>
+</ul>
+</div>
+
+<h4>Ajouter un disque dur dans un Volume ou un groupe de disques :</h4>
+
+<ol>
+<li>Éteignez votre DiskStation. (Vous pouvez ignorer cette étape si votre DiskStation prend en charge l'échange à chaud.)</li>
+<li>Installez un nouveau disque dur dans une fente de disque dur vide.</li>
+
+<div class="section">
+<h4>Remarque :</h4>
+<p>Afin d'éviter de vous blesser ou d'endommager votre DiskStation, veuillez suivre les instructions d'installation de disque dur trouvées dans le <i>Guide d'installation rapide</i> de votre produit Synology.</p>
+</div>
+
+<li>Allumez votre DiskStation.</li>
+<li>Connectez-vous à DSM avec un compte appartenant au groupe <strong>administrators</strong>.</li>
+<li>Ouvrez <strong>Gestionnaire de stockage</strong>.</li>
+<img src="about:blank" class="help_image"/>
+
+<li>A ce point, procédez comme suit :</li>
+  <ul class="list_abc">
+    
+  <li>Si vous étendez un volume unique sur le RAID, allez dans l'onglet <strong>Volume.</strong> Sélectionnez le volume à étendre. Cliquez sur <strong>Gérer</strong> et continuez avec l'étape suivante. </li>
+<img src="about:blank" class="help_image"/>
+    
+  <li>Si vous étendez un volume unique sur un groupe de disques, allez dans l'onglet <strong>groupe de disques.</strong> Sélectionnez le groupe de disques à étendre. Cliquez sur <strong>Gérer</strong> et continuez avec l'étape suivante.</li>
+<img src="about:blank" class="help_image"/>
+  </ul>
+<li>Sélectionnez <strong>Étendre le volume (ou groupe de disques) en ajoutant des disques durs</strong>. Puis cliquez sur <strong>Suivant</strong>.</li>
+<img src="about:blank" class="help_image"/>
+<li>Sélectionnez les disques durs avec lesquels vous désirez étendre le volume ou le groupe de disques. Vous pouvez ajouter des disques durs en cochant les cases correspondantes. Puis cliquez sur <strong>Suivant</strong>.</li>
+<img src="about:blank" class="help_image"/>
+<li>Suivez les étapes de l'assistant pour terminer.</li>
+</ol>
+</body>
+</html>

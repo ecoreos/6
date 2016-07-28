@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+ <head>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>High Availability</title>
+
+
+ </head>
+ <body>
+<h2>Stan pamięci</h2>
+	<p>Ta strona przedstawia stan wszystkich nadających się do użytku wolumenów pamięci masowej i jednostek iSCSI LUN (na poziomie bloku) na serwerze aktywnym i pasywnym w klastrze high-availability.</p>
+    <p>Ze względu na to, że pojemność i konfiguracje odpowiadających sobie wolumenów i jednostek iSCSI LUN (na poziomie bloku) na serwerze aktywnym i pasywnym muszą być identyczne, wolumeny i jednostki iSCSI LUN (na poziomie bloku) na obu serwerach są wyświetlane razem, jako pojedyncze jednostki. W związku z tym, w celu wyświetlenia stanu wolumenów i jednostek iSCSI LUN (na poziomie bloku) na serwerze zarówno aktywnym, jak i pasywnym, należy przejść do strony <b>Stan pamięci</b>. Podczas uzyskiwania dostępu do klastra high-availability na stronie <b>Zarządzanie przechowywaniem</b> są wyświetlane tylko wolumeny i jednostki iSCSI LUN (na poziomie bloku) na serwerze aktywnym.</p>
+
+    <p>Ta strona zawiera następujące informacje:</p>
+		<ul>
+			<li><b>Nazwa:</b> Wyświetla nazwy wolumenów i jednostek iSCSI LUN (na poziomie bloku).</li>
+			<li><b>Używane:</b> Wyświetla procent zajętej pamięci wolumenów i jednostek iSCSI LUN (na poziomie bloku).</li>
+			<li><b>Rozmiar Użyty/Łącznie:</b> Wyświetla łączną i zajętą pojemność pamięci wolumenów i jednostek iSCSI LUN (na poziomie bloku).</li>
+            <li><b>Stan:</b> Wyświetla stan wolumenów i jednostek iSCSI LUN (na poziomie bloku) i pamięci podręcznej SSD.</li>
+            <li><b>Opis:</b> Wyświetla opis błędów i inne informacje odnoszące się do wolumenu i jednostek iSCSI LUN (na poziomie bloku) i pamięci podręcznej SSD.</li>
+		</ul>
+<h4>Aby nareperować niewłaściwie działający wolumen lub jednostkę iSCSI LUN (na poziomie bloku):</h4>
+	<ul>
+		<li>Jeżeli dysk twardy jednego z serwerów został uszkodzony, można przejść do strony <a href="disk.html">Stan dysku</a> w celu stwierdzenia, który dysk jest uszkodzony i wymaga wymiany. W takim przypadku wykonaj następujące czynności:
+        	<ol>
+            	<li>Wymień uszkodzony dysk twardy (opis instalacji dysków twardych został przedstawiony w dokumencie <i>Przewodnik szybkiej instalacji</i> produktu Synology).</li>
+                <li>Przejdź do strony <b>Stan pamięci</b> i kliknij pozycję <b>Reperuj</b>.</li>
+            </ol>
+        </li>
+        <li>Jeżeli serwer pasywny będzie offline, stan wolumenów i jednostek iSCSI LUN (na poziomie bloku) będzie wskazywać wystąpienie błędu, a żaden z dysków na serwerze pasywnym nie będzie widoczny na stronie Stan dysku. W takim przypadku można spróbować rozwiązać problem następująco:
+        	<ol>
+            	<li>Sprawdź, czy serwer pasywny jest włączony.</li>
+                <li>Sprawdź wszystkie zasilacze.</li>
+                <li>Sprawdź wszystkie połączenia.</li>
+            </ol>
+        </li>
+        <li>W razie wystąpienia błędu systemu plików na wolumenie lub w jednostce iSCSI LUN (na poziomie bloku) na jednym z serwerów, wykonaj następujące czynności:
+        	<ul>
+            	<li>Przejdź do strony <b>Stan pamięci</b>.</li>
+                <li>Kliknij przycisk <b>Reperuj.</b></li>
+            </ul>
+        </li>
+	</ul>
+
+<p><span class="note_head">Uwaga:</span> Limit liczby wolumenów i jednostek iSCSI LUN (na poziomie bloku) w klastrze high-availability wynosi 64.</p>
+
+ </body>
+</html>

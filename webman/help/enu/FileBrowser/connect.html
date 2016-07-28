@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Connecting to Different File Servers with File Station - Synology DSM Help</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="Learn how to customize File Station settings related to file management, shared links, and security.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Remote Connection</h2>
+
+<p>In File Station, you can connect to public cloud services (Box, Dropbox, Google Drive, and Microsoft OneDrive) and file servers via a variety of different protocols (FTP, STFP, WebDAV, and WebDAV HTTPS).</p>
+
+<h4>To connect to a cloud service:</h4>
+<ol>
+  <li>Go to <strong>Tools</strong> &gt; <strong>Remote Connection</strong> &gt; <strong>Connection Setup</strong>.</li>
+  <li>Choose a desired cloud service by clicking the icon, and click <strong>Next</strong>.</li>
+  <li>In the pop-up window, follow the wizard's instructions for account authentication.</li>
+  <li>Once the setup is complete, the target cloud service will appear in the left panel.</li>
+</ol>
+
+
+<div class="section">
+<h4>Cloud-Specific Limitations:</h4>
+<ul>
+<li><strong>Box</strong>:
+<ul>
+  <li>A catalog shared with other collaborators will be suffixed with the owner's username.</li>
+  <li>If catalogs shared with other collaborators use an identical name (a catalog name suffixed with the owner's username), only one such catalog will be displayed.</li>
+  <li>Only via Box can you open files of these extensions: .gdoc, .gsheet, and .boxnote.</li>
+  <li>Filenames are case insensitive.</li>
+  <li>For proper firewall settings, please refer to <a href="https://support.box.com/hc/articles/200523728-Configuring-a-Firewall-for-Box-or-Box-Sync"  target="_blank">this article</a>.</li>
+</ul>
+</li>
+
+<li><strong>Dropbox</strong>:
+<ul>
+<li>A Dropbox catalog cannot be displayed if it contains over 25000 files.</li>
+<li>A Dropbox catalog cannot be renamed if it contains over 10000 files.</li>
+<li>Files that exceed 10 GB cannot be uploaded.</li>
+<li>An upload task will fail if the target file takes more than 24 hours to upload.</li>
+<li>Filenames are case insensitive.</li>
+<li>For proper firewall settings, please refer to <a href="https://www.dropbox.com/help/23"  target="_blank">this article</a>.</li>
+</ul>
+</li>
+
+<li><strong>Google Drive</strong>:
+<ul>
+  <li>Files/folders with a path longer than 2048 characters will not be displayed.</li>
+  <li>Files with a filename longer than 255 characters will not be displayed.</li>
+  <li>Files/catalogs with an identical name will be marked with individual creation times.</li>
+<li>If you open a Google-specific file (e.g., Google Docs and Google Slides) via File Station, a URL will be displayed for you to access the target file.</li>
+<li>The <strong>My Drive</strong> and <strong>Starred</strong> folders displayed at File Station correspond respectively to the "My Drive" and "Starred" folders in Google Drive.</li>
+<li>For proper firewall settings, please refer to <a href="https://support.google.com/drive/answer/2589954"  target="_blank">this article</a>.</li>
+</ul>
+</li>
+
+<li><strong>Microsoft OneDrive</strong>:
+<ul>
+<li>OneNote notebook files will not be displayed.</li>
+<li>Files that exceed 10 GB cannot be uploaded.</li>
+<li>Files (e.g., .png, .jpg, .docx, .pdf) may display larger file sizes (original sizes plus thumbnail sizes). This will not affect their original file sizes when they are downloaded.</li>
+<li>Filenames are case insensitive.</li>
+
+</ul>
+</li>
+</ul>
+
+<p>To know more limitations, we suggest you visit the official website for the concerned cloud service.</p>
+
+
+</div>
+
+
+<h4>To connect to a file server:</h4>
+<ol>
+  <li>Go to <strong>Tools</strong> &gt; <strong>Remote Connection</strong> &gt; <strong>Connection Setup</strong>.</li>
+  <li>Choose a desired server protocol by clicking the icon, and click <strong>Next</strong>.</li>
+  <li>Provide the following information to complete the setup:
+  <ul>
+  <li><strong>Hostname or IP</strong>: Enter the hostname or IP of the target file server.</li>
+  <li><strong>Port</strong>: Enter the port number of the target file server.</li>
+  <li><strong>User</strong> and <strong>Password</strong>: Enter this login information if the target file server may require an account/password.</li>
+  <li><strong>Codepage</strong>: Select the character encoding of the target file server  to display file names correctly.</li>
+  <li><strong>Profile Name</strong>: Enter a unique name to easily identify this file server.</li>
+  <li><strong>Use WebDAV HTTPS connection</strong>: This option is available only when you are setting up a WebDAV protocol and when both the client and   file server support WebDAV HTTPS.</li>
+  <li><strong>Allow only one connection per user</strong>: This option is available only when you are setting up an FTP or SFTP protocol. Tick this option to optimize connectivity when the server has limitations on the number of connections.</li>
+  </ul>
+  </li>
+<li>Click <strong>Apply</strong> to save the settings. The target file server will appear in the left panel.</li> 
+</ol>
+<h4>To modify an existing cloud service or file server profile:</h4>
+<ol>
+  <li>Go to <strong>Tools</strong> &gt; <strong>Remote Connection</strong> &gt; <strong>Connection List</strong>.</li>
+  <li>Click the target cloud service or file server for the following managements:
+    <ul>
+      <li>Editing: Click <strong>Edit</strong>, change the current profile configuration, and click <strong>OK</strong>.</li>
+      <li>Disconnecting: Click <strong>Disconnect</strong> to terminate connection.</li>
+  <li>Reconnecting: Click <strong>Connect</strong> to recover connection. (Alternatively, click the target in the left panel of File Station for reconnection.)</li>
+  <li>Deleting: Click <strong>Delete</strong> and then confirm to abandon the profile. (Alternatively, click the target in the left panel of File Station and click <strong>Delete</strong> for deletion.)</li>
+    </ul>
+  </li>
+  </ol>
+  
+  
+<div class="section">
+  <h4>Note:</h4>
+<ul>
+  <li>Each user may simultaneously connect to no more than 100 cloud services and file servers.</li>
+  <li>Make sure you select the correct server codepage to avoid unexpected errors. Unicode is recommended if you do not know the server codepage.</li>
+  <li>Certain File Station functions (e.g., Compress to, Extract, Preview, etc.) cannot be applied to  files stored on cloud services or file servers.</li>
+<li>Individual transfer speeds for each connected cloud service or file server are subject to user speed limit settings.</li>
+<li>Each user is limited to three simultaneous file transfers across all cloud services and file servers.</li>
+<li>To configure WebDAV, WebDAV HTTPS, and cloud service proxy settings, go to <strong>Control Panel</strong> &gt; <strong>Network</strong> &gt; <strong>General</strong> &gt; <strong>Proxy</strong>. If you have changed the proxy settings during connection to a cloud service or file server, please disconnect and then reconnect it.</li>
+<li>Modifying information of connected cloud services or file servers will not affect the connection status.</li>
+<li>To release connection resource, a cloud service/file server will automatically get disconnected if the contained files remain untouched for over 30 minutes. Click the cloud service/file server to recover connection.</li>
+<li>The system cannot display files/folders that adopt the following naming formats:
+  <ul>
+    <li>Beginning with <strong>._</strong> or <strong>.SYNOPPSDB</strong></li>
+    <li>Including <strong>/</strong></li>
+<li>Named exactly as <strong>.</strong>&nbsp;&nbsp;&nbsp;&nbsp;<strong>..</strong>&nbsp;&nbsp;&nbsp;&nbsp;<strong>'</strong>&nbsp;&nbsp;&nbsp;&nbsp;<strong>"</strong>&nbsp;&nbsp;&nbsp;&nbsp;<strong>.DS_Store</strong>&nbsp;&nbsp;&nbsp;&nbsp;<strong>@eaDir</strong>&nbsp;&nbsp;&nbsp;&nbsp;<strong>@sharebin</strong>&nbsp;&nbsp;&nbsp;&nbsp;<strong>@tmp</strong>&nbsp;&nbsp;&nbsp;&nbsp;<strong>.SynologyWorkingDirectory</strong></li>
+  </ul>
+</li>
+<li class="enable-dockerx64">Remote connection is only supported in high privilege mode. To use this feature, go to the Docker package on your host DSM, select the <strong>Docker DSM</strong> you want to enable encrypted shared folders for, click <strong>Edit</strong> and tick the box next to <strong>Execute container using high privileges</strong>.</li>
+
+</ul>
+</div>
+</body>
+</html>

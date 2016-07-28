@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+	<h2>常规设置</h2>
+	<p>存储管理器可让用户管理其 Synology 产品中的所有存储空间。为简化存储管理并创建带数据保护的灵活存储空间，Synology DSM 支持多个类别的 RAID Group。</p>
+
+<h4><a href="raid.html">RAID Group</a></h4>
+	<p>通过 DiskStation，您可以将多个硬盘合并为一个称之为 RAID Group 的存储设备。DiskStation 提供以下类别的 RAID Group：</p>
+	<ul>
+		<li><b>用于单个卷或 iSCSI LUN（段落分块）的 RAID Group</b>：
+			<ul>
+				<li>将所有可用的容量分配到单个卷或 iSCSI LUN（段落分块）。</li>
+				<li>提供较佳的性能，但其存储空间管理的灵活性较低。</li>
+<li>允许在这些卷上创建多个 iSCSI LUN（常规文件）。</li>
+<li>最多支持一个 RAID 阵列。</li>
+			</ul>
+		</li>
+		<li><b>用于多个卷或 iSCSI LUN（段落分块）的 RAID Group</b>：
+			<ul>
+				<li>其支持在 RAID Group 上创建多个存储卷或 iSCSI LUN（块级）。</li>
+<li>其提供的存储空间管理灵活性较高。</li>
+<li>允许在这些卷上创建多个 iSCSI LUN（常规文件）。</li>
+				<li>支持在单一 RAID Group 下合并多个 RAID 阵列（当其配置为 RAID 5 或 RAID 6 时）。</li>
+			</ul>
+            </li>
+	</ul>
+
+<h4>RAID 类型</h4>    
+<p>当创建 RAID Group 时，先选择 RAID 类别。不同类别的 RAID 可提供不同级别的数据保护、存储功能及性能。DiskStation 目前支持以下类型的 RAID：</p>
+	<ul>
+	  <li><b>基本</b>：使用一个硬盘来创建 RAID Group。Basic RAID Group 不提供数据冗余。</li>
+	  <li><b>JBOD*</b>：至少合并两个硬盘来创建 RAID Group。JBOD RAID Group 不提供数据冗余。JBOD RAID Group 的可用容量等于该组中所有硬盘的总容量。JBOD 支持不同容量硬盘的合并。</li>
+	  <li><b>RAID 0*</b>：至少合并两个硬盘来创建 RAID Group。RAID 0 不提供数据冗余。如果一个成员硬盘发生故障，该 RAID Group 中的数据将丢失。RAID 0 组的可用容量等于该组中所有成员硬盘的总容量。RAID 0 支持不同容量硬盘的合并。</li>
+	  <li><b>RAID 1*</b>：合并 2-4 个硬盘来创建 RAID Group。系统将把相同的数据写入到各硬盘。只要一个硬盘工作正常，RAID 1 将提供数据保护。RAID 1 组的可用容量等于最小成员硬盘的容量。</li>
+	  <li><b>RAID 5*</b>：合并至少三个硬盘以创建一个 RAID Group，并在所有的成员硬盘上存放数据以及奇偶校验信息。RAID 5 提供数据冗余。如果一个成员硬盘发生故障，系统可使用其它成员硬盘上的奇偶校验信息来重建。支持在 RAID Group 上创建多个卷或 iSCSI LUN（段落分块）时合并多个 RAID 阵列。RAID 5 组的可用容量 = <span class="note_content"> 合并 RAID 阵列的总容量。RAID 阵列容量&nbsp;=（硬盘数量 - 1） x （最小硬盘容量）</span></li>
+	  <li><b>RAID 6*</b>：合并至少四个硬盘以创建一个 RAID Group，并在所有的成员硬盘上存放数据以及奇偶校验信息。RAID 6 提供数据冗余。即使两个成员硬盘发生故障，系统可使用其它成员硬盘上的同比特信息来重建。支持在 RAID Group 上创建多个卷或 iSCSI LUN（段落分块）时合并多个 RAID 阵列。RAID 6 组的可用容量 = <span class="note_content"> 合并 RAID 阵列的总容量。RAID 阵列容量&nbsp;=（硬盘数量 - 2） x （最小硬盘容量）</span></li>
+	  <li><b>RAID 10*</b>：至少合并四个硬盘来创建 RAID Group。硬盘数必须为偶数。RAID 10 除提供与 RAID 1 相同的数据保护级别外，还提供了 RAID 0 的性能。RAID 10 组的可用容量 = <span class="note_content">（最小硬盘容量） X （总硬盘数 / 2）</span></li>
+	</ul>
+	<p>
+		<span class="note_head">注：</span> 带&ldquo;*&rdquo;的 RAID 类别仅在有足够硬盘插槽的 NAS 型号中可用。
+</p>
+
+
+<h4><a href="space.html">卷类型</a></h4>
+	<p>根据相关 RAID Group 的类别，有两种类型的卷：</p>
+	<ul>
+		<li><b>用于单个卷或 iSCSI LUN（段落分块）的 RAID Group 中的卷</b>
+        	<ul>
+	<li>将 RAID Group 中的所有存储容量分配到单个卷。提供较佳的性能但管理灵活性较低。</li>
+<li>允许在这些卷上创建多个 iSCSI LUN（常规文件）。</li>
+            </ul></li>
+		<li><b>用于多个卷或 iSCSI LUN（段落分块）的 RAID Group 中的卷</b>
+        	<ul>
+	<li>在 RAID Group 存储空间中分配一个指定的分区来创建一个存储卷。其提供的存储空间管理灵活性较高，您可按需要来扩充存储卷或创建其它存储卷。</li>
+<li>允许在这些卷上创建多个 iSCSI LUN（常规文件）。</li>
+            </ul></li>
+	</ul>
+
+<h4 class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64">卷格式</h4>
+<p class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64">取决于使用的文件系统，有两种卷格式:</p>
+<ul class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64">
+	<li><strong>新卷格式</strong>:此格式使用 <b>Btrfs</b> 文件系统。卷在此格式下的大小下限必须至少为 10 GB。它支持以下新功能，这些功能让您更加轻松地管理您的数据：
+		<ul>
+			<li><strong><a href="../DisasterRecovery/snapshots.html">共享文件夹快照</a>：</strong>快照记录了拍照时的整个数据状态。如果用户用快照意外修改或删除了卷中的数据，您可可快速将数据还原到拍摄快照之前的时间点状态。</li>
+			<li><strong><a href="../AdminCenter/file_share_create.html#sharequota">共享文件夹配额</a>：</strong>您可以为每个文件夹设置最大容量。</li>
+			<li><strong><a href="../AdminCenter/file_user_create.html#userquota">用户配额</a>基于共享文件夹：</strong>您可以控制每个用户可使用的共享文件夹中的空间量。</li>
+			<li><strong><a href="../AdminCenter/file_share_create.html#integrity_protection">高级数据完整性保护</a>：</strong>共享文件夹受到 CRC32 总和检查码和写入时复制策略的保护。</li>
+		</ul>
+	</li>
+	<li><strong>传统的卷格式</strong>：此格式使用 <b>ext4</b> 文件系统。卷在此格式下的大小下限必须至少为 10 GB。由于大部分 Synology 产品都支持 ext4 文件系，您可轻松将此格式的卷移转到另一个 Synology 产品。</li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+	<h2>Hot Spare</h2>
+	<p>De hot spare-schijven zijn standby harde schijven die een beschadigde RAID Group kunnen repareren door de beschadigde schijf automatisch te vervangen. Hot spare-schijven kunnen worden toegewezen om een RAID Group van uw DiskStation te repareren. Een hot spare-schijf kan alleen een RAID Group repareren die aan de volgende criteria voldoet:
+</p>
+	<ul>
+  <li>Het RAID-type van de RAID Group moet gegevensbescherming hebben (bijv. RAID 1, RAID 5, RAID 6, RAID 10).</li>
+		<li>Het type harde schijf van de hot spare-schijf moet hetzelfde zijn als dat van de lidschijven van de RAID Group (bijv. SATA, SAS).</li>
+		<li>De hot spare schijf moet groter of gelijk zijn aan de grootte van de kleinste schijf in de RAID Group.</li>
+	</ul>
+
+	<h4>Om hot spare-schijven te beheren:</h4>
+	<ol>
+		<li>Klik op <b>Beheren</b>.</li>
+		<li>Om een hot spare-schijf toe te wijzen, ga naar het gedeelte <b>Beschikbare schijven</b> aan de rechterkant en schakel het selectievakje in naast de schijf die u als hot spare-schijf wilt toewijzen. Om de hot spare-schijf te verwijderen schakelt u het selectievakje uit. Klik op <b>Toepassen</b> om de instellingen op te slaan.</li>
+	</ol>
+	<p>
+<div class="section">
+<h4>Opmerking:</h4> 
+<ul>
+<li>wanneer een hot spare-schijf een beschadigde RAID Group repareert, worden alle gegevens op de hot spare-schijf verwijderd. Controleer of er geen belangrijke gegevens op de schijf staan die u als hot spare-schijf wilt toewijzen.</li>
+<li>Een RAID gevormd door HDD's wordt niet automatisch gerepareerd door SSD hot spare-schijven, en omgekeerd.</li>
+</ul>
+</div>
+
+<h4>Hot spare-instellingen voor RAID Group configureren:</h4>
+<ol>
+<li>Klik op <b>Configureren</b>.</li>
+<li>In het tabblad <b>Hot Spare-doelen</b> worden RAID Groups weergegeven die door hot spare-schijven kunnen worden beschermd. Schakelt u de selectievakjes uit, dan zullen de desbetreffende RAID Groups bij beschadiging niet automatisch worden gerepareerd door hot spare-schijven.</li>
+<li>In het tabblad <b>Meerdere apparaten-Hot Spare</b> kunt u het gebruik van hot spare-schijven op een apparaat instellen voor de reparatie van een beschadigde RAID op een ander apparaat.</li>
+<li>Klik op <b>OK</b> om de instellingen op te slaan.</li>
+</ol>
+
+</body>
+</html>

@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>自動ブロック - Synology DSM ヘルプ</title> 
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="The auto block feature helps improve the security of your DiskStation by blocking the IP addresses of clients with too many failed login attempts.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>自動ブロック</h2>
+
+<p>自動ブロック機能は、何度もログインに失敗したクライアントの IP アドレスをブロックすることで、DiskStation のセキュリティを高める機能です。これにより、アカウントが強硬な攻撃により破壊される危険性を低減できます。</p>
+
+<p>また、信頼できる IP アドレスを追加する許可リストや、特定の IP アドレスをログインさせないブロック リストを作成、管理することもできます。</p>
+
+<div class="section">
+<h4>注意：</h4>
+<p>次のように、さまざまなサービスやパッケージが自動ブロックに対応しています：DSM、SSH、Telnet、rsync、ネットワークバックアップ、共有フォルダ同期、FTP、WebDAV、File Station、Photo Station、Audio Station、Video Station、Download Station、Mail Server、Mail Statio、Time Backup、VPN Server、Cloud Station、Synology モバイルアプリ</p>
+</div>
+
+<h4>自動ブロックを有効にする：</h4>
+<ol>
+
+<li><strong>コントロール パネル</strong>を開き、<strong>[セキュリティ]</strong> &gt; <strong>[自動ブロック]</strong> を選択します。</li>
+<li><b>[自動ブロックを有効にする]</b> を選択します。</li>
+
+<li><b>[ログイン回数]</b> 欄にログイン試行回数を入力し、<b>[有効時間（分）]</b> 欄に分数を入力します。指定した時間内に指定した回数以上ログインに失敗すると、その IP アドレスはブロックされます。</li>
+<li><b>[ブロック有効期限を有効にする]</b> を選択してから、日数を入力して、指定した日数を過ぎたブロックされたIPアドレスを削除します。</li>
+
+<li><b>[適用] をクリックします。</b></li>
+</ol>
+
+
+<h3>ブロック リストの管理</h3>
+<p><strong>[ホワイト/ブロック リスト]</strong> をクリックして、<strong>[ブロック リスト]</strong> タブを開きます。</p>
+
+<h4>IP アドレスを追加するには：</h4>
+<p><strong>[作成]</strong> ドロップダウン メニューで以下のいずれかを選択します。</p>
+<ul>
+<li><strong>IP アドレスを追加</strong><br>IP アドレスを入力して、失効時間を設定します。</li>
+<li><strong>IP アドレス リストをインポート</strong><br> まとめて追加する IP アドレスがリストされたテキスト ファイルをインポートし、失効時間も同時に設定します。既存の IP アドレスに上書きする場合は、オプションを選択してください。このオプションを選択しなければ、重複する IP アドレスはスキップされます。<br> 選択したファイルが正しいフォーマットであれば、プレビュー エリアにすべての IP アドレスがリストされます。<strong>[OK] </strong>をクリックして開始します。</li>
+
+<div class="section">
+<h4>注意：</h4>
+<p>ファイルをインポートするには、ファイルが次の条件を満たす必要があります。</p>
+<ul>
+<li>書式なしのテキスト ファイルであること。</li>
+<li>1 行につき 1 個の IP アドレスだけが記載されていること。</li>
+<li>コメント行は # で始まること。</li>
+</ul>
+</div>
+</ul>
+
+<h4>ブロックした IP アドレスを削除する：</h4>
+<p>リストから削除する IP アドレスを選択し、<b>[削除]</b> をクリックします。</p>
+
+
+<h3>ホワイト リストの管理</h3>
+
+<p><strong>[ホワイト/ブロック リスト]</strong> をクリックして、<strong>[ホワイト リスト]</strong> タブを開きます。</p>
+
+<h4>IP アドレスを追加するには：</h4>
+<p><strong>[作成]</strong> ドロップダウン メニューで以下のいずれかを選択します。</p>
+<ul>
+<li><strong>IP アドレスを追加</strong><br> IP アドレスを入力します。</li>
+<li><strong>IP アドレス リストをインポート</strong><br> まとめて追加する IP アドレスがリストされたテキスト ファイルをインポートします。既存の IP アドレスに上書きする場合は、オプションを選択してください。このオプションを選択しなければ、重複する IP アドレスはスキップされます。<br> 選択したファイルが正しいフォーマットであれば、プレビュー エリアにすべての IP アドレスがリストされます。<strong>[OK] </strong>をクリックして開始します。</li>
+</ul>
+
+<div class="section"><h4>注意：</h4>
+<p>ファイルをインポートするには、ファイルが次の条件を満たす必要があります。</p>
+<ul>
+<li>書式なしのテキスト ファイルであること。</li>
+<li>1 行につき 1 個の IP アドレスだけが記載されていること。</li>
+<li>コメント行は # で始まること。</li>
+</ul>
+</div>
+
+<h4>IP アドレスを削除する：</h4>
+<p>リストから削除する IP アドレスを選択し、<b>[削除]</b> をクリックします。</p>
+
+<div class="section"><h4>注意：</h4>
+<p>DiskStation デバイスがリバース プロキシ サーバーの後ろにある場合は、そのリバース プロキシ サーバーの IP アドレスをホワイト リストに追加してください。</p>
+</div>
+
+</body>
+</html>

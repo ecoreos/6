@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Een verbinding maken met verschillende bestandsservers met Files Station - Synology DSM Help</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="Learn how to customize File Station settings related to file management, shared links, and security.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Externe verbinding</h2>
+
+<p>In File Station kunt u een verbinding maken met openbare cloudservices (Box, Dropbox, Google Drive en Microsoft OneDrive) en bestandsservers via een groot aantal verschillende protocollen (FTP, STFP, WebDAV en WebDAV HTTPS).</p>
+
+<h4>Om een verbinding met een cloudservice te maken:</h4>
+<ol>
+  <li>ga naar <strong>Tools</strong> > <strong>Externe verbinding</strong> > <strong>Verbinding instellen</strong>.</li>
+  <li>Kies de gewenste cloudservice door op het pictogram te klikken en klik vervolgens op <strong>Volgende</strong>.</li>
+  <li>Volg de wizardinstructies voor accountverificatie in het pop-upvenster dat verschijnt.</li>
+  <li>Na instelling verschijnt de doelcloudservice in het linkerpaneel.</li>
+</ol>
+
+
+<div class="section">
+<h4>Cloud-specifieke beperkingen:</h4>
+<ul>
+<li><strong>Box</strong>:
+<ul>
+  <li>een catalogus die met andere medewerkers wordt gedeeld, krijgt een suffix met de gebruikersnaam van de eigenaar.</li>
+  <li>Als catalogi die met andere medewerkers worden gedeeld een identieke naam gebruiken (een catalogusnaam met een suffix van de gebruikersnaam van de eigenaar), wordt slechts een van die catalogi weergegeven.</li>
+  <li>Alleen via Box kunt bestanden met de volgende extensies openen: .gdoc, .gsheet en .boxnote.</li>
+  <li>Bestandsnamen zijn hoofdlettergevoelig.</li>
+  <li>Zie <a href="https://support.box.com/hc/articles/200523728-Configuring-a-Firewall-for-Box-or-Box-Sync"  target="_blank">dit artikel</a> voor de juiste firewallinstellingen.</li>
+</ul>
+</li>
+
+<li><strong>Dropbox</strong>:
+<ul>
+<li>een Dropbox-catalogus met meer dan 25.000 bestanden kan niet worden weergegeven.</li>
+<li>De naam van een Dropbox-catalogus met meer dan 10.000 bestanden kan niet worden gewijzigd.</li>
+<li>Bestanden die groter zijn dan 10 GB kunnen niet worden geüpload.</li>
+<li>Een uploadtaak zal mislukken als het uploaden van het doelbestand langer duurt dan 24 uur.</li>
+<li>Bestandsnamen zijn hoofdlettergevoelig.</li>
+<li>Zie <a href="https://www.dropbox.com/help/23"  target="_blank">dit artikel</a> voor de juiste firewallinstellingen.</li>
+</ul>
+</li>
+
+<li><strong>Google Drive</strong>:
+<ul>
+  <li>bestanden/mappen met een pad langer dan 2048 tekens worden niet weergegeven.</li>
+  <li>Bestanden met een bestandsnaam langer dan 255 tekens worden niet weergegeven.</li>
+  <li>Bestanden/catalogi met een identieke naam worden gemarkeerd met individuele aanmaaktijden.</li>
+<li>Bij het openen van een Google-specifiek bestand (bv. Google Docs en Google Slides) via File Station wordt een URL weergegeven voor toegang tot het doelbestand.</li>
+<li>De in File Station weergegeven mappen <strong>My Drive</strong> en <strong>Starred</strong> komen overeen met de mappen "Mijn schijf" en "Met ster" in Google Drive.</li>
+<li>Zie <a href="https://support.google.com/drive/answer/2589954"  target="_blank">dit artikel</a> voor de juiste firewallinstellingen.</li>
+</ul>
+</li>
+
+<li><strong>Microsoft OneDrive</strong>:
+<ul>
+<li>OneNote-notitieblokbestanden worden niet weergegeven.</li>
+<li>Bestanden die groter zijn dan 10 GB kunnen niet worden geüpload.</li>
+<li>Bestanden (bijv., .png, .jpg, .docx, .pdf) kunnen grotere bestandsgroottes weergegeven (oorspronkelijke grootte plus miniatuurgrootte). Dit heeft bij het downloaden geen invloed op de oorspronkelijke bestandsgrootte.</li>
+<li>Bestandsnamen zijn hoofdlettergevoelig.</li>
+
+</ul>
+</li>
+</ul>
+
+<p>Raadpleeg de officiële website van de desbetreffende cloudservice om meer te weten over eventuele beperkingen.</p>
+
+
+</div>
+
+
+<h4>Om een verbinding te maken met een bestandsserver:</h4>
+<ol>
+  <li>ga naar <strong>Tools</strong> > <strong>Externe verbinding</strong> > <strong>Verbinding instellen</strong>.</li>
+  <li>Kies het gewenste serverprotocol door op het pictogram te klikken en vervolgens op <strong>Volgende</strong>.</li>
+  <li>Voer de volgende informatie in om de installatie te voltooien:
+  <ul>
+  <li><strong>Hostnaam of IP</strong>: voer de hostnaam of het IP van de doelbestandsserver in.</li>
+  <li><strong>Poort</strong>: voer het poortnummer van de doelbestandsserver in.</li>
+  <li><strong>Gebruiker</strong> en <strong>Wachtwoord</strong>: voer deze aanmeldingsinformatie in als de doelbestandsserver een account/wachtwoord vereist.</li>
+  <li><strong>Codepagina</strong>: selecteer de tekencodering van de doelbestandsserver om de bestandsnamen correct weer te geven.</li>
+  <li><strong>Profielnaam</strong>: voer een unieke naam in om deze bestandsserver gemakkelijk te identificeren.</li>
+  <li><strong>WebDAV HTTPS-verbinding gebruiken</strong>: deze optie is alleen beschikbaar bij de instelling van een WebDAV-protocol en wanneer client en bestandsserver WebDAV HTTPS ondersteunen.</li>
+  <li><strong>Een verbinding per gebruiker toestaan</strong>: deze optie is alleen beschikbaar bij de instelling van een FTP- of SFTP-protocol. Schakel deze optie in om de connectiviteit te optimaliseren wanneer er serverbeperkingen gelden voor het aantal verbindingen.</li>
+  </ul>
+  </li>
+<li>Klik op <strong>Toepassen</strong> om de instellingen op te slaan. De doelbestandsserver verschijnt in het linkerpaneel.</li> 
+</ol>
+<h4>Om een bestaande cloudservice of bestandsserverprofiel te wijzigen:</h4>
+<ol>
+  <li>ga naar <strong>Tools</strong> > <strong>Externe verbinding</strong> > <strong>Verbindingslijst</strong>.</li>
+  <li>Klik op de doelcloudservice of bestandsserver om de volgende handelingen uit te voeren:
+    <ul>
+      <li>Bewerken: klik op <strong>Bewerken</strong> om de huidige profielconfiguratie te wijzigen en klik op <strong>OK</strong>.</li>
+      <li>Verbinding verbreken: klik op <strong>Verbinding verbreken</strong> om de verbinding te beëindigen.</li>
+  <li>Verbinding maken: klik op <strong>Verbinding maken</strong> om de verbinding te herstellen. (Om de verbinding te herstellen, kunt u ook op het doel klikken in het linkerpaneel van File Station.)</li>
+  <li>Verwijderen: klik op <strong>Verwijderen</strong> en bevestig om het profiel te verlaten. (Deze verwijderingshandeling kunt u ook uitvoeren door op het doel te klikken in het linkerpaneel van File Station en vervolgens op <strong>Verwijderen</strong> te klikken.)</li>
+    </ul>
+  </li>
+  </ol>
+  
+  
+<div class="section">
+  <h4>Opmerking:</h4>
+<ul>
+  <li>elke gebruiker kan een gelijktijdige verbinding maken met meer dan 100 cloudservices en bestandsservers.</li>
+  <li>Zorg dat u de correcte servercodepagina selecteert om onverwachtse fouten te voorkomen. Unicode wordt aangeraden als u de servercodepagina niet weet.</li>
+  <li>Bepaalde File Station-functies (zoals Comprimeren naar, Uitpakken, Voorbeeldweergave enz.) kunnen niet worden gebruikt voor op cloudservices of bestandsservers opgeslagen bestanden.</li>
+<li>De individuele overdrachtsnelheden van elke verbonden cloudservice of bestandsserver zijn afhankelijk van de door de gebruiker ingestelde snelheidslimieten.</li>
+<li>Elke gebruiker is beperkt tot maximaal drie gelijktijdige bestandsoverdrachten, ongeacht het aantal verbonden cloudservices en bestandsservers.</li>
+<li>Om de WebDAV-, WebDAV HTTPS- en cloudservice-proxyinstellingen te configureren, gaat u naar <strong>Configuratiescherm</strong> > <strong>Netwerk</strong> > <strong>Algemeen</strong> > <strong>Proxy</strong>. Hebt u de proxyinstellingen gewijzigd terwijl u verbonden was met een cloudservice of bestandsserver, dan moet u de verbinding verbreken en opnieuw een verbinding maken om de instellingen toe te passen.</li>
+<li>Het wijzigen van informatie van verbonden cloudservices of bestandsservers heeft geen invloed op de verbindingsstatus.</li>
+<li>Een cloudservice/bestandsserver zal zich automatisch loskoppelen van de verbindingsbron wanneer de desbetreffende bestanden gedurende meer dan 30 minuten niet worden geactiveerd. Klik op de cloudservice/bestandsserver om de verbinding te herstellen.</li>
+<li>Het systeem kan bestanden/mappen met de volgende naamindelingen niet weergeven:
+  <ul>
+    <li>Beginnend met <strong>._</strong> of <strong>.SYNOPPSDB</strong></li>
+    <li>Inclusief <strong>/</strong></li>
+<li>Met de exacte naam <strong>.</strong>&nbsp;&nbsp;&nbsp;&nbsp;<strong>..</strong>&nbsp;&nbsp;&nbsp;&nbsp;<strong>'</strong>&nbsp;&nbsp;&nbsp;&nbsp;<strong>"</strong>&nbsp;&nbsp;&nbsp;&nbsp;<strong>.DS_Store</strong>&nbsp;&nbsp;&nbsp;&nbsp;<strong>@eaDir</strong>&nbsp;&nbsp;&nbsp;&nbsp;<strong>@sharebin</strong>&nbsp;&nbsp;&nbsp;&nbsp;<strong>@tmp</strong>&nbsp;&nbsp;&nbsp;&nbsp;<strong>.SynologyWorkingDirectory</strong></li>
+  </ul>
+</li>
+<li class="enable-dockerx64">Externe verbinding wordt alleen ondersteund in de modus hoge machtiging. Om deze functie te gebruiken, ga naar het Docker-pakket op uw host-DSM, selecteer de <strong>Docker DSM</strong> waarvoor u gecodeerde gedeelde mappen wilt inschakelen, klik op <strong>Bewerken</strong> en schakel het selectievakje naast <strong>Container uitvoeren met hoge machtigingen</strong> in.</li>
+
+</ul>
+</div>
+</body>
+</html>

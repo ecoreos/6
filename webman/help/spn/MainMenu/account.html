@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Opciones</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2><a name="leaf_user"></a>Cuenta</h2>
+
+<p>La pestaña de Cuenta ofrece opciones para editar configuraciones básicas de cuenta, como descripción, contraseña, correo electrónico y verificación en 2 pasos. Para ver esta pestaña, haga clic en el icono con forma de persona en la parte superior derecha del escritorio y seleccione <strong>Personal</strong>.</p>
+
+
+
+<h3>Modificación de la configuración de cuenta</h3>
+
+<p>Se pueden editar las siguientes opciones de configuración de la cuenta:</p>
+<ul>
+<li><strong>Descripción:</strong> introduzca una descripción de su cuenta. Las descripciones de los usuarios pueden incluir hasta 64 caracteres Unicode visibles.</li>
+<li><strong>Contraseña nueva:</strong> si desea cambiar la contraseña de su cuenta, introduzca una nueva aquí y confírmela en el campo <strong>Confirmar contraseña</strong> a continuación. Las contraseñas distinguen entre mayúsculas y minúsculas y pueden contener hasta 127 caracteres visibles, incluyendo letras, números, símbolos y espacios.</li>
+<li><strong>Correo electrónico:</strong> introduzca una dirección de correo electrónico (solo para usuarios que no sean administradores).</li>
+<li><strong>Idioma de visualización:</strong> especifique el idioma de visualización de su cuenta. La configuración de idioma de visualización que especifique aquí tendrá prioridad sobre cualquier idioma especificado en <b>Panel de control</b> > <b>Opciones regionales</b> > <b>Idioma</b>.</li>
+</ul>
+<p>Tras modificar la configuración de la cuenta, haga clic en <b>OK</b> para guardar los cambios.</p>
+
+
+<h3>Verificación en 2 pasos</h3>
+
+<p>La verificación en 2 pasos ofrece una seguridad mejorada para su cuenta DSM. Si la verificación en 2 pasos está habilitada, tendrá que introducir su contraseña además del código de verificación de un uso para iniciar sesión en DSM. Los códigos de verificación se obtienen de las aplicaciones de autenticación instaladas en su dispositivo móvil. Por tanto, si alguien quiere acceder a su cuenta, no solo necesitará su nombre de usuario y contraseña, sino también su dispositivo móvil.</p>
+
+<div class="section">
+<h4>Requisitos:</h4>
+<p>La verificación en 2 pasos requiere un dispositivo móvil y una aplicación de autenticación que admita el protocolo TOTP (Time-based One-Time Password). Las aplicaciones de autenticación incluyen Google Authenticator (Android/iPhone/BlackBerry) o Authenticator (Windows Phone).</p>
+</div>
+
+<h4>Para habilitar la verificación en 2 pasos:</h4>
+
+<ol>
+<li>Vaya a <strong>Personal</strong> > pestaña <strong>Cuenta</strong> y marque la casilla <strong>Habilitar verificación en 2 pasos</strong> para iniciar el asistente de configuración de la verificación en 2 pasos.</li>
+<li>En la primera pantalla, introduzca una dirección de correo electrónico. Los códigos de verificación de emergencia se pueden enviar a esta dirección de correo electrónico en caso de que se pierda su dispositivo.</li>
+<li>Descargue e instale una aplicación de autenticación como Google Authenticator (Android/iPhone/BlackBerry) o Authenticator (Windows Phone).</li>
+<li>En la siguiente pantalla, abra la aplicación de autenticación y escanee el código QR. Si lo prefiere, también puede hacer clic en el enlace manualmente para introducir una clave secreta.</li>
+<li>A continuación, su aplicación de autenticación generará un código de verificación de 6 dígitos. Introduzca este código en el campo de texto del asistente para confirmar que la configuración es correcta. Si se produce un error, asegúrese de que la hora del sistema de su dispositivo móvil está sincronizada con la hora del sistema de DSM. Además, los códigos de verificación se actualizan periódicamente, así que asegúrese de que el código introducido no ha caducado.</li>
+<li>Una vez completado el asistente de configuración, haga clic en <strong>OK</strong> para guardar la configuración.</li>
+</ol>
+
+
+
+<h4>Para iniciar sesión en DSM con la verificación en 2 pasos:</h4>
+
+<p>Cuando la verificación en 2 pasos esté habilitada, se le pedirá que introduzca un código de verificación de 6 dígitos al iniciar sesión en DSM.</p>
+
+<ol>
+<li>En la pantalla de inicio de sesión de DSM, introduzca su nombre de usuario y contraseña de la forma habitual.</li>
+<li>Cuando se le pida que introduzca un código de verificación, abra la aplicación de autenticación en su dispositivo móvil.</li>
+<li>Busque e introduzca el código de verificación de 6 dígitos para su cuenta. Si ha perdido su dispositivo móvil, puede hacer clic en el enlace <b>¿Ha perdido su teléfono?</b>, y se enviará un código de emergencia a su dirección de correo electrónico.</li>
+</ol>
+
+<div class="section">
+<h4>Nota:</h4>
+<ul>
+<li><strong>Configuración de SMTP:</strong> para recibir códigos de emergencia por correo electrónico, se debe configurar correctamente el servidor SMTP en <b>Panel de control</b> > <b>Notificación</b>.</li>
+<li><strong>Límite de códigos de emergencia:</strong> cada usuario tiene un límite de 5 códigos de emergencia. Si supera ese límite, tendrá que deshabilitar y volver a habilitar la verificación en 2 pasos para poder recibir más códigos de emergencia.</li>
+<li>La verificación en 2 pasos puede aplicarse a DSM y a todas las aplicaciones móviles relacionadas de Synology (p. ej., DSM mobile y DS file).</li>
+
+</ul>
+</div>
+
+
+<h4>Para restablecer la configuración de la verificación en 2 pasos:</h4>
+
+<p>Los usuarios que pertenecen al grupo <strong>administrators</strong> pueden restablecer la configuración de la verificación en 2 pasos de otros usuarios.<ol>
+<li>Vaya al <strong>Panel de control</strong> > <strong>Usuario</strong>.</li>
+<li>Haga doble clic en el usuario cuya verificación en 2 pasos desea restablecer.</li>
+<li>En la pestaña <strong>Información de usuario</strong>, haga clic en el botón <strong>Restablecer verificación en 2 pasos</strong>.</li>
+</ol>
+
+<div class="section">
+<h4>Nota:</h4>
+<p>Si no hay disponible ningún usuario que pertenezca al grupo <strong>administrators</strong>, puede pulsar el botón de reinicio físico de su DiskStation para restablecer la configuración de DSM y deshabilitar la verificación en 2 pasos.</p>
+</div>
+
+
+<h3>Actividad de cuenta</h3>
+<p>La actividad de cuenta muestra la actividad de inicio de sesión de su cuenta de DSM, como las conexiones actuales, los dispositivos de confianza o el historial de inicio de sesión.</p>
+
+
+<h4>Para consultar la actividad de su cuenta:</h4>
+<p>Haga clic en el botón <strong>Actividad de cuenta</strong>. Aparecerá un mensaje emergente mostrando las siguientes pestañas:<ul>
+<li><strong>Usuarios conectados:</strong> esta pestaña muestra la siguiente información:<ul>
+<li><strong>Fecha y hora:</strong> momento en el que se accedió a la cuenta.</li>
+<li><strong>Nombre e IP de cliente:</strong> nombre y dirección IP del dispositivo que ha accedido a la cuenta. El nombre de cliente solo aparece cuando se accede a la cuenta con el protocolo CIFS.</li>
+<li><strong>Servicio:</strong> el protocolo utilizado para acceder a la cuenta.</li>
+<li><strong>Recurso:</strong> los recursos del sistema utilizados por la cuenta.</li>
+</ul></li>
+
+<li><strong>Dispositivos de confianza:</strong> esta pestaña muestra la página de administración de los dispositivos de confianza:<ul>
+<li><strong>El dispositivo actual es de confianza/no es de confianza:</strong> haga clic en <strong>Confiar en este dispositivo</strong> si decide que el dispositivo actual es de confianza y que la verificación en 2 pasos ya no será necesaria cuando inicie sesión en DSM en este dispositivo.</li>
+
+<li><strong>No confiar en otros dispositivos:</strong> puede retirar la confianza de otros dispositivos (p. ej., otros ordenadores o dispositivos móviles) en los que se haya confiado. Esto significa que deberá realizar la verificación en 2 pasos cuando inicie sesión en DSM en estos dispositivos.</li>
+</ul></li>
+
+
+<li><strong>Historial de inicio de sesión:</strong> Esta pestaña muestra las sesiones de inicio de sesión recientes y la siguiente información:<ul>
+<li><strong>Fecha y hora:</strong> momento en el que se accedió a la cuenta.</li>
+<li><strong>Evento:</strong> Muestra el nombre de usuario y la dirección IP.</li>
+</ul>
+</li>
+</ul>
+
+
+<div class="section">
+<h4>Nota:</h4>
+<p>Los que marque como dispositivos de confianza solo se recordarán cuando inicie sesión con la misma cuenta y desde el mismo explorador. Se le seguirá solicitando que introduzca una OTP (contraseña de un solo uso) para la verificación en 2 pasos en las siguientes situaciones, incluso si ha considerado anteriormente que un dispositivo era de confianza:</p>
+<ul>
+<li>Inicia sesión con la misma cuenta pero con un explorador diferente.</li>
+<li>Las cookies se han eliminado del explorador.</li>
+<li>Confía en un dispositivo cuando inicia sesión como Usuario A y luego confía en el mismo dispositivo cuando inicia sesión como Usuario B. Al iniciar sesión de nuevo como Usuario A, sigue necesitando introducir una contraseña para la verificación en 2 pasos.</li>
+</ul>
+
+</div>
+
+
+</body>
+</html>

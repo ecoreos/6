@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+	<h2>HDD/SSD</h2>
+	<p>Detta avsnitt låter dig övervaka statusen för den HDD/SSD som finns installerad på din DiskStation och tillhandahåller alternativ för att hantera och analysera prestanda och hälsa för HDD/SSD. Gå till <strong>Lagringshanterare</strong> > <strong>HDD/SSD</strong> för att hantera dessa alternativ.</p>
+
+	<h4>För att kontrollera information för HDD/SSD:</h4>
+	<ol>
+		<li>Gå till fliken <b>HDD/SSD</b>.</li>
+		<li>Välj en disk från listan och expandera den. Här kommer du att se status för S.M.A.R.T., volyminformation, modellnamn, serienummer, version av fast programvara och temperatur.</li>
+	</ol>	
+	
+	<h4>För att kontrollera hälsoinformation:</h4>
+    <ol>
+      <li>Gå till fliken <b>HDD/SSD</b>.</li>
+	  <li>Välj en disk.</li>
+      <li>Kicka på <b>Hälsoinformation</b>.</li>
+	  <li>Gå till fliken <strong>Översikt</strong>. Här får du reda på hur många timmar disken har varit igång, aktuell temperatur, antal återanslutningar/återidentifieringar, antal skadade sektorer, och övergripande status för S.M.A.R.T.</li>
+      <li>Gå till <strong>S.M.A.R.T. Info</strong>. Siffrorna som listas kan hjälpa dig att ytterligare diagnostisera statusen för din disk.</li>
+    </ol>
+
+<div class="section">
+<h4>Obs:</h4>
+<p>
+   SAS-diskar har inte stöd för S.M.A.R.T.-info.
+</p>
+</div>
+
+	<h4>Starta ett S.M.A.R.T.-test:</h4>
+	<P>S.M.A.R.T. Test undersöker och rapporterar status för din diskar och varnar dig vid eventuella diskproblem. Vi rekommenderar att omgående byta diskar om fel upptäcks. </P>
+    <ol>
+      <li>Gå till fliken <strong>HDD/SSD</strong>.</li>
+      <li>Välj en disk.</li>
+      <li>Klicka på <b>S.M.A.R.T. Test</b>.</li>
+      <li>Välj en typ av test och klicka på <strong>Starta</strong> för att börja testet.</li>
+      <li>Det senaste testresultatet visas i avsnittet <b>Testresultat</b>.</li>
+    </ol>
+    <div class="section">
+<h4>Obs:</h4>
+    <p>Tiden för att utföra testet varierar beroende på din systemmiljö.</p>
+</div>
+    <h4>Schemalägga ett S.M.A.R.T.-test:</h4>
+    <p>S.M.A.R.T-test kan schemaläggas att köras automatiskt genom att skapa uppgifter.</p>
+    <ol>
+      <li>Gå till fliken <strong>Schemaläggare för test</strong>.</li>
+      <li>Klicka på <strong>Skapa</strong> för att göra en ny uppgift.</li>
+      <li>Ändra följande inställningar på fliken <strong>Allmänt</strong>:</li>
+      <ul>
+        <li><strong>Uppgift:</strong> Ange ett namn för uppgiften.</li>
+        <li><strong>S.M.A.R.T. Testtyp:</strong> Välj att utföra ett snabbtest eller ett utökat test.</li>
+        <li><strong>S.M.A.R.T. Testintervall:</strong> Välj vilka HDD/SSD som ska testas var gång S.M.A.R.T.-test utförs.</li>
+      </ul>
+      <li>På fliken <strong>Schema</strong>, ändra följande inställningar:</li>
+      <ul>
+        <li><strong>Datum:</strong> Specificera när S.M.A.R.T.-test ska utföras. S.M.A.R.T. tests kan schemaläggas att köras vissa dagar i veckan (t.ex. dagligen, veckoslut, varje söndag, etc.) eller på specifika datum (t.ex. 2015-10-21).</li>
+        <li><strong>Tid:</strong> Specificera hur många gånger S.M.A.R.T.-test ska köras, så väl som den första och sista tiden för körning.</li>
+      </ul>
+      <li>Klicka på <strong>OK</strong> för att slutföra.</li>
+    </ol>
+
+<h4>För att utföra Secure Erase:</h4>
+<ol>
+<li>Gå till fliken <b>HDD/SSD</b>.</li>
+<li>Välj en enhet och klicka på <b>Secure Erase</b>.</li>
+</ol>
+
+
+<div class="section">
+<h4>Obs:</h4>
+<ul>
+<li>Secure Erase kan inte utföras på enheter i utökningsenheter.</li>
+<li>Secure Erase kommer permanent att utplåna all data som lagras på din enhet. Vänligen säkerställ att den valda disken inte används och att data har säkerhetskopierats innan detta görs.</li>
+<li>När systemet utför Secure Erase kommer den valda disken att temporärt låsas och sedan automatiskt låsas upp när åtgärden är slutförd.</li>
+<li>Om Secure Erase stoppas på ett felaktigt sätt under åtgärden kan du köra Secure Erase igen, direkt i användargränssnittet. Om enheterna är borttagna eller används någon annanstans när de fortfarande är låsta, vänligen ange lösenordet ”synology” för att låsa upp enheterna.</li>
+</ul>
+</div>
+
+
+	<h3>Aktivera stöd för skrivcache för HDD</h3>
+	<p>Aktivering av stöd för skrivcache förbättrar prestanda för din DiskStation. Endast vissa HDD-modeller har stöd för denna funktion. För att säkerställa dataskyddet vid användning av stöd för skrivcache rekommenderas användning av en UPS-enhet. Vi rekommenderar också att stänga av systemet ordentligt efter varje användning. Genom att avaktivera skrivcache minskar risken för dataförlust orsakad av onormala strömavbrott men systemets prestanda minskar.</p>
+
+	<h4>Att aktivera stöd för skrivcache: </h4>
+	<ol>
+		<li>Gå till fliken <b>Cache-hantering</b>.</li>
+		<li>Markera <b>Aktivera skrivcache</b>. Som standard är denna funktion aktiverad.</li>
+		<li>Klicka på <b>Tillämpa</b>.</li>
+	</ol>
+	
+
+
+</body>
+</html>

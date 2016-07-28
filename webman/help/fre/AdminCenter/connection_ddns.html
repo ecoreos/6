@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>DDNS</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>DDNS</h2>
+<p>DDNS (Dynamic Domain Name Service) simplifie la connexion à votre DiskStation via Internet en mappant un nom d'hôte à son adresse IP. Par exemple, DDNS vous permet d'accéder à votre DiskStation en utilisant un nom de domaine (p.ex. <i>www.john.synology.me</i>), sans avoir à vous rappeler d'une adresse IP (p.ex. <i>172.16.254.1</i>).</p>
+
+<h3>Configurer DDNS</h3>
+<p>Vous pouvez pointer un nom d'hôte existant à l'adresse IP de votre DiskStation, ou en obtenir un nouveau fourni par Synology ou plusieurs autres fournisseurs de DDNS. Veuillez consulter chaque fournisseur pour plus de détails concernant l’enregistrement d’un nom d’hôte.
+</p>
+
+
+
+<h4>Pour configurer un nom d'hôte DDNS :</h4>
+<ol>
+<li>Cliquez sur le bouton <b>Ajouter</b>.</li>
+<li>Une boîte de dialogue apparaît vous invitant à modifier les paramètres suivants:
+  <ul>
+<li><strong>Fournisseur de service :</strong> Sélectionnez un fournisseur de service. Pour obtenir un nom d'hôte gratuit fourni par Synology, choisissez <b>Synology</b> dans le menu déroulant, cliquez sur <b>S'inscrire maintenant</b>, et entrez les détails comme indiqué.</li>
+<li><strong>Nom d'hôte :</strong> Entrez un nom d'hôte DDNS enregistré, comme <i>john.synology.me</i>.</li>
+<li><strong>Nom d'utilisateur :</strong> Entrez le nom d'utilisateur pour votre fournisseur DDNS.</li>
+<li><strong>Mot de passe :</strong> Entrez le mot de passe pour votre fournisseur DDNS.</li>
+<li><strong>Adresse externe :</strong> Entrez l'adresse IP externe du DiskStation qui utiliser le nom d'hôte.</li>
+<li><strong>Pulsation :</strong> Activez cette option pour recevoir des alertes sur l'état du nom d'hôte mappé (uniquement pour les noms d'hôtes fournis par Synology).</li>
+</ul>
+</li>
+<li>Cliquez sur <strong>Test de connexion</strong> pour voir si les paramètres sont corrects.</li>
+<li>Cliquez sur <strong>OK</strong> pour enregistrer et terminer.</li>
+</ol>
+
+<p>Une fois la configuration terminée, vous pouvez accéder à votre DiskStation sur Internet en entrant le nom d'hôte DDNS dans un navigateur Web.</p>
+<div class="section">
+<h4>Conditions et limites</h4>
+<ul> 
+<li>Les serveurs du fournisseur de service DDNS fonctionnent.</li>
+<li>Le DiskStation peut se connecter à Internet.</li>
+<li>DDNS ne fonctionnera que dans un environnement réseau où aucun serveur proxy n'est nécessaire.</li>
+<li>Vous ne pouvez entrer qu’un nom d’hôte pour chaque fournisseur de service DDNS.</li>
+
+</ul>
+</div>
+
+<h3>Gestion des noms d'hôtes</h3>
+<p>Utilisez les boutons suivants pour gérer les entrées des noms d'hôtes existants :</p>
+<ul>
+<li><strong>Supprimer :</strong> Supprime le nom d'hôte sélectionné de la liste.</li>
+<li><strong>Modifier :</strong> Changez les paramètres de l'entrée du nom d'hôte sélectionné.</li>
+<li><strong>Mettre à jour maintenant :</strong> Met à jour le statut de toutes les entrées des noms d'hôtes dont le service DDNS est activé.</li></ul>
+
+<h3>Configuration d'un fournisseur DDNS personnalisé</h3>
+<p>Vous pouvez ajouter un fournisseur DDNS personnalisé si votre fournisseur ne s'affiche pas déjà dans la liste des fournisseurs de services.</p>
+<h4>Pour configurer un fournisseur DDNS personnalisé :</h4>
+<ol>
+<li>Cliquez sur <b>Personnaliser</b>.</li>
+<li>Une boîte de dialogue apparaît vous invitant à saisir les paramètres suivants :
+<ul>
+    <li><strong>Fournisseur de service :</strong> Saisissez le nom de votre fournisseur de services personnalisé.</li>
+    <li><strong>URL de la requête :</strong> Saisissez l'URL de votre fournisseur de services personnalisé.</li>
+  </ul>
+</li>
+<li>Cliquez sur <strong>Enregistrer</strong> pour ajouter le fournisseur de services personnalisé à la liste des fournisseurs de services DDNS.</li>
+</ol>
+<div class="section">
+<h4>Conditions et limites</h4>
+<ul>
+  <li>L'URL de la requête doit être conforme au protocole spécifié par votre fournisseur de services. Cette URL est utilisée pour mettre à jour les informations d'IP sur le serveur DDNS de votre fournisseur.</li>
+  <li>Une URL de requête comprend généralement les quatre paramètres ci-dessous. Lorsque vous saisissez l'URL de requête, remplacez les paramètres suivants par la variable correspondante.</li>
+  <ul>
+    <li>Nom d'utilisateur : __USERNAME__</li>
+    <li>Mot de passe : __PASSWORD__</li>
+    <li>Nom d'hôte : __HOSTNAME__</li>
+    <li>Adresse externe : __MYIP__</li>
+  </ul>
+<li>L'URL de requête ne peut pas comporter d'espace ni de point-virgule.</li>
+</ul>
+</div>
+</body>
+</html>

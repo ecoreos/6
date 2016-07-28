@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+	<h2>Hot Spare</h2>
+	<p>Диски горячего резерва Hot Spare — это резервные жесткие диски, которые могут использоваться для замены неисправного блока RAID Group с помощью автоматической замены отказавшего устройства. Диски Hot Spare можно назначить глобально для восстановления любого блока RAID Group в DiskStation. Диск Hot Spare можно использовать для замены блока RAID Group, если он отвечает следующим критериям:</p>
+	<ul>
+  <li>Тип RAID блока RAID Group поддерживает защиту данных (т. е. RAID 1, RAID 5, RAID 6, RAID 10).</li>
+		<li>Типы жестких дисков Hot Spare должны совпадать с типами составляющих дисков RAID Group (например, SATA, SAS).</li>
+		<li>Размер диска Hot Spare не меньше, чем размер самого малого диска в RAID Group.</li>
+	</ul>
+
+	<h4>Для управления дисками Hot Spare выполните следующие действия.</h4>
+	<ol>
+		<li>Нажмите <b>Управление</b>.</li>
+		<li>Чтобы назначить диск Hot Spare, найдите раздел <b>Доступные диски</b> с правой стороны и установите флажок рядом с диском, который будет выполнять функцию Hot Spare. Для удаления Hot Spare оставьте этот флажок. Нажмите <b>Применить</b>, чтобы сохранить настройки.</li>
+	</ol>
+	<p>
+<div class="section">
+<h4>Примечание.</h4> 
+<ul>
+<li>Когда диск Hot Spare восстановит неисправный блок RAID Group, все данные на диске Hot Spare будут удалены. Перед назначением диска Hot Spare убедитесь, что на диске нет важных данных.</li>
+<li>Раздел RAID, созданный на основе жестких дисков, не будет автоматически восстанавливаться твердотельными дисками (SSD) Hot Spare, и наоборот.</li>
+</ul>
+</div>
+
+<h4>Настройка параметров Hot Spare для RAID Group:</h4>
+<ol>
+<li>Нажмите <b>Настройка</b>.</li>
+<li>На вкладке <b>Целевые устройства Hot Spare</b> отображается список блоков RAID Group, которые могут быть защищены дисками Hot Spare. Если снять флажки, поврежденные данные соответствующих блоков RAID Group не будут автоматически восстанавливаться дисками Hot Spare.</li>
+<li>На вкладке <b>Hot Spare для разных устройств</b> можно разрешить дискам Hot Spare одного устройства восстанавливать поврежденные RAID на другом устройстве.</li>
+<li>Нажмите кнопку <b>OK</b>, чтобы сохранить изменения.</li>
+</ol>
+
+</body>
+</html>

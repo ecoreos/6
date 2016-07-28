@@ -1,0 +1,71 @@
+﻿ <!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Agregar una unidad de disco duro a un volumen o grupo de discos - Ayuda de Synology DSM</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="This article walks you through the steps to add an additional hard drive to an existing volume or disk group on your DiskStation."><link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Agregar una unidad de disco duro para ampliar la capacidad de almacenamiento</h2>
+
+<p>Si DiskStation tiene ranuras para unidades de disco duro vacías, puede instalar unidades de disco duro adicionales y agregarlas a un volumen o a un grupo de discos existentes. Este artículo proporciona instrucciones para ampliar volúmenes o grupos de discos existentes mediante la instalación de unidades de disco duro adicionales.</p>
+
+<h3>Antes de comenzar</h3>
+
+<p>Antes de comenzar, asegúrese de que la unidad de disco duro que desea agregar satisface los requisitos de tamaño mínimo:</p>
+<ul>
+  <li><strong>Para SHR:</strong> La capacidad de la unidad de disco duro que desea añadir debe ser igual o superior a la de la unidad de disco duro más grande del volumen o grupo de discos, o igual a cualquiera de los discos duros en el volumen o grupo de discos. Por ejemplo, si su volumen SHR está compuesto por tres unidades de disco duro (2 TB, 1,5 TB y 1 TB respectivamente), la capacidad de la nueva unidad de disco duro debe ser de al menos 2 TB, o bien igual a 1,5 TB o 1 TB.</li>
+  <li><strong>Para RAID 5 y RAID 6:</strong> La capacidad de la unidad de disco duro que desea añadir debe ser igual o superior a la de la unidad de disco duro más pequeña del volumen o grupo de discos. Por ejemplo, si su volumen está compuesto por tres unidades de disco duro (2 TB, 1,5 TB y 1 TB respectivamente), la capacidad de la nueva unidad de disco duro debe ser de al menos 1 TB.</li>
+</ul>
+
+<div class="section">
+<h4>Comprobar el estado del volumen</h4>
+
+<p>Asegúrese de que el estado de su volumen o grupo de discos es <strong>Normal</strong>. De lo contrario, primero deberá repararlo.</p>
+</div>
+
+
+<h3>  Agregar una unidad de disco duro a un volumen o grupo de discos</h3>
+
+<p>Es posible agregar unidades de disco duro a los siguientes tipos de RAID: </p>
+
+<ul>
+<li>Synology Hybrid RAID (SHR)</li>
+<li>JBOD</li>
+<li>RAID 5</li>
+<li>RAID 6</li>
+</ul>
+
+<div class="section">
+<h4>Nota:</h4>
+<p>Para volúmenes SHR, la capacidad de almacenamiento solo se amplía al agregar unidades de disco duro a un volumen con dos o más unidades de disco duro.</p>
+</ul>
+</div>
+
+<h4>Para agregar una unidad de disco duro a un volumen o grupo de discos:</h4>
+
+<ol>
+<li>Apague su DiskStation (Omita este paso si su DiskStation admite el intercambio en caliente).</li>
+<li>Inserte la nueva unidad de disco duro en una ranura para unidades de disco duro vacía.</li>
+
+<div class="section">
+<h4>Nota:</h4>
+<p>Para evitar lesionarse o dañar su DiskStation, siga las instrucciones de instalación de la unidad de disco duro disponibles en la <i>Guía rápida de instalación</i> de su producto de Synology.</p>
+</div>
+
+<li>Encienda su DiskStation.</li>
+<li>Inicie sesión en DSM con una cuenta que pertenezca al grupo <strong>administrators</strong>.</li>
+<li>Abra <strong>Administrador de almacenamiento</strong>.</li><img src="about:blank" class="help_image"/><li>En este momento, haga lo siguiente:</li>
+  <ul class="list_abc">
+    
+  <li>Si está ampliando un volumen individual, vaya a la pestaña <strong>Volumen</strong>. Seleccione el volumen que desea ampliar. Haga clic en <strong>Administrar</strong> y continúe con el siguiente paso. </li><img src="about:blank" class="help_image"/><li>Si está ampliando un grupo de discos, vaya a la pestaña <strong>Grupo de discos</strong>. Seleccione el grupo de discos que desea ampliar. Haga clic en <strong>Administrar</strong> y continúe con el siguiente paso.</li><img src="../../../online_img/dsm/StorageManager/volume_diskgroup_expand_add_disk/diskgroup_manage.png" class="help_image"/></ul>
+<li>Seleccione <strong>Ampliar el volumen (o grupo de discos) agregando discos duros</strong>. A continuación, haga clic en <strong>Siguiente</strong>.</li><img src="about:blank" class="help_image"/><li>Seleccione las unidades de disco duro con las que desea ampliar el volumen o el grupo de discos. Puede agregar unidades de disco duro activando las correspondientes casillas de verificación. A continuación, haga clic en <strong>Siguiente</strong>.</li><img src="../../../online_img/dsm/StorageManager/volume_diskgroup_expand_add_disk/choose_disks.png" class="help_image"/><li>Siga los pasos del asistente para finalizar.</li>
+</ol>
+</body>
+</html>

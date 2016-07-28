@@ -1,0 +1,2650 @@
+
+[]
+
+
+
+[AutoBlockAdd]
+Category: System
+Title: IP address blocked
+Subject: IP address [%CLIENT_IP%] of %HOSTNAME% has been blocked by %SERVICE%
+
+Dear user,
+
+The IP address [%CLIENT_IP%] experienced %AUTOBLOCK_ATTEMPTS% failed attempts when attempting to log into %SERVICE% running on %HOSTNAME% within %AUTOBLOCK_ATTEMPT_MIN% minutes, and was blocked at %AUTOBLOCK_TIME%.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[BackupTaskCanceled]
+Category: Backup/Restore,Important
+Title: Backup canceled
+Subject: %TASK_TYPE% - %TASK_NAME% canceled on %HOSTNAME%
+
+Dear user,
+
+Data backup on %HOSTNAME% has been canceled.
+
+Backup Task: %TASK_NAME%
+Backup Destination: %DESTINATION_IP% %DESTINATION_PATH%
+Start Time: %START_TIME%
+Duration: %DURATION%
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[BackupTaskFailed]
+Category: Backup/Restore,Important
+Title: Backup failed
+Subject: %TASK_TYPE% - %TASK_NAME% failed on %HOSTNAME%
+
+Dear user,
+
+Data backup on %HOSTNAME% has failed.
+
+Please check the backup log at Hyper Backup > Log
+for more information.
+
+Backup Task: %TASK_NAME%
+Backup Destination: %DESTINATION_IP% %DESTINATION_PATH%
+Start Time: %START_TIME%
+Duration: %DURATION%
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[BackupTaskFinished]
+Category: Backup/Restore
+Title: Backup completed
+Subject: %TASK_TYPE% - %TASK_NAME% successful on %HOSTNAME%
+
+Dear user,
+
+Your backup task %TASK_NAME% is now complete.
+
+Backup Task: %TASK_NAME%
+Backup Destination: %DESTINATION_IP%  %DESTINATION_PATH%
+Start Time: %START_TIME%
+Duration: %DURATION%
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[BackupTaskPartial]
+Category: Backup/Restore,Important
+Title: Backup partially completed
+Subject: %TASK_TYPE% - %TASK_NAME% partially successful on %HOSTNAME%
+
+Dear user,
+
+Your backup task %TASK_NAME% is now complete with minor exceptions.
+
+Please check the backup log at Hyper Backup > Log
+for more information.
+
+Backup Task: %TASK_NAME%
+Backup Destination: %DESTINATION_IP% %DESTINATION_PATH%
+Start Time: %START_TIME%
+Duration: %DURATION%
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[CMSClientConnectFailed]
+Category: CMS
+Title: Connection to CMS Host failed
+Subject: %HOSTNAME% cannot connect to CMS Host (%CMS_SERVER%).
+
+Dear user,
+
+The server %HOSTNAME% cannot connect to the CMS Host (%CMS_SERVER%). Please check the network connection and settings of both servers.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[CMSClientDetachSuccess]
+Category: CMS
+Title: Disjoin from CMS Host successful
+Subject: %HOSTNAME% disjoined from CMS Host (%CMS_SERVER%).
+
+Dear user,
+
+The server %HOSTNAME% has disjoined from the CMS Host (%CMS_SERVER%).
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[CMSClientJoinSuccess]
+Category: CMS
+Title: Join to CMS Host successful
+Subject: %HOSTNAME% joined to CMS Host (%CMS_SERVER%).
+
+Dear user,
+
+The server %HOSTNAME% has successfully joined to the CMS Host (%CMS_SERVER%). Some settings will be managed by the CMS Host.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[CpuFanResume]
+Category: System
+Title: CPU fan resumed
+Subject: CPU fan %FANID% on %HOSTNAME% (SN: %HOST_SN%) has resumed
+
+Dear user,
+
+CPU fan %FANID% on %HOSTNAME% (SN: %HOST_SN%) has resumed.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[CpuFanStop]
+Category: System,Important
+Title: CPU fan stopped
+Subject: CPU fan %FANID% on %HOSTNAME% (SN: %HOST_SN%) has stopped working
+
+Dear user,
+
+CPU fan %FANID% on %HOSTNAME% (SN: %HOST_SN%) has stopped working.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[DDNSFail]
+Category: System
+Title: DDNS registration failed
+Subject: DDNS service failed to register IP address %EXTERNAL_IP% to %DDNS_HOST_NAME% [%FAIL_REASON%]
+
+Dear user,
+
+System failed to register the external IP address %EXTERNAL_IP% to %DDNS_HOST_NAME% in DDNS server %DDNS_NAME%. The reported reason is [%FAIL_REASON%].
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[DRLunScheduleSnapshotFail]
+Category: Snapshot Replication,Important
+Title: Failed to take a snapshot for iSCSI LUN
+Subject: Failed to take a snapshot for LUN %LUNNAME% on %HOSTNAME%
+
+Dear user,
+
+Failed to take a LUN snapshot on %HOSTNAME%. Please check the log in Snapshot Replication for detailed information.
+
+LUN: %LUNNAME%
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[DRReplicationCleanupTestFailoverCompletion]
+Category: Snapshot Replication,Important
+Title: Cleaned up test failover of replication task
+Subject: Cleaned up test failover of %DRSITE_TARGET_NAME% on %DRSITE_HOSTNAME% successfully
+
+Dear user,
+
+The system cleaned up test failover of %DRSITE_TARGET_NAME% on the destination server (%DRSITE_HOSTNAME%) successfully. Please check the Log page of Snapshot Replication for detailed information.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[DRReplicationCleanupTestFailoverFail]
+Category: Snapshot Replication,Important
+Title: Failed to cleanup test failover of replication task
+Subject: Failed to cleanup test failover of %DRSITE_TARGET_NAME% on %DRSITE_HOSTNAME%
+
+Dear user,
+
+The system failed to cleanup test failover of %DRSITE_TARGET_NAME% on %DRSITE_HOSTNAME%. Please check the Log page of Snapshot Replication for detailed information.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[DRReplicationExportCompletion]
+Category: Snapshot Replication,Important
+Title: Exported replication task successfully
+Subject: Exported %MAINSITE_TARGET_NAME% successfully
+
+Dear user,
+
+The system has exported %MAINSITE_TARGET_NAME% successfully. Please check the Log page of Snapshot Replication for detailed information.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[DRReplicationExportFail]
+Category: Snapshot Replication,Important
+Title: Failed to export replication task
+Subject: Failed to export %MAINSITE_TARGET_NAME%
+
+Dear user,
+
+The system failed to export %MAINSITE_TARGET_NAME%. Please check the Log page of Snapshot Replication for detailed information.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[DRReplicationFailoverCompletion]
+Category: Snapshot Replication,Important
+Title: Performed failover of replication task successfully
+Subject: Performed failover of %DRSITE_TARGET_NAME% to %DRSITE_HOSTNAME% successfully
+
+Dear user,
+
+The system performed failover of %DRSITE_TARGET_NAME% to the destination server (%DRSITE_HOSTNAME%) successfully. Please check the Log page of Snapshot Replication for detailed information.
+
+Failover version: %SNAPSHOT_VERSION%
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[DRReplicationFailoverFail]
+Category: Snapshot Replication,Important
+Title: Failed to perform failover of replication task
+Subject: Failed to perform failover of %DRSITE_TARGET_NAME% to %DRSITE_HOSTNAME%
+
+Dear user,
+
+The system failed to perform failover of %DRSITE_TARGET_NAME% to the destination server (%DRSITE_HOSTNAME%) successfully. Please check the Log page of Snapshot Replication for detailed information.
+
+Failover version: %SNAPSHOT_VERSION%
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[DRReplicationImportCompletion]
+Category: Snapshot Replication,Important
+Title: Imported replication task successfully
+Subject: Imported %DRSITE_TARGET_NAME% successfully
+
+Dear user,
+
+The system has imported %DRSITE_TARGET_NAME% successfully. Please check the Log page of Snapshot Replication for detailed information.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[DRReplicationImportFail]
+Category: Snapshot Replication,Important
+Title: Failed to import replication task
+Subject: Failed to import %DRSITE_TARGET_NAME%
+
+Dear user,
+
+The system failed to import %DRSITE_TARGET_NAME%. Please check the Log page of Snapshot Replication for detailed information.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[DRReplicationInitialSyncCompletion]
+Category: Snapshot Replication,Important
+Title: Initial replication completed
+Subject: Replication task has completed the initial replication from %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%) to %DRSITE_HOSTNAME% (%DRSITE_TARGET_NAME%)
+
+Dear user,
+
+The replication task has completed the initial replication. Please check the Log page of Snapshot Replication for detailed information.
+
+Source server: %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%)
+Destination server: %DRSITE_HOSTNAME% (%DRSITE_TARGET_NAME%)
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[DRReplicationInitialSyncFail]
+Category: Snapshot Replication,Important
+Title: Failed to perform initial replication
+Subject: Replication task failed to perform initial replication to %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%)
+
+Dear user,
+
+The replication task failed to perform initial replication to %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%). Please check the Log page of Snapshot Replication for detailed information.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[DRReplicationReprotectCompletion]
+Category: Snapshot Replication,Important
+Title: Reprotected replication task successfully
+Subject: Reprotected replication task (%NEW_MAINSITE_TARGET_NAME%) successfully
+
+Dear user,
+
+The system reprotected replication task (%NEW_MAINSITE_TARGET_NAME%) to the new source server (%NEW_MAINSITE_HOSTNAME%) with the replicated data (%NEW_DRSITE_TARGET_NAME%) on the new destination server (%NEW_DRSITE_HOSTNAME%). Please check the Log page of Snapshot Replication for detailed information.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[DRReplicationReprotectFail]
+Category: Snapshot Replication,Important
+Title: Failed to reprotect replication task
+Subject: Failed to reprotect replication task (%NEW_MAINSITE_TARGET_NAME%)
+
+Dear user,
+
+The system failed to reprotect replication task (%NEW_MAINSITE_TARGET_NAME%) to the new source server (%NEW_MAINSITE_HOSTNAME%) with the replicated data (%NEW_DRSITE_TARGET_NAME%) on the new destination server (%NEW_DRSITE_HOSTNAME%). Please check the Log page of Snapshot Replication for detailed information.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[DRReplicationScheduleSyncCompletion]
+Category: Snapshot Replication,Important
+Title: Scheduled replication completed
+Subject: The replication task has completed the scheduled replication from %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%) to %DRSITE_HOSTNAME% (%DRSITE_TARGET_NAME%)
+
+Dear user,
+
+The replication task has completed the scheduled replication. Please check the Log page of Snapshot Replication for detailed information.
+
+Source server: %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%)
+Destination server: %DRSITE_HOSTNAME% (%DRSITE_TARGET_NAME%)
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[DRReplicationScheduleSyncFail]
+Category: Snapshot Replication,Important
+Title: Failed to perform scheduled replication
+Subject: Replication task failed to perform scheduled replication to %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%)
+
+Dear user,
+
+The replication task failed to perform scheduled replication to %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%). Please check the Log page of Snapshot Replication for detailed information.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[DRReplicationSwitchoverCompletion]
+Category: Snapshot Replication,Important
+Title: Performed switchover of replication task successfully
+Subject: Performed switchover of %NEW_DRSITE_HOSTNAME% (%NEW_DRSITE_TARGET_NAME%) to %NEW_MAINSITE_HOSTNAME% successfully
+
+Dear user,
+
+The system performed switchover of %NEW_DRSITE_HOSTNAME% (%NEW_DRSITE_TARGET_NAME%) to the destination server (%NEW_MAINSITE_HOSTNAME%) successfully. Please check the Log page of Snapshot Replication for detailed information.
+
+New source server: %NEW_MAINSITE_HOSTNAME% (%NEW_MAINSITE_TARGET_NAME%)
+New destination server: %NEW_DRSITE_HOSTNAME% (%NEW_DRSITE_TARGET_NAME%)
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[DRReplicationSwitchoverFail]
+Category: Snapshot Replication,Important
+Title: Failed to perform switchover of replication task
+Subject: Failed to performed switchover of %NEW_DRSITE_HOSTNAME% (%NEW_DRSITE_TARGET_NAME%) to %NEW_MAINSITE_HOSTNAME%
+
+Dear user,
+
+The system failed to perform switchover of %NEW_DRSITE_HOSTNAME% (%NEW_DRSITE_TARGET_NAME%) to the destination server (%NEW_MAINSITE_HOSTNAME%). Please check the Log page of Snapshot Replication for detailed information.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[DRReplicationSyncFail]
+Category: Snapshot Replication,Important
+Title: Failed to perform replication
+Subject: Replication task failed to perform replication to %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%)
+
+Dear user,
+
+The replication task failed to perform replication to %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%). Please check the Log page of Snapshot Replication for detailed information.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[DRReplicationSyncNotFinishInNotifyTime]
+Category: Snapshot Replication,Important
+Title: Replication task not completed
+Subject: Replication task %MAINSITE_TARGET_NAME% to %DRSITE_HOSTNAME% (%DRSITE_TARGET_NAME%) is not completed
+
+Dear user,
+
+The replication task has not been completed within %NOTIFY_TIME% minutes. Please check the Log page of Snapshot Replication for detailed information.
+
+Source server: %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%)
+Destination server: %DRSITE_HOSTNAME% (%DRSITE_TARGET_NAME%)
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[DRReplicationSyncStop]
+Category: Snapshot Replication,Important
+Title: Replication is stopped
+Subject: Replication task performing replication to %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%) is stopped
+
+Dear user,
+
+The replication task which performs the replication to %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%) is stopped. Please check the Log page of Snapshot Replication for detailed information.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[DRReplicationTestFailoverCompletion]
+Category: Snapshot Replication,Important
+Title: Launched test failover of replication task successfully
+Subject: Test failover of %TEST_TARGET_NAME% is available now
+
+Dear user,
+
+Test failover of %TEST_TARGET_NAME% is available now. Please check the Log page of Snapshot Replication for detailed information.
+
+Test server: %DRSITE_HOSTNAME%
+Test shared folder/iSCSI LUN name: %TEST_TARGET_NAME%
+Test verstion: %SNAPSHOT_VERSION%
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[DRReplicationTestFailoverFail]
+Category: Snapshot Replication,Important
+Title: Failed to launch test failover of replication task
+Subject: Failed to launch test failover of %TEST_TARGET_NAME% on %DRSITE_HOSTNAME%
+
+Dear user,
+
+The system failed to launch a test failover on the destination server (%DRSITE_HOSTNAME%). Please check the Log page of Snapshot Replication for detailed information.
+
+Test server: %DRSITE_HOSTNAME%
+Test shared folder/iSCSI LUN name: %TEST_TARGET_NAME%
+Test verstion: %SNAPSHOT_VERSION%
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[DRShareTakeSnapshotFail]
+Category: Snapshot Replication,Important
+Title: Failed to take a snapshot for shared folder
+Subject: Failed to take a snapshot for shared folder %SHARE% on %HOSTNAME%
+
+Dear user,
+
+Failed to take a shared folder snapshot on %HOSTNAME%. Please check the log in Snapshot Replication for detailed information.
+
+Shared folder: %SHARE%
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[DRSnapshotScheduleTaskTooDenseFail]
+Category: Snapshot Replication,Important
+Title: Previous scheduled snapshot task is still in process
+Subject: Previous scheduled snapshot task is still running on %MAINSITE_TARGET_NAME%.
+
+Dear user,
+
+Failed to perform scheduled snapshot task on  %MAINSITE_TARGET_NAME% because previous scheduled snapshot task is still running. Please check the Log page of Snapshot Replication for detailed information.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[DSMAutoUpdateReady]
+Category: System,Important
+Title: System Automatic Update
+Subject: %OSNAME% Automatic Update will automatically start on %HOSTNAME% in %COUNTDOWN_MINUTE% minutes
+
+Dear user,
+
+%NEW_VERSION% will automatically be installed in %COUNTDOWN_MINUTE% minutes. If you want to cancel the installation, please sign in to %HOSTNAME% and do it in the notification area.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[DSMAutoUpdateShutdownStart]
+Category: System,Important
+Title: System updates to be installed before scheduled shutdown
+Subject: %OSNAME% updates will be installed on %HOSTNAME% before the scheduled shutdown
+
+Dear user,
+
+%NEW_VERSION% will be installed before the scheduled shutdown and %HOSTNAME% will be powered off after the installation is completed. Please do not turn off your %DISKSTATION% before it is completed.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[DSMUpdateAvailable]
+Category: System,Important
+Title: New %OSNAME% update ready
+Subject: %OSNAME% update is ready to be installed on %HOSTNAME%
+
+Dear user,
+
+A new version of %OSNAME% has been downloaded and is ready to install. Please sign into %HOSTNAME% and go to Control Panel > Update & Restore to install %NEW_VERSION%. To know more about the %OSNAME% update, please refer to %HTTP_URL%.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[DeviceEjectedImproperly]
+Category: External Storage
+Title: External device was not ejected properly
+Subject: External device %DEVICE_NAME% on %HOSTNAME% was not ejected properly.
+
+Dear user,
+
+The external device %DEVICE_NAME% on %HOSTNAME% was not ejected properly. To avoid data loss, we recommend ejecting the device before unplugging it.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[DiskTemperatureAbnormal]
+Category: Storage,Important
+Title: Disk Temperature is not within the operating temperature
+Subject: Disk %DISK_ID% is not within the operating temperature
+
+Dear user,
+
+The temperature of disk %DISK_ID% [%MODEL%] is %REAL_TEMPERATURE% ºC, which is not within the operating temperature, %MIN_TEMPERATURE% ºC ~ %MAX_TEMPERATURE% ºC.
+Please keep your disks within acceptable operating temperature.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[DiskTemperatureNormal]
+Subject: Disk %DISK_ID% is within the operating temperature
+
+Dear user,
+
+The temperature of disk %DISK_ID% [%MODEL%] is now within acceptable operating temperature, %MIN_TEMPERATURE% ºC ~ %MAX_TEMPERATURE% ºC.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[DriveSlotDisabled]
+Category: Storage,Important
+Title: Drive slot is disabled
+Subject: Drive slot [%DISK_ID%] is disabled
+
+Dear user,
+
+A drive slot has been disabled due to errors on the hard drive [%DISK_ID%]. Please replace the drive, enable it, and repair any degraded volumes if necessary.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[DsmProtectionCheckFailed]
+Category: System,Important
+Title: System abnormality detected
+Subject: Abnormality detected on %HOSTNAME%. All volumes have been unmounted.
+
+Dear user,
+
+The system has detected an abnormality on %HOSTNAME%. In order to protect your data, all volumes have been unmounted. Please contact the Synology support team for further assistance.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[EBoxHDEcc]
+Category: Storage,Important
+Title: I/O error in expansion unit disk
+Subject: I/O error occurred to disk %DISK_ID% of %EUNIT_ID% on %HOSTNAME%
+
+Dear user,
+
+The hard disk %DISK_ID% of %EUNIT_ID% on %HOSTNAME% had an I/O error, but it is working properly now after several retries. It might have been caused by bad sectors. If the error occurs again, please back up your data and run the S.M.A.R.T. test on your hard drive to examine the hard drive status.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[ESATADiskFull]
+Category: External Storage
+Title: eSATA disk full
+Subject: eSATA disk %DISK_NUMBER% on %HOSTNAME% is running out of space
+
+Dear user,
+
+The eSATA disk %DISK_NUMBER% on %HOSTNAME% is running out of space. Please refer to the info below and take corrective action.
+
+Total capacity: %DISK_SIZE% GB
+Available capacity: %FREE_SPACE% GB (%USAGE%%)
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[ESATAPartitionFull]
+Category: External Storage
+Title: eSATA partition full
+Subject: Partition %PARTITION_NUMBER% of eSATA disk %DISK_NUMBER% on %HOSTNAME% is running out of space
+
+Dear user,
+
+The partition %PARTITION_NUMBER% of eSATA disk %DISK_NUMBER% on %HOSTNAME% is running out of space. Please refer to the info below and take corrective action.
+
+Total capacity: %DISK_SIZE% GB
+Available capacity: %FREE_SPACE% GB (%USAGE%%)
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[EUnitPowerFail]
+Category: System,Important
+Title: Redundant power supply of expansion unit failed
+Subject: Power supply No.%POWERID% of %EUNIT_ID% on %HOSTNAME% has failed
+
+Dear user,
+
+Power supply No.%POWERID% of %EUNIT_ID% on %HOSTNAME% has failed.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[EUnitPowerResume]
+Category: System,Important
+Title: Redundant power supply of expansion unit recovered
+Subject: Power supply No.%POWERID% of %EUNIT_ID% on %HOSTNAME% has recovered
+
+Dear user,
+
+Power supply No.%POWERID% of %EUNIT_ID% on %HOSTNAME% has recovered.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[EboxFanResume]
+Category: System,Important
+Title: Expansion unit fan resumed
+Subject: %EBOX_ID% fan %FAN_ID% on %HOSTNAME% has resumed
+
+Dear user,
+
+%EBOX_ID% fan %FAN_ID% on %HOSTNAME% has resumed.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[EboxFanStop]
+Category: System,Important
+Title: Expansion unit fan stopped
+Subject: %EBOX_ID% fan %FAN_ID% on %HOSTNAME% has stopped working
+
+Dear user,
+
+%EBOX_ID% fan %FAN_ID% on %HOSTNAME% has stopped working.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[EboxLinkFail]
+Category: System,Important
+Title: Connection error on expansion unit
+Subject: A connection error occurred on the expansion unit %EBOX_ID% (SAS Out - %LINK_ID%) of %HOSTNAME% (SN: %HOST_SN%)
+
+Dear user,
+
+A connection error occurred on the expansion unit %EBOX_ID% (SAS Out - %LINK_ID%) of %HOSTNAME% (SN: %HOST_SN%).
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[EboxLinkResume]
+Category: System,Important
+Title: Expansion unit connection recovered
+Subject: Recovered the connection on the expansion unit %EBOX_ID% (SAS Out - %LINK_ID%) of %HOSTNAME% (SN: %HOST_SN%)
+
+Dear user,
+
+The connection on the expansion unit %EBOX_ID% (SAS Out - %LINK_ID%) of %HOSTNAME% (SN: %HOST_SN%) has been recovered.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[ExpansionFrmInconsistent]
+Category: System,Important
+Title: Expansion unit firmware inconsistent
+Subject: Firmware on expansion unit of %HOSTNAME% is inconsistent.
+
+Dear user:
+
+The firmware on the expansion unit of %HOSTNAME% is inconsistent. To fix this issue, please contact Synology Online Support at www.synology.com.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[ForgetPassword]
+Subject: Reset Forgotten Password
+Dear %USER%,
+
+You can click the link below to reset your password:
+%URL%
+
+This link will work for 24 hours. If you did not request to change your password, please ignore this message.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[HA_AbleSwitchover]
+Category: HA,Important
+Title: Switchover of the high-availability cluster is functional again
+Subject: Switchover of the high-availability cluster %HOSTNAME% is functional again
+
+Dear user,
+
+The switchover of the high-availability cluster %HOSTNAME% is functional again. Please check System Logs or the Logs page of High Availability Manager for further information.
+
+Action: %HA_ACTION%
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[HA_FailOver]
+Category: HA,Important
+Title: High-availability cluster error detected
+Subject: Error detected on high-availability cluster %HOSTNAME%
+
+Dear user,
+
+An error has been detected on the high-availability cluster %HOSTNAME%. The system will failover to the passive server. Please check System Logs for further information.
+
+Action: %HA_ACTION%
+Error: %HA_PARAM_1%
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[HA_PassiveTimeout]
+Category: HA,Important
+Title: Localhost failed to detect the active server
+Subject: [%HA_PARAM_1%] could not detect the active server for a period of time
+
+Dear user,
+
+The passive server [%HA_PARAM_1%] has been shut down because it could not detect the active server [%HA_PARAM_2%] for a period of time. Please power on the active server [%HA_PARAM_2%] first. If the active server [%HA_PARAM_2%] is no longer available, please follow the instructions below to remove the high-availability cluster: Boot up [%HA_PARAM_1%] and wait for 5 minutes. Press and hold the RESET button located on the back panel of your %DISKSTATION% for 4 seconds until your %DISKSTATION% emits a beep sound. Release immediately. (Warning: Pressing the RESET button continuously will cause the operating system to reinstall.) For more information about the system settings that will be reset, please refer to this tutorial: https://www.synology.com/knowledgebase/DSM/tutorial/General/How_to_reset_your_Synology_NAS.
+
+Action: %HA_ACTION%
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[HA_SwitchFail]
+Category: HA,Important
+Title: Failed to failover services
+Subject: Failed to failover services of high-availability cluster %HOSTNAME%
+
+Dear user,
+
+The system attempted to failover services to the passive server of the high-availability cluster %HOSTNAME%, but failed. Please check System Logs for further information.
+
+Action: %HA_ACTION%
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[HA_SwitchFinished]
+Category: HA,Important
+Title: High-availability cluster is now running
+Subject: High-availability cluster %HOSTNAME% is now running on %HA_PARAM_1%
+
+Dear user,
+
+The services of the high-availability cluster %HOSTNAME% are now running on %HA_PARAM_1%. Please check System Logs or the Logs page of High Availability Manager for further information.
+
+Action: %HA_ACTION%
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[HA_SwitchOver]
+Category: HA,Important
+Title: Switchover of high-availability cluster
+Subject: Switchover of high-availability cluster %HOSTNAME% to %HA_PARAM_1%
+
+Dear user,
+
+A switchover has been initiated on the high-availability cluster %HOSTNAME%. Services are being switched over to %HA_PARAM_1%. Please check System Logs for further information.
+
+Action: %HA_ACTION%
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[HA_SyncComplete]
+Category: HA,Important
+Title: Full data replication is complete
+Subject: Full data replication of the high-availability cluster %HOSTNAME% is complete
+
+Dear user,
+
+Full data replication of the high-availability cluster %HOSTNAME% is complete. The passive server is now ready to take over services in the event a switchover or failover is necessary. Please check System Logs or the Logs page of High Availability Manager for further information.
+
+Action: %HA_ACTION%
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[HA_UnableSwitchover]
+Category: HA,Important
+Title: Switchover of the high-availability cluster disabled
+Subject: Switchover of the high-availability cluster %HOSTNAME% has been disabled
+
+Dear user,
+
+The switchover of the high-availability cluster %HOSTNAME% has been disabled. Please check System Logs or the Logs page of High Availability Manager for further information.
+
+Action: %HA_ACTION%
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[HA_UnbindLocal]
+Category: HA,Important
+Title: Localhost removed from the high-availability cluster
+Subject: %HA_PARAM_1% has been removed from the high-availability cluster %HA_PARAM_2%
+
+Dear user,
+
+%HA_PARAM_1% has been removed from the high-availability cluster %HA_PARAM_2%. Please check System Logs for further information.
+
+Action: %HA_ACTION%
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[HDEcc]
+Category: Storage,Important
+Title: Disk I/O error
+Subject: I/O error occurred to hard disk %DISK_ID% on %HOSTNAME%
+
+Dear user,
+
+The hard disk %DISK_ID% on %HOSTNAME% had an I/O error, but it is working properly now after several retries. It might have been caused by bad sectors. If this error occurs again, please back up your data and run the S.M.A.R.T. test on your hard drive to examine the hard drive status.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[HotSpareDiskPlugout]
+Category: Storage,Important
+Title: Global Hot Spare disk is unplugged.
+Subject: Hot Spare disk (%DISK_ID%) is unplugged
+
+Dear user,
+
+The system detected that Hot Spare disk (%DISK_ID%) had been unplugged.
+It is recommended to add disks to Hot Spare in order to protect the storage space.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[HotSpareRepairDone]
+Category: Storage,Important
+Title: Global Hot Spare repairing has completed
+Subject: Repairing of storage space (%STORAGE_ID%) is completed
+
+Dear user,
+
+The system has completed repairing the degraded storage space (%STORAGE_ID%) with Hot Spare disk (%DISK_ID%).
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[HotSpareRepairFailed]
+Category: Storage,Important
+Title: Global Hot Spare repairing has failed
+Subject: Failed to repair the storage space (%STORAGE_ID%)
+
+Dear user,
+
+The system failed to repair the degraded storage space (%STORAGE_ID%) with Hot Spare disk (%DISK_ID%).
+For more information, please refer to the system logs.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[HotSpareRepairNoProtect]
+Category: Storage,Important
+Title: Global Hot Spare: remind which spaces are not protected
+Subject: Some storage spaces are not protected by Hot Spare
+
+Dear user,
+
+Some storage spaces (%STORAGE_ID%) are not protected by Hot Spare.
+It is recommended to add disks to Hot Spare in order to protect the storage space.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[HotSpareRepairStart]
+Category: Storage,Important
+Title: Global Hot Spare repairing is progressing
+Subject: System is using Hot Spare disks to repair degraded storage space (%STORAGE_ID%)
+
+Dear user,
+
+The system is now using Hot Spare disk (%DISK_ID%) to repair the degraded storage space (%STORAGE_ID%).
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[ImproperShutdown]
+Category: System,Important
+Title: Improper shutdown
+Subject: %HOSTNAME% experienced an improper shutdown
+
+Dear user,
+
+%HOSTNAME% suffered from power failure and was shut down improperly.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[InternalFanResume]
+Category: System
+Title: Server fan resumed
+Subject: Fan %FANID% of the server %HOSTNAME% (SN: %HOST_SN%) has resumed
+
+Dear user,
+
+The fan %FANID% on the server %HOSTNAME% (SN: %HOST_SN%) has resumed.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[InternalFanStop]
+Category: System,Important
+Title: Server fan stopped
+Subject: Fan %FANID% on the server %HOSTNAME% (SN: %HOST_SN%) has stopped working
+
+Dear user,
+
+The fan %FANID% on the server %HOSTNAME% (SN: %HOST_SN%) has stopped working.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[LocalLUNBkpError]
+Category: Backup/Restore,Important
+Title: Local LUN Backup failed
+Subject: Failed - LUN Backup on %HOSTNAME%
+
+Dear user,
+
+LUN backup on %HOSTNAME% to local shared folder has failed. Please check the backup log in DSM at Backup & Replication > Log for further information.
+
+LUN Name: %LUN%
+Backup Task: %BKP_TASK%
+Backup Destination: %BKP_DST%  %PATH%
+Start Time: %TIME%
+Duration: %DUR%
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[LocalLUNBkpFinished]
+Category: Backup/Restore
+Title: Local LUN Backup completed
+Subject: Completed - LUN Backup on %HOSTNAME%
+
+Dear user,
+
+LUN backup on %HOSTNAME% to local shared folder has been completed.
+
+LUN Name: %LUN%
+Backup Task: %BKP_TASK%
+Backup Destination: %BKP_DST%  %PATH%
+Start Time: %TIME%
+Duration: %DUR%
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[LocalLUNRecoverError]
+Category: Backup/Restore,Important
+Title: Local LUN restoration failed
+Subject: Failed - LUN restoration on %HOSTNAME%
+
+Dear user,
+
+LUN restoration on %HOSTNAME% from local shared folder has failed. Please check the backup log in DSM at Backup & Replication > Log for further information.
+
+LUN Name: %LUN%
+Restoration Source: %BKP_SRC%  %SRC_PATH%
+Start Time: %TIME%
+Duration: %DUR%
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[LocalLUNRecoverFinished]
+Category: Backup/Restore
+Title: Local LUN restoration completed
+Subject: Completed - LUN restoration on %HOSTNAME%
+
+Dear user,
+
+LUN restoration on %HOSTNAME% from local shared folder has been completed.
+
+LUN Name: %LUN%
+Restoration Source: %BKP_SRC%  %SRC_PATH%
+Start Time: %TIME%
+Duration: %DUR%
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[MyDSPasswordChanged]
+Category: System,Important
+Title: Synology Account password changed
+Subject: Your Synology Account password on %HOSTNAME% has been changed
+
+Dear user,
+
+This is a confirmation that the password of your Synology Account [%MYDS_ACCOUNT%] has been changed via Synology Account on %HOSTNAME%.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[NetLUNBkpError]
+Category: Backup/Restore,Important
+Title: Network LUN backup failed
+Subject: Failed - LUN backup on %HOSTNAME%
+
+Dear user,
+
+LUN backup on %HOSTNAME% to remote shared folder has failed. Please check the backup log in DSM at Backup & Replication > Log for further information.
+
+LUN Name: %LUN%
+Backup Task: %BKP_TASK%
+Backup Destination: %BKP_DST%  %PATH%
+Start Time: %TIME%
+Duration: %DUR%
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[NetLUNBkpOK]
+Category: Backup/Restore
+Title: Network LUN backup completed
+Subject: Completed - LUN backup on %HOSTNAME%
+
+Dear user,
+
+LUN backup on %HOSTNAME% to remote shared folder has been completed.
+
+LUN Name: %LUN%
+Backup Task: %BKP_TASK%
+Backup Destination: %BKP_DST%  %PATH%
+Start Time: %TIME%
+Duration: %DUR%
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[NetLUNRecoverError]
+Category: Backup/Restore,Important
+Title: Network LUN restoration failed
+Subject: Failed - LUN restoration on %HOSTNAME%
+
+Dear user,
+
+LUN restoration on %HOSTNAME% from remote shared folder has failed. Please check the backup log in DSM at Backup & Replication > Log for further information.
+
+LUN Name: %LUN%
+Restoration Source: %BKP_SRC%  %SRC_PATH%
+Start Time: %TIME%
+Duration: %DUR%
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[NetLUNRecoverFinished]
+Category: Backup/Restore,Important
+Title: Network LUN Restoration completed
+Subject: Completed - LUN restoration on %HOSTNAME%
+
+Dear user,
+
+LUN restoration on %HOSTNAME% from remote shared folder been completed.
+
+LUN Name: %LUN%
+Restoration Source: %BKP_SRC%  %SRC_PATH%
+Start Time: %TIME%
+Duration: %DUR%
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[OTP_emergency_mail]
+Subject: Emergency verification code for %USER_NAME% of %HOSTNAME%
+
+Dear user,
+
+The following is a single-use emergency verification code which can be used to log into %HOSTNAME% and reset your 2-step verification settings. Please enter this 8-digit code when prompted to enter a verification code.
+
+Emergency verification code: %EMG_CODE%
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[OTP_emergency_mail_warning]
+Subject: Emergency verification code for %USER_NAME% of %HOSTNAME%
+
+Dear user,
+
+The following is a single-use emergency verification code which can be used to log into %HOSTNAME% and reset your 2-step verification settings. Please enter this 8-digit code when prompted to enter a verification code.
+
+Note: You have reached your emergency code limit. Please reset your 2-step verification settings as soon as possible.
+
+Emergency login code: %EMG_CODE%
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[OverheatShutdownCPU]
+Category: System,Important
+Title: CPU overheating shutdown
+Subject: %HOSTNAME% (SN: %HOST_SN%) shut down due to CPU overheating
+
+Dear user,
+
+%HOSTNAME% (SN: %HOST_SN%) shut down automatically because of CPU overheating (over %SHUTDOWN_TMP%°C).
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[OverheatShutdownDisk]
+Category: System,Important
+Title: Disk overheating shutdown
+Subject: %HOSTNAME% shut down due to disk overheating.
+
+Dear user,
+
+%HOSTNAME% shut down automatically, because disk %DISK_NUM% was overheating and reached a temperature of %SHUTDOWN_TMP%°C.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[OverheatShutdownThermal]
+Category: System,Important
+Title: Overheating shutdown
+Subject: %HOSTNAME% (SN: %HOST_SN%) shut down due to overheating
+
+Dear user,
+
+%HOSTNAME% (SN: %HOST_SN%) shut down automatically because of overheating (over %SHUTDOWN_TMP%°C).
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[PKGUpgrade]
+Subject: Package Upgrade Information for %HOSTNAME%
+
+Dear user,
+
+The following packages are ready for update on %HOSTNAME%. You can launch Package Center in %OSNAME% to update them.
+
+Packages to update:
+%PKG_SET%
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[Raid5SpareChanged]
+Category: Storage,Important
+Title: RAID5+spare volume degraded
+Subject: RAID5+spare volume %VOLUME_ID% on %HOSTNAME% has degraded
+
+Dear user,
+
+Volume %VOLUME_ID% on %HOSTNAME% has degraded from RAID5+spare to RAID5. To change the volume back to RAID5+spare, please prepare a spare disk, and then go to "Main Menu" > "Storage Manager" > "Volume" > "Manage" to replace the defective disk.
+
+To obtain further assistance, please contact Synology Online Support: http://www.synology.com.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[RaidDiskFail]
+Category: Storage,Important
+Title: HDD in the Disk Group failed
+Subject: Hard disk %DISK_ID% in the Disk Group on %HOSTNAME% has failed
+
+Dear user,
+
+The hard disk %DISK_ID% in the Disk Group on %HOSTNAME% has failed; please replace it.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[RaidGroupCrashed]
+Category: Storage,Important
+Title: RAID Group crashed
+Subject: RAID Group %RAID_ID% on %HOSTNAME% has crashed
+
+Dear user,
+
+RAID Group %RAID_ID% on %HOSTNAME% has crashed. The system may not boot up.
+
+To obtain further assistance, please contact Synology Online Support: http://www.synology.com.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[RaidGroupDegraded]
+Category: Storage,Important
+Title: RAID Group degraded
+Subject: RAID Group %RAID_ID% on %HOSTNAME% has entered degraded mode [%ACTIVE_DISK%/%TOTAL_DISK%]
+
+Dear user,
+
+RAID Group %RAID_ID% on %HOSTNAME% has entered degraded mode. (Total number of hard disks: %TOTAL_DISK%; Number of active hard disks: %ACTIVE_DISK%) Please identify the cause of degradation and take corrective action.
+
+To obtain further assistance, please contact Synology Online Support: http://www.synology.com.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[RaidGroupDiskFail]
+Category: Storage,Important
+Title: HDD in the RAID Group failed
+Subject: Hard disk %DISK_ID% in the RAID Group on %HOSTNAME% has failed
+
+Dear user,
+
+The hard disk %DISK_ID% in the RAID Group on %HOSTNAME% has failed; please replace it.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[RaidGroupSyncDone]
+Category: Storage
+Title: RAID Group sync ended
+Subject: Consistency check of RAID Group %RAID_ID% on %HOSTNAME% has ended
+
+Dear user,
+
+The consistency check of RAID Group %RAID_ID% on %HOSTNAME% has ended. The system is now ready for use.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[RaidGroupVolumeBadSector]
+Category: Storage,Important
+Title: RAID Group volume has failed
+Subject: RAID Group volume (%VOLUME_ID%) on %HOSTNAME% has failed
+
+Dear user,
+
+Some files have been corrupted because the RAID Group volume (%VOLUME_ID%) on %HOSTNAME% has failed. Files are at the risk of being damaged under the degraded mode. Please repair the volume as soon as possible. You can go to Main Menu > System Logs for more details.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[RaidGroupiScsiBadSector]
+Category: Storage,Important
+Title: iSCSI LUN of RAID Group has failed
+Subject: iSCSI LUN of RAID Group on %HOSTNAME% has failed
+
+Dear user,
+
+Some files have been corrupted because iSCSI LUN of the RAID Group on %HOSTNAME% has failed. Files are at the risk of being damaged under the degraded mode. Please repair the volume as soon as possible.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[RaidSuggestDataScrubbing]
+Category: Storage
+Title: RAID scrubbing reminder
+Subject: Reminder for RAID scrubbing on %HOSTNAME%
+
+Dear user,
+
+RAID scrubbing on %HOSTNAME% has not been performed for a month. We recommend you perform RAID scrubbing to ensure data integrity.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[RaidSystemVolumeCrashed]
+Category: Storage,Important
+Title: System volume crashed
+Subject: System volume (%SYSTEM_ID%) on %HOSTNAME% has crashed
+
+Dear user,
+
+System volume (%SYSTEM_ID%) on %HOSTNAME% has crashed. The system may not boot up.
+To obtain further assistance, please contact Synology Online Support: http://www.synology.com.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[RaidSystemVolumeDegrade]
+Category: Storage,Important
+Title: System volume degraded
+Subject: System volume (%SYSTEM_ID%) on %HOSTNAME% has entered degraded mode [%ACTIVE_DISK%/%TOTAL_DISK%]
+
+Dear user,
+
+System volume (%SYSTEM_ID%) on %HOSTNAME% has entered degraded mode. (Total number of hard drives: %TOTAL_DISK%; number of active hard drives: %ACTIVE_DISK%)
+
+Please reboot the system, and it will repair itself automatically on startup.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[RaidSystemVolumeSyncDone]
+Category: Storage
+Title: Consistency check on system completed
+Subject: Consistency check of system volume (%SYSTEM_ID%) on %HOSTNAME% is complete
+
+Dear user,
+
+%HOSTNAME% has finished checking the consistency on system volume (%SYSTEM_ID%). The system is now ready for use.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[RaidVolumeBadSector]
+Category: Storage,Important
+Title: Disk Group volume has failed
+Subject: Disk Group volume (%VOLUME_ID%) on %HOSTNAME% has failed
+
+Dear user,
+
+Some files have been corrupted because the Disk Group volume (%VOLUME_ID%) on %HOSTNAME% has failed. Files are at the risk of being damaged under the degraded mode. Please repair the volume as soon as possible. You can go to "Main Menu" > "System Information" > "Log" > "System log" for more details.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[RaidVolumeCrashed]
+Category: Storage,Important
+Title: Volume crashed
+Subject: Volume %VOLUME_ID% on %HOSTNAME% has crashed
+
+Dear user,
+
+Volume %VOLUME_ID% on %HOSTNAME% has crashed. The system may not boot up.
+
+To obtain further assistance, please contact Synology Online Support: http://www.synology.com.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[RaidVolumeDegrade]
+Category: Storage,Important
+Title: Volume degraded
+Subject: Volume %VOLUME_ID% on %HOSTNAME% has entered degraded mode [%ACTIVE_DISK%/%TOTAL_DISK%]
+
+Dear user,
+
+Volume %VOLUME_ID% on %HOSTNAME% has entered degraded mode. (Total number of hard disks: %TOTAL_DISK%; Number of active hard disks: %ACTIVE_DISK%) Please identify the cause of degradation and take corrective action.
+
+To repair the volume, please replace the defected disks with new ones. For more information, visit Synology's Knowledge Base on our official website.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[RaidVolumeFull]
+Category: Storage,Important
+Title: Volume full
+Subject: Volume %VOLUME_ID% on %HOSTNAME% is running out of space
+
+Dear user,
+
+The available space of volume %VOLUME_ID% on %HOSTNAME% is running out; please delete some files to free space.
+
+Total capacity: %VOLUME_SIZE% GB
+Available capacity: %FREE_SPACE% GB (%USAGE%%)
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[RaidVolumeSyncDone]
+Category: Storage
+Title: Consistency check completed
+Subject: Consistency check of volume %VOLUME_ID% on %HOSTNAME% is complete
+
+Dear user,
+
+%HOSTNAME% has finished checking the consistency on Volume %VOLUME_ID%. The system is now ready for use.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[RaidiScsiBadSector]
+Category: Storage,Important
+Title: iSCSI LUN of Disk Group has failed
+Subject: iSCSI LUN of Disk Group on %HOSTNAME% has failed
+
+Dear user,
+
+Some files have been corrupted because iSCSI LUN of the Disk Group on %HOSTNAME% has failed. Files are at the risk of being damaged under the degraded mode. Please repair the volume as soon as possible.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[RaidiScsiCrashed]
+Category: Storage,Important
+Title: iSCSI LUN crashed
+Subject: iSCSI LUN (%LUN_NAME%) on %HOSTNAME% has crashed
+
+Dear user,
+
+iSCSI LUN (%LUN_NAME%) on %HOSTNAME% has crashed. The system may not boot up.
+
+To obtain further assistance, please contact Synology Online Support: http://www.synology.com.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[RaidiScsiDegraded]
+Category: Storage,Important
+Title: iSCSI LUN degraded
+Subject: iSCSI LUN (%LUN_NAME%) on %HOSTNAME% has entered degraded mode [%ACTIVE_DISK%/%TOTAL_DISK%]
+
+Dear user,
+
+iSCSI LUN (%LUN_NAME%) on %HOSTNAME% has entered degraded mode. (Total number of hard disks: %TOTAL_DISK%; Number of active hard disks: %ACTIVE_DISK%) Please identify the cause of degradation and take corrective action.
+
+To repair the iSCSI LUN, please replace the defected disks with new ones. For more information, visit Synology's Knowledge Base on our official website.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[RedundantPowerRecoveredProvide]
+Category: Power System
+Title: Recovered redundant power supply
+Subject: Power supply No.%POWERID% on %HOSTNAME% (SN: %HOST_SN%) has recovered
+
+Dear user,
+
+Power supply No.%POWERID% on %HOSTNAME% (SN: %HOST_SN%) has recovered.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[RedundantPowerStopProvide]
+Category: Power System,Important
+Title: Redundant power supply failed
+Subject: Power supply No.%POWERID% on %HOSTNAME% (SN: %HOST_SN%) has failed
+
+Dear user,
+
+Power supply No.%POWERID% on %HOSTNAME% (SN: %HOST_SN%) has failed.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[RestoreTaskCanceled]
+Category: Backup/Restore,Important
+Title: Restore canceled
+Subject: %TASK_TYPE% canceled on %HOSTNAME%
+
+Dear user,
+
+Data restore on %HOSTNAME% has been canceled.
+
+Restore Source: %DESTINATION_IP% %DESTINATION_PATH%
+Start Time: %START_TIME%
+Duration: %DURATION%
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[RestoreTaskFailed]
+Category: Backup/Restore,Important
+Title: Restoration failed
+Subject: %TASK_TYPE% failed be restored from %HOSTNAME%
+
+Dear user,
+
+Backup data failed to be restored from %HOSTNAME%.
+
+Please check the backup log at Hyper Backup > Log
+for more information.
+
+Restoration Source: %DESTINATION_IP% %DESTINATION_PATH%
+Start Time: %START_TIME%
+Duration: %DURATION%
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[RestoreTaskFinished]
+Category: Backup/Restore
+Title: Restore completed
+Subject: %TASK_TYPE% successful on %HOSTNAME%
+
+Dear user,
+
+Your restore task %TASK_NAME% is now complete.
+
+Restore Source: %DESTINATION_IP% %DESTINATION_PATH%
+Start Time: %START_TIME%
+Duration: %DURATION%
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[SDCardFull]
+Category: External Storage
+Title: SD card full
+Subject: SD card %DISK_NUMBER% on %HOSTNAME% is running out of space
+
+Dear user,
+
+The available space of SD card %DISK_NUMBER% on %HOSTNAME% is running out. Please refer to the info below and take corrective action.
+
+Total capacity: %DISK_SIZE% GB
+Available capacity: %FREE_SPACE% GB (%USAGE%%)
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[SDCardPartitionFull]
+Category: External Storage
+Title: SD card partition full
+Subject: Partition %PARTITION_NUMBER% of SD card %DISK_NUMBER% on %HOSTNAME% is running out of space
+
+Dear user,
+
+The partition %PARTITION_NUMBER% of SD card %DISK_NUMBER% on %HOSTNAME% is running out of space. Please take corrective action.
+
+Total capacity: %DISK_SIZE% GB
+Available capacity: %FREE_SPACE% GB (%USAGE%%)
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[SFPModuleUnsupported]
+Category: System,Important
+Title: Unsupported SFP+ module
+Subject: An unsupported SFP+ module %LAN% was detected
+
+Dear user,
+
+An unsupported SFP+ module %LAN% was detected, and the driver of the network interface card has been disabled.
+Please install a supported module and restart your %DISKSTATION%.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[SSDCacheCrashed]
+Category: Storage,Important
+Title: SSD Cache crashed
+Subject: SSD Cache %SSD_ID% on %HOSTNAME% has crashed
+
+Dear user,
+
+SSD Cache %SSD_ID% on %HOSTNAME% has crashed. To obtain further assistance, please contact Synology Online Support: http://www.synology.com.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[SSDCacheDegraded]
+Category: Storage,Important
+Title: SSD cache degraded
+Subject: SSD Cache %SSD_ID% on %HOSTNAME% has become degraded
+
+Dear user,
+
+SSD Cache %SSD_ID% on %HOSTNAME% has become degraded. To obtain further assistance, please contact Synology Online Support: http://www.synology.com.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[SSDCacheMissing]
+Category: Storage,Important
+Title: Read-write cache missing
+Subject: Read-write cache of %SPACE_ID% on %HOSTNAME% is missing
+
+Dear user,
+
+The read-write cache of %SPACE_ID% on %HOSTNAME% is missing. To obtain further assistance, please contact Synology Online Support: http://www.synology.com.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[SecurityScanAlarm]
+Category: System,Important
+Title: Security Risks Found
+Subject: Security risks found on %HOSTNAME%
+
+Dear user,
+
+Security Advisor just completed a scheduled scan on %HOSTNAME%. Several security risks were found that need your attention. Please sign in to %OSNAME% on %HOSTNAME% and view the report in Security Advisor.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[SecurityScanDSMOutOfDate]
+Category: System,Important
+Title: System Out-of-date
+Subject: %OSNAME% on %HOSTNAME% is out-of-date from Security Advisor
+
+Dear user,
+
+%OSNAME% running on %HOSTNAME% is out-of-date. Please sign in to %OSNAME% on %HOSTNAME%, open Control Panel, and install the latest version of %OSNAME%. For a detailed report, please go to Main Menu > Security Advisor.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[SecurityScanDSMPackageOutOfDate]
+Category: System,Important
+Title: System and Packages Out-of-date
+Subject: %OSNAME% and packages on %HOSTNAME% are out-of-date from Security Advisor
+
+Dear user,
+
+%OSNAME% and %NUMBER% package(s) running on %HOSTNAME% is/are out-of-date. Please sign in to %OSNAME% on %HOSTNAME% and do the following:
+- Open Control Panel and install the latest version of %OSNAME%.
+- Open Package Center and install the latest version of your package(s).
+
+For a detailed report, please go to Main Menu > Security Advisor.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[SecurityScanDanger]
+Category: System,Important
+Title: Malware Detected
+Subject: Malware detected on %HOSTNAME%
+
+Dear user,
+
+Malware was detected on %HOSTNAME%. Please sign in to %OSNAME% on %HOSTNAME% and open Security Advisor to fix this.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[SecurityScanPackageOutOfDate]
+Category: System,Important
+Title:  Packages Out-of-date
+Subject: Packages on %HOSTNAME% are out-of-date
+
+Dear user,
+
+%NUMBER% package(s) running on %HOSTNAME% is/are out-of-date. Please sign in to %OSNAME% on %HOSTNAME% and open Package Center to install the latest version of your package(s).
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[ShareSyncError]
+Category: Backup/Restore,Important
+Title: Shared folder sync failed
+Subject: Failed - Shared Folder Sync
+
+Dear user,
+
+Shared folder sync on %HOSTNAME% has failed. Please check the backup log in DSM at Log Center for further information.
+
+Sync Task: %S2S_TASK%
+Sync Server: %S2S_SERVER%
+Start Time: %TIME%
+Duration: %DUR%
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[ShareSyncSuccess]
+Category: Backup/Restore
+Title: Shared folder sync completed
+Subject: Completed - Shared Folder Sync
+
+Dear user,
+
+Shared Folder Sync on %HOSTNAME% has been completed.
+
+Sync Task: %S2S_TASK%
+Sync Server: %S2S_SERVER%
+Start Time: %TIME%
+Duration: %DUR%
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[SmartEBoxAbnor]
+Category: Storage,Important
+Title: S.M.A.R.T. status of expansion unit disk is abnormal
+Subject: S.M.A.R.T. status of Disk %DISK_ID% on %EUNIT_ID% connected to %HOSTNAME% is abnormal
+
+Dear user,
+
+The S.M.A.R.T. status of Disk %DISK_ID% on %EUNIT_ID% connected to %HOSTNAME% is abnormal. This might be indicative of an imminent failure. Please back up your data and replace the disk as soon as possible.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[SmartESataAbnor]
+Category: External Storage,Important
+Title: S.M.A.R.T. status of eSATA disk is abnormal
+Subject: S.M.A.R.T. status of eSATA disk on %HOSTNAME% is abnormal
+
+Dear user,
+
+The S.M.A.R.T. status of the eSATA disk on %HOSTNAME% is abnormal. This might be indicative of an imminent failure. Please back up your data and replace the disk as soon as possible.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[SmartIntAbnor]
+Category: Storage,Important
+Title: S.M.A.R.T. status of internal disk is abnormal
+Subject: S.M.A.R.T. status of Disk %DISK_ID% on %HOSTNAME% is abnormal
+
+Dear user,
+
+The S.M.A.R.T. status of the internal Disk %DISK_ID% on %HOSTNAME% is abnormal. This might be indicative of an imminent failure. Please back up your data and replace the disk as soon as possible.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[SmartTestEBoxErr]
+Category: Storage,Important
+Title: S.M.A.R.T. test failure on expansion unit disk
+Subject: Disk %DISK_ID% on %EUNIT_ID% connected to %HOSTNAME% failed S.M.A.R.T. test
+
+Dear user,
+
+Hard Disk %DISK_ID% on %EUNIT_ID% connected to %HOSTNAME% failed S.M.A.R.T. test. Please back up your data and replace the disk as soon as possible.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[SmartTestESataErr]
+Category: External Storage,Important
+Title: S.M.A.R.T. test failure on eSATA disk
+Subject: eSATA disk on %HOSTNAME% failed S.M.A.R.T. test
+
+Dear user,
+
+eSATA disk on %HOSTNAME% failed S.M.A.R.T. test. Please back up your data and replace the disk as soon as possible.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[SmartTestIntErr]
+Category: Storage,Important
+Title: S.M.A.R.T. test failure on internal disk
+Subject: Disk %DISK_ID% on %HOSTNAME% failed S.M.A.R.T. test
+
+Dear user,
+
+Hard Disk %DISK_ID% on %HOSTNAME% failed S.M.A.R.T. test. Please back up your data and replace the disk as soon as possible.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[StoragePoolCrashed]
+Category: Storage,Important
+Title: Disk group crashed
+Subject: Disk group %RAID_ID% on %HOSTNAME% has crashed
+
+Dear user,
+
+Disk group %RAID_ID% on %HOSTNAME% has crashed. The system may not boot up.
+
+To obtain further assistance, please contact Synology Online Support: http://www.synology.com.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[StoragePoolDegraded]
+Category: Storage,Important
+Title: Disk group degraded
+Subject: Disk group %RAID_ID% on %HOSTNAME% has entered degraded mode [%ACTIVE_DISK%/%TOTAL_DISK%]
+
+Dear user,
+
+Disk group %RAID_ID% on %HOSTNAME% has entered degraded mode. (Total number of hard disks: %TOTAL_DISK%; Number of active hard disks: %ACTIVE_DISK%) Please identify the cause of degradation and take corrective action.
+
+To obtain further assistance, please contact Synology Online Support: http://www.synology.com.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[StoragePoolRaid5SpareChanged]
+Category: Storage,Important
+Title: Disk group - Raid5+spare degraded
+Subject: Disk group %RAID_ID% on %HOSTNAME% has degraded to RAID5
+
+Dear user,
+
+Disk group %RAID_ID% on %HOSTNAME% has degraded from RAID5+spare to RAID5. To change it back to RAID5+spare, please prepare a spare disk, and then go to "Main Menu" > "Storage Manager" > "Disk Group" to replace the defective disk.
+
+To obtain further assistance, please contact Synology Online Support: http://www.synology.com.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[StoragePoolSyncDone]
+Category: Storage
+Title: Disk group sync ended
+Subject: Consistency check of Disk Group %RAID_ID% on %HOSTNAME% has ended
+
+Dear user,
+
+The consistency check of Disk Group %RAID_ID% on %HOSTNAME% has ended. The system is now ready for use.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[SynoReport]
+Subject: Disk usage report has been generated
+
+Dear user,
+
+The disk usage report of %PROFILE% has been generated. To view the report, please see below:
+%LINK%
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[SynoReportFail]
+Subject: Failed to generate the storage usage report
+
+Dear user,
+
+An error occurred while generating the usage report of %PROFILE%.
+
+Reason: %MSG%
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[SystemInodeFull]
+Category: System
+Title: File count on the system reaching the limit
+Subject: File count on system partition on %HOSTNAME% is reaching the limit
+
+Dear user,
+
+The file count on the system partition on %HOSTNAME% is reaching the limit. Please contact Synology support for help.
+
+The maximum file count: %TOTAL_INODE%
+The remaining file count: %FREE_INODE% (%USAGE%%)
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[SystemVolumeCrashed]
+Category: System
+Title: System storage space crashed
+Subject: System storage space on %HOSTNAME% has crashed
+
+Dear user,
+
+System storage space on %HOSTNAME% has crashed.
+
+To obtain further assistance, please contact Synology Online Support at http://www.synology.com
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[SystemVolumeFull]
+Category: System
+Title: System storage space full
+Subject: System storage space on %HOSTNAME% is running out
+
+Dear user,
+
+The available space of system storage on %HOSTNAME% is running out. Please refer to the information below and free up space.
+
+Total capacity: %VOLUME_SIZE% GB
+Available capacity: %FREE_SPACE% GB (%USAGE%%)
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[TPLUNReachSoftLimit]
+Category: Storage,Important
+Title: Insufficient LUN storage
+Subject: LUN %LUN_NAME% storage on %HOSTNAME% is running low
+
+Dear user,
+
+The free capacity of LUN %LUN_NAME% on %HOSTNAME% is running low. Please expand the volume for more capacity.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[TaskSchedulerResult]
+Subject: Task Scheduler has completed a scheduled task
+
+Dear user,
+
+Task Scheduler has completed a scheduled task.
+
+Task: %TASK_ID%
+Start time: %START_TIME%
+Stop time: %STOP_TIME%
+Current status: %EXIT_CODE%
+Standard output/error:
+%OUTPUT%
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[TestMail]
+Subject: Test Message from %HOSTNAME%
+
+Dear User,
+
+Congratulations! You have successfully set up the email notification on %HOSTNAME%.
+For further system configurations, please visit %HTTP_URL%.
+(If you cannot connect to the server, please contact the administrator.)
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[UPSConnected]
+Category: Power System
+Title: UPS connected
+Subject: %HOSTNAME% has been connected to UPS.
+
+Dear user,
+
+%HOSTNAME% has been connected to UPS.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[UPSDisconnect]
+Category: Power System,Important
+Title: UPS disconnected
+Subject: %HOSTNAME% has lost the connection to UPS.
+
+Dear user,
+
+%HOSTNAME% has lost the connection to UPS. Please check the server settings.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[UPSOnAC]
+Category: Power System,Important
+Title: UPS has returned to AC mode
+Subject: UPS device connected to %HOSTNAME% has returned to AC mode.
+
+Dear user,
+
+The UPS device connected to %HOSTNAME% has returned to AC mode.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[UPSOnBattery]
+Category: Power System,Important
+Title: UPS has entered battery mode
+Subject: UPS device connected to %HOSTNAME% has entered battery mode.
+
+Dear user,
+
+The UPS device connected to %HOSTNAME% has entered battery mode. %HOSTNAME% will shut down once the UPS device's battery has been depleted. Please manually power off %HOSTNAME% or restore the external power supply as soon as possible.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[UPSPowerFail]
+Category: Power System,Important
+Title: UPS low battery reached
+Subject: UPS connected to %HOSTNAME% has reached low battery
+
+Dear user,
+
+The UPS connected to %HOSTNAME% has reached low battery. All services are shut down. The services will be restarted once the UPS is recovered.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[USBCOPYDisconnect]
+Category: USB Copy
+Title: USBCopy disconnected
+Subject: External device is disconnected on %HOSTNAME%
+
+Dear user,
+
+The %COPY% on %HOSTNAME% has failed because the external device is disconnected.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[USBCOPYError]
+Category: USB Copy,Important
+Title: USBCopy failed
+Subject: The %COPY% on %HOSTNAME% failed
+
+Dear user,
+
+The %COPY% on %HOSTNAME% failed due to unknown errors.
+The error code is %ERR%. Please check out USBCopy/SDCopy log for further information.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[USBCOPYFinished]
+Category: USB Copy
+Title: USBCopy completed
+Subject: The %COPY% on %HOSTNAME% has been completed
+
+Dear user,
+
+The %COPY% on %HOSTNAME% has been completed successfully.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[USBCOPYNospace]
+Category: USB Copy,Important
+Title: USBCopy canceled
+Subject: The %COPY% on %HOSTNAME% is canceled
+
+Dear user,
+
+The %COPY% on %HOSTNAME% is canceled because available space of the destination shared folder has run out.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[USBDiskFail]
+Category: External Storage
+Title: USB disk failed
+Subject: USB disk %DISK_ID% on %HOSTNAME% has failed
+
+Dear user,
+
+USB disk %DISK_ID% on %HOSTNAME% has failed.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[USBDiskFull]
+Category: External Storage
+Title: USB disk full
+Subject: USB disk %DISK_NUMBER% on %HOSTNAME% is running out of space
+
+Dear user,
+
+USB disk %DISK_NUMBER% on %HOSTNAME% is running out of space; please take corrective action.
+
+Total capacity: %DISK_SIZE% GB
+Available capacity: %FREE_SPACE% GB (%USAGE%%)
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[USBPartitionFull]
+Category: External Storage
+Title: USB partition full
+Subject: Partition %PARTITION_NUMBER% of USB disk %DISK_NUMBER% on %HOSTNAME% is running out of space
+
+Dear user,
+
+The partition %PARTITION_NUMBER% of USB disk %DISK_NUMBER% on %HOSTNAME% is running out of space. Please take corrective action.
+
+Total capacity: %DISK_SIZE% GB
+Available capacity: %FREE_SPACE% GB (%USAGE%%)
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[UserChangePassword]
+Subject: Your password on %HOSTNAME% has been changed
+
+Dear %USER_NAME%,
+
+This is a confirmation that your password on %HOSTNAME% has been changed.
+
+To modify your account settings, please point your browser at %HTTP_URL%. (If you cannot connect to the server, please contact the administrator.)
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[UserWelcome]
+Category: System
+Title: Welcome new user
+Subject: Welcome %USER_NAME% on server %HOSTNAME%
+
+Dear user,
+
+Welcome to %HOSTNAME%!
+You may point your browser to %HTTP_URL% to modify your personal profile.
+(If you cannot connect to the server, please contact the administrator.)
+
+Your username: %USER_NAME%
+Your password: %PASSWD%
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[VolumeInodeFull]
+Category: Storage,Important
+Title: File count on the volume reaching the limit
+Subject: File count on volume %VOLUME_ID% on %HOSTNAME% is reaching the limit
+
+Dear user,
+
+The file count on volume %VOLUME_ID% on %HOSTNAME% is reaching the limit. Please delete some files to reduce the number.
+
+The maximum file count: %TOTAL_INODE%
+The remaining file count: %FREE_INODE% (%USAGE%%)
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[VpncReconnectFail]
+Category: System
+Title: VPN Client redialling has failed
+Subject: The reconnection of VPN profile [%VPN_CLIENT%] on %HOSTNAME% has failed
+
+Dear user,
+
+The reconnection of VPN profile [%VPN_CLIENT%] on %HOSTNAME% has failed after disconnection. Please check the connection between VPN client and server.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[aha_reboot_active]
+Category: AHA,Important
+Title: Reboot active server
+Subject: The active server of the high-availability cluster %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) has been rebooted
+
+Dear user,
+
+An administrator has rebooted the active server of the high-availability cluster %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%).
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[aha_reboot_active_fail]
+Category: AHA,Important
+Title: Failed to reboot the active server
+Subject: Failed to reboot the active server of the high-availability cluster %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%)
+
+Dear user,
+
+The active server of the high-availability cluster %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) failed to reboot. Please check the Log page of High Availability Manager for detailed information.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[aha_reboot_passive]
+Category: AHA
+Title: Reboot passive server
+Subject: The passive server of the high-availability cluster %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) has been rebooted.
+
+Dear user,
+
+A user has rebooted the passive server of the high-availability cluster %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%).
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[aha_reboot_passive_fail]
+Category: AHA
+Title: Failed to reboot the passive server.
+Subject: Failed to reboot the passive server of the high-availability cluster %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%)
+
+Dear user,
+
+The passive server of the high-availability cluster %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) failed to reboot. Please check the Log page of High Availability Manager for detailed information.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[aha_reboot_remote]
+Category: AHA
+Title: Reboot unknown server
+Subject: The unknown server connected to the high-availability cluster %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) has been rebooted
+
+Dear user,
+
+A user has rebooted the unknown server connected to the high-availability cluster %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%).
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[aha_reboot_remote_fail]
+Category: AHA
+Title: Failed to reboot the unknown server
+Subject: Failed to reboot the unknown server connected to the high-availability cluster %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%)
+
+Dear user,
+
+The unknown server connected to the high-availability cluster %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) failed to reboot. Please check the Log page of High Availability Manager for detailed information.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[aha_recover_remote]
+Category: AHA,Important
+Title: Add a new server
+Subject: Adding a new server to the high-availability cluster
+
+Dear user,
+
+An administrator has initiated the recovery of the unknown server. The server is currently joining the high-availability cluster %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) as the passive server. Please check the Log page of High Availability Manager for detailed information.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[aha_recover_remote_fail]
+Category: AHA,Important
+Title: Failed to add a new server
+Subject: Failed to add a new server to the high-availability cluster
+
+Dear user,
+
+The unknow server failed to join the high-availability cluster %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) as the passive server. Please check the Log page of High Availability Manager for detailed information.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[aha_shutdown]
+Category: AHA,Important
+Title: Power off high-availability cluster
+Subject: High-availability cluster %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) has been powered off
+
+Dear user,
+
+A user has powered off the high-availability cluster %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%).
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[aha_shutdown_active]
+Category: AHA,Important
+Title: Power off active server
+Subject: The active server of the high-availability cluster %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) has been powered off
+
+Dear user,
+
+An administrator has powered off the active server of the high-availability cluster %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%).
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[aha_shutdown_active_fail]
+Category: AHA,Important
+Title: Failed to power off active server
+Subject: Failed to power off the active server of the high-availability cluster %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%)
+
+Dear user,
+
+The active server of the high-availability cluster %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) failed to be powered off. Please check the Log page of High Availability Manager for detailed information.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[aha_shutdown_fail]
+Category: AHA,Important
+Title: Failed to power off the high-availability cluster
+Subject: Failed to power off the high-availability cluster %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%)
+
+Dear user,
+
+The high-availability cluster %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) failed to be powered off. Please check the Log page of High Availability Manager for detailed information.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[aha_shutdown_passive]
+Category: AHA,Important
+Title: Power off passive server
+Subject: The passive server of the high-availability cluster %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) has been powered off
+
+Dear user,
+
+An administrator has powered off the passive server of the high-availability cluster %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%).
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[aha_shutdown_passive_fail]
+Category: AHA,Important
+Title: Failed to power off passive server
+Subject: Failed to power off the passive server of the high-availability cluster %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%)
+
+Dear user,
+
+The passive server of the high-availability cluster %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) failed to be powered off. Please check the Log page of High Availability Manager for detailed information.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[aha_shutdown_remote]
+Category: AHA
+Title: Power off unknown server
+Subject: The unknown server connected to the high-availability cluster %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) has been powered off.
+
+Dear user,
+
+A user has powered off the unknown server connected to the high-availability cluster %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%).
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[aha_shutdown_remote_fail]
+Category: AHA,Important
+Title: Failed to power off unknown server
+Subject: Failed to power off the unknown server connected to the high-availability cluster %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%)
+
+Dear user,
+
+The unknown server connected to the high-availability cluster %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) failed to be powered off. Please check the Log page of High Availability Manager for detailed information.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[aha_switchover]
+Category: AHA,Important
+Title: Switchover of the high-availability cluster
+Subject: Services of the high-availability cluster %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) are switched over to %HA_REMOTE_HOST_SN%
+
+Dear user,
+
+The sysyem has initiated a switchover of the high-availability cluster %HOSTNAME%  (SN: %HA_LOCAL_HOST_SN%). Services will be switched over to %HA_REMOTE_HOST_SN%. Please check the Log page of High Availability Manager for detailed information.
+
+Reason: %HA_FAILOVER_REASON%
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[aha_switchover_fail]
+Category: AHA,Important
+Title: Failed to perform switchover of the high-availability cluster
+Subject: Services of the high-availability cluster %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) failed to be switched over to %HA_REMOTE_HOST_SN%
+
+Dear user,
+
+The system had attempted to perform the switchover in the high-availability cluster %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%). However, services failed to be switched over to the passive server (SN: %HA_REMOTE_HOST_SN%). Please check the Log page of High Availability Manager for detailed information.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[aha_takeover]
+Category: AHA,Important
+Title: High-availability cluster failover
+Subject: Detected errors in the high-availability cluster %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%)
+
+Dear user,
+
+Error have been detected in the high-availability cluster %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%). Services will be switched over to the passive server. Please check the Log page of High Availability Manager for detailed information.
+
+Error: %HA_FAILOVER_REASON%
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[aha_upgrade_fail]
+Category: AHA,Important
+Title: Failed to upgrade the high-availability cluster
+Subject: Failed to upgrade the high-availability cluster %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%)
+
+Dear user,
+
+The high-availability cluster %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) failed to be upgraded. Please check the Log page of High Availability Manager for detailed information.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[aha_upgrade_passive_fail]
+Category: AHA,Important
+Title: Failed to upgrade passive server
+Subject: Failed to upgrade the passive server of the high-availability cluster %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%)
+
+Dear user,
+
+The passive server of the high-availability cluster %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) failed to be upgraded. Please check the Log page of High Availability Manager for detailed information.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[aha_welcome]
+Category: AHA
+Title: High-availability cluster running
+Subject: The high-availability cluster %HOSTNAME% is now operating services on %HA_LOCAL_HOST_SN%
+
+Dear user,
+
+The services of the high-availability cluster %HOSTNAME% are now running on %HA_LOCAL_HOST_SN%. Please check the Log page of High Availability Manager for detailed information.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[disk_health_monthly_report]
+Subject: Monthly Disk Health Report on %HOSTNAME%
+
+Dear user,
+
+The following is your monthly report regarding the health of disks on %HOSTNAME%. You can also check the health of individual disks at Storage Manager > HDD/SSD > Health Info.
+
+%CONTENT%
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[eSynoscheduler_complete_task]
+Subject: Task Scheduler has completed a triggered task
+
+Dear user,
+
+Task Scheduler has completed a triggered task.
+
+Task: %TASK%
+Start time: %START_TIME%
+Stop time: %END_TIME%
+Current status: %EXIT_CODE%
+Standard output/error:
+%OUT_PUT%
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[ext4_fs_err]
+Category: System,Important
+Title: File system error
+Subject: File system error detected on %HOSTNAME%
+
+Dear user,
+
+A file system error was detected on volume %VOLUME_ID%. Please go to Storage Manager to repair it as soon as possible.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[file_cksum_err]
+Category: System,Important
+Title: Checksum error
+Subject: Checksum error on %HOSTNAME%. Please check Log Center for more details.
+
+Dear user,
+
+A checksum error was detected in the file %FILE_PATH%. Please use a previously backed up version to repair the file.
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[iSCSILunScheduleSnapshotFail]
+Category: Storage,Important
+Title: Failed to take a snapshot for iSCSI LUN
+Subject: Failed to take a snapshot for iSCSI LUN %LUNNAME% on %HOSTNAME%
+
+Dear user,
+
+Failed to take an iSCSI LUN snapshot on %HOSTNAME%. Please check Storage Manager for detailed information.
+
+LUN: %LUNNAME%
+
+Sincerely,
+%COMPANY_NAME%
+

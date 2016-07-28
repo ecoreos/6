@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Depolama Yöneticisi</title>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2><a name="leaf_iscsilun"></a>iSCSI LUN*</h2>
+<p>iSCSI yerel ağlar veya uzun mesafeler boyunca veri aktarımını hızlandıran bir depolama ağ servisidir. iSCSI Target'lere iSCSI LUN'lar eşleyerek, istemciler depolama alanlarına yerel disklermiş gibi erişebilirler. Bir iSCSI LUN (mantıksal birim numarası) iSCSI depolama hizmetlerini sunmak için birden fazla iSCSI Target'e eşlenebilir.  <strong>Depolama Yöneticisi</strong> > <strong>iSCSI LUN</strong> bölümüne giderek iSCSI LUN'ları yönetin.</p>
+
+<div class="section"><h4>Not:</h4>
+<p>Desteklenen iSCSI LUN'ların sayısı DiskStation modellerinde değişkenlik arz eder. Ayrıntılı ürün özellikleri için, lütfen <a href="http://www.synology.com/" target="_blank">www.synology.com</a> adresine gidin.</p>
+</div>
+
+<p>DiskStation şu anda aşağıdaki iSCSI LUN tiplerini destekler:</p>
+<ul>
+	<li><b>iSCSI LUN (Normal Dosyalar)</b>: iSCSI LUN, birim alanının bir kısmı kullanımına atanarak oluşturulur. Gerektiğinde boyutunu daha sonra artırabilirsiniz. Bu tür iSCSI LUN, Thin Provisioning, VMware VAAI donanım hızlandırma desteği, Windows ODX Desteği, LUN anlık görüntü ve LUN kopyası çıkarmayla dinamik kapasite yönetiminin esnekliğini sağlar.</li>
+	<li class="disable-bromolow disable-grantley disable-avoton disable-braswell disable-broadwell disable-kvmx64"><b>iSCSI LUN (Blok-Seviyesi) - RAID’de Tekli LUN</b>: Bir birimdeki tüm alan kullanılarak iSCSI LUN oluşturulur. Aynı bir birim kullanır gibi bunu onarabilir veya genişletebilir ya da RAID tipini değiştirebilirsiniz. Lütfen daha fazla bilgi için <a href="space.html">Birim</a> sayfasına bakın.</li>
+	<li class="disable-bromolow disable-grantley disable-avoton disable-braswell disable-broadwell disable-kvmx64"><b>iSCSI LUN (Blok-Seviyesi) – RAID’de Çoklu LUN’lar</b>: Bir Disk Grubundaki belirli bir alan tasarlanarak iSCSI LUN oluşturulur. Eğer Disk Grubunda mevcut alan varsa iSCSI LUN'u daha sonra genişletebilirsiniz. Lütfen daha fazla bilgi için <a href="raid.html">Disk Grubu</a> sayfasına bakın.</li>
+	<li class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64"><b>iSCSI LUN (Blok-Seviyesi)</b>: Bu tür iSCSI LUN bir RAID Group içinde oluşturuldu ve optimize edilen erişim performansı ile birlikte dinamik kapasite yönetiminin esnekliğini sağlar. RAID Group üzerinde ayrılmamış alanı kullanarak bu tür iSCSI LUN'u daha sonra genişletebilirsiniz. Lütfen daha fazla bilgi için <a href="raid.html">RAID Group</a> sayfasına bakın.</li>
+</ul>
+
+<div class="section"><h4>Not:</h4>
+<p>Gelişmiş LUN özelliklerine sahip iSCSI LUN'lar yalnızca ext4<span style="display: inline;" class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64">/Btrfs</span> dosya sisteminde mevcuttur.</p>
+</div>
+
+<h4>iSCSI LUN oluşturmak için:</h4>
+<ol>
+	<li><b>Oluştur</b>'a tıklayın.</li>
+	<li>Oluşturmak istediğiniz iSCSI LUN tipini seçin.</li>
+	<li>Süreci tamamlamak için sihirbazı izleyin.</li>
+</ol>
+
+<div class="section"><h4>Not:</h4>
+<p>Gelişmiş LUN özellikleri yalnızca ilk iSCSI LUN oluşturması sırasında etkinleştirilebilir. Bu ayar daha sonra değiştirilemez.</p>
+</div>
+
+<p>Gelişmiş LUN atama birimi boyutu, aşağıdakilerden biri yapılarak uygulama sunucusundaki (örneğin Microsoft Exchange veya SQL Sunucusu) veya sanallaştırma sunucularındaki ve depolama hızlandırma teknolojilerindeki (Microsoft Windows ODX veya VMware VAAI gibi) belirli özellikler için optimize edilebilir:</p>
+<ul>
+	<li>Atama birimi boyutunu bir birimin ilk gelişmiş LUN'u oluşturulurken ayarlayın.</li>
+	<li>Atama birimi boyutunu, bir birimin ilk gelişmiş LUN'unu oluşturmadan önce <strong>Yapılandır</strong> bölümünde ayarlayın.</li>
+</ul>
+
+<p>Atama birimi boyutunu DiskStation üzerinde Gelişmiş iSCSI LUN'lar ile çalışan RDM (geçiş) yöntemleri veya uygulama sunucunuzdan direkt bağlantı kullanırken belirlemenizi öneririz. Windows ODX üzerinde klonlama için Synology Gelişmiş LUN teknolojisinden faydalanmak için NTFS birimini DSM'de belirlediğiniz atama birimi boyutuna eşit (veya daha büyük) bir boyutta biçimlendirmenizi öneririz.</p>
+
+<div class="section"><h4>Not:</h4>
+<p>Her bir birimin Gelişmiş LUN atama birimi sadece bir kez ayarlanabilir.</p>
+</div>
+
+<h4>iSCSI LUN'u kaldırmak için:</h4>
+<p>Bir iSCSI LUN kaldırıldığında, iSCSI LUN üzerindeki tüm veriler silinecektir. iSCSI LUN ile eşlenmiş iSCSI Target'lar arasındaki bağlantılar da kaybedilecektir.</p>
+<ol>
+	<li>Kaldırmak istediğiniz iSCSI LUN'ı seçin.</li>
+	<li><b>Kaldır</b> düğmesine tıklayın ve sihirbazı izleyerek süreci tamamlayın.</li>
+</ol>
+
+<div class="section"><h4>Not:</h4>
+<p>VAAI LUN'ların DiskStation üzerinde silinmesi hemen disk alanını boşaltmaz. Veriler <strong>@EP_trash</strong> adındaki bir sistem yedek klasörüne taşınır ve parçalar halinde silinir. Örneğin, bir adet 100 GB VAAI LUN, DiskStation sunucusundan silinirse, disk biriminde 100 GB'a kadar alanı boşaltmak yaklaşık 15-20 dakika sürebilir.</p>
+</div>
+
+<h4>iSCSI LUN'ı (Blok-Seviyesi) zorla tanıtmak için:</h4>
+<p>Bir iSCSI LUN (Blok-Seviyesi) üzerindeki önbellek kayıp ise, sistem önyükleme sırasında iSCSI LUN'ı (Blok-Seviyesi) bağlamaz. Önbellek kurtarılabilir değilse ve iSCSI LUN'a (Blok-Seviyesi) erişmek istiyorsanız, <b>Zorla tanıt</b> üzerine tıklayabilirsiniz.</p>
+
+<div class="section"><h4>Not:</h4>
+<p>Bu işlev yalnızca belirli modellerde kullanılabilir.</p>
+</div>
+
+<h4>iSCSI LUN'u düzenlemek için:</h4>
+<ol>
+	<li>Düzenlemek istediğiniz iSCSI LUN'ı seçin.</li>
+	<li><b>Düzenle</b>'ye tıklayın.</li>
+	<li>İstenilen özellikleri düzenleyin.</li>
+	<li><b>Tamam</b> üzerine tıklayarak ayarları kaydedin.</li>
+</ol>	
+
+<div class="section"><h4>Not:</h4>
+<p>iSCSI LUN kapasitesini düzenlerken veri kaybını önlemek için, sadece geçerli boyuttan daha büyük yapabilirsiniz.</p>
+</div>
+
+<h4>Bir iSCSI LUN anlık görüntüsü almak için:</h4>
+<p>Bir iSCSI LUN'un anlık görüntüsü zaman içindeki bir andır, iSCSI LUN'un salt okunur kopyasıdır.</p>
+<ol>
+	<li>Anlık görüntülerini almak istediğiniz iSCSI LUN'u seçin.</li>
+	<li><strong>Anlık görüntü</strong>'ye tıklayıp <strong>Bir Anlık Görüntü Al</strong>'ı seçin.</li>
+	<li>Bu anlık görüntü için açıklamayı girin.</li>
+	<li>İhtiyaçlarınıza göre aşağıdaki anlık görüntü tiplerinden birisini seçin:
+		<ul>
+			<li><strong>Uygulama tutarlı</strong>: Bu tip bir anlık görüntü DSM ile iletişim kuracak çalışma ortamınıza bağlı olarak Synology Snapshot Manager'in Windows sunucunuza veya VMware vCenter Server'a kurulması durumunda çekilebilir. Uygulama tutarlı anlık görüntüler DSM üzerinde tetiklendiğinde, uygulamalar bilgilendirilir ve veri tutarlılığını garanti altına almak için tüm verileri bellekten anlık görüntünün alındığı LUN'a aktarır.</li>
+			<li><strong>Çökme tutarlı</strong>: Synology Snapshot Manager istemcilerinizden birinde kurulu değil ise, LUN'ların sadece çökme tutarlı anlık görüntülerini yakalayabilirsiniz. Tetiklendiklerinde, uygulamalar verileri bellekten LUN'a aktarmak için uyarılmazlar ve bu yüzden veri tutarlılığı garantisi vermezler.</li>
+		</ul>
+	</li>
+	<li><strong>Tamam</strong>'a tıklayın.</li>
+</ol>
+
+<h4>Bir iSCSI LUN'ı geri yüklemek için:</h4>
+<p>Bir iSCSI LUN üzerindeki verileri geri yüklemek için bir anlık görüntü seçin.</p>
+<ol>
+	<li>Geri yüklemek istediğiniz iSCSI LUN'ı seçin.</li>
+	<li><strong>Anlık görüntü</strong>'ye tıklayıp <strong>Anlık Görüntü Yöneticisi</strong>'ni seçin.</li>
+	<li>Geri yüklemek istediğiniz bir anlık görüntüyü seçip <strong>Geri yükle</strong>'ye tıklayın.</li>
+</ol>
+
+<h4>Bir iSCSI LUN kopyalamak veya anlık görüntüsünü almak için:</h4>
+<p>Bir iSCSI LUN ya da iSCSI LUN anlık görüntüsünün yazılabilir bir kopyasını çıkarın.</p>
+<ul>
+	<li>Listeden bir iSCSI LUN seçerek <strong>Kopya Çıkar</strong>'a tıklayın.</li>
+	<li><strong>Snapshot Manager</strong> bölümünden bir iSCSI LUN anlık görüntüsü seçerek <strong>Kopya Çıkar</strong>'a tıklayın.</li>
+</ul>
+
+<div class="section"><h4>Not:</h4>
+<ul>
+<li>Belirli modellerde, <b>Paket Merkezi</b>'ne gitmeniz ve iSCSI LUN'ların geri yüklenmesi, iSCSI LUN anlık görüntülerinin alınması ve klonlanması dahil fonksiyonlar için <b>Anlık Görüntü ve Çoğaltma</b> kurmanız gerekir.</li>
+	<li>LUN ile ilişkili en az bir bağlı iSCSI oturumu varsa ve Windows Server ya da VMware ESXi Server tarafından kullanılıyorsa, olası veri tutarsızlıklarından kaçınmak için <b>Synology Snapshot Manager</b> eklentisini yüklemenizi öneririz, aksi takdirde devam etmeden önce tüm uygulamaları kapatarak başlatıcılardan bu oturumları kapatmanız gerekir.</li>
+	<li>LUN anlık görüntüsü, geri yükleme ve kopya çıkarma işlevleri yalnızca gelişmiş LUN özelliklerine sahip iSCSI LUN'larda kullanılabilir.</li>
+	<li>Bir anlık görüntü almış ya da bir kopya çıkarmışsanız ve durum <strong>Anormal</strong>/<strong>Çöktü</strong> olmuşsa, lütfen bu anlık görüntüyü/kopyayı silip başka bir tane oluşturun.</li>
+	<li>LUN'ı bu anlık görüntüye geri yüklediğinizde, anlık görüntü oluşturulduktan sonra bir LUN'da yapılan tüm değişiklikler kaybedilecektir.</li>
+	<li>iSCSI LUN durumu <b>Kullanılamıyor</b> olarak değişirse, bu iSCSI LUN'a erişim sırasında bazı veriye ilişkin hataların meydana geldiği anlamına gelir. Sisteminizde ciddi veri kaybını önlemek için, bu iSCSI LUN geçici olarak erişime kapatılacaktır. Lütfen en kısa zamanda destek için Synology ile temas kurun.</li>
+</ul>
+</div>
+
+
+<div class="section"><h4>Sözlük:</h4>
+<ul>
+	<li><b>Thin Provisioning</b>: Thin Provisioning dinamik ve talep üzerine olacak şekilde depolama alanı atayarak depolama kullanımını optimize etmek için bir yöntemdir. Bu ayar sadece <b>iSCSI LUN (düzenli dosyalar)</b> için kullanılabilir.</li>
+	<li><b>VMware VAAI</b>: VMware vStorage APIs for Array Integration (VAAI), sanal depolama dizilerindeki standart işlemlerin çalışmasını VMware vSphere ortamındaki iSCSI aygıtına yükleyebilir ve depolama performansını iyileştirebilir.</li>
+	<li><b>Windows ODX</b>: Yükdışı Veri Transferi (ODX) olarak adlandırılan Windows tarafından Windows Server 2012 ve 8 için geliştirilen yeni bir veri transfer teknolojisidir. ODX iş yükünün bir kısmını depolama dizisine bırakarak transfer performansını iyileştirir. <br />Veri kaynağı ve hedefi aynı birim üzerinde yer alan LUN'larda yer alıyorsa, klonlama işlemi depolama alanı sarfiyatını %99,9'a kadar azaltan ve aynı anda klonlamayı hızlandıran Synology Gelişmiş LUN teknolojisi tarafından yapılacaktır.</li>
+	<li><b>iSCSI Target Eşleme</b>: iSCSI LUN'u bir veya daha fazla iSCSI Target'e eşleyin.</li>
+	<li><b>Synology Snapshot Manager</b>: Bir yazılım eklentisi olan Synology Snapshot Manager, doğrudan DiskStation Manager (DSM)'den uygulama ile tutarlı anlık görüntüler almanızı sağlar.
+		<ul>
+		    <li>VMware ortamı için, Synology Snapshot Manager'ı Windows sunucusunda VMware vCenter Server'ın yüklü olduğu yere yüklemeniz gerekir. DSM'de bir anlık görüntü tetiklendiğinde, VMware vCenter Server bilgilendirilir ve veri tutarlılığını garanti altına almak için tüm verileri bellekten anlık görüntünün alındığı LUN'a aktarır. Anlık görüntü tamamlandığında, VMware vCenter Server VMware veri deposunun normal G/Ç çalışmasına devam eder. Synology Snapshot Manager for VMware vCenter Server, vSphere 5.1 veya daha yeni sürümleri destekler.</li>
+		    <li>Windows ortamı için, Synology Snapshot Manager'ı Windows sunucusuna yüklemeniz gerekir. DSM'de bir anlık görüntü tetiklendiğinde, Synology Snapshot Manager verilerin belirli bir noktadaki kopyalarını tutarlı biçimde üretmek için Microsoft Volume Shadow Copy Service (VSS) teknolojisinden faydalanır. Synology Snapshot Manager for Windows, Windows Server 2008 R2, 2012 ve 2012 R2 sürümlerini destekler.</li>
+			<li>Synology Snapshot Manager, <a href="http://www.synology.com/" target="_blank">www.synology.com</a> adresinden ücretsiz olarak indirilebilir.</li>
+		</ul>
+	</li>
+</ul>
+</div>
+<p>____<br />*Yalnızca bazı modellerde mevcuttur.</p>
+
+
+</body>
+</html>

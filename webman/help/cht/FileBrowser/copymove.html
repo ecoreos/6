@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>File Station</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>複製或移動檔案或資料夾</h2>
+<p>File Station 提供多種方式，讓您能在兩臺 DiskStation 之間或單一 DiskStation 之中傳送檔案 / 資料夾，或是傳送至本機電腦上。</p>
+<h3>在瀏覽器之間拖拉檔案 / 資料夾</h3>
+<p>透過 File Station，您可以從 DiskStation 直接上傳檔案 / 資料夾至另一臺 DiskStation，毋須設定複雜的檔案傳輸通訊協定。</p>
+<h4>若要啟動跨瀏覽器拖拉功能：</h4>
+<ol>
+<li>請前往<strong>設定</strong> &gt; <strong>一般</strong> &gt; <strong>File Station</strong>。</li>
+<li>勾選<strong>啟動跨瀏覽器拖拉功能</strong>。</li>
+<li>按一下<strong>確定</strong>。</li>
+<li>開啟兩個相同種類的網頁瀏覽器 (例如 Firefox)，並個別連線至作為來源端及目的地的 DiskStation。</li>
+<li>在兩臺 DiskStation 上開啟 File Station。您現在可以透過此兩臺上的 File Station 直接拖拉檔案 / 資料夾。</li>
+</ol>
+
+<div class="section">
+<h4>注意：</h4>
+<ul>
+<li>您也可以在同一個瀏覽器的兩個頁籤之間拖拉檔案 / 資料夾。</li>
+<li>Internet Explorer 不支援跨瀏覽器及跨頁籤的拖拉功能。</li>
+<li>若選取多個檔案 / 資料夾進行拖拉，所選的檔案 / 資料夾將會壓縮成一份壓縮檔後再進行上傳。</li>
+<li>拖拉檔案的大小限制依個別網頁瀏覽器有所不同：Safari (1 GB)。</li>
+</ul>
+</div>
+<h3>在 DiskStation 中複製或移動檔案 / 資料夾，或是複製、移動至本機電腦</h3>
+<p>依照下列步驟的指示，在 DiskStation 之中複製、移動檔案 / 資料夾，或是複製、移動至您的本機電腦上。</p>
+<h4>方法 1：</h4>
+<ol>
+<li>選擇您想移動或複製的檔案或資料夾。(多選時請按住 Shift 或 Ctrl 鍵。)</li>
+<li>從<b>操作</b>下拉式選單中選擇<b>剪下</b>或<b>複製</b>。</li>
+<li>前往 DiskStation 或您電腦上的目的地資料夾。</li>
+<li>從<b>操作</b>下拉式選單中選擇<b>貼上</b> - <b>覆寫</b>或<b>貼上</b> - <b>略過</b>，視您是否要覆寫目的地資料夾中檔名相同的檔案或資料夾而定。</li>
+</ol>
+<h4>方法 2：</h4>
+<ol>
+<li>選擇您想移動或複製的檔案或資料夾。(多選時請按住 Shift 或 Ctrl 鍵。)</li>
+<li>將資料夾或檔案從主要區塊拖曳至左側面板上的另一個資料夾中。</li>
+<li>在顯示的彈出式選單中，選擇<b>複製 - 覆寫</b>、<b>複製 - 略過</b>、<b>移動 - 覆寫</b>或<b>移動 - 略過</b>來覆寫或略過目的地資料夾中名稱相同的檔案或資料夾。</li>
+</ol>
+
+<h4>方法 3</h4>
+<ol>
+<li>選擇您想移動或複製的檔案或資料夾。(多選時請按住 Shift 或 Ctrl 鍵。)</li>
+<li>請按 Ctrl + X 來剪下或 Ctrl + C 來複製檔案 / 資料夾。若為 Mac 使用者，請按 Command + X 或 Command + C。</li>
+<li>前往 DiskStation 或您電腦上的目的地資料夾。</li>
+<li>請按 Ctrl + V 來貼上檔案 / 資料夾。(Mac 請按 Command + V。)</li>
+<li>在顯示的對話框中，選擇您是否要覆寫或略過目的地資料夾中相同名稱的檔案。</li>
+</ol>
+
+<div class="section">
+<h4>快速鍵：</h4>
+<p>在 File Station 中移動 / 複製檔案及資料夾時，下列快速鍵可能會派上用場：</p>
+<ul>
+<li>F2：重新命名</li>
+<li>Del：刪除</li>
+<li>Ctrl + A：全選</li>
+<li>Crtl + X：剪下</li>
+<li>Crtl + C：複製</li>
+<li>Crtl + V：貼上</li>
+</ul>
+</div>
+
+
+<div class="section">
+<h4>注意：</h4>
+<ul>
+<li>當檔案或資料夾複製或移動的目的地為 FAT 檔案系統的目錄時，檔名中的 <span class="note_content">\ *?&quot;&gt;|</span> 字元將會由 &ndash; 取代，且 Mac 檔案中的 Metadata (中繼資料) 會被刪除。</li>
+<li>如果您剪下本機電腦上的檔案並貼到 DiskStation 資料夾中，系統會保留本機電腦上的檔案。</li>
+<li>移動檔案或資料夾時，其「擁有者」將維持不變。然而，複製檔案或資料夾時，其「擁有者」將變更為複製該檔案或資料夾的使用者。</li>
+</ul>
+</div>
+
+</body>
+</html>

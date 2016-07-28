@@ -1,0 +1,100 @@
+
+
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Resursskärm</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script> <script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h1><a name="leaf_update"></a>Resursskärm</h1>
+<p class="disable-dockerx64">Resursskärmen ger dig möjlighet att övervaka användningen av processorn, minnet, diskutnyttjande och nätverksflödet. Du kan välja att övervaka i realtid eller titta på tidigare data.</p>
+<p class="enable-dockerx64">Resursskärm ger dig möjlighet att övervaka användningen av processorn, minnet och nätverksflödet. Du kan välja att övervaka i realtid eller titta på tidigare data.</p>
+<div class="section">
+<h4>Obs:</h4>
+<ul>
+<li>Tidigare data visas bara om <strong>Aktivera användningshistorik</strong> är markerat på fliken <strong>Avancerade inställningar</strong>.</li>
+<li class="enable-dockerx64">För Docker DSM är <strong>CPU och minne</strong> det som visar information om användning för <strong>Docker Värd</strong>.</li>
+</ul>
+</div>
+<h2>Prestanda</h2>
+<p>Klicka på fliken <strong>Prestanda</strong> för att visa data om resursanvändning. Detaljerad information för datum tid och diagram visas när du håller musen över.</p>
+
+<h3>CPU</h3>
+<p>Du kan se övergripande CPU-användning för <strong>Användare</strong>, <strong>System</strong> och <strong>I/O vänta</strong>. Processorbelastningen kan vara hög när Resursskärm först körs eftersom systemet måste hämta sina resursdata och ladda användargränssnittssidan samtidigt.</p>
+<p><strong>Användare</strong> visar procentsats av CPU som används för att köra användarapplikationer. <strong>Systemet</strong> visar procentsats av CPU som används för systemets kärna, hårdvaras/mjukvaras IRQ. <strong>I/O vänta</strong> visar procentsats av CPU som används för I/O vänta.</p>
+<p><strong>Utnyttjande</strong> är total CPU-användning för <strong>Användare</strong> och <strong>System</strong>.</p>
+<p>Medelbelastningen inom 1, 5 och 15 minuter visas, och du kan se kör-kölängd (dvs. summan av antalet processer som för närvarande körs plus det antal som väntar på att få köra). </p>
+<div class="section">
+<h4>Förklaring av termer</h4>
+<ul>
+<li><b>I/O vänta</b>: I/O vänta visar att CPU är inaktiv och inte används av något program. </li>
+<p>I/O vänta är ett normalt tillstånd. Eftersom CPU:s hastighet är mycket snabbare den för I/O, så är det vanligt att CPU får vänta på att överföringen av hårddiskar eller nätverk ska slutföras. Om procentandelen för I/O är mycket stor och CPU oftast är i läget I/O vänta så kanske den inte korrekt utnyttjad. Därför kan du använda effektivare konfigurationer av hårddiskgrupper (t.ex. SHR eller RAID 5) eller nätverkskonfigurationer (t.ex. Bonding) för att uppnå bättre systemprestanda.</p> 
+</ul>
+</div>
+<h3>Minne</h3>
+<p>Den totala minnesanvändningen för fysiskt minne och swap space visas. Minnesanvändningen förblir hög eftersom systemet lagrar ofta förekommande data i cachen så att data snabbt kan erhållas utan att komma åt hårddisken. Cacheminnet används när det totala minnet inte räcker till.</p>
+<p>Hög swap space pekar på för lite systemminne och påverkar även systemets prestanda. Du kan visa hastigheten vid swap in och swap ut genom att välja <strong>Swap</strong> från rullgardinsmenyn högst upp. </p>
+
+<h3>Nätverk</h3>
+<p>Nätverksflödesdiagrammet visar hastigheten, i KB per sekund, för data som skickas och mottas. Om PPPoE är aktiverat kommer dess överföringshastighet även att visas på diagrammet.</p>
+
+<h3 class="disable-dockerx64">Hårddisk</h3>
+<p class="disable-dockerx64">Du kan välja att visa total diskanvändning, överföringshastighet eller IOPS genom att klicka på rullgardinsmenyn högst upp i diagrammet. Du kan klicka på <strong>Visa alla</strong> längst ned för att välja fler hårddiskar genom att markera kryssrutorna för att lägga till dess data till diagrammet.</p>
+
+
+<h3 class="disable-eds14 disable-dockerx64">Volym</h3>
+<p class="disable-eds14 disable-dockerx64">Den här sidan visar den övergripande överföringsstatusen för volymer. Klicka på rullgardinsmenyn ovanför grafen för att visa överföringsutnyttjande, överföringshastighet eller IOPS. Klicka på knappen <strong>Visa alla</strong> för att välja enskilda volymer och lägg till dem i diagrammet.</p>
+
+<h3 class="disable-eds14 disable-dockerx64">iSCSI</h3>
+<p class="disable-eds14 dixable-dockerx64">Den här sidan visar den övergripande statusen för de iSCSI LUNs som för närvarande körs. Klicka på rullgardinsmenyn ovanför diagrammet för att välja en LUN och se dess status. Tre diagram visas som standard, de är <strong>Datakapacitet</strong>, <strong>IOPS</strong> och <strong>Fördröjning</strong>. För mer detaljerad information, klicka på knappen <strong>Välj diagram</strong> för att välja andra diagram som du vill visa.</p>
+
+
+<h2>Process</h2>
+<p>Klicka på fliken <strong>Process</strong> för att visa CPU- och minnesanvändning för varje process i sjunkande ordning baserat på CPU-belastning.</p>
+<p>Proces<strong>status</strong> omfattar <strong>Körs</strong>, <strong>Sover</strong> och <strong>Stoppad</strong>. Motsvarande processtatus för Linux är <strong>körs</strong>, <strong>stoppad/spårning</strong> och <strong>sover</strong>. </p>
+<p><strong>Sover</strong> kan följas av en bokstav med detaljerad information, t.ex. 'D' för hårddisk i viloläge, 'Z' för zombie och 'X' för död.</p>
+
+<h2>Anslutna användare</h2>
+<p> På denna flik kan du visa och hantera de klienter som för närvarande är anslutna till systemet och använder resurser. Detta avsnitt visar klienter som är anslutna via HTTP, TELNET, SSH, SMB/CIFS, AFP, FTP och NFS.</p>
+<h4>Gör något av följande för att hantera aktuella anslutningar:</h4>
+<ul>
+<li>Klicka på <b>Spara</b> för att exportera den aktuella listan till en HTML-fil.</li>
+<li>Klicka på <b>Uppdatera</b> för att uppdatera listan.</li>
+<li>Klicka på <b>Avsluta anslutning</b> för att förhindra användaren från att komma åt resursen. Den frånkopplade användaren måste auktorisera på nytt för att gå tillgång till resursen.</li>
+<li>Klicka på <b>Inaktivera användare</b> för att inaktivera användaren. För att aktivera användaren igen, gå till <b>Huvudmeny</b> > <b>Kontrollpanel</b> > <b>Användare</b>.</li>
+</ul>
+<div class="section">
+<h4>Obs:</h4>
+<ul>
+<li>Alternativet <strong>Avsluta anslutning</strong> fungerar inte med NFS-klienter.</li>
+<li>Om NFS-klienter inte avmonterar delade mappar ordentligt kan de fortfarande visas i listan över anslutna användare.</li>
+<li>Om DiskStation startar om kommer inte NFS-klienter som tidigare var anslutna att visas i listan över ansluta användare.</li>
+</ul>
+</div>
+
+
+<h2>Hastighetsbegränsning</h2>
+<p>Under fliken <strong>Hastighetsbegränsning</strong> kan du visa och hantera listan över filöverföringsprocesser som tillämpar hastighetsbegränsning på DiskStation.</p>
+<h4>Gör så här för att uppdatera listan:</h4>
+<p>Klicka på <strong>Uppdatera</strong> för att ladda om sidan och få de senaste posterna.</p>
+<h4>Gör så här för att stoppa en filöverföringsprocess:</h4>
+<p>Klicka på <b>Avsluta anslutning</b> för att stoppa filöverföringen. Du måste starta om filöverföringen för att framgångsrikt avsluta processen.</p>
+
+
+<h2>Inställningar</h2>
+<p>Klicka på <strong>Inställningar</strong> för att ställa in följande alternativ:</p>
+<ul>
+<li>Välj <strong>Realtidslängd i minuter</strong> från rullgardinsmenyn.</li>
+<li>Markera<strong> Aktivera användningshistorik</strong> om du vill se tidigare data. När det är aktiverat kan du växla mellan <strong>Realtid</strong>, <strong>1 dag</strong>, <strong>1 vecka</strong>, <strong>1 Månad</strong> och <strong>1 år</strong> i rullgardinsmenyn högst upp till höger när du tittar på prestandadiagram.</li> 
+</ul>
+<p>Klicka på <strong>Tillämpa</strong> för att spara inställningarna.</p>
+</body>
+</html>

@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>E-mail - Guida Synology DSM</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="Enabling email notifications allows your DiskStation to send messages to your email when specified events occur.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>E-mail</h2>
+<p class="disable-eds14">Abilitando le notifiche e-mail si consente a DiskStation di inviare messaggi alla propria e-mail quando si verifica un evento specifico, come errori di sistema, perdita connessione di rete, comportamento ventola, interruzione dell'alimentazione o guasto attività.</p>
+
+<p class="enable-eds14">Abilitando le notifiche e-mail si consente a DiskStation di inviare messaggi alla propria e-mail quando si verifica un evento specifico, come errori di sistema, perdita connessione di rete, interruzione dell'alimentazione o guasto attività.</p>
+
+
+<h4>Per abilitare le notifiche e-mail:</h4>
+<ol>
+<li>Andare su <strong>Pannello di controllo</strong> > <strong>Notifica</strong> > <strong>E-mail</strong>.</li>
+<li>Spuntare <strong>Abilita notifiche e-mail</strong>.</li>
+<li>Inserire uno o più indirizzi e-mail nel campo <strong>Destinatari</strong>. Notifiche di sistema saranno inviate agli indirizzi inseriti qui. Sono consentiti due indirizzi. Separare più indirizzi con un punto e virgola (;).</li>
+<li>Se necessario, aggiungere un prefisso oggetto nel campo <strong>Prefisso oggetto</strong>. Questo prefisso sarà aggiunto all'oggetto di ogni messaggio inviato da DiskStation, aiutando quindi a identificare e filtrare i messaggi.</li>
+<li>Se si desidera utilizzare un server e-mail di terzi (ad es. Gmail, Outlook, Yahoo!) per trasmettere i messaggi, si veda la sezione "Servizio e-mail di terzi" seguente. Se si vuole utilizzare un server personalizzato, si veda la sezione "Server SMTP personalizzato". </li>
+</ol>
+
+
+
+
+<h4>Per utilizzare un servizio e-mail di terzi:</h4>
+<ol>
+
+
+<li>Nel menu <strong>Provider di servizi</strong>, scegliere un servizio e-mail di terzi, come Gmail, Yahoo o Outlook.</li>
+<li>Inserire il nome utente e la password per il servizio e-mail selezionato.</li>
+<li>Fare clic su <strong>Applica</strong> per salvare le impostazioni.</li>
+<li>È possibile fare clic su <strong>Invia e-mail di prova</strong> per vedere se le impostazioni sono corrette.</li>
+</ol>
+
+<h4>Per utilizzare un server SMTP personalizzato:</h4>
+<ol>
+
+
+<li>Nel menu <strong>Provider di servizi</strong>, selezionare <strong>Personalizza server SMTP</strong>.</li>
+<li>Inserire il nome server SMTP o l'indirizzo IP nel campo <strong>Server SMTP</strong>. </li>
+<li>Inserire il numero di porta SMTP nel campo <strong>Porta SMTP</strong> Se è stata specificata una porta SMTP diversa mentre si configurano le regole di inoltro porta, inserire tale numero.</li>
+<li>Se il server SMTP richiede l'autenticazione, spuntare <strong>Autenticazione richiesta</strong> e inserire <strong>Nome utente</strong> e <strong>Password</strong> per il server e-mail. </li>
+<li>Se il server SMTP richiede la connessione SSL/TLS, selezionare <strong>È richiesta una connessione sicura (SSL/TLS)</strong>.
+<li>Per personalizzare il nome del mittente indicato nei messaggi e-mail inviati da DiskStation, inserire il nome nel campo <strong>Nome mittente</strong>. Per personalizzare l'indirizzo e-mail del mittente, immettere l'indirizzo e-mail nel campo <strong>E-mail mittente</strong>. Se il campo è vuoto, il primo indirizzo e-mail nel campo <strong>Destinatari</strong> sarà utilizzato.</li>
+<li>Fare clic su <strong>Applica</strong> per salvare le impostazioni.</li>
+<li>È possibile fare clic su <strong>Invia e-mail di prova</strong> per vedere se le impostazioni sono corrette.</li>
+</ol>
+
+
+
+
+
+
+<div class="section">
+<h4>Nota:</h4>
+<ul>
+<li>Per inviare un messaggio di benvenuto per ciascun account utente creato di recente, selezionare <strong>Invia messaggio di benvenuto ai nuovi utenti</strong>, e ogni utente riceverà un messaggio di benvenuto quando il suo account è creato.</li>
+<li>La lingua per le notifiche e-mail può essere impostata su <strong>Lingua notifica</strong>. Per cambiare la lingua di notifica e-mail, andare sul <strong>Menu principale</strong> > <strong>Pannello di controllo</strong> > <strong>Opzioni regionali</strong>, fare clic sulla scheda <strong>Lingua</strong>, e scegliere la lingua preferita dal menu a discesa nella sezione <strong>Lingua notifica</strong>.</li>
+<li>Se si sta utilizzando il server SMTP di Gmail e si è abilitata la verifica in due passaggi, ricordarsi di utilizzare la "password specifica per l'applicazione" fornita da Google per l'autenticazione SMTP.</li>
+</ul>
+</div>
+
+<div class="section">
+<h4>Nome dominio server SMTP:</h4>
+<p>Il server SMTP può essere un indirizzo IP o un nome di dominio. Se è il nome di un dominio, verificare di aver inserito un IP valido del server DNS nella pagina <b>Menu principale</b> > <b>Pannello di controllo</b> > <b>Rete</b> e verificare che il server sia su Internet. </p>
+
+
+</div>
+</body>
+</html>

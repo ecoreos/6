@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+	<h2>Overzicht</h2>
+	<p>Het overzicht toont de algemene status van uw opslagruimtes, inclusief de algemene gezondheid van alle ruimtes, het harde schijfgebruik, het topvolumegebruik en het iSCSI LUN-gebruik.</p>
+
+		<h4>Opslaggezondheid</h4>
+        <p>Er zijn drie soorten status:</p>
+	  	<ul>
+				<li><b>Gezond</b>: alle opslagruimtes zijn Normaal.</li>
+				<li><B>Opgepast</B>: een opslagruimte (volume of iSCSI LUN) is beschadigd, de SSD-cache is vastgelopen of een systeempartitie heeft een storing.</li>
+				<li><b>Gevaar</b>: een opslagruimte (volume of iSCSI LUN is vastgelopen.</li>
+			</ul>
+			<p>Als meerdere afwijkingen gelijktijdig optreden, zal de gezondheidsstatus in de volgende volgorde worden weergegeven: 1) Opslagruimtes (volume of iSCSI LUN); 2) SSD-cache; 3) systeempartitie. Volg de voorgestelde instructies onder de status als een probleem optreedt.</p>
+		
+		<h4>Schijfinformatie</h4>
+        <p>Dit gedeelte toont informatie over de harde schijf en de hardware. U kunt zien hoeveel harde schijven worden gebruikt door welke opslagruimtes, het aantal reserveschijven en het aantal beschikbare schijfgleuven.</p>
+        
+		<h4>Topvolumegebruik</h4>
+        <p>Dit gedeelte toont de gebruikte capaciteit van een volume. Als het totaalgebruik de 90% bereikt, wordt de taartgrafiek rood, meer dan 80% geel en lager dan 79% blauw.</p>
+        
+		<h4>iSCSI LUN-gebruik</h4>
+        <p>Dit gedeelte toont de volgende informatie:</p>
+        <ul>
+         		<li><b>Gerapporteerd</b>: De totale toegewezen capaciteit van alle iSCSI LUN (blockniveau) en iSCSI LUN (gewone bestanden) op de DiskStation bij elkaar opgeteld.</li>
+                <li><b>Gebruikt</b>: De totale toegewezen capaciteit van iSCSI LUN (gewone bestanden) en de totale capaciteit op iSCSI LUN (blockniveau) bij elkaar opgeteld.</li>
+                <li><b>Opgeslagen</b>: de totale <b>Gerapporteerde</b> grootte min de totale <b>Gebruikte</b> grootte. Weergave van het bespaarde bedrag in de aankoop van opslagruimte en beheerskosten.</li>
+</ul>
+        </li>
+</body>
+</html>

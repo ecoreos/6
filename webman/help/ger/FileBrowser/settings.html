@@ -1,0 +1,195 @@
+
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Optionen der File Station verwalten - Hilfe zu Synology DSM</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="Learn how to customize File Station settings related to file management, shared links, and security.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>File Station-Einstellungen verwalten</h2>
+<p>Öffnen Sie <strong>File Station</strong> und klicken Sie auf die Schaltfläche <b>Einstellungen</b>, um die Einstellungen von File Station zu verwalten.</p>
+
+<h3>Allgemein</h3>
+<p>
+Hier können Sie das File Station Protokoll aktivieren, um die Aktivitäten aller Benutzer aufzuzeichnen. Die Benutzeraktivitäten umfassen <b>Ordner erstellen</b>, <b>Hochladen</b>, <b>Herunterladen</b>, <b>Löschen</b>, <b>Umbenennen</b>, <b>Verschieben</b>, <b>Kopieren</b> und <b>Eigenschaft einstellen</b>.
+</p>
+<h4>File Station Protokoll aktivieren:</h4>
+<ol>
+<li>Wenn Sie die Aktivitäten aller Benutzer aufzeichnen möchten, aktivieren Sie <b>File Station Protokoll aktivieren</b>.
+</li>
+<li>
+Klicken Sie auf <b>OK</b>.
+</li>
+</ol>
+<h4>File Station Protokoll anzeigen:</h4>
+<ol>
+<li>
+Klicken Sie auf <b>Protokolle anzeigen</b>, dann werden Sie zum <strong>Protokoll-Center</strong> weitergeleitet.</li>
+<li>
+Klicken Sie auf die Registerkarte <b>Dateiübertragung</b>.
+</li>
+</ol>
+
+<h4>Dateien automatisch über Upload per Ziehen und Ablegen oder Tastaturkürzel überschreiben:</h4>
+<p>Markieren Sie <strong>Immer Dateien überschreiben, wenn ich sie in einen Webbrowser ziehe und ablege oder mit Tastaturkürzeln einfüge</strong>, wenn Sie Dateien mit demselben Namen automatisch überschreiben möchten, wenn Sie sie vom Desktop Ihres Computers in einen Webbrowser ziehen und ablegen, oder wenn Sie Dateien mit Tastaturkürzeln innerhalb der File Station einfügen.</p>
+
+
+<h4>Intelligentes Ziehen und Ablegen aktivieren:</h4>
+<p>Wenn Sie Dateien innerhalb der File Station ziehen und ablegen, erkennt diese Funktion automatisch, ob Sie die Dateien kopieren oder verschieben.</p>
+
+<ol>
+<li>Wählen Sie <strong>Intelligentes Ziehen und Ablegen aktivieren</strong>.</li>
+<li>Wählen Sie eine der beiden folgenden Aktionen, die stets ausgeführt wird, wenn ein anderer Benutzer zur gleichen Zeit wie Sie Dateien mit demselben Namen an den gleichen Speicherort überträgt:
+  <ul>
+<li><strong>Überschreiben</strong>: Die von Ihnen übertragenen Dateien werden Dateien mit identischem Namen überschreiben.</li>
+<li><strong>Überspringen</strong>: Die von Ihnen übertragenen Dateien werden übersprungen und Dateien mit identischem Namen nicht überschreiben.</li>
+</ul>
+</li>
+<li>Klicken Sie auf <strong>OK</strong>.</li>
+</ol>
+
+<div class="section">
+<h4>Hinweis:</h4>
+<p>Sie können die von intelligentes Ziehen und Ablegen bestimmte Aktion (kopieren oder verschieben) bei Bedarf mit den folgenden Hotkeys ändern:</p>
+<ul>
+<li>Wechsel zu Kopieren: Drücken Sie während des Ziehens und Ablegens die Taste „Strg“.</li>
+<li>Wechsel zu Verschieben: Drücken Sie während des Ziehens und Ablegens die Taste „Umsch“.</li>
+</ul>
+</div>
+
+
+<h4>Mit File Station Dateien des lokalen Computers durchsuchen und verwalten:</h4>
+<ol>
+<li>
+Aktivieren Sie <b>Mit File Station Dateien des lokalen Computers durchsuchen</b>.
+</li>
+<li>
+Klicken Sie auf <b>OK</b>.
+</li>
+</ol>
+
+
+<h4>DSM-Benutzerliste für Nicht-Admin-Benutzer freigeben:</h4>
+<p>Diese Option ermöglicht es Nicht-Admin-Benutzern, auf die vollständige DSM-Benutzerliste zuzugreifen, wenn Sie nach Dateien von bestimmten DSM-Benutzern/Gruppen suchen oder Dateilinks für andere DSM-Benutzer freigeben möchten.</p>
+
+<ol>
+<li>Wählen Sie <strong>DSM-Benutzerliste für Nicht-Admin-Benutzer freigeben</strong>.</li>
+<li>Klicken Sie auf <strong>OK</strong>.</li>
+</ol>
+
+
+<h3>Standard-UNIX-Befugnisse anwenden</h3>
+<p>Klicken Sie auf<strong> Erweiterte Einstellungen</strong>, und markieren Sie die Option, um die Standard UNIX-Befugnissse beim Hochladen oder Erstellen von Dateien und Ordnern anzuwenden. Angewandte Befugnisse sind identisch mit den Berechtigungen, die vom UNIX-Befehl <strong>umask</strong> angewendet werden. Wenn diese Option aktiviert ist, sind die UNIX-Berechtigungen für Dateien 644 und für Ordner 755. Wenn diese Option deaktiviert ist, sind die UNIX-Berechtigungen für Dateien 666 und für Ordner 777. Der Standardwert für „umask“ ist 022.</p>
+<div class="section">
+<h4>Hinweis:</h4>
+<ul>
+  <li>Führen Sie für gemeinsame Ordner, für die Windows ACL aktiviert ist (alle gemeinsamen Ordner, außer &quot;photo&quot; und Freigaben auf externen Festplatten), den Befehl <strong>chmod</strong> auf Ihrem Linux- oder FTP-Client aus, um die Ordner- und Dateiberechtigungstypen von Windows ACL auf UNIX zu ändern.</li>
+  <li>Die Aktivierung dieser Option kann zu inkonsistenten Berechtigungen zwischen verschiedenen Protokollen führen. Um Inkonsistenzen zu vermeiden, empfehlen wir, diese Option deaktiviert zu lassen.</li>
+</ul>
+</div>
+<h3 class="disable-eds14">Anhängen/Verbindungen</h3>
+<p class="disable-eds14">
+Standardmäßig können alle Benutzer Remote-Ordner oder virtuelle Laufwerke anhängen. Hier können Sie einstellen, dass nur Administratoren auf die Verwaltung von Remote-Ordnern oder virtuellen Laufwerken zugreifen können.
+</p>
+
+<div class="disable-eds14 section">
+<h4>Hinweis:</h4>
+<p>Benutzer, die keine Administratoren sind, können Remote-Ordner nur in ihrem <b>Home</b>-Ordner anhängen.</p>
+</div>
+<h4 class="disable-eds14">Anhängen von Remote-Ordnern oder virtuellen Laufwerken durch verschiedene Benutzer zulassen:</h4>
+<ol class="disable-eds14">
+<li>
+Wählen Sie <b>Alle Benutzer</b> oder <b>Administratoren</b> unter <b>Remote-Ordner</b> oder <b>Virtuelles Laufwerk</b> aus.
+</li>
+<li>
+Klicken Sie auf <b>OK</b>.
+</li>
+</ol>
+<h4 class="disable-eds14">Anhängen von Servern und Cloud-Diensten durch verschiedene Benutzer zulassen:</h4>
+<ol class="disable-eds14">
+  <li>Wählen Sie <b>Alle Benutzer</b>, <b>Administratoren</b> oder <strong>Bestimmter Benutzer</strong> aus. </li>
+  <li>Durch die Auswahl <strong>Bestimmter Benutzer</strong> öffnet sich ein Fenster, in dem Sie für verschiedene Benutzer die Berechtigungen zum Anhängen konfigurieren können. Um den Zugriff für einen bestimmten Benutzer zu aktivieren, muss das Kontrollkästchen unter der Spalte <strong>Aktiviert</strong> aktiviert werden. Um den Zugriff für einen bestimmten Benutzer zu deaktivieren, muss das Kontrollkästchen unter der Spalte <strong>Aktiviert</strong> deaktiviert werden. Klicken Sie anschließend auf <strong>OK</strong>, um das Fenster zu schließen.</li>
+  <div class="section">
+    <h4>Hinweis:</h4>
+    <ul>
+      <li>Benutzer, die zur Gruppe <strong>administrators</strong> gehören, können diese Funktion verwenden, aber keine Änderungen vornehmen. Benutzer, die sich als <strong>guest</strong> (Gast) angemeldet haben, können weder diese Funktion verwenden, noch Änderungen vornehmen. Berechtigungen für alle anderen Benutzer können hier festgelegt werden.</li>
+    </ul>
+  </div>
+  <li>Klicken Sie auf <strong>OK</strong>.</li>
+</ol>
+<h3>Freigegebene Links</h3>
+<p>
+Standardmäßig können alle Benutzer Dateilinks freigeben. Hier können Sie festlegen, dass nur Administratoren Zugriff auf die Verwaltung freigegebener Links haben.
+</p>
+<h4>Freigeben von Dateilinks durch verschiedene Benutzer zulassen:</h4>
+<ol>
+<li>
+Wählen Sie <b>Alle Benutzer</b>, <b>Administratoren</b> oder <strong>Bestimmte Benutzer</strong> aus.
+</li>
+<li>
+Klicken Sie auf <b>OK</b>.
+</li>
+</ol>
+
+<h4>HTML-Dateien als Klartext öffnen:</h4>
+
+<ol>
+<li>Aktivieren Sie das Kontrollkästchen <strong>HTML-Dateien immer im Klartext-Format öffnen</strong>. Wenn diese Option aktiviert ist, werden HTML-Dateien (d. h. HTM-, HTML-, JSP-, XHTML-Dateien) im Klartext-Format angezeigt, wenn die Benutzer sie über einen Dateifreigabe-Link öffnen. Diese Option verhindert, dass böswillige Dritte Benutzer-Anmeldesitzungen mithilfe von eingebetteten Skripts in HTML-Dateien übernehmen.</li>
+<li>Klicken Sie auf <strong>OK</strong>.</li>
+</ol>
+
+<h3>Geschwindigkeitseinschränkung</h3>
+<p>Sie können eine Geschwindigkeitseinschränkung aktivieren, um die maximal nutzbare Bandbreite für Benutzer und Gruppen zu regeln, die Daten über File Station übertragen.</p>
+
+
+<h4>Geschwindigkeitseinschränkung aktivieren:</h4>
+<ol>
+  <li>Aktivieren Sie das Kontrollkästchen <b>Geschwindigkeitseinschränkung aktivieren</b> oder <strong>Geschwindigkeitseinschränkung nach einem Zeitplan aktivieren</strong>, wenn Sie nur zu bestimmten Zeiten eine Geschwindigkeitseinschränkung festlegen möchten. Dies ist eine serverweite Einstellung, die die Einstellungen der einzelnen Benutzer und Gruppen überschreibt. Die Auswahl von <strong>Keine Geschwindigkeitseinschränkung</strong> deaktiviert die Einstellungen für die Geschwindigkeitseinschränkung aller Benutzer und Gruppen.</li>
+  <li>Klicken Sie auf <strong>Einstellungen für Geschwindigkeitseinschränkung</strong>, um die Einstellungen für einzelne Benutzer oder Gruppen zu ändern. Für jeden Benutzer und jede Gruppe steht Folgendes zur Auswahl:  </li>
+    <ul>
+      <li><strong>Gruppeneinstellungen anwenden:</strong> Die Geschwindigkeitseinschränkungseinstellungen sind identisch mit denen der Gruppe, zu der der Benutzer gehört. </li>
+      <li><strong>Keine Geschwindigkeitseinschränkung:</strong> Es wird keine Geschwindigkeitseinschränkung angewendet, wenn Gruppenmitglieder Dateien mit dem Dienst übertragen.</li>
+      <li><strong>Konstant:</strong> Für alle Benutzer und Gruppenmitglieder gilt eine feste, konstante Geschwindigkeitseinschränkung. Die Upload- und Download-Geschwindigkeitseinschränkungen können in den Feldern links angegeben werden.</li>
+      <li><strong>Variabel:</strong> Für Benutzer oder Gruppenmitglieder können zwei unterschiedliche Geschwindigkeitseinschränkungen gemäß einem Zeitplan festgelegt werden. Klicken Sie auf die Schaltfläche <strong>Anpassen</strong>, um die Einstellungen für Geschwindigkeitseinschränkung und einen Zeitplan festzulegen.</li>
+    </ul>
+
+  <li>Klicken Sie auf <b>Übernehmen</b>.</li>
+</ol>
+<div class="section">
+  <h4>Hinweis:</h4>
+  <ul>
+    <li>Weitere Informationen über Geschwindigkeitseinschränkungen für Gruppen finden Sie <a href="../AdminCenter/file_group_edit.html">hier</a>.</li>
+    <li>Beim Festlegen einer Geschwindigkeitseinschränkung für einen Benutzer zeigt der Bereich <strong>Ergebnis</strong> die tatsächliche Geschwindigkeitseinschränkung des Benutzers gemäß seiner individuellen und der Gruppeneinstellungen an. Falls zum Beispiel ein Benutzer "Achilles" ein individuelles Download Limit von 100 kB/s hat, aber zu einer Benutzergruppe mit einem Downlod-Limit von 500 kB/s gehört, dann zeigt der Bereich <strong>Ergebnisse</strong> "0/500" an.</li>
+  </ul>
+</div>
+
+
+
+<h3>Sicherheit</h3>
+
+<p>Hier finden Sie die nachfolgend aufgeführten Sicherheitseinstellungen.</p>
+
+<h4>HTML-Dateien als Klartext öffnen:</h4>
+
+<ol>
+<li>Aktivieren Sie das Kontrollkästchen <strong>HTML-Dateien immer im Klartext-Format öffnen</strong>. Wenn diese Option aktiviert ist, werden HTML-Dateien (d. h. HTM-, HTML-, JSP-, XHTML-Dateien) im Klartext-Format angezeigt, wenn sie in File Station geöffnet werden. Diese Option verhindert, dass böswillige Dritte Benutzer-Anmeldesitzungen mithilfe von eingebetteten Skripts in HTML-Dateien übernehmen.</li>
+<div class="section">
+<h4>Hinweis:</h4>
+<ul>
+<li>Dies ist keine globale Einstellung. Jeder Benutzer kann gemäß seinen Anforderungen auswählen, ob diese Option aktiviert wird.</li>
+</ul>
+</div>
+<li>Klicken Sie auf <strong>OK</strong>.</li>
+</ol>
+
+</body>
+</html>

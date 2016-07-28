@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Win/Mac/NFS</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+
+
+
+<h2>NFS-tjänst</h2>
+<p>NFS-tjänsten gör att Linux-klienter får tillgång till data på denna DiskStation-enhet.</p>
+<h4>Aktivera NFS-tjänst:</h4>
+<ol>
+<li>Gå till <strong>Kontrollpanel</strong> > <strong>File Services</strong> > <strong>Win/Mac/NFS</strong> och markera <b>Aktivera NFS</b>.</li>
+<li>Klicka på <b>Tillämpa</b>.</li>
+</ol>
+
+
+<div class="section">
+  <h4>Obs:</h4>
+<ul>
+<li> DiskStation stöder för närvarande NFSv2, NFSv3 och NFSv4.</li>
+<li>Vid montering kan parametern <strong>-o vers=2</strong>, <strong>-o vers=3</strong> eller <strong>-o vers=4</strong> läggas till monteringskommandot för att specificera vilken version av NFS som ska användas.</li>
+</ul>
+</div>
+
+
+<h4>Konfigurera Linux-klienters åtkomstprivilegier till delade mappar:</h4>
+<p>Gå till <b>Kontrollpanel</b> > <b>Delad mapp</b>. Välj en delad mapp och klicka på <strong>Redigera</strong> för att hantera NFS-regler och styra Linux-klienters åtkomsträttigheter för denna delade mapp.</p>
+
+
+<h3>Ställa in stöd för NFSv4</h3>
+<p>Du kan avgöra huruvida din NFS-server stöder NFSv4. När detta alternativ är aktiverat kommer NFS-server att ha stöd för NFSv2, NFSv3 och NFSv4; i annat fall finns endast stöd för NFSv2 och NFSv3.</p>
+
+<h4>Aktivera stöd för NFSv4:</h4>
+<ol>
+<li>Markera <b>Aktivera stöd för NFSv4</b>.
+</li>
+<li>
+I fältet <b>NFSv4-domän</b>, ange namnet på den NFSv4-domän du vill använda. Detta fält är valfritt och kan lämnas tomt.</li>
+<li>
+Klicka på <b>Tillämpa</b>.
+</li>
+</ol>
+
+<div class="section">
+<h4>Obs:</h4>
+<p>När du använder NFSv4 för att montera den delade mappen, vänligen observera följande. I annat fall kommer filåtgärder som associeras till användarnamnet att misslyckas.</p>
+<ul>
+<li>NFS-klient måste aktivera idmapd.</li>
+<li>Inställningarna för NFSv4-domän i filen idmapd.conf på din NFS-klient måste överensstämma med fältet <b>NFSv4-domän</b> på DiskStation.</li>
+</ul>
+
+</div>
+
+<h3>Avancerade inställningar</h3>
+
+<h4>Tillämpning av standardbehörigheter för UNIX</h4>
+<p> När <strong>Tillämpa standardrättigheter för UNIX</strong> är markerad tillämpas standardrättigheter för UNIX som ställts in i Linux-klienten, i stället för Windows ACL-behörigheter, när filer eller mappar laddas upp eller skapas. Tillämpade behörigheter är de samma som de behörigheter som appliceras av UNIX-kommandot <strong>umask</strong>. När detta alternativ är aktiverat är behörigheterna för UNIX 644 för filer och 755 för mappar. När detta alternativ är avaktiverat är behörigheterna för UNIX 666 för filer och 777 för mappar. Standardvärdet för umask är 022.</p><div class="section">
+<h4>Obs:</h4>
+<ul>
+  <li>För delade mappar där Windows ACL aktiverats (alla utdelningar förutom &quot;photo&quot; och utdelningar på externa enheter), vänligen kör kommandot <strong>chmod</strong> på din Linux- eller FTP-klient för att ändra typ av filbehörighet från Windows ACL till UNIX.</li>
+  <li>Aktivering av detta alternativ kan orsaka problem med inkonsekventa behörigheter mellan olika protokoll. För att undvika inkonsekvens rekommenderar vi att detta alternativ lämnas avaktiverat.</li>
+</ul>
+</div>
+
+<h4>Anpassad port</h4>
+<p>Du kan anpassa portnummer för tjänsterna statd och nlockmgr.</p>
+
+<ol>
+<li>Välj <strong>Anpassade portar</strong>.</li>
+<li>Ange portnummer i <strong>statd-port </strong>och<strong> nlockmgr-port</strong>.</li>
+<li>
+Klicka på <b>Tillämpa</b>.
+</li>
+</ol>
+
+<div class="section">
+<h4>Obs:</h4>
+<ul>
+<li>Om du vill använda NFSv3-tjänster, gå till <strong>Kontrollpanel</strong> &gt; <strong>Säkerhet</strong> &gt; <strong>Brandvägg</strong> och skapa en brandväggsregel som aktiverar &quot;Mac/Linux-filserver&quot; från listan över inbyggda applikationer.</li>
+</ul>
+</div>
+<h4>Ställa in storlek på läs-/skrivpaket</h4>
+<p>När storleken för läs-/skrivpaket inte kan ställas in i din NFS-klient, kan du specificera standardvärde i detta fält.</p>
+
+<ol>
+<li>Välj den önskade paketstorleken från fälten <strong>Lässtorlek på paket</strong> och <strong>Skrivstorlek på paket</strong>.</li>
+<li>
+Klicka på <b>Tillämpa</b>.
+</li>
+<li>
+Återmontera delad enhet.
+</li>
+</ol>
+
+<div class="section">
+<h4>Obs:</h4>
+<ul>
+<li>Efter ändring av storlek på läs-/skrivpaket måste den delade mappen först återmonteras innan inställningarna börjar gälla.</li>
+<li>Dessa inställningar påverkar endast NFS-klienter som ansluter via UDP (User Datagram Protocol).</li>
+</ul>
+</div>
+
+
+
+
+<h3>Kerberos-inställningar*</h3>
+<p>Kerberos är ett nätverksautentiseringsprotokoll. Det låter klienter och servrarna kommunicera över ett icke-säkert nätverk och bevisa sina identiteter till varandra på ett säkert sätt. DiskStation tillhandahåller möjligheter att importera befintliga Kerberosnycklar. När de väl importerats lyckosamt, kan NFS-klienter använda Kerberos autentiseringsprotokoll för att ansluta till DiskStation.</p>
+
+<h4> Importera en Kerberosnyckel: </h4>
+<ol>
+<li>Klicka på <strong>Kerberos-inställningar</strong>.</li>
+<li>Klicka på knappen <b>Importera</b>.</li>
+<li>Välj den Kerberosnyckel du vill importera.</li>
+<li>Klicka på <b>OK</b>.</li>
+</ol>
+
+<h3><a name="idmap"></a>Kerberos ID-mappning</h3>
+<p>Du kan mappa individuella Kerberos säkerhetsobjekt till lokala DSM-användare.</p>
+<h4> Mappa Kerberos säkerhetsobjekt och lokala användare: </h4>
+<ol>
+<li>Klicka på <strong>Kerberos-inställningar</strong>.</li>
+<li>Gå till fliken <strong>ID-mappning</strong>.</li>
+<li> Klicka på knappen <b>Lägg till</b>. Välj en av följande.</li>
+<ul>
+<li><strong>ID-mappning:</strong> Ange Kerberos säkerhetsobjekt och den lokala användaren till vilken det ska mappas.</li>
+<li><strong>Föreslagen mappningslista:</strong> Detta alternativ visar en list över föreslagna mappningsalternativ för Kerberos säkerhetsobjekt/lokala användare som genereras av systemet.</li>
+</ul>
+</ol>
+<div class="section disable-eds14">
+  <h4> Obs: </h4>
+<ul>
+<li>Om du vill mappa en NFS-klient som ansluter via Kerberos till en befintlig domän-/LDAP-användare, tillse att du har anslutit till katalogtjänsten. Dessutom måste servern ha ett attribut som inkluderar motsvarande Kerberos säkerhetsobjekt.</li>
+<ul>
+<li><strong>Domänanvändare:</strong> Formatet för motsvarande attribut ska vara <strong>userPrincipalName</strong>.</li>
+<li><strong>LDAP-användare:</strong> Formatet för motsvarande attribut ska vara <strong>GSSAuthName</strong>.</li>
+</ul>
+<li>Om användaren inte kan mappas till en lokal användare eller en domän-/LDAP-användare, ska användaren mappas till &quot;guest.&quot;
+<li>Mappningsprioriteten är som följer: Lokal användare > Domän-/LDAP-användare > Guest. </li>
+<li>Om du vill ändra åtkomstbehörigheter för NFS-klienter, vänligen använd Kontrollista för Windows-tillträde (Windows Access Control List - ACL). Alternativen för privilegier som finns i <strong>Kontrollpanel</strong> > <strong>Användare</strong> är inte applicerbara på NFS-klienter.</li>
+</ul>
+</div>
+<p>
+<br>____<br>* Endast tillgängligt för vissa modeller.
+
+</p>
+
+
+
+</body>
+</html>

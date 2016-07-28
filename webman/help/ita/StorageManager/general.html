@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+	<h2>Generale</h2>
+	<p>Gestione archiviazione consente agli utenti di gestire tutti gli spazi di archiviazione su prodotti Synology. Per semplificare la gestione dell'archiviazione e creare spazi di archiviazione più flessibili con protezione dei dati, Synology DSM supporta più tipi di Gruppi RAID.</p>
+
+<h4><a href="raid.html">RAID Group</a></h4>
+	<p>Con DiskStation, è possibile unire più dischi rigidi in un'unica unità di archiviazione denominata Gruppo RAID. DiskStation fornisce i seguenti tipi di Gruppi RAID:</p>
+	<ul>
+		<li><b>RAID Group per volumi o iSCSI LUN (Livello blocco) singoli</b>:
+			<ul>
+				<li>Alloca tutta la capacità disponibile su un solo volume o iSCSI LUN (Livello blocco).</li>
+				<li>Offre prestazioni migliori con minore flessibilità nella gestione dell'archiviazione.</li>
+                <li>Consente la creazione di più iSCSI LUN (File normali) sui volumi.</li>
+                <li>Supporta al massimo un array RAID.</li>
+			</ul>
+		</li>
+		<li><b>RAID Group per volumi o iSCSI LUN (Livello blocco) multipli</b>:
+			<ul>
+				<li>Supporta la creazione di più volumi o iSCSI LUN (Livello blocco) su RAID Group.</li>
+                <li>Offre una maggiore flessibilità nella gestione dell'archiviazione.</li>
+                <li>Consente la creazione di più iSCSI LUN (File normali) sui volumi.</li>
+				<li>Supporta l'unione di più array RAID in un RAID Group (se configurato come RAID 5 o RAID 6).</li>
+			</ul>
+            </li>
+	</ul>
+
+<h4>Tipo di RAID</h4>    
+<p>Durante la creazione di un RAID Group è necessario prima scegliere il tipo di RAID. Diversi tipi di RAID offrono diversi livelli di protezione dei dati, funzioni di archiviazione e prestazioni. DiskStation supporta correntemente i seguenti tipi di RAID:</p>
+	<ul>
+	  <li><b>Base</b>: utilizza un disco rigido per creare un RAID Group. I Gruppi RAID Basic non offrono la ridondanza dei dati.</li>
+	  <li><b>JBOD*</b>: combina almeno due dischi rigidi per creare un RAID Group. I Gruppi RAID JBOD non offrono la ridondanza dei dati. La capacità disponibile di un Gruppo RAID JBOD equivale alla capacità di tutti i dischi presenti nel gruppo. JBOD supporta l'uso di dischi rigidi di varie dimensioni.</li>
+	  <li><b>RAID 0*</b>: combina almeno due dischi rigidi per creare un RAID Group. RAID 0 non offre la ridondanza dei dati. In caso di guasto di un singolo disco, i dati nel RAID Group andranno persi. La capacità disponibile del Gruppo RAID 0 equivale alla capacità totale di tutti i dischi membri. RAID 0 supporta l'uso di dischi rigidi di diverse dimensioni.</li>
+	  <li><b>RAID 1*</b>: combina 2-4 dischi rigidi per creare un RAID Group. Il sistema scriverà dati identici per ogni disco rigido. RAID 1 offre la protezione dei dati fino a quando un disco funziona in modo corretto. La capacità disponibile Gruppo RAID 1 equivale alla dimensione del disco membro più piccolo.</li>
+	  <li><b>RAID 5*</b>: combina almeno tre dischi rigidi per creare un RAID Group ed esegue lo striping dei dati e delle informazioni di parità attraverso i dischi membri. RAID 5 offre la ridondanza dei dati. In caso di guasto di uno dei dischi membri, il sistema può essere ricreato utilizzando le informazioni di parità sugli altri dischi membri. Supporta l'unione di più array RAID durante la creazione di un RAID Group per volumi o iSCSI LUN (Livello blocco) multipli. La capacità disponibile di un Gruppo RAID 5 = <span class="note_content"> capacità totale delle array RAID combinate. Capacità array RAID = (numero di dischi rigidi - 1) x (capacità del disco rigido più piccolo)</span></li>
+	  <li><b>RAID 6*</b>: combina almeno quattro dischi rigidi per creare un RAID Group ed esegue lo striping dei dati e delle informazioni di parità attraverso i dischi membri. RAID 6 offre la ridondanza dei dati. Anche in caso di guasto di due dei dischi membri, il sistema può essere ricreato utilizzando le informazioni di parità sugli altri dischi membri. Supporta l'unione di più array RAID durante la creazione di un RAID Group per volumi o iSCSI LUN (Livello blocco) multipli. La capacità disponibile di un Gruppo RAID 6 = <span class="note_content"> capacità totale delle array RAID combinate. Capacità array RAID = (numero di dischi rigidi - 2) x (capacità del disco rigido più piccolo)</span></li>
+	  <li><b>RAID 10*</b>: combina almeno quattro dischi rigidi per creare un RAID Group. Il numero dei dischi deve essere pari. RAID 10 offre le prestazioni di RAID 0 oltre allo stesso livello di protezione dati del RAID 1. La capacità disponibile del Gruppo RAID 10 = <span class="note_content">(capacità del disco rigido più piccolo) X (numero dei dischi rigidi / 2)</span></li>
+	</ul>
+	<p>
+		<span class="note_head">Nota:</span> i tipi RAID con "*" sono disponibili solo sui modelli di NAS con abbastanza vani per i dischi rigidi.
+</p>
+
+
+<h4><a href="space.html">Tipo di volume</a></h4>
+	<p>In relazione al tipo di RAID Group, sono disponibili due tipi di volumi:</p>
+	<ul>
+		<li><b>Volume su un RAID Group per volumi o iSCSI LUN (livello blocco) singoli</b>
+        	<ul>
+            	<li>Alloca tutta la capacità di archiviazione di un RAID Group su un singolo volume. Offre prestazioni migliori con minore flessibilità nella gestione.</li>
+                <li>Consente la creazione di più iSCSI LUN (File normali) sui volumi.</li>
+            </ul></li>
+		<li><b>Volume su un RAID Group per volumi o iSCSI LUN (livello blocco) multipli</b>
+        	<ul>
+            	<li>Alloca la porzione designata della capacità di archiviazione di un RAID Group per creare un volume.  Offre una migliore flessibilità di gestione consentendo l'espansione della dimensione del volume o la creazione di ulteriori volumi quando necessario.</li>
+                <li>Consente la creazione di più iSCSI LUN (File normali) sui volumi.</li>
+            </ul></li>
+	</ul>
+
+<h4 class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64">Formato volume</h4>
+<p class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64">A seconda del file system in uso, sono presenti due formati di volume:</p>
+<ul class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64">
+	<li><strong>Formato nuovo volume</strong>: questo formato utilizza il file system <b>Btrfs</b>. Le dimensioni minime di un volume in questo formato devono essere di almeno 10 GB. Supporta le seguenti nuove funzioni con cui è possibile gestire i dati in modo più semplice:
+		<ul>
+			<li><strong><a href="../DisasterRecovery/snapshots.html">Istantanea cartella condivisa</a>:</strong> l'istantanea registra lo stato di tutti i dati nel momento in cui viene acquisita. Se un utente modifica o elimina accidentalmente i dati in un volume con istantanee, sarà possibile ripristinare rapidamente i dati al periodo precedente, in cui è stata acquisita l'istantanea.</li>
+			<li><strong><a href="../AdminCenter/file_share_create.html#sharequota">Quota cartella condivisa</a>:</strong> è possibile impostare la capacità massima per ogni cartella.</li>
+			<li><strong><a href="../AdminCenter/file_user_create.html#userquota">Quota utente</a> basata sulla cartella condivisa:</strong> è possibile controllare la quantità di spazio utilizzabile in una cartella condivisa da ogni utente.</li>
+			<li><strong><a href="../AdminCenter/file_share_create.html#integrity_protection">Abilita protezione dell'integrità dei dati avanzata</a>:</strong> la cartella condivisa è protetta con le strategie somma di controllo CRC32 e copy-on-write.</li>
+		</ul>
+	</li>
+	<li><strong>Formato volume classico</strong>: questo formato utilizza il file system <b>ext4</b>. Le dimensioni minime di un volume in questo formato devono essere di almeno 10 GB. Il file system ext4 non è supportato dalla maggior parte dei prodotti Synology, quindi sarà possibile migrare facilmente il volume in uso in questo formato in un altro prodotto Synology.</li>
+</ul>
+</body>
+</html>

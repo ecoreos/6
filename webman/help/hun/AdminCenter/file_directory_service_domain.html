@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Win/Mac/NFS</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Tartomány</h2>
+<p>A(z) DiskStation eszköze képes csatlakozni a Windows tartományokhoz. A tartományhoz történő csatlakozást követően a tartományfelhasználók is bejelentkezhetnek a(z) DiskStation eszközre a tartományfiók és a jelszavak segítségével, melynek köszönhetően hozzáférhetnek a fájlokhoz, valamint használhatják a DSM-alkalmazásokat, mindezt úgy, hogy nem kell számos felhasználónevet és jelszót megjegyezniük.</p>
+<h4>Csatlakozás tartományhoz:</h4>
+<ol>
+<li>Lépjen a <strong>Vezérlőpult</strong> > <strong>Könyvtárszolgáltatás</strong> > <strong>Tartomány</strong> menüpontra.</li>
+<li>Jelölje be a <strong>Csatlakozás tartományhoz</strong> jelölőnégyzetet.</li>
+<li>Írja be a tartomány nevét, majd a megfelelő mezők segítségével határozza meg a DNS-szervert.</li>
+<li>Amennyiben szükséges, jelölje be a <b>Speciális tartománybeállítások</b> jelölőnégyzetet. (A részleteket lásd alább.)</li>
+<li>Kattintson az <b>Alkalmaz</b> gombra.</li>
+<li>A felugró ablakban adja meg a rendszergazda felhasználónevét és jelszavát a tartományszerveren.</li>
+<li>Kattintson az <b>OK</b> gombra.</li>
+</ol>
+<div class="section">
+<h4>DNS Server</h4>
+<p>Ajánlatos meghatározni egy DNS-szervert, ezzel elősegítve a(z) DiskStation eszköz számára a tartomány megkeresését. Ha azonban a tartomány nincs regisztrálva a DNS-szerveren, akkor előfordulhat, hogy a tartományhoz történő csatlakozás sikertelen lesz.</p>
+<h4>Tartományszerver típusa</h4>
+<p>Ez a mező jeleníti meg a tartomány típusát, amikor a(z) DiskStation eszköz csatlakozik egy tartományhoz. A tartomány típusa „AD tartomány” lesz.</p>
+<h4>Kezelési mód</h4>
+<p>Ez a beállítás határozza meg, hogy a rendszer hogyan kezelje a tartományfelhasználók és csoportok jogosultságait. </p>
+<ul>
+<li><b>Megbízható tartomány</b>: A csatlakozott tartományban, valamint a megbízható tartományokban szereplő felhasználókat és csoportokat kezelheti. A felhasználók és a csoportok a tartomány legördülő lista segítségével szűrhetők.</li>
+<li><b>Egy tartomány új szervezeti egységgel</b>: Ebben az üzemmódban csak a csatlakoztatott tartományban szereplő felhasználók és csoportok jelennek meg. Ezen üzemmódban a tartományfelhasználók/tartománycsoportok az OU (szervezeti egység) legördülő menü segítségével szűrhetők.</li>
+</ul>
+<h4>Speciális tartománybeállítások</h4>
+<p>A speciális tartománybeállításokat általában nem szükséges kitöltenie. A speciális tartománybeállításokra csak egyes tartománykörnyezetekben van szükség. </p>
+<ul>
+<li><b>DC IP/FQDN</b>: Határozzon meg egy DC (tartományvezérlő) IP-címet vagy FQDN-t, ekkor a(z) DiskStation megpróbál kommunikálni vele. Ha egynél több IP-címet vagy FQDN-t ad meg, vesszővel (,) válassza el őket egymástól. Tegyen csillagot (*) az utolsó DC IP-cím vagy FQDN után, ha azt szeretné, hogy a(z) DiskStation megpróbáljon más DC-vel is kommunikálni, ha az összes meghatározott cím sikertelennek bizonyult. A csillag és az utolsó IP-cím vagy FQDN közé vesszőt kell tennie.</li>
+<li><b>Domain NetBIOS név</b>: Adja meg a tartomány NetBIOS nevét.</li>
+<li><b>Domain FQDN (DNS név)</b>: Adja meg a tartomány FQDN-jét (DNS név).</li>
+<li><b>DNS-interfész regisztrálása:</b> Egy tartományhoz történő csatlakozáskor az itt meghatározott NIC (hálózati kártya) lesz regisztrálva a DNS-szerveren. Ne feledje, ha a(z) DiskStation eszköz állomásneve alulvonást (_) is tartalmaz, a regisztráció sikertelen lesz, mivel a DNS-nél nem használható alulvonás (_).</li>
+<li><b>Felhasználó-/csoportlista frissítése</b>: Határozza meg, hogy a(z) DiskStation eszköz milyen gyakran frissítse automatikusan a tartományfelhasználó-/csoportlistát. Meghatározhatja, hogy a frissítések naponta, hetente vagy havonta legyenek elvégezve. Ezenfelül a tartományfelhasználó-/csoportlisták manuálisan is frissíthetők. Ehhez lépjen a <strong>Tartományfelhasználó</strong> lapra, majd kattintson az <strong>Összes tartomány frissítése</strong> elemre. Ne feledje, hogy az automatikus frissítések hatással lehetnek a rendszer hibernálására.</li>
+</ul>
+
+<h4>Csak olvasható tartományvezérlő csatlakoztatása</h4>
+<p>A(z) DiskStation eszköz csak olvasható tartományvezérlőhöz (RODC) történő csatlakoztatása érdekében a <strong>DC IP/FQDN</strong> mezőben meg kell határoznia a csak írható tartományvezérlő (RWDC) „teljes számítógépnevét” (RWDC). A teljes számítógépnevet a következő formátumban kell megadnia: <strong>ComputerName.Domain</strong>, pl. „ad01.synology.com”.</p>
+
+</div>
+
+
+<div class="section">
+<h4>Megjegyzés:</h4>
+<ul>
+<li>Ha a tartomány nevében a „%” vagy a „$” jel szerepel, előfordulhat, hogy nem fog tudni hozzáférni az otthoni mappájához. Kérjen a tartomány rendszergazdájától új felhasználónevet.</li>
+<li>A <strong>Tartománygazda</strong> és a <strong>Vállalati rendszergazda</strong> tartománycsoportokat a rendszer automatikusan hozzáadja a helyi <strong>Administrators</strong> csoporthoz. Ebből következően az ezen csoportokhoz tartozó tartományfelhasználók rendszergazda jogosultságokkal fognak rendelkezni a(z) DiskStation eszközön, ideértve az olyan fájlszolgáltatásokhoz történő hozzáférést is, mint pl. a CIFS/FTP/AFP/WebDAV és egyéb DSM-alkalmazások.</li>
+<li>A tartományfelhasználók hozzáférési jogait is konfigurálhatja a(z) DiskStation megosztott mappáihoz. További információkért kattintson <a href="file_directory_service_user_group.html">ide</a>.</li>
+</ul>
+</div>
+
+
+
+<h3>Tartománybeállítások</h3>
+<p>Ez a rész az alábbi kiegészítő tartománybeállításokat tartalmazza.</p>
+<ul>
+<li><b>A DiskStation minden alkalommal szinkronizál az NTP szerverrel, amikor a domain felhasználója bejelentkezik:</b> Ezen opció engedélyezése esetén a rendszer kényszerítve végzi el az idő a(z) DiskStation eszköz és az NTP-szerver közti szinkronizálását.</li>
+<li><b>Kiszolgáló-aláírás engedélyezése:</b> Amennyiben a kliens engedélyezte a kliens aláírását, abban az esetben a szerver aláírását is engedélyezni kell a(z) DiskStation eszközön, hogy a felhasználók normál módon használhassák a tartományszolgáltatásokat.</li>
+<li><b>Felhasználó-/csoportlisták megszerzése NT4-kompatibilis üzemmóddal:</b> Ezen opció engedélyezése lehetővé teszi a rendszer számára, hogy az NT4 RPC mód segítségével felhasználó-/csoportlistákat kérhessen le. Ez az opciót abban az esetben érdemes engedélyezni, ha bizonyos tartományfelhasználó-/csoportlisták nem kérhetők le az alapértelmezett beállításokkal.</li>
+<li><b> Tartománygazdák és vállalati rendszergazdák adminisztrátori engedélyeinek letiltása:</b> A rendszergazda jogosultsággal rendelkező felhasználók teljes körű felügyelettel rendelkeznek a(z) DiskStation eszköz és az azon tárolt fájlok felett. Ezen opció engedélyezése lehetővé teszi a Tartománygazdák és a Vállalati rendszergazdák jogainak normál felhasználói jogokra történő korlátozását, ezzel átörökítve minden normál felhasználói fájl-/mappaengedélyt.</li>
+<li><strong>Beágyazott csoportszintek felsorolása:</strong> Határozza meg a beágyazott tartománycsoport tagok számát</li>
+</ul>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+	<h2>Hot Spare</h2>
+	<p>Hot spare-disker er reservedisker som kan reparere en degradert RAID Group ved automatisk å erstatte en sviktet disk. Hot spare-disker kan tildeles for å reparere en RAID Group på din DiskStation. En Hot spare-disk kan kun reparere en RAID Group som møter følgende kriterier:
+</p>
+	<ul>
+  <li>RAID-typen på RAID Group må være en med databeskyttelse (det vil si RAID 1, RAID 5, RAID 6, RAID 10).</li>
+		<li>Harddisktypen på hot spare-disken må være den samme som RAID Group-medlemsdisker (det vil se SATA, SAS).</li>
+		<li>Størrelsen på hot spare-disken må være større eller lik den minste disken i RAID Group.</li>
+	</ul>
+
+	<h4>Slik administrerer du hot spare-disker:</h4>
+	<ol>
+		<li>Klikk på <b>Administrer</b>.</li>
+		<li>For å tildele en hot spare-disk, finner du seksjonen <b>Tilgjengelige disker</b> på høyre side og merker av ved siden av disken du ønsker å tildele som hot spare. For å fjerne en hot spare-disk, fjerner du avmerkingen igjen. Klikk på <b>Bruk</b> for å lagre innstillingene.</li>
+	</ol>
+	<p>
+<div class="section">
+<h4>Merk:</h4> 
+<ul>
+<li>Når en hot spare-disk reparerer en degradert RAID Group, vil all data på hot spare-disken bli slettet. Før du tildeler en hot spare-disk, må du forsikre deg om at disken ikke inneholder viktig data.</li>
+<li>Et RAID av HDD-er vil ikke automatisk bli reparert av SSD hot spare-disker, og vice versa.</li>
+</ul>
+</div>
+
+<h4>Slik konfigurerer du hot spare-innstillinger for RAID Group:</h4>
+<ol>
+<li>Klikk på <b>Konfigurer</b>.</li>
+<li>Under fanen <b>Hot Spare-mål</b> finner du en liste over RAID Group-er som kan beskyttes av hot spare-disker. Hvis du fjerner avmerkingen i boksene, vil ikke korresponderende RAID Group-er bli reparert av hot spare-disker automatisk når de er degradert.</li>
+<li>Under fanen <b>Hot Spare på tvers av enheter</b> kan du la hot spare-disker på én enhet reparere et degradert RAID på en annen enhet.</li>
+<li>Klikk på <b>OK</b> for å lagre innstillingene.</li>
+</ol>
+
+</body>
+</html>

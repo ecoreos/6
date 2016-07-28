@@ -1,0 +1,195 @@
+
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Alternativ för att hantera File Station - Synology DSM hjälp</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="Learn how to customize File Station settings related to file management, shared links, and security.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Hantera inställningar för File Station</h2>
+<p>För att hantera inställningar i File Station, öppna <strong>File Station</strong> och klicka på knappen <b>Inställningar</b>.</p>
+
+<h3>Allmänt</h3>
+<p>
+Här kan du aktivera File Stations loggfil för att dokumentera alla användares aktiviteter. Användaraktiviteterna inkluderar <b>Skapa mapp</b>, <b>Ladda upp</b>, <b>Ladda ner</b>, <b>Radera</b>, <b>Döp om</b>, <b>Flytta</b>, <b>Kopiera</b> och <b>Egenskap inställd</b>.
+</p>
+<h4>Aktivera File Station loggfil:</h4>
+<ol>
+<li>Om du vill dokumentera alla användares aktiviteter, markera <b>Aktivera File Station loggfil</b>.
+</li>
+<li>
+Klicka på <b>OK</b>.
+</li>
+</ol>
+<h4>För att se File Stations loggfil:</h4>
+<ol>
+<li>
+Klicka på <b>Visa loggfiler</b>, vilket leder dig till <strong>Loggcentral</strong>.</li>
+<li>
+Klicka på fliken <b>Filöverföring</b>.
+</li>
+</ol>
+
+<h4>För att automatiskt skriva över filer vid uppladdning med dra och släpp eller tangentbordskommandon:</h4>
+<p>Markera <strong>Skriv alltid över filer när jag drar och släpper dem i en webbläsare eller klistrar in med tangentbordskommandon</strong> om du vill att filer med samma namn automatiskt skrivs över, när filer dras och släpps från din dators skrivbord till webbläsaren eller när du klistrar in filer med tangentbordskommandon i File Station.</p>
+
+
+<h4>Att aktivera smart dra och släpp:</h4>
+<p>När du drar och släpper filer i File Station avgör den här funktionen automatiskt om överföringen är en kopierings- eller flyttningsåtgärd.</p>
+
+<ol>
+<li>Välj <strong>Aktivera smart dra och släpp</strong>.</li>
+<li>Välj valfri åtgärd som alltid ska utföras om det händelsevis finns en annan användare som samtidigt överför filer med samma namn till samma plats:
+  <ul>
+<li><strong>Skriv över</strong>: Dina överförda filer skriver över filer med samma namn.</li>
+<li><strong>Hoppa över</strong>: Dina överförda filer hoppas över och skriver inte över filer med samma namn.</li>
+</ul>
+</li>
+<li>Klicka på <strong>OK</strong>.</li>
+</ol>
+
+<div class="section">
+<h4>Obs:</h4>
+<p>Om du vill ändra kopierings- eller flyttningsåtgärden som avgörs av smart dra och släpp, tillämpa följande snabbtangenter för att passa dina behov:</p>
+<ul>
+<li>Att byta till en kopieringsåtgärd: Tryck på Ctrl medan dra och släpp utförs.</li>
+<li>Att byta till en flyttningsåtgärd: Tryck på Shift medan dra och släpp utförs.</li>
+</ul>
+</div>
+
+
+<h4>Bläddra bland och hantera filer från lokal dator med File Station:</h4>
+<ol>
+<li>
+Markera <b>Bläddra bland filer från lokal dator med File Station</b>.
+</li>
+<li>
+Klicka på <b>OK</b>.
+</li>
+</ol>
+
+
+<h4>För att dela användarlistan i DSM med användare som inte är admin:</h4>
+<p>Det här alternativet låter användare som inte är admin få åtkomst till den fullständiga användarlistan i DSM, om de vill söka efter filer som ägs av specifika DSM-användare/-grupper eller om de vill dela fillänkar med andra DSM-användare.</p>
+
+<ol>
+<li>Välj <strong>Dela användarlistan i DSM med användare som inte är admin</strong>.</li>
+<li>Klicka på <strong>OK</strong>.</li>
+</ol>
+
+
+<h3>Tillämpning av standardbehörigheter för UNIX</h3>
+<p>Klicka på <strong>Avancerade inställningar</strong> och markera alternativet att tillämpa standardbehörigheter för UNIX när filer eller mappar laddas upp eller skapas. Tillämpade behörigheter är de samma som de behörigheter som appliceras av UNIX-kommandot <strong>umask</strong>. När detta alternativ är aktiverat är behörigheterna för UNIX 644 för filer och 755 för mappar. När detta alternativ är avaktiverat är behörigheterna för UNIX 666 för filer och 777 för mappar. Standardvärdet för umask är 022.</p>
+<div class="section">
+<h4>Obs:</h4>
+<ul>
+  <li>För delade mappar där Windows ACL aktiverats (alla utdelningar förutom &quot;photo&quot; och utdelningar på externa enheter), vänligen kör kommandot <strong>chmod</strong> på din Linux- eller FTP-klient för att ändra typ av filbehörighet från Windows ACL till UNIX.</li>
+  <li>Aktivering av detta alternativ kan orsaka problem med inkonsekventa behörigheter mellan olika protokoll. För att undvika inkonsekvens rekommenderar vi att detta alternativ lämnas avaktiverat.</li>
+</ul>
+</div>
+<h3 class="disable-eds14">Montera/Anslutningar</h3>
+<p class="disable-eds14">
+Som standard kan alla användare montera fjärrmappar eller virtuella diskar. Här kan du begränsa åtkomsten till hantering av fjärrmappar eller virtuella diskar till administrators.
+</p>
+
+<div class="disable-eds14 section">
+<h4>Obs:</h4>
+<p>Användare som inte är administrator kan endast montera fjärrmappar inom sin mapp <b>home</b>.</p>
+</div>
+<h4 class="disable-eds14">Att tillåta olika användare att montera fjärrmappar eller virtuella diskar:</h4>
+<ol class="disable-eds14">
+<li>
+Välj <b>Alla användare</b> eller <b>Administrators</b> i avsnittet <b>Fjärrmapp</b> eller <b>Virtuell enhet</b>.
+</li>
+<li>
+Klicka på <b>OK</b>.
+</li>
+</ol>
+<h4 class="disable-eds14">Att tillåta olika användare att montera servrar och cloud services:</h4>
+<ol class="disable-eds14">
+  <li>Välj från <b>Alla användare</b>, <b>Administrators</b>, eller <strong>Specifik användare</strong>. </li>
+  <li>Att välja <strong>Specifik användare</strong> öppnar ett fönster som låter dig konfigurera monteringsbehörigheter för olika användare. För att aktivera åtkomst för en specifik användare, tillse att rutan är markerad i kolumnen <strong>Aktiverad</strong>. För att avaktivera åtkomst för en specifik användare, tillse att rutan är inte markerad i kolumnen <strong>Aktiverad</strong>. När det är klart, klicka på <strong>OK</strong> för att stänga det här fönstret.</li>
+  <div class="section">
+    <h4>Obs:</h4>
+    <ul>
+      <li>Användare som hör till gruppen <strong>administrators</strong> kan använda den här funktionen men kan inte göra några ändringar. Användare som loggar in med <strong>guest</strong> kan varken använda den här funktionen och inte heller göra några ändringar. Behörigheter för alla andra användare kan ställas in här.</li>
+    </ul>
+  </div>
+  <li>Klicka på <strong>OK</strong>.</li>
+</ol>
+<h3>Delade länkar</h3>
+<p>
+Som standard kan alla användare dela fillänkar. Här kan du begränsa åtkomsthantering av delade länkar till enbart administrators.
+</p>
+<h4>Att tillåta olika användare att dela fillänkar:</h4>
+<ol>
+<li>
+Välj <b>Alla användare</b>, <b>Administrators</b>, eller <strong>Specifika användare</strong>.
+</li>
+<li>
+Klicka på <b>OK</b>.
+</li>
+</ol>
+
+<h4>För att alltid öppna HTML-filer i textformat:</h4>
+
+<ol>
+<li>Markera rutan <strong>Öppna alltid HTML-filer i textformat</strong>. Om detta alternativ är aktiverat kommer HTML-filer (dvs. filer i formaten HTM, HTML, JSP, XHTML) visas i textformat när användare öppnar dem via en fildelningslänk. Detta alternativ hjälper till att förhindra att skadliga aktörer manipulerar användares inloggningssessioner genom att använda inbäddade skript i HTML-filer.</li>
+<li>Klicka på <strong>OK</strong>.</li>
+</ol>
+
+<h3>Hastighetsbegränsning</h3>
+<p>Du kan aktivera hastighetsbegränsning för att kontrollera den maximalt användbara bandbredden för användare och grupper som överför data via File Station.</p>
+
+
+<h4>För att aktivera hastighetsgräns:</h4>
+<ol>
+  <li>Markera kryssrutan med texten <b>Aktivera hastighetsbegränsning</b> eller <strong>Aktivera hastighetsbegränsning i enlighet med ett schema</strong> om du vill implementera hastighetsbegränsning endast vid specifika tider. Detta är en inställning som får genomslagskraft över hela servern och kommer att åsidosätta inställningar för enskilda användare och grupper. Att välja <strong>Ingen hastighetsbegränsning</strong> avaktiverar inställningarna för hastighetsbegränsning, för alla användare och grupper.</li>
+  <li>Klicka på <strong>Inställningar för hastighetsbegränsning</strong> för att ändra inställningarna för användare eller grupper. För varje användare eller grupp kan du välja en av de följande:  </li>
+    <ul>
+      <li><strong>Tillämpa gruppinställningar:</strong> Inställningen för hastighetsbegränsning kommer att vara samma som för gruppen användaren tillhör. </li>
+      <li><strong>Ingen hastighetsgräns:</strong> Ingen hastighetsbegränsning kommer att tillämpas när gruppmedlemmar överför filer med tjänsten.</li>
+      <li><strong>Konstant:</strong> En fast, konstant hastighetsbegränsning kommer att tillämpas för användaren eller gruppmedlemmarna. Hastighetsbegränsning för uppladdning och nedladdning kan specificeras i fälten till vänster.</li>
+      <li><strong>Variabel:</strong> Två olika hastighetsbegränsningar kan specificeras och tillämpas på användaren eller gruppmedlemmar, i enlighet med ett schema. Klicka på knappen <strong>Anpassa</strong> för att ändra inställningarna för hastighetsbegränsning och ställa in ett schema.</li>
+    </ul>
+
+  <li>Klicka på <b>Tillämpa</b>.</li>
+</ol>
+<div class="section">
+  <h4>Obs:</h4>
+  <ul>
+    <li>För mer detaljer om dynamiken för hastighetsbegränsning för grupper, vänligen se <a href="../AdminCenter/file_group_edit.html">här</a>.</li>
+    <li>Vid inställning av hastighetsbegränsning för en användare kan avsnittet <strong>Resultat</strong> visa användarens faktiska hastighetsbegränsning, i enlighet med sina individuella eller sin grupps inställningar. Till exempel, Till exempel om användaren ”Achilles” har en individuell nedladdningsgräns på 100 KB/s men hör till en grupp med en nedladdningsgräns på 500 KB/s, kommer avsnittet <strong>Resultat</strong> att visa ”0/500”.</li>
+  </ul>
+</div>
+
+
+
+<h3>Säkerhet</h3>
+
+<p>Här hittar du nedanstående säkerhetsinställningar.</p>
+
+<h4>För att alltid öppna HTML-filer i textformat:</h4>
+
+<ol>
+<li>Markera rutan <strong>Öppna alltid HTML-filer i textformat</strong>. Om detta alternativ är aktiverat kommer HTML-filer (dvs. filer i formaten HTM, HTML, JSP, XHTML) visas i textformat när de öppnas i File Station. Detta alternativ hjälper till att förhindra att skadliga aktörer manipulerar användares inloggningssessioner genom att använda inbäddade skript i HTML-filer.</li>
+<div class="section">
+<h4>Obs:</h4>
+<ul>
+<li>Detta är inte en global inställning. Varje användare kan välja om detta alternativ ska aktiveras, enligt dennes personliga behov.</li>
+</ul>
+</div>
+<li>Klicka på <strong>OK</strong>.</li>
+</ol>
+
+</body>
+</html>

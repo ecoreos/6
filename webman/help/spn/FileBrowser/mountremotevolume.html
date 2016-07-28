@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>File Station</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2>Montar carpetas remotas</h2>
+
+<p>Puede montar carpetas remotas desde servidores remotos (como ordenadores de red u otros dispositivos Synology NAS) para navegar y administrar las carpetas montadas a través de File Station.</p>
+
+
+
+
+
+<h4>Para montar una carpeta compartida remota CIFS*:</h4>
+<ol>
+<li>Haga clic en <b>Herramientas</b> > <b>Montar carpeta remota</b> > <strong>Carpeta compartida de CIFS</strong>.</li><img src="about:blank" class="help_image"/><li>En el campo <b>Carpeta</b>, especifique la ruta de la carpeta remota con el formato <code>\\servidor_remoto\carpeta_remota</code>, como por ejemplo <code>\\192.168.0.2\share</code> o <code>\\chad\cheeseburger\pictures</code>.</li>
+<li>Si el servidor remoto requiere privilegios de acceso para la carpeta remota, introduzca sus credenciales de usuario del servidor remoto en los campos <b>Nombre de cuenta</b> y <b>Contraseña</b>.</li>
+<li>Haga clic en <b>Examinar</b> para seleccionar o crear una carpeta de destino vacía en su DiskStation para montar la carpeta remota.</li><img src="about:blank" class="help_image"/><li>Marque <b>Montar automáticamente al arrancar</b> si desea que DiskStation monte la carpeta remota en cada reinicio o arranque del sistema.</li>
+<li>Haga clic en <b>Montar</b> para montar la carpeta remota en la carpeta de destino. Ahora puede navegar y administrar la carpeta remota desde su DiskStation.</li>
+</ol>
+
+<h4>Para montar una carpeta compartida remota NFS:</h4>
+
+<ol>
+<li>Haga clic en <b>Herramientas</b> > <b>Montar carpeta remota</b> > <b>Carpeta compartida de NFS</b>.</li><img src="about:blank" class="help_image"/><li>En el campo <b>Carpeta</b>, especifique la ruta de la carpeta remota con el formato <code>servidor_remoto:/ruta_carpeta_remota</code>, como por ejemplo <code>192.168.0.2:/volume1/share</code>.</li>
+<li>Seleccione la versión de NFS y el protocolo de transporte deseados.</li>
+<li>Haga clic en <b>Examinar</b> para seleccionar o crear una carpeta de destino vacía en su DiskStation para montar la carpeta remota.</li><img src="about:blank" class="help_image"/><li>Marque <b>Montar automáticamente al arrancar</b> si desea que DiskStation monte la carpeta remota en cada reinicio o arranque del sistema.</li>
+<li>Haga clic en <b>Montar</b> para montar la carpeta remota en la carpeta de destino. Ahora puede navegar y administrar la carpeta remota desde su DiskStation.</li>
+</ol>
+
+<div class="section">
+<h4>Nota:</h4>
+<p>NFSv4 solo es compatible con el protocolo TCP.</p>
+</div>
+
+<h4>Para desmontar una carpeta remota:</h4>
+<ol>
+<li>Seleccione la carpeta remota que desee desmontar, y, a continuación, haga clic en <b>Herramientas</b> > <b>Desmontar</b>.</li><img src="about:blank" class="help_image"/><li>Como alternativa, simplemente haga clic con el botón secundario del ratón en la carpeta remota y seleccione <b>Desmontar</b>.</li><img src="../../../online_img/dsm/FileStation/mountremotevolume/04.png" class="help_image"/></ol>
+
+<div class="section">
+<h4>Nota:</h4>
+<ul>
+<li>El número máximo de carpetas remotas simultáneas es 100.</li>
+<li>Solo puede montar carpetas remotas de un servidor remoto que admita los protocolos CIFS o NFS.</li>
+<li>Las carpetas remotas solo pueden montarse en subcarpetas de carpetas compartidas.</li>
+<li class="enable-dockerx64">Solo es posible montar carpetas remotas en el modo con privilegios altos. Para usar esta función vaya al paquete Docker de su DSM host, seleccione el <strong>Docker DSM</strong> para el que desea habilitar las carpetas compartidas cifradas, haga clic en <strong>Editar</strong> y marque la casilla junto a <strong>Ejecutar contenedor usando privilegios altos</strong>.</li>
+</ul>
+</div>
+
+
+<p>____<br />* Solo disponible en determinados modelos.</p>
+
+</body>
+</html>

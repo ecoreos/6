@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Power</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+
+
+<h2>UPS</h2>
+
+<p class="disable-eds14">An UPS (Uninterruptible Power Supply) is a backup power device that allows the DiskStation to continue operating for a short time if power failure occurs. This function at <strong>Control Panel</strong> > <strong>Hardware & Power</strong> > <strong>UPS</strong> helps prevent data loss by giving the DiskStation enough time to save data and unmount volumes before losing power and shutting off.</p>
+
+<p class="enable-eds14">An UPS (Uninterruptible Power Supply) is a backup power device that allows the DiskStation to continue operating for a short time if power failure occurs. This function at <strong>Control Panel</strong> > <strong>Hardware & Power</strong> > <strong>UPS</strong> helps prevent data loss by giving the DiskStation enough time to save data and unmount volumes before losing power and halting.</p>
+
+<div class="section">
+<h4>Safe Mode</h4>
+<p class="disable-eds14">When the DiskStation enters Safe Mode, it stops all services and unmounts volumes in order to prevent data loss and shut down safely when the UPS device runs out of power. By default, the system enters Safe Mode when the UPS device starts running low on power. You can also specify the amount of time before the DiskStation enters Safe Mode when power failure occurs. However, if the UPS device reaches low battery before the specified time, the system enters Safe Mode immediately.</p>
+
+<p class="enable-eds14">When the DiskStation enters Safe Mode, it stops all services and unmounts volumes in order to prevent data loss and halt safely when the UPS device runs out of power. By default, the system enters Safe Mode when the UPS device starts running low on power. You can also specify the amount of time before the DiskStation enters Safe Mode when power failure occurs. However, if the UPS device reaches low battery before the specified time, the system enters Safe Mode immediately.</p>
+
+
+<p></p>
+<p class="disable-eds14">In situations when the DiskStation shuts down during Safe Mode, it will automatically turn on when power is restored if you have enabled the <strong>Restart automatically after a power failure</strong> option (located at <strong>Control Panel</strong> > <strong>Hardware & Power</strong> > <strong>General</strong>).</p>
+
+<p></p>
+</div>
+
+
+
+
+<h3>Local UPS Support</h3>
+
+<p>For details regarding hardware installation, please consult the user manual of your UPS device. Once installation is complete, and the DiskStation has been plugged into the UPS device, you can follow the steps below to enable UPS support.</p>
+<h4>To enable local UPS support:</h4>
+<OL>
+<li>Connect the UPS device to a USB port of the DiskStation.</li>
+<LI>On the <strong>UPS</strong> tab, check the <b>Enable UPS support</b> checkbox.</LI>
+<LI>Select when the DiskStation should enter Safe Mode after power failure occurs.</LI>
+<LI>Choose whether or not to send a shutdown signal to the UPS device when the system enters Safe Mode. Most UPS devices can automatically turn on when power is restored.</LI>
+<LI>Click <b>Apply</b>.</LI>
+</OL>
+
+<h3>SNMP UPS Support</h3>
+
+<p>Your DiskStation also supports connecting to SNMP (Simple Network Management Protocol) UPS devices. For details regarding hardware installation, please consult the user manual of your SNMP UPS device. Once the DiskStation has been plugged into the device and connected to the same network, you can follow the steps below to enable UPS support.</p>
+<h4>To enable SNMP UPS support:</h4>
+<ol>
+<LI>On the <strong>UPS</strong> tab, check the <b>Enable UPS support</b> checkbox.</LI>
+<li>Select <strong>SNMP UPS</strong> from the <strong>Network UPS type</strong> drop-down menu.</li>
+<li>In the <strong>SNMP UPS IP address</strong> field, enter the IP address of the SNMP UPS device.</li>
+<LI>Select when the DiskStation should enter Safe Mode after power failure occurs.</LI>
+<li>Enter the community string for the SNMP UPS device into the <strong>SNMP community</strong> field.</li>
+<LI>Click <b>Apply</b>.</LI>
+</ol>
+
+<div class="section">
+<h4>Note:</h4>
+<ul>
+<li>It is strongly recommended to use <b>SNMP UPS</b> for Synology High Availability (SHA) deployments.</li>
+<li>DiskStation supports SNMPv1 and SNMPv2c UPS devices.</li>
+</ul>
+</div>
+
+
+<h3>Network UPS Support</h3>
+
+<p>If there are two Synology products using a UPS device with a single USB port, then only one DiskStation can obtain information regarding the status of the UPS device. In this case, one DiskStation can act as a "network UPS server" and connect to the UPS device via USB or network (depending on the device). The network UPS server obtains UPS information and relays it to the other "client" DiskStation.</p>
+<h4>To enable network UPS support:</h4>
+<OL>
+<li>Log into the DiskStation that is connected to the UPS device (via USB or network). If local UPS support has not been enabled on this DiskStation yet, please see the section above.</li>
+<LI>On the <strong>UPS</strong> tab, check the <strong>Enable network UPS server</strong> box to allow the DiskStation to relay UPS information to the client DiskStation.</li>
+<li>Click the <strong>Permitted DiskStation Devices</strong> button.</li>
+<li>On the window that appears, enter the IP addresses of the other DiskStation that is using the UPS device, but not connected via USB or the network. Click <strong>OK</strong>.</li>
+<li>Click <strong>Apply</strong> to save settings.</li>
+</OL>
+<p>Now the network UPS server can obtain UPS information and relay it to the other DiskStation that is using the UPS device. Please see the instructions below to enable UPS support on the other DiskStation.</p>
+<h4>To enable UPS support on the client DiskStation:</h4>
+<ol>
+<li>Log into the other DiskStation that is using the UPS device, but not connected via USB or network.</li>
+<li>On the <strong>UPS</strong> tab, check the <strong>Enable UPS support</strong> box.</li>
+<li>Select <strong>Synology UPS server</strong> from the <strong>Network UPS type</strong> drop-down menu.</li>
+<li>Enter the IP address of the network UPS server (i.e. the DiskStation connected to the UPS device) in the <strong>Network UPS server IP</strong> field.</li>
+<LI>Select when the DiskStation should enter Safe Mode after power failure occurs. To simplify Safe Mode settings, you can select <strong>Same as server</strong>.</LI>
+<LI>Click <b>Apply</b> to save settings.</LI>
+</OL>
+<div class="section">
+<h4>Network UPS Requirements:</h4>
+<UL>
+<LI>To relay UPS device information, each DiskStation should be connected to the same network.</LI>
+<LI>The network device (e.g. switch or hub) to which each DiskStation is connected should be plugged into the same UPS device. Otherwise the DiskStations will not be able to relay UPS device information when power failure occurs.</LI>
+</UL>
+</div>
+</body>
+</html>

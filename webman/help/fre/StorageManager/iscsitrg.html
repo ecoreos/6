@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Gestionnaire de stockage</title>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2><a name="leaf_iscsitrg"></a>iSCSI Target*</h2>
+<p>iSCSI est un type de réseau de stockage (SAN) qui donne accès au stockage de données consolidé, au niveau des blocs. Il facilite les transferts de données sur les intranets et la gestion du stockage sur de longues distances. En mappant des iSCSI LUN vers des iSCSI Target, les serveurs clients peuvent accéder aux espaces de stockage par son initiateur iSCSI comme s'ils étaient des disques locaux. Selon le modèle, le produit Synology prend en charge la création de multiples iSCSI Targets sur lesquels les iSCSI LUN peuvent être mappés.</p>
+<p><span class="note_head">Remarque : </span>Le nombre d'iSCSI Targets pris en charge varie selon les produits Synology. Pour des caractéristiques techniques détaillées, veuillez consulter le site Web Synology.</p>
+<h4>Pour créer un iSCSI Target :</h4>
+<ol>
+<li>Cliquez sur le bouton <b>Créer</b>.</li>
+<li>Entrez les informations de l'iSCSI Target, notamment le <b>Nom</b>, l'<b>IQN</b>, et s'il faut activer l'<b>Authentification CHAP</b>.</li>
+<li>Cliquez sur <b>Suivant</b>.</li>
+<li>Configurer les propriétés d'iSCSI LUN. Sélectionnez <b>Créer un nouveau iSCSI LUN</b> ou <b>Mapper les iSCSI LUN existants</b>.</li>
+<li>Cliquez sur <b>Suivant</b>.</li>
+<li>Cliquez sur <b>Retour</b> pour modifier les paramètres ou sur <b>Appliquer</b> pour les confirmer.</li>
+</ol>
+<div class="section">
+<h4>Explication des termes</h4>
+<ul>
+<li><b>IQN</b> : IQN (iSCSI Qualified Name) est un ensemble de noms uniques pour un iSCSI Target. Il ne devrait pas provoquer de conflits avec d'autres IQN d'iSCSI Target sur d'autres serveurs. L'IQN doit comporter moins de 128 caractères et peut inclure des lettres (sensible à la casse), des numéros, des double-points, des tirets et des points. Le format de nomination suggéré est iqn.[date].[domaine]:[identifiant périphérique], par exemple : <i>iqn.2000-04.com.synology:storage.diskarray.1</i>.</li>
+<li><b>Authentification CHAP</b> : Si vous sélectionnez <b>CHAP</b>, le serveur pourra vérifier l'identité du client. Le nom d'utilisateur peut comporter 1 à 12 lettres et numéros, et le mot de passe peut compter 12 à 16 lettres et numéros.</li>
+<li><b>Authentification CHAP mutuel</b> : Dans <b>CHAP mutuel</b>, le client et le serveur s'authentifieront l'un l'autre. Tout mot de passe CHAP utilisé pour l'authentification de client ne doit pas être configuré pour l'authentification d'un serveur, et tout mot de passe CHAP utilisé pour l'authentification de serveur ne doit pas être configuré pour l'authentification d'un client.</li></ul></div>
+<h4>Pour supprimer un iSCSI Target :</h4>
+<p>Vous pouvez supprimer un iSCSI Target ainsi que tous les iSCSI LUN mappés. Notez qu'en supprimant un iSCSI LUN, toutes les données qui s'y trouvent seront supprimées.</p>
+<ol>
+<li>Sélectionnez l'iSCSI Target que vous souhaitez supprimer.</li>
+<li>Cliquez sur <b>Supprimer</b>.</li>
+<li>Si vous voulez supprimer des iSCSI LUN mappés, sélectionnez <b>Supprimer également les iSCSI LUN mappés</b> et sélectionnez ceux que vous voulez supprimer.</li>
+<li>Cliquez sur <b>OK</b>.</li>
+</ol>
+<h4>Pour modifier un iSCSI Target :</h4>
+<ol>
+<li>Sélectionnez l'iSCSI Target que vous souhaitez modifier.</li>
+<li>Cliquez sur <b>Modifier</b>.</li>
+<li>Modifiez les paramètres à votre convenance. Cliquez sur <b>OK</b> pour enregistrer les modifications.</li>
+</ol>
+<div class="section">
+<h4>Explication des termes</h4>
+<ul>
+<li><b>Somme de contrôle CRC</b> : Activez la somme de contrôle CRC pour vérifier si une erreur s'est produite au cours de la transmission de données.</li>
+<li><b>Sessions multiples</b> : Autorisez plusieurs sessions d'un ou plusieurs initiateurs à se connecter au même iSCSI Target en même temps. Pour protéger vos fichiers contre toute altération ou perte de données, nous vous conseillons fortement d'utiliser un système de fichiers partagés ou un système à clusters tel que Virtual Machine File System (VMFS) de VMware et Oracle Cluster File System (OCFS).</li>
+<li><b>Masquage</b> : Le masquage permet à des IQN d'initiateur iSCSI définis d'accédede manière exclusive à un iSCSI Target.</li>
+</ul></div>
+<h4>Pour activer ou désactiver un iSCSI Target :</h4>
+<ol>
+<li>Sélectionnez l'iSCSI Target que vous souhaitez activer ou désactiver.</li>
+<li>Cliquez sur <b>Activer</b> ou <b>Désactiver</b>.</li>
+</ol>
+<h4>Pour enregistrer les iSCSI Target sur un serveur iSNS :</h4>
+<p>iSNS (Internet Storage Name Service) fournit le mécanisme des gestions centralisées. Vous pouvez enregistrer toutes les iSCSI Targets avec le serveur iSNS.</p>
+<ol>
+<li>Cliquez sur le bouton <b>iSNS</b> et cochez la case <b>Activer iSNS</b>.</li>
+<li>Entrez l'adresse IP du serveur iSNS. Cliquez sur <b>OK</b> pour appliquer le paramètre.</li>
+</ol>
+<p>____<br />*Uniquement pris en charge sur certains mod&egrave;les.</p>
+
+</body>
+</html>

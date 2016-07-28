@@ -1,0 +1,149 @@
+
+[HA_ConfSyncError]
+Subject: High-availability クラスタ %HOSTNAME% が、システム構成チェック中に同期エラーを検出しました。
+
+お客様各位
+
+High-availability クラスタ %HOSTNAME% が、アクティブ サーバーと受動サーバーのシステム構成チェック中に同期エラーを検出しました。システムはシステム構成のフル同期を実行することで、エラーを修正しようと試みました。詳細は、システムログまたは、High Availability Manager のログページをご覧ください。
+
+操作：%HA_ACTION%
+エラー：%HA_PARAM_1%
+
+敬具
+%COMPANY_NAME%
+
+
+[HA_FailOver]
+Subject: high-availability クラスタ %HOSTNAME% におけるエラー発生のお知らせ。
+
+お客様各位
+
+high-availability クラスタ %HOSTNAME% でエラーが検出されました。システムは、サービスを受動サーバーに切り替えます。詳しくは、システム ログをご覧ください。
+
+操作：%HA_ACTION%
+エラー：%HA_PARAM_1%
+
+敬具
+%COMPANY_NAME%
+
+
+[HA_MismatchedSsdCache]
+Subject: SSD キャッシュ ディスクは high-availability クラスタ %HOSTNAME% にあるものと同じではありません
+
+お客様各位
+
+受動サーバー %HA_PARAM_1% 上の次の SSD キャッシュにあるディスクとアクティブ サーバー上にあるディスクが一致しません。SSD キャッシュ %HA_PARAM_2%.
+
+詳細は、High Availability Manager のログページをご覧ください。
+
+操作：%HA_ACTION%
+
+敬具
+%COMPANY_NAME%
+
+
+[HA_SplitBrain]
+Subject: high-availability クラスタ %HOSTNAME% でスプリット ブレイン エラー発生
+
+お客様各位
+
+high-availability クラスタ %HOSTNAME% でスプリット ブレイン エラーが発生しました。詳しくは、システム ログをご覧ください。
+
+操作：%HA_ACTION%
+
+敬具
+%COMPANY_NAME%
+
+
+[HA_StatusChange]
+Subject: High-availability クラスタ %HOSTNAME% のステータスが %HA_PARAM_1% から %HA_PARAM_2% に変わりました。
+
+お客様各位
+
+High-availability クラスタ %HOSTNAME% のステータスが %HA_PARAM_1% から %HA_PARAM_2% に変わりました。詳細は、システムログまたは、High Availability Manager のログページをご覧ください。
+
+操作：%HA_ACTION%
+説明 %HA_PARAM_3%
+
+敬具
+%COMPANY_NAME%
+
+
+[HA_SwitchFail]
+Subject: High-availability クラスタ %HOSTNAME% のサービス切替え失敗のお知らせ
+
+お客様各位
+
+システムがサービスを high-availability クラスタ %HOSTNAME% の受動サーバーに切り替えようとしましたが、できませんでした。詳しくは、システム ログをご覧ください。
+
+操作：%HA_ACTION%
+
+敬具
+%COMPANY_NAME%
+
+
+[HA_SwitchFinished]
+Subject: High-availability クラスタ %HOSTNAME% は、%HA_PARAM_1% 上でサービスを実行しています。
+
+お客様各位
+
+High-availability クラスタ %HOSTNAME% のサービスは、%HA_PARAM_1% 上で実行されています。詳細は、システムログまたは、High Availability Manager のログページをご覧ください。
+
+操作：%HA_ACTION%
+
+敬具
+%COMPANY_NAME%
+
+
+[HA_SwitchOver]
+Subject: High-availability クラスタ %HOSTNAME% の %HA_PARAM_1% への切り替え。
+
+お客様各位
+
+High-availability クラスタ %HOSTNAME% の切り替え作業が開始されました。サービスは %HA_PARAM_1% に切り替えられます。詳しくは、システム ログをご覧ください。
+
+操作：%HA_ACTION%
+
+敬具
+%COMPANY_NAME%
+
+
+[HA_SwitchOver_With_Reason]
+Subject: High-availability クラスタ %HOSTNAME% が %HA_PARAM_1% にスイッチオーバーしました。
+
+お客様各位
+
+high-availability クラスタ %HOSTNAME% でスイッチオーバーが実行されました。サービスは %HA_PARAM_1% に切り替えられます。詳しくは、システム ログをご覧ください。
+
+操作：%HA_ACTION%
+理由：%HA_PARAM_2%
+
+敬具
+%COMPANY_NAME%
+
+
+[HA_SyncComplete]
+Subject: High-availability クラスタ %HOSTNAME% のフル複製が完了しました。
+
+お客様各位
+
+High-availability クラスタ %HOSTNAME% のフル複製が完了しました。受動サーバーはスイッチオーバーが必要になった場合、サービスを引き継ぐ準備ができています。詳細は、システムログまたは、High Availability Manager のログページをご覧ください。
+
+操作：%HA_ACTION%
+
+敬具
+%COMPANY_NAME%
+
+
+[HA_UnbindLocal]
+Subject: ローカルホストは high-availability クラスタから削除されました
+
+お客様各位
+
+%HA_PARAM_1% は high-availability クラスタ %HA_PARAM_2% から移動されました。詳しくは、システム ログをご覧ください。
+
+操作：%HA_ACTION%
+
+以上、よろしくお願い申し上げます。
+%COMPANY_NAME%
+

@@ -1,0 +1,81 @@
+ <!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Merevlemez lecserélése kötetben vagy lemezcsoportban – Synology DSM Súgó</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="This article walks you through the steps to replace a hard drive of an existing volume or disk group on DiskStation in order to increase storage capacity."><link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Merevlemezek cseréje a tárolókapacitás bővítése érdekében</h2>
+
+<p>Bizonyos RAID-típusok esetében úgy is növelheti a kötet vagy lemezcsoport tárolókapacitását, ha nagyobb méretűre cseréli a régi merevlemezeket. Ebben a cikkben fontos információkat közlünk a bővítési folyamatról, illetve egy példán keresztül be is mutatjuk, hogyan cserélheti le meglévő merevlemezeit a tárhelykapacitás növelése céljából.</p>
+
+<div class="section">
+  <h4>Megjegyzés:</h4>
+<p>A cikkben leírt folyamat kizárólag SHR, RAID 1, RAID 5 és RAID 6 esetén működik. Több merevlemez cseréje esetén ne feledje, hogy a merevlemezeket egyesével kell lecserélnie. Egy merevlemez lecserélését követően a következő kicserélése előtt ki kell javítania a kötetet vagy lemezcsoportot. RAID 1, RAID 5 és RAID 6 esetében a kötetkapacitás csak az összes merevlemez cseréje után nő meg.</p>
+
+</div>
+
+
+<h3 class="list_head"><a name="t1"></a>  Kezdés előtt</h3>
+
+<p>Merevlemez lecserélése előtt tekintse át az alábbi feljegyzéseket:<br/><ul>
+<li><b>Adatok biztonsági mentése:</b> Habár a bővítési folyamat nem töröl létező adatokat, javasoljuk, hogy megkezdése előtt készítsen biztonsági mentést.</li>
+<li><b>Kötet vagy lemezcsoport állapota:</b> Kezdés előtt győződjön meg róla, hogy a kötet vagy lemezcsoport <b>Normál</b> állapotban van-e. Ha nem, először ki kell javítania.</li>
+<li><b>Elérhetőek még az adatai a kötetbővítés során?</b> A rendszerben tárolt adatok elérhetőek maradnak a kötet vagy lemezcsoport bővítésének folyamata során, bár előfordulhat, hogy a rendszer ideiglenesen felfüggeszti a kapcsolatokat a folyamat első indításakor.</li>
+</ul>
+
+<div class="section">
+<h4>SHR (Synology Hybrid RAID)</h4>
+
+<p>Az SHR-kötetek a telepített merevlemezek száma és mérete alapján optimalizálják a tárolókapacitást. Ezért kérjük, a kapacitás megfelelő bővítése érdekében kövesse az alábbi útmutatást:</p>
+
+<ul>
+<li>Ha az összes merevlemez megegyező kapacitással rendelkezik, a tárolókapacitás bővítése érdekében legalább két merevlemezt nagyobbra kell cserélnie. Ha például az SHR-kötet három 2 TB-os merevlemezből áll, a kötet kapacitásának bővítéséhez legalább két merevlemezt ki kell cserélnie.</li>
+<li>Ha a meglévő merevlemezek kapacitása ettől eltérő, az új, csereként használt merevlemezek kapacitásának meg kell egyeznie a meglévő legnagyobb merevlemez kapacitásával, vagy meg kell haladnia azt. A kapacitás kihasználásának optimalizálása érdekében először a legkisebb merevlemezeket kell kicserélnie. Ha például az SHR-kötet három, egyenként 4 TB, 3 TB, és 2 TB méretű merevlemezből áll, akkor az új csereként használt merevlemezeknek legalább 4 TB-osnak kell lenniük. Ezenfelül a 3 TB-os vagy 2 TB-os merevlemezeket kell először kicserélnie.</i>
+</li>
+</ul>
+</div>
+
+<div class="section">
+<h4>RAID 5 és RAID 6</h4>
+
+<p>Amikor RAID 5 vagy RAID 6 kötetek, illetve lemezcsoportok merevlemezeit cseréli ki, mindig a legkisebb merevlemezt cserélje le először. A RAID 5 kötetek tárolókapacitása: (merevlemezek száma – 1) x (legkisebb merevlemez mérete), a RAID 6 esetén pedig: (merevlemezek száma – 2) x (legkisebb merevlemez mérete). Vagyis a maximális merevlemez-kihasználás érdekében mindig a legkisebb merevlemezt kell először kicserélni.</p>
+
+<p>Ha például a RAID 5 kötet három, egyenként 4 TB, 3 TB, és 2 TB méretű merevlemezből áll, a kötet rendelkezésre álló kapacitása 4 TB. Ha kicseréli a 4 TB vagy 3 TB méretű merevlemezeket, a kötet kapacitása nem fog változni. A kötet kapacitásának növeléséhez először a 2 TB-os merevlemezt kell kicserélni.</p>
+</div>
+
+
+
+<h3>Merevlemez cseréje a tárolókapacitás bővítése érdekében</h3>
+
+<p>Az alábbi lépésekben példát szolgáltatunk arra, hogyan érdemes lecserélni egy SHR-kötet merevlemezeit.</p>
+
+<h4>Merevlemezek cseréje:</h4>
+<ol>
+<li>Nyissa meg a <b>Tároláskezelő</b> alkalmazást.</li><img src="about:blank" class="help_image"/><li>Lépjen a <strong>Kötet</strong> menübe, tekintse meg, hogy melyik merevlemez a legkisebb.</li><img src="../../../online_img/dsm/StorageManager/volume_diskgroup_expand_replace_disk/check_disk.png" class="help_image"/><li>Kapcsolja ki a(z) DiskStation eszközt. (Amennyiben DiskStation eszköze támogatja a hot swap funkciót, ezt a lépést kihagyhatja.)</li>
+<li>Távolítsa el a legkisebb tagmerevlemezt, majd telepítse az új, nagyobb merevlemezt.</li>
+
+<div class="section">
+<h4>Megjegyzés:</h4>
+<p>A személyi sérülések és DiskStation eszköze károsodásának elkerülése érdekében kövesse a Synology termék <i>Gyorstelepítési útmutatójában</i> található merevlemez-telepítési utasításokat.</p>
+</div>
+
+<li>Kapcsolja be DiskStation eszközét.</li>
+<li>Nyissa meg ismét a <strong>Tároláskezelő</strong> alkalmazást.</li>
+<li>Lépjen a <strong>HDD/SSD</strong> menüpontra, ellenőrizze, hogy a rendszer felismerte-e az új merevlemezt.</li><img src="about:blank" class="help_image"/><li>A kötetnek a következő állapottal kell rendelkeznie: <b>Csökkent</b>. Válasszon ki egy kötetet, majd kattintson a <strong>Kezelés</strong> lehetőségre.</li><img src="../../../online_img/dsm/StorageManager/volume_diskgroup_expand_replace_disk/volume_manage.png" class="help_image"/><li>Válassza a <b>Javítás</b> lehetőséget.</li><img src="../../../online_img/dsm/StorageManager/volume_diskgroup_expand_replace_disk/manage_repair.png" class="help_image"/><li>Jelölje ki a kötethez hozzáadni kívánt merevlemezt. Majd kövesse a varázsló utasításait a művelet befejezéséig.</li><img src="../../../online_img/dsm/StorageManager/volume_diskgroup_expand_replace_disk/choose_disks.png" class="help_image"/><li>Ismételje addig a következő folyamatot, amíg az összes kívánt merevlemezt nagyobbra nem cserélte.</li>
+</ol>
+
+
+
+
+
+
+</body>
+</html>

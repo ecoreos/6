@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+<meta content="en-us" http-equiv="Content-Language" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Zabezpečení dat na zařízení Synology NAS zálohováním</title>
+</head>
+
+<body class="tutorial-content-box" >
+
+<h1>Zálohování zařízení Synology NAS</h1>
+<div class="tutorials_content"><img src="../../images/Backup/1x/Backup/back_up_your_data_on_synology_nas_to_ensure_data_security.jpg" /><h2>Přehled</h2>
+<p>Potenciálními hrozbami pro vaše klíčová data jsou neočekávané ztráty způsobené závadami na pevném disku nebo přírodními pohromami, především tehdy, když není k dispozici žádné spolehlivé řešení zálohování. Služba <strong>Hyper Backup</strong> poskytuje intuitivní a integrované řešení zálohování a obnovení, které pomáhá uchovávat a načítat kopie cenných dat a obnovovat aplikace a konfigurace systému k určitému časového bodu. Podporovány jsou následující cíle ukládání:</p>
+
+<ul>
+<li><strong>Místní sdílené složky (včetně externích úložných zařízení připojených k zařízení DiskStation)</strong></li>
+<li><strong>Vzdálené zařízení Synology NAS</strong></li>
+<li><strong>Vzdálené servery rsync</strong></li>
+<li><strong>Vzdálené servery OpenStack Swift</strong></li>
+<li><strong>Veřejné cloudy (Amazon S3, Microsoft Azure, OpenStack Swift apod.)</strong></li>
+</ul>
+</div>
+
+<div class="section">
+<h4>Poznámka:</h4>
+<p>Služba Hyper Backup zálohuje pouze určité systémové konfigurace a aplikace. Další informace naleznete v dokumentaci nápovědy pro službu Hyper Backup.</p>
+</div>
+
+
+<h3 class="list_head">1. Vytvoření místních úloh zálohování do místní sdílené složky či externího úložného zařízení</h3>
+<p>Služba <strong>Hyper Backup</strong> nabízí podobné postupy zálohování a obnovení u různých typů cílů. Níže jako referenci k jiným typům úloh ukážeme, jak zálohovat a obnovit data místně.</p>
+
+<ol>
+<li>Přihlaste se k systému DSM a najděte balíček <strong>Hyper Backup</strong>.</li>
+<li>Klikněte na symbol <strong>+</strong> v levém dolním rohu a vyberte možnost <strong>Úloha zálohování dat</strong>.</li>
+<li>Úlohu zálohování dat nastavíte volbou <strong>Místní sdílená složka</strong>.</li><img src="../../images/Backup/1x/Backup/1.png" width="600" alt=""/><li>Vyberte možnost <strong>Vytvořit úlohu zálohování</strong> a zvolte místní sdílenou složku nebo externí úložné zařízení připojené k zařízení DiskStation.</li><img src="../../images/Backup/1x/Backup/2.png" width="600" alt=""/><li>Vyberte zdrojové složky, jejichž data se mají zálohovat. Pokud jsou vybrány šifrované sdílené složky, musí zůstat během procesu zálohování připojené. Jestliže jsou zdroj a cíl na stejném svazku, systém takové zdrojové složky označí oranžovým vykřičníkem.</li><img src="../../images/Backup/1x/Backup/3.png" width="600" alt=""/><li>Vyberte aplikace, které se mají zálohovat.</li><img src="../../images/Backup/1x/Backup/4.png" width="600" alt=""/><li>Níže určete nastavení zálohování, které vyhovuje vašim potřebám:<ul>
+  <li><strong>Úloha</strong>: Pojmenujte úlohu zálohování.</li>
+  <li><strong>Povolit upozornění na úlohy</strong>: Zvolte, pokud chcete být informováni o stavu úlohy pomocí e-mailu, zprávy SMS nebo nabízené služby.</li>
+  <li><strong>Povolit zálohu konfigurace</strong>: Možnost zálohování konfigurací systému (např. přihlašovacích údajů uživatelů). Toto nastavení je u všech úloh zálohování podle výchozího nastavení vynuceno.</li>
+  <li><strong>Komprimovat zálohovaná data</strong>: Zálohovaná data se komprimují, aby se snížilo využití cílového úložiště. Vyberete-li tuto možnost, bude zálohování trvat déle.</li>
+  <li><strong>Povolit šifrování přenosu</strong> (pouze u vzdáleného zálohování): Touto volbou zálohovaná data při přenosu do vzdáleného cíle (např. serveru rsync nebo veřejného cloudu) zašifrujete.</li>
+  <li><strong>Velikost části Multipart Upload</strong> (pouze u serverů kompatibilních s funkcí S3): Rozdělí data zálohování na části o stanovené velikosti.</li>
+  <li><strong>Povolit šifrování na straně klienta</strong>: Touto volbou ochráníte pomocí hesla zálohovaná data před neoprávněným přístupem na straně cíle.</li>
+    
+  <li><strong>Povolit plán zálohování</strong>: Touto volbou naplánujete, kdy úlohu zálohování provádět automaticky.</li>
+  </ul>
+  </li><img src="../../images/Backup/1x/Backup/5.png" width="600" alt=""/><li>Volbou <strong>Povolit rotaci záloh</strong> nastavíte schéma rotace:<ul>
+  <li><strong>Od nejstarších verzí</strong>: Po překročení stanoveného <strong>Počtu verzí</strong> se odstraní nejstarší stávající verze zálohování.</li>
+  <li><strong>Smart Recycle</strong>: Tento systém zachová všechny verze zálohování, dokud nebude překročen stanovený počet verzí. Při aktivaci rotace bude systém rotovat nejprve verze, které nesplňují některé podmínky. Jestliže všechny stávající verze podmínky uvedené níže splňují, bude systém rotovat nejstarší verzi:<ul>
+  <li><strong>Hodinové verze za posledních 24 hodin</strong>: Systém uchovává nejstarší verzi z každé hodiny.</li>
+  <li><strong>Denní verze staré 1 den až 1 měsíc</strong>: Systém uchovává nejstarší verzi z každého dne.</li>
+  <li><strong>Týdenní verze po 1 měsíci</strong>: Systém uchovává nejstarší verzi z každého týdne.</li>
+  </ul>
+  
+  </li>
+  <li><strong>Počet verzí</strong>: Nastaví horní limit potenciálně uchovávaných verzí zálohování.</li>
+  <li>Časová osa: Zobrazí potenciální výsledek uchovávání záloh na základě vašeho plánu zálohování a schématu rotace.</li>
+  </ul>
+</li><img src="../../images/Backup/1x/Backup/6.png" width="600" alt=""/><li>Nastavení dokončíte kliknutím na možnost <strong>Použít</strong>.</li>
+<li>Pokud chcete úlohu zálohování provést okamžitě, postupujte podle pokynů Průvodce zálohováním a klikněte na možnost <strong>Ano</strong>.</li>
+</ol>
+
+
+<h3 class="list_head">2. Obnovení jednotlivých souborů z místní sdílené složky či externího úložného zařízení</h3>
+
+
+<ol>
+<li>Přejděte k možnosti <strong>Hyper Backup</strong>, na levém panelu vyberte požadovanou úlohu zálohování a klikněte na možnost <strong>Průzkumník záloh</strong> (ikona lupy). Pokud je úloha chráněná šifrováním na straně klienta, zadejte heslo.</li><img src="../../images/Backup/1x/Backup/Single_1.png" width="600" alt=""/><li>Najděte a vyberte soubor, který se má obnovit. Pomocí časové osy můžete vybrat také požadovanou verzi.</li><img src="../../images/Backup/1x/Backup/Single_2.png" width="600" alt=""/><li>Kliknutím na možnost <strong>Obnovit</strong> vybraný soubor či složku obnovíte.</li>
+
+</ol>
+
+
+
+<h3 class="list_head">3. Obnovení úplných úloh do požadovaných časových bodů</h3>
+
+<ol>
+<li>Klikněte na možnost <strong>Obnovit</strong> v levém dolním rohu a potom na možnost <strong>Data</strong>. Pokud je úloha chráněná šifrováním na straně klienta, zadejte heslo.</li><img src="../../images/Backup/1x/Backup/Restore_1.png" width="600" alt=""/><li>Vyberte úlohu, která se má obnovit. Data z jiných úložišť obnovíte volbou <strong>Obnovit z jiných úložišť</strong> a nalezením úlohy, která se má obnovit.</li><img src="../../images/Backup/1x/Backup/Restore_2.png" width="600" alt=""/><li>Zvolte, jestli obnovit konfigurace systému. Pokud vyberete možnost <strong>Obnovit konfiguraci systému</strong>, vyberte v seznamu níže konkrétní konfigurace, které se mají obnovit.</li><img src="../../images/Backup/1x/Backup/Restore_3.png" width="600" alt=""/><li>Najděte a vyberte cílové soubory či úlohu, které se mají obnovit. Pomocí časové osy můžete vybrat také požadovanou verzi.</li><img src="../../images/Backup/1x/Backup/Restore_4.png" width="600" alt=""/><li>Vyberte aplikace, které se mají obnovit.</li><img src="../../images/Backup/1x/Backup/Restore_4.5.png" width="600" alt=""/><li>Zobrazí se základní informace o obnovení.</li><img src="../../images/Backup/1x/Backup/Restore_5.png" width="600" alt=""/><li>Obnovení zahájíte kliknutím na možnost <strong>Použít</strong>.</li>
+</ol>
+
+
+
+
+
+
+<div class="page-info">
+  <ul>
+    <li>Předchozí část tohoto tématu: <a href="backup_from_computer.html">Zálohování dat na počítač PC nebo Mac pomocí služby Cloud Station</a> </li>
+  </ul>
+</div>
+</body>
+
+</html>

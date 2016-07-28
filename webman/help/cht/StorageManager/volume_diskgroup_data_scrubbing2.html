@@ -1,0 +1,50 @@
+ <!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+
+<title>Data Scrubbing</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="Data scrubbing is a data maintenance feature that inspects volumes or disk groups and repairs any detected data inconsistencies.">
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Data Scrubbing*</h2>
+<p>Data scrubbing 的功能為資料維護，用於檢測儲存空間或磁碟群組。Data scrubbing 有以下兩種類型：</p>
+
+<ul>
+<li><strong>RAID scrubbing：</strong>此功能可用於採用 SHR (由三顆以上的硬碟組成)、RAID 5 或 RAID 6 的儲存空間或磁碟群組。它可修復所偵測到的不一致資料。</li>
+<li><strong>檔案系統 scrubbing：</strong>此功能可用於 Btrfs 檔案系統上的儲存空間。若偵測到任何與總和檢查碼不一致的資料，系統會將檔案路徑記錄於日誌中心。強烈建議您使用備份來修復資料。</li>
+</ul>
+
+<p>建議您定期執行 data scrubbing 以確保資料的一致性，避免重要資料在硬碟故障時出現遺失的情形。</p>
+
+<h4>若要執行 data scrubbing：</h4>
+
+<ol>
+<li>開啟<strong>儲存空間管理員</strong>。</li>
+<li>前往<strong>儲存空間</strong>或<strong>磁碟群組</strong>。</li>
+<li>請選擇要執行 data scrubbing 的儲存空間或磁碟群組。</li>
+<li>按一下<strong>管理</strong>。</li>
+<li>選擇 <strong>Data scrubbing</strong>。</li>
+<li>選擇想要執行的 data scrubbing 類型。(若只有一種類型可供選擇，系統會自動略過此步驟。)</li>
+</ol>
+
+<div class="section">
+<h4>注意：</h4>
+<ul>
+<li>Data scrubbing 僅能在儲存空間或磁碟群組狀態為<strong>正常</strong>的情況下執行。</li>
+<li>系統若在程序結束前關機，您需手動重新執行 data scrubbing。</li>
+</ul></div>
+
+<p>____<br />* 僅適用於特定機型。</p>
+
+</body>
+</html>

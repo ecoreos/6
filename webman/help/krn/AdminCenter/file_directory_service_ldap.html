@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>LDAP</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>LDAP</h2>
+<p>DiskStation은(는) LDAP를 통해 기존 디렉터리 서비스에 LDAP 클라이언트로 가입한 다음 LDAP 서버(또는 "디렉토리 서버")에서 사용자 또는 그룹 정보를 검색할 수 있습니다. 로컬 DSM 사용자 또는 그룹에서처럼 LDAP 사용자 또는 그룹의 액세스 권한을 DSM 응용 프로그램 및 공유 폴더로 관리할 수 있습니다. LDAP에 대한 자세한 정보를 보려면 <a href="http://en.wikipedia.org/wiki/LDAP" target="_blank">여기</a>를 참조하십시오.</p>
+
+<p>지원하는 LDAP 표준은 LDAP 버전 3(RFC 2251)입니다.</p>
+<h4>DiskStation을(를) 디렉터리 서비스에 가입하기:</h4>
+<ol>
+<li><b>제어판</b> &gt; <b>디렉터리 서비스</b>로 이동합니다.</li>
+<img src="about:blank" class="help_image"/>
+<li><b>LDAP</b> 탭으로 이동하고 <b>LDAP 클라이언트 활성화</b>를 선택합니다.</li>
+<img src="about:blank" class="help_image"/>
+<li><b>LDAP 서버 주소</b> 필드에 LDAP 서버의 IP 주소나 도메인 이름을 입력하십시오.</li>
+<img src="about:blank" class="help_image"/>
+<li><b>암호화</b> 드롭다운 메뉴에서 암호화 유형을 선택하여 LDAP 연결을 LDAP 서버로 암호화하십시오.</li>
+<img src="about:blank" class="help_image"/>
+<li><b>Base DN</b> 필드에 LDAP 서버의 Base DN을 입력하십시오.</li>
+<img src="about:blank" class="help_image"/>
+<li>사용자의 LDAP 서버에 따라 적절한 <b>프로파일</b>을 선택합니다. 예를 들어 Synology Directory Server 또는 Mac Open Directory를 사용할 경우 <b>표준</b>을 선택합니다.</li>
+<img src="about:blank" class="help_image"/>
+<li>Samba 스키마를 지원하지 않는 LDAP 서버 사용자가 CIFS를 통해 DiskStation 파일에 액세스하도록 허용하려면 <b>CIFS 일반 텍스트 패스워드 인증 활성화</b>를 선택합니다. LDAP 사용자가 자신의 컴퓨터에서 CIFS를 통해 DiskStation 파일에 액세스하도록 하려면 아래 섹션을 참조하십시오.</li>
+<img src="about:blank" class="help_image"/>
+<li><b>적용</b>을 클릭합니다.</li>
+<li>
+  필드에 Bind DN(또는 LDAP 관리자 계정) 및 패스워드를 입력한 다음 <b>확인</b>을 클릭합니다.
+</li>
+<img src="about:blank" class="help_image"/>
+</ol>
+
+
+<div class="section">
+<h4>CIFS 지원 및 클라이언트 컴퓨터 설정 정보</h4>
+<p>
+LDAP 사용자가 CIFS 일반 텍스트 패스워드 인증을 활성화하고 나면 CIFS를 통해 DiskStation 파일에 액세스하기 위해 자신의 컴퓨터 설정을 수정해야 합니다.
+</p>
+<ul>
+<li>
+DiskStation이(가) Synology LDAP 서버(또는 다른 <b>Directory Server</b> 패키지를 설치하고 실행한 DiskStation) 또는 Samba 스키마를 지원하는 LDAP 서버에서 제공하는 디렉터리 서비스에 가입하고, 모든 LDAP 사용자가 올바른 sambaNTPassword 속성을 가진 경우, LDAP 사용자는 <b>CIFS 일반 텍스트 패스워드 인증 활성화</b>를 선택하거나 컴퓨터의 설정을 수정하지 않고도 CIFS를 통해 DiskStation 파일에 액세스할 수 있습니다. 그렇지 않으면, LDAP 사용자는 컴퓨터의 <a href="http://en.wikipedia.org/wiki/Pluggable_Authentication_Modules" target="_blank">PAM</a> 지원을 활성화해야 CIFS를 통해 DiskStation 파일에 액세스할 수 있습니다. 이렇게 하면 LDAP 사용자의 패스워드가 DiskStation에 암호화되지 않은 일반 텍스트로 전송되어 보안 단계가 낮아집니다.
+</li>
+
+</ul>
+<h4>Windows 설정 수정하기:</h4>
+<ol>
+<li><b>시작</b> > <b>실행</b>을 선택한 다음 필드에 <b>regedit</b>을 입력하고 <b>확인</b>을 클릭하여 레지스트리 편집기를 여십시오.</li>
+<li>
+Windows 버전에 따라 다음 레지스트리를 찾거나 만드십시오.
+</li>
+<ul>
+<li>
+<b>Windows 2000, XP, Vista 및 Windows 7:</b><br> [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanWorkStation\Parameters]
+</li>
+<li>
+<b>Windows NT:</b><br> [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Rdr\Parameters]
+</li>
+<li>
+<b>Windows 95 (SP1), 98 및 Me:</b><br> [HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\VxD\VNETSUP]
+</li>
+</ul>
+<li>
+DWORD 값 <b>EnablePlainTextPassword</b>을 작성하거나 수정한 다음 해당 값 데이터를 <b>0</b>에서 <b>1</b>로 변경하십시오.
+</li>
+<li>
+변경 사항을 적용하려면 Windows를 다시 시작하십시오.
+</li>
+</ol>
+<h4>Mac OS X의 설정을 수정하려면 다음과 같이 하십시오.</h4>
+<ol>
+<li><b>응용 프로그램</b> > <b>유틸리티</b>로 이동해서 <b>터미널</b>을 여십시오.
+</li>
+<li>
+빈 파일 <b>/etc/nsmb.conf</b>을 만드십시오.
+<pre>
+sudo touch /etc/nsmb.conf
+</pre>
+</li>
+<li>
+vi로 <b>/etc/nsmb.conf</b>를 여십시오.
+<pre>
+sudo vi /etc/nsmb.conf
+</pre>
+</li>
+<li>
+"<b>i</b>"를 입력하여 텍스트를 삽입하고 다음을 붙여넣으십시오.
+<pre>
+[default]<br / >
+minauth=none
+</pre>
+</li>
+<li>
+Esc 키를 누르고 "<b>ZZ</b>"을 입력하여 변경 사항을 저장하고 vi를 종료하십시오.
+</li>
+</ol>
+<h4>Linux의 설정을 수정하려면 다음과 같이 하십시오.</h4>
+<p><b>smbclient</b>를 사용하는 경우, <b>smb.conf</b>의 <b>[global]</b> 섹션에서 다음 키를 추가하십시오.
+
+<p style="font-family:sans; margin-top:0px; padding-left:20px;line-height:1.25em;"> encrypt passwords = no <br> client plaintext auth = yes <br> client lanman auth = yes <br> client ntlmv2 auth = no </p>
+<p><b>mount.cifs</b>를 사용하는 경우, 다음의 명령을 실행하십시오.</b>
+<p style="font-family:sans; margin-top:0px; padding-left:20px;line-height:1.25em;">echo 0x30030 > /proc/fs/cifs/SecurityFlags</p>
+<p>보다 자세한 정보는 <a href="https://www.kernel.org/doc/readme/Documentation-filesystems-cifs-README" target=_blank>https://www.kernel.org/doc/readme/Documentation-filesystems-cifs-README</a>을 참조하십시오.</p>
+
+</p>
+</div>
+<div class="section">
+<h4>프로파일 정보</h4>
+
+<p>각 LDAP 서버는 계정 이름, 그룹 이름에 서로 다른 속성을 사용하여 계정과 그룹을 구별할 수 있습니다. <b>프로파일</b> 옵션을 사용하여 사용자 및 그룹 정보를 LDAP 속성에 연결하는 방법을 지정하거나 사용자 지정할 수 있습니다. 사용자의 LDAP 서버에 따라 다음 프로파일 중 하나를 선택할 수 있습니다:</p>
+
+<ul>
+<li><b>표준:</b> Synology Directory Server 또는 Mac Open Directory를 실행하는 서버.</li>
+<li><b>IBM Lotus Domino:</b> IBM Lotus Domino 8.5를 실행하는 서버.</li>
+<li><b>사용자 지정:</b> 매핑을 사용자 지정할 수 있습니다. 세부 내용은 아래 섹션을 참조하십시오.</li>
+</ul>
+
+<p>LDAP 속성 매핑을 사용자 지정하기 전에 몇 가지 배경 지식이 필요합니다. Synology DSM과 <strong>프로파일</strong> 편집기 둘다 RFC 2307을 준수합니다. 예를 들어, <b>필터</b> > <b>passwd</b>를 <b>userFilter</b>로 지정할 수 있습니다. 이 경우 DiskStation은(는) LDAP 서버에서 <b>objectClass=userFilter</b>가 있는 레코드를 LDAP 계정으로 해석합니다. <b>passwd</b> > <b>uid</b>를 <b>username</b>으로 지정하는 경우, DiskStation에서는 LDAP 서버의 <b>username</b>을 계정 이름으로 해석합니다. 매핑을 비워두면 RFC 2307 규칙을 적용합니다.</p>
+<p>DiskStation에서는 LDAP 계정 식별자(<strong>uidNumber</strong>) 또는 그룹 식별자(<strong>gidNumber</strong>) 역할에 고정된 정수를 필요로 합니다. 그러나 모든 LDAP 서버가 정수를 사용하여 이런 속성을 표현하는 것은 아닙니다. 따라서 이런 속성을 정수로 변환하기 위해 키워드 <b>HASH()</b>이 제공됩니다. 예를 들어, LDAP 서버가 십육진수 값을 가진 <b>userid</b> 속성을 LDAP 계정의 고유한 식별자로 사용할 수 있습니다. 이 경우, <b>passwd</b> > <b>uidNumber</b>를 <b>HASH(userid)</b>에 설정하면 DiskStation이(가) 이를 정수로 변환합니다.</p>
+
+<p>다음은 사용자 지정 가능한 속성에 대한 요약입니다:</p>
+
+<ul>
+	<li><b>filter</b></li>
+	<ul>
+		<li><b>group</b>: 그룹에 대한 필수 objectClass.</li>
+		<li><b>passwd</b>: 사용자에 대한 필수 objectClass.</li>
+		<li><b>shadow</b>: 사용자 패스워드에 대한 필수 objectClass.</li>
+	</ul>
+	<li><b>group</b></li>
+	<ul>
+		<li><b>cn</b>: 그룹 이름.</li>
+		<li><b>gidNumber</b>: 이 그룹의 GID 수.</li>
+		<li><b>memberUid</b>: 이 그룹의 구성원.</li>
+	</ul>
+	<li><b>passwd</b></li>
+	<ul>
+		<li><b>uidNumber</b>: 이 사용자의 UID 수.</li>
+		<li><b>uid</b>: 사용자 이름.</li>
+		<li><b>gidNumber</b>: 이 사용자의 기본 GID 수.</li>
+	</ul>
+	<li><b>shadow</b></li>
+	<ul>
+		<li><b>uid</b>: 사용자 이름.</li>
+		<li><b>userPassword</b>: 사용자 패스워드.</li>
+	</ul>
+</ul>
+</div>
+<div class="section">
+<h4>UID/GID 전환 정보</h4>
+<p>LDAP 사용자/그룹 및 로컬 사용자/그룹 간 UID/GID 충돌을 방지하려면, UID/GID 전환을 활성화하여 LDAP 사용자/그룹의 UID/GID를 1000000으로 전환할 수 있습니다. 이 옵션은 비-Synology LDAP 서버이면서 각 사용자/그룹에 대해 고유한 숫자 ID 속성을 가진 LDAP 서버만을 위한 것입니다.</p>
+</div>
+</body>
+</html>

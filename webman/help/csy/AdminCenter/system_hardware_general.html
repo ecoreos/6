@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Napájení</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Obecné</h2>
+
+<p>Možnost nabídky <strong>Ovládací panel</strong> > <strong>Hardware a napájení</strong> > <strong>Obecné</strong> nabízí volby pro zotavení po ztrátě napájení, probuzení přes LAN (WOL) a kompresi paměti. Můžete zde také upravit nastavení zvukových signálů a režim otáček ventilátoru.</p>
+
+<h3>Zotavení po ztrátě napájení</h3>
+<p>V případě, že byl systém vypnut kvůli neočekávanému přerušení napájení, umožňuje funkce zotavení po ztrátě napájení systému automatické spuštění po obnovení dodávky napájení.</p>
+<h3>Probuzení přes LAN*</h3>
+<p>Povolením probuzení přes LAN (WOL) umožníte zapnout DiskStation přes místní síť nebo Internet. Je nutné zadat IP adresu (nebo název hostitele DDNS) a adresu MAC produktu DiskStation prostřednictvím aplikace WOL, například aplikace Synology Assistant, DS finder nebo jiné.</p>
+<p>Probuzení přes LAN funguje pouze tehdy, pokud je DiskStation řádně vypnut stisknutím fyzického tlačítka <b>Power</b> nebo kliknutím na tlačítko <b>Vypnout</b> na rozhraní systému DSM. Po vypnutí ponechejte napájecí kabel zapojený do funkční elektrické zásuvky.</p>
+<div class="section">
+	<h4>Poznámka:</h4>
+	<p class="disable-rc18015xsp">Funkce WOL není podporována na portech LAN 10GbE (pokud jsou dostupné ve vašem zařízení DiskStation).</p>
+	<ul class="enable-rc18015xsp">
+		<li>Funkce WOL není podporována na portech LAN 10GbE (pokud jsou dostupné ve vašem zařízení DiskStation).</li>
+		<li>Funkce WOL je ve výchozím nastavení povolena na portech LAN 1GbE zařízení DiskStation a nelze ji zakázat.</li>
+	</ul>
+</div>
+<h3>Režim otáček ventilátoru*</h3>
+<p>K dispozici jsou následující volby rychlosti ventilátoru:</p>
+<ul>
+<li><strong>Režim chlazení:</strong> Ventilátor má rychlejší otáčky, provádí ochlazování systému DiskStation, ale je hlučnější.</li>
+<li><strong>Tichý režim:</strong> Ventilátor má pomalejší otáčky, není hlučný, ale může docházet k zahřívání systému DiskStation.</li>
+<li><strong>Úsporný režim:</strong> Ventilátor má pomalejší otáčky, není hlučný, ale může docházet k zahřívání systému DiskStation. Pokud je systém DiskStation chladný, dojde z důvodu úspory energie k zastavení ventilátoru. Úsporný režim je dostupný pouze u některých modelů.</li>
+</ul>
+<h3>Nastavení zvukových signálů</h3>
+<p>Systém DiskStation může v případě výskytu určitých událostí nebo chyb vydávat zvukové signály. Zaškrtnutím políček příslušných událostí povolíte systému DiskStation vydávat zvukové signály v případě výskytu chyb.</p>
+
+<h4>Vypnutí zvukových signálů:</h4>
+<ul>
+<li>Pokud systém DiskStation vydává zvukové signály, můžete je vypnout kliknutím na možnost <strong>Zvukový signál je vypnut</strong>. </li>
+</ul>
+
+
+
+<h3>Komprese paměti*</h3>
+<p>Povolením komprese paměti můžete zlepšit obecnou odezvu systému při zatížení provedením komprese těch nejméně často používaných dat v paměti.</p>
+<p>Když máte spuštěných více aplikací a paměť se začíná plnit, provede dynamická komprese paměti zmenšení zřídka používaných položek paměti a sníží tak velikost využívané paměti. Když jsou tyto položky znovu potřebné, provede se jejich okamžitá dekomprese. Snižuje se tak potřeba čtení a zápisu odkládacích souborů paměti na disk a zvyšuje se efektivita a odezva.</p>
+<p>Kompresi paměti můžete povolit prostým zaškrtnutím políčka.</p>
+
+
+<h3>Kontrolky LED*</h3>
+
+<p>V části <strong>Ovládací panel</strong> > <strong>Hardware a napájení</strong> > <strong>Obecné</strong> > <strong>Ovládání jasu LED</strong> je možné nastavit jas kontrolek LED na zařízení DiskStation.</p>
+
+<div class="section">
+<h4>Poznámka:</h4>
+<p>Nastavení jasu platí pro všechny kontrolky LED na zařízení DiskStation (tj. napájení, STATUS, LAN, stav disku atd.).</p>
+</div>
+
+
+<h4>Úprava jasu kontrolek LED:</h4>
+<p>U kontrolek LED na zařízení DiskStation jsou nyní možné čtyři úrovně jasu.</p>
+<ol>
+<li>Klikněte a přetáhněte ukazatel na měřítku jasu některým směrem:<ul>
+<li>Doprava: Zvýší jas kontrolek LED.</li>
+<li>Doleva: Sníží jas kontrolek LED.</li>
+</ul>
+</li>
+<li>Nastavení uložte kliknutím na možnost <strong>Použít</strong>.</li>
+</ol>
+
+
+
+<h4>Úprava jasu kontrolek LED podle plánu:</h4>
+<p>Kontrolky LED mohou měnit úroveň svého jasu v naplánovaný čas.</p>
+
+<ol>
+<li>Klikněte na možnost <strong>Nastavit plán</strong>.</li>
+<li>Klikněte na některý z typů jasu níže:<ul>
+<li><strong>Výchozí jas</strong>: Nejvyšší jas</li>
+<li><strong>Upravený jas</strong>: Úroveň jasu stanovená na měřítku jasu</li>
+</ul>
+</li>
+<li>Kliknutím na požadovaná období upravíte plán jasu.</li>
+<li>Kliknutím na možnosti <strong>OK</strong> a <strong>Použít</strong> nastavení uložíte.</li>
+</ol>
+
+
+
+
+<p>____<br> * K dispozici pouze u některých modelů. </p>
+</body>
+</html>

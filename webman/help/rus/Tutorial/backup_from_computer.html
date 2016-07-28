@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+<meta content="en-us" http-equiv="Content-Language" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Резервирование данных на ПК/Mac с помощью Cloud Station</title>
+</head>
+
+<body class="tutorial-content-box" >
+
+<h1>Резервирование данных на ПК/Mac с помощью Cloud Station</h1>
+<div class="tutorials_content"><img src="../../images/Backup/1x/backup_from_PC/07_1_back_up_your_data_from_pc.png" /><h2>Обзор</h2>
+<p>Cloud Station Server – современная кроссплатформенная программа синхронизации, которая может использоваться как гибкий инструмент резервирования пользовательских данных. Решение Cloud Station Backup мгновенно выполняет резервное копирование в режиме реального времени и требуют меньшей ширины пропускания. Оно обеспечивает лучшую защиту и сохраняет до 32 версий одного файла.</p>
+<h3 class="list_head">Настройка Cloud Station Server на Synology NAS</h3>
+<ol>
+
+<li>Откройте <b>Центр пакетов</b>, найдите <b>Cloud Station Server</b> и нажмите <strong>Установить</strong>.</li> <li>Запустите <strong>Cloud Station Server</strong>.</li>
+<li>Выберите <strong>Обзор</strong> и нажмите <strong>Загрузить сейчас</strong> в разделе <strong>Cloud Station Backup</strong>. (Вы также можете загрузить Cloud Station Backup из <a href="https://www.synology.com/en-us/support/download" target="_blank">Центра загрузок Synology</a>.)</li><img src="../../images/Backup/1x/backup_from_PC/download_backup.png" border="1" /><li>Запустите на компьютере средство установки и следуйте инструкциям по установке Cloud Station Backup. </li>
+<li>После установки запустите <strong>Cloud Station Backup</strong> на компьютере. Нажмите <strong>Запустить сейчас</strong>.</li><img src="../../images/Backup/1x/backup_from_PC/start_now.png" border="1" /><li>Введите адрес Synology NAS, на котором установлено приложение Cloud Station Server (или QuickConnect ID), имя пользователя и пароль. (Можно также нажать на значок поиска справа, и Cloud Station Backup автоматически начнет искать другие Synology NAS в вашей локальной сети.) Нажмите <strong>Далее</strong>.</li><img src="../../images/Backup/1x/backup_from_PC/enter_credentials.png" border="1" /><li>Выберите источник резервирования и отмените выбор папок, которые не нужно синхронизировать. </li><img src="../../images/Backup/1x/backup_from_PC/backup_settings_source.png" border="1" /><li>Выберите папку на Synology NAS, нажав <strong>Выбрать</strong>. Cloud Station Backup создаст папку резервирования в выбранном месте назначения с именем компьютера.</li><img src="../../images/Backup/1x/backup_from_PC/backup_destination.png" border="1" /><li>Нажмите <strong>Правила синхронизации</strong>, чтобы установить фильтры и правила синхронизации.</li><li>Нажмите <strong>Далее</strong> для предварительного просмотра настроек резервирования и выберите <strong>Готово</strong>.</li><img src="../../images/Backup/1x/backup_from_PC/summary.png" border="1" /><li>В главном приложении можно посмотреть ход выполнения резервирования.</li><img src="../../images/Backup/1x/backup_from_PC/progress.png" border="1" /></ol>
+
+<h3 class="list_head">Загрузка и восстановление предыдущей версии синхронизированного файла из Cloud Station Server</h3>
+<ol>
+  <li>Выберите <strong>Cloud Station Server</strong>> <strong>Журнал версий</strong> и найдите файл или папку для восстановления.</li><img src="../../images/BuildCloud/1x/cloud_sync_files/version_history.png" /><li>Выберите файл, который нужно извлечь, и нажмите <strong>Действие</strong>. Выберите <strong>Обзор предыдущих версий</strong>. Если файл был случайно удален с компьютера, его можно восстановить, нажав <strong>Восстановить</strong>. </li><img src="../../images/BuildCloud/1x/cloud_sync_files/browse_previous versions_server.png" /><li>Выберите версию файла, которую вы хотите загрузить, и нажмите <strong>Загрузить</strong>. Если вы хотите восстановить выбранную версию файла, нажмите <strong>Восстановить</strong>, чтобы перезаписать текущую версию файла.</li><img src="../../images/BuildCloud/1x/cloud_sync_files/previous_versions.png" /></ol>
+
+
+  <h3 class="list_head">5. Дополнительные способы защиты данных</h3>
+  
+<p>Для получения информации о дополнительных способах защиты и резервирования данных перейдите по этой <a href="https://www.synology.com/knowledgebase/tutorials#BackupRestore" target="_blank">ссылке</a> и ознакомьтесь с руководствами по использованию других служб резервирования на DSM.</p>
+
+</div>
+<div class="page-info">
+  <ul>
+    <li>Далее в этом разделе: <a href="backup_backup.html">Резервирование данных с Synology NAS</a> </li>
+  </ul>
+</div>
+</body>
+
+</html>

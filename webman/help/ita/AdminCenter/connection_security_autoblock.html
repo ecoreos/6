@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Blocco automatico - Guida Synology DSM</title> 
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="The auto block feature helps improve the security of your DiskStation by blocking the IP addresses of clients with too many failed login attempts.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Blocco automatico</h2>
+
+<p>La funzione di blocco automatico aiuta a migliorare la sicurezza del proprio DiskStation bloccando gli indirizzi IP di client con troppi tentativi di accesso falliti. In questo modo, si contribuisce a ridurre il rischio di account danneggiati usando attacchi forzati.</p>
+
+<p>È possibile creare e gestire un elenco consentiti per aggiungere indirizzi IP considerati affidabili o un elenco bloccati per impedire sempre l'accesso da parte di determinati indirizzi IP.</p>
+
+<div class="section">
+<h4>Nota:</h4>
+<p>Vari servizi e pacchetti supportano il blocco automatico, tra cui: DSM, SSH, Telnet, rsync, network backup, shared folder sync, FTP, WebDAV, File Station, Photo Station, Audio Station, Video Station, Download Station, Mail Server, Mail Station, Time Backup, VPN Server, Cloud Station e app mobili Synology.</p>
+</div>
+
+<h4>Per abilitare il blocco automatico:</h4>
+<ol>
+
+<li>Aprire il <strong>Pannello di controllo</strong> e andare a <strong>Sicurezza</strong> > <strong>Blocco automatico</strong>.</li>
+<li>Selezionare <b>Attiva blocco automatico</b>.</li>
+
+<li>Immettere un numero di tentativi di accesso falliti nel campo <b>Tentativi di accesso</b> e un numero di minuti nel campo <b>Entro (minuti)</b>. Un indirizzo IP sarà bloccato se raggiunge il numero di tentativi di accesso non riusciti entro il numero di minuti specificato.</li>
+<li>Selezionare <b>Attiva scadenza del blocco</b> e inserire un numero per rimuovere un indirizzo IP bloccato dopo il numero di giorni indicato.</li>
+
+<li>Fare clic su <b>Applica.</b></li>
+</ol>
+
+
+<h3>Gestire l'Elenco bloccati</h3>
+<p>Fare clic su <strong>Elenco consentiti/bloccati</strong>, e andare alla scheda <strong>Elenco bloccati</strong>. </p>
+
+<h4>Per aggiungere indirizzi IP:</h4>
+<p>Scegliere una delle seguenti opzioni dal menu a discesa <strong>Crea</strong>:</p>
+<ul>
+<li><strong>Aggiungi indirizzo IP</strong><br> Inserire un indirizzo IP e impostare la data di scadenza.</li>
+<li><strong>Importa elenco indirizzi IP</strong><br> Importare un file di testo che elenca gli indirizzi IP per aggiungere tutti gli indirizzi IP e impostare tutte le date di scadenza in un'unica volta. Selezionare le caselle di controllo per sovrascrivere gli indirizzi IP esistenti. Se l'opzione non viene selezionata, gli indirizzi IP duplicati saranno ignorati.<br> Se il file selezionato è nel formato corretto, gli indirizzi IP saranno visualizzati nell'area di anteprima. Fare clic su <strong>OK</strong> per importare.</li>
+
+<div class="section">
+<h4>Nota:</h4>
+<p>Per importare un file, il file deve soddisfare i seguenti criteri:</p>
+<ul>
+<li>Il file deve essere un file di solo testo.</li>
+<li>Ciascuna riga del file deve contenere un solo indirizzo IP.</li>
+<li>Le righe di commento devono iniziare con # (simbolo del cancelletto).</li>
+</ul>
+</div>
+</ul>
+
+<h4>Per rimuovere gli indirizzi IP bloccati:</h4>
+<p>Selezionare gli indirizzi IP da rimuovere dall'elenco e fare clic su <b>Rimuovi</b>.</p>
+
+
+<h3>Gestione dell'Elenco consentiti</h3>
+
+<p>Fare clic su <strong>Elenco consentiti/bloccati</strong>, e andare alla scheda <strong>Elenco consentiti</strong>. </p>
+
+<h4>Per aggiungere indirizzi IP:</h4>
+<p>Scegliere una delle seguenti opzioni dal menu a discesa <strong>Crea</strong>:</p>
+<ul>
+<li><strong>Aggiungi indirizzo IP</strong><br> Inserire un indirizzo IP.</li>
+<li><strong>Importa elenco indirizzi IP</strong><br> Importare un file di testo che elenca gli indirizzi IP per aggiungere un numero di indirizzi IP in un'unica volta. Selezionare le caselle di controllo per sovrascrivere gli indirizzi IP esistenti. Se l'opzione non viene selezionata, gli indirizzi IP duplicati saranno ignorati.<br> Se il file selezionato è nel formato corretto, gli indirizzi IP saranno visualizzati nell'area di anteprima. Fare clic su <strong>OK</strong> per importare.</li>
+</ul>
+
+<div class="section"><h4>Nota:</h4>
+<p>Per importare un file, il file deve soddisfare i seguenti criteri:</p>
+<ul>
+<li>Il file deve essere un file di solo testo.</li>
+<li>Ciascuna riga del file deve contenere un solo indirizzo IP.</li>
+<li>Le righe di commento devono iniziare con # (simbolo del cancelletto).</li>
+</ul>
+</div>
+
+<h4>Per rimuovere gli indirizzi IP:</h4>
+<p>Selezionare gli indirizzi IP da rimuovere dall'elenco e fare clic su <b>Rimuovi</b>.</p>
+
+<div class="section"><h4>Nota:</h4>
+<p>Se il dispositivo DiskStation è dietro un server proxy inverso, aggiungere l'indirizzo IP di tale server proxy esterno all'elenco consentiti.</p>
+</div>
+
+</body>
+</html>

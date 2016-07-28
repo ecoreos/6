@@ -1,0 +1,45 @@
+ <!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>SSD TRIM - Synology DSM Hjälp</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="SSD TRIM improves the read and write performance of volumes created on SSDs, increasing efficiency as well as extending the lifetime of your SSDs.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>SSD TRIM</h2>
+<p>Om en volym består endast av SSD:er (Solid State Drives), rekommenderar vi aktivering av SSD TRIM. Denna funktion förbättrar läs- och skrivprestandan på volymer som skapats på SSD:s, vilket ökar effektiviteten såväl som förlänger livslängden på dina SSD:er.</p>
+<h4>Aktivera SSD TRIM:</h4>
+<ol>
+  <li>Öppna <strong>Lagringshanterare</strong> och gå till <strong>Volym</strong>. </li>
+  <li>Välj en volym som helt och hållet består av SSD:er och klicka sedan på knappen <b>Konfigurera</b>.</li>
+  <li>I fönstret som visas, gå till fliken <b>SSD TRIM</b> och markera rutan <strong>Aktivera TRIM</strong>.</li>
+  <li>Klicka på knappen <strong>Lägg till schema</strong> för att välja när systemet ska utföra SSD TRIM.</li>
+  <li>Klicka på <strong>OK</strong>.</li>
+</ol>
+<div class="section">
+  <h4>Obs:</h4>
+  <ul>
+    <li>SSD TRIM är endast tillgängligt på vissa modeller av DiskStation och typer av RAID. </li>
+    <li>En del modeller av SSD kan inte utföra SSD TRIM på volymer med RAID 5 eller RAID 6. Vänligen se kompabilitetslistan på <a href="http://www.synology.com/" target=_blank>www.synology.com</a>.</li>
+    <li>SSD TRIM kan i följande situationer inte aktiveras:
+      <ul>
+        <li>Volymen är monterad med SSD-cache.</li>
+        <li>Filpaketet <strong>Time Backup</strong> är installerat.</li>
+        <li>Ett high-availability-kluster har skapats med filpaketet <strong>High Availability-hanteraren</strong>.</li>
+      </ul>
+    </li>
+    <li>SSD TRIM kan inte aktiveras på Blocknivå iSCSI LUNs.</li>
+    <li>Systemets prestanda kan påverkas vid utförande av SSD TRIM. Tiden det tar att utföra TRIM beror på volymens storlek och modell på SSD.</li>
+    <li>När TRIM är aktiverad på en volym, kommer den också att bli aktiverad på andra volymer som skapas på samma diskgrupp eller RAID Group.</li>
+  </ul>
+</div>
+</body>
+</html>

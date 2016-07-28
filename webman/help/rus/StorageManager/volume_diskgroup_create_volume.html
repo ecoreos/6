@@ -1,0 +1,67 @@
+﻿ <!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Создание тома — Справка Synology DSM</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="This article walks you through the steps to create a volume on DiskStation с помощью Диспетчера хранения."><link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Создание тома</h2>
+
+<p>В этой статье описывается процесс создание тома на DiskStation. Выберите один из способов создания нового тома.</p>
+
+<ul>
+  <li><b>Быстрый.</b> Лучший вариант для новичков. Выберите этот способ, чтобы автоматически оптимизировать емкость и производительность хранилища, не заботясь о технических аспектах, например уровнях RAID. </li>
+
+<li><b>Пользовательский.</b> Этот способ подходит продвинутым пользователям, которые хотят выборочно управлять параметрами создания тома, например типами RAID и распределением емкости. Эта опция поддерживает различные типы RAID, позволяет создавать один том или несколько томов, а также предоставляет возможность определять объем емкости для каждого тома (только при создании нескольких томов на RAID).</li>
+</ul>
+
+<div class="section">
+<h4>Один или несколько томов на RAID?</h4>
+<p>При создании тома в пользовательском режиме можно выбрать один из вариантов ниже.</p>
+<ul>
+  <li><b>Один том на RAID</b><ul>
+      <li>Создание единого тома, включающего все пространство выбранных жестких дисков.</li>
+      <li>Обеспечивает лучшую производительность и скорость.</li>
+      <li>Поддерживает различные типы RAID.</li>
+    </ul>
+  </li>
+  <li><b>Несколько томов на RAID</b><ul>
+      <li>Позволяет создавать несколько томов в группе дисков.</li>
+      <li>Поддерживает распределение емкости между томами.</li>
+      <li>Обеспечивает большую гибкость в управлении хранилищем.</li>
+      <li>Поддерживает различные типы RAID.</li>
+    </ul>
+  </li>
+</ul>
+</div>
+
+
+<div class="section">
+<h4>Перед началом работы</h4>
+<ul>
+<li>Сначала проверьте, что на жестких дисках нет важных данных. При создании все имеющиеся данные будут удалены.</li>
+<li>Откройте страницу <b>HDD/SSD</b> и убедитесь, что для каждого жесткого диска установлен статус <b>Нормальный режим</b> или <strong>Диск не инициализирован</strong>.</li>
+</ul>
+</div>
+
+<div class="section enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64">
+<h4>Примечания</h4>
+<ul>
+<li>Минимальный размер тома Btrfs — 10 ГБ.</li>
+<li>Тома Btrfs сохранят 4% пространства для метаданных.</li>
+</ul>
+</div>
+
+<h4>Создание тома:</h4>
+<ol>
+<li>Откройте <b>Диспетчер хранения</b>.</li><img src="about:blank" class="help_image"/><li>Выберите <b>Том</b> и нажмите <b>Создать</b>.</li><img src="../../../online_img/dsm/StorageManager/volume_diskgroup_create_volume/volume_create.png" class="help_image"/><li>Отобразится мастер создания томов. Нажмите <strong>Быстрый</strong> или <strong>Пользовательский</strong> на свой выбор. Следуйте инструкциям мастера для завершения создания тома.</li><img src="../../../online_img/dsm/StorageManager/volume_diskgroup_create_volume/choose_mode.png" class="help_image"/></ol>
+
+</body>
+</html>

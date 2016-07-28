@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Lagerstyring</title>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2><a name="leaf_iscsilun"></a>iSCSI LUN*</h2>
+<p>iSCSI er en lagernetværkstjeneste, der muliggør overførsel af data over lokale netværk eller lange afstande. Ved at tilknytte iSCSI LUN'er til iSCSI Targets kan klienter få adgang til lagerplads, som om de var lokale diske. En iSCSI LUN (logical unit number) kan tilknyttes til ét eller flere iSCSI Targets for at yde iSCSI-lagertjenester.  Gå til <strong>Lagerstyring</strong> > <strong>iSCSI LUN</strong> for at administrere iSCSI LUN'er.</p>
+
+<div class="section"><h4>Bemærk:</h4>
+<p>Antallet af understøttede iSCSI LUN'er varierer på DiskStation-modeller. Detaljerede produktspecifikationer findes på <a href="http://www.synology.com/" target="_blank">www.synology.com</a>.</p>
+</div>
+
+<p>DiskStation understøtter i øjeblikket følgende iSCSI LUN-typer:</p>
+<ul>
+	<li><b>iSCSI LUN (almindelige filer)</b>: iSCSI LUN oprettes ved at udpege en del af diskenhedens plads til dens brug. Du kan udvide dens størrelse efter behov. Denne type iSCSI LUN giver fleksibilitet til dynamisk kapacitetsstyring med Thin Provisioning, VMware VAAI-hardwareaccelerationssupport, Windows ODX-support, LUN-billede og LUN-klon.</li>
+	<li class="disable-bromolow disable-grantley disable-avoton disable-braswell disable-broadwell disable-kvmx64"><b>iSCSI LUN (Blokniveau) - Enkelt LUN på RAID</b>: iSCSI LUN oprettes med hele diskenhedens plads. Du kan reparere eller udvide den eller ændre dens RAID-type ligesom på en diskenhed. Der henvises til siden <a href="space.html">Lydstyrke</a>, hvor der er flere oplysninger.</li>
+	<li class="disable-bromolow disable-grantley disable-avoton disable-braswell disable-broadwell disable-kvmx64"><b>iSCSI LUN (Blokniveau) - Flere LUN'er på RAID</b>: iSCSI LUN oprettes ved at designere en specifik plads på en diskgruppe. Du kan udvide iSCSI LUN senere hvis der er tilgængelig plads i diskgruppen. Der henvises til siden <a href="raid.html">Diskgruppe</a>, hvor der er yderligere oplysninger.</li>
+	<li class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64"><b>iSCSI LUN (blokniveau)</b>: Denne type iSCSI LUN oprettes på en RAID Group og giver fleksibilitet til dynamisk kapacitetsstyring ud over optimeret adgangsydelse. Du kan udvide denne type iSCSI LUN senere med ikke-allokeret plads i RAID Group'en. Der henvises til siden <a href="raid.html">RAID Group</a>, hvor der er flere oplysninger.</li>
+</ul>
+
+<div class="section"><h4>Bemærk:</h4>
+<p>iSCSI LUN'er med avancerede LUN-funktioner er kun tilgængelige på ext4<span style="display: inline;" class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64">/Btrfs</span>-filsystemet.</p>
+</div>
+
+<h4>Sådan opretter du en iSCSI LUN:</h4>
+<ol>
+	<li>Klik på <b>Opret</b>.</li>
+	<li>Vælg den iSCSI LUN-type, du vil oprette.</li>
+	<li>Følg guiden for at fuldføre processen.</li>
+</ol>
+
+<div class="section"><h4>Bemærk:</h4>
+<p>Avancerede LUN-funktioner kan kun aktiveres under første iSCSI LUN-oprettelse. Denne indstilling kan ikke ændres bagefter.</p>
+</div>
+
+<p>Avanceret LUN-allokeringsenhedsstørrelse kan optimeres for visse funktioner til programserver, f.eks. Microsoft Exchange eller SQL Server eller virtualiseringsservere og lageraccelerationsteknologier, f.eks. Microsoft Windows ODX eller VMware VAAI ved at gøre et af følgende:</p>
+<ul>
+	<li>Indstil allokeringsenhedsstørrelsen under oprettelsen af den første avancerede LUN for en diskenhed.</li>
+	<li>Indstil allokeringsenhedsstørrelsen fra <strong>Konfigurer</strong>, før du opretter den første avancerede LUN for en diskenhed.</li>
+</ul>
+
+<p>Vi anbefaler, at du angiver allokeringsenhedsstørrelsen for dit program, når der bruges den direkte forbindelse fra programserveren eller RDM (pass-through)-metoder for arbejde med avancerede iSCSI LUN'er på DiskStation. For at få nytte af Synologys avancerede LUN-teknologi til kloning for Windows ODX foreslår vi, at du formaterer NTFS-diskenheden med allokeringsenhedsstørrelsen lig med (eller større end) den, du angav på DSM.</p>
+
+<div class="section"><h4>Bemærk:</h4>
+<p>Den avancerede LUN-allokeringsenhed for hver diskenhed kan kun indstilles én gang.</p>
+</div>
+
+<h4>Sådan fjerner du en iSCSI LUN:</h4>
+<p>Ved at fjerne en iSCSI LUN bliver alle data på iSCSI LUN'en slettet. Forbindelser mellem iSCSI LUN og eventuelle tilknyttede iSCSI Target mistes også.</p>
+<ol>
+	<li>Vælg den iSCSI LUN, du vil fjerne.</li>
+	<li>Klik på knappen <b>Fjern</b>, og følg guiden for at fuldføre processen.</li>
+</ol>
+
+<div class="section"><h4>Bemærk:</h4>
+<p>Sletning af VAAI LUN'er på DiskStation frigør ikke umiddelbart diskplads. Data flyttes til en reserveret systemmappe, der kaldes <strong>@EP_trash</strong> og slettes lidt efter lidt. Hvis f.eks. en 100 GB VAAI LUN slettes fra DiskStation, kan det tage ca. 15 - 20 minutter at frigøre op til 100 GB plads på diskenheden.</p>
+</div>
+
+<h4>Sådan gennemtvinger du tilknytning af en iSCSI LUN (Blokniveau):</h4>
+<p>Hvis cachen på en iSCSI LUN (blokniveau) mangler, vil systemet ikke tilknytte iSCSI LUN (blokniveau) ved start. Hvis cachen ikke kan gendannes, og du vil have adgang til iSCSI LUN (blokniveau), kan du klikke på <b>Gennemtving tilknytning</b>.</p>
+
+<div class="section"><h4>Bemærk:</h4>
+<p>Denne funktion er kun tilgængelig på bestemte modeller.</p>
+</div>
+
+<h4>Sådan redigerer du en iSCSI LUN:</h4>
+<ol>
+	<li>Vælg den iSCSI LUN, du vil redigere.</li>
+	<li>Klik på <b>Rediger</b>.</li>
+	<li>Rediger de ønskede egenskaber.</li>
+	<li>Klik på <b>OK</b> for at gemme indstillingerne.</li>
+</ol>	
+
+<div class="section"><h4>Bemærk:</h4>
+<p>Undgå datatab ved redigering af iSCSI LUN-kapaciteten ved at gøre den større end den aktuelle størrelse.</p>
+</div>
+
+<h4>Sådan tager du et iSCSI LUN-billede:</h4>
+<p>Et billede af en iSCSI LUN er en tidsangivet skrivebeskyttet kopi af en iSCSI LUN.</p>
+<ol>
+	<li>Vælg den iSCSI LUN, som du vil tage billeder af.</li>
+	<li>Klik på <strong>Billede</strong>, og vælg <strong>Tag et billede</strong>.</li>
+	<li>Indtast beskrivelsen af dette billede.</li>
+	<li>Vælg en af følgende billedtyper efter dine behov:
+		<ul>
+			<li><strong>Application consistent (Programkonsekvent)</strong>: Denne type billeder kan kun tages, når Synology Snapshot Manager er installeret på din Windows-server eller VMware vCenter Server, afhængigt af dit operativsystem til kommunikation med DSM. Når et programkonsekvent billede udløses på DSM, vil programmer blive underrettet og fjerne alle data fra hukommelsen til den LUN, hvorpå billedet er taget for at garantere datakonsekvens.</li>
+			<li><strong>Crash consistent (Nedbrudskonsekvent)</strong>: Hvis der ikke er installeret en Synology Snapshot Manager på nogen af klienterne, kan du kun optage nedbrudskonsekvente billeder af LUN'er. Nå de udløses, vil programmer ikke blive underrettet til at fjerne data fra hukommelsen til LUN'en og derfor garantere datakonsekvens.</li>
+		</ul>
+	</li>
+	<li>Klik på <strong>OK</strong>.</li>
+</ol>
+
+<h4>Sådan gendanner du en iSCSI LUN:</h4>
+<p>Vælg et tidsangivet billede for at gendanne data på en iSCSI LUN.</p>
+<ol>
+	<li>Vælg den iSCSI LUN, du vil gendanne.</li>
+	<li>Klik på <strong>Billede</strong>, og vælg <strong>Snapshot Manager</strong>.</li>
+	<li>Vælg et billede, som du vil gendanne til, og klik på <strong>Gendan</strong>.</li>
+</ol>
+
+<h4>Sådan kloner du en iSCSI LUN eller et billede:</h4>
+<p>Opret en ikke-skrivebeskyttet kopi af en iSCSI Lun eller et iSCSI LUN-billede.</p>
+<ul>
+	<li>Vælg en iSCSI LUN i listen, og klik på <strong>Klon</strong>.</li>
+	<li>Vælg et iSCSI LUN-billede fra <strong>Billedstyring</strong>, og klik på <strong>Klon</strong>.</li>
+</ul>
+
+<div class="section"><h4>Bemærk:</h4>
+<ul>
+<li>På visse modeller skal du gå til <b>Pakkecenter</b> og installere <b>Billede og replikering</b> for funktioner, herunder gendannelse af iSCSI LUN'er, optagelse og kloning af iSCSI LUN-billeder.</li>
+	<li>Hvis der er mindst en tilsluttet iSCSI-session knyttet til den LUN, og den bruges på en Windows Server eller VMware ESXi Server, anbefaler vi installation af vores plug-in <b>Synology Snapshot Manager</b> for at undgå mulige datainkonsekvenser. Ellers skal du stoppe alle programmer og logge ud af disse sessioner fra initiatorerne, før du fortsætte.</li>
+	<li>LUN-billed-/gendannelses- og klonfunktioner er kun tilgængelige på iSCSI LUN'er med avancerede LUN-funktioner.</li>
+	<li>Hvis du tog et billede eller oprettede en klon, og status viste sig at være <strong>Unormal</strong>/<strong>Brudt sammen</strong>, skal du slette billedet/klonen og oprette en anden.</li>
+	<li>Alle ændringer til en LUN, efter et billede blev oprettet, mistes, når du gendanner LUN til dette billede.</li>
+	<li>Hvis status for en iSCSI LUN ændres til <b>Ikke-tilgængelig</b>, betyder det, at der er opstået nogle datarelaterede fejl under adgang til iSCSI LUN. For at undgå alvorligt datatab på systemet, bliver denne iSCSI LUN midlertidigt utilgængelig. Kontakt Synology for at få support så hurtigt som muligt.</li>
+</ul>
+</div>
+
+
+<div class="section"><h4>Glossar:</h4>
+<ul>
+	<li><b>Thin Provisioning</b>: Thin Provisioning er en metode til optimering af lagerplads på en dynamisk og on-demand-måde. Denne indstilling er kun tilgængelig for <b>iSCSI LUN (almindelige Filer)</b>.</li>
+	<li><b>VMware VAAI</b>: VMware vStorage API'er for Array Integration (VAAI) kan aflaste arbejdet med standardoperationer på virtuelle lager-arrays til iSCSI-enheden i VMware vSphere-miljøet og optimere lagerydelsen.</li>
+	<li><b>Windows ODX</b>: En ny dataoverførselsteknologi, der er udviklet af Windows i Windows Server 2012 og 8 kaldet Offload Data Transfer (ODX). ODX forbedrer overførselsydelsen ved at offloade noget af arbejdsbyrden til lager-array‹en.<br /> Hvis datakilden og -destinationen findes på LUN'er på den samme diskenhed, vil kloning behandles af Synologys avancerede LUN-teknologi, der sparer op til 99,9 % af lagerpladsforbruget og øger kloningshastigheden på samme tidspunkt.</li>
+	<li><b>iSCSI Target-tilknytning</b>: Tilknyt iSCSI LUN til en eller flere iSCSI Targets.</li>
+	<li><b>Synology Snapshot Manager</b>: Synology Snapshot Manager er en software-plug-in, der giver dig mulighed for at tage programkonsekvente billeder direkte fra DiskStation Manager (DSM).
+		<ul>
+		    <li>Ved VMware-miljø skal du installere Synology Snapshot Manager på den Windows-server, hvor VMware vCenter Server er installeret. Når et billede udløses på DSM, vil VMware vCenter Server blive underrettet og fjerne alle data fra hukommelsen til den LUN, hvorpå billedet er taget for at garantere datakonsekvens. Når billedet er færdigt, vil VMware vCenter Server genoptage normal I/O-drift af VMware datastore. Synology Snapshot Manager for VMware vCenter Server understøtter vSphere 5.1 eller nyere versioner.</li>
+		    <li>Ved Windows-miljø skal du installere Synology Snapshot Manager på din Windows-server. Når et billede udløses på DSM, vil Synology Snapshot Manager udnytte Tjenesten Microsoft Volume Snapshots (VSS)-teknologien til at producere konsekvente tidspunktsbestemte datakopier. Synology Snapshot Manager for Windows understøtter Windows Server 2008 R2, 2012 og 2012 R2.</li>
+			<li>Synology Snapshot Manager kan downloades gratis fra <a href="http://www.synology.com/" target="_blank">www.synology.com</a>.</li>
+		</ul>
+	</li>
+</ul>
+</div>
+<p>____<br /> *Kun tilgængeligt på visse modeller.</p>
+
+
+</body>
+</html>

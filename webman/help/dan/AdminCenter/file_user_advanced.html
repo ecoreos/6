@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Avancerede brugerindstillinger</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Avancerede brugerindstillinger</h2>
+
+<p>Ret avancerede brugerindstillinger ved at gå til <strong>Kontrolpanel</strong> > <strong>Bruger</strong> > <strong>Avanceret</strong>. Nedenstående valgmuligheder er tilgængelige. </p>
+
+<h3>Tillad brugere at nulstille glemte adgangskoder</h3>
+<p>Hvis du vil tillade brugere at nulstille glemte adgangskoder via e-mail, kan du markere <strong>Tillad ikke-admin-brugere at nulstille glemte adgangskoder via e-mail</strong>. Når denne mulighed er markeret, vises et link, som er markeret <strong>Har du glemt din adgangskode?</strong> på DSM's loginside. Hvis en bruger glemmer sin adgangskode, kan han klikke på dette link og indtaste brugernavnet. I det tilfælde vil systemet sende en e-mail til brugeren, der indeholder et link til nulstilling af hans glemte adgangskode. </p>
+
+<div class="section">
+<h4>Bemærk:</h4>
+<ul>
+<li>Før du aktiverer denne mulighed, skal du sørge for, at du allerede har aktiveret SMTP-e-mail-underretninger. Det gør du ved at gå til <strong>Kontrolpanel</strong> > <strong>Underretning</strong>.</li>
+<li>Hvis du vil modtage meddelelser fra systemet, skal du angive en e-mailadresse i afsnittet Brugeroplysninger for kontiene.</li>
+<li>Brugere, der hører til gruppen <strong>administrators</strong> kan ikke nulstille adgangskoder med denne mulighed.</li>
+<li>Domænebrugere kan ikke nulstille adgangskoder med denne mulighed.</li>
+<li>LDAP-brugere kan nulstille adgangskoder med denne mulighed, når blot DiskStation bruges som LDAP-katalogserver.</li>
+
+</ul>
+</div>
+
+
+<h3>Adgangskodestyrke</h3>
+<p>Du kan konfigurere regler for adgangskodestyrke for bruger på ding DiskStation .</p>
+
+<div class="section">
+<h4>Bemærk:</h4>
+<p>Regler for adgangskodestyrke gælder kun for nye adgangskoder. F.eks. gælder nye regler for adgangskodestyrke kun, når der oprettes en ny brugerkonto, eller når en eksisterende bruger ændrer sin adgangskode. Eksisterende adgangskoder, og dem, der hører til importerede brugerkonti, udelukkes fra nye adgangskoderegler.</p>
+</div>
+<h4>Sådan aktiverer du regler for adgangskodestyrke:</h4>
+<ol>
+<li>Marker afkrydsningsfeltet <b>Anvend regler for adgangskodestyrke</b> for at aktivere begrænsninger for adgangskode.</li>
+<li>Vælg mere end én begrænsning for adgangskoder fra reglerne nedenfor:</li>
+<ul>
+<li><b>Udeluk navn og beskrivelse på bruger fra adgangskode</b>: Adgangskoden må ikke indeholde brugernavn eller beskrivelse på bruger. UTF-8-kodede tegn er ekskluderet.</li>
+<li><b>Inkluder store og små bogstaver</b>: Adgangskoden skal indeholde både store og små bogstaver.</li>
+<li><b>Inkluder numerisk tegn</b>: Adgangskoden skal indeholde mindst ét numerisk tegn (0 - 9).</li>
+<li><b>Inkluder særligt tegn</b>: Adgangskoden skal indeholde mindst et ASCII-tegn (i.e., ~, `, !, @, #, $, %, ^, &, *, (, ), -, _, =, +, [, {, ], }, \, |, ;, :, ', ", <, >, /, ?).</li>
+<li><b>Mindste adgangskodelængde</b>: Adgangskoden skal være mindst den værdi, der er angivet i tekstfeltet. Længden skal være et tal mellem 6 og 127.</li>
+</ul>
+<li>Klik på <b>Anvend</b> for at gemme indstillingerne.</li>
+</ol>
+
+
+
+<h3>2-trins verificering</h3>
+<p>2-trins verificering giver forbedret sikkerhed til din DSM-brugerkonti. Du kan tvinge DSM-administratorer eller alle DSM-brugere til at aktivere deres 2-trins verificering for yderligere at beskytte deres konti.</p>
+
+<h4>Sådan tvinger du 2-trins verificering for DSM-brugere:</h4>
+
+<ol>
+<li>Marker feltet <strong>Gennemtving 2-trins verificering for følgende brugere</strong>, og vælg de brugere, det skal anvendes på.</li>
+<div class="section">
+<h4>Bemærk:</h4>
+<p>Hvis du endnu ikke har konfigureret 2-trins verificering under <b>Personl.</b> > <b>Konto</b>, bliver guiden til 2-trins verificering startet som hjælp med at fuldføre de krævede indstillinger, før du kan anvende gennem gennemtvingelse.</p>
+</div>
+
+<li>Når gennemtvingelsen er fuldført, bliver brugere, der ikke har aktiveret deres 2-trins verificering, bedt om at færdiggøre indstilingerne, før de kan logge ind på DSM.</li>
+</ol>
+
+<div class="section">
+<h4>Bemærk:</h4>
+<p>Deaktivering af gennemtvingelse af 2-trins verificering her vil ikke påvirke eller deaktivere 2-trins verificeringsindstillinger for hver bruger. Brugere kan beholde deres 2-trins verificeringsindstillinger eller gå til <b>Personl.</b> > <b>Konto</b> for at deaktivere disse indstillinger.</p>
+</div>
+
+
+<h3>Brugerstart</h3>
+
+<p>Aktier brugerstart for at oprette en personlig <b>start</b>-mappe til hver bruger bortset fra <b>guest</b> . Alle brugere kan få adgang til deres egen startmappe via CIFS, AFP, FTP eller File Station.</p>
+<p>Brugere, der hører til gruppen <strong>administrators</strong>, og kan få adgang til alle personlige mapper i den delte standardmappe <b>homes</b>. Navnet på startmappen er det samme som brugerkontoen.</p>
+
+<h4>Sådan aktiverer du brugerstarttjeneste:</h4>
+<ol>
+<li>Marker <b>Aktiver brugerstarttjeneste</b>.</li>
+<li>Hvis der er flere diskenheden, skal du vælge den, hvor du ønsker, at mappen <b>homes</b> skal gemmes.</li>
+<li>Klik på <b>Anvend</b>.</li>
+</ol>
+
+<div class="section">
+<h4>Bemærk:</h4>
+<p>Når den lokale brugerstarttjeneste er deaktiveret, vil domænebrugerens starttjeneste alle blive deaktiveret.</p>
+</div>
+
+<h4>Sådan deaktiverer du brugerstarttjeneste:</h4>
+<ol>
+<li>Afmarker <b>Aktiver brugerstarttjeneste</b>.</li>
+<li>Klik på <b>Anvend</b>.</li>
+</ol>
+<p>Når brugerstarttjeneste er deaktiveret, vil den delte mappe <b>homes</b> bevares, så administrator har adgang til den.  Bruger får adgang til deres startmapper igen, når brugerstarttjenesten aktiveres igen.</p>
+
+<div class="section">
+<h4>Bemærk:</h4>
+<ol>
+<li>Brugerstartservice skal først deaktiveres, før den delte <b>homes</b>-mappe kan slettes.</li>
+<li>Domænebrugerens startservice bliver deaktiveret, hvis den lokale brugers starttjeneste deaktiveres.</li> 
+</ol> 
+</div>
+
+
+</body>	
+</html> 

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>LDAP</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script> <script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>LDAP</h2>
+<p>LDAP gør det muligt for din DiskStation at være med i en eksisterende bibliotekstjenestem som LDAP-klient og så hente bruger- eller gruppeoplysninger fra en LDAP-server (eller "directory server"). Du kan styre LDAP-brugeres eller -gruppers adgangsprivilegier til DSM-programmer og delte mapper, lige som du ville med lokale DSM-brugere eller grupper. Yderligere oplysninger om LDAP findes <a href="http://en.wikipedia.org/wiki/LDAP" target="_blank">her</a>.</p>
+
+<p>Den understøttede LDAP-standard er LDAP-version 3 (RFC 2251).</p>
+<h4>Sådan tilmelder du DiskStation til en bibliotekstjeneste:</h4>
+<ol>
+<li>Gå til <b>Kontrolpanel</b> &gt; <b>Katalogtjeneste</b></li>
+<img src="about:blank" class="help_image"/>
+<li>Gå til fanen <b>LDAP</b>, og marker <b>Aktiver LDAP-klient</b>.</li>
+<img src="about:blank" class="help_image"/>
+<li>Indtast IP-adressen eller domænenavnet for LDAP-serveren i feltet <b>LDAP-serveradresse</b>.</li>
+<img src="about:blank" class="help_image"/>
+<li>Vælg en krypteringstype i rullemenuen <b>Kryptering</b> for at kryptere LDAP-forbindelsen med LDAP-serveren.</li>
+<img src="about:blank" class="help_image"/>
+<li>Indtast Base DN for LDAP-serveren i feltet <b>Base DN</b>.</li>
+<img src="about:blank" class="help_image"/>
+<li>Vælg den korrekte <b>Profil</b>, afhængigt af din LDAP-server. Vælg f.eks. <b>Standard</b>, hvis du bruger Synology Directory Server eller Mac Open Directory.</li>
+<img src="about:blank" class="help_image"/>
+<li>Marker <b>Aktiver CIFS-adgangskodegodkendelse med almindelig tekst</b> for at give brugere af en LDAP-server, der ikke understøtter Samba-skemaet, adgang til DiskStation -filer via CIFS. Se nedenstående afsnit for at sikre, at LDAP-brugere kan bruge deres computere til at få adgang til DiskStation filer via CIFS.</li>
+<img src="about:blank" class="help_image"/>
+<li>Klik på <b>Anvend</b>.</li>
+<li>
+  Indtast Bind DN (eller LDAP-administratorkonto) og adgangskoden i felterne, og klik så på <b>OK</b>.
+</li>
+<img src="about:blank" class="help_image"/>
+</ol>
+
+
+<div class="section">
+<h4>Om CIFS-support og indstillinger for klientcomputer</h4>
+<p>
+Når CIFS-adgangskodegodkendelse i almindelig tekst er aktiveret, skal LDAP-brugere måske ændre deres computeres indstillinger, så de kan få adgang til DiskStation filer via CIFS:
+</p>
+<ul>
+<li>
+Hvis din DiskStation er med i den bibliotekstjeneste, der leveres af en Synology LDAP-server (eller en anden DiskStation, der indeholder og kører pakken <b>Directory Server</b>) eller LDAP-serveren, der understøtter Samba-skemaet og alle LDAP-brugere har korrekte sambaNTPassword-attributter, kan LDAP-brugere åbne dine DiskStation-filer via CIFS uden at markere <b>Aktiver CIFS-adgangskodegodkendelse med almindelig tekst</b> eller ændre deres computerindstillinger. Eller skal LDAP-brugere aktivere deres computers <a href="http://en.wikipedia.org/wiki/Pluggable_Authentication_Modules" target="_blank">PAM</a>-support for at kunne åbne DiskStation-filer via CIFS. Dette vil dog overføre LDAP-brugeres adgangskode til DiskStation i almindeligt tekstformat (uden kryptering), hvilket sænker sikkerhedsniveauet.
+</li>
+
+</ul>
+<h4>Sådan ændrer du Windows-indstillinger:</h4>
+<ol>
+<li>Gå til <b>Start</b> > <b>Kør</b>, indtast <b>regedit</b> i feltet, og klik så på <b>OK</b> for at åbne registreringsdatabasens editor.</li>
+<li>
+Afhængigt af din Windows-version skal du finde eller oprette følgende registreringsdatabase:
+</li>
+<ul>
+<li>
+<b>Windows 2000, XP, Vista og Windows 7:</b><br> [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanWorkStation\Parameters]
+</li>
+<li>
+<b>Windows NT:</b><br> [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Rdr\Parameters]
+</li>
+<li>
+<b>Windows 95 (SP1), 98 og Me:</b><br> [HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\VxD\VNETSUP]
+</li>
+</ul>
+<li>
+Opret eller ret DWORD-værdien <b>EnablePlainTextPassword</b>, og ret værdidataene fra <b>0</b> til <b>1</b>.
+</li>
+<li>
+Genstart Windows for at ændringen skal træde i kraft.
+</li>
+</ol>
+<h4>Sådan ændrer du Mac OS X's indstillinger:</h4>
+<ol>
+<li>Gå til <b>Programmer</b> > <b>Hjælpeværktøjer</b> for at åbne <b>Terminal</b>.
+</li>
+<li>
+Opret en tom fil <b>/etc/nsmb.conf</b>:
+<pre>
+sudo touch /etc/nsmb.conf
+</pre>
+</li>
+<li>
+Åbn <b>/etc/nsmb.conf</b> med vi:
+<pre>
+sudo vi /etc/nsmb.conf
+</pre>
+</li>
+<li>
+Indtast "<b>i</b>" for at indsætte tekst, og indsæt følgende:
+<pre>
+[standard]<br / >
+minauth=none
+</pre>
+</li>
+<li>
+Tryk på Esc-tasten, og indtast så "<b>ZZ</b>" for at gemme ændringer og afslutte vi.
+</li>
+</ol>
+<h4>Sådan ændrer du Linux-indstillingerne:</h4>
+<p>Hvis du bruger <b>smbclient</b>, skal du tilføje følgende nøgler i afsnittet <b>[global]</b> i <b>smb.conf</b>:
+
+<p style="font-family:sans; margin-top:0px; padding-left:20px;line-height:1.25em;"> encrypt passwords = no <br> client plaintext auth = yes <br> client lanman auth = yes <br> client ntlmv2 auth = no </p>
+<p>Hvis du bruger <b>mount.cifs</b>, skal du udføre følgende kommando:</b>
+<p style="font-family:sans; margin-top:0px; padding-left:20px;line-height:1.25em;">echo 0x30030 > /proc/fs/cifs/SecurityFlags</p>
+<p>Yderligere oplysninger findes under <a href="https://www.kernel.org/doc/readme/Documentation-filesystems-cifs-README" target=_blank>https://www.kernel.org/doc/readme/Documentation-filesystems-cifs-README</a></p>
+
+</p>
+</div>
+<div class="section">
+<h4>Om profiler</h4>
+
+<p>Forskellige LDAP-servere kan bruge forskellige attributter til kontonavne, gruppenavne eller til at skelne mellem konti og grupper. Valgmuligheden <b>Profil</b> sætter dig i stand til at specificere eller tilpasse, hvordan bruger- og gruppeoplysninger tilknyttes til LDAP-attributter. En af følgende profiler kan vælges, afhængigt af din LDAP-server:</p>
+
+<ul>
+<li><b>Standard:</b> For servere, der kører Synology Directory Server eller Mac Open Directory.</li>
+<li><b>IBM Lotus Domino:</b> For servere, der kører IBM Lotus Domino 8.5.</li>
+<li><b>Tilpasset</b>: Sætter dig i stand til at tilpasse tilknytninger. Se i afsnittet nedenfor for at få detaljer.</li>
+</ul>
+
+<p>Før LDAP-attributtilknytning tilpasses, skal du have lidt baggrundkendskab. Synology DSM og <strong>Profil</strong>-editoren overholder begge RFC 2307. Du kan f.eks. specificere <b>filter</b> > <b>passwd</b> som <b>userFilter</b>, hvorefter DiskStation vil fortolke records med <b>objectClass=userFilter</b> på din LDAP-server som LDAP-konti. Hvis du specificerer <b>passwd</b> > <b>uid</b> som <b>username</b>, vil DiskStation fortolke <b>username</b> på LDAP-serveren som et kontonavn. Hvis du lader tilknytning være tom, gælder RFC 2307-regler.</p>
+<p>DiskStation kræver et fast heltal, der skal bruges som en LDAP-konto-id (<strong>uidNumber</strong>) eller en gruppe-id (<strong>gidNumber</strong>). IDog bruger ikke alle LDAP-servere heltal til at repræsenterer sådanne attributter. Derfor angives et søgeord <b>HASH()</b> til at konvertere sådanne attributter til heltal. Din LDSP-server kan dog f.eks. bruge attributten <b>userid</b> med en hexadecimalværdi som entydig id til en LDAP-konto. I det tilfælde kan du angive <b>passwd</b> > <b>uidNumber</b> til <b>HASH(userid)</b>, og så vil DiskStation konvertere det til et heltal.</p>
+
+<p>Her følger en oversigt over attributter, der kan tilpasses:</p>
+
+<ul>
+	<li><b>filter</b></li>
+	<ul>
+		<li><b>group</b>: krævet objectClass for gruppe.</li>
+		<li><b>passwd</b>: krævet objectClass for bruger.</li>
+		<li><b>shadow</b>: krævet objectClass for brugeradgangskoder.</li>
+	</ul>
+	<li><b>group</b></li>
+	<ul>
+		<li><b>cn</b>: gruppenavn.</li>
+		<li><b>gidNumber</b>: GID-nr. på denne gruppe.</li>
+		<li><b>memberUid</b>: medlemmer af denne gruppe.</li>
+	</ul>
+	<li><b>passwd</b></li>
+	<ul>
+		<li><b>uidNumber</b>: UID-nr. for denne bruger.</li>
+		<li><b>uid</b>: brugernavn.</li>
+		<li><b>gidNumber</b>: primært GID-nr. på denne bruger.</li>
+	</ul>
+	<li><b>shadow</b></li>
+	<ul>
+		<li><b>uid</b>: brugernavn.</li>
+		<li><b>userPassword</b>: brugeradgangskode.</li>
+	</ul>
+</ul>
+</div>
+<div class="section">
+<h4>Om UID/GID-skifte</h4>
+<p>Undgå UID/GID-konflikter mellem LDAP-brugere/-grupper og lokale brugere/-grupper ved at aktivere UID/GID-skifte for at skifte UID/GID for LDAP-brugere/-grupper med 1.000.000. Denne mulighed er kun for LDAP-servere, som er ikke-Synology LDAP-servere og har en unik numerisk id-attribut for hver bruger/gruppe.</p>
+</div>
+</body>
+</html>

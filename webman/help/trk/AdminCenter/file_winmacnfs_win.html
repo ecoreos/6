@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Win/Mac/NFS</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Windows Dosya Hizmeti</h2>
+
+<p>Windows dosya hizmeti SMB/CIFS desteğine sahip Windows, Mac ve Linux istemcilerinin DiskStation üzerinde saklanan verilere erişmesini sağlar. DiskStation içinde yer alan dosyaları Windows Explorer aracılığıyla aramak veya paylaşımlı dosyaları ağ sürücüleri olarak tanıtmak istiyorsanız, lütfen <strong>Denetim Masası</strong> > <strong>Dosya Hizmetleri</strong> > <strong>Win/Mac/NFS</strong> bölümünde bu seçeneği etkinleştirin.</p>
+
+
+<h4>Windows dosya hizmetini etkinleştirmek için:</h4>
+<ol>
+<li>
+<b>Windows dosya hizmetini etkinleştir</b>'i işaretleyin.
+</li>
+<li>
+<b>Uygula</b>'ya tıklayın.
+</li>
+</ol>
+
+<div class="section disable-hi3535">
+<h4>Not:</h4>
+<p>Windows dosya hizmetini etkinleştirdikten sonra, SMB yoluyla tam indekslenen klasörleri Mac bilgisayarınıza tanıtabilirsiniz ve tanıtılan klasörler içindeki dosyaları aramak için Spotlight on Finder kullanabilirsiniz.</p>
+</div>
+
+
+<h3>Çalışma grubu</h3>
+<p>Bu seçenek ağ yönetimi amacıyla sistemi belirli bir çalışma grubunun üyesi olarak atamanızı sağlar.</p>
+
+<div class="section">
+
+<h4>Not:</h4>
+<ul>
+<li>Çalışma grubunun adı 1'den 15'e kadar karakter içerebilir. Ad aşağıdaki karakterleri içeremez: [ ] ; : &quot; < > * + = \ / | ? ,</li>
+<li>OS X 10.9 çalıştıran bir Mac kullanıyorsanız ve DiskStation cihazınız bir Windows etki alanına katılmışsa, Windows dosya hizmeti yoluyla DiskStation üzerinde saklanan dosyalara erişmek için DiskStation kullanıcı adınızın öncesinde <strong>localhost\</strong> ekleyerek oturum açabilirsiniz.</li>
+</ul>
+</div>
+
+<h3 class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64">Önceki Sürümlere erişime izin verme</h3>
+<p class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64">Windows Explorer'da, kullanıcılar bir paylaşımlı klasör dahilinde <strong>Önceki Sürümler</strong> sekmesine tıklayarak klasörlerin veya dosyaların anlık görüntülerine erişebilirler ve bu sayede bir yöneticiden yardım almadan verileri geri yükleyebilir veya kopyalayabilirler. <strong>Önceki Sürümlere erişime izin verme</strong> öğesini seçerseniz, "Önceki Sürümler" Sayfası herhangi bir bilgi görüntülemez.</p>
+
+<div class="section enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64"><h4>Not :</h4>
+<ul>
+	<li>Kullanıcıların, ancak önceki versiyon alındığında anlık görüntü eşlendiğinde, kendi kullanıcı hesapları oluşturulduğunda ve kendilerine eşlenen anlık görüntünün alındığı paylaşımlı klasörün okuma izni verildiğinde önceki bir versiyona erişmelerine izin verilir.</li>
+</ul>
+</div>
+
+<h3>Aktarım Günlüğünü Etkinleştirme</h3>
+<p>Bu seçeneğin işaretlenmesi dosyaları veya klasörleri, Windows Dosya Aktarım protokolü olarak ta bilinen CIFS/SMB protokolü aracılığıyla oluşturma, silme, okuma, yazma, taşıma ve yeniden adlandırma dahil olmak üzere dosya erişim işlemlerine giriş yapmaya olanak sağlar.</p>
+
+<h3>Gelişmiş Ayarlar</h3>
+<p>Aşağıdaki seçenekleri görmek için <strong>Gelişmiş Ayarlar</strong> düğmesine tıklayın.</p>
+<ul>
+<li><strong>WINS Sunucusu</strong>: Microsoft Windows Internet Name Service (WINS) bir NetBIOS addan-IP-adresine haritalama servisidir. Eğer sistem WINS sunucuya kaydedilecek şekilde yapılandırılmışsa Windows kullanıcıları sistemi TCP/IP ağlarına daha kolay yerleştirecektir.</li>
+<li><strong>Windows Dosya Hizmeti için maksimum protokol</strong>: Ağ yapılandırmanıza bağlı olarak, DiskStation sunucunuz tarafından desteklenecek en yüksek protokolü belirleyebilirsiniz.
+  <ul>
+    <li><strong>SMB 2'yi etkinleştir</strong>: SMB (Sunucu Mesaj Bloğu) 2, Windows Vista'dan bu yana desteklenmektedir ve SMB'nin geliştirilmiş sürümüdür. SMB 2, ağ paketlerinin sayısını azaltmak ve performansı artırmak için birçok SMB eylemini tek bir talep halinde birleştirme becerisi katar.</li>
+    <li><strong>SMB 2'yi Büyük MTU ile etkinleştir</strong>: Maximum transmission unit (MTU) (Maksimum iletim birimi) bir iletişim protokolünden geçirilebilen en büyük veri birimini tanımlar. 1- veya 10-gigabit Ethernet gibi daha hızlı ağ arabirimlerinin avantajından faydalanmak için, Büyük MTU maximum transmission unit'i 1 megabayta (MB) yükseltir. Büyük MTU'nun etkinleştirilmesi büyük dosya transferlerinin hızını ve verimini arttırırken, işlenmesi gereken paketlerin sayısını da azaltır.</li>
+    <li><strong>SMB 3'yi etkinleştir</strong>: SMB 3, Windows 8 ve Windows Server 2012'den beri desteklenmektedir. SMB 2'nin genişletilmiş versiyonudur. SMB 3, AES tabanlı dosya şifreleme iletimini desteklediğinden, eşler arası dosya aktarımlarının güvenliğini artırır.</li>
+</ul>
+<div class="section">
+  <h4>Not:</h4>
+  <ul>
+    <li>SMB 2, Windows Vista, Windows Server 2008 R2, Windows 7 ve sonrasında desteklenir.</li>
+    <li>Büyük MTU, Windows Server 2008 R2, Windows 7 veya sonrasında desteklenir.</li>
+    <li>Windows bilgisayarınızla büyük MTU'yu etkin hale getirmek için, bilgisayarınızın kayıt defteri ayarlarını değiştirmeniz gerekir. Daha fazla bilgi için, lütfen Microsoft teknik desteğe başvurun (bu <a href="http://technet.microsoft.com/en-us/library/ff625695(v=ws.10).aspx" target="_blank">yazı</a> gibi).</li>
+    </ul>
+</div>
+<li><strong>Taşıma şifreleme modu</strong>: SMB 3 etkinleştirildiğinde, Windows Dosya Hizmeti dosya iletim güvenliğini güçlendirmek için taşıma şifrelemesi ekler.
+  <ul>
+    <li><b>Etkisizleştir</b>: Hiçbir taşıma şifrelemesi uygulanmayacaktır.</li>
+    <li><b>Auto</b>: Taşıma şifrelemesi sadece bu özelliği destekleyen istemcilere uygulanacaktır.</li>
+    <li><b>Zorla</b>: Taşıma şifrelemesi her zaman uygulanacaktır. Bu, taşıma şifrelemesini desteklemeyen istemcilerin Windows File Service kullanamamasına neden olur.</li>
+  </ul>
+</li>
+<div class="section">
+  <h4>Not:</h4>
+  <ul>
+    <li>Taşıma şifrelemesi Windows 8, Windows Server 2012 ve sonrasında desteklenir.</li>
+    <li>Windows Dosya Hizmeti için anonim oturum açma taşıma şifrelemesi etkinleştirildiğinde desteklenmez.</li>
+    <li>Taşıma şifrelemesi etkinleştirildiğinde, uygulama zaman aşımlarına engel olmak için <b>Opportunistic Locking'i Devre Dışı Bırak</b> öğesini işaretlemeden bırakın.</li>
+    </ul>
+</div>
+<li><strong>Opportunistic Locking'i Devre Dışı Bırak</strong>: Bu seçeneğin işaretlenmesi CIFS'nin &quot;Opportunistic Locking&quot; özelliğini engelleyecek; veritabanı uygulamaları, DiskStation cihazının paylaşımlı klasöründeki veritabanı dosyalarına ağ aracılığıyla erişim sağladığında artan performans ile sonuçlanacaktır.</li>
+<li>
+  <strong>Local Master Browser'ı Etkinleştir</strong>: Birden fazla Windows bilgisayarı aynı ağ dahilinde mevcut olduğunda, müzakere ederler ve bir bilgisayarı &quot;local master browser&quot; olarak seçerler. Local master browser alt ağ dahilindeki diğer bilgisayarların ve paylaşılan kaynaklarının listelerini muhafaza eder ve bu listeleri diğer bilgisayarlarla paylaşır. Bu seçenek DiskStation'in local master browser'ın görevini üstlenmesini sağlar.
+</li>
+
+<div class="section">
+<h4>Not:</h4>
+<p>Bu işlevin etkinleştirilmesi sabit disk uykusunu devre dışı bırakır ve parolasız misafir hesabını etkin kılar.</p>
+</div>
+
+
+<li><strong>DirSort VFS modülünü etkinleştir</strong>: Klasör adlarını sıralar ve alfabetik olarak listeler. Bu seçeneğin etkinleştirilmesi sistem performansını etkiler.</li>
+
+<li><strong>Dosyaları veto et</strong>: Belirlenen kritere göre dosyaları gizler. Kriter joker karakterler (*) içerebilir ve çok sayıda giriş bir bölme işareti (/) ile ayrılır. Örnek: <i>/abc*/*.txt/*.conf/</i>. Bu seçeneğin etkinleştirilmesi sistem performansını etkiler.</li>
+
+<li><strong>Paylaşımlı klasörler dahilinde sembolik bağlantılara izin ver</strong>: Bu seçeneğin etkinleştirilmesi sembolik bağlantıların aynı paylaşımlı klasör dahilinde dosyalara veya klasörlere yönelmesini sağlar. Sembolik bağlantılar DSM terminali kullanılarak oluşturulabilir.</li>
+
+<li><strong>Paylaşımlı klasörler boyunca sembolik bağlantılara izin ver</strong>: Bu seçeneğin etkinleştirilmesi sembolik bağlantıların farklı paylaşımlı klasörlerde bulunan dosyalara veya klasörlere yönlendirilmesini sağlar. Sembolik bağlantılar DSM terminali kullanılarak oluşturulabilir. Bu seçeneğin etkinleştirilmesinin erişim ayrıcalıklarına sahip olmayan kullanıcıların sembolik bağlantıların hedefi olan paylaşımlı klasörleri görmesine ve erişmesine izin verebileceğine lütfen dikkat edin.</li>
+
+<li><strong>MSDFS VFS modülünü etkinleştir</strong>: Sembolik bağlantıların diğer SMB sunucularında bulunan dosyalara veya klasörlere yönlendirilmesini sağlar. Windows XP gibi eski Windows sürümlerinde, istemci ve DiskStation bu seçeneğin etkinleştirilmesi öncesinde bir Windows etki alanına katılmalıdır. MSDFS bağlantılarının oluşturulması hakkında daha fazla bilgi almak için, lütfen <a href="http://www.samba.org/samba/docs/man/Samba-HOWTO-Collection/msdfs.html" target=_blank>buraya</a> bakın. Bu seçeneğin devre dışı bırakılması sonrasında, istemci aygıtının önbelleği temizlenmelidir, aksi halde normal performans bundan etkilenebilir.</li>
+
+<li><strong>Aynı IP adresinden çok sayıda bağlantıyı devre dışı bırak</strong>: Bu seçenek etkinleştirildiğinde, DiskStation, Windows Dosya Hizmetini kullanan istemcilerden IP adresi başına sadece bir bağlantıya izin verir. Aynı IP adresine sahip çok sayıda istemci Windows Dosya Hizmetini kullanırken, DiskStation en sonuncuyu korur ve daha eski bağlantıları bırakır. Bir NAT ortamında, istemci tek bir IP adresini kullanabilir, bu durumda bu seçeneğin etkinleştirilmesi normal performansı etkileyebilir.</li>
+
+<li><strong>Hata ayıklama günlüklerini topla</strong>: Bu seçenek etkinleştirildiğinde, hata ayıklama amacıyla ayrıntılı günlükler kaydedilir. Bu seçeneğin etkinleştirilmesi sistem performansını etkiler.</li>
+<li><strong>Varsayılan UNIX izinlerini uygula</strong>: Dosyaları ve klasörleri yüklerken veya oluştururken varsayılan UNIX izinlerini uygulamak için bu seçeneği etkinleştirin. UNIX izni dosyalar için 744 ve klasörler için 755 olacaktır. Bu seçenek devre dışı bırakıldığında, UNIX izni dosyalar ve klasörler için 777'dir.</li>
+<div class="section enable-eds14">
+<h4>Not:</h4>
+<ul>
+<li>Bu seçeneğin etkinleştirilmesi farklı protokoller arasında tutarsız izin sorunlarına neden olabilir. Tutarsızlıkları önlemek için, bu seçeneği devre dışı bırakmanızı öneririz.</li>
+</ul>
+</div>
+<div class="section disable-eds14">
+<h4>Not:</h4>
+<ul>
+  <li>Windows ACL etkin paylaşımlı klasörler (harici sürücülerde bulunan &quot;photo&quot; ve paylaşımlar hariç tüm paylaşımlar) için, klasör ve dosya izni tiplerini Windows ACL'den UNIX'e değiştirmek amacıyla <strong>chmod</strong> komutunu Linux veya FTP istemcinizde çalıştırın.</li>
+  <li>Bu seçeneğin etkinleştirilmesi farklı protokoller arasında tutarsız izin sorunlarına neden olabilir. Tutarsızlıkları önlemek için, bu seçeneği devre dışı bırakmanızı öneririz.</li>
+</ul>
+</div>
+<li><b>Dosyaları oluştururken disk alanını rezerve etme</b>: DiskStation sunucunuzda dosyalar oluştururken disk alanının ayrılmasına izin vermemek için bu seçeneği etkinleştirin.</li>
+<li><strong>SMB önbelleğini temizle</strong>: Sorun giderme amacıyla aşağıdaki SMB önbellek dosyalarını silmek için bu düğmeye tıklayın:
+  <ul>
+
+<li>/var/cache/samba/netsamlogon_cache.tdb</li>
+<li>/var/lib/samba/winbindd_cache.tdb</li>
+<li>/var/lib/samba/share_info.tdb</li>
+<li>/var/lib/samba/registry.tdb</li>
+<li>/run/samba/connections.tdb</li>
+<li>/run/samba/gencacche.tdb</li>
+<li>/run/samba/gencache_notran.tdb</li>
+</ul>
+</li>
+
+</ul>
+
+</body>
+</html>

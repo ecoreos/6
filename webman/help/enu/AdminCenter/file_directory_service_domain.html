@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Win/Mac/NFS</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Domain</h2>
+<p>Your DiskStation can join a Windows domain. After joining the domain, domain users can log in to your DiskStation using their domain accounts and passwords, allowing them to access files and use DSM applications without the need to remember another set of usernames and password.</p>
+<h4>To join a domain:</h4>
+<ol>
+<li>Go to <strong>Control Panel</strong> > <strong>Directory Service</strong> > <strong>Domain</strong>.</li>
+<li>Tick the box <strong>Join domain</strong>.</li>
+<li>Enter the domain name and specify the DNS server in the appropriate fields.</li>
+<li>If necessary, tick the box <b>Advanced domain options</b>. (See below for details.)</li>
+<li>Click <b>Apply</b>.</li>
+<li>In the popup window, enter the username and password of the administrator of the domain server.</li>
+<li>Click <b>OK</b>.</li>
+</ol>
+<div class="section">
+<h4>DNS Server</h4>
+<p>You are recommended to specify a DNS server to help your DiskStation  search for the domain. However, if the domain is not registered on the DNS server, the procedure of joining domain may fail.</p>
+<h4>Domain Server Type</h4>
+<p>This field shows the domain type when your DiskStation joins a domain. The domain type will be "AD domain".</p>
+<h4>Management Mode</h4>
+<p>This option will determine how you manage the privileges of domain users and groups. </p>
+<ul>
+<li><b>Trusted Domain</b>: You can manage  
+users and groups in the joined domain as well as trusted domains. Users and groups can be 
+filtered with the domain drop-down list.</li>
+<li><b>Single Domain with OU</b>: Only users and groups in  the joined domain will be displayed in this mode. This mode allows you to filter domain users/domain groups with the OU (Organizational Unit) drop-down list.</li>
+</ul>
+<h4>Advanced Domain Options</h4>
+<p>In most cases, you do not need to fill in any of the advanced domain options. Advanced domain options are needed only for specific domain environments. </p>
+<ul>
+<li><b>DC IP/FQDN</b>: Specify a DC (Domain Controller) IP address or FQDN, and your DiskStation will try to communicate with it. If there is more than one IP address or FQDN, insert a comma (,) between each one. Add an asterisk (*) after the last DC IP address or FQDN if you wish, and your DiskStation will try to communicate with the other DC if all specified ones have failed. You will need to add a comma between the asterisk and the last IP address or FQDN.</li>
+<li><b>Domain NetBIOS name</b>: Specify the NetBIOS name of the domain.</li>
+<li><b>Domain FQDN (DNS name)</b>: Specify the FQDN (DNS name) of the domain.</li>
+<li><b>Register DNS interface:</b> When joining a domain, the NIC (Network Interface Card) specified here will be registered with the DNS server. Please note, if the hostname of  your DiskStation includes an underscore (_), the registration will fail because underscores (_) cannot be used with DNS.</li>
+<li><b>Update user/group list</b>: Specify how often  your DiskStation automatically updates the domain user/group list. You can customize the time period to perform updates daily, weekly, or monthly. In addition, domain user/group lists can be manually updated by going to the <strong>Domain user</strong> tab and clicking <strong>Update all domains</strong>. Please note automatic updates will affect system hibernation.</li>
+</ul>
+
+<h4>Joining Read-Only Domain Controller</h4>
+<p>To join your DiskStation to a read-only domain controller (RODC), you need to specify the "full computer name" (FQDN) of your read-write domain controller (RWDC) in the <strong>DC IP/FQDN</strong> field. The full computer name should be in the following format: <strong>ComputerName.Domain</strong>, e.g. "ad01.synology.com".</p>
+
+</div>
+
+
+<div class="section">
+<h4>Note:</h4>
+<ul>
+<li>If your domain user name includes “%” or “$”, you may not be able to access your home folder. Please ask your domain administrator to give you a new user name.</li>
+<li>Domain groups <strong>Domain Admins</strong> and <strong>Enterprise Admins</strong> will be automatically added to the local <strong>Administrators</strong> group. Therefore, the domain users in these groups will possess administrative privileges on  your DiskStation, including access to file services like CIFS/FTP/AFP/WebDAV and other DSM applications.</li>
+<li>You can also configure domain users’ access privileges to the shared folders on your DiskStation. See <a href="file_directory_service_user_group.html">here</a> for more information.</li>
+</ul>
+</div>
+
+
+
+<h3>Domain Options</h3>
+<p>This section includes the additional domain options below.</p>
+<ul>
+<li><b>DiskStation will synchronize with a NTP server every time when a domain user logs in:</b> Enabling this option will force synchronize the time between your DiskStation and NTP server.</li>
+<li><b>Enable server signing:</b> If the client has enabled client signing, then server signing must also be enabled on your DiskStation, so users can use domain services normally.</li>
+<li><b>Get user/group lists with NT4-compatible mode:</b> Enabling this option allows the system to obtain user/group lists using NT4 RPC mode. This option can be enabled if certain domain user/group lists cannot be obtained using default settings.</li>
+<li><b> Disable administrator permissions for Domain Admins and Enterprise Admins:</b> A user with administrator permissions can have full control of your DiskStation and its files. Enabling this option will allow you to restrict Domain Admins and Enterprise Admins' permissions to be the same as a normal user, therefore inheriting all normal user file/folder permissions.</li>
+<li><strong>Enumerate nested group levels:</strong> Specify the number of nested, domain group members that can be enumerated.</li>
+</ul>
+
+</body>
+</html>

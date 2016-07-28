@@ -1,0 +1,89 @@
+ <!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Modifier le type RAID d'un Volume ou d'un groupe de disques - Aide Synology DSM</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="This article provides instructions to change the RAID type of existing volumes and disk groups on your DiskStation.">
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Modifier le type RAID d'un Volume ou d'un groupe de disques</h2>
+<p>Les volumes et les groupes de disques peut être modifiés d'un type RAID à un autre sans la perte des données existantes. Par exemple, vous pouvez créer un volume RAID 1 sur votre DiskStation, et plus tard passer à RAID 5 si vous installez plusieurs disques durs. Cet article fournit les instructions pour modifier le type RAID des volumes et des groupes de disque existants sur votre DiskStation.</p>
+<h3>Limitations du type RAID</h3>
+<p>Seuls certains types RAID peuvent être modifiés à certains autres types RAID. Consultez le tableau ci-dessous pour plus de détails.</p>
+<table>
+  <tr>
+    <th width="50%">Type RAID</th>
+    <th width="50%">Peut être changé en…</th>
+  </tr>
+  <tr>
+    <td>Basic</td>
+    <td>RAID 1<br /> RAID 5</td>
+  </tr>
+  <tr>
+    <td>RAID 1</td>
+    <td>RAID 5</td>
+  </tr>
+  <tr>
+    <td>RAID 5</td>
+    <td>RAID 6</td>
+  </tr>
+</table>
+<div class="section">
+<h4>Exemple :</h4>
+<p>Le RAID 1 peut être modifié au RAID 5 mais le RAID 5 ne peut pas être modifié en RAID 1.</p>
+</div>
+<h3>Exigences des disques durs</h3>
+<p>Afin de changer le type de RAID d'un volume ou groupe de disques, vous devez avoir un nombre suffisant de disques durs disponibles installés sur votre DiskStation. Veuillez voir ci-dessous le nombre minimum de disques durs requis pour chaque type de RAID.</p>
+<table>
+  <tr>
+    <th width="50%">Type RAID souhaité</th>
+    <th width="50%">Disques durs exigés</th>
+  </tr>
+  <tr>
+    <td>RAID 1</td>
+    <td>2 ou 4</td>
+  </tr>
+  <tr>
+    <td>RAID 5</td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>RAID 6</td>
+    <td>4</td>
+  </tr>
+</table>
+<div class="section">
+<h4>Exemple :</h4>
+<p>Si vous voulez modifier un volume RAID 1 à RAID 5, vous aurez besoin d'au moins trois disques durs au total (c.-à-d. les deux disques durs appartenant au volume RAID 1, plus un disque dur libre pour ajouter le volume).</p>
+</div>
+<h3>Changer le type de RAID</h3>
+<p>Dans l'exemple ci-dessous, nous modifierons le volume <strong>Basic</strong> à un volume <strong>RAID 1</strong>.</p>
+<div class="section">
+<h4>Avant de commencer :</h4>
+<ul>
+<li>Assurez-vous que l'état de votre volume ou du groupe de disques est <b>Normal</b>.</li>
+<li>Lors de l'ajout de nouveaux disques durs à un volume ou groupe de disques, les nouveaux disques durs doivent être plus grands que le plus petit disque dur dans le volume ou le groupe de disques.</li>
+<li>L'état des nouveaux disques durs doit être <b>Initialisé</b> ou <b>Non initialisé</b>.</li></ul>
+</div>
+<h4>Pour changer le type de RAID d'un volume :</h4>
+<ol>
+<li>Ouvrez <strong>Gestionnaire de stockage</strong>.</li>
+<img src="about:blank" class="help_image"/>
+<li>Accédez à <b>Volume</b>.  (Si vous voulez modifier le type RAID d'un groupe de disques, allez à l'onglet <b>Groupe de disques</b>.)</li>
+<li>Sélectionnez le volume que vous souhaitez changer et cliquez sur <b>Gérer</b>.</li>
+<img src="about:blank" class="help_image"/>
+<li>Lorsque l'assistant apparaît, sélectionnez <b>Modifier le type de RAID</b>. Puis cliquez sur <b>Suivant</b>.</li>
+<img src="about:blank" class="help_image"/>
+<li>Sélectionnez le type RAID auquel vous voulez modifier le volume. Cliquez sur <b>Suivant</b>.</li>
+<img src="about:blank" class="help_image"/>
+<li>Sélectionnez le ou les disque(s) dur que vous voudriez ajouter au volume existant. Puis cliquez sur <b>Suivant</b>.</li>
+<img src="about:blank" class="help_image"/>
+<li>Suivez les instructions de l'assistant pour terminer. Veuillez noter que les données existantes sur le disque dur ajouté seront supprimées.</li></ol>
+</body>
+</html>

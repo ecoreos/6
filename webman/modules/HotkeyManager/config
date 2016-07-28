@@ -1,0 +1,1 @@
+{"HotkeyMgr.js":{"SYNO.SDS.HotkeyMgr.DesktopPanel":[],"SYNO.SDS.HotkeyMgr.CmpPanel":[],"SYNO.SDS.HotkeyMgr.Instance":{"type":"app","hidden":true,"hideTaskBtn":true,"allowMultiInstance":false,"allUsers":true,"appWindow":"SYNO.SDS.HotkeyMgr.Window","icon":"images\/help_icon.png"},"SYNO.SDS.HotkeyMgr.Window":{"title":"hotkey_manager:app_title","type":"lib"}}}

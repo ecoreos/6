@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Dispositivi esterni</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Dispositivi esterni</h2>
+
+<p>Andare su <strong>Pannello di controllo</strong> > <b>Dispositivi esterni</b> > <b>Dispositivi esterni</b> per visualizzare un elenco di dispositivi di archiviazione esterni collegati a DiskStation.</p>
+
+
+<h3><a name="usbdisk"></a><a name="esatadisk"></a>Dischi esterni</h3>
+<p class="enable-eds14">Il collegamento di un disco esterno al sistema consentirà di condividere la capacità del disco grazie a una cartella condivisa creata dal sistema, chiamata <b>usbshare[numero]</b> (per dischi USB). La cartella condivisa verrà rimossa automaticamente quando il disco esterno viene estratto dal sistema.</p>
+<p class="disable-eds14">Il collegamento di un disco esterno al sistema consentirà di condividerne la capacità su disco tramite una cartella condivisa creata dal sistema, chiamata <b>usbshare[numero]</b> (per dischi USB) oppure <b>satashare[numero]</b> (per dischi eSATA). La cartella condivisa verrà rimossa automaticamente quando il disco esterno viene estratto dal sistema.</p>
+<p>DiskStation riconosce i seguenti formati: <span style="display: inline;" class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64"><b>Btrfs</b>, </span><b>ext3</b>, <b>ext4</b>, <b>FAT</b>, <b>FAT32</b>, <b>HFS</b>, <b>HFS Plus</b> e <b>NTFS</b>. Qualsiasi disco esterno non riconosciuto dovrà essere formattato prima di poter essere usato dal sistema.</p>
+<div class="section">
+<h4>Nota:</h4>
+<ol>
+<li>Alcuni modelli supportano HFS/HFS in sola lettura.</li>
+<li>Il giornale non è supportato su HFS/HFS.</li>
+<li>Verificare di avere estratto il disco esterno prima di scollegarlo.</li>
+</ol>
+</div>
+
+<h4>Per formattare il disco:</h4>
+
+<p>Fare clic sul pulsante <b>Formatta</b> e seguire la procedura guidata. È possibile formattare i dischi esterni su <b>ext4</b> e <b>FAT32</b> con DiskStation.</p>
+
+<div class="section">
+<h4>Nota:</h4>
+<ol>
+<li>assicurarsi di aver eseguito il backup dei dati prima di formattare il disco esterno. Tutti i dati verranno eliminati durante la procedura e non potranno essere recuperati.</li>
+
+<li>Per formattare il disco esterno in formato EXT3 o EXT4, la capacità del disco deve essere superiore a 1 GB.</li>
+
+<li>Se il disco viene formattato in formato EXT3 o EXT4, verrà riconosciuto soltanto da DiskStation. Per leggere i dati direttamente dal disco esterno con un PC e Mac, scegliere la formattazione FAT32.</li>
+</ol>
+</div>
+
+
+<h4>Per eseguire un test S.M.A.R.T. Test:</h4>
+<P>Il test del disco S.M.A.R.T. aiuterà ad esaminare e riferire lo stato dei dischi rigidi, fornendo un preavviso di possibili guasti imminenti. Se sono riscontrati degli errori, si consiglia di cambiare subito il disco. <br> Per eseguire un test S.M.A.R.T. sarà sufficiente fare clic sul pulsante <strong>Test S.M.A.R.T.</strong> e seguire la procedura guidata.<br> Per controllare i risultati del test, è sufficiente fare clic su <strong>Informazioni su S.M.A.R.T. </strong>.</P>
+<div class="section">
+<h4>Nota:</h4>
+<p>la durata del test varia in relazione all'ambiente di sistema.</p>
+</div>
+
+
+<div class="section disable-eds14">
+<h4>Limitazioni</h4>
+
+<p>La formattazione del disco non è disponibile nelle seguenti situazioni:</p>
+
+<ul>
+<li>Se il disco esterno è in fase di inizializzazione, ad es. quando il dispositivo esterno è stato appena collegato.</li>
+<li>La capacità del disco esterno è inferiore a 1 GB (formato EXT3 o EXT4).</li>
+<li>Il disco esterno è in corso di formattazione.</li>
+<li>Quando il sistema esegue il backup dei file su un disco esterno.</li>
+<li>Il disco esterno è danneggiato.</li>
+</ul>
+<h4>Risoluzione dei problemi</h4>
+<ol>
+<li>Formattazione del disco esterno non riuscita. Perché?</li>
+<ul>
+<li>Verificare che il disco esterno sia inserito correttamente.</li>
+<li>Verificare che il disco esterno non sia protetto dalla scrittura. Se è protetto, rimuoverlo prima di formattarlo. </li>
+</ul>
+<li>Il tipo di file system del disco esterno è identificato come <b>Non Supportato</b> o il sistema non crea la cartella condivisa <b>usbshare[numero]</b> o <b>satashare[numero]</b> per il disco esterno. Come procedere? </li>
+<ul>
+<li>Il sistema corrente riconosce i formati <span style="display: inline;" class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64">Btrfs, </span>EXT3, EXT4, FAT, FAT32, HFS, HFS Plus e NTFS. Tutti i dischi esterni non formattati nel formato indicato sopra non saranno riconosciuti e lo stato sarà identificato come <b>Non supportato</b>.</li>
+</ul>
+<li>Impossibile accedere alla cartella condivisa <b>usbshare[numero]</b> o <b>satashare[numero]</b>. Come procedere? </li>
+
+<ul>
+<li>Questa condizione può essere causata da un problema nel file system sul disco esterno. Per correggere il problema, collegare il disco esterno al PC ed eseguire un controllo del file system.</li>
+</ul>
+<li>Il disco esterno con formattazione EXT3 o EXT4 può essere collegato al PC e al Mac ed è possibile accedervi direttamente?</li>
+<ul>
+<li>No, EXT3 o EXT4 è riconosciuto esclusivamente da DiskStation. Per leggere i dati direttamente dal disco esterno con un PC e Mac, scegliere la formattazione FAT32. </li>
+</ul>
+<li>Perché è presente una cartella dal nome "trovati" nel disco esterno?</li>
+<ul>
+<li>Si tratta di una cartella predefinita di sistema creata automaticamente dal file system EXT3/EXT4. La visualizzazione di questa cartella nel disco esterno è normale. L'amministratore ha diritto di accesso e di gestione ai contenuti di questa cartella; tuttavia, si consiglia vivamente di lasciare invariata la cartella.</li>
+
+</ul>
+
+</ol>
+</div>
+<div class="section enable-eds14">
+<h4>Limitazioni</h4>
+
+<p>La formattazione del disco non è disponibile nelle seguenti situazioni:</p>
+
+<ul>
+<li>Se il disco esterno è in fase di inizializzazione, ad es. quando il dispositivo esterno è stato appena collegato.</li>
+<li>La capacità del disco esterno è inferiore a 1 GB (formato EXT3 o EXT4).</li>
+<li>Il disco esterno è in corso di formattazione.</li>
+<li>Quando il sistema esegue il backup dei file su un disco esterno.</li>
+<li>Il disco esterno è danneggiato.</li>
+</ul>
+<h4>Risoluzione dei problemi</h4>
+<ol>
+<li>Formattazione del disco esterno non riuscita. Perché?</li>
+<ul>
+<li>Verificare che il disco esterno sia inserito correttamente.</li>
+<li>Verificare che il disco esterno non sia protetto dalla scrittura. Se è protetto, rimuoverlo prima di formattarlo. </li>
+</ul>
+<li>Il tipo di file system del disco esterno è identificato come <b>Non Supportato</b> o il sistema non crea la cartella condivisa <b>usbshare[numero]</b> per il disco esterno. Come procedere? </li>
+<ul>
+<li>Il sistema corrente riconosce i formati EXT3, EXT4, FAT, FAT32, HFS, HFS Plus e NTFS. Tutti i dischi esterni non formattati nel formato indicato sopra non saranno riconosciuti e lo stato sarà identificato come <b>Non supportato</b>.</li>
+</ul>
+<li>Impossibile accedere alla cartella condivisa <b>usbshare[numero]</b>. Come procedere? </li>
+
+<ul>
+<li>Questa condizione può essere causata da un problema nel file system sul disco esterno. Per correggere il problema, collegare il disco esterno al PC ed eseguire un controllo del file system.</li>
+</ul>
+<li>Il disco esterno con formattazione EXT3 o EXT4 può essere collegato al PC e al Mac ed è possibile accedervi direttamente?</li>
+<ul>
+<li>No, EXT3 o EXT4 è riconosciuto esclusivamente da DiskStation. Per leggere i dati direttamente dal disco esterno con un PC e Mac, scegliere la formattazione FAT32. </li>
+</ul>
+<li>Perché è presente una cartella dal nome "trovati" nel disco esterno?</li>
+<ul>
+<li>Si tratta di una cartella predefinita di sistema creata automaticamente dal file system EXT3/EXT4. La visualizzazione di questa cartella nel disco esterno è normale. L'amministratore ha diritto di accesso e di gestione ai contenuti di questa cartella; tuttavia, si consiglia vivamente di lasciare invariata la cartella.</li>
+
+</ul>
+
+</ol>
+</div>
+
+
+<h4>Per impostare le autorizzazioni predefinite per tutti i dispositivi esterni:</h4>
+<p>è possibile impostare le autorizzazioni predefinite facendo clic su <strong>Autorizzazioni predefinite</strong> e specificare utenti e gruppi che possono accedere, visualizzare o modificare i dispositivi esterni e i relativi contenuti. Quando un dispositivo esterno è inserito in DiskStation, le autorizzazioni specificate saranno assegnate a tale dispositivo esterno automaticamente.</p>
+<p>Nella finestra autorizzazioni, attenersi ai passaggi seguenti per le autorizzazioni predefinite:</p>
+<ol>
+<li>Selezionare una delle seguenti opzioni dal menu a discesa:</li>
+<ul>
+<li><b>Utente interno di sistema:</b> assegnare autorizzazioni per gli utenti di sistema predefiniti, come utente FTP/WebDAV anonimo.</li>
+<li><b>Utenti locali:</b> assegnare autorizzazioni per gli utenti locali (incluso <b>guest</b>).</li>
+<li><b>Gruppi locali:</b> assegnare permessi per i gruppi locali.</li>
+</ul>
+
+<li>Selezionare o deselezionare le caselle appropriate per ciascun utente o gruppo per personalizzare i permessi di accesso per i dispositivi esterni:</li>
+  <ul>
+<li><b>Lettura/Scrittura</b>: l'utente o il gruppo può accedere e apportare modifiche ai file e alle cartelle suoi dispositivi esterni.</li>
+<li><b>Sola lettura</b>: l'utente o il gruppo può accedere ai file e alle cartelle suoi dispositivi esterni.</li>
+<li><b>Nessun accesso</b>: l'utente o il gruppo non può accedere ai file e alle cartelle suoi dispositivi esterni.</li>
+</ul>
+</ol>
+
+
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Aktualizacja DSM</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h1><a name="leaf_update"></a>Aktualizacja DSM</h1>
+<p>Co pewien czas Synology wprowadza bezpłatne aktualizacje DSM. Aktualizacje mogą obejmować nowe funkcje, poprawki funkcji i udoskonalenia wydajności.</p>
+<p><span class="note_head">Ważne:</span> Aktualizacja DSM zazwyczaj nie wpływa na dane na DiskStation. Mimo to, aby zapewnić bezpieczeństwo danych, bardzo zalecamy sporządzenie kopii zapasowej danych przed rozpoczęciem aktualizacji.</p>
+
+<h2>Ręczna aktualizacja DSM</h2>
+<p>
+Plik aktualizacji .pat można pobrać z <a href="http://www.synology.com/support/download.php" target="_blank">Centrum pobierania</a> firmy Synology i użyć go do ręcznej aktualizacji DSM.
+</p>
+<h4>Aby dokonać ręcznej aktualizacji DSM:</h4>
+
+<ol>
+<li>Odwiedź <a href="http://www.synology.com" target="_blank">www.synology.com</a>, aby pobrać najnowszą aktualizację DSM na swój komputer. Rozpakuj plik, aby uzyskać plik aktualizacji .pat.</li>
+<li>Kliknij <b>Ręczna aktualizacja DSM</b>, aby przejść do strony Ręczna aktualizacja DSM</li>
+<li>Kliknij <b>Przeglądaj</b>, aby wybrać plik aktualizacji.</li>
+<li>Kliknij <b>Zastosuj</b>, aby rozpocząć aktualizację DSM. System zostanie uruchomiony ponownie po zakończeniu aktualizacji.</li>
+</ol>
+<div class="section">
+<h4>Rozwiązywanie problemów:</h4>
+<p>Jeśli nie możesz zaktualizować DSM, w rozwiązaniu problemu mogą pomóc następujące wskazówki:</p>
+<ul>
+<li>Sprawdź, czy proces aktualizacji został przerwany przez użytkowników lub nieoczekiwane wydarzenia, takie jak awaria zasilania.</li>
+<li>Sprawdź wersję oprogramowania DSM. Aktualizować można tylko do nowszej wersji DSM.</li>
+<li>Ponownie pobierz aktualizację systemu DSM, ponieważ plik aktualizacji mógł zostać uszkodzony.</li>
+</ul>
+<p>Jeśli problem nadal występuje, skontaktuj się z <a href="https://account.synology.com/support/support_form.php" target="_blank">Pomocą techniczną</a> Synology.</p>
+</div>
+
+<h2>Automatyczna aktualizacja DSM</h2>
+<p>
+Oprócz umożliwiania aktualizacji ręcznej, po każdym przejściu do strony <b>Aktualizacja firmware</b> system sprawdza, czy firma Synology udostępniła do pobrania nową wersję DSM, a następnie wyświetla informacje w kolorze zielonym lub czerwonym. Jeżeli najnowsza aktualizacja DSM będzie gotowa do pobrania, system może ją pobrać i dokonać aktualizacji DSM. 
+</p>
+<h4>Aby system pobrał najnowszą wersję DSM i dokonał aktualizacji:</h4>
+<ol>
+<li>Jeżeli najnowsza wersja DSM jest gotowa do pobrania, kliknij odnośnik <b>Pobierz</b>, aby system pobrał najnowszą wersję DSM.</li>
+<li>W celu poinformowania o powodzeniu lub niepowodzeniu pobierania system wyświetli jedno z następujących powiadomień na pulpicie: <b>Pobieranie DSM zostało ukończone</b> lub <b>Pobieranie DSM nie powiodło się</b>.</li>
+<li>
+Kliknij okno powiadomienia na pulpicie, aby przejść do strony <b>Aktualizacja DSM</b>.
+</li>
+<li>
+Wykonaj dowolną z następujących czynności:
+<ul>
+<li>
+Jeżeli pobieranie DSM zostało ukończone, kliknij <b>Aktualizuj teraz</b>, aby zacząć aktualizować DSM bezpośrednio.
+</li>
+<li>
+Jeżeli pobieranie DSM się nie powiodło, kliknij <b>Spróbuj ponownie</b>, aby system ponownie pobrał najnowszą wersję DSM udostępnioną przez firmę Synology.
+</li>
+</ul>
+</li>
+</ol>
+<h4>Aby regularnie sprawdzać dostępność aktualizacji:</h4>
+<ol>
+<li>Zaznacz <b>Sprawdzaj aktualizacje DSM automatycznie</b>.</li>
+<li>Wybierz plan aktualizacji i skonfiguruj <b>Harmonogram instalacji</b>.</li>
+<li>Kliknij przycisk <b>OK</b>.</li>
+</ol>
+<p>Kiedy aktualizacja DSM zostanie pobrana i będzie gotowa do instalacji, wyświetli się powiadomienie na pulpicie. Aby wyłączyć automatyczne aktualizowanie systemu DSM, możesz anulować je w powiadomieniu na pulpicie lub zmieniając <strong>Ustawienia aktualizacji</strong>. Aktualizacje DSM zostaną zainstalowane przed planowanym zamknięciem, jeżeli została włączona opcja <strong>Zamknij</strong> w obszarze <strong>Harmonogram zasilania</strong>.</p>
+
+<div class="section">
+<h4>Rozwiązywanie problemów:</h4>
+<p>Jeżeli podczas sprawdzania lub pobierania najnowszej wersji DSM wyświetlą się komunikaty o błędach (na czerwono), w rozwiązaniu problemu mogą pomóc następujące wskazówki:</p>
+<ul>
+<li>Sprawdź, czy serwer DiskStation jest połączony z Internetem.</li>
+<li>Serwer pobierania firmy Synology może być aktualnie zajęty. Spróbuj pobrać później — być może rozwiąże to problem.</li>
+</ul>
+<p>Jeśli problem nadal występuje, skontaktuj się z <a href="https://account.synology.com/support/support_form.php" target="_blank">Pomocą techniczną</a> Synology.</p>
+</div>
+
+</body>
+</html>

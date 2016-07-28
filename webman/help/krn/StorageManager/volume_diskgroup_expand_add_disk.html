@@ -1,0 +1,85 @@
+ <!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>볼륨 또는 디스크 그룹에 하드 드라이브 추가 - Synology DSM 도움말</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="This article walks you through the steps to add an additional hard drive to an existing volume or disk group on your DiskStation.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>하드 드라이브를 추가하여 저장 용량 확장</h2>
+
+<p>DiskStation에 빈 하드 드라이브 슬롯이 있으면, 하드 드라이브를 더 설치하여 기존 볼륨이나 디스크 그룹에 추가할 수 있습니다. 이 게시물은 추가 하드 드라이브를 설치하여 기존 볼륨이나 디스크 그룹을 확장하는 지침을 제공합니다.</p>
+
+<h3>시작하기 전에</h3>
+
+<p>시작하기 전에, 추가할 하드 드라이브가 다음 크기 요구 사항에 맞는지 확인합니다:</p>
+<ul>
+  <li><strong>SHR:</strong>추가하려는 하드 드라이브 용량이 볼륨 또는 디스크 그룹에서 가장 큰 하드 드라이브와 같거나 크고 또한 볼륨 및 디스크 그룹에 있는 하드 드라이브와 같아야 합니다. 예를 들어, SHR 볼륨이 각각 2 TB, 1.5 TB, 1 TB 크기의 하드 드라이브 3개로 이루어진 경우, 새 하드 드라이브 용량은 적어도 2 TB가 되어야 하고 또한 1.5 TB 또는 1 TB와 같아야 합니다.</li>
+  <li><strong>RAID 5 및 RAID 6:</strong>추가하려는 하드 드라이브 용량이 볼륨 또는 디스크 그룹에서 가장 작은 하드 드라이브와 같거나 커야 합니다. 예를 들어, 볼륨이 각각 2 TB, 1.5 TB, 1 TB 크기의 하드 드라이브 3개로 이루어진 경우, 새 하드 드라이브 용량은 적어도 1 TB가 되어야 합니다.</li>
+</ul>
+
+<div class="section">
+<h4>볼륨 상태 확인</h4>
+
+<p>볼륨 또는 디스크 그룹의 상태가 <strong>정상</strong>인지 확인합니다. 그렇지 않으면 먼저 이를 수리해야 합니다.</p>
+</div>
+
+
+<h3>  볼륨 또는 디스크 그룹에 하드 드라이브 추가</h3>
+
+<p>하드 드라이브를 다음 RAID 유형에 추가할 수 있습니다: </p>
+
+<ul>
+<li>Synology Hybrid RAID (SHR)</li>
+<li>JBOD</li>
+<li>RAID 5</li>
+<li>RAID 6</li>
+</ul>
+
+<div class="section">
+<h4>참고:</h4>
+<p>SHR 볼륨의 경우, 하나 또는 그 이상의 하드 드라이브를 사용하여 하드 드라이브를 볼륨에 추가할 때만 저장 용량이 확장됩니다.</p>
+</ul>
+</div>
+
+<h4>볼륨 또는 디스크 그룹에 하드 드라이브 추가하기:</h4>
+
+<ol>
+<li>DiskStation을(를) 끕니다. (DiskStation이(가) 핫 스와핑을 지원하는 경우 이 단계를 건너뜁니다.)</li>
+<li>새 하드 드라이브를 빈 하드 드라이브 슬롯에 삽입합니다.</li>
+
+<div class="section">
+<h4>참고:</h4>
+<p>다치거나 DiskStation이(가) 손상되는 것을 방지하려면 Synology 제품의 <i>빠른 설치 가이드</i>에 있는 하드 드라이브 설치 지침을 따르십시오.</p>
+</div>
+
+<li>DiskStation을(를) 켭니다.</li>
+<li><strong>Administrators</strong> 그룹에 속하는 계정으로 DSM에 로그인합니다.</li>
+<li><strong>저장소 관리자</strong>를 엽니다.</li>
+<img src="about:blank" class="help_image"/>
+
+<li>여기에서 다음을 수행하십시오:</li>
+  <ul class="list_abc">
+    
+  <li>단일 볼륨을 확장할 경우 <strong>볼륨</strong> 탭으로 이동합니다. 확장할 볼륨을 선택합니다. <strong>관리</strong>를 클릭하고 다음 단계를 진행합니다. </li>
+<img src="about:blank" class="help_image"/>
+    
+  <li>디스크 그룹을 확장할 경우 <strong>디스크 그룹</strong> 탭으로 이동합니다. 확장하려는 디스크 그룹을 선택합니다. <strong>관리</strong>를 클릭하고 다음 단계를 진행합니다.</li>
+<img src="about:blank" class="help_image"/>
+  </ul>
+<li><strong>하드 디스크를 추가하여 볼륨(또는 디스크 그룹) 확장</strong>을 선택합니다. 그리고 나서 <strong>다음</strong>을 클릭합니다.</li>
+<img src="about:blank" class="help_image"/>
+<li>볼륨 또는 디스크 그룹을 확장할 하드 드라이브를 선택합니다. 해당 선택 상자에 체크 표시하여 하드 드라이브를 추가할 수 있습니다. 그리고 나서 <strong>다음</strong>을 클릭합니다.</li>
+<img src="about:blank" class="help_image"/>
+<li>마법사의 단계를 따라 마칩니다.</li>
+</ol>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>File Station</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Montar unidades virtuais</h2>
+
+<p>
+Pode montar unidades virtuais para aceder a conteúdos de imagens de disco com a File Station.
+</p>
+
+<h4>Para montar uma unidade virtual:</h4>
+<ol>
+<li>
+Selecione uma imagem de disco e clique em <b>Ferramentas</b> > <b>Montar Unidade Virtual</b>.
+</li>
+<img src="about:blank" class="help_image"/>
+<li>
+Clique em <b>Pesquisar</b> para selecionar ou criar uma pasta de destino vazia em DiskStation para montar a unidade virtual.
+</li>
+<img src="about:blank" class="help_image"/>
+<li>
+Selecione <b>Montar automaticamente ao iniciar</b> caso deseje que o seu DiskStation monte a unidade virtual a cada início ou reinício de sistema. Clique em <b>Montar</b> para continuar. Poderá agora navegar até à pasta de destino onde a unidade virtual está montada e aceder aos conteúdos da imagem de disco.
+</li>
+<img src="about:blank" class="help_image"/>
+</ol>
+
+<div class="section">
+<h4>Nota:</h4>
+<p>As unidades virtuais e ficheiros .iso apenas podem ser montados em subpastas dentro de pastas partilhadas.</p>
+</div>
+
+
+
+<h4>Para desmontar uma unidade virtual:</h4>
+<ol>
+<li>Clique no botão direito do rato sobre a pasta de destino onde a unidade virtual está montada e selecione <b>Desmontar</b>.</li>
+<img src="about:blank" class="help_image"/>
+</ol>
+<ol>
+<span class="note_head">Nota: </span>
+<li>
+Formatos de imagem de disco suportados: Ficheiros "<b>.iso</b>" utilizando o sistema de ficheiros ISO 9660 e UDF.
+</li>
+<li>
+O número máximo de unidades virtuais em simultâneo é de 16.
+</li>
+<li class="enable-dockerx64">Montar unidades virtuais é apenas suportado no modo de privilégio elevado. Para usar esta funcionalidade, aceda ao pacote Docker no seu DSM anfitrião, selecione o <strong>Docker DSM</strong> que deseja para ativar pastas partilhadas encriptadas, clique em <strong>Editar</strong> e assinale a caixa junto de <strong>Executar contentor usando privilégios elevados</strong>.</li>
+
+</ol>
+</body>
+</html>

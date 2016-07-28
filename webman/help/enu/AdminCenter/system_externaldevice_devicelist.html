@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>External Devices</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>External Devices</h2>
+
+<p>Go to <strong>Control Panel</strong> > <b>External Devices</b> > <b>External Devices</b> to view a list of external storage devices connected to your DiskStation.</p>
+
+
+<h3><a name="usbdisk"></a><a name="esatadisk"></a>External Disks</h3>
+<p class="enable-eds14">By connecting an external disk to the system, you will be able to share its disk capacity through a system-created shared folder named <b>usbshare[number]</b> (for USB disks). The shared folder will be removed automatically when the external disk is ejected from the system.</p>
+<p class="disable-eds14">By connecting an external disk to the system, you will be able to share its disk capacity through a system-created shared folder named <b>usbshare[number]</b> (for USB disks) or <b>satashare[number]</b> (for eSATA disks). The shared folder will be removed automatically when the external disk is ejected from the system.</p>
+
+
+<p class="enable-eds14">DiskStation recognizes the following formats: <span style="display: inline;" class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64"><strong>Btrfs</strong>, </span><strong>ext3</strong>, <strong>ext4</strong>, <strong>FAT</strong>, <strong>FAT32</strong>, <strong>HFS</strong>, <strong>HFS Plus</strong>, and <strong>NTFS</strong>. Any unrecognized external disk will have to be formatted first before being used on the system.</p>
+<p class="disable-eds14">DiskStation recognizes the following formats: <span style="display: inline;" class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64"><strong>Btrfs</strong>, </span><strong>ext3</strong>, <strong>ext4</strong>, <strong>FAT</strong>, <strong>FAT32</strong>, <strong>exFAT</strong>, <strong>HFS</strong>, <strong>HFS Plus</strong>, and <strong>NTFS</strong>. Any unrecognized external disk will have to be formatted first before being used on the system.</p>
+<div class="section">
+<h4>Note:</h4>
+<ol class="enable-eds14">
+<li>Some models support HFS/HFS Plus with read-only.</li>
+<li>Journal is not supported on HFS/HFS Plus.</li>
+<li>Make sure you have ejected the external disk before unplugging it.</li>
+</ol>
+<ol class="disable-eds14">
+<li>Some models support HFS/HFS Plus with read-only.</li>
+<li>Journal is not supported on HFS/HFS Plus.</li>
+<li>You will need to install <strong>exFAT Access</strong> from <strong>Package Center</strong> to enable DiskStation to support exFAT.</li>
+<li>Make sure you have ejected the external disk before unplugging it.</li>
+</ol>
+</div>
+
+
+<h4>To format the disk:</h4>
+
+<p>Click <b>Format</b> and follow the wizard. You can format your external disks to <b>ext4</b> and <b>FAT32</b> with DiskStation.</p>
+
+<div class="section">
+<h4>Note:</h4>
+<ol>
+<li>Make sure you have backed up data before formatting the external disk. All data will be deleted during the procedure and cannot be restored.</li>
+
+<li>To format the external disk to ext3 or ext4 format, the disk size must be larger than 1 GB.</li>
+
+<li>When the disk is formatted as ext3 or ext4 format, it is only recognized by DiskStation. If you would like to read data directly from your external disk with a PC and Mac, choose FAT32 format.</li>
+</ol>
+</div>
+
+
+<h4>To perform S.M.A.R.T. Test:</h4>
+<P>Disk S.M.A.R.T. Test examines and reports the status of your hard disks, providing early warning of imminent disk failure. We recommend changing your disk if any errors are detected. <br>
+To perform S.M.A.R.T. Test, simply click the <strong>S.M.A.R.T. Test</strong> button and follow the wizard.<br>
+To check the test results, simply click <strong>S.M.A.R.T. Info</strong>.</P>
+<div class="section">
+<h4>Note:</h4>
+<p>Test time varies depending on your system environment.</p>
+</div>
+
+
+<div class="section disable-eds14">
+<h4>Limitations</h4>
+
+<p>Disk formatting is not available in the following situations:</p>
+
+<ul>
+<li>The external disk is being initialized, i.e. when the external device has just been plugged in.</li>
+<li>The capacity of the external disk is less than 1 GB (ext3 or ext4 format).</li>
+<li>The external disk is being formatted.</li>
+<li>When the system is backing up files to the external disk.</li>
+<li>The external disk is damaged.</li>
+</ul>
+<h4>Troubleshooting</h4>
+<ol>
+<li>Failed to format the external disk. Why?</li>
+<ul>
+<li>Check if the external disk is properly inserted.</li>
+<li>Check if the external disk is write-protected. If yes, remove it before formatting. </li>
+</ul>
+<li>The file system of the external disk is shown as <b>Not Supported</b>, or the system does not create the <b>usbshare[number]</b> or <b>satashare[number]</b> shared folder for the external disk. What should I do? </li>
+<ul>
+<li>The current system recognizes <span style="display: inline;" class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64">Btrfs, </span>ext3, ext4, FAT, FAT32, HFS, HFS Plus, and NTFS formats. Any external disk not formatted to the types above will not be recognized and the status will be shown as <b>Not Supported</b>.</li>
+</ul>
+<li>I cannot access the <b>usbshare[number]</b> or <b>satashare[number]</b> shared folder. What should I do? </li>
+
+<ul>
+<li>This might result from a problem in the file system on your external disk. To fix it, please connect the external disk to a PC and perform a file system check.</li>
+</ul>
+<li>Can my external disk with ext3 or ext4 format be connected to my PC and Mac and accessed directly?</li>
+<ul>
+<li>No, ext3 or ext4 is only recognized by the DiskStation. If you would like to read data directly from your external disk with a PC and Mac, choose FAT32 format. </li>
+</ul>
+<li>Why do I see a folder named "lost+found" in my external disk?</li>
+<ul>
+<li>This is a system default folder that is created automatically when using ext3/ext4 file system. It is normal to see the folder on your external disk. Although administrators have the right to access and manage the content within, it is strongly recommended that you leave the folder untouched.</li>
+
+</ul>
+
+</ol>
+</div>
+<div class="section enable-eds14">
+<h4>Limitations</h4>
+
+<p>Disk formatting is not available in the following situations:</p>
+
+<ul>
+<li>The external disk is being initialized, i.e. when the external device has just been plugged in.</li>
+<li>The capacity of the external disk is less than 1 GB (ext3 or ext4 format).</li>
+<li>The external disk is being formatted.</li>
+<li>When the system is backing up files to the external disk.</li>
+<li>The external disk is damaged.</li>
+</ul>
+<h4>Troubleshooting</h4>
+<ol>
+<li>Failed to format the external disk. Why?</li>
+<ul>
+<li>Check if the external disk is properly inserted.</li>
+<li>Check if the external disk is write-protected. If yes, remove it before formatting. </li>
+</ul>
+<li>The file system of the external disk is shown as <b>Not Supported</b>, or the system does not create the <b>usbshare[number]</b> shared folder for the external disk. What should I do? </li>
+<ul>
+<li>The current system recognizes ext3, ext4, FAT, FAT32, HFS, HFS Plus, and NTFS formats. Any external disk not formatted to the types above will not be recognized and the status will be shown as <b>Not Supported</b>.</li>
+</ul>
+<li>I cannot access the <b>usbshare[number]</b> shared folder. What should I do? </li>
+
+<ul>
+<li>This might result from a problem in the file system on your external disk. To fix it, please connect the external disk to a PC and perform a file system check.</li>
+</ul>
+<li>Can my external disk with ext3 or ext4 format be connected to my PC and Mac and accessed directly?</li>
+<ul>
+<li>No, ext3 or ext4 is only recognized by the DiskStation. If you would like to read data directly from your external disk with a PC and Mac, choose FAT32 format. </li>
+</ul>
+<li>Why do I see a folder named "lost+found" in my external disk?</li>
+<ul>
+<li>This is a system default folder that is created automatically when using ext3/ext4 file system. It is normal to see the folder on your external disk. Although administrators have the right to access and manage the content within, it is strongly recommended that you leave the folder untouched.</li>
+
+</ul>
+
+</ol>
+</div>
+
+
+<h4>To set default permissions for all external devices:</h4>
+<p>You can set default permissions by clicking <strong>Default Permissions</strong> and specifying which users or groups can access, view, or modify external devices and their contents. When an external device is inserted to your DiskStation, the permissions you specified will be assigned to that external device automatically.</p>
+<p>In the permissions window, do the following to set default permissions:</p>
+<ol>
+<li>Select one of the following from the drop-down menu:</li>
+<ul>
+<li><b>System internal user:</b> Assign permissions for default system users, such as the Anonymous FTP/WebDAV user.</li>
+<li><b>Local users:</b> Assign permissions for local users (including <b>guest</b>).</li>
+<li><b>Local groups:</b> Assign permissions for local groups.</li>
+</ul>
+
+<li>Check or uncheck the appropriate boxes for each user or group to customize their access permissions for external devices:</li>
+  <ul>
+<li><b>Read/Write</b>: The user or group can access and make changes to the files and folders on the external devices.</li>
+<li><b>Read only</b>: The user or group can access the files and folders on the external devices.</li>
+<li><b>No access</b>: The user or group cannot access the files and folders on the external devices.</li>
+</ul>
+</ol>
+
+
+</body>
+</html>

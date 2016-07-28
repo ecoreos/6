@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Win/Mac/NFS</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Dom&iacute;nio</h2>
+<p>O seu DiskStation pode ingressar um dom&iacute;nio Windows. Depois de ingressar no dom&iacute;nio, os usu&aacute;rios de dom&iacute;nio podem fazer login no DiskStation usando sua conta e senha de dom&iacute;nio, que permitem acessar arquivos e usar os aplicativos de DSM sem precisar lembrar outro conjunto de nomes de usu&aacute;rio e senhas.</p>
+<h4>Para ingressar em um dom&iacute;nio:</h4>
+<ol>
+<li>V&aacute; para <strong>Painel de controle</strong> &gt; <strong>Servi&ccedil;o de diret&oacute;rio</strong> &gt; <strong>Dom&iacute;nio</strong>.</li>
+<li>Marque a caixa<strong>Ingressar dom&iacute;nio</strong>.</li>
+<li>Insira o nome de dom&iacute;nio e especifique o servidor DNS nos campos adequados.</li>
+<li>Se necess&aacute;rio, marque a caixa <b>Op&ccedil;&otilde;es avan&ccedil;adas de dom&iacute;nio</b>. (Consulte abaixo para obter detalhes.)</li>
+<li>Clique em <b>Aplicar</b>.</li>
+<li>Na janela pop-up, digite o nome do usu&aacute;rio e senha do administrador do servidor do dom&iacute;nio.</li>
+<li>Clique em <b>OK</b>.</li>
+</ol>
+<div class="section">
+<h4>DNS Server</h4>
+<p>Recomendamos que especifique um DNS server para ajudar DiskStation a pesquisar o dom&iacute;nio. No entanto, se o dom&iacute;nio n&atilde;o estiver registrado no servidor DNS, poder&aacute; ocorrer falha no procedimento de ingresso no dom&iacute;nio.</p>
+<h4>Tipo de servidor de dom&iacute;nio</h4>
+<p>Esse campo mostra o tipo de dom&iacute;nio quando o DiskStation ingressa em um dom&iacute;nio. O tipo de dom&iacute;nio ser&aacute; &quot;Dom&iacute;nio AD&quot;.</p>
+<h4>Modo de gerenciamento</h4>
+<p>Essa op&ccedil;&atilde;o determinar&aacute; como os privil&eacute;gios dos usu&aacute;rios e grupos do dom&iacute;nio ser&atilde;o gerenciados. </p>
+<ul>
+<li><b>Dom&iacute;nio confi&aacute;vel</b>: Voc&ecirc; pode gerenciar usu&aacute;rios e grupos no dom&iacute;nio ingressado, bem como dom&iacute;nios confi&aacute;veis. Os usu&aacute;rios e grupos podem ser filtrados com a lista suspensa de dom&iacute;nio.</li>
+<li><b>Dom&iacute;nio &uacute;nico com UO</b>: Somente usu&aacute;rios e grupos no dom&iacute;nio ingressado ser&atilde;o exibidos nesse modo. Esse modo permite filtrar usu&aacute;rios/grupos de dom&iacute;nio com a lista suspensa UO (unidade organizacional).</li>
+</ul>
+<h4>Op&ccedil;&otilde;es avan&ccedil;adas de dom&iacute;nio</h4>
+<p>Na maioria dos casos, n&atilde;o &eacute; necess&aacute;rio preencher nenhuma das op&ccedil;&otilde;es avan&ccedil;adas de dom&iacute;nio. As op&ccedil;&otilde;es avan&ccedil;adas de dom&iacute;nio s&atilde;o necess&aacute;rias apenas para ambientes de dom&iacute;nio espec&iacute;ficos. </p>
+<ul>
+<li><b>DC IP/FQDN</b>: Especifique um endere&ccedil;o IP de DC (Controlador de dom&iacute;nio) ou FQDN e o DiskStation tentar&aacute; comunicar-se com ele. Se houver mais de um endere&ccedil;o de IP ou FQDN, insira uma v&iacute;rgula (,) entre cada um. Se quiser, adicione um asterisco (*) depois do &uacute;ltimo endere&ccedil;o IP de DC ou FQDN, e o DiskStation tentar&aacute; comunicar-se com outro DC se houver erro em todos os especificados. Voc&ecirc; dever&aacute; adicionar uma v&iacute;rgula entre o asterisco e o &uacute;ltimo endere&ccedil;o IP ou FQDN.</li>
+<li><b>Nome de dom&iacute;nio NetBIOS</b>: Informe o nome NetBIOS do dom&iacute;nio.</li>
+<li><b>FQDN do dom&iacute;nio (nome DNS)</b>: Informe o FQDN (nome DNS) do dom&iacute;nio.</li>
+<li><b>Registrar interface DNS:</b> Ao ingressar num dom&iacute;nio, a NIC (Placa de interface de rede) especificada aqui ser&aacute; registrada no servidor DNS. Observe que, se o nome do host do DiskStation incluir um sublinhado (_), o registro falhar&aacute;, porque sublinhados (_) n&atilde;o podem ser usados com o DNS.</li>
+<li><b>Atualizar lista de usu&aacute;rios/grupos</b>: Especifique com que frequ&ecirc;ncia o DiskStation atualiza automaticamente a lista de usu&aacute;rios/grupos do dom&iacute;nio. Voc&ecirc; pode personalizar o per&iacute;odo para realizar as atualiza&ccedil;&otilde;es, diariamente, semanalmente ou mensalmente. Al&eacute;m disso, as listas de usu&aacute;rios/grupos de dom&iacute;nio podem ser atualizadas manualmente indo para a guia <strong>Usu&aacute;rio do dom&iacute;nio</strong> e clicando em <strong>Atualizar todos os dom&iacute;nios</strong>. Observe que as atualiza&ccedil;&otilde;es autom&aacute;ticas afetar&atilde;o a hiberna&ccedil;&atilde;o do sistema.</li>
+</ul>
+
+<h4>Ingresso do controlador de dom&iacute;nio de somente leitura</h4>
+<p>Para ingressar o dispositivo DiskStation a um controlador de dom&iacute;nio somente leitura (RODC), &eacute; necess&aacute;rio especificar o &quot;nome completo do computador&quot; (FQDN) do controlador de dom&iacute;nio de leitura e escrita (RWDC) no campo <strong>DC IP/FQDN</strong>. O nome completo do computador deve estar no seguinte formato: <strong>ComputerName.Domain</strong>, por exemplo, &quot;ad01.synology.com&quot;.</p>
+
+</div>
+
+
+<div class="section">
+<h4>Nota:</h4>
+<ul>
+<li>Se o nome de usu&aacute;rio do dom&iacute;nio inclui &quot;%&quot; e &quot;$&quot;, voc&ecirc; pode n&atilde;o conseguir acessar sua pasta base. Pe&ccedil;a que o administrador do dom&iacute;nio atribua a voc&ecirc; um novo nome de usu&aacute;rio.</li>
+<li>Grupos de dom&iacute;nio <strong>Domain Admins</strong> e <strong>Enterprise Admins</strong> ser&atilde;o adicionados automaticamente ao grupo local <strong>﻿Administrators</strong>. Portanto, os usu&aacute;rios do dom&iacute;nio desses grupos t&ecirc;m privil&eacute;gios de direito administrativo sobre o DiskStation, incluindo acesso aos servi&ccedil;os de arquivos como CIFS/FTP/AFP/WebDAV e outros aplicativos de DSM.</li>
+<li>Voc&ecirc; tamb&eacute;m pode configurar os privil&eacute;gios de acesso dos usu&aacute;rios do dom&iacute;nio &agrave;s pastas compartilhadas no DiskStation. Veja <a href="file_directory_service_user_group.html">aqui</a> para obter mais informa&ccedil;&otilde;es.</li>
+</ul>
+</div>
+
+
+
+<h3>Op&ccedil;&otilde;es de dom&iacute;nio</h3>
+<p>Esta se&ccedil;&atilde;o inclui as op&ccedil;&otilde;es adicionais de dom&iacute;nio abaixo.</p>
+<ul>
+<li><b>O DiskStation far&aacute; a sincroniza&ccedil;&atilde;o com um servidor NTP sempre que o usu&aacute;rio de um dom&iacute;nio fizer logon:</b> Ativar essa op&ccedil;&atilde;o for&ccedil;a a sincroniza&ccedil;&atilde;o do tempo entre o DiskStation e o servidor de NTP.</li>
+<li><b>Habilitar assinatura do servidor:</b> Se o cliente ativou a assinatura do cliente, assinatura do servidor tamb&eacute;m deve ser ativada no DiskStation, para que os usu&aacute;rios possam usar os servi&ccedil;os de dom&iacute;nio normalmente.</li>
+<li><b>Obter listas de usu&aacute;rios/grupos com o modo compat&iacute;vel ao NT4:</b> Ativar essa op&ccedil;&atilde;o permite que o sistema obtenha as listas de usu&aacute;rios/grupos usando o modo NT4 RPC. Essa op&ccedil;&atilde;o pode ser ativada se certas listas de usu&aacute;rios/grupos do dom&iacute;nio n&atilde;o puderem ser obtidas usando as configura&ccedil;&otilde;es padr&atilde;o.</li>
+<li><b> Desativar permiss&otilde;es de administrador para Administradores de Dom&iacute;nio e Administradores de Empresa:</b> Usu&aacute;rios com permiss&otilde;es de administrador podem ter controle total de seu DiskStation e seus arquivos. Habilitar essa op&ccedil;&atilde;o permite restringir as permiss&otilde;es de administradores de dom&iacute;nio e administradores de empresa para serem as mesmas dos usu&aacute;rios normais, herdando, portanto, todas as permiss&otilde;es de arquivos/pastas de usu&aacute;rios normais.</li>
+<li><strong>Enumerar os n&iacute;veis de grupo aninhados:</strong> Especificar o n&uacute;mero de membros de grupos de dom&iacute;nio aninhados que pode ser enumerado.</li>
+</ul>
+
+</body>
+</html>

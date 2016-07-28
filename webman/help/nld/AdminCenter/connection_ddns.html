@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>DDNS</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>DDNS</h2>
+<p>DDNS (Dynamic Domain Name Service) vereenvoudigt de verbinding met uw DiskStation via internet door een hostnaam aan het IP-adres toe te voegen. Bijvoorbeeld: DDNS geeft u toegang tot uw DiskStation met behulp van een domeinnaam (bijv. <i>www.john.synology.me</i>), zonder dat u het IP-adres moet onthouden (bijv. <i>172.16.254.1</i>).</p>
+
+<h3>DDNS instellen</h3>
+<p>U kunt een bestaande hostnaam toewijzen aan het IP-adres van uw DiskStation of een nieuwe van Synology of van andere DDNS-providers registreren. Neem contact op met de desbetreffende provider voor meer informatie over het registreren van een hostnaam.
+</p>
+
+
+
+<h4>Om een DDNS-hostnaam in te stellen:</h4>
+<ol>
+<li>Klik op de knop <b>Toevoegen</b>.</li>
+<li>Er verschijnt een dialoogvenster waarin u wordt verzocht om de volgende instellingen te bewerken:
+  <ul>
+<li><strong>Serviceprovider:</strong> selecteer een serviceprovider. Om een gratis hostnaam van Synology te registreren, selecteert u in het vervolgkeuzemenu <b>Synology</b>, klikt u op <b>Nu registreren</b> en voert u de verzochte gegevens in.</li>
+<li><strong>Hostnaam:</strong> voor een geregistreerde DDNS-hostnaam in, zoals <i>john.synology.me</i>.</li>
+<li><strong>Gebruikersnaam:</strong> voer de gebruikersnaam in van uw DDNS-provider.</li>
+<li><strong>Wachtwoord:</strong> voer het wachtwoord in van uw DDNS-provider.</li>
+<li><strong>Extern adres:</strong> voer het externe IP-adres in voor DiskStation die uw hostnaam zal gebruiken.</li>
+<li><strong>Heartbeat:</strong> schakel deze optie in om statusmeldingen te ontvangen van de toegewezen hostnaam (alleen voor de hostnamen van Synology).</li>
+</ul>
+</li>
+<li>Klik op <strong>Testverbinding</strong> om te controleren of de instellingen correct zijn.</li>
+<li>Klik op <strong>OK</strong> om op te slaan en te voltooien.</li>
+</ol>
+
+<p>Na het voltooien van de installatie, hebt u toegang tot uw DiskStation via internet door de DDNS-hostnaam in een webbrowser in te voeren.</p>
+<div class="section">
+<h4>Vereisten en beperkingen</h4>
+<ul> 
+<li>De servers van de DDNS-serviceprovider werken.</li>
+<li>De DiskStation maakt verbinding via internet.</li>
+<li>DDNS werkt alleen in een netwerkomgeving die geen proxy-server vereist.</li>
+<li>U kunt voor elke DDNS-provider slechts een hostnaam invoeren.</li>
+
+</ul>
+</div>
+
+<h3>Hostnamen beheren</h3>
+<p>Gebruik de volgende knoppen om bestaande hostnamen te beheren:</p>
+<ul>
+<li><strong>Verwijderen:</strong> verwijdert de geselecteerde hostnaam uit de lijst.</li>
+<li><strong>Bewerken:</strong> om instellingen van de geselecteerde hostnaam te wijzigen.</li>
+<li><strong>Nu bijwerken:</strong> werkt de status van alle hostnamen bij waarvoor de DDNS-service is ingeschakeld.</li></ul>
+
+<h3>Een aangepaste DDNS-provider instellen</h3>
+<p>Als uw provider niet in de lijst met serviceproviders verschijnt, kunt u een andere DDNS-provider toevoegen.</p>
+<h4>Om een andere DDNS-provider in te stellen:</h4>
+<ol>
+<li>Klik op <b>Aanpassen</b>.</li>
+<li>Er verschijnt een dialoogvenster waarin u wordt verzocht om de volgende instellingen in te voeren:
+<ul>
+    <li><strong>Serviceprovider:</strong> voer de naam in van uw aangepaste serviceprovider.</li>
+    <li><strong>Query-URL:</strong> voer de URL in van uw aangepaste serviceprovider.</li>
+  </ul>
+</li>
+<li>Klik op <strong>Opslaan</strong> om de aangepaste serviceprovider toe te voegen aan de lijst van DDNS-serviceproviders.</li>
+</ol>
+<div class="section">
+<h4>Vereisten en beperkingen</h4>
+<ul>
+  <li>De query-URL moet voldoen aan het protocol dat uw serviceprovider heeft opgegeven. Deze URL wordt gebruikt om de IP-gegevens op de DDNS-server van uw provider te updaten.</li>
+  <li>Over het algemeen bevat een query-URL de onderstaande vier parameters. vervang bij het invoeren van de query-URL de volgende parameters door de overeenkomstige variabele.</li>
+  <ul>
+    <li>Gebruikersnaam: __GEBRUIKERSNAAM__</li>
+    <li>Wachtwoord: __WACHTWOORD__</li>
+    <li>Hostnaam: __HOSTNAAM__</li>
+    <li>Extern adres: __MIJNIP__</li>
+  </ul>
+<li>De query-URL mag geen spaties of puntkomma's bevatten.</li>
+</ul>
+</div>
+</body>
+</html>

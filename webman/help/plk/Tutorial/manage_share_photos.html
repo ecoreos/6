@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+<meta content="en-us" http-equiv="Content-Language" />
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+<title>Tworzenie album&oacute;w w celu zarządzania i przeglądania zdjęć w aplikacji Photo Station</title>
+</head>
+
+<body class="tutorial-content-box" >
+
+<h1>Tworzenie album&oacute;w w celu zarządzania i przeglądania zdjęć w aplikacji Photo Station</h1>
+<div class="tutorials_content">
+
+<img src="../../images/ManagePhotos/1x/manage_share_photos/Create_Albums_to_Manage_and_Browse_Photos_with_Photo_Station.jpg"/>
+
+<h2>Przegląd</h2>
+<p>Photo Station to aplikacja internetowa, kt&oacute;ra pomaga organizować i wyświetlać przez Internet zdjęcia zapisane na serwerze NAS Synology. Dzięki wyszukanemu i przyjaznemu dla użytkownika interfejsowi, aplikacja Photo Station umożliwia przesyłanie, przeglądanie, zarządzanie i udostępnianie album&oacute;w ze zdjęciami za pomocą kilku prostych kliknięć.</p>
+
+<h3 class="list_head">1. Instalacja pakietu Photo&nbsp;Station</h3>
+<p>Aby zainstalować pakiet Photo Station, przejdź do pozycji <b>Centrum pakiet&oacute;w</b>, odszukaj pakiet <b>Photo Station</b>, a następnie kliknij przycisk <b>Zainstaluj</b>.</p>
+
+<img src="../../images/ManagePhotos/1x/manage_share_photos/1.png" border="1"/>
+
+<h3 class="list_head">2. Przesyłanie zdjęć</h3>
+<p>Zanim będzie można przeglądać zdjęcia i zarządzać nimi w aplikacji Photo Station, należy utworzyć albumy i przesłać zdjęcia za pomocą jednej z poniższych metod.</p>
+
+<h4>2.1 Przesyłanie zdjęć za pomocą aplikacji Photo Station Uploader (dla systemu Windows i Mac)</h4>
+<p>Zalecamy użycie aplikacji Photo Station Uploader, ponieważ w procesie przesyłania zostaną wygenerowane miniatury każdego zdjęcia. Przesyłanie plik&oacute;w za pomocą aplikacji Photo Station Uploader pozwala wykorzystać moc obliczeniową komputera do przyspieszenia kompresji.</p>
+<ol>
+<li>Pobierz i zainstaluj aplikację <b>Photo Station Uploader</b> (dostępna w <a href="https://www.synology.com/support/download/DS713+" target="_blank">Centrum pobierania firmy Synology</a>).</li>
+<li>Na komputerze kliknij prawym przyciskiem myszy dowolne zdjęcie, kt&oacute;re chcesz przesłać, a następnie wybierz pozycję <b>Prześlij do Photo Station</b> &gt; <b>Utw&oacute;rz nowy profil</b>, aby otworzyć kreatora.</li>
+<li>Wprowadź wybraną nazwę oraz nazwę serwera/adres IP docelowego serwera NAS Synology w nowym profilu.</li>
+
+<img src="../../images/ManagePhotos/1x/manage_share_photos/2.png" border="1"/>
+
+<div class="code_div">
+<b>Uwaga:</b>
+<p>Podane informacje na temat serwera i poświadczeń użytkownika zostaną zapisane w tym profilu na przyszłość. Można skonfigurować kilka profili, stosownie do reguł lub miejsc docelowych. Zamiast ponownie wypełniać informacje na temat serwera podczas korzystania z aplikacji Photo Station Uploader, można wybrać istniejący profil i użyj jego skonfigurowanej wcześniej konfiguracji, aby przesłać zdjęcia do tego samego miejsca docelowego.</p>
+</div>
+
+<li>Wybierz, czy chcesz przesłać pliki do aplikacji Photo Station, czy do osobistej aplikacji Photo Station.</li>
+
+<li>Wprowadź poświadczenia użytkownika dla docelowego serwera NAS Synology.</li>
+
+<li>Kliknij <b>Przeglądaj</b>, aby wybrać folder docelowy lub utworzyć podfolder we wsp&oacute;łdzielonym folderze <b>photo</b>.</li>
+
+<img src="../../images/ManagePhotos/1x/manage_share_photos/3.png" border="1"/>
+
+<li>Po zakończeniu przesyłania można uruchomić aplikację Photo Station na serwerze NAS Synology, aby wyświetlić przesłane pliki w r&oacute;żnych trybach lub edytować inne informacje, takie jak właściwości albumu i uprawnienia dostępu.</li>
+</ol>
+
+
+<h4>2.2 Tworzenie album&oacute;w i przesyłanie zdjęć za pośrednictwem aplikacji Photo Station</h4>
+<p>Uruchom aplikację <b>Photo Station</b> i kliknij <b>Dodaj</b>, aby utworzyć nowy album lub przesłać zdjęcia z komputera lub serwera NAS Synology do istniejących album&oacute;w.</p>
+
+<img src="../../images/ManagePhotos/1x/manage_share_photos/4.png" border="1"/>
+
+<div class="code_div">
+<b>Uwaga:</b>
+<p>Jeśli użytkownik woli przesyłać zdjęcia za pośrednictwem interfejsu aplikacji Photo Station, zalecane jest włączenie usługi QuickConnect. Usługa QuickConnect pozwala na dostęp do serwera NAS Synology i aplikacji Photo Station w domu lub poza nim, z dowolnego miejsca sieci Internet, za pomocą niestandardowego identyfikatora, a przy tym bez konieczności wprowadzania skomplikowanych konfiguracji sieciowych, takich jak reguły przekierowania port&oacute;w. Więcej informacji na temat usługi QuickConnect można uzyskać w <a class="launch-app" href="cloud_set_up_quickconnect.html">tym samouczku</a>.</p>
+</div>
+
+<h3 class="list_head">3. Udostępnianie zdjęć</h3>
+<p>Dzięki funkcji udostępniania można z łatwością udostępnić zdjęcia zapisane w aplikacji Photo Station przyjaciołom lub przesłać zdjęcia do popularnych sieci społecznościowych, takich jak Facebook, Picasa i Flickr.</p>
+
+<h4>3.1 Publiczne udostępnianie zdjęć</h4>
+<ol>
+<li>Przejdź do albumu i wybierz zdjęcia, kt&oacute;re chcesz udostępnić.</li>
+<li>Kliknij <b>Udostępnij</b> &gt; <b>Udostępnij publicznie</b>, aby uzyskać łącze.</li>
+<ul>
+<li>Jeśli wybrano tylko jedno zdjęcie do udostępnienia, zdjęcie zostanie dodane do udostępnionej kolekcji o nazwie <b>Udostępnione zdjęcia</b>. Można tam zarządzać wszystkimi zdjęciami, kt&oacute;re zostały udostępnione pojedynczo.</li>
+<li>Jeśli wybrano wiele zdjęć do udostępnienia, zostaną one umieszczone w nowym udostępnionym albumie.</li>
+</ul>
+<li>Ewentualnie można r&oacute;wnież kliknąć pozycję <b>Udostępnij</b> &gt; <b>Dodaj do udostępnionego albumu</b>, aby dodać wybrane zdjęcia do istniejącego udostępnionego albumu (jeśli ma to zastosowanie).</li>
+<img src="../../images/ManagePhotos/1x/manage_share_photos/5.png" border="1"/>
+<li>Wprowadź nazwę nowego udostępnionego albumu i określ jego okres ważności, jeśli jest to konieczne.</li>
+<li>Skopiuj i wklej łącze w wiadomości e-mail, komunikatorze i na stronach internetowych, aby udostępnić wszystkim wybrane zdjęcia.</li>
+</ol>
+
+<div class="code_div">
+<b>Uwaga:</b>
+<ul>
+<li>Wszystkie udostępnione zdjęcia są dostępne publicznie dla każdej osoby posiadającej łącze.</li>
+<li>Można określić, kt&oacute;rzy użytkownicy mają uprawnienia do publicznego udostępniania pozycji w aplikacji Photo Station za pomocą opcji <b>Ustawienia</b> &gt; <b>Udostępnianie</b>.</li>
+</ul>
+</div>
+
+<h4>3.2 Udostępnianie zdjęć w sieciach społecznościowych</h4>
+<ol>
+<li>Wybierz zdjęcia, kt&oacute;re chcesz przesłać, a następnie wybierz pozycję <b>Udostępnij</b> &gt; <b>Prześlij do [witryn serwis&oacute;w społecznościowych]</b>.</li>
+
+<img src="../../images/ManagePhotos/1x/manage_share_photos/6.png" border="1"/>
+
+<li>W wyświetlonym oknie kliknij <b>Połącz z [witrynami serwis&oacute;w społecznościowych]</b>, a następnie dokonaj uwierzytelnienia na koncie serwisu społecznościowego. Można wybrać przesłanie zdjęć do nowego lub istniejącego albumu.</li>
+</ol>
+
+<h3 class="list_head">4. Organizowanie i oglądanie zdjęć na urządzeniach mobilnych</h3>
+<p>Aby połączyć się z aplikacją Photo Station lub przesłać zdjęcia za pomocą urządzeń mobilnych, można zainstalować aplikację <b>DS photo+</b> na urządzeniach mobilnych, korzystając z poniższych kod&oacute;w QR.</p>
+
+<img src="../../images/ManagePhotos/1x/manage_share_photos/7.png"/>
+
+
+</div>
+
+</body>
+</html>

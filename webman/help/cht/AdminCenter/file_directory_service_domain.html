@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Win/Mac/NFS</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>網域</h2>
+<p>您的 DiskStation 可加入 Windows 網域。加入之後，網域使用者便可使用其網域帳號及密碼登入 DiskStation，無須再記住另外一組帳號密碼來存取檔案及使用 DSM 應用程式。</p>
+<h4>若要加入網域：</h4>
+<ol>
+<li>前往<strong>控制台</strong> &gt; <strong>目錄服務</strong> &gt; <strong>網域</strong>。</li>
+<li>勾選<strong>加入網域</strong>。</li>
+<li>在對應的欄位輸入網域名稱並指定 DNS 伺服器。</li>
+<li>如有需要，請勾選<b>進階網域選項</b>。(請參閱下方來瞭解更多資訊。)</li>
+<li>按一下<b>套用</b>。</li>
+<li>在跳出的視窗中輸入該網域伺服器的系統管理者帳號及密碼。</li>
+<li>按一下<b>確定</b>。</li>
+</ol>
+<div class="section">
+<h4>DNS Server</h4>
+<p>建議您指定 DNS 伺服器讓 DiskStation 更容易搜尋網域。但是如果網域並沒有在 DNS 伺服器上註冊，加入網域的程序可能會失敗。</p>
+<h4>網域伺服器類型</h4>
+<p>此欄位會顯示 DiskStation 加入網域時的網域類型。網域類型是「AD 網域」。</p>
+<h4>管理模式</h4>
+<p>此選項用來決定網域使用者和網域群組的管理方式。</p>
+<ul>
+<li><b>受信任的網域</b>：您可管理加入的網域或是受信任的網域中的使用者及群組。您可用網域下拉式選單以篩選使用者及群組。</li>
+<li><b>依組織單位管理的單一網域</b>：這模式只顯示屬於加入的網域的使用者及群組。您並可用組織單位下拉式選單以篩選網域使用者及群組。</li>
+</ul>
+<h4>進階網域選項</h4>
+<p>在大多數的情形下，您不需要填寫進階網域選項。只有在特殊網域環境之下才須填寫。</p>
+<ul>
+<li><b>DC IP/FQDN</b>：DiskStation 會嘗試和您指定的 DC (網域控制站) IP 位址或 FQDN 溝通。如果您想要輸入多個 IP 位址或 FQDN，請使用半形逗號 (,) 隔開。您可以在最後一個 DC IP 位址或 FQDN 的後面加上星號 (*)，DiskStation 將會在與您指定的 DC 溝通失敗後，嘗試和其它的 DC 溝通。最後一個 IP 位址或 FQDN 與星號之間也必須加上逗號。</li>
+<li><b>網域的 NetBIOS 名稱</b>：指定網域的 NetBIOS 名稱。</li>
+<li><b>網域的 FQDN DNS 名稱</b>：指定網域的 FQDN DNS 名稱。</li>
+<li><b>註冊 DNS 介面：</b>加入網域之後，此處指定的 NIC (網路介面卡) 便會註冊至 DNS 伺服器。請注意，由於 DNS 無法使用底線 (_)，因此如果 DiskStation 的主機名稱包含底線 (_)，則註冊會失敗。</li>
+<li><b>更新使用者/群組清單</b>：指定 DiskStation 自動更新網域使用者及群組清單的頻率。您可以自訂時間於每天、每週或每月進行更新。此外，您也可以前往<strong>網域使用者</strong>頁籤並按一下<strong>更新全部網域</strong>，來手動更新網域使用者及群組清單。請注意自動更新會影響系統休眠狀態。</li>
+</ul>
+
+<h4>加入唯讀網域控制站</h4>
+<p>若要將 DiskStation 加入至唯讀網域控制站 (RODC)，您需在 <strong>DC IP/FQDN</strong> 欄位填入讀寫網域控制站 (RWDC) 的「完整電腦名稱」(FQDN)。完整電腦名稱必須為以下格式：<strong>電腦名稱.網域</strong>，例如「ad01.synology.com」。</p>
+
+</div>
+
+
+<div class="section">
+<h4>注意：</h4>
+<ul>
+<li>如果您的網域使用者名稱包含「%」或「$」，則將無法存取您的家目錄。請向網域管理員要求一個新的使用者名稱。</li>
+<li>網域群組 <strong>Domain Admins</strong> 及 <strong>Enterprise Admins</strong> 將會自動加到本地的 <strong>Administrators</strong> 群組。因此，這些群組的網域使用者都會擁有 DiskStation 的管理權限，包含存取 CIFS/FTP/AFP/WebDAV 等檔案服務及其他 DSM 應用程式。</li>
+<li>您也可以設定網域使用者對 DiskStation 共用資料夾的存取權限。請參閱<a href="file_directory_service_user_group.html">此處</a>來獲得更多資訊。</li>
+</ul>
+</div>
+
+
+
+<h3>網域選項</h3>
+<p>本區塊包含以下額外的網域選項。</p>
+<ul>
+<li><b>網域使用者登入時，使 DiskStation 與 NTP 伺服器對時：</b>啟動此選項會強制 DiskStation 和 NTP 伺服器進行時間同步。</li>
+<li><b>啟動伺服器簽章：</b>如果用戶端已啟動用戶端簽章，伺服器簽章也必須在 DiskStation 啟動，這樣使用者才能正常使用網域服務。</li>
+<li><b>以 NT4 相容模式取得使用者 / 群組清單：</b>啟動此選項可讓系統使用 NT4 RPC 模式取得使用者及群組清單。您可以在某些網域使用者及群組清單無法透過預設設定取得的狀況下啟動此選項。</li>
+<li><b> 停用 Domain Admins 及 Enterprise Admins 的管理者權限</b>：擁有管理者權限的使用者對於 DiskStation 及所有檔案擁有完整掌控的權限。啟動此選項可讓您限制 Domain Admins 及 Enterprise Admins 的權限，使其權限和一般使用者相同，擁有一般使用者存取檔案 / 資料夾的權限。</li>
+<li><strong>列舉巢狀群組的層級數：</strong>指定可以列舉巢狀網域群組成員的數目。</li>
+</ul>
+
+</body>
+</html>

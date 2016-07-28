@@ -1,0 +1,44 @@
+﻿ <!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+
+<title>Depuración de RAID - Ayuda de Synology DSM</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="Data scrubbing is a data maintenance feature that inspects volumes or disk groups and repairs any detected data inconsistencies.">
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Depuración de RAID*</h2>
+<p>La depuración de RAID es una función de mantenimiento de datos que inspecciona volúmenes o grupos de discos y repara cualquier inconsistencia que detecte en los datos. esta función se puede usar con volúmenes o grupos de discos que implementen SHR (compuestos por tres o más discos), RAID 5 o RAID 6. </p>
+
+<p>Le recomendamos que realice regularmente una depuración de RAID para mantener la consistencia de los datos y evitar perder cualquier dato crítico en el caso de que falle una unidad de disco duro.</p>
+
+<h4>Para realizar una depuración de RAID:</h4>
+
+<ol>
+<li>Abra <strong>Administrador de almacenamiento</strong>.</li>
+<li>Vaya a <strong>Volumen</strong> o <strong>Grupo de discos</strong>.</li>
+<li>Seleccione el volumen o grupo de discos en el que desea realizar una depuración de RAID.</li>
+<li>Haga clic en <strong>Administrar</strong>.</li>
+<li>Seleccione <strong>Depuración de RAID</strong>.</li>
+</ol>
+
+<div class="section">
+<h4>Nota:</h4>
+<ul>
+<li>La depuración de RAID solo se puede realizar cuando el estado del volumen o grupo de discos sea <strong>Normal</strong>.</li>
+<li>No apague el sistema hasta que finalice la depuración de RAID. Si el sistema se apaga antes de que finalice el proceso, se debe volver a iniciar la depuración de RAID desde el principio.</li>
+</ul></div>
+
+<p>____<br />*Solo disponible en ciertos modelos.</p>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+ <head>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>High Availability</title>
+
+
+ </head>
+ <body>
+<h2>Lagringsstatus</h2>
+	<p>Denne siden gir deg detaljer om statusen til lagringsvolum og iSCSI LUN (blokknivå) på den aktive og den passive serveren i high-availability-skyen.</p>
+    <p>Siden kapasiteten og konfigurasjonene til de korresponderende volumene og iSCSI LUN (blokknivå) på den aktive og den passive serveren må være identiske, vises volumene og iSCSI LUN (blokknivå) på de to serverne sammen som enkle enheter. Derfor, hvis du ønsker å vise statusen til volum og iSCSI LUN (blokknivå) på både den aktive og passive serveren, må du gå til siden <b>Lagringsstatus</b> [når du åpner en high-availability-sky, er kun volum og iSCSI LUN (blokknivå) på den aktive serveren tilgjengelige i <b>Lagringshåndtering</b>].</p>
+
+    <p>Denne siden inneholder følgende informasjon:</p>
+		<ul>
+			<li><b>Navn:</b> Viser navnene på volum og iSCSI LUN (blokknivå).</li>
+			<li><b>Brukt:</b> Viser prosenten av brukt kapasitet på volum og iSCSI LUN (blokknivå).</li>
+			<li><b>Brukt/Total størrelse:</b>  Viser totalprosent og prosenten av brukt kapasitet på volum og iSCSI LUN (blokknivå).</li>
+            <li><b>Status:</b> Viser statusen til volum, iSCSI LUN-er (blokknivå) og SSD-hurtigbuffere.</li>
+            <li><b>Beskrivelse:</b> Viser beskrivelser av feil eller annen informasjon vedrørende volumet, iSCSI LUN-en (blokknivå) og SSD-hurtigbufferen.</li>
+		</ul>
+<h4>Slik reparerer du et sviktende volum eller iSCSI LUN (blokknivå):</h4>
+	<ul>
+		<li>Hvis en harddisk eller en av serverne har brutt sammen, kan du gå til siden <a href="disk.html">Diskstatus</a> for å finne ut hvilken harddisk som har brutt sammen og må erstattes. I dette tilfellet gjør du følgende:
+        	<ol>
+            	<li>Erstatt den sammenbrutte disken (for trinnene for harddiskinstallasjon, se <i>Installasjonsveiledning</i> for ditt Synology-produkt).</li>
+                <li>Gå til siden <b>Lagringsstatus</b> og klikk på <b>Reparer</b>.</li>
+            </ol>
+        </li>
+        <li>Hvis den passive serveren er frakoblet, vil statusen til volumer og iSCSI LUN (blokknivå) indikere at en feil har oppstått, og ingen av diskene på den passive serveren vil vises på siden Diskstatus. I dette tilfellet kan du prøve å løse problemet ved å gjøre følgende:
+        	<ol>
+            	<li>Forsikre deg om at den passive serveren er slått på.</li>
+                <li>Kontroller alle strømforsyninger.</li>
+                <li>Undersøk alle tilkoblinger.</li>
+            </ol>
+        </li>
+        <li>Hvis en filsystemfeil oppstår på et volum eller iSCSI LUN (blokknivå) på en av serverne, gjør du følgende:
+        	<ul>
+            	<li>Gå til siden <b>Lagringsstatus</b>.</li>
+                <li>Klikk på <b>Reparer</b>.</li>
+            </ul>
+        </li>
+	</ul>
+
+<p><span class="note_head">Merk:</span>  Grensen for volum og iSCSI LUN (blokknivå) i en high-availability-sky er 64.</p>
+
+ </body>
+</html>

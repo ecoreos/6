@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+	<h2>HDD/SSD</h2>
+	<p>Essa se&ccedil;&atilde;o permite que voc&ecirc; monitore o status do HDD/SSD instalado no seu DiskStation, fornecendo op&ccedil;&otilde;es para gerenciar e analisar a integridade e o desempenho dos HDD/SSD. V&aacute; para <strong>Gerenciador de Armazenamento</strong> &gt; <strong>HDD / SSD</strong> para gerenciar essas op&ccedil;&otilde;es.</p>
+	<h4>Para verificar as informa&ccedil;&otilde;es do HDD/SSD:</h4>
+	<ol>
+		<li>V&aacute; para a aba <b>HDD/SSD</b>.</li>
+		<li>Selecione uma unidade na lista e a expanda. Aqui voc&ecirc; ver&aacute; o status do S.M.A.R.T., informa&ccedil;&otilde;es do volume, nome do modelo, n&uacute;mero de s&eacute;rie, vers&atilde;o do firmware e temperatura.</li>
+	</ol>	
+	
+	<h4>Para verificar as informa&ccedil;&otilde;es de integridade:</h4>
+    <ol>
+      <li>V&aacute; para a aba <b>HDD/SSD</b>.</li>
+	  <li>Selecione uma unidade.</li>
+      <li>Clique em <b>Informa&ccedil;&otilde;es de Integridade</b>.</li>
+	  <li>V&aacute; para a guia <strong>Vis&atilde;o geral</strong>. Aqui voc&ecirc; vai descobrir quantas horas a unidade ficou ligada, a temperatura atual, a contagem de reconex&atilde;o/reidentifica&ccedil;&atilde;o, contagem de setores ruins e o estado S.M.A.R.T. geral.</li>
+      <li>V&aacute; para a guia <strong>Informa&ccedil;&otilde;es S.M.A.R.T.</strong>. Os n&uacute;meros listados podem ajud&aacute;-lo a diagnosticar melhor o status de sua unidade.</li>
+    </ol>
+<div class="section">
+<h4>Nota:</h4>
+<p>
+   As unidades SAS n&atilde;o suportam informa&ccedil;&otilde;es S.M.A.R.T.
+</p>
+</div>
+	<h4>Para iniciar um teste S.M.A.R.T.:</h4>
+	<P>O teste S.M.A.R.T. ir&aacute; ajudar a examinar e relatar o status das unidades, alertando-o sobre poss&iacute;veis falhas na unidade. Recomendamos a troca imediata das unidades em caso de detec&ccedil;&atilde;o de algum erro. </P>
+    <ol>
+      <li>V&aacute; para a aba <strong>HDD/SSD</strong>.</li>
+      <li>Selecione uma unidade.</li>
+      <li>Clique em <b>Teste S.M.A.R.T.</b></li>
+      <li>Selecione o tipo de teste e clique em <strong>Iniciar</strong> para come&ccedil;ar o teste.</li>
+      <li>Os resultados de teste mais recentes s&atilde;o exibidos na se&ccedil;&atilde;o <b>Resultado do Teste</b>.</li>
+    </ol>
+    <div class="section">
+<h4>Nota:</h4>
+    <p>O tempo de teste varia de acordo com o ambiente do sistema.</p>
+</div>
+    <h4>Para agendar testes S.M.A.R.T.:</h4>
+    <p>Os testes S.M.A.R.T. podem ser agendados para serem executados automaticamente criando tarefas.</p>
+    <ol>
+      <li>V&aacute; para a aba <strong>Programador de Testes</strong>.</li>
+      <li>Clique em <strong>Criar</strong> para configurar uma nova tarefa.</li>
+      <li>Modifique as seguintes configura&ccedil;&otilde;es da guia <strong>Geral</strong>:</li>
+      <ul>
+        <li><strong>Tarefa:</strong> Digite um nome para a tarefa.</li>
+        <li><strong>Tipo de teste S.M.A.R.T.:</strong> Selecione para realizar um teste r&aacute;pido ou estendido.</li>
+        <li><strong>Faixa do teste S.M.A.R.T.:</strong> Selecione quais HDD/SSD testar cada vez que o teste S.M.A.R.T. for realizado.</li>
+      </ul>
+      <li>Na guia <strong>Agendamento</strong>, modifique as seguintes configura&ccedil;&otilde;es:</li>
+      <ul>
+        <li><strong>Data:</strong> Especifique quando realizar o teste S.M.A.R.T. Os testes S.M.A.R.T. podem ser agendados para serem executados em certos dias da semana (ex.: diariamente, finais de semana ou todo domingo, etc.) ou em datas espec&iacute;ficas (ex.: 21/10/2015).</li>
+        <li><strong>Vezes:</strong> Especifique quantas vezes o teste S.M.A.R.T. &eacute; realizado bem como a primeira e a &uacute;ltima vez a cada dia.</li>
+      </ul>
+      <li>Clique em <strong>OK</strong> para concluir.</li>
+    </ol>
+<h4>Para executar Secure Erase:</h4>
+<ol>
+<li>V&aacute; para a aba <b>HDD/SSD</b>.</li>
+<li>Selecione uma unidade e clique em <b>Secure Erase</b>.</li>
+</ol>
+<div class="section">
+<h4>Nota:</h4>
+<ul>
+<li>O Secure Erase n&atilde;o pode ser executado em discos em unidades de expans&atilde;o.</li>
+<li>O Secure Erase ir&aacute; excluir permanentemente todos os dados armazenados em seu disco. Verifique se a unidade escolhida n&atilde;o est&aacute; em uso ou se foi feito backup dos dados antes de fazer isso.</li>
+<li>Quando o sistema estiver executando o Secure Erase, a unidade escolhida ser&aacute; temporariamente bloqueada e depois desbloqueada automaticamente quando a opera&ccedil;&atilde;o for conclu&iacute;da.</li>
+<li>Se o Secure Erase for interrompido indevidamente durante a opera&ccedil;&atilde;o, voc&ecirc; poder&aacute; executar novamente o Secure Erase diretamente na interface do usu&aacute;rio. Se as unidades forem removidas ou utilizadas em outros lugares quando elas ainda estiverem sendo bloqueadas, digite a senha &quot;Synology&quot; para desbloquear as unidades.</li>
+</ul>
+</div>
+	<h3>Habilita&ccedil;&atilde;o do Suporte &agrave; Grava&ccedil;&atilde;o de Cache para HDD</h3>
+	<p>Habilitar o suporte do cache de grava&ccedil;&atilde;o aprimora o desempenho do seu DiskStation. Apenas alguns modelos de HDD suportam esse recurso. Para garantir a prote&ccedil;&atilde;o de dados durante o uso do suporte do cache de grava&ccedil;&atilde;o, recomendamos enfaticamente o uso de um dispositivo no-break. Tamb&eacute;m sugerimos que o sistema seja sempre desligado adequadamente ap&oacute;s cada uso. A desabilita&ccedil;&atilde;o do cache de grava&ccedil;&atilde;o reduzir&aacute; a possibilidade de perda de dados causada pelos cortes anormais de energia, mas o desempenho do sistema diminuir&aacute;.</p>
+	<h4>Para habilitar o suporte &agrave; grava&ccedil;&atilde;o de cache: </h4>
+	<ol>
+		<li>V&aacute; para a guia <b>Gerenciamento de Cache</b>.</li>
+		<li>Marque <b>Habilitar cache de grava&ccedil;&atilde;o</b>. Por padr&atilde;o, essa fun&ccedil;&atilde;o &eacute; habilitada.</li>
+		<li>Clique em <b>Aplicar</b>.</li>
+	</ol>
+	
+ 
+</body>
+</html>

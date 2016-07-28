@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+	<h2>Hot Spare</h2>
+	<p>Hot spare disks are standby hard disks that can repair a degraded RAID Group by automatically replacing a failed disk. Hot spare disks can be globally assigned to repair any RAID Group within your DiskStation. A hot spare disk can only repair a RAID Group that meets the following criteria:
+</p>
+	<ul>
+  <li>The RAID type of the RAID Group must be one with data protection (i.e. RAID 1, RAID 5, RAID 6, RAID 10).</li>
+		<li>The hard drive type of the hot spare disk must be the same  as the RAID Group member disks (i.e. SATA, SAS).</li>
+		<li>The hot spare disk size must be equal to or larger than the size of the smallest disk in the RAID Group.</li>
+	</ul>
+
+	<h4>To manage hot spare disks:</h4>
+	<ol>
+		<li>Click <b>Manage</b>.</li>
+		<li>To assign a hot spare disk, find the section <b>Available Disks</b> on the right side, and tick the box next to the disk you wish to assign as a hot spare. To remove a hot spare disk, leave the same box. Click
+      <b>Apply</b> to save settings.</li>
+	</ol>
+	<p>
+<div class="section">
+<h4>Note:</h4> 
+<ul>
+<li>When a hot spare disk repairs a degraded RAID Group, all data on the hot spare disk will be erased. Before assigning a hot spare disk, make sure the disk has no important data on it.</li>
+<li>A RAID assembled by HDDs will not be automatically repaired by SSD hot spare disks, and vice versa.</li>
+</ul>
+</div>
+
+<h4>To configure hot spare settings for RAID Group:</h4>
+<ol>
+<li>Click <b>Configure</b>.</li>
+<li>In the <b>Hot Spare Targets</b> tab, RAID Groups that can be protected by hot spare disks will be listed. If you uncheck the boxes, the corresponding RAID Groups will not be automatically repaired by hot spare disks when degareded.</li>
+<li>In the <b>Cross-device Hot Spare</b> tab, you can allow hot spare disks on one device to repair a degraded RAID located on a different device.</li>
+<li>Click <b>OK</b> to save the settings.</li>
+</ol>
+
+</body>
+</html>

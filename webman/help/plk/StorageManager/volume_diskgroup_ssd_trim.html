@@ -1,0 +1,45 @@
+ <!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>SSD TRIM — Pomoc Synology DSM</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="SSD TRIM improves the read and write performance of volumes created on SSDs, increasing efficiency as well as extending the lifetime of your SSDs.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>SSD TRIM</h2>
+<p>Jeżeli wolumen składa się wyłącznie z dysków SSD, zalecamy włączenie funkcji SSD TRIM. Funkcja ta zwiększa szybkość odczytu i zapisu wolumenów utworzonych na dyskach SSD, poprawiając wydajność i wydłużając okres eksploatacji dysków SSD.</p>
+<h4>Aby włączyć funkcję SSD TRIM:</h4>
+<ol>
+  <li>Otwórz <strong>Zarządzanie przechowywaniem</strong> i przejdź do pozycji <strong>Wolumen</strong>. </li>
+  <li>Wybierz wolumen składający się wyłącznie z dysków SSD, a następnie kliknij przycisk <b>Konfiguruj</b>.</li>
+  <li>W wyświetlonym oknie przejdź do karty <b>SSD TRIM</b> i zaznacz pole wyboru <strong>Włącz TRIM</strong>.</li>
+  <li>Kliknij przycisk <strong>Ustaw harmonogram</strong>, aby wybrać, kiedy system ma dokonać operacji SSD TRIM.</li>
+  <li>Kliknij przycisk <strong>OK</strong>.</li>
+</ol>
+<div class="section">
+  <h4>Uwaga:</h4>
+  <ul>
+    <li>Funkcja SSD TRIM jest dostępna tylko w niektórych modelach serwera DiskStation i typach RAID. </li>
+    <li>Niektóre modele dysków SSD nie umożliwiają wykonywania operacji SSD TRIM na wolumenach RAID 5 i RAID 6. Sprawdź listę kompatybilności pod adresem <a href="http://www.synology.com/" target=_blank>www.synology.com</a>.</li>
+    <li>Funkcji SSD TRIM nie można włączyć w następujących sytuacjach:
+      <ul>
+        <li>Wolumen jest zamontowany z pamięcią podręczną SSD.</li>
+        <li>Jest zainstalowany pakiet <strong>Time Backup</strong>.</li>
+        <li>Utworzono klaster high-availability przy użyciu <strong>Menedżera High Availability</strong>.</li>
+      </ul>
+    </li>
+    <li>Funkcji SSD TRIM nie można włączyć w przypadku jednostek iSCSI LUN na poziomie bloku.</li>
+    <li>Podczas wykonywania funkcji SSD TRIM pogarsza się wydajność systemu. Czas wykonywania funkcji TRIM zależy od rozmiaru wolumenu i modelu dysku SSD.</li>
+    <li>Funkcja TRIM włączona na jednym wolumenie zostanie także włączona na innych wolumenach utworzonych w tej samej grupie dysków lub grupie RAID Group.</li>
+  </ul>
+</div>
+</body>
+</html>

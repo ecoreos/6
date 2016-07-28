@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Upozornění</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>SMS</h2>
+<p class="disable-eds14">Povolením upozornění SMS zprávami na zařízení DiskStation můžete přijímat upozornění v případě změny stavu nebo chyb systému, jako např. ztráta připojení, změna činnosti ventilátoru, výpadek napájení, nedostatečná kapacita úložiště, selhání zálohování a obnovení atd.</p>
+
+<p class="enable-eds14">Povolením upozornění pomocí SMS zpráv na zařízení DiskStation můžete přijímat upozornění přes SMS zprávy v případě změny stavu nebo chyb systému, jako je např. ztráta připojení, výpadek napájení, nedostatečná kapacita úložiště nebo selhání zálohování a obnovení atd.</p>
+
+
+<h4>Postup povolení upozornění SMS zprávami:</h4>
+<p>Zaškrtněte možnost <b>Povolit upozornění zprávami SMS</b> a proveďte následující nastavení:</p>
+<ol>
+<li>Vyberte poskytovatele služeb SMS ze seznamu <b>Poskytovatel služeb SMS</b>. Výchozím poskytovatelem služeb je clickatell.</li>
+<li>Kliknutím na možnost <b>Přidat poskytovatele služeb SMS</b> můžete vytvořit nového poskytovatele služeb SMS, nebo kliknutím na možnost <b>Odstranit</b> můžete vybraného poskytovatele služeb SMS odstranit.</li>
+<li>Do pole <b>Uživatelské jméno</b> zadejte uživatelské jméno svého účtu pro službu SMS.</li>
+<li>Do pole <b>Heslo</b> a <b>Potvrdit heslo</b> zadejte a potvrďte heslo svého účtu pro službu SMS.</li>
+<li>Zadejte <b>Primární telefonní číslo</b> nebo <b>Sekundární telefonní číslo</b>. Pokud jsou zadána obě čísla, zprávy SMS s upozorněním budou zasílány na obě čísla.</li>
+<li>Pokud nechcete dostávat příliš mnoho zpráv, zaškrtněte možnost <b>Povolit omezení intervalu zpráv SMS</b> a nastavte interval, během kterého vám bude moci být zaslána jedna zpráva.</li>
+<li>Kliknutím na možnost <b>Odeslat zkušební zprávu SMS</b> můžete odeslat zkušební SMS zprávu na zadané telefonní číslo. Pokud zprávu neobdržíte, znamená to, že konfigurace není správná.</li>
+<li>Kliknutím na možnost <b>Použít</b> můžete konfiguraci uložit, nebo kliknutím na možnost <b>Obnovit</b> nastavení zrušíte.</li>
+</ol>
+<p>
+<span class="note_head">Poznámka: </span>Jazyk upozornění SMS zprávami lze nastavit v části <strong>Jazyk oznámení</strong>. Pokud chcete změnit jazyk upozornění SMS zprávami, přejděte do části <strong>Hlavní nabídka</strong> > <strong>Ovládací panel</strong> > <strong>Místní nastavení</strong>, klikněte na kartu <strong>Jazyk</strong> a vyberte požadovaný jazyk z rozevírací nabídky v části <strong>Jazyk oznámení</strong>.</p>
+<ol>
+<span class="note_head">Omezení:</span>
+<li>Uživatelské jméno: rozlišují se malá a velká písmena a musí obsahovat 1 až 32 znaků Unicode.</li>
+<li>Heslo: rozlišují se malá a velká písmena; musí obsahovat 0 až 128 zobrazitelných znaků včetně písmen, čísel, symbolů a mezer.</li>
+<li>Interval pro SMS musí být 1 až 10 000 minut.</li>
+</ol>
+<h4>Postup vytvoření konfigurace poskytovatele služeb SMS:</h4>
+<ol>
+<li>Klikněte na možnost <b>Přidat poskytovatele služeb SMS</b>.</li>
+<li>Do pole <b>Jméno poskytovatele</b> zadejte jméno poskytovatele služeb SMS.</li>
+<li>Do pole <b>Adresa URL pro SMS</b> zadejte adresu URL pro SMS s obsahem zprávy „Hello world“. Adresu URL pro SMS můžete získat od poskytovatele služeb SMS.</li>
+<li>Klikněte na možnost <b>Další</b>.</li>
+<li>Systém rozdělí adresu URL pro SMS na několik parametrů. Definujte jednotlivé parametry výběrem příslušné kategorie. Jednotlivé kategorie parametru, kromě kategorie <b>Jiné</b>, lze použít pouze jednou.</li>
+</ol>
+<ol>
+<a name='smshowto'></a><span class="note_head">Omezení:</span>
+<li>Název poskytovatele: rozlišují se malá a velká písmena a musí obsahovat 1 až 32 znaků Unicode.</li>
+<li>Adresa URL pro zprávy SMS: rozlišují se malá a velká písmena a musí obsahovat 1 až 500 znaků Unicode. Musí být zadány 4 až 10 parametrů. Tato adresa URL slouží pouze pro nastavení zpráv SMS. Po dokončení nastavení nebude zaslána žádná zpráva SMS. Formát této adresy URL obdržíte od poskytovatele služeb SMS a adresa URL musí obsahovat následující parametry: uživatelské jméno, heslo, cílové telefonní číslo a obsah zprávy. Pokud například používáte Clickatell, může být odkaz URL následující: https://api.clickatell.com/http/sendmsg?user=TestUser&password=TestPassword&api_id=3148203&to=886123456789&text=Hello+world. V rámci parametru „Obsah zprávy“ bude mezera mezi slovy „Hello“ a „world“ nahrazena konkrétním znakem, který určuje poskytovatel služeb.	
+</li>	
+
+</ol>
+</body>
+</html>

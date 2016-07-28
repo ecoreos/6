@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>File Station</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Copier ou déplacer les fichiers ou dossiers</h2>
+<p>File Station vous offre diverses méthodes de transfert de fichiers/dossiers entre deux DiskStation, sur un même DiskStation ou sur un ordinateur local.</p>
+<h3>Glisser et déposer des fichiers/dossiers entre des navigateurs</h3>
+<p>Vous pouvez, sans aucune configuration complexe de protocol de transfert de fichiers, transférer directement des fichiers/dossiers via File Station depuis un DiskStation vers un autre.</p>
+<h4>Pour activer le glisser et déposer entre les navigateurs :</h4>
+<ol>
+<li>Accédez à <strong>Paramètres</strong> > <strong>Général</strong> > <strong>File Station</strong>.</li>
+<li>Cochez <strong>Activer le glisser et déposer entre les navigateurs</strong>.</li>
+<li>Cliquez sur <strong>OK</strong>.</li>
+<li>Ouvrez de navigateur Web de même sorte (Par ex., Firefox), connectez-les respectivement aux DiskStation source et cible.</li>
+<li>Lancez File Station sur les deux DiskStation. Vous pouvez maintenant glisser et déposer directement des fichiers/dossiers entre eux via File Station.</li>
+</ol>
+
+<div class="section">
+<h4>Remarque :</h4>
+<ul>
+<li>Vous pouvez également glisser et déposer des fichiers/dossiers entre deux onglets du même navigateur.</li>
+<li>Internet Explorer ne prend pas en charge le glisser-déposer entre navigateurs ou entre onglets.</li>
+<li>Si vous avez sélectionné plusieurs fichiers/dossiers pour le glisser-déposer, ils sont compressés en une archive pour le transfert.</li>
+<li>La limite de taille du fichier pour le glisser-déposer varie en fonction des navigateurs : Safari (1 Go).</li>
+</ul>
+</div>
+<h3>Copier ou déplacer des fichiers/dossiers dans un même DiskStation ou sur un ordinateur local</h3>
+<p>Suivez les étapes ci-dessous pour déplacer ou copier des fichiers ou dossiers dans un même DiskStation ou sur votre ordinateur local.</p>
+<h4>Méthode 1 :</h4>
+<ol>
+<li>Sélectionnez les fichiers et dossiers que vous souhaitez déplacer ou copier. (Appuyez sur Maj ou Ctrl et maintenez cette touche enfoncée tout en sélectionnant plusieurs éléments.)</li>
+<li>Choisissez <b>Couper</b> ou <b>Copier</b> dans le menu déroulant <b>Action</b>.</li>
+<li>Allez au dossier de destination sur DiskStation ou votre ordinateur.</li>
+<li>Choisissez <b>Coller</b> - <b>Écraser</b> ou <b>Coller</b> - <b>Ignorer</b> dans le menu déroulant <b>Action</b>, selon que vous souhaitez écraser les fichiers ou dossiers avec le même nom dans le dossier de destination.</li>
+</ol>
+<h4>Méthode 2 :</h4>
+<ol>
+<li>Sélectionnez les fichiers et dossiers que vous souhaitez déplacer ou copier. (Appuyez sur Maj ou Ctrl et maintenez cette touche enfoncée tout en sélectionnant plusieurs éléments.)</li>
+<li>Faites glisser n'importe quels dossiers ou fichiers de la section principale vers un autre dossier du panneau gauche.</li>
+<li>Dans le menu contextuel qui s'affiche, choisissez <b>Copier</b> - <b>Écraser</b>, <b>Copier</b> - <b>Ignorer</b>, <b>Déplacer</b> - <b>Écraser</b> ou <b>Déplacer</b> - <b>Ignorer</b> pour écraser ou ignorer les fichiers ou dossiers ayant le même nom dans le dossier de destination.</li>
+</ol>
+
+<h4>Méthode 3</h4>
+<ol>
+<li>Sélectionnez les fichiers et dossiers que vous souhaitez déplacer ou copier. (Appuyez sur Maj ou Ctrl et maintenez cette touche enfoncée tout en sélectionnant plusieurs éléments.)</li>
+<li>Appuyez sur Ctrl + X pour couper ou Ctrl + C pour couper les fichiers/dossiers. Pour les utilisateurs Mac, appuyez sur Commande + X et Commande + C.</li>
+<li>Allez au dossier de destination sur DiskStation ou votre ordinateur.</li>
+<li>Appuyez sur Ctrl + V pour coller les fichiers/dossiers. (Commande + V pour Mac.)</li>
+<li>Dans le dialogue qui apparaît, choisissez si vous voulez écraser ou ignorer les fichiers ayant le même nom dans le dossier de destination.</li>
+</ol>
+
+<div class="section">
+<h4>Raccourcis clavier :</h4>
+<p>Les raccourcis clavier suivants peuvent être utiles lorsque vous transférez/copiez les fichiers et dossiers dans File Station :</p>
+<ul>
+<li>F2 : Renommer</li>
+<li>Suppr : Supprimer</li>
+<li>Ctrl + A : Sélectionner tout</li>
+<li>Ctrl + X : Couper</li>
+<li>Ctrl + C : Copier</li>
+<li>Ctrl + V : Coller</li>
+</ul>
+</div>
+
+
+<div class="section">
+<h4>Remarque :</h4>
+<ul>
+<li>Lorsque vous copiez ou déplacez les fichiers/dossiers vers un répertoire sur un système de fichier FAT, les caractères <span class="note_content">\ *?">|</span> dans le nom du fichier seront remplacés par <span class="note_content">–</span> et les métadonnées des fichiers Mac seront perdues.</li>
+<li>Si vous coupez les fichiers de votre ordinateur local, puis les collez dans un dossier de DiskStation, les fichiers seront conservés sur votre ordinateur local.</li>
+<li>Lorsque vous déplacez un fichier ou un dossier, le "possesseur" reste le même. Cependant, lorsque vous copiez un fichier ou un dossier, le "possesseur" devient l'utilisateur qui l'a copié.</li>
+</ul>
+</div>
+
+</body>
+</html>

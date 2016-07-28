@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+<meta content="en-us" http-equiv="Content-Language" />
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+<title>Synology NAS にデータをバックアップしてデータを確実に保護する</title>
+</head>
+
+<body class="tutorial-content-box" >
+
+<h1>Synology NAS のバックアップ</h1>
+<div class="tutorials_content">
+<img src="../../images/Backup/1x/Backup/back_up_your_data_on_synology_nas_to_ensure_data_security.jpg" />
+<h2>概要</h2>
+<p>ハードドライブの故障や自然災害などにより、予期せずデータが失われること、特に信頼できるバックアップ ソリューションがない場合は、非常に危険なことです。<strong>Hyper Backup</strong> は、機長なデータのコピーを維持/取得し、特定時点のアプリケーションやシステム構成を復元するための直感的で統合されたバックアップ/復元ソリューションです。次のストレージ ディスティネーションがサポートされています。</p>
+
+<ul>
+<li><strong>ローカル共有フォルダ（DiskStation に接続されている外部ストレージ デバイスを含む）</strong></li>
+<li><strong>リモートSynology NAS</strong></li>
+<li><strong>リモート rsync サーバー</strong></li>
+<li><strong>リモート OpenStack Swift サーバー</strong></li>
+<li><strong>パブリック クラウド（Amazon S3、Microsoft Azure、OpenStack Swift など）</strong></li>
+</ul>
+</div>
+
+<div class="section">
+<h4>注意：</h4>
+<p>Hyper Backup は特定のシステム構成とアプリケーションのみバックアップします。詳細は、Hyper Backup のヘルプをお読みください。</p>
+</div>
+
+
+<h3 class="list_head">1. ローカル共有フォルダ/外部ストレージ デバイスへのローカル バックアップ タスクを作成する</h3>
+<p><strong>Hyper Backup</strong> を活用すると、バックアップ先のタイプが違っても似たような手続きでバックアップや復元を実行できます。ここに、他のタスク タイプでも応用できるように、データをローカルにバックアップし、復元する方法を紹介します。</p>
+
+<ol>
+<li>DSM にログインし、<strong>Hyper Backup</strong> パッケージを探します。</li>
+<li>左下にある <strong>+</strong> をクリックして、<strong>[データ バックアップ タスク] </strong>を選択します。</li>
+<li>ローカル バックアップ タスクを設定するには、<strong>[ローカル共有フォルダ]</strong> を選択します。</li>
+<img src="../../images/Backup/1x/Backup/1.png" width="600" alt=""/>
+<li><strong>[バックアップ タスクの作成]</strong> を選択し、DiskStation に繋がっているローカル共有フォルダまたは既存のストレージ デバイスを選択します。</li>
+<img src="../../images/Backup/1x/Backup/2.png" width="600" alt=""/>
+<li>ソースフォルダを選択して、含まれるデータをバックアップします。暗号化した共有フォルダを選択した場合は、バックアップ中はマウントしたままにしておいてください。バックアップ元とバックアップ先が同じボリュームにある場合は、そのようなソース フォルダはオレンジ色のエクスクラメーション マークで印が付けられます。</li>
+<img src="../../images/Backup/1x/Backup/3.png" width="600" alt=""/>
+<li>バックアップするアプリケーションを選択します。</li>
+<img src="../../images/Backup/1x/Backup/4.png" width="600" alt=""/>
+<li>必要に応じてバックアップ設定を指定します。
+  <ul>
+  <li><strong>タスク</strong>：バックアップタスクに名前を付けます。</li>
+  <li><strong>タスク通知を有効にする</strong>：タスク状態をEメール、SMS、またはプッシュサービスで知らせます。</li>
+  <li><strong>構成バックアップを有効にする</strong>：システム構成をバックアップします（例：ユーザーログイン情報）。この設定は、デフォルトですべてのバックアップ タスクで強化されています。</li>
+  <li><strong>バックアップデータを圧縮する</strong>：バックアップ データを圧縮して、ディスティネーション ストレージの使用量を減らします。このオプションを選択すると、バックアップに時間がかかります。</li>
+  <li><strong>転送暗号化を有効にする</strong>（リモートバックアップのみ）: バックアップデータを暗号化してリモート バックアップ先に転送します（rsync サーバーやパブリック クラウド）。</li>
+  <li><strong>マルチパート アップロード パートサイズ</strong>（S3 互換サーバーのみ）：指定したチャンクサイズでバックアップ データを分割します。</li>
+  <li><strong>クライアントサイドの暗号化を有効にする</strong>：バックアップ データをパスワードでバックアップ先における不正アクセスから保護します。</li>
+    
+  <li><strong>複製予定を有効にする</strong>：バックアップ タスクを自動実行する予定を設定します。</li>
+  </ul>
+  </li>
+  
+<img src="../../images/Backup/1x/Backup/5.png" width="600" alt=""/>
+<li><strong>[バックアップ ローテーションを有効にする]</strong> を選択して、ローテーション スキーマを設定します。
+  
+  <ul>
+  <li><strong>古いバージョンから</strong>：指定した<strong>バージョン数</strong>を超えたときには、最も古いバックアップ バージョンを削除します。</li>
+  <li><strong>Smart Recycle</strong>：指定したバージョン数を超えるまで、システムは各バックアップ バージョンを維持します。ローテーションが実行されると、システムはまずどの条件にも当てはまらないバージョンから交代し、既存のバージョンが次の条件に合う場合は、システムが最も古いバージョンを交代させます。
+  <ul>
+  <li><strong>過去 24 時間分の時間ごとのバージョンを維持する</strong>：システムは、毎時作成される最も古いバージョンを維持します。</li>
+  <li><strong>日時バージョンを過去 1 日～1 ヶ月分維持する</strong>：システムは、毎日作成される最も古いバージョンを維持します。</li>
+  <li><strong>週次バージョンを 1 ヶ月分維持する</strong>：システムは、毎週作成される最も古いバージョンを維持します。</li>
+  </ul>
+  
+  </li>
+  <li><strong>バージョン番号</strong>：維持されるバックアップ バージョンの上限数を設定します。</li>
+  <li>タイムライン：バックアップ スケジュールとローテーション方式に基づいてバックアップを維持した場合、考えられる結果を表示します。</li>
+  </ul>
+</li>
+
+<img src="../../images/Backup/1x/Backup/6.png" width="600" alt=""/>
+<li><strong>[適用]</strong> をクリックして設定を終了します。</li>
+<li>直ちにバックアップ タスクを実行するには、バックアップ ウィザードの手順に従って <strong>[はい]</strong> をクリックします。</li>
+</ol>
+
+
+<h3 class="list_head">2. ローカル共有フォルダ/外部ストレージ デバイスから1個のファイルを復元する</h3>
+
+
+<ol>
+<li><strong>Hyper Backup</strong> を選択し、左側のパネルから任意のバックアップ タスクを選択します。次に、<strong>バックアップ エクスプローラ</strong> をクリックします（拡大鏡アイコン）。タスクがクライアントサイドで暗号化されている場合は、パスワードを入力してください。</li>
+<img src="../../images/Backup/1x/Backup/Single_1.png" width="600" alt=""/>
+<li>復元するファイルを探して選択します。タイムライン バーを使って復元するバージョンを選択することもできます。</li>
+<img src="../../images/Backup/1x/Backup/Single_2.png" width="600" alt=""/>
+<li><strong>[復元]</strong> をクリックすると、選択したファイル/フォルダを復元します。</li>
+
+</ol>
+
+
+
+<h3 class="list_head">3. 任意の時点にフルタスクを復元する</h3>
+
+<ol>
+<li>左下にある <strong>[復元]</strong> をクリックして、<strong>[データ]</strong> をクリックします。タスクがクライアントサイドで暗号化されている場合は、パスワードを入力してください。</li>
+
+<img src="../../images/Backup/1x/Backup/Restore_1.png" width="600" alt=""/>
+<li>復元するタスクを選択します。別のレポジトリからデータを復元するには、<strong>[別のレポジトリから復元]</strong> を選択して復元するタスクを探します。</li>
+<img src="../../images/Backup/1x/Backup/Restore_2.png" width="600" alt=""/>
+<li>システム構成を復元するかどうかを選択します。<strong>[システム構成を復元]</strong> を選択すると、下のリストから特定の構成を選択してください。</li>
+<img src="../../images/Backup/1x/Backup/Restore_3.png" width="600" alt=""/>
+
+<li>復元するターゲットのファイル タスクを探して選択します。タイムライン バーを使って復元するバージョンを選択することもできます。</li>
+<img src="../../images/Backup/1x/Backup/Restore_4.png" width="600" alt=""/>
+<li>復元するアプリケーションを選択します。</li>
+<img src="../../images/Backup/1x/Backup/Restore_4.5.png" width="600" alt=""/>
+<li>基本の復元情報が表示されます。</li>
+<img src="../../images/Backup/1x/Backup/Restore_5.png" width="600" alt=""/>
+<li><strong>[適用]</strong> をクリックすると復元が開始されます。</li>
+</ol>
+
+
+
+
+
+
+<div class="page-info">
+  <ul>
+    <li>このトピックの前のセクション：<a href="backup_from_computer.html">Cloud Station で PC/Mac のデータをバックアップする</a> </li>
+  </ul>
+</div>
+</body>
+
+</html>

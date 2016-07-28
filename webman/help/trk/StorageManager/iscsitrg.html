@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Depolama Yöneticisi</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2><a name="leaf_iscsitrg"></a>iSCSI Target*</h2>
+
+<p>iSCSI, toplanmış, blok seviyesi veri depolamasına erişim sağlayan bir depolama alanı ağ iletişimi (SAN) hizmeti türüdür. İntranetler üzerinden veri aktarımlarını ve uzun mesafeli depolama yönetimini hızlandırır. iSCSI Target'lere iSCSI LUN'lar eşleyerek, istemci sunucuları depolama alanlarına kendi iSCSI başlatıcısı ile yerel disklermiş gibi erişebilirler. Modele bağlı olarak, Synology ürünü, iSCSI LUN'ların eşlenebileceği çok sayıda iSCSI Target'ları oluşturmayı destekler.</p>
+
+<p><span class="note_head">Not: </span>Desteklenen iSCSI Target'lerin sayısı Synology ürünlerine bağlıdır. Ayrıntılı ürün özellikleri için, lütfen Synology web sitesine bakınız.</p>
+
+<h4>iSCSI Target oluşturmak için:</h4>
+<ol>
+<li><b>Oluştur</b> düğmesine tıklayın.</li>
+<li><b>Ad</b>, <b>IQN</b> ve <b>CHAP kimlik doğrulama</b>'nın etkinleştirilip etkinleştirilmeyeceği dahil iSCSI Target bilgilerini girin.</li>
+<li><b>İleri</b>'ye tıklayın.</li>
+<li>iSCSI LUN eşlemeyi kurun. <b>Yeni bir iSCSI LUN oluştur</b> veya <b>Mevcut iSCSI LUN'ları eşle</b>'yi işaretleyin.</li>
+<li><b>İleri</b>'ye tıklayın.</li>
+<li>Ayarları değiştirmek için <b>Geri</b> üzerine ya da onaylamak için <b>Uygula</b> üzerine tıklayın.</li>
+</ol>
+
+<div class="section">
+<h4>Terim Açıklaması</h4>
+<ul>
+<li><b>IQN</b>: IQN (iSCSI Tanımlanmış Ad) bir iSCSI Target için benzersiz ad kümesidir. Diğer sunucular üzerindeki iSCSI Target IQN'leri ile çakışmamalıdır. IQN 128 karakterden az olmalıdır ve harf (büyük küçük harfe duyarlı) sayı, iki nokta üst üste, tire ve nokta içerebilir. Önerilen adlandırma biçimi iqn.[tarih].[etki alanı]:[aygıt tanımlayıcı], örnek: <i>iqn.2000-04.com.synology:storage.diskarray.1</i>.</li>
+<li><b>CHAP kimlik doğrulama</b>: <b>CHAP</b> seçtiğinizde, sunucu istemcinin kimliği ile ilgili doğrulama yapabilecektir. Kullanıcı adı 1 ~ 12 harf ve sayı, parola 12 ~ 16 harf ve sayıdan derlenebilir.</li>
+<li><b>Karşılıklı CHAP kimlik doğrulama</b>: <b>Karşılıklı CHAP</b> kullanıldığında, hem istemci hem de sunucu birbirlerinin kimliğini denetleyecektir. İstemci doğrulaması için kullanılan herhangi bir CHAP parolası herhangi bir sunucunun yapılandırılması için kullanılmamalıdır ve sunucu doğrulaması için kullanılan herhangi bir CHAP parolası herhangi bir istemcinin doğrulanması için yapılandırılmamalıdır.</li></ul></div>
+
+
+<h4>iSCSI Target'i kaldırmak için:</h4>
+<p>Bir iSCSI Target'i ve eşlenmiş iSCSI LUN'ları kaldırabilirsiniz. Bir iSCSI LUN kaldırılırken, iSCSI LUN üzerindeki tüm verilerin silineceğine dikkat edin.</p>
+<ol>
+<li>Kaldırmak istediğiniz iSCSI Target'i seçin.</li>
+<li><b>Kaldır</b>'a tıklayın.</li>
+<li>Eşlenmiş iSCSI LUN'ları kaldırmak isterseniz, <b>Eşlenmiş iSCSI LUN'ları da sil</b> seçimini yapın ve kaldırmak istediklerinizi seçin.</li>
+<li><b>Tamam</b>'a tıklayın.</li>
+</ol>
+
+<h4>iSCSI Target'i düzenlemek için:</h4>
+<ol>
+<li>Düzenlemek istediğiniz iSCSI Target'i seçin.</li>
+<li><b>Düzenle</b>'ye tıklayın.</li>
+<li>Ayarları tercihinize göre düzenleyin. <b>Tamam</b> üzerine tıklayarak değişiklikleri kaydedin.</li>
+</ol>
+
+<div class="section">
+<h4>Terim Açıklaması</h4>
+<ul>
+<li><b>CRC Checksum</b>: Veri aktarımı sırasında hata olup olmadığını kontrol etmek için CRC Checksum etkinleştirilmelidir.</li>
+<li><b>Çoklu Oturumlar</b>: Aynı iSCSI Target'e aynı anda bağlanmak için bir veya daha çok başlatıcıdan gelen çoklu oturumlara izin verir. Dosyalarınızı bozulmaya veya beklenmedik veri kayıplarına karşı korumak için, VMware Sanal Makine Dosya Sistemi (VMFS) ve Oracle Küme Dosya Sistemi (OCFS) gibi paylaşımlı dosya sistemi ya da küme sistemi kullanmanız önemle tavsiye olunur.</li>
+<li><b>Maskeleme</b>: Maskeleme bir iSCSI Target'in yalnızca belirlenmiş iSCSI başlatıcı IQN'leri tarafından erişilmesine izin verir.</li>
+</ul></div>
+
+<h4>iSCSI Target'i etkinleştirmek veya devre dışı bırakmak için:</h4>
+<ol>
+<li>Etkinleştirmek veya devre dışı bırakmak istediğiniz iSCSI Target'i seçin.</li>
+<li><b>Etkinleştir</b> veya <b>Devre dışı bırak</b>'a tıklayın.</li>
+</ol>
+<h4>iSCSI Hedeflerini bir iSNS sunucusuna kaydetmek için</h4>
+<p>iSNS (İnternet Depo Adı Hizmeti) merkezi yönetimlerin mekanizmasını sağlar. Tüm iSCSI Hedeflerini iSNS sunucusuna kaydedebilirsiniz.</p>
+<ol>
+<li><b>iSNS</b> düğmesine tıklayın ve <b>iSNS Etkinleştir</b> onay kutusunu işaretleyin.</li>
+<li>iSNS sunucusunun IP adresini girin. Ayarı uygulamak için <b>Tamam</b> üzerine tıklayın.</li>
+</ol>
+<p>____<br />*Yalnızca bazı modellerde mevcuttur.</p>
+
+</body>
+</html>

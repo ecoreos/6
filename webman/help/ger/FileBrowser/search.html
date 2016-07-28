@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Dateien oder Ordner suchen</title>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script> <script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2>Dateien oder Ordner suchen</h2>
+<p>Der <strong>Filter</strong> von File Station bietet Ihnen Optionen zur Suche und Anzeige von Dateien oder Ordnern, die Ihren Kriterien entsprechen. Sie können Dateien oder Ordner im aktuellen Ordner filtern oder eine erweiterte Suche ausführen, die sämtliche Unterordner abdeckt, um genauere Suchergebnisse zu erzählen.</p>
+
+<h4>Nach Dateien oder Ordnern im aktuellen Ordner suchen:</h4>
+<ol>
+	<li>Wechseln Sie mit File Station zu dem Ordner mit den Inhalten, die Sie durchsuchen möchten.</li>
+	<li>Geben Sie in das Feld <b>Filtern</b> oben rechts einen Suchbegriff ein; die Suchergebnisse werden im Hauptbereich des Fensters angezeigt.</li>
+</ol>
+
+<h4>Erweiterte Suche durchführen:</h4>
+<ol>
+	<li>Wechseln Sie mit File Station zu dem Ordner mit den Inhalten, die Sie durchsuchen möchten.</li>
+  <li>Klicken Sie auf das Lupensymbol neben dem Feld <b>Filtern</b> oben rechts, um das erweiterte Suchmenü anzuzeigen.</li>
+	<li>Geben Sie unten die Suchkriterien an oder wählen Sie sie aus Dropdown-Menüs aus:
+		<ul>
+			<li><b>Schlüsselwort</b>: Geben Sie ein Schlüsselwort ein, um nach Dateien oder Ordnern mit übereinstimmenden Namen zu suchen.
+				<div class="section"><h4>Hinweis:</h4>
+				<ul>
+					<li>Sie können Platzhalter [*] (d. h. kein oder mehrere Zeichen) und [?] (ein zufälliges Zeichen) in den Suchbegriffen verwenden. Beispielsweise kann [a<span class="note_content">*</span>n] für [a<span class="note_content">ktio</span>n], [a<span class="note_content">lbe</span>n] oder [an] stehen.</li>
+					<li>Sie können Leerzeichen verwenden, um Schlüsselwörter zu trennen. Beispielsweise ergibt das Schlüsselwort [File Station] Suchergebnisse, die [File], [Station] oder beides enthalten.</li>
+					<li>Sie können ein Anführungszeichen ["] an den Anfang und das Ende von Schlüsselwörtern stellen, um nach exakten Übereinstimmungen ohne Berücksichtigung der Groß-/Kleinschreibung zu suchen. Zum Beispiel kann [<span class="note_content">"Synology Inc."</span>] für [<span class="note_content">Synology Inc.</span>] stehen, jedoch nicht für [<span class="note_content">Synology Incorporation</span>].
+					</li>
+					<li class="disable-hi3535">Die nachstehenden Operatoren können zum Verfeinern der Suchergebnisse verwendet werden:
+						<table width="84%" border="1">
+							<tbody>
+								<tr>
+									<th width="147" align="center">Operator</th>
+									<th width="229" align="center">Beispiel</th>
+									<th width="926" align="center">Nutzung</th>
+								</tr>
+								<tr>
+									<td align="center">&&</td>
+									<td align="center">[X] && [Y]</td>
+									<td><li>Listet Übereinstimmungen auf, die sowohl [X] als auch [Y] enthalten.</li></td>
+								</tr>
+								<tr>
+									<td align="center">||</td>
+									<td align="center">[X] || [Y]</td>
+									<td>
+										<li>Listet Übereinstimmungen auf, die [X], [Y] oder beides enthalten.</li>
+										<li>Übereinstimmungen, die sowohl [X] als auch [Y] enthalten, werden oben in der Liste angezeigt.</li>
+									</td>
+								</tr>
+								<tr>
+									<td align="center">+</td>
+									<td align="center">+[X]</td>
+									<td><li>Listet Übereinstimmungen auf, die [X] enthalten.</li></td>
+								</tr>
+								<tr>
+									<td align="center">-</td>
+									<td align="center">-[X]</td>
+									<td><li>Listet Übereinstimmungen auf, die [X] nicht enthalten.</li></td>
+								</tr>
+								<tr>
+									<td align="center">!</td>
+									<td align="center">![X]</td>
+									<td><li>Listet Übereinstimmungen auf, die [X] nicht enthalten.</li></td>
+								</tr>
+								<tr>
+									<td align="center">\</td>
+									<td align="center">\[Sonderzeichen]</td>
+									<td>
+										<li>Sonderzeichen: <span class="note_content">&nbsp; + &nbsp;&nbsp;-&nbsp;&nbsp; &&	&nbsp;&nbsp;|| &nbsp;&nbsp; ! &nbsp;&nbsp; ( &nbsp;&nbsp; ) &nbsp;&nbsp; { &nbsp;&nbsp; } &nbsp;&nbsp; [ &nbsp;&nbsp; ] &nbsp;&nbsp; ^ &nbsp;&nbsp; " &nbsp;&nbsp; ~ &nbsp;&nbsp; * &nbsp;&nbsp; ? &nbsp;&nbsp; : &nbsp;&nbsp;\</span></li>
+										<li>Listet Übereinstimmungen auf, die eines der vorgenannten gewünschten Sonderzeichen enthalten.</li>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</li>
+				</ul>
+				</div>
+			</li>
+			<li class="disable-hi3535"><strong>Durchsuchen des Dateiinhalts aktivieren</strong>: Über diese Option kann nach indizierten Dateien mit dem Dateiinhalt oder den Metadaten gesucht werden, die mit den Schlüsselwörtern übereinstimmen.</li>
+			<li><b>Speicherort</b>: Wählen Sie aus dem Dropdown-Menü die Einstellung des Bereichs und der Tiefe der erweiterten Suche aus. Sie können auch den Suchumfang anpassen, indem Sie andere gemeinsame Ordner in der Liste auswählen.</li>
+			<li><b>Dateityp</b>: Wählen Sie <b>Erweiterung</b>, um den Suchbereich auf bestimmte Dateiarten zu begrenzen, oder wählen Sie <b>Beliebiger Ordner</b>, um nur Ordner zu durchsuchen.</li>
+			<li><strong>Datum</strong>: Wählen Sie <b>Änderungsdatum</b>, <b>Erstellungsdatum</b> oder <strong>Zuletzt zugegriffen</strong> und wählen Sie anschließend ein Datum aus dem Kalender, um nach Dateien mit den entsprechenden Daten zu suchen.</li>
+			<li><b>Größe (MB)</b>: Wählen Sie <b>Entspricht</b>, <b>Ist mehr als</b> oder <b>Ist weniger als</b> und geben Sie die Größe für die Suche nach Dateien mit übereinstimmenden Größen ein. (Wenn Sie <strong>Entspricht</strong> auswählen, enthalten die Suchergebnisse Dateien mit ungefähr der angegebenen Größe.)</li>
+			<li><b>Besitzer/Gruppe</b>: Wählen Sie <b>Besitzer</b> oder <b>Gruppe</b> und treffen Sie eine Auswahl im Dropdown-Menü um nach Dateien oder Ordnern zu suchen, die zum ausgewählten Besitzer oder zur ausgewählten Gruppe gehören.
+				<div class="section"><h4>Hinweis:</h4>
+				<ul>
+					<li>Für die erweiterte Suche müssen Sie <b>Speicherort</b> und mindestens ein weiteres Suchkriterium angeben.</li>
+					<li>Wenn ein ISO-Ordner oder ein Remote-Ordner an einen indizierten freigegebenen Ordner angehängt ist, können Sie über die erweiterte Suche die darin enthaltenen Dateien nicht finden.</li>
+				</ul>
+				</div>
+			</li>
+		</ul>
+	</li>
+	<li>Klicken Sie auf <b>Suche</b>, um mit der Suche zu beginnen, oder klicken Sie auf <b>Zurücksetzen</b> und geben Sie ein anderes Suchkriterium an. Nach Abschluss der Suche werden übereinstimmende Dateien im Hauptbereich von File Station amgezeigt.</li>
+</ol>
+
+</body>
+</html>

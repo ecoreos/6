@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+ <head>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>High Availability</title>
+
+
+ </head>
+ <body>
+<h2>Tárolási állapot</h2>
+	<p>Ez az oldal a high-availability klaszter aktív és passzív kiszolgálóján található tárolókötetek és iSCSI LUN-ok (zárószint) állapotát részletezi.</p>
+    <p>Mivel az aktív és passzív kiszolgálókon található megfelelő kötetek és iSCSI LUN-ok (zárószint) kapacitásának és konfigurációjának azonosnak kell lennie, a két kiszolgálón található kötetek és iSCSI LUN (zárószint) együtt, egyetlen egységként kerül megjelenítésre. Ha tehát mind az aktív, mind pedig a passzív kiszolgáló köteteinek és iSCSI LUN-jainak (zárószint) állapotát meg szeretné tekinteni, a <b>Tárolási állapot</b> oldalra kell mennie [a high-availability klaszter elérésekor csak az aktív kiszolgálón található kötetek és iSCSI LUN-ok (zárószint) tekinthetők meg a <b>Tároláskezelő</b>-ben].</p>
+
+    <p>Az oldal a következő információkat tartalmazza:</p>
+		<ul>
+			<li><b>Név:</b> A kötetek és iSCSI LUN-ok (zárószint) neveit jeleníti meg.</li>
+			<li><b>Használt:</b> A kötetek és iSCSI LUN-ok (zárószint) felhasznált kapacitásának százalékos arányát jeleníti meg.</li>
+			<li><b>Használt/teljes méret:</b> A kötetek és iSCSI LUN-ok (zárószint) teljes és felhasznált kapacitását jeleníti meg.</li>
+            <li><b>Állapot:</b> A kötetek, az iSCSI LUN-ok (zárószint) és az SSD-gyorsítótárak állapotát jeleníti meg.</li>
+            <li><b>Leírás:</b> Hibaleírást vagy a kötetre, az iSCSI LUN-ra (zárószint) és SSD-gyorítótárra vonatkozó egyéb információkat jelenít meg.</li>
+		</ul>
+<h4>A hibás működésű kötet vagy iSCSI LUN (zárószint) javítása:</h4>
+	<ul>
+		<li>Ha az egyik kiszolgálón összeomlott egy merevlemez, menjen a <a href="disk.html">Lemez állapota</a> oldalra, és határozza meg, melyik lemez omlott össze, melyiket kell kicserélni. Ebben az esetben tegye a következőket:
+        	<ol>
+            	<li>Cserélje ki az összeomlott merevlemezt (a merevlemez telepítésére vonatkozó lépéseket lásd a Synology termék <i>Gyors telepítési útmutató</i> c. dokumentumában).</li>
+                <li>Menjen a <b>Tárolási állapot</b> oldalra, és kattintson a <b>Javítás</b> lehetőségre.</li>
+            </ol>
+        </li>
+        <li>Ha a passzív kiszolgáló offline állapotban van, a kötetek és iSCSI LUN-ok (zárószint) állapota azt jelzi, hogy hiba történt, és a passzív kiszolgálón található egyetlen lemez sem jelenik meg a Lemez állapota oldalon. Ebben az esetben a következők megtételével megkísérelheti megoldani a problémát:
+        	<ol>
+            	<li>Győződjön meg róla, hogy a passzív kiszolgáló be van kapcsolva.</li>
+                <li>Ellenőrizze az összes tápfeszültség-ellátást.</li>
+                <li>Vizsgálja meg valamennyi csatlakozást.</li>
+            </ol>
+        </li>
+        <li>Ha az egyik kiszolgálón található köteten vagy iSCSI LUN-on (zárószint) fájlrendszer-hiba fordul elő, tegye a következőt:
+        	<ul>
+            	<li>Menjen a <b>Tárolási állapot</b> oldalra.</li>
+                <li>Kattintson a <b>Javítás</b> lehetőségre.</li>
+            </ul>
+        </li>
+	</ul>
+
+<p><span class="note_head">Megjegyzés:</span>  Az egy high-availability klaszteren található kötetek és iSCSI LUN-ok (zárószint) korlátja 64.</p>
+
+ </body>
+</html>

@@ -1,0 +1,71 @@
+﻿ <!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Dodawanie dysków twardych w wolumenie lub w grupie dysków — pomoc Synology DSM</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="This article walks you through the steps to add an additional hard drive to an existing volume or disk group on your DiskStation.”><link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Dodawanie dysku twardego w celu zwiększenia pojemności pamięci masowej</h2>
+
+<p>Jeśli w urządzeniu DiskStation dostępne są puste kieszenie dysku twardego, można zainstalować dodatkowe dyski twarde i dodać je do istniejącego wolumenu lub grupy dysków. Niniejszy artykuł zawiera instrukcje rozszerzenia istniejącego wolumenu lub grupy dysków przez zainstalowanie dodatkowych dysków twardych.</p>
+
+<h3>Przed rozpoczęciem</h3>
+
+<p>Przed rozpoczęciem upewnij się, że dyski twarde, które mają być dodawane, spełniają następujące wymagania dotyczące rozmiaru:</p>
+<ul>
+  <li><strong>Macierz SHR:</strong> Pojemność dysku twardego, który ma zostać dodany, musi być nie mniejsza niż pojemność największego dysku twardego w wolumenie lub grupie dysków, lub równa dowolnemu dyskowi twardemu w wolumenie lub grupie dysków. Jeśli np. wolumen SHR składa się z trzech dysków twardych o pojemnościach odpowiednio 2, 1,5 i 1 TB, nowy dysk twardy powinien mieć pojemność co najmniej 2 TB lub równą 1,5 TB lub 1 TB.</li>
+  <li><strong>RAID 5 i RAID 6:</strong> Pojemność dysku twardego, który ma być dodany, musi być co najmniej taka, jak pojemność najmniejszego dysku w wolumenie lub grupie dysków. Jeśli np. wolumen SHR składa się z trzech dysków twardych o pojemnościach odpowiednio 2, 1,5 i 1 TB, nowy dysk twardy powinien mieć pojemność co najmniej 1 TB.</li>
+</ul>
+
+<div class="section">
+<h4>Sprawdzenie stanu wolumenu</h4>
+
+<p>Upewnij się, że stan wolumenu lub grupy dysków jest <strong>Normalny</strong>. W przeciwnym razie należy w pierwszej kolejności przeprowadzić naprawę.</p>
+</div>
+
+
+<h3>  Dodanie dysku twardego do wolumenu lub grupy dysków</h3>
+
+<p>Dyski twarde można dodawać do następujących typów macierzy RAID: </p>
+
+<ul>
+<li>Synology Hybrid RAID (SHR)</li>
+<li>JBOD</li>
+<li>RAID 5</li>
+<li>RAID 6</li>
+</ul>
+
+<div class="section">
+<h4>Uwaga:</h4>
+<p>W przypadku wolumenów SHR pojemność pamięci zostanie zwiększona pod warunkiem dodania dysków twardych do wolumenu zawierającego co najmniej dwa dyski twarde.</p>
+</ul>
+</div>
+
+<h4>Aby dodać dysk twardy do wolumenu lub grupy dysków:</h4>
+
+<ol>
+<li>Wyłącz urządzenie DiskStation. (Pomiń ten krok, jeśli posiadane urządzenie DiskStation obsługuje funkcję wymiany dysków podczas pracy).</li>
+<li>Wsuń nowy dysk twardy do pustej kieszeni dysku.</li>
+
+<div class="section">
+<h4>Uwaga:</h4>
+<p>Aby zapobiec obrażeniom ciała lub uszkodzeniu urządzenia DiskStation, należy postępować zgodnie z instrukcjami instalacji dysku twardego zawartymi w dokumencie <i>Przewodnik szybkiej instalacji</i> dostarczonym z produktem firmy Synology.</p>
+</div>
+
+<li>Włącz urządzenie DiskStation.</li>
+<li>Zaloguj się w systemie DSM na konto należące do grupy <strong>administrators</strong>.</li>
+<li>Otwórz aplikację <strong>Zarządzanie przechowywaniem</strong>.</li><img src="about:blank" class="help_image"/><li>Na tym etapie wykonaj następujące czynności:</li>
+  <ul class="list_abc">
+    
+  <li>W przypadku rozszerzania pojedynczego wolumenu wybierz kartę <strong>Wolumen</strong>. Wybierz wolumen, który ma zostać rozszerzony. Kliknij <strong>Zarządzaj</strong> i przejdź do następnego kroku. </li><img src="about:blank" class="help_image"/><li>W przypadku rozszerzania grupy dysków wybierz kartę <strong>Grupa dysków</strong>. Wybierz grupę dysków, która ma zostać rozszerzona. Kliknij <strong>Zarządzaj</strong> i przejdź do następnego kroku.</li><img src="../../../online_img/dsm/StorageManager/volume_diskgroup_expand_add_disk/diskgroup_manage.png" class="help_image"/></ul>
+<li>Zaznacz opcję <strong>Rozszerz wolumen (lub grupę dysków) przez dodanie dysków twardych</strong>. Następnie kliknij przycisk <strong>Dalej</strong>.</li><img src="about:blank" class="help_image"/><li>Zaznacz dyski twarde, które mają być użyte do rozszerzenia wolumenu lub grupy dysków. Dyski twarde można dodać, klikając odpowiednie pola wyboru. Następnie kliknij przycisk <strong>Dalej</strong>.</li><img src="../../../online_img/dsm/StorageManager/volume_diskgroup_expand_add_disk/choose_disks.png" class="help_image"/><li>Aby zakończyć operację, wykonaj kolejne instrukcje kreatora.</li>
+</ol>
+</body>
+</html>

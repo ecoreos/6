@@ -1,0 +1,199 @@
+
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Síť</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2><a name="wireless_ap"></a>Hotspot*</h2>
+<p>Vaše zařízení DiskStation podporuje vytvoření hotspotu pro sdílení připojení k Internetu s ostatními zařízeními bezdrátovým způsobem, pokud jste si nainstalovali adaptér USB pro síť Wi-Fi, nebo je vaše zařízení DiskStation vybaveno vestavěnou Wi-Fi. Zařízení DiskStation můžete nastavit jako bezdrátový přístupový bod (AP) nebo bezdrátový směrovač, v závislosti na tom, jak chcete Internet používat.</p>
+
+<table>
+<tr>
+<th width="23%">Režim hotspotu</th>
+<th width="77%">Popis</th>
+</tr>
+<tr>
+<th>Bezdrátový přístupový bod</th>
+<td>
+<ul>
+<li>Propojuje síť LAN a Wi-Fi.</li>
+<li>Klienti sítě LAN a bezdrátoví klienti budou součástí stejné místní sítě.</li>
+<li>Platí, pokud již máte směrovač a zařízení DiskStation chcete použít jako dodatečný přístupový bod ke stávající síti.</li> 
+<li>Umožňuje sdílení síťových prostředků, jako jsou zařízení DLNA, tiskárny, nástroj Synology Web Assistant a další služby využívající vysílání v síti.</li>
+<li>Server DHCP bude za zařízeních DiskStation, která fungují jako bezdrátové přístupové body, deaktivován. Chcete-li server DHCP znovu na zařízení DiskStation aktivovat, odeberte bezdrátové klíče Wi-Fi a zařízení DiskStation restartujte.</li>
+<li>Pro modely s větším počtem portů místní sítě LAN se pro propojení s bezdrátovým přístupovým bodem používá pouze LAN 1.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Bezdrátový směrovač</th>
+<td>
+<ul>
+<li>Pokud se zařízení nacházejí v privátní podsíti, nastavte bezdrátovou síť.</li>
+</ul>
+</td>
+</tr>
+</table>
+
+
+<div class="section">
+<h4>Poznámka:</h4>
+
+<ol>
+<li>Některé modely vyžadují v rámci vytváření bezdrátových hotspotů připojování bezdrátových hardwarových klíčů. Kompletní seznam podporovaných bezdrátových hardwarových klíčů najdete na stránkách <a href="http://www.synology.com/support/faq/444" target=_blank>www.synology.com</a>.</li>
+<li>V případě modelů DS213air je možnost Bezdrátový hotspot ze systému DSM 4.3 přejmenována v systému DSM 5.0 a novějších verzích na „Bezdrátový směrovač“</li>
+</ul>
+</ol>
+
+</div>
+
+<h3>Správa nastavení hotspotu</h3>
+<p>V této části je vysvětlen postup povolení a správy nastavení hotspotu zařízení DiskStation.</p>
+
+
+<h4>Vytvoření hotspotu ze zařízení DiskStation:</h4>
+<ol>
+<li>Přejděte do části <strong>Ovládací panel</strong> > <strong>Bezdrátové připojení</strong> > <strong>Mapa sítě</strong>. Vyberte možnost <strong>Bezdrátový přístupový bod</strong> nebo <strong>Bezdrátový směrovač</strong>.</li>
+<li>Přejděte na kartu <strong>Wi-Fi</strong>. Kliknutím na možnost <strong>Upravit</strong> provedete správu následujících nastavení:</li>
+<ul>
+<li><strong>Název (SSID):</strong> Zadejte název bezdrátové sítě.</li>
+<li><strong>Zobrazit/Skrýt:</strong> Zadejte, zda ostatní zařízení mohu zobrazit bezdrátovou síť či nikoli.</li>
+<li><strong>Bezdrátový režim:</strong> Vyberte standard bezdrátové sítě. Jednotlivé standardy podporují různé šířky pásma a frekvence.</li>
+<li><strong>Šířka kanálu:</strong> Vyberte šířku kanálu (k dispozici pouze v bezdrátovém režimu 802.11n).</li>
+<li><strong>Kanál:</strong> Vyberte frekvenci bezdrátové sítě. Chcete-li dosáhnout vyššího výkonu, vyberte jinou frekvenci než tu, kterou používají okolní sítě.</li>
+<li><strong>Výkon přenosu:</strong> Vyberte sílu signálu bezdrátové sítě.</li>
+<li><strong>Max. počet připojení:</strong> Zadejte, kolik klientských zařízení se může k síti připojit. Nejvyšší možný počet připojení je 256.</li>
+<li><strong>Povolit WMM QoS:</strong> Wi-Fi Multimedia (WMM) QoS (Quality of Service) přes síť Wi-Fi. Tato možnost umožňuje bezdrátové síti stanovit priority provozu a optimalizovat sdílení prostředků mezi aplikacemi.</li>
+</ul>
+</ol>
+
+
+
+<h4>Postup nastavení plánu bezdrátové sítě:*</h4>
+<p>Povolení plánu bezdrátové sítě umožňuje získat kontrolu nad tím, kdy bude bezdrátová síť zařízení DiskStation aktivní a přístupná.</p>
+<ol>
+<li>Přejděte na kartu <strong>Wi-Fi</strong> a klikněte na možnost <strong>Upravit</strong>. </li>
+<li>Zaškrtněte políčko <strong>Povolit plán</strong>.</li>
+
+<li>Klikněte na možnost <strong>Nastavit plán</strong>.</li>
+<li>Na obrazovce plánu vyberte, kdy chcete, aby byla bezdrátová síť aktivní.</li>
+</ol>
+
+
+<h3>Nastavení zabezpečení</h3>
+<p>V části <strong>Ovládací panel</strong> > <strong>Bezdrátové připojení</strong> > <strong>Wi-Fi</strong> najdete možnosti úpravy nastavení zabezpečení bezdrátové sítě.</p>
+
+
+<h4>Postup nastavení zabezpečení bezdrátového připojení:</h4>
+<ol>
+
+<li>Klikněte na možnost <strong>Upravit</strong>.</li>
+<li>Z rozevírací nabídky <strong>Nastavení zabezpečení</strong> vyberte jeden z následujících protokolů zabezpečení:</li>
+<ul>
+<li><strong>WEP:</strong> Základní protokol zabezpečení, který od uživatelů požaduje zadávání hesla pro přístup k bezdrátové síti, poskytuje však minimální ochranu.</li>
+<li><strong>WPA/WPA2, verze pro fyzické osoby:</strong> Doporučený protokol. Požaduje od uživatelů zadání hesla pro přístup k bezdrátové síti a je bezpečnější než protokol WEP.</li>
+<li><strong>Podnikový protokol WPA/WPA2:</strong>* Protokol zabezpečení určený pro podniky. Požaduje ověření uživatelů na externím serveru ověřování.</li>
+
+</ul>
+</ol>
+
+<h4>Postup povolení funkce Wi-Fi Protected Setup:*</h4>
+<p>Protokol Wi-Fi Protected Setup je standard vytvořený organizací Wi-Fi, který umožňuje uživatelům jednodušší nastavení zabezpečení bezdrátové sítě. Síť Wi-Fi můžete zabezpečit také stisknutím příkazového tlačítka nebo pomocí PIN kódu. Kliknutím na možnost <strong>WPS</strong> povolíte funkci Wi-Fi Protected Setup.</p>
+
+
+<h3>Hostovaná síť*</h3>
+<p>Kromě bezdrátových sítí podporuje zařízení DiskStation také vytváření hostované bezdrátové sítě. Nastavení hostované sítě může omezit uživatelům přístup. Toto nastavení je vhodné pro podniky a instituce, který chtějí zajistit svým návštěvníkům přístup k bezdrátové síti, ale chtějí zároveň blokovat přístup k hostitelské síti.</p>
+
+
+<h4>Postup povolení hostované sítě:</h4>
+
+<ol>
+<li>Přejděte do části <strong>Ovládací panel</strong> > <strong>Bezdrátové připojení</strong> > <strong>Wi-Fi</strong>. </li>
+<li>Kliknutím na možnost <strong>Upravit</strong> provedete správu následujících nastavení na kartě <strong>Hostovaná síť</strong>:</li>
+
+<ul>
+<li><strong>Název (SSID):</strong> Zadejte název bezdrátové sítě.</li>
+<li><strong>Zobrazit/Skrýt:</strong> Zadejte, zda ostatní zařízení mohu zobrazit bezdrátovou síť či nikoli.</li>
+<li><strong>Max. počet připojení:</strong> Zadejte, kolik klientských zařízení se může k síti připojit. Nejvyšší možný počet připojení je 256.</li>
+</ul>
+</ol>
+
+<h4>Postup nastavení zabezpečení hostované sítě:</h4>
+<p>Z rozevírací nabídky <strong>Nastavení zabezpečení</strong> vyberte jeden z následujících protokolů zabezpečení:</p>
+<ul>
+<li><strong>WEP:</strong> Základní protokol zabezpečení, který od uživatelů požaduje zadávání hesla pro přístup k bezdrátové síti, poskytuje však minimální ochranu.</li>
+<li><strong>WPA/WPA2, verze pro fyzické osoby:</strong> Doporučený protokol. Požaduje od uživatelů zadání hesla pro přístup k bezdrátové síti a je bezpečnější než protokol WEP.</li>
+</ul>
+
+
+<h4>Postup nastavení plánu hostované sítě:</h4>
+<p>Povolení plánu hostované sítě umožňuje získat kontrolu nad tím, kdy bude hostovaná bezdrátová síť zařízení DiskStation aktivní a přístupná.</p>
+
+<ol>
+<li>Zaškrtněte políčko <strong>Povolit plán hostované sítě</strong>.</li>
+<li>Klikněte na možnost <strong>Nastavit plán hostované sítě</strong>.</li>
+<li>Na obrazovce plánu vyberte, kdy chcete, aby byla hostovaná bezdrátová síť aktivní.</li>
+</ol>
+
+<div class="section">
+<h4>Poznámka:</h4>
+<p>Hostovaná bezdrátová síť nemůže být aktivní v době, kdy je hostitelská bezdrátová síť deaktivována.</p>
+</div>
+
+
+<h3>Nastavení filtru MAC*</h3>
+<p>Nastavení filtru MAC (v části <strong>Ovládací panel</strong> > <strong>Bezdrátové připojení</strong>) umožňuje zadat, které adresy MAC mají přístupová oprávnění k bezdrátové síti a tím možnost konkrétním zařízením zablokovat nebo přidělit přístup. Tato funkce má vliv na přístup k síti, nikoli na další nastavení šifrování.</p>
+
+
+<h4>Postup povolení pravidel filtru MAC:</h4>
+<ol>
+<li>Zadejte popis a adresu MAC zařízení.</li>
+<li>Vyberte zásadu přístupu:
+<ul>
+<li><strong>Odepřít:</strong> Zakáže konkrétní MAC adrese přístup k bezdrátové síti.</li>
+<li><strong>Povolit:</strong> Povolí konkrétní MAC adrese přístup k bezdrátové síti.</li>
+</ul> 
+</ol>
+
+
+
+<h3>Rodičovská kontrola*</h3>
+<p>Funkce rodičovské kontroly umožňuje řízení toho, kdy se mohou jednotlivá klientská zařízení připojená k místní síti DiskStation připojit k Internetu. Pokud se například počítače nebo mobilní zařízení vašich dětí připojují k Internetu prostřednictvím zařízení DiskStation, můžete konfigurací nastavení rodičovské kontroly omezit používání Internetu podle konkrétních zařízení a časových úseků.</p>
+
+<h4>Postup povolení rodičovské kontroly:</h4>
+<ol>
+<li>Přejděte do části <strong>Ovládací panel</strong> > <strong>Bezdrátové připojení</strong> > <strong>Nastavení rodičovské kontroly</strong>.</li>
+
+<li>Kliknutím na tlačítko <strong>Přidat</strong> přidáte klientské zařízení.</li>
+<ul>
+<li><strong>Název klienta:</strong> Vyberte zařízení, které je připojeno k zařízení DiskStation, nebo zadejte název ručně (např. Notebook Marušky).</li>
+<li><strong>Adresa MAC:</strong> Zadejte adresu MAC zařízení, u kterého chcete provádět kontrolu využití Internetu.</li>
+<li><strong>Nastavit plán:</strong> Zadejte, kdy se může konkrétní zařízení připojovat k Internetu prostřednictvím zařízení DiskStation.</li>
+</ul>
+</ol>
+
+<h3>Seznam připojení*</h3>
+<p>Seznam připojení (v části <strong>Ovládací panel</strong> > <strong>Bezdrátové připojení</strong>) zobrazuje informace týkající se zařízení připojených k zařízení DiskStation. V této části můžete přidávat zařízení přímo do seznamu filtrů MAC.</p>
+
+<h4>Postup přidávání zařízení do seznamu filtrů MAC:</h4>
+<ol>
+<li>Zaškrtněte políčko vedle zařízení, které chcete přidat do filtru MAC.</li>
+<li>Klikněte na možnost <strong>Přidat do seznamu filtrů MAC</strong>.</li>
+</ol>
+
+
+
+<p>____<br> * K dispozici pouze u některých modelů.<br>
+</body>
+</html>

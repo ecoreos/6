@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Sök efter filer eller mappar</title>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script> <script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2>Sök efter filer eller mappar</h2>
+<p>File Stations <strong>Filter</strong> tillhandahåller alternativ för att söka och visa filer och mappar som uppfyller dina kriterier. Du kan filtrera genom filer eller mappar i den aktuella mappen eller göra en avancerad sökning i alla undermappar för ett mer förfinat sökresultat.</p>
+
+<h4>Om du vill söka efter filer eller mappar i den aktuella mappen:</h4>
+<ol>
+	<li>Använd File Station för att gå till den mapp som innehåller det du vill söka efter.</li>
+	<li>I fältet <b>Filter</b> i det övre högra hörnet kan du ange ett sökord och se det filtrerade resultatet i fönstrets huvudområde.</li>
+</ol>
+
+<h4>Utföra en avancerad sökning:</h4>
+<ol>
+	<li>Använd File Station för att gå till den mapp som innehåller det du vill söka efter.</li>
+  <li>Klicka på förstoringsglaset bredvid fältet <b>Filter</b> i det övre högra hörnet i File Station för att ta fram den avancerade menyn för sökning.</li>
+	<li>Specificera sökkriteriet här nedanför eller välj från rullgardinsmenyerna:
+		<ul>
+			<li><b>Nyckelord</b>: Ange ett sökord för att söka efter filer eller mappar med matchande namn.
+				<div class="section"><h4>Obs:</h4>
+				<ul>
+					<li>Du kan använda jokertecken [*] (vilket betyder noll eller fler tecken) och [?] (som representerar ett tecken, vilket som helst) i sökordet. Till exempel kan [a<span class="note_content">*</span>n] representera [a<span class="note_content">ktio</span>n], [a<span class="note_content">ttentio</span>n] eller [an].</li>
+					<li>Du kan använda mellanslag för att avskilja nyckelord. Nyckelordet [File Station] leder exempelvis till sökresultat som innehåller [File], [Station] eller bådadera.</li>
+					<li>Du kan lägga till dubbla citattecken ["] i början och slutet av nyckelord för att få exakta, icke skiftlägeskänsliga träffar. Till exempel kan [<span class="note_content">”Synology Inc.”</span>] representera [<span class="note_content">Synology Inc.</span>] men kan inte representera [<span class="note_content">Synology Incorporation</span>].
+					</li>
+					<li class="disable-hi3535">Operanderna här nedanför kan användas för förfinade sökresultat:
+						<table width="84%" border="1">
+							<tbody>
+								<tr>
+									<th width="147" align="center">Operand</th>
+									<th width="229" align="center">Exempel</th>
+									<th width="926" align="center">Användning</th>
+								</tr>
+								<tr>
+									<td align="center">&&</td>
+									<td align="center">[X] && [Y]</td>
+									<td><li>Listar träffar som innehåller både [X] och [Y]</li></td>
+								</tr>
+								<tr>
+									<td align="center">||</td>
+									<td align="center">[X] || [Y]</td>
+									<td>
+										<li>Listar träffar som innehåller både [X], [Y] eller båda</li>
+										<li>Träffar som innehåller både [X] och [Y] listas överst</li>
+									</td>
+								</tr>
+								<tr>
+									<td align="center">+</td>
+									<td align="center">+[X]</td>
+									<td><li>Listar träffar som innehåller [X]</li></td>
+								</tr>
+								<tr>
+									<td align="center">-</td>
+									<td align="center">-[X]</td>
+									<td><li>Listar träffar som inte innehåller [X]</li></td>
+								</tr>
+								<tr>
+									<td align="center">!</td>
+									<td align="center">![X]</td>
+									<td><li>Listar träffar som inte innehåller [X]</li></td>
+								</tr>
+								<tr>
+									<td align="center">\</td>
+									<td align="center">\[Specialtecken]</td>
+									<td>
+										<li>Specialtecken: <span class="note_content">&nbsp; + &nbsp;&nbsp;-&nbsp;&nbsp; &&	&nbsp;&nbsp;|| &nbsp;&nbsp; ! &nbsp;&nbsp; ( &nbsp;&nbsp; ) &nbsp;&nbsp; { &nbsp;&nbsp; } &nbsp;&nbsp; [ &nbsp;&nbsp; ] &nbsp;&nbsp; ^ &nbsp;&nbsp; " &nbsp;&nbsp; ~ &nbsp;&nbsp; * &nbsp;&nbsp; ? &nbsp;&nbsp; : &nbsp;&nbsp;\</span></li>
+										<li>Listar träffar som innehåller ett eftersökt specialtecken enligt ovanstående</li>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</li>
+				</ul>
+				</div>
+			</li>
+			<li class="disable-hi3535"><strong>Aktivera sökning av filinnehåll</strong>: Söker efter indexerade filer som har innehåll eller metadata som överensstämmer med nyckelorden.</li>
+			<li><b>Plats</b>: Välj från rullgardinsmenyn för att ställa in område och djup för avancerad sökning. Du kan också anpassa sökomfattningen genom att välja valfri annan listad delad mapp.</li>
+			<li><b>Filtyp</b>: Välj <b>Filnamnstillägg</b> för att begränsa sökningen till vissa typer av filer, eller välj <b>Valfri mapp</b> för att endast söka efter mappar.</li>
+			<li><strong>Datum</strong>: Välj <b>Ändringsdatum</b>, <b>Skapad den</b> eller <strong>Tid för senaste åtkomst</strong> och välj sedan ett datum från kalendern för att söka efter filer med matchande datum.</li>
+			<li><b>Storlek (MB)</b>: Välj mellan <b>är lika med</b>, <b>är större än</b> och <b>är mindre än</b> och ange därefter en storlek för att söka efter filer med matchande storlek. (Vid val av <strong>är lika med</strong> kommer sökresultatet att inkludera filer av ungefärligen samma storlek som den som specificerats.)</li>
+			<li><b>Ägare/grupp</b>: Välj <b>Ägare</b> eller <b>Grupp</b> och välj sedan i rullgardinsmenyn för att söka efter filer eller mappar som hör till den valda ägaren eller gruppen.
+				<div class="section"><h4>Obs:</h4>
+				<ul>
+					<li>För att utföra avancerad sökning måste du specificera <b>Plats</b> och minst ytterligare ett sökkriteria.</li>
+					<li>Om en ISO-mapp eller en fjärrmapp är monterad i en indexerad delad mapp kan du inte hitta filerna i dem med avancerad sökning.</li>
+				</ul>
+				</div>
+			</li>
+		</ul>
+	</li>
+	<li>Klicka på <b>Sök</b> för att starta sökningen eller klicka på <b>Återställ</b> och ange nya sökvillkor. När sökningen är klar visas de matchande filerna i File Stations huvudområde.</li>
+</ol>
+
+</body>
+</html>

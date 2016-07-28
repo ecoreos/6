@@ -1,0 +1,12 @@
+{
+	"listItems": [{
+		"text": "support_center:support_form",
+		"iconCls": "icon-contact",
+		"fn": "SYNO.SDS.SupportForm.FormModule"
+	}, {
+		"text": "support_center:support_services",
+		"iconCls": "icon-utilities",
+		"fn": "SYNO.SDS.SupportForm.RemoteModule"
+	}]
+}
+

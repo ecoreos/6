@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2><a name="leaf_volume"></a>RAID Group*</h2>
+	<p>您可以使用 Synology NAS 來將多個硬碟整合為稱為 RAID Group 的單一儲存空間，其上可以直接建立儲存空間或
+iSCSI LUN (段落分塊)。如果 RAID Group 上仍有可用空間，您可依需要擴充儲存空間或 iSCSI LUN 的容量。依照所選擇的 RAID 類型，可提供不同等級的資料保護。關於 Synology NAS 所支援的 RAID 類型，請參照<a href="general.html">一般資訊</a>的說明。</p>
+
+<h4><a name="create"></a>新增一個 RAID Group：</h4>
+	<ol>
+		<li>按一下<b>新增</b>按鈕。</li>
+		<li>選擇下列選項兩者其一：</li>
+		<ul>
+			<li>用於單一儲存空間或 iSCSI LUN (段落分塊) 的 RAID Group：提供較佳的效能。</li>
+			<li>用於多個儲存空間或 iSCSI LUN (段落分塊) 的 RAID Group：提供較彈性的管理。</li>
+		</ul>
+		<li>依照精靈指示完成設定。</li>
+	</ol>
+
+<div class="section">
+<h4>注意：</h4> 
+<ul>
+		<li>RAID Group 必須由相同硬碟類型的硬碟來組合。您不可同時使用 SATA 和 SAS 硬碟或同時使用 SSD 和 HDD 硬碟來建立 RAID。</li>
+		<li>用於多個儲存空間或 iSCSI LUN (段落分塊) 的 RAID Group 且 RAID 類型為 <b>RAID 5</b> 或 <b>RAID 6</b> 時，可以由多個 <strong>RAID 陣列</strong>所組成，每個 RAID 陣列都將是相同 RAID 類型 (如 RAID 5 或 RAID 6)，且每個 RAID 陣列的硬碟上限可為 6、12 或 24 顆。您可以在新增 RAID Group 時設定硬碟數量上限，而之後不可再修改該數量。當一個 RAID 陣列放滿硬碟數量上限時，接下來添加的硬碟可分配至新的 RAID 陣列。新的 RAID 陣列硬碟數量必須符合該 RAID 類型之最少硬碟數量，例如 RAID 5 最少需要三顆硬碟，RAID 6 最少需要四顆硬碟。</li>
+		<li>當您新增一個 RAID Group ，卻無法從<b> RAID Group 新增精靈</b>選擇欲使用的硬碟時，請前往<b>硬碟管理</b>來確認硬碟狀態。</li>
+	</ul>
+</div>
+
+<h4>移除 RAID Group：</h4>
+	<ol>
+		<li>點選您要移除的 RAID Group。</li>
+		<li>按一下<b>移除</b>按鈕，並依照精靈指示完成移除。</li>
+	</ol>
+
+<div class="section">
+<h4>注意：</h4> 
+<ul>
+<li>RAID Group 移除後，建立於 RAID Group 上面的儲存空間與 iSCSI LUN 的資料會一併被刪除。請謹慎使用此功能。</li>
+</ul>
+</div>
+
+<h4>修復 RAID Group：</h4>
+	<p>當 RAID Group 處於<b>堪用</b>模式，且 RAID Group 類型為 RAID 1、RAID 5、RAID 6 或 RAID 10 時，您可對其進行修復。RAID Group 上現有的資料不會被刪除。</p>
+    <p>請依照下列步驟修復 RAID Group：</p>
+	<ol>
+		<li>關閉 Synology NAS 的電源。若您的機種支援硬碟熱抽換，您可略過此步驟。</li>
+		<li>取下本頁中磁碟狀態顯示為損毀的硬碟，將其更換為新的硬碟。</li>
+		<li>按一下<b>管理</b>。</li>
+		<li>選擇<b>修復</b>。</li>
+		<li>依照設定精靈的指示修復 RAID Group 。</li>
+	</ol>
+	
+<div class="section">
+<h4>注意：</h4> 
+<ul>
+			<li>所使用的硬碟容量必須大於該 RAID Group 中最小的硬碟容量。</li>
+			<li>硬碟狀態必須為已初始化或未初始化。</li>
+    </ul>
+    </div>
+    
+<h4>更改 RAID Group 的 RAID 類型：</h4>
+	<p>要更改 RAID Group 的 RAID 類型，Synology NAS 上必須具有可用硬碟。目前提供以下的更改方式：</p>
+	<ul>
+		<li>Basic 更改為 RAID 1、RAID 5</li>
+		<li>RAID 1 更改為 RAID 5</li>
+		<li>RAID 5 更改為 RAID 6。</li>
+        <li>將映射硬碟加到 RAID 1</li>
+	</ul>
+
+<p>請跟隨下列步驟來更改 RAID Group 的 RAID 類型：</p>
+	<ol>
+		<li>選擇您要更改的 RAID Group 。</li>
+		<li>按一下<b>管理</b>。</li>
+		<li>選擇<b>更改 RAID 類型</b>。</li>
+		<li>依照設定精靈的指示來完成設定。</li>
+	</ol>
+
+<div class="section">
+<h4>注意：</h4> 
+<ul>
+			<li>RAID Group 狀態必須為正常，否則可能造成資料損失。如 RAID Group 呈<b>堪用</b>模式，請先修復 RAID Group。</li>
+			<li>如果您要更改 RAID Group 類別，必須要有新類別所需的硬碟數量。硬碟容量必須大於 RAID Group 的最小硬碟容量。</li>
+			<li>硬碟狀態必須為已初始化或未初始化。</li>
+            <li>包含多個 RAID 陣列的 RAID Group ，不能改變 RAID 類型。</li>
+
+	</ul>
+    </div>
+    
+<h4>擴充 RAID Group 大小</h4>
+<p>您可以更換較大的硬碟或增加硬碟來擴充 RAID Group 大小。</p>
+<div class="section">
+  <h4>注意： </h4>
+  <ul>
+    <li>若要使用 3 TB 或更大的硬碟來擴充 RAID Group，請確認您是使用 DSM 3.0 或以上版本來建立您的 RAID Group。
+  </ul>
+</div>
+<h4>更換較大的硬碟來擴充 RAID Group ：</h4>
+	<p>此功能適用於 RAID 1、RAID 5、及 RAID 6 等 RAID Group。在單一儲存空間或 iSCSI LUN 的 RAID Group 上建立的儲存空間或 iSCSI LUN 會隨著新的容量而自動擴充。請按照下列步驟進行：</p>
+	<ol>
+		<li>關閉伺服器電源 (支援硬碟熱插拔的機種可以略過此步驟)。</li>
+		<li>把內部第一顆硬碟更換成較大容量的硬碟。</li>
+		<li>啟動伺服器電源，並修復 RAID Group 。</li>
+		<li>重複步驟 1~3 直到所有的內部硬碟都更換成較大的硬碟。</li>
+		<li>系統會自動地執行擴充 RAID Group 。</li>
+	</ol>
+
+<div class="section">
+<h4>注意：</h4> 
+<ul>
+			<li>在擴充程序進行時，儲存空間管理員上的所有服務會暫時停止。</li>
+			<li>您必須在<b>正常</b>的 RAID Group 狀態下才能擴充硬碟；否則會造成資料流失。若 RAID Group 狀態為<b>堪用</b>，請您先修復空間後再進行。</li>
+	</ul>
+    </div>
+
+<h4>新增硬碟來擴充 RAID Group ：</h4>
+	<p>此功能適用於 JBOD 、 RAID 5 及 RAID 6 RAID Group 。請按照下列步驟進行：</p>
+	<ol>
+		<li>點選要擴充的 RAID Group。</li>
+		<li>按一下<b>管理</b>。</li>
+		<li>選擇<b>加入硬碟</b>。</li>
+		<li>依照精靈指示完成設定。</li>
+	</ol>
+
+<div class="section">
+<h4>注意：</h4> 
+<ul>
+			<li>RAID Group 狀態必須為正常。</li>
+		<li>擴充 RAID 5 或 RAID 6 RAID Group 時，所使用的硬碟容量必須大於該 RAID Group 中最小的硬碟容量。</li>
+		<li>硬碟狀態必須為已初始化或未初始化。</li>
+	</ul>
+    </div>
+    
+<h4>編輯 RAID Group 描述</h4>
+	<ol>
+    	<li>點選要編輯的 RAID Group 。</li>
+        <li>按一下<b>管理</b>。</li>
+        <li>選擇<b>編輯</b>。</li>
+        <li>輸入新的描述，然後按一下<strong>確定</strong>來儲存設定。</li>
+    </ol>
+	<h3>RAID Scrubbing</h3>
+    <p>RAID scrubbing 的功能為資料維護，用於檢測 RAID Group 並修復不一致的資料。此功能可用於採用 RAID 5 或 RAID 6 的 RAID Group。 </p>
+    <p>建議您定期執行 RAID scrubbing 以維護資料的一致性，避免重要資料在硬碟故障時出現遺失的情形。</p>
+    <h4>若要執行 RAID scrubbing：</h4>
+    <ol>
+      <li>請選擇要執行 RAID scrubbing 的 RAID Group。</li>
+      <li>按一下<strong>管理</strong>。</li>
+      <li>選擇 <strong>RAID scrubbing</strong>。</li>
+    </ol>
+    <div class="section">
+      <h4>注意：</h4>
+      <ul>
+        <li>RAID scrubbing 僅能在 RAID Group 狀態為<strong>正常</strong>的情況下執行。</li>
+        <li>請勿在 RAID scrubbing 程序結束之前關閉系統。RAID scrubbing 就必須重新再執行一次。</li>
+      </ul>
+    </div>
+    
+<p>____<br /> * 僅適用於特定機型。</p>
+    
+</body>
+</html>

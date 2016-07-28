@@ -1,0 +1,162 @@
+﻿<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Win/Mac/NFS</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+
+
+
+<h2>NFS 服务</h2>
+<p>NFS 服务可让 Linux 客户端访问此 DiskStation 设备中的数据。</p>
+<h4>若要启用 NFS 服务：</h4>
+<ol>
+<li>请进入<strong>控制面板</strong> &gt; <strong>文件服务</strong> &gt; <strong>Win/Mac/NFS</strong> 并勾选<b>启用 NFS 服务</b>。</li>
+<li>单击<b>应用</b>。</li>
+</ol>
+
+
+<div class="section">
+<h4>注：</h4>
+<ul>
+<li> DiskStation 目前支持 NFSv2、NFSv3 和 NFSv4。</li>
+<li>您可以在装载的命令中添加参数 <strong>-o vers=2</strong>、<strong>-o vers=3</strong> 或 <strong>-o vers=4</strong> 指定您想使用的 NFS 版本。</li>
+</ul>
+</div>
+
+
+<h4>若要配置 Linux 客户端对共享文件夹的访问权限：</h4>
+<p>请进入<b>控制面板</b> &gt; <b>共享文件夹</b>。选择一个共享文件夹并单击<strong>编辑</strong>来管理 NFS 规则，并指派 Linux 客户端对该共享文件夹的访问权限。</p>
+
+
+<h3>设置 NFSv4 支持</h3>
+<p>您可以决定 NFS 服务器是否支持 NFSv4。启用此选项后，NFS 服务器将支持 NFSv2、NFSv3 和 NFSv4；否则，NFS 服务器将仅支持 NFSv2 和 NFSv3。</p>
+
+<h4>若要启用 NFSv4 支持：</h4>
+<ol>
+<li>请勾选<b>启用 NFSv4 支持</b>。
+</li>
+<li>
+在 <b>NFSv4 域</b>栏中输入您想使用的 NFSv4 域名称。此栏为选填且可留空。</li>
+<li>
+单击<b>应用</b>。
+</li>
+</ol>
+
+<div class="section">
+<h4>注：</h4>
+<p>使用 NFSv4 装载共享文件夹时，请注意下列事项。否则，与用户名相关的文件操作将失败。</p>
+<ul>
+<li>NFS 客户端必须启用 idmapd。</li>
+<li>NFS 客户端上 idmapd.conf 文件的 NFSv4 域设置必须与 DiskStation 上的 <b>NFSv4 域</b>栏一致。</li>
+</ul>
+
+</div>
+
+<h3>高级设置</h3>
+
+<h4>应用默认的 UNIX 权限</h4>
+<p> 勾选<strong>应用默认的 UNIX 权限</strong>后，上传或创建文件和文件夹时将应用在 Linux 客户端设置的默认 UNIX 权限而不是 Windows ACL 权限。所应用的权限将与 UNIX <strong>umask</strong> 命令所应用的权限相同。启用此选项后，文件的 UNIX 权限为 644，而文件夹为 755。禁用此选项后，文件的 UNIX 权限为 666，而文件夹为 777。默认 umask 值为 022。</p><div class="section">
+<h4>注：</h4>
+<ul>
+<li>对于启用 Windows ACL 的共享文件夹（外部设备上的&ldquo;photo&rdquo;和共享文件除外），请在 Linux 或 FTP 客户端上运行 <strong>chmod</strong> 命令，以将 Windows ACL 上的文件夹和文件权限类型更改到 UNIX。</li>
+<li>启动此选项可能会导致不同协议之间发生权限不一致的问题。为避免不一致问题，建议您保持禁用此选项。</li>
+</ul>
+</div>
+
+<h4>自定义端口</h4>
+<p>您可为 statd 和 nlockmgr 服务自定义端口号。</p>
+
+<ol>
+<li>选择<strong>自定义端口</strong>。</li>
+<li>输入 <strong>statd 端口</strong>和<strong> nlockmgr 端口</strong>的端口号。</li>
+<li>
+单击<b>应用</b>。
+</li>
+</ol>
+
+<div class="section">
+<h4>注：</h4>
+<ul>
+<li>如果您要使用 NFSv3 服务，进入<strong>控制面板</strong> &gt; <strong>安全</strong> &gt; <strong>防火墙</strong>并创建防火墙规则，该规则可从内置应用程序启用&ldquo;Mac/Linux 文件服务器&rdquo;。</li>
+</ul>
+</div>
+<h4>设置读取/写入数据包大小</h4>
+<p>如果读取/写入的数据包大小无法通过 NFS 客户端设置，您可以在此栏指定默认值。</p>
+
+<ol>
+<li>请从<strong>读取数据包大小</strong>和<strong>写入数据包大小</strong>栏选择想要的数据包大小。</li>
+<li>
+单击<b>应用</b>。
+</li>
+<li>
+重新装载共享文件夹。
+</li>
+</ol>
+
+<div class="section">
+<h4>注：</h4>
+<ul>
+<li>更改读取/写入的数据包大小后，您必须重新装载共享文件夹才能使新的设置生效。</li>
+<li>这些设置只会影响通过 UDP（用户数据报协议）连接的 NFS 客户端。</li>
+</ul>
+</div>
+
+
+
+
+<h3>Kerberos 设置*</h3>
+<p>Kerberos 是一种网络验证通讯协议，可以让通过非安全网络通信的客户端和服务器，以安全的方式相互验证并证明彼此身份。DiskStation 提供了导入现有 Kerberos 密钥的选项。密钥成功导入后，NFS 客户端可以使用 Kerberos 验证协议连接至 DiskStation。</p>
+
+<h4> 若要导入 Kerberos 密钥：</h4>
+<ol>
+<li>请单击 <strong>Kerberos 设置</strong>。</li>
+<li>单击<b>导入</b>按钮。</li>
+<li>选择要导入的 Kerberos 密钥。</li>
+<li>单击<b>确定</b>。</li>
+</ol>
+
+<h3><a name="idmap"></a>Kerberos ID 映射</h3>
+<p>你可以将个别的 Kerberos 主体映射至本地 DSM 的用户帐户。</p>
+<h4> 若要将 Kerberos 主体映射至本地用户帐户：</h4>
+<ol>
+<li>请单击 <strong>Kerberos 设置</strong>。</li>
+<li>进入 <strong>ID 映射</strong>选项卡。</li>
+<li> 单击<b>添加</b>按钮。选择下列其中一个选项：</li>
+<ul>
+<li><strong>ID 映射：</strong>输入 Kerberos 主体以及与其映射的本地用户帐户。</li>
+<li><strong>建议的映射列表：</strong>此选项显示由系统生成的 Kerberos 主体及本地用户映射选项列表。</li>
+</ul>
+</ol>
+<div class="section disable-eds14">
+<h4> 注：</h4>
+<ul>
+<li>如果您要将通过 Kerberos 连接的 NFS 客户端映射至现有的域/LDAP 用户帐户，请确认您已加入目录服务。此外，目录服务器必须具有包含相应 Kerberos 主体的属性。</li>
+<ul>
+<li><strong>域用户：</strong>相应属性的格式应为 <strong>userPrincipalName</strong>。</li>
+<li><strong>LDAP 用户：</strong>相应属性的格式应为 <strong>GSSAuthName</strong>。</li>
+</ul>
+<li>如果用户无法成功映射至本地用户或域/LDAP 用户，则该用户应映射至&ldquo;guest&rdquo;。
+<li>映射优先顺序为：本地用户 &gt; 域/LDAP 用户 &gt; Guest。</li>
+<li>如果您要修改 NFS 客户端的访问权限，请使用 Windows 访问控制列表（ACL）。<strong>控制面板</strong> &gt; <strong>用户</strong>提供的权限选项不适用于 NFS 客户端。</li>
+</ul>
+</div>
+<p>
+<br>____<br> *仅适用于特定机型。
+
+</p>
+
+
+
+</body>
+</html>

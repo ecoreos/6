@@ -1,0 +1,208 @@
+﻿<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Conectar a VPN - Ayuda de Synology DSM</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="Turn your DiskStation into a VPN client and create profiles to connect your DiskStation to a VPN server.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h1>Conectar a VPN</h1>
+<p>Puede convertir fácilmente su DiskStation en un cliente VPN y conectarse a un servidor VPN (red privada virtual) existente a través de protocolos PPTP, OpenVPN o L2TP/IPSec. Si dispone de varios servidores VPN, también puede crear perfiles específicos de VPN para cada servidor para conectarse rápidamente a diferentes servidores VPN con un solo clic.</p>
+
+
+<div class="section">
+<h4>¿Qué es VPN?</h4>
+<p>Una VPN o red privada virtual es una solución que satisface la necesidad de acceder de manera segura a recursos en su red privada a través de Internet. Para empresas o para algunos individuos, el crecimiento de las necesidades de expansión de las redes conlleva un aumento exponencial del coste del sistema de red físico y la asistencia técnica requerida. Si se considera el rendimiento y el mantenimiento a largo plazo, VPN es una solución inteligente y cada vez más atractiva. Con el cifrado y otros mecanismos de seguridad, la tecnología VPN permite a los miembros de empresas acceder de manera sencilla la red central de la empresa y aprovechar los recursos contenidos en ella, como ocurre con una red LAN. Los individuos también pueden acceder a recursos en su LAN doméstica cuando están lejos de casa.</p>
+</div>
+
+
+<div class="section">
+<h4>Nota:</h4>
+<ul>
+<li> DiskStation solo puede conectarse a servidores OpenVPN que admiten túneles de estilo tun en Layer 3.</li>
+<li>Antes de instalar el paquete VPN, asegúrese de tener un servidor VPN al que conectarse. Para optimizar la compatibilidad, le recomendamos conectar con los servicios VPN alojados en un DiskStation con el paquete <strong>VPN Server</strong>. Para configurar otro DiskStation como servidor VPN, consulte <b>Ayuda de DSM</b> > <b>VPN Server</b> > <b>Configurar un VPN Server</b> para obtener las instrucciones.</li>
+</ul>
+</div>
+
+
+<h4>Para crear perfiles VPN:</h4>
+<ol>
+<li>Vaya al <b>Panel de control</b> > <b>Red</b>.</li><img src="about:blank" class="help_image"/><li>En la pestaña <b>Interfaz de red</b>, haga clic en <b>Crear</b> y elija <b>Crear perfil VPN</b>.</li><img src="../../../online_img/dsm/AdminCenter/connection_network_vpnclient/02.png" class="help_image"/><li>Para crear un nuevo perfil VPN, puede elegir uno de los siguientes tipos de conexión:<ul>
+		<li><b>PPTP</b>: PPTP (Protocolo de tunelización de punto a punto) es una solución VPN utilizada habitualmente y compatible con la mayor parte de clientes (incluidos Windows, Mac, Linux y dispositivos móviles).</li>
+		<li><b>OpenVPN</b>: OpenVPN es una solución de código abierto para implementar el servicio VPN. Protege la conexión VPN con el mecanismo de cifrado SSL/TLS.</li>
+		<li><b>L2TP/IPSec</b>: L2TP (protocolo de seguridad de capa 2) por IPSec proporciona una mayor seguridad a las redes privadas virtuales y es compatible con la mayoría de clientes (como Windows, Mac, Linux y dispositivos móviles).</li>
+	</ul>
+</li><img src="about:blank" class="help_image"/><li>Consulte las secciones siguientes para obtener instrucciones acerca de cómo configurar cualquiera de los tres tipos de conexiones VPN.</li>
+</ul>
+</ol>
+
+<h4>Para crear un perfil PPTP:</h4>
+
+  <ol>
+  <li>Cuando se le pida que elija un método de conexión VPN, elija <b>PPTP</b> y a continuación haga clic en <b>Siguiente</b>.</li>
+  <li>Elija un nombre para el nuevo el perfil, especifique la dirección del servidor VPN con el que desea establecer una conexión e introduzca su nombre de usuario y contraseña para el servidor. Haga clic en <b>Siguiente</b> para continuar.</li>
+
+<div class="section">
+<h4>Nota:</h4>
+
+<ul>
+<li>El nombre de usuario, la contraseña y la dirección del servidor VPN las deberá proporcionar el administrador del servidor VPN.</li>
+</ul>
+</div>
+
+  <li>Elija uno de los siguientes protocolos de autenticación desde el menú <b>Autenticación</b> para proteger la contraseña del cliente VPN durante la autenticación:<ul>
+		<li><b>PAP</b>: la contraseña no se cifrará durante la autenticación.</li>
+		<li><b>CHAP</b>: la contraseña se cifrará con ayuda de CHAP (Challenge-Handshake Authentication Protocol).</li>
+		<li><b>MS CHAP</b>: la contraseña se cifrará con ayuda de Microsoft CHAP versión 1.</li>
+		<li><b>MS CHAP v2</b>: la contraseña se cifrará con ayuda de Microsoft CHAP versión 2.</li>
+	</ul>
+  </li>
+  <li>Si elige <b>MS CHAP</b> o <b>MS CHAP v2</b>, a continuación seleccione una de las siguientes opciones del menú de <b>Cifrado</b> para cifrar la conexión VPN:<ul>
+		<li><b>No MPPE</b>: la conexión VPN no estará protegida con el cifrado punto a punto de Microsoft.</li>
+		<li><b>Require MPPE (40/128 bit)</b>: la conexión VPN se protegerá mediante el cifrado punto a punto de Microsoft de 40 bits o 128 bits.</li>
+		<li><b>Maximum MPPE (128 bit)</b>: la conexión VPN se protegerá mediante el cifrado punto a punto de Microsoft de 128 bits, que proporciona el mayor nivel de seguridad.</li>
+	</ul>
+  </li>
+    <div class="section">
+    <h4>Nota:</h4>
+  
+    <ul>
+    <li>Los ajustes de autenticación y cifrado aquí deberán ser iguales a los ajustes especificados en el servidor VPN. Póngase en contacto con el administrador del servidor VPN para obtener más información.</li>
+    </ul>
+    </div>
+   
+<li>Marque cualquiera de las siguientes casillas de verificación según sus necesidades:<ul>
+		<li><b>Utilizar la puerta de enlace predeterminada en la red remota</b>: habilite esta opción para dirigir el tráfico de red de DiskStation al servidor VPN especificado.</li>
+		<li><b>Permitir que otros dispositivos de la red se conecten a través de la conexión a Internet de este servidor de Synology</b>: habilite esta opción para permitir que los dispositivos de red que están dentro de la misma red local que su DiskStation para conectar al mismo servidor VPN.</li>
+		<li><b>Volver a conectar cuando se pierda la conexión VPN</b>: cuando se pierda la conexión VPN inesperadamente, el sistema intentará restablecerla cinco veces en intervalos de 30 segundos.</li>
+	</ul>
+</li>
+
+<li>Haga clic en <b>Aplicar</b>.</li>
+</ol>
+<h4>Para crear un perfil de OpenVPN:</h4>
+<ol>
+<li>Cuando se le pida que elija un método de conexión VPN, elija <b>OpenVPN</b> y a continuación haga clic en <b>Siguiente</b>.</li>
+<li>Elija un nombre para el nuevo el perfil, especifique la dirección del servidor VPN con el que desea establecer una conexión e introduzca su nombre de usuario y contraseña para el servidor.</li>
+<li>En el campo <b>Certificado</b>, haga clic en el botón <strong>Examinar</strong> para encontrar e importar el archivo del certificado (por ejemplo, <b>ca.crt</b>) que se ha exportado del servidor VPN. Haga clic en <b>Siguiente</b> para continuar.</li>
+
+<div class="section">
+<h4>Nota:</h4>
+
+<ul>
+<li>El nombre de usuario, la contraseña, la dirección y el certificado del servidor VPN los deberá proporcionar el administrador del servidor VPN.</li>
+</ul>
+</div>
+
+<li>Marque cualquiera de las siguientes casillas de verificación según sus necesidades:<ul>
+		<li><b>Habilitar compresión en el enlace VPN</b>: habilite esta opción para realizar la compresión de datos antes de transferir datos a través de VPN. Esta opción puede aumentar la velocidad de transferencia, pero consumirá más recursos del sistema.</li>
+		<li><b>Utilizar la puerta de enlace predeterminada en la red remota</b>: habilite esta opción para dirigir el tráfico de red de DiskStation al servidor VPN especificado.</li>
+		<li><b>Permitir que otros dispositivos de la red se conecten a través de la conexión a Internet de este servidor de Synology</b>: habilite esta opción para permitir que los dispositivos de red que están dentro de la misma red local que su DiskStation para conectar al mismo servidor VPN.</li>
+		<li><b>Volver a conectar cuando se pierda la conexión VPN</b>: cuando se pierda la conexión VPN inesperadamente, el sistema intentará restablecerla cinco veces en intervalos de 30 segundos.</li>
+	</ul>
+</li>
+<li>Haga clic en <b>Aplicar</b>.</li>
+</ol>
+
+
+
+<h4>Para crear un perfil OpenVPN (a través de .ovpn):</h4>
+<ol>
+<li>Cuando se le pida que elija un método de conexión VPN, elija <b>OpenVPN (mediante importación de un archivo .ovpn)</b> y, a continuación, haga clic en <b>Siguiente</b>.</li>
+<li>Elija un nombre para el nuevo perfil y en el campo <strong>Importar archivo .ovpn</strong>, haga clic en <strong>Examinar</strong> para seleccionar e importar un archivo .ovpn exportado desde el servidor VPN.</li>
+<li>Introduzca la siguiente información facilitada por el administrador de su servidor VPN: <strong>nombre de usuario</strong>, <strong>contraseña</strong> e importe el archivo del <b>certificado CA</b> (p. ej. ca.crt).</li>
+<li>Si el proveedor del servidor VPN también le ha proporcionado una <b>clave TLS-auth</b>, una <b>clave de cliente</b>, un <b>certificado de cliente</b> o una <b>lista de revocación de certificados</b>, haga clic en <strong>Opciones avanzadas</strong> e impórtelos en los campos correspondientes.</li>
+<li>Haga clic en <b>Siguiente</b> para continuar. </li>
+
+<div class="section">
+<h4>Nota:</h4>
+<ul>
+<li>El nombre de usuario, la contraseña, la dirección y cualquier archivo adicional, como certificados o claves, los deberá proporcionar el administrador del servidor VPN.</li>
+</ul>
+</div>
+
+<li>Marque cualquiera de las siguientes casillas de verificación según sus necesidades:</li>
+<ul>
+<li><b>Habilitar compresión en el enlace VPN</b>: habilite esta opción para realizar la compresión de datos antes de transferir datos a través de VPN. Esta opción puede aumentar la velocidad de transferencia, pero consumirá más recursos del sistema.</li>
+<li><b>Utilizar la puerta de enlace predeterminada en la red remota</b>: habilite esta opción para dirigir el tráfico de red de DiskStation al servidor VPN especificado.</li>
+<li><b>Permitir que otros dispositivos de la red se conecten a través de la conexión a Internet de este servidor de Synology</b>: habilite esta opción para permitir que los dispositivos de red que están dentro de la misma red local que su DiskStation para conectar al mismo servidor VPN.</li>
+<li><b>Volver a conectar cuando se pierda la conexión VPN</b>: cuando se pierda la conexión VPN inesperadamente, el sistema intentará restablecerla cinco veces en intervalos de 30 segundos.</li>
+</ul>
+<li>Haga clic en <b>Aplicar</b>.</li>
+</ol>
+
+
+
+
+
+<h4>Para crear un perfil de L2TP/IPSec:</h4>
+<ol>
+<li>Cuando se le pida que elija un método de conexión VPN, elija <b>L2TP/IPSec</b> y, a continuación, haga clic en <b>Siguiente</b>.</li>
+<li>Elija un nombre para el nuevo el perfil, especifique la dirección del servidor VPN con el que desea establecer una conexión e introduzca su nombre de usuario y contraseña para el servidor. También deberá introducir una clave compartida previamente para el servidor VPN. A continuación, haga clic en <strong>Siguiente</strong>.</li>
+
+<div class="section">
+<h4>Nota:</h4>
+
+<ul>
+<li>El nombre de usuario, la contraseña, la dirección y la clave precompartida del servidor VPN los deberá proporcionar el administrador del servidor VPN.</li>
+</ul>
+</div>
+
+<li>Elija uno de los siguientes protocolos de autenticación desde el menú <b>Autenticación</b> para proteger la contraseña del cliente VPN durante la autenticación:<ul>
+		<li><b>PAP</b>: la contraseña no se cifrará.</li>
+		<li><b>CHAP</b>: la contraseña se cifrará con ayuda de CHAP (Challenge-Handshake Authentication Protocol).</li>
+		<li><b>MS CHAP</b>: la contraseña se cifrará con ayuda de Microsoft CHAP versión 1.</li>
+		<li><b>MS CHAP v2</b>: la contraseña se cifrará con ayuda de Microsoft CHAP versión 2.</li>
+	</ul>
+</li>
+
+<div class="section"><h4>Nota:</h4>
+<ul>
+	<li>Los ajustes de autenticación y cifrado aquí deberán ser iguales a los ajustes especificados en el servidor VPN. Póngase en contacto con el administrador del servidor VPN para obtener más información.</li>
+</ul>
+</div>
+
+<li>Marque cualquiera de las siguientes casillas de verificación según sus necesidades:<ul>
+		<li><b>Utilizar la puerta de enlace predeterminada en la red remota</b>: habilite esta opción para dirigir el tráfico de red de DiskStation al servidor VPN especificado.</li>
+		<li><b>Permitir que otros dispositivos de la red se conecten a través de la conexión a Internet de este servidor de Synology</b>: habilite esta opción para permitir que los dispositivos de red que están dentro de la misma red local que su DiskStation para conectar al mismo servidor VPN.</li>
+		<li><strong>El servidor está detrás de un dispositivo NAT</strong>: de manera predeterminada, el protocolo L2TP/IPSec no permite conectarse a un servidor VPN detrás de un dispositivo NAT. Habilite esta opción para sortear esta limitación y permitir que DiskStation se conecte a un servidor VPN L2TP/IPSec detrás de un dispositivo NAT.</li>
+		<li><b>Volver a conectar cuando se pierda la conexión VPN</b>: cuando se pierda la conexión VPN inesperadamente, el sistema intentará restablecerla cinco veces en intervalos de 30 segundos.</li>
+	</ul>
+</li>
+<li>Haga clic en <b>Aplicar</b>.</li>
+</ol>
+
+
+<h4>Para conectarse o desconectarse de un servidor VPN:</h4>
+
+<ol>
+<li>Seleccione un perfil de VPN.</li>
+<li>Haga clic en <b>Conectar</b> o <b>Desconectar</b>.</li><img src="about:blank" class="help_image"/></ol>
+
+
+<div class="section">
+<h4>Nota:</h4>
+<ul>
+<li>Solo puede conectarse un perfil a la vez.</li>
+</ul>
+</div>
+
+<h4>Para modificar un perfil de VPN:</h4>
+
+<ol>
+<li>Seleccione un perfil de VPN.</li>
+<li>Haga clic en <strong>Editar</strong>.</li>
+
+</ol>
+
+
+</body>
+</html>

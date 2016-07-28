@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Ansluta till olika filservrar med File Station - Synology DSM hjälp</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="Learn how to customize File Station settings related to file management, shared links, and security.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Fjärranslutning</h2>
+
+<p>I File Station kan du ansluta till publika molntjänster (Box, Dropbox, Google Drive och Microsoft OneDrive) och filservrar med ett antal olika protokoll (FTP, SFTP, WebDAV och WebDAV HTTPS).</p>
+
+<h4>Att ansluta till en molntjänst:</h4>
+<ol>
+  <li>Gå till <strong>Verktyg</strong> > <strong>Fjärranslutning</strong> > <strong>Anslutningskonfiguration</strong>.</li>
+  <li>Välj en önskad molntjänst genom att klicka på ikonen och klicka på <strong>Nästa</strong>.</li>
+  <li>I popup-fönstret, följ guidens instruktioner för autentisering av konto.</li>
+  <li>När installationen är slutförd visas molntjänsten i den vänstra panelen.</li>
+</ol>
+
+
+<div class="section">
+<h4>Moln-specifika begränsningar:</h4>
+<ul>
+<li><strong>Box</strong>:
+<ul>
+  <li>En katalog som delas med andra samarbetspartners får ägarens användarnamn som suffix.</li>
+  <li>Om kataloger som delas med andra samarbetspartners använder ett identiskt namn (en katalog som har ägarens användarnamn som suffix) kommer endast en sådan katalog att visas.</li>
+  <li>Filer med dessa filnamnstillägg går endast att öppna via Box: .gdoc, .gsheet och .boxnote.</li>
+  <li>Filnamn är inte skiftlägeskänsliga.</li>
+  <li>För rätt inställningar av brandvägg, vänligen se <a href="https://support.box.com/hc/articles/200523728-Configuring-a-Firewall-for-Box-or-Box-Sync"  target="_blank">den här artikeln</a>.</li>
+</ul>
+</li>
+
+<li><strong>Dropbox</strong>:
+<ul>
+<li>En Dropbox-katalog kan inte visas om den innehåller över 25000 filer.</li>
+<li>Det går inte att byta namn på en Dropbox-katalog om den innehåller över 10000 filer.</li>
+<li>Filer som överskrider 10 GB kan inte laddas upp.</li>
+<li>En uppladdningsuppgift misslyckas om målfilen tar mer än 24 timmar att ladda upp.</li>
+<li>Filnamn är inte skiftlägeskänsliga.</li>
+<li>För rätt inställningar av brandvägg, vänligen se <a href="https://www.dropbox.com/help/23"  target="_blank">den här artikeln</a>.</li>
+</ul>
+</li>
+
+<li><strong>Google Drive</strong>:
+<ul>
+  <li>Filer/mappar med en sökväg längre än 2048 tecken visas inte.</li>
+  <li>Filer med ett filnamn längre än 255 tecken visas inte.</li>
+  <li>Filer/kataloger med identiska namn kommer att markeras med individuell tid för skapandet.</li>
+<li>Om du öppnar en Google-specifik fil (dvs. Google Docs och Google Slides) via File Station visas en URL för dig, för åtkomst till målfilen.</li>
+<li>Mapparna <strong>Min enhet</strong> och <strong>Stjärnmärkta</strong> som visas i File Station motsvarar respektive mappar ”Min enhet” och ”Stjärnmärkta” i Google Drive.</li>
+<li>För rätt inställningar av brandvägg, vänligen se <a href="https://support.google.com/drive/answer/2589954"  target="_blank">den här artikeln</a>.</li>
+</ul>
+</li>
+
+<li><strong>Microsoft OneDrive</strong>:
+<ul>
+<li>OneNote-anteckningsfiler visas inte.</li>
+<li>Filer som överskrider 10 GB kan inte laddas upp.</li>
+<li>Filer (t.ex. .png, .jpg, .docx, .pdf) kan visa större filstorlekar (ursprunglig storlek plus storlek på miniatyrbild). Det här påverkar inte deras ursprungliga filstorlekar när de laddas ner.</li>
+<li>Filnamn är inte skiftlägeskänsliga.</li>
+
+</ul>
+</li>
+</ul>
+
+<p>För att få reda på fler begränsningar föreslår vi att du besöker den officiella webbplatsen för den berörda molntjänsten.</p>
+
+
+</div>
+
+
+<h4>Att ansluta till en filserver:</h4>
+<ol>
+  <li>Gå till <strong>Verktyg</strong> > <strong>Fjärranslutning</strong> > <strong>Anslutningskonfiguration</strong>.</li>
+  <li>Välj ett önskat serverprotokoll genom att klicka på ikonen och klicka på <strong>Nästa</strong>.</li>
+  <li>Tillhandahåll följande information för att slutföra konfigurationen:
+  <ul>
+  <li><strong>Värdnamn eller IP-adress</strong>: Ange värdnamn eller IP-adress för målfilservern.</li>
+  <li><strong>Port</strong>: Ange portnumret för målfilservern.</li>
+  <li><strong>Användare</strong> och <strong>Lösenord</strong>: Ange den här inloggningsinformationen om målfilservern kan kräva ett konto/lösenord.</li>
+  <li><strong>Teckentabell</strong>: Välj teckentabell för målfilservern så att filnamnen visas korrekt.</li>
+  <li><strong>Profilnamn</strong>: Ange ett unikt namn för att enkelt identifiera den här filservern.</li>
+  <li><strong>Använd WebDAV HTTPS-anslutning</strong>: Det här alternativet är bara tillgängligt när du konfigurerar ett WebDAV-protokoll och både klienten och filserver har stöd för WebDAV HTTPS.</li>
+  <li><strong>Tillåt bara en anslutning per användare</strong>: Det här alternativet är bara tillgängligt när du konfigurerar ett FTP- eller SFTP-protokoll. Markera det här alternativet för att optimera anslutningsbarhet när servern har begränsningar för antalet anslutningar.</li>
+  </ul>
+  </li>
+<li>Klicka på <strong>Tillämpa</strong> för att spara inställningarna. Målfilservern visas i den vänstra panelen.</li> 
+</ol>
+<h4>Att ändra en profil för en befintlig molntjänst eller filserver:</h4>
+<ol>
+  <li>Gå till <strong>Verktyg</strong> > <strong>Fjärranslutning</strong> > <strong>Anslutningslista</strong>.</li>
+  <li>Klicka på molntjänsten eller filerserven som är mål för att hantera följande:
+    <ul>
+      <li>Redigering: Klicka på <strong>Redigera</strong>, ändra den nuvarande profilkonfigurationen och klicka på <strong>OK</strong>.</li>
+      <li>Koppla ifrån: Klicka på <strong>Koppla ifrån</strong> för att avsluta anslutningen.</li>
+  <li>Återansluta: Klicka på <strong>Anslut</strong> för att återställa anslutning. (Alternativt, klicka på målet i vänster panel på File Station för att återansluta.)</li>
+  <li>Radering: Klicka på <strong>Radera</strong> och bekräfta därefter att profilen ska överges. (Alternativt, klicka på målet i vänster panel på File Station och klicka på <strong>Radera</strong> för radering.)</li>
+    </ul>
+  </li>
+  </ol>
+  
+  
+<div class="section">
+  <h4>Obs:</h4>
+<ul>
+  <li>Varje användare kan samtidigt ansluta till inte mer än 100 molntjänster och filservrar.</li>
+  <li>Tillse att du väljer korrekt teckentabell för servern, för att undvika oväntade fel. Unicode rekommenderas om du inte känner till serverns teckentabell.</li>
+  <li>Vissa funktioner i File Station (dvs. Komprimera till, Extrahera, Förhandsgranska, osv.) kan inte tillämpas på filer som lagras på molntjänster eller filservrar.</li>
+<li>Individuella överföringshastigheter för varje ansluten molntjänst eller filserver är föremål för användarens inställningar för hastighetsbegränsning.</li>
+<li>Varje användare är begränsad till tre samtidiga filöverföringar mellan alla anslutna molntjänster och filservrar.</li>
+<li>För att konfigurera WebDAV, WebDAV HTTPS och inställningarna för proxy för molntjänster, gå till <strong>Kontrollpanel</strong> > <strong>Nätverk</strong> > <strong>Allmänt</strong> > <strong>Proxy</strong>. Om du har ändrat inställningar för proxy och varit ansluten till en molntjänst eller filserver, vänligen koppla ifrån och återanslut sedan.</li>
+<li>Att ändra information för anslutna molntjänster eller filservrar påverkar inte anslutningsstatusen.</li>
+<li>För att frigöra anslutningsresurser blir en molntjänst/filserver automatiskt frånkopplad om de filer den innehåller inte används på 30 minuter. Klicka på molntjänsten/filsservern för att återställa anslutningen.</li>
+<li>Systemet kan inte visa filer/mappar som använder sig av följande format på namn:
+  <ul>
+    <li>Börjar med <strong>._</strong> eller <strong>.SYNOPPSDB</strong></li>
+    <li>Innehåller <strong>/</strong></li>
+<li>Namngiven exakt som <strong>.</strong>&nbsp;&nbsp;&nbsp;&nbsp;<strong>..</strong>&nbsp;&nbsp;&nbsp;&nbsp;<strong>'</strong>&nbsp;&nbsp;&nbsp;&nbsp;<strong>"</strong>&nbsp;&nbsp;&nbsp;&nbsp;<strong>.DS_Store</strong>&nbsp;&nbsp;&nbsp;&nbsp;<strong>@eaDir</strong>&nbsp;&nbsp;&nbsp;&nbsp;<strong>@sharebin</strong>&nbsp;&nbsp;&nbsp;&nbsp;<strong>@tmp</strong>&nbsp;&nbsp;&nbsp;&nbsp;<strong>.SynologyWorkingDirectory</strong></li>
+  </ul>
+</li>
+<li class="enable-dockerx64">Fjärranslutning stöds endast i läget högt privilegie. För att använda den här funktionen, gå till filpaketet Docker på din DSM som är värd, välj den <strong>Docker DSM</strong> som du vill aktivera krypterade delade mappar för, klicka på <strong>Redigera</strong> och markera rutan bredvid <strong>Kör container med högt privilegie</strong>.</li>
+
+</ul>
+</div>
+</body>
+</html>

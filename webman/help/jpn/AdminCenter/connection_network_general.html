@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>ネットワーク</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2>全般</h2>
+
+<p><strong>[コントロール パネル]</strong> &gt; <strong>[ネットワーク]</strong> &gt; <strong>[全般]</strong> を選択すると、デフォルトのゲートウェイ、DNS サーバー、プロキシおよび IPv6 トンネリングなどの一般的なネットワーク オプションを設定できます。</p>
+
+
+<h3>DiskStation デバイスに別名を付ける</h3>
+<p>DiskStation デバイスに別名を付けるには、新しいサーバー名を入力した後で <b>[適用]</b> をクリックします。</p>
+<p>サーバー名は大文字小文字を区別します。1 ～ 15 文字で指定し、文字、数字、アンダースコアー、マイナス記号などが使用可能です。ただし名前の先頭は文字で開始しなければなりません。</p>
+
+
+<h3>デフォルトのゲートウェイを指定する</h3>
+<p>デフォルトのゲートウェイの IP アドレスを入力し、<b>[適用]</b> をクリックするだけで設定が保存されます。</p>
+
+
+<h3>DNS サーバーの IP アドレスを指定する</h3>
+<p>DNS サーバーの IP アドレスは手動で設定できます。その場合、優先 DNS サーバーの IP アドレスを入力してください。優先 DNS サーバーに不具合が生じたときのバックアップ用として、代替 DNS サーバーの IP アドレスも入力できます。DNS サーバーの IP アドレスを設定できたら、<strong>[適用]</strong> をクリックして設定を保存してください。</p>
+
+
+<div class="section">
+<h4>注：</h4>
+<p>すべてのインターフェースを自動的に構成した場合、または PPPoE 接続を使用している場合は、DNS サーバーととデフォルトゲートウェイの欄は自動的に設定されますので変更することはできません。</p>
+</div>
+
+
+
+<h3><a name="proxy"></a>プロキシ サーバー経由で接続</h3>
+<p>プロキシ サーバー経由で DiskStation を接続するには、<b>[プロキシ サーバー経由で接続]</b> にチェックマークを付けて、<b>[アドレス]</b> と <b>[ポート]</b> を入力した後、<b>[適用]</b> をクリックします。</p>
+
+
+<div class="section">
+<h4>注：</h4>
+<ul>
+<li><strong>[詳細設定]</strong> をクリックして HTTP プロキシ、HTTPS プロキシ、および認証情報を設定します。
+<li>デフォルトにより、HTTPS プロキシ設定は HTTP プロキシと同じです。</li>
+<li><b>[プロキシ サーバー経由で接続]</b> にチェックマークが付けてあると、他の一部のパッケージと共に [DSM の更新]、[パッケージ センター] も常にプロキシを経由してインターネットに接続します。</li>
+<li><b>[ローカル アドレスはプロキシ サーバーを通らない]</b> にチェックマークを付けた場合は、DiskStation が使用する DNS サーバーがローカル ネットワーク内のデバイスのクエリーを解決できるか確認してください。</li>
+</ul>
+</div>
+
+
+<h3>IPv6 トンネリングを有効にする</h3>
+<p>IPv6 が完全に IPv4 に引き継がれるまで、IPv6 アドレスを持つホストが IPv4 サービスにアクセスできるように、IPv6 トンネリングが必要となります。このテクニックは、既存の IPv4 ネットワーク内で IPv6 トラフィックを配信することができます。<br>IPv6 の設定の仕方がわからない、または接続に問題が発生した場合は、インターネットのサービスプロバイダにご相談ください。</p>
+<h4>IPv6 Tunnel を有効にする：</h4>
+<ol>
+<li><b>[トンネルを有効にする]</b> にチェックマークを付けて、トンネルのサポートを有効にします。</li>
+
+<li><b>[サーバーアドレス] </b>にホスト名またはトンネル サービス プロバイダの IP アドレスを入力します。例：anonymous.freenet6.net.</li>
+
+<li>必要に応じて<b> [匿名で接続する] </b>または<b> [既存のアカウントに接続] </b>を選択します。</li>
+</ol>
+
+<div class="section">
+<h4>注：</h4>
+<p>外部 IPv6 アドレスは、サービスプロバイダが自動的に更新する場合があります。その場合でも、DiskStation デバイスからは、以前の IPv6 アドレスはすぐに削除されません。</p>
+</div>
+
+
+
+</body>
+</html>

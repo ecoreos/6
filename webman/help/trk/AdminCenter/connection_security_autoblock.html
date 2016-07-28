@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Otomatik Engelleme - Synology DSM Yardım</title> 
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="The auto block feature helps improve the security of your DiskStation by blocking the IP addresses of clients with too many failed login attempts.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Otomatik Engelleme</h2>
+
+<p>Otomatik engelleme özelliği çok fazla başarısız oturum açma girişimine sahip istemcilerin IP adreslerini engelleyerek DiskStation sunucunuzun güvenliğini arttırmaya yardımcı olur. Bu kaba-kuvvet saldırıları kullanılarak hesapların kırılması riskini azaltmaya yardımcı olur.</p>
+
+<p>Güvendiğiniz IP adreslerini eklemek için bir izin verme listesini ya da belirli IP adreslerinin oturum açmasını daima engellemek için bir engelleme listesini de oluşturup yönetebilirsiniz.</p>
+
+<div class="section">
+<h4>Not:</h4>
+<p>Aşağıdakiler gibi çeşitli hizmetler ve paketler otomatik engellemeyi destekler: DSM, SSH, Telnet, rsync, ağ yedeklemesi, paylaşımlı klasör senkronizasyonu, FTP, WebDAV, File Station, Photo Station, Audio Station, Video Station, Download Station, Mail Server, Mail Station, Time Backup, VPN Server, Cloud Station ve Synology mobil uygulamaları.</p>
+</div>
+
+<h4>Otomatik engellemeyi etkinleştirmek için:</h4>
+<ol>
+
+<li><strong>Denetim Masası</strong> öğesini açın ve <strong>Güvenlik</strong> > <strong>Otomatik Engelleme</strong> öğesine gidin.</li>
+<li><b>Otomatik engellemeyi etkinleştir</b>'i işaretleyin.</li>
+
+<li><b>Oturum açma girişimleri</b> alanına başarısız oturum açma girişimlerinin sayısını girin ve <b>Süre içinde (dakika)</b> alanına dakika sayısını girin. Bir IP adresi belirlenen dakika içerisinde başarısız oturum açma girişimi sayısını aşarsa, bu IP adresi engellenir.</li>
+<li><b>Engelleme süre dolumunu etkinleştir</b>'i işaretleyin ve belirlenen gün sayısı sonunda engellenen IP adresini kaldırmak için bir sayı girin.</li>
+
+<li><b>Uygula</b>'ya tıklayın.</li>
+</ol>
+
+
+<h3>Engelleme Listesi Yönetilmesi</h3>
+<p><strong>İzin/Engelleme Listesi</strong>'ne tıklayın ve <strong>Engelleme Listesi</strong> sekmesine gidin. </p>
+
+<h4>IP adresleri eklemek için:</h4>
+<p><strong>Oluştur</strong> açılır menüsünden aşağıdakilerden birini seçin:</p>
+<ul>
+<li><strong>IP adresi ekle</strong><br> Bir IP adresi girin ve sona erme zamanını ayarlayın.</li>
+<li><strong>IP adres listesini al</strong><br>Bir kerede birtakım IP adreslerini eklemek ve sona erme zamanı ayarlamak için, IP adreslerinin listelendiği bir metin dosyasını içe aktarın. Var olan IP adreslerinin üzerine yazmak isterseniz onay kutusunu işaretleyin. Seçenek işaretlenmezse, aynı IP adresleri atlanacaktır.<br> Seçtiğiniz dosya doğru biçime sahipse, önizleme alanında tüm IP adreslerini göreceksiniz. İçe aktarmak için <strong>Tamam</strong>'a tıklayın.</li>
+
+<div class="section">
+<h4>Not:</h4>
+<p>Bir dosyayı içe aktarmak için, dosyanın aşağıdaki kriterlere uyması gerekir:</p>
+<ul>
+<li>Dosya düz metin dosyası olmalıdır.</li>
+<li>Dosyanın her bir satırı yalnızca bir IP adresi içermelidir.</li>
+<li>Yorum satırları # (diyez işareti) ile başlar.</li>
+</ul>
+</div>
+</ul>
+
+<h4>Engellenen IP adreslerini kaldırmak için:</h4>
+<p>Listeden kaldırmak istediğiniz IP adreslerini seçip <b>Kaldır</b>'a tıklayın.</p>
+
+
+<h3>İzin Listesinin Yönetilmesi</h3>
+
+<p><strong>İzin/Engelleme Listesi</strong>'ne tıklayın ve <strong>İzin Listesi</strong> sekmesine gidin. </p>
+
+<h4>IP adresleri eklemek için:</h4>
+<p><strong>Oluştur</strong> açılır menüsünden aşağıdakilerden birini seçin:</p>
+<ul>
+<li><strong>IP adresi ekle</strong><br> Bir IP adresi girin.</li>
+<li><strong>IP adres listesini al</strong><br>Bir kerede birtakım IP adreslerini eklemek için IP adreslerinin listelendiği bir metin dosyasını içe aktarın. Var olan IP adreslerinin üzerine yazmak isterseniz onay kutusunu işaretleyin. Seçenek işaretlenmezse, aynı IP adresleri atlanacaktır.<br> Seçtiğiniz dosya doğru biçime sahipse, önizleme alanında tüm IP adreslerini göreceksiniz. İçe aktarmak için <strong>Tamam</strong>'a tıklayın.</li>
+</ul>
+
+<div class="section"><h4>Not:</h4>
+<p>Bir dosyayı içe aktarmak için, dosyanın aşağıdaki kriterlere uyması gerekir:</p>
+<ul>
+<li>Dosya düz metin dosyası olmalıdır.</li>
+<li>Dosyanın her bir satırı yalnızca bir IP adresi içermelidir.</li>
+<li>Yorum satırları # (diyez işareti) ile başlar.</li>
+</ul>
+</div>
+
+<h4>IP adreslerini kaldırmak için:</h4>
+<p>Listeden kaldırmak istediğiniz IP adreslerini seçip <b>Kaldır</b>'a tıklayın.</p>
+
+<div class="section"><h4>Not:</h4>
+<p>DiskStation cihazınız bir karşıt sunucunun arkasındaysa lütfen bu karşıt sunucunun IP adresini izin listesine ekleyin.</p>
+</div>
+
+</body>
+</html>

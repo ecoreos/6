@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Win/Mac/NFS</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Mac-bestandsservice</h2>
+
+<p>
+In <strong>Configuratiescherm</strong> > <strong>Bestandsservices</strong> > <strong>Win/Mac/NFS</strong> kunt u Mac-bestandsservice inschakelen om van DiskStation een Mac-bestandsserver (AFP-server) te maken.</p>
+
+<h4>Om Mac-bestandsservice in te schakelen:</h4>
+<ol>
+<li>
+Schakel het selectievakje <b>Mac-bestandsservice inschakelen</b> in om van DiskStation een Mac-bestandsserver (AFP-server) te maken.
+</li>
+<li>
+Stel indien nodig een <b>Time Machine</b>-back-upmap in. (Zie het gedeelte hieronder voor meer informatie.)
+</li>
+
+<li>
+Klik op <b>Toepassen</b>.
+</li>
+
+</ol>
+
+<div class="section">
+<h4>Opmerking:</h4>
+<ul>
+<li>Als u gegevens van Time Machine naar DiskStation wilt back-uppen, selecteert u een gedeelde map in de vervolgkeuzelijst. </li>
+<li> gedeelde mappen die door andere services worden gebruikt, zullen niet beschikbaar zijn voor Time Machine.</li>
+</ul>
+
+</div>
+
+
+
+<h3>Logboekregistratie van overdracht inschakelen</h3>
+<p>Door deze optie in te schakelen worden bestandsbewerkingen, zoals het maken, verwijderen, openen, schrijven, verplaatsen en hernoemen van bestanden en mappen, bijgehouden via het AFP-protocol, ook bekend als Apple Filing Protocol.</p>
+
+
+<h3>Geavanceerde instellingen</h3>
+<h4>Standaard UNIX-machtigingen toepassen:</h4>
+<p>Door deze optie in te schakelen worden de standaard UNIX-machtigingen van kracht bij het uploaden of maken van bestanden en mappen. Toegepaste machtigingen zijn hetzelfde als machtigingen die worden toegepast met de UNIX-opdracht <strong>umask</strong>. Door deze optie in te schakelen geldt 644 als UNIX-machtiging voor bestanden en 755 voor mappen. Door deze optie uit te schakelen geldt 666 als UNIX-machtiging voor bestanden en 777 voor mappen. De standaard umask-waarde is 022.</p>
+
+<div class="section">
+<h4>Opmerking:</h4>
+<p>door het inschakelen van deze optie kunnen inconsistente machtigingsproblemen tussen verschillende protocollen ontstaan. Om inconsistenties te vermijden raden wij u aan om deze optie uitgeschakeld te laten.</p>
+</div>
+
+<h4>Bronnen onmiddellijk vrijgeven na verbreking van de verbinding:</h4>
+<p>door deze optie in te schakelen, worden de bronnen onmiddellijk vrijgegeven bij onverwachte onderbreking van de AFP-serververbinding. Schakel deze optie in als bij het gebruik van Time Machine de foutmelding "Volume in gebruik" verschijnt.</p>
+<h4>Om Bonjour printer broadcast in te schakelen:</h4>
+<p>Schakel het selectievakje <b>Bonjour Printer Broadcast inschakelen</b> in om Mac-clients toe te laten om te bladeren naar de printer die aangesloten is op DiskStation.</p>
+
+<h4 class="disable-hi3535">Bestandsinhoud zoeken op Finder met Spotlight:</h4>
+<p class="disable-hi3535">na het indexeren van mappen en koppeling op uw Mac-computer kunt u Spotlight gebruiken om naar bestanden en inhoud te zoeken.</p>
+<ol class="disable-hi3535">
+<li>Ga naar <strong>Configuratiescherm</strong> > <strong>Indexeringsservice</strong> > <strong>Indexeren van bestanden</strong> > <strong>Geïndexeerde maplijst</strong> > <strong>Maken</strong> om specifieke mappen en bijbehorende bestanden te indexeren op bestandstype.</li>
+<li>Klik op <strong>OK</strong> om de indexering uit te voeren.</li>
+<li>Koppel de geïndexeerde mappen op uw Mac-computer.</li>
+<li>Klik op uw Mac-computer op de gewenste gekoppelde map in het linkerpaneel of Finder en gebruik Spotlight op Finder om naar bestanden te zoeken.</li>
+
+</ol>
+
+<div class="section disable-hi3535">
+<h4>Opmerking:</h4>
+<ul>
+<li>gebruik Spotlight op Finder om in gekoppelde mappen te zoeken. Met Spotlight op het Mac-bureaublad kunt u alleen naar lokale bestanden zoeken.</li>
+<li>Op Mac OS X 10.9 en later versies ondersteunt Spotlight op Finder het zoeken in gekoppelde mappen op tagnaam en categorie.</li>
+</ul>
+</div>
+
+</body>
+</html>

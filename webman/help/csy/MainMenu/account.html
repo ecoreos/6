@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Možnosti</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2><a name="leaf_user"></a>Účet</h2>
+
+<p>Karta Účet nabízí možnosti pro úpravu základních nastavení účtu, například popisu, hesla, e-mailu a dvoufázového ověření. Tuto kartu je možné zobrazit kliknutím na ikonu ve tvaru lidské postavy v pravém horním rohu plochy a volbou <strong>Osobní</strong>.</p>
+
+
+
+<h3>Úprava nastavení účtu</h3>
+
+<p>Upravit je možné tato nastavení účtu:</p>
+<ul>
+<li><strong>Popis:</strong> Zadejte popis účtu. Uživatelský popis může obsahovat maximálně 64 zobrazitelných znaků Unicode.</li>
+<li><strong>Nové heslo:</strong> Pokud chcete změnit heslo účtu, zadejte nové heslo a potvrďte jej v níže uvedeném poli <strong>Potvrdit heslo</strong>. V heslech se rozlišují malá a velká písmena a hesla mohou obsahovat maximálně 127 zobrazitelných znaků včetně písmen, čísel, symbolů a mezer.</li>
+<li><strong>E-mail:</strong> Zadejte e-mailovou adresu (pouze pro uživatele, kteří nejsou správci).</li>
+<li><strong>Jazyk zobrazení:</strong> Zadejte jazyk zobrazení účtu. Jazyk zobrazení, který zde zadáte, bude mít přednost před jazykem zadaným v části <b>Ovládací panel</b> > <b>Místní nastavení</b> > <b>Jazyk</b>.</li>
+</ul>
+<p>Po provedení změny nastavení účtu uložte kliknutím na možnost <b>OK</b>.</p>
+
+
+<h3>Dvoufázové ověření</h3>
+
+<p>Dvoufázové ověření poskytuje lepší zabezpečení účtu DSM. Pokud je dvoufázové ověření povoleno, budete muset při přihlašování do systému DSM zadat kromě svého hesla také kód pro jednorázové ověření. Ověřovací kódy získáte z ověřovací aplikace nainstalované ve vašem mobilním zařízení. Když bude tedy někdo chtít získat přístup k vašemu účtu, bude potřebovat nejen vaše uživatelské jméno a heslo, ale také vaše mobilní zařízení.</p>
+
+<div class="section">
+<h4>Požadavky:</h4>
+<p>Dvoufázové ověření vyžaduje mobilní zařízení a ověřovací aplikaci podporující protokol TOTP (Time-based One-Time Password). Mezi takové ověřovací aplikace patří Google Authenticator (Android/iPhone/BlackBerry) nebo Authenticator (Windows Phone).</p>
+</div>
+
+<h4>Povolení dvoufázového ověření:</h4>
+
+<ol>
+<li>Přejděte na kartu <strong>Osobní</strong> > <strong>Účet</strong> a zaškrtnutím políčka <strong>Povolit dvoufázové ověření</strong> spusťte průvodce nastavením dvoufázového ověření.</li>
+<li>Na první obrazovce zadejte e-mailovou adresu. Na tuto e-mailovou adresu lze v případě ztráty vašeho mobilního zařízení zaslat nouzové ověřovací kódy.</li>
+<li>Stáhněte a nainstalujte ověřovací aplikaci, například Google Authenticator (Android/iPhone/BlackBerry) nebo Authenticator (Windows Phone).</li>
+<li>Na následující obrazovce otevřete ověřovací aplikaci a naskenujte kód QR. Případně je možné kliknout na odkaz a ručně zadat tajný klíč.</li>
+<li>Vaše ověřovací aplikace poté vygeneruje 6místný ověřovací kód. Zadáním tohoto kódu do textového pole průvodce potvrdíte správnost konfigurací. Pokud dojde k chybě, zkontrolujte, jestli je systémový čas vašeho mobilního zařízení synchronizován se systémovým časem systému DSM. Ověřovací kódy se navíc pravidelně aktualizují, takže ověřte, jestli platnost vámi zadaného ověřovacího kódu nevypršela.</li>
+<li>Po dokončení průvodce nastavením uložte nastavení kliknutím na možnost <strong>OK</strong>.</li>
+</ol>
+
+
+
+<h4>Přihlášení do systému DSM pomocí dvoufázového ověření:</h4>
+
+<p>Pokud je povolené dvoufázové ověření, budete při přihlášení do systému DSM vyzváni k zadání 6místného ověřovacího kódu.</p>
+
+<ol>
+<li>Na přihlašovací obrazovce systému DSM zadejte uživatelské jméno a heslo jako obvykle.</li>
+<li>Po zobrazení výzvy k zadání ověřovacího kódu otevřete ověřovací aplikaci na mobilním zařízení.</li>
+<li>Vyhledejte a zadejte 6místný ověřovací kód pro váš účet. Pokud dojde ke ztrátě vašeho mobilního zařízení, je možné kliknout na odkaz <b>Ztráta telefonu?</b> a na vaši e-mailovou adresu bude odeslán nouzový kód.</li>
+</ol>
+
+<div class="section">
+<h4>Poznámka:</h4>
+<ul>
+<li><strong>Nastavení SMTP:</strong> Abyste mohli obdržet nouzový kód prostřednictvím e-mailu, musí být v části <b>Ovládací panel</b> > <b>Upozornění</b> odpovídajícím způsobem nastaven server SMTP.</li>
+<li><strong>Omezení nouzového kódu:</strong> Na každého uživatele se vztahuje limit 5 nouzových kódů. Pokud tento limit překročíte, musíte před dalším přijímáním nouzových kódů dvoufázové ověření zakázat a poté znovu povolit.</li>
+<li>Dvoufázové ověření lze vynutit v systému DSM a ve všech souvisejících mobilních aplikacích Synology (například DSM mobile a DS file).</li>
+
+</ul>
+</div>
+
+
+<h4>Obnovení uživatelských nastavení dvoufázového ověření:</h4>
+
+<p>Uživatelé patřící do skupiny <strong>administrators</strong> mohou obnovit nastavení dvoufázového ověření jiných uživatelů.<ol>
+<li>Přejděte do části <strong>Ovládací panel</strong> > <strong>Uživatel</strong>.</li>
+<li>Dvakrát klikněte na uživatele, jehož dvoufázové ověření chcete obnovit.</li>
+<li>Na kartě <strong>Údaje uživatele</strong> klikněte na tlačítko <strong>Povolit dvoufázové ověření</strong>.</li>
+</ol>
+
+<div class="section">
+<h4>Poznámka:</h4>
+<p>Pokud není dostupný uživatel patřící do skupiny <strong>administrators</strong>, je možné obnovit nastavení systému DSM a zakázat dvoufázové ověření stisknutím fyzického tlačítka Reset na zařízení DiskStation.</p>
+</div>
+
+
+<h3>Aktivita účtu</h3>
+<p>Aktivita účtu zobrazuje aktivitu přihlášení účtu DSM, včetně aktuálních připojení, důvěryhodných zařízení a historie přihlášení.</p>
+
+
+<h4>Kontrola aktivity účtu:</h4>
+<p>Klikněte na tlačítko <strong>Aktivita účtu</strong>. Zobrazí se místní okno s následujícími kartami:<ul>
+<li><strong>Připojení uživatelé:</strong> Na této kartě se zobrazují následující informace:<ul>
+<li><strong>Datum a čas:</strong> Čas přístupu k účtu.</li>
+<li><strong>Název klienta a IP adresa:</strong> Název a IP adresa zařízení, které k účtu přistupovalo. Název klienta se zobrazí pouze v případě, že se k účtu přistupovalo prostřednictvím protokolu CIFS.</li>
+<li><strong>Služba:</strong> Protokol použitý pro přístup k účtu.</li>
+<li><strong>Zdroj:</strong> Systémové prostředky využívané účtem.</li>
+</ul></li>
+
+<li><strong>Důvěryhodná zařízení:</strong> Na této kartě se zobrazuje stránka správy důvěryhodných zařízení:<ul>
+<li><strong>Aktuální zařízení je nedůvěryhodné/důvěryhodné:</strong> Rozhodnete-li se aktuálnímu zařízení důvěřovat, klikněte na možnost <strong>Důvěřovat tomuto zařízení</strong>. Při přihlášení do systému DSM se pak u tohoto zařízení dvoufázové ověření nebude vyžadovat.</li>
+
+<li><strong>Nedůvěřovat ostatním zařízením:</strong> Můžete přestat důvěřovat ostatním zařízením (např. jiným počítačům nebo mobilním zařízením), která byla považována za důvěryhodná. To znamená, že při přihlášení do systému DSM na těchto zařízeních se dvoufázové ověření bude vyžadovat.</li>
+</ul></li>
+
+
+<li><strong>Historie přihlášení:</strong> Na této kartě se zobrazují poslední relace přihlášení a následující informace:<ul>
+<li><strong>Datum a čas:</strong> Čas přístupu k účtu.</li>
+<li><strong>Událost:</strong> Zobrazuje uživatelské jméno a IP adresu.</li>
+</ul>
+</li>
+</ul>
+
+
+<div class="section">
+<h4>Poznámka:</h4>
+<p>Zařízení označené jako důvěryhodné si systém zapamatuje pouze v případě, když se přihlásíte pomocí stejného účtu a ze stejného prohlížeče. V následujících scénářích budete k zadání jednorázového hesla pro dvoufázové ověření vyzváni i v případě, že jste dané zařízení předtím označili za důvěryhodné:</p>
+<ul>
+<li>Přihlásíte se pomocí stejného účtu, ale na jiném prohlížeči.</li>
+<li>Z prohlížeče byly odstraněny soubory cookie.</li>
+<li>Při přihlášení jako uživatel A označíte zařízení za důvěryhodné a poté označíte za důvěryhodné stejné zařízení, když se přihlásíte jako uživatel B. Když se znovu přihlásíte jako uživatel A, musíte zadat heslo pro dvoufázové ověření.</li>
+</ul>
+
+</div>
+
+
+</body>
+</html>

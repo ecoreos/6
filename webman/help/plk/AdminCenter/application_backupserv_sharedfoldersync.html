@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Kopia zapasowa i replikacja</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head> 
+<body>
+<h2>Synchronizacja folderów współdzielonych</h2>
+<p>Usługa Synchronizacja folderów współdzielonych umożliwia użytkownikom synchronizację folderów współdzielonych z jednego urządzenia Synology NAS (źródło) na innych urządzeniach Synology NAS (cele) w sieci LAN lub przez Internet.</p>
+<p>Za pierwszym razem usługa Synchronizacja folderów współdzielonych dokonuje pełnej synchronizacji wybranych folderów współdzielonych. Podczas kolejnych aktywacji synchronizowane są tylko zmienione pliki. Pliki, które zostały usunięte z lokalizacji źródłowej, zostaną również usunięte z lokalizacji docelowej.</p>
+
+<div class="section">
+<h4>Uwaga:</h4>
+<ul>
+<li>Usługa Synchronizacja folderów współdzielonych jest rozwiązaniem synchronizacji jednostronnej, co oznacza, że pliki w lokalizacji źródłowej będą synchronizowane z lokalizacją docelową. Aby korzystać z rozwiązania synchronizacji dwustronnej, użyj aplikacji <strong>Cloud Station ShareSync</strong>.</li>
+<li>Jeśli źródłowy folder współdzielony i folder współdzielony w lokalizacji docelowej mają tę samą nazwę (np. SharedFolder), folder docelowy otrzyma nazwę (np„SharedFolder_1”.</li>
+<li>Jeśli w lokalizacji docelowej nie ma folderu współdzielonego o tej samej nazwie, co źródłowy folder współdzielony, zostanie utworzony folder z nazwą w odpowiednim wolumenie lub pierwszym dostępnym.</li>
+<li>Domyślnie żaden użytkownik nie ma uprawnień dostępu do współdzielonego folderu w lokalizacji docelowej. Skontaktuj się z <strong>administratorem</strong> lokalizacji docelowej, aby uzyskać uprawnienia.</li>
+</ul>
+</p>
+</div>
+
+<h3>Włączanie usługi</h3>
+<h4>Aby włączyć usługę synchronizacji folderów współdzielonych:</h4>
+<p>Usługę należy najpierw włączyć w lokalizacji docelowej Synology NAS.</p>
+<ol>
+<li>Wybierz kolejno <strong>Panel sterowania</strong> > <strong>Usługi plików</strong> > <strong>rsync</strong>.</li>
+<li>Wybierz opcję <strong>Włącz usługę rsync</strong>, aby włączyć usługę Synchronizacji folderów współdzielonych.</li>
+<li>Kliknij przycisk <strong>Zastosuj</strong>.</li>
+</ol>
+
+
+<h4>Aby usunąć połączenie folderów współdzielonych z lokalizacją docelową Synology NAS:</h4>
+
+<p>Jeśli synchronizowane są jednocześnie dwa identyczne foldery współdzielone z jedną lokalizacją docelową DiskStation, wystąpi konflikt. Należy wtedy usunąć połączenie współdzielonego folderu w lokalizacji źródłowej, zanim folder z innego źródła będzie mógł być zsynchronizowany z lokalizacją docelową.<ol>
+<li>Zaloguj się do lokalizacji docelowej Synology NAS i wybierz kolejno <strong>Panel sterowania</strong> > <strong>Synchronizacja folderów współdzielonych</strong> > <strong>Lista połączeń</strong>.</li>
+<li>Wybierz połączenie generujące konflikt z lokalizacji źródłowej Synology NAS i kliknij <strong>Usuń połączenie</strong>, aby je usunąć.</li>
+</ol>
+
+<p>Umożliwi to synchronizację folderu współdzielonego lokalizacji źródłowej z lokalizacją docelową DiskStation.</p>
+
+<h3>Zarządzanie zadaniami synchronizacji</h3>
+
+<h4>Aby utworzyć zadanie synchronizacji:</h4>
+<ol>
+<li>Zaloguj się do lokalizacji źródłowej Synology NAS i wybierz kolejno <b>Panel sterowania</b> > <b>Synchronizacja folderów współdzielonych</b> > <strong>Lista zadań</strong>.</li>
+<li>Kliknij przycisk <b>Utwórz</b>.</li>
+<li>Wprowadź nazwę zadania.</li>
+<li>Wybierz folder udostępniony, który ma być zsynchronizowany z lokalizacją docelową.</li>
+<li>Określ lokalizację docelową Synology NAS i następujące opcje synchronizacji:</li>
+<ul>
+<li><strong>Dostosuj port szyfrowania SSH dla zaszyfrowanej synchronizacji folderów współdzielonych</strong>: Określ żądany port szyfrowania dla szyfrowania przesyłania SSH.</li>
+<li><strong>Włącz szyfrowanie przesyłania SSH</strong>: szyfrowanie danych podczas przesyłania. Zapewnia to większe bezpieczeństwo, podczas gdy tryb nieszyfrowany zapewnia lepszą wydajność. Wyboru można dokonać zależnie od potrzeb.</li> 
+<li><strong>Włącz kompresję przesyłania</strong>: kompresja danych podczas przesyłania. Pozwala to zmniejszyć obciążenie sieci, ale zwiększa obciążenie CPU.</li>
+<li><strong>Włącz synchronizację na poziomie bloku</strong>: przesyłanie tylko danych, w których występują różnice, nie zaś całych plików. Pozwala to zmniejszyć obciążenie sieci, ale zwiększa obciążenie CPU.</li>
+</ul>
+<li>Po wyświetleniu monitu wybierz jedną z poniższych opcji, aby określić, kiedy uruchomić synchronizację z lokalizacji źródłowej do lokalizacji docelowej:</li>
+<ul>
+<li><strong>Uruchom synchronizację po modyfikacji</strong>: zadanie synchronizacji jest uruchamiane natychmiast po zmianie w źródłowym folderze współdzielonym.</li>
+<li><strong>Uruchom synchronizację ręcznie</strong>: zadanie synchronizacji jest uruchamiane ręcznie ze źródłowego folderu współdzielonego.</li>
+<li><strong>Zaawansowany plan</strong>: kliknij <strong>Harmonogram</strong>, aby określić, kiedy wykonać zadanie synchronizacji.</li>
+
+</ul>
+<li>Kliknij przycisk <strong>Zastosuj</strong>. Zadanie synchronizacji zostanie wyświetlone na liście zadań i zostanie ono wykonane zgodnie z określonym harmonogramem.</li></ol>
+<h4>Aby zarządzać zadaniem synchronizacji:</h4>
+<ol>
+<li>W lokalizacji źródłowej Synology NAS przejdź kolejno do opcji <strong>Panel sterowania</strong> > <strong>Synchronizacja folderów współdzielonych</strong>, kliknij <strong>Lista zadań</strong> i wybierz żądane zadanie.</li>
+<li>Wykonaj dowolną z następujących czynności:</li>
+<ul>
+<li>Kliknij przycisk <b>Edytuj</b>, aby edytować zadanie.</li>
+<li>Kliknij przycisk <b>Usuń</b>, aby usunąć zadanie.</li> 
+<li>Jeżeli zadanie synchronizacji nie jest uruchomione, kliknij przycisk <b>Synchronizuj teraz</b>, aby od razu wykonać zadanie.</li>
+<li>Jeżeli zadanie synchronizacji jest uruchomione, kliknij przycisk <b>Anuluj</b>, aby zatrzymać trwające zadanie.</li>
+
+<div class="section">
+<h4>Uwaga:</h4>
+<p>Jeżeli harmonogram zadania synchronizacji jest ustawiony na <b>Uruchom synchronizację po modyfikacji</b>, kliknięcie przycisku <b>Anuluj</b> spowoduje zatrzymanie trwającego zadania synchronizacji. Jeśli jednak w zawartości któregokolwiek z monitorowanych przez zadanie synchronizacji folderów współdzielonych zostanie zmieniona, usługa Synchronizacja folderów współdzielonych wznowi zadanie.</p>
+</div>
+
+<li>Kliknij przycisk <b>Pełna synchronizacja</b>, aby synchronizować wszystkie dane. Usługa Synchronizacja folderów współdzielonych uruchomi pełną synchronizację przy pierwszej synchronizacji, a przy kolejnych synchronizacjach będzie synchronizować wyłącznie zmodyfikowane części. Kliknięcie tego przycisku może pomóc w ponownej ręcznej synchronizacji wszystkich danych.</li>
+</ul>
+</ol>
+
+<div class="section disable-eds14">
+<h4>Więcej informacji</h4>
+<ol>
+<li>Nazwa zadania musi składać się z od 1 do 32 znaków Unicode i nie może zawierać następujących znaków:<br> <span class="letterSpace5">! " # $ % & ' ( ) * + , / : ; <= > ? @ [ ] \ ^ ` { } | ~ </span></li>
+<li>W przypadku synchronizacji folderów udostępnionych z systemu plików ext4 do ext3 mogą wystąpić błędy, gdy zadanie obejmuje ponad 32 000 folderów.</li>
+<li>Jeżeli foldery udostępnione w docelowym urządzeniu DiskStation zostały wcześniej zsynchronizowane z innym urządzeniem DiskStation, usługa Synchronizacja folderów współdzielonych przeprowadzi pełną synchronizację w ramach zadania.</li>
+<li>Do wykonywania zadań Synchronizacji folderów udostępnionych wymagane są uprawnienia administratora docelowego urządzenia DiskStation. Wymagane jest hasło do konta admin lub przynależność do grupy administratorów tego serwera.</li>
+<li>Podczas synchronizacji urządzenia z lokalizacją docelową DiskStation przez Internet można wprowadzić zamiast nazwy serwera jego zewnętrzny adres IP lub nazwę hosta. Jednak w przypadku wybrania nazwy hosta nazwa musi być zapisana w formacie FQDN, czyli przykładowo www.synology.com.</li>
+<li>Jeżeli konieczne jest przekierowanie portów, pamiętaj o otwarciu portów używanych przez usługę Synchronizacja folderów współdzielonych, czyli portu 22 (przesyłanie z szyfrowaniem) oraz portu 873 (przesyłanie bez szyfrowania).</li>
+<li>Usługa Synchronizacja folderów współdzielonych nie obsługuje zewnętrznych urządzeń pamięci masowej.</li>
+<li>Podczas wykonywania zadania Synchronizacji folderów współdzielonych zaszyfrowane foldery współdzielone w lokalizacji docelowej zostaną automatycznie zamontowane. Jednak aby uzyskać dostęp do danych zapisanych w folderach, należy najpierw zamontować zaszyfrowane foldery współdzielone w lokalizacji docelowej.</li>
+<li>Zaplanowana Synchronizacja folderów współdzielonych nie będzie działać o określonej godzinie, jeżeli nie dokonano żadnych zmian w wybranym folderze współdzielonym.</li>
+<li>W celu zapewnienia jak najlepszej wydajności zaleca się, aby każde zadanie synchronizacji obejmowało mniej niż 200 folderów udostępnionych.</li>
+<li>Funkcja <strong>Użytkownik domowy</strong> zostanie wyłączona w docelowym urządzeniu DiskStation, jeżeli folder udostępniony <strong>homes</strong> będzie synchronizowany ze źródłowego urządzenia DiskStation w docelowym urządzeniu DiskStation.</li>
+
+<li>Modele z CPU firmy innej niż Intel mogą za pomocą usługi Synchronizacja folderów współdzielonych synchronizować do 100 000 folderów udostępnionych (razem z podfolderami).</li>
+ <li>Usługa Synchronizacja folderów współdzielonych może obejmować ustawienia Windows ACL, gdy systemem plików w miejscu docelowym jest ext4.</li>
+ 
+ <li>Uruchomienie usługi Synchronizacja folderów współdzielonych nie powiedzie się, jeżeli celem synchronizacji będzie serwer z udziałami o takich samych nazwach jakie są zdefiniowane w urządzeniu DiskStation.</li>
+ 
+<li>Zaawansowane uprawnienia do folderów udostępnionych nie będą synchronizowane z serwerem docelowym. Ponadto zostanie na nim utworzona reguła Tylko do odczytu dla grupy administratorów. </li> 
+
+  </ol>
+</div>
+<div class="section enable-eds14">
+<h4>Więcej informacji</h4>
+<ol>
+<li>Nazwa zadania musi składać się z od 1 do 32 znaków Unicode i nie może zawierać następujących znaków:<br> <span class="letterSpace5">! " # $ % & ' ( ) * + , / : ; <= > ? @ [ ] \ ^ ` { } | ~ </span></li>
+<li>W przypadku synchronizacji folderów udostępnionych z systemu plików ext4 do ext3 mogą wystąpić błędy, gdy zadanie obejmuje ponad 32 000 folderów.</li>
+<li>Jeżeli foldery udostępnione w docelowym urządzeniu DiskStation zostały wcześniej zsynchronizowane z innym urządzeniem DiskStation, usługa Synchronizacja folderów współdzielonych przeprowadzi pełną synchronizację w ramach zadania.</li>
+<li>Do wykonywania zadań Synchronizacji folderów udostępnionych wymagane są uprawnienia administratora docelowego urządzenia DiskStation. Wymagane jest hasło do konta admin lub przynależność do grupy administratorów tego serwera.</li>
+<li>Podczas synchronizacji urządzenia z lokalizacją docelową DiskStation przez Internet można wprowadzić zamiast nazwy serwera jego zewnętrzny adres IP lub nazwę hosta. Jednak w przypadku wybrania nazwy hosta nazwa musi być zapisana w formacie FQDN, czyli przykładowo www.synology.com.</li>
+<li>Jeżeli konieczne jest przekierowanie portów, pamiętaj o otwarciu portów używanych przez usługę Synchronizacja folderów współdzielonych, czyli portu 22 (przesyłanie z szyfrowaniem) oraz portu 873 (przesyłanie bez szyfrowania).</li>
+<li>Usługa Synchronizacja folderów współdzielonych nie obsługuje zewnętrznych urządzeń pamięci masowej.</li>
+<li>Podczas wykonywania zadania Synchronizacji folderów współdzielonych, zaszyfrowane foldery współdzielone w lokalizacji docelowej zostaną automatycznie zamontowane. Jednak aby uzyskać dostęp do danych zapisanych w folderach, należy najpierw zamontować zaszyfrowane foldery współdzielone w lokalizacji docelowej.</li>
+<li>Zaplanowana Synchronizacja folderów współdzielonych nie będzie działać o określonej godzinie, jeżeli nie dokonano żadnych zmian w wybranym folderze współdzielonym.</li>
+<li>W celu zapewnienia jak najlepszej wydajności zaleca się, aby każde zadanie synchronizacji obejmowało mniej niż 200 folderów udostępnionych.</li>
+<li>Funkcja <strong>Użytkownik domowy</strong> zostanie wyłączona w docelowym urządzeniu DiskStation, jeżeli folder udostępniony <strong>homes</strong> będzie synchronizowany ze źródłowego urządzenia DiskStation w docelowym urządzeniu DiskStation.</li>
+<li>Modele z CPU firmy innej niż Intel mogą za pomocą usługi Synchronizacja folderów współdzielonych synchronizować do 100 000 folderów udostępnionych (razem z podfolderami).</li>
+ 
+ <li>Uruchomienie usługi Synchronizacja folderów współdzielonych nie powiedzie się, jeżeli celem synchronizacji będzie serwer z udziałami o takich samych nazwach jakie są zdefiniowane w urządzeniu DiskStation.</li>
+ 
+<li>Zaawansowane uprawnienia do folderów udostępnionych nie będą synchronizowane z serwerem docelowym. Ponadto zostanie na nim utworzona reguła Tylko do odczytu dla użytkowników grupy administratorów. </li> 
+ 
+ </ol>
+</div>
+</body></html>

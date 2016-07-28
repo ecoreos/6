@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Kaynak Monitörü</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script> <script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h1><a name="leaf_update"></a>Kaynak Monitörü</h1>
+<p class="disable-dockerx64">Kaynak Monitörü, CPU kullanımını, bellek kullanımını, disk kullanımını ve ağ akışını izlemenize olanak tanır. Gerçek zamanlı izlemeyi ya da geçmiş verileri görüntülemeyi seçebilirsiniz.</p>
+<p class="enable-dockerx64">Kaynak Monitörü CPU kullanımını, bellek kullanımını ve ağ akışını izlemenize imkan tanır. Gerçek zamanlı izlemeyi ya da geçmiş verileri görüntülemeyi seçebilirsiniz.</p>
+<div class="section">
+<h4>Not:</h4>
+<ul>
+<li><strong>Ayarlar</strong> sekmesinde <strong>Kullanım geçmişini etkinleştir</strong> işaretlenirse ancak önceki veriler görüntülenir.</li>
+<li class="enable-dockerx64">Docker DSM için, <strong>CPU ve bellek</strong>, <strong>Docker Host</strong> hakkındaki kullanım bilgilerini belirtir.</li>
+</ul>
+</div>
+<h2>Performans</h2>
+<p>Kaynak kullanımı verilerini görüntülemek için <strong>Performans</strong> sekmesine tıklayın. Grafiğin ayrıntılı tarih, saat ve bilgisi, fareyle üzerinden geçildiğinde gösterilecektir.</p>
+
+<h3>CPU</h3>
+<p><strong>Kullanıcı</strong>, <strong>Sistem</strong> ve <strong>G/Ç Bekleme</strong> şeklindeki genel CPU kullanımını görebilirsiniz. Kaynak Monitörü ilk başlatıldığında CPU kullanımı yüksek olabilir, bunun nedeni sistemin aynı anda kaynak verisi toplaması ve kullanıcı arabirim sayfasını yüklemesi gerekliliğindendir.</p>
+<p><strong>Kullanıcı</strong>, kullanıcı uygulamalarını çalıştırmak için kullanılan CPU yüzdesini gösterir. <strong>Sistem</strong>, sistemin kendisinde kullanılan CPU yüzdesini, donanım/yazılım IRQ'larını gösterir. <strong>G/Ç Bekleme</strong>, G/Ç beklemesinde harcanan CPU yüzdesini gösterir.</p>
+<p><strong>Kullanım</strong>, <strong>Kullanıcı</strong> ve <strong>Sistem</strong> CPU kullanımının toplamıdır.</p>
+<p>1, 5 ve 15 dakika içindeki Yük Ortalaması, çalışma kuyruğu uzunluğunu göstererek görüntülenir (yani, çalışmakta olan işlemlerin sayısıyla çalışmayı bekleyenlerin sayısının toplamı). </p>
+<div class="section">
+<h4>Terim Açıklaması</h4>
+<ul>
+<li><b>G/Ç bekleme</b>: G/Ç bekleme CPU'nun boşta olduğunu ve herhangi bir program tarafından kullanılmadığını belirtir. </li>
+<p>G/Ç bekleme normal bir davranıştır. CPU hızı G/Ç'nin hızından çok daha yüksek olduğu için, CPU genellikle disklerin veya ağın iletiminin tamamlanmasını beklemek zorundadır. Ancak, G/Ç bekleme yüzdesi çok büyükse, bu CPU'nun zamanın çoğunu G/Ç beklemesinde geçirmesi ve iyi bir şekilde kullanılamayabilmesi anlamına gelir. Daha yüksek sistem performansı elde etmek için daha verimli disk grubu yapılandırmalarını (SHR veya RAID 5 gibi) veya ağ yapılandırmalarını (Bonding gibi) kullanabilirsiniz.</p> 
+</ul>
+</div>
+<h3>Bellek</h3>
+<p>Fiziksel belleğin genel bellek kullanımı ve takas alanı gösterilecektir. Verilerin sabit diske erişim yapmadan hızla elde edilebilmesi için sistem sıklıkla erişilen verileri önbellekte sakladığından bellek kullanımı yüksek durumda kalır. Genel bellek yetersiz olduğunda önbellek hafızası boşaltılır.</p>
+<p>Yüksek takas alanı kullanımı, yetersiz sistem belleğini belirtir ve sistem performansını da etkileyecektir. Üstteki açılan menüden <strong>Değiştir</strong>'i seçerek, içe değiştirme ve dışa değiştirme oranını görüntüleyebilirsiniz. </p>
+
+<h3>Ağ</h3>
+<p>Ağ akış çizelgesi gönderilen ve alınan veriyi KB/sn olarak gösterir. PPPoE etkin olduğunda, aktarım hızı da çizelgede görünür.</p>
+
+<h3 class="disable-dockerx64">Disk</h3>
+<p class="disable-dockerx64">Grafiğin üstündeki açılır menüye tıklayarak, genel disk kullanımını, aktarım hızını ya da IOPS'u görüntülemeyi seçebilirsiniz. Verilerini grafiğe eklemek amacıyla onay kutularını işaretleyerek daha fazla disk eklemek için, alttaki <strong>Tümünü Görüntüle</strong>'ye tıklayabilirsiniz.</p>
+
+
+<h3 class="disable-eds14 disable-dockerx64">Birim</h3>
+<p class="disable-eds14 disable-dockerx64">Bu sayfa birimlerin genel aktarım durumunu görüntüler. Aktarım kullanımını, aktarım oranını ya da IOPS'ı görüntülemek için grafiğin üstündeki açılan menüye tıklayın. Belirli birimleri seçmek için <strong>Tümünü Görüntüle</strong> düğmesine tıklayıp bunları grafiğe ekleyin.</p>
+
+<h3 class="disable-eds14 disable-dockerx64">iSCSI</h3>
+<p class="disable-eds14 dixable-dockerx64">Bu sayfa çalışmakta olan iSCSI LUN'ların genel durumunu görüntüler. Bir LUN'ı seçmek ve durumunu görüntülemek için grafiğin üzerindeki açılır menüye tıklayın. Üç grafik varsayılan olarak görüntülenir, bunlar <strong>Kapasite</strong>, <strong>IOPS</strong> ve <strong>Bekleme</strong>'dir. Daha ayrıntılı bilgi için, görüntülemek istediğiniz diğer grafikleri seçmek üzere <strong>Grafikleri Seç</strong> düğmesine tıklayın.</p>
+
+
+<h2>Süreç</h2>
+<p>Her bir işlemin CPU ve bellek kullanımını azalan CPU yükü düzeninde görüntülemek için <strong>İşlem</strong> sekmesine tıklayın.</p>
+<p><strong>Durum</strong> süreci <strong>Çalışma</strong>, <strong>Uyuma</strong> ve <strong>Durduruldu</strong> içerir. Proses durumunun Linux eşdeğerleri <strong>çalışma</strong>, <strong>durma/izleme</strong>, <strong>uyuma</strong>'dır. </p>
+<p><strong>Uyuma</strong> ayrıntılı bilgi için bir harf ile takip edilebilir, ör. disk uykusu için 'D', zombi için 'Z', ölüm için 'X'.</p>
+
+<h2>Bağlanan Kullanıcılar</h2>
+<p> Bu sekmede, sisteme bağlı olan ve kaynaklara erişen istemcileri görüntüleyebilir ve yönetebilirsiniz. Bu kısım HTTP, TELNET, SSH, SMB/CIFS, AFP, FTP ve NFS yoluyla bağlanan istemcileri görüntüler.</p>
+<h4>Geçerli bağlantıları yönetmek için aşağıdakilerden dilediğinizi yapın:</h4>
+<ul>
+<li>Geçerli listeyi bir HTML dosyasına vermek için <b>Kaydet</b>'e tıklayın.</li>
+<li>Listeyi güncellemek için <b>Yenile</b>'ye tıklayın.</li>
+<li>Kullanıcının kaynağa erişimini durdurmak için <b>Bağlantıyı kes</b>'e tıklayın. Bağlantısı kesilen kullanıcı, kaynağa erişim hakkı kazanmak için yeniden yetkilendirilmelidir.</li>
+<li>Kullanıcıyı devre dışı bırakmak için <b>Kullanıcıyı devre dışı bırak</b>'a tıklayın. Kullanıcıyı tekrar etkinleştirmek için <b>Ana Menü</b> > <b>Denetim Masası</b> > <b>Kullanıcı</b>'ya gidin.</li>
+</ul>
+<div class="section">
+<h4>Not:</h4>
+<ul>
+<li><strong>Bağlantıyı kes</strong> seçeneği NFS istemcileriyle çalışmaz.</li>
+<li>NFS istemcileri paylaşımlı klasörleri uygun şekilde ayırmazsa, bağlı kullanıcılar listesinde görünmeye devam edebilirler.</li>
+<li>DiskStation sunucusu yeniden başlarsa, önceden bağlanan NFS istemcileri bağlı kullanıcılar listesinde görünmezler.</li>
+</ul>
+</div>
+
+
+<h2>Hız Limiti</h2>
+<p><strong>Hız Limiti</strong> sekmesi altında, DiskStation üzerinde hız limiti uygulamış aktarma işlemlerinin listesini görüntüleyip yönetebilirsiniz.</p>
+<h4>Listeyi yenilemek için:</h4>
+<p>Sayfayı yeniden yüklemek ve en güncel kayıtları edinmek için <strong>Yenile</strong>'ye tıklayın.</p>
+<h4>Bir dosya aktarım işlemini durdurmak için:</h4>
+<p>Dosya aktarımını durdurmak için <b>Bağlantıyı kes</b>'e tıklayın. İşlemi başarıyla tamamlamak için dosya aktarımını tekrar başlatmanız gerekecektir.</p>
+
+
+<h2>Ayarlar</h2>
+<p>Aşağıdaki seçenekleri ayarlamak için <strong>Ayarlar</strong>'a tıklayın:</p>
+<ul>
+<li>Açılır menüden dakika cinsinden <strong>Gerçek zamanlı süre</strong> bilgisini seçin.</li>
+<li>Geçmiş verileri görüntülemek isterseniz<strong> Kullanım geçmişini etkinleştir</strong>'i işaretleyin. Bu etkinleştirildiğinde, performans grafiklerini görüntülerken, sağ üst köşedeki açılır menüden <strong>Gerçek Zamanlı</strong>, <strong>1 Günlük</strong>, <strong>1 Haftalık</strong>, <strong>1 Aylık</strong> ve <strong>1 Yıllık</strong> arasında geçiş yapabilirsiniz.</li> 
+</ul>
+<p>Ayarları kaydetmek için <strong>Uygula</strong>'ya tıklayın.</p>
+</body>
+</html>

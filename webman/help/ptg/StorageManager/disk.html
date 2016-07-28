@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+	<h2>HDD/SSD</h2>
+	<p>Esta sec&ccedil;&atilde;o permite-lhe monitorizar o estado dos HDD/SSD instalado no seu DiskStation, disponibilizando op&ccedil;&otilde;es gerir e analisar o desempenho e bom estado dos HDD/SSD. Aceda a <strong>Gestor de Armazenamento</strong> &gt; <strong>HDD/SSD</strong> para gerir estas op&ccedil;&otilde;es.</p>
+
+	<h4>Para consultar as informa&ccedil;&otilde;es dos HDD/SSD:</h4>
+	<ol>
+		<li>Aceda ao separador <b>HDD/SSD</b>.</li>
+		<li>Selecione a unidade na lista que pretende expandir. Aqui pode visualizar o estado S.M.A.R.T., a informa&ccedil;&atilde;o do volume, o nome do modelo, o n&uacute;mero de s&eacute;rie, a vers&atilde;o de firmware e a temperatura.</li>
+	</ol>	
+	
+	<h4>Para verificar a informa&ccedil;&atilde;o do estado:</h4>
+    <ol>
+      <li>Aceda ao separador <b>HDD/SSD</b>.</li>
+	  <li>Selecione uma unidade.</li>
+      <li>Clique em <b>Informa&ccedil;&atilde;o do Estado</b>.</li>
+	  <li>Aceda ao separador <strong>Vis&atilde;o geral</strong>. Aqui pode consultar quantas horas a unidade esteve ligada, a temperatura atual, contagem de novas liga&ccedil;&otilde;es/nova identifica&ccedil;&atilde;o, contagem de sectores avariados e o estado S.M.A.R.T. geral.</li>
+      <li>Aceda ao separador <strong>Informa&ccedil;&atilde;o S.M.A.R.T.</strong>. Os n&uacute;meros listados podem ajud&aacute;-lo a diagnosticar mais detalhadamente o estado da sua unidade.</li>
+    </ol>
+
+<div class="section">
+<h4>Nota:</h4>
+<p>
+   As unidades SAS n&atilde;o suportam informa&ccedil;&atilde;o S.M.A.R.T.
+</p>
+</div>
+
+	<h4>Para iniciar o teste S.M.A.R.T.:</h4>
+	<P>O Disco S.M.A.R.T. examinar&aacute; e reportar&aacute; o estado das suas unidades para o alertar de poss&iacute;veis falhas das unidades. Recomendamos a substitui&ccedil;&atilde;o imediata das suas unidades se forem detetados erros. </P>
+    <ol>
+      <li>Aceda ao separador <strong>HDD/SSD</strong>.</li>
+      <li>Selecione uma unidade.</li>
+      <li>Clique em <b>Teste S.M.A.R.T.</b></li>
+      <li>Escolha um tipo de teste e clique em <strong>Iniciar</strong> para come&ccedil;ar o teste.</li>
+      <li>Os &uacute;ltimos resultados do teste s&atilde;o exibidos na sec&ccedil;&atilde;o <b>Resultado do Teste</b>.</li>
+    </ol>
+    <div class="section">
+<h4>Nota:</h4>
+    <p>A dura&ccedil;&atilde;o do teste varia em fun&ccedil;&atilde;o do ambiente do seu sistema.</p>
+</div>
+    <h4>Para agendar testes S.M.A.R.T.:</h4>
+    <p>Testes S.M.A.R.T. podem ser agendados para execu&ccedil;&atilde;o autom&aacute;tica criando tarefas.</p>
+    <ol>
+      <li>Aceda ao separador <strong>Agendamento de Teste</strong>.</li>
+      <li>Clique em <strong>Criar</strong> para configurar uma nova tarefa.</li>
+      <li>Modifique as seguintes defini&ccedil;&otilde;es no separador <strong>Geral</strong>:</li>
+      <ul>
+        <li><strong>Tarefa:</strong> Introduza um nome para a tarefa.</li>
+        <li><strong>Tipo de Teste S.M.A.R.T.:</strong> Escolha entre realizar um teste r&aacute;pido ou teste expandido.</li>
+        <li><strong>Alcance de Teste S.M.A.R.T.:</strong> Escolha que HDD/SSD testar de cada vez que &eacute; realizado o teste S.M.A.R.T.</li>
+      </ul>
+      <li>No separador <strong>Agendamento</strong>, modifique as seguintes defini&ccedil;&otilde;es:</li>
+      <ul>
+        <li><strong>Data:</strong> Especifique quando realizar o teste S.M.A.R.T. Os testes S.M.A.R.T. podem ser agendados para execu&ccedil;&atilde;o em certos dias da semana (por ex., diariamente, aos fins de semana ou a cada Domingo, etc.) ou em datas espec&iacute;ficas (por ex., 21/10/2015).</li>
+        <li><strong>Vezes:</strong> Especifique quantas vezes o teste S.M.A.R.T. &eacute; realizado, bem como a primeira e &uacute;ltima vez de cada dia.</li>
+      </ul>
+      <li>Clique em <strong>OK</strong> para terminar.</li>
+    </ol>
+
+<h4>Para realizar Secure Erase:</h4>
+<ol>
+<li>Aceda ao separador <b>HDD/SSD</b>.</li>
+<li>Selecione uma unidade e clique <b>Secure Erase</b>.</li>
+</ol>
+
+
+<div class="section">
+<h4>Nota:</h4>
+<ul>
+<li>Secure Erase n&atilde;o pode ser executado em discos em unidades de expans&atilde;o.</li>
+<li>O Secure Erase ir&aacute; remover permanentemente todos os dados da sua unidade. Certifique-se de que a unidade escolhida n&atilde;o est&aacute; a ser utilizada ou que realizou c&oacute;pia de seguran&ccedil;a dos dados antes de remover.</li>
+<li>Quando o sistema est&aacute; a realizar Secure Erase, a unidade escolhida ser&aacute; temporariamente bloqueada e depois automaticamente desbloqueada quando a opera&ccedil;&atilde;o estiver completa.</li>
+<li>Se Secure Erase for parado indevidamente durante o funcionamento, pode voltar a executar Secure Erase diretamente na interface do utilizador. Se as unidades forem removidas ou utilizadas noutro local quando ainda estiverem bloqueadas, introduza a palavra-passe &quot;synology&quot; para desbloquear as unidades.</li>
+</ul>
+</div>
+
+
+	<h3>Ativa&ccedil;&atilde;o do Suporte de Cache de Escrita do HDD</h3>
+	<p>Ativar o suporte de cache de escrita melhora o desempenho do seu DiskStation. S&oacute; alguns modelos de HDD suportam esta funcionalidade. Para garantir a prote&ccedil;&atilde;o dos dados enquanto usa suporte de cache de escrita, &eacute; altamente recomend&aacute;vel a utiliza&ccedil;&atilde;o de um dispositivo UPS. Sugerimos tamb&eacute;m o encerramento correto do sistema depois de cada utiliza&ccedil;&atilde;o. A desativa&ccedil;&atilde;o da cache de escrita reduzir&aacute; os riscos de perda de dados provocados por falhas de energia anormais, mas o desempenho do sistema diminuir&aacute;.</p>
+
+	<h4>Para ativar suporte de cache de escrita: </h4>
+	<ol>
+		<li>Aceda ao separador <b>Gest&atilde;o da Cache</b>.</li>
+		<li>Marque a op&ccedil;&atilde;o <b>Ativar cache de escrita</b>. Por predefini&ccedil;&atilde;o, esta fun&ccedil;&atilde;o est&aacute; ativada.</li>
+		<li>Clique em <b>Aplicar</b>.</li>
+	</ol>
+	
+
+ 
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Win/Mac/NFS</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>ドメイン</h2>
+<p>DiskStation を Windows ドメインに加えることができます。ドメインに加えると、わざわざ別のユーザー名とパスワードの組み合わせを覚えなくても、ドメイン ユーザーは各自のドメイン アカウントとパスワードを使って DiskStation にログインし、ファイルにアクセスしたり、DSM アプリケーションを使用したりすることができます。</p>
+<h4>ドメインに加入する：</h4>
+<ol>
+<li><strong>[コントロール パネル]</strong> &gt; <strong>[ディレクトリ サービス]</strong> &gt; <strong>[ドメイン]</strong> を選択します。</li>
+<li><strong>[ドメインに参加]</strong> オプションにチェックマークを付けます。</li>
+<li>相当する欄にドメイン名を入力し、DNS サーバーを指定します。</li>
+<li>必要であれば、<b>[詳細ドメインオプション]</b> にチェックマークを付けます（詳細は、次の説明をお読みください）。</li>
+<li><b>[適用] </b>をクリックします。</li>
+<li>開いたウィンドウで、ドメインサーバーの管理者用ユーザー名とパスワードを入力します。</li>
+<li><b>[OK]</b> をクリックします。</li>
+</ol>
+<div class="section">
+<h4>DNS Server</h4>
+<p>DiskStation でドメイン検索をできるようにするため、DNS サーバーを指定するよう推奨しています。ただし、ドメインが DNS サーバーに登録されていない場合は、ドメイン加入処理ができない場合があります。</p>
+<h4>ドメインサーバーの種類</h4>
+<p>DiskStation がドメインに加入すると、この欄にはドメイン タイプが表示されます。ドメインタイプは「AD ドメイン」になります。</p>
+<h4>管理モード</h4>
+<p>このオプションは、ドメイン ユーザーとグループの権限を管理する方法を決定します。</p>
+<ul>
+<li><b>信頼できるドメイン</b>：結合したドメインと信頼できるドメインのユーザーとグループを管理できます。ユーザーとグループは、ドメイン ドロップダウン リストでフィルタ化できます。</li>
+<li><b>OUのシングルドメイン</b>：このモードでは、結合したドメインのユーザーとグループのみ表示されます。このモードでは、ドメイン ユーザー/ドメイン グループを OU (Organizational Unit) ドロップダウン リストでフィルタ化できます。</li>
+</ul>
+<h4>詳細ドメイン オプション</h4>
+<p>ほとんどの場合、詳細ドメインオプションの設定は必要ありません。詳細ドメインオプションは、特定のドメイン環境でのみ必要です。</p>
+<ul>
+<li><b>DC IP/FQDN</b>：DC（ドメインコントローラー）IP アドレスまたは FQDN を指定すると、DiskStation がその情報を使用して通信しようとします。複数の IP アドレスまたは FQDN が存在する場合は、IP の間にコンマを入力します。必要に応じて最後の DC IP アドレスまたは FQDN の後にアスタリスク(*)を追加すると、指定したすべての IP アドレスで失敗したときに DiskStation が別の DC との通信を試みます。このとき、最後の IP アドレスまたは FQDN とアスタリスクの間には必ずコンマを追加してください。</li>
+<li><b>ドメインNetBIOS名</b>：ドメインの NetBIOS 名を指定します。</li>
+<li><b>Domain FQDN (DNS name)</b>：ドメインの FQDN (DNS名)を指定します。</li>
+<li><b>DNS インターフェイスの登録：</b> ドメインを加えると、ここで指定した NIC (Network Interface Card) は DNS サーバーに登録されます。DiskStation のホスト名にアンダースコア（_）が含まれていると、DNS にはアンダースコアは使用できないため、登録できません。</li>
+<li><b>ユーザー/グループ リストを更新</b>：DiskStation がドメイン ユーザー／グループ リストを自動更新する間隔を指定します。この間隔は、毎日、毎週、毎月のいずれかで設定できます。また、<strong>[ドメイン ユーザー]</strong> タブを選択し、<strong>[すべてのドメインを更新]</strong> をクリックすると、ドメイン ユーザー／グループ リストを手動で更新できます。自動更新はシステムのハイバネーションに影響しますのでご注意ください。</li>
+</ul>
+
+<h4>読み取り専用ドメイン コントローラに加入する</h4>
+<p>DiskStation を読み取り専用ドメイン コントローラ (RODC) に加入するには、<strong>[DC IP/FQDN]</strong> 欄で読み書き可能ドメイン コントローラ (RWDC) の「コンピュータのフルネーム」(FQDN) を指定することができます。フルコンピュータ名は次のフォーマットに従う必要があります。<strong>ComputerName.Domain</strong> 例：「ad01.synology.com」</p>
+
+</div>
+
+
+<div class="section">
+<h4>注意：</h4>
+<ul>
+<li>ドメイン ユーザー名に「%」や「$」が含まれていると、ホームフォルダにアクセスできない場合があります。その場合は、ドメイン管理者に新しいユーザー名を要請してください。</li>
+<li>ドメイングループ<strong>「Domain Admins」</strong>と<strong>「Enterprise Admins」</strong>は、自動的に<strong>「Administrators」</strong>という名前のローカルグループに追加されます。要するに、これらのグループのドメイン ユーザーは、CIFS/FTP/AFP/WebDAV、その他の DSM アプリケーションなどのファイル サービスへのアクセスをはじめ、DiskStation についての管理権を有することになります。</li>
+<li>また、DiskStation の共有フォルダへアクセスする権限をドメインユーザーに設定することもできます。詳しくは、<a href="file_directory_service_user_group.html">「こちら」</a>を参照してください。</li>
+</ul>
+</div>
+
+
+
+<h3>ドメイン オプション</h3>
+<p>このセクションには、次のようなドメインの追加オプションがあります。</p>
+<ul>
+<li><b>DiskStation はドメインユーザーがログインすると、毎回 NTP サーバーと同期を取る：</b> DiskStation と NTP サーバーの間で強制的に同期させます。</li>
+<li><b>サーバーの署名を有効にする：</b> クライアントでクライアントの署名を有効にしてある場合は、ユーザーがドメイン機能を正常に使用できるように、サーバーの署名を DiskStation で有効にする必要があります。</li>
+<li><b>NT4 対応モードでユーザー/グループ リストを取得：</b> NT4 RPC モードでシステムにユーザー／グループ リストを取得させます。このオプションは、デフォルトの設定であるドメイン ユーザー／グループ リストを取得できないときに有効にしてください。</li>
+<li><b> Domain Admins と Enterprise Admins の管理者権限を無効にする：</b> 管理者の権限を持つユーザーには、DiskStation とそのファイルを管理する権限があります。このオプションを有効にすると、Domain Admins と Enterprise Admins の権限を普通のユーザーと同じにして、すべての普通のユーザー ファイル/フォルダの権限を継承させることができます。</li>
+<li><strong>ネスト構造のグループレベルを列挙する：</strong> ネスト構造の数と番号を付けられるドメイン グループのメンバーを指定します。</li>
+</ul>
+
+</body>
+</html>

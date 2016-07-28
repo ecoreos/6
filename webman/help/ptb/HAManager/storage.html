@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+ <head>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>High Availability</title>
+
+
+ </head>
+ <body>
+<h2>Status do armazenamento</h2>
+	<p>Essa p&aacute;gina detalha o status dos volumes de armazenamento e iSCSI LUNs (n&iacute;vel de bloqueio) dos servidores ativo e passivo do conjunto de high-availability.</p>
+    <p>Como a capacidade e as configura&ccedil;&otilde;es dos volumes e iSCSI LUNs (n&iacute;vel de bloqueio) correspondentes dos servidores ativo e passivo devem ser id&ecirc;nticas, os volumes e iSCSI LUN (n&iacute;vel de bloqueio) dos dois servidores s&atilde;o exibidos em conjunto como unidades &uacute;nicas. Portanto, caso voc&ecirc; deseje exibir o status dos volumes e iSCSI LUNs (n&iacute;vel de bloqueio) dos servidores ativo e passivo, &eacute; necess&aacute;rio ir para a p&aacute;gina <b>Status de Armazenamento</b> [ao acessar um cluster de high-availability, apenas volumes e iSCSI LUNs (N&iacute;vel de Bloqueio) do servidor ativo podem ser exibidos no <b>Gerenciador de Armazenamento</b>].</p>
+
+    <p>Essa p&aacute;gina cont&eacute;m as seguintes informa&ccedil;&otilde;es:</p>
+		<ul>
+			<li><b>Nome:</b> Exibe os nomes dos volumes e iSCSI LUNs (N&iacute;vel de Bloqueio).</li>
+			<li><b>Usado:</b> Exibe a porcentagem da capacidade usada dos volumes e iSCSI LUNs (N&iacute;vel de Bloqueio).</li>
+			<li><b>Tamanho Usado/Total:</b>   Exibe a capacidade total e usada dos volumes e iSCSI LUNs (N&iacute;vel de Bloqueio).</li>
+            <li><b>Status:</b> Exibe o status dos volumes, iSCSI LUNs (n&iacute;vel de Bloqueio) e caches de SSD.</li>
+            <li><b>Descri&ccedil;&atilde;o:</b> Exibe a descri&ccedil;&atilde;o dos erros ou outras informa&ccedil;&otilde;es relativas ao volume, iSCSI LUN (N&iacute;vel de Bloqueio) e cache de SSD.</li>
+		</ul>
+<h4>Para reparar um volume ou iSCSI LUN (n&iacute;vel de bloqueio) com defeito:</h4>
+	<ul>
+		<li>Se um disco r&iacute;gido em um dos servidores tiver travado, voc&ecirc; pode ir para a p&aacute;gina <a href="disk.html">Status do Disco</a> para determinar qual disco r&iacute;gido foi travado e precisa ser substitu&iacute;do. Nessa caso, fa&ccedil;a o seguinte:<ol>
+            	<li>Substitua o disco r&iacute;gido travado (para informar-se sobre as etapas de instala&ccedil;&atilde;o do disco r&iacute;gido, consulte o <i>Guia de Instala&ccedil;&atilde;o R&aacute;pida</i> de seu produto Synology).</li>
+                <li>V&aacute; para a p&aacute;gina <b>Status de armazenamento</b> e clique em <b>Reparar</b>.</li>
+            </ol>
+        </li>
+        <li>Se o servidor passivo estiver offline, o status dos volumes e iSCSI LUNs (n&iacute;vel de bloqueio) indicar&atilde;o que ocorreu um erro e nenhum dos discos do servidor passivo aparecer&aacute; na p&aacute;gina Status do disco. Nesse caso, voc&ecirc; pode tentar resolver o problema fazendo o seguinte:<ol>
+            	<li>Certifique-se de que o servidor passivo esteja ligado.</li>
+                <li>Verifique todas as fontes de alimenta&ccedil;&atilde;o.</li>
+                <li>Examine todas as conex&otilde;es.</li>
+            </ol>
+        </li>
+        <li>Caso ocorra um erro no sistema de arquivo em um volume ou iSCSI LUN (n&iacute;vel de bloqueio) em um dos servidores, fa&ccedil;a o seguinte:<ul>
+            	<li>V&aacute; para a p&aacute;gina <b>Status de Armazenamento</b>.</li>
+                <li>Clique em <b>Reparar</b>.</li>
+            </ul>
+        </li>
+	</ul>
+
+<p><span class="note_head">Observa&ccedil;&atilde;o:</span>  O limite dos volumes e iSCSI LUNs (N&iacute;vel de Bloqueio) em um cluster de high-availability &eacute; 64.</p>
+
+ </body>
+</html>

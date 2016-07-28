@@ -1,0 +1,101 @@
+ <!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Replace a Hard Drive in a Volume or Disk Group - Synology DSM Help</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="This article walks you through the steps to replace a hard drive of an existing volume or disk group on DiskStation in order to increase storage capacity.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Replace Hard Drives to Expand Storage Capacity</h2>
+
+<p>When using certain RAID types, you can expand the storage capacity of a volume or disk group by replacing old hard drives with ones of larger size. This article provides important information regarding the expansion process, as well as an example of how to replace existing hard drives in order to expand storage capacity.</p>
+
+<div class="section">
+  <h4>Note:</h4>
+<p>The procedure described in this article only works with SHR, RAID 1, RAID 5, and RAID 6. If you plan on replacing multiple hard drives, you must be careful to replace hard drives one-by-one. After replacing one hard drive, you must repair the volume or disk group before replacing the next one. For RAID 1, RAID 5, and RAID 6, volume capacity will expand once all hard drives have been replaced.</p>
+
+</div>
+
+
+<h3 class="list_head"><a name="t1"></a>  Before You Start</h3>
+
+<p>Before replacing a hard drive, please see the following notes:<br/>
+
+<ul>
+<li><b>Back Up Data:</b> Although the expansion process will not delete any existing data, we strongly recommend backing up your data before proceeding.</li>
+<li><b>Volume or Disk Group Status:</b> Before beginning, make sure the status of your volume or disk group is <b>Normal</b>. If not, you must first repair it.</li>
+<li><b>Is data still accessible during expansion?</b> Data on your system will be available while expanding volumes or disk groups; although the system may suspend connections temporarily when first starting the process.</li>
+</ul>
+
+<div class="section">
+<h4>SHR (Synology Hybrid RAID)</h4>
+
+<p>Because SHR volumes optimize storage capacity based on the number and size of installed hard drives, please follow the below guidelines in order to properly expand capacity:</p>
+
+<ul>
+<li>If the capacity of all existing hard drives is equal, you must replace at least two hard drives with larger ones in order to expand storage capacity. For example, if your SHR volume consists of three 2 TB hard drives, then you must replace at least two hard drives in order to expand volume capacity.</li>
+<li>If the capacity of existing hard drives is different, then the new, replacement hard drives must be equal to or larger than the largest existing hard drive. In addition, you must replace smaller hard drives first in order to optimize capacity usage. For example, if your SHR volume consists of three hard drives that are 4 TB, 3 TB, and 2 TB respectively, then your new, replacement hard drives must be at least 4 TB. In addition, you should replace the 3 TB or 2 TB hard drives first.</i>
+</li>
+</ul>
+</div>
+
+<div class="section">
+<h4>RAID 5 and RAID 6</h4>
+
+<p>When replacing hard drives of RAID 5 or RAID 6 volumes or disk groups, the smallest hard drive should always be replaced first. The storage capacity of RAID 5 volumes is (number of hard drives – 1) x (smallest hard drive size), and RAID 6 is (number of hard drives – 2) x (smallest hard drive size). Therefore, the smallest hard drive should always be replaced first in order to maximize hard drive usage.</p>
+
+<p>For example, if your RAID 5 volume contains three hard drives that are 4 TB, 3 TB, and 2 TB respectively, the available capacity of your volume will be 4 TB. If you replace the 4 TB or 3 TB hard drives, the capacity of the volume will not change. To increase the capacity of your volume, the 2 TB hard drive must be replaced first.</p>
+</div>
+
+
+
+<h3>Replace Hard Drive to Expand Storage Capacity</h3>
+
+<p>In the steps below, we'll provide an example of replacing the hard drives of an SHR volume.</p>
+
+<h4>To replace hard drives:</h4>
+<ol>
+<li>Open <b>Storage Manager</b>.</li>
+<img src="about:blank" class="help_image"/>
+<li>Go to the <strong>Volume</strong> to see which existing hard drive is the smallest.</li>
+<img src="about:blank" class="help_image"/>
+
+<li>Turn off your DiskStation. (Skip this step if your DiskStation supports hot-swapping.)</li>
+<li>Remove the smallest of the member hard drives and install a new, larger hard drive.</li>
+
+<div class="section">
+<h4>Note:</h4>
+<p>To avoid harming yourself or damaging your DiskStation, please follow the hard drive installation instructions found in the <i>Quick Installation Guide</i> for your Synology product.</p>
+</div>
+
+<li>Turn on your DiskStation.</li>
+<li>Open <strong>Storage Manager</strong> again.</li>
+<li>Go to <strong>HDD/SSD</strong> to make sure the new hard drive is recognized.</li>
+<img src="about:blank" class="help_image"/>
+
+
+<li>The status of your volume should be <b>Degraded</b>. Select the volume and click <strong>Manage</strong>.</li>
+<img src="about:blank" class="help_image"/>
+<li>Select <b>Repair</b>.</li>
+<img src="about:blank" class="help_image"/>
+
+<li>Select the replacement hard drive to add to the volume. Then follow the steps of the wizard to finish.</li>
+<img src="about:blank" class="help_image"/>
+<li>Repeat the above process until all desired hard drives have been replaced with larger ones.</li>
+</ol>
+
+
+
+
+
+
+</body>
+</html>

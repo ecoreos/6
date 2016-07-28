@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+	<h2>一般設定</h2>
+	<p>儲存空間管理員能讓使用者管理 Synology NAS 上的所有儲存空間。為了簡化儲存空間管理並建立具有資料保護功能的彈性儲存空間，Synology DSM 支援多種 RAID Group。</p>
+
+<h4><a href="raid.html">RAID Group</a></h4>
+	<p>您可以使用 Synology NAS 來將多個硬碟整合為稱為 RAID Group 的單一儲存空間。Synology NAS 提供以下種類的 RAID Group：</p>
+	<ul>
+		<li><b>用於單一儲存空間或 iSCSI LUN (段落分塊) 的 RAID Group</b><ul>
+				<li>需將所有空間配置到單一儲存空間或 iSCSI LUN (段落分塊)。</li>
+				<li>提供更佳的效能，但儲存空間管理彈性較小。</li>
+                <li>相關儲存空間上可建立多個 iSCSI LUN (一般檔案)。</li>
+                <li>最多支援一個 RAID 陣列。</li>
+			</ul>
+		</li>
+		<li><b>用於多個儲存空間或 iSCSI LUN (段落分塊) 的 RAID Group</b><ul>
+				<li>支援在同一個 RAID Group 上建立多個儲存空間或 iSCSI LUN (段落分塊)。</li>
+                <li>提供較大的儲存空間管理彈性。</li>
+                <li>相關儲存空間上可建立多個 iSCSI LUN (一般檔案)。</li>
+				<li>(配置為 RAID 5 或 RAID 6 時) 支援在同一個 RAID Group 下整合多個 RAID 陣列。</li>
+			</ul>
+            </li>
+	</ul>
+
+<h4>RAID 類別</h4>    
+<p>在建立 RAID Group 時，您必須選擇 RAID 類型。不同的 RAID 類型可提供不同層級的資料保護、儲存空間功能及效能。以下是 Synology NAS 所支援的 RAID 類型：</p>
+	<ul>
+	  <li><b>Basic</b>：僅使用一顆硬碟建立一個不具資料保護機制的 RAID Group。</li>
+	  <li><b>JBOD*</b>：將兩顆以上的硬碟空間合併，整合成為單一的 RAID Group。JBOD RAID Group 不具資料保護機制。JBOD RAID Group 可使用容量為所有組成硬碟容量總和。JBOD 支援使用不同容量的硬碟。</li>
+	  <li><b>RAID 0*</b>：將兩顆以上的硬碟空間合併，整合成為單一的 RAID Group。這種方式不具任何資料保護的機制。當有硬碟損毀時，資料將無法回復。可使用容量為所有組成硬碟容量總和。RAID 0 支援使用不同容量的硬碟。</li>
+	  <li><b>RAID 1*</b>：將二至四顆的硬碟空間合併，整合成為單一的 RAID Group。系統會同時在每顆硬碟上寫入相同的資料。所以只要一顆以上的硬碟處於正常狀態，資料完整性就會受到保護。可用的容量為最小硬碟的容量。</li>
+	  <li><b>RAID 5*</b>：將三顆以上的硬碟整合為單一的 RAID Group，並在每一顆硬碟上存放資料以及同位元資訊。RAID 5 提供資料防護機制。若其中一顆硬碟損毀，就可以利用其他硬碟上存放的同位元資訊來重建系統，資料仍可安全保存。建立在用於多個儲存空間或 iSCSI LUN (段落分塊) 的 RAID Group 上時，可支援整合多個 RAID 陣列。可使用容量 = <span class="note_content">所有 RAID 陣列的總容量。RAID 陣列容量 = (硬碟數量 &ndash; 1) x (最小硬碟容量)</span></li>
+	  <li><b>RAID 6*</b>：將四顆以上的硬碟整合為單一的 RAID Group，並在每一顆硬碟上存放資料以及同位元資訊。RAID 6 提供資料防護機制。若其中一或二顆硬碟損毀，就可以利用其他硬碟上存放的同位元資訊來重建系統，資料仍可安全保存。建立在用於多個儲存空間或 iSCSI LUN (段落分塊) 的 RAID Group 上時，可支援整合多個 RAID 陣列。可使用容量 = <span class="note_content">所有 RAID 陣列的總容量。RAID 陣列容量 = (硬碟數量 &ndash; 2) x (最小硬碟容量)</span></li>
+	  <li><b>RAID 10*</b>：組合四顆以上的硬碟來建立 RAID Group。硬碟數量必須為雙數。RAID 10 兼具 RAID 0 的執行效能和 RAID 1 的資料保護等級。可使用容量 = <span class="note_content">(最小硬碟容量) X (總硬碟數 / 2)</span></li>
+	</ul>
+	<p><span class="note_head">注意：</span>僅具有足夠硬碟數的 NAS 型號支援標有「*」的 RAID 類型。</p>
+
+
+<h4><a href="space.html">儲存空間類型</a></h4>
+	<p>根據前述 RAID Group 類型，儲存空間可以分為：</p>
+	<ul>
+		<li><b>單一儲存空間或 iSCSI LUN (段落分塊) 的 RAID Group 上建立的儲存空間</b><ul>
+            	<li>將所有 RAID Group 空間分配給單一儲存空間。提供較佳的效能，但較不具管理上的彈性。</li>
+                <li>相關儲存空間上可建立多個 iSCSI LUN (一般檔案)。</li>
+            </ul></li>
+		<li><b>多個儲存空間或 iSCSI LUN (段落分塊) 的 RAID Group 上建立的儲存空間</b><ul>
+            	<li>分配 RAID Group 一部分的空間來建立儲存空間。提供較大的儲存空間管理彈性，可依需求擴充儲存空間大小或新增儲存空間。</li>
+                <li>相關儲存空間上可建立多個 iSCSI LUN (一般檔案)。</li>
+            </ul></li>
+	</ul>
+
+<h4 class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64">儲存空間格式</h4>
+<p class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64">根據使用的檔案系統，儲存空間格式可以分為：</p>
+<ul class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64">
+	<li><strong>新型儲存空間格式</strong>：此格式使用 <b>Btrfs</b> 檔案系統。此格式的儲存空間大小至少須為 10 GB 以上。支援下列新功能讓您更容易管理資料：<ul>
+			<li><strong><a href="../DisasterRecovery/snapshots.html">共用資料夾快照</a>：</strong>快照可記錄資料在拍攝快照時的完整狀態。在已拍攝快照的儲存空間中，若使用者不慎變更或刪除資料，您將可以快速還原該資料至拍攝快照時的狀態。</li>
+			<li><strong><a href="../AdminCenter/file_share_create.html#sharequota">共用資料夾空間配額</a>：</strong>可設定每個共用資料夾的最大空間限制。</li>
+			<li><strong>共用資料夾空間的<a href="../AdminCenter/file_user_create.html#userquota">使用者配額</a>：</strong>可控制共用資料夾中每個使用者可使用的空間大小。</li>
+			<li><strong><a href="../AdminCenter/file_share_create.html#integrity_protection">進階資料完整性保護</a>：</strong>以 CRC32 checksum 及 copy-on-write 方式來保護共用資料夾。</li>
+		</ul>
+	</li>
+	<li><strong>傳統儲存空間格式</strong>：此格式使用 <b>ext4</b> 檔案系統。此格式的儲存空間大小至少須為 10 GB 以上。大部分 Synology NAS 產品皆支援 ext4 檔案系統，故此格式的儲存空間可以很輕鬆地轉移至另一台 Synology NAS。</li>
+</ul>
+</body>
+</html>

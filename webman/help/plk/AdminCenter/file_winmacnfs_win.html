@@ -1,0 +1,139 @@
+﻿<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Win/Mac/NFS</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Usługa plików systemu Windows</h2>
+
+<p>Usługa plików systemu Windows umożliwia klientom z systemami Windows, Mac OS i Linux z obsługą protokołów SMB/CIFS dostęp do danych przechowywanych na serwerze DiskStation. Aby przeglądać pliki na serwerze DiskStation za pośrednictwem programu Eksplorator Windows lub montować foldery współdzielone jako dyski sieciowe, włącz tę opcję na stronie <strong>Panel sterowania</strong> > <strong>Usługi plików</strong> > <strong>Win/Mac/NFS</strong>.</p>
+
+
+<h4>Aby włączyć obsługę plików Windows:</h4>
+<ol>
+<li>Zaznacz pole wyboru <b>Włącz obsługę plików Windows</b>.</li>
+<li>Kliknij przycisk <b>Zastosuj</b>.</li>
+</ol>
+
+<div class="section disable-hi3535">
+<h4>Uwaga:</h4>
+<p>Po włączeniu usługi plików systemu Windows można zamontować w pełni indeksowane foldery w komputerze Mac za pośrednictwem SMB i wyszukiwać zawartość plików w zamontowanych folderach przy użyciu opcji Spotlight w aplikacji Finder.</p>
+</div>
+
+
+<h3>Grupa robocza</h3>
+<p>Ta opcja umożliwia przypisanie systemu jako członka określonej grupy roboczej do celów zarządzania siecią.</p>
+
+<div class="section">
+
+<h4>Uwaga:</h4>
+<ul>
+<li>Nazwa grupy roboczej może zawierać od 1 do 15 znaków. Nazwa nie może zawierać następujących znaków: [ ] ; : ” < > * + = \ / | ? ,</li>
+<li>Jeżeli używany jest komputer Mac z systemem OS X 10.9, a DiskStation dołączył do domeny Windows, można się zalogować, dodając <strong>localhost\</strong> przed nazwą użytkownika lokalnego DiskStation, aby uzyskać dostęp do plików przechowywanych w urządzeniu DiskStation za pośrednictwem usługi plików Windows.</li>
+</ul>
+</div>
+
+<h3 class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64">Nie zezwalaj na dostęp do poprzednich wersji</h3>
+<p class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64">W programie Eksplorator Windows użytkownicy mogą uzyskiwać dostęp do migawek folderów lub plików, klikając we właściwościach folderu współdzielonego kartę <strong>Poprzednie wersje</strong>, co pozwala na przywracanie lub kopiowanie danych bez udziału administratora. Jeżeli opcja <strong>Nie zezwalaj na dostęp do poprzednich wersji</strong> zostanie zaznaczona, na karcie [Poprzednie wersje] nie będzie żadnych informacji.</p>
+
+<div class="section enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64"><h4>Uwaga:</h4>
+<ul>
+	<li>Użytkownicy mogą uzyskać dostęp do wcześniejszej wersji tylko wtedy, gdy w momencie tworzenia migawki odpowiadającej wcześniejszej wersji ich konta użytkowników były utworzone i miały uprawnienia do odczytu folderu współdzielonego, którego migawka była tworzona.</li>
+</ul>
+</div>
+
+<h3>Włączanie rejestrowania transferu w logu</h3>
+<p>Zaznaczenie tej opcji spowoduje włączenie rejestrowania operacji dostępu do plików, w tym tworzenia, usuwania, odczytu, zapisu, przenoszenia i zmiany nazw plików lub folderów za pośrednictwem protokołu CIFS/SMB, znanego także jako protokół Windows File Transfer.</p>
+
+<h3>Ustawienia zaawansowane</h3>
+<p>Kliknij przycisk <strong>Ustawienia zaawansowane</strong>, aby wyświetlić poniższe opcje.</p>
+<ul>
+<li><strong>Serwer WINS</strong>: Microsoft Windows Internet Name Service (WINS) to nazwa usługi odwzorowania nazw NetBIOS na adresy IP. Użytkownicy systemu Windows znajdą system w sieciach TCP/IP znacznie łatwiej, jeżeli zostanie on skonfigurowany tak, aby rejestrować się na serwerze WINS.</li>
+<li><strong>Maks. protokół usługi plików systemu Windows</strong>: w zależności od konfiguracji sieci można określić najwyższy poziom protokołu, który będzie obsługiwany przez urządzenie DiskStation.<ul>
+    <li><strong>Włącz SMB 2</strong>: protokół SMB (Server Message Block) 2 jest obsługiwany od wersji Windows Vista i jest on udoskonaloną wersją SMB. SMB 2 umożliwia łączenie wielu działań SMB w jedno żądanie w celu zmniejszenia liczby pakietów sieciowych i poprawy wydajności.</li>
+    <li><strong>Włącz SMB 2 z Large MTU</strong>: Maksymalna jednostka transmisji (MTU — Maximum Transmission Unit) to największa jednostka danych, którą można przesłać przy użyciu protokołu telekomunikacyjnego. Aby umożliwić wykorzystanie szybszych interfejsów sieciowych, takich jak Ethernet 1 Gb lub 10 Gb, w funkcji Large MTU zwiększono MTU do 1 megabajta (MB). Włączenie funkcji Large MTU zwiększa szybkość i wydajność transferów dużych plików, zmniejszając jednocześnie liczbę pakietów do przetworzenia.</li>
+    <li><strong>Włącz SMB 3</strong>: protokół SMB 3 jest obsługiwany od wersji Windows 8 i Windows Server 2012. Jest to rozszerzona wersja protokołu SMB 2. Protokół SMB 3 obsługuje transmisję plików szyfrowanych algorytmem AES, co pozwala poprawić bezpieczeństwo transferu plików między komputerami.</li>
+</ul>
+<div class="section">
+  <h4>Uwaga:</h4>
+  <ul>
+    <li>Protokół SMB 2 jest obsługiwany w systemach Windows Vista, Windows Server 2008 R2, Windows 7 i nowszych.</li>
+    <li>Funkcja Large MTU jest obsługiwana w systemach Windows Server 2008 R2, Windows 7 i nowszych.</li>
+    <li>W celu uzyskania efektywnej obsługi dużych MTU na komputerze z systemem Windows należy zmodyfikować ustawienia rejestru komputera. Więcej informacji można znaleźć w materiałach pomocy technicznej firmy Microsoft (takich jak ten <a href="http://technet.microsoft.com/en-us/library/ff625695(v=ws.10).aspx" target="_blank">artykuł</a>).</li>
+    </ul>
+</div>
+<li><strong>Tryb szyfrowania transferu</strong>: po włączeniu protokołu SMB 3 w usłudze plików systemu Windows zostanie włączone szyfrowanie transferu, aby zwiększyć bezpieczeństwo transmisji plików.<ul>
+    <li><b>Wyłącz</b>: wyłączenie szyfrowania transferu.</li>
+    <li><b>Auto</b>: włączenie szyfrowania transferu na klientach obsługujących tę funkcję.</li>
+    <li><b>Wymuś</b>: wymuszenie szyfrowania transferu. Po wybraniu tej opcji klienci nieobsługujący szyfrowania transferu nie będą mogli korzystać z usługi plików systemu Windows.</li>
+  </ul>
+</li>
+<div class="section">
+  <h4>Uwaga:</h4>
+  <ul>
+    <li>Funkcja szyfrowania transferu jest obsługiwana przez system Windows 8, Windows Server 2012 i nowsze wersje.</li>
+    <li>W przypadku włączenia szyfrowania transferu logowanie anonimowe w usłudze plików systemu Windows nie będzie obsługiwane.</li>
+    <li>Po włączeniu szyfrowania należy pozostawić opcję <b>Wyłącz Opportunistic Locking</b> niezaznaczoną, aby uniknąć przekraczania limitów czasu oczekiwania aplikacji.</li>
+    </ul>
+</div>
+<li><strong>Wyłącz Opportunistic Locking</strong>: Zaznaczenie tej opcji wyłączy Opportunistic Locking CIFS, zwiększając wydajność, kiedy aplikacje bazy danych uzyskują dostęp do plików bazy w folderze współdzielonym urządzenia DiskStation przez sieć.</li>
+<li><strong>Włącz Local Master Browser</strong>: kiedy w tej samej podsieci istnieje wiele komputerów z systemem Windows, w wyniku negocjacji jeden z nich zostanie wybrany jako Local Master Browser (główna przeglądarka lokalna). Komputer pełniący funkcję Local Master Browser przechowuje listy pozostałych komputerów z podsieci oraz ich udostępnionych zasobów i udostępnia im te listy. Ta opcja umożliwia DiskStation objęcie roli Local Master Browser (nadrzędnej przeglądarki lokalnej).</li>
+
+<div class="section">
+<h4>Uwaga:</h4>
+<p>Włączenie tej funkcji spowoduje wyłączenie funkcji hibernacji dysku twardego i aktywowanie konta użytkownika guest (gość) niezabezpieczonego hasłem.</p>
+</div>
+
+
+<li><strong>Włącz moduł DirSort VFS</strong>: sortowanie nazw plików i wyświetlanie ich na liście w kolejności alfabetycznej. Włączenie tej opcji obciąża system.</li>
+
+<li><strong>Odrzuć pliki</strong>: ukrywanie plików według określonych kryteriów. Kryteria mogą obejmować symbole wieloznaczne (*), a większą liczbę kryteriów należy rozdzielić ukośnikami (/). Na przykład: <i>/abc*/*.txt/*.conf/</i>. Włączenie tej opcji obciąża system.</li>
+
+<li><strong>Zezwalaj na łącza symboliczne w folderach współdzielonych</strong>: zezwolenie na wskazywanie plików lub folderów docelowych przez łącza symboliczne w tym samym folderze współdzielonym. Łącza symboliczne można tworzyć przy użyciu terminala systemu DSM.</li>
+
+<li><strong>Zezwalaj na łącza symboliczne między folderami współdzielonymi</strong>: zezwolenie na wskazywanie plików i folderów przez łącza symboliczne w różnych folderach współdzielonych. Łącza symboliczne można tworzyć przy użyciu terminala systemu DSM. Włączenie tej opcji może umożliwić użytkownikom bez uprawnień dostępu wyświetlanie zawartości folderów współdzielonych, do których kierują łącza symboliczne, oraz uzyskiwanie do nich dostępu.</li>
+
+<li><strong>Włącz moduł MSDFS VFS</strong>: zezwolenie na wskazywanie przez łącza symboliczne plików lub folderów znajdujących się na innych serwerach SMB. W przypadku starszych wersji systemu Windows, takich jak Windows XP, przed włączeniem tej opcji należy dołączyć klienta i DiskStation do domeny Windows. Więcej informacji o tworzeniu łączy MSDFS można uzyskać <a href="http://www.samba.org/samba/docs/man/Samba-HOWTO-Collection/msdfs.html" target=_blank>tutaj</a>. Pamiętaj, że po wyłączeniu tej opcji należy wyczyścić pamięć podręczną urządzenia klienckiego. W przeciwnym razie wydajność może ulec pogorszeniu.</li>
+
+<li><strong>Wyłącz wiele połączeń z tego samego adresu IP</strong>: kiedy ta opcja jest włączona, DiskStation zezwala na tylko jedno połączenie z każdego adresu IP w przypadku klientów używających usługi plików systemu Windows. Jeżeli wiele klientów z tego samego adresu IP używa usługi plików systemu Windows, DiskStation utrzyma najnowsze połączenie i odrzuci wszystkie starsze. W środowisku NAT klient może używać jednego adresu IP. W takim przypadku włączenie tej opcji może wpływać negatywnie na normalne działanie.</li>
+
+<li><strong>Gromadź logi debugowania</strong>: przechowywanie szczegółowych dzienników do celów debugowania. Włączenie tej opcji obciąża system.</li>
+<li><strong>Zastosuj domyślne uprawnienia UNIX</strong>: Włączenie tej opcji powoduje zastosowanie domyślnych uprawnień systemu UNIX podczas przesyłania lub tworzenia plików i folderów. Uprawnienia systemu UNIX mają wartość 744 w przypadku plików i 755 w przypadku folderów. Po wyłączeniu tej opcji uprawnienia systemu UNIX mają wartość 777 w przypadku plików i folderów.</li>
+<div class="section enable-eds14">
+<h4>Uwaga:</h4>
+<ul>
+<li>Włączenie tej opcji może spowodować problemy z niespójnością uprawnień między różnymi protokołami. Aby uniknąć niespójności, nie zaleca się włączania tej opcji.</li>
+</ul>
+</div>
+<div class="section disable-eds14">
+<h4>Uwaga:</h4>
+<ul>
+  <li>W przypadku folderów współdzielonych z obsługą listy kontroli dostępu systemu Windows (ACL) (wszystkie udziały z wyłączeniem udziału photo i udziałów na zewnętrznych dyskach) należy uruchomić polecenie <strong>chmod</strong> w kliencie Linux lub FTP, aby zmienić rodzaje uprawnień dotyczące folderów i plików z lista kontroli dostępu systemu Windows (ACL) na UNIX.</li>
+  <li>Włączenie tej opcji może spowodować problemy z niespójnością uprawnień między różnymi protokołami. Aby uniknąć niespójności, nie zaleca się włączania tej opcji.</li>
+</ul>
+</div>
+<li><b>Nie rezerwuj przestrzeni na dysku podczas tworzenia plików</b>: Włącz tę opcję, aby zapobiec rezerwowaniu przestrzeni na dysku podczas tworzenia plików na serwerze DiskStation.</li>
+<li><strong>Wyczyść pamięć podręczną SMB</strong>: kliknięcie tego przycisku pozwala usunąć następujące pliki pamięci podręcznej SMB do celów rozwiązywania problemów: <ul>
+
+<li>/var/cache/samba/netsamlogon_cache.tdb</li>
+<li>/var/lib/samba/winbindd_cache.tdb</li>
+<li>/var/lib/samba/share_info.tdb</li>
+<li>/var/lib/samba/registry.tdb</li>
+<li>/run/samba/connections.tdb</li>
+<li>/run/samba/gencacche.tdb</li>
+<li>/run/samba/gencache_notran.tdb</li>
+</ul></li>
+
+</ul>
+
+</body>
+</html>

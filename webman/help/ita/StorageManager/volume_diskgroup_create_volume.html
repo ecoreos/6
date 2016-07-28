@@ -1,0 +1,77 @@
+ <!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Creare un volume - Guida Synology DSM</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="This article walks you through the steps to create a volume on DiskStation using Storage Manager.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script> <script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Creare un volume</h2>
+
+<p>Questo articolo spiega come creare un volume su DiskStation. Quando si crea un nuovo volume, è possibile scegliere uno dei seguenti metodi:</p>
+
+<ul>
+  <li><b>Rapida:</b> Questa è la migliore opzione per i principianti. Scegliere questo metodo se si vuole ottimizzare manualmente la capacità di archiviazione e le prestazioni, senza preoccuparsi degli aspetti tecnici, come livelli RAID. </li>
+
+<li><b>Personalizzato:</b> Per utenti avanzati che vogliono controllare gli aspetti più precisi della creazione del volume, come tipi di RAID e allocazione capacità. Questa opzione supporta diversi tipi di RAID, consente di creare volumi singoli o multipli, e fornisce opzioni per allocare quantità specifiche di capacità per ogni volume (solo quando si creano più volumi su RAID).
+</li>
+</ul>
+
+<div class="section">
+<h4>Volumi singoli o multipli su RAID?</h4>
+<p>Quando si crea un volume con modalità predefinita, è possibile scegliere una delle seguenti opzioni:</p>
+<ul>
+  <li><b>Volume singolo su RAID</b>
+    <ul>
+      <li>Crea un singolo volume usando tutta la capacità disponibile dei dischi rigidi selezionati.</li>
+      <li>Offre una velocità e prestazioni migliori.</li>
+      <li>Supporta diversi tipi di RAID.</li>
+    </ul>
+  </li>
+  <li><b>Volumi multipli su RAID</b>
+    <ul>
+      <li>Consente di creare volumi multipli su un gruppo disco.</li>
+      <li>Supporta l’allocazione di una capacità specifica per ciascun volume.</li>
+      <li>Offre una maggiore flessibilità nella gestione dell'archiviazione.</li>
+      <li>Supporta diversi tipi di RAID.</li>
+    </ul>
+  </li>
+</ul>
+</div>
+
+
+<div class="section">
+<h4>Prima di cominciare:</h4>
+<ul>
+<li>Prima di iniziare, assicurarsi che non vi siano dati importanti nei dischi rigidi. Tutti i dati esistenti saranno cancellati durante il processo di creazione.</li>
+<li>Andare sulla pagina <b>HDD/SSD</b> e verificare che lo stato di ogni disco rigido sia <b>Normale</b> o <strong>Non inizializzato</strong>.</li>
+</ul>
+</div>
+
+<div class="section enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64">
+<h4>Nota:</h4>
+<ul>
+<li>la dimensione minima di un volume è di 10GB.</li>
+<li>I volumi btrfs manterranno il 4% di spazio per i metadati.</li>
+</ul>
+</div>
+
+<h4>Per creare un volume:</h4>
+<ol>
+<li>Aprire <b>Gestione archiviazione</b>.</li>
+<img src="about:blank" class="help_image"/>
+<li>Andare su <b>Volume</b> e fare clic su <b>Crea</b>.</li>
+<img src="about:blank" class="help_image"/>
+<li>Apparirà la procedura guidata creazione volume. Selezionare <strong>Rapida</strong> o <strong>Personalizzata</strong> in base alle proprie necessità. Quindi seguire le istruzioni della procedura guidata per terminare la creazione del volume.</li>
+<img src="about:blank" class="help_image"/>
+</ol>
+
+</body>
+</html>

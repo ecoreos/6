@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+	<h2>HDD/SSD</h2>
+	<p>您可在此監控 DiskStation 上所安裝的 HDD/SSD 狀態，並透過此處的選項來管理、分析 HDD/SSD 效能及健康狀況。請前往<strong>儲存空間管理員</strong> &gt; <strong>HDD/SSD</strong> 來管理這些選項。</p>
+
+	<h4>若要檢查 HDD/SSD 資訊：</h4>
+	<ol>
+		<li>前往<b>HDD/SSD</b>頁籤。</li>
+		<li>請從清單中選擇硬碟，並將其展開。您可在此查看 S.M.A.R.T. 狀態、儲存空間資訊、型號、序號、韌體版本及溫度。</li>
+	</ol>	
+	
+	<h4>若要檢查健康資訊：</h4>
+    <ol>
+      <li>前往<b>HDD/SSD</b>頁籤。</li>
+	  <li>選擇硬碟。</li>
+      <li>按一下<b>健康資訊</b>。</li>
+	  <li>前往<strong>總覽</strong>頁籤。您可在此得知硬碟運作時數、目前溫度、重新連線 / 重新辨識次數、壞軌數，及整體 S.M.A.R.T. 狀態。</li>
+      <li>前往 <strong>S.M.A.R.T. 資訊</strong>頁籤。此處列出的各項數值可幫助您進一步瞭解硬碟狀態。</li>
+    </ol>
+
+<div class="section">
+<h4>注意：</h4>
+<p>
+   SAS 硬碟不支援 S.M.A.R.T. 資訊。
+</p>
+</div>
+
+	<h4>若要執行 S.M.A.R.T. 檢測：</h4>
+	<P>S.M.A.R.T. 檢測可檢查並回報硬碟狀態，在硬碟可能發生問題前提出警訊。若偵測出任何錯誤，建議您立刻更換硬碟。 </P>
+    <ol>
+      <li>前往<strong>HDD/SSD</strong>頁籤。</li>
+      <li>選擇硬碟。</li>
+      <li>按一下 <b>S.M.A.R.T. 檢測</b>。</li>
+      <li>選擇一種檢測類型並按一下<strong>開始</strong>來進行檢測。</li>
+      <li>最新的檢測結果會顯示在<b>檢測結果</b>區塊中。</li>
+    </ol>
+    <div class="section">
+<h4>注意：</h4>
+    <p>檢測所需時間會因您的系統環境而有所不同。</p>
+</div>
+    <h4>若要安排 S.M.A.R.T. 檢測排程：</h4>
+    <p>您可以建立任務來依排程自動執行 S.M.A.R.T. 檢測。</p>
+    <ol>
+      <li>前往<strong>測試排程表</strong>頁籤。</li>
+      <li>按一下<strong>新增</strong>來建立任務。</li>
+      <li>在<strong>一般</strong>頁籤中修改下列設定：</li>
+      <ul>
+        <li><strong>任務</strong>：輸入任務的名稱。</li>
+        <li><strong>S.M.A.R.T.檢測類型：</strong>選擇要執行快速檢測或完整檢測。</li>
+        <li><strong>S.M.A.R.T.檢測範圍</strong>：每次執行 S.M.A.R.T. 檢測時選擇要檢測哪些 HDD/SSD。</li>
+      </ul>
+      <li>在<strong>排程</strong>頁籤，請修改下列設定：</li>
+      <ul>
+        <li><strong>日期：</strong>指定何時要執行 S.M.A.R.T. 檢測。您可以排定在每週某些日子 (如每天、週末、每星期天等) 或指定的日期 (如 2015/10/21) 執行 S.M.A.R.T. 檢測。</li>
+        <li><strong>時間：</strong>指定要執行 S.M.A.R.T. 檢測的次數，以及當日開始執行與最後執行的時間。</li>
+      </ul>
+      <li>按一下<strong>確定</strong>來完成。</li>
+    </ol>
+
+<h4>若要執行 Secure Erase:</h4>
+<ol>
+<li>前往<b>HDD/SSD</b>頁籤。</li>
+<li>選擇一個硬碟，然後按一下 <B>Secure Erase</B>。</li>
+</ol>
+
+<div class="section">
+<h4>注意：</h4>
+<ul>
+<li>Secure Erase 不可執行於擴充裝置的硬碟上。</li>
+<li>Secure Erase 會永久移除硬碟上的所有資料。執行前，請先確認您已不使用該硬碟或已備份資料。</li>
+<li>系統在執行 Secure Erase 時，將會暫時鎖定所選的硬碟，並於操作完成後自動解鎖。</li>
+<li>操作過程中，若 Secure Erase 被不當停止，您可以直接從使用者介面上重新執行 Secure Erase。若硬碟在鎖定的狀態下被移除或是移至他處使用，您可以輸入密碼「synology」來解鎖硬碟。</li>
+</ul>
+</div>
+
+	<h3>啟動 HDD 寫入快取</h3>
+	<p>啟動寫入快取可提升 DiskStation 效能。僅特定 HDD 型號支援此功能。為確保資料安全，強烈建議您使用 UPS 不斷電系統。同時，建議每次使用後正常關機。停用寫入快取能減少無預警斷電時的資料遺失，但相對的會降低系統效能。</p>
+
+	<h4>若要啟動寫入快取功能： </h4>
+	<ol>
+		<li>前往<b>硬碟快取管理</b>頁籤。</li>
+		<li>勾選<b>啟動硬碟寫入快取</b>。依照預設，此功能是啟動的。</li>
+		<li>按一下<b>套用</b>。</li>
+	</ol>
+
+
+ 
+
+
+	
+</body>
+</html>

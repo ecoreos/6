@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>작업 스케줄러</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h1>작업 스케줄러</h1>
+<p>작업 스케줄러를 사용하면 미리 정의된 시간에 서비스 또는 스크립트를 예약하고 실행할 수 있습니다.</p>
+<h2>지원되는 작업</h2>
+<p>다음을 수행하기 위한 작업을 만들 수 있습니다:</p>
+<ul class="disable-eds14">
+<li><strong>사용자 정의 스크립트:</strong> 사용자 정의 스크립트 또는 명령을 실행합니다.</li>
+<li><strong>휴지통:</strong> 특정 공유 폴더의 휴지통을 비웁니다. 또한, <strong>보존 정책</strong> 설정을 사용하여 휴지통을 비울 때 영구 삭제할 파일을 제어할 수 있습니다. 예를 들어, 크기, 삭제 시간 또는 파일 형식에 따라 파일을 삭제 또는 보존할 수 있습니다.</li>
+<li><strong>신호음 제어:</strong> DiskStation 신호음을 만듭니다.</li> 
+<li><strong>서비스:</strong> Windows 파일 서비스, FTP 및 자동 차단 등과 같은 네트워크 서비스를 시작하거나 중지합니다.</li>
+</ul>
+
+
+<ul class="enable-eds14">
+<li><strong>사용자 정의 스크립트:</strong> 사용자 정의 스크립트 또는 명령을 실행합니다.</li>
+<li><strong>휴지통:</strong> 특정 공유 폴더의 휴지통을 비웁니다. 또한, <strong>보존 정책</strong> 설정을 사용하여 휴지통을 비울 때 영구 삭제할 파일을 제어할 수 있습니다. 예를 들어, 크기, 삭제 시간 또는 파일 형식에 따라 파일을 삭제 또는 보존할 수 있습니다.</li>
+<li><strong>서비스:</strong> Windows 파일 서비스, FTP 및 자동 차단 등과 같은 네트워크 서비스를 시작하거나 중지합니다.</li>
+</ul>
+
+
+<h2>작업 관리</h2>
+<p>작업 스케줄러의 메인 페이지에 기존 작업이 모두 표시되고 작업을 생성, 편집 또는 실행할 수 있는 옵션을 제공합니다.</p>
+
+<h4>예약된 작업 생성하기:</h4>
+<p>예약된 작업은 지정한 날짜, 시간 또는 간격으로 실행하는 작업입니다.</p>
+
+<ol>
+<li><strong>제어판</strong> > <strong>작업 스케줄러</strong>로 이동하여 <strong>생성</strong>을 클릭하고 <strong>예약된 작업</strong>을 선택합니다.</li>
+<li>예약하기를 원하는 작업 유형을 선택합니다: <strong>사용자 정의 스크립트</strong>, <strong>휴지통</strong>, <strong>신호음 제어</strong> 또는 <strong>서비스</strong>.</li>
+<li><strong>작업 만들기</strong> 창이 나타나면 <strong>일반</strong>을 클릭하고 다음 설정을 수정합니다.
+<ul>
+<li><strong>일반 설정:</strong> 작업 이름을 입력하고, 작업을 어떤 사용자를 위해 실행할지 선택하고, 작업을 활성화하거나 비활성화합니다. </li>
+</ul>
+</li>
+<li><strong>예약</strong>을 클릭하고 다음 설정을 수정합니다.
+<ul>
+<li><strong>날짜:</strong> 작업을 실행할 날짜를 지정합니다. 특정 요일(예: 매일, 주말 또는 매주 일요일) 또는 구체적인 날짜(예: 2015/10/21)에 실행되도록 작업을 예약할 수 있습니다.</li>
+<li><strong>시간:</strong> 매일 작업이 실행되는 횟수와 처음 및 마지막 실행 시간을 지정합니다.</li>
+</ul>
+</li>
+<li><strong>작업 설정</strong>을 클릭하고 작업 관련 설정을 수정합니다(일부 작업에만 해당).
+<ul>
+<li>작업의 실행 상세 정보를 수신하려면 <strong>실행 상세 정보를 이메일로 보내기</strong>를 선택합니다.</li>
+<li>비정상 상황 발생 시에만 알림을 받으려면 <strong>스크립트가 정상적으로 종료할 때만 실행 상세 정보 보내기</strong>를 선택합니다.</li>
+<li>작업 내용을 사용자 지정하려면, <strong>사용자 정의 스크립트</strong> 아래에 스크립트를 입력합니다.</li>
+<li>2단계에서 <strong>휴지통</strong> 또는 <strong>서비스</strong>를 선택한 경우, 휴지통을 언제 어떻게 비울지, 어떤 서비스를 시작/중지할지 결정할 수 있습니다.</li>
+</ul>
+</li>
+<li><strong>확인</strong>을 클릭하여 설정을 저장합니다.</li>
+</ol>
+
+
+
+<h4>트리거된 작업 생성하기:</h4>
+<p>트리거된 작업은 특정 이벤트 완료 전/후에 실행하는 작업입니다.</p>
+
+<ol>
+<li><strong>제어판</strong> > <strong>작업 스케줄러</strong>로 이동하여 <strong>생성</strong>을 클릭하고 <strong>트리거된 작업</strong>을 선택합니다.</li>
+<li><strong>사용자 정의 스크립트</strong>를 선택합니다.</li>
+<li><strong>작업 만들기</strong> 창이 나타나면 <strong>일반</strong>을 클릭하고 다음 설정을 수정합니다.
+<ul>
+<li><strong>일반 설정:</strong> 작업 이름을 입력하고, 작업을 어떤 사용자를 위해 실행할지 선택하고, 작업을 트리거하는 이벤트/사전 작업을 선택하고, 작업을 활성화하거나 비활성화합니다. </li>
+</ul>
+</li>
+<li><strong>작업 설정</strong>을 클릭하고 작업 관련 설정을 수정합니다(일부 작업에만 해당).
+<ul>
+<li>작업의 실행 상세 정보를 수신하려면 <strong>실행 상세 정보를 이메일로 보내기</strong>를 선택합니다.</li>
+<li>비정상 상황 발생 시에만 알림을 받으려면 <strong>스크립트가 정상적으로 종료할 때만 실행 상세 정보 보내기</strong>를 선택합니다.</li>
+<li>작업 내용을 사용자 지정하려면, <strong>사용자 정의 스크립트</strong> 아래에 스크립트를 입력합니다.</li>
+</ul>
+</li>
+<li><strong>확인</strong>을 클릭하여 설정을 저장합니다.</li>
+</ol>
+
+<div class="section">
+<h4>참고:</h4>
+<ul>
+<li>트리거된 작업을 생성할 때, 해당 사전 작업을 지정해야 할 수도 있습니다. 생성되는 작업은 사전 작업이 수행된 후에만 실행됩니다.</li>
+<li><strong>스크립트가 정상적으로 종료할 때만 실행 상세 정보 보내기</strong>를 활성화하면 스크립트가 0으로 끝나는 경우 상세 정보가 전달되지 않습니다.</li>
+</ul>
+</div>
+
+<h4>작업 설정 편집하기:</h4>
+<ol>
+<li>기존 작업을 선택합니다.</li>
+<li><strong>편집</strong>을 클릭합니다.</li>
+<li>작업 설정을 수정할 수 있는 창이 나타납니다.</li>
+</ol>
+<h4>작업 삭제하기:</h4>
+<ol>
+<li>기존 작업을 선택합니다.</li>
+<li><strong>동작</strong> > <strong>삭제</strong>를 클릭합니다.</li>
+</ol>
+
+<h4>작업 활성화 또는 비활성화하기:</h4>
+<ol>
+<li><strong>작업 스케줄러</strong> 메인 페이지의 <strong>활성화</strong> 아래에서 해당 선택 상자를 선택하거나 선택을 취소하여 작업을 활성화하거나 비활성화합니다.</li>
+<li><strong>저장</strong>을 클릭하십시오.</li>
+</ol>
+
+
+<h4>작업을 수동으로 실행하기:</h4>
+<ol>
+<li>하나 이상의 기존 작업을 선택합니다.</li>
+<li><strong>실행</strong>을 클릭합니다.</li>
+</ol>
+
+<div class="section">
+<h4>작업 스케줄러 제한 사항:</h4>
+<ul class="disable-eds14">
+<li>작업 이름에 512자의 표시 가능한 문자를 포함할 수 있습니다.</li>
+<li>최대 작업 수: 1024.</li>
+<li>스크립트 경로 또는 명령줄의 최대 길이: 4095.</li>
+<li>신호음 기간을 1초 ~ 600초로 설정할 수 있습니다.</li>
+</ul>
+
+
+<ul class="enable-eds14">
+<li>작업 이름에 512자의 표시 가능한 문자를 포함할 수 있습니다.</li>
+<li>최대 작업 수: 1024.</li>
+<li>스크립트 경로 또는 명령줄의 최대 길이: 4095.</li>
+</ul>
+
+</div>
+
+</body> </html>

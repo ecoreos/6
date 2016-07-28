@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>DSM Help - SSO-client</title>
+<meta name="author" content="Synology Inc.">
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script> <script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2>SSO-client</h2>
+
+<p>Als uw DiskStation aan dezelfde domein- of LDAP-service van de SSO server is gekoppeld, kunt uw DiskStation instellen als een SSO-client. Nadat gebruikers zich met hun gebruikersgegevens bij de SSO server hebben aangemeld, hebben ze toegang tot de door uw DiskStation verleende services.</p>
+
+<p>Voor u begint, moet u zich ervan vergewissen dat uw DiskStation aan dezelfde domein- of LDAP-service van de SSO server is gekoppeld.</p>
+
+<h4>Om uw DiskStation in te stellen als SSO-client:</h4>
+<ol>
+	<li>Ga naar <strong>Configuratiescherm</strong> > <strong>Domein/LDAP</strong> > <strong>SSO Client</strong>.</li>
+	<li>Schakel het selectievakje <strong>SSO-service inschakelen</strong> in.</li>
+	<li>Voer de <strong>SSO-server-URL</strong> en <strong>Toepassings-ID</strong> in de velden onder het selectievakje in.
+<div class="section"><h4>Opmerking:</h4>
+	<p>selecteer een van de volgende methodes om een toepassings-ID te verkrijgen:</p>
+	<ul>
+		<li><strong>Methode 1:</strong>
+			<ol>
+				<li>Meld u aan bij de DSM waarop de SSO server draait.</li>
+				<li>Voeg uw DiskStation die als clienttoepassing zal fungeren toe aan de toepassingenlijst van de SSO server. Voor gedetailleerde stappen, zie het Help-artikel voor <strong>SSO-server</strong> > <strong>Toepassingenlijst</strong>.</li>
+				<li>Kopieer en plak de door de SSO server toegewezen toepassings-ID nadat uw DiskStation aan de SSO server is toegevoegd.</li>
+			</ol>
+		</li>
+		<li><strong>Methode 2:</strong>
+			<ol>
+				<li>Na invoeren van de <strong>SSO-server-URL</strong>* klikt u op <strong>Snelle registratie</strong> naast het veld Toepassings-ID.</li>
+				<li>In het registratieveld voert u de gebruikersgegevens van een administratoraccount van de SSO server in bij de velden <strong>Serveradministrator</strong> en <strong>Wachtwoord</strong>.</li>
+				<li>Voer de naam van uw clienttoepassing in het veld <strong>Toepassingsnaam</strong> in.</li>
+				<li>Vergewis u ervan dat <strong>URI omleiden</strong> naar de aanmeldingspagina van uw DiskStation verwijst.</li>
+				<li>Klik op <strong>OK</strong> en uw DiskStation wordt toegevoegd aan de SSO server, waarbij de toepassings-ID automatisch wordt ingevuld.</li>
+			</ol>
+		</li>
+	</ul>
+<p>______</p><p style="margin-left: 20px; text-indent: -10px;">* U moet de identieke SSO server-URL (hostnaam of IP) invoeren bij de configuratie van elke SSO-client.</p>
+</div>
+	</li>
+	<li>Klik op <strong>Toepassen</strong> om uw instellingen op te slaan.</li>
+</ol>
+
+<div class="section"><h4>Opmerking:</h4>
+<ul>
+	<li>Gebruikt de SSO server HTTPS-protocol, dan kan de SSO-aanmelding worden geblokkeerd door browsers zonder vertrouwd certificaat.</li>
+	<li>Als uw DiskStation (ingesteld als SSO-client) een HTTPS-verbinding gebruikt en het HTTP-protocol wordt gebruikt voor toegang tot de SSO server, moeten gebruikers hun instellingen configureren zodat hun browsers het gebruik van onbeveiligde verbindingen toestaan.</li>
+	<li>Het IP-adres in IPv6-formaat van de SSO server wordt niet ondersteund als het selectievakje <strong>Verbeter de beveiliging met HTTP Content Security Policy (CSP) header</strong> in <strong>Configuratiescherm</strong> &gt; <strong>Beveiliging</strong> &gt; <strong>Beveiliging</strong> op uw DSM is ingeschakeld.</li>
+</ul>
+</div>
+
+</body>
+</html>

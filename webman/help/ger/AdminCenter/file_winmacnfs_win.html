@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Win/Mac/NFS</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Windows-Dateidienst</h2>
+
+<p>Der Windows-Dateidienst ermöglicht SMB/CIFS-fähigen Windows-, Mac- und Linux-Clients den Zugriff auf Daten, die auf DiskStation gespeichert sind. Wenn Sie Dateien auf DiskStation über den Windows Explorer durchsuchen oder gemeinsame Ordner als Netzwerklaufwerke einbinden möchten, aktivieren Sie bitte diese Option unter <strong>Systemsteuerung</strong> > <strong>Dateidienste</strong> > <strong>Win/Mac/NFS</strong>.</p>
+
+
+<h4>Windows-Dateidienst aktivieren:</h4>
+<ol>
+<li>
+Markieren Sie <b>Windows Dateidienst aktivieren</b>.
+</li>
+<li>
+Klicken Sie auf <b>Übernehmen</b>.
+</li>
+</ol>
+
+<div class="section disable-hi3535">
+<h4>Hinweis:</h4>
+<p>Nachdem Sie den Windows-Dateidienst aktiviert haben, können Sie vollständig indizierte Ordner über SMB auf Ihrem Mac-Computer anhängen und mit Spotlight in Finder nach Dateiinhalten in den angehängten Ordnern suchen.</p>
+</div>
+
+
+<h3>Arbeitsgruppe</h3>
+<p>Diese Option ermöglicht Ihnen, das System als Mitglied einer bestimmten Arbeitsgruppe für die Netzwerkverwaltung zu bestimmen.</p>
+
+<div class="section">
+
+<h4>Hinweis:</h4>
+<ul>
+<li>Der Name einer Arbeitsgruppe kann aus 1 bis 15 Zeichen bestehen. Der Name darf keines der folgenden Zeichen enthalten: [ ] ; : &quot; < > * + = \ / | ? ,</li>
+<li>Wenn Sie einen Mac mit OS X 10.9 verwenden und Ihr DiskStation einer Windows-Domain beigetreten ist, können Sie sich anmelden, indem Sie <strong>localhost\</strong> vor dem lokalen Benutzernamen Ihres DiskStation hinzufügen, um über den Windows-Dateidienst auf im DiskStation gespeicherte Dateien zuzugreifen.</li>
+</ul>
+</div>
+
+<h3 class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64">Zugriff auf frühere Versionen nicht zulassen</h3>
+<p class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64">In Windows Explorer kann auf die Schnappschüsse von Ordnern oder Dateien zugegriffen werden, indem in einem freigegebenen Ordner auf die Registerkarte <strong>Frühere Versionen</strong> geklickt wird, sodass Daten ohne die Hilfe eines Administrators wiederhergestellt oder kopiert werden können. Wenn Sie die Option <strong>Zugriff auf frühere Versionen nicht zulassen</strong> ausgewählt haben, werden auf der Seite "Frühere Versionen" keine Informationen angezeigt.</p>
+
+<div class="section enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64"><h4>Hinweis:</h4>
+<ul>
+	<li>Benutzer dürfen nur auf eine vorherige Version zugreifen, wenn ihr Benutzerkonto zum Zeitpunkt der Erstellung des der vorherigen Version entsprechenden Schnappschusses bereits erstellt war und ihnen die Berechtigung zum Lesen des freigegebenen Ordners gewährt wurde, von dem der entsprechende Schnappschuss erstellt wurde.</li>
+</ul>
+</div>
+
+<h3>Aktivieren der Übertragungsprotokollierung</h3>
+<p>Durch Aktivierung dieser Option werden die Dateizugriffsvorgänge, z. B. Erstellen, Löschen, Lesen, Schreiben, Verschieben und Umbenennen von Dateien und Ordnern, über das CIFS/SMB-Protokoll oder das Windows-Dateiübertragungsprotokoll protokolliert.</p>
+
+<h3>Erweiterte Einstellungen</h3>
+<p>Klicken Sie auf die Schaltfläche <strong>Erweiterte Einstellungen</strong>, um die folgenden Optionen anzuzeigen.</p>
+<ul>
+<li><strong>WINS Server</strong>: Microsoft Windows Internet Name Service (WINS) ist ein Dienst für die Zuordnung von NetBIOS-Namen zu IP-Adressen. Windows-Benutzer können das System einfacher in TCP/IP-Netzwerken erreichen, wenn das System so konfiguriert wurde, dass es bei einem WINS-Server registriert wird.</li>
+<li><strong>Max. Protokoll für Windows-Dateidienst</strong>: Je nach Ihrer Netzwerkkonfiguration können Sie die höchste Protokollebene einstellen, die von Ihrem DiskStation unterstützt wird.
+  <ul>
+    <li><strong>SMB 2 aktivieren</strong>: SMB (Server Message Block) 2 wird seit Windows Vista unterstützt und ist die erweiterte Version von SMB. SMB 2 bietet die Möglichkeit mehrere SMB-Aktionen zu einer einzelnen Anforderung zu verbinden, um die Anzahl der Netzwerkpakete zu verringern und eine Leistungssteigerung zu erreichen.</li>
+    <li><strong>SMB 2 mit Large MTU aktivieren</strong>: Maximum Transmission Unit (MTU) bezieht sich auf die größte Dateneinheit, die über ein Kommunikationsprotokoll übertragen werden kann. Um schnelle Netzwerkschnittstellen, z. B. 1- oder 10-Gigabit Ethernet optimal nutzen zu können, erhöht Large MTU die maximale Übertragungseinheit (Maximum Transmission Unit - MTU) auf 1 Megabyte (MB). Die Aktivierung von Large MTU verbessert die Geschwindigkeit und Effizienz bei der Übertragung großer Dateien und reduziert die Anzahl der zu verarbeitenden Pakete.</li>
+    <li><strong>SMB 3 aktivieren</strong>: SMB 3 wird seit Windows 8 und Windows Server 2012 unterstützt. Es handelt sich um die erweiterte Version von SMB 2. SMB 3 unterstützt die AES-basierte Verschlüsselung der Datenübertragung und verbessert auf diese Weise die Sicherheit von Peer-to-Peer-Dateiübertragungen.</li>
+</ul>
+<div class="section">
+  <h4>Hinweis:</h4>
+  <ul>
+    <li>SMB 2 wird von Windows Vista, Windows Server 2008 R2, Windows 7 und höher unterstützt.</li>
+    <li>Large MTU wird von Windows Server 2008 R2, Windows 7 und höher unterstützt.</li>
+    <li>Um einen Large-MTU-Wert auf Ihrem Windows-Computer zu verwenden, müssen Sie die Registrierungseinstellungen des Computers ändern. Weitere Einzelheiten finden Sie beim Technischen Support von Microsoft (z. B. in diesem <a href="http://technet.microsoft.com/en-us/library/ff625695(v=ws.10).aspx" target="_blank">Artikel</a>).</li>
+    </ul>
+</div>
+<li><strong>Verschlüsselungsübertragungsmodus</strong>: Wenn SMB 3 aktiviert ist, aktiviert der Windows-Dateiservice die Verschlüsselung der Übertragung, um die Sicherheit der Dateiübertragung zu erhöhen.
+  <ul>
+    <li><b>Deaktivieren</b>: Es erfolgt keine Verschlüsselung der Übertragung.</li>
+    <li><b>Automatisch</b>: Die Verschlüsselung erfolgt nur bei der Übertragung an Clients, die diese Funktion unterstützen.</li>
+    <li><b>Erzwingen</b>: Die Übertragung wird immer verschlüsselt. Auf diese Weise wird bewirkt, dass Clients, die die Verschlüsselung der Übertragung nicht unterstützen, den Windows-Dateidienst nicht nutzen können.</li>
+  </ul>
+</li>
+<div class="section">
+  <h4>Hinweis:</h4>
+  <ul>
+    <li>Die Verschlüsselung der Übertragung wird von Windows 8, Windows Server 2012 und höher unterstützt.</li>
+    <li>Die anonyme Anmeldung beim Windows-Dateiservice wird bei aktivierter Übertragungsverschlüsselung nicht unterstützt.</li>
+    <li>Lassen Sie, wenn die Übertragungsverschlüsselung aktiviert ist, die Option <b>Opportunistische Sperre deaktivieren</b> deaktiviert, um Anwendungs-Timeouts zu vermeiden.</li>
+    </ul>
+</div>
+<li><strong>Opportunistische Sperre deaktivieren</strong>: Wenn Sie diese Option aktivieren, wird &quot;Opportunistic Locking&quot; von CIFS deaktiviert, was zu einer verbesserten Leistung führt, wenn Datenbankanwendungen über das Netzwerk auf Datenbankdateien im freigegebenen Ordner des DiskStation zugreifen.</li>
+<li>
+  <strong>Local Master Browser aktivieren</strong>: Wenn sich mehrere Windows-Computer im selben Subnetz befinden, wird einer von ihnen zum &quot;Local Master Browser&quot; gemacht.&quot; Der Local Master Browser verwaltet eine Liste der anderen Computer innerhalb des Teilnetzes und ihrer freigegebenen Ressourcen und gibt diese Liste für andere Computer frei. Mit dieser Option kann der DiskStation die Rolle eines Local Master Browsers übernehmen.
+</li>
+
+<div class="section">
+<h4>Hinweis:</h4>
+<p>Die Aktivierung dieser Funktion deaktiviert den Ruhemodus der Festplatte und aktiviert das „Guest“-Konto ohne ein Passwort.</p>
+</div>
+
+
+<li><strong>DirSort VFS-Modul aktivieren</strong>: Sortiert Ordnernamen und listet sie alphabetisch auf. Die Aktivierung dieser Option beeinträchtigt die Systemleistung.</li>
+
+<li><strong>Veto-Dateien</strong>: Verbirgt Dateien nach bestimmten Kriterien. Kriterien können Platzhalter (*) enthalten und Mehrfacheinträge sollten durch einen Schrägstrich (/) getrennt werden. Beispiel: <i>/abc*/*.txt/*.conf/</i>. Die Aktivierung dieser Option beeinträchtigt die Systemleistung.</li>
+
+<li><strong>Symbolische Links in gemeinsamen Ordnern zulassen</strong>: Durch die Aktivierung dieser Option können symbolische Links auf Dateien oder Ordner im selben freigegebenen Ordner verweisen. Symbolische Links können mit DSM Terminal erstellt werden.</li>
+
+<li><strong>Symbolische Links übergreifend über gemeinsame Ordner zulassen</strong>: Durch die Aktivierung dieser Option können symbolische Links auf Dateien oder Ordner in unterschiedlichen freigegebenen Ordnern verweisen. Symbolische Links können mit DSM Terminal erstellt werden. Beachten Sie, dass durch die Aktivierung dieser Option eventuell Benutzer ohne Zugriffsrechte freigegebene Ordner, die das Ziel von symbolischen Links sind, anzeigen und darauf zugreifen können.</li>
+
+<li><strong>MSDFS VFS-Modul aktivieren</strong>: Symbolische Links können auf Dateien oder Ordner auf anderen SMB-Servern verweisen. Bei älteren Windows-Versionen wie Windows XP, müssen der Client und der DiskStation einer Windows-Domain beitreten, bevor diese Option aktiviert werden kann. Weitere Informationen über das Erstellen von MSDFS-Links finden Sie <a href="http://www.samba.org/samba/docs/man/Samba-HOWTO-Collection/msdfs.html" target=_blank>hier</a>. Beachten Sie, dass der Cache des Client-Geräts nach dem Deaktivieren dieser Option gelöscht werden sollte, sonst könnte die normale Leistung beeinträchtigt werden.</li>
+
+<li><strong>Mehrere Verbindungen von derselben IP-Adresse deaktivieren</strong>: Wenn diese Option aktiviert ist, lässt DiskStation nur eine Verbindung pro IP-Adresse von Clients zu, die den Windows-Dateidienst verwenden. Wenn mehrere Clients mit derselben IP-Adresse den Windows-Dateidienst verwenden, behält DiskStation den neuesten bei und trennt alle älteren Verbindungen. In einer NAT-Umgebung verwendet der Client eventuell nur eine IP-Adresse, in diesem Fall kann die Aktivierung dieser Option die normale Leistung beeinträchtigen.</li>
+
+<li><strong>Debug-Protokolle zusammenstellen</strong>: Wenn diese Option aktiviert ist, werden detaillierte Protokolle für Debugging-Zwecke gespeichert. Die Aktivierung dieser Option beeinträchtigt die Systemleistung.</li>
+<li><strong>Standard UNIX-Berechtigungen anwenden</strong>: Durch die Aktivierung dieser Option gelten die Standard-UNIX-Berechtigungen beim Hochladen oder Erstellen von Dateien und Ordnern. Die UNIX-Berechtigung ist 744 für Dateien und 755 für Ordner. Wenn diese Option deaktiviert ist, ist die UNIX-Berechtigung für Dateien und für Ordner 777.</li>
+<div class="section enable-eds14">
+<h4>Hinweis:</h4>
+<ul>
+<li>Die Aktivierung dieser Option kann zu inkonsistenten Berechtigungen zwischen verschiedenen Protokollen führen. Um Inkonsistenzen zu vermeiden, empfehlen wir, diese Option deaktiviert zu lassen.</li>
+</ul>
+</div>
+<div class="section disable-eds14">
+<h4>Hinweis:</h4>
+<ul>
+  <li>Führen Sie für gemeinsame Ordner, für die Windows ACL aktiviert ist (alle gemeinsamen Ordner, außer &quot;photo&quot; und Freigaben auf externen Festplatten), den Befehl <strong>chmod</strong> auf Ihrem Linux- oder FTP-Client aus, um die Ordner- und Dateiberechtigungstypen von Windows ACL auf UNIX zu ändern.</li>
+  <li>Die Aktivierung dieser Option kann zu inkonsistenten Berechtigungen zwischen verschiedenen Protokollen führen. Um Inkonsistenzen zu vermeiden, empfehlen wir, diese Option deaktiviert zu lassen.</li>
+</ul>
+</div>
+<li><b>Beim Erstellen von Dateien keinen Speicherplatz reservieren</b>: Aktivieren Sie diese Option, um das Reservieren von Speicherplatz nicht zuzulassen, wenn Sie Dateien auf Ihrem DiskStation erstellen.</li>
+<li><strong>SMB-Cache löschen</strong>: Klicken Sie auf diese Schaltfläche, um die folgenden SMB-Cache-Dateien für die Fehlerbehebung zu löschen:
+  <ul>
+
+<li>/var/cache/samba/netsamlogon_cache.tdb</li>
+<li>/var/lib/samba/winbindd_cache.tdb</li>
+<li>/var/lib/samba/share_info.tdb</li>
+<li>/var/lib/samba/registry.tdb</li>
+<li>/run/samba/connections.tdb</li>
+<li>/run/samba/gencacche.tdb</li>
+<li>/run/samba/gencache_notran.tdb</li>
+</ul>
+</li>
+
+</ul>
+
+</body>
+</html>

@@ -1,0 +1,101 @@
+ <!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Sostituzione di un disco rigido in un Volume o Gruppo Disco - Guida Synology DSM</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="This article walks you through the steps to replace a hard drive of an existing volume or disk group on DiskStation in order to increase storage capacity.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Sostituire dischi rigidi per espandere la capacità di archiviazione</h2>
+
+<p>Quando si utilizzano alcuni tipi di RAID, è possibile espandere la capacità di archiviazione di un volume o gruppo disco sostituendo i vecchi dischi rigidi con quelli più grandi. In questo articolo sono fornite le informazioni importanti in merito al processo di espansione, nonché un esempio di come sostituire i dischi rigidi esistenti per espandere la capacità di archiviazione.</p>
+
+<div class="section">
+  <h4>Nota:</h4>
+<p>la procedura descritta in questo articolo funziona solo con SHR, RAID 1, RAID 5 e RAID 6. Per sostituire più dischi rigidi, è necessario prestare attenzione a sostituire i dischi rigidi uno ad uno. Dopo la sostituzione di un disco rigido, sarà necessario riparare il volume o il gruppo disco prima di sostituire il successivo. Per volumi RAID 1, RAID 5 e RAID 6, la capacità del volume si espande dopo avere sostituito tutti i dischi rigidi.</p>
+
+</div>
+
+
+<h3 class="list_head"><a name="t1"></a>  Prima di cominciare</h3>
+
+<p>Prima di sostituire un disco rigido, si vedano le note seguenti:<br/>
+
+<ul>
+<li><b>Backup dei dati:</b> Sebbene il processo di espansione del volume non cancellerà alcun dato esistente, si raccomanda di effettuare il backup dei dati prima di procedere.</li>
+<li><b>Stato Volume/Gruppo Disco:</b> Prima di iniziare, assicurarsi che lo stato del volume o del gruppo disco sia su <b>Normale</b>. In caso contrario, sarà necessario ripararlo prima.</li>
+<li><b>I dati sono comunque accessibili durante l'espansione?</b> I dati sul proprio sistema saranno disponibili durante l'espansione di volumi o gruppi disco; tuttavia il sistema può sospendere le connessioni temporaneamente quando sia avvia il processo.</li>
+</ul>
+
+<div class="section">
+<h4>Synology Hybrid RAID (SHR)</h4>
+
+<p>Poiché i volumi SHR ottimizzano la capacità di archiviazione in base al numero e alle dimensioni dei dischi rigidi installati, è consigliabile osservare le seguenti linee guida per espandere correttamente la capacità:</p>
+
+<ul>
+<li>Se la capacità di tutti i dischi rigidi esistenti è uguale, è necessario sostituire almeno due dischi rigidi con dischi più grandi per espandere la capacità di archiviazione. Ad esempio, se il volume SHR è composto tre dischi rigidi da 2 TB, è necessario sostituire almeno due dischi rigidi per poter espandere la capacità del volume.</li>
+<li>Se la capacità dei dischi rigidi esistenti è diversa, allora i nuovi dischi rigidi di sostituzione devono essere uguali o superiori al disco rigido più grande esistente. Inoltre, è necessario sostituire i dischi rigidi più piccoli per primi per poter ottimizzare l’utilizzo della capacità. Ad esempio, se il volume SHR contiene tre dischi rigidi rispettivamente da 4 TB, 3 TB e 2 TB, il nuovo disco rigido di sostituzione deve essere almeno di 4 TB. Inoltre, è necessario sostituire i dischi rigidi da 3 TB o 2 TB.</i>
+</li>
+</ul>
+</div>
+
+<div class="section">
+<h4>RAID 5 e RAID 6</h4>
+
+<p>Durante la sostituzione dei dischi rigidi dei volumi o Gruppi disco di tipo RAID 5 o RAID 6, il disco rigido più piccolo deve essere sostituite sempre per primo. La capacità di archiviazione dei volumi RAID 5 è (numero dei dischi rigidi – 1) x (dimensione disco rigido più piccolo), mentre RAID 6 è (numero dei dischi rigidi – 2) x (dimensione disco rigido più piccolo). Pertanto, il disco rigido più piccolo deve sempre essere sostituito per prima in modo da massimizzare l’utilizzo del disco rigido.</p>
+
+<p>Ad esempio, se il volume RAID 5 contiene tre dischi rigidi rispettivamente da 4 TB, 3 TB e 2 TB, la capacità disponibile del volume sarà 4 TB. Se vengono sostituiti i dischi da 4 TB o 3 TB, la capacità del volume non viene cambiata. Per aumentare la capacità del volume, deve essere sostituito prima il disco rigido da 2 TB.</p>
+</div>
+
+
+
+<h3>Sostituire dischi rigidi per espandere la capacità di archiviazione</h3>
+
+<p>Nei passaggi seguenti, sarà fornito un esempio di sostituzione di dischi rigidi di un volume SHR.</p>
+
+<h4>Per sostituire dischi rigidi:</h4>
+<ol>
+<li>Aprire <b>Gestione archiviazione</b>.</li>
+<img src="about:blank" class="help_image"/>
+<li>Andare su <strong>Volume</strong> per vedere quale dei dischi esistenti è il più piccolo.</li>
+<img src="about:blank" class="help_image"/>
+
+<li>Spegnere la DiskStation. È possibile saltare questo passaggio se DiskStation supporta l'hot-swap.</li>
+<li>Rimuovere il più piccolo dei dischi rigidi membro e installare un nuovo disco rigido più grande.</li>
+
+<div class="section">
+<h4>Nota:</h4>
+<p>Per evitare rischi alla persona o il danneggiamento di DiskStation, osservare le istruzioni per l'installazione del disco rigido riportate nella <i>Guida di installazione rapida</i> del prodotto Synology.</p>
+</div>
+
+<li>Accendere DiskStation.</li>
+<li>Aprire nuovamente <strong>Gestione archiviazione</strong>.</li>
+<li>Andare su <strong>HDD/SSD</strong> per verificare che il nuovo disco rigido sia riconosciuto.</li>
+<img src="about:blank" class="help_image"/>
+
+
+<li>Lo stato del volume deve essere <b>Danneggiato</b>. Selezionare il volume e fare clic su <strong>Gestisci</strong>.</li>
+<img src="about:blank" class="help_image"/>
+<li>Selezionare <b>Ripara</b>.</li>
+<img src="about:blank" class="help_image"/>
+
+<li>Selezionare il disco rigido sostitutivo da aggiungere al volume. Quindi seguire le istruzioni della procedura guidata per terminare.</li>
+<img src="about:blank" class="help_image"/>
+<li>Ripetere la procedura precedente fino a quando tutti i dischi rigidi sono stati sostituiti con quelli più grandi.</li>
+</ol>
+
+
+
+
+
+
+</body>
+</html>

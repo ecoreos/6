@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Hot Spare</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2>Hot Spare*</h2>
+<p>Hot spare diskler, arızalı bir diski otomatik olarak değiştirerek kapasitesi düşmüş bir birimi/Disk Grubunu/iSCSI LUN'u onarabilen yedek sabit disklerdir. Hot spare diskler, birim/Disk Grubu/iSCSI LUN aşağıdaki kriterle uyuştuğu sürece DiskStation ürününüzdeki herhangi bir birimi/Disk Grubunu/iSCSI LUN'ı korumak için genel olarak atanabilir:</p>
+<ul>
+<li>Birimin/Disk Grubunun/iSCSI LUN'ın RAID tipi veri korumasına (RAID 1, RAID 5, RAID 6, RAID 10 gibi) sahip olan türde olmalıdır.</li>
+<li>Hot spare disk boyutu, birim/Disk Grubu/iSCSI LUN'daki en küçük diskin boyutuna eşit veya ondan daha yüksek olmalıdır.</li>
+</ul>
+
+<h4>Hot spare diskleri kurmak için:</h4>
+<ol>
+<li><b>Yönet</b>'e tıklayın.</li>
+<li>Kullanılabilir disklerin yanı sıra, her bir birimin/Disk Grubunun/iSCSI LUN'ın hot spare durumunu görüntüleyen bir iletişim kutusu açılır. Birim/Disk Grubu/iSCSI LUN durumu aşağıdakileri içerir:</li>
+<ul>
+<li><strong>Atanmış:</strong> Birim/Disk Grubu/iSCSI LUN, en az bir tane atanmış hot spare disk tarafından korunur.</li>
+<li><strong>Kalan:</strong> Birimi/Disk Grubunu/iSCSI LUN'ı koruyabilecek diskler var ama henüz hiç hot spare atanmamış.</li>
+<li><strong>Mevcut değil:</strong> Birimi/Disk Grubunu/iSCSI LUN'ı koruyabilecek hiç hot spare disk yok.</li>
+</ul>
+<li><strong>Mevcut Diskler</strong> kısmı, hot spare diskler olarak atanabilecek sabit diskleri görüntüler. Bir hot spare disk atamak için, hot spare olarak atamak istediğiniz diskin yanındaki kutuyu işaretleyin.</li>
+<li>Ayarları kaydetmek için <b>Uygula</b>'ya tıklayın.</li>
+</ol>
+<div class="section">
+<h4>Not:</h4> 
+<ul>
+<li>Bir sabit disk hot spare disk olarak atandığında, diskteki tüm veriler silinir. Bir hot spare diski atamadan evvel, diskin üzerinde önemli veri bulunmadığından emin olun.</li>
+<li>HDD'ler tarafından monte edilen bir RAID, SSD hot spare diskler tarafından otomatik olarak onarılmaz.</li>
+</ul>
+</div>
+
+<h4>Birim/Disk Grubu/iSCSI LUN için hot spare ayarlarını yapılandırmak için:</h4>
+<ol>
+<li><b>Yapılandır</b> üzerine tıklayın.</li>
+<li><b>Hot Spare Hedefleri</b> sekmesinde, hot spare diskler tarafından korunabilen birimler/Disk Grupları/iSCSI LUN'lar listelenecektir. Kutuların işaretini kaldırırsanız, ilgili birimler/Disk Grupları/iSCSI LUN'lar kapasiteleri düştüğünde hot spare diskler tarafından otomatik olarak onarılmaz.</li>
+<li><b>Cihaz arası Hot Spare</b> sekmesinde, farklı bir cihazda bulunan kapasitesi düşmüş bir RAID'i onarmak için bir cihaz üzerinde hot spare disklere izin verebilirsiniz.</li>
+<li><b>Tamam</b> üzerine tıklayarak ayarları kaydedin.</li>
+</ol>
+
+
+
+<p>____<br />*Yalnızca bazı modellerde mevcuttur.</p>
+
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+	<h2>Allmänt</h2>
+	<p>Lagringshanterare hjälper användaren att hantera alla lagringsutrymmen på sin Synology-produkt. Synology DSM stöder flera typer av RAID Groups för att förenkla lagringshanteringen och att skapa flexibla lagringsutrymmen med dataskydd.</p>
+
+<h4><a href="raid.html">RAID Group</a></h4>
+	<p>Med DiskStation kan du kombinera flera hårddiskar till en enskild lagringsenhet kallad en RAID Group. DiskStation tillhandahåller följande typer av RAID Groups:</p>
+	<ul>
+		<li><b>RAID Group för en enskild volym eller iSCSI LUN (blocknivå)</b>:
+			<ul>
+				<li>Tilldelar all tillgänglig kapacitet till en enskild volym eller iSCSI LUN (blocknivå).</li>
+				<li>Ger bättre prestanda med mindre flexibilitet gällande lagringshantering.</li>
+                <li>Tillåter att flera iSCSI LUNs (Vanliga filer) skapas på volymer.</li>
+                <li>Har stöd för maximalt en RAID Array.</li>
+			</ul>
+		</li>
+		<li><b>RAID Group för flera volymer eller iSCSI LUNs (blocknivå)</b>:
+			<ul>
+				<li>Stöder skapande av flera volymer eller iSCSI LUNs (blocknivå) i en RAID Group.</li>
+                <li>Ger bättre flexibilitet gällande lagringshantering.</li>
+                <li>Tillåter att flera iSCSI LUNs (Vanliga filer) skapas på volymer.</li>
+				<li>Har stöd för att kombinera flera RAID Arrays under en RAID Group (vid konfiguration som RAID 5 eller RAID 6).</li>
+			</ul>
+            </li>
+	</ul>
+
+<h4>RAID-typ</h4>    
+<p>Välj först en RAID-typ när du skapar en RAID Group. Olik RAID-typer erbjuder olika nivåer av dataskydd, lagringsegenskaper och prestanda. DiskStation stöder för närvarande följande RAID-typer:</p>
+	<ul>
+	  <li><b>Basic</b>: Använder en hårddisk för att skapa en RAID Group. Grundläggande RAID Groups erbjuder inte dataredundans.</li>
+	  <li><b>JBOD*</b>: Kombinerar minst två hårddiskar för att skapa en RAID Group. JBOD RAID Groups erbjuder inte dataredundans. Den tillgängliga kapaciteten hos en JBOD RAID Group motsvarar den totala kapaciteten hos alla hårddiskar som är inkluderade i gruppen. JBOD stöder kombination av hårddiskar med olika storlekar.</li>
+	  <li><b>RAID 0*</b>: Kombinerar minst två hårddiskar för att skapa en RAID Group. RAID 0 erbjuder inte dataredundans. Om en enskild medlemsdisk kraschar så förloras data i denna RAID Group. Den tillgängliga kapaciteten för en RAID 0 Group är lika med medlemsdiskarnas sammansatta kapacitet. RAID 0 stöder kombination av hårddiskar med olika storlekar.</li>
+	  <li><b>RAID 1*</b>: Kombinerar 2-4 hårddiskar för att skapa en RAID Group. Systemet kommer att skriva identisk data för varje hårddisk. RAID 1 erbjuder dataskydd så länge en hårddisk fungerar normalt. Den tillgängliga kapaciteten för en RAID 1 Group är lika med storleken på den minsta medlemsdisken.</li>
+	  <li><b>RAID 5*</b>: Kombinerar minst tre hårddiskar för att skapa en RAID Group och fördelar både data och paritetsdata över samtliga medlemsdiskar. RAID 5 erbjuder dataredundans. Om en medlemsdisk kraschar kan systemet återskapas med hjälp av paritetsinformation från andra medlemsdiskar. Har stöd för att kombinera flera RAID Arrays när skapad i en RAID Group för flera volymer eller iSCSI LUNs (blocknivå). Den tillgängliga kapaciteten för en RAID 5 Group = <span class="note_content"> Total kapacitet för kombinerade RAID Arrays. RAID Array kapacitet = (antalet hårddiskar - 1) x (Kapacitet för minsta hårddisk)</span></li>
+	  <li><b>RAID 6*</b>: Kombinerar minst fyra hårddiskar för att skapa en RAID Group och fördelar både data och paritetsdata över samtliga medlemsdiskar. RAID 6 erbjuder dataredundans. Även om två medlemsdiskar kraschar kan systemet återskapas med hjälp av paritetsinformation från andra medlemsdiskar. Har stöd för att kombinera flera RAID Arrays när skapad i en RAID Group för flera volymer eller iSCSI LUNs (blocknivå). Den tillgängliga kapaciteten för en RAID 6 Group = <span class="note_content">Total kapacitet för kombinerade RAID Arrays. RAID Array kapacitet = (antalet hårddiskar - 2) x (Kapacitet för minsta hårddisk)</span></li>
+	  <li><b>RAID 10*</b>: Kombinerar minst fyra hårddiskar för att skapa en RAID Group. Antalet hårddiskar måste vara jämnt. RAID 10 har förutom samma prestanda som RAID 0 även samma nivå av dataskydd som RAID 1. Tillgängliga kapacitet för RAID 10 Group = <span class="note_content">(den minsta hårddiskens kapacitet) X (antal hårddiskar / 2)</span></li>
+	</ul>
+	<p>
+		<span class="note_head">Obs:</span> RAID-typer med ”*” finns bara tillgängliga på NAS-modeller med tillräckliga hårddiskfack.
+</p>
+
+
+<h4><a href="space.html">Volymtyp</a></h4>
+	<p>Beroende på den underliggande typen av RAID Group så finns det två typer av volymer:</p>
+	<ul>
+		<li><b>Volym på RAID Group för enskild volym eller iSCSI LUN (Blocknivå)</b>
+        	<ul>
+            	<li>Allokerar all lagringskapacitet på en RAID Group till en enkel volym. Ger bättre prestanda men mindre flexibilitet gällande hantering.</li>
+                <li>Tillåter att flera iSCSI LUNs (Vanliga filer) skapas på volymer.</li>
+            </ul></li>
+		<li><b>Volym på RAID Group för flera volymer eller iSCSI LUNs (blocknivå)</b>
+        	<ul>
+            	<li>Tilldelar en angiven del av lagringskapaciteten i en RAID Group för att skapa en volym.  Ger bättre hanteringsflexibilitet och gör så att du kan utöka volymstorleken eller skapa extra volymer efter behov.</li>
+                <li>Tillåter att flera iSCSI LUNs (Vanliga filer) skapas på volymer.</li>
+            </ul></li>
+	</ul>
+
+<h4 class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64">Volymformat</h4>
+<p class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64">Beroende på vilket filsystem som används finns det två volymformat:</p>
+<ul class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64">
+	<li><strong>Nytt volymformat</strong>: Det här formatet använder filsystemet <b>Btrfs</b>. Den minsta storleken på en volym med det här formatet måste vara minst 10 GB. Den har stöd för följande nya funktioner med vilka du mer enkelt kan hantera dina data:
+		<ul>
+			<li><strong><a href="../DisasterRecovery/snapshots.html">Snapshot delad mapp</a>:</strong> Snapshotet registrerar all datastatus vid den tidpunkt den togs. Om en användare oavsiktligt ändrar eller raderar data med snapshot på en volym med snapshots kan du snabbt återställa data tillbaka till den tidigare tidpunkten då snapshotet togs.</li>
+			<li><strong><a href="../AdminCenter/file_share_create.html#sharequota">Kvot delad mapp</a>:</strong> Du kan ställa in maximal kapacitet för varje mapp.</li>
+			<li><strong><a href="../AdminCenter/file_user_create.html#userquota">Användarkvot</a> baserat på delad mapp:</strong> Du kan kontrollera hur mycket utrymme inom en delad mapp som kan användas av varje användare.</li>
+			<li><strong><a href="../AdminCenter/file_share_create.html#integrity_protection">Avancerat dataintegritetsskydd</a>:</strong> Delad mapp är skyddad med strategierna CRC32-checksumma och kopiera vid skrivning.</li>
+		</ul>
+	</li>
+	<li><strong>Traditionellt volymformat</strong>: Det här formatet använder filsystemet <b>ext4</b>. Den minsta storleken på en volym med det här formatet måste vara minst 10 GB. Eftersom filsystemet ext4 stöds av de flesta Synology-produkter kan du enkelt migrera din volym som har det här formatet till en annan Synology NAS.</li>
+</ul>
+</body>
+</html>

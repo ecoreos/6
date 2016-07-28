@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>File Station</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2>Montare le cartelle remote</h2>
+
+<p>
+È possibile montare le cartelle remote dai server remoti (ad esempio computer di rete o altri dispositivi Synology NAS) per navigare e gestire le cartelle montate tramite File Station.
+</p>
+
+
+
+
+
+<h4>Per montare una cartella condivisa CIFS remota*:</h4>
+<ol>
+<li>Fare clic su <b>Strumenti</b> > <b>Monta cartella remota</b> > <strong>Cartella condivisa CIFS</strong>.</li>
+
+<img src="about:blank" class="help_image"/>
+
+<li>Nel campo <b>Cartella</b>, specificare il percorso della cartella remota nel formato <code>\\Remote_Server\Remote_Folder</code>, such as <code>\\192.168.0.2\share</code> o <code>\\chad\cheeseburger\pictures</code>.</li>
+<li>Se il server remoto richiede i privilegi di accesso alla cartella remota, inserire le credenziali utente del server remoto nei campi <b>Nome account</b> e <b>Password</b>.</li>
+<li>Fare clic su <b>Sfoglia</b> per selezionare o creare una cartella di destinazione vuota sulla DiskStation per il montaggio della cartella remota.</li>
+
+<img src="about:blank" class="help_image"/>
+
+<li>Selezionare <b>Montaggio automatico all'avvio</b> per consentire a DiskStation di montare la cartella remota tutte le volte che il sistema viene avviato o riavviato.</li>
+<li>Fare clic su <b>Monta</b> per montare la cartella remota sulla cartella di destinazione. A questo punto, sarà possibile consultare e gestire la cartella remota da DiskStation.</li>
+</ol>
+
+<h4>Per montare una cartella condivisa NFS remota:</h4>
+
+<ol>
+<li>Fare clic su <b>Strumenti</b> > <b>Monta cartella remota</b> > <b>Cartella condivisa NFS</b>.</li>
+
+<img src="about:blank" class="help_image"/>
+
+<li>Nel campo <b>Cartella</b>, specificare il percorso della cartella remota nel formato <code>Remote_Server:/Remote_Folder_Path</code>, such as <code>192.168.0.2:/volume1/share</code>.</li>
+<li>Selezionare la versione NFS desiderata e il protocollo di trasporto.</li>
+<li>Fare clic su <b>Sfoglia</b> per selezionare o creare una cartella di destinazione vuota sulla DiskStation per il montaggio della cartella remota.</li>
+
+<img src="about:blank" class="help_image"/>
+
+<li>Selezionare <b>Montaggio automatico all'avvio</b> per consentire a DiskStation di montare la cartella remota tutte le volte che il sistema viene avviato o riavviato.</li>
+<li>Fare clic su <b>Monta</b> per montare la cartella remota sulla cartella di destinazione. A questo punto, sarà possibile consultare e gestire la cartella remota da DiskStation.</li>
+</ol>
+
+<div class="section">
+<h4>Nota:</h4>
+<p>NFSv4 supporta solo il protocollo TCP.</p>
+</div>
+
+<h4>Per smontare una cartella remota:</h4>
+<ol>
+<li>Selezionare la cartella remota da smontare e fare clic su <b>Strumenti</b> > <b>Smonta</b>.</li>
+
+<img src="about:blank" class="help_image"/>
+
+<li>In alternativa, è sufficiente fare clic con il tasto destro del mouse sulla cartella remota e selezionare <b>Smonta</b>.</li>
+
+<img src="about:blank" class="help_image"/>
+
+</ol>
+
+<div class="section">
+<h4>Nota:</h4>
+<ul>
+<li>il numero massimo di cartelle remote simultanee &egrave; 100.</li>
+<li>&Egrave; consentito montare solo cartelle remote da un server remoto che supporta il protocollo CIFS o il protocollo NFS.
+</li>
+<li>Le cartelle remote possono essere montate solo su sottocartelle sotto le cartelle condivise.</li>
+<li class="enable-dockerx64">Il montaggio delle cartelle remote &egrave; supportato solo nella modalit&agrave; privilegi elevati. Per usare questa funzione, andare nel pacchetto <strong>Docker del DSM</strong> host, selezionare il Docker DSM per cui abilitare le cartelle condivise crittografate, fare clic su <strong>Modifica</strong> e spuntare le caselle accanto <strong>Esegui contenitore utilizzando i privilegi elevati</strong>.</li>
+</ul>
+</div>
+
+
+<p>____<br />* Disponibile solo su alcuni modelli.</p>
+
+</body>
+</html>

@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>電源</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>全般</h2>
+
+<p>
+<strong>[コントロール パネル]</strong> &gt; <strong>[ハードウェアと電源]</strong> &gt; <strong>[全般]</strong> を選択すると、電源復旧、WOL（ウェイク オン ラン）、メモリ圧縮を有効にするオプションがあります。また、警告音の設定やファン速度モードも変更できます。
+</p>
+
+<h3>
+電源復旧
+</h3>
+<p>停電などが原因でシステムが突然シャットダウンした場合、電源復旧機能が電気復旧時に自動的にシステムを再起動します。</p>
+<h3>WOL（ウェイク オン ラン）*</h3>
+<p>Wake on LAN (WOL) を有効にすると、Synology Assistant、DS finder、その他の WOL アプリケーションを使って DiskStation の IP アドレス（または DDNS ホスト名）と MAC アドレスを入力して、ＬＡＮ やインターネットを介して DiskStation をオンにすることができます。</p>
+<p>WOL（ウェイク オン ラン）は、実際の <b>[電源]</b> ボタンを押すか、DSM インターフェイスで <b>[シャットダウン]</b> をクリックして、DiskStation が正常にシャットダウンした後でなければ機能しません。シャットダウンした後も、正常に使えるコンセントに電源コードを差し込んだままにしておいてください。</p>
+<div class="section">
+	<h4>注：</h4>
+	<p class="disable-rc18015xsp">WOL 機能は 10GbE LAN ポート（DiskStation に搭載されている場合）ではサポートされていません。</p>
+	<ul class="enable-rc18015xsp">
+		<li>WOL 機能は 10GbE LAN ポート（DiskStation に搭載されている場合）ではサポートされていません。</li>
+		<li>デフォルトでは、WOL 機能は DiskStation の 1GbE LAN ポートで有効になっており、無効にすることはできません。</li>
+	</ul>
+</div>
+<h3>ファン速度モード*</h3>
+<p>次のような速度オプションがあります。</p>
+<ul>
+<li><strong>冷却モード：</strong>ファンは高速で稼働して DiskStation を冷やしますが、ノイズが大きくなります。</li>
+<li><strong>低ノイズモード：</strong>ファンは低速で稼働するためノイズは低くなりますが、DiskStation が熱くなります。</li>
+<li><strong>低電力：</strong>ファンは低速で稼働するためノイズは低くなりますが、DiskStation が熱くなります。また、DiskStation が冷却されると節電のためにファンが停止します。低電力モードは一部のモデルでしかご使用いただけません。</li>
+</ul>
+<h3>警告音の設定</h3>
+<p>あるイベントやエラーが発生すると、DiskStation が警告音を発します。リストされたイベントにチェックマークを付けると、エラーが発生したときに DiskStation が警告します。</p>
+
+<h4>警告音を止める：</h4>
+<ul>
+<li>DiskStation が警告音を発したら、<strong>[警告音停止]</strong> ボタンをクリックすると警告音が止まります。</li>
+</ul>
+
+
+
+<h3>メモリ圧縮*</h3>
+<p>メモリ圧縮を有効にすると、メモリ内で一番最近使用したデータを圧縮することで、読み込み時のシステムの全体的な応答性を向上できます。</p>
+<p>複数のアプリケーションが実行中であり、メモリに書き込みが行われている場合は、ダイナミック メモリ圧縮でメモリ内のあまり使用しないアイテムのサイズを縮小し、メモリの使用量を最小化します。再びそのアイテムが必要になったときには、即座に解凍されます。これにより、ディスク上でのメモリ スワップ ファイルの読み書きの必要性が軽減されるため、効率と応答性を飛躍的に高めることができます。</p>
+<p>メモリ圧縮を有効にするには、チェックマークを付けてください。</p>
+
+
+<h3>LED*</h3>
+
+<p><strong>[コントロール パネル]</strong> &gt; <strong>[ハードウェアと電源]</strong> &gt; <strong>[全般]</strong> &gt; <strong>[LED 輝度コントロール]</strong> を選択すると、DiskStation の LED インジケータの輝度を調整できます。</p>
+
+<div class="section">
+<h4>注意：</h4>
+<p>輝度設定は、DiskStation の LED インジケータに適用されます (電源、状態、LAN、ドライブの状態など)。</p>
+</div>
+
+
+<h4>LED の輝度を調整する：</h4>
+<p>DiskStation の LED インジケータは、4 段階に輝度を調整できます。</p>
+<ol>
+<li>輝度スケールのポインタをいずれかの方向へクリック・アンド・ドラッグします。
+  <ul>
+<li>右へ：LED の輝度を上げます。</li>
+<li>左へ：LED の輝度を下げます。</li>
+</ul>
+</li>
+<li><strong>[適用]</strong> をクリックして設定を保存します。</li>
+</ol>
+
+
+
+<h4>予定に則って LED の輝度を調整する：</h4>
+<p>LED インジケータは、予約時間になると輝度レベルを変えることができます。</p>
+
+<ol>
+<li><strong>[予約の設定]</strong> をクリックします。</li>
+<li>輝度タイプをクリックします。
+<ul>
+<li><strong>デフォルトの輝度</strong>：最大輝度</li>
+<li><strong>調整済みの輝度</strong>：輝度スケールで指定された輝度レベル</li>
+</ul>
+</li>
+<li>期間をクリックして、輝度予定をカスタマイズします。</li>
+<li><strong>[OK]</strong> をクリックし、<strong>[適用]</strong> をクリックして設定を保存します。</li>
+</ol>
+
+
+
+
+<p>____<br> * 特定のモデルでのみ使用できます。</p>
+</body>
+</html>

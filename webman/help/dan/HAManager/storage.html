@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+ <head>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>High Availability</title>
+
+
+ </head>
+ <body>
+<h2>Lagerstatus</h2>
+	<p>Denne side detaljerer status for lagerdiskenhederne og iSCSI LUN'er (blokniveau) på den aktive og passive server i High Availability-klyngen.</p>
+    <p>Da kapaciteten og konfigurationerne på de tilsvarende diskenheder og iSCSI LUN'er (blokniveau) på den aktive og passive server skal være identiske, vises diskenhederne og iSCSI LUN (blokniveau) på de to servere samlet som enkelte enheder. Hvis du derfor vil se status for diskenheder og iSCSI LUN'er (blokniveau) for både den aktive og passive server, skal du gå til siden <b>Lagerstatus</b> [når du åbner High Availability-klyngen kan kun diskenheder og iSCSI LUN'er (blokniveau) på den aktive server ses i <b>Lagerstyring</b>].</p>
+
+    <p>Denne side indeholder følgende oplysninger:</p>
+		<ul>
+			<li><b>Navn</b>: Viser navnene på diskenheder og iSCSI LUN'er (blokniveau).</li>
+			<li><b>Brugt:</b> Viser anvendelsesprocent af kapaciteten på diskenheder og iSCSI LUN'er (blokniveau).</li>
+			<li><b>Brugt/samlet størrelse:</b>  Viser den samlede og brugte kapacitet på diskenheder og iSCSI LUN'er (blokniveau).</li>
+            <li><b>Status:</b> Viser status for diskenheder og iSCSI LUN'er (blokniveau) og SSD-caches.</li>
+            <li><b>Beskrivelse:</b> Viser beskrivelse af fejl eller andre oplysninger vedrørende diskenheden og iSCSI LUN (blokniveau) og SSD-caches.</li>
+		</ul>
+<h4>Sådan reparerer du en fejlet diskenhed eller iSCSI LUN (blokniveau):</h4>
+	<ul>
+		<li>Hvis en harddisk på en af serverne er brudt ned, kan du gå til siden <a href="disk.html">Diskstatus</a> for at fastlægge den harddisk, der er brudt ned og skal udskiftes. I det tilfælde skal du gøre følgende:
+        	<ol>
+            	<li>Udskift den nedbrudte harddisk (for trin vedrørende harddiskinstallation, skal du gå til <i>Hurtig installationsvejledning</i> for dit Synology-produkt).</li>
+                <li>Gå til siden <b>Lagerstatus</b>, og klik på <b>Reparer</b>.</li>
+            </ol>
+        </li>
+        <li>Hvis den passive server er offline, vil status for diskenheder og iSCSI LUN'er (blokniveau) angive, at der er sket en fejl, og ingen af diskene på den passive server bliver vist på siden Diskstatus. I det tilfælde kan du forsøge at løse problemet ved at gøre følgende:
+        	<ol>
+            	<li>Sørg for, at den passive server er tændt.</li>
+                <li>Kontroller alle strømforsyninger.</li>
+                <li>Undersøg alle forbindelser.</li>
+            </ol>
+        </li>
+        <li>Hvis der sker en systemfejl på en diskenhed eller iSCSI LUN (blokniveau) på en a serverne, skal du gøre følgende:
+        	<ul>
+            	<li>Gå til siden <b>Lagerstatus</b>.</li>
+                <li>Klik på <b>Reparer.</b></li>
+            </ul>
+        </li>
+	</ul>
+
+<p><span class="note_head">Bemærk:</span>  Grænsen for diskenheder og iSCSI LUN'er (blokniveau) på en High Availability-klynge er 64.</p>
+
+ </body>
+</html>

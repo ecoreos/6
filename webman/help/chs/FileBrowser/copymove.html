@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>File Station</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>复制或移动文件或文件夹</h2>
+<p>File Station 可向您提供在两个 DiskStation 中、一个 DiskStation 中传输文件/文件夹或传输至本地计算机的各种方法。</p>
+<h3>在浏览器之间拖放文件/文件夹</h3>
+<p>无需复杂的文件传输协议设置，您就可通过 File Station 从一个 DiskStation 将文件/文件夹传输到另一个 DiskStation。</p>
+<h4>若要在浏览器之间启用拖放操作：</h4>
+<ol>
+<li>进入<strong>设置</strong> &gt; <strong>常规</strong> &gt; <strong>File Station</strong>。</li>
+<li>勾选<strong>在浏览器之间启用拖放操作</strong>。</li>
+<li>单击<strong>确定</strong>。</li>
+<li>打开两个相同类型的网页浏览器（如 Firefox），并将其分别连接到来源和目标 DiskStation。</li>
+<li>在两个 DiskStation 上启动 File Station。您现在可通过 File Station 直接在它们之间拖放文件/文件夹。</li>
+</ol>
+
+<div class="section">
+<h4>注：</h4>
+<ul>
+<li>您还可在同一浏览器的两个选项卡之间拖放文件/文件夹。</li>
+<li>Internet Explorer 不支持浏览器之间或选项卡之间的拖放操作。</li>
+<li>如果选择多个文件/文件夹进行拖放操作，这些文件/文件夹将被压缩到一个档案以进行上传。</li>
+<li>拖放操作的文件大小限制视网页浏览器而有所不同：Safari（1 GB）。</li>
+</ul>
+</div>
+<h3>在 DiskStation 之间复制或移动文件/文件夹或至本地计算机</h3>
+<p>按照以下步骤在 DiskStation 中移动或复制文件或文件夹，或至您的计算机。</p>
+<h4>方法 1：</h4>
+<ol>
+<li>选择您想移动或复制的文件或文件夹。（多选时请按住 Shift 或 Ctrl 键。）</li>
+<li>从<b>操作</b>下拉菜单中选择<b>剪切</b>或<b>复制</b>。</li>
+<li>进入 DiskStation 或计算机中的目标文件夹。</li>
+<li>根据您是否想要以同样的名字覆盖目标文件夹中的文件或文件夹，从<b>操作</b>下拉菜单中选择<b>粘贴</b> - <b>覆盖</b>或<b>粘贴</b> - <b>跳过</b>。</li>
+</ol>
+<h4>方法 2：</h4>
+<ol>
+<li>选择您想移动或复制的文件或文件夹。（多选时请按住 Shift 或 Ctrl 键。）</li>
+<li>将文件夹或文件从主要区块拖放至左侧面板上的其它文件夹中。</li>
+<li>在显示的下拉菜单中，选择<b>复制</b> - <b>覆盖</b>、<b>复制</b> - <b>跳过</b>、<b>移动</b> - <b>覆盖</b>或<b>移动</b> - <b>跳过</b>以同样名字覆盖或跳过目标文件夹中的文件或文件夹。</li>
+</ol>
+
+<h4>方法 3</h4>
+<ol>
+<li>选择您想移动或复制的文件或文件夹。（多选时请按住 Shift 或 Ctrl 键。）</li>
+<li>按 Ctrl + X 来剪切或按 Ctrl + C 来复制文件/文件夹。Mac 用户，请按 Command + X 和 Command + C。</li>
+<li>进入 DiskStation 或计算机中的目标文件夹。</li>
+<li>按 Ctrl + V 来粘贴文件/文件夹。（Mac 用户为 Command + V。）</li>
+<li>在显示的弹出式菜单中，选择覆盖或跳过目的地文件夹中名称相同的文件或文件夹。</li>
+</ol>
+
+<div class="section">
+<h4>键盘快捷方式：</h4>
+<p>在 File Station 中移动/复制文件和文件夹时，以下快捷键可派上用场：</p>
+<ul>
+<li>F2：重命名</li>
+<li>Del：删除</li>
+<li>Ctrl + A：全选</li>
+<li>Crtl + X：剪切</li>
+<li>Crtl + C：复制</li>
+<li>Crtl + V：粘贴</li>
+</ul>
+</div>
+
+
+<div class="section">
+<h4>注：</h4>
+<ul>
+<li>当文件/文件夹复制或移动的目的地为 FAT 文件系统的目录时，文件名中的 <span class="note_content">\ *?&quot;&gt;|</span> 字符将会由 <span class="note_content">&ndash;</span> 字符替换，且 Mac 文件中的元数据会被删除。</li>
+<li>如果您从本地计算机剪切文件并粘贴到 DiskStation 文件夹，文件将仍然留在您的本地计算机中。</li>
+<li>当移动文件或文件夹时，&ldquo;所有者&rdquo;不会改变。但在复制文件或文件夹时，&ldquo;所有者&rdquo;将更改为对其进行复制的用户。</li>
+</ul>
+</div>
+
+</body>
+</html>

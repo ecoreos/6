@@ -1,0 +1,149 @@
+
+[HA_ConfSyncError]
+Subject: High-availability-cluster %HOSTNAME% heeft een synchronisatiefout gedetecteerd tijdens controle van de systeemconfiguratie.
+
+Beste gebruiker
+
+High-availability-cluster %HOSTNAME% heeft een synchronisatiefout gedetecteerd tijdens controle van de systeemconfiguratie van de actieve en passieve servers. Het systeem heeft geprobeerd om de fout te corrigeren door een volledige synchronisatie van de systeemconfiguraties uit te voeren. Controleer de systeemlogboeken of de pagina Logboeken van High Availability Manager voor meer informatie.
+
+Actie: %HA_ACTION%
+Fout: %HA_PARAM_1%
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[HA_FailOver]
+Subject: Er is een fout gedetecteerd op high-availability-cluster %HOSTNAME%.
+
+Beste gebruiker
+
+Er is een fout gedetecteerd op high-availability-cluster %HOSTNAME%. Het systeem zal alle services overschakelen naar de passieve server. Controleer de systeemlogboeken voor meer informatie.
+
+Actie: %HA_ACTION%
+Fout: %HA_PARAM_1%
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[HA_MismatchedSsdCache]
+Subject: SSD cache-schijven zijn niet dezelfde op high-availability-cluster %HOSTNAME%
+
+Beste gebruiker
+
+De schijven die deel uitmaken van de volgende SSD cache op de passieve server %HA_PARAM_1% zijn niet dezelfde als de schijven op de actieve server: SSD cache %HA_PARAM_2%.
+
+Controleer de logboekpagina van High Availability Manager voor meer informatie.
+
+Actie: %HA_ACTION%
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[HA_SplitBrain]
+Subject: Er is een split-brainfout opgetreden op high-availability-cluster %HOSTNAME%
+
+Beste gebruiker
+
+Er is een split-brainfout opgetreden op de high-availability-cluster %HOSTNAME%. Controleer de systeemlogboeken voor meer informatie.
+
+Actie: %HA_ACTION%
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[HA_StatusChange]
+Subject: Status van high-availability-cluster %HOSTNAME% is gewijzigd van %HA_PARAM_1% in %HA_PARAM_2%.
+
+Beste gebruiker
+
+De status van de high-availability-cluster %HOSTNAME% is gewijzigd van %HA_PARAM_1% in %HA_PARAM_2%. Controleer de systeemlogboeken of de pagina Logboeken van High Availability Manager voor meer informatie.
+
+Actie: %HA_ACTION%
+Beschrijving: %HA_PARAM_3%
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[HA_SwitchFail]
+Subject:  Kan services van high-availability-cluster %HOSTNAME% niet overschakelen
+
+Beste gebruiker
+
+Het systeem heeft vergeefs geprobeerd om services over te schakelen naar de passieve server van de high-availability-cluster %HOSTNAME%. Controleer de systeemlogboeken voor meer informatie.
+
+Actie: %HA_ACTION%
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[HA_SwitchFinished]
+Subject: High-availability-cluster %HOSTNAME% voert momenteel services uit op %HA_PARAM_1%.
+
+Beste gebruiker
+
+De services van de high-availability-cluster %HOSTNAME% worden nu uitgevoerd op %HA_PARAM_1%. Controleer de systeemlogboeken of de pagina Logboeken van High Availability Manager voor meer informatie.
+
+Actie: %HA_ACTION%
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[HA_SwitchOver]
+Subject:  Overschakelen van high-availability-cluster %HOSTNAME% %HA_PARAM_1%.
+
+Beste gebruiker
+
+Iemand is gestart met overschakelen van de high-availability-cluster %HOSTNAME%. Services worden overgeschakeld naar %HA_PARAM_1%. Controleer de systeemlogboeken voor meer informatie.
+
+Actie: %HA_ACTION%
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[HA_SwitchOver_With_Reason]
+Subject: High-availability-cluster %HOSTNAME% heeft een overschakeling geactiveerd naar %HA_PARAM_1%.
+
+Beste gebruiker
+
+Er is een overschakeling geactiveerd op high-availability-cluster %HOSTNAME%. Services worden overgeschakeld naar %HA_PARAM_1%. Controleer de systeemlogboeken voor meer informatie.
+
+Actie: %HA_ACTION%
+Reden: %HA_PARAM_2%
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[HA_SyncComplete]
+Subject: De volledige gegevensreplicatie van de high-availability-cluster %HOSTNAME% is voltooid.
+
+Beste gebruiker
+
+De volledige gegevensreplicatie van de high-availability cluster %HOSTNAME% is voltooid. De passieve server is nu gereed om de services over te nemen als overschakelen noodzakelijk is. Controleer de systeemlogboeken of de pagina Logboeken van High Availability Manager voor meer informatie.
+
+Actie: %HA_ACTION%
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[HA_UnbindLocal]
+Subject: Lokale host is verwijderd van de high-availability-cluster
+
+Beste gebruiker
+
+%HA_PARAM_1% is verwijderd uit de high-availability-cluster %HA_PARAM_2%. Controleer de systeemlogboeken voor meer informatie.
+
+Actie: %HA_ACTION%
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+

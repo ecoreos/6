@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Configurações do DSM</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2><a name="https"></a>Configurações do DSM</h2>
+
+<p>Em <strong>Painel de Controle</strong> > <strong>Rede</strong> > <strong>Configurações do DSM</strong>, você pode alterar o número da porta que os clientes usam para acessar o DiskStation.</p>
+
+<h4>Para mudar o número de porta padrão:</h4>
+<p>Conexões HTTP e HTTPS são sempre habilitadas no DSM. A porta HTTP padrão é 5000 e a porta HTTPS padrão é 5001.</p>
+<ol>
+<li>Digite o número da porta no campo <b>HTTP</b> ou <b>HTTPS</b>.</li>
+<li>Clique em <b>Aplicar</b>.</li>
+</ol>
+
+<h4>Para redirecionar conexões HTTP para HTTPS:</h4>
+<p>Você pode redirecionar clientes para a porta HTTPS quando eles tentarem acessar seu DiskStation através da porta HTTP.</p>
+<ol>
+<li>Selecione <b>Redirecionar automaticamente conexões HTTP para HTTPS (exceto Web Station e Photo Station)</b>.</li>
+<li>
+Clique em <b>Aplicar</b>.
+</li>
+</ol>
+
+<div class="section">
+<h4>Portas usadas para a conexão HTTPS:</h4>
+<ul>
+  <li><b>DSM</b>: O número da porta padrão é 5001, portanto é possível acessar o DSM de forma segura digitando o seguinte endereço: https://server-hostname:5001/</li>
+<li><b>Web Station e Photo Station</b>: O número da porta padrão é 443, portanto é possível acessar o Web Station e o Photo Station de forma segura digitando o seguinte endereço: https://server-hostname/</li>
+</ul>
+
+</div>
+
+<h4>Para detectar o DiskStation na rede:</h4>
+
+<p>Você pode encontrar seu DiskStation através da descoberta de rede do Windows ou da descoberta do serviço Bonjour.</p>
+<ol>
+<li>Selecione um serviço para encontrar seu DiskStation na rede:
+
+  <ul>
+<li><strong>Ativar a descoberta de redes do Windows</strong></li>
+<li><strong>Habilitar descoberta do serviço Bonjour</strong></li>
+</ul>
+</li>
+
+<li>
+Clique em <b>Aplicar</b>.
+</li>
+</ol>
+
+
+
+<h2>Domínio</h2>
+<p>Em <strong>Domínio</strong>, você pode especificar um nome de domínio personalizado para acessar o DiskStation.
+</p>
+<h4>Para habilitar o domínio personalizado:</h4>
+<ol>
+<li>
+Marque <b>Habilitar domínio personalizado</b>.
+</li>
+<li>
+Especifique um nome de domínio aplicado para seu DiskStation.
+</li>
+<li>
+Você também pode marcar <b>Habilitar HSTS</b> para forçar conexões HTTPS criptografadas nesse domínio.
+</li>
+<li>
+Clique em <b>Aplicar</b>.
+</li>
+</ol>
+
+<div class="section">
+<h4>Nota:</h4>
+<ul>
+<li>Cada nome de domínio pode ser usado somente para um aplicativo específico no seu DiskStation.</li>
+<li>Se o nome de domínio não exceder 15 caracteres e respeitar as <a href="https://support.microsoft.com/kb/909264" target="_blank">convenções de nomenclatura do NetBIOS</a> (por exemplo, MyDSM), ele será registrado e transmitido pelo sistema automaticamente. Usuários do Windows podem acessar a área de trabalho do DSM na mesma rede local com uma URL semelhante: <code>http://MyDSM</code> ou <code>https://MyDSM</code></li>
+<li>Ao acessar aplicativos com URLs que usam nomes de domínio, você passará pela porta HTTP padrão (80) ou pela porta HTTPS padrão (443).</li>
+</ul>
+
+</div>
+
+</body>
+</html>
+

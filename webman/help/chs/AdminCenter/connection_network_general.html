@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>网络</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2>常规设置</h2>
+
+<p><strong>控制面板</strong> > <strong>网络</strong> > <strong>常规</strong>中提供通用的网络选项，如默认网关、DNS 服务器、代理服务器和 IPv6 隧道等。</p>
+
+
+<h3>重命名 DiskStation 设备</h3>
+<p>若要重命名 DiskStation 设备，请输入新服务器名称并单击<b>应用</b>。</p>
+<p>服务器名称没有大小写区分，可包含 1 到 15 个字符，由英文字母、数字、下划线和减号组成。名称的第一个字符必须为字母。</p>
+
+
+<h3>指定默认网关</h3>
+<p>请输入默认网关的 IP 地址并单击<b>应用</b>来保存设置。</p>
+
+
+<h3>指定 DNS 服务器 IP 地址</h3>
+<p>您可选择手动配置 DNS 服务器的 IP 地址。若选择此方法，您必须输入首选 DNS 服务器的 IP 地址。您也可以输入备选 DNS 服务器的 IP 地址，如此一来，如果首选 DNS 服务器遇到问题备选 DNS 服务器就可作为备用。DNS 服务器 IP 地址按要求配置后，请单击<strong>应用</strong>以保存设置。</p>
+
+
+<div class="section">
+<h4>注：</h4>
+<p>当您使用 PPPoE 连接或是让系统自动设置所有的网络接口时，系统会一并自动设置 DNS 服务器和默认网关等栏，且您将无法变更这些栏的数值。</p>
+</div>
+
+
+
+<h3><a name="proxy"></a>通过代理服务器连接</h3>
+<p>若要通过代理服务器让 DiskStation 设备进行连接，请勾选<b>通过代理服务器连接</b>，输入<b>地址</b>和<b>端口</b>，然后单击<b>应用</b>。</p>
+
+
+<div class="section">
+<h4>注：</h4>
+<ul>
+<li>单击<strong>高级设置</strong>可配置 HTTP 代理、HTTPS 代理和验证信息。
+<li>HTTPS 代理设置与 HTTP 代理设置默认相同。</li>
+<li>如果勾选<b>通过代理服务器连接</b>，则 DSM 更新、套件中心及部分其他套件将始终通过代理服务器连接 Internet。</li>
+<li>如果勾选了<b>对于本地地址不使用代理服务器</b>，请确认 DiskStation 使用的 DNS 服务器可为本地网络中的设备解析查询。</li>
+</ul>
+</div>
+
+
+<h3>启用 IPv6 隧道</h3>
+<p>在 IPv6 完全取代 IPv4 之前，您需通过 IPv6 隧道来让拥有 IPv6 地址的主机连接到 IPv4 服务。此项技术提供了一种在现有 IPv4 网络中传输 IPv6 流量的方法。<br>如果您对于设置 IPv6 有任何疑问或遇到链接上的问题，请联系您的网络服务供应商（ISP）。</p>
+<h4>若要启用 IPv6 隧道：</h4>
+<ol>
+<li>勾选<b>启用 tunnel</b> 复选框来启用 tunnel 支持。</li>
+
+<li>在<b>服务器地址</b>中，输入 tunnel 服务供应商的主机名或 IP 地址，例如：anonymous.freenet6.net。</li>
+
+<li>选择<b>匿名连接</b>或<b>以现有的帐户连接</b>。</li>
+</ol>
+
+<div class="section">
+<h4>注：</h4>
+<p>服务供应商可能会主动更新您的外部 IPv6 地址。但 DiskStation 设备不会立刻删除原有的 IPv6 地址。</p>
+</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>用户高级设置</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>用户高级设置</h2>
+
+<p>若要修改用户高级设置，您可以进入<strong>控制面板</strong> > <strong>用户</strong> > <strong>高级</strong>。您有以下选项可使用。 </p>
+
+<h3>允许用户重置忘记的密码</h3>
+<p>如果您要让用户通过电子邮件重置忘记的密码，可启用<strong>允许非管理员用户在忘记密码时通过电子邮件重置</strong>。当您启用此功能后，DSM 登录页面将会出现<strong>忘了密码？</strong>的链接。当用户忘记密码时，可单击此链接并输入其用户名。此时系统会向用户发送一封电子邮件，当中含有重置忘记密码的链接。 </p>
+
+<div class="section">
+<h4>注：</h4>
+<ul>
+<li>启用该选项之前，请先确认您已启用 SMTP 电子邮件通知。若要进行此操作，请进入<strong>控制面板</strong> > <strong>通知</strong>。</li>
+<li>若要接收系统信息，用户必须在其帐户的用户信息区域中提供电子邮件地址。</li>
+<li>属于 <strong>administrators</strong> 群组的用户无法使用此选项来重置密码。</li>
+<li>域用户无法使用此选项来重置密码。</li>
+<li>只要 DiskStation 作为 LDAP 目录服务器，LDAP 用户就可使用此选项来重置密码。</li>
+
+</ul>
+</div>
+
+
+<h3>密码强度</h3>
+<p>您可以为 DiskStation 上的用户设置密码强度规则。</p>
+
+<div class="section">
+<h4>注：</h4>
+<p>密码强度规则仅适用于新创建的密码。例如，仅当创建新的用户帐户或当现有用户更改其密码时，才能应用新设置的密码强度规则。新密码强度规则不适用于现有用户帐户密码以及属于导入的用户帐户密码。</p>
+</div>
+<h4>若要启用密码强度规则：</h4>
+<ol>
+<li>请勾选<b>应用密码强度规则</b>复选框来启用密码限制。</li>
+<li>从下列规则中选择多个密码限制。</li>
+<ul>
+<li><b>排除用户名及描述</b>：密码中不能包含用户名或用户描述。若用户名称或描述为 UTF-8 字符则不在此限制中。</li>
+<li><b>包括混合大小写</b>：密码需包含大小写字母。</li>
+<li><b>包含数字字符</b>：密码中至少要包含一个 0 ~ 9 的数字字符。</li>
+<li><b>包含特殊字符</b>：密码需包含至少一个 ASCII 特殊字符（即 ~、`、!、@、#、$、%、^、&、*、(、)、-、_、=、+、[、{、]、}、\、|、;、:、'、"、<、>、/、?）。</li>
+<li><b>最短密码长度</b>：最短密码长度不可小于此栏指定的值。密码长度应介于 6 到 127 个字符之间的数字。</li>
+</ul>
+<li>单击<b>应用</b>来保存设置。</li>
+</ol>
+
+
+
+<h3>两步骤验证</h3>
+<p>两步骤验证可为 DSM 用户帐户提供更进一步的安全保护。您可强制 DSM 管理员或所有的 DSM 用户启用其两步骤验证，以进一步保护其帐户。</p>
+
+<h4>若要为 DSM 用户强制执行两步骤验证：</h4>
+
+<ol>
+<li>勾选<strong>强制以下用户进行两步骤验证</strong>复选框，并选择应用此功能的用户。</li>
+<div class="section">
+<h4>注：</h4>
+<p>如果您尚未在<b>个人设置</b> > <b>帐户</b>中配置两步骤验证，在您可应用此强制功能之前将启动两步骤验证设置向导，以帮助您完成所需的设置。</p>
+</div>
+
+<li>通过应用强制功能，将要求未启用两步骤验证的用户在可登录到 DSM 之前完成设置。</li>
+</ol>
+
+<div class="section">
+<h4>注：</h4>
+<p>禁用两步骤验证强制功能不会影响或禁用每个用户的两步骤验证设置。用户可保留其两步骤验证设置，或进入<b>个人设置</b> > <b>帐户</b>以禁用这些设置。</p>
+</div>
+
+
+<h3>用户主目录</h3>
+
+<p>启用用户主目录功能来为每一位用户（<b>guest</b> 用户除外）创建个人的 <b>home</b> 文件夹。所有的用户都可以通过 CIFS、AFP、FTP 或 File Station 来访问自己的主文件夹。</p>
+<p>属于 <strong>administrators</strong> 群组的用户可访问所有用户的个人文件夹（位于默认的 <b>homes</b> 共享文件夹中）。主文件夹的名称与用户帐户相同。</p>
+
+<h4>若要启动用户主目录服务：</h4>
+<ol>
+<li>勾选<b>启用用户主目录服务</b>。</li>
+<li>如果存在多个卷，请选择您要存储的 <b>homes</b> 文件夹。</li>
+<li>单击<b>应用</b>。</li>
+</ol>
+
+<div class="section">
+<h4>注：</h4>
+<p>禁用本地用户的主目录服务后，域用户的主目录服务也会一并禁用。</p>
+</div>
+
+<h4>若要禁用用户主目录服务：</h4>
+<ol>
+<li>取消勾选<b>启用用户主目录服务</b>复选框。</li>
+<li>单击<b>应用</b>。</li>
+</ol>
+<p>禁用用户主目录服务后，<b>homes</b> 共享文件夹将被保留下来仅供系统管理员访问。重新启用用户主目录服务后，各用户仍可访问其所有的主文件夹。</p>
+
+<div class="section">
+<h4>注：</h4>
+<ol>
+<li>若要删除 <b>homes</b> 共享文件夹，您必须先禁用用户主目录服务。</li>
+<li>如果本地用户的主目录服务已禁用，域用户的主目录服务也会一并禁用。</li> 
+</ol> 
+</div>
+
+
+</body>	
+</html> 

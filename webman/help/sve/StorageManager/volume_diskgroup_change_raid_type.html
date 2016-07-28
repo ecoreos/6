@@ -1,0 +1,114 @@
+ <!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Ändra RAID-typ för en Volym eller Diskgrupp - Synology DSM Hjälp</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="This article provides instructions to change the RAID type of existing volumes and disk groups on your DiskStation.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Ändra RAID-typ för en Volym eller Diskgrupp</h2>
+
+<p>Volymer och diskgrupper kan ändras från en RAID-typ till en annan utan att befintliga data förloras. Till exempel kan du skapa en volym med RAID 1 på din DiskStation och senare ändra till RAID 5 om du installerar fler hårddiskar. Denna artikel innehåller instruktioner för att ändra RAID-typ för befintliga volymer och diskgrupper på din DiskStation.</p>
+<h3>Begränsningar för RAID-typer</h3>
+
+<p>Endast vissa RAID-typer kan ändras till andra RAID-typer. Se tabellen här nedanför för detaljer.</p>
+
+<table>
+  <tr>
+    <th width="50%">RAID-typ</th>
+    <th width="50%">Kan ändras till…</th>
+  </tr>
+  <tr>
+    <td>Basic</td>
+    <td>RAID 1<br /> RAID 5</td>
+  </tr>
+  <tr>
+    <td>RAID 1</td>
+    <td>RAID 5</td>
+  </tr>
+  <tr>
+    <td>RAID 5</td>
+    <td>RAID 6</td>
+  </tr>
+
+</table>
+
+<div class="section">
+<h4>Exempel:</h4>
+<p>RAID 1 kan ändras till RAID 5 men RAID 5 kan inte ändras till RAID 1.</p>
+</div>
+
+
+<h3>Hårdvarukrav</h3>
+
+<p>För att kunna ändra RAID-typ för en volym eller diskgrupp måste du ha tillräckligt antal tillgängliga hårddiskar installerade i din DiskStation. Vänligen se här nedanför för det minsta antal hårddiskar som krävs för varje RAID-typ.</p>
+
+<table>
+  <tr>
+    <th width="50%">Önskad RAID-typ</th>
+    <th width="50%">Erfordrade hårddiskar</th>
+  </tr>
+  <tr>
+    <td>RAID 1</td>
+    <td>2 eller 4</td>
+  </tr>
+  <tr>
+    <td>RAID 5</td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>RAID 6</td>
+    <td>4</td>
+  </tr>
+</table>
+
+<div class="section">
+<h4>Exempel:</h4>
+<p>Om du vill ändra en volym med RAID 1 till RAID 5 behöver du totalt minst tre hårddiskar (dvs. de två hårdiskarna som hör till volymen med RAID 1 samt en ledig hårddisk att lägga till i volymen).</p>
+</div>
+
+<h3>Ändra RAID-typ</h3>
+
+<p>I exemplet här nedanför kommer vi att byta ut en volym med <strong>Basic</strong> till en volym med <strong>RAID 1</strong>.</p>
+
+<div class="section">
+<h4>Innan du börjar:</h4>
+<ul>
+<li>Tillse att statusen för din volym eller diskgrupp är <b>Normal</b>.</li>
+<li>När nya hårddiskar läggs till i en volym eller diskgrupp måste de nya hårddiskarna vara större än den minsta hårddisken i volymen eller diskgruppen.</li>
+<li>Den nya hårddiskens status måste vara <b>Initierat</b> eller <b>Ej initierat</b>.</li></ul>
+</div>
+
+<h4>Ändra RAID-typ för en volym:</h4>
+
+<ol>
+<li>Öppna <strong>Lagringshanterare</strong>.</li>
+<img src="about:blank" class="help_image"/>
+<li>Gå till <b>Volym</b>.  (Om du vill ändra RAID-typ för en diskgrupp, gå då till fliken <b>Diskgrupp</b>.)</li>
+<li>Välj den volym du vill ändra och klicka på <b>Hantera</b>.</li>
+<img src="about:blank" class="help_image"/>
+
+<li>När installationsguiden visas, välj <b>Ändra RAID-typ</b>. Klicka sedan på <b>Nästa</b>.</li>
+<img src="about:blank" class="help_image"/>
+
+
+<li>Välj den RAID-typ till vilken du vill ändra volymen. Klicka på <b>Nästa</b>.</li>
+<img src="about:blank" class="help_image"/>
+
+
+<li>Välj vilken hårddisk(vilka hårddiskar) som ska läggas till den befintliga volymen. Klicka sedan på <b>Nästa</b>.</li>
+<img src="about:blank" class="help_image"/>
+
+
+<li>Följ instruktionerna i installationsguiden för att slutföra. Vänligen observera att data på den tillagda hårddisken kommer att tas bort.</li></ol>
+
+</body>
+</html>

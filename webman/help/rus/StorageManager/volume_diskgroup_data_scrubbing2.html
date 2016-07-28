@@ -1,0 +1,50 @@
+ <!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+
+<title>Исправление ошибок данных</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="Data scrubbing is a data maintenance feature that inspects volumes or disk groups and repairs any detected data inconsistencies.">
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Исправление ошибок данных*</h2>
+<p>Исправление ошибок данных — это функция обслуживания данных, проверяющая тома или группы дисков. Существует два типа исправления ошибок данных.</p>
+
+<ul>
+<li><strong>Исправление ошибок данных RAID.</strong> Эту функцию можно использовать с томами или группами дисков, использующими SHR (из трех или более дисков), RAID 5 или RAID 6. Она может исправить обнаруженные несоответствия данных.</li>
+<li><strong>Исправление ошибок данных файловой системы.</strong> Эту функцию можно использовать с томами в файловой системе Btrfs. При обнаружении несоответствия данных с контрольной суммой путь доступа к файлу будет записан в Центр журналов. Настоятельно рекомендуется исправить данные с помощью резервной копии.</li>
+</ul>
+
+<p>Рекомендуется регулярно выполнять исправление ошибок данных, чтобы поддерживать их согласованность и избежать утери критически важных данных в случае отказа диска.</p>
+
+<h4>Исправление ошибок данных:</h4>
+
+<ol>
+<li>Откройте <strong>Диспетчер хранения</strong>.</li>
+<li>Выберите <strong>Том</strong> или <strong>Группа дисков</strong>.</li>
+<li>Выберите том или группу дисков, в которой необходимо выполнить исправление ошибок данных.</li>
+<li>Нажмите <strong>Управление</strong>.</li>
+<li>Выберите <strong>Исправление ошибок данных</strong>.</li>
+<li>Выберите нужный тип исправления ошибок данных. (Система автоматически пропустит этот шаг, если доступен только один тип.)</li>
+</ol>
+
+<div class="section">
+<h4>Примечание.</h4>
+<ul>
+<li>Исправление ошибок данных можно выполнить, только когда том или группа дисков находится в состоянии <strong>Нормальный</strong>.</li>
+<li>Если отключить систему до завершения процесса, потребуется вручную перезапустить исправление ошибок данных с самого начала.</li>
+</ul></div>
+
+<p>____<br />* Данная функция доступна только в некоторых моделях.</p>
+
+</body>
+</html>

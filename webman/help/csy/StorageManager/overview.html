@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+	<h2>Přehled</h2>
+	<p>V části Přehled naleznete informace o celkovém stavu kapacity úložiště, včetně celkového situace veškerého úložného místa, využití pevných disků, maximálního využití svazků a využití jednotek iSCSI LUN.</p>
+
+		<h4>Stav úložiště</h4>
+        <p>K dispozici jsou tři typy stavů:</p>
+	  	<ul>
+				<li><b>V pořádku</b>: Veškeré úložné místo vykazuje hodnotu Normální.</li>
+				<li><B>Upozornění</B>: Úložné místo (svazek nebo jednotka iSCSI LUN) je v omezeném režimu a došlo k poruše mezipaměti SSD nebo systémového oddílu.</li>
+				<li><b>Výstraha</b>: Došlo k poruše úložného místa (svazku nebo jednotky iSCSI LUN).</li>
+			</ul>
+			<p>Dojde-li k několika poruchám současně, bude stav zobrazen v následujícím pořadí: 1) Úložné místo (svazek nebo jednotka iSCSI LUN); 2) mezipaměť SSD a 3) systémový oddíl. Dojde-li k problému, postupujte podle pokynů uvedených pod tímto stavem.</p>
+		
+		<h4>Informace o disku</h4>
+        <p>V této části jsou zobrazeny informace o pevných discích a hardwarovém vybavení. Můžete ověřit, kolik pevných disků je využito v rámci úložného místa, počet záložních pevných disků a počet dostupných slotů pro pevné disky.</p>
+        
+		<h4>Maximální využití úložiště</h4>
+        <p>V této části je zobrazena využitá kapacita svazku. Pokud hodnota maximálního využití dosáhne 80 %, bude výsečový graf označen červenou barvou, v případě využití na 60 % bude graf označen žlutou barvou a v případě využití na 79% pak modrou barvou.</p>
+        
+		<h4>Využití jednotky iSCSI LUN</h4>
+        <p>V této části jsou zobrazeny následující informace:</p>
+        <ul>
+         		<li><b>Hlášeno</b>: Celkový součet přidělené kapacity všech jednotek iSCSI LUN (na úrovni bloků) a jednotek iSCSI LUN (běžné soubory) ve skupině DiskStation.</li>
+                <li><b>Využito</b>: Celkový součet přidělené kapacity jednotky iSCSI LUN (běžné soubory) a kapacity jednotky iSCSI LUN (na úrovni bloků).</li>
+                <li><b>Ušetřeno</b>: Celková hodnota položky <b>Hlášeno</b> mínus celková hodnota položky <b>Využito</b>, která zobrazuje celkové úspory na nákup a správu ušetřené kapacity úložiště.</li>
+</ul>
+        </li>
+</body>
+</html>

@@ -1,0 +1,149 @@
+
+[HA_ConfSyncError]
+Subject: High-availability-klynge %HOSTNAME% registrerede en synkroniseringsfejl under kontrol af systemkonfiguration.
+
+Kære bruger
+
+High-availability-klynge %HOSTNAME% registrerede en synkroniseringsfejl under systemkonfigurationskontrol af den aktive og passive server. Systemet forsøgte at rette fejlen ved at udføre en fuld synkronisering af systemkonfigurationer. Kontroller systemlogfiler eller logsiderne for High Availability Manager for at få yderligere oplysninger.
+
+Handling: %HA_ACTION%
+Fejl: %HA_PARAM_1%
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[HA_FailOver]
+Subject: Fejl registreret på high-availability-klyngen %HOSTNAME%.
+
+Kære bruger
+
+Der er registreret en fejl på high-availability-klyngen %HOSTNAME%. Systemet vil switchover tjenester til den passive server. Kontroller systemlogfilerne for at få yderligere oplysninger.
+
+Handling: %HA_ACTION%
+Fejl: %HA_PARAM_1%
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[HA_MismatchedSsdCache]
+Subject: SSD-cache-diske er ikke de samme på high-availability-klynge %HOSTNAME%
+
+Kære bruger
+
+De diske, der hører til følgende SSD-cache på den passive server %HA_PARAM_1% er ikke identiske med diskene på den aktive server: SSD-cache %HA_PARAM_2%.
+
+Kontroller logsiderne for High Availability Manager for at få yderligere oplysninger.
+
+Handling: %HA_ACTION%
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[HA_SplitBrain]
+Subject: Opdelt hjerne-fejl opstod på high-availability-klyngen %HOSTNAME%
+
+Kære bruger
+
+Opdelt hjerne-fejl opstod på high-availability-klyngen %HOSTNAME%. Kontroller systemlogfilerne for at få yderligere oplysninger.
+
+Handling: %HA_ACTION%
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[HA_StatusChange]
+Subject: Status for high-availability-klynge %HOSTNAME% er ændret fra %HA_PARAM_1% til %HA_PARAM_2%.
+
+Kære bruger
+
+Status for high-availability-klynge %HOSTNAME% er ændret fra %HA_PARAM_1% til %HA_PARAM_2%. Kontroller systemlogfiler eller logsiderne for High Availability Manager for at få yderligere oplysninger.
+
+Handling: %HA_ACTION%
+Beskrivelse: %HA_PARAM_3%
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[HA_SwitchFail]
+Subject: Kunne ikke switchover tjenester eller high-availability-klyngen %HOSTNAME%
+
+Kære bruger
+
+Systemet forsøgte at switchover tjenester til den passive server på high-availability-klyngen %HOSTNAME%, men mislykkedes. Kontroller systemlogfilerne for at få yderligere oplysninger.
+
+Handling: %HA_ACTION%
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[HA_SwitchFinished]
+Subject: High-availability-klynge %HOSTNAME% kører nu tjenester på %HA_PARAM_1%.
+
+Kære bruger
+
+Tjenesterne på high-availability-klynge %HOSTNAME% kører nu tjenester på %HA_PARAM_1%. Kontroller systemlogfiler eller logsiderne for High Availability Manager for at få yderligere oplysninger.
+
+Handling: %HA_ACTION%
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[HA_SwitchOver]
+Subject: Switchover af high-availability-klyngen %HOSTNAME% til %HA_PARAM_1%.
+
+Kære bruger
+
+Der er startet en switchover af high-availability-klyngen %HOSTNAME%. Tjenester skiftes over til %HA_PARAM_1%. Kontroller systemlogfilerne for at få yderligere oplysninger.
+
+Handling: %HA_ACTION%
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[HA_SwitchOver_With_Reason]
+Subject: High-availability-klyngen %HOSTNAME% startede en switchover til %HA_PARAM_1%.
+
+Kære bruger
+
+En switchover er startet på high-availability-klyngen %HOSTNAME%. Tjenester skiftes over til %HA_PARAM_1%. Kontroller systemlogfilerne for at få yderligere oplysninger.
+
+Handling: %HA_ACTION%
+Årsag: %HA_PARAM_2%
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[HA_SyncComplete]
+Subject: Fuld datakopiering af high-availability-klynge %HOSTNAME% er fuldført.
+
+Kære bruger
+
+Fuld datakopiering af high-availability-klynge %HOSTNAME% er fuldført. Den passive server er nu klar til at overtage tjenesterne i tilfælde af, at en switchover er nødvendig. Kontroller systemlogfiler eller logsiderne for High Availability Manager for at få yderligere oplysninger.
+
+Handling: %HA_ACTION%
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[HA_UnbindLocal]
+Subject: Localhost er fjernet fra high-availability-klyngen
+
+Kære bruger
+
+%HA_PARAM_1% er fjernet fra high-availability-klyngen %HA_PARAM_2%. Kontroller systemlogfilerne for at få yderligere oplysninger.
+
+Handling: %HA_ACTION%
+
+Med venlig hilsen
+%COMPANY_NAME%
+

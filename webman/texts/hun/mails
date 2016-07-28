@@ -1,0 +1,2655 @@
+
+[]
+
+
+
+[AutoBlockAdd]
+Category: System
+Title: IP-cím blokkolva
+Subject: %SERVICE% blokkolta %HOSTNAME% [%CLIENT_IP%] IP-címét
+
+Kedves felhasználó!
+
+A(z) [%CLIENT_IP%] IP-cím %AUTOBLOCK_ATTEMPTS% alkalommal, %AUTOBLOCK_ATTEMPT_MIN% percen át nem tudott bejelentkezni a(z) %HOSTNAME% által futtatott %SERVICE% szolgáltatásba, ezért a következő időpontban blokkolásra került: %AUTOBLOCK_TIME%.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[BackupTaskCanceled]
+Category: Backup/Restore,Important
+Title: Biztonsági mentés megszakítva
+Subject: %TASK_TYPE% – %TASK_NAME% megszakítva a következőn: %HOSTNAME%
+
+Kedves felhasználó!
+
+A(z) %HOSTNAME% eszközön végzett biztonsági mentést megszakították.
+
+Biztonsági mentési feladat: %TASK_NAME%
+Biztonsági mentés célhelye: %DESTINATION_IP% %DESTINATION_PATH%
+Kezdési idő: %START_TIME%
+Időtartam: %DURATION%
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[BackupTaskFailed]
+Category: Backup/Restore,Important
+Title: Biztonsági mentés sikertelen
+Subject: %TASK_TYPE% – %TASK_NAME% sikertelen a következőn: %HOSTNAME%
+
+Kedves felhasználó!
+
+A(z) %HOSTNAME% eszközön tárolt adatok biztonsági mentése sikertelen volt.
+
+További információkért tekintse át a biztonsági mentési naplót a Hyper Backup > Napló
+menüpontban.
+
+Biztonsági mentési feladat: %TASK_NAME%
+Biztonsági mentés célhelye: %DESTINATION_IP% %DESTINATION_PATH%
+Kezdési idő: %START_TIME%
+Időtartam: %DURATION%
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[BackupTaskFinished]
+Category: Backup/Restore
+Title: Biztonsági mentés befejeződött
+Subject: %TASK_TYPE% – %TASK_NAME% sikeres a következőn: %HOSTNAME%
+
+Kedves felhasználó!
+
+A(z) %TASK_NAME% biztonsági mentési feladat befejeződött.
+
+Biztonsági mentési feladat: %TASK_NAME%
+Biztonsági mentés célhelye: %DESTINATION_IP%  %DESTINATION_PATH%
+Kezdési idő: %START_TIME%
+Időtartam: %DURATION%
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[BackupTaskPartial]
+Category: Backup/Restore,Important
+Title: Biztonsági mentés részben befejeződött
+Subject: %TASK_TYPE% – %TASK_NAME% részlegesen sikeres a következőn: %HOSTNAME%
+
+Kedves felhasználó!
+
+A(z) %TASK_NAME% biztonsági mentési feladat kisebb kivételekkel befejeződött.
+
+További információkért tekintse át a biztonsági mentési naplót a Hyper Backup > Napló
+menüpontban.
+
+Biztonsági mentési feladat: %TASK_NAME%
+Biztonsági mentés célhelye: %DESTINATION_IP% %DESTINATION_PATH%
+Kezdési idő: %START_TIME%
+Időtartam: %DURATION%
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[CMSClientConnectFailed]
+Category: CMS
+Title: Nem sikerült kapcsolódni a CMS állomáshoz
+Subject: A(z) %HOSTNAME% nem tudott kapcsolódni a CMS állomáshoz (%CMS_SERVER%).
+
+Kedves felhasználó!
+
+A(z) %HOSTNAME% szerver nem tudott kapcsolatot létesíteni a CMS állomással (%CMS_SERVER%). Ellenőrizze mindkét szerver hálózati kapcsolatát és beállításait.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[CMSClientDetachSuccess]
+Category: CMS
+Title: Sikerült a lecsatlakozás a CMS állomásról
+Subject: %HOSTNAME% sikeresen lecsatlakozott a CMS állomásról (%CMS_SERVER%).
+
+Kedves felhasználó!
+
+A(z) %HOSTNAME% szerver sikeresen lecsatlakozott a CMS állomásról (%CMS_SERVER%).
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[CMSClientJoinSuccess]
+Category: CMS
+Title: Csatlakozás a CMS hoszthoz sikeres
+Subject: %HOSTNAME% csatlakozott a CMS hoszthoz (%CMS_SERVER%).
+
+Kedves felhasználó!
+
+A(z) %HOSTNAME% szerver sikeresen csatlakozott a CMS hoszthoz (%CMS_SERVER%). Egyes beállításokat a CMS hoszt fog kezelni.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[CpuFanResume]
+Category: System
+Title: CPU-ventilátor ismét működik
+Subject: A(z) %FANID% CPU-ventilátor ismét működik a következő helyen: %HOSTNAME% (sorozatszám: %HOST_SN%)
+
+Kedves felhasználó!
+
+A(z) %FANID% CPU-ventilátor ismét működik a következő helyen: %HOSTNAME% (sorozatszám: %HOST_SN%).
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[CpuFanStop]
+Category: System,Important
+Title: CPU-ventilátor leállt
+Subject: A(z) %FANID% CPU-ventilátor leállt a következő helyen: %HOSTNAME% (sorozatszám: %HOST_SN%)
+
+Kedves felhasználó!
+
+A(z) %FANID% CPU-ventilátor leállt a következő helyen: %HOSTNAME% (sorozatszám: %HOST_SN%).
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[DDNSFail]
+Category: System
+Title: DDNS-regisztráció sikertelen
+Subject: A DDNS-szolgáltatásnak nem sikerült regisztrálnia a(z) %EXTERNAL_IP% IP-címet a következőre: %DDNS_HOST_NAME% [%FAIL_REASON%]
+
+Kedves felhasználó!
+
+A rendszernek nem sikerült a(z) %EXTERNAL_IP% külső IP-cím regisztrálása ide: %DDNS_HOST_NAME% a(z) %DDNS_NAME% DDNS-szerveren. A jelentés szerint az ok a következő: [%FAIL_REASON%].
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[DRLunScheduleSnapshotFail]
+Category: Snapshot Replication,Important
+Title: Nem sikerült pillanatfelvételt készíteni egy iSCI LUN-ról
+Subject: Nem sikerült pillanatfelvételt készíteni a következő LUN-ról: %LUNNAME%, hely: %HOSTNAME%
+
+Kedves felhasználó!
+
+Nem sikerült pillanatfelvételt készíteni egy, a következő helyen található LUN-ról: %HOSTNAME%. Részletes információkért ellenőrizze a Snapshot Replication alkalmazás naplóját.
+
+LUN: %LUNNAME%
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[DRReplicationCleanupTestFailoverCompletion]
+Category: Snapshot Replication,Important
+Title: Replikálási feladat feladatátvételi tesztjének törlése
+Subject: A(z) %DRSITE_TARGET_NAME% végzett feladatátvételi tesztjének törlése sikeresen befejeződött a következőn: %DRSITE_HOSTNAME%
+
+Kedves felhasználó!
+
+A rendszer sikeresen törölte a(z) %DRSITE_TARGET_NAME% feladatátvételi tesztjén a célszerverről (%DRSITE_HOSTNAME%). Részletes információkért ellenőrizze a Snapshot Replication Napló oldalát.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[DRReplicationCleanupTestFailoverFail]
+Category: Snapshot Replication,Important
+Title: Replikálási feladat feladatátvételi tesztjének törlése sikertelen volt
+Subject: Nem sikerült törölni a(z) %DRSITE_TARGET_NAME% feladatátvételi tesztjét a következőn: %DRSITE_HOSTNAME%
+
+Kedves felhasználó!
+
+A rendszernek nem sikerült törölnie a(z) %DRSITE_TARGET_NAME% feladatátvételi tesztjét a következőn: %DRSITE_HOSTNAME%. Részletes információkért ellenőrizze a Snapshot Replication Napló oldalát.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[DRReplicationExportCompletion]
+Category: Snapshot Replication,Important
+Title: Replikálási feladat sikeresen exportálva
+Subject: %MAINSITE_TARGET_NAME% sikeresen exportálva
+
+Kedves felhasználó!
+
+A rendszer sikeresen exportálta a következőt: %MAINSITE_TARGET_NAME%. Részletes információkért ellenőrizze a Snapshot Replication Napló oldalát.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[DRReplicationExportFail]
+Category: Snapshot Replication,Important
+Title: Nem sikerült exportálni a replikálási feladatot
+Subject: Nem sikerült exportálni a következőt: %MAINSITE_TARGET_NAME%
+
+Kedves felhasználó!
+
+A rendszernek nem sikerült exportálnia a következőt: %MAINSITE_TARGET_NAME%. Részletes információkért ellenőrizze a Snapshot Replication Napló oldalát.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[DRReplicationFailoverCompletion]
+Category: Snapshot Replication,Important
+Title: A replikálási feladat átadása sikeresen megtörtént
+Subject: A(z) %DRSITE_TARGET_NAME% átadása sikeresen megtörtént a következőre: %DRSITE_HOSTNAME%
+
+Kedves felhasználó!
+
+A rendszer sikeresen elvégezte a(z) %DRSITE_TARGET_NAME% átadását a célszerverre (%DRSITE_HOSTNAME%). Részletes információkért ellenőrizze a Snapshot Replication Napló oldalát.
+
+Feladatátvétel verziója: %SNAPSHOT_VERSION%
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[DRReplicationFailoverFail]
+Category: Snapshot Replication,Important
+Title: Nem sikerült átadni a replikálási feladatot
+Subject: Nem sikerült a(z) %DRSITE_TARGET_NAME% átadása a következőre: %DRSITE_HOSTNAME%
+
+Kedves felhasználó!
+
+A rendszernek nem sikerült elvégeznie a(z) %DRSITE_TARGET_NAME% átadását a célszerverre (%DRSITE_HOSTNAME%). Részletes információkért ellenőrizze a Snapshot Replication Napló oldalát.
+
+Feladatátvétel verziója: %SNAPSHOT_VERSION%
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[DRReplicationImportCompletion]
+Category: Snapshot Replication,Important
+Title: Replikálási feladat sikeresen importálva
+Subject: %DRSITE_TARGET_NAME% sikeresen importálva
+
+Kedves felhasználó!
+
+A rendszer sikeresen importálta a következőt: %DRSITE_TARGET_NAME%. Részletes információkért ellenőrizze a Snapshot Replication Napló oldalát.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[DRReplicationImportFail]
+Category: Snapshot Replication,Important
+Title: Nem sikerült importálni a replikálási feladatot
+Subject: Nem sikerült importálni a következőt: %DRSITE_TARGET_NAME%
+
+Kedves felhasználó!
+
+A rendszernek nem sikerült importálnia a következőt: %DRSITE_TARGET_NAME%. Részletes információkért ellenőrizze a Snapshot Replication Napló oldalát.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[DRReplicationInitialSyncCompletion]
+Category: Snapshot Replication,Important
+Title: Kezdeti replikáció kész
+Subject: A replikálási feladat befejezte a kezdeti replikációt, forrás: %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%), cél: %DRSITE_HOSTNAME% (%DRSITE_TARGET_NAME%)
+
+Kedves felhasználó!
+
+A replikálási feladat befejezte a kezdeti replikációt. Részletes információkért ellenőrizze a Snapshot Replication Napló oldalát.
+
+Forrásszerver: %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%)
+Célszerver: %DRSITE_HOSTNAME% (%DRSITE_TARGET_NAME%)
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[DRReplicationInitialSyncFail]
+Category: Snapshot Replication,Important
+Title: Nem sikerült elvégezni a kezdeti replikációt
+Subject: A replikálási feladatnak nem sikerült elvégeznie a kezdet replikációt, cél: %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%)
+
+Kedves felhasználó!
+
+A replikálási feladatnak nem sikerült elvégeznie a kezdet replikációt, cél: %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%). Részletes információkért ellenőrizze a Snapshot Replication Napló oldalát.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[DRReplicationReprotectCompletion]
+Category: Snapshot Replication,Important
+Title: Replikálási feladat ismételt védelme sikeres
+Subject: Replikálási feladat (%NEW_MAINSITE_TARGET_NAME%) ismételt védelme sikeres
+
+Kedves felhasználó!
+
+A rendszer ismét védelmet nyújt a replikálási feladatnak (%NEW_MAINSITE_TARGET_NAME%) az új forrásszerveren (%NEW_MAINSITE_HOSTNAME%), a replikált adatok (%NEW_DRSITE_TARGET_NAME%) elhelyezésre kerültek az új célszerveren (%NEW_DRSITE_HOSTNAME%). Részletes információkért ellenőrizze a Snapshot Replication Napló oldalát.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[DRReplicationReprotectFail]
+Category: Snapshot Replication,Important
+Title: Nem sikerült ismételt védelmet nyújtani a replikálási feladatnak
+Subject: Nem sikerült ismételt védelmet nyújtani a replikálási feladatnak (%NEW_MAINSITE_TARGET_NAME%)
+
+Kedves felhasználó!
+
+A rendszernek nem sikerült ismételt védelmet nyújtani a replikálási feladatnak (%NEW_MAINSITE_TARGET_NAME%) az új forrásszerverrel (%NEW_MAINSITE_HOSTNAME%) és a replikált adatokkal (%NEW_DRSITE_TARGET_NAME%) az új célszerveren (%NEW_DRSITE_HOSTNAME%). Részletes információkért ellenőrizze a Snapshot Replication Napló oldalát.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[DRReplicationScheduleSyncCompletion]
+Category: Snapshot Replication,Important
+Title: Ütemezett replikáció kész
+Subject: A replikálási feladat befejezte az ütemezett replikációt, forrás: %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%), cél: %DRSITE_HOSTNAME% (%DRSITE_TARGET_NAME%)
+
+Kedves felhasználó!
+
+A replikálási feladat befejezte az ütemezett replikációt. Részletes információkért ellenőrizze a Snapshot Replication Napló oldalát.
+
+Forrásszerver: %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%)
+Célszerver: %DRSITE_HOSTNAME% (%DRSITE_TARGET_NAME%)
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[DRReplicationScheduleSyncFail]
+Category: Snapshot Replication,Important
+Title: Nem sikerült elvégezni az ütemezett replikációt
+Subject: A replikálási feladatnak nem sikerült elvégeznie az ütemezett replikációt, cél: %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%)
+
+Kedves felhasználó!
+
+A replikálási feladatnak nem sikerült elvégeznie az ütemezett replikációt, cél: %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%). Részletes információkért ellenőrizze a Snapshot Replication Napló oldalát.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[DRReplicationSwitchoverCompletion]
+Category: Snapshot Replication,Important
+Title: A replikálási feladat átkapcsolása sikeresen megtörtént
+Subject: A(z) %NEW_DRSITE_HOSTNAME% (%NEW_DRSITE_TARGET_NAME%) átkapcsolása sikeresen megtörtént a következőre: %NEW_MAINSITE_HOSTNAME%
+
+Kedves felhasználó!
+
+A rendszer sikeresen elvégezte a(z) %NEW_DRSITE_HOSTNAME% (%NEW_DRSITE_TARGET_NAME%) átkapcsolását a célszerverre (%NEW_MAINSITE_HOSTNAME%). Részletes információkért ellenőrizze a Snapshot Replication Napló oldalát.
+
+Új forrásszerver: %NEW_MAINSITE_HOSTNAME% (%NEW_MAINSITE_TARGET_NAME%)
+Új célszerver: %NEW_DRSITE_HOSTNAME% (%NEW_DRSITE_TARGET_NAME%)
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[DRReplicationSwitchoverFail]
+Category: Snapshot Replication,Important
+Title: Nem sikerült átkapcsolni a replikálási feladatot
+Subject: Nem sikerült a(z) %NEW_DRSITE_HOSTNAME% (%NEW_DRSITE_TARGET_NAME%) átkapcsolása a következőre: %NEW_MAINSITE_HOSTNAME%
+
+Kedves felhasználó!
+
+A rendszernek nem sikerült elvégeznie a(z) %NEW_DRSITE_HOSTNAME% (%NEW_DRSITE_TARGET_NAME%) átkapcsolását a célszerverre (%NEW_MAINSITE_HOSTNAME%). Részletes információkért ellenőrizze a Snapshot Replication Napló oldalát.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[DRReplicationSyncFail]
+Category: Snapshot Replication,Important
+Title: Nem sikerült elvégezni a replikációt
+Subject: A replikálási feladatnak nem sikerült elvégeznie a replikációt, cél: %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%)
+
+Kedves felhasználó!
+
+A replikálási feladatnak nem sikerült elvégeznie a replikációt, cél: %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%). Részletes információkért ellenőrizze a Snapshot Replication Napló oldalát.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[DRReplicationSyncNotFinishInNotifyTime]
+Category: Snapshot Replication,Important
+Title: Replikálási feladat nem fejeződött be
+Subject: A replikálási feladat (%MAINSITE_TARGET_NAME%) nem fejeződött be, cél: %DRSITE_HOSTNAME% (%DRSITE_TARGET_NAME%)
+
+Kedves felhasználó!
+
+A replikálási feladat nem fejeződött be %NOTIFY_TIME% percen belül. Részletes információkért ellenőrizze a Snapshot Replication Napló oldalát.
+
+Forrásszerver: %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%)
+Célszerver: %DRSITE_HOSTNAME% (%DRSITE_TARGET_NAME%)
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[DRReplicationSyncStop]
+Category: Snapshot Replication,Important
+Title: A replikálás leállt
+Subject: A replikálási feladat, amely replikálást végez a következőre: %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%) leállt.
+
+Kedves felhasználó!
+
+A replikálási feladat, amely a replikálást végezte a következőre: %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%) leállt. Részletes információkért ellenőrizze a Snapshot Replication Napló oldalát.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[DRReplicationTestFailoverCompletion]
+Category: Snapshot Replication,Important
+Title: A replikálási feladat feladatátvételi tesztje sikeresen elindult
+Subject: A(z) %TEST_TARGET_NAME% feladatátvételi tesztje mostantól elérhető
+
+Kedves felhasználó!
+
+A(z) %TEST_TARGET_NAME% feladatátvételi tesztje mostantól elérhető. Részletes információkért ellenőrizze a Snapshot Replication Napló oldalát.
+
+Tesztszerver: %DRSITE_HOSTNAME%
+Megosztott mappa/iSCSI LUN neve (teszt): %TEST_TARGET_NAME%
+Tesztverzió: %SNAPSHOT_VERSION%
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[DRReplicationTestFailoverFail]
+Category: Snapshot Replication,Important
+Title: Replikálási feladat feladatátvételi tesztjének indítása sikertelen volt
+Subject: Nem sikerült elindítani a(z) %TEST_TARGET_NAME% feladatátvételi tesztjét a következőn: %DRSITE_HOSTNAME%
+
+Kedves felhasználó!
+
+A rendszernek nem sikerült feladatátvételi tesztet indítania a célszerveren (%DRSITE_HOSTNAME%). Részletes információkért ellenőrizze a Snapshot Replication Napló oldalát.
+
+Tesztszerver: %DRSITE_HOSTNAME%
+Megosztott mappa/iSCSI LUN neve (teszt): %TEST_TARGET_NAME%
+Tesztverzió: %SNAPSHOT_VERSION%
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[DRShareTakeSnapshotFail]
+Category: Snapshot Replication,Important
+Title: Nem sikerült pillanatfelvételt készíteni a megosztott mappáról
+Subject: Nem sikerült pillanatfelvételt készíteni a következő megosztott mappáról: %SHARE%, hely: %HOSTNAME%
+
+Kedves felhasználó!
+
+Nem sikerült pillanatfelvételt készíteni egy megosztott mappáról a következő helyen: %HOSTNAME%. Részletes információkért ellenőrizze a Snapshot Replication alkalmazás naplóját.
+
+Megosztott mappa: %SHARE%
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[DRSnapshotScheduleTaskTooDenseFail]
+Category: Snapshot Replication,Important
+Title: Egy korábban ütemezett pillanatfelvételi feladat még folyamatban van
+Subject: Egy korábban ütemezett pillanatfelvételi feladat még fut a következő helyen: %MAINSITE_TARGET_NAME%.
+
+Kedves felhasználó!
+
+Nem sikerült elvégezni a pillanatfelvételi feladatot a következőn: %MAINSITE_TARGET_NAME%, mivel egy korábban ütemezett pillanatfelvételi feladat még fut. Részletes információkért ellenőrizze a Snapshot Replication Napló oldalát.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[DSMAutoUpdateReady]
+Category: System,Important
+Title: Automatikus rendszerfrissítés
+Subject: A(z) %OSNAME% automatikus frissítési folyamata %COUNTDOWN_MINUTE% percen belül elindul a(z) %HOSTNAME% eszközön
+
+Kedves felhasználó!
+
+%COUNTDOWN_MINUTE% percen belül elindul a(z) %NEW_VERSION% verzió automatikus telepítése. Ha meg kívánja szakítani a telepítést, jelentkezzen be a(z) %HOSTNAME% eszközre, majd végezze el a kívánt műveletet az értesítési területen.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[DSMAutoUpdateShutdownStart]
+Category: System,Important
+Title: Az ütemezett leállás előtt rendszerfrissítések kerülnek telepítésre
+Subject: A(z) %HOSTNAME% eszköz ütemezett leállása előtt a rendszer %OSNAME% frissítést telepít
+
+Kedves felhasználó!
+
+Az ütemezett leállás előtt a rendszer telepíti a(z) %NEW_VERSION% verziót. A(z) %HOSTNAME% eszköz a telepítés befejezését követően áll le. Kérjük, ne kapcsolja ki a befejezés előtt a(z) %DISKSTATION% eszközt.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[DSMUpdateAvailable]
+Category: System,Important
+Title: Készen áll a(z) %OSNAME% rendszer új frissítése
+Subject: %OSNAME% frissítése telepítésre kész a következő eszközre: %HOSTNAME%
+
+Kedves felhasználó!
+
+A rendszer letöltötte a(z) %OSNAME% új verzióját, mely telepítésre készen áll. Jelentkezzen be a(z) %HOSTNAME% eszközre, majd lépjen a Vezérlőpult > Frissítés és visszaállítás menüpontra a(z) %NEW_VERSION% verzió telepítéséhez. Itt tudhat meg többet a(z) %OSNAME% rendszer frissítéséről: %HTTP_URL%.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[DeviceEjectedImproperly]
+Category: External Storage
+Title: Külső eszköz nem megfelelően került kivetésre
+Subject: A(z) %DEVICE_NAME% külső eszköz nem megfelelően került kivetésre a(z) %HOSTNAME% gazdagépen.
+
+Kedves felhasználó!
+
+A(z) %DEVICE_NAME% külső eszköz nem megfelelően került kivetésre a(z) %HOSTNAME% gazdagépen. Az adatvesztés elkerülése érdekében javasoljuk, hogy kihúzása előtt vettesse ki az eszközt.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[DiskTemperatureAbnormal]
+Category: Storage,Important
+Title: A lemezhőmérséklet kívül esik az üzemi hőmérsékleten
+Subject: A(z) %DISK_ID% lemez hőmérséklete kívül esik az üzemi hőmérsékleti tartományon
+
+Kedves felhasználó!
+
+%DISK_ID% [%MODEL%] lemez hőmérséklete %REAL_TEMPERATURE% ºC, mely kívül esik a(z) %MIN_TEMPERATURE% ºC – %MAX_TEMPERATURE% ºC közötti üzemi hőmérsékleti tartományon.
+Kérjük, tartsa lemezeit az elfogadható működési hőmérsékleten belül.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[DiskTemperatureNormal]
+Subject: A(z) %DISK_ID% lemez hőmérséklete az üzemi hőmérsékleti tartományon belül van
+
+Kedves felhasználó!
+
+%DISK_ID% [%MODEL%] lemez hőmérséklete mostantól beleesik a(z) %MIN_TEMPERATURE% ºC – %MAX_TEMPERATURE% ºC közötti üzemi hőmérsékleti tartományba.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[DriveSlotDisabled]
+Category: Storage,Important
+Title: Lemezfiók letiltva
+Subject: A(z) [%DISK_ID%] lemezfiók letiltva
+
+Kedves felhasználó!
+
+A(z) [%DISK_ID%] merevlemez hibái miatt egy lemezfiók letiltásra került. Cserélje ki a meghajtót, engedélyezze az új meghajtót, majd szükség esetén javítson meg minden csökkent teljesítményű állapotba került kötetet.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[DsmProtectionCheckFailed]
+Category: System,Important
+Title: Rendellenes rendszerműködés észlelve
+Subject: A rendszer rendellenes működést észlelt a(z) %HOSTNAME% eszközön. Az összes kötet leválasztásra került.
+
+Kedves felhasználó!
+
+A rendszer rendellenes működést észlelt a(z) %HOSTNAME% eszközön. Adatai védelme érdekében az összes kötet leválasztásra került. További segítségért forduljon a Synology támogatószolgálatához.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[EBoxHDEcc]
+Category: Storage,Important
+Title: I/O hiba a bővítőegység lemezén
+Subject: A(z) %HOSTNAME% gazdagépen %EUNIT_ID% egység %DISK_ID% lemezén I/O hiba történt
+
+Kedves felhasználó!
+
+A(z) %HOSTNAME% gazdagépen %EUNIT_ID% egység %DISK_ID% lemezén I/O hiba történt, de most több újrapróbálkozás után megfelelően működik. Lehet, hogy a jelenséget meghibásodott szektorok okozták. Ha a hiba újra bekövetkezik, kérjük, hogy készítsen adatairól biztonsági másolatot, majd futtassa merevlemezén a S.M.A.R.T. tesztet a merevlemez állapotának vizsgálatához.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[ESATADiskFull]
+Category: External Storage
+Title: eSATA lemez megtelt
+Subject: A(z) %HOSTNAME% eszköz %DISK_NUMBER%. eSATA lemeze hamarosan megtelik
+
+Kedves felhasználó!
+
+Hamarosan elfogy a hely a(z) %HOSTNAME% eszköz %DISK_NUMBER%. eSATA lemezén. Ellenőrizze az alábbi adatokat, majd tegye meg a szükséges lépéseket.
+
+Összes kapacitás: %DISK_SIZE% GB
+Elérhető kapacitás: %FREE_SPACE% GB (%USAGE%%)
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[ESATAPartitionFull]
+Category: External Storage
+Title: eSATA partíció megtelt
+Subject: Fogy a hely a(z) %HOSTNAME% eszköz %DISK_NUMBER%. eSATA lemezének %PARTITION_NUMBER%. partícióján
+
+Kedves felhasználó!
+
+Hamarosan elfogy a hely a(z) %HOSTNAME% eszköz %DISK_NUMBER%. eSATA lemezének %PARTITION_NUMBER%. partícióján. Ellenőrizze az alábbi adatokat, majd tegye meg a szükséges lépéseket.
+
+Összes kapacitás: %DISK_SIZE% GB
+Elérhető kapacitás: %FREE_SPACE% GB (%USAGE%%)
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[EUnitPowerFail]
+Category: System,Important
+Title: Bővítőegység redundáns tápegysége meghibásodott
+Subject: A(z) %HOSTNAME% eszköz %EUNIT_ID% egységének %POWERID% tápegysége meghibásodott
+
+Kedves felhasználó!
+
+A(z) %HOSTNAME% eszköz %EUNIT_ID% egységének %POWERID% tápegysége meghibásodott.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[EUnitPowerResume]
+Category: System,Important
+Title: Bővítőegység redundáns tápegysége helyreállt
+Subject: %EUNIT_ID% %POWERID% sz. tápegysége a(z) %HOSTNAME% gazdagépen helyreállt
+
+Kedves felhasználó!
+
+%EUNIT_ID% %POWERID% sz. tápegysége a(z) %HOSTNAME% gazdagépen helyreállt.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[EboxFanResume]
+Category: System,Important
+Title: Bővítőegység ventilátora ismét működik
+Subject: A(z) %HOSTNAME% eszköz %EBOX_ID% %FAN_ID% ventilátora ismét működik
+
+Kedves felhasználó!
+
+A(z) %HOSTNAME% eszköz %EBOX_ID% %FAN_ID% ventilátora ismét működik.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[EboxFanStop]
+Category: System,Important
+Title: Bővítőegység ventilátora leállt
+Subject: A(z) %HOSTNAME% eszköz %EBOX_ID% %FAN_ID% ventilátorának működése leállt
+
+Kedves felhasználó!
+
+A(z) %HOSTNAME% eszköz %EBOX_ID% %FAN_ID% ventilátorának működése leállt.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[EboxLinkFail]
+Category: System,Important
+Title: Csatlakozási hiba a bővítőegységben
+Subject: Csatlakozási hiba lépett fel a(z) %EBOX_ID% bővítőegységben (SAS-kimenet – %LINK_ID%) a következő eszközön: %HOSTNAME% (sorozatszám: %HOST_SN%)
+
+Kedves felhasználó!
+
+Csatlakozási hiba lépett fel a(z) %EBOX_ID% bővítőegységben (SAS-kimenet – %LINK_ID%) a következő eszközön: %HOSTNAME% (sorozatszám: %HOST_SN%).
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[EboxLinkResume]
+Category: System,Important
+Title: Bővítőegység csatlakozása helyreállt
+Subject: Helyreállt a kapcsolat a(z) %EBOX_ID%. számú bővítőegységgel (SAS-kimenet – %LINK_ID%) a következő gazdagépen: %HOSTNAME% (sorozatszám: %HOST_SN%)
+
+Kedves felhasználó!
+
+Helyreállt a kapcsolat a(z) %EBOX_ID%. számú bővítőegység (SAS-kimenet – %LINK_ID%) és a következő gazdagép: %HOSTNAME% (sorozatszám: %HOST_SN%) között.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[ExpansionFrmInconsistent]
+Category: System,Important
+Title: Bővítőegység firmware-inkonzisztencia
+Subject: Inkonzisztens a(z) %HOSTNAME% bővítőegységének firmware-je.
+
+Kedves felhasználó!
+
+Inkonzisztens a(z) %HOSTNAME% bővítőegységének firmware-je. A probléma megoldásához forduljon a Synology online támogatószolgálatához: http://www.synology.hu.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[ForgetPassword]
+Subject: Elfelejtett jelszó visszaállítása
+Kedves %USER%!
+
+Az alábbi hivatkozásra kattintva visszaállíthatja jelszavát:
+%URL%
+
+Ez a hivatkozás 24 órán át marad elérhető. Amennyiben nem kért jelszóváltoztatást, hagyja figyelmen kívül ezt az üzenetet.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[HA_AbleSwitchover]
+Category: HA,Important
+Title: A high-availability klaszter átkapcsolás funkciója ismét használható
+Subject: A(z) %HOSTNAME% high-availability klaszter átkapcsolás funkciója ismét használható
+
+Kedves felhasználó!
+
+A(z) %HOSTNAME% high-availability klaszter átkapcsolás funkciója ismét használható. További információkért ellenőrizze a High Availability Manager Rendszernaplók vagy Naplók oldalát.
+
+Művelet: %HA_ACTION%
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[HA_FailOver]
+Category: HA,Important
+Title: Hibát észleltünk a high-availability klaszterben
+Subject: Hibát észleltünk a következő high-availability klaszterben: %HOSTNAME%
+
+Kedves felhasználó!
+
+Hibát észleltünk a következő high-availability klaszterben: %HOSTNAME%. A rendszer átadja a feladatokat a passzív szervernek. További információkért ellenőrizze a rendszernaplókat.
+
+Művelet: %HA_ACTION%
+Hiba: %HA_PARAM_1%
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[HA_PassiveTimeout]
+Category: HA,Important
+Title: A helyi állomás nem észlelte az aktív szervert
+Subject: [%HA_PARAM_1%] adott időtartamon át nem észlelte az aktív szervert
+
+Kedves felhasználó!
+
+A(z) [%HA_PARAM_1%] passzív szerver leállt, mivel adott időtartamon át nem észlelte a(z) [%HA_PARAM_2%] aktív szervert. Először kapcsolja be a(z) [%HA_PARAM_2%] aktív szervert. Amennyiben a(z) [%HA_PARAM_2%] aktív szerver nem érhető el, kövesse az alábbi utasításokat a high-availability klaszter eltávolításához. Indítsa el a(z) [%HA_PARAM_1%] eszközt, és várjon 5 percet. Nyomja be és tartsa 4 másodpercig benyomva a(z) %DISKSTATION% eszköz hátsó panelén található RESET gombot, amíg a(z) %DISKSTATION% eszköz sípoló hangot nem ad ki. Engedje fel a gombot, amint meghallja a jelzést. (Figyelem: Ha továbbra is lenyomva tartja a RESET gombot, megkezdődik az operációs rendszer újratelepítése.) A visszaállításra kerüli rendszerbeállításokkal kapcsolatban lásd a következő oktatóanyagot: https://www.synology.com/hu-hu/knowledgebase/DSM/tutorial/General/How_to_reset_your_Synology_NAS.
+
+Tevékenység: %HA_ACTION%
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[HA_SwitchFail]
+Category: HA,Important
+Title: Nem sikerült átadni a szolgáltatásokat
+Subject: Nem sikerült átadni a következő high-availability klaszter szolgáltatásait: %HOSTNAME%
+
+Kedves felhasználó!
+
+A rendszer megpróbálta átadni a szolgáltatásokat a(z) %HOSTNAME% high-availability klaszter passzív szerverének, ám nem járt sikerrel. További információkért ellenőrizze a rendszernaplókat.
+
+Művelet: %HA_ACTION%
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[HA_SwitchFinished]
+Category: HA,Important
+Title: A high-availability klaszter ismét fut
+Subject: A(z) %HOSTNAME% high-availability klaszter ismét fut a következőn: %HA_PARAM_1%
+
+Kedves felhasználó!
+
+A következő high-availability klaszter: %HOSTNAME% mostantól szolgáltatásokat futtat a következő eszközön: %HA_PARAM_1%. További információkért ellenőrizze a High Availability Manager Rendszernaplók vagy Naplók oldalát.
+
+Művelet: %HA_ACTION%
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[HA_SwitchOver]
+Category: HA,Important
+Title: High-availability klaszter átkapcsolása
+Subject: %HOSTNAME% high-availability klaszter átkapcsolása a következőre: %HA_PARAM_1%
+
+Kedves felhasználó!
+
+A rendszer átkapcsolást kezdeményezett a következő high-availability klaszteren: %HOSTNAME%. A szolgáltatások átkapcsolásra kerülnek a következő eszközre: %HA_PARAM_1%. További információkért ellenőrizze a rendszernaplókat.
+
+Művelet: %HA_ACTION%
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[HA_SyncComplete]
+Category: HA,Important
+Title: Teljes adatreplikáció kész
+Subject: A(z) %HOSTNAME% high-availability klaszterének teljes adatreplikációja befejeződött
+
+Kedves felhasználó!
+
+A(z) %HOSTNAME% high-availability klaszterének teljes adatreplikációja befejeződött. A passzív szerver most készen áll a szolgáltatások átvételére abban az esetben, ha feladatátvételre vagy átkapcsolásra van szükség. További információkért ellenőrizze a High Availability Manager Rendszernaplók vagy Naplók oldalát.
+
+Művelet: %HA_ACTION%
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[HA_UnableSwitchover]
+Category: HA,Important
+Title: High-availability klaszter átkapcsolása letiltva
+Subject: A(z) %HOSTNAME% high-availability klaszter átkapcsolása letiltásra került
+
+Kedves felhasználó!
+
+A(z) %HOSTNAME% high-availability klaszter átkapcsolása letiltásra került. További információkért ellenőrizze a High Availability Manager Rendszernaplók vagy Naplók oldalát.
+
+Művelet: %HA_ACTION%
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[HA_UnbindLocal]
+Category: HA,Important
+Title: A localhost eltávolításra került a high-availability klaszterből
+Subject: A(z) %HA_PARAM_1% eltávolításra került a következő high-availability klaszterből: %HA_PARAM_2%
+
+Kedves felhasználó!
+
+A(z) %HA_PARAM_1% eltávolításra került a következő high-availability klaszterből: %HA_PARAM_2%. További információkért ellenőrizze a rendszernaplókat.
+
+Tevékenység: %HA_ACTION%
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[HDEcc]
+Category: Storage,Important
+Title: Lemez I/O hiba
+Subject: %HOSTNAME% gazdagép %DISK_ID% merevlemezén I/O hiba történt
+
+Kedves felhasználó!
+
+A(z) %HOSTNAME% gazdagép %DISK_ID% lemezén I/O hiba történt, de most több újrapróbálkozás után megfelelően működik. Lehet, hogy a jelenséget meghibásodott szektorok okozták. Ha ez a hiba újra bekövetkezik, kérjük, hogy készítsen adatairól biztonsági másolatot, majd futtassa merevlemezén a S.M.A.R.T. tesztet a merevlemez állapotának vizsgálatához.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[HotSpareDiskPlugout]
+Category: Storage,Important
+Title: A globális Hot Spare lemez ki van húzva.
+Subject: Egy Hot Spare lemez (%DISK_ID%) ki van húzva
+
+Kedves felhasználó!
+
+A rendszer azt érzékelte, hogy egy Hot Spare lemez (%DISK_ID%) ki van húzva.
+A tárhely védelme érdekében ajánlott lemezeket adni a Hot Spare funkcióhoz.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[HotSpareRepairDone]
+Category: Storage,Important
+Title: A globális Hot Spare javítása befejeződött
+Subject: Befejeződött a tárhely (%STORAGE_ID%) javítása
+
+Kedves felhasználó!
+
+A rendszer befejezte a csökkent teljesítményű tárhely (%STORAGE_ID%) javítását Hot Spare lemez (%DISK_ID%) segítségével.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[HotSpareRepairFailed]
+Category: Storage,Important
+Title: A globális Hot Spare javítása sikertelen
+Subject: Nem sikerült kijavítani a tárhelyet (%STORAGE_ID%)
+
+Kedves felhasználó!
+
+A rendszernek nem sikerült a csökkent teljesítményű tárhely (%STORAGE_ID%) javítása Hot Spare lemez (%DISK_ID%) segítségével.
+További információért lásd a biztonsági rendszernaplókat.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[HotSpareRepairNoProtect]
+Category: Storage,Important
+Title: Globális Hot Spare emlékeztető: bizonyos tárhelyek nem védettek
+Subject: Egyes tárhelyeket nem véd a Hot Spare funkció
+
+Kedves felhasználó!
+
+Egyes tárhelyeket (%STORAGE_ID%) nem véd a Hot Spare funkció.
+A tárhely védelme érdekében ajánlott lemezeket adni a Hot Spare funkcióhoz.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[HotSpareRepairStart]
+Category: Storage,Important
+Title: Globális Hot Spare javítás folyamatban
+Subject: A rendszer Hot Spare lemezeket használ egy csökkent teljesítményű tárhely (%STORAGE_ID%) javítása érdekében
+
+Kedves felhasználó!
+
+A rendszer most Hot Spare lemez (%DISK_ID%) segítségével megpróbálja kijavítani a csökkent teljesítményű tárhelyet (%STORAGE_ID%).
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[ImproperShutdown]
+Category: System,Important
+Title: Nem megfelelő leállítás
+Subject: %HOSTNAME% gazdagépen nem megfelelő leállítás történt
+
+Kedves felhasználó!
+
+%HOSTNAME% áramkimaradás miatt rendellenesen zárult be.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[InternalFanResume]
+Category: System
+Title: Szerver ventilátora ismét működik
+Subject: A(z) %FANID% ventilátor ismét működik a következő szerveren: %HOSTNAME% (sorozatszám: %HOST_SN%)
+
+Kedves felhasználó!
+
+A(z) %FANID% ventilátor ismét működik a következő szerveren: %HOSTNAME% (sorozatszám: %HOST_SN%).
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[InternalFanStop]
+Category: System,Important
+Title: Szerver ventilátora leállt
+Subject: A(z) %FANID% ventilátor leállt a következő szerveren: %HOSTNAME% (sorozatszám: %HOST_SN%)
+
+Kedves felhasználó!
+
+A(z) %FANID% ventilátor leállt a következő szerveren: %HOSTNAME% (sorozatszám: %HOST_SN%).
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[LocalLUNBkpError]
+Category: Backup/Restore,Important
+Title: Helyi LUN biztonsági mentése nem sikerült
+Subject: Nem sikerült – LUN biztonsági mentés a következőn: %HOSTNAME%
+
+Kedves felhasználó!
+
+A(z) %HOSTNAME% eszközön található adatok helyi megosztott mappába történő LUN biztonsági mentése nem sikerült. További információkért tekintse meg a biztonsági mentési naplót a DSM Biztonsági mentés és replikáció > Napló menüpontjában.
+
+LUN neve: %LUN%
+Biztonsági mentési feladat: %BKP_TASK%
+Biztonsági mentés célhelye: %BKP_DST%  %PATH%
+Kezdési idő: %TIME%
+Időtartam: %DUR%
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[LocalLUNBkpFinished]
+Category: Backup/Restore
+Title: Helyi LUN biztonsági mentés befejeződött
+Subject: Befejeződött – LUN biztonsági mentés a következőn: %HOSTNAME%
+
+Kedves felhasználó!
+
+A(z) %HOSTNAME% eszközön található adatok helyi megosztott mappába történő LUN biztonsági mentése befejeződött.
+
+LUN neve: %LUN%
+Biztonsági mentési feladat: %BKP_TASK%
+Biztonsági mentés célhelye: %BKP_DST%  %PATH%
+Kezdési idő: %TIME%
+Időtartam: %DUR%
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[LocalLUNRecoverError]
+Category: Backup/Restore,Important
+Title: Helyi LUN visszaállítás nem sikerült
+Subject: Nem sikerült – LUN visszaállítás a következőn: %HOSTNAME%
+
+Kedves felhasználó!
+
+A(z) %HOSTNAME% eszközön található adatok helyi megosztott mappából történő LUN visszaállítása nem sikerült. További információkért tekintse meg a biztonsági mentési naplót a DSM Biztonsági mentés és replikáció > Napló menüpontjában.
+
+LUN neve: %LUN%
+Visszaállítás forrása: %BKP_SRC%  %SRC_PATH%
+Kezdési idő: %TIME%
+Időtartam: %DUR%
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[LocalLUNRecoverFinished]
+Category: Backup/Restore
+Title: Helyi LUN visszaállítás befejeződött
+Subject: Befejeződött – LUN visszaállítás a következőn: %HOSTNAME%
+
+Kedves felhasználó!
+
+A(z) %HOSTNAME% eszközön található adatok helyi megosztott mappából történő LUN visszaállítása befejeződött.
+
+LUN neve: %LUN%
+Visszaállítás forrása: %BKP_SRC%  %SRC_PATH%
+Kezdési idő: %TIME%
+Időtartam: %DUR%
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[MyDSPasswordChanged]
+Category: System,Important
+Title: Synology fiók jelszava megváltozott
+Subject: A(z) %HOSTNAME% eszközhöz tartozó Synology fiók jelszava megváltozott
+
+Kedves felhasználó!
+
+Ez egy megerősítő üzenet, mely arról tájékoztatja, hogy [%MYDS_ACCOUNT%] Synology fiókjához tartozó jelszavát a(z) %HOSTNAME% eszközön futó Synology fiók segítségével megváltoztatták.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[NetLUNBkpError]
+Category: Backup/Restore,Important
+Title: Hálózati LUN biztonsági mentés nem sikerült
+Subject: Nem sikerült – LUN biztonsági mentés a következőn: %HOSTNAME%
+
+Kedves felhasználó!
+
+A(z) %HOSTNAME% gazdagépen található adatok távoli megosztott mappába történő LUN biztonsági mentése nem sikerült. További információkért tekintse meg a biztonsági mentési naplót a DSM Biztonsági mentés és replikáció > Napló menüpontjában.
+
+LUN neve: %LUN%
+Biztonsági mentési feladat: %BKP_TASK%
+Biztonsági mentés célhelye: %BKP_DST%  %PATH%
+Kezdési idő: %TIME%
+Időtartam: %DUR%
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[NetLUNBkpOK]
+Category: Backup/Restore
+Title: Hálózati LUN biztonsági mentés befejeződött
+Subject: Befejeződött – LUN biztonsági mentés a következőn: %HOSTNAME%
+
+Kedves felhasználó!
+
+A(z) %HOSTNAME% gazdagépen található adatok távoli megosztott mappába történő LUN biztonsági mentése befejeződött.
+
+LUN neve: %LUN%
+Biztonsági mentési feladat: %BKP_TASK%
+Biztonsági mentés célhelye: %BKP_DST%  %PATH%
+Kezdési idő: %TIME%
+Időtartam: %DUR%
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[NetLUNRecoverError]
+Category: Backup/Restore,Important
+Title: Hálózati LUN visszaállítás nem sikerült
+Subject: Nem sikerült – LUN visszaállítás a következőn: %HOSTNAME%
+
+Kedves felhasználó!
+
+A(z) %HOSTNAME% gazdagépen található adatok távoli megosztott mappából történő LUN visszaállítása nem sikerült. További információkért tekintse meg a biztonsági mentési naplót a DSM Biztonsági mentés és replikáció > Napló menüpontjában.
+
+LUN neve: %LUN%
+Visszaállítás forrása: %BKP_SRC%  %SRC_PATH%
+Kezdési idő: %TIME%
+Időtartam: %DUR%
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[NetLUNRecoverFinished]
+Category: Backup/Restore,Important
+Title: Hálózati LUN visszaállítás befejeződött
+Subject: Befejeződött – LUN visszaállítás a következőn: %HOSTNAME%
+
+Kedves felhasználó!
+
+A(z) %HOSTNAME% gazdagépen található adatok távoli megosztott mappából történő LUN visszaállítása befejeződött.
+
+LUN neve: %LUN%
+Visszaállítás forrása: %BKP_SRC%  %SRC_PATH%
+Kezdési idő: %TIME%
+Időtartam: %DUR%
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[OTP_emergency_mail]
+Subject: %HOSTNAME% eszköz %USER_NAME% felhasználójának vészhelyzeti ellenőrző kódja
+
+Kedves felhasználó!
+
+Alább egy egyszer használatos ellenőrző kódot talál, mellyel bejelentkezhet %HOSTNAME% eszközére és visszaállíthatja a kétlépéses ellenőrzés beállításait. Ha a rendszer kéri az ellenőrző kód megadását, írja be ezt a nyolcjegyű kódot.
+
+Vészhelyzeti ellenőrző kód: %EMG_CODE%
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[OTP_emergency_mail_warning]
+Subject: %HOSTNAME% eszköz %USER_NAME% felhasználójának vészhelyzeti ellenőrző kódja
+
+Kedves felhasználó!
+
+Alább egy egyszer használatos ellenőrző kódot talál, mellyel bejelentkezhet %HOSTNAME% eszközére és visszaállíthatja a kétlépéses ellenőrzés beállításait. Ha a rendszer kéri az ellenőrző kód megadását, írja be ezt a nyolcjegyű kódot.
+
+Megjegyzés: Ön elérte vészhelyzeti kódjának határát. A lehető leghamarabb állítsa be újra a kétlépéses ellenőrzést.
+
+Vészhelyzeti bejelentkező kód: %EMG_CODE%
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[OverheatShutdownCPU]
+Category: System,Important
+Title: Leállás CPU túlmelegedés miatt
+Subject: A(z) %HOSTNAME% (sorozatszám: %HOST_SN%) a CPU túlmelegedése miatt leállt
+
+Kedves felhasználó!
+
+A(z) %HOSTNAME% (sorozatszám: %HOST_SN%) automatikusan leállt, mivel a CPU túlmelegedett (%SHUTDOWN_TMP% °C feletti hőmérséklet).
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[OverheatShutdownDisk]
+Category: System,Important
+Title: Leállás lemez túlmelegedése miatt
+Subject: %HOSTNAME% a lemez túlmelegedése miatt leállt.
+
+Kedves felhasználó!
+
+A(z) %HOSTNAME% eszköz automatikusan leállt, mivel a(z) %DISK_NUM%. lemez túlmelegedett, elérve a(z) %SHUTDOWN_TMP%°C hőmérsékletet.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[OverheatShutdownThermal]
+Category: System,Important
+Title: Leállás túlmelegedés miatt
+Subject: A(z) %HOSTNAME% (sorozatszám: %HOST_SN%) túlmelegedés miatt leállt
+
+Kedves felhasználó!
+
+A(z) %HOSTNAME% (sorozatszám: %HOST_SN%) automatikusan leállt, mivel túlmelegedés következett be (%SHUTDOWN_TMP% °C feletti hőmérséklet).
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[PKGUpgrade]
+Subject: Csomagfrissítési információk a következőhöz: %HOSTNAME%
+
+Kedves felhasználó!
+
+A(z) %HOSTNAME% eszköz következő csomagjai frissítésre készen állnak. A frissítéshez indítsa el a(z) %OSNAME% rendszerben a Csomagkezelési központot.
+
+Frissítendő csomagok:
+%PKG_SET%
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[Raid5SpareChanged]
+Category: Storage,Important
+Title: RAID5+spare kötet csökkent teljesítményű módba lépett
+Subject: A(z) %HOSTNAME% eszköz %VOLUME_ID% RAID5+spare kötete csökkent teljesítményű módba lépett
+
+Kedves felhasználó!
+
+A(z) %HOSTNAME% eszköz %VOLUME_ID% kötete RAID5+spare módból RAID5 módba lépett. A kötet RAID5+spare értékre való visszaállításához készítsen elő egy pótlemezt, majd a „Főmenü” > „Tároláskezelő” > „Kötet” > „Kezelés” menüpont alatt cserélje le a hibás lemezt.
+
+További segítségért, kérjük, forduljon a Synology online támogatószolgálatához: http://www.synology.hu.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[RaidDiskFail]
+Category: Storage,Important
+Title: A lemezcsoportban található merevlemez meghibásodott
+Subject: %HOSTNAME% eszköz lemezcsoportjának %DISK_ID% merevlemeze meghibásodott
+
+Kedves felhasználó!
+
+A(z) %HOSTNAME% eszköz lemezcsoportjának %DISK_ID% merevlemeze meghibásodott. Kérjük, cserélje ki.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[RaidGroupCrashed]
+Category: Storage,Important
+Title: RAID Group összeomlott
+Subject: A(z) %HOSTNAME% eszköz %RAID_ID% RAID Groupja összeomlott
+
+Kedves felhasználó!
+
+A(z) %HOSTNAME% eszköz %RAID_ID% RAID Groupja összeomlott. Előfordulhat, hogy a rendszer nem fog elindulni.
+
+További segítségért, kérjük, forduljon a Synology online támogatószolgálatához: http://www.synology.hu.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[RaidGroupDegraded]
+Category: Storage,Important
+Title: RAID Group csökkent teljesítményű módba lépett
+Subject: A(z) %HOSTNAME% eszköz %RAID_ID% RAID Groupja csökkent teljesítményű módba lépett [%ACTIVE_DISK%/%TOTAL_DISK%]
+
+Kedves felhasználó!
+
+A(z) %HOSTNAME% eszköz %RAID_ID% RAID Groupja csökkent teljesítményű módba lépett. (Merevlemezek teljes száma: %TOTAL_DISK%; Aktív merevlemezek száma: %ACTIVE_DISK%). Kérjük, azonosítsa a csökkent teljesítmény okát, majd tegye meg a szükséges lépéseket.
+
+További segítségért, kérjük, forduljon a Synology online támogatószolgálatához: http://www.synology.hu.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[RaidGroupDiskFail]
+Category: Storage,Important
+Title: A RAID Groupban található merevlemez meghibásodott
+Subject: %HOSTNAME% eszköz RAID Groupjának %DISK_ID% merevlemeze meghibásodott
+
+Kedves felhasználó!
+
+A(z) %HOSTNAME% eszközön üzemelő RAID Group %DISK_ID% merevlemeze meghibásodott. Kérjük, cserélje ki.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[RaidGroupSyncDone]
+Category: Storage
+Title: RAID Group szinkronizálása befejeződött
+Subject: Befejeződött a(z) %HOSTNAME% eszköz %RAID_ID% RAID Groupjának konzisztencia-ellenőrzése
+
+Kedves felhasználó!
+
+Befejeződött a(z) %HOSTNAME% eszköz %RAID_ID% RAID Groupjának konzisztencia-ellenőrzése. A rendszer most már használatra kész.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[RaidGroupVolumeBadSector]
+Category: Storage,Important
+Title: A RAID Group kötet meghibásodott
+Subject: A(z) %HOSTNAME% eszközön működő RAID Group egyik kötete (%VOLUME_ID%) meghibásodott
+
+Kedves felhasználó!
+
+Egyes fájlok megsérültek, mivel a(z) %HOSTNAME% eszközön található RAID Group egyik kötete (%VOLUME_ID%) meghibásodott. Csökkent teljesítményű módban fennáll a fájlok sérülésének a veszélye. A lehető leghamarabb javítsa ki a kötetet. További részletekért lépjen a Főmenü > Rendszernaplók menüpontra.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[RaidGroupiScsiBadSector]
+Category: Storage,Important
+Title: A RAID Group iSCSI LUN-ja meghibásodott
+Subject: A(z) %HOSTNAME% eszköz RAID Groupjának iSCSI LUN-ja meghibásodott
+
+Kedves felhasználó!
+
+Egyes fájlok megsérültek, mivel a(z) %HOSTNAME% eszközön található RAID Group iSCSI LUN-ja meghibásodott. Csökkent teljesítményű módban fennáll a fájlok sérülésének a veszélye. A lehető leghamarabb javítsa ki a kötetet.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[RaidSuggestDataScrubbing]
+Category: Storage
+Title: Emlékeztető RAID-tisztítására
+Subject: Emlékeztető a(z) %HOSTNAME% eszközön végzendő RAID-tisztításról
+
+Kedves felhasználó!
+
+Már egy hónapja nem végzett RAID tisztítást a(z) %HOSTNAME% eszközön. Az adatok integritásának biztosítása érdekében azt javasoljuk, hogy végezzen RAID-tisztítást.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[RaidSystemVolumeCrashed]
+Category: Storage,Important
+Title: Rendszerkötet összeomlott
+Subject: A(z) %HOSTNAME% eszköz rendszerkötete (%SYSTEM_ID%) összeomlott
+
+Kedves felhasználó!
+
+A(z) %HOSTNAME% eszköz rendszerkötete (%SYSTEM_ID%) összeomlott. Előfordulhat, hogy a rendszer nem fog elindulni.
+További segítségért, kérjük, forduljon a Synology online támogatószolgálatához: http://www.synology.hu.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[RaidSystemVolumeDegrade]
+Category: Storage,Important
+Title: Rendszerkötet csökkent teljesítményű módba került
+Subject: A(z) %HOSTNAME% eszköz rendszerkötete (%SYSTEM_ID%) csökkent teljesítményű módba lépett [%ACTIVE_DISK%/%TOTAL_DISK%]
+
+Kedves felhasználó!
+
+A(z) %HOSTNAME% eszköz rendszerkötete (%SYSTEM_ID%) csökkent teljesítményű módba lépett. (Merevlemezek teljes száma: %TOTAL_DISK%; aktív merevlemezek száma: %ACTIVE_DISK%)
+
+Indítsa újra a rendszert, mely újraindításkor automatikusan kijavítja magát.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[RaidSystemVolumeSyncDone]
+Category: Storage
+Title: Konzisztencia-ellenőrzés kész a rendszeren
+Subject: A(z) %HOSTNAME% eszköz rendszerkötetének (%SYSTEM_ID%) konzisztencia-ellenőrzése befejeződött
+
+Kedves felhasználó!
+
+A(z) %HOSTNAME% eszköz befejezte a rendszerkötet (%SYSTEM_ID%) konzisztenciájának ellenőrzését. A rendszer most már használatra kész.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[RaidVolumeBadSector]
+Category: Storage,Important
+Title: A lemezcsoport kötete meghibásodott.
+Subject: A(z) %HOSTNAME% eszköz lemezcsoportkötete (%VOLUME_ID%) meghibásodott
+
+Kedves felhasználó!
+
+Egyes fájlok megsérültek, mivel a(z) %HOSTNAME% eszközön található lemezcsoportkötet (%VOLUME_ID%) meghibásodott. Csökkent teljesítményű módban fennáll a fájlok sérülésének a veszélye. A lehető leghamarabb javítsa ki a kötetet. További részletekért lépjen a „Főmenü” > „Rendszerinformációk” > „Napló” > „Rendszernapló” menüpontra.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[RaidVolumeCrashed]
+Category: Storage,Important
+Title: A kötet összeomlott
+Subject: A(z) %HOSTNAME% eszköz %VOLUME_ID% kötete összeomlott
+
+Kedves felhasználó!
+
+A(z) %HOSTNAME% eszköz %VOLUME_ID% kötete összeomlott. Előfordulhat, hogy a rendszer nem fog elindulni.
+
+További segítségért, kérjük, forduljon a Synology online támogatószolgálatához: http://www.synology.hu.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[RaidVolumeDegrade]
+Category: Storage,Important
+Title: A kötet csökkent teljesítményű állapotba került
+Subject: A(z) %HOSTNAME% eszköz %VOLUME_ID% kötete csökkent teljesítményű módba lépett [%ACTIVE_DISK%/%TOTAL_DISK%]
+
+Kedves felhasználó!
+
+A(z) %HOSTNAME% eszköz %VOLUME_ID% kötete csökkent teljesítményű módba lépett. (Merevlemezek teljes száma: %TOTAL_DISK%; Aktív merevlemezek száma: %ACTIVE_DISK%). Kérjük, azonosítsa a csökkent teljesítmény okát, majd tegye meg a szükséges lépéseket.
+
+A kötet kijavításához cserélje újakra a hibás lemezeket. További tájékoztatás ügyében keresse fel a hivatalos webhelyünkön elérhető Synology Tudásbázist.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[RaidVolumeFull]
+Category: Storage,Important
+Title: Kötet megtelt
+Subject: A(z) %HOSTNAME% eszköz %VOLUME_ID% kötetén egyre kevesebb a hely
+
+Kedves felhasználó!
+
+A(z) %HOSTNAME% eszköz %VOLUME_ID% rendszerkötetén fogyóban van a tárhely; fájlok törlésével szabadítson fel kapacitást.
+
+Összes kapacitás: %VOLUME_SIZE% GB
+Elérhető kapacitás: %FREE_SPACE% GB (%USAGE%%)
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[RaidVolumeSyncDone]
+Category: Storage
+Title: Konzisztencia-ellenőrzés befejeződött
+Subject: A(z) %HOSTNAME% eszköz %VOLUME_ID% kötetének konzisztencia-ellenőrzése befejeződött
+
+Kedves felhasználó!
+
+%HOSTNAME% befejezte a konzisztencia-ellenőrzést a(z) %VOLUME_ID% köteten. A rendszer most már használatra kész.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[RaidiScsiBadSector]
+Category: Storage,Important
+Title: Lemezcsoport iSCSI LUN-ja meghibásodott
+Subject: A(z) %HOSTNAME% eszközön található lemezcsoport iSCSI LUN-ja meghibásodott.
+
+Kedves felhasználó!
+
+Egyes fájlok megsérültek, mivel a(z) %HOSTNAME% eszközön található lemezcsoport iSCSI LUN-ja meghibásodott. Csökkent teljesítményű módban fennáll a fájlok sérülésének a veszélye. A lehető leghamarabb javítsa ki a kötetet.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[RaidiScsiCrashed]
+Category: Storage,Important
+Title: Az iSCSI LUN összeomlott
+Subject: Összeomlott az iSCSI LUN (%LUN_NAME%) a következő eszközön: %HOSTNAME%
+
+Kedves felhasználó!
+
+Összeomlott az iSCSI LUN (%LUN_NAME%) a következő eszközön: %HOSTNAME%. Előfordulhat, hogy a rendszer nem fog elindulni.
+
+További segítségért, kérjük, forduljon a Synology online támogatószolgálatához: http://www.synology.com/hu-hu.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[RaidiScsiDegraded]
+Category: Storage,Important
+Title: Az iSCSI LUN csökkent állapotba került
+Subject: Az iSCSI LUN (%LUN_NAME%) csökkent állapotba került a következő eszközön: %HOSTNAME% [%ACTIVE_DISK%/%TOTAL_DISK%]
+
+Kedves felhasználó!
+
+Az iSCSI LUN (%LUN_NAME%) csökkent állapotba került a következő eszközön: %HOSTNAME%. (Merevlemezek teljes száma: %TOTAL_DISK%; Aktív merevlemezek száma: %ACTIVE_DISK%). Kérjük, azonosítsa a csökkent teljesítmény okát, majd tegye meg a szükséges lépéseket.
+
+Az iSCSI LUN kijavításához cserélje újakra a hibás lemezeket. További tájékoztatás ügyében keresse fel a hivatalos webhelyünkön elérhető Synology Tudásbázist.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[RedundantPowerRecoveredProvide]
+Category: Power System
+Title: Redundáns tápegység helyreállt
+Subject: Helyreállt a(z) %POWERID% tápegység a(z) %HOSTNAME% eszközön (sorozatszám: %HOST_SN%)
+
+Kedves felhasználó!
+
+Helyreállt a(z) %POWERID% tápegység a(z) %HOSTNAME% eszközön (sorozatszám: %HOST_SN%).
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[RedundantPowerStopProvide]
+Category: Power System,Important
+Title: Redundáns tápegység meghibásodott
+Subject: Meghibásodott a(z) %POWERID% tápegység a(z) %HOSTNAME% eszközön (sorozatszám: %HOST_SN%)
+
+Kedves felhasználó!
+
+Meghibásodott a(z) %POWERID% tápegység a(z) %HOSTNAME% eszközön (sorozatszám: %HOST_SN%).
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[RestoreTaskCanceled]
+Category: Backup/Restore,Important
+Title: Visszaállítás megszakítva
+Subject: %TASK_TYPE% megszakítva a következőn: %HOSTNAME%
+
+Kedves felhasználó!
+
+A(z) %HOSTNAME% eszközön végzett adat-visszaállítást megszakították.
+
+Visszaállítás forrása: %DESTINATION_IP% %DESTINATION_PATH%
+Kezdési idő: %START_TIME%
+Időtartam: %DURATION%
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[RestoreTaskFailed]
+Category: Backup/Restore,Important
+Title: Visszaállítás sikertelen
+Subject: A(z) %TASK_TYPE% feladatot nem sikerült visszaállítani innen: %HOSTNAME%
+
+Kedves felhasználó!
+
+A biztonsági mentési adatokat nem sikerült visszaállítani innen: %HOSTNAME%.
+
+További információkért tekintse át a biztonsági mentési naplót a Hyper Backup > Napló
+menüpontban.
+
+Visszaállítás forrása: %DESTINATION_IP% %DESTINATION_PATH%
+Kezdési idő: %START_TIME%
+Időtartam: %DURATION%
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[RestoreTaskFinished]
+Category: Backup/Restore
+Title: Visszaállítás befejeződött
+Subject: %TASK_TYPE% sikeres a következőn: %HOSTNAME%
+
+Kedves felhasználó!
+
+A(z) %TASK_NAME% visszaállítási feladat befejeződött.
+
+Visszaállítás forrása: %DESTINATION_IP% %DESTINATION_PATH%
+Kezdési idő: %START_TIME%
+Időtartam: %DURATION%
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[SDCardFull]
+Category: External Storage
+Title: SD kártya megtelt
+Subject: A(z) %HOSTNAME% eszköz %DISK_NUMBER%. SD-kártyáján hamarosan elfogy a tárhely
+
+Kedves felhasználó!
+
+A(z) %HOSTNAME% eszköz %DISK_NUMBER%. SD-kártyáján hamarosan elfogy a tárhely. Ellenőrizze az alábbi adatokat, majd tegye meg a szükséges lépéseket.
+
+Összes kapacitás: %DISK_SIZE% GB
+Elérhető kapacitás: %FREE_SPACE% GB (%USAGE%%)
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[SDCardPartitionFull]
+Category: External Storage
+Title: SD-kártya partíciója megtelt
+Subject: Hamarosan elfogy a hely a(z) %HOSTNAME% eszköz %DISK_NUMBER%. SD-kártyájának %PARTITION_NUMBER%. partícióján
+
+Kedves felhasználó!
+
+Hamarosan elfogy a hely a(z) %HOSTNAME% eszköz %DISK_NUMBER%. SD-kártyájának %PARTITION_NUMBER%. partícióján. Tegye meg a szükséges lépéseket.
+
+Összes kapacitás: %DISK_SIZE% GB
+Elérhető kapacitás: %FREE_SPACE% GB (%USAGE%%)
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[SFPModuleUnsupported]
+Category: System,Important
+Title: Nem támogatott SFP+ modul
+Subject: Nem támogatott %LAN% SFP+ modul észlelve
+
+Kedves felhasználó!
+
+A rendszer nem támogatott %LAN% SFP+ modult észlelt, ezért a hálózati interfész kártya illesztőprogramja letiltásra került.
+Telepítsen egy támogatott modult, és indítsa újra a(z) %DISKSTATION% eszközt.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[SSDCacheCrashed]
+Category: Storage,Important
+Title: SSD-gyorsítótár összeomlott
+Subject: Összeomlott a(z) %HOSTNAME% eszköz %SSD_ID% SSD-gyorsítótára
+
+Kedves felhasználó!
+
+Összeomlott a(z) %HOSTNAME% eszköz %SSD_ID% SSD-gyorsítótára. További segítségért, kérjük, forduljon a Synology online támogatószolgálatához: http://www.synology.hu.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[SSDCacheDegraded]
+Category: Storage,Important
+Title: SSD-gyorsítótár csökkent teljesítményű állapotba került
+Subject: A(z) %HOSTNAME% eszköz %SSD_ID% SSD-gyorsítótára csökkent teljesítményű állapotba került
+
+Kedves felhasználó!
+
+A(z) %HOSTNAME% eszköz %SSD_ID% SSD-gyorsítótára csökkent teljesítményű állapotba került. További segítségért, kérjük, forduljon a Synology online támogatószolgálatához: http://www.synology.hu.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[SSDCacheMissing]
+Category: Storage,Important
+Title: Olvasási-írási gyorsítótár hiányzik
+Subject: A(z) %HOSTNAME% eszköz %SPACE_ID% olvasási-írási gyorsítótára hiányzik
+
+Kedves felhasználó!
+
+A(z) %HOSTNAME% eszköz %SPACE_ID% olvasási-írási gyorsítótára hiányzik. További segítségért, kérjük, forduljon a Synology online támogatószolgálatához: http://www.synology.hu.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[SecurityScanAlarm]
+Category: System,Important
+Title: Biztonsági kockázatok észlelve
+Subject: Biztonsági kockázatok találhatók a következő eszközön: %HOSTNAME%
+
+Kedves felhasználó!
+
+A Biztonsági tanácsadó éppen most fejezett be egy ütemezett ellenőrzést a(z) %HOSTNAME% eszközön. Számos biztonsági kockázatot észleltünk, melyekkel foglalkoznia kell. Jelentkezzen be a(z) %OSNAME% rendszerbe a(z) %HOSTNAME% eszközön, majd tekintse meg a Biztonsági tanácsadó jelentését.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[SecurityScanDSMOutOfDate]
+Category: System,Important
+Title: A rendszer elavult
+Subject: A(z) %HOSTNAME% eszköz %OSNAME% rendszere a Biztonsági tanácsadó szerint elavult.
+
+Kedves felhasználó!
+
+A(z) %HOSTNAME% eszközön futó %OSNAME% rendszer elavult. Jelentkezzen be a(z) %OSNAME% rendszerbe %HOSTNAME% eszközén, nyissa meg a Vezérlőpultot, majd telepítse a(z) %OSNAME% legújabb verzióját. A részletes jelentést megtekintheti a Főmenü > Biztonsági Tanácsadó menüpont alatt.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[SecurityScanDSMPackageOutOfDate]
+Category: System,Important
+Title: A rendszer és egyes csomagok elavultak
+Subject: A(z) %OSNAME% és a(z) %HOSTNAME% eszközön futó egyes csomagok elavultak a Biztonsági tanácsadó szerint
+
+Kedves felhasználó!
+
+A(z) %OSNAME% rendszer és a(z) %HOSTNAME% eszközön futó %NUMBER% csomag elavult. Jelentkezzen be a(z) %OSNAME% rendszerbe a(z) %HOSTNAME% eszközön, majd tegye a következőket:
+- Nyissa meg a Vezérlőpultot és telepítse a(z) %OSNAME% rendszer legújabb verzióját.
+- Nyissa meg a Csomagkezelési központot, majd telepítse a csomag(ok) legújabb verzióját.
+
+A részletes jelentést megtekintheti a Főmenü > Biztonsági Tanácsadó menüpont alatt.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[SecurityScanDanger]
+Category: System,Important
+Title: Rosszindulatú program észlelve
+Subject: Rosszindulatú program észlelve a következő eszközön: %HOSTNAME%
+
+Kedves felhasználó!
+
+A rendszer rosszindulatú programo(ka)t észlelt a(z) %HOSTNAME% eszközön. A probléma megoldásához jelentkezzen be a(z) %OSNAME% rendszerbe a(z) %HOSTNAME% eszközön, majd nyissa meg a Biztonsági tanácsadót.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[SecurityScanPackageOutOfDate]
+Category: System,Important
+Title:  Elavult csomagok
+Subject: A(z) %HOSTNAME% eszközön található egyes csomagok elavultak
+
+Kedves felhasználó!
+
+A(z) %HOSTNAME% eszközön futó %NUMBER% csomag elavult Jelentkezzen be a(z) %OSNAME% rendszerbe a(z) %HOSTNAME% eszközön, nyissa meg a Csomagkezelési központot, majd telepítse a csomag(ok) legújabb verzióját.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[ShareSyncError]
+Category: Backup/Restore,Important
+Title: Megosztott mappa szinkronizálása sikertelen
+Subject: Nem sikerült – Megosztott mappa szinkronizálása
+
+Kedves felhasználó!
+
+Nem sikerült szinkronizálni a(z) %HOSTNAME% eszközön található adatokat. További információkért tekintse meg a DSM Napló központ menüpontjában elérhető biztonsági mentési naplót.
+
+Szinkronizálási feladat: %S2S_TASK%
+Szinkronizálási szerver: %S2S_SERVER%
+Kezdési idő: %TIME%
+Időtartam: %DUR%
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[ShareSyncSuccess]
+Category: Backup/Restore
+Title: Megosztott mappa szinkronizálása befejeződött
+Subject: Befejeződött – Megosztott mappa szinkronizálása
+
+Kedves felhasználó!
+
+A(z) %HOSTNAME% eszközön található megosztott mappák szinkronizálása befejeződött.
+
+Szinkronizálási feladat: %S2S_TASK%
+Szinkronizálási szerver: %S2S_SERVER%
+Kezdési idő: %TIME%
+Időtartam: %DUR%
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[SmartEBoxAbnor]
+Category: Storage,Important
+Title: Rendellenes a bővítőegység lemezének S.M.A.R.T. állapota
+Subject: A(z) %HOSTNAME% eszközhöz csatlakoztatott %EUNIT_ID% egység %DISK_ID% lemezének S.M.A.R.T. állapota rendellenes
+
+Kedves felhasználó!
+
+A(z) %HOSTNAME% eszközhöz csatlakoztatott %EUNIT_ID% egység %DISK_ID% lemezének S.M.A.R.T. állapota rendellenes. Ez közelgő meghibásodásra utalhat. Amint lehet, végezzen biztonsági mentést adatairól, majd cserélje ki a problémás lemezt.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[SmartESataAbnor]
+Category: External Storage,Important
+Title: Rendellenes az eSATA lemez S.M.A.R.T. állapota
+Subject: A(z) %HOSTNAME% eszköz egyik eSATA lemezének S.M.A.R.T. állapota rendellenes
+
+Kedves felhasználó!
+
+A(z) %HOSTNAME% eszköz egyik eSATA lemezének S.M.A.R.T. állapota rendellenes. Ez közelgő meghibásodásra utalhat. Amint lehet, végezzen biztonsági mentést adatairól, majd cserélje ki a problémás lemezt.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[SmartIntAbnor]
+Category: Storage,Important
+Title: Rendellenes az belső lemez S.M.A.R.T. állapota
+Subject: A(z) %HOSTNAME% eszköz %DISK_ID%. lemezének S.M.A.R.T. állapota rendellenes
+
+Kedves felhasználó!
+
+A(z) %HOSTNAME% eszköz %DISK_ID% belső lemezének S.M.A.R.T. állapota rendellenes. Ez közelgő meghibásodásra utalhat. Amint lehet, végezzen biztonsági mentést adatairól, majd cserélje ki a problémás lemezt.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[SmartTestEBoxErr]
+Category: Storage,Important
+Title: S.M.A.R.T. teszt sikertelen a bővítőegység lemezén
+Subject: A(z) %HOSTNAME% eszközhöz csatlakoztatott %EUNIT_ID% egység %DISK_ID% lemezén sikertelen volt a S.M.A.R.T. teszt
+
+Kedves felhasználó!
+
+A(z) %HOSTNAME% eszközhöz csatlakoztatott %EUNIT_ID% egység %DISK_ID% merevlemezén sikertelen volt a S.M.A.R.T. teszt. Amint lehet, végezzen biztonsági mentést adatairól, majd cserélje ki a problémás lemezt.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[SmartTestESataErr]
+Category: External Storage,Important
+Title: S.M.A.R.T. teszt sikertelen az eSATA lemezen
+Subject: A(z) %HOSTNAME% eszköz eSATA lemezén sikertelen volt a S.M.A.R.T. teszt
+
+Kedves felhasználó!
+
+A(z) %HOSTNAME% eszköz eSATA lemezén sikertelen volt a S.M.A.R.T. teszt. Amint lehet, végezzen biztonsági mentést adatairól, majd cserélje ki a problémás lemezt.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[SmartTestIntErr]
+Category: Storage,Important
+Title: S.M.A.R.T. teszt sikertelen a belső lemezen
+Subject: A(z) %HOSTNAME% eszköz %DISK_ID% lemezén sikertelen volt a S.M.A.R.T. teszt
+
+Kedves felhasználó!
+
+A(z) %HOSTNAME% eszköz %DISK_ID% merevlemezén sikertelen volt a S.M.A.R.T. teszt Amint lehet, végezzen biztonsági mentést adatairól, majd cserélje ki a problémás lemezt.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[StoragePoolCrashed]
+Category: Storage,Important
+Title: Lemezcsoport összeomlott
+Subject: A(z) %HOSTNAME% eszköz %RAID_ID% lemezcsoportja összeomlott
+
+Kedves felhasználó!
+
+A(z) %HOSTNAME% eszköz %RAID_ID% lemezcsoportja összeomlott. Előfordulhat, hogy a rendszer nem fog elindulni.
+
+További segítségért, kérjük, forduljon a Synology online támogatószolgálatához: http://www.synology.hu.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[StoragePoolDegraded]
+Category: Storage,Important
+Title: Lemezcsoport csökkent teljesítményű állapotba került
+Subject: A(z) %HOSTNAME% eszköz %RAID_ID% lemezcsoportja csökkent teljesítményű módba került [%ACTIVE_DISK%/%TOTAL_DISK%]
+
+Kedves felhasználó!
+
+A(z) %HOSTNAME% eszköz %RAID_ID% lemezcsoportja csökkent teljesítményű módba került. (Merevlemezek teljes száma: %TOTAL_DISK%; Aktív merevlemezek száma: %ACTIVE_DISK%). Kérjük, azonosítsa a csökkent teljesítmény okát, majd tegye meg a szükséges lépéseket.
+
+További segítségért, kérjük, forduljon a Synology online támogatószolgálatához: http://www.synology.hu.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[StoragePoolRaid5SpareChanged]
+Category: Storage,Important
+Title: Lemezcsoport - Raid5+spare csökkent teljesítményű módba lépett
+Subject: %HOSTNAME% eszköz %RAID_ID% lemezcsoportja RAID5 módba lépett
+
+Kedves felhasználó!
+
+A(z) %HOSTNAME% eszköz %RAID_ID% lemezcsoportja RAID5+spare módról RAID5 módba lépett. RAID5+spare értékre való visszaállításához készítsen elő egy pótlemezt, majd a „Főmenü” > „Tároláskezelő” > „Lemezcsoport” menüpont alatt cserélje le a hibás lemezt.
+
+További segítségért, kérjük, forduljon a Synology online támogatószolgálatához: http://www.synology.hu.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[StoragePoolSyncDone]
+Category: Storage
+Title: Lemezcsoport szinkronizálása kész
+Subject: Befejeződött a(z) %HOSTNAME% eszköz %RAID_ID% lemezcsoportjának konzisztencia-ellenőrzése
+
+Kedves felhasználó!
+
+Befejeződött a(z) %HOSTNAME% eszköz %RAID_ID% lemezcsoportjának konzisztencia-ellenőrzése. A rendszer most már használatra kész.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[SynoReport]
+Subject: Lemezhasználati jelentés került generálásra
+
+Kedves felhasználó!
+
+Generálásra került a(z) %PROFILE% lemezhasználati jelentése. A jelentés megtekintéséhez lásd az alábbiakat:
+%LINK%
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[SynoReportFail]
+Subject: A tárhelyhasználati jelentés létrehozása nem sikerült
+
+Kedves felhasználó!
+
+Hiba történt a(z) %PROFILE% használati jelentésének létrehozása során.
+
+Ok: %MSG%
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[SystemInodeFull]
+Category: System
+Title: A rendszeren található fájlok száma a határérték felé közelít
+Subject: A(z) %HOSTNAME% rendszerpartícióján található fájlok száma a határérték felé közelít
+
+Kedves felhasználó!
+
+A(z) %HOSTNAME% rendszerpartíción található fájlok száma a határérték felé közelít. Kérjük, forduljon segítségért a Synology támogatószolgálatához.
+
+A fájlok számának határértéke: %TOTAL_INODE%
+A határérték eléréséig fennmaradó fájlok száma: %FREE_INODE% (%USAGE%%)
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[SystemVolumeCrashed]
+Category: System
+Title: A rendszer tárhelye összeomlott
+Subject: A(z) %HOSTNAME% eszköz rendszertárhelye összeomlott
+
+Kedves felhasználó!
+
+A(z) %HOSTNAME% eszköz rendszertárhelye összeomlott.
+
+További segítségért, kérjük, forduljon a Synology online támogatószolgálatához: http://www.synology.hu.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[SystemVolumeFull]
+Category: System
+Title: Rendszer tárolótér megtelt
+Subject: A(z) %HOSTNAME% gazdagépen kezd kifogyni a rendszer tárolótér
+
+Kedves felhasználó!
+
+A(z) %HOSTNAME% gazdagépen kezd kifogyni a rendszertároló rendelkezésre álló tere. Tekintse át az alábbi információkat és szabadítson fel helyet.
+
+Összes kapacitás: %VOLUME_SIZE% GB
+Elérhető kapacitás: %FREE_SPACE% GB (%USAGE%%)
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[TPLUNReachSoftLimit]
+Category: Storage,Important
+Title: Nincs elegendő LUN-tárhely
+Subject: A(z) %HOSTNAME% eszközön található %LUN_NAME% LUN-tárhely hamarosan megtelik
+
+Kedves felhasználó!
+
+A(z) %HOSTNAME% eszközön található %LUN_NAME% LUN-tárhely szabad kapacitása hamarosan elfogy. További kapacitás eléréséhez bővítse ki a kötetet.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[TaskSchedulerResult]
+Subject: A Feladatidőzítő befejezett egy ütemezett feladatot
+
+Kedves felhasználó!
+
+A Feladatidőzítő befejezett egy ütemezett feladatot.
+
+Feladat: %TASK_ID%
+Kezdési idő: %START_TIME%
+Leállítás ideje: %STOP_TIME%
+Jelenlegi állapot: %EXIT_CODE%
+Standard hiba/kimenet:
+%OUTPUT%
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[TestMail]
+Subject: Tesztüzenet a következőről: %HOSTNAME%
+
+Kedves felhasználó!
+
+Gratulálunk! Ön sikeresen beállította az e-mail értesítési szolgáltatást a következő eszközön: %HOSTNAME%.
+További rendszerbeállításokért látogasson el ide: %HTTP_URL%.
+(Ha nem tud kapcsolódni a szerverhez, kérjük, lépjen kapcsolatba a rendszergazdával.)
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[UPSConnected]
+Category: Power System
+Title: UPS csatlakoztatva
+Subject: %HOSTNAME% csatlakoztatva a UPS-hez.
+
+Kedves felhasználó!
+
+%HOSTNAME% csatlakoztatva a UPS-hez.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[UPSDisconnect]
+Category: Power System,Important
+Title: UPS leválasztva
+Subject: %HOSTNAME% csatlakozása a UPS-hez megszakadt.
+
+Kedves felhasználó!
+
+%HOSTNAME% csatlakozása a UPS-hez megszakadt. Ellenőrizze a kiszolgáló-beállításokat.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[UPSOnAC]
+Category: Power System,Important
+Title: A szünetmentes tápegység visszatért hálózati üzemmódba
+Subject: A(z) %HOSTNAME% eszközhöz csatlakoztatott szünetmentes tápegység visszatért hálózati üzemmódba.
+
+Kedves felhasználó!
+
+A(z) %HOSTNAME% eszközhöz csatlakoztatott szünetmentes tápegység visszatért hálózati üzemmódba.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[UPSOnBattery]
+Category: Power System,Important
+Title: A szünetmentes tápegység akkumulátoros üzemmódba lépett
+Subject: A(z) %HOSTNAME% eszközhöz csatlakoztatott szünetmentes tápegység akkumulátoros üzemmódban lépett.
+
+Kedves felhasználó!
+
+A(z) %HOSTNAME% eszközhöz csatlakoztatott szünetmentes tápegység akkumulátoros üzemmódban lépett. Ha a szünetmentes tápegység akkumulátora lemerül, a(z) %HOSTNAME% eszköz kikapcsol. Kapcsolja ki manuálisan a(z) %HOSTNAME% eszközt, illetve állítsa helyre a külső tápellátást a lehető leghamarabb.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[UPSPowerFail]
+Category: Power System,Important
+Title: Szünetmentes áramforrás lemerülőben
+Subject: A(z) %HOSTNAME% eszközhöz csatlakoztatott szünetmentes áramforrás lemerülőben van
+
+Kedves felhasználó!
+
+A(z) %HOSTNAME% eszközhöz csatlakoztatott szünetmentes áramforrás lemerülőben van. Az összes szolgáltatás leáll. A szolgáltatások a szünetmentes áramforrás helyreállása után újraindulnak.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[USBCOPYDisconnect]
+Category: USB Copy
+Title: USBCopy szétkapcsolva
+Subject: %HOSTNAME% gazdagépen a külsõ eszköz kapcsolat megszakadt.
+
+Kedves felhasználó!
+
+%COPY% %HOSTNAME% gazdagépen nem sikerült, mivel a külsõ eszköz kapcsolata megszakadt.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[USBCOPYError]
+Category: USB Copy,Important
+Title: USBCopy sikertelen
+Subject: A(z) %COPY% a(z) %HOSTNAME% gazdagépen sikertelen
+
+Kedves felhasználó!
+
+A(z) %COPY% a(z) %HOSTNAME% gazdagépen ismeretlen hiba miatt sikertelen.
+A hibakód: %ERR%. Kérjük, hogy további információért ellenőrizze az USBCopy/SDCopy napló adatait.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[USBCOPYFinished]
+Category: USB Copy
+Title: USBCopy befejeződött
+Subject: %COPY% a(z) %HOSTNAME% gazdagépen befejeződött
+
+Kedves felhasználó!
+
+A(z) %COPY% a(z) %HOSTNAME% gazdagépen sikeresen befejeződött.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[USBCOPYNospace]
+Category: USB Copy,Important
+Title: USBCopy megszakítva
+Subject: %COPY% megszakítva a(z) %HOSTNAME% eszközön
+
+Kedves felhasználó!
+
+A(z) %COPY% művelet megszakadt a(z) %HOSTNAME% eszközön, mivel a célpontként szolgáló megosztott mappában nem maradt elég hely.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[USBDiskFail]
+Category: External Storage
+Title: USB-lemez meghibásodott
+Subject: %HOSTNAME% %DISK_ID% USB-lemeze meghibásodott
+
+Kedves felhasználó!
+
+%HOSTNAME% %DISK_ID% USB-lemeze meghibásodott.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[USBDiskFull]
+Category: External Storage
+Title: USB-lemez megtelt
+Subject: %DISK_NUMBER%. sz. USB-lemez a(z) %HOSTNAME% gazdagépen megtelőben van
+
+Kedves felhasználó!
+
+A(z) %HOSTNAME% %DISK_NUMBER% sz. USB-lemeze kifogy a helyből; kérjük, tegye meg a szükséges lépéseket.
+
+Összes kapacitás: %DISK_SIZE% GB
+Elérhető kapacitás: %FREE_SPACE% GB (%USAGE%%)
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[USBPartitionFull]
+Category: External Storage
+Title: USB-partíció megtelt
+Subject: Fogy a hely a(z) %HOSTNAME% eszköz %DISK_NUMBER%. USB-lemezének %PARTITION_NUMBER%. partícióján
+
+Kedves felhasználó!
+
+Egyre kevesebb a hely a(z) %HOSTNAME% eszköz %DISK_NUMBER%. USB-lemezének %PARTITION_NUMBER%. partícióján. Tegye meg a szükséges lépéseket.
+
+Összes kapacitás: %DISK_SIZE% GB
+Elérhető kapacitás: %FREE_SPACE% GB (%USAGE%%)
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[UserChangePassword]
+Subject: %HOSTNAME% eszközhöz tartozó jelszava megváltozott
+
+Kedves %USER_NAME%!
+
+Ez egy megerősítő üzenet, mely arról tájékoztatja, hogy %HOSTNAME% eszközén megváltozott a jelszava.
+
+Fiókbeállításainak módosításához keresse fel a következő webhelyet: %HTTP_URL%. (Ha nem tud kapcsolódni a szerverhez, kérjük, lépjen kapcsolatba a rendszergazdával.)
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[UserWelcome]
+Category: System
+Title: Új felhasználó üdvözlése
+Subject: %USER_NAME%! Üdvözöljük a következő szerveren: %HOSTNAME%
+
+Kedves felhasználó!
+
+Üdvözöljük a következőn: %HOSTNAME%!
+Személyes profiljának módosításához látogasson el ide: %HTTP_URL%.
+(Ha nem tud kapcsolódni a szerverhez, kérjük, lépjen kapcsolatba az adminisztrátorral.)
+
+Felhasználó neve: %USER_NAME%
+Jelszava: %PASSWD%
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[VolumeInodeFull]
+Category: Storage,Important
+Title: A köteten található fájlok száma a határérték felé közelít
+Subject: A(z) %HOSTNAME% helyen található %VOLUME_ID% köteten lévő fájlok száma a határérték felé közelít
+
+Kedves felhasználó!
+
+A(z) %HOSTNAME% helyen található %VOLUME_ID% köteten lévő fájlok száma a határérték felé közelít Kérjük, töröljön néhány fájlt a szám csökkentéséhez.
+
+A fájlok számának határértéke: %TOTAL_INODE%
+A határérték eléréséig fennmaradó fájlok száma: %FREE_INODE% (%USAGE%%)
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[VpncReconnectFail]
+Category: System
+Title: VPN kliens újratárcsázása sikertelen
+Subject: A(z) %HOSTNAME% eszközön nem sikerült a(z) [%VPN_CLIENT%] VPN-profil újracsatlakoztatása
+
+Kedves felhasználó!
+
+A(z) %HOSTNAME% eszközön leválasztást követően nem sikerült a(z) [%VPN_CLIENT%] VPN-profil újracsatlakoztatása. Ellenőrizze a VPN-kliens és a szerver közti kapcsolatot.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[aha_reboot_active]
+Category: AHA,Important
+Title: Aktív szerver újraindítása
+Subject: A következő high-availability klaszter aktív szerverét újraindították: %HOSTNAME% (sorozatszám: %HA_LOCAL_HOST_SN%)
+
+Kedves felhasználó!
+
+A következő high-availability klaszter aktív szerverét egy rendszergazda újraindította: %HOSTNAME% (sorozatszám: %HA_LOCAL_HOST_SN%).
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[aha_reboot_active_fail]
+Category: AHA,Important
+Title: Nem sikerült újraindítani az aktív szervert
+Subject: A következő high-availability klaszter aktív szerverének újraindítása sikertelen volt: %HOSTNAME% (sorozatszám: %HA_LOCAL_HOST_SN%)
+
+Kedves felhasználó!
+
+A következő high-availability klaszter aktív szerverének újraindítása sikertelen volt: %HOSTNAME% (sorozatszám: %HA_LOCAL_HOST_SN%). Részletes információkért ellenőrizze a High Availability Manager Naplók oldalát.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[aha_reboot_passive]
+Category: AHA
+Title: Passzív szerver újraindítása
+Subject: A következő high-availability klaszter passzív szerverét újraindították: %HOSTNAME% (sorozatszám: %HA_LOCAL_HOST_SN%).
+
+Kedves felhasználó!
+
+A következő high-availability klaszter passzív szerverét egy felhasználó újraindította: %HOSTNAME% (sorozatszám: %HA_LOCAL_HOST_SN%).
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[aha_reboot_passive_fail]
+Category: AHA
+Title: A passzív szerver újraindítása sikertelen volt.
+Subject: A következő high-availability klaszter passzív szerverének újraindítása sikertelen volt: %HOSTNAME% (sorozatszám: %HA_LOCAL_HOST_SN%)
+
+Kedves felhasználó!
+
+A következő high-availability klaszter passzív szerverének újraindítása sikertelen volt: %HOSTNAME% (sorozatszám: %HA_LOCAL_HOST_SN%). Részletes információkért ellenőrizze a High Availability Manager Naplók oldalát.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[aha_reboot_remote]
+Category: AHA
+Title: Ismeretlen szerver újraindítása
+Subject: A következő high-availability klaszterhez csatlakoztatott ismeretlen szervert újraindították: %HOSTNAME% (sorozatszám: %HA_LOCAL_HOST_SN%)
+
+Kedves felhasználó!
+
+A következő high-availability klaszterhez csatlakoztatott ismeretlen szervert egy felhasználó újraindította: %HOSTNAME% (sorozatszám: %HA_LOCAL_HOST_SN%).
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[aha_reboot_remote_fail]
+Category: AHA
+Title: Az ismeretlen szerver újraindítása sikertelen volt
+Subject: A következő high-availability klaszterhez csatlakoztatott ismeretlen szerver újraindítása sikertelen volt: %HOSTNAME% (sorozatszám: %HA_LOCAL_HOST_SN%)
+
+Kedves felhasználó!
+
+A következő high-availability klaszterhez csatlakoztatott ismeretlen szerver újraindítása sikertelen volt: %HOSTNAME% (sorozatszám: %HA_LOCAL_HOST_SN%). Részletes információkért ellenőrizze a High Availability Manager Naplók oldalát.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[aha_recover_remote]
+Category: AHA,Important
+Title: Új szerver hozzáadása
+Subject: Új szerver hozzáadása a high-availability klaszterhez
+
+Kedves felhasználó!
+
+Egy rendszergazda az ismeretlen szerver helyreállítását kezdeményezte. A szerver jelenleg passzív szerverként csatlakozik a következő high-availability klaszterhez: %HOSTNAME% (sorozatszám: %HA_LOCAL_HOST_SN%). Részletes információkért ellenőrizze a High Availability Manager Naplók oldalát.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[aha_recover_remote_fail]
+Category: AHA,Important
+Title: Új szerver hozzáadása sikertelen
+Subject: Nem sikerült új szervert adni a high-availability klaszterhez
+
+Kedves felhasználó!
+
+Az ismeretlen szerver nem tudott passzív szerverként csatlakozni a következő high-availability klaszterhez: %HOSTNAME% (sorozatszám: %HA_LOCAL_HOST_SN%). Részletes információkért ellenőrizze a High Availability Manager Naplók oldalát.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[aha_shutdown]
+Category: AHA,Important
+Title: High-availability klaszter leállítása
+Subject: A következő high-availability klasztert leállították: %HOSTNAME% (sorozatszám: %HA_LOCAL_HOST_SN%)
+
+Kedves felhasználó!
+
+A következő high-availability klasztert egy felhasználó leállította: %HOSTNAME% (sorozatszám: %HA_LOCAL_HOST_SN%).
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[aha_shutdown_active]
+Category: AHA,Important
+Title: Aktív szerver leállítása
+Subject: A következő high-availability klaszter aktív szerverét leállították: %HOSTNAME% (sorozatszám: %HA_LOCAL_HOST_SN%)
+
+Kedves felhasználó!
+
+A következő high-availability klaszter aktív szerverét egy rendszergazda leállította: %HOSTNAME% (sorozatszám: %HA_LOCAL_HOST_SN%).
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[aha_shutdown_active_fail]
+Category: AHA,Important
+Title: Aktív szerver leállítása sikertelen volt
+Subject: A következő high-availability klaszter aktív szerverének leállítása sikertelen volt: %HOSTNAME% (sorozatszám: %HA_LOCAL_HOST_SN%)
+
+Kedves felhasználó!
+
+A következő high-availability klaszter aktív szerverének leállítása sikertelen volt: %HOSTNAME% (sorozatszám: %HA_LOCAL_HOST_SN%). Részletes információkért ellenőrizze a High Availability Manager Naplók oldalát.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[aha_shutdown_fail]
+Category: AHA,Important
+Title: A high-availability klaszter leállítása sikertelen volt
+Subject: A következő high-availability klaszter leállítása sikertelen volt: %HOSTNAME% (sorozatszám: %HA_LOCAL_HOST_SN%)
+
+Kedves felhasználó!
+
+A következő high-availability klaszter leállítása sikertelen volt: %HOSTNAME% (sorozatszám: %HA_LOCAL_HOST_SN%). Részletes információkért ellenőrizze a High Availability Manager Naplók oldalát.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[aha_shutdown_passive]
+Category: AHA,Important
+Title: Passzív szerver leállítása
+Subject: A következő high-availability klaszter passzív szerverét leállították: %HOSTNAME% (sorozatszám: %HA_LOCAL_HOST_SN%)
+
+Kedves felhasználó!
+
+A következő high-availability klaszter passzív szerverét egy rendszergazda leállította: %HOSTNAME% (sorozatszám: %HA_LOCAL_HOST_SN%).
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[aha_shutdown_passive_fail]
+Category: AHA,Important
+Title: A passzív szerver leállítása sikertelen volt
+Subject: A következő high-availability klaszter passzív szerverének leállítása sikertelen volt: %HOSTNAME% (sorozatszám: %HA_LOCAL_HOST_SN%)
+
+Kedves felhasználó!
+
+A következő high-availability klaszter passzív szerverének leállítása sikertelen volt: %HOSTNAME% (sorozatszám: %HA_LOCAL_HOST_SN%). Részletes információkért ellenőrizze a High Availability Manager Naplók oldalát.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[aha_shutdown_remote]
+Category: AHA
+Title: Ismeretlen szerver leállítása
+Subject: A következő high-availability klaszterhez csatlakoztatott ismeretlen szervert leállították: %HOSTNAME% (sorozatszám: %HA_LOCAL_HOST_SN%).
+
+Kedves felhasználó!
+
+A következő high-availability klaszterhez csatlakoztatott ismeretlen szervert egy felhasználó leállította: %HOSTNAME% (sorozatszám: %HA_LOCAL_HOST_SN%).
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[aha_shutdown_remote_fail]
+Category: AHA,Important
+Title: Az ismeretlen szerver leállítása sikertelen volt
+Subject: A következő high-availability klaszterhez csatlakoztatott ismeretlen szerver leállítása sikertelen volt: %HOSTNAME% (sorozatszám: %HA_LOCAL_HOST_SN%)
+
+Kedves felhasználó!
+
+A következő high-availability klaszterhez csatlakoztatott ismeretlen szerver leállítása sikertelen volt: %HOSTNAME% (sorozatszám: %HA_LOCAL_HOST_SN%). Részletes információkért ellenőrizze a High Availability Manager Naplók oldalát.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[aha_switchover]
+Category: AHA,Important
+Title: High-availability klaszter átkapcsolása
+Subject: A következő high-availability klaszter szolgáltatásait: %HOSTNAME% (sorozatszám: %HA_LOCAL_HOST_SN%) átkapcsolták a következő eszközre: %HA_REMOTE_HOST_SN%
+
+Kedves felhasználó!
+
+A rendszer a következő high-availability klaszter átkapcsolását kezdeményezte: %HOSTNAME% (sorozatszám: %HA_LOCAL_HOST_SN%). A szolgáltatások átkapcsolásra kerülnek a következő eszközre: %HA_REMOTE_HOST_SN%. Részletes információkért ellenőrizze a High Availability Manager Naplók oldalát.
+
+Ok: %HA_FAILOVER_REASON%
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[aha_switchover_fail]
+Category: AHA,Important
+Title: High-availability klaszter átkapcsolása sikertelen volt
+Subject: A következő high-availability klaszter szolgáltatásait: %HOSTNAME% (sorozatszám: %HA_LOCAL_HOST_SN%) nem sikerült átkapcsolni a következő eszközre: %HA_REMOTE_HOST_SN%
+
+Kedves felhasználó!
+
+A rendszer átkapcsolást kísérelt meg a következő high-availability klaszterben: %HOSTNAME% (sorozatszám: %HA_LOCAL_HOST_SN%). A szolgáltatásokat azonban nem sikerült átkapcsolni a passzív szerverre (sorozatszám: %HA_REMOTE_HOST_SN%). Részletes információkért ellenőrizze a High Availability Manager Naplók oldalát.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[aha_takeover]
+Category: AHA,Important
+Title: High-availability klaszter feladatátvétel
+Subject: Hibákat észleltünk a következő high-availability klaszterben: %HOSTNAME% (sorozatszám: %HA_LOCAL_HOST_SN%)
+
+Kedves felhasználó!
+
+Hibákat észleltünk a következő high-availability klaszterben: %HOSTNAME% (sorozatszám: %HA_LOCAL_HOST_SN%). A szolgáltatások átadásra kerülnek a passzív szervernek. Részletes információkért ellenőrizze a High Availability Manager Naplók oldalát.
+
+Hiba: %HA_FAILOVER_REASON%
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[aha_upgrade_fail]
+Category: AHA,Important
+Title: High-availability klaszter frissítése sikertelen volt
+Subject: A következő high-availability klaszter frissítése sikertelen volt: %HOSTNAME% (sorozatszám: %HA_LOCAL_HOST_SN%)
+
+Kedves felhasználó!
+
+A következő high-availability klaszter leállítása sikertelen volt: %HOSTNAME% (sorozatszám: %HA_LOCAL_HOST_SN%). Részletes információkért ellenőrizze a High Availability Manager Naplók oldalát.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[aha_upgrade_passive_fail]
+Category: AHA,Important
+Title: Passzív szerver frissítése sikertelen volt
+Subject: A következő high-availability klaszter passzív szerverének frissítése sikertelen volt: %HOSTNAME% (sorozatszám: %HA_LOCAL_HOST_SN%)
+
+Kedves felhasználó!
+
+A következő high-availability klaszter passzív szerverének frissítése sikertelen volt: %HOSTNAME% (sorozatszám: %HA_LOCAL_HOST_SN%). Részletes információkért ellenőrizze a High Availability Manager Naplók oldalát.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[aha_welcome]
+Category: AHA
+Title: High-availability klaszter fut
+Subject: A következő high-availability klaszter: %HOSTNAME% mostantól szolgáltatásokat futtat a következő eszközön: %HA_LOCAL_HOST_SN%
+
+Kedves felhasználó!
+
+A következő high-availability klaszter: %HOSTNAME% mostantól szolgáltatásokat futtat a következő eszközön: %HA_LOCAL_HOST_SN%. Részletes információkért ellenőrizze a High Availability Manager Naplók oldalát.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[disk_health_monthly_report]
+Subject: %HOSTNAME% eszközre vonatkozó havi lemezállapot-jelentés
+
+Kedves felhasználó!
+
+Az alábbiakban találja %HOSTNAME% eszközére vonatkozó havi lemezállapot-jelentést. Az egyes lemezek állapotát a Tároláskezelő > HDD/SSD > Állapot információk menüpontban is megtekintheti.
+
+%CONTENT%
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[eSynoscheduler_complete_task]
+Subject: A Feladatidőzítő befejezett egy kiváltott feladatot
+
+Kedves felhasználó!
+
+A Feladatidőzítő befejezett egy kiváltott feladatot.
+
+Feladat: %TASK%
+Indítás ideje: %START_TIME%
+Leállítás ideje: %END_TIME%
+Jelenlegi állapot: %EXIT_CODE%
+Standard hiba/kimenet:
+%OUT_PUT%
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[ext4_fs_err]
+Category: System,Important
+Title: Fájlrendszerhiba
+Subject: Fájlrendszerhiba észlelve a következőn: %HOSTNAME%
+
+Kedves felhasználó!
+
+Fájlrendszerhibát észleltünk a következő köteten: %VOLUME_ID%. Nyissa meg a Tároláskezelőt, és javítsa ki a hibát, amint csak lehet.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[file_cksum_err]
+Category: System,Important
+Title: Ellenőrzőösszeg-hiba
+Subject: Ellenőrzőösszeg-hiba a következőn: %HOSTNAME% További részletekért jelentkezzen be a Naplóközpontba.
+
+Kedves felhasználó!
+
+A rendszer ellenőrzőösszeg-hibát észlelt a következő fájlban: %FILE_PATH%. Javítsa ki a fájlt az arról készült egyik korábbi biztonsági mentés segítségével.
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[iSCSILunScheduleSnapshotFail]
+Category: Storage,Important
+Title: Nem sikerült pillanatfelvételt készíteni egy iSCI LUN-ról
+Subject: Nem sikerült pillanatfelvételt készíteni egy iSCI LUN-ról (%LUNNAME%) a következő helyen: %HOSTNAME%
+
+Kedves felhasználó!
+
+Nem sikerült pillanatfelvételt készíteni egy, a következő helyen található iSCI LUN-ról: %HOSTNAME%. Részletes információkat a Tároláskezelőben talál.
+
+LUN: %LUNNAME%
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[widget]
+eunit	=	"Bővítő egység"
+link_fail	=	"Csatlakozási hiba"
+

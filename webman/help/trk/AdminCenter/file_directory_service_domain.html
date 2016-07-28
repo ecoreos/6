@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Win/Mac/NFS</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Etki Alanı</h2>
+<p>DiskStation sunucunuz bir Windows etki alanına katılabilir. Etki alanına katıldıktan sonra, etki alanı kullanıcıları kendi etki alanı hesaplarını ve şifrelerini kullanarak DiskStation sunucusunda oturum açabilirler ve bu da onlara başka bir kullanıcı adı ve şifre setini hatırlama zorunluluğu olmadan dosyalara erişmelerine ve DSM uygulamalarını kullanmalarına olanak tanır.</p>
+<h4>Bir etki alanına katılmak için:</h4>
+<ol>
+<li><strong>Denetim Masası</strong> > <strong>Dizin Hizmeti</strong> > <strong>Etki Alanı</strong>'na gidin.</li>
+<li><strong>Etki alanına katıl</strong> kutusunu işaretleyin.</li>
+<li>Etki alanı adını girin ve uygun alanlara DNS server tanımlayın.</li>
+<li>Gerekirse <b>Gelişmiş etki alanı seçenekleri</b> kutusunu işaretleyin. (Ayrıntılar için aşağıya bakın.)</li>
+<li><b>Uygula</b>'ya tıklayın.</li>
+<li>Beliren pencerede, etki alanı sunucusunun yöneticinin kullanıcı adını ve parolasını girin.</li>
+<li><b>Tamam</b>'a tıklayın.</li>
+</ol>
+<div class="section">
+<h4>DNS Server</h4>
+<p>DiskStation sunucunuzun etki alanını aramasına yardımcı olmak için bir DNS sunucusu belirlemeniz önerilir. Ancak etki alanı DNS sunucusunda kayıtlı değilse, etki alanına katılma prosedürü başarılı olmayabilir.</p>
+<h4>Etki Alanı Sunucu Türü</h4>
+<p>Bu alan, DiskStation sunucunuz bir etki alanına katıldığında etki alanı tipini gösterir. Etki alanı türü "AD etki alanı" olacaktır.</p>
+<h4>Yönetim Modu</h4>
+<p>Bu seçenek etki alanı kullanıcılarının ve grupların ayrıcalıklarını nasıl yöneteceğinizi saptar. </p>
+<ul>
+<li><b>Güvenilir Etki Alanı</b>: Birleştirilen etki alanı ile güvenilir etki alanlarındaki kullanıcıları ve grupları yönetebilirsiniz. Kullanıcılar ve gruplar etki alanı açılır listesi ile filtrelenebilir.</li>
+<li><b>OU ile Tek Etki Alanı</b>: Sadece birleştirilen etki alanındaki kullanıcılar ve gruplar bu modda görüntülenir. Bu mod OU (Organizasyonel Birim) açılır listesi ile etki alanı kullanıcılarını/etki alanı gruplarını filtrelemenizi sağlar.</li>
+</ul>
+<h4>Gelişmiş Etki Alanı Seçenekleri</h4>
+<p>Çoğu durumda, gelişmiş etki alanı seçeneklerinden hiçbirini doldurmanız gerekmez. Gelişmiş etki alanı seçenekleri sadece belirli etki alanı ortamlarında gerekir. </p>
+<ul>
+<li><b>DC IP/FQDN</b>: Bir DC (Etki Alan Denetleyici) IP adresi veya FQDN belirlediğinizde DiskStation sunucunuz onunla iletişim kurmaya çalışacaktır. Eğer birden fazla IP adresi veya FQDN varsa, her birinin arasına bir virgül (,) koyun. Dilerseniz son DC IP adresinden veya FQDN'den sonra bir asteriks (*) koyun, belirlenenlerin hepsi başarısız olduğunda DiskStation sunucunuz diğer DC ile iletişim kurmaya çalışacaktır. Asteriks ile son IP adresi veya FQDN arasına bir virgül koymanız gerecektir.</li>
+<li><b>Etki Alanı NetBIOS adı</b>: Etki alanının NetBIOS adını belirleyin.</li>
+<li><b>Etki Alanı FQDN (DNS adı)</b>: Etki alanı için FQDN (DNS adını) belirleyin.</li>
+<li><b>DNS arayüzünü kaydet:</b> Bir etki alanına katılırken, burada belirtilen NIC (Ağ Arayüz Kartı) DNS sunucusuna kaydedilir. DiskStation sunucunuzun ana bilgisayar adı bir alt çizgi (_) içerirse DNS ile alt çizgi (_) kullanılamayacağı için kaydın başarısız olacağını lütfen unutmayınız.</li>
+<li><b>Kullanıcı/grup listesini güncelle</b>: DiskStation sunucunuzun ne kadar sıklıkla otomatik olarak etki alanı kullanıcı/grup listesini güncelleyeceğini belirtin. Güncellemeleri günlük, haftalık veya aylık yapacak şekilde zaman periyodunu özelleştirebilirsiniz. Ayrıca, etki alanı kullanıcı/grup listeleri de <strong>Etki alanı kullanıcısı</strong> sekmesine gidilerek ve <strong>Tüm etki alanlarını güncelle</strong> üzerine tıklanarak manuel olarak güncellenebilir. Otomatik güncellemelerin sistem uykusunu etkileyeceğine dikkat edin.</li>
+</ul>
+
+<h4>Salt Okunur Etki Alanı Denetleyicisini Katma</h4>
+<p>DiskStation sunucunuzu salt okunur etki alanı denetleyicisine (RODC) katmak için, <strong>DC IP/FQDN</strong> alanında okuma-yazma etki alanı denetleyicinizin (RWDC) "tam bilgisayar adını" (FQDN) belirtmeniz gerekir. Tam bilgisayar adının aşağıdaki formata göre olması gerekir: <strong>ComputerName.Domain</strong>, ör. "ad01.synology.com".</p>
+
+</div>
+
+
+<div class="section">
+<h4>Not:</h4>
+<ul>
+<li>Etki alanı kullanıcı adınızda “%” veya “$” varsa, home klasörünüze erişemeyebilirsiniz. Lütfen etki alanı yöneticinizden size yeni bir kullanıcı adı vermesini isteyin.</li>
+<li><strong>Domain Admins</strong> ve <strong>Enterprise Admins</strong> etki alanı grupları yerel <strong>Administrators</strong> grubuna otomatik olarak eklenecektir. Dolayısıyla, bu gruplardaki etki alanı kullanıcıları CIFS/FTP/AFP/WebDAV gibi dosya hizmetlerine ve diğer DSM uygulamalarına erişim dahil olmak üzere DiskStation sunucunuz üzerinde yönetim ayrıcalıklarına sahip olacaklardır.</li>
+<li>Etki alanı kullanıcılarının DiskStation sunucunuz üzerindeki paylaşımlı klasörlere erişim ayrıcalıklarını da yapılandırabilirsiniz. Daha fazla bilgi için <a href="file_directory_service_user_group.html">buraya</a> bakın.</li>
+</ul>
+</div>
+
+
+
+<h3>Etki Alanı Seçenekleri</h3>
+<p>Bu bölüm aşağıdaki ilave etki alanı seçeneklerini içerir.</p>
+<ul>
+<li><b>Bir etki alanı kullanıcısı her oturum açışında DiskStation bir NTP sunucusu ile senkronize olacaktır:</b> Bu seçeneğin etkinleştirilmesi DiskStation ve NTP sunucusu arasında zamanı senkronize edecektir.</li>
+<li><b>Sunucu imzalamasını etkinleştir:</b> Müşteri, müşteri imzalamasını etkinleştirmişse, kullanıcıların etki alanı hizmetlerini normal olarak kullanabilmesi için sunucu imzalamasının DiskStation sunucusunda da etkinleştirilmesi gerekir.</li>
+<li><b>NT4-uyumlu modla kullanıcı/grup listelerini al:</b> Bu seçeneğin etkinleştirilmesi sistemin NT4 RPC modunu kullanarak kullanıcı/grup listelerini almasını sağlar. Bu seçenek belirli kullanıcı/grup listeleri varsayılan ayarlar kullanılarak edinilemediğinde etkinleştirilebilir.</li>
+<li><b> Etki Alanı Yöneticileri ve Şirket Yöneticileri için yönetici izinlerini devre dışı bırak:</b> Yönetici izinlerine sahip bir kullanıcı DiskStation sunucunuzun ve dosyalarının tüm kontrolüne sahip olabilir. Bu seçeneğin etkinleştirilmesi Etki Alanı Yöneticilerinin ve Şirket Yöneticilerinin izinlerini normal bir kullanıcı ile aynı olacak şekilde sınırlandırmanızı sağlar, bu sayede tüm normal kullanıcı dosyası/klasör izinlerini üstlenir.</li>
+<li><strong>Gömülü grup seviyelerini numaralandır:</strong> Numaralandırılabilecek gömülü, etki grubu üyelerinin sayısını belirleyin.</li>
+</ul>
+
+</body>
+</html>

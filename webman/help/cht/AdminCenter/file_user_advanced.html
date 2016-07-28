@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>使用者進階設定</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>使用者進階設定</h2>
+
+<p>若要修改使用者進階設定，您可以前往<strong>控制台</strong> &gt; <strong>使用者帳號</strong> &gt; <strong>進階設定</strong>。下列為可選擇的項目。 </p>
+
+<h3>允許使用者重設遺失密碼</h3>
+<p>如果您想要允許使用者透過電子郵件重設遺失的密碼，您可以啟動<strong>允許非管理員使用者在忘記密碼時透過電子郵件重設</strong>。啟動此選項後，DSM 登入頁面上將會出現<strong>忘記密碼？</strong>的連結。如果使用者忘記密碼，便可以按一下該連結來輸入使用者帳號。接著系統會發送訊息給使用者，裡頭附有重設遺失密碼的連結。 </p>
+
+<div class="section">
+<h4>注意：</h4>
+<ul>
+<li>啟動此選項前，請先確認您已啟動 SMTP 電子郵件通知。若要進行此操作，請前往<strong>控制台</strong> &gt; <strong>通知設定</strong>。</li>
+<li>若要接受來自系統的訊息，使用者必須在使用者帳號資訊區塊中提供電子郵件位址。</li>
+<li>屬於 <strong>administrators</strong> 群組的使用者無法使用此選項來重設密碼。</li>
+<li>網域使用者無法使用此選項來重設密碼。</li>
+<li>LDAP 使用者唯有在 DiskStation 作為 LDAP 目錄伺服器的情況下才能夠使用此選項重設密碼。</li>
+
+</ul>
+</div>
+
+
+<h3>密碼強度</h3>
+<p>您可以在 DiskStation 上為使用者設定密碼強度規則。</p>
+
+<div class="section">
+<h4>注意：</h4>
+<p>密碼強度規則僅適用於新密碼。舉例來說，只有在建立新使用者帳號或是現有使用者變更密碼時才會套用新密碼強度規則。新密碼強度規則不適用於已存在的密碼及透過匯入方式建立的使用者帳號密碼。</p>
+</div>
+<h4>若要啟動密碼強度規則：</h4>
+<ol>
+<li>勾選<b>啟動密碼強度限制規則</b>核取方塊來啟動密碼限制。</li>
+<li>從下列選出要套用的密碼限制規則：</li>
+<ul>
+<li><b>排除使用者名稱及描述</b>：密碼中不包含用戶名稱或描述。若用戶名稱或描述為 UTF-8 字元則不檢查。</li>
+<li><b>包含混合大小寫</b>：密碼必須包含大寫及小寫字母。</li>
+<li><b>包含數字：</b>密碼至少要有一個數字 (0~9)。</li>
+<li><b>包含特殊字元</b>：密碼至少要包含一個特殊字元 (例如，~, `, !, @, #, $, %, ^, &amp;, *, (, ), -, _, =, +, [, {, ], }, \, |, ;, :, ', &quot;, &lt;, &gt;, /, ?)。</li>
+<li><b>最短密碼長度</b>：密碼長度不可小於此值，且最短密碼長度為介於 6 到 127 之間的數字。</li>
+</ul>
+<li>按一下<b>套用</b>來儲存設定。</li>
+</ol>
+
+
+
+<h3>兩步驟驗證</h3>
+<p>兩步驟驗證為 DSM 使用者帳號提供更安全的防護機制。您可以強制 DSM 管理者或所有 DSM 使用者啟動其兩步驟驗證功能，以便更進一步保護他們的帳號。</p>
+
+<h4>若要強制 DSM 使用者啟動兩步驟驗證：</h4>
+
+<ol>
+<li>勾選<strong>強制下列使用者啟動兩步驟驗證</strong>核取方塊，並選擇您要套用此設定至哪些使用者。</li>
+<div class="section">
+<h4>注意：</h4>
+<p>若您尚未於<b>個人設定</b> &gt; <b>帳號</b>設定兩步驟驗證，在您套用此強制設定前，系統會開啟兩步驟驗證設定精靈，協助您完成必要的設定。</p>
+</div>
+
+<li>套用此強制設定後，尚未啟動兩步驟驗證的使用者必須完成系統要求的相關設定，才能登入 DSM。</li>
+</ol>
+
+<div class="section">
+<h4>注意：</h4>
+<p>停用此處的兩步驟驗證強制設定不會影響或停用個別使用者的兩步驟驗證設定。使用者可以保留其兩步驟驗證設定，或前往<b>個人設定</b> &gt; <b>帳號</b>來停用這些設定。</p>
+</div>
+
+
+<h3>家目錄</h3>
+
+<p>啟動使用者家目錄功能來為每一位使用者 (<b>guest</b> 除外) 建立個人的 <b>home </b>資料夾 (家目錄)。所有的使用者都可以透過 CIFS、AFP、FTP 及 File Station 來存取自己的家目錄。</p>
+<p>系統管理者 (admin) 及屬於 <strong>administrators</strong> 群組的使用者皆可以存取預設共用資料夾 <b>homes</b> 中的所有個人資料夾。家目錄的名稱與使用者帳號相同。</p>
+
+<h4>若要啟動使用者家目錄服務：</h4>
+<ol>
+<li>勾選<b>啟動家目錄服務</b>。</li>
+<li>若您有多個儲存空間，請選擇您希望將 <b>homes</b> (家目錄) 儲存在哪個儲存空間。</li>
+<li>按一下<b>套用</b>。</li>
+</ol>
+
+<div class="section">
+<h4>注意：</h4>
+<p>停用本地使用者的家目錄服務後，網域使用者的家目錄服務也會一併停用。</p>
+</div>
+
+<h4>若要停用使用家目錄服務：</h4>
+<ol>
+<li>取消勾選<b>啟動家目錄服務</b>。</li>
+<li>按一下<b>套用</b>。</li>
+</ol>
+<p>關閉家目錄功能後，所有使用者的 <b>homes</b> (家目錄) 將被保留下來僅供系統管理者存取。重新開啟家目錄功能後，各使用者仍可存取其家目錄的所有檔案。</p>
+
+<div class="section">
+<h4>注意：</h4>
+<ol>
+<li>若要刪除 <b>homes</b> 共用資料夾，您必須先停用家目錄服務。</li>
+<li>如果本地使用者的家目錄服務已停用，網域使用者的家目錄服務也會一併停用。</li> 
+</ol> 
+</div>
+
+
+</body>	
+</html> 

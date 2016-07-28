@@ -1,0 +1,101 @@
+ <!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Bir Birimdeki veya Disk Grubundaki Sabit Diski Değiştirme - Synology DSM Yardım</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="This article walks you through the steps to replace a hard drive of an existing volume or disk group on DiskStation in order to increase storage capacity.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Depolama Kapasitesini Genişletmek için Sabit Diskleri Değiştir</h2>
+
+<p>Belirli RAID tiplerini kullanırken, eski sabit diskleri daha büyük boyutlu olanlarla değiştirerek bir birimin veya disk grubunun depolama kapasitesini arttırabilirsiniz. Bu yazı genişletme işlemi hakkında önemli bilgileri sunmasının yanında, depolama kapasitesini arttırmak için mevcut sabit disklerin nasıl değiştirileceğine ilişkin bir örneği içerir.</p>
+
+<div class="section">
+  <h4>Not:</h4>
+<p>Bu yazıda açıklanan prosedür sadece SHR, RAID 1, RAID 5 ve RAID 6 ile çalışır. Çok sayıda sabit diski değiştirmeyi planlıyorsanız, sabit diskleri birer birer değiştirmeye dikkat etmeniz gerekir. Bir sabit diski değiştirdikten sonra, bir sonrakini değiştirmeden önce birimi veya disk grubunu onarmanız gerekir. RAID 1, RAID 5 ve RAID 6 için, birim kapasitesi tüm sabit diskler değiştirildikten sonra genişleyecektir.</p>
+
+</div>
+
+
+<h3 class="list_head"><a name="t1"></a>  Başlamadan Önce</h3>
+
+<p>Bir sabit diski değiştirmeden önce, lütfen aşağıdaki notlara bakın:<br/>
+
+<ul>
+<li><b>Veriyi Yedekleyin:</b> Genişletme işlemi mevcut verileri silmeyecek olsa da, devam etmeden önce verilerinizi yedeklemenizi şiddetle öneririz.</li>
+<li><b>Birim veya Disk Grubu Durumu:</b> Başlamadan önce, biriminizin veya disk grubunuzun durumunun <b>Normal</b> olduğundan emin olun. Değilse, önce bunu yapmanız gerekir.</li>
+<li><b>Genişletme sırasında verilere yine de erişilebiliyor mu?</b> Sisteminizdeki veriler birimleri veya disk gruplarını genişletirken kullanılabilecektir; yine de sistem işleme başlarken bağlantıları geçici olarak askıya alabilir.</li>
+</ul>
+
+<div class="section">
+<h4>SHR (Synology Hybrid RAID)</h4>
+
+<p>SHR birimleri depolama kapasitesini kurulu sabit disklerin sayısına ve boyutuna göre optimize ettiğinden, kapasiteyi uygun şekilde genişletmek için aşağıdaki yönergelere lütfen uyun:</p>
+
+<ul>
+<li>Tüm sabit disklerin kapasitesi eşit ise, depolama kapasitesini genişletmek için en az iki sabit diski daha büyük olanlarla değiştirmeniz gerekir. Örneğin, SHR biriminiz üç tane 2 TB sabit diskten oluşuyorsa, birim kapasitesini genişletmek için en az iki sabit diski değiştirmelisiniz.</li>
+<li>Mevcut sabit disklerin kapasitesi farklıysa, yeni sabit diskler, var olan en büyük sabit diske eşit ya da ondan büyük olmalıdır. Bunun yanı sıra, kapasite kullanımını en uygun hale getirmek için önce daha küçük sabit diskleri değiştirmelisiniz. Örneğin, SHR biriminiz sırasıyla 4 TB, 3 TB ve 2 TB olan üç sabit diskten oluşuyorsa, yeni sabit diskleriniz en az 4 TB olmalıdır. Buna ek olarak, 3 TB ya da 2 TB sabit diskleri değiştirmelisiniz.</i>
+</li>
+</ul>
+</div>
+
+<div class="section">
+<h4>RAID 5 ve RAID 6</h4>
+
+<p>RAID 5 ya da RAID 6 birimleri veya disk gruplarının sabit diskleri değiştirilirken, en küçük sabit disk her zaman ilk önce değiştirilmelidir. Depolama kapasitesi, RAID 5 birimleri için (sabit disklerin sayısı – 1) x (en küçük sabit disk boyutu) ve RAID 6 için (sabit disklerin sayısı – 2) x (en küçük sabit disk boyutu) şeklindedir. Bundan dolayı, sabit disk kullanımını en üst düzeye çıkarmak için her zaman önce en küçük sabit disk değiştirilmelidir.</p>
+
+<p>Örneğin, RAID 5 biriminiz sırasıyla 4 TB, 3 TB ve 2 TB olan üç sabit disk içeriyorsa, biriminizin kullanılabilir kapasitesi 4 TB olacaktır. 4 TB ya da 3 TB sabit diskleri değiştirdiğinizde birimin kapasitesi değişmeyecektir. Biriminizin kapasitesini artırmak için önce 2 TB sabit disk değiştirilmelidir.</p>
+</div>
+
+
+
+<h3>Depolama Kapasitesini Genişletmek için Sabit Diski Değiştir</h3>
+
+<p>Aşağıdaki adımlarda, bir SHR biriminde sabit diskleri değiştirmeye dair bir örneği sunacağız.</p>
+
+<h4>Sabit diskleri değiştirmek için:</h4>
+<ol>
+<li><b>Depolama Yöneticisi</b>'ni açın.</li>
+<img src="about:blank" class="help_image"/>
+<li>Hangi sabit diskin en küçük olduğunu görmek için <strong>Birim</strong> öğesine gidin.</li>
+<img src="about:blank" class="help_image"/>
+
+<li>DiskStation ürününüzü kapatın. (DiskStation sunucunuz çalışırken değiştirmeyi desteklemiyorsa bu adımı atlayın.)</li>
+<li>Üye sabit disklerin en küçüğünü çıkartın ve yeni, daha büyük bir sabit disk takın.</li>
+
+<div class="section">
+<h4>Not:</h4>
+<p>Kendinize veya DiskStation sunucunuza zarar vermemek için, lütfen Synology ürününüze ait <i>Hızlı Kurulum Kılavuzunda</i> bulunan sabit disk kurulum talimatlarına uyun.</p>
+</div>
+
+<li>DiskStation ürününüzü açın.</li>
+<li><strong>Depolama Yöneticisi</strong>'ni tekrar açın.</li>
+<li>Yeni sabit diskin tanındığından emin olmak için <strong>HDD/SSD</strong> öğesine gidin.</li>
+<img src="about:blank" class="help_image"/>
+
+
+<li>Biriminizin durumu <b>Kapasitesi düşmüş</b> olmalıdır. Birimi seçin ve <strong>Yönet</strong>'e tıklayın.</li>
+<img src="about:blank" class="help_image"/>
+<li><b>Onar</b> seçimini yapın.</li>
+<img src="about:blank" class="help_image"/>
+
+<li>Yedek sabit diski seçerek birime ekleyin. Ardından tamamlamak için kurulum sihirbazının adımlarını izleyin.</li>
+<img src="about:blank" class="help_image"/>
+<li>İstenen tüm sabit diskler daha büyükleriyle değiştirilene kadar yukarıdaki işlemi tekrarlayın.</li>
+</ol>
+
+
+
+
+
+
+</body>
+</html>

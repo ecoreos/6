@@ -1,0 +1,45 @@
+ <!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>SSD TRIM - Справка Synology DSM</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="SSD TRIM improves the read and write performance of volumes created on SSDs, increasing efficiency as well as extending the lifetime of your SSDs.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>SSD TRIM</h2>
+<p>Если раздел состоит только из SSD (твердотельных накопителей), рекомендуется включить SSD TRIM. Данная функция позволяет повысить скорость чтения и записи разделов, созданных на SSD, что позволит повысить эффективность и срок службы SSD.</p>
+<h4>Включение SSD TRIM:</h4>
+<ol>
+  <li>Откройте <strong>Диспетчер хранения</strong> и выберите <strong>Раздел</strong>. </li>
+  <li>Выберите раздел, который состоит только из твердотельных накопителей (SSD) и нажмите кнопку <b>Настроить</b>.</li>
+  <li>В отобразившемся окне выберите вкладку <b>SSD TRIM</b> и установите флажок <strong>Включить TRIM</strong>.</li>
+  <li>Нажмите кнопку <strong>Настроить расписание</strong>, чтобы установить, когда система будет выполнять SSD TRIM.</li>
+  <li>Нажмите <strong>OK</strong>.</li>
+</ol>
+<div class="section">
+  <h4>Примечание.</h4>
+  <ul>
+    <li>Функция SSD TRIM доступна только на некоторых моделях DiskStation и типах RAID. </li>
+    <li>Некоторые модели SSD не поддерживают выполнение SSD TRIM на разделах RAID 5 и RAID 6. См. список совместимости на веб-сайте <a href="http://www.synology.com/" target=_blank>www.synology.com</a>.</li>
+    <li>Невозможно включить SSD TRIM в следующих случаях:
+      <ul>
+        <li>Раздел подключен с помощью твердотельного кэш-накопителя.</li>
+        <li>Установлен пакет <strong>Time Backup</strong>.</li>
+        <li>Создан кластер high-availability с помощью пакета <strong>Диспетчер High Availability</strong>.</li>
+      </ul>
+    </li>
+    <li>SSD TRIM невозможно включить на iSCSI LUN уровня блоков.</li>
+    <li>Производительность системы будет снижена при использовании функции SSD TRIM. Время, необходимое для выполнения TRIM, зависит от размера раздела и модели SSD.</li>
+    <li>Если на разделе включена функция TRIM, она также будет активирована на других разделах, созданных в той же группе дисков или RAID Group.</li>
+  </ul>
+</div>
+</body>
+</html>

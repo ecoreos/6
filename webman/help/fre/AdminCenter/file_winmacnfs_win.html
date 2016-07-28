@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Win/Mac/NFS</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Service de fichiers Windows</h2>
+
+<p>Le service de fichiers Windows permet aux clients Windows, Mac et Linux prenant en charge SMB/CIFS d'accéder aux données stockées sur le DiskStation. Si vous désirez parcourir les fichiers sur le DiskStation via Windows Explorer ou monter des dossiers partagés en tant que disques de réseaux, activez cette option dans <strong>Panneau de configuration</strong> > <strong>Services de fichiers</strong> > <strong>Win/Mac/NFS</strong>.</p>
+
+
+<h4>Pour activer le service de fichiers Windows :</h4>
+<ol>
+<li>
+Cochez <b>Activer le service de fichiers Windows</b>.
+</li>
+<li>
+Cliquez sur <b>Appliquer</b>.
+</li>
+</ol>
+
+<div class="section disable-hi3535">
+<h4>Remarque :</h4>
+<p>Après avoir activé le service de fichiers Windows, vous pouvez monter des dossiers entièrement indexés sur votre ordinateur Mac via SMB et utiliser Spotlight dans Finder pour rechercher le contenu de fichiers dans les dossiers montés.</p>
+</div>
+
+
+<h3>Groupe de travail</h3>
+<p>Cette option vous permet de désigner le système comme membre d'un groupe de travail spécifique à des fins de gestion de réseau.</p>
+
+<div class="section">
+
+<h4>Remarque :</h4>
+<ul>
+<li>Le nom d'un groupe de travail peut inclure de 1 à 15 caractères. Le nom ne peut pas inclure les caractères suivants : [ ] ; : &quot; < > * + = \ / | ? ,</li>
+<li>Si vous utilisez un MAC sous OS X 10.9 et que votre DiskStation a rejoint un domaine Windows, vous pouvez vous connecter en ajoutant <strong>localhost\</strong> avant votre nom d'utilisateur local de DiskStation pour accéder aux fichiers stockés sur le DiskStation via le service de fichiers Windows.</li>
+</ul>
+</div>
+
+<h3 class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64">Refuser l'accès aux versions précédentes</h3>
+<p class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64">Dans Windows Explorer, les utilisateurs peuvent accéder aux instantanés des dossiers ou des fichiers en cliquant sur l'onglet <strong>Versions précédentes</strong> dans un dossier partagé, ce qui leur permet de restaurer ou de copier des données sans passer par un administrateur. Si vous sélectionnez <strong>Refuser l'accès aux versions précédentes</strong>, la page « Versions précédentes » n'affiche aucune information.</p>
+
+<div class="section enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64"><h4>Remarque :</h4>
+<ul>
+	<li>Les utilisateurs sont autorisés à accéder à la version précédente uniquement si, au moment où l'instantané correspondant à la version précédente a été pris, leurs comptes utilisateurs ont été créés et qu'on leur a octroyé la permission en lecture sur le dossier partagé dont l'instantané correspondant a été pris.</li>
+</ul>
+</div>
+
+<h3>Activation de l'accès au transfert</h3>
+<p>Cette option permet d'activer l'enregistrement des opérations d'accès aux fichiers, y compris créer, supprimer, lire, écrire, déplacer et renommer les fichiers ou des dossiers par le biais du protocole CIFS/SMB, également appelé protocole de transfert de fichiers Windows.</p>
+
+<h3>Paramètres avancés</h3>
+<p>Cliquez sur le bouton <strong>Paramètres avancés</strong> pour voir les options ci-dessous.</p>
+<ul>
+<li><strong>Serveur WINS</strong> : Microsoft Windows Internet Name Service (WINS) est un service de mappage nom NetBIOS - adresse IP. Les utilisateurs Windows localiseront le système plus facilement sur les réseaux TCP/IP si le système a été configuré pour s'enregistrer sur un serveur WINS.</li>
+<li><strong>Protocole max pour le service de fichiers Windows</strong> : Selon votre configuration réseau, vous pouvez configurer le niveau de protocole le plus élevé pris en charge par votre DiskStation.
+  <ul>
+    <li><strong>Activer SMB 2</strong> : SMB (Server Message Block) 2 est pris en charge depuis Windows Vista et représente la version améliorée de SMB. SMB 2 ajoute la capacité à composer plusieurs actions SMB dans une seule demande pour réduire le nombre de paquets réseau et pour améliorer la performance.</li>
+    <li><strong>Activer SMB 2 et Large MTU</strong> : MTU (maximum transmission unit) fait référence à la plus grande unité de données qui peut être transmise via un protocole de communication. Afin de tirer parti des interfaces réseau plus rapides, tels que l'Ethernet 1 ou 10 gigabits, Grand MTU augmente l'unité de transmission maximale à 1 mégaoctet (Mo). L'activation de Grand MTU améliore la rapidité et l'efficacité des transferts de fichiers volumineux, tout en réduisant le nombre de paquets qui doivent être traités.</li>
+    <li><strong>Activer SMB 3</strong> : SMB 3 est pris en charge depuis Windows 8 et Windows Server 2012. Il s'agit de la version améliorée de SMB 2. SMB 3 prend en charge la transmission de chiffrement de fichiers AES, ce qui permet d'améliorer la sécurité des transferts de fichiers en mode pair à pair.</li>
+</ul>
+<div class="section">
+  <h4>Remarque :</h4>
+  <ul>
+    <li>SMB 2 est pris en charge sur Windows Vista, Windows Server 2008 R2, Windows 7, et versions ultérieures.</li>
+    <li>Grand MTU est pris en charge sur Windows Server 2008 R2, Windows 7, et versions ultérieures.</li>
+    <li>Afin de rendre le grand MTU opérationnel sur votre ordinateur Windows, vous devez modifier les paramètres de registre de votre ordinateur. Pour plus de détails, veuillez vous reporter au support technique Microsoft (comme cet <a href="http://technet.microsoft.com/en-us/library/ff625695(v=ws.10).aspx" target="_blank">article</a>).</li>
+    </ul>
+</div>
+<li><strong>Mode de transport du chiffrement</strong> : Lorsque SMB 3 est activé, le service de fichiers Windows ajoute le chiffrement du transport afin de renforcer la sécurité de la transmission des fichiers.
+  <ul>
+    <li><b>Désactiver</b> : Aucun chiffrement de transport n'est appliqué.</li>
+    <li><b>Auto</b> : Le chiffrement de transport n'est appliqué qu'aux clients qui prennent en charge cette fonctionnalité.</li>
+    <li><b>Forcer</b> : Le chiffrement du transport est toujours appliqué. Cela empêche les clients qui ne prennent pas en charge le chiffrement du transport d'utiliser le service de fichiers Windows.</li>
+  </ul>
+</li>
+<div class="section">
+  <h4>Remarque :</h4>
+  <ul>
+    <li>Le chiffrement du transport pris en charge sous Windows 8,  Windows Server 2012 et les versions ultérieures.</li>
+    <li>La connexion anonyme pour le service de fichiers Windows n'est pas prise en charge lorsque le chiffrement du transport est activé.</li>
+    <li>Si le chiffrement de transport est activé, laissez la case <b>Désactiver le verrouillage opportuniste</b> décochée pour éviter les dépassements de délai de l'application.</li>
+    </ul>
+</div>
+<li><strong>Désactiver le verrouillage opportuniste</strong> : Si vous cochez cette option, cela désactive la fonction de « verrouillage opportuniste » de CIFS, entraînant une amélioration des performances quand des applications de base de données accèdent aux fichiers de la base de données sur le dossier partagé du DiskStation via le réseau.</li>
+<li>
+  <strong>Activer Local Master Browser</strong> : Lorsque plusieurs ordinateurs Windows existent dans le même sous-réseau, ils négocient et élisent un ordinateur en tant que « local master browser ». Le local master browser maintient les listes des autres ordinateurs du sous-réseau et de leurs ressources partagées, et partage ces listes avec les autres ordinateurs. Cette option permet au DiskStation d'assumer le rôle de local master browser.
+</li>
+
+<div class="section">
+<h4>Remarque :</h4>
+<p>L'activation de cette fonction désactive l'hibernation du disque dur et active le compte guest sans mot de passe.</p>
+</div>
+
+
+<li><strong>Activer le module VFS DirSort</strong> : Trie les noms de dossier et les classe par ordre alphabétique. Cette option affecte la performance du système lorsqu'elle est activée.</li>
+
+<li><strong>Omettre des fichiers</strong> : Masque des fichiers selon des critères spécifiques. Ces critères peuvent inclure des caractères de remplacement (*) ; les entrées multiples doivent être séparées par une barre oblique (/). Par exemple : <i>/abc*/*.txt/*.conf/</i>. Cette option affecte la performance du système lorsqu'elle est activée.</li>
+
+<li><strong>Permettre les liens symboliques au sein de dossiers partagés</strong> : L'activation de cette option permet aux liens symboliques de pointer vers des fichiers ou des dossiers situés dans le même dossier partagé. Les liens symboliques peuvent être créés à l'aide d'un terminal DSM.</li>
+
+<li><strong>Autoriser les liens symboliques entre différents dossiers partagés</strong> : Permet que les liens symboliques pointent vers des fichiers ou des dossiers situés dans des dossiers partagés différents. Les liens symboliques peuvent être créés à l'aide d'un terminal DSM. Veuillez noter que l'activation de cette option pourrait permettre à des utilisateurs sans privilèges d'accès de voir et d'accéder à des dossiers partagés qui sont la cible de liens symboliques.</li>
+
+<li><strong>Activer le module VFS MSDFS</strong> : Permet aux liens symboliques de pointer vers des fichiers ou des dossiers situés sur d'autres serveurs SMB. Sur les anciennes versions de Windows, telles que Windows XP, le client et le DiskStation doivent rejoindre un domaine Windows avant d'activer cette option. Pour en savoir davantage sur la création des liens MSDFS, veuillez voir <a href="http://www.samba.org/samba/docs/man/Samba-HOWTO-Collection/msdfs.html" target=_blank>ici</a>. Veuillez noter que le cache de l'appareil client doit être effacé après la désactivation de cette option, autrement la performance normale pourrait en être affectée.</li>
+
+<li><strong>Désactiver les connexions multiples à partir de la même adresse IP</strong> : Lorsque cette option est activée, le DiskStation autorise une seule connexion par adresse IP pour les clients utilisant le Service de fichiers Windows. Lorsque plusieurs clients avec la même adresse IP utilisent Windows File Service, le DiskStation conserve la dernière connexion et interrompt toutes les connexions plus anciennes. Dans un environnement NAT, le client pourrait utiliser une adresse IP unique, auquel cas l'activation de cette option pourrait affecter la performance normale.</li>
+
+<li><strong>Activer les journaux de débogage</strong> : Lorsque cette option est activée, le système crée des journaux détaillés pour aider au débogage. Cette option affecte la performance du système lorsqu'elle est activée.</li>
+<li><strong>Application des permissions UNIX par défaut</strong> : L'activation de cette option applique les permissions UNIX par défaut lors du chargement ou de la création de fichiers et dossiers. La permission UNIX est de 744 pour les fichiers et 755 pour les dossiers. Lorsque cette option est désactivée, la permission UNIX est 777 pour les fichiers et les dossiers.</li>
+<div class="section enable-eds14">
+<h4>Remarque :</h4>
+<ul>
+<li>L'activation de cette option pourrait provoquer des problèmes d'incohérence de permission entre différents protocoles. Afin d'éviter les incohérences, nous suggérons de laisser cette option désactivée.</li>
+</ul>
+</div>
+<div class="section disable-eds14">
+<h4>Remarque :</h4>
+<ul>
+  <li>Pour les dossiers partagés avec Windows ACL activé (tous les partages sauf les « photos » et les partages sur des disques externes), veuillez exécuter la commande <strong>chmod</strong> sur votre client Linux ou FTP pour changer les types de permissions de dossier et de fichier depuis Windows ACL vers UNIX.</li>
+  <li>L'activation de cette option pourrait provoquer des problèmes d'incohérence de permission entre différents protocoles. Afin d'éviter les incohérences, nous suggérons de laisser cette option désactivée.</li>
+</ul>
+</div>
+<li><b>Ne pas réserver d'espace disque lors de la création de fichiers </b>: Activez cette option pour empêcher la réservation d'espace disque lors de la création de fichiers sur votre DiskStation.</li>
+<li><strong>Vider le cache SMB</strong> : Cliquez sur ce bouton pour supprimer les fichiers de cache SMB dans un but de dépannage :
+  <ul>
+
+<li>/var/cache/samba/netsamlogon_cache.tdb</li>
+<li>/var/lib/samba/winbindd_cache.tdb</li>
+<li>/var/lib/samba/share_info.tdb</li>
+<li>/var/lib/samba/registry.tdb</li>
+<li>/run/samba/connections.tdb</li>
+<li>/run/samba/gencacche.tdb</li>
+<li>/run/samba/gencache_notran.tdb</li>
+</ul>
+</li>
+
+</ul>
+
+</body>
+</html>

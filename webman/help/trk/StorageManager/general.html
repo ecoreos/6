@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+	<h2>Genel</h2>
+	<p>Storage Manager kullanıcıların Synology ürünleri üzerindeki tüm depolama alanlarını yönetmesini sağlar. Depolama yönetimini basitleştirmek ve veri koruma ile esnek depolama alanları oluşturmak için, Synology DSM birçok tipte RAID Group barındırır.</p>
+
+<h4><a href="raid.html">RAID Group</a></h4>
+	<p>DiskStation ile, çok sayıda sabit diski RAID Group adı verilen tek bir depolama ünitesine kombine edebilirsiniz. DiskStation aşağıdaki RAID Group tiplerini sunar:</p>
+	<ul>
+		<li><b>Tek Birim veya iSCSI LUN (Blok-Seviyesi) için RAID Group</b>:
+			<ul>
+				<li>Tüm mevcut kapasiteyi tek bir birime veya iSCSI LUN’a (Blok-Seviyesi) yerleştirir.</li>
+				<li>Daha iyi performans sağlamakla birlikte daha az depolama esnekliği sunar.</li>
+                <li>Birimler üzerinde birden fazla iSCSI LUN (Normal Dosya) oluşturulmasına izin verir.</li>
+                <li>Azami bir RAID Dizisini destekler.</li>
+			</ul>
+		</li>
+		<li><b>Çok Sayıda Bölüm veya iSCSI LUN’lar (Blok-Seviyesi) için RAID Group</b>:
+			<ul>
+				<li>Bir RAID Group üzerinde çok sayıda birim veya iSCSI LUN (Blok-Seviyesi) oluşturmayı destekler.</li>
+                <li>Daha iyi depolama yönetimi esnekliği sağlar.</li>
+                <li>Birimler üzerinde birden fazla iSCSI LUN (Normal Dosya) oluşturulmasına izin verir.</li>
+				<li>Bir RAID Group altında çok sayıda RAID Dizisinin birleştirilmesini destekler (RAID 5 veya RAID 6 olarak konfigüre edildiğinde).</li>
+			</ul>
+            </li>
+	</ul>
+
+<h4>RAID Tipi</h4>    
+<p>Bir RAID Group oluştururken, ilk olarak bir RAID tipini seçin. Farklı RAID tipleri farklı seviyelerde veri koruması, depolama özelliği ve performans sunar. DiskStation şu anda aşağıdaki RAID tiplerini destekler:</p>
+	<ul>
+	  <li><b>Temel</b>: Bir RAID Group oluşturmak için bir sabit disk kullanır. Temel RAID Group'ları veri yedeklemesi sunmaz.</li>
+	  <li><b>JBOD*</b>: Bir RAID Group oluşturmak için en az iki sabit diski birleştirir. JBOD RAID Group'ları veri yedeklemesi sunmaz. Bir JBOD RAID Group'unun mevcut kapasitesi grup içinde bulunan tüm disklerin toplam kapasitesine eşittir. JBOD, farklı boyutlardaki sabit disklerin birleştirilmesini destekler.</li>
+	  <li><b>RAID 0*</b>: Bir RAID Group oluşturmak için en az iki sabit diski birleştirir. RAID 0 veri yedeklemesi sunmaz. Eğer tek bir üye disk arızalanırsa, RAID Group içindeki veri kaybolur. Bir RAID 0 Group'unun mevcut kapasitesi tüm üye disklerin toplam kapasitesine eşittir. RAID 0 farklı boyutlardaki sabit disklerin birleştirilmesini destekler.</li>
+	  <li><b>RAID 1*</b>: Bir RAID Group oluşturmak için 2-4 sabit diski birleştirir. Sistem aynı verileri her bir sabit diske yazacaktır. RAID 1 bir disk normal çalıştığı sürece veri koruması sunar. Bir RAID 1 Group'unun mevcut kapasitesi en küçük üye diskin boyutuna eşittir.</li>
+	  <li><b>RAID 5*</b>: Tüm üye disklerdeki veri ve parite bilgilerini alarak bir RAID Group oluşturmak için en az üç sabit diski birleştirir. RAID 5 daha fazla veri yedeklemesi sağlar. Bir üye disk arızalanırsa, sistem diğer üye disklerdeki parite bilgilerini kullanarak yeniden oluşturulabilir. Çok Sayıda Birim veya iSCSI LUN'lar (Blok-Seviyesi) için bir RAID Group üzerinde oluşturulduğunda çok sayıda RAID Dizisinin birleştirilmesini destekler. Bir RAID 5 Group'unun mevcut kapasitesi = <span class="note_content"> Tüm RAID Dizilerinin toplam kapasitesi. RAID Dizisi kapasitesi = (sabit disklerin sayısı - 1) x (En küçük sabit diskin kapasitesi)</span></li>
+	  <li><b>RAID 6*</b>: Tüm üye disklerdeki veri ve parite bilgilerini alarak bir RAID Group oluşturmak için en az dört sabit diski birleştirir. RAID 6 daha fazla veri yedeklemesi sağlar. İki üye disk arızalansa bile, sistem diğer üye disklerdeki parite bilgilerini kullanarak yeniden oluşturulabilir. Çok Sayıda Birim veya iSCSI LUN'lar (Blok-Seviyesi) için bir RAID Group üzerinde oluşturulduğunda çok sayıda RAID Dizisinin birleştirilmesini destekler. Bir RAID 6 Group'unun mevcut kapasitesi = <span class="note_content"> Tüm RAID Dizilerinin toplam kapasitesi. RAID Dizisi kapasitesi = (sabit disklerin sayısı - 2) x (En küçük sabit diskin kapasitesi)</span></li>
+	  <li><b>RAID 10*</b>: Bir RAID Group oluşturmak için en az dört sabit diski birleştirir. Disklerin sayısı çift sayısı olmalıdır. RAID 10'da RAID 0 performansı vardır ve ayrıca RAID 1 ile aynı veri koruma seviyesini sağlar. Bir RAID 10 Group mevcut kapasitesi = <span class="note_content">(en küçük sabit disk kapasitesi) X (sabit disk sayısı / 2)</span></li>
+	</ul>
+	<p>
+		<span class="note_head">Not:</span> "*" işaretli RAID tipleri sadece yeterli sabit disk yuvalarına sahip NAS modellerinde kullanılabilir.
+</p>
+
+
+<h4><a href="space.html">Birim Tipi</a></h4>
+	<p>Altta yatan RAID Group tipine göre, iki tür bölüm vardır:</p>
+	<ul>
+		<li><b>Tek Birim veya iSCSI LUN (Blok-Seviyesi) için RAID Group üzerindeki birim</b>
+        	<ul>
+            	<li>Bir RAID Group üzerindeki tüm depolama kapasitesini tek bir birime tahsis eder. Daha iyi performans sağlamakla birlikte daha az yönetim esnekliği sunar.</li>
+                <li>Birimler üzerinde birden fazla iSCSI LUN (Normal Dosya) oluşturulmasına izin verir.</li>
+            </ul></li>
+		<li><b>Çok Sayıda Bölüm veya iSCSI LUN’lar (Blok-Seviyesi) için RAID Group üzerindeki birim</b>
+        	<ul>
+            	<li>Bir birim oluşturmak için bir RAID Group üzerindeki depolama kapasitesinin belirlenen bir kısmını tahsis eder.  Birim boyutunu genişletmenize veya gerektiği gibi ilave birimler oluşturmanıza olanak tanıyarak daha iyi yönetim esnekliği sunar.</li>
+                <li>Birimler üzerinde birden fazla iSCSI LUN (Normal Dosya) oluşturulmasına izin verir.</li>
+            </ul></li>
+	</ul>
+
+<h4 class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64">Birim Biçimi</h4>
+<p class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64">Kullanımdaki dosya sistemine bağlı olarak, iki birim biçimi vardır:</p>
+<ul class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64">
+	<li><strong>Yeni birim biçimi</strong>: Bu biçim <b>Btrfs</b> dosya sistemini kullanır. Bu biçimdeki bir birimin asgari boyutu en az 10 GB olmalıdır. Birlikte verilerinizi daha kolay yönetebileceğiniz aşağıdaki yeni özellikleri destekler:
+		<ul>
+			<li><strong><a href="../DisasterRecovery/snapshots.html">Paylaşımlı klasör anlık görüntüsü</a>:</strong> Anlık görüntü tüm veri durumunu alınma zamanında kaydeder. Eğer bir kullanıcı anlık görüntülere sahip bir birim üzerindeki verileri kazara değiştirir veya silerse, anlık görüntünün alındığı eski bir zamana ait verileri hızlıca geri yükleyebilirsiniz.</li>
+			<li><strong><a href="../AdminCenter/file_share_create.html#sharequota">Paylaşımlı klasör kotası</a>:</strong> Her klasör için maksimum kapasiteyi belirleyebilirsiniz.</li>
+			<li><strong><a href="../AdminCenter/file_user_create.html#userquota">Kullanıcı kotası</a>, paylaşımlı klasöre dayalı:</strong> Her kullanıcı tarafından bir paylaşımlı klasör dahilinde ne kadar alanın kullanılabileceğini kontrol edebilirsiniz.</li>
+			<li><strong><a href="../AdminCenter/file_share_create.html#integrity_protection">Gelişmiş veri bütünlüğü koruması</a>:</strong> Paylaşımlı klasör CRC32 kontrol toplamı ve yazma sırasında kopyala stratejileri ile korunur.</li>
+		</ul>
+	</li>
+	<li><strong>Geleneksel birim biçimi</strong>: Bu biçim <b>ext4</b> dosya sistemini kullanır. Bu biçimdeki bir birimin asgari boyutu en az 10 GB olmalıdır. Ext4 dosya sistemi çoğu Synology ürünü tarafından desteklendiği için, bu biçimdeki biriminizi kolayca başka bir Synology ürününe taşıyabilirsiniz.</li>
+</ul>
+</body>
+</html>

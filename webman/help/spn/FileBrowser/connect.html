@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Conectar a diferentes servidores de archivos con File Station - Ayuda de Synology DSM</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="Learn how to customize File Station settings related to file management, shared links, and security.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Conexión remota</h2>
+
+<p>File Station le permite conectarse a servicios de nube pública (Box, Dropbox, Google Drive y Microsoft OneDrive) y servidores de archivos a través de varios protocolos diferentes (FTP, STFP, WebDAV y WebDAV HTTPS).</p>
+
+<h4>Para conectar a un servicio de nube:</h4>
+<ol>
+  <li>Vaya a <strong>Herramientas</strong> > <strong>Conexión remota</strong> > <strong>Configuración de conexión</strong>.</li>
+  <li>Para seleccionar el servicio de nube que prefiera, haga clic en el icono y haga clic en <strong>Siguiente</strong>.</li>
+  <li>En la ventana emergente, siga las instrucciones del asistente para autenticar la cuenta.</li>
+  <li>Cuando se haya completado la configuración, el servicio de nube de destino aparecerá en el panel de la izquierda.</li>
+</ol>
+
+
+<div class="section">
+<h4>Limitaciones específicas de cada nube:</h4>
+<ul>
+<li><strong>Box</strong>:<ul>
+  <li>Un catálogo compartido con otros colaboradores recibirá un sufijo con el nombre de usuario del propietario.</li>
+  <li>Si los catálogos compartidos con otros colaboradores utilizan un nombre idéntico (un nombre de catálogo con un sufijo con el nombre de usuario del propietario), solo se mostrará uno de dichos catálogos.</li>
+  <li>Los archivos con las siguientes extensiones solo se podrán abrir a través de Box: .gdoc, .gsheet y .boxnote.</li>
+  <li>Los nombres de archivos distinguen entre mayúsculas y minúsculas.</li>
+  <li>Para obtener la configuración correcta del cortafuegos consulte <a href="https://support.box.com/hc/articles/200523728-Configuring-a-Firewall-for-Box-or-Box-Sync"  target="_blank">este artículo</a>.</li>
+</ul>
+</li>
+
+<li><strong>Dropbox</strong>:<ul>
+<li>Un catálogo de Dropbox no se puede mostrar si contiene más de 25 000 archivos.</li>
+<li>Un catálogo de Dropbox no se puede renombrar si contiene más de 10 000 archivos.</li>
+<li>No se pueden cargar archivos de más de 10 GB.</li>
+<li>Una tarea de carga no se completará correctamente si el archivo necesita más de 24 horas para cargarse.</li>
+<li>Los nombres de archivos distinguen entre mayúsculas y minúsculas.</li>
+<li>Para obtener la configuración correcta del cortafuegos consulte <a href="https://www.dropbox.com/help/23"  target="_blank">este artículo</a>.</li>
+</ul>
+</li>
+
+<li><strong>Google Drive</strong>:<ul>
+  <li>Los archivos/carpetas con una ruta superior a 2048 caracteres no se mostrarán.</li>
+  <li>Los archivos con un nombre superior a 255 caracteres no se mostrarán.</li>
+  <li>Los archivos/catálogos con nombres idénticos se marcarán con horas de creación individuales.</li>
+<li>Si abre un archivo específico de Google (por ejemplo, Google Docs y Google Slides) a través de File Station, se mostrará una URL para que acceda al archivo de destino.</li>
+<li>Las carpetas <strong>My Drive</strong> y <strong>Starred</strong> que se muestran en File Station corresponden respectivamente a "Mi unidad" y "Destacados" en Google Drive.</li>
+<li>Para obtener la configuración correcta del cortafuegos consulte <a href="https://support.google.com/drive/answer/2589954"  target="_blank">este artículo</a>.</li>
+</ul>
+</li>
+
+<li><strong>Microsoft OneDrive</strong>:<ul>
+<li>Los archivos del bloc de notas OneNote no se mostrarán.</li>
+<li>No se pueden cargar archivos de más de 10 GB.</li>
+<li>Los archivos (por ejemplo, .png, .jpg, .docx, .PDF) pueden mostrar tamaño de archivo mayores (tamaños originales + tamaños de miniaturas). Esto no afectará a los tamaños de los archivos originales cuando se descarguen.</li>
+<li>Los nombres de archivos distinguen entre mayúsculas y minúsculas.</li>
+
+</ul>
+</li>
+</ul>
+
+<p>Para obtener información acerca de otras limitaciones, le sugerimos que visite el sitio web oficial del servicio de nube correspondiente.</p>
+
+
+</div>
+
+
+<h4>Para conectar a un servidor de archivos:</h4>
+<ol>
+  <li>Vaya a <strong>Herramientas</strong> > <strong>Conexión remota</strong> > <strong>Configuración de conexión</strong>.</li>
+  <li>Para elegir el protocolo de servidor deseado, haga clic en el icono y haga clic en <strong>Siguiente</strong>.</li>
+  <li>Proporcione la siguiente información para completar la configuración:<ul>
+  <li><strong>Nombre de host o IP</strong>: escriba el nombre de host o IP del servidor de archivos de destino.</li>
+  <li><strong>Puerto</strong>: escriba el número de puerto del servidor de archivos de destino.</li>
+  <li><strong>Usuario</strong> y <strong>Contraseña</strong>: introduzca esta información de inicio de sesión si el servidor de archivos de destino requiere cuenta/contraseña.</li>
+  <li><strong>Página de código</strong>: seleccione la codificación de caracteres del servidor de archivos de destino para mostrar los nombres de los archivos correctamente.</li>
+  <li><strong>Nombre del perfil</strong>: escriba un nombre único para identificar este servidor de archivos fácilmente.</li>
+  <li><strong>Utilizar conexión WebDAV HTTPS</strong>: esta opción está disponible solo cuando configura un protocolo WebDAV y tanto el cliente como el servidor de archivos son compatibles con WebDAV HTTPS.</li>
+  <li><strong>Permitir solo una conexión por usuario</strong>: esta opción está disponible solo cuando configura un protocolo FTP o SFTP. Marque esta opción para optimizar la conectividad cuando el servidor tiene limitaciones en cuanto al número de conexiones.</li>
+  </ul>
+  </li>
+<li>Haga clic en <strong>Aplicar</strong> para guardar la configuración. El servidor de archivos de destino aparecerá en el panel de la izquierda.</li> 
+</ol>
+<h4>Para modificar el perfil del servidor de archivos o del servicio de nube existentes:</h4>
+<ol>
+  <li>Vaya a <strong>Herramientas</strong> > <strong>Conexión remota</strong> > <strong>Lista de conexiones</strong>.</li>
+  <li>Haga clic en el servicio de nube o servidor de archivos de destino para administrar lo siguiente:<ul>
+      <li>Edición: haga clic en <strong>Editar</strong>, cambie la configuración actual del perfil y haga clic en <strong>OK</strong>.</li>
+      <li>Desconexión: haga clic en <strong>Desconectar</strong> para finalizar la conexión.</li>
+  <li>Reconexión: haga clic en <strong>Conectar</strong> para recuperar la conexión (también puede hacer clic en el destino del panel de la izquierda en File Station para reconectar).</li>
+  <li>Eliminación: haga clic en <strong>Eliminar</strong> y a continuación confirme para abandonar el perfil (también puede hacer clic en el destino del panel de la izquierda en File Station y hacer clic en <strong>Eliminar</strong> para borrarlo).</li>
+    </ul>
+  </li>
+  </ol>
+  
+  
+<div class="section">
+  <h4>Nota:</h4>
+<ul>
+  <li>Cada usuario puede conectar simultáneamente a un máximo de 100 servicios de nube y servidores de archivos.</li>
+  <li>Asegúrese de seleccionar la página de códigos del servidor correcto para evitar errores inesperados. Se recomienda Unicode si no conoce la página de códigos del servidor.</li>
+  <li>Algunas funciones de File Station (por ejemplo, Comprimir a, Extraer, Vista previa, etc.) no se pueden aplicar a archivos almacenados en servicios en la nube o servidores de archivos.</li>
+<li>Las velocidades de transferencia individuales para cada servicio de nube o servidor de archivos conectado están sujetas a las configuraciones de límite de velocidad de los usuarios.</li>
+<li>Cada usuario está limitado a tres transferencias de archivos simultáneas a través de todos los servicios de nube y servidores de archivos conectados.</li>
+<li>Para configurar los parámetros del proxy de WebDAV, WebDAV HTTPS y del servicio de nube vaya a <strong>Panel de control</strong> > <strong>Red</strong> > <strong>General</strong> > <strong>Proxy</strong>. Si ha cambiado la configuración del proxy durante la conexión al servicio de nube o al servidor de archivos, desconéctese y vuélvase a conectar.</li>
+<li>Si modifica la información del servicio de nube o los servidores de archivos conectados el estado de conexión no se verá afectado.</li>
+<li>Para liberar recursos de conexión, un servicio de nube/servidor de archivos se desconectará automáticamente si los archivos que contiene permanecen inalterados durante más de 30 minutos. Haga clic en el servicio de nube/servidor de archivos para recuperar conexión.</li>
+<li>El sistema no puede mostrar archivos/carpetas que adoptan los siguientes formatos de nomenclatura:<ul>
+    <li>Comienzan por <strong>._</strong> o <strong>.SYNOPPSDB</strong></li>
+    <li>Incluyen <strong>/</strong></li>
+<li>Nombrados exactamente como <strong>.</strong>    <strong>..</strong>    <strong>'</strong>    <strong>"</strong>    <strong>.DS_Store</strong>    <strong>@eaDir</strong>    <strong>@sharebin</strong>    <strong>@tmp</strong>    <strong>.SynologyWorkingDirectory</strong></li>
+  </ul>
+</li><li class="enable-dockerx64">La conexión remota solo es compatible en el modo con privilegios altos. Para usar esta función vaya al paquete Docker de su DSM host, seleccione el <strong>Docker DSM</strong> para el que desea habilitar las carpetas compartidas cifradas, haga clic en <strong>Editar</strong> y marque la casilla junto a <strong>Ejecutar contenedor usando privilegios altos</strong>.</li></ul>
+</div>
+</body>
+</html>

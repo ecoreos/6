@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Centrum protokolů</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+
+</head>
+<body>
+<h2>Nastavení archivu</h2>
+
+<p>Stránka <strong>Nastavení archivu</strong> poskytuje možnosti konfigurace, jak a kde se archivují protokoly přijaté Centrem protokolů. Níže uvedené možnosti se používají ke stanovení umístění úložiště a pravidel automatického vytváření archivů protokolů.</p>
+
+
+<h3>Cíl ukládání archivů</h3>
+
+<p>Cíl se týká složky, kde se ukládají a archivují protokoly přijaté Centrem protokolů. Kliknutím na možnost <strong>Vybrat umístění</strong> se vybere složka.</p>
+<p>Jestliže chcete, aby se místní protokoly zařízení DiskStation archivovaly do stejného cíle, zaškrtněte políčko označené <strong>Místní protokoly archivovat do umístění úložiště stanoveného výše</strong>. Ve většině případů se tím poskytuje více úložného prostoru pro místní protokoly, což umožní udržovat úplnější systémové protokoly.</p><!--DSM#61793: Describe how logs are archived in data volume--><div class="section">
+<h4>Poznámka:</h4>
+<p>Místní protokoly (protokoly systému, připojení a přenosu souborů) se ukládají do systémového oddílu, který má omezené úložiště. Povolením možnosti <strong>Místní protokoly archivovat do umístění úložiště stanoveného výše</strong> se budou všechny protokoly archivovat do stanoveného cíle podle <strong>Pravidel archivu</strong>. Pokud chcete procházet archivované místní protokoly, klikněte na možnost <strong>Otevřít archiv protokolů</strong> a vyberte položku <strong>SYNOSYSLOGDB__LOCALARCH.DB</strong>.</p>
+</div>
+
+
+<h3>Pravidla archivu</h3>
+
+<p>Protokoly se archivují automaticky podle kritérií definovaných v části <strong>Pravidla archivu</strong>. Protokoly je možné archivovat automaticky, jestliže velikost databáze protokolů dosáhne stanovené velikost, počet jednotlivých protokolů dosáhne stanovené hodnoty nebo protokoly dosáhnou stanoveného stáří.</p>
+
+<h3>Formát archivu</h3>
+<p>Tato část obsahuje následující možnosti.</p>
+<ul>
+<li><strong>Archivovat protokoly kromě výchozího i v textovém formátu:</strong> Uloží archivy nejen jako výchozí soubory SQLite, ale i jako soubory prostého textu.</li>
+<li><strong>Komprimovat archivy protokolů:</strong> Uloží archivy protokolů jako komprimované soubory ve formátu ZIP.</li>
+<li><strong>Archivovat protokoly samostatně podle zařízení:</strong> Ukládá samostatné archivy pro jednotlivá klientská zařízení, která odesílají protokoly na zařízení DiskStation.</li>
+</ul>
+
+</body>

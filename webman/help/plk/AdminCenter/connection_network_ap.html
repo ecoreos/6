@@ -1,0 +1,199 @@
+
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Sieć</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2><a name="wireless_ap"></a>Punkt dostępowy*</h2>
+<p>Urządzenie DiskStation umożliwia tworzenie punktu dostępowego, który bezprzewodowo udostępnia połączenie internetowe innym urządzeniom, jeżeli w serwerze DiskStation zainstalowano adapter USB Wi-Fi lub łączność Wi-Fi jest wbudowana. Serwer DiskStation można ustawić jako bezprzewodowy punkt dostępu lub router bezprzewodowy w zależności od tego, jak chcesz używać Internetu.</p>
+
+<table>
+<tr>
+<th width="23%">Tryb punktu dostępowego</th>
+<th width="77%">Opis</th>
+</tr>
+<tr>
+<th>Bezprzewodowy punkt dostępowy</th>
+<td>
+<ul>
+<li>Ustanawia most między sieciami LAN i Wi-Fi.</li>
+<li>Klienci w sieci LAN sieci bezprzewodowej będą działać w tej samej sieci lokalnej.</li>
+<li>Tryb ten przydaje się, gdy masz już router i chcesz używać serwera DiskStation jako dodatkowego punktu dostępowego do istniejącej sieci.</li> 
+<li>Umożliwia współdzielenie zasobów sieciowych, takich jak urządzenia DLNA, drukarki, Synology Web Assistant czy innych usług korzystających z transmisji sieciowych.</li>
+<li>W urządzeniach DiskStation działających jako bezprzewodowe punkty dostępowe serwer DHCP jest wyłączony. Aby ponownie włączyć serwer DHCP na serwerze DiskStation, odłącz adaptery Wi-Fi i uruchom ponownie serwer DiskStation.</li>
+<li>W przypadku modeli z kilkoma portami LAN do utworzenia mostu z bezprzewodowym punktem dostępowym będzie używany tylko port LAN 1.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Router bezprzewodowy</th>
+<td>
+<ul>
+<li>Konfiguruje sieć bezprzewodową, w której urządzenia są w prywatnej podsieci.</li>
+</ul>
+</td>
+</tr>
+</table>
+
+
+<div class="section">
+<h4>Uwaga:</h4>
+
+<ol>
+<li>Niektóre modele wymagają podłączenia zewnętrznej karty sieci bezprzewodowej w celu tworzenia punktów dostępowych. Pełną listę obsługiwanych kart sieci bezprzewodowej można znaleźć w witrynie <a href="http://www.synology.com/support/faq/444" target=_blank>www.synology.com</a>.</li>
+<li>W modelach innych niż DS213air opcja Bezprzewodowy punkt dostępowy w systemie DSM 4.3 ma nazwę zmienioną na Router bezprzewodowy w systemie DSM 5.0 i nowszych.</li>
+</ul>
+</ol>
+
+</div>
+
+<h3>Zarządzanie ustawieniami punktu dostępowego</h3>
+<p>W tej sekcji wyjaśniono, jak włączyć ustawienia punktu dostępowego serwera DiskStation i nimi zarządzać.</p>
+
+
+<h4>Aby zmienić serwer DiskStation w punkt dostępowy:</h4>
+<ol>
+<li>Przejdź do pozycji <strong>Panel sterowania</strong> > <strong>Łączność bezprzewodowa</strong> > <strong>Mapa sieci</strong>. Wybierz <strong>Bezprzewodowy punkt dostępowy</strong> lub <strong>Router bezprzewodowy</strong>.</li>
+<li>Przejdź do karty <strong>Wi-Fi</strong>, a następnie kliknij przycisk <strong>Edytuj</strong>, aby zarządzać następującymi ustawieniami:</li>
+<ul>
+<li><strong>Nazwa (SSID):</strong> wprowadź nazwę sieci bezprzewodowej.</li>
+<li><strong>Pokaż/Ukryj:</strong> wybierz, czy sieć bezprzewodowa ma być widoczna dla innych urządzeń.</li>
+<li><strong>Tryb łączności bezprzewodowej:</strong> wybierz standard sieci bezprzewodowej. Każdy standard obsługuje różne szerokości pasma i częstotliwości.</li>
+<li><strong>Szerokość kanału:</strong> wybierz szerokość kanału (ustawienie dostępne tylko w przypadku trybu 802.11n).</li>
+<li><strong>Kanał:</strong> wybierz częstotliwość sieci bezprzewodowej. Aby uzyskać lepszą wydajność, wybierz częstotliwość inną niż używana w pobliskich sieciach.</li>
+<li><strong>Moc transmisji:</strong> wybierz moc sygnału sieci bezprzewodowej.</li>
+<li><strong>Max połączenia:</strong> wybierz, ilu klientów może się łączyć z siecią. Największa wartość tego ustawienia to 256.</li>
+<li><strong>Włącz WMM QoS:</strong> QoS (jakość usług) multimediów Wi-Fi (WMM) w sieci Wi-Fi. Ta opcja umożliwia sieci bezprzewodowej priorytetowe traktowanie ruchu i optymalizację sposobu udostępniania zasobów aplikacjom.</li>
+</ul>
+</ol>
+
+
+
+<h4>Aby skonfigurować harmonogram sieci bezprzewodowej:*</h4>
+<p>Włączenie harmonogramu sieci bezprzewodowej umożliwia sterowanie działaniem i dostępnością sieci bezprzewodowej serwera DiskStation.</p>
+<ol>
+<li>Przejdź do karty <strong>Wi-Fi</strong>, a następnie kliknij przycisk <strong>Edytuj</strong>. </li>
+<li>Zaznacz pole wyboru <strong>Włącz plan</strong>.</li>
+
+<li>Kliknij przycisk <strong>Ustaw harmonogram</strong>.</li>
+<li>Na ekranie harmonogramu wybierz, kiedy sieć bezprzewodowa ma być aktywna.</li>
+</ol>
+
+
+<h3>Ustawienia bezpieczeństwa</h3>
+<p><strong>Panel sterowania</strong> > <strong>Łączność bezprzewodowa</strong> > <strong>Wi-Fi</strong> oferuje opcje edycji ustawień bezpieczeństwa sieci bezprzewodowej.</p>
+
+
+<h4>Aby skonfigurować bezpieczeństwo sieci bezprzewodowej:</h4>
+<ol>
+
+<li>Kliknij przycisk <strong>Edytuj</strong>.</li>
+<li>Wybierz jeden z następujących protokołów zabezpieczeń w menu rozwijanym <strong>Ustawienia bezpieczeństwa</strong>:</li>
+<ul>
+<li><strong>WEP:</strong> podstawowy protokół zabezpieczeń, który wymaga wprowadzenia hasła w celu uzyskania dostępu do sieci bezprzewodowej, ale zapewnia minimalną ochronę.</li>
+<li><strong>WPA/WPA2 Personal:</strong> zalecany. Wymaga wprowadzenia hasła w celu uzyskania dostępu do sieci bezprzewodowej i zapewnia lepszą ochronę niż WEP.</li>
+<li><strong>WPA/WPA2 Enterprise:</strong>* protokół zabezpieczeń przeznaczony dla przedsiębiorstw, wymagający uwierzytelniania użytkowników przy użyciu zewnętrznego serwera uwierzytelniającego.</li>
+
+</ul>
+</ol>
+
+<h4>Aby włączyć funkcję Wi-Fi Protected Setup:*</h4>
+<p>Wi-Fi Protected Setup to standard propagowany przez Wi-Fi Alliance w celu uproszczenia konfiguracji zabezpieczeń sieci bezprzewodowej. Do zabezpieczenia sieci Wi-Fi można użyć przycisku lub numeru PIN. Kliknij <strong>WPS</strong>, aby włączyć funkcję Wi-Fi Protected Setup.</p>
+
+
+<h3>Sieć dla gości*</h3>
+<p>Oprócz sieci bezprzewodowej hosta serwer DiskStation umożliwia także tworzenie sieci bezprzewodowej dla gości. Ustawienia sieci bezprzewodowej dla gości można ograniczyć w celu ograniczenia dostępu użytkowników. Jest to przydatne w przedsiębiorstwach i innych instytucjach, które chcą zapewniać gościom sieć bezprzewodową, ale nie udzielać im dostępu do sieci hosta.</p>
+
+
+<h4>Aby włączyć sieć dla gości:</h4>
+
+<ol>
+<li>Przejdź do pozycji <strong>Panel sterowania</strong> > <strong>Łączność bezprzewodowa</strong> > <strong>Wi-Fi</strong>. </li>
+<li>Kliknij przycisk <strong>Edytuj</strong>, aby zarządzać następującymi ustawieniami na karcie <strong>Sieć dla gości</strong>:</li>
+
+<ul>
+<li><strong>Nazwa (SSID):</strong> wprowadź nazwę sieci bezprzewodowej.</li>
+<li><strong>Pokaż/Ukryj:</strong> wybierz, czy sieć bezprzewodowa ma być widoczna dla innych urządzeń.</li>
+<li><strong>Max połączenia:</strong> wybierz, ilu klientów może się łączyć z siecią. Największa wartość tego ustawienia to 256.</li>
+</ul>
+</ol>
+
+<h4>Aby skonfigurować bezpieczeństwo sieci dla gości:</h4>
+<p>Wybierz jeden z następujących protokołów zabezpieczeń w menu rozwijanym <strong>Ustawienia bezpieczeństwa</strong>:</p>
+<ul>
+<li><strong>WEP:</strong> podstawowy protokół zabezpieczeń, który wymaga wprowadzenia hasła w celu uzyskania dostępu do sieci bezprzewodowej, ale zapewnia minimalną ochronę.</li>
+<li><strong>WPA/WPA2 Personal:</strong> zalecany. Wymaga wprowadzenia hasła w celu uzyskania dostępu do sieci bezprzewodowej i zapewnia lepszą ochronę niż WEP.</li>
+</ul>
+
+
+<h4>Aby skonfigurować harmonogram sieci dla gości:</h4>
+<p>Włączenie harmonogramu sieci bezprzewodowej umożliwia sterowanie działaniem i dostępnością sieci dla gości serwera DiskStation.</p>
+
+<ol>
+<li>Zaznacz pole wyboru <strong>Włącz harmonogram sieci dla gości</strong>.</li>
+<li>Kliknij przycisk <strong>Ustaw harmonogram dla gości</strong>.</li>
+<li>Na ekranie harmonogramu wybierz, kiedy sieć da gości ma być aktywna.</li>
+</ol>
+
+<div class="section">
+<h4>Uwaga:</h4>
+<p>Sieć bezprzewodowa dla gości nie może być aktywna wtedy, gdy sieć bezprzewodowa hosta jest nieaktywna.</p>
+</div>
+
+
+<h3>Ustawienie filtru adresów MAC*</h3>
+<p>Ustawienia filtru adresów MAC (<strong>Panel sterowania</strong> > <strong>Łączność bezprzewodowa</strong>) umożliwiają określenie adresów MAC urządzeń, które mogą uzyskiwać dostęp do sieci bezprzewodowej. W ten sposób można przyznawać lub blokować dostęp określonym urządzeniom. Ta funkcja steruje tylko dostępem do sieci, a nie innymi ustawieniami szyfrowania.</p>
+
+
+<h4>Aby utworzyć reguły filtru adresów MAC:</h4>
+<ol>
+<li>Wprowadź opis i adres MAC urządzenia.</li>
+<li>Wybierz strategię dostępu:
+<ul>
+<li><strong>Odmów:</strong> ogranicza dostęp do sieci bezprzewodowej urządzeniom o określonych adresach MAC.</li>
+<li><strong>Zezwól:</strong> zezwala na dostęp do sieci bezprzewodowej urządzeniom o określonych adresach MAC.</li>
+</ul> 
+</ol>
+
+
+
+<h3>Ochrona rodzicielska*</h3>
+<p>Ochrona rodzicielska umożliwia sterowanie dostępem do Internetu poszczególnych klientów podłączonych do sieci lokalnej serwera DiskStation. Jeżeli na przykład komputery lub urządzenia mobilne dzieci łączą się z Internetem za pośrednictwem serwera DiskStation, można skonfigurować ustawienia ochrony rodzicielskiej tak, aby ograniczyć dostęp do Internetu określonych urządzeń i określonych godzin.</p>
+
+<h4>Aby włączyć ochronę rodzicielską:</h4>
+<ol>
+<li>Przejdź do pozycji <strong>Panel sterowania</strong> > <strong>Łączność bezprzewodowa</strong> > <strong>Ustawienia ochrony rodzicielskiej</strong>.</li>
+
+<li>Kliknij przycisk <strong>Dodaj</strong>, aby dodać urządzenie klienckie.</li>
+<ul>
+<li><strong>Nazwa klienta:</strong> wybierz urządzenie podłączone do serwera DiskStation lub wprowadź nazwę ręcznie (np. laptop Luizy).</li>
+<li><strong>Adres MAC:</strong> wprowadź adres MAC urządzenia, którego dostęp do Internetu chcesz kontrolować.</li>
+<li><strong>Ustaw harmonogram:</strong> wybierz pory, w których określone urządzenie będzie mogło uzyskiwać dostęp do Internetu za pośrednictwem serwera DiskStation.</li>
+</ul>
+</ol>
+
+<h3>Lista połączeń*</h3>
+<p>Lista połączeń (na stronie <strong>Panel sterowania</strong> > <strong>Łączność bezprzewodowa</strong>) wyświetla informacje o urządzeniach podłączonych do serwera DiskStation. Urządzenia wyświetlane na tej stronie można dodawać bezpośrednio do listy filtru adresów MAC.</p>
+
+<h4>Aby dodać urządzenia do listy filtru adresów MAC:</h4>
+<ol>
+<li>Kliknij pole wyboru przed urządzeniem, które chcesz dodać do listy filtru adresów MAC.</li>
+<li>Kliknij <strong>Dodaj do listy filtru adresów MAC</strong>.</li>
+</ol>
+
+
+
+<p>____<br> * Funkcja dostępna tylko w niektórych modelach.<br>
+</body>
+</html>

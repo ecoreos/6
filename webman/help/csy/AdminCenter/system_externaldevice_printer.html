@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Externí zařízení</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2><a name="usbprinter"></a>Tiskárny</h2>
+<p>Zařízení DiskStation lze nastavit jako tiskový server, který umožňuje klientským počítačům nebo mobilním zařízením přístup k tiskárnám připojeným k zařízení DiskStation. Kromě toho umožňuje podpora technologií Apple Wireless Printing a Google Cloud Print vzdálený tisk pomocí zařízení se systémem iOS nebo produktů a služeb společnosti Google.</p>
+<p>Seznam kompatibilních tiskáren najdete na stránkách <a href="http://www.synology.com" target="_blank">www.synology.com</a>.</p>
+
+<h3>Nastavení tiskáren</h3>
+<p>Nastavení a připojení tiskárny <span style="display: inline;" class="disable-rc18015xsp">USB nebo </span>síťové tiskárny k zařízení DiskStation provedete podle následujícího postupu.</p>
+
+
+<h4 class="disable-rc18015xsp">Postup nastavení tiskárny USB:</h4>
+<ol class="disable-rc18015xsp">
+<li>Zapněte a připojte tiskárnu do portu USB zařízení DiskStation.</li>
+<li>Přejděte do části <strong>Ovládací panel</strong> > <strong>Externí zařízení</strong> > <strong>Tiskárna</strong>.</li>
+<li>Vyberte tiskárnu, kterou chcete nastavit. Zařízení DiskStation nedokáže rozpoznat tiskárny připojené pomocí rozbočovačů USB.</li>
+<li>Klikněte na možnost <b>Správa tiskárny</b> a vyberte možnost <b>Nastavit tiskárnu</b>.</li>
+<li>V dialogovém okně vyberte jeden z následujících režimů:<ul>
+<li><b>Network MFP:</b> Umožňuje klientským zařízením v místní síti používat funkce tisku, skenování a faxu multifunkční tiskárny. Skenování a faxování je k dispozici pouze u počítačů se systémem Windows.</li>
+<li><b>Síťová tiskárna:</b> Vyberte tento režim pouze v případě tiskáren podporujících možnost tisku nebo pokud chcete klientským zařízením umožnit pouze používání funkce tisku.</li>
+</ul>
+</li>
+<li>Proveďte konfiguraci nastavení Apple Wireless Printing nebo Google Cloud Print (volitelné).</li>
+<li>Klikněte na možnost <b>Uložit</b>.</li>
+</ol>
+
+<div class="section disable-rc18015xsp">
+<h4>Poznámka:</h4>
+<p>Přístup k síťovému MFP (Network MFP) může získat pouze jeden klient současně.</p>
+</div>
+
+
+<h4>Postup instalace síťové tiskárny:</h4>
+<ol>
+<li>Zapněte a připojte síťovou tiskárnu ke stejné síti, ke které je připojeno zařízení DiskStation.</li>
+<li>Přejděte do části <strong>Ovládací panel</strong> > <strong>Externí zařízení</strong> > <strong>Tiskárna</strong>.</li>
+<li>Klikněte na možnost <b>Přidat síťovou tiskárnu</b> a postupujte podle pokynů průvodce nastavením.</li>
+</ol>
+
+<div class="section">
+<h4>Poznámka:</h4>
+<ul>
+<li><strong>Název tiskárny:</strong> Název tiskárny je nutné zadat během nastavení a může obsahovat maximálně 32 znaků, včetně písmen, číslic a podtržítek.</li>
+	<li><strong>Protokol:</strong> V běžných situacích používají síťové tiskárny HP protokol Socket, síťové tiskárny Canon protokol BJNP a ostatní tiskárny převážně protokol LPR.</li>
+<li><strong>Název fronty:</strong> Název fronty vyžadují síťové tiskárny s protokolem LPR a IPP, nejsou však vyžadovány v případě tiskáren s podporou protokolů Socket nebo BJNP.</li>
+<li><strong>Bez síťového MFP (Network MFP):</strong> Síťové tiskárny připojené k zařízení DiskStation nemohou v současnosti využívat režim Network MFP.</li>
+<li><strong>Bez tiskáren USB:</strong> Tiskárny USB sdílené produktem Synology nelze nastavit jako síťové tiskárny.</li>
+</ul>
+</div>
+
+
+<h3>Správa tiskáren</h3>
+<p>Karta tiskáren obsahuje následující možnosti správy tiskáren <span style="display: inline;" class="disable-rc18015xsp">USB nebo </span>síťových tiskáren připojených k zařízení DiskStation.</p>
+
+<ul>
+<li><b>Získat informace:</b> Zobrazí informace týkající se vybrané tiskárny, jako je název zařízení, výrobce, stav atd.</li>
+<li><strong>Odebrat:</strong> Odebere a odpojí tiskárnu od zařízení DiskStation.</li>
+<li><strong>Správa tiskárny:</strong> Obsahuje následující možnosti:<ul>
+<li><strong>Nastavit tiskárnu</strong>: Upraví nastavení tiskárny, jako je Apple Wireless Printing nebo Google Cloud Print (pokyny najdete níže).</li>
+<li><strong>Vyčistit frontu:</strong> Zruší všechny tiskové úlohy na všech tiskárnách.</li>
+<li><strong>Tisk zkušební stránky:</strong> Vytiskne zkušební stránku a ověří správnost konfigurací.</li>
+<li><b>Uvolnit tiskárnu:</b> Odpojí tiskárnu a klientské zařízení (k dispozici pouze pro režim Síťový MFP). Pokud se klientské zařízení připojuje k multifunkční tiskárně za účelem příjmu faxových zpráv nebo skenování souborů, může tato úloha trvat déle. Je-li potřeba, může být připojení pozastaveno a přístup k tiskárně bude přidělen dalšímu klientskému zařízení.</li>
+</ul></li>
+</ul>
+
+
+<h4>Postup povolení technologie Apple Wireless Printing:</h4>
+<ol>
+<li>Přejděte do části <strong>Ovládací panel</strong> > <strong>Externí zařízení</strong> > <strong>Tiskárna</strong>.</li>
+<li>Vyberte tiskárnu ze seznamu zařízení.</li>
+<li>Klikněte na možnost <b>Správa tiskárny</b> > <b>Nastavit tiskárnu</b>.</li>
+<li>Zaškrtněte políčko <b>Povolit Apple Wireless Printing</b>.</li>
+<li>Vyberte značku a ovladač tiskárny.</li>
+<li>Klikněte na možnost <b>Uložit</b>.</li>
+</ol>
+
+<p>Po dokončení nastavení si můžete vytisknout zkušební stránku, a to kliknutím na možnost <b>Správa tiskárny</b> > <b>Tisk zkušební stránky</b>.</li>
+
+<div class="section">
+<h4>Poznámka:</h4>
+<ul>
+<li>Povolením technologie Apple Wireless Printing bude povolena také funkce Přenos tiskárny Bonjour pro systém DSM.</li>
+<li>Technologie Apple Wireless Printing je k dispozici pro systém iOS 4.2 nebo novější.</li>
+</ul>
+</div>
+
+
+<h4>Postup povolení technologie Google Cloud Print:</h4>
+<ol>
+<li>Přejděte do části <strong>Ovládací panel</strong> > <strong>Externí zařízení</strong> > <strong>Tiskárna</strong>.</li>
+<li>Vyberte tiskárnu ze seznamu zařízení.</li>
+<li>Klikněte na možnost <b>Správa tiskárny</b> > <b>Nastavit tiskárnu</b>.</li>
+<li>Zaškrtněte políčko <b>Povolit Google Cloud Print</b>.</li>
+<li>Zadejte následující údaje:<ul>
+
+<li>Údaje účtu Google.</li>
+<li>Značku a ovladač tiskárny.</li>
+</ul>
+<li>Klikněte na možnost <b>Uložit</b>.</li>
+</ol>
+<p>Po dokončení nastavení si můžete vytisknout zkušební stránku, a to kliknutím na možnost <b>Správa tiskárny</b> > <b>Tisk zkušební stránky</b>.</li>
+</p>
+<p>Správu úloh Google Cloud Print zahájíte kliknutím na odkaz <a href="http://www.google.com/cloudprint/manage.html" target="_blank">Google Cloud Print</a>.</p>
+
+
+<h3>Přístup k tiskárnám</h3>
+<p>Přístup k tiskárnám pomocí počítače PC nebo Mac získáte podle pokynů v níže uvedené části.</p>
+<h4><a name="others"></a>Možnosti přístupu k tiskárnám pomocí počítače se systémem Windows:</h4>
+<p>Přístup ke službě tisku zařízení DiskStation lze nejlépe nastavit připojením k tiskárně prostřednictvím služby Synology Assistant. Podrobné pokyny najdete v nápovědě pro tuto službu.</p>
+
+<p>Pokud není služba Synology Assistant v počítači nainstalována, přečtěte si níže uvedené rady týkající se dalších způsobů přístupu ke službám tisku zařízení DiskStation.</p>
+<p><strong>Typ 1. Sdílená síťová tiskárna</strong></p>
+<ol>
+<li>Aktivujte na počítači v programu Průzkumník souborů možnost <b>Síť</b> a klikněte dvakrát na zařízení DiskStation.</li>
+
+<li>Klikněte dvakrát na možnost <span style="display: inline;" class="disable-rc18015xsp"><b>usbprinter</b> nebo </span><b>network printer name</b>; systém vás vyzve k instalaci správného ovladače. Poté klikněte na možnost <b>Ano</b>.</li>
+
+<li>Ovladač tiskárny najdete na disku CD nebo na webové stránce výrobce. Vyberte výrobce a model tiskárny nebo vyberte umístění ovladače kliknutím na možnost <strong>Z disku</strong>. Poté klikněte na tlačítko <b>OK</b>.</li>
+<li>Systém zahájí instalaci síťové tiskárny. Po dokončení nastavení můžete začít tiskárnu používat. </li>
+</ol>
+
+
+<p><strong>Typ 2. Port LPR (doporučeno)</strong></p>
+<ol>
+<li>Klikněte v počítači na tlačítko <b>Start</b> a přejděte do části <b>Zařízení a tiskárny</b>.</li>
+<li>Klikněte na možnost <b>Přidat tiskárnu</b>. </li>
+	<li>Vyberte možnost <strong>Přidat síťovou tiskárnu, bezdrátovou tiskárnu nebo tiskárnu s technologií Bluetooth</strong>. </li>
+	<li>Vyberte možnost <strong>Požadovaná tiskárna není v seznamu</strong>.</li>
+<li>Vyberte možnost <b>Přidat tiskárnu pomocí TCP/IP adresy nebo hostitelského názvu</b>. Pokračujte kliknutím na tlačítko <b>Další</b>.</li>
+<li>V části Typ zařízení vyberte možnost <b>Zařízení TCP/IP</b>.</li>
+<li>Zadejte IP adresu zařízení DiskStation. Pokračujte kliknutím na tlačítko <b>Další</b>.</li>
+<li>Vyberte položku <b>Typ zařízení</b>: <strong>Vlastní</strong> > <strong>Nastavení</strong> > …. Pokračujte kliknutím na tlačítko <b>Další</b>.</li>
+
+<li>Jako protokol vyberte <b>LPR</b>, jako název fronty zadejte <span style="display: inline;" class="disable-rc18015xsp"><b>usbprinter</b> nebo </span><b>network printer name</b> a zaškrtněte políčko <b>Povolit počítání bajtů protokolu LPR</b>. Pokračujte kliknutím na možnost <b>OK</b>.</li>
+
+<li>Ovladač tiskárny najdete na disku CD nebo na webové stránce výrobce. Vyberte výrobce a model tiskárny nebo vyberte umístění ovladače kliknutím na možnost <strong>Z disku</strong>. Poté klikněte na tlačítko <b>OK</b>.</li>
+	<li>Systém zahájí instalaci síťové tiskárny. Po dokončení nastavení můžete začít tiskárnu používat.</li>
+</ol>
+
+<h4>Možnosti přístupu k tiskárnám pomocí počítače Mac:</h4>
+<p>Uživatelé systému Mac mohou získat přístup ke službě tisku zařízení DiskStation povolením přenosu tiskárny DSM Bonjour a přidáním tiskárny v části Systémové předvolby.</p>
+<P>Dříve než budete pokračovat, přesvědčte se, zda je k zařízení DiskStation připojena tiskárna podporující jazyk Postscript.</p>
+<p><strong>Krok 1. Povolení přenosu tiskárny DSM Bonjour:</strong></p>
+<ol>
+<li>Přihlaste se do systému DSM jako uživatel <b>admin</b> nebo uživatel ze skupiny <b>administrators</b>.</li>
+<li>Přejděte do části <b>Ovládací panel</b> > <strong>Souborové služby</strong> > <b>Win/Mac/NFS</b>.</li>
+<li>Zaškrtněte možnost <b>Povolit přenos tiskárny Bonjour</b>.</li>
+</ol>
+
+<p><strong>Krok 2. Přístup k tiskárně pomocí počítače Mac</strong></p>
+<ol>
+<li>Přejděte do části <b>Systémové předvolby</b> > <b>Tiskárny a skenování</b> a klikněte na symbol <b>+</b>.</li>
+
+<li>Z rozevírací nabídky vyberte možnost <span style="display: inline;" class="disable-rc18015xsp"><b>usbprinter[number]</b> nebo </span><b>network printer name</b>. Počítač Mac provede automatické nastavení tiskárny.</li>
+
+</ol>
+</div>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Ein/Aus</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+
+
+<h2>USV</h2>
+
+<p class="disable-eds14">Eine USV (unterbrechungsfreie Stromversorgung) ist eine Reservestromversorgung, über die der DiskStation bei Stromausfall für kurze Zeit weiterbetrieben werden kann. Diese Funktion unter <strong>Systemsteuerung</strong> > <strong>Hardware und Energie</strong> > <strong>USV</strong> verhindert Datenverlust, indem dem DiskStation ausreichend Zeit für das Speichern von Daten und Trennen von Volumes gegeben wird, bevor die Stromversorgung ausfällt und das Gerät heruntergefahren wird.</p>
+
+<p class="enable-eds14">Eine USV (unterbrechungsfreie Stromversorgung) ist eine Reservestromversorgung, über die der DiskStation bei Stromausfall für kurze Zeit weiterbetrieben werden kann. Diese Funktion unter <strong>Systemsteuerung</strong> > <strong>Hardware und Energie</strong> > <strong>USV</strong> verhindert Datenverlust, indem dem DiskStation ausreichend Zeit für das Speichern von Daten und Trennen von Volumes gegeben wird, bevor die Stromversorgung ausfällt und das Gerät ausgeschaltet wird.</p>
+
+<div class="section">
+<h4>Sicherer Modus</h4>
+<p class="disable-eds14">Wenn der DiskStation in den sicheren Modus wechselt, werden sämtliche Dienste gestoppt und Volumes getrennt, um den Datenverlust zu verhindern und das Gerät sicher herunterzufahren, wenn das USV-Gerät keinen Strom mehr hat. Das System wechselt standardmäßig in den sicheren Modus, wenn das USV-Gerät nur noch wenig Strom liefert. Sie können auch die Zeit angeben, nach der der DiskStation bei Stromausfall in den sicheren Modus wechselt. Wenn das USV-Gerät allerdings bereits vor der angegeben Zeit nur noch wenig Strom liefert, wechselt das System sofort in den sicheren Modus.</p>
+
+<p class="enable-eds14">Wenn der DiskStation in den sicheren Modus wechselt, werden sämtliche Dienste gestoppt und Volumes getrennt, um den Datenverlust zu verhindern und das Gerät sicher herunterzufahren, wenn das USV-Gerät keinen Strom mehr hat. Das System wechselt standardmäßig in den sicheren Modus, wenn das USV-Gerät nur noch wenig Strom liefert. Sie können auch die Zeit angeben, nach der der DiskStation bei Stromausfall in den sicheren Modus wechselt. Wenn das USV-Gerät allerdings bereits vor der angegeben Zeit nur noch wenig Strom liefert, wechselt das System sofort in den sicheren Modus.</p>
+
+
+<p></p>
+<p class="disable-eds14">In Situationen, in denen der DiskStation im sicheren Modus herunterfährt, wird er automatisch eingeschaltet, wenn die Stromversorgung wiederhergestellt ist, sofern die Option <strong>Nach Stromausfall automatisch starten</strong> aktiviert ist (unter <strong>Systemsteuerung</strong> > <strong>Hardware und Energie</strong> > <strong>Allgemein</strong>).</p>
+
+<p></p>
+</div>
+
+
+
+
+<h3>Lokale USV-Unterstützung</h3>
+
+<p>Einzelheiten zur Hardware-Installation finden Sie in der Bedienungsanleitung Ihres USV-Gerätes. Nach Abschluss der Installation und Anschließen des DiskStation an das USV-Gerät können Sie die USV-Unterstützung aktivieren, indem Sie die folgenden Schritte durchführen.</p>
+<h4>Lokale USV-Unterstützung aktivieren:</h4>
+<OL>
+<li>Schließen Sie ein USV-Gerät an einen USB-Port des DiskStation an.</li>
+<LI>Aktivieren Sie auf der Registerkarte <strong>USV</strong> das Kontrollkästchen <b>USV-Unterstützung aktivieren</b>.</LI>
+<LI>Wählen Sie aus, wann der DiskStation nach einem Stromausfall in den sicheren Modus wechseln soll.</LI>
+<LI>Wählen Sie aus, ob ein Signal zum Herunterfahren an das USV-Gerät geschickt werden soll, wenn das System in den sicheren Modus wechselt. Die meisten USV-Geräte können sich automatisch einschalten, wenn die Stromversorgung wiederhergestellt wird.</LI>
+<LI>Klicken Sie auf <b>Übernehmen</b>.</LI>
+</OL>
+
+<h3>SNMP USV-Unterstützung</h3>
+
+<p>Ihr DiskStation unterstützt auch die Verbindung mit SNMP (Simple Network Management Protocol) USV-Geräten. Einzelheiten zur Hardware-Installation finden Sie in der Bedienungsanleitung Ihres SNMP USV-Gerätes. Nachdem der DiskStation an das Gerät angeschlossen und mit demselben Netzwerk verbunden wurde, können Sie die USV-Unterstützung aktivieren, indem Sie die folgenden Schritte durchführen.</p>
+<h4>SNMP USV-Unterstützung aktivieren:</h4>
+<ol>
+<LI>Aktivieren Sie auf der Registerkarte <strong>USV</strong> das Kontrollkästchen <b>USV-Unterstützung aktivieren</b>.</LI>
+<li>Wählen Sie <strong>SNMP USV</strong> im Dropdown-Menü <strong>Netzwerk-USV-Typ</strong> aus.</li>
+<li>Geben Sie die IP-Adresse des SNMP USV-Gerätes in das Feld <strong>SNMP USV IP-Adresse</strong> ein.</li>
+<LI>Wählen Sie aus, wann der DiskStation nach einem Stromausfall in den sicheren Modus wechseln soll.</LI>
+<li>Geben Sie den Community-String für das SNMP USV-Gerät in das Feld <strong>SNMP Community</strong> ein.</li>
+<LI>Klicken Sie auf <b>Übernehmen</b>.</LI>
+</ol>
+
+<div class="section">
+<h4>Hinweis:</h4>
+<ul>
+<li>Es wird dringend empfohlen, für Implementierungen von Synology High Availability (SHA) <b>SNMP USV</b> zu verwenden.</li>
+<li>DiskStation unterstützt SNMPv1- und SNMPv2c-USV-Geräte.</li>
+</ul>
+</div>
+
+
+<h3>Netzwerk-USV-Unterstützung</h3>
+
+<p>Wenn zwei Synology-Produkte ein USV-Gerät über einen einzelnen USB-Port verwenden, kann nur ein DiskStation Informationen hinsichtlich des Status des USV-Gerätes abrufen. In diesem Fall kann der DiskStation als „Netzwerk-USV-Server“ fungieren und sich über USB oder das Netzwerk (je nach Gerät) mit dem USV-Gerät verbinden. Der Netzwerk-USV-Server erhält USV-Informationen und leitet sie an den anderen „Client“-DiskStation weiter.</p>
+<h4>Netzwerk-USV-Unterstützung aktivieren:</h4>
+<OL>
+<li>Melden Sie sich bei dem mit dem USV-Gerät verbundenen DiskStation an (über USB oder Netzwerk). Lesen Sie den vorstehenden Abschnitt, wenn die lokale USV-Unterstützung auf diesem DiskStation noch nicht aktiviert wurde.</li>
+<LI>Aktivieren Sie auf der Registerkarte <strong>USV</strong> das Kontrollkästchen <strong>Netzwerk-USV-Server aktivieren</strong>, damit der DiskStation USV-Informationen an den Client-DiskStation weiterleiten kann.</li>
+<li>Klicken Sie auf die Schaltfläche <strong>Zugelassene DiskStation-Geräte</strong>.</li>
+<li>Geben Sie im angezeigten Fenster die IP-Adressen der anderen DiskStation ein, die das USV-Gerät verwenden, aber nicht über USB oder das Netzwerk verbunden sind. Klicken Sie auf <strong>OK</strong>.</li>
+<li>Klicken Sie auf <strong>Übernehmen</strong>, um die Einstellungen zu speichern.</li>
+</OL>
+<p>Der Netzwerk-USV-Server kann jetzt USV-Informationen abrufen und sie an den anderen DiskStation, der das USV-Gerät verwendet, weiterleiten. Gehen Sie gemäß der nachfolgenden Anleitung vor, um die USV-Unterstützung am anderen DiskStation zu aktivieren.</p>
+<h4>USV-Unterstützung am Client-DiskStation aktivieren:</h4>
+<ol>
+<li>Melden Sie sich bei dem DiskStation an, der das USV-Gerät ebenfalls nutzt, aber nicht über USB oder Netzwerk verbunden ist.</li>
+<li>Aktivieren Sie auf der Registerkarte <strong>USV</strong> das Kontrollkästchen <strong>USV-Unterstützung aktivieren</strong>.</li>
+<li>Wählen Sie <strong>Synology USV-Server</strong> im Dropdown-Menü <strong>Netzwerk-USV-Typ</strong> aus.</li>
+<li>Geben Sie die IP-Adresse des Netzwerk-USV-Servers (d. h. der DiskStation, der an das Gerät angeschlossen ist) in das Feld <strong>Netzwerk-USV-Server IP</strong> ein.</li>
+<LI>Wählen Sie aus, wann der DiskStation nach einem Stromausfall in den sicheren Modus wechseln soll. Um die Einstellungen des sicheren Modus zu vereinfachen, können Sie <strong>Genauso wie Server</strong> auswählen.</LI>
+<LI>Klicken Sie auf <b>Übernehmen</b>, um die Einstellungen zu speichern.</LI>
+</OL>
+<div class="section">
+<h4>Netzwerk-USV-Anforderungen:</h4>
+<UL>
+<LI>Um USV-Geräteinformationen weiterzuleiten, muss jeder DiskStation mit demselben Netzwerk verbunden sein.</LI>
+<LI>Das Netzwerkgerät (z. B. Switch oder Hub), an dem der DiskStation angeschlossen ist, muss mit demselben USV-Gerät verbunden sein. Anderenfalls kann der DiskStation bei Stromausfall keine USV-Geräteinformationen weiterleiten.</LI>
+</UL>
+</div>
+</body>
+</html>

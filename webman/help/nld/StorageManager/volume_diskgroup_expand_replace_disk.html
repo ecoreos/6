@@ -1,0 +1,101 @@
+ <!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Een harde schijf vervangen in een volume of schijfgroep - Synology DSM Help</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="This article walks you through the steps to replace a hard drive of an existing volume or disk group on DiskStation in order to increase storage capacity.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Harde schijven vervangen om de opslagcapaciteit uit te breiden</h2>
+
+<p>Bij bepaalde RAID-types kunt u de opslagcapaciteit van een volume of schijfgroep uitbreiden door oudere harde schijven te vervangen door nieuwe en grotere schijven. Dit artikel geeft belangrijke informatie over het uitbreidingsproces en een voorbeeld hoe u bestaande harde schijven kunt vervangen om de opslagcapaciteit uit te breiden.</p>
+
+<div class="section">
+  <h4>Opmerking:</h4>
+<p>de in dit artikel beschreven procedure geldt alleen voor HR, RAID 1, RAID 5 en RAID 6. Wilt u meerdere harde schijven vervangen, dan moet u de harde schijven voorzichtig een voor een vervangen. Na vervanging van een harde schijf moet u het volume of de schijfgroep herstellen voor u de volgende harde schijf vervangt. Bij RAID 1, RAID 5 en RAID 6 wordt de volumecapaciteit uitgebreid nadat alle harde schijven zijn vervangen.</p>
+
+</div>
+
+
+<h3 class="list_head"><a name="t1"></a>  Voor u begint</h3>
+
+<p>Zie de volgende opmerkingen voor u de harde schijf vervangt:<br/>
+
+<ul>
+<li><b>Een back-up maken van gegevens:</b> hoewel het uitbreidingsproces geen bestaande gegevens zal verwijderen, raden wij u toch aan om een gegevensback-up te maken voor u verder gaat.</li>
+<li><b>Volume-/schijfgroepstatus:</b> controleer eerst of de status van uw volume of schijfgroep op <b>Normaal</b> staat. Zo niet, moet u dit eerst herstellen.</li>
+<li><b>Zijn de gegevens tijdens uitbreiding nog toegankelijk?</b> Tijdens de uitbreiding van volumes of schijfgroepen blijven de gegevens op uw systeem beschikbaar, hoewel het systeem bij het starten van het proces de verbindingen tijdelijk kan onderbreken.</li>
+</ul>
+
+<div class="section">
+<h4>SHR (Synology Hybrid RAID)</h4>
+
+<p>Omdat SHR-volumes de opslagcapaciteit optimaliseren op basis van het aantal en de grootte van geïnstalleerde harde schijven, verzoeken we u om de onderstaande richtlijnen te volgen om de capaciteit correct uit te breiden:</p>
+
+<ul>
+<li>als de capaciteit van alle bestaande harde schijven gelijk is, moet u minstens twee harde schijven vervangen door twee grotere schijven om de opslagcapaciteit uit te breiden. Wanneer uw SHR-volume uit drie 2 TB harde schijven bestaat, moet u minstens twee harde schijven vervangen om de volumecapaciteit uit te breiden.</li>
+<li>Als de capaciteit van bestaande harde schijven onderling verschilt, moeten de nieuwe harde schijven gelijk zijn aan of groter dan de grootste bestaande harde schijf. Bovendien moet u altijd eerst de kleinste harde schijven vervangen om het capaciteitsgebruik te optimaliseren. Als uw SHR-volume bijvoorbeeld uit drie harde schijven van 4 TB, 3 TB en 2 TB bestaat, moet de grootte van uw nieuwe harde schijven minstens 4 TB zijn. Aansluitend moet u dan de 3 TB- of 2 TB-harde schijf vervangen.</i>
+</li>
+</ul>
+</div>
+
+<div class="section">
+<h4>RAID 5 en RAID 6</h4>
+
+<p>Bij vervanging van harde schijven van RAID 5- of RAID 6-volumes of schijfgroepen moet altijd eerst de kleinste harde schijf worden vervangen. De opslagcapaciteit van RAID 5-volumes = (aantal harde schijven – 1) x (kleinste harde schijfgrootte), en van RAID 6-volumes = (aantal harde schijven - 2) x (kleinste harde schijfgrootte) Daarom moet eerst de kleinste harde schijf worden vervangen om het harde schijfgebruik te maximaliseren.</p>
+
+<p>Als uw RAID 5-volume bijvoorbeeld uit drie harde schijven bestaat, met respectievelijke groottes van 4 TB, 3 TB en 2 TB, zal de beschikbare capaciteit van uw volume 4 TB bedragen. Vervangt u de 4 TB- of de 3 TB-harde schijven, dan zal de capaciteit van het volume niet veranderen. Om de capaciteit van uw volume te vergroten, moet u eerst de 2 TB harde schijf vervangen.</p>
+</div>
+
+
+
+<h3>Harde schijf vervangen om de opslagcapaciteit uit te breiden</h3>
+
+<p>In de onderstaande stappen geven we een voorbeeld voor de vervanging van harde schijven van een SHR-volume.</p>
+
+<h4>Harde schijven vervangen:</h4>
+<ol>
+<li>Open <b>Opslagbeheer</b>.</li>
+<img src="about:blank" class="help_image"/>
+<li>Ga naar <strong>Volume</strong> om te zien welke bestaande harde schijf het kleinst is.</li>
+<img src="about:blank" class="help_image"/>
+
+<li>Zet uw DiskStation uit. (Sla deze stap over als uw DiskStation hot-swapping ondersteunt).</li>
+<li>Verwijder de kleinste harde schijf en installeer de nieuwe grotere harde schijf.</li>
+
+<div class="section">
+<h4>Opmerking:</h4>
+<p>om uzelf niet te kwetsen of uw DiskStation niet te beschadigen, moet u de installatie-instructies van harde schijven in de <i>Snelinstallatiegids</i> van uw Synology-product volgen.</p>
+</div>
+
+<li>Zet uw DiskStation aan.</li>
+<li>Open opnieuw <strong>Opslagbeheer</strong>.</li>
+<li>Ga naar <strong>HDD/SSD</strong> om er zeker van te zijn dat de nieuwe harde schijf wordt herkend.</li>
+<img src="about:blank" class="help_image"/>
+
+
+<li>De status van uw volume moet <b>Beschadigd</b> zijn. Selecteer het volume en klik op <strong>Beheren</strong>.</li>
+<img src="about:blank" class="help_image"/>
+<li>Selecteer <b>Herstellen</b>.</li>
+<img src="about:blank" class="help_image"/>
+
+<li>Selecteer de nieuwe harde schijf om aan het volume toe te voegen. Volg vervolgens de instructies van de wizard om de handeling te voltooien.</li>
+<img src="about:blank" class="help_image"/>
+<li>Herhaal de bovenstaande procedure tot alle gewenste harde schijven door grotere schijven zijn vervangen.</li>
+</ol>
+
+
+
+
+
+
+</body>
+</html>

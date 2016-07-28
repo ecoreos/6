@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>LDAP</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>LDAP</h2>
+<p>LDAP umożliwia DiskStation dołączenie do istniejącej usługi katalogowej jako klient LDAP, a następnie pobranie informacji o użytkowniku lub grupie z serwera LDAP (lub „directory server”). Użytkownik może zarządzać uprawnieniami dostępu użytkowników lub grup LDAP do aplikacji DSM i folderów współdzielonych podobnie jak w przypadku lokalnych użytkowników lub grup DSM. Więcej informacji na temat uwierzytelniania LDAP można znaleźć <a href="http://en.wikipedia.org/wiki/LDAP" target="_blank">tutaj</a>.</p>
+
+<p>Obsługiwany standard LDAP to LDAP wersja 3 (RFC 2251).</p>
+<h4>Aby podłączyć DiskStation do usługi katalogowej:</h4>
+<ol>
+<li>Wybierz polecenie <b>Panel sterowania</b> > <b>Usługa katalogowa</b>.</li><img src="about:blank" class="help_image"/><li>Przejdź do karty <b>LDAP</b> i zaznacz <b>Włącz klienta LDAP</b>.</li><img src="../../../online_img/dsm/AdminCenter/file_directory_service_ldap/howto465-2.png" class="help_image"/><li>Wprowadź adres IP lub nazwę domeny serwera LDAP w polu <b>Adres serwera LDAP</b>.</li><img src="../../../online_img/dsm/AdminCenter/file_directory_service_ldap/howto465-3.png" class="help_image"/><li>Wybierz typ szyfrowania z menu rozwijanego <b>Szyfrowanie</b>, aby szyfrować połączenia LDAP do serwera LDAP.</li><img src="../../../online_img/dsm/AdminCenter/file_directory_service_ldap/howto465-4.png" class="help_image"/><li>Wprowadź ustawienia Base DN lub serwera LDAP w polu <b>Base DN</b>.</li><img src="../../../online_img/dsm/AdminCenter/file_directory_service_ldap/howto465-5.png" class="help_image"/><li>Wybierz odpowiedni <b>Profil</b> w zależności od używanego serwera LDAP. Wybierz np. <b>Standardowy</b>, jeśli korzystasz z serwera Directory Server firmy Synology lub serwera Mac Open Directory.</li><img src="../../../online_img/dsm/AdminCenter/file_directory_service_ldap/howto465-6.png" class="help_image"/><li>Aby zezwolić użytkownikom serwera LDAP, który nie obsługuje planu Samba, dostęp do plików serwera DiskStation za pośrednictwem CIFS, zaznacz pole wyboru <b>Włącz autoryzację za pomocą hasła w postaci zwykłego tekstu CIFS</b>. Zapoznaj się z poniższą sekcją, aby upewnić się, że użytkownicy LDAP mogą za pomocą swoich komputerów pomyślnie uzyskać dostęp do plików DiskStation przez CIFS.</li><img src="../../../online_img/dsm/AdminCenter/file_directory_service_ldap/howto465-7.png" class="help_image"/><li>Kliknij przycisk <b>Zastosuj</b>.</li>
+<li>Wprowadź w polach Bind DN (lub konto administratora LDAP) oraz hasło, a następnie kliknij <b>OK</b>.</li><img src="about:blank" class="help_image"/></ol>
+
+
+<div class="section">
+<h4>Informacje o obsłudze protokołu CIFS i ustawieniach komputerów klienckich</h4>
+<p>Po włączeniu uwierzytelniania hasłem w postaci zwykłego tekstu CIFS od użytkowników LDAP może być wymagana modyfikacja ustawień komputera w celu uzyskania dostępu do plików DiskStation przez CIFS:</p>
+<ul>
+<li>Jeżeli serwer DiskStation dołączy do usługi katalogowej zapewnianej przez serwer LDAP Synology (lub inny serwer DiskStation z zainstalowanym i uruchomionym pakietem <b>Directory Server</b>) lub serwer LDAP obsługujący plany Samba, a wszyscy użytkownicy LDAP posiadają prawidłowe atrybuty sambaNTPassword, użytkownicy LDAP mogą uzyskać dostęp do plików DiskStation za pośrednictwem CIFS bez zaznaczania pola wyboru <b>Włącz autoryzację za pomocą hasła w postaci zwykłego tekstu CIFS</b> lub modyfikacji ustawień swoich komputerów. W przeciwnym razie użytkownicy LDAP będą musieli włączyć w swoich komputerach obsługę <a href="http://en.wikipedia.org/wiki/Pluggable_Authentication_Modules" target="_blank">PAM</a>, aby móc uzyskać dostęp do plików DiskStation przez CIFS. Spowoduje to jednak przesłanie haseł użytkowników LDAP do urządzenia DiskStation w postaci zwykłego tekstu (bez szyfrowania), co obniży poziom bezpieczeństwa.</li>
+
+</ul>
+<h4>Aby zmodyfikować ustawienia systemu Windows:</h4>
+<ol>
+<li>Wybierz polecenie <b>Start</b> > <b>Uruchom</b>, wpisz <b>regedit</b> i kliknij <b>OK</b>, aby otworzyć Edytor rejestru.</li>
+<li>W zależności od wersji systemu Windows, odszukaj lub utwórz następujący wpis rejestru:</li>
+<ul>
+<li><b>Windows 2000, XP, Vista i Windows 7:</b><br> [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanWorkStation\Parameters]</li>
+<li><b>Windows NT:</b><br> [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Rdr\Parameters]</li>
+<li><b>Windows 95 (SP1), 98 i Me:</b><br> [HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\VxD\VNETSUP]</li>
+</ul>
+<li>Utwórz lub zmodyfikuj wartość DWORD <b>EnablePlainTextPassword</b> i zmień wartość jej danych z <b>0</b> na <b>1</b>.</li>
+<li>Uruchom ponownie system Windows, aby zastosować zmiany.</li>
+</ol>
+<h4>Aby zmodyfikować ustawienia systemu Mac OS X:</h4>
+<ol>
+<li>Wybierz polecenie <b>Aplikacje</b> > <b>Narzędzia</b>, aby otworzyć okno <b>Terminal</b>.</li>
+<li>Utwórz pusty plik <b>/etc/nsmb.conf</b>:<pre>sudo touch /etc/nsmb.conf</pre>
+</li>
+<li>Otwórz <b>/etc/nsmb.conf</b> w programie vi:<pre>sudo vi /etc/nsmb.conf</pre>
+</li>
+<li>Wpisz „<b>i</b>”, aby wstawić tekst, a następnie wklej poniższy tekst:<pre>[default]<br />> minauth=none</pre>
+</li>
+<li>Naciśnij klawisz Esc, a następnie wpisz „<b>ZZ</b>”, aby zapisać zmiany i zamknąć program vi.</li>
+</ol>
+<h4>Aby zmodyfikować ustawienia systemu Linux:</h4>
+<p>Jeśli korzystasz z <b>smbclient</b>, dodaj następujące wpisy w sekcji <b>[global]</b> pliku <b>smb.conf</b>: <p style="font-family:sans; margin-top:0px; padding-left:20px;line-height:1.25em;"> encrypt passwords = no <br> client plaintext auth = yes <br> client lanman auth = yes <br> client ntlmv2 auth = no </p><p>Jeśli korzystasz z <b>mount.cifs</b>, wpisz poniższe polecenie:</b>
+<p style="font-family:sans; margin-top:0px; padding-left:20px;line-height:1.25em;">echo 0x30030 > /proc/fs/cifs/SecurityFlags</p>
+<p>Szczegółowe informacje znajdziesz pod adresem <a href="https://www.kernel.org/doc/readme/Documentation-filesystems-cifs-README" target=_blank>https://www.kernel.org/doc/readme/Documentation-filesystems-cifs-README</a>.</p>
+
+</p>
+</div>
+<div class="section">
+<h4>Informacje o profilach</h4>
+
+<p>Poszczególne serwery LDAP mogą korzystać z różnych atrybutów dla nazw kont i nazw grup bądź też w celu rozróżnienia kont i grup. Opcja <b>Profil</b> umożliwia określenie lub skonfigurowanie sposobu, w jaki informacje o użytkowniku i grupie są mapowane do atrybutów LDAP. W zależności od używanego serwera LDAP można wybrać jeden z poniższych profili:</p>
+
+<ul>
+<li><b>Standardowy:</b> Dla serwerów Directory Server firmy Synology lub serwerów Mac Open Directory.</li>
+<li><b>IBM Lotus Domino:</b> Dla serwerów IBM Lotus Domino 8.5.</li>
+<li><b>Niestandardowy:</b> Umożliwia konfigurację mapowania. Więcej szczegółowych informacji można znaleźć w sekcji poniżej.</li>
+</ul>
+
+<p>Przed konfiguracją atrybutów mapowania LDAP użytkownik powinien posiąść podstawową wiedzę w tym zakresie. System Synology DSM i edytor <strong>Profili</strong> są zgodne ze standardem RFC 2307. Użytkownik może określić <b>filter</b> > <b>passwd</b> jako <b>userFilter</b>, dzięki czemu DiskStation będzie interpretować zapisy za pomocą <b>objectClass=userFilter</b> na serwerze LDAP jako konta LDAP. Jeśli określisz <b>passwd</b> > <b>uid</b> jako <b>username</b>, DiskStation będzie interpretować <b>username</b> na serwerze LDAP jako nazwę konta. Pozostawienie pustych opcji mapowania spowoduje zastosowanie zasad standardu RFC 2307.</p>
+<p>DiskStation wymaga stałej liczby całkowitej, która będzie służyć jako identyfikator konta LDAP (<strong>uidNumber</strong>) lub identyfikator grupy (<strong>gidNumber</strong>). Jednak nie wszystkie serwery LDAP używają liczb całkowitych jako takich atrybutów. Dlatego też słowo kluczowe <b>HASH()</b> może być użyte do konwertowania atrybutów na liczby całkowite. Na przykład serwer LDAP może używać atrybutu <b>userid</b> o wartości szesnastkowej jako unikatowego identyfikatora dla konta LDAP. W takim przypadku użytkownik może ustawić <b>passwd</b> > <b>uidNumber</b> na <b>HASH(userid)</b>, po czym DiskStation przekonwertuje wartość na liczbę całkowitą.</p>
+
+<p>Poniżej znajduje się podsumowanie atrybutów, które można zmodyfikować:</p>
+
+<ul>
+	<li><b>filtr</b></li>
+	<ul>
+		<li><b>group</b>: wymagany element objectClass dla grupy.</li>
+		<li><b>passwd</b>: wymagany element objectClass dla użytkownika.</li>
+		<li><b>shadow</b>: wymagany element objectClass dla haseł użytkowników.</li>
+	</ul>
+	<li><b>grupa</b></li>
+	<ul>
+		<li><b>cn</b>: nazwa grupy.</li>
+		<li><b>gidNumber</b>: Numer GID dla tej grupy.</li>
+		<li><b>memberUid</b>: członkowie tej grupy.</li>
+	</ul>
+	<li><b>passwd</b></li>
+	<ul>
+		<li><b>uidNumber</b>: Numer UID dla tego użytkownika.</li>
+		<li><b>uid</b>: nazwa użytkownika.</li>
+		<li><b>gidNumber</b>: podstawowy numer GID dla tego użytkownika.</li>
+	</ul>
+	<li><b>shadow</b></li>
+	<ul>
+		<li><b>uid</b>: nazwa użytkownika.</li>
+		<li><b>userPassword</b>: hasło użytkownika.</li>
+	</ul>
+</ul>
+</div>
+<div class="section">
+<h4>Informacje o przesunięciu UID/GID</h4>
+<p>Aby uniknąć konfliktów UID/GID pomiędzy użytkownikami/grupami LDAP i użytkownikami/grupami lokalnymi, można włączyć przesunięcie UID/GID w celu przesunięcia UID/GID dla użytkowników/grup serwera LDAP o 1 000 000. Ta opcja dotyczy tylko serwerów LDAP, które nie są serwerami LDAP firmy Synology i mają unikatowy, numeryczny atrybut identyfikatora ID dla każdego użytkownika/grupy.</p>
+</div>
+</body>
+</html>

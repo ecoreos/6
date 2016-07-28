@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+	<h2>Hot Spare</h2>
+	<p>「Hot spare ディスク」とは、劣化した RAID Group で故障したディスクを自動的に交換して補修するための、予備のハードディスクのことです。DiskStation 内の RAID Group を復元するために、Hot spare ディスクは全体的に割り当てることができます。Hot spare ディスクは、次の条件を満たす RAID Group しか補修できません。
+</p>
+	<ul>
+<li>RAID Group の RAID タイプは、データ保護を備えたものでなければなりません (例： RAID 1、RAID 5、RAID 6、RAID 10)。</li>
+		<li>Hot spare ディスクのハードドライブの種類は、RAID Group  メンバーのディスクと同じでなければなりません （例： SATA、SAS）。</li>
+		<li>Hot spare ディスクのサイズは、必ず RAID Group で最小のディスクのサイズと同じ、またはそれ以上のサイズにします。</li>
+	</ul>
+
+	<h4>Hot spare ディスクを管理する：</h4>
+	<ol>
+		<li><b>[管理]</b> をクリックしてください。</li>
+		<li>Hot spare ディスクを割り当てるには、右側の <b>[使用可能なディスク] </b>セクションで Hot spare として割り当てたいディスクにチェックマークを付けます。Hot spare ディスクを削除するには、チェックマークを外します。<b>[適用]</b> をクリックして、設定を保存します。</li>
+	</ol>
+	<p>
+<div class="section">
+<h4>注意：</h4> 
+<ul>
+<li>Hot spare ディスクが降等した RAID Group を修復する場合、Hot spare ディスクのすべてのデータは消去されます。Hot spare ディスクを割り当てる前に、ディスクに重要なデータがないことを確認してください。</li>
+<li>HDD によってアセンブルされた RAID は、SSD ホットスペア ディスクによって自動的に修復されず、その逆も同じです。</li>
+</ul>
+</div>
+
+<h4>RAID Group にホットスペアの設定を行うには：</h4>
+<ol>
+<li><b>[設定]</b> をクリックしてください。</li>
+<li><b>[Hot Spare ターゲット]</b> タブで、ホットスペア ディスクによって保護することができる RAID Group が一覧表示されます。ボックスのチェックを外すと、対応する RAID Group は、劣化した場合、ホットスペア ディスクによって自動的に修復されることはありません。</li>
+<li><b>[クロスデバイス Hot Spare]</b> タブで、別のデバイスにある劣化した RAID を修復するために、1 つのデバイスをホットスペア ディスクにすることができます。</li>
+<li><b>[OK]</b> をクリックして、設定を保存してください。</li>
+</ol>
+
+</body>
+</html>

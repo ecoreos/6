@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Alimentación</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>General</h2>
+
+<p><strong>Panel de control</strong> > <strong>Hardware y alimentación</strong> > <strong>General</strong> proporciona opciones para habilitar la recuperación de energía, Wake on LAN (WOL) y compresión de memoria. Aquí también puede modificar el control de pitido y el modo de velocidad del ventilador.</p>
+
+<h3>Recuperación de energía</h3>
+<p>En caso de que el sistema se apague debido a un corte eléctrico, la función de recuperación de energía permite que el sistema arranque automáticamente una vez restaurada la alimentación.</p>
+<h3>Wake on LAN*</h3>
+<p>Habilitar Wake on LAN (WOL) le permite activar su DiskStation a través de una red de área local o de Internet, introduciendo una dirección IP (o nombre de host DDNS) y la dirección MAC de su DiskStation mediante una aplicación WOL, como por ejemplo Synology Assistant, DS finder o cualquier otra aplicación WOL.</p>
+<p>Wake on LAN funciona solo después de que DiskStation se haya apagado correctamente pulsando el botón físico de <b>Alimentación</b> o haciendo clic en <b>Apagar</b> en la interfaz de DSM. Mantenga el cable de alimentación enchufado a una toma de corriente que funcione después del apagado.</p>
+<div class="section">
+	<h4>Nota:</h4>
+	<p class="disable-rc18015xsp">La característica WOL no es compatible con puertos LAN de 10 GbE (si está disponible en el DiskStation).</p>
+	<ul class="enable-rc18015xsp">
+		<li>La característica WOL no es compatible con puertos LAN de 10 GbE (si está disponible en el DiskStation).</li>
+		<li>La característica WOL está habilitada por defecto en los puertos LAN de 1 GbE para DiskStation, y no puede deshabilitarse.</li>
+	</ul>
+</div>
+<h3>Modo de velocidad del ventilador*</h3>
+<p>Las opciones de velocidad del ventilador disponibles son las siguientes:</p>
+<ul>
+<li><strong>Modo Fresco:</strong> el ventilador funciona a mayor velocidad, de forma que la unidad DiskStation se mantiene refrigerada, pero se produce más ruido.</li>
+<li><strong>Modo Silencioso:</strong> el ventilador funciona a menor velocidad, de forma que se produce menos ruido, pero la unidad DiskStation se puede recalentar.</li>
+<li><strong>Baja potencia:</strong> El ventilador funciona a menor velocidad, de forma que se produce menos ruido, pero la unidad DiskStation se puede recalentar. Además, cuando la unidad DiskStation esté refrigerada, el ventilador se parará para ahorrar energía. El modo bajo consumo solo está disponible en algunos modelos.</li>
+</ul>
+<h3>Control de pitido</h3>
+<p>DiskStation puede emitir un pitido cuando se produzcan ciertos eventos o errores. Marque las casillas de selección de los eventos enumerados para permitir que DiskStation le avise cuando se produzcan errores.</p>
+
+<h4>Para detener el pitido:</h4>
+<ul>
+<li>Si DiskStation está emitiendo el pitido en estos momentos, haga clic en el botón <strong>Pitido desactivado</strong> para desactivarlo. </li>
+</ul>
+
+
+
+<h3>Compresión de memoria*</h3>
+<p>Puede habilitar la compresión de memoria para mejorar la respuesta general del sistema bajo carga, comprimiendo los datos que se han utilizado menos recientemente en la memoria.</p>
+<p>Cuando varias aplicaciones están funcionando al mismo tiempo y la memoria comienza a llenarse, la compresión dinámica de la memoria reduce el tamaño de elementos raramente utilizados, minimizando así el uso de memoria. Cuando los elementos se necesitan de nuevo, se pueden descomprimir instantáneamente. Esto reduce la necesidad de intercambiar archivos de lectura y escritura en el disco y mejora la eficacia y la respuesta.</p>
+<p>Para habilitar la compresión de memoria, basta con marcar la casilla de verificación.</p>
+
+
+<h3>LED*</h3>
+
+<p>En <strong>Panel de control</strong> > <strong>Hardware y alimentación</strong> > <strong>General</strong> > <strong>Control de brillo LED</strong> puede ajustar el brillo de los indicadores de su DiskStation.</p>
+
+<div class="section">
+<h4>Nota:</h4>
+<p>La configuración del brillo se aplica a todos los indicadores LED de su DiskStation (p.ej. encendido, STATUS, LAN, estado del disco, etc.).</p>
+</div>
+
+
+<h4>Para ajustar el brillo de los LED:</h4>
+<p>Ahora, su DiskStation dispone de cuatro niveles de brillo para los indicadores LED.</p>
+<ol>
+<li>Haga clic y arrastre el puntero de la escala de brillo en cualquier dirección:<ul>
+<li>Hacia la derecha: aumenta el brillo de los LED.</li>
+<li>Hacia la izquierda: reduce el brillo de los LED.</li>
+</ul>
+</li>
+<li>Haga clic en <strong>Aplicar</strong> para guardar la configuración.</li>
+</ol>
+
+
+
+<h4>Para ajustar el brillo de los LED según un programa:</h4>
+<p>Los indicadores LED pueden modificar su nivel de brillo en base a una hora programada.</p>
+
+<ol>
+<li>Haga clic en <strong>Establecer el programa</strong>.</li>
+<li>Haga clic en algún tipo de brillo a continuación:<ul>
+<li><strong>Brillo predeterminado</strong>: el máximo brillo</li>
+<li><strong>Brillo ajustado</strong>: el nivel de brillo especificado en la escala de brillo</li>
+</ul>
+</li>
+<li>Haga clic en los periodos para personalizar el programa de brillo.</li>
+<li>Haga clic en <strong>OK</strong> y en <strong>Aplicar</strong> para guardar la configuración.</li>
+</ol>
+
+
+
+<p>____<br> * Solo disponible en determinados modelos. </p>
+</body>
+</html>

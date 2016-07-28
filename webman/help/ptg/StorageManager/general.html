@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+	<h2>Geral</h2>
+	<p>O Gestor de Armazenamento permite a utilizadores gerir todos os espa&ccedil;os de armazenamento nos seus produtos Synology. Para simplificar a gest&atilde;o de armazenamento e criar espa&ccedil;os de armazenamento flex&iacute;veis com protec&ccedil;&atilde;o de dados, o Synology DSM suporta v&aacute;rios tipos de grupos RAID.</p>
+
+<h4><a href="raid.html">RAID Group</a></h4>
+	<p>Com DiskStation, pode combinar m&uacute;ltiplos discos r&iacute;gidos numa &uacute;nica unidade de armazenamento chamada RAID Group. DiskStation fornece os seguintes tipos de RAID Groups:</p>
+	<ul>
+		<li><b>Grupo RAID para volume &uacute;nico ou iSCSI LUN (N&iacute;vel do Bloco)</b>:
+			<ul>
+				<li>Atribui toda a capacidade dispon&iacute;vel a um &uacute;nico volume ou iSCSI LUN (N&iacute;vel de Bloqueio).</li>
+				<li>Oferece o melhor desempenho mas menor flexibilidade de gest&atilde;o do armazenamento.</li>
+                <li>Permite criar m&uacute;ltiplos iSCSI LUNs (Ficheiro Normal) nos volumes.</li>
+                <li>Suporta um m&aacute;ximo de um Conjunto RAID.</li>
+			</ul>
+		</li>
+		<li><b>Grupo RAID para m&uacute;ltiplos volumes ou iSCSI LUNs (N&iacute;vel do Bloco)</b>:
+			<ul>
+				<li>Suporta a cria&ccedil;&atilde;o de m&uacute;ltiplos volumes ou iSCSI LUNs (N&iacute;vel do Bloco) num Grupo RAID.</li>
+                <li>Oferece melhor flexibilidade de gest&atilde;o do armazenamento.</li>
+                <li>Permite criar m&uacute;ltiplos iSCSI LUNs (Ficheiro Normal) nos volumes.</li>
+				<li>Suporta a combina&ccedil;&atilde;o de m&uacute;ltiplos Conjuntos RAID num RAID Group (quando configurado como RAID 5 ou RAID 6).</li>
+			</ul>
+            </li>
+	</ul>
+
+<h4>Tipo RAID</h4>    
+<p>Quando criar um grupo RAID, primeiro seleccione o tipo de RAID. Diferentes tipos de RAID oferecem diferentes n&iacute;veis de protec&ccedil;&atilde;o de dados, funcionalidades de armazenamento e desempenho. DiskStation actualmente suporta os seguintes tipos RAID:</p>
+	<ul>
+	  <li><b>B&aacute;sico</b>: Usa um disco r&iacute;gido para criar um grupo RAID. Grupos RAID b&aacute;sicos n&atilde;o oferecem redund&acirc;ncia de dados.</li>
+	  <li><b>JBOD*</b>: Combina, pelo menos, 2 discos r&iacute;gidos para criar um grupo RAID. Grupos RAID JBOD n&atilde;o oferecem redund&acirc;ncia de dados. A capacidade dispon&iacute;vel de um grupo RAID JBOD equivale &agrave; capacidade total de todos os discos inclu&iacute;dos no grupo. JBOD suporta a combina&ccedil;&atilde;o de discos r&iacute;gidos de v&aacute;rios tamanhos.</li>
+	  <li><b>RAID 0*</b>: Combina, pelo menos, 2 discos r&iacute;gidos para criar um grupo RAID. RAID 0 n&atilde;o oferece redund&acirc;ncia de dados. Se um &uacute;nico disco falhar, os dados no grupo RAID perdem-se. A capacidade dispon&iacute;vel do um grupo RAID 0 &eacute; id&ecirc;ntica &agrave; capacidade total de todos os discos membro. RAID 0 suporta a combina&ccedil;&atilde;o de discos r&iacute;gidos de v&aacute;rios tamanhos.</li>
+	  <li><b>RAID 1*</b>: Combina 2-4 discos r&iacute;gidos para criar um grupo RAID. O sistema ir&aacute; escrever dados id&ecirc;nticos em cada disco r&iacute;gido. RAID 1 oferece protec&ccedil;&atilde;o de dados enquanto, pelo menos, um disco funcionar normalmente. A capacidade dispon&iacute;vel do Grupo RAID 1 &eacute; id&ecirc;ntica ao tamanho do disco mais pequeno.</li>
+	  <li><b>RAID 5*</b>: Combina pelo menos tr&ecirc;s discos r&iacute;gidos para criar um grupo RAID, registando tanto os dados como a informa&ccedil;&atilde;o de paridade em todos os discos. RAID 5 oferece redund&acirc;ncia de dados. Se um disco falhar, o sistema poder&aacute; ser reconstru&iacute;do usando a informa&ccedil;&atilde;o de paridade dos restantes discos. Suporta a combina&ccedil;&atilde;o de m&uacute;ltiplos Conjuntos RAID quando criados num RAID Group para m&uacute;ltiplos volumes ou iSCSI LUNs (N&iacute;vel do Bloco). A capacidade dispon&iacute;vel de um Grupo RAID 5 = <span class="note_content"> Capacidade total dos Conjuntos RAID. Capacidade dos Conjuntos RAID = (n&uacute;mero de discos r&iacute;gidos - 1) x (Capacidade do disco r&iacute;gido mais pequeno)</span></li>
+	  <li><b>RAID 6*</b>: Combina pelo menos quatro discos r&iacute;gidos para criar um grupo RAID, registando tanto os dados como a informa&ccedil;&atilde;o de paridade em todos os discos. RAID 6 oferece redund&acirc;ncia de dados. Mesmo que dois discos falhem, o sistema poder&aacute; ser reconstru&iacute;do usando a informa&ccedil;&atilde;o de paridade nos outros discos. Suporta a combina&ccedil;&atilde;o de m&uacute;ltiplos Conjuntos RAID quando criados num RAID Group para m&uacute;ltiplos volumes ou iSCSI LUNs (N&iacute;vel do Bloco). A capacidade dispon&iacute;vel de um Grupo RAID 6 = <span class="note_content"> Capacidade total dos Conjuntos RAID. Capacidade dos Conjuntos RAID = (n&uacute;mero de discos r&iacute;gidos - 2) x (Capacidade do disco r&iacute;gido mais pequeno)</span></li>
+	  <li><b>RAID 10*</b>: Combina, pelo menos, quatro discos r&iacute;gidos para criar um grupo RAID. O n&uacute;mero de discos deve ser par. RAID 10 tem o desempenho de RAID 0 para al&eacute;m do mesmo n&iacute;vel de prote&ccedil;&atilde;o de dados de RAID 1. A capacidade dispon&iacute;vel do Grupo RAID 10 = <span class="note_content">(capacidade do disco r&iacute;gido mais pequeno) X (n&uacute;mero de discos r&iacute;gidos / 2)</span></li>
+	</ul>
+	<p>
+		<span class="note_head">Nota:</span> Tipos RAID com &ldquo;*&rdquo; s&oacute; est&atilde;o dispon&iacute;veis em modelos NAS com ba&iacute;as de disco r&iacute;gido suficientes.
+</p>
+
+
+<h4><a href="space.html">Tipo de Volume</a></h4>
+	<p>Dependendo do tipo de grupo RAID subjacente, existem dois tipos de volumes:</p>
+	<ul>
+		<li><b>Volume no RAID Group para volume &uacute;nico ou iSCSI LUN (N&iacute;vel de Bloqueio)</b>
+        	<ul>
+            	<li>Atribui toda a capacidade de armazenamento num Grupo RAID para um &uacute;nico volume. Oferece o melhor desempenho mas menor flexibilidade de gest&atilde;o.</li>
+                <li>Permite criar m&uacute;ltiplos iSCSI LUNs (Ficheiro Normal) nos volumes.</li>
+            </ul></li>
+		<li><b>Volume do RAID Group para m&uacute;ltiplos volumes ou iSCSI LUNs (N&iacute;vel de Bloqueio)</b>
+        	<ul>
+            	<li>Atribui um parte designada da capacidade de armazenamento num RAID Group para criar um volume.  Disponibiliza melhor flexibilidade de gest&atilde;o, permitindo expandir o tamanho do volume ou criar volumes adicionais, conforme necess&aacute;rio.</li>
+                <li>Permite criar m&uacute;ltiplos iSCSI LUNs (Ficheiro Normal) nos volumes.</li>
+            </ul></li>
+	</ul>
+
+<h4 class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64">Formato do volume</h4>
+<p class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64">Dependendo do sistema de ficheiro em utiliza&ccedil;&atilde;o, h&aacute; dois formatos de volume:</p>
+<ul class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64">
+	<li><strong>Formato do novo volume</strong>: Este formato utiliza o sistema de ficheiros <b>Btrfs</b>. O tamanho m&iacute;nimo de um volume neste formato dever&aacute; ser pelo menos 10 GB. Suporta as seguintes novas funcionalidades com as quais pode gerir os seus dados mais facilmente:
+		<ul>
+			<li><strong><a href="../DisasterRecovery/snapshots.html">Instant&acirc;neo de pasta partilhada</a>:</strong> O instant&acirc;neo regista o estado completo dos dados no momento em que foi tirado. Se um utilizador modificar ou eliminar acidentalmente dados num volume com instant&acirc;neos, poder&aacute; rapidamente recuperar os dados ao momento anterior, quando foi tirado o instant&acirc;neo.</li>
+			<li><strong><a href="../AdminCenter/file_share_create.html#sharequota">Quota de pasta partilhada</a>:</strong> Pode configurar a capacidade m&aacute;xima para cada pasta.</li>
+			<li><strong><a href="../AdminCenter/file_user_create.html#userquota">Quota de utilizador</a> com base em pasta partilhada:</strong> Pode controlar quanto espa&ccedil;o dentro de uma pasta partilhada pode ser usada por cada utilizador.</li>
+			<li><strong><a href="../AdminCenter/file_share_create.html#integrity_protection">Protec&ccedil;&atilde;o avan&ccedil;ada da integridade de dados</a>:</strong> A pasta partilhada est&aacute; protegida por estrat&eacute;gias CRC32 checksum e copy-on-write.</li>
+		</ul>
+	</li>
+	<li><strong>Formato tradicional do volume</strong>: Este formato utiliza o sistema de ficheiros <b>ext4</b>. O tamanho m&iacute;nimo de um volume neste formato dever&aacute; ser pelo menos 10 GB. Uma vez que o sistema de ficheiros ext4 &eacute; suportado pela maioria dos produtos Synology, pode migrar facilmente o seu volume neste formato para outro produto Synology.</li>
+</ul>
+</body>
+</html>

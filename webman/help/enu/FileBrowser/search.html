@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Search for Files or Folders</title>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2>Search for Files or Folders</h2>
+<p>File Station's <strong>Filter</strong> provides you with options to search and display files or folders that meet your criteria. You can filter through files or folders in the current folder, or perform advanced search that covers all subfolders for more refined search results.</p>
+
+<h4>To search for files or folders in the current folder:</h4>
+<ol>
+	<li>Use File Station to go to the folder containing contents you want to search.</li>
+	<li>In the <b>Filter</b> field at the top-right corner, enter a keyword and see the filtered results in the main area of the window.</li>
+</ol>
+
+<h4>To perform advanced search:</h4>
+<ol>
+	<li>Use File Station to go to the folder containing contents you want to search.</li>
+  <li>Click the magnifying glass next to the <b>Filter</b> field at the top-right corner to reveal the advanced search menu.</li>
+	<li>Specify the search criteria below or choose from drop-down menus:
+		<ul>
+			<li><b>Keyword</b>: Enter a keyword to search for files or folders with matching names.
+				<div class="section"><h4>Note:</h4>
+				<ul>
+					<li>You can use wildcards [*] (meaning zero or more characters) and [?] (meaning one random character) in your keywords. For example, [a<span class="note_content">*</span>n] can represent [a<span class="note_content">ctio</span>n], [a<span class="note_content">ttentio</span>n], or [an].</li>
+					<li>You can use  spaces to separate keywords. For example, the keyword [File Station] leads to search results that contain [File], [Station], or both.</li>
+					<li>You can add double quotes ["] at the beginning and the end of keywords to search for exact, case-insensitive matches. For example, [<span class="note_content">"Synology Inc."</span>] can represent [<span class="note_content">Synology Inc.</span>], but cannot represent [<span class="note_content">Synology Incorporation</span>].
+					</li>
+					<li class="disable-hi3535">The operators below can be used for refined search results:
+						<table width="84%" border="1">
+							<tbody>
+								<tr>
+									<th width="147" align="center">Operator</th>
+									<th width="229" align="center">Example</th>
+									<th width="926" align="center">Usage</th>
+								</tr>
+								<tr>
+									<td align="center">&&</td>
+									<td align="center">[X] && [Y]</td>
+									<td><li>List matches that contain both [X] and [Y]</li></td>
+								</tr>
+								<tr>
+									<td align="center">||</td>
+									<td align="center">[X] || [Y]</td>
+									<td>
+										<li>List matches that contain [X], [Y], or both</li>
+										<li>Matches that contain both [X] and [Y] will be listed on the top</li>
+									</td>
+								</tr>
+								<tr>
+									<td align="center">+</td>
+									<td align="center">+[X]</td>
+									<td><li>List matches that contain [X]</li></td>
+								</tr>
+								<tr>
+									<td align="center">-</td>
+									<td align="center">-[X]</td>
+									<td><li>List matches that do not contain [X]</li></td>
+								</tr>
+								<tr>
+									<td align="center">!</td>
+									<td align="center">![X]</td>
+									<td><li>List matches that do not contain [X]</li></td>
+								</tr>
+								<tr>
+									<td align="center">\</td>
+									<td align="center">\[SpecialCharacter]</td>
+									<td>
+										<li>Special characters: <span class="note_content">&nbsp; + &nbsp;&nbsp;-&nbsp;&nbsp; &&	&nbsp;&nbsp;|| &nbsp;&nbsp; ! &nbsp;&nbsp; ( &nbsp;&nbsp; ) &nbsp;&nbsp; { &nbsp;&nbsp; } &nbsp;&nbsp; [ &nbsp;&nbsp; ] &nbsp;&nbsp; ^ &nbsp;&nbsp; " &nbsp;&nbsp; ~ &nbsp;&nbsp; * &nbsp;&nbsp; ? &nbsp;&nbsp; : &nbsp;&nbsp;\</span></li>
+										<li>List matches that contain a targeted special character above</li>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</li>
+				</ul>
+				</div>
+			</li>
+			<li class="disable-hi3535"><strong>Enable file content search</strong>: Search for indexed files with the file content or metadata that match the keywords.</li>
+			<li><b>Location</b>: Select from the drop-down menu to set the range and depth of advanced search. You can also customize the search scope by selecting any other shared folders listed.</li>
+			<li><b>File Type</b>: Choose <b>Extension</b> to limit the search range to specific types of files, or choose <b>Any Folder</b> to search for folders only.</li>
+			<li><strong>Date</strong>: Choose <b>Modified Date</b>, <b>Created Date</b> or <strong>Last Accessed</strong>, and then choose a date from the calendar to search for files with matching dates.</li>
+			<li><b>Size (MB)</b>: Choose from <b>equals</b>, <b>is greater than</b>, and <b>is less than</b>, and then enter a size to search for files with matching sizes. (When choosing <strong>equals</strong>, search results will include files of approximately the same size specified.)</li>
+			<li><b>Owner/Group</b>: Choose <b>Owner</b> or <b>Group</b>, and then choose from the drop-down menu to search for files or folders belonging to the selected owner or group.
+				<div class="section"><h4>Note:</h4>
+				<ul>
+					<li>To perform advanced search, you need to specify <b>Location</b> and at least one other search criterion.</li>
+					<li>If an ISO folder or a remote folder is mounted in an indexed shared folder, you cannot find the files inside via  advanced search.</li>
+				</ul>
+				</div>
+			</li>
+		</ul>
+	</li>
+	<li>Click <b>Search</b> to start the search, or click <b>Reset</b> and specify the search criteria again. When the search is complete, matching files will be listed in the main area of File Station.</li>
+</ol>
+
+</body>
+</html>

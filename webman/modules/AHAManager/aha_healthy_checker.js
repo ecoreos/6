@@ -1,0 +1,3 @@
+/* Copyright (c) 2016 Synology Inc. All rights reserved. */
+
+Ext.define("SYNO.SDS.AHA.HealthyChecker.Instance",{extend:"SYNO.SDS.AppInstance",initInstance:function(b){var a=this;if(!a.win){a.win=new SYNO.SDS.Window({appInstance:a});a.addInstance(a.win);a.askAHAStatus()}},askAHAStatus:function(){this.sendWebAPI({api:"SYNO.Core.AHA",version:1,method:"get",params:{blocked:true},callback:this.handleGetAHADone,scope:this})},handleGetAHADone:function(d,b,c,a){if(d){if("healthy"!==b.status){SYNO.SDS.AppLaunch("SYNO.SDS.AHA.Instance")}}}});

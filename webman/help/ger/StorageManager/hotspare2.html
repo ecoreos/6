@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+	<h2>Hot Spare</h2>
+	<p>Hot Spare-Festplatten sind Standby-Festplatten, die eine fehlerhafte RAID Group durch den automatischen Austausch einer defekten Festplatte reparieren können. Hot Spare-Festplatten können global zugewiesen werden, um beliebige RAID Groups in Ihrem DiskStation zu reparieren. Eine Hot Spare-Festplatte kann nur eine RAID Group reparieren, die den folgenden Kriterien entspricht:
+</p>
+	<ul>
+  <li>Der RAID-Typ der RAID Group muss Datenschutz bieten (d.h. RAID 1, RAID 5, RAID 6, RAID 10).</li>
+		<li>Der Hot Spare-Festplattentyp muss mit den Festplatten in der RAID Group identisch sein (d. h. SATA, SAS).</li>
+		<li>Die Hot Spare-Festplatte muss größer oder genauso groß sein wie die kleinste Festplatte des RAIDs.</li>
+	</ul>
+
+	<h4>Hot Spare-Festplatten verwalten:</h4>
+	<ol>
+		<li>Klicken Sie auf <b>Verwalten</b>.</li>
+		<li>Aktivieren Sie im Bereich <b>Verfügbare Festplatten</b> rechts das Kontrollkästchen neben der Festplatte, die Sie als Hot Spare zuweisen möchten. Deaktivieren Sie das Kontrollkästchen, wenn Sie eine Hot Spare-Festplatte entfernen möchten. Klicken Sie auf <b>Übernehmen</b>, um die Einstellungen zu speichern.</li>
+	</ol>
+	<p>
+<div class="section">
+<h4>Hinweis:</h4> 
+<ul>
+<li>Wenn eine Hot Spare Festplatte eine fehlerhafte RAID Gruppe repariert, werden sämtliche Daten auf der Hot Spare Festplatte gelöscht. Stellen Sie vor dem Zuweisen einer Hot Spare-Festplatte sicher, dass keine wichtigen Daten darauf gespeichert sind.</li>
+<li>Ein aus Festplatten bestehendes RAID wird von SSD Hot Spare-Disks nicht automatisch repariert und umgekehrt.</li>
+</ul>
+</div>
+
+<h4>Hot Spare-Einstellungen für RAID Group konfigurieren:</h4>
+<ol>
+<li>Klicken Sie auf <b>Konfigurieren</b>.</li>
+<li>Auf der Registerkarte <b>Hot Spare-Ziele</b> sind die RAID Groups aufgelistet, die mit Hot Spare-Disks geschützt werden können. Wenn Sie die Kontrollkästchen deaktivieren, werden die entsprechenden RAID Groups nicht automatisch von Hot Spare-Disks repariert, wenn sie fehlerhaft sind.</li>
+<li>Auf der Registerkarte <b>Geräteübergreifendes Hot Spare</b> können Sie Hot Spare-Disks auf einem Gerät erlauben, ein fehlerhaftes RAID auf einem anderen Gerät zu reparieren.</li>
+<li>Klicken Sie auf <b>OK</b>, um die Einstellungen zu speichern.</li>
+</ol>
+
+</body>
+</html>

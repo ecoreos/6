@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Eksterne enheder</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2><a name="usbprinter"></a>Printere</h2>
+<p>DiskStation kan være printerserver, så klientcomputere eller mobile enheder kan få adgang til printere, som er tilsluttet til DiskStation. Derudover sætter Apple Wireless Printing og Google Cloud Print-understøttelse dig i stand til fjernt at udskrive på iOS-enheder eller Google-produkter og -tjenester.</p>
+<p>Besøg <a href="http://www.synology.com" target="_blank"> www.synology.com</a> for at se kompatible printere.</p>
+
+<h3>Konfiguration af printere</h3>
+<p>Se vejledningen nedenfor for at konfigurere og tilslutte til en <span style="display: inline;" class="disable-rc18015xsp">USB eller </span>netværksprinter med din DiskStation.</p>
+
+
+<h4 class="disable-rc18015xsp">Sådan konfigurerer du en USB-printer:</h4>
+<ol class="disable-rc18015xsp">
+<li>Aktiver og tilslut printeren til en USB-port på DiskStation.</li>
+<li>Gå til <strong>Kontrolpanel</strong> > <strong>Eksterne enheder</strong> > <strong>Printer</strong>.</li>
+<li>Vælg den printer, du vil konfigurere. Bemærk, at DiskStation ikke kan genkende printere, der er tilsluttet via USB-hubs.</li>
+<li>Klik på <b>Printerstyring</b>, og vælg <b>Konfigurer printer</b>.</li>
+<li>Vælg en af følgende tilstande i dialogboksen:
+<ul>
+<li><b>Netværk-MFP:</b> Giver klienter mulighed for på det lokale netværk at bruge printer, scanner og fax-funktioner på din multifunktionsprinter. Scannings- og faxfunktioner er kun tilgængelige på Windows-computere.</li>
+<li><b>Netværksprinter:</b> Vælg denne tilstand for printere, der kun understøtter udskrift, eller hvis du vil gøre det muligt for klienter kun at bruge udskriftsfunktionen.</li>
+</ul>
+</li>
+<li>Konfigurer indstillinger for Apple Wireless Printing eller Google Cloud Print (valgfrit).</li>
+<li>Klik på <b>Gem</b>.</li>
+</ol>
+
+<div class="section disable-rc18015xsp">
+<h4>Bemærk:</h4>
+<p>En netværks-MFP kan kun åbnes af én klient på et givet tidspunkt.</p>
+</div>
+
+
+<h4>Sådan konfigurerer du en netværksprinter:</h4>
+<ol>
+<li>Aktiver og tilslut netværksprinteren til det samme lokale netværk som din DiskStation.</li>
+<li>Gå til <strong>Kontrolpanel</strong> > <strong>Eksterne enheder</strong> > <strong>Printer</strong>.</li>
+<li>Klik på <b>Tilføj netværksprinter</b>, og følg vejledningen i konfigurationsguiden.</li>
+</ol>
+
+<div class="section">
+<h4>Bemærk:</h4>
+<ul>
+<li><strong>Printernavn:</strong> Der skal angives et printernavn under konfigurationen, og det kan indeholder op til 32 tegn, herunder bogstaver, tal og understregninger.</li>
+	<li><strong>Protokol:</strong> Generelt bruger HP-netværksprintere Socket, Canon-netværksprintere bruger BJNP og andre for det meste LPR.</li>
+<li><strong>Kønavn:</strong> Indtastning af et kønavn kræves til LPR- og IPP-netværksprintere, men gælder ikke for Socket- eller BJNP-printere.</li>
+<li><strong>Ingen netværk-MFP:</strong> Netværksprintere tilsluttet til DiskStation kan ikke bruge netværks-MFP-tilstand på nuværende tidspunkt.</li>
+<li><strong>Ingen USB-printere:</strong> USB-printere, der deles af et Synology-produkt, kan ikke angives som netværksprintere.</li>
+</ul>
+</div>
+
+
+<h3>Administration af printere</h3>
+<p>Printerfanen indeholder følgende muligheder til administration af <span style="display: inline;" class="disable-rc18015xsp">USB eller </span> netværksprintere, der er tilsluttet til DiskStation.</p>
+
+<ul>
+<li><b>Hent oplysninger:</b> Viser oplysninger, der relaterer sig til den valgte printer, f.eks. enhedsnavn, producent, status osv.</li>
+<li><strong>Fjern:</strong> Fjerner og afbryder en printer fra DiskStation.</li>
+<li><strong>Printerstyring:</strong> Omfatter følgende muligheder:
+<ul>
+<li><strong>Konfigurer printer</strong>: Rediger printerindstillinger, f.eks Apple Wireless Printing eller Google Cloud Print (se nedenfor for instruktioner).</li>
+<li><strong>Ryd op i spool-plads:</strong> Annuller alle udskriftsopgaver på alle printere.</li>
+<li><strong>Udskriv testside:</strong> Udskriver en testside for at sikre, at konfigurationerne er korrekte.</li>
+<li><b>Frigiv printer:</b> Afbryder printeren og klienten (kun for tilstanden Netværk-MFP). Når en klient tilsluttes til en multifunktionsprinter for at modtage faxer eller scanne filer, kan opgave tage lang tid. Om nødvendigt kan forbindelsen standses for at tillade den næste klient i køen at få adgang til printeren.</li>
+</ul></li>
+</ul>
+
+
+<h4>Sådan aktiverer du Apple Wireless Printing:</h4>
+<ol>
+<li>Gå til <strong>Kontrolpanel</strong> > <strong>Eksterne enheder</strong> > <strong>Printer</strong>.</li>
+<li>Vælg en printer i enhedslisten.</li>
+<li>Klik på <b>Printerstyring</b> > <b>Konfigurer printer</b>.</li>
+<li>Marker feltet <b>Aktiver Apple Wireless Printing</b>.</li>
+<li>Vælg din printers mærke og driver.</li>
+<li>Klik på <b>Gem</b>.</li>
+</ol>
+
+<p>Når konfigurationen er færdig, kan du udskrive en testside ved at klikke på <b>Printerstyring</b> > <b>Udskriv testside</b>.</li>
+
+<div class="section">
+<h4>Bemærk:</h4>
+<ul>
+<li>Aktivering af Apple Wireless Printing aktiverer også Bonjour-printerrundkastning for DSM.</li>
+<li>Apple Wireless Printing findes til iOS 4.2 eller senere.</li>
+</ul>
+</div>
+
+
+<h4>Sådan aktiverer du Google Cloud Print:</h4>
+<ol>
+<li>Gå til <strong>Kontrolpanel</strong> > <strong>Eksterne enheder</strong> > <strong>Printer</strong>.</li>
+<li>Vælg en printer i enhedslisten.</li>
+<li>Klik på <b>Printerstyring</b> > <b>Konfigurer printer</b>.</li>
+<li>Marker feltet <b>Aktiver Google Cloud Print</b>.</li>
+<li>Indtast følgende detaljer:
+<ul>
+
+<li>Dine Google-kontooplysninger.</li>
+<li>Din printers mærke og driver.</li>
+</ul>
+<li>Klik på <b>Gem</b>.</li>
+</ol>
+<p>Når konfigurationen er færdig, kan du udskrive en testside ved at klikke på <b>Printerstyring</b> > <b>Udskriv testside</b>.</li>
+</p>
+<p>Administrer Google Cloud Print-opgaver ved at klikke på linket <a href="http://www.google.com/cloudprint/manage.html" target="_blank">Google Cloud Print</a>.</p>
+
+
+<h3>Adgang til printere</h3>
+<p>Se nedenstående afsnit for at få adgang til printere med en PC eller Mac.</p>
+<h4><a name="others"></a>Sådan får du adgang til printere med en Windows PC:</h4>
+<p>
+Den bedste måde at få adgang til DiskStation-enhedens udskriftstjeneste er at konfigurere forbindelsen til printeren med Synology Assistant. Der henvises til Hjælp for at få flere oplysninger.
+</p>
+
+<p>Hvis Synology Assistant ikke er installeret på computeren, skal du se nedenfor for at se andre måder, du kan få adgang til DiskStation-enhedens udskriftstjeneste på.</p>
+<p><strong>Type 1. Delt netværksprinter</strong></p>
+<ol>
+<li>Åbn <b>Netværk </b>i Stifinder på computeren, og dobbeltklik på DiskStation.</li>
+
+<li>Dobbeltklik på <span style="display: inline;" class="disable-rc18015xsp"><b>usbprinter</b> eller </span><b>navn på netværksprinter</b>. Systemet beder dig installere den korrekte driver og klikke på <b>Ja</b>.</li>
+
+<li>Hent printerdriveren fra cd'en eller producentens websted. Vælg printerproducenten og modellen, eller klik på <strong>Har disk</strong> for at vælge placeringen af driveren. Klik på <b>OK</b></li>
+<li>Systemet vil begynde konfigurationen af netværksprinteren. Efter konfigurationen er færdig, kan du begynde at bruge printeren. </li>
+</ol>
+
+
+<p><strong>Type 2. LPR-port (anbefales)</strong></p>
+<ol>
+<li>Klik på <b>Start</b> på computeren, og gå til <b>Enheder og printere.</b></li>
+<li>Klik på <b>Tilføj printer</b>. </li>
+	<li>Vælg <strong>Tilføj en netværks-, trådløs eller Bluetooth-printer.</strong> </li>
+	<li>Vælg <strong>Den printer, jeg ønsker, er ikke på listen.</strong></li>
+<li>Vælg <b>Tilføj en printer ved hjælp af TCP/IP-adresse eller værtsnavn</b>. Klik på <b> Næste</b> for at fortsætte.</li>
+<li>Vælg enhedstypen til at være <b>TCP/IP-portenhed.</b></li>
+<li>Angiv IP-adressen på DiskStation. Klik på <b> Næste</b> for at fortsætte.</li>
+<li>Vælg <b>Enhedstype:</b> <strong>Tilpasset</strong> > <strong>Indstillinger</strong> > …. Klik på <b>Næste</b> for at fortsætte.</li>
+
+<li>Vælg <b>LPR</b> for protokol. Indtast <span style="display: inline;" class="disable-rc18015xsp"><b>usbprinter</b> eller </span><b>navn på netværksprinter</b> som kønavn, og marker afkrydsningsfeltet <b>Byte-tælling for LPR aktiveret</b>. Klik på <b>OK</b> for at fortsætte.</li>
+
+<li>Hent printerdriveren fra cd'en eller producentens websted. Vælg printerproducenten og modellen, eller klik på <strong>Har disk</strong> for at vælge placeringen af driveren. Klik på <b>OK</b></li>
+	<li>Systemet vil begynde konfigurationen af netværksprinteren. Efter konfigurationen er færdig, kan du begynde at bruge printeren.</li>
+</ol>
+
+<h4>Sådan får du adgang til printere med en Mac:</h4>
+<p>
+Mac-brugere kan få adgang til DiskStation-enhedens udskriftstjenester ved at aktivere DSM's Bonjour-printerrundkastning og tilføje printeren under Systempræferencer.</p>
+<P>Sørg for, at din DiskStation bruger Postscript-printer, før du fortsætter.
+</p>
+<p><strong>Trin 1. Aktiver DSM's Bonjour-printerrundkastning</strong></p>
+<ol>
+<li>
+Log ind på DSM som <b>admin</b> eller en bruger, der hører til gruppen <b>administrators</b>.
+</li>
+<li>
+Gå til <b>Kontrolpanel</b> > <strong>Filtjenester</strong> > <b>Win/Mac/NFS</b>.
+</li>
+<li>
+Marker <b>Aktiver Bonjour-printerrundkastning</b>.
+</li>
+</ol>
+
+<p><strong>Trin 2. Få adgang til printer med Mac</strong></p>
+<ol>
+<li>
+Flyt til <b>Systempræferencer</b> > <b>Udskriv og scan</b> på din Mac, og klik på <b>+</b>.
+</li>
+
+<li>
+Vælg <span style="display: inline;" class="disable-rc18015xsp"><b>usbprinter[nummer]</b> eller </span><b>navn på netværksprinter</b> fra rullemenuen. Din Mac vil konfigurere printeren automatisk.
+</li>
+
+</ol>
+</div>
+</body>
+</html>

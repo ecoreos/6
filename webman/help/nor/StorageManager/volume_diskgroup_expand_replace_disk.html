@@ -1,0 +1,101 @@
+ <!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Erstatt en harddisk i et volum eller en diskgruppe - Synology DSM Hjelp</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="This article walks you through the steps to replace a hard drive of an existing volume or disk group on DiskStation in order to increase storage capacity.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Erstatt harddisker for å utvide lagringskapasiteten</h2>
+
+<p>Ved bruk av bestemte RAID-typer, kan du utvide lagringskapasiteten til et volum eller en diskgruppe ved å erstatte gamle harddisker med større harddisker. Denne artikkelen gir deg viktig informasjon om utvidelsesprosessen, samt et eksempel på hvordan du erstatter eksisterende harddisker for å utvide lagringskapasiteten.</p>
+
+<div class="section">
+  <h4>Merk:</h4>
+<p>Prosedyren som er beskrevet i denne artikkelen fungerer kun med SHR, RAID 1, RAID 5 og RAID 6. Hvis du vil erstatte flere harddisker, må du sørge for å erstatte én harddisk om gangen.  Når du har erstattet én harddisk, må du reparere volumet eller diskgruppen før du erstatter den neste. For RAID 1, RAID 5 og RAID 6 vil volumkapasiteten være utvidet når alle harddiskene er erstattet.</p>
+
+</div>
+
+
+<h3 class="list_head"><a name="t1"></a>  Før du starter</h3>
+
+<p>Før du erstatter en harddisk, må du se følgende merknader:<br/>
+
+<ul>
+<li><b>Sikkerhetskopiere data:</b> Selv om utvidelsesprosessen ikke vil slette eksisterende data, anbefaler vi sterkt å sikkerhetskopiere dataene dine før du fortsetter.</li>
+<li><b>Volum- eller diskgruppestatus:</b> Før du starter, må du kontrollere at statusen til volumet eller diskgruppen er <b>Normal</b>. Hvis ikke, må du først reparere det/den.</li>
+<li><b>Er data fortsatt tilgjengelig under utvidelsen?</b> Data på systemet ditt vil være tilgjengelig under utvidelse av volum eller diskgrupper, men systemet kan midlertidig innstille tilkoblinger når du først starter prosessen.</li>
+</ul>
+
+<div class="section">
+<h4>SHR (Synology Hybrid RAID)</h4>
+
+<p>Siden SHR-volum optimaliserer lagringskapasiteten basert på antall installerte harddisker og størrelsen på dem, må du følge retningslinjene nedenfor for å utvide kapasiteten på korrekt måte:</p>
+
+<ul>
+<li>Hvis kapasiteten på alle eksisterende harddisker er lik, må du erstatte minst to harddisker med større harddisker for å utvide lagringskapasiteten. For eksempel, hvis SHR-volumet dtt består av tre harddisker på 2 TB, må du erstatte minst to harddisker for å utvide volumkapasiteten.</li>
+<li>Hvis kapasiteten på eksisterende harddisker er ulik, må den nye erstatningsharddisken være lik eller større enn den største eksisterende harddisken. I tillegg må du erstatte mindre harddisker først for å optimalisere kapasitetsbruken. For eksempel, hvis SHR-volumet ditt består av tre harddisker som er på 4 TB, 3 TB, og 2 TB, må den nye erstatningsharddisken være på minst 4 TB. I tillegg bør du erstatte harddiskene på 3 TB eller 2 TB først.</i>
+</li>
+</ul>
+</div>
+
+<div class="section">
+<h4>RAID 5 og RAID 6</h4>
+
+<p>Når du erstatter harddisker på RAID 5- eller RAID 6-volum eller -diskgrupper, bør den minste harddisken alltid erstattes først. Lagringskapasiteten for RAID 5-volum er (antall harddisker – 1) x (minste harddiskstørrelse), og for RAID 6 er (antall harddisker – 2) x (minste harddiskstørrelse). Derfor bør den minste harddisken alltid erstattes først for å maksimere harddiskbruken.</p>
+
+<p>For eksempel, hvis RAID 5-volumet ditt inneholder tre harddisker som er på 4 TB, 3 TB, og 2 TB, vil den tilgjengelige kapasiteten på volumet ditt være 4 TB. Hvis du erstatter harddiskene på 4 TB eller 3 TB, vil ikke kapasiteten på volumet endre seg. For å øke kapasiteten på volumet ditt, må harddisken på 2 TB erstattes først.</p>
+</div>
+
+
+
+<h3>Erstatt harddisker for å utvide lagringskapasiteten</h3>
+
+<p>I trinnene nedenfor gir vi deg et eksempel på å erstatte harddiskene i et SHR-volum.</p>
+
+<h4>Slik erstatter du harddisker:</h4>
+<ol>
+<li>Åpne <b>Lagringshåndtering</b>.</li>
+<img src="about:blank" class="help_image"/>
+<li>Gå til <strong>Volum</strong> for å se hvilken eksisterende harddisk som er minst.</li>
+<img src="about:blank" class="help_image"/>
+
+<li>Skru av din DiskStation. (Hopp over dette trinnet hvis din DiskStation støtter hot-swapping.)</li>
+<li>Fjern den minste av medlemsharddiskene og installer en ny, større harddisk.</li>
+
+<div class="section">
+<h4>Merk:</h4>
+<p>For å unngå å gjøre skade på deg selv eller din DiskStation, må du følge instruksjonene for harddiskinstallering i <i>Installasjonsveiledning</i> for ditt Synology-produkt.</p>
+</div>
+
+<li>Skru på din DiskStation.</li>
+<li>Åpne <strong>Lagringshåndtering</strong> igjen.</li>
+<li>Gå til <strong>HDD/SSD</strong> for å kontrollere at den nye harddisken er gjenkjent.</li>
+<img src="about:blank" class="help_image"/>
+
+
+<li>Statusen til volumet ditt skal være <b>Degradert</b>. Velg volumet og klikk på <strong>Administrer</strong>.</li>
+<img src="about:blank" class="help_image"/>
+<li>Velg <b>Reparer</b>.</li>
+<img src="about:blank" class="help_image"/>
+
+<li>Velg erstatningsharddisken som skal legges til i volumet. Deretter følger du trinnene i veiviseren for å fullføre.</li>
+<img src="about:blank" class="help_image"/>
+<li>Gjenta prosessen ovenfor til alle ønskede harddisker er erstattet med større harddisker.</li>
+</ol>
+
+
+
+
+
+
+</body>
+</html>

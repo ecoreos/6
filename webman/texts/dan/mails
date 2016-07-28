@@ -1,0 +1,2647 @@
+
+[]
+
+
+
+[AutoBlockAdd]
+Category: System
+Title: IP-adresse blokeret
+Subject: IP-adressen [%CLIENT_IP%] for %HOSTNAME% er blokeret af %SERVICE%
+
+Kære bruger
+
+IP-adressen [%CLIENT_IP%] oplevede %AUTOBLOCK_ATTEMPTS% mislykkede forsøg ved forsøg på at logge ind på %SERVICE%, som kører på %HOSTNAME% inden for %AUTOBLOCK_ATTEMPT_MIN% minutter og blev blokeret ved %AUTOBLOCK_TIME%.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[BackupTaskCanceled]
+Category: Backup/Restore,Important
+Title: Backup annulleret
+Subject: %TASK_TYPE% - %TASK_NAME% annulleret på %HOSTNAME%
+
+Kære bruger
+
+Databackup på %HOSTNAME% er annulleret.
+
+Backupopgave: %TASK_NAME%
+Backupdestination: %DESTINATION_IP% %DESTINATION_PATH%
+Starttid: %START_TIME%
+Varighed: %DURATION%
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[BackupTaskFailed]
+Category: Backup/Restore,Important
+Title: Backup mislykkedes
+Subject: %TASK_TYPE% - %TASK_NAME% mislykkedes på %HOSTNAME%
+
+Kære bruger
+
+Databackup på %HOSTNAME% mislykkedes.
+
+Kontroller backuplogfilen under Hyper Backup > Log for at få flere oplysninger.
+
+Backupopgave: %TASK_NAME%
+Backupdestination: %DESTINATION_IP% %DESTINATION_PATH%
+Starttid: %START_TIME%
+Varighed: %DURATION%
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[BackupTaskFinished]
+Category: Backup/Restore
+Title: Sikkerhedskopiering fuldført
+Subject: %TASK_TYPE% - %TASK_NAME% gennemført på %HOSTNAME%
+
+Kære bruger
+
+Din backupopgave: %TASK_NAME% er nu færdig.
+
+Backupopgave: %TASK_NAME%
+Backupdestination: %DESTINATION_IP% %DESTINATION_PATH%
+Starttid: %START_TIME%
+Varighed: %DURATION%
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[BackupTaskPartial]
+Category: Backup/Restore,Important
+Title: Backup delvist fuldført
+Subject: %TASK_TYPE% - %TASK_NAME% delvis gennemført på %HOSTNAME%
+
+Kære bruger
+
+Din backupopgave %TASK_NAME% er nu færdig med mindre undtagelser.
+
+Kontroller backuplogfilen under Hyper Backup > Log for at få flere oplysninger.
+
+Backupopgave: %TASK_NAME%
+Backupdestination: %DESTINATION_IP% %DESTINATION_PATH%
+Starttid: %START_TIME%
+Varighed: %DURATION%
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[CMSClientConnectFailed]
+Category: CMS
+Title: Forbindelse to CMS-vært mislykkedes
+Subject: %HOSTNAME% kan ikke oprette forbindelse til CMS-vært (%CMS_SERVER%).
+
+Kære bruger
+
+Serveren %HOSTNAME% kan ikke oprette forbindelse til CMS-værten (%CMS_SERVER%). Kontroller netværksforbindelsen og indstillingerne for begge servere.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[CMSClientDetachSuccess]
+Category: CMS
+Title: Fjern fra CMS-vært uden fejl
+Subject: %HOSTNAME% fjernet fra CMS-vært (%CMS_SERVER%).
+
+Kære bruger
+
+Serveren %HOSTNAME% kan ikke fjernes fra CMS-værten (%CMS_SERVER%).
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[CMSClientJoinSuccess]
+Category: CMS
+Title: Tilslutning til CMS-vært uden fejl
+Subject: %HOSTNAME% tilsluttet til CMS-vært (%CMS_SERVER%).
+
+Kære bruger
+
+Serveren %HOSTNAME% er tilsluttet til CMS-vært (%CMS_SERVER%). Nogle indstillinger styres af CMS-vært.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[CpuFanResume]
+Category: System
+Title: CPU-ventilator genoptaget
+Subject: CPU-ventilator %FANID% på %HOSTNAME% (SN: %HOST_SN%) er genoptaget
+
+Kære bruger
+
+CPU-ventilator %FANID% på %HOSTNAME% (SN: %HOST_SN%) er genoptaget.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[CpuFanStop]
+Category: System,Important
+Title: CPU-ventilator standsede
+Subject: CPU-ventilator %FANID% på %HOSTNAME% (SN: %HOST_SN%) er holdt op med at fungere
+
+Kære bruger
+
+CPU-ventilator %FANID% på %HOSTNAME% (SN: %HOST_SN%) er holdt op med at fungere.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[DDNSFail]
+Category: System
+Title: DDNS-registrering mislykkedes
+Subject: DDNS-tjenesten kunne ikke registrere IP-adressen %EXTERNAL_IP% til %DDNS_HOST_NAME% [%FAIL_REASON%]
+
+Kære bruger
+
+Systemet kunne ikke regisrtrere den eksterne IP-adresse %EXTERNAL_IP% til %DDNS_HOST_NAME% på DDNS-serveren %DDNS_NAME%. Den angivne årsag er [%FAIL_REASON%].
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[DRLunScheduleSnapshotFail]
+Category: Snapshot Replication,Important
+Title: Kunne ikke tage et billede til iSCSI LUN
+Subject: Kunne ikke tage et billede til LUN %LUNNAME% på %HOSTNAME%
+
+Kære bruger
+
+Kunne ikke tage et LUN-billede på %HOSTNAME% Kontroller logsiden for Billedreplikering for at få yderligere oplysninger.
+
+LUN: %LUNNAME%
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[DRReplicationCleanupTestFailoverCompletion]
+Category: Snapshot Replication,Important
+Title: Ryddede op i test-failover for replikeringsopgave.
+Subject: Oprydning i test-failover for %DRSITE_TARGET_NAME% på %DRSITE_HOSTNAME% uden fejl
+
+Kære bruger
+
+Systemet ryddede op i test-failover for %DRSITE_TARGET_NAME% på destinationsserveren %DRSITE_HOSTNAME% uden fejl. Kontroller logsiden for Snapshot Replication for at få yderligere oplysninger.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[DRReplicationCleanupTestFailoverFail]
+Category: Snapshot Replication,Important
+Title: Kunne ikke rydde op i test-failover for replikeringsopgave
+Subject: Kunne ikke rydde op i test-failover for %DRSITE_TARGET_NAME% på %DRSITE_HOSTNAME%
+
+Kære bruger
+
+Systemet kunne ikke rydde op i test-failover for %DRSITE_TARGET_NAME% på %DRSITE_HOSTNAME%. Kontroller logsiden for Snapshot Replication for at få yderligere oplysninger.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[DRReplicationExportCompletion]
+Category: Snapshot Replication,Important
+Title: Eksporterede replikationsopgave uden fejl
+Subject: Eksporterede %MAINSITE_TARGET_NAME% uden fejl
+
+Kære bruger
+
+Systemet har eksporteret %MAINSITE_TARGET_NAME% uden fejl. Kontroller logsiden for Snapshot Replication for at få yderligere oplysninger.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[DRReplicationExportFail]
+Category: Snapshot Replication,Important
+Title: Kunne ikke eksportere replikeringsopgaven
+Subject: Kunne ikke eksportere %MAINSITE_TARGET_NAME%
+
+Kære bruger
+
+Systemet kunne ikke eksportere %MAINSITE_TARGET_NAME% Kontroller logsiden for Snapshot Replication for at få yderligere oplysninger.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[DRReplicationFailoverCompletion]
+Category: Snapshot Replication,Important
+Title: Udførte failover for replikeringsopgave uden fejl
+Subject:Udførte failover for %DRSITE_TARGET_NAME% på %DRSITE_HOSTNAME% uden fejl
+
+Kære bruger
+
+Systemet udførte failover for %DRSITE_TARGET_NAME% på destinationsserveren (%DRSITE_HOSTNAME%) uden fejl. Kontroller logsiden for Snapshot Replication for at få yderligere oplysninger.
+
+Failover-version: %SNAPSHOT_VERSION%
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[DRReplicationFailoverFail]
+Category: Snapshot Replication,Important
+Title: Kunne ikke udføre failover for replikeringsopgave
+Subject: Kunne ikke udføre failover for %DRSITE_TARGET_NAME% på %DRSITE_HOSTNAME%
+
+Kære bruger
+
+Systemet kunne ikke udføre failover for %DRSITE_TARGET_NAME%  på destinationsserveren (%DRSITE_HOSTNAME%) uden fejl. Kontroller logsiden for Snapshot Replication for at få yderligere oplysninger.
+
+Failover-version: %SNAPSHOT_VERSION%
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[DRReplicationImportCompletion]
+Category: Snapshot Replication,Important
+Title: Importerede replikationsopgave uden fejl
+Subject: Importerede %DRSITE_TARGET_NAME% uden fejl
+
+Kære bruger
+
+Systemet har importeret %DRSITE_TARGET_NAME% uden fejl. Kontroller logsiden for Snapshot Replication for at få yderligere oplysninger.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[DRReplicationImportFail]
+Category: Snapshot Replication,Important
+Title: Kunne ikke importere replikeringsopgaven
+Subject: Kunne ikke importere %DRSITE_TARGET_NAME%
+
+Kære bruger
+
+Systemet kunne ikke importere %DRSITE_TARGET_NAME% Kontroller logsiden for Snapshot Replication for at få yderligere oplysninger.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[DRReplicationInitialSyncCompletion]
+Category: Snapshot Replication,Important
+Title: Første replikering fuldført
+Subject: Replikeringsopgave har fuldført den første replikering fra %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%) til %DRSITE_HOSTNAME% (%DRSITE_TARGET_NAME%)
+
+Kære bruger
+
+Replikeringsopgave har fuldført den første replikering. Kontroller logsiden for Snapshot Replication for at få yderligere oplysninger.
+
+Kildeserver: %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%)
+Destinationsserver: %DRSITE_HOSTNAME% (%DRSITE_TARGET_NAME%)
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[DRReplicationInitialSyncFail]
+Category: Snapshot Replication,Important
+Title: Kunne ikke udføre første replikering
+Subject: Replikeringsopgave fejlede udførelse af første replikering til %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%)
+
+Kære bruger
+
+Replikeringsopgaven kunne ikke udføre første replikering til %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%) Kontroller logsiden for Snapshot Replication for at få yderligere oplysninger.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[DRReplicationReprotectCompletion]
+Category: Snapshot Replication,Important
+Title: Beskyttede replikeringsopgave uden fejl igen
+Subject: Beskyttede replikeringsopgave igen (%NEW_MAINSITE_TARGET_NAME%) uden fejl
+
+Kære bruger
+
+Systemet beskyttede replikeringsopgave igen (%NEW_MAINSITE_TARGET_NAME%) til den nye kildeserver (%NEW_MAINSITE_HOSTNAME%) med de replikerede data (%NEW_DRSITE_TARGET_NAME%) på den nye destinationsserver (%NEW_DRSITE_HOSTNAME%). Kontroller logsiden for Snapshot Replication for at få yderligere oplysninger.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[DRReplicationReprotectFail]
+Category: Snapshot Replication,Important
+Title: Kunne ikke beskytte replikeringsopgave igen
+Subject: Kunne ikke beskytte replikeringsopgave igen (%NEW_MAINSITE_TARGET_NAME%)
+
+Kære bruger
+
+Systemet kunne ikke beskytte replikeringsopgave igen (%NEW_MAINSITE_TARGET_NAME%) til den nye kildeserver (%NEW_MAINSITE_HOSTNAME%) med de replikerede data (%NEW_DRSITE_TARGET_NAME%) på den nye destinationsserver (%NEW_DRSITE_HOSTNAME%). Kontroller logsiden for Snapshot Replication for at få yderligere oplysninger.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[DRReplicationScheduleSyncCompletion]
+Category: Snapshot Replication,Important
+Title: Planlagt replikering fuldført
+Subject:Replikeringsopgaven har fuldført den planlagte replikering fra %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%) til %DRSITE_HOSTNAME% (%DRSITE_TARGET_NAME%)
+
+Kære bruger
+
+Replikeringsopgaven har fuldført den planlagte replikering. Kontroller logsiden for Billedreplikering for at få yderligere oplysninger.
+
+Kildeserver: %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%)
+Destinationsserver: %DRSITE_HOSTNAME% (%DRSITE_TARGET_NAME%)
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[DRReplicationScheduleSyncFail]
+Category: Snapshot Replication,Important
+Title:Kunne ikke udføre planlagt replikering
+Subject:Replikeringsopgave fejlede udførelse af planlagte replikering til %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%)
+
+Kære bruger
+
+Replikeringsopgaven fejlede udførelse af planlagte replikering til %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%) Kontroller logsiden for Billedreplikering for at få yderligere oplysninger.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[DRReplicationSwitchoverCompletion]
+Category: Snapshot Replication,Important
+Title: Udførte switchover for replikeringsopgave uden fejl
+Subject: Udførte switchover for %NEW_DRSITE_HOSTNAME% (%NEW_DRSITE_TARGET_NAME%)til %NEW_MAINSITE_HOSTNAME% uden fejl
+
+Kære bruger
+
+Udførte switchover for %NEW_DRSITE_HOSTNAME% (%NEW_DRSITE_TARGET_NAME%) til destinationsserveren (%NEW_MAINSITE_HOSTNAME%) uden fejl. Kontroller logsiden for Snapshot Replication for at få yderligere oplysninger.
+
+Ny kildeserver: %NEW_MAINSITE_HOSTNAME% (%NEW_MAINSITE_TARGET_NAME%)
+Ny destinationsserver: %NEW_DRSITE_HOSTNAME% (%NEW_DRSITE_TARGET_NAME%)
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[DRReplicationSwitchoverFail]
+Category: Snapshot Replication,Important
+Title: Kunne ikke udføre switchover for replikeringsopgave
+Subject: Kunne ikke udføre switchover for %NEW_DRSITE_HOSTNAME% (%NEW_DRSITE_TARGET_NAME%)til %NEW_MAINSITE_HOSTNAME%
+
+Kære bruger
+
+Systemet kunne ikke udfør switchover for %NEW_DRSITE_HOSTNAME% (%NEW_DRSITE_TARGET_NAME%) til destinationsserveren (%NEW_MAINSITE_HOSTNAME%) uden fejl. Kontroller logsiden for Snapshot Replication for at få yderligere oplysninger.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[DRReplicationSyncFail]
+Category: Snapshot Replication,Important
+Title:Kunne ikke udføre replikering
+Subject:Replikeringsopgave fejlede udførelse af replikering til %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%)
+
+Kære bruger
+
+Replikeringsopgaven fejlede udførelse af replikering til %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%) Kontroller logsiden for Billedreplikering for at få yderligere oplysninger.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[DRReplicationSyncNotFinishInNotifyTime]
+Category: Snapshot Replication,Important
+Title: Replikeringsopgave ikke fuldført
+Subject: Replikeringsopgave  %MAINSITE_TARGET_NAME% til %DRSITE_HOSTNAME% (%DRSITE_TARGET_NAME%) er ikke fuldført
+
+Kære bruger
+
+Replikeringsopgave er ikke fuldført inden for %NOTIFY_TIME% minutter. Kontroller logsiden for Snapshot Replication for at få yderligere oplysninger.
+
+Kildeserver: %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%)
+Destinationsserver: %DRSITE_HOSTNAME% (%DRSITE_TARGET_NAME%)
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[DRReplicationSyncStop]
+Category: Snapshot Replication,Important
+Title: Replikering er standset
+Subject: Replikeringsopgave udfører replikering til %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%)
+
+Kære bruger
+
+Den replikeringsopgave, der udfører replikering til %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%) er standset. Kontroller logsiden for Billedreplikering for at få yderligere oplysninger.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[DRReplicationTestFailoverCompletion]
+Category: Snapshot Replication,Important
+Title: Startede test-failover for replikeringsopgave uden fejl
+Subject: Test-failover for %TEST_TARGET_NAME% er tilgængelig nu
+
+Kære bruger
+
+Test-failover for %TEST_TARGET_NAME% er tilgængelig nu. Kontroller logsiden for Snapshot Replication for at få yderligere oplysninger.
+
+Testserver: %DRSITE_HOSTNAME%
+Delt testmappe/iSCSI LUN-navn: %TEST_TARGET_NAME%
+Testversion: %SNAPSHOT_VERSION%
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[DRReplicationTestFailoverFail]
+Category: Snapshot Replication,Important
+Title: Kunne ikke starte test-failover for replikeringsopgave
+Subject: Kunne ikke starte test-failover for %TEST_TARGET_NAME% på %DRSITE_HOSTNAME%
+
+Kære bruger
+
+Systemet kunne ikke starte test-failover på destinationsserveren %DRSITE_HOSTNAME%. Kontroller logsiden for Snapshot Replication for at få yderligere oplysninger.
+
+Testserver: %DRSITE_HOSTNAME%
+Delt testmappe/iSCSI LUN-navn: %TEST_TARGET_NAME%
+Testversion: %SNAPSHOT_VERSION%
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[DRShareTakeSnapshotFail]
+Category: Snapshot Replication,Important
+Title:  Kunne ikke tage et billede til delt mappe
+Subject:  Kunne ikke tage et billede til en delt mappe %SHARE% på %HOSTNAME%
+
+Kære bruger
+
+Kunne ikke tage et billede af en delt mappe på %HOSTNAME% Kontroller logsiden for Billedreplikering for at få yderligere oplysninger.
+
+Delt mappe: %SHARE%
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[DRSnapshotScheduleTaskTooDenseFail]
+Category: Snapshot Replication,Important
+Title: Tidligere planlagt billedopgave er stadig i gang
+Subject: Tidligere planlagt billedopgave kører stadig på %MAINSITE_TARGET_NAME%.
+
+Kære bruger
+
+Kunne ikke udføre planlagt billedopgave på %MAINSITE_TARGET_NAME%, da tidligere planlagt billedopgave stadig kører. Kontroller logsiden for Billedreplikering for at få yderligere oplysninger.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[DSMAutoUpdateReady]
+Category: System,Important
+Title: Automatisk systemopdatering
+Subject: %OSNAME% Automatisk opdatering vil automatisk starte på %HOSTNAME% om %COUNTDOWN_MINUTE% minutter
+
+Kære bruger
+
+%NEW_VERSION% installeres automatisk om %COUNTDOWN_MINUTE% minutter. Hvis du vil annullere installationen, skal du logge ind på %HOSTNAME% og gøre det i underretningsområdet.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[DSMAutoUpdateShutdownStart]
+Category: System,Important
+Title: Systemopdateringer installeres før planlagt lukning
+Subject: %OSNAME%-opdateringer bliver installeret på %HOSTNAME% før planlagt lukning
+
+Kære bruger
+
+%NEW_VERSION% bliver installeret før den planlagte slukning, og %HOSTNAME% slukkes, når installationen er fuldført. Sluk ikke for din %DISKSTATION%, før den er fuldført.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[DSMUpdateAvailable]
+Category: System,Important
+Title: Ny %OSNAME%-opdateringer klar
+Subject: %OSNAME%-opdatering er klar til at blive installeret på %HOSTNAME%
+
+Kære bruger
+
+En ny version af %OSNAME% er downloadet og klar til at blive installeret. Log ind på %HOSTNAME%, og gå til Kontrolpanel > Opdater og gendan for at installere %NEW_VERSION%. Få mere at vide om %OISNAME%-opdageringen under %HTTP_URL%.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[DeviceEjectedImproperly]
+Category: External Storage
+Title: Ekstern enhed blev ikke skubbet korrekt ud
+Subject: Ekstern enhed %DEVICE_NAME% på %HOSTNAME% blev ikke skubbet ud korrekt.
+
+Kære bruger
+
+Den eksterne enhed %DEVICE_NAME% på %HOSTNAME% blev ikke skubbet ud korrekt. Hvis du vil undgå datatab, anbefales det, at du skubber enheden ud, før du trækker den ud.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[DiskTemperatureAbnormal]
+Category: Storage,Important
+Title: Disktemperatur ligger ikke inden for driftstemperaturen
+Subject: Disken %DISK_ID% ligger ikke inden for driftstemperaturen
+
+Kære bruger
+
+Temperaturen for disken %DISK_ID% [%MODEL%] er %REAL_TEMPERATURE% º C, som ikke ligger inden for driftstemperaturen, %MIN_TEMPERATURE% º C ~ %MAX_TEMPERATURE% º C.
+Hold temperaturen inden for den acceptable driftstemperatur.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[DiskTemperatureNormal]
+Subject: Disken %DISK_ID% ligger inden for driftstemperaturen
+
+Kære bruger
+
+Temperaturen for disken %DISK_ID% [%MODEL%] ligger nu inden for driftstemperaturen, %MIN_TEMPERATURE% º C ~ %MAX_TEMPERATURE% º C.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[DriveSlotDisabled]
+Category: Storage,Important
+Title: Drevstik er deaktiveret
+Subject: Drevstik [%DISK_ID%] er deaktiveret
+
+Kære bruger
+
+Et drevstik er deaktiveret på grund af fejl på harddisken [%DISK_ID%]. Udskift disken, aktiver den, og reparer eventuelt degraderes diskenheder, hvis det er nødvendigt.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[DsmProtectionCheckFailed]
+Category: System,Important
+Title: Systemunormalitet registreret
+Subject: Unormalitet registreret på %HOSTNAME%. Alle diskenheder er fraknyttet.
+
+Kære bruger
+
+Systemet har registreret en unormalitet på %HOSTNAME%. For at beskytte dine data bliver alle diskenheder fraknyttet. Kontakt Synology-supportteamet for at få hjælp.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[EBoxHDEcc]
+Category: Storage,Important
+Title: I/O-fejl i udvidelsesdisk
+Subject: I/O-fejl opstod på disk %DISK_ID% af %EUNIT_ID% på %HOSTNAME%
+
+Kære bruger
+
+Harddisken %DISK_ID% af %EUNIT_ID% på %HOSTNAME% fik en I/O-fejl, men den fungerer korrekt nu efter flere gentagne forsøg. Det kan skyldes ødelagte sektorer. Hvis fejlen sker igen, skal du sikkerhedskopiere dine data og køre S.M.A.R.T.-testen på din harddisk for at undersøge status for harddisken.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[ESATADiskFull]
+Category: External Storage
+Title: eSATA-disk fuld
+Subject: Der er snart ikke mere plads på eSATA-disken %DISK_NUMBER% på %HOSTNAME%
+
+Kære bruger
+
+Der er snart ikke mere plads på eSATA-disken %DISK_NUMBER% på %HOSTNAME%. Se informationen forneden, og tag en korrigerende handling.
+
+Samlet kapacitet: %DISK_SIZE% GB
+Tilgængelig kapacitet: %FREE_SPACE% GB (%USAGE%%)
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[ESATAPartitionFull]
+Category: External Storage
+Title: eSATA-partitionering fuld
+Subject: Partitioneringen %PARTITION_NUMBER% har snart ikke mere plads på eSATA-disken %DISK_NUMBER% på %HOSTNAME%.
+
+Kære bruger
+
+Partitioneringen %PARTITION_NUMBER% har snart ikke mere plads på eSATA-disken %DISK_NUMBER% på %HOSTNAME%. Se informationen forneden, og tag en korrigerende handling.
+
+Samlet kapacitet: %DISK_SIZE% GB
+Tilgængelig kapacitet: %FREE_SPACE% GB (%USAGE%%)
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[EUnitPowerFail]
+Category: System,Important
+Title: Redundant strømforsyning i udvidelsesenhed fejlede
+Subject: Strømforsyning nr. %POWERID% af %EUNIT_ID% på %HOSTNAME% har fejlet
+
+Kære bruger
+
+Strømforsyning nr. %POWERID% af %EUNIT_ID% på %HOSTNAME% har fejlet.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[EUnitPowerResume]
+Category: System,Important
+Title: Redundant strømforsyning i udvidelsesenhed gendannet
+Subject: Strømforsyning nr. %POWERID% af %EUNIT_ID% på %HOSTNAME% er gendannet
+
+Kære bruger
+
+Strømforsyning nr. %POWERID% af %EUNIT_ID% på %HOSTNAME% er gendannet.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[EboxFanResume]
+Category: System,Important
+Title: Udvidelsesenhedens ventilator genoptaget
+Subject: %EBOX_ID%-ventilator %FAN_ID% på %HOSTNAME% er genoptaget
+
+Kære bruger
+
+%EBOX_ID%-ventilator %FAN_ID% på %HOSTNAME% er genoptaget.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[EboxFanStop]
+Category: System,Important
+Title: Udvidelsesenhedens ventilator standset
+Subject: %EBOX_ID%-ventilator %FAN_ID% på %HOSTNAME% er holdt op med at fungere
+
+Kære bruger
+
+%EBOX_ID%-ventilator %FAN_ID% på %HOSTNAME% er holdt op med at fungere.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[EboxLinkFail]
+Category: System,Important
+Title: Forbindelsesfejl på udvidelsesenhed
+Subject: Forbindelsesfejl opstod på %EBOX_ID% (SAS-udforbindelse %LINK_ID%) på %HOSTNAME% (SN: %HOST_SN%)
+
+Kære bruger
+
+Forbindelsesfejl opstod på %EBOX_ID% (SAS-udforbindelse %LINK_ID%) på %HOSTNAME% (SN: %HOST_SN%).
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[EboxLinkResume]
+Category: System,Important
+Title: Forbindelsesfejl på udvidelsesenhed gendannet
+Subject: Genoprettede forbindelsen på udvidelsesenheden %EBOX_ID% (SAS-udforbindelse %LINK_ID%) på %HOSTNAME% (SN: %HOST_SN%)
+
+Kære bruger
+
+Forbindelsen på udvidelsesenheden %EBOX_ID% (SAS-udforbindelse %LINK_ID%) på %HOSTNAME% (SN: %HOST_SN%) er gendannet.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[ExpansionFrmInconsistent]
+Category: System,Important
+Title: Firmware til udvidelsesenhed inkonsekvent
+Subject: Firmware på udvidelsesenhed til %HOSTNAME% er inkonsekvent.
+
+Kære bruger
+
+Firmwaren på udvidelsesenhed til %HOSTNAME% er inkonsekvent. Afhjælp problemet ved at kontakte Synologys onlinesupport på www.synology.com.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[ForgetPassword]
+Subject: Nulstil glemt adgangskode
+Kære %USER%
+
+Du kan klikke på nedenstående link for at nulstille adgangskoden:
+%URL%
+
+Dette link vil fungere i 24 timer. Hvis du ikke anmodede om at ændre adgangskoden, skal du ignorere denne meddelelse.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[HA_AbleSwitchover]
+Category: HA,Important
+Title: Switchover til high-availability-klyngen fungerer igen
+Subject: Switchover til high-availability-klyngen på %HOSTNAME% fungerer igen
+
+Kære bruger
+
+Switchover til high-availability-klyngen på %HOSTNAME% fungerer igen. Kontroller systemlogfiler eller logsiderne for High Availability Manager for at få yderligere oplysninger.
+
+Handling: %HA_ACTION%
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[HA_FailOver]
+Category: HA,Important
+Title: Fejl registreret i high-Availability-klynge
+Subject: Fejl registreret i high-availability-klyngen %HOSTNAME%
+
+Kære bruger
+
+Der er registreret en fejl på high-availability-klyngen %HOSTNAME%. Systemet vil failover til den passive server. Kontroller systemlogfilerne for at få yderligere oplysninger.
+
+Handling: %HA_ACTION%
+Fejl: %HA_PARAM_1%
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[HA_PassiveTimeout]
+Category: HA,Important
+Title: Localhost kunne ikke registrere den aktive server
+Subject: [%HA_PARAM_1%] kunne ikke registrere den aktive server i en tidsperiode
+
+Kære bruger
+
+Den passive server [%HA_PARAM_1%] kunne ikke lukke ned, da den ikke kunne registrere den aktive server [%HA_PARAM_2%] i en tidsperiode. Aktiver først den aktive server [%HA_PARAM_2%]. Hvis den aktive server [%HA_PARAM_2%] ikke længere er tilgængelig, skal du følge nedenstående vejledning for at fjerne high-availability-klyngen: Start [%HA_PARAM_1%], og vent i 5 minutter.  Tryk og hold på knappen RESET på bagpanelet af din %DISKSTATION% i 4 sekunder, indtil din %DISKSTATION% udsender et bip. Frigiv øjeblikkeligt. (Advarsel: Tryk på knappen RESET flere gange vil medføre, at operativsystemet bliver geninstalleret). Yderligere oplysninger om systemindstillinger, der nulstilles, se i dette selvstudium: https://www.synology.com/knowledgebase/DSM/tutorial/General/How_to_reset_your_Synology_NAS.
+
+Handling: %HA_ACTION%
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[HA_SwitchFail]
+Category: HA,Important
+Title: Kunne ikke failover tjenester
+Subject: Kunne ikke failover tjenester for high-availability-klyngen %HOSTNAME%
+
+Kære bruger
+
+Systemet forsøgte at failover tjenester til den passive server på high-availability-klyngen %HOSTNAME%, men mislykkedes. Kontroller systemlogfilerne for at få yderligere oplysninger.
+
+Handling: %HA_ACTION%
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[HA_SwitchFinished]
+Category: HA,Important
+Title: High-availability-klyngen kører
+Subject: High-availability-klyngen %HOSTNAME% kører nu på %HA_PARAM_1%
+
+Kære bruger
+
+Tjenesterne på high-availability-klyngen %HOSTNAME% kører nu tjenester på %HA_PARAM_1%. Kontroller systemlogfiler eller logsiderne for High Availability Manager for at få yderligere oplysninger.
+
+Handling: %HA_ACTION%
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[HA_SwitchOver]
+Category: HA,Important
+Title: Switchover af high-availability-klyngen
+Subject: Switchover af high-availabiiity-klyngen %HOSTNAME% til %HA_PARAM_1%
+
+Kære bruger
+
+En switchover er startet på high-availability-klyngen %HOSTNAME%. Tjenester skiftes over til %HA_PARAM_1%. Kontroller systemlogfilerne for at få yderligere oplysninger.
+
+Handling: %HA_ACTION%
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[HA_SyncComplete]
+Category: HA,Important
+Title: Fuld datakopiering er fuldført
+Subject: Fuld datakopiering af high-availability-klyngen %HOSTNAME% er fuldført
+
+Kære bruger
+
+Fuld datakopiering af high-availabilityklyngen %HOSTNAME% er fuldført. Den passive server er nu klar til at overtage tjenesterne i tilfælde af, at en switchover eller failover er nødvendig. Kontroller systemlogfiler eller logsiderne for High Availability Manager for at få yderligere oplysninger.
+
+Handling: %HA_ACTION%
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[HA_UnableSwitchover]
+Category: HA,Important
+Title:  Switchover for high-availability-klyngen deaktiveret
+Subject:  Switchover for high-availability-klyngen %HOSTNAME% er deaktiveret
+
+Kære bruger
+
+Switchover for high-availability-klyngen %HOSTNAME% er deaktiveret Kontroller systemlogfiler eller logsiderne for High Availability Manager for at få yderligere oplysninger.
+
+Handling: %HA_ACTION%
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[HA_UnbindLocal]
+Category: HA,Important
+Title: Localhost fjernet fra high-availability-klyngen
+Subject: %HA_PARAM_1% er fjernet fra high-availability-klyngen %HA_PARAM_2%
+
+Kære bruger
+
+%HA_PARAM_1% er fjernet fra high-availability-klyngen %HA_PARAM_2%. Kontroller systemlogfilerne for at få yderligere oplysninger.
+
+Handling: %HA_ACTION%
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[HDEcc]
+Category: Storage,Important
+Title: Disk I/O-fejl
+Subject: I/O-fejl opstod på disk %DISK_ID% på %HOSTNAME%
+
+Kære bruger
+
+Harddisken %DISK_ID% på %HOSTNAME% fik en I/O-fejl, men den fungerer korrekt nu efter flere gentagne forsøg. Det kan skyldes ødelagte sektorer. Hvis fejlen sker igen, skal du sikkerhedskopiere dine data og køre S.M.A.R.T.-testen på din harddisk for at undersøge status for harddisken.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[HotSpareDiskPlugout]
+Category: Storage,Important
+Title: Global Hot Spare-disk er ikke sat i.
+Subject: Hot Spare-disk (%DISK_ID%) er ikke sat i
+
+Kære bruger
+
+Systemet har registrere, at Hot Spare-disk (%DISK_ID%) ikke er sat i.
+Det anbefales, at der tilføjes diske til Hot Spare for at beskytte lagerpladsen.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[HotSpareRepairDone]
+Category: Storage,Important
+Title: Global Hot Spare-reparation er fuldført
+Subject: Reparation af lagerpladsen (%STORAGE_ID%) er fuldført
+
+Kære bruger
+
+Systemet har fuldført reparationen af den degraderes lagerplads (%STORAGE_ID%) med Hot Spare-disk (%DISK_ID%).
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[HotSpareRepairFailed]
+Category: Storage,Important
+Title: Global Hot Spare-reparation er fuldført
+Subject: Kunne ikke reparere lagerpladsen (%STORAGE_ID%)
+
+Kære bruger
+
+Systemet kunne ikke reparere den degraderes lagerplads (%STORAGE_ID%) med Hot Spare-disk (%DISK_ID%).
+Yderligere oplysninger findes i systemlogfilen.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[HotSpareRepairNoProtect]
+Category: Storage,Important
+Title: Global Hot Spare: Påmindelse om, hvilken plads der ikke er beskyttet
+Subject: Noget af pladsen er ikke beskyttet af Hot Spare
+
+Kære bruger
+
+Noget af pladsen er (%STORAGE_ID%) ikke beskyttet af Hot Spare.
+Det anbefales, at der tilføjes diske til Hot Spare for at beskytte lagerpladsen.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[HotSpareRepairStart]
+Category: Storage,Important
+Title: Igangværende global Hot Spare-repararation
+Subject: Systemet bruger Hot Spare-diske til at reparere degraderet lagerplads (%STORAGE_ID%)
+
+Kære bruger
+
+Systemet bruger nu Hot Spare-disk (%DISK_ID%) til at reparere den degraderede lagerplads (%STORAGE_ID%).
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[ImproperShutdown]
+Category: System,Important
+Title: Ukorrekt lukning
+Subject: %HOSTNAME% lukkede forkert ned
+
+Kære bruger
+
+%HOSTNAME% var udsat for strømsvigt og lukkede unormalt.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[InternalFanResume]
+Category: System
+Title: Serverventilator genoptaget
+Subject: Ventilator %FANID% på serveren %HOSTNAME% (SN: %HOST_SN%) er genoptaget
+
+Kære bruger
+
+Ventilatoren %FANID% på serveren %HOSTNAME% (SN: %HOST_SN%) er genoptaget.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[InternalFanStop]
+Category: System,Important
+Title: Serverventilator standsede
+Subject: Ventilatoren %FANID% på serveren %HOSTNAME% (SN: %HOST_SN%) er holdt op med at fungere
+
+Kære bruger
+
+Ventilatoren %FANID% på serveren %HOSTNAME% (SN: %HOST_SN%) er holdt op med at fungere.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[LocalLUNBkpError]
+Category: Backup/Restore,Important
+Title: Lokal LUN-backup mislykkedes
+Subject: Mislykkedes - LUN-backup på %HOSTNAME%
+
+Kære bruger
+
+LUN-backup til lokal delt mappe på %HOSTNAME% mislykkedes. Undersøg backuploggen i DSM under Backup og kopiering > Logfil for at få flere oplysninger.
+
+LUN-navn: %LUN%
+Backupopgave: %BKP_TASK%
+Backupdestination: %BKP_DST% %PATH%
+Start tidspunkt: %TIME%
+Varighed: %DUR%
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[LocalLUNBkpFinished]
+Category: Backup/Restore
+Title: Lokal LUN-backup fuldført
+Subject: Fuldført - LUN-backup på %HOSTNAME%
+
+Kære bruger
+
+LUN-backup til lokal delt mappe på %HOSTNAME% er fuldført.
+
+LUN-navn: %LUN%
+Backupopgave: %BKP_TASK%
+Backupdestination: %BKP_DST% %PATH%
+Start tidspunkt: %TIME%
+Varighed: %DUR%
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[LocalLUNRecoverError]
+Category: Backup/Restore,Important
+Title: Lokal LUN-gendannelse mislykkedes
+Subject: Mislykkedes - LUN-gendannelse på %HOSTNAME%
+
+Kære bruger
+
+LUN-gendannelse fra lokal delt mappe på %HOSTNAME% mislykkedes. Undersøg backuploggen i DSM under Backup og kopiering > Logfil for at få flere oplysninger.
+
+LUN-navn: %LUN%
+Gendannelseskilde: %BKP_SRC%  %SRC_PATH%
+Start tidspunkt: %TIME%
+Varighed: %DUR%
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[LocalLUNRecoverFinished]
+Category: Backup/Restore
+Title: Lokal LUN-gendannelse fuldført
+Subject: Fuldført - LUN-gendannelse på %HOSTNAME%
+
+Kære bruger
+
+LUN-gendannelse fra lokal delt mappe på %HOSTNAME% er fuldført.
+
+LUN-navn: %LUN%
+Gendannelseskilde: %BKP_SRC%  %SRC_PATH%
+Start tidspunkt: %TIME%
+Varighed: %DUR%
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[MyDSPasswordChanged]
+Category: System,Important
+Title: Adgangskode til Synology-konto ændret
+Subject: Adgangskoden til din Synology-konto på %HOSTNAME% er ændret
+
+Kære bruger-
+
+Dette er en bekræftelse på, at adgangskoden til din Synology-konto [%MYDS_ACCOUNT%] er ændret via Synology-kontoen på %HOSTNAME%.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[NetLUNBkpError]
+Category: Backup/Restore,Important
+Title: Backup af Netværks-LUN mislykkedes
+Subject: Mislykkedes - LUN-backup på %HOSTNAME%
+
+Kære bruger
+
+LUN-backup til delt fjernmappe på %HOSTNAME% mislykkedes. Undersøg backuploggen i DSM under Backup og kopiering > Logfil for at få flere oplysninger.
+
+LUN-navn: %LUN%
+Backupopgave: %BKP_TASK%
+Backupdestination: %BKP_DST%  %PATH%
+Start tidspunkt: %TIME%
+Varighed: %DUR%
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[NetLUNBkpOK]
+Category: Backup/Restore
+Title: Backup af netværks-LUN fuldført
+Subject: Fuldført - LUN-backup på %HOSTNAME%
+
+Kære bruger
+
+LUN-backup til delt fjernmappe på %HOSTNAME% er fuldført.
+
+LUN-navn: %LUN%
+Backupopgave: %BKP_TASK%
+Backupdestination: %BKP_DST%  %PATH%
+Start tidspunkt: %TIME%
+Varighed: %DUR%
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[NetLUNRecoverError]
+Category: Backup/Restore,Important
+Title: Gendannelse af netværks-LUN mislykkedes
+Subject: Mislykkedes - LUN-gendannelse på %HOSTNAME%
+
+Kære bruger
+
+LUN-gendannelse fra delt fjernmappe på %HOSTNAME% mislykkedes. Undersøg backuploggen i DSM under Backup og kopiering > Logfil for at få flere oplysninger.
+
+LUN-navn: %LUN%
+Gendannelseskilde: %BKP_SRC%  %SRC_PATH%
+Start tidspunkt: %TIME%
+Varighed: %DUR%
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[NetLUNRecoverFinished]
+Category: Backup/Restore,Important
+Title: Gendannelse af netværks-LUN fuldført
+Subject: Fuldført - LUN-gendannelse på %HOSTNAME%
+
+Kære bruger
+
+LUN-gendannelse fra delt fjernmappe på %HOSTNAME% er fuldført.
+
+LUN-navn: %LUN%
+Gendannelseskilde: %BKP_SRC%  %SRC_PATH%
+Start tidspunkt: %TIME%
+Varighed: %DUR%
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[OTP_emergency_mail]
+Subject: Nødverificeringskode til %USER_NAME% på %HOSTNAME%
+
+Kære bruger
+
+Dette er en engangs nødverificeringskode, som kan bruges til at logge ind på %HOSTNAME% og nulstille dine 2-trins verificeringsindstillinger. Indtast denne 8-cifrede kode, når du bedes om at indtaste verificeringskoden.
+
+Nødverificeringskode: %EMG_CODE%
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[OTP_emergency_mail_warning]
+Subject: Nødverificeringskode til %USER_NAME% på %HOSTNAME%
+
+Kære bruger
+
+Dette er en engangs nødverificeringskode, som kan bruges til at logge ind på %HOSTNAME% og nulstille dine 2-trins verificeringsindstillinger. Indtast denne 8-cifrede kode, når du bedes om at indtaste verificeringskoden.
+
+Bemærk: Du har nået din nødkodegrænse. Nulstil dine 2-trins verificeringsindstillinger hurtigst muligt.
+
+Nødloginkode: %EMG_CODE%
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[OverheatShutdownCPU]
+Category: System,Important
+Title: CPU lukker ned pga. overopvarmning
+Subject: %HOSTNAME% (SN: %HOST_SN%) lukker ned pga. overopvarmning af CPU.
+
+Kære bruger
+
+%HOSTNAME% (SN: %HOST_SN%) lukker automatisk pga. overopvarmning af CPU (over %SHUTDOWN_TMP%° C).
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[OverheatShutdownDisk]
+Category: System,Important
+Title: Disk lukker ned pga. overopvarmning
+Subject: %HOSTNAME% lukker ned pga. overopvarmning af disk.
+
+Kære bruger
+
+%HOSTNAME% lukker automatisk, da disken %DISK_NUM% overopheder og nåede en temperatur på %SHUTDOWN_TMP%° C.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[OverheatShutdownThermal]
+Category: System,Important
+Title: Lukning på grund af overophedning
+Subject: %HOSTNAME% (SN: %HOST_SN%) lukker ned pga. overopvarmning.
+
+Kære bruger
+
+%HOSTNAME% (SN: %HOST_SN%) lukker automatisk pga. overopvarmning (over %SHUTDOWN_TMP%° C).
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[PKGUpgrade]
+Subject: Oplysninger om pakkeopgradering for %HOSTNAME%
+
+Kære bruger
+
+Følgende pakker er klar til opdatering på %HOSTNAME%. Du kan starte Pakkecenter i %OSNAME% for at opdatere dem.
+
+Pakker, der skal opdateres:
+%PKG_SET%
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[Raid5SpareChanged]
+Category: Storage,Important
+Title: RAID5+spare-diskenhed degraderet
+Subject: RAID5+spare-diskenheden %VOLUME_ID% på %HOSTNAME% er degraderet
+
+Kære bruger
+
+Diskenheden %VOLUME_ID% på %HOSTNAME% er degraderet fra RAID5+spare til RAID5. Hvis du vil ændre diskenheden tilbage til RAID5+spare, skal du forberede en reservedisk og gå til "Hovedmenu" > "Lagerstyring" > "Diskenhed" > "Administrer" for at udskifte den defekte disk.
+
+Yderligere hjælp kan fås ved kontakt til Synologys onlinesupport: http://www.synology.com.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[RaidDiskFail]
+Category: Storage,Important
+Title: Harddisk i diskgruppe fejlede
+Subject: Harddisken %DISK_ID% i diskgruppen på %HOSTNAME% fejlede
+
+Kære bruger
+
+Harddisken %DISK_ID% i diskgruppen på %HOSTNAME% fejlede. Udskift den.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[RaidGroupCrashed]
+Category: Storage,Important
+Title: RAID Group brudt sammen
+Subject: RAID Group %RAID_ID% på %HOSTNAME% brød sammen
+
+Kære bruger
+
+RAID Group %RAID_ID% på %HOSTNAME% brød sammen. Systemet vil måske ikke starte
+
+Yderligere hjælp kan fås ved kontakt til Synologys onlinesupport: http://www.synology.com.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[RaidGroupDegraded]
+Category: Storage,Important
+Title: RAID Group degraderet
+Subject: RAID-gruppen %RAID_ID% på %HOSTNAME% er gået i degraderet tilstand [%ACTIVE_DISK%/%TOTAL_DISK%]
+
+Kære bruger
+
+RAID Group %RAID_ID% på %HOSTNAME% er gået i degraderet tilstand. (samlet antal harddiske: %TOTAL_DISK%; antal aktive harddiske: %ACTIVE_DISK%). Identificer årsagen til degraderingen, og ret fejlen.
+
+Yderligere hjælp kan fås ved kontakt til Synologys onlinesupport: http://www.synology.com.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[RaidGroupDiskFail]
+Category: Storage,Important
+Title: Harddisk i RAID Group fejlede
+Subject: Harddisk %DISK_ID% i RAID Group på %HOSTNAME% fejlede
+
+Kære bruger
+
+Harddisken %DISK_ID% i RAID Group på %HOSTNAME% fejlede. Udskift den.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[RaidGroupSyncDone]
+Category: Storage
+Title: Synkronisering af RAID-gruppe fuldført
+Subject: Konsistenscheck af RAID Group %RAID_ID% på %HOSTNAME% er færdig
+
+Kære bruger
+
+Konsistenscheck af RAID Group %RAID_ID% på %HOSTNAME% er færdig Systemet er nu klar til brug.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[RaidGroupVolumeBadSector]
+Category: Storage,Important
+Title: RAID Group-enheden fejlede
+Subject: RAID Group-enheden (%VOLUME_ID%) på %HOSTNAME% fejlede
+
+Kære bruger
+
+Nogle filer er ødelagt, fordi RAID Group-enheden (%VOLUME_ID%) på %HOSTNAME% fejlede. Filer er under risiko for at blive ødelagte i degraderet tilstand. Reparer diskenheden så hurtigt som muligt. Du kan gå til Hovedmenu > Systemlogfiler for at få flere detaljer.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[RaidGroupiScsiBadSector]
+Category: Storage,Important
+Title: iSCSI LUN i RAID Group fejlede
+Subject: iSCSI LUN i RAID Group på %HOSTNAME% fejlede
+
+Kære bruger
+
+Nogle filer er ødelagte, fordi iSCSI LUN i RAID Group på %HOSTNAME% fejlede. Filer er under risiko for at blive ødelagte i degraderet tilstand. Reparer diskenheden så hurtigt som muligt.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[RaidSuggestDataScrubbing]
+Category: Storage
+Title: Påmindelse om RAID-scrubbing
+Subject: Påmindelse om RAID-scrubbing på %HOSTNAME%
+
+Kære bruger
+
+RAID-scrubbing på %HOSTNAME% er ikke udført i en måned. Vi anbefaler, at du udfører RAID-scrubbing for at sikre dataintegritet.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[RaidSystemVolumeCrashed]
+Category: Storage,Important
+Title: Systemdiskenhed brød sammen
+Subject: Systemdiskenheden (%SYSTEM_ID%) på %HOSTNAME% brød sammen
+
+Kære bruger
+
+Systemdiskenheden (%SYSTEM_ID%) på %HOSTNAME% brød sammen. Systemet vil måske ikke starte
+Yderligere hjælp kan fås ved kontakt til Synologys onlinesupport: http://www.synology.com.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[RaidSystemVolumeDegrade]
+Category: Storage,Important
+Title: Systemdiskenhed degraderet
+Subject: Systemdiskenheden (%SYSTEM_ID%) på %HOSTNAME% er gået i degraderet tilstand [%ACTIVE_DISK%/%TOTAL_DISK%]
+
+Kære bruger
+
+Systemdiskenheden (%SYSTEM_ID%) på %HOSTNAME% er gået i degraderet tilstand. (Samlet antal harddiske: %TOTAL_DISK%; Antal aktive harddiske: %ACTIVE_DISK%)
+
+Genstart systemet, og det vil reparere sig selv automatisk ved start.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[RaidSystemVolumeSyncDone]
+Category: Storage
+Title: Konsistenskontrol på system fuldført
+Subject: Konsistenskontrol af systemdiskenheden (%SYSTEM_ID%) på %HOSTNAME% er færdig
+
+Kære bruger
+
+%HOSTNAME% er færdig med konsistenskontrol på systemdiskenheden (%SYSTEM_ID%). Systemet er nu klar til brug.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[RaidVolumeBadSector]
+Category: Storage,Important
+Title: Diskgruppeenhed fejlede
+Subject: Diskgruppeenhed (%VOLUME_ID%) på %HOSTNAME% fejlede
+
+Kære bruger
+
+Nogle filer er ødelagt, fordi diskgruppeenheden (%VOLUME_ID%) på %HOSTNAME% fejlede. Filer er under risiko for at blive ødelagte i degraderet tilstand. Reparer diskenheden så hurtigt som muligt. Du kan gå til "Hovedmenu" > "Systemoplysninger" > "Log" > "Systemlog" for at få flere oplysninger.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[RaidVolumeCrashed]
+Category: Storage,Important
+Title: Diskenhed brudt sammen
+Subject: Diskenheden  %VOLUME_ID% på  %HOSTNAME% brød sammen
+
+Kære bruger
+
+Diskenheden %VOLUME_ID% på %HOSTNAME% brød sammen. Systemet vil måske ikke starte
+
+Yderligere hjælp kan fås ved kontakt til Synologys onlinesupport: http://www.synology.com.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[RaidVolumeDegrade]
+Category: Storage,Important
+Title: Diskenhed degraderet
+Subject: Diskenheden %VOLUME_ID% på %HOSTNAME% er gået i degraderet tilstand [%ACTIVE_DISK%/%TOTAL_DISK%]
+
+Kære bruger
+
+Volume %VOLUME_ID% op %HOSTNAME% er gået i degraderet tilstand. (samlet antal harddiske: %TOTAL_DISK%; antal aktive harddiske: %ACTIVE_DISK%). Identificer årsagen til degraderingen, og ret fejlen.
+
+Hvis du vil reparere diskenheden, skal du udskifte de ødelagte diske med nye. Yderligere oplysninger findes i Synologys videnbase på vores officielle websted.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[RaidVolumeFull]
+Category: Storage,Important
+Title: Diskenhed fuld
+Subject: Der er snart ikke mere plads på  %VOLUME_ID% på  %HOSTNAME%
+
+Kære bruger
+
+Den tilgængelige plads på diskenheden %VOLUME_ID% på %HOSTNAME% er ved at være tom. Slet nogle filer for at frigøre plads.
+
+Samlet kapacitet: %VOLUME_SIZE% GB
+Tilgængelig kapacitet: %FREE_SPACE% GB (%USAGE%%)
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[RaidVolumeSyncDone]
+Category: Storage
+Title: Konsistenskontrol fuldført
+Subject: Konsistenskontrol af diskenheden %VOLUME_ID% på %HOSTNAME% er færdig
+
+Kære bruger
+
+%HOSTNAME% har færdiggjort kontrollen af konsistensen på diskenhed %VOLUME_ID%. Systemet er nu klar til brug.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[RaidiScsiBadSector]
+Category: Storage,Important
+Title: iSCSI LUN i diskgruppe fejlede
+Subject: iSCSI LUN i diskgruppe %HOSTNAME% fejlede
+
+Kære bruger
+
+Nogle filer er ødelagte, fordi iSCSI LUN i diskgruppen på %HOSTNAME% fejlede. Filer er under risiko for at blive ødelagte i degraderet tilstand. Reparer diskenheden så hurtigt som muligt.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[RaidiScsiCrashed]
+Category: Storage,Important
+Title: iSCSI LUN brudt sammen
+Subject: iSCSI LUN (%LUN_NAME%) på %HOSTNAME% er brudt sammen
+
+Kære bruger
+
+iSCSI LUN (%LUN_NAME%) på %HOSTNAME% er brudt sammen. Systemet vil måske ikke starte
+
+Yderligere hjælp kan fås ved kontakt til Synologys onlinesupport: http://www.synology.com.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[RaidiScsiDegraded]
+Category: Storage,Important
+Title: iSCSI LUN degraderet
+Subject:  iSCSI LUN (%LUN_NAME% på %HOSTNAME% er gået i degraderet tilstand [%ACTIVE_DISK%/%TOTAL_DISK%]
+
+Kære bruger
+
+iSCSI LUN (%LUN_NAME% på %HOSTNAME% er gået i degraderet tilstand. (samlet antal harddiske: %TOTAL_DISK%; antal aktive harddiske: %ACTIVE_DISK%). Identificer årsagen til degraderingen, og ret fejlen.
+
+Hvis du vil reparere iSCSI LUN, skal du udskifte de ødelagte diske med nye. Yderligere oplysninger findes i Synologys videnbase på vores officielle websted.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[RedundantPowerRecoveredProvide]
+Category: Power System
+Title: Gendannede redundant strømforsyning
+Subject: Strømforsyning nr. %POWERID% på %HOSTNAME% (SN: %HOST_SN%) er gendannet
+
+Kære bruger
+
+Strømforsyning nr. %POWERID% på %HOSTNAME% (SN: %HOST_SN%) er gendannet.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[RedundantPowerStopProvide]
+Category: Power System,Important
+Title: Redundant strømforsyning fejlede
+Subject: Strømforsyning nr. %POWERID% på %HOSTNAME% (SN: %HOST_SN%) mislykkedes
+
+Kære bruger
+
+Strømforsyning nr. %POWERID% på %HOSTNAME% (SN: %HOST_SN%) mislykkedes.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[RestoreTaskCanceled]
+Category: Backup/Restore,Important
+Title: Gendannelse annulleret
+Subject: %TASK_TYPE% annulleret på %HOSTNAME%
+
+Kære bruger
+
+Datagendannelse på %HOSTNAME% er annulleret.
+
+Gendannelsesdestination: %DESTINATION_IP% %DESTINATION_PATH%
+Starttid: %START_TIME%
+Varighed: %DURATION%
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[RestoreTaskFailed]
+Category: Backup/Restore,Important
+Title: Gendannelse mislykkedes
+Subject: %TASK_TYPE% kunne ikke gendannes fra %HOSTNAME%
+
+Kære bruger
+
+Backupdata kunne ikke gendannes fra %HOSTNAME%.
+
+Kontroller backuplogfilen under Hyper Backup > Log for at få flere oplysninger.
+
+Gendannelseskilden: %DESTINATION_IP% %DESTINATION_PATH%
+Starttid: %START_TIME%
+Varighed: %DURATION%
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[RestoreTaskFinished]
+Category: Backup/Restore
+Title: Gendannelses fuldført
+Subject: %TASK_TYPE% gennemført på %HOSTNAME%
+
+Kære bruger
+
+Din gendannelsesopgave: %TASK_NAME% er nu færdig.
+
+Gendannelsesdestination: %DESTINATION_IP% %DESTINATION_PATH%
+Starttid: %START_TIME%
+Varighed: %DURATION%
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[SDCardFull]
+Category: External Storage
+Title: SD-kort fuld
+Subject: Der er snart ikke mere plads på SD-kortet %DISK_NUMBER% på %HOSTNAME%
+
+Kære bruger
+
+Den tilgængelige plads på SD-kortet %DISK_NUMBER% på %HOSTNAME% er ved at være tom. Se informationen forneden, og tag en korrigerende handling.
+
+Samlet kapacitet: %DISK_SIZE% GB
+Tilgængelig kapacitet: %FREE_SPACE% GB (%USAGE%%)
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[SDCardPartitionFull]
+Category: External Storage
+Title: SD-kortpartitionering fuld
+Subject: Partitioneringen %PARTITION_NUMBER% har snart ikke mere plads på SD-kortet %DISK_NUMBER% på %HOSTNAME%
+
+Kære bruger
+
+Partitioneringen %PARTITION_NUMBER% har snart ikke mere plads på SD-kortet %DISK_NUMBER% på %HOSTNAME%. Tag en korrigerende handling.
+
+Samlet kapacitet: %DISK_SIZE% GB
+Tilgængelig kapacitet: %FREE_SPACE% GB (%USAGE%%)
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[SFPModuleUnsupported]
+Category: System,Important
+Title: Ikke-understøttet SFP+-modul
+Subject: Der blev registreret et ikke-understøttet SFP+-modul %LAN%
+
+Kære bruger
+
+Der blev registreret et ikke-understøttet SFP+-modul %LAN%, og driveren af netværksinterfacekortet er deaktiveret.
+Installer et understøttet model, og genstart din %DISKSTATION%.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[SSDCacheCrashed]
+Category: Storage,Important
+Title: SSD-cache brudt sammen
+Subject: SSD-cache %SSD_ID% på %HOSTNAME% er brudt sammen
+
+Kære bruger
+
+SSD-cache %SSD_ID% på %HOSTNAME% er brudt sammen. Yderligere hjælp kan fås ved kontakt til Synologys onlinesupport: http://www.synology.com.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[SSDCacheDegraded]
+Category: Storage,Important
+Title: SSD-cache degraderet
+Subject: SSD-cache %SSD_ID% på %HOSTNAME% er brudt sammen.
+
+Kære bruger
+
+SSD-cache %SSD_ID% på %HOSTNAME% er brudt sammen. Yderligere hjælp kan fås ved kontakt til Synologys onlinesupport: http://www.synology.com.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[SSDCacheMissing]
+Category: Storage,Important
+Title: Læse-skrive-cache mangler
+Subject: Læse-/skrive-cache for %SPACE_ID% på %HOSTNAME% mangler
+
+Kære bruger
+
+Læse-/skrive-cache for %SPACE_ID% på %HOSTNAME% mangler. Yderligere hjælp kan fås ved kontakt til Synologys onlinesupport: http://www.synology.com.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[SecurityScanAlarm]
+Category: System,Important
+Title: Sikkerhedsrisici fundet
+Subject: Sikkerhedsrisici fundet på %HOSTNAME%
+
+Kære bruger
+
+Sikkerhedsrådgiver har lige gennemført en planlagt scanning af %HOSTNAME%. Sikkerhedsrisici blev fundet, som kræver din opmærksomhed. Log ind på %OSNAME% på %HOSTNAME%, og se rapporten i Sikkerhedsrådgiver.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[SecurityScanDSMOutOfDate]
+Category: System,Important
+Title: System forældet
+Subject: %OSNAME% på %HOSTNAME% er forældet fra Sikkerhedsrådgiver
+
+Kære bruger
+
+%OSNAME%, der kører på %HOSTNAME%, er forældet Log ind på %OSNAME% på %HOSTNAME%, åbne kontrolpanelet, og installer den seneste version af %OSNAME%. Gå til Hovedmenu > Sikkerhedsrådgiver for at få en detaljeret rapport.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[SecurityScanDSMPackageOutOfDate]
+Category: System,Important
+Title:  System og forældede pakker
+Subject: %OSNAME% og pakker på %HOSTNAME% er forældede fra Sikkerhedsrådgiver
+
+Kære bruger
+
+%OSNAME% og %NUMBER% pakke(r), der kører på %HOSTNAME% er forældede. Log ind på %OSNAME% på %HOSTNAME%, og gør følgende:
+- Åbn Kontrolpanel, og installer den seneste version af %OSNAME%.
+- Åbn Pakkecenter, og installer den seneste version af din(e) pakke(r).
+
+Gå til Hovedmenu > Sikkerhedsrådgiver for at få en detaljeret rapport.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[SecurityScanDanger]
+Category: System,Important
+Title: Malware fundet
+Subject: Malware fundet på %HOSTNAME%
+
+Kære bruger
+
+Malware fundet på %HOSTNAME%. Log ind på %OSNAME% på %HOSTNAME%, og åbn Sikkerhedsrådgiver for at rette det.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[SecurityScanPackageOutOfDate]
+Category: System,Important
+Title: Forældede pakker
+Subject: Pakker på %HOSTNAME% er forældede
+
+Kære bruger
+
+%NUMBER% pakke(r), der kører på %HOSTNAME%, er forældede. Log ind på %OSNAME% på %HOSTNAME%, og åbn Pakkecenter for at installere den seneste version af din(e) pakke(r).
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[ShareSyncError]
+Category: Backup/Restore,Important
+Title: Synkronisering af delt mappe mislykkedes
+Subject: Mislykkedes - Synkronisering af delt mappe
+
+Kære bruger
+
+Synkronisering af delt mappe på %HOSTNAME% mislykkedes. Undersøg backuploggen i DSM under Logcenter for at få flere oplysninger.
+
+Synkroniseringsopgave: %S2S_TASK%
+Synkroniseringsserver: %S2S_SERVER%
+Start tidspunkt: %TIME%
+Varighed: %DUR%
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[ShareSyncSuccess]
+Category: Backup/Restore
+Title: Synkronisering af delt mappe fuldført
+Subject: Fuldført - Synkronisering af delt mappe
+
+Kære bruger
+
+Synkronisering af delt mappe på %HOSTNAME% er fuldført.
+
+Synkroniseringsopgave: %S2S_TASK%
+Synkroniseringsserver: %S2S_SERVER%
+Start tidspunkt: %TIME%
+Varighed: %DUR%
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[SmartEBoxAbnor]
+Category: Storage,Important
+Title: S.M.A.R.T.-status for udvidelsesdisken er unormal
+Subject: S.M.A.R.T.-status for disken %DISK_ID% på %EUNIT_ID% tilsluttet til %HOSTNAME% er unormal
+
+Kære bruger
+
+S.M.A.R.T.-status for disken %DISK_ID% på %EUNIT_ID% tilsluttet til %HOSTNAME% er unormal. Dette kan antyde en snarlig fejl. Backup dine data, og udskift de beskadigede diske så hurtigt som muligt.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[SmartESataAbnor]
+Category: External Storage,Important
+Title: S.M.A.R.T.-status for eSATA-disken er unormal
+Subject: S.M.A.R.T.-status for eSATA-disken på %HOSTNAME% er unormal
+
+Kære bruger
+
+S.M.A.R.T.-status for eSATA-disken på %HOSTNAME% er unormal. Dette kan antyde en snarlig fejl. Backup dine data, og udskift de beskadigede diske så hurtigt som muligt.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[SmartIntAbnor]
+Category: Storage,Important
+Title: S.M.A.R.T.-status for intern disk er unormal
+Subject: S.M.A.R.T.-status for disken %DISK_ID% på %HOSTNAME% er unormal
+
+Kære bruger
+
+S.M.A.R.T.-status for den interne disk %DISK_ID% på %HOSTNAME% er unormal. Dette kan antyde en snarlig fejl. Backup dine data, og udskift de beskadigede diske så hurtigt som muligt.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[SmartTestEBoxErr]
+Category: Storage,Important
+Title: S.M.A.R.T.-testfejl på udvidelsesenhedsdisk
+Subject: Disken %DISK_ID% på %EUNIT_ID% tilsluttet %HOSTNAME% fejlede S.M.A.R.T.-testen
+
+Kære bruger
+
+Disken %DISK_ID% på %EUNIT_ID% tilsluttet til %HOSTNAME% fejlede S.M.A.R.T.-testen. Backup dine data, og udskift de beskadigede diske så hurtigt som muligt.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[SmartTestESataErr]
+Category: External Storage,Important
+Title: S.M.A.R.T.-test fejlede på eSATA-disk
+Subject: eSATA-disk på %HOSTNAME% fejlede S.M.A.R.T.-test
+
+Kære bruger
+
+eSATA-disk på %HOSTNAME% fejlede S.M.A.R.T.-test Backup dine data, og udskift de beskadigede diske så hurtigt som muligt.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[SmartTestIntErr]
+Category: Storage,Important
+Title: S.M.A.R.T.-test fejl på intern disk
+Subject: Disken %DISK_ID% på %HOSTNAME% fejlede S.M.A.R.T.-testen
+
+Kære bruger
+
+Harddisken %DISK_ID% på %HOSTNAME% fejlede S.M.A.R.T.-testen. Backup dine data, og udskift de beskadigede diske så hurtigt som muligt.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[StoragePoolCrashed]
+Category: Storage,Important
+Title: Diskgruppe brød sammen
+Subject: Diskgruppen %RAID_ID% på %HOSTNAME% brød sammen
+
+Kære bruger
+
+Diskgruppen %RAID_ID% på %HOSTNAME% brød sammen. Systemet vil måske ikke starte
+
+Yderligere hjælp kan fås ved kontakt til Synologys onlinesupport: http://www.synology.com.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[StoragePoolDegraded]
+Category: Storage,Important
+Title: Diskgruppe degraderet
+Subject: Diskgruppen %RAID_ID% på %HOSTNAME% er gået i degraderet tilstand [%ACTIVE_DISK%/%TOTAL_DISK%]
+
+Kære bruger
+
+Diskgruppen %RAID_ID% på %HOSTNAME% er gået i degraderet tilstand. (samlet antal harddiske: %TOTAL_DISK%; antal aktive harddiske: %ACTIVE_DISK%). Identificer årsagen til degraderingen, og ret fejlen.
+
+Yderligere hjælp kan fås ved kontakt til Synologys onlinesupport: http://www.synology.com.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[StoragePoolRaid5SpareChanged]
+Category: Storage,Important
+Title: Diskgruppe - Raid5+spare degraderet
+Subject: Diskgruppe %RAID_ID% på %HOSTNAME% er degraderet til RAID5
+
+Kære bruger
+
+Diskgruppen %RAID_ID% på %HOSTNAME% er degraderet fra RAID5+spare til RAID5. Hvis du vil ændre den tilbage til RAID5+spare, skal du forberede en reservedisk og gå til "Hovedmenu" > "Lagerstyring" > "Diskgruppe" for at udskifte den defekte disk.
+
+Yderligere hjælp kan fås ved kontakt til Synologys onlinesupport: http://www.synology.com.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[StoragePoolSyncDone]
+Category: Storage
+Title: Synkronisering af diskgruppe fuldført
+Subject: Konsistenscheck af diskgruppen %RAID_ID% på %HOSTNAME% er færdig
+
+Kære bruger
+
+Konsistenscheck af diskgruppen %RAID_ID% på %HOSTNAME% er færdig. Systemet er nu klar til brug.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[SynoReport]
+Subject: Diskbrugsrapporten er genereret
+
+Kære bruger
+
+Diskbrugsrapporten for %PROFILE% er genereret. Hvis du vil se rapporten, skal du se nedenfor:
+%LINK%
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[SynoReportFail]
+Subject: Kunne ikke generere lagerforbrugsrapport
+
+Kære bruger
+
+Der opstod en fejl ved generering af brugsrapport for %PROFILE%.
+
+Årsag: %MSG%
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[SystemInodeFull]
+Category: System
+Title: Filantal på systemet nærmer sig grænsen
+Subject: Filantal på systempartitioneringen på %HOSTNAME% nærmer sig grænsen
+
+Kære bruger
+
+Filantal på systempartitioneringen på %HOSTNAME% nærmer sig grænsen. Kontakt Synology-support for at få hjælp.
+
+Det maksimale filantal: %TOTAL_INODE%
+Det resterende filantal: %FREE_INODE% (%USAGE%%)
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[SystemVolumeCrashed]
+Category: System
+Title: Systemet lagerplads brudt sammen
+Subject: Systemlagerpladsen på %HOSTNAME% er brudt sammen
+
+Kære bruger
+
+Systemlagerpladsen på %HOSTNAME% er brudt sammen.
+
+Yderligere hjælp kan fås ved kontakt til Synologys onlinesupport på http://www.synology.com
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[SystemVolumeFull]
+Category: System
+Title: Systemlagerplads fuld
+Subject: Systemlagerplads på %HOSTNAME% er ved at løbe ud
+
+Kære bruger
+
+Den tilgængelig plads i systemlageret på %HOSTNAME% er ved at løbe ud. Der henvises til oplysninger nedenfor, og frigør plads.
+
+Samlet kapacitet: %VOLUME_SIZE% GB
+Tilgængelig kapacitet: %FREE_SPACE% GB (%USAGE%%)
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[TPLUNReachSoftLimit]
+Category: Storage,Important
+Title: Utilstrækkeligt LUN-lager
+Subject: LUN %LUN_NAME%-lageret på %HOSTNAME% er lavt
+
+Kære bruger
+
+Den ledige kapacitet for LUN %LUN_NAME% på %HOSTNAME% er lavt. Udvid diskenheden for at få mere kapacitet.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[TaskSchedulerResult]
+Subject: Opgaveplanlægger har fuldført en planlagt opgave
+
+Kære bruger
+
+Opgaveplanlægger har fuldført en planlagt opgave.
+
+Opgave: %TASK_ID%
+Starttid: %START_TIME%
+Stoptid: %STOP_TIME%
+Aktuel status: %EXIT_CODE%
+Standardoutput/-fejl:
+%OUTPUT%
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[TestMail]
+Subject: Testmeddelelse fra %HOSTNAME%
+
+Kære bruger
+
+Tillykke! Du har konfigureret e-mail-underretningen på %HOSTNAME%.
+For yderligere systemkonfigurationer, besøg %HTTP_URL%.
+(Hvis du ikke kan oprette forbindelse til serveren, skal du kontakte administratoren.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[UPSConnected]
+Category: Power System
+Title: UPS tilsluttet
+Subject: %HOSTNAME% er tilsluttet til UPS.
+
+Kære bruger
+
+%HOSTNAME% er tilsluttet til UPS.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[UPSDisconnect]
+Category: Power System,Important
+Title: UPS afbrudt
+Subject: %HOSTNAME% har mistet forbindelsen til UPS.
+
+Kære bruger
+
+%HOSTNAME% har mistet forbindelsen til UPS. Kontroller serverindstillingerne.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[UPSOnAC]
+Category: Power System,Important
+Title: UPS er vendt tilbage til AC-tilstand
+Subject: UPS-enhed tilsluttet til %HOSTNAME% er vendt tilbage til AC-tilstand.
+
+Kære bruger
+
+UPS-enhed tilsluttet til %HOSTNAME% er vendt tilbage til AC-tilstand.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[UPSOnBattery]
+Category: Power System,Important
+Title: UPS er gået i batteritilstand
+Subject: UPS-enhed tilsluttet til %HOSTNAME% er gået i batteritilstand.
+
+Kære bruger
+
+UPS-enheden tilsluttet til %HOSTNAME% er gået i batteritilstand. %HOSTNAME% lukker ned, når UPS-enhedens batteri er udtømt. Sluk manuelt for %HOSTNAME%, eller gendan den eksterne strømforsyning så hurtigt som muligt.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[UPSPowerFail]
+Category: Power System,Important
+Title: Lavt batteri for UPS nået
+Subject: UPS, der er tilsluttet til %HOSTNAME%, har nået lavt batteri
+
+Kære bruger
+
+Den UPS, der er tilsluttet til %HOSTNAME%, har nået lavt batteri. Alle tjenester lukkes. Tjenesterne bliver genstartet, når UPS'en er gendannet.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[USBCOPYDisconnect]
+Category: USB Copy
+Title: USBCopy afbrudt
+Subject: Ekstern enhed er afbrudt på %HOSTNAME%
+
+Kære bruger
+
+%COPY% på %HOSTNAME% mislykkedes da den eksterne enhed er afbrudt.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[USBCOPYError]
+Category: USB Copy,Important
+Title: USBCopy mislykkedes
+Subject: %COPY% på %HOSTNAME% mislykkedes
+
+Kære bruger
+
+%COPY% på %HOSTNAME% mislykkedes pga. ukendt fejl.
+Fejlkoden er %ERR%. Undersøg USBCopy/SDCopy-loggen for at få flere oplysninger.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[USBCOPYFinished]
+Category: USB Copy
+Title: USBCopy fuldført
+Subject: %COPY% på %HOSTNAME% er fuldført
+
+Kære bruger
+
+%COPY% på %HOSTNAME% er fuldført.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[USBCOPYNospace]
+Category: USB Copy,Important
+Title: USBCopy annulleret
+Subject: %COPY% på %HOSTNAME% er annulleret
+
+Kære bruger
+
+%COPY% på %HOSTNAME% er annulleret, fordi der ikke er mere tilgængelige plads på den delte destinationsmappe.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[USBDiskFail]
+Category: External Storage
+Title: USB-disk mislykkedes
+Subject: USB-disk på %DISK_ID% på %HOSTNAME% fejlede
+
+Kære bruger
+
+USB-disk på %DISK_ID% på %HOSTNAME% fejlede.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[USBDiskFull]
+Category: External Storage
+Title: USB-disk fuld
+Subject: Der er snart ikke mere plads på USB-disken %DISK_NUMBER% på %HOSTNAME%
+
+Kære bruger
+
+Der er snart ikke mere plads på USB-disken %DISK_NUMBER% på %HOSTNAME%. Tag en korrigerende handling.
+
+Samlet kapacitet: %DISK_SIZE% GB
+Tilgængelig kapacitet: %FREE_SPACE% GB (%USAGE%%)
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[USBPartitionFull]
+Category: External Storage
+Title: USB-partitionering fuld
+Subject: Partitioneringen %PARTITION_NUMBER% har snart ikke mere plads på USB-disken %DISK_NUMBER% på %HOSTNAME%.
+
+Kære bruger
+
+Partitioneringen %PARTITION_NUMBER% har snart ikke mere plads på USB-disken %DISK_NUMBER% på %HOSTNAME%. Tag en korrigerende handling.
+
+Samlet kapacitet: %DISK_SIZE% GB
+Tilgængelig kapacitet: %FREE_SPACE% GB (%USAGE%%)
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[UserChangePassword]
+Subject: Adgangskoden på %HOSTNAME% er ændret
+
+Kære %USER_NAME%
+
+Dette er en bekræftelse, at din adgangskode på %HOSTNAME% er ændret.
+
+Ret dine kontoindstillinger ved at pege din browser til %HTTP_URL%. (Hvis du ikke kan oprette forbindelse til serveren, skal du kontakte administratoren.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[UserWelcome]
+Category: System
+Title: Velkommen til ny bruger
+Subject: Velkommen %USER_NAME% på serveren %HOSTNAME%
+
+Kære bruger
+
+Velkommen til %HOSTNAME%!
+Du kan pege din browser på %HTTP_URL% for at ændre din personlige profil.
+(Hvis du ikke kan oprette forbindelse til serveren, skal du kontakte administratoren.
+
+Dit brugernavn: %USER_NAME%
+Din adgangskode: %PASSWD%
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[VolumeInodeFull]
+Category: Storage,Important
+Title: Filantal på diskenheden nærmer sig grænsen
+Subject: Filantal på diskenheden %VOLUME_ID% på %HOSTNAME% nærmer sig grænsen
+
+Kære bruger
+
+Filantal på diskenheden %VOLUME_ID% på %HOSTNAME% nærmer sig grænsen. Slet nogle filer for at mindske antallet.
+
+Det maksimale filantal: %TOTAL_INODE%
+Det resterende filantal: %FREE_INODE% (%USAGE%%)
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[VpncReconnectFail]
+Category: System
+Title: VPN Client genopkald fejlede
+Subject: Genoprettelse af forbindelse til VPN-profilen [%VPN_CLIENT%] på %HOSTNAME% fejlede
+
+Kære bruger
+
+Genoprettelse af forbindelse til VPN-profilen [%VPN_CLIENT%] på %HOSTNAME% fejlede efter afbrydelse. Kontroller forbindelsen mellem VPN-klienten og serveren.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[aha_reboot_active]
+Category: AHA,Important
+Title: Genstart aktiv server
+Subject: Den aktive server på high-availability-klyngen %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) er genstartet
+
+Kære bruger
+
+En administrator har genstartet den aktive server på high-availability-klyngen %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%).
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[aha_reboot_active_fail]
+Category: AHA,Important
+Title: Kunne ikke genstarte den aktive server
+Subject: Kunne ikke genstarte den aktive server på high-availability-klyngen %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%)
+
+Kære bruger
+
+Den aktive server på high-availability-klyngen %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) kunne ikke genstarte. Kontroller logsiden for High Availability Manager for at få yderligere oplysninger.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[aha_reboot_passive]
+Category: AHA
+Title: Genstart passiv server
+Subject: Den passive server på high-availability-klyngen %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) er genstartet
+
+Kære bruger
+
+En bruger har genstartet den passive server på high-availability-klyngen %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%).
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[aha_reboot_passive_fail]
+Category: AHA
+Title: Kunne ikke genstarte den passive server.
+Subject: Kunne ikke genstarte den passive server på high-availability-klyngen %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%)
+
+Kære bruger
+
+Den passive server på high-availability-klyngen %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) kunne ikke genstartes. Kontroller logsiden for High Availability Manager for at få yderligere oplysninger.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[aha_reboot_remote]
+Category: AHA
+Title: Genstart ukendt server
+Subject: Den ukendte server tilsluttet til high-availability-klyngen %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) er genstartet
+
+Kære bruger
+
+En bruger har genstartet den ukendte server tilsluttet til high-availability-klyngen %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%).
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[aha_reboot_remote_fail]
+Category: AHA
+Title: Kunne ikke genstarte den ukendte server
+Subject: Kunne ikke genstarte den ukendte server tilsluttet til high-availability-klyngen %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%)
+
+Kære bruger
+
+Den ukendte server tilsluttet til high-availability-klyngen %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) kunne ikke genstartes. Kontroller logsiden for High Availability Manager for at få yderligere oplysninger.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[aha_recover_remote]
+Category: AHA,Important
+Title: Tilføj en ny server
+Subject: Tilføjelse af en ny server til high-availability-klyngen
+
+Kære bruger
+
+En administrator har startet gendannelsen af den ukendte server. Serveren er i øjeblikket tilsluttet high-availability-klyngen %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) som den passive server. Kontroller logsiden for High Availability Manager for at få yderligere oplysninger.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[aha_recover_remote_fail]
+Category: AHA,Important
+Title: Kunne ikke tilføje en ny server
+Subject: Kunne ikke tilføje en ny server til high-availability-klyngen
+
+Kære bruger
+
+Den ukendte server kunne ikke tilsluttes til high-availability-klyngen %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) som den passive server. Kontroller logsiden for High Availability Manager for at få yderligere oplysninger.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[aha_shutdown]
+Category: AHA,Important
+Title: Sluk for high-availability-klynge
+Subject: High-availability-klyngen %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) er slukket
+
+Kære bruger
+
+En bruger har slukket for high-availability-klyngen %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%).
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[aha_shutdown_active]
+Category: AHA,Important
+Title: Sluk for aktiv server
+Subject: Den aktive server på high-availability-klyngen %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) er slukket
+
+Kære bruger
+
+En administrator har slukket for den aktive server på high-availability-klyngen %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%).
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[aha_shutdown_active_fail]
+Category: AHA,Important
+Title: Kunne ikke slukke for aktiv server
+Subject: Kunne ikke slukke for den aktive server på high-availability-klyngen %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%)
+
+Kære bruger
+
+Den aktive server på high-availability-klyngen %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) kunne ikke slukkes. Kontroller logsiden for High Availability Manager for at få yderligere oplysninger.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[aha_shutdown_fail]
+Category: AHA,Important
+Title: Kunne ikke slukke for high-availability-klyngen
+Subject: Kunne ikke slukke for high-availability-klyngen %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%)
+
+Kære bruger
+
+High-availability-klyngen %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) kunne ikke slukkes. Kontroller logsiden for High Availability Manager for at få yderligere oplysninger.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[aha_shutdown_passive]
+Category: AHA,Important
+Title: Sluk for passiv server
+Subject: Den passive server på high-availability-klyngen %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) er slukket
+
+Kære bruger
+
+En administrator har slukket for den passive server på high-availability-klyngen %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%).
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[aha_shutdown_passive_fail]
+Category: AHA,Important
+Title: Kunne ikke slukke for passiv server
+Subject: Kunne ikke slukke for den passive server på high-availability-klyngen %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%)
+
+Kære bruger
+
+Den passive server på high-availability-klyngen %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) kunne ikke slukkes. Kontroller logsiden for High Availability Manager for at få yderligere oplysninger.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[aha_shutdown_remote]
+Category: AHA
+Title: Sluk for ukendt server
+Subject: Den ukendte server tilsluttet til high-availability-klyngen %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) er slukket.
+
+Kære bruger
+
+En bruger har slukket for den ukendte server tilsluttet til high-availability-klyngen %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%).
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[aha_shutdown_remote_fail]
+Category: AHA,Important
+Title: Kunne ikke slukke for ukendt server
+Subject: Kunne ikke slukke for den ukendte server tilsluttet til high-availability-klyngen %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%)
+
+Kære bruger
+
+Den ukendte server tilsluttet til high-availability-klyngen %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) kunne ikke slukkes. Kontroller logsiden for High Availability Manager for at få yderligere oplysninger.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[aha_switchover]
+Category: AHA,Important
+Title: Switchover for high-availability-klyngen
+Subject: Tjenester på high-availability-klyngen %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) er skiftet til %HA_REMOTE_HOST_SN%
+
+Kære bruger
+
+Systemet har startet en switchover af high-availability-klyngen %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%). Tjenester skiftes over til %HA_REMOTE_HOST_SN%. Kontroller logsiden for High Availability Manager for at få yderligere oplysninger.
+
+Årsag: %HA_FAILOVER_REASON%
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[aha_switchover_fail]
+Category: AHA,Important
+Title: Kunne ikke udføre switchover for high-availability-klyngen
+Subject: Tjenester på high-availability-klyngen %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) kunne ikke skiftes til %HA_REMOTE_HOST_SN%
+
+Kære bruger
+
+Systemet forsøgte at udføre switchover i high-availability-klyngen %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%). Tjenester kunne dog ikke skiftes til den passive server (SN: %HA_REMOTE_HOST_SN%). Kontroller logsiden for High Availability Manager for at få yderligere oplysninger.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[aha_takeover]
+Category: AHA,Important
+Title: High-Availability-klynge - Failover
+Subject: Registrerede fejl i high-availability-klyngen %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%)
+
+Kære bruger
+
+Registrerede fejl i high-availability-klyngen %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%). Tjenester bliver skiftet til den passive server. Kontroller logsiden for High Availability Manager for at få yderligere oplysninger.
+
+Fejl: %HA_FAILOVER_REASON%
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[aha_upgrade_fail]
+Category: AHA,Important
+Title: Kunne ikke opgradere high-availabilityklyngen
+Subject: Kunne ikke opgradere high-availabilityklyngen %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%)
+
+Kære bruger
+
+High-availability-klyngen %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) kunne ikke opgraderes. Kontroller logsiden for High Availability Manager for at få yderligere oplysninger.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[aha_upgrade_passive_fail]
+Category: AHA,Important
+Title: Kunne ikke opgradere passiv server
+Subject: Kunne ikke opgradere den passive server på high-availability-klyngen %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%)
+
+Kære bruger
+
+Den passive server på high-availability-klyngen %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) kunne ikke opgraderes. Kontroller logsiden for High Availability Manager for at få yderligere oplysninger.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[aha_welcome]
+Category: AHA
+Title: High-Availability-klynge kører
+Subject: High-Availability-klyngen %HOSTNAME% kører nu tjenester på %HA_LOCAL_HOST_SN%.
+
+Kære bruger
+
+Tjenesterne på High-Availability-klyngen %HOSTNAME% kører nu tjenester på %HA_LOCAL_HOST_SN%. Kontroller logsiden for High Availability Manager for at få yderligere oplysninger.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[disk_health_monthly_report]
+Subject: Månedlig disksundhedsrapport på %HOSTNAME%
+
+Kære bruger
+
+Her følger din månedlige rapport om sundeheden af diskene på %HOSTNAME%. Du kan også undersøge sundheden af individuelle diske under Lagerstyring > Harddisk/SSD > Sundhedsoplysninger.
+
+%CONTENT%
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[eSynoscheduler_complete_task]
+Subject: Opgaveplanlægger har fuldført en udløst opgave
+
+Kære bruger
+
+Opgaveplanlægger har fuldført en udløst opgave.
+
+Opgave: %TASK%
+Starttid: %START_TIME%
+Stoptid: %END_TIME%
+Aktuel status: %EXIT_CODE%
+Standardoutput/-fejl:
+%OUT_PUT%
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[ext4_fs_err]
+Category: System,Important
+Title: Filsystemfejl
+Subject: Filsystemfejl registreret på %HOSTNAME%
+
+Kære bruger
+
+En filsystemfejl blev registreret på %VOLUME_ID% Gå til Lagerstyring for at reparere så hurtigt som muligt.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[file_cksum_err]
+Category: System,Important
+Title: Fejl i kontrolsum
+Subject: Fejl i kontrolsum på %HOSTNAME%. Yderligere oplysninger findes i Logcenter.
+
+Kære bruger
+
+Der blev registreret en fejl i kontrolsum i filen %FILE_PATH%. Brug en tidligere backupversion for at reparere filen.
+
+Med venlig hilsen
+%COMPANY_NAME%
+
+
+[iSCSILunScheduleSnapshotFail]
+Category: Storage,Important
+Title: Kunne ikke tage et billede til iSCSI LUN
+Subject: Kunne ikke tage et billede til iSCSI LUN %LUNNAME% på %HOSTNAME%
+
+Kære bruger
+
+Kunne ikke tage et billede til iSCSI LUN på %HOSTNAME%. Kontroller Lagerstyring for at få detaljerede oplysninger.
+
+LUN: %LUNNAME%
+
+Med venlig hilsen
+%COMPANY_NAME%
+

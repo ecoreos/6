@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Freigegebener Ordner</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Dateien indizieren</h2>
+<p>
+Durch Indizieren eines Ordners oder seiner Unterordner können Sie die darin enthaltenen Dateien und Inhalte bei der Dateisuche schneller finden.
+</p>
+
+
+<div class="section">
+<h4>Hinweis:</h4>
+<p>Remote-Ordner, Cloud-Ordner oder an Ihr DiskStation angehängte .iso-Ordner können nicht indiziert werden.</p>
+</div>
+
+
+<h4>Inhalt von Ordnern und Dateien indizieren:</h4>
+<p>Wenn Sie Ordner indiziert haben, werden diese und die darin enthaltenen Dateien automatisch nach Dateiname indiziert. Sie können den Dateiinhalt bzw. Metadaten in den indizierten Ordnern weiter nach Dateityp indizieren. Die Ordnerindizierung ermöglicht das schnellere, detaillierte Suchen im Inhalt indizierter Dateien sowie in Metadaten.</p>
+
+<ol>
+<li>Gehen Sie zu <strong>Systemsteuerung</strong> > <strong>Indizierungsdienst</strong> > <strong>Dateiindizierung</strong> und klicken Sie auf <strong>Liste indizierter Ordner</strong>.</li>
+<li>Klicken Sie im eingeblendeten Fenster auf <strong>Erstellen</strong> > <strong>Auswählen</strong>, um die Ordner für die Indizierung anzuzeigen.</li>
+<li>Wählen Sie den gewünschten Ordner aus und klicken Sie auf <strong>Auswählen</strong>. Klicken Sie, um einen neuen Ordner für die Indizierung zu erstellen, auf <strong>Ordner erstellen</strong> und fahren Sie fort.</li>
+<li>Klicken Sie auf den Ordner, den Sie indizieren möchten, und klicken Sie auf <strong>Auswählen</strong>.</li>
+<li>Wenn Sie bestimmte Arten von Dateiinhalten indizieren möchten, gehen Sie zu <strong>Dateityp</strong> und wählen Sie <strong>Bild</strong>, <strong>Audio</strong>, <strong>Video</strong> oder <strong>Dokument</strong> für die Indizierung aus.</li>
+
+<li>Klicken Sie zum Beenden der Indizierung auf <strong>OK</strong>.</li>
+</ol>
+
+<div class="section">
+<h4>Hinweis:</h4>
+<ul>
+<li>Die maximale Anzahl indizierter Ordner ist 1000.</li>
+<li>Wenn Sie in File Station <strong>Durchsuchen des Dateiinhalts aktivieren</strong> auswählen, können Sie den Dateiinhalt in den indizierten Ordnern durchsuchen.</li>
+<li>Das Volume, das den indizierten Ordner hostet, muss mehr als 10 MB freien Speicherplatz haben. Andernfalls wird die Indizierung unterbrochen. Erweitern Sie das Volume und klicken Sie auf <strong>Neu indizieren</strong>, um die Indizierung fortzusetzen.</li>
+<li>Wenn Sie einen Ordner und dessen Unterordner gleichzeitig indiziert haben, indiziert das System nur den (die) Unterordner, um Systemressourcen einzusparen.</li>
+<li class="disable-hi3535">Nachdem Ordner vollständig indiziert und über SMB- oder AFP-Protokoll an einen Mac-Computer angehängt wurden, können Mac-Benutzer mit Spotlight in Finder die Dateiinhalte durchsuchen.</li>
+</ul>
+
+</div>
+
+
+<h4>Indizierte Ordner löschen:</h4>
+
+<ol>
+<li>Gehen Sie zu <strong>Systemsteuerung</strong> > <strong>Indizierungsdienst</strong> > <strong>Dateiindizierung</strong> > <strong>Liste indizierter Ordner</strong> und wählen Sie den (die) gewünschten indizierten Ordner aus.</li>
+<li>Klicken Sie auf <strong>Löschen</strong>, um die Indizierung des Ordners bzw. der Ordner zu stoppen.</li>
+</ol>
+
+<h2>Dateien neu indizieren</h2>
+<p>
+Eine erneute Indizierung von Dateien ist unter normalen Umständen nicht erforderlich. Stimmen Dateien in einem Ordner mit bestimmten Suchkriterien überein, wurden aber während der Suche nicht angezeigt, müssen Sie die Dateien möglicherweise neu indizieren, um die Indexstruktur der Dateien neu zu aufzubauen.
+</p>
+<h4>Dateien in einem freigegebenen Ordner neu indizieren:</h4>
+<ol>
+<li>Gehen Sie zu <strong>Systemsteuerung</strong> > <strong>Indizierungsdienst</strong> > <strong>Dateiindizierung</strong> > <strong>Liste indizierter Ordner</strong>.</li>
+<li>Wählen Sie den (die) aufgeführten Ordner aus, den (die) Sie neu indizieren möchten.</li>
+<li>Klicken Sie auf <b>Neu indizieren</b>.</li>
+</ol>
+
+<div class="section">
+<h4>Hinweis:</h4>
+<p>File Station unterstützt keine Dateiindizierung von Remote-Ordnern oder auf externen Speichergeräten (z. B. USB-Geräte/SD-Karten).</p>
+</div>
+
+
+<h2>Dateiindizierung über den Desktop verwalten</h2>
+<p>Wenn die Dateiindizierung beginnt, wird der <strong>Indizierungsfortschritt</strong> in der Taskleiste angezeigt (Vergrößerungsglas). Da die Dateiindizierung mehr CPU-Ressourcen benötigt, können Sie damit die Nutzung der CPU-Ressourcen optimieren.</p>
+
+
+<ul>
+<li>Klicken Sie auf die Schaltfläche Wiedergabe, um die Dateiindizierung anzuhalten bzw. fortzusetzen.</li>
+<li>Wenn Sie die Dateiindizierung bis zu einem passenden Zeitpunkt verzögern möchten, wählen Sie im Dropdown-Menü die gewünschte Option aus.</li>
+<li>Um anzuzeigen, welche Ordner indiziert werden, klicken Sie auf <strong>Liste der indizierten Ordner anzeigen</strong>.</li>
+</ul>
+
+<div class="section">
+<h4>Hinweis:</h4>
+<ul>
+<li>Wenn Sie die Indizierung anhalten, können Sie sie nur durch Anklicken der Schaltfläche Wiedergabe in der Taskleiste am Desktop fortsetzen.</li>
+</ul>
+
+</div>
+
+
+</body>
+</html>

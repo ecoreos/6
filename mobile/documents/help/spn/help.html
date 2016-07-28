@@ -1,0 +1,329 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>DSM mobile</title>
+<link href="../help.css" rel="stylesheet" type="text/css" />
+<link href="help.css" rel="stylesheet" type="text/css" />
+<script src="../jslib/jquery.min.js"></script>
+<script src="../jslib/mobile.js"></script>
+</head>
+<body><br><p>DSM mobile permite al usuario <strong>admin</strong> de DSM (o a un usuario que pertenezca al grupo <strong>administrators</strong>) administrar la configuración de DSM y comprobar la información de DSM con un dispositivo iOS<sup>®</sup> (iPhone<sup>®</sup>, iPad<sup>®</sup> o iPod touch<sup>®</sup>) o Android<sup>®</sup>. Esta Ayuda de DSM mobile le proporciona los siguientes temas y recursos para ayudarle a comenzar.</p>
+<h2><a name="login" href="#">Iniciar y cerrar sesión</a></h2>
+
+<div name="contents" id="login" class="x-hidden-display">
+<p>Después de conectarse a DSM con el explorador web en su dispositivo iOS o Android, verá la pantalla de conexión, donde puede especificar su información de cuenta de DSM.</p>
+
+<h4>Para iniciar sesión en DSM mobile:</h4>
+<p>Introduzca sus credenciales de usuario de DSM y toque <b>Iniciar sesión</b>. Si desea guardar su información de conexión y conectarse automáticamente la próxima vez, active el interruptor <b>Recordarme</b> antes de conectarse.</p>
+
+<h4>Para cerrar sesión en DSM mobile:</h4>
+<ol>
+	<li>Toque el botón de opción situado en la esquina superior derecha de la página de inicio (iPhone/iPod touch o teléfono Android) o en el panel izquierdo (iPad o tableta Android).</li>
+	<li>Toque <b>Configuración</b> y, a continuación, <b>Cerrar sesión</b>.</li>
+</ol>
+</div>
+
+<h2><a name="user" href="#" >Administrar usuarios de DSM</a></h2>
+
+<div name="contents" id="user" class="x-hidden-display">
+<p>Toque en <b>Usuario y grupo</b> en la página de inicio (iPhone/iPod touch o teléfono Android) o en el panel izquierdo (iPad o tableta Android) para ver la lista de usuarios.</p>
+
+<h4>Para crear un usuario:</h4>
+<ol>
+	<li>Toque <b>+</b> y escriba el nombre de usuario y la contraseña, y la dirección de correo electrónico del nuevo usuario.</li>
+	<li>Habilite <b>Enviar notificación</b> para enviar un correo de notificación a la dirección de correo electrónico del usuario cuando se creen sus cuentas de usuario de DSM.<br><span class="note_head">Nota: </span>Antes de enviar la notificación, asegúrese de que la configuración de notificación se ha completado en su Synology NAS. Conéctese a la edición de escritorio de DSM con el explorador web de su equipo y vaya a <b>Menú principal</b> > <b>Panel de control</b> > <b>Notificación</b> > <b>Correo electrónico</b> para modificar la configuración.</li>
+	<li>Toque <b>Finalizar</b> para confirmar o toque la flecha izquierda para cancelar.</li>
+</ol>
+
+<h4>Para buscar rápidamente un usuario:</h4>
+<p>Escriba el nombre del usuario en el campo de búsqueda.</p>
+
+<h4>Para modificar la información de un usuario:</h4>
+<ol>
+	<li>Toque el nombre del usuario y elija una de las siguientes opciones:<ul>
+			<li>Modifique el nombre o la contraseña del usuario en el campo <b>Nombre</b> o <b>Contraseña</b>.</li>
+		<li>Active <b>Deshabilitar</b> para deshabilitar al usuario. Puede habilitar el usuario más tarde sin perder su configuración.</li>
+		<li>Active <b>Administrador</b> para añadir al usuario al grupo <b>admin</b>. A cualquier usuario que pertenezca al grupo <b>admin</b> se le otorgarán privilegios administrativos para modificar la configuración de DSM con DSM mobile o con el navegador web de su equipo.</li>
+		</ul>
+	</li>
+	<li>En <b>Privilegios</b>, realice alguna de las siguientes opciones y toque <b>Anterior</b>:<ul>
+			<li>Toque <b>Carpeta compartida</b> y toque el nombre de una carpeta compartida para modificar el privilegio de acceso del usuario: <b>Lectura/Escritura</b>: el usuario puede acceder a los archivos y subcarpetas de la carpeta compartida y hacerles cambios; <b>Sólo lectura</b>: el usuario puede acceder a los archivos y subcarpetas de la carpeta compartida, pero no puede hacerles cambios; <b>Sin acceso</b>: el usuario no puede acceder a los archivos y subcarpetas de la carpeta compartida.<br><span class="note_head">Nota: </span>Si hubiera conflictos de privilegios, la prioridad será la siguiente: <span class="note_content">Sin acceso > Lectura/Escritura > Sólo lectura</span>.</li>
+			<li>Toque <b>Aplicación</b> para modificar el privilegio de acceso del usuario a las aplicaciones DSM.</li>
+		</ul>
+	</li>
+	<li>Toque <b>Finalizar</b> para confirmar o toque la flecha izquierda para cancelar.</li>
+</ol>
+</div>
+
+<h2><a name="shared" href="#" >Administrar carpetas compartidas</a></h2>
+
+<div name="contents" id="shared" class="x-hidden-display">
+<p>Toque <b>Carpeta compartida</b> en la página de inicio (iPhone/iPod touch o teléfono Android) o en el panel izquierdo (iPad o tableta Android) para ver la lista de carpetas compartidas en su Synology NAS.</p>
+
+<h4>Para crear una carpeta compartida:</h4>
+<ol>
+	<li>Toque <b>+</b> y escriba el nombre de la nueva carpeta.</li>
+	<li>Toque <b>Finalizar</b> para confirmar o toque la flecha izquierda para cancelar.</li>
+</ol>
+
+<h4>Para modificar una carpeta compartida:</h4>
+<p>Toque el nombre de la carpeta compartida y elija una de las siguientes opciones:</p>
+<ul>
+	<li>Modifique el nombre de la carpeta compartida en el campo <b>Nombre</b>.</li>
+	<li>Toque <b>Permisos de usuario</b> y seleccione un usuario para modificar su privilegio de acceso a la carpeta compartida: <b>Lectura/Escritura</b>: el usuario puede acceder a los archivos y subcarpetas de la carpeta compartida y hacerles cambios; <b>Sólo lectura</b>: el usuario puede acceder a los archivos y subcarpetas de la carpeta compartida, pero no puede hacerles cambios; <b>Sin acceso</b>: el usuario no puede acceder a los archivos y subcarpetas de la carpeta compartida.<br><span class="note_head">Nota: </span>Si hubiera conflictos de privilegios, la prioridad será la siguiente: <span class="note_content">Sin acceso > Lectura/Escritura > Sólo lectura</span>.</li>
+	<li>También puede tocar <b>Permisos de grupo</b> para configurar privilegios por grupos.<br><span class="note_head">Nota: </span>Los permisos de grupo tienen mayor prioridad que los permisos de usuario.</li>
+</ul>
+</div>
+
+<h2><a name="services" href="#" >Habilitar servicios</a></h2>
+
+<div name="contents" id="services" class="x-hidden-display">
+<p>Toque <b>Servicio</b> en la página de inicio (iPhone/iPod touch o teléfono Android) o en el panel izquierdo (iPad o tableta Android) para habilitar o deshabilitar los servicios del Synology NAS.</p>
+
+<h4>Para administrar los servicios LAN del Synology NAS:</h4>
+<ul>
+	<li>Habilite o deshabilite cualquiera de las siguientes opciones:<ul>
+			<li><b>Servicio de archivos Windows</b> permite que su Synology NAS se convierta en un servidor de archivos Windows (CIFS) dentro de una red LAN.</li>
+			<li><b>Servicio de archivos Mac</b> permite que su Synology NAS se convierta en un servidor de archivos Mac (AFP) dentro de una red LAN.</li>
+			<li><b>Servicio NFS</b> permite que el cliente Linux dentro de la red LAN acceda a datos de Synology NAS.</li>
+			<li><b>Impresora Bonjour</b> permite que los clientes de Mac impriman en impresoras USB conectadas al Synology NAS.</li>
+			<li><b>Servidor multimedia</b> permite que los dispositivos domésticos DLNA/UPnP en la red LAN examinen y reproduzcan el contenido multimedia de su Synology NAS.</li>
+			<li><b>iTunes</b> permite que clientes de iTunes dentro de la red LAN examinen y reproduzcan música o vídeo en su Synology NAS.</li>
+		</ul>
+	</li>
+</ul>
+
+<h4>Para administrar los servicios de Internet del Synology NAS:</h4>
+<ul>
+	<li>Habilite o deshabilite cualquiera de las siguientes opciones:<ul>
+			<li><b>FTP</b> permite que su Synology NAS se convierta en un servidor FTP.</li>
+			<li><b>Servicios Web</b> le permite alojar sitios web (con compatibilidad PHP+MySQL) en su Synology NAS.</li>
+			<li><b>WebDAV</b> permite que los programas cliente administren y editen archivos del Synology NAS mediante el protocolo HTTP.</li>
+			<li><b>WebDAV (HTTPS)</b> permite que los programas cliente administren y editen archivos de Synology NAS mediante el protocolo HTTPS.</li>
+			<li><b><a name="filestationservice"></a>File Station</b> es una aplicación basada en web que le permite administrar archivos del Synology NAS a través de un puerto personalizado sin iniciar sesión en DSM.</li>
+			<li><b>File Station (HTTPS)</b> le permite conectarse a File Station mediante el protocolo HTTPS.</li>
+			<li><b>Surveillance Station</b> es una aplicación basada en web que puede administrar cámaras IP para proteger su entorno doméstico o de oficina.</li>
+			<li><b>Audio Station</b> es una aplicación basada en web que le permite acceder a la biblioteca de música en su Synology NAS.</li>
+			<li><b>Photo Station</b> es un álbum de fotos en línea integrado con un blog guardado en su Synology NAS.</li>
+			<li><b><a name="downloadsationservice"></a>Download Station</b> (BT/HTTP/FTP/NZB/RSS) es una aplicación basada en web que le ayuda a descargar archivos desde Internet a su Synology NAS.</li>
+			<li><b>eMule</b> habilita la compatibilidad con eMule de Download Station.</li>
+		</ul>
+	</li>
+</ul>
+
+<div class="section">
+<h4>Nota:</h4>
+<p>Para obtener más información acerca de los anteriores servicios, consulte cualquiera de lo siguiente:</p>
+	<ul>
+		<li><b>Ayuda de DSM</b> (disponible si inicia sesión en la edición de escritorio de DSM con el navegador web del equipo y accede a <b>Menú principal</b> > <b>Ayuda de DSM</b>)</li>
+		<li><b>Guía del usuario de Synology DSM</b> (disponible en el <a href="http://www.synology.com/support/download.php" target="_blank">Centro de descargas</a> de Synology)</li>
+	</ul>
+</div>
+
+</div>
+
+<h2><a name="resourcemonitor" href="#" >Supervisar recursos del sistema</a></h2>
+
+<div name="contents" id="resourcemonitor" class="x-hidden-display">
+<p>Toque <b>Monitor de recursos</b> en la página de inicio (iPhone/iPod touch o teléfono Android) o en el panel izquierdo (iPad o tableta Android) para supervisar el uso de la CPU y la memoria de su Synology NAS.</p>
+</div>
+
+<h2><a name="sysinfo" href="#" >Ver información del sistema</a></h2>
+
+<div name="contents" id="sysinfo" class="x-hidden-display">
+<p>Toque <b>Inform sistema</b> en la página de inicio (iPhone/iPod touch o teléfono Android) o en el panel izquierdo (iPad o tableta Android) para obtener una información general del estado de su Synology NAS.</p>
+
+<h4>Para ver la información del sistema de Synology NAS:</h4>
+<ol>
+	<li>Realice cualquiera de las siguientes operaciones:<ul>
+			<li>Toque <b>General</b> para ver información básica acerca de su Synology NAS, incluido el número de serie, el nombre del modelo, la cantidad de memoria física, la versión de DSM e información sobre hora y estado térmico.</li>
+			<li>Toque <b>Red</b> para ver la configuración de red de su Synology NAS y el estado de cada interfaz de red.</li>
+			<li>Toque <b>Almacenamiento</b> para ver el uso de volumen del Synology NAS.</li>
+		</ul>
+	</li>
+	<li>Toque el botón <b>Actualizar</b> en la esquina superior derecha para mantener actualizada la información del sistema.</li>
+</ol>
+</div>
+
+<h2><a name="firmware" href="#" >Firmware</a></h2>
+
+<div name="contents" id="firmware" class="x-hidden-display">
+<p>Toque <b>Firmware</b> para ver y actualizar su versión de DSM.</p>
+
+<h4>Para configurar los parámetros de actualización de DSM:</h4>
+<ol>
+	<li>Toque <strong>Actualización de DSM</strong>.</li>
+	<li>Elija alguna opción de las siguientes:<ul>
+			<li>Solo actualizaciones importantes</li>
+			<li>DSM más reciente y todas las actualizaciones</li>
+		</ul>
+	</li>
+	<li>Toque <strong>Finalizado</strong>.</li>
+</ol>
+
+<h4>Para descargar las actualizaciones disponibles:</h4>
+<ol>
+	<li>Compruebe la versión de DSM en <strong>Estado</strong>.</li>
+	<li>Si su versión de DSM no está actualizada, toque el botón <strong>Descargar</strong> que aparece bajo la sección <strong>Estado</strong> para actualizar su DSM.</li>
+</ol>
+</div>
+
+<h2><a name="block" href="#" >Administrar bloqueo IP</a></h2>
+
+<div name="contents" id="block" class="x-hidden-display">
+<p>Toque <b>Bloqueo IP</b> en la página de inicio (iPhone/iPod touch o teléfono Android) o en el panel izquierdo (iPad o tableta Android) para impedir conexiones no autorizadas.</p>
+
+<h4>Para administrar el bloqueo IP:</h4>
+<ol>
+	<li>Toque en el botón de configuración de la esquina superior derecha.</li>
+	<li>Active <b>Habilitar bloqueo automático</b> para habilitar Bloqueo IP.</li>
+	<li>Introduzca un número en <b>Intentos de conexión</b> y <b>En (minutos)</b> para bloquear una dirección IP al cabo de un número definido de intentos de conexión fallidos en un número de minutos especificado.</li>
+	<li>Puede activar <b>Habilitar caducidad del bloqueo</b> y especificar <b>Desbloquear al cabo de (días)</b> para desbloquear una dirección IP después de un número de días determinado. Si introduce aquí "0", la dirección IP bloqueada permanecerá así indefinidamente hasta que la elimine de la lista de bloqueados.</li>
+	<li>Toque <b>Finalizar</b>.</li>
+</ol>
+
+<h4>Para agregar direcciones IP a la lista de permiso/bloqueo:</h4>
+<ol>
+	<li>Si desea añadir la IP a la lista de permiso/bloqueo, toque el botón de añadir de la esquina superior derecha y seleccione <b>Lista de permiso</b> o <b>Lista de bloqueo</b>.</li>
+	<li>Después de introducir la dirección IP, toque <b>Finalizar</b>.</li>
+</ol>
+</div>
+
+
+<h2><a name="package" href="#" >Administrar Centro de paquetes</a></h2>
+
+<div name="contents" id="package" class="x-hidden-display">
+
+<p>Synology ha integrado aplicaciones diseñadas por Synology o terceros en paquetes que pueden instalarse y habilitarse fácilmente en el Synology NAS.</p>
+
+
+<h4>Para administrar el Centro de paquetes:</h4>
+<p>Toque <strong>Centro de paquetes</strong> en la página de inicio (iPhone/iPod touch o teléfono Android) o el panel de la izquierda (iPad o tableta Android) para ver la información del paquete, ejecutar o detener paquetes, o actualizar a las versiones más recientes.</p>
+
+
+<h4>Para ejecutar o detener los paquetes instalados:</h4>
+<p>Toque el interruptor que aparece junto a un paquete para ejecutarlo o detenerlo.</p>
+
+<h4>Para ver paquetes: </h4>
+<p>Toque un paquete para ver su información.</p>
+     
+<h4>Para actualizar paquetes:</h4>
+<ol>
+	<li>Toque la pestaña <strong>Actualizar</strong> para ver las versiones de actualización disponibles actualmente.</li>
+    <li>Toque el botón que aparece a la derecha del paquete para actualizar a la versión más reciente.</li>   
+</ol>
+</div>
+
+
+<h2><a name="log" href="#">Ver registros o conexiones actuales</a></h2>
+
+<div name="contents" id="log" class="x-hidden-display">
+<p>Toque en <b>Registro</b> en la página de inicio (iPhone/iPod touch o teléfono Android) o en el panel izquierdo (iPad o tableta Android) para supervisar las conexiones actuales o ver los registros de los servicios del Synology NAS.</p>
+
+<h4>Para supervisar las conexiones actuales:</h4>
+<ul>
+	<li>Toque <b>[número] registros más recientes</b> en la sección <b>Visión general</b> para ver la lista de usuarios que han accedido últimamente a los servicios del Synology NAS.</li>
+</ul>
+
+<h4>Para ver los registros de un servicio específico:</h4>
+<ul>
+	<li>Toque en cualquier elemento en la sección <b>Registros de eventos</b> o <b>Registros de transferencia de archivos</b> para ver la lista de los correspondientes registros.</li>
+</ul>
+
+</div>
+<h2><a name="launch" href="#">Iniciar aplicaciones móviles</a></h2>
+<div name="contents" id="launch" class="x-hidden-display">
+
+<p>DSM mobile proporciona un práctico lugar para que inicie las aplicaciones móviles de Synology instaladas en su dispositivo iOS o Android.</p>
+
+<h4>Para iniciar las aplicaciones móviles de Synology con DSM mobile:</h4>
+<p>Toque cualquiera de las siguientes aplicaciones en la sección inferior de la página de inicio (iPhone/iPod touch o teléfono Android) o en el panel izquierdo (iPad o tableta Android):</p>
+<ul>
+	<li><b>DS photo</b> (disponible si está habilitado el servicio <b>Photo Station</b>)</li>
+	<li><b>DS audio</b> (disponible si está habilitado el servicio <b>Audio Station</b>)</li>
+	<li><b>DS cam</b> (disponible si está habilitado el servicio <b>Surveillance Station</b>)</li>
+	<li><b>DS file</b> (disponible si está habilitado el servicio <b>WebDAV</b>)</li>
+</ul>
+
+<div class="section">
+<h4>Nota:</h4>
+	<ul>
+		<li>Para obtener más información acerca de estas aplicaciones, consulte los archivos de Ayuda incluidos con las aplicaciones.</li>
+     </ul> 
+</div>
+</div>
+
+<h2><a name="restart" href="#">Poner el Synology NAS en marcha<br><span style="font-size:80%;">(reinicio, apagado o pitido)</span></a></h2>
+
+<div name="contents" id="restart" class="x-hidden-display">
+<p>DSM mobile le permite reiniciar o apagar su Synology NAS con su iOS o dispositivo Android. Además, si tiene varios Synology NAS cerca, podrá identificar rápidamente el suyo solicitando que emita sonidos.</p>
+
+<h4>Para poner su Synology NAS en marcha:</h4>
+<ol>
+	<li>Toque el botón de opción situado en la esquina superior derecha de la página de inicio (iPhone/iPod touch o teléfono Android) o en el panel izquierdo (iPad o tableta Android).</li>
+	<li>Realice cualquiera de las siguientes operaciones:<ul>
+			<li>Toque <b>Reiniciar</b> y, a continuación, toque <b>Sí</b> para reiniciar su Synology NAS.</li>
+			<li>Toque <b>Apagar</b> y, a continuación, toque <b>Sí</b> para apagar su Synology NAS.</li>
+			<li>Toque <b>Buscarme</b> para solicitar al Synology NAS que emita pitidos. Toque <b>OK</b> para detener el pitido.</li>
+		</ul>
+	</li>
+</ol>
+</div>
+
+
+<h2><a name="desktopedition" href="#">Cambiar al modo de escritorio de DSM</a></h2>
+
+<div name="contents" id="desktopedition" class="x-hidden-display">
+<p>Toque el icono de configuración y seleccione <b>Modo de escritorio</b> para cambiar al modo de escritorio de DSM.</p>
+
+</div>
+
+
+
+
+<h2><a name="contents12" href="#">Cómo utilizar Storage Manager</a></h2>
+<div name="contents" id="contents12" class="x-hidden-display">
+<p>El <strong>Administrador de almacenamiento</strong> le permite ver rápidamente el uso y el estado de los volúmenes del sistema y los discos.</p>
+
+<h4>Para visualizar la información del volumen:</h4>
+	<ol>
+		<li>Toque <strong>Administrador de almacenamiento</strong> en la página de inicio (iPhone/iPod touch o teléfono Android) o en el panel izquierdo (iPad o tableta Android).</li>
+		<li>Toque la ficha <strong>Volumen</strong>.</li> 
+		<li>Toque un volumen de la lista para obtener información detallada.</li>
+	</ol>
+
+<h4>Para visualizar la información del disco:</h4>
+	<ol>
+		<li>Toque <strong>Administrador de almacenamiento</strong> en la página de inicio (iPhone/iPod touch o teléfono Android) o en el panel izquierdo (iPad o tableta Android).</li>
+		<li>Toque la pestaña <strong>HDD/SDD</strong>.</li>
+		<li>Toque un disco de la lista para ver la información de estado y S.M.A.R.T.</li>
+	</ol>
+
+<h4>Para iniciar o detener una prueba de S.M.A.R.T.:</h4>
+	<ol>
+		<li>Toque <strong>Administrador de almacenamiento</strong> en la página de inicio (iPhone/iPod touch o teléfono Android) o en el panel izquierdo (iPad o tableta Android).</li>
+		<li>Toque la pestaña <strong>HDD/SDD</strong>.</li>
+		<li>Toque un disco de la lista para ver su página de información.</li>
+		<li>Toque <strong>Prueba de S.M.A.R.T.</strong> para iniciar una prueba de S.M.A.R.T. o <strong>Detener</strong> para pausarla.</li>
+     </ol>
+     
+</div>
+
+
+<h2><a name="contents11" href="#">Más información</a></h2>
+
+<div name="contents" id="contents11" class="x-hidden-display">
+<p>Si necesita información para solucionar problemas o desea conocer más acerca de Synology, toque los siguientes vínculos para conocer los recursos en línea de Synology:</p>
+<ul>
+	<li><a href="https://www.synology.com/knowledgebase/faq" target="_blank">Preguntas más frecuentes</a></li>
+	<li><a href="http://forum.synology.com/wiki" target="_blank">Wiki</a></li>
+	<li><a href="http://forum.synology.com" target="_blank">Foro</a></li>
+	<li><a href="http://www.synology.com/support/download.php" target="_blank">Centro de descargas</a></li>
+	<li><a href="https://myds.synology.com/support/support_form.php" target="_blank">Soporte técnico</a></li>
+</ul>
+</div>
+
+
+</body>
+</html>

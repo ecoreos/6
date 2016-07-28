@@ -1,0 +1,2650 @@
+
+[]
+
+
+
+[AutoBlockAdd]
+Category: System
+Title: IP adresa byla zablokována
+Subject: IP adresa [%CLIENT_IP%] zařízení %HOSTNAME% byla zablokována službou %SERVICE%
+
+Vážený uživateli,
+
+IP adresa [%CLIENT_IP%] zaznamenala během %AUTOBLOCK_ATTEMPT_MIN% min. %AUTOBLOCK_ATTEMPTS% neúspěšných pokusů přihlašování ke službě %SERVICE%, která je spuštěná na zařízení %HOSTNAME%, a byla zablokována v %AUTOBLOCK_TIME%.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[BackupTaskCanceled]
+Category: Backup/Restore,Important
+Title: Zálohování bylo zrušeno
+Subject: Úloha %TASK_TYPE% - %TASK_NAME% byla zrušena na zařízení %HOSTNAME%
+
+Vážený uživateli,
+
+Zálohování dat na zařízení %HOSTNAME% bylo zrušeno.
+
+Úloha zálohování: %TASK_NAME%
+Cíl záloh: %DESTINATION_IP% %DESTINATION_PATH%
+Počáteční čas: %START_TIME%
+Trvání: %DURATION%
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[BackupTaskFailed]
+Category: Backup/Restore,Important
+Title: Zálohování se nezdařilo
+Subject: Úloha %TASK_TYPE% – %TASK_NAME% na zařízení %HOSTNAME% se nezdařila
+
+Vážený uživateli,
+
+zálohování dat na zařízení %HOSTNAME% se nezdařilo.
+
+Další informace naleznete v protokolu zálohy v části Hyper Backup > Protokol
+.
+
+Úloha zálohování: %TASK_NAME%
+Cíl záloh: %DESTINATION_IP% %DESTINATION_PATH%
+Počáteční čas: %START_TIME%
+Trvání: %DURATION%
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[BackupTaskFinished]
+Category: Backup/Restore
+Title: Záloha dokončena
+Subject: Úloha %TASK_TYPE% - %TASK_NAME% byla úspěšná na zařízení %HOSTNAME%
+
+Vážený uživateli,
+
+Vaše úloha zálohování %TASK_NAME% je nyní dokončena.
+
+Úloha zálohování: %TASK_NAME%
+Cíl záloh: %DESTINATION_IP%  %DESTINATION_PATH%
+Počáteční čas: %START_TIME%
+Trvání: %DURATION%
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[BackupTaskPartial]
+Category: Backup/Restore,Important
+Title: Záloha byla částečně dokončena
+Subject: Úloha %TASK_TYPE% – %TASK_NAME% na zařízení %HOSTNAME% byla částečně úspěšná
+
+Vážený uživateli,
+
+úloha zálohování %TASK_NAME% je nyní dokončena s několika drobnými výjimkami.
+
+Další informace naleznete v protokolu zálohy v části Hyper Backup > Protokol
+.
+
+Úloha zálohování: %TASK_NAME%
+Cíl záloh: %DESTINATION_IP% %DESTINATION_PATH%
+Počáteční čas: %START_TIME%
+Trvání: %DURATION%
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[CMSClientConnectFailed]
+Category: CMS
+Title: Připojení k hostiteli CMS se nezdařilo
+Subject: Zařízení %HOSTNAME% nelze připojit k hostiteli CMS (%CMS_SERVER%).
+
+Vážený uživateli,
+
+zařízení %HOSTNAME% nelze připojit k hostiteli CMS (%CMS_SERVER%). Zkontrolujte síťové připojení a nastavení obou serverů.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[CMSClientDetachSuccess]
+Category: CMS
+Title: Odpojení od hostitele CMS proběhlo úspěšně
+Subject: Zařízení %HOSTNAME% se odpojilo od hostitele CMS (%CMS_SERVER%).
+
+Vážený uživateli,
+
+zařízení %HOSTNAME% se odpojilo od hostitele CMS (%CMS_SERVER%).
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[CMSClientJoinSuccess]
+Category: CMS
+Title: Připojení k hostiteli CMS proběhlo úspěšně
+Subject: Server %HOSTNAME% byl připojen k hostiteli CMS (%CMS_SERVER%).
+
+Vážený uživateli,
+
+Server %HOSTNAME% byl úspěšně připojen k hostiteli CMS (%CMS_SERVER%). Správu některých nastavení provádí hostitel CMS.
+
+S pozdravem,
+%COMPANY_NAME%
+
+
+[CpuFanResume]
+Category: System
+Title: Činnost ventilátoru procesoru byl obnovena
+Subject: Činnost ventilátoru procesoru %FANID% na %HOSTNAME% (SN: %HOST_SN%) byla obnovena
+
+Vážený uživateli,
+
+činnost ventilátoru procesoru %FANID% na %HOSTNAME% (SN: %HOST_SN%) byla obnovena.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[CpuFanStop]
+Category: System,Important
+Title: Činnost ventilátoru procesoru byl pozastavena
+Subject: Činnost ventilátoru procesoru %FANID% na %HOSTNAME% (SN: %HOST_SN%) se zastavila
+
+Vážený uživateli,
+
+činnost ventilátoru procesoru %FANID% na %HOSTNAME% (SN: %HOST_SN%) se zastavila.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[DDNSFail]
+Category: System
+Title: Registrace DDNS se nezdařila
+Subject: Registrace IP adresy %EXTERNAL_IP% na zařízení %DDNS_HOST_NAME% službou DDNS se nezdařila [%FAIL_REASON%]
+
+Vážený uživateli,
+
+Registrace externí IP adresy %EXTERNAL_IP% na zařízení %DDNS_HOST_NAME% serveru DDNS %DDNS_NAME% systémem se nezdařila. Hlášeným důvodem je [%FAIL_REASON%].
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[DRLunScheduleSnapshotFail]
+Category: Snapshot Replication,Important
+Title: Pořízení snímku jednotky iSCSI LUN se nezdařilo
+Subject: Pořízení snímku jednotky LUN pro jednotku %LUNNAME% na hostiteli %HOSTNAME% se nezdařilo
+
+Vážený uživateli,
+
+pořízení snímku jednotky LUN na hostiteli %HOSTNAME% se nezdařilo. Podrobné údaje naleznete v protokolu ve službě Snapshot Replication.
+
+LUN: %LUNNAME%
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[DRReplicationCleanupTestFailoverCompletion]
+Category: Snapshot Replication,Important
+Title: Vyčištění testu přepnutí služeb při selhání úlohy replikace
+Subject: Vyčištění testu přepnutí služeb při selhání ze serveru %DRSITE_TARGET_NAME% na server %DRSITE_HOSTNAME% bylo úspěšné
+
+Vážený uživateli,
+
+systém úspěšně provedl vyčištění testu přepnutí služeb při selhání ze serveru %DRSITE_TARGET_NAME% na cílový server (%DRSITE_HOSTNAME%). Podrobné informace naleznete na stránce Protokol služby Snapshot Replication.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[DRReplicationCleanupTestFailoverFail]
+Category: Snapshot Replication,Important
+Title: Vyčištění testu přepnutí služeb při selhání úlohy replikace se nezdařilo
+Subject: Vyčištění testu přepnutí služeb při selhání ze serveru %DRSITE_TARGET_NAME% na server %DRSITE_HOSTNAME% se nezdařilo
+
+Vážený uživateli,
+
+systému se nepodařilo provést vyčištění testu přepnutí služeb při selhání ze serveru %DRSITE_TARGET_NAME% na server %DRSITE_HOSTNAME% Podrobné informace naleznete na stránce Protokol služby Snapshot Replication.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[DRReplicationExportCompletion]
+Category: Snapshot Replication,Important
+Title: Export úlohy replikace bylo úspěšný
+Subject: Export serveru %MAINSITE_TARGET_NAME% byl úspěšný
+
+Vážený uživateli,
+
+systém úspěšně vyexportoval server %MAINSITE_TARGET_NAME%. Podrobné informace naleznete na stránce Protokol služby Snapshot Replication.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[DRReplicationExportFail]
+Category: Snapshot Replication,Important
+Title: Export úlohy replikace se nezdařil
+Subject: Server %MAINSITE_TARGET_NAME% se nepodařilo exportovat
+
+Vážený uživateli,
+
+systému se nepodařilo exportovat server %MAINSITE_TARGET_NAME%. Podrobné informace naleznete na stránce Protokol služby Snapshot Replication.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[DRReplicationFailoverCompletion]
+Category: Snapshot Replication,Important
+Title: Přepnutí služeb při selhání úlohy replikace proběhlo úspěšně
+Subject: Přepnutí služeb při selhání ze serveru %DRSITE_TARGET_NAME% na server %DRSITE_HOSTNAME% proběhlo úspěšně
+
+Vážený uživateli,
+
+systém úspěšně provedl přepnutí služeb při selhání ze serveru %DRSITE_TARGET_NAME% na cílový server (%DRSITE_HOSTNAME%). Podrobné informace naleznete na stránce Protokol služby Snapshot Replication.
+
+Verze přepnutí služeb při selhání: %SNAPSHOT_VERSION%
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[DRReplicationFailoverFail]
+Category: Snapshot Replication,Important
+Title: Přepnutí služeb při selhání úlohy replikace se nezdařilo
+Subject: Přepnutí služeb při selhání ze serveru %DRSITE_TARGET_NAME% na server %DRSITE_HOSTNAME% se nezdařilo
+
+Vážený uživateli,
+
+systému se nepodařilo provést přepnutí služeb při selhání ze serveru %DRSITE_TARGET_NAME% na cílový server (%DRSITE_HOSTNAME%). Podrobné informace naleznete na stránce Protokol služby Snapshot Replication.
+
+Verze přepnutí služeb při selhání: %SNAPSHOT_VERSION%
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[DRReplicationImportCompletion]
+Category: Snapshot Replication,Important
+Title: Import úlohy replikace bylo úspěšný
+Subject: Import serveru %DRSITE_TARGET_NAME% byl úspěšný
+
+Vážený uživateli,
+
+systém úspěšně importoval server %DRSITE_TARGET_NAME%. Podrobné informace naleznete na stránce Protokol služby Snapshot Replication.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[DRReplicationImportFail]
+Category: Snapshot Replication,Important
+Title: Import úlohy replikace se nezdařil
+Subject: Import serveru %DRSITE_TARGET_NAME% se nezdařil
+
+Vážený uživateli,
+
+systému se nepodařilo importovat server %DRSITE_TARGET_NAME%. Podrobné informace naleznete na stránce Protokol služby Snapshot Replication.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[DRReplicationInitialSyncCompletion]
+Category: Snapshot Replication,Important
+Title: Počáteční replikace byla dokončena
+Subject: Úloha replikace dokončila počáteční replikaci ze serveru %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%) na server %DRSITE_HOSTNAME% (%DRSITE_TARGET_NAME%)
+
+Vážený uživateli,
+
+úloha replikace dokončila počáteční replikaci. Podrobné informace naleznete na stránce Protokol služby Snapshot Replication.
+
+Zdrojový server: %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%)
+Cílový server: %DRSITE_HOSTNAME% (%DRSITE_TARGET_NAME%)
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[DRReplicationInitialSyncFail]
+Category: Snapshot Replication,Important
+Title: Provedení počáteční replikace se nezdařilo
+Subject: Úloze replikace se nepodařilo provést počáteční replikaci na server %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%)
+
+Vážený uživateli,
+
+úloze replikace se nepodařilo provést počáteční replikaci na server %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%). Podrobné informace naleznete na stránce Protokol služby Snapshot Replication.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[DRReplicationReprotectCompletion]
+Category: Snapshot Replication,Important
+Title: Opětovné nastavení ochrany úlohy replikace bylo úspěšné
+Subject: Opětovné nastavení ochrany úlohy replikace (%NEW_MAINSITE_TARGET_NAME%) bylo úspěšné
+
+Vážený uživateli,
+
+systém provedl opětovné nastavení ochrany úlohy replikace (%NEW_MAINSITE_TARGET_NAME%) na nový zdrojový server (%NEW_MAINSITE_HOSTNAME%) s replikovanými daty (%NEW_DRSITE_TARGET_NAME%) na novém cílovém serveru (%NEW_DRSITE_HOSTNAME%). Podrobné informace naleznete na stránce Protokol služby Snapshot Replication.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[DRReplicationReprotectFail]
+Category: Snapshot Replication,Important
+Title: Opětovné nastavení ochrany úlohy replikace se nezdařilo
+Subject: Opětovné nastavení ochrany úlohy replikace (%NEW_MAINSITE_TARGET_NAME%) se nezdařilo
+
+Vážený uživateli,
+
+systému se nepodařilo provést opětovné nastavení ochrany úlohy replikace (%NEW_MAINSITE_TARGET_NAME%) na nový zdrojový server (%NEW_MAINSITE_HOSTNAME%) s replikovanými daty (%NEW_DRSITE_TARGET_NAME%) na novém cílovém serveru (%NEW_DRSITE_HOSTNAME%). Podrobné informace naleznete na stránce Protokol služby Snapshot Replication.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[DRReplicationScheduleSyncCompletion]
+Category: Snapshot Replication,Important
+Title: Naplánovaná replikace byla dokončena
+Subject: Úloha replikace dokončila naplánovanou replikaci ze serveru %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%) na server %DRSITE_HOSTNAME% (%DRSITE_TARGET_NAME%)
+
+Vážený uživateli,
+
+úloha replikace dokončila naplánovanou replikaci. Podrobné údaje naleznete na stránce protokolu aplikace Snapshot Replication.
+
+Zdrojový server: %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%)
+Cílový server: %DRSITE_HOSTNAME% (%DRSITE_TARGET_NAME%)
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[DRReplicationScheduleSyncFail]
+Category: Snapshot Replication,Important
+Title: Provedení naplánované replikace se nezdařilo
+Subject: Úloze replikace se nepodařilo provést naplánovanou replikaci na server %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%)
+
+Vážený uživateli,
+
+úloze replikace se nepodařilo provést naplánovanou replikaci na server %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%). Podrobné údaje naleznete na stránce protokolu aplikace Snapshot Replication.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[DRReplicationSwitchoverCompletion]
+Category: Snapshot Replication,Important
+Title: Přepnutí služeb za provozu úlohy replikace bylo úspěšně provedeno
+Subject: Přepnutí služeb za provozu ze serveru %NEW_DRSITE_HOSTNAME% (%NEW_DRSITE_TARGET_NAME%) na server %NEW_MAINSITE_HOSTNAME% bylo úspěšně provedeno
+
+Vážený uživateli,
+
+systém úspěšně provedl přepnutí ze serveru %NEW_DRSITE_HOSTNAME% (%NEW_DRSITE_TARGET_NAME%) na cílový server (%NEW_MAINSITE_HOSTNAME%). Podrobné informace naleznete na stránce Protokol služby Snapshot Replication.
+
+Nový zdrojový server: %NEW_MAINSITE_HOSTNAME% (%NEW_MAINSITE_TARGET_NAME%)
+Nový cílový server: %NEW_DRSITE_HOSTNAME% (%NEW_DRSITE_TARGET_NAME%)
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[DRReplicationSwitchoverFail]
+Category: Snapshot Replication,Important
+Title: Přepnutí služeb za provozu úlohy replikace se nezdařilo
+Subject: Přepnutí služeb za provozu ze serveru %NEW_DRSITE_HOSTNAME% (%NEW_DRSITE_TARGET_NAME%) na %NEW_MAINSITE_HOSTNAME% se nezdařilo
+
+Vážený uživateli,
+
+systému se nepodařilo provést přepnutí služeb za provozu ze serveru %NEW_DRSITE_HOSTNAME% (%NEW_DRSITE_TARGET_NAME%) na cílový server (%NEW_MAINSITE_HOSTNAME%). Podrobné informace naleznete na stránce Protokol služby Snapshot Replication.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[DRReplicationSyncFail]
+Category: Snapshot Replication,Important
+Title: Provedení replikace se nezdařilo
+Subject: Úloze replikace se nepodařilo provést replikaci na server %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%)
+
+Vážený uživateli,
+
+úloze replikace se nepodařilo provést replikaci na server %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%). Podrobné údaje naleznete na stránce protokolu aplikace Snapshot Replication.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[DRReplicationSyncNotFinishInNotifyTime]
+Category: Snapshot Replication,Important
+Title: Úloha replikace nebyla dokončena
+Subject: Úloha replikace ze serveru %MAINSITE_TARGET_NAME% na server %DRSITE_HOSTNAME% (%DRSITE_TARGET_NAME%) nebyla dokončena
+
+Vážený uživateli,
+
+úloha replikace nebyla dokončena do %NOTIFY_TIME% minut. Podrobné informace naleznete na stránce Protokol služby Snapshot Replication.
+
+Zdrojový server: %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%)
+Cílový server: %DRSITE_HOSTNAME% (%DRSITE_TARGET_NAME%)
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[DRReplicationSyncStop]
+Category: Snapshot Replication,Important
+Title: Replikace se zastavila
+Subject: Úloha replikace provádějící replikaci na server %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%) se zastavila
+
+Vážený uživateli,
+
+úloha replikace, která provádí replikaci na server %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%), se zastavila. Podrobné údaje naleznete na stránce protokolu aplikace Snapshot Replication.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[DRReplicationTestFailoverCompletion]
+Category: Snapshot Replication,Important
+Title: Spuštěný test přepnutí služeb při selhání úlohy replikace byl úspěšný
+Subject: Test přepnutí služeb při selhání %TEST_TARGET_NAME% je nyní k dispozici
+
+Vážený uživateli,
+
+test přepnutí služeb při selhání %TEST_TARGET_NAME% je nyní k dispozici. Podrobné informace naleznete na stránce Protokol služby Snapshot Replication.
+
+Zkušební server: %DRSITE_HOSTNAME%
+Testovat sdílenou složku či jednotku iSCSI LUN s názvem: %TEST_TARGET_NAME%
+Verze testu: %SNAPSHOT_VERSION%
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[DRReplicationTestFailoverFail]
+Category: Snapshot Replication,Important
+Title: Spuštění testu přepnutí služeb při selhání úlohy replikace se nezdařilo
+Subject: Spuštění testu přepnutí služeb při selhání %TEST_TARGET_NAME% na serveru %DRSITE_HOSTNAME% se nezdařilo
+
+Vážený uživateli,
+
+systému se nepodařilo spustit test přepnutí služeb při selhání na cílovém serveru (%DRSITE_HOSTNAME%). Podrobné informace naleznete na stránce Protokol služby Snapshot Replication.
+
+Zkušební server: %DRSITE_HOSTNAME%
+Testovat sdílenou složku či jednotku iSCSI LUN s názvem: %TEST_TARGET_NAME%
+Verze testu: %SNAPSHOT_VERSION%
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[DRShareTakeSnapshotFail]
+Category: Snapshot Replication,Important
+Title: Pořízení snímku sdílené složky se nezdařilo
+Subject: Pořízení snímku sdílené složky %SHARE% na hostiteli %HOSTNAME% se nezdařilo
+
+Vážený uživateli,
+
+pořízení snímku sdílené složky na hostiteli %HOSTNAME% se nezdařilo. Podrobné údaje naleznete v protokolu ve službě Snapshot Replication.
+
+Sdílená složka: %SHARE%
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[DRSnapshotScheduleTaskTooDenseFail]
+Category: Snapshot Replication,Important
+Title: Předchozí naplánovaná úloha snímku stále probíhá
+Subject: Předchozí naplánovaná úloha snímku na serveru %MAINSITE_TARGET_NAME% stále probíhá.
+
+Vážený uživateli,
+
+naplánovanou úlohu snímku se na serveru %MAINSITE_TARGET_NAME% nepodařilo provést, protože je stále spuštěná dříve naplánovaná úloha snímku. Podrobné údaje naleznete na stránce protokolu aplikace Snapshot Replication.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[DSMAutoUpdateReady]
+Category: System,Important
+Title: Automatická aktualizace systému
+Subject: Za %COUNTDOWN_MINUTE% minut se na zařízení %HOSTNAME% automaticky spustí automatická aktualizace systému %OSNAME%
+
+Vážený uživateli,
+
+za %COUNTDOWN_MINUTE% minut bude automaticky nainstalována verze %NEW_VERSION%. Instalaci zrušíte po přihlášení k serveru %HOSTNAME% v oblasti upozornění.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[DSMAutoUpdateShutdownStart]
+Category: System,Important
+Title: Před plánovaným vypnutím se nainstalují aktualizace systému
+Subject: Před plánovaným vypnutím se na zařízení %HOSTNAME% nainstalují aktualizace systému %OSNAME%
+
+Vážený uživateli,
+
+před plánovaným vypnutím se nainstaluje verze %NEW_VERSION% a po dokončení instalace se zařízení %HOSTNAME% vypne. Dokud nebude instalace dokončena, zařízení %DISKSTATION% nevypínejte.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[DSMUpdateAvailable]
+Category: System,Important
+Title: Je připravena nová aktualizace %OSNAME%
+Subject: Aktualizace systému %OSNAME% je připravena k instalaci na zařízení %HOSTNAME%
+
+Vážený uživateli,
+
+byla stažena nová verze systému %OSNAME%, která je připravena k instalaci. Novou verzi %NEW_VERSION% nainstalujete tak, že se přihlásíte k zařízení %HOSTNAME% a přejdete do nabídky Ovládací panel > Aktualizace a obnovení. Více informací o aktualizaci systému %OSNAME% se dozvíte na adrese %HTTP_URL%.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[DeviceEjectedImproperly]
+Category: External Storage
+Title: Externí zařízení nebylo správně vysunuto
+Subject: Externí zařízení %DEVICE_NAME% na serveru %HOSTNAME% nebylo správně vysunuto
+
+Vážený uživateli,
+
+Externí zařízení %DEVICE_NAME% na serveru %HOSTNAME% nebylo správně vysunuto. Chcete-li zabránit ztrátě dat, doporučujeme vám, abyste zařízení před odpojením správně vysunuli.
+
+S pozdravem,
+%COMPANY_NAME%
+
+
+[DiskTemperatureAbnormal]
+Category: Storage,Important
+Title: Teplota disku přesáhla běžnou provozní teplotu
+Subject: Disk %DISK_ID% přesáhl běžnou provozní teplotu
+
+Vážený uživateli,
+
+teplota disku %DISK_ID% [%MODEL%] je %REAL_TEMPERATURE% ºC a přesahuje tak provozní teplotu %MIN_TEMPERATURE% ºC ~ %MAX_TEMPERATURE% ºC.
+Udržujte disky v patřičné provozní teplotě.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[DiskTemperatureNormal]
+Subject: Disk %DISK_ID% splňuje provozní teplotu
+
+Vážený uživateli,
+
+teplota disku %DISK_ID% [%MODEL%] momentálně splňuje patřičnou provozní teplotu %MIN_TEMPERATURE% ºC ~ %MAX_TEMPERATURE% ºC.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[DriveSlotDisabled]
+Category: Storage,Important
+Title: Slot pro disk je zakázán
+Subject: Slot pro disk [%DISK_ID%] je zakázán
+
+Vážený uživateli,
+
+Z důvodu chyb na pevném disku [%DISK_ID%] byl zakázán slot disku. Disk vyměňte, aktivujte jej a v případě potřeby opravte svazky v omezeném režimu.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[DsmProtectionCheckFailed]
+Category: System,Important
+Title: Bylo zaznamenáno nestandardní chování systému
+Subject: Bylo zaznamenáno nestandardní chování na zařízení %HOSTNAME%. Všechny svazky byly odpojeny.
+
+Vážený uživateli,
+
+systém zaznamenal nestandardní chování na zařízení %HOSTNAME%. Všechny svazky byly odpojeny za účelem ochrany dat. Další pomoc můžete získat od týmu podpory Synology.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[EBoxHDEcc]
+Category: Storage,Important
+Title: Chyba vstupu-výstupu na disku rozšiřovací jednotky
+Subject: Na disku %DISK_ID% jednotky %EUNIT_ID% na zařízení %HOSTNAME% došlo k chybě vstupu-výstupu
+
+Vážený uživateli,
+
+Na pevném disku %DISK_ID% jednotky %EUNIT_ID% na zařízení %HOSTNAME% došlo k chybě vstupu-výstupu. Po několika opakovaných pokusech však opět funguje. Důvodem jsou pravděpodobně poškozené sektory. Pokud k této chybě dojde znovu, zálohujte prosím data a zkontrolujte pevný disk testem S.M.A.R.T., který ověří stav disku.
+
+S pozdravem,
+%COMPANY_NAME%
+
+
+[ESATADiskFull]
+Category: External Storage
+Title: Disk eSATA je plný
+Subject: Disk eSATA %DISK_NUMBER% na zařízení %HOSTNAME% je plný
+
+Vážený uživateli,
+
+disk eSATA %DISK_NUMBER% na zařízení %HOSTNAME% je plný. Prostudujte si prosím následující informace a učiňte příslušné kroky.
+
+Celková kapacita: %DISK_SIZE% GB
+Dostupná kapacita: %FREE_SPACE% GB (%USAGE%%)
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[ESATAPartitionFull]
+Category: External Storage
+Title: Segment disku eSATA je plný
+Subject: Oddíl %PARTITION_NUMBER% disku eSATA %DISK_NUMBER% na zařízení %HOSTNAME% je plný
+
+Vážený uživateli,
+
+oddíl %PARTITION_NUMBER% disku eSATA %DISK_NUMBER% na zařízení %HOSTNAME% je plný. Prostudujte si prosím následující informace a učiňte příslušné kroky.
+
+Celková kapacita: %DISK_SIZE% GB
+Dostupná kapacita: %FREE_SPACE% GB (%USAGE%%)
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[EUnitPowerFail]
+Category: System,Important
+Title: Došlo k chybě redundantního napájecího zdroje rozšiřovací jednotky
+Subject: Došlo k chybě napájecího zdroje č. %POWERID% jednotky %EUNIT_ID% na zařízení %HOSTNAME%
+
+Vážený uživateli,
+
+došlo k chybě napájecího zdroje č. %POWERID% jednotky %EUNIT_ID% na zařízení %HOSTNAME%.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[EUnitPowerResume]
+Category: System,Important
+Title: Činnost redundantního napájecího zdroje rozšiřovací jednotky byla obnovena
+Subject: Činnost napájecího zdroje %POWERID% jednotky %EUNIT_ID% na zařízení %HOSTNAME% byla obnovena
+
+Vážený uživateli,
+
+Činnost napájecího zdroje č. %POWERID% jednotky %EUNIT_ID% na zařízení %HOSTNAME% byla obnovena.
+
+S pozdravem,
+%COMPANY_NAME%
+
+
+[EboxFanResume]
+Category: System,Important
+Title: Činnost ventilátoru rozšiřovací jednotky byla obnovena
+Subject: Činnost ventilátoru %FAN_ID% jednotky %EBOX_ID% na zařízení %HOSTNAME% byla obnovena
+
+Vážený uživateli,
+
+činnost ventilátoru %FAN_ID% jednotky %EBOX_ID% na zařízení %HOSTNAME% byla obnovena.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[EboxFanStop]
+Category: System,Important
+Title: Činnost ventilátoru rozšiřovací jednotky byla pozastavena
+Subject: Činnost ventilátoru %FAN_ID% jednotky %EBOX_ID% na zařízení %HOSTNAME% byla zastavena.
+
+Vážený uživateli,
+
+činnost ventilátoru %FAN_ID% jednotky %EBOX_ID% na zařízení %HOSTNAME% byla zastavena.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[EboxLinkFail]
+Category: System,Important
+Title: Chyba připojení na rozšiřovací jednotce
+Subject: Došlo k chybě (výstup SAS – %LINK_ID%) na rozšiřovací jednotce %EBOX_ID% na %HOSTNAME% (SN: %HOST_SN%)
+
+Vážený uživateli,
+
+došlo k chybě (výstup SAS – %LINK_ID%) na rozšiřovací jednotce %EBOX_ID% na %HOSTNAME% (SN: %HOST_SN%).
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[EboxLinkResume]
+Category: System,Important
+Title: Připojení rozšiřovací jednotky bylo obnoveno
+Subject: Bylo obnoveno připojení (výstup SAS – %LINK_ID%) na rozšiřovací jednotce %EBOX_ID% na %HOSTNAME% (SN: %HOST_SN%)
+
+Vážený uživateli,
+
+připojení na rozšiřovací jednotce %EBOX_ID% (výstup SAS – %LINK_ID%) na %HOSTNAME% (SN: %HOST_SN%) bylo obnoveno.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[ExpansionFrmInconsistent]
+Category: System,Important
+Title: Firmware rozšiřovací jednotky není konzistentní
+Subject: Firmware rozšiřovací jednotky zařízení %HOSTNAME% není konzistentní.
+
+Vážený uživateli:
+
+Firmware rozšiřovací jednotky zařízení %HOSTNAME% není konzistentní. Pokud chcete tento problém vyřešit, obraťte se na online podporu Synology na adrese www.synology.com.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[ForgetPassword]
+Subject: Obnovení zapomenutého hesla
+Vážený uživateli %USER%,
+
+kliknutím na níže uvedený odkaz můžete obnovit své heslo:
+%URL%
+
+Tento odkaz bude aktivní po dobu 24 hodin. Pokud jste nežádali o obnovení hesla, tuto zprávu ignorujte.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[HA_AbleSwitchover]
+Category: HA,Important
+Title: Přepnutí clusteru high-availability opět funguje
+Subject: Přepnutí clusteru high-availability %HOSTNAME% opět funguje
+
+Vážený uživateli,
+
+přepnutí clusteru high-availability %HOSTNAME% opět funguje. Podrobnější údaje naleznete v systémových protokolech nebo na stránce protokolů aplikace High Availability Manager.
+
+Akce: %HA_ACTION%
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[HA_FailOver]
+Category: HA,Important
+Title: Byla zjištěna chyba clusteru high-availability
+Subject: Byla zjištěna chyba v clusteru high-availability %HOSTNAME%
+
+Vážený uživateli,
+
+V clusteru high-availability %HOSTNAME% byla zjištěna chyba. Systém provede přepnutí služeb na pasivní server. Další informace naleznete v protokolech systému.
+
+Akce: %HA_ACTION%
+Chyba: %HA_PARAM_1%
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[HA_PassiveTimeout]
+Category: HA,Important
+Title: Místnímu hostiteli se nepodařilo najít aktivní server
+Subject: [%HA_PARAM_1%] se po určitou dobu nepodařilo najít aktivní server
+
+Vážený uživateli,
+
+pasivní server [%HA_PARAM_1%] se vypnul, protože se mu po určitou dobu nepodařilo najít aktivní server [%HA_PARAM_2%]. Nejprve zapněte aktivní server [%HA_PARAM_2%]. Pokud aktivní server [%HA_PARAM_2%] již není k dispozici, odeberte pomocí následujících pokynů cluster high-availability. Spusťte server [%HA_PARAM_1%] a počkejte 5 minut. Stiskněte a podržte tlačítko RESET nacházející se na zadním panelu zařízení %DISKSTATION% po dobu 4 sekund, dokud zařízení %DISKSTATION% nevydá zvukový signál. Ihned tlačítko pusťte. (Výstraha: Opakovaným stisknutím tlačítka RESET dojde k přeinstalování operačního systému.) Další informace o nastaveních systému, která se budou resetovat, se nachází v tomto návodu: https://www.synology.com/knowledgebase/DSM/tutorial/General/How_to_reset_your_Synology_NAS.
+
+Akce: %HA_ACTION%
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[HA_SwitchFail]
+Category: HA,Important
+Title: Přepnutí služeb selhalo
+Subject: Přepnutí služeb clusteru high-availability %HOSTNAME% selhalo
+
+Vážený uživateli,
+
+Systém se pokusil o přepnutí služeb do pasivního serveru clusteru high-availability %HOSTNAME%, ale tento proces selhal. Další informace naleznete v protokolech systému.
+
+Akce: %HA_ACTION%
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[HA_SwitchFinished]
+Category: HA,Important
+Title: Cluster high-availability je nyní spuštěn
+Subject: Cluster high-availability %HOSTNAME% je nyní spuštěn na %HA_PARAM_1%
+
+Vážený uživateli,
+
+služby clusteru high-availability %HOSTNAME% jsou nyní poskytovány na %HA_PARAM_1%. Podrobnější údaje naleznete v systémových protokolech nebo na stránce protokolů aplikace High Availability Manager.
+
+Akce: %HA_ACTION%
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[HA_SwitchOver]
+Category: HA,Important
+Title: Přepnutí clusteru high-availability
+Subject: Přepnutí clusteru high-availability %HOSTNAME% do %HA_PARAM_1%
+
+Vážený uživateli,
+
+V clusteru high-availability %HOSTNAME% bylo zahájeno přepínání. Služby jsou přepínány do %HA_PARAM_1%. Další informace naleznete v protokolech systému.
+
+Akce: %HA_ACTION%
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[HA_SyncComplete]
+Category: HA,Important
+Title: Kompletní replikace dat je dokončena
+Subject: Kompletní replikace dat clusteru high-availability %HOSTNAME% je dokončena
+
+Vážený uživateli,
+
+kompletní replikace dat clusteru high-availability %HOSTNAME% je dokončena. Pasivní server je nyní připraven převzít služby v případě nutnosti přepnutí nebo předání služeb. Podrobnější údaje naleznete v systémových protokolech nebo na stránce protokolů aplikace High Availability Manager.
+
+Akce: %HA_ACTION%
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[HA_UnableSwitchover]
+Category: HA,Important
+Title: Přepnutí clusteru high-availability zakázáno
+Subject: Přepnutí clusteru high-availability %HOSTNAME% bylo zakázáno
+
+Vážený uživateli,
+
+přepnutí clusteru high-availability %HOSTNAME% bylo zakázáno. Podrobnější údaje naleznete v systémových protokolech nebo na stránce protokolů aplikace High Availability Manager.
+
+Akce: %HA_ACTION%
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[HA_UnbindLocal]
+Category: HA,Important
+Title: Z clusteru high-availability byl odebrán místní hostitel
+Subject: %HA_PARAM_1% byl odebrán z clusteru high-availability %HA_PARAM_2%
+
+Vážený uživateli,
+
+z clusteru high-availability %HA_PARAM_2% byl odebrán hostitel %HA_PARAM_1%. Další informace naleznete v systémových protokolech.
+
+Akce: %HA_ACTION%
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[HDEcc]
+Category: Storage,Important
+Title: Chyba vstupu-výstupu disku
+Subject: Na pevném disku %DISK_ID% zařízení %HOSTNAME% došlo k chybě vstupu-výstupu
+
+Vážený uživateli,
+
+Na pevném disku %DISK_ID% zařízení %HOSTNAME% došlo k chybě vstupu-výstupu. Po několika opakovaných pokusech však opět funguje. Důvodem jsou pravděpodobně poškozené sektory. Pokud k chybě dojde znovu, zálohujte prosím data a zkontrolujte pevný disk testem S.M.A.R.T., který ověří jeho stav.
+
+S pozdravem,
+%COMPANY_NAME%
+
+
+[HotSpareDiskPlugout]
+Category: Storage,Important
+Title: Globální disk Hot Spare není zapojen.
+Subject: Disk Hot Spare (%DISK_ID%) není zapojen
+
+Vážený uživateli,
+
+systém zaznamenal odpojení disku Hot Spare (%DISK_ID%).
+Doporučujeme přidat disky do Hot Spare kvůli ochraně úložného prostoru.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[HotSpareRepairDone]
+Category: Storage,Important
+Title: Oprava globálního disku Hot Spare byla dokončena
+Subject: Oprava úložného prostoru (%STORAGE_ID%) byla dokončena
+
+Vážený uživateli,
+
+systém dokončil opravu úložného prostoru (%STORAGE_ID%) v omezeném režimu pomocí disku Hot Spare (%DISK_ID%).
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[HotSpareRepairFailed]
+Category: Storage,Important
+Title: Oprava pomocí globálního disku Hot Spare se nezdařila
+Subject: Oprava úložného prostoru se nezdařila(%STORAGE_ID%)
+
+Vážený uživateli,
+
+systému se nezdařila oprava úložného prostoru (%STORAGE_ID%) v omezeném režimu pomocí disku Hot Spare (%DISK_ID%).
+Další informace naleznete v systémových protokolech.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[HotSpareRepairNoProtect]
+Category: Storage,Important
+Title: Globální Hot Spare: Připomenout nezabezpečená místa
+Subject: Některé úložné prostory nejsou chráněny diskem Hot Spare
+
+Vážený uživateli,
+
+některé úložné prostory (%STORAGE_ID%) nejsou chráněny diskem Hot Spare
+Doporučujeme přidat disky do Hot Spare kvůli ochraně úložného prostoru.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[HotSpareRepairStart]
+Category: Storage,Important
+Title: Probíhá oprava pomocí globálního disku Hot Spare
+Subject: Systém provádí opravu úložného prostoru (%STORAGE_ID%) v omezeném režimu pomocí disků Hot Spare
+
+Vážený uživateli,
+
+systém momentálně provádí opravu úložného prostoru (%STORAGE_ID%) v omezeném režimu pomocí disku Hot Spare (%DISK_ID%).
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[ImproperShutdown]
+Category: System,Important
+Title: Neočekávané vyřazení z provozu
+Subject: Na zařízení %HOSTNAME% došlo k neočekávanému vyřazení z provozu
+
+Vážený uživateli,
+
+Na zařízení %HOSTNAME% došlo k výpadku napájení a bylo mimořádně vyřazeno z provozu.
+
+S pozdravem,
+%COMPANY_NAME%
+
+
+[InternalFanResume]
+Category: System
+Title: Činnost ventilátoru serveru byla obnovena
+Subject: Činnost ventilátoru %FANID% serveru %HOSTNAME% (SN: %HOST_SN%) byla obnovena
+
+Vážený uživateli,
+
+činnost ventilátoru %FANID% na serveru %HOSTNAME% (SN: %HOST_SN%) byla obnovena.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[InternalFanStop]
+Category: System,Important
+Title: Činnost ventilátoru serveru se zastavila
+Subject: Činnost ventilátoru %FANID% na serveru %HOSTNAME% (SN: %HOST_SN%) se zastavila
+
+Vážený uživateli,
+
+činnost ventilátoru %FANID% na serveru %HOSTNAME% (SN: %HOST_SN%) se zastavila.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[LocalLUNBkpError]
+Category: Backup/Restore,Important
+Title: Došlo k chybě místní zálohy jednotky LUN
+Subject: Nesplněno – záloha LUN na zařízení %HOSTNAME%
+
+Vážený uživateli,
+
+záloha LUN na zařízení %HOSTNAME% do místní sdílené složky selhala. Další informace naleznete v protokolu zálohování systému DSM pomocí nabídky Zálohování a replikace > Protokol.
+
+Název LUN: %LUN%
+Úloha zálohování: %BKP_TASK%
+Cíl záloh: %BKP_DST%  %PATH%
+Počáteční čas: %TIME%
+Trvání: %DUR%
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[LocalLUNBkpFinished]
+Category: Backup/Restore
+Title: Místní záloha jednotky LUN byla dokončena
+Subject: Dokončeno – záloha LUN na zařízení %HOSTNAME%
+
+Vážený uživateli,
+
+záloha LUN na zařízení %HOSTNAME% do místní sdílené složky byla dokončena.
+
+Název LUN: %LUN%
+Úloha zálohování: %BKP_TASK%
+Cíl záloh: %BKP_DST%  %PATH%
+Počáteční čas: %TIME%
+Trvání: %DUR%
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[LocalLUNRecoverError]
+Category: Backup/Restore,Important
+Title: Došlo k chybě místního obnovení jednotky LUN
+Subject: Nesplněno – obnovení LUN na zařízení %HOSTNAME%
+
+Vážený uživateli,
+
+obnovení LUN na zařízení %HOSTNAME% z místní sdílené složky selhalo. Další informace naleznete v protokolu zálohování systému DSM pomocí nabídky Zálohování a replikace > Protokol.
+
+Název LUN: %LUN%
+Zdroj obnovení: %BKP_SRC%  %SRC_PATH%
+Počáteční čas: %TIME%
+Trvání: %DUR%
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[LocalLUNRecoverFinished]
+Category: Backup/Restore
+Title: Místní obnovení jednotky LUN bylo dokončeno
+Subject: Dokončeno – obnovení LUN na zařízení %HOSTNAME%
+
+Vážený uživateli,
+
+obnovení LUN na zařízení %HOSTNAME% z místní sdílené složky bylo dokončeno.
+
+Název LUN: %LUN%
+Zdroj obnovení: %BKP_SRC%  %SRC_PATH%
+Počáteční čas: %TIME%
+Trvání: %DUR%
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[MyDSPasswordChanged]
+Category: System,Important
+Title: Změna hesla účtu Synology
+Subject: Vaše heslo účtu Synology na zařízení %HOSTNAME% bylo změněno
+
+Vážený uživateli,
+
+toto je potvrzení, že heslo k Vašemu účtu Synology [%MYDS_ACCOUNT%] bylo změněno prostřednictvím účtu Synology na zařízení %HOSTNAME%.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[NetLUNBkpError]
+Category: Backup/Restore,Important
+Title: Došlo k chybě síťové zálohy jednotky LUN
+Subject: Nesplněno - záloha LUN na zařízení %HOSTNAME%
+
+Vážený uživateli,
+
+Záloha LUN na zařízení %HOSTNAME% do vzdálené sdílené složky selhala. Další informace naleznete v protokolu zálohování systému DSM pomocí nabídky Zálohování a replikace > Protokol.
+
+Název LUN: %LUN%
+Úloha zálohování: %BKP_TASK%
+Cíl záloh: %BKP_DST%  %PATH%
+Počáteční čas: %TIME%
+Trvání: %DUR%
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[NetLUNBkpOK]
+Category: Backup/Restore
+Title: Síťová záloha jednotky LUN byla dokončena
+Subject: Dokončeno - záloha LUN na zařízení %HOSTNAME%
+
+Vážený uživateli,
+
+Záloha LUN na zařízení %HOSTNAME% do vzdálené sdílené složky byla dokončena.
+
+Název LUN: %LUN%
+Úloha zálohování: %BKP_TASK%
+Cíl záloh: %BKP_DST%  %PATH%
+Počáteční čas: %TIME%
+Trvání: %DUR%
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[NetLUNRecoverError]
+Category: Backup/Restore,Important
+Title: Došlo k chybě síťového obnovení jednotky LUN
+Subject: Nesplněno - obnovení LUN na zařízení %HOSTNAME%
+
+Vážený uživateli,
+
+Obnovení jednotky LUN na zařízení %HOSTNAME% ze vzdálené sdílené složky selhalo. Další informace naleznete v protokolu zálohování systému DSM pomocí nabídky Zálohování a replikace > Protokol.
+
+Název LUN: %LUN%
+Zdroj obnovení: %BKP_SRC%  %SRC_PATH%
+Počáteční čas: %TIME%
+Trvání: %DUR%
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[NetLUNRecoverFinished]
+Category: Backup/Restore,Important
+Title: Síťové obnovení jednotky LUN bylo dokončeno
+Subject: Dokončeno - obnovení LUN na zařízení %HOSTNAME%
+
+Vážený uživateli,
+
+Obnovení jednotky LUN na zařízení %HOSTNAME% ze vzdálené sdílené složky bylo dokončeno.
+
+Název LUN: %LUN%
+Zdroj obnovení: %BKP_SRC%  %SRC_PATH%
+Počáteční čas: %TIME%
+Trvání: %DUR%
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[OTP_emergency_mail]
+Subject: Pohotovostní ověřovací kód pro uživatele %USER_NAME% na zařízení %HOSTNAME%
+
+Vážený uživateli,
+
+následující pohotovostní ověřovací kód je určen pro jedno použití a lze ho použít k přihlášení k zařízení %HOSTNAME% a obnovení nastavení dvoufázového ověření. Po zobrazení výzvy k zadání ověřovacího kódu zadejte tento 8místný kód.
+
+Pohotovostní ověřovací kód: %EMG_CODE%
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[OTP_emergency_mail_warning]
+Subject: Pohotovostní ověřovací kód pro uživatele %USER_NAME% na zařízení %HOSTNAME%
+
+Vážený uživateli,
+
+následující pohotovostní ověřovací kód je určen pro jedno použití a lze ho použít k přihlášení k zařízení %HOSTNAME% a obnovení nastavení dvoufázového ověření. Po zobrazení výzvy k zadání ověřovacího kódu zadejte tento 8místný kód.
+
+Poznámka: Dosáhli jste maximálního počtu pohotovostních kódů. Obnovte co nejdříve nastavení dvoufázového ověření.
+
+Pohotovostní přihlašovací kód: %EMG_CODE%
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[OverheatShutdownCPU]
+Category: System,Important
+Title: Vypnutí z důvodu přehřátí procesoru
+Subject: %HOSTNAME% (SN: %HOST_SN%) se vypnul z důvodu přehřátí procesoru
+
+Vážený uživateli,
+
+%HOSTNAME% (SN: %HOST_SN%) se automaticky vypnul z důvodu přehřátí procesoru (nad %SHUTDOWN_TMP%°C).
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[OverheatShutdownDisk]
+Category: System,Important
+Title: Vypnutí z důvodu přehřátí disku
+Subject: Zařízení %HOSTNAME% se vypnulo z důvodu přehřátí disku.
+
+Vážený uživateli,
+
+zařízení %HOSTNAME% se automaticky vypnulo, protože disk %DISK_NUM% se přehříval a dosáhl teploty %SHUTDOWN_TMP% °C.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[OverheatShutdownThermal]
+Category: System,Important
+Title: Vypnutí z důvodu přehřátí
+Subject: %HOSTNAME% (SN: %HOST_SN%) se vypnul z důvodu přehřátí
+
+Vážený uživateli,
+
+%HOSTNAME% (SN: %HOST_SN%) se automaticky vypnul z důvodu přehřátí (nad %SHUTDOWN_TMP%°C).
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[PKGUpgrade]
+Subject: Informace o upgradu balíčků pro zařízení %HOSTNAME%
+
+Vážený uživateli,
+
+následující balíčky jsou připraveny k aktualizaci na serveru %HOSTNAME%. Můžete ji zahájit spuštěním Centra balíčků v systému %OSNAME%.
+
+Balíčky, které lze aktualizovat:
+%PKG_SET%
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[Raid5SpareChanged]
+Category: Storage,Important
+Title: Omezení svazku RAID5+spare
+Subject: Svazek %VOLUME_ID% jednotky RAID5+spare na zařízení %HOSTNAME% byl omezen
+
+Vážený uživateli,
+
+svazek %VOLUME_ID% na zařízení %HOSTNAME% byl omezen z RAID5+spare na RAID5. Pokud chcete svazek opět změnit na RAID5+spare, připravte si prosím náhradní disk a v nabídce „Hlavní nabídka“ > „Správce úložiště“ > „Svazek“ > „Správa“ proveďte výměnu vadného disku.
+
+Další pomoc můžete získat v rámci online podpory společnosti Synology: http://www.synology.com.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[RaidDiskFail]
+Category: Storage,Important
+Title: Pevný disk v diskové skupině selhal
+Subject: Pevný disk %DISK_ID% v diskové skupině na zařízení %HOSTNAME% selhal
+
+Vážený uživateli,
+
+pevný disk %DISK_ID% v diskové skupině na zařízení %HOSTNAME% selhal, vyměňte ho.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[RaidGroupCrashed]
+Category: Storage,Important
+Title: Porucha skupiny RAID Group
+Subject: Došlo k poruše skupiny %RAID_ID% na zařízení %HOSTNAME%
+
+Vážený uživateli,
+
+došlo k poruše skupiny %RAID_ID% na zařízení %HOSTNAME%. Pravděpodobně nedojde ke spuštění systému.
+
+Další pomoc můžete získat v rámci online podpory společnosti Synology: http://www.synology.com.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[RaidGroupDegraded]
+Category: Storage,Important
+Title: Omezení skupiny RAID Group
+Subject: Skupina RAID Group %RAID_ID% na zařízení %HOSTNAME% přešla do omezeného režimu [%ACTIVE_DISK%/%TOTAL_DISK%]
+
+Vážený uživateli,
+
+skupina RAID Group %RAID_ID% na zařízení %HOSTNAME% přešla do omezeného režimu. (Celkový počet pevných disků: %TOTAL_DISK%; Počet aktivních pevných disků: %ACTIVE_DISK%) Zjistěte příčinu omezení a učiňte příslušné kroky.
+
+Další pomoc můžete získat v rámci online podpory společnosti Synology: http://www.synology.com.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[RaidGroupDiskFail]
+Category: Storage,Important
+Title: Pevný disk (HDD) ve skupině RAID Group selhal
+Subject: Pevný disk %DISK_ID% ve skupině RAID Group na zařízení %HOSTNAME% selhal
+
+Vážený uživateli,
+
+pevný disk %DISK_ID% ve skupině RAID Group na zařízení %HOSTNAME% selhal, vyměňte ho.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[RaidGroupSyncDone]
+Category: Storage
+Title: Synchronizace skupiny RAID Group byla dokončena
+Subject: Kontrola konzistence skupiny RAID Group %RAID_ID% na zařízení %HOSTNAME% byla dokončena
+
+Vážený uživateli,
+
+kontrola konzistence skupiny RAID Group %RAID_ID% na zařízení %HOSTNAME% byla dokončena. Systém je nyní připraven k použití.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[RaidGroupVolumeBadSector]
+Category: Storage,Important
+Title: Svazek skupiny RAID Group selhal
+Subject: Svazek skupiny RAID Group (%VOLUME_ID%) na zařízení %HOSTNAME% selhal
+
+Vážený uživateli,
+
+v důsledku selhání svazku skupiny RAID Group (%VOLUME_ID%) na zařízení %HOSTNAME% došlo k poškození některých souborů. Existuje riziko poškození souborů v omezeném režimu. Opravte svazek co nejdříve. Více podrobností naleznete v nabídce Hlavní nabídka > Systémové protokoly.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[RaidGroupiScsiBadSector]
+Category: Storage,Important
+Title: Jednotka iSCSI LUN skupiny RAID Group selhala
+Subject: Jednotka iSCSI LUN skupiny RAID Group na zařízení %HOSTNAME% selhala
+
+Vážený uživateli,
+
+v důsledku selhání jednotky iSCSI LUN skupiny RAID Group na zařízení %HOSTNAME% došlo k poškození některých souborů. Existuje riziko poškození souborů v omezeném režimu. Opravte svazek co nejdříve.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[RaidSuggestDataScrubbing]
+Category: Storage
+Title: Připomínka scrubbingu pole RAID
+Subject: Připomenutí scrubbingu pole RAID na zařízení %HOSTNAME%
+
+Vážený uživateli,
+
+už jeden měsíc nebyl proveden scrubbing pole RAID na zařízení %HOSTNAME%. Doporučujeme provést scrubbing pole RAID a zajistit tak jeho integritu.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[RaidSystemVolumeCrashed]
+Category: Storage,Important
+Title: Porucha systémového svazku
+Subject: Došlo k poruše systémového svazku (%SYSTEM_ID%) na zařízení %HOSTNAME%
+
+Vážený uživateli,
+
+došlo k poruše systémového svazku (%SYSTEM_ID%) na zařízení %HOSTNAME%. Pravděpodobně nedojde ke spuštění systému.
+Další pomoc můžete získat v rámci online podpory společnosti Synology: http://www.synology.com.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[RaidSystemVolumeDegrade]
+Category: Storage,Important
+Title: Omezení systémového svazku
+Subject: Systémový svazek (%SYSTEM_ID%) na zařízení %HOSTNAME% přešel do omezeného režimu. [%ACTIVE_DISK%/%TOTAL_DISK%]
+
+Vážený uživateli,
+
+systémový svazek (%SYSTEM_ID%) na zařízení %HOSTNAME% byl nastaven na omezený režim. (Celkový počet pevných disků: %TOTAL_DISK%; počet aktivních pevných disků: %ACTIVE_DISK%)
+
+Restartujte prosím systém a disk bude během spuštění automaticky opraven.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[RaidSystemVolumeSyncDone]
+Category: Storage
+Title: Kontrola konzistence systému byla dokončena
+Subject: Kontrola konzistence systémového svazku (%SYSTEM_ID%) na zařízení %HOSTNAME% byla dokončena
+
+Vážený uživateli,
+
+zařízení %HOSTNAME% dokončilo kontrolu konzistence systémového svazku (%SYSTEM_ID%). Systém je nyní připraven k použití.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[RaidVolumeBadSector]
+Category: Storage,Important
+Title: Svazek diskové skupiny selhal
+Subject: Svazek diskové skupiny (%VOLUME_ID%) na zařízení %HOSTNAME% selhal
+
+Vážený uživateli,
+
+v důsledku poškození sektorů na svazku diskové skupiny (%VOLUME_ID%) na zařízení %HOSTNAME% došlo k poškození některých souborů. Existuje riziko poškození souborů v omezeném režimu. Opravte svazek co nejdříve. Více podrobností naleznete v nabídce „Hlavní nabídka“ > „Systémové informace“ > „Protokol“ > „Protokol systému“.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[RaidVolumeCrashed]
+Category: Storage,Important
+Title: Porucha svazku
+Subject: Došlo k poruše svazku %VOLUME_ID% na zařízení %HOSTNAME%
+
+Vážený uživateli,
+
+došlo k poruše svazku %VOLUME_ID% na zařízení %HOSTNAME%. Pravděpodobně nedojde ke spuštění systému.
+
+Další pomoc můžete získat v rámci online podpory společnosti Synology: http://www.synology.com.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[RaidVolumeDegrade]
+Category: Storage,Important
+Title: Omezení svazku
+Subject: Svazek %VOLUME_ID% na zařízení %HOSTNAME% byl nastaven na omezený režim [%ACTIVE_DISK%/%TOTAL_DISK%]
+
+Vážený uživateli,
+
+svazek %VOLUME_ID% na zařízení %HOSTNAME% byl nastaven na omezený režim. (Celkový počet pevných disků: %TOTAL_DISK%; Počet aktivních pevných disků: %ACTIVE_DISK%) Zjistěte příčinu omezení a učiňte příslušné kroky.
+
+Svazek opravíte nahrazením poškozených disků novými. Více informací získáte ve Znalostní databázi Synology na našich oficiálních webových stránkách.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[RaidVolumeFull]
+Category: Storage,Important
+Title: Plný svazek
+Subject: Svazek %VOLUME_ID% na zařízení %HOSTNAME% je plný
+
+Vážený uživateli,
+
+kapacita svazku %VOLUME_ID% na zařízení %HOSTNAME% není dostatečná; další volné místo získáte odstraněním některých souborů.
+
+Celková kapacita: %VOLUME_SIZE% GB
+Dostupná kapacita: %FREE_SPACE% GB (%USAGE%%)
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[RaidVolumeSyncDone]
+Category: Storage
+Title: Kontrola konzistence byla dokončena
+Subject: Kontrola konzistence svazku %VOLUME_ID% na zařízení %HOSTNAME% byla dokončena
+
+Vážený uživateli,
+
+zařízení %HOSTNAME% dokončilo kontrolu konzistence svazku %VOLUME_ID%. Systém je nyní připraven k použití.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[RaidiScsiBadSector]
+Category: Storage,Important
+Title: Jednotka diskové skupiny iSCSI LUN selhala
+Subject: Jednotka diskové skupiny iSCSI LUN na zařízení %HOSTNAME% selhala
+
+Vážený uživateli,
+
+v důsledku poškození sektorů na svazku diskové skupiny iSCSI LUN na zařízení %HOSTNAME% došlo k poškození některých souborů. Existuje riziko poškození souborů v omezeném režimu. Opravte svazek co nejdříve.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[RaidiScsiCrashed]
+Category: Storage,Important
+Title: Zhroucení jednotky iSCSI LUN
+Subject: Jednotka iSCSI LUN (%LUN_NAME%) na zařízení %HOSTNAME% se zhroutila
+
+Vážený uživateli,
+
+Došlo ke zhroucení jednotky iSCSI LUN (%LUN_NAME%) na zařízení %HOSTNAME%. Systém se nemusí spustit.
+
+Další pomoc můžete získat v rámci podpory společnosti Synology online: http://www.synology.com.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[RaidiScsiDegraded]
+Category: Storage,Important
+Title: Omezený režim jednotky iSCSI LUN
+Subject: Jednotka iSCSI LUN (%LUN_NAME%) na zařízení %HOSTNAME% přešla do omezeného režimu [%ACTIVE_DISK%/%TOTAL_DISK%]
+
+Vážený uživateli,
+
+Jednotka iSCSI LUN (%LUN_NAME%) na zařízení %HOSTNAME% přešla do omezeného režimu. (Celkový počet pevných disků: %TOTAL_DISK%; Počet aktivních pevných disků: %ACTIVE_DISK%) Zjistěte příčinu omezení a učiňte příslušné kroky.
+
+Jednotku iSCSI LUN opravíte nahrazením poškozených disků novými. Více informací získáte ve Znalostní databázi Synology na našich oficiálních webových stránkách.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[RedundantPowerRecoveredProvide]
+Category: Power System
+Title: Byla obnovena činnost redundantního napájecího zdroje
+Subject: činnost napájecího zdroje č.%POWERID% na %HOSTNAME% (SN: %HOST_SN%) byla obnovena
+
+Vážený uživateli,
+
+činnost napájecího zdroje č.%POWERID% na %HOSTNAME% (SN: %HOST_SN%) byla obnovena.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[RedundantPowerStopProvide]
+Category: Power System,Important
+Title: Došlo k chybě redundantního napájecího zdroje
+Subject: činnost napájecího zdroje č.%POWERID% na %HOSTNAME% (SN: %HOST_SN%) selhala
+
+Vážený uživateli,
+
+činnost napájecího zdroje č.%POWERID% na %HOSTNAME% (SN: %HOST_SN%) selhala.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[RestoreTaskCanceled]
+Category: Backup/Restore,Important
+Title: Obnovení bylo zrušeno
+Subject: Úloha %TASK_TYPE% byla zrušena na zařízení %HOSTNAME%
+
+Vážený uživateli,
+
+Obnovení dat na zařízení %HOSTNAME% bylo zrušeno.
+
+Obnovit zdroj: %DESTINATION_IP% %DESTINATION_PATH%
+Počáteční čas: %START_TIME%
+Trvání: %DURATION%
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[RestoreTaskFailed]
+Category: Backup/Restore,Important
+Title: Obnovení se nezdařilo
+Subject: Úlohu %TASK_TYPE% se z hostitele %HOSTNAME% nepodařilo obnovit.
+
+Vážený uživateli,
+
+data zálohy se z hostitele %HOSTNAME% nepodařilo obnovit.
+
+Další informace naleznete v protokolu zálohy v části Hyper Backup > Protokol
+.
+
+Zdroj obnovení: %DESTINATION_IP% %DESTINATION_PATH%
+Počáteční čas: %START_TIME%
+Trvání: %DURATION%
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[RestoreTaskFinished]
+Category: Backup/Restore
+Title: Obnovení dokončeno
+Subject: Úloha %TASK_TYPE% byla úspěšná na zařízení %HOSTNAME%
+
+Vážený uživateli,
+
+Vaše úloha obnovení %TASK_NAME% je nyní dokončena.
+
+Obnovit zdroj: %DESTINATION_IP% %DESTINATION_PATH%
+Počáteční čas: %START_TIME%
+Trvání: %DURATION%
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[SDCardFull]
+Category: External Storage
+Title: Karta SD je plná
+Subject: Karta SD %DISK_NUMBER% na zařízení %HOSTNAME% je plná
+
+Vážený uživateli,
+
+dostupná kapacita karty SD %DISK_NUMBER% na zařízení %HOSTNAME% již nepostačuje. Prostudujte si prosím následující informace a učiňte příslušné kroky.
+
+Celková kapacita: %DISK_SIZE% GB
+Dostupná kapacita: %FREE_SPACE% GB (%USAGE%%)
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[SDCardPartitionFull]
+Category: External Storage
+Title: Segment karty SD je plný
+Subject: Oddíl %PARTITION_NUMBER% karty SD %DISK_NUMBER% na zařízení %HOSTNAME% je plný
+
+Vážený uživateli,
+
+oddíl %PARTITION_NUMBER% karty SD %DISK_NUMBER% na zařízení %HOSTNAME% je plný. Zajistěte prosím nápravu.
+
+Celková kapacita: %DISK_SIZE% GB
+Dostupná kapacita: %FREE_SPACE% GB (%USAGE%%)
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[SFPModuleUnsupported]
+Category: System,Important
+Title: Nepodporovaný modul SFP+
+Subject: Byl zjištěn nepodporovaný modul SFP+ %LAN%
+
+Vážený uživateli,
+
+byl zjištěn nepodporovaný modul SFP+ %LAN% a řadič karty síťového rozhraní byl zakázán.
+Nainstalujte podporovaný modul a restartujte zařízení %DISKSTATION%.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[SSDCacheCrashed]
+Category: Storage,Important
+Title: Došlo k poruše mezipaměti SSD
+Subject: Došlo k poruše mezipaměti SSD %SSD_ID% na zařízení %HOSTNAME%
+
+Vážený uživateli,
+
+došlo k poruše mezipaměti SSD %SSD_ID% na zařízení %HOSTNAME%. Další pomoc můžete získat v rámci online podpory společnosti Synology: http://www.synology.com.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[SSDCacheDegraded]
+Category: Storage,Important
+Title: Omezení mezipaměti SSD
+Subject: Mezipaměť SSD %SSD_ID% na zařízení %HOSTNAME% přešla do omezeného režimu
+
+Vážený uživateli,
+
+mezipaměť SSD %SSD_ID% na zařízení %HOSTNAME% přešla do omezeného režimu. Další pomoc můžete získat v rámci online podpory společnosti Synology: http://www.synology.com.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[SSDCacheMissing]
+Category: Storage,Important
+Title: Mezipaměť pro čtení-zápis není k dispozici
+Subject: Mezipaměť pro čtení-zápis %SPACE_ID% na zařízení %HOSTNAME% není k dispozici
+
+Vážený uživateli,
+
+mezipaměť pro čtení-zápis %SPACE_ID% na zařízení %HOSTNAME% není k dispozici. Další pomoc můžete získat v rámci online podpory společnosti Synology: http://www.synology.com.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[SecurityScanAlarm]
+Category: System,Important
+Title: Byla nalezena rizika zabezpečení
+Subject: Byla nalezena rizika zabezpečení na zařízení %HOSTNAME%
+
+Vážený uživateli,
+
+nástroj Bezpečnostní poradce právě dokončil plánovanou kontrolu na serveru %HOSTNAME%. Byla nalezena rizika zabezpečení, která vyžadují vaši pozornost. Přihlaste se do systému %OSNAME% na serveru %HOSTNAME%, kde zobrazíte sestavu v nástroji Bezpečnostní poradce.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[SecurityScanDSMOutOfDate]
+Category: System,Important
+Title: Neaktualizovaný systém
+Subject: Systém %OSNAME% na zařízení %HOSTNAME% není podle nástroje Bezpečnostní poradce aktuální
+
+Vážený uživateli,
+
+systém %OSNAME% spuštěný na zařízení %HOSTNAME% není aktuální. Přihlaste se do systému %OSNAME% na zařízení %HOSTNAME%, otevřete Ovládací panel a nainstalujte nejnovější verzi systému %OSNAME%. Podrobnější sestavu naleznete v nabídce Hlavní nabídka > Bezpečnostní poradce.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[SecurityScanDSMPackageOutOfDate]
+Category: System,Important
+Title: Neaktualizovaný systém a balíčky
+Subject: Systém %OSNAME% a balíčky na zařízení %HOSTNAME% nejsou podle nástroje Security Advisor aktuální
+
+Vážený uživateli,
+
+systém %OSNAME% a %NUMBER% balíčků spuštěných na zařízení %HOSTNAME% není aktuálních. Přihlaste se do systému %OSNAME% na serveru %HOSTNAME% a proveďte následující akce:
+– Otevřete Ovládací panel a nainstalujte nejnovější verzi systému %OSNAME%.
+– Otevřete Centrum balíčků a nainstalujte nejnovější verzi balíčků.
+
+Podrobnější zpráva se nachází v části Hlavní nabídka > Security Advisor.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[SecurityScanDanger]
+Category: System,Important
+Title: Byl zaznamenám malware
+Subject: Byl zaznamenám malware na zařízení %HOSTNAME%
+
+Vážený uživateli,
+
+na serveru %HOSTNAME% byl zaznamenán malware. Přihlaste se do systému %OSNAME% na zařízení %HOSTNAME% a problém vyřešte pomocí nástroje Security Advisor.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[SecurityScanPackageOutOfDate]
+Category: System,Important
+Title:  Neaktuální balíčky
+Subject: Balíčky na serveru %HOSTNAME% jsou neaktuální
+
+Vážený uživateli,
+
+balíčky (%NUMBER%) spuštěné na zařízení %HOSTNAME% nejsou aktuální. Přihlaste se k systému %OSNAME% na zařízení %HOSTNAME%, otevřete Centrum balíčků a nainstalujte nejnovější verzi balíčků.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[ShareSyncError]
+Category: Backup/Restore,Important
+Title: Synchronizace sdílených složek se nezdařila
+Subject: Nesplněno – synchronizace sdílených složek
+
+Vážený uživateli,
+
+synchronizace sdílených složek na zařízení %HOSTNAME% se nezdařila. Další informace naleznete v protokolu zálohování systému DSM v Centru protokolů.
+
+Úloha synchronizace: %S2S_TASK%
+Synchronizační server: %S2S_SERVER%
+Počáteční čas: %TIME%
+Trvání: %DUR%
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[ShareSyncSuccess]
+Category: Backup/Restore
+Title: Synchronizace sdílených složek byla dokončena
+Subject: Dokončeno – synchronizace sdílených složek
+
+Vážený uživateli,
+
+synchronizace sdílených složek na zařízení %HOSTNAME% byla dokončena.
+
+Úloha synchronizace: %S2S_TASK%
+Synchronizační server: %S2S_SERVER%
+Počáteční čas: %TIME%
+Trvání: %DUR%
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[SmartEBoxAbnor]
+Category: Storage,Important
+Title: Stav S.M.A.R.T. disku rozšiřovací jednotky je nenormální
+Subject: Stav S.M.A.R.T. disku %DISK_ID% rozšiřovací jednotky %EUNIT_ID% připojené k zařízení %HOSTNAME% je nenormální
+
+Vážený uživateli,
+
+stav S.M.A.R.T. disku %DISK_ID% rozšiřovací jednotky %EUNIT_ID% připojené k zařízení %HOSTNAME% je nenormální. To může znamenat, že hrozí selhání. Co nejdříve zálohujte data a vyměňte disk.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[SmartESataAbnor]
+Category: External Storage,Important
+Title: Stav S.M.A.R.T. disku eSATA je nenormální
+Subject: Stav S.M.A.R.T. disku eSATA na zařízení %HOSTNAME% je nenormální
+
+Vážený uživateli,
+
+stav S.M.A.R.T. disku eSATA na zařízení %HOSTNAME% je nenormální. To může znamenat, že hrozí selhání. Co nejdříve zálohujte data a vyměňte disk.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[SmartIntAbnor]
+Category: Storage,Important
+Title: Stav S.M.A.R.T. interního disku je nenormální
+Subject: Stav S.M.A.R.T. disku %DISK_ID% na zařízení %HOSTNAME% je nenormální
+
+Vážený uživateli,
+
+stav S.M.A.R.T. interního disku %DISK_ID% na zařízení %HOSTNAME% je nenormální. To může znamenat, že bezprostředně hrozí selhání. Co nejdříve zálohujte data a vyměňte disk.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[SmartTestEBoxErr]
+Category: Storage,Important
+Title: Chyba testu S.M.A.R.T. na disku rozšiřovací jednotky
+Subject: Došlo k chybě při testu S.M.A.R.T. disku %DISK_ID% na rozšiřovací jednotce %EUNIT_ID% připojené k zařízení %HOSTNAME%
+
+Vážený uživateli,
+
+došlo k chybě při testu S.M.A.R.T. na pevném disku %DISK_ID% rozšiřovací jednotky %EUNIT_ID% připojené k zařízení %HOSTNAME%. Co nejdříve zálohujte data a vyměňte disk.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[SmartTestESataErr]
+Category: External Storage,Important
+Title: Chyba testu S.M.A.R.T. na disku eSATA
+Subject: Došlo k chybě při testu S.M.A.R.T. disku eSATA na zařízení %HOSTNAME%
+
+Vážený uživateli,
+
+došlo k chybě při testu S.M.A.R.T. disku eSATA na zařízení %HOSTNAME%. Co nejdříve zálohujte data a vyměňte disk.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[SmartTestIntErr]
+Category: Storage,Important
+Title: Chyba testu S.M.A.R.T. na interním disku
+Subject: Došlo k chybě při testu S.M.A.R.T. disku %DISK_ID% na zařízení %HOSTNAME%
+
+Vážený uživateli,
+
+došlo k chybě při testu S.M.A.R.T. na pevném disku %DISK_ID% zařízení %HOSTNAME%. Co nejdříve zálohujte data a vyměňte disk.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[StoragePoolCrashed]
+Category: Storage,Important
+Title: Porucha skupiny disků
+Subject: Došlo k poruše skupiny disků %RAID_ID% na zařízení %HOSTNAME%
+
+Vážený uživateli,
+
+došlo k poruše skupiny disků %RAID_ID% na zařízení %HOSTNAME%. Pravděpodobně nedojde ke spuštění systému.
+
+Další pomoc můžete získat v rámci online podpory společnosti Synology: http://www.synology.com.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[StoragePoolDegraded]
+Category: Storage,Important
+Title: Omezení skupin disků
+Subject: Disková skupina %RAID_ID% na zařízení %HOSTNAME% přešla do omezeného režimu. [%ACTIVE_DISK%/%TOTAL_DISK%]
+
+Vážený uživateli,
+
+disková skupina %RAID_ID% na zařízení %HOSTNAME% byla nastavena na omezený režim. (Celkový počet pevných disků: %TOTAL_DISK%; Počet aktivních pevných disků: %ACTIVE_DISK%) Zjistěte příčinu omezení a učiňte příslušné kroky.
+
+Další pomoc můžete získat v rámci online podpory společnosti Synology: http://www.synology.com.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[StoragePoolRaid5SpareChanged]
+Category: Storage,Important
+Title: Omezení skupiny disků – Raid5+spare
+Subject: Disková skupina %RAID_ID% na zařízení %HOSTNAME% byla omezena na RAID5
+
+Vážený uživateli,
+
+disková skupina %RAID_ID% na zařízení %HOSTNAME% byla omezena z RAID5+spare do RAID5. Pokud chcete svazek změnit zpět na RAID5+spare, připravte si náhradní disk a v nabídce „Hlavní nabídka“ > „Správce úložiště“ > „Disková skupina“ proveďte výměnu vadného disku.
+
+Další pomoc můžete získat v rámci online podpory společnosti Synology: http://www.synology.com.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[StoragePoolSyncDone]
+Category: Storage
+Title: Synchronizace skupiny disků byla dokončena
+Subject: Kontrola konzistence diskové skupiny %RAID_ID% na zařízení %HOSTNAME% byla dokončena
+
+Vážený uživateli,
+
+kontrola konzistence diskové skupiny %RAID_ID% na zařízení %HOSTNAME% byla dokončena. Systém je nyní připraven k použití.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[SynoReport]
+Subject: Byla vytvořena sestava využití disku
+
+Vážený uživateli,
+
+Byla vytvořena sestava využití disku %PROFILE%. Tuto sestavu naleznete zde:
+%LINK%
+
+S pozdravem,
+%COMPANY_NAME%
+
+
+[SynoReportFail]
+Subject: Při generování sestavy využití úložiště došlo k chybě.
+
+Vážený uživateli,
+
+při generování sestavy využití pro %PROFILE% došlo k chybě.
+
+Důvod: %MSG%
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[SystemInodeFull]
+Category: System
+Title: Počet souborů v systému dosahuje limitu
+Subject: Počet souborů na systémovém oddílu na %HOSTNAME% dosahuje limitu
+
+Vážený uživateli,
+
+Počet souborů na systémovém oddílu %HOSTNAME% dosahuje limitu. Obraťte se na podporu společnosti Synology.
+
+Maximální počet souborů: %TOTAL_INODE%
+Počet zbývajících souborů: %FREE_INODE% (%USAGE%%)
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[SystemVolumeCrashed]
+Category: System
+Title: Porucha systémového úložiště
+Subject: Došlo k poruše systémového úložiště na zařízení %HOSTNAME%
+
+Vážený uživateli,
+
+došlo k poruše systémového úložiště na zařízení %HOSTNAME%.
+
+Další pomoc můžete získat v rámci online podpory společnosti Synology na adrese http://www.synology.com.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[SystemVolumeFull]
+Category: System
+Title: Úložný prostor systému je plný
+Subject: Úložný prostor systému na serveru %HOSTNAME% není dostatečný
+
+Vážený uživateli,
+
+dostupný prostor úložiště systému na serveru %HOSTNAME% není dostatečný. Prostudujte si prosím níže uvedené informace a prostor uvolněte.
+
+Celková kapacita: %VOLUME_SIZE% GB
+Dostupná kapacita: %FREE_SPACE% GB (%USAGE%%)
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[TPLUNReachSoftLimit]
+Category: Storage,Important
+Title: Nedostatek místa na úložišti LUN
+Subject: Dochází volné místo v úložišti LUN %LUN_NAME% na hostiteli %HOSTNAME%
+
+Vážený uživateli,
+
+zmenšuje se volná kapacita jednotky LUN %LUN_NAME% na hostiteli %HOSTNAME%. Zvyšte kapacitu rozšířením svazku.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[TaskSchedulerResult]
+Subject: Plánovač úloh dokončil naplánovanou úlohu
+
+Vážený uživateli,
+
+plánovač úloh dokončil naplánovanou úlohu.
+
+Úloha: %TASK_ID%
+Počáteční čas: %START_TIME%
+Koncový čas: %STOP_TIME%
+Aktuální stav: %EXIT_CODE%
+Standardní výstup/chyba:
+%OUTPUT%
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[TestMail]
+Subject: Zkušební zpráva ze zařízení %HOSTNAME%
+
+Vážený uživateli,
+
+Blahopřejeme! Na zařízení %HOSTNAME% jste úspěšně nastavili e-mailová upozornění.
+Další konfigurace systému můžete najít zde: %HTTP_URL%.
+(Pokud se k serveru nemůžete připojit, obraťte se prosím na správce.)
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[UPSConnected]
+Category: Power System
+Title: Zařízení UPS bylo připojeno
+Subject: %HOSTNAME% byl připojen k zařízení UPS.
+
+Vážený uživateli,
+
+%HOSTNAME% byl připojen k zařízení UPS.
+
+S pozdravem,
+%COMPANY_NAME%
+
+
+[UPSDisconnect]
+Category: Power System,Important
+Title: Zařízení UPS bylo odpojeno
+Subject: %HOSTNAME% byl odpojen od zařízení UPS.
+
+Vážený uživateli,
+
+%HOSTNAME% byl odpojen od zařízení UPS. Zkontrolujte nastavení serveru.
+
+S pozdravem,
+%COMPANY_NAME%
+
+
+[UPSOnAC]
+Category: Power System,Important
+Title: Zdroj UPS přešel zpět do režimu AC
+Subject: Zařízení UPS připojené k zařízení %HOSTNAME% přešlo zpět do režimu AC.
+
+Vážený uživateli,
+
+zařízení UPS připojené k zařízení %HOSTNAME% přešlo zpět do režimu AC.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[UPSOnBattery]
+Category: Power System,Important
+Title: Zdroj UPS přešel do režimu baterie
+Subject: Zařízení UPS připojené k zařízení %HOSTNAME% přešlo do režimu baterie.
+
+Vážený uživateli,
+
+zařízení UPS připojené k zařízení %HOSTNAME% přešlo do režimu baterie. Jakmile se baterie zařízení UPS vybije, zařízení %HOSTNAME% bude vypnuto. Vypněte zařízení %HOSTNAME% ručně, nebo co nejdříve obnovte externí napájení.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[UPSPowerFail]
+Category: Power System,Important
+Title: Nízký stav baterie zdroje napájení UPS
+Subject: Bylo dosaženo nízkého stavu baterie zdroje napájení UPS na zařízení %HOSTNAME%
+
+Vážený uživateli,
+
+bylo dosaženo nízkého stavu baterie zdroje napájení UPS na zařízení %HOSTNAME%. Všechny služby budou ukončeny. Služby budou znovu spuštěny po obnovení činnosti zdroje napájení UPS.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[USBCOPYDisconnect]
+Category: USB Copy
+Title: Funkce USBCopy byla přerušena
+Subject: Externí zařízení je odpojeno od zařízení %HOSTNAME%
+
+Vážený uživateli,
+
+Během procesu %COPY% na zařízení %HOSTNAME% došlo k chybě. Externí zařízení bylo odpojeno.
+
+S pozdravem,
+%COMPANY_NAME%
+
+
+[USBCOPYError]
+Category: USB Copy,Important
+Title: Došlo k chybě funkce USBCopy
+Subject: Během %COPY% na zařízení %HOSTNAME% došlo k chybě
+
+Vážený uživateli,
+
+Během %COPY% na zařízení %HOSTNAME% došlo k neznámým chybám.
+Kód chyby je %ERR%. Další informace naleznete v protokolu USBCopy/SDCopy.
+
+S pozdravem,
+%COMPANY_NAME%
+
+
+[USBCOPYFinished]
+Category: USB Copy
+Title: USBCopy bylo dokončeno
+Subject: %COPY% na zařízení %HOSTNAME% bylo dokončeno
+
+Vážený uživateli,
+
+%COPY% na zařízení %HOSTNAME% bylo úspěšně dokončeno.
+
+S pozdravem,
+%COMPANY_NAME%
+
+
+[USBCOPYNospace]
+Category: USB Copy,Important
+Title: Zrušení funkce USBCopy
+Subject: Funkce %COPY% na zařízení %HOSTNAME% byla zrušena
+
+Vážený uživateli,
+
+%COPY% na zařízení %HOSTNAME% bylo zrušeno. Kapacita cílové sdílené složky není dostatečná.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[USBDiskFail]
+Category: External Storage
+Title: Chyba USB disku
+Subject: Došlo k chybě USB disku %DISK_ID% na zařízení %HOSTNAME%
+
+Vážený uživateli,
+
+došlo k chybě USB disku %DISK_ID% na zařízení %HOSTNAME%.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[USBDiskFull]
+Category: External Storage
+Title: USB disk je plný
+Subject: USB disk %DISK_NUMBER% na zařízení %HOSTNAME% je plný
+
+Vážený uživateli,
+
+USB disk %DISK_NUMBER% na zařízení %HOSTNAME% je plný; učiňte prosím příslušné kroky.
+
+Celková kapacita: %DISK_SIZE% GB
+Dostupná kapacita: %FREE_SPACE% GB (%USAGE%%)
+
+S pozdravem,
+%COMPANY_NAME%
+
+
+[USBPartitionFull]
+Category: External Storage
+Title: Segment USB disku je plný
+Subject: Oddíl %PARTITION_NUMBER% USB disku %DISK_NUMBER% na zařízení %HOSTNAME% je plný
+
+Vážený uživateli,
+
+oddíl %PARTITION_NUMBER% USB disku %DISK_NUMBER% na zařízení %HOSTNAME% je plný. Zajistěte prosím nápravu.
+
+Celková kapacita: %DISK_SIZE% GB
+Dostupná kapacita: %FREE_SPACE% GB (%USAGE%%)
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[UserChangePassword]
+Subject: Vaše heslo na zařízení %HOSTNAME% bylo změněno
+
+Vážený uživateli %USER_NAME%,
+
+toto je potvrzení, že vaše heslo na zařízení %HOSTNAME% bylo změněno.
+
+Pokud chcete změnit nastavení účtu, přejděte v prohlížeči na adresu %HTTP_URL%. (Pokud se k serveru nemůžete připojit, obraťte se prosím na správce.)
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[UserWelcome]
+Category: System
+Title: Vítáme nového uživatele
+Subject: Vitáme uživatele %USER_NAME% na serveru %HOSTNAME%
+
+Vážený uživateli,
+
+vítejte na serveru %HOSTNAME%!
+Zadáním adresy %HTTP_URL% do prohlížeče můžete upravit svůj osobní profil.
+(Pokud se k serveru nemůžete připojit, obraťte se prosím na správce.)
+
+Vaše uživatelské jméno: %USER_NAME%
+Vaše heslo: %PASSWD%
+
+S pozdravem,
+%COMPANY_NAME%
+
+
+[VolumeInodeFull]
+Category: Storage,Important
+Title: Počet souborů na svazku dosahuje limitu
+Subject: Počet souborů na svazku %VOLUME_ID% na %HOSTNAME% dosahuje limitu
+
+Vážený uživateli,
+
+Počet souborů na svazku %VOLUME_ID% na %HOSTNAME% dosahuje limitu. Počet snížíte odstraněním některých souborů.
+
+Maximální počet souborů: %TOTAL_INODE%
+Počet zbývajících souborů: %FREE_INODE% (%USAGE%%)
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[VpncReconnectFail]
+Category: System
+Title: Opakované vytáčení klientského zařízení VPN se nezdařilo
+Subject: Opakované připojení profilu VPN [%VPN_CLIENT%] na zařízení %HOSTNAME% se nezdařilo
+
+Vážený uživateli,
+
+opakované připojení profilu VPN [%VPN_CLIENT%] na zařízení %HOSTNAME% se po odpojení nezdařilo. Zkontrolujte připojení mezi klientským zařízením VPN a serverem.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[aha_reboot_active]
+Category: AHA,Important
+Title: Restartovat aktivní server
+Subject: Aktivní server clusteru high-availability %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) byl restartován
+
+Vážený uživateli,
+
+správce restartoval aktivní server clusteru high-availability %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%).
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[aha_reboot_active_fail]
+Category: AHA,Important
+Title: Aktivní server se nepodařilo restartovat
+Subject: Nepodařilo se restartovat aktivní server clusteru high-availability %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%)
+
+Vážený uživateli,
+
+aktivní server clusteru high-availability %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) se nepodařilo restartovat. Podrobnější údaje naleznete na stránce protokolu aplikace High Availability Manager.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[aha_reboot_passive]
+Category: AHA
+Title: Restartovat pasivní server
+Subject: pasivní server clusteru high-availability %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) byl restartován.
+
+Vážený uživateli,
+
+uživatel restartoval pasivní server clusteru high-availability %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%).
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[aha_reboot_passive_fail]
+Category: AHA
+Title: Pasivní server se nepodařilo restartovat.
+Subject: Nepodařilo se restartovat pasivní server clusteru high-availability %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%)
+
+Vážený uživateli,
+
+pasivní server clusteru high-availability %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) se nepodařilo restartovat. Podrobnější údaje naleznete na stránce protokolu aplikace High Availability Manager.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[aha_reboot_remote]
+Category: AHA
+Title: Restartování neznámého serveru
+Subject: Neznámý server připojený ke clusteru high-availability %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) byl restartován
+
+Vážený uživateli,
+
+uživatel restartoval neznámý server připojený ke clusteru high-availability %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%).
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[aha_reboot_remote_fail]
+Category: AHA
+Title: Neznámý server se nepodařilo restartovat
+Subject: Nepodařilo se restartovat neznámý server připojený ke clusteru high-availability %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%)
+
+Vážený uživateli,
+
+neznámý server připojený ke clusteru high-availability %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) se nepodařilo restartovat. Podrobnější údaje naleznete na stránce protokolu aplikace High Availability Manager.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[aha_recover_remote]
+Category: AHA,Important
+Title: Přidání nového serveru
+Subject: Přidávání nového serveru do clusteru high-availability
+
+Vážený uživateli,
+
+správce zahájil obnovení neznámého serveru. Tento server se aktuálně připojuje ke clusteru high-availability %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) jako pasivní server. Podrobnější údaje naleznete na stránce protokolu aplikace High Availability Manager.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[aha_recover_remote_fail]
+Category: AHA,Important
+Title: Nový server se nepodařilo přidat
+Subject: Nepodařilo se přidat nový server do clusteru high-availability
+
+Vážený uživateli,
+
+nastala chyba při připojení neznámého serveru do clusteru high-availability %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) jako pasivní server. Podrobnější údaje naleznete na stránce protokolu aplikace High Availability Manager.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[aha_shutdown]
+Category: AHA,Important
+Title: Vypnutí clusteru high-availability
+Subject: Cluster high-availability %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) byl vypnut
+
+Vážený uživateli,
+
+uživatel vypnul cluster high-availability %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%).
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[aha_shutdown_active]
+Category: AHA,Important
+Title: Vypnutí aktivního serveru
+Subject: Aktivní server clusteru high-availability %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) byl vypnut
+
+Vážený uživateli,
+
+správce vypnul aktivní server clusteru high-availability %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%).
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[aha_shutdown_active_fail]
+Category: AHA,Important
+Title: Nepodařilo se vypnout aktivní server
+Subject: Nepodařilo se vypnout aktivní server clusteru high-availability %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%)
+
+Vážený uživateli,
+
+aktivní server clusteru high-availability %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) se nepodařilo vypnout. Podrobnější údaje naleznete na stránce protokolu aplikace High Availability Manager.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[aha_shutdown_fail]
+Category: AHA,Important
+Title: Nepodařilo se vypnout cluster high-availability
+Subject: Nepodařilo se vypnout cluster high-availability %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%)
+
+Vážený uživateli,
+
+cluster high-availability %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) se nepodařilo vypnout. Podrobnější údaje naleznete na stránce protokolu aplikace High Availability Manager.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[aha_shutdown_passive]
+Category: AHA,Important
+Title: Vypnutí pasivního serveru
+Subject: Pasivní server clusteru high-availability %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) byl vypnut
+
+Vážený uživateli,
+
+správce vypnul pasivní server clusteru high-availability %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%).
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[aha_shutdown_passive_fail]
+Category: AHA,Important
+Title: Pasivní server se nepodařilo vypnout
+Subject: Nepodařilo se vypnout pasivní server clusteru high-availability %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%)
+
+Vážený uživateli,
+
+pasivní server clusteru high-availability %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) se nepodařilo vypnout. Podrobnější údaje naleznete na stránce protokolu aplikace High Availability Manager.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[aha_shutdown_remote]
+Category: AHA
+Title: Vypnutí neznámého serveru
+Subject: Neznámý server připojený ke clusteru high-availability %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) byl vypnut.
+
+Vážený uživateli,
+
+uživatel vypnul neznámý server připojený ke clusteru high-availability %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%).
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[aha_shutdown_remote_fail]
+Category: AHA,Important
+Title: Neznámý server se nepodařilo vypnout
+Subject: Nepodařilo se vypnout neznámý server připojený ke clusteru high-availability %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%)
+
+Vážený uživateli,
+
+neznámý server připojený ke clusteru high-availability %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) se nepodařilo vypnout. Podrobnější údaje naleznete na stránce protokolu aplikace High Availability Manager.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[aha_switchover]
+Category: AHA,Important
+Title: Přepnutí clusteru high-availability
+Subject: Služby clusteru high-availability %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) jsou přepnuty do %HA_REMOTE_HOST_SN%
+
+Vážený uživateli,
+
+systém zahájil přepnutí clusteru high-availability %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%). Služby budou přepnuty do %HA_REMOTE_HOST_SN%. Podrobnější údaje naleznete na stránce protokolu aplikace High Availability Manager.
+
+Důvod: %HA_FAILOVER_REASON%
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[aha_switchover_fail]
+Category: AHA,Important
+Title: Nepodařilo se provést přepnutí clusteru high-availability
+Subject: Služby clusteru high-availability %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) se nepodařilo přepnout do %HA_REMOTE_HOST_SN%
+
+Vážený uživateli,
+
+systém se pokusil o provedení přepnutí v clusteru high-availability %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%). Služby se však nepodařilo přepnout do pasivního serveru (SN: %HA_REMOTE_HOST_SN%). Podrobnější údaje naleznete na stránce protokolu aplikace High Availability Manager.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[aha_takeover]
+Category: AHA,Important
+Title: Převzetí clusteru high-availability při selhání
+Subject: Byly zjištěny chyby v clusteru high-availability %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%)
+
+Vážený uživateli,
+
+v clusteru high-availability byly zjištěny chyby %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%). Služby budou přepnuty na pasivní server. Podrobnější údaje naleznete na stránce protokolu aplikace High Availability Manager.
+
+Chyba: %HA_FAILOVER_REASON%
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[aha_upgrade_fail]
+Category: AHA,Important
+Title: Nepodařilo se upgradovat cluster high-availability
+Subject: Nepodařilo se upgradovat cluster high-availability %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%)
+
+Vážený uživateli,
+
+cluster high-availability %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) se nepodařilo upgradovat. Podrobnější údaje naleznete na stránce protokolu aplikace High Availability Manager.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[aha_upgrade_passive_fail]
+Category: AHA,Important
+Title: Pasivní server se nepodařilo upgradovat
+Subject: Nepodařilo se upgradovat pasivní server clusteru high-availability %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%)
+
+Vážený uživateli,
+
+pasivní server clusteru high-availability %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) se nepodařilo upgradovat. Podrobnější údaje naleznete na stránce protokolu aplikace High Availability Manager.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[aha_welcome]
+Category: AHA
+Title: Cluster high-availability je spuštěn
+Subject: Cluster high-availability %HOSTNAME% nyní poskytuje služby na %HA_LOCAL_HOST_SN%
+
+Vážený uživateli,
+
+služby clusteru high-availability %HOSTNAME% jsou nyní poskytovány na %HA_LOCAL_HOST_SN%. Podrobnější údaje naleznete na stránce protokolu aplikace High Availability Manager.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[disk_health_monthly_report]
+Subject: Měsíční sestava o stavu disků na zařízení %HOSTNAME%
+
+Vážený uživateli,
+
+podívejte se na následující měsíční sestavu o stavu disků na zařízení %HOSTNAME%. Stav jednotlivých disků je možné zkontrolovat v nabídce Správce úložiště > HDD/SSD > Informace o stavu.
+
+%CONTENT%
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[eSynoscheduler_complete_task]
+Subject: Plánovač úloh dokončil spuštěnou úlohu
+
+Vážený uživateli,
+
+plánovač úloh dokončil spuštěnou úlohu.
+
+Úloha: %TASK%
+Počáteční čas: %START_TIME%
+Koncový čas: %END_TIME%
+Aktuální stav: %EXIT_CODE%
+Standardní výstup/chyba:
+%OUT_PUT%
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[ext4_fs_err]
+Category: System,Important
+Title: Chyba systému souborů
+Subject: Na svazku %HOSTNAME% byla zjištěna chyba systému souborů
+
+Vážený uživateli,
+
+na svazku %VOLUME_ID% byla zjištěna chyba systému souborů. Přejděte do Správce úložiště a co nejdříve ji opravte.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[file_cksum_err]
+Category: System,Important
+Title: Chyba kontrolního součtu
+Subject: Chyba kontrolního součtu na hostiteli %HOSTNAME%. Další podrobnosti se nacházejí v Centru protokolů.
+
+Vážený uživateli,
+
+v souboru %FILE_PATH% byla zjištěna chyba kontrolního účtu. K opravě souboru použijte dříve zálohovanou verzi.
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[iSCSILunScheduleSnapshotFail]
+Category: Storage,Important
+Title: Pořízení snímku jednotky iSCSI LUN se nezdařilo
+Subject: Pořízení snímku jednotky pro jednotku iSCSI LUN %LUNNAME% na hostiteli %HOSTNAME% se nezdařilo
+
+Vážený uživateli,
+
+pořízení snímku jednotky iSCSI LUN na hostiteli %HOSTNAME% se nezdařilo. Podrobné informace naleznete v části Správce úložiště.
+
+LUN: %LUNNAME%
+
+S pozdravem
+%COMPANY_NAME%
+

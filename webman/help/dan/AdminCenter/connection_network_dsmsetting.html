@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>DSM-indstillinger</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script> <script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2><a name="https"></a>DSM-indstillinger</h2>
+
+<p>Under <strong>Kontrolpanel</strong> > <strong>Netværk</strong> > <strong>DSM-indstillinger</strong> kan du ændre det portnummer, som klienterne bruger til at få adgang til din DiskStation.</p>
+
+<h4>Sådan ændrer du standardportnummeret:</h4>
+<p>Både HTTP- og HTTPS-forbindelser er altid aktiverede i DSM. Standard HTTP-porten er 5000 og [standard] HTTPS-porten er 5001.</p>
+<ol>
+<li>Indtast portnummeret i feltet <b>HTTP</b> eller <b>HTTPS</b>.</li>
+<li>Klik på <b>Anvend</b>.</li>
+</ol>
+
+<h4>Sådan omdirigerer du HTTP- til HTTPS-forbindelser:</h4>
+<p>Du kan omdirigere klienter til HTTPS-porten, når de forsøger at få adgang til din DiskStation via HTTP-porten.</p>
+<ol>
+<li>Vælg <b>Omdiriger automatisk HTTP-forbindelser til HTTPS (bortset fra Web Station og Photo Station)</b>.</li>
+<li>
+Klik på <b>Anvend</b>.
+</li>
+</ol>
+
+<div class="section">
+<h4>Porte, der bruges til HTTPS-forbindelse:</h4>
+<ul>
+  <li><b>DSM</b>: Standardportnummeret er 5001, så du sikkert kan få adgang til DSM ved at indtaste følgende adresse: https://server-hostname:5001/</li>
+<li><b>Web Station og Photo Station</b>: Standardportnummeret er 443, så du sikkert kan få adgang til Web Station og Photo Station ved at indtaste følgende adresse: https://server-hostname/</li>
+</ul>
+
+</div>
+
+<h4>Sådan finder du DiskStation på netværket:</h4>
+
+<p>Du kan finde din DiskStation via Windows-netværksregistrering eller Bonjour-tjenesteopdagelse.</p>
+<ol>
+<li>Vælg entjeneste for at søge efter din DiskStation på netværket:
+
+  <ul>
+<li><strong>Aktiver Windows netværksregistrering</strong></li>
+<li><strong>Aktiver Bonjour-tjenesteopdagelse</strong></li>
+</ul>
+</li>
+
+<li>
+Klik på <b>Anvend</b>.
+</li>
+</ol>
+
+
+
+<h2>Domæne</h2>
+<p>Under <strong>Domæne</strong> kan du angive et tilpasset domænenavn til adgang til DiskStation.
+</p>
+<h4>Sådan aktiverer du tilpasset domæne:</h4>
+<ol>
+<li>
+Marker <b>Aktiver tilpasset domæne</b>.
+</li>
+<li>
+Angiv et ansøgt domænenavn til din DiskStation.
+</li>
+<li>
+Du kan også markere <b>Aktiver HSTS</b> for at gennemtvinge HTTPS-krypterede forbindelser på dette domæne.
+</li>
+<li>
+Klik på <b>Anvend</b>.
+</li>
+</ol>
+
+<div class="section">
+<h4>Bemærk:</h4>
+<ul>
+<li>Hvert domænenavn kan kun bruges til ét særskilt program på din DiskStation.</li>
+<li>Hvis domænenavnet ikke overstiger 15 tegn og overholder <a href="https://support.microsoft.com/kb/909264" target="_blank">Navngivningskonventionerne for NetBIOS</a>, vil systemet registrere og udsende domænenavnet (f.eks. MyDSM) automatisk. Windows-brugere kan få adgang til DSM-skrivebordet på det samme netværk med en lignende URL: <code>http://MyDSM</code> or <code>https://MyDSM</code></li>
+<li>Når du får adgang til programmer via URL'er, der bruger domænenavne, skal du gå gennem standard HTTP-porten (80) eller standard HTTPS-porten (443).</li>
+</ul>
+
+</div>
+
+</body>
+</html>
+

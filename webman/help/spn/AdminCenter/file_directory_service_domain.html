@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Win/Mac/NFS</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Dominio</h2>
+<p>Su DiskStation puede unirse a un dominio de Windows. Tras unirse, los usuarios del dominio pueden conectarse a DiskStation con su cuenta de dominio y contraseña, que les permiten acceder a los archivos y utilizar aplicaciones de DSM sin necesidad de tener que recordar otro nombre de usuario y contraseña.</p>
+<h4>Para unirse a un dominio:</h4>
+<ol>
+<li>Vaya a <strong> Panel de control</strong> ><strong>Servicio de directorio</strong> > <strong>Dominio</strong>.</li>
+<li>Marque la casilla <strong>Unirse a dominio</strong>.</li>
+<li>Introduzca el nombre de dominio y especifique el servidor DNS en los campos correspondientes.</li>
+<li>Si fuera necesario, marque la casilla <b>Opciones avanzadas de dominio</b>. (Para más información, consulte más abajo).</li>
+<li>Haga clic en <b>Aplicar</b>.</li>
+<li>En la ventana emergente, introduzca el nombre del usuario y la contraseña del administrador del servidor del dominio.</li>
+<li>Haga clic en <b>OK</b>.</li>
+</ol>
+<div class="section">
+<h4>DNS Server</h4>
+<p>Se recomienda que especifique un servidor DNS para ayudar a DiskStation a buscar el dominio. Sin embargo, si el dominio no está registrado en el servidor DNS, es posible que falle el procedimiento de unirse al dominio.</p>
+<h4>Tipo de servidor de dominio</h4>
+<p>Este campo muestra el tipo de dominio cuando su DiskStation se une a un dominio. El tipo de dominio será "Dominio AD".</p>
+<h4>Modo de administración</h4>
+<p>Esta opción determinará la manera de administrar los privilegios de usuarios y grupos dominio. </p>
+<ul>
+<li><b>Dominio de confianza</b>: puede administrar usuarios y grupos en el dominio unido, además de en los dominios de confianza. Los usuarios y grupos se pueden filtrar utilizando la lista desplegable de dominios.</li>
+<li><b>Dominio único con UO</b>: en este modo solo se mostrarán los usuarios y grupos en el dominio al que se haya unido. Este modo le permite filtrar usuarios y grupos de dominio con la lista desplegable de la UO (unidad organizativa).</li>
+</ul>
+<h4>Opciones avanzadas de dominio</h4>
+<p>En la mayoría de los casos, no es necesario rellenar ninguna de las opciones de dominio avanzadas. Las opciones avanzadas de dominio únicamente se necesitan para determinados entornos de dominio. </p>
+<ul>
+<li><b>DC IP/FQDN</b>: especifique una dirección IP de DC (controlador de dominio) o FQDN para que DiskStation intente comunicarse con ella. Si hay más de una dirección IP o FQDN, inserte una coma (,) entre ellas. Si lo desea, añada un asterisco (*) después de la última dirección IP de DC o FQDN y DiskStation intentará comunicarse con el otro DC cuando fallen todos los que haya especificado. Tendrá que añadir una coma entre el asterisco y la última dirección IP o FQDN.</li>
+<li><b>Nombre NetBIOS de dominio</b>: especifique el nombre de NetBIOS del dominio.</li>
+<li><b>FQDN de dominio (nombre DNS)</b>: especifique el FQDN (nombre DNS) del dominio.</li>
+<li><b>Registrar interfaz DNS:</b> al unirse a un dominio, la NIC (tarjeta interfaz de red) especificada aquí se registrará en el servidor DNS. Tenga en cuenta que si el nombre de host de DiskStation incluye un guion bajo (_), el registro no se completará porque los guiones bajos (_) no se pueden utilizar en DNS.</li>
+<li><b>Actualizar la lista de usuarios/grupos</b>: especifique con qué frecuencia actualiza automáticamente su DiskStation el nombre de usuario/la lista de grupos. Puede personalizar el periodo de tiempo para realizar actualizaciones diaria, semanal o mensualmente. Además, las listas de grupo/usuarios del dominio se pueden actualizar manualmente si va a la pestaña <strong>Usuario del dominio</strong> y hace clic en <strong>Actualizar todos los dominios</strong>. Tenga en cuenta que las actualizaciones automáticas afectarán a la hibernación del sistema.</li>
+</ul>
+
+<h4>Unirse a un controlador de dominio de solo lectura</h4>
+<p>Para unir su DiskStation a un controlador de dominio de solo lectura (RODC), deberá especificar el "nombre completo del equipo" (FQDN) del controlador de dominio de lectura escritura (RWDC) en el campo <strong>DC IP/FQDN</strong>. El nombre completo del equipo se debe introducir con el siguiente formato: <strong>Nombredelequipo.Dominio</strong>, por ejemplo "ad01.synology.com".</p>
+
+</div>
+
+
+<div class="section">
+<h4>Nota:</h4>
+<ul>
+<li>Si su nombre de usuario del dominio incluye “%” o “$”, es posible que no pueda acceder a su carpeta home. Solicite un nuevo nombre de usuario al administrador de su dominio.</li>
+<li>Los grupos de dominios <strong>Administradores de dominio</strong> y <strong>Administradores de empresa</strong> se añadirán automáticamente al grupo local <strong>administrators</strong>. Por tanto, los usuarios del dominio en estos grupos tendrán privilegios administrativos en DiskStation, incluido el acceso a servicios de archivos como CIFS/FTP/AFP/WebDAV y otras aplicaciones de DSM.</li>
+<li>También puede configurar privilegios de acceso para que los usuarios del dominio puedan compartir las carpetas compartidas de DiskStation. Consulte <a href="file_directory_service_user_group.html">aquí</a> para obtener más información.</li>
+</ul>
+</div>
+
+
+
+<h3>Opciones de dominio</h3>
+<p>Esta sección incluye las siguientes opciones adicionales de dominio.</p>
+<ul>
+<li><b>DiskStation sincronizará con un servidor NTP cada vez que un usuario de dominio inicie sesión:</b> habilitar esta opción forzará la sincronización de tiempo entre DiskStation y el servidor NTP.</li>
+<li><b>Habilitar el inicio de sesión en los servidores:</b> si el cliente ha habilitado el inicio de sesión de cliente, el inicio de sesión en los servidores también debe habilitarse en su DiskStation para que los usuarios puedan utilizar los servicios del dominio con normalidad.</li>
+<li><b>Conseguir listas de usuarios/grupos en modo compatible con NT4:</b> habilitar esta opción permite al sistema obtener las listas de usuarios/grupos utilizando el modo NT4 RPC. Esta opción se puede habilitar si ciertas listas de usuarios/grupos del dominio no se pueden obtener con la configuración predeterminada.</li>
+<li><b> Deshabilitar los permisos de los Administradores de dominio y de los Administradores de empresa:</b> un usuario con permisos de administrador puede tener control absoluto de DiskStation y su archivos. Habilitar esta opción le permitirá restringir los permisos de Administradores de dominio y Administradores de empresa, para que sean iguales a los de los usuarios normales, heredando así todos los permisos de archivos/carpetas de los usuarios normales.</li>
+<li><strong>Enumerar los niveles de grupos anidados:</strong> especifique el número de miembros de grupo de dominio anidados que se pueden enumerar.</li>
+</ul>
+
+</body>
+</html>

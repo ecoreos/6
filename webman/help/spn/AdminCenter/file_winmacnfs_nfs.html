@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Win/Mac/NFS</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+
+
+
+<h2>Servicio NFS</h2>
+<p>El servicio NFS permite a los clientes de Linux acceder al dispositivo DiskStation.</p>
+<h4>Para habilitar el servicio NFS:</h4>
+<ol>
+<li>Vaya a <strong>Panel de control</strong> > <strong>Servicios de archivos</strong> > <strong>Win/Mac/NFS</strong> y marque <b>Habilitar NFS</b>.</li>
+<li>Haga clic en <b>Aplicar</b>.</li>
+</ol>
+
+
+<div class="section">
+  <h4>Nota:</h4>
+<ul>
+<li> DiskStation admite actualmente NFSv2, NFSv3 y NFSv4.</li>
+<li>Durante el montaje, los parámetros <strong>-o vers=2</strong>, <strong>-o vers=3</strong> o <strong>-o vers=4</strong> se pueden añadir al comando de montaje a fin de especificar qué versión de NFS se debería utilizar.</li>
+</ul>
+</div>
+
+
+<h4>Para configurar los privilegios de acceso de los clientes de Linux a carpetas compartidas:</h4>
+<p>Vaya al <b>Panel de control</b> > <b>Carpeta compartida</b>. Seleccione una carpeta compartida y haga clic en <strong>Editar</strong> para administrar las reglas de NFS y regular los derechos de acceso de clientes Linux a esta carpeta compartida.</p>
+
+
+<h3>Configurar la compatibilidad con NFSv4</h3>
+<p>Puede determinar si su servidor NFS es compatible con NFSv4. Cuando se habilita esta opción, el servidor NFS será compatible con NFSv2, NFSv3 y NFSv4; de lo contrario, solo NFSv2 y NFSv3 serán compatibles.</p>
+
+<h4>Para habilitar la compatibilidad con NFSv4:</h4>
+<ol>
+<li>Marque <b>Habilitar la compatibilidad NFSv4</b>.</li>
+<li>En el campo de <b>Dominio NFSv4</b>, introduzca el nombre del dominio NFSv4 que desea utilizar. Este campo es opcional y se puede dejar en blanco.</li>
+<li>Haga clic en <b>Aplicar</b>.</li>
+</ol>
+
+<div class="section">
+<h4>Nota:</h4>
+<p>Cuando utilice NFSv4 para montar la carpeta compartida, observe lo siguiente. De lo contrario, se producirán errores en las operaciones de archivos asociadas al nombre de usuario.</p>
+<ul>
+<li>El cliente NFS debe habilitar idmapd.</li>
+<li>La configuración del dominio NFSv4 en el archivo idmapd.conf en su cliente NFS debe ser coherente con el campo <b>Dominio NFSv4</b> en DiskStation.</li>
+</ul>
+
+</div>
+
+<h3>Configuración avanzada</h3>
+
+<h4>Aplicar permisos UNIX predeterminados</h4>
+<p> Cuando se marca <strong>Aplicar permisos UNIX predeterminados</strong>, se aplican los permisos UNIX predeterminados configurados en el cliente Linux en lugar de los permisos Windows ACL al cargar o crear archivos y carpetas. Los permisos aplicados son los mismos que los aplicados por el comando UNIX <strong>umask</strong>. Cuando se habilita esta opción, los permisos UNIX son 644 para archivos y 755 para carpetas. Cuando se deshabilita esta opción, los permisos UNIX son 666 para archivos y 777 para carpetas. El valor predeterminado de umask es 022.</p><div class="section">
+<h4>Nota:</h4>
+<ul>
+  <li>Para las carpetas compartidas con Windows ACL habilitadas (todos los recursos compartidos excepto "photo" y los recursos compartidos en discos externos), ejecute el comando <strong>chmod</strong> en el cliente Linux o FTP para cambiar los tipos de permisos de carpeta y de archivo de Windows ACL a UNIX.</li>
+  <li>Si se habilita esta opción se pueden provocar problemas de permisos que no mantienen la consistencia entre protocolos diferentes. Para evitar inconsistencias, sugerimos no habilitar esta opción.</li>
+</ul>
+</div>
+
+<h4>Puerto personalizado</h4>
+<p>Puede personalizar números de puerto para los servicios statd y nlockmgr.</p>
+
+<ol>
+<li>Seleccione <strong>Puertos personalizados</strong>.</li>
+<li>Introduzca los números de puertos en <strong>puerto statd </strong>y<strong> puerto nlockmgr</strong>.</li>
+<li>Haga clic en <b>Aplicar</b>.</li>
+</ol>
+
+<div class="section">
+<h4>Nota:</h4>
+<ul>
+<li>Si desea utilizar los servicios NFSv3, vaya a <strong>Panel de control</strong> > <strong>Seguridad</strong> > <strong>Cortafuegos</strong> y cree una regla de cortafuegos que habilite "Servidor de archivos Mac/Linux" de la lista de aplicaciones incorporadas.</li>
+</ul>
+</div>
+<h4>Configurar el tamaño del paquete de lectura/escritura</h4>
+<p>Cuando el tamaño de paquete de lectura/escritura no se puede configurar en el cliente NFS, puede especificar el valor predeterminado en este campo.</p>
+
+<ol>
+<li>Seleccione el tamaño de paquete deseado de los campos <strong>Leer el tamaño de paquete</strong> y <strong>Escribir el tamaño de paquete</strong>.</li>
+<li>Haga clic en <b>Aplicar</b>.</li>
+<li>Volver a montar el recurso compartido.</li>
+</ol>
+
+<div class="section">
+<h4>Nota:</h4>
+<ul>
+<li>Tras cambiar el tamaño del paquete de lectura/escritura, la carpeta compartida se debe volver a montar antes de que la nueva configuración pueda aplicarse.</li>
+<li>Estas configuraciones sólo afectarán a clientes NFS que se conecten a través de UDP (Protocolo de datagrama de usuario).</li>
+</ul>
+</div>
+
+
+
+
+<h3>Configuración Kerberos*</h3>
+<p>Kerberos es un protocolo de autenticación de redes. Permite a clientes y servidores comunicarse a través de una red no segura para autenticar y demostrar sus identidades los unos a los otros de manera segura. DiskStation proporciona opciones para importar una clave Kerberos existente. Cuando se haya importado correctamente, los clientes NFS podrán utilizar el protocolo de autenticación Kerberos para conectarse a DiskStation.</p>
+
+<h4> Para importar una clave Kerberos: </h4>
+<ol>
+<li>Hacer clic en <strong>Configuración Kerberos</strong>.</li>
+<li>Haga clic en el botón <b>Importar</b>.</li>
+<li>Elija la clave Kerberos que desea importar.</li>
+<li>Haga clic en <b>OK</b>.</li>
+</ol>
+
+<h3><a name="idmap"></a>Asignación de ID Kerberos</h3>
+<p>Puede asignar nombres de principales individuales de Kerberos a las cuentas de usuarios DSM locales.</p>
+<h4> Para asignar nombres de principales de Kerberos y cuentas de usuarios locales: </h4>
+<ol>
+<li>Hacer clic en <strong>Configuración Kerberos</strong>.</li>
+<li>Vaya a la pestaña <strong>Asignación de ID</strong>.</li>
+<li> Haga clic en el botón <b>Agregar</b>. Seleccione una de las siguientes opciones.</li>
+<ul>
+<li><strong>Asignación de ID:</strong> Introduzca el nombre de principal de Kerberos y la cuenta de usuario local a la que lo desea asignar.</li>
+<li><strong>Lista de asignaciones sugerida:</strong> Esta opción muestra una lista de opciones de asignación sugeridas para nombres de principales de Kerberos/usuarios locales generadas por el sistema.</li>
+</ul>
+</ol>
+<div class="section disable-eds14">
+  <h4> Nota: </h4>
+<ul>
+<li>Si desea asignar un cliente NFS que se conecta a través de Kerberos a una cuenta de usuario de dominio/LDAP existente, asegúrese de haberse unido al servicio de directorio. Además, el servidor de directorio debe tener un atributo que incluya el nombre principal de Kerberos correspondiente.</li>
+<ul>
+<li><strong>Usuario del dominio:</strong> El formato del atributo correspondiente debe ser <strong>userPrincipalName</strong>.</li>
+<li><strong>Usuario de LDAP:</strong> El formato del atributo correspondiente debe ser <strong>GSSAuthName</strong>.</li>
+</ul>
+<li>Si el usuario no se puede asignar correctamente a un usuario local o a un usuario de dominio/LDAP, entonces se debe asignar a "guest."<li>La prioridad de las asignaciones es la siguiente: Usuario local > Usuario de Dominio/LDAP > Guest. </li>
+<li>Si desea modificar los permisos de acceso de clientes NFS, utilice la Lista de control de acceso de Windows (ACL). Las opciones de privilegios situadas en <strong>Panel de control</strong> > <strong>Usuario</strong> no son relevantes para clientes NFS.</li>
+</ul>
+</div>
+<p><br>____<br> * Sólo disponible en ciertos modelos.</p>
+
+
+
+</body>
+</html>

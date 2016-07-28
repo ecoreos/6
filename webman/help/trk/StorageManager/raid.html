@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+	<h2>RAID Group*</h2>
+	<p>DiskStation ile, çok sayıda sabit diski RAID Group adı verilen tek bir depolama ünitesine kombine edebilirsiniz. Birimler veya iSCSI LUN'lar (Blok-Seviyesi) RAID Group'ların üstünde oluşturulabilir. Bölümler veya iSCSI LUN'lar bir RAID Group yerleştirilebilir alana sahipse genişletilebilir. Farklı RAID tipleri çeşitli düzeylerde veri koruması sunar. DiskStation sunucunuz tarafından desteklenen RAID tiplerinin genel bir listesi için lütfen <a href="general.html">Genel</a> öğesine gidin.
+</p>
+
+<h4>Bir RAID Group oluşturmak için:</h4>
+	<ol>
+		<li><b>Oluştur</b> düğmesine tıklayın.</li>
+		<li>Aşağıdaki seçeneklerden birini seçin: 
+	  <ul>
+				<li>Tek Birim veya iSCSI LUN (Blok-Seviyesi) için RAID Group: Daha iyi performans sağlar.</li>
+				<li>Çok Sayıda Bölüm veya iSCSI LUN’lar (Blok-Seviyesi) için RAID Group: Daha iyi yönetim esnekliği sağlar.</li>
+			</ul>
+		</li>
+		<li>Süreci tamamlamak için sihirbazı izleyin.</li>
+	</ol>
+<div class="section">
+<h4>Not: </h4>
+<ul>
+<li>Bir RAID Group aynı sabit disk tipindeki sabit disklerden oluşmalıdır. RAID oluşturmak için ne SSD ve SAS sabit diskleri ne de SSD ve HDD sabit diskleri eş zamanlı olarak kullanamazsınız.</li>
+<li><b>RAID 5</b> ve <b>RAID 6</b> kullanan Çok Sayıda Birim veya iSCS LUN (Blok-Seviyesi) için bir RAID Group çok sayıda <b>RAID Dizisi</b> içerebilir. Aynı RAID Group'a ait olan her RAID Dizisi aynı RAID tipinde olacaktır (RAID 5 veya RAID 6 gibi). Her RAID Dizisi için azami disk sayısı 6, 12 veya 24 olabilir. RAID Group oluştururken azami disk sayısını belirleyebilirsiniz ve sayı daha sonra değiştirilemez. Bir RAID Dizisine azami disk sayısı atandığında, RAID Group'a eklenen sonraki disk yeni bir RAID Dizisine atanabilir. Yeni RAID Dizisi ilgili RAID tipi için gerekli minimum disk sayısını içermelidir (RAID 5 için üç disk ve RAID 6 için dört disk gibi).
+</li>
+<li>Belirli bir sabit disk ile bir RAID Group oluşturmak istiyor ancak disk <b>RAID Group Oluşturma Sihirbazı</b>'nda göremiyorsanız, lütfen sabit diskin durumunu <b>HDD Yönetimi</b>'nde kontrol edin.</li>
+</ul>
+</div>
+
+	<h4>Bir RAID Group'u kaldırmak için:</h4>
+	<ol>
+		<li>Kaldırmak istediğiniz RAID Group'u seçin.</li>
+		<li><b>Kaldır</b> düğmesine tıklayın ve sihirbazı izleyerek süreci tamamlayın.</li>
+	</ol>
+
+<div class="section">
+<h4>Not: </h4>
+<ul>
+<li>RAID Group'u kaldırdığınızda RAID Group'daki birimler ve iSCSI LUN'lar silinecektir. Hiçbir önemli verinin silinmediğinden emin olun.</li>
+</ul>
+</div>
+
+
+	<h4>Bir RAID Group'u onarmak için:</h4>
+	<p>RAID Group aşağıdaki tiplerden birisi ise surumu <b>Kapasitesi Düşmüş</b> olan bir RAID Group onarılabilir: RAID 1, RAID 5, RAID 6 ve RAID 10. RAID Group üzerinde mevcut veriler silinmez.</p>
+	<p>RAID Group'unuzu onarmak için lütfen aşağıdaki adımları izleyin:</p>
+	<ol>
+		<li>DiskStation ürününüzü kapatın. (Modeliniz çalışırken değiştirmeyi destekliyorsa, bu adımı atlayabilirsiniz.)</li>
+		<li>RAID Group durumunda yer alan Disk Bilgisi içinde belirtilen şekilde arızalı sabit diski değiştirin.</li>
+		<li><b>Yönet</b>'e tıklayın.</li>
+		<li><b>Onar</b> seçimini yapın.</li>
+		<li>Süreci tamamlamak için sihirbazı izleyin.</li>
+        </ol>
+        
+<div class="section">
+<h4>Not:</h4>
+<ul>
+<li>Değiştirilecek sabit disk boyutu RAID Group içindeki en küçük diskin boyutuna eşit veya daha büyük olmalıdır.</li>
+<li>Değiştirilecek sabit diskin durumu "İlk Kullanıma Hazırlandı" veya "İlk Kullanıma Hazırlanmadı" olmalıdır.</li>
+</ul>
+</div>
+
+	<h4>Bir RAID Group'un RAID tipini değiştirmek</h4>
+	<p>Bir RAID Group'un RAID tipini değiştirmek için, DiskStation üzerinde kurulu kullanılabilir sabit diskler bulunmalıdır. Halihazırda aşağıdaki RAID değiştirme türleri desteklenmektedir:</p>
+	<ul>
+		<li>Basic'den RAID 1 veya RAID 5'e</li>
+		<li>RAID 1'den RAID 5'e</li>
+		<li>RAID 5'den RAID 6'e</li>
+      <li>RAID 1'e ikizlenmiş disk ekleme</li>
+	</ul>
+	<p>Lütfen aşağıdaki adımları izleyerek RAID Group'unuzun RAID tipini değiştirin:</p>
+	<ol>
+		<li>Değiştirmek istediğiniz RAID Group'u seçin.</li>
+		<li><b>Yönet</b>'e tıklayın.</li>
+		<li><b>RAID tipini değiştir</b> seçimini yapın.</li>
+		<li>Süreci tamamlamak için sihirbazı izleyin.</li>
+        </ol>
+<div class="section">
+<h4>Not: </h4>
+<ul>
+<li>RAID tipi değiştirilmeden önce bir RAID Group'un durumu <b>Normal</b> olmalıdır. Aksi taktirde veri kaybı gerçekleşir. RAID Group <b>Kapasitesi düşmüş</b> durumunda ise, lütfen ilk önce bunu onarın.</li>
+<li>Bir RAID Group'unun RAID tipini değiştirmek için, DiskStation'a yeterli sabit disk kurulmalı ve yeni diskin boyutu RAID Group içindeki en küçük diskten büyük olmalıdır.</li>
+<li>Yeni diskin durumu "İlk Kullanıma Hazırlandı" veya "İlk Kullanıma Hazırlanmadı" olmalıdır.</li>
+<li>Çok sayıda RAID Dizisine sahip bir RAID Group'un RAID tipi değiştirilemez.</li>
+</ul>
+</div>
+
+	<h4>Bir RAID Group'un boyutunu genişletmek için</h4>
+	<p>Mevcut sabit diskleri daha büyükleri ile değiştirerek ya da sabit diskler ekleyerek RAID Group'unuzun boyutunu genişletebilirsiniz.</p>
+
+<div class="section">
+<h4>Not: </h4>
+<ul>
+  <li>3 TB veya daha büyük disklerle bir RAID Group'u genişletmek için, RAID Group'unuzun DSM 3.0 veya sonrası kullanılarak oluşturulduğundan emin olun.
+</ul>
+</div>
+
+	<h4>Daha büyük boyuttaki mevcut sabit diskler ile değiştirerek bir RAID Group'u artırabilirsiniz:</h4>
+	<p>Mevcut sabit diskleri aşağıdaki RAID tiplerinden birinde daha büyük bir sabit disk ile değiştirerek bir RAID Group'u genişletebilirsiniz: RAID 1, RAID 5 ve RAID 6. İlişkili birimler veya tek birim için RAID Group üzerindeki iSCSI LUN veya iSCSI LUN otomatik olarak genişletilir.  Lütfen aşağıdaki adımları izleyin:</p>
+	<ol>
+    <li>DiskStation ürününüzü kapatın. Modeliniz çalışırken değiştirmeyi destekliyorsa, bu adımı atlayabilirsiniz.</li>
+		<li>Bir sabit diski daha büyük bir sabit disk ile değiştirin.</li>
+		<li>DiskStation ürününü açın ve RAID Group'u onarın.</li>
+		<li>Tüm sabit diskler daha büyüğü ile değiştirilinceye kadar 1'den 3'e kadar olan adımları tekrarlayın.</li>
+		<li>Sistem, RAID Group'u otomatik olarak genişletecektir.</li>
+	</ol>
+
+<div class="section">
+<h4>Not: </h4>
+<ul>
+<li>Storage Manager'in tüm hizmetleri genişletme sürecinde geçici olarak durdurulacaktır.</li> 
+<li>Sadece RAID Group <b>Normal</b> durumda iken sabit diski genişletebilirsiniz; aksi halde veri kaybına sebep olacaktır. RAID Group <b>Kapasitesi düşmüş</b> durumunda ise, lütfen ilk önce bunu onarın.</li>
+	</ul>
+</div>
+
+	<h4>Sabit diskler ilave ederek bir RAID Group'u genişletmek için:</h4>
+	<p>Bu işlev JBOD, RAID 5 ve RAID 6 türü RAID için geçerlidir. Bunu yapmak için:</p>
+	<ol>
+		<li>Genişletmek istediğiniz RAID Group'u seçin.</li>
+		<li><b>Yönet</b>'e tıklayın.</li>
+		<li><b>Disk Ekle</b> seçimini yapın.</li>
+		<li>Kurulumu tamamlamak için sihirbazı izleyin.</li>
+</ol>
+<div class="section">
+<h4>Not: </h4>
+<ul>
+		<li>RAID Group durumu <b>Normal</b> olmalıdır.</li>
+		<li>RAID 5 ve RAID 6 RAID Group türleri için, sabit disk boyutu RAID Group içindeki en küçük diskten daha büyük olmalıdır.</li>
+		<li>Seçilen sabit diskin durumu "İlk Kullanıma Hazırlandı" veya "İlk Kullanıma Hazırlanmadı" olmalıdır.</li>
+	</ul>
+    </div>
+
+	<h4>RAID Group tanımını düzenlemek için:</h4>
+	<ol>
+		<li>Düzenlemek istediğiniz RAID Group'u seçin.</li>
+		<li><b>Yönet</b>'e tıklayın.</li>
+		<li><b>Açıklama düzenle</b> öğesini seçin.</li>
+		<li>Açıklamayı düzenleyin ve sonucu kaydetmek için <b>TAMAM</b>'a tıklayın.</li>
+	</ol>
+	<h3>RAID Düzeltme</h3>
+    <p>RAID düzeltme, RAID Group'larını inceleyen ve belirlenen veri tutarsızlıklarını onaran bir veri bakımı işlevidir. Bu işlev, RAID 5 ya da RAID 6 uygulayan RAID Gruplarıyla kullanılabilir. </p>
+    <p>Veri tutarlılığını korumak ve disk hatası durumunda verilerin kaybedilmesini önlemek için düzenli olarak RAID düzeltme gerçekleştirilmesini öneririz.</p>
+    <h4>RAID düzeltme gerçekleştirmek için:</h4>
+    <ol>
+      <li>Üzerinde RAID düzeltme gerçekleştirilecek RAID Grubunu seçin.</li>
+      <li><strong>Yönet</strong>'e tıklayın.</li>
+      <li><strong>RAID düzeltme</strong>'yi seçin.</li>
+    </ol>
+    <div class="section">
+      <h4>Not:</h4>
+      <ul>
+        <li>RAID düzeltme yalnızca RAID Grubunun durumu <strong>Normal</strong> olduğunda gerçekleştirilebilir.</li>
+        <li>Lütfen RAID düzeltme tamamlanmadan önce sistemi kapatmayın. Tamamlanmadan önce sistem kapatılırsa, RAID düzeltme baştan başlatılmalıdır.</li>
+      </ul>
+    </div>
+    
+<p>____<br />*Yalnızca bazı modellerde mevcuttur.</p>    
+</body>
+</html>

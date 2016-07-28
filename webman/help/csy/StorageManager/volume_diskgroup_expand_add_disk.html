@@ -1,0 +1,71 @@
+﻿ <!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Přidání pevného disku do svazku nebo diskové skupiny – Nápověda Synology DSM</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="This article walks you through the steps to add an additional hard drive to an existing volume or disk group on your DiskStation."><link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Přidání pevného disku pro rozšíření kapacity úložiště</h2>
+
+<p>Pokud v zařízení DiskStation existují prázdné sloty na pevné disky, můžete nainstalovat další pevné disky a přidat je do existujícího svazku nebo diskové skupiny. Tento článek popisuje rozšíření existujícího svazku nebo skupiny disků instalací dodatečných pevných disků.</p>
+
+<h3>Než začnete</h3>
+
+<p>Před zahájením zkontrolujte, jestli pevné disky, které chcete přidat, splňují následující požadavky na velikost:</p>
+<ul>
+  <li><strong>Pro SHR:</strong> Kapacita pevného disku, který chcete přidat, se musí rovnat nebo být větší než kapacita největšího pevného disku ve svazku nebo skupině disků, nebo se musí rovnat libovolnému z pevných disků ve svazku nebo skupině disků. Pokud se například váš svazek SHR skládá ze tří pevných disků o velikostech 2 TB, 1,5 TB a 1 TB, musí být kapacita nového pevného disku nejméně 2 TB nebo rovna 1,5 TB nebo 1 TB.</li>
+  <li><strong>Pro typy RAID 5 a RAID 6:</strong> Kapacita pevného disku, který chcete přidat, se musí rovnat nebo být vyšší než kapacita nejmenšího pevného disku ve svazku nebo skupině disků. Pokud se například váš svazek skládá ze tří pevných disků o velikostech 2 TB, 1,5 TB a 1 TB, musí být kapacita nového pevného disku nejméně 1 TB.</li>
+</ul>
+
+<div class="section">
+<h4>Kontrola stavu svazku</h4>
+
+<p>Ujistěte se, že stav vašeho svazku nebo skupiny disků je <strong>Normální</strong>. Pokud ne, musíte jej opravit.</p>
+</div>
+
+
+<h3>  Přidání pevného disku do svazku nebo diskové skupiny</h3>
+
+<p>Pevné disky lze přidávat do následujících typů RAID: </p>
+
+<ul>
+<li>Synology Hybrid RAID (SHR)</li>
+<li>JBOD</li>
+<li>RAID 5</li>
+<li>RAID 6</li>
+</ul>
+
+<div class="section">
+<h4>Poznámka:</h4>
+<p>U svazků SHR dochází k rozšíření kapacity pouze přidáváním pevných disků do svazku se dvěma či více pevnými disky.</p>
+</ul>
+</div>
+
+<h4>Přidání pevného disku do svazku nebo diskové skupiny:</h4>
+
+<ol>
+<li>Vypněte zařízení DiskStation. (Tento krok přeskočte, pokud vaše zařízení DiskStation podporuje výměnu disků za chodu.)</li>
+<li>Vložte nový disk do prázdného slotu pevného disku.</li>
+
+<div class="section">
+<h4>Poznámka:</h4>
+<p>Při instalaci pevného disku se řiďte pokyny uvedenými v <i>Rychlé instalační příručce</i> vašeho produktu Synology, abyste se nezranili nebo nepoškodili zařízení DiskStation.</p>
+</div>
+
+<li>Zapněte zařízení DiskStation.</li>
+<li>Přihlaste se do systému DSM pomocí účtu ze skupiny <strong>administrators</strong> .</li>
+<li>Otevřete <strong>Správce úložiště</strong>.</li><img src="about:blank" class="help_image"/><li>V této chvíli proveďte následující:</li>
+  <ul class="list_abc">
+    
+  <li>Pokud rozšiřujete jediný svazek, přejděte na kartu <strong>Svazek</strong>. Vyberte svazek, který chcete rozšířit. Klikněte na možnost <strong>Správa</strong> a pokračujte dalším krokem. </li><img src="about:blank" class="help_image"/><li>Pokud rozšiřujete diskovou skupinu, přejděte na kartu <strong>Disková skupina</strong>. Vyberte diskovou skupinu, kterou chcete rozšířit. Klikněte na možnost <strong>Správa</strong> a pokračujte dalším krokem.</li><img src="../../../online_img/dsm/StorageManager/volume_diskgroup_expand_add_disk/diskgroup_manage.png" class="help_image"/></ul>
+<li>Zvolte možnost <strong>Rozšířit svazek (nebo diskovou skupinu) přidáním pevných disků</strong>. Potom klikněte na možnost <strong>Další</strong>.</li><img src="about:blank" class="help_image"/><li>Vyberte pevné disky, kterými chcete svazek nebo diskovou skupinu rozšířit. Pevné disky můžete přidat zaškrtnutím příslušných polí. Potom klikněte na možnost <strong>Další</strong>.</li><img src="../../../online_img/dsm/StorageManager/volume_diskgroup_expand_add_disk/choose_disks.png" class="help_image"/><li>Dokončete postup podle pokynů v průvodci.</li>
+</ol>
+</body>
+</html>

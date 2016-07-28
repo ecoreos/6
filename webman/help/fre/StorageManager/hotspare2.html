@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+	<h2>Hot Spare</h2>
+	<p>Les disques de secours à chaud sont des disques durs en attente qui permettent de réparer un RAID Group dégradé en remplaçant automatiquement un disque défaillant. Il est possible d'affecter des disques remplaçables à chaud pour réparer tous les RAID Group de votre DiskStation. Un disque de secours à chaud ne peut réparer qu'un RAID Group qui répond aux critères suivants :
+</p>
+	<ul>
+  <li>Le RAID Group doit être un type de RAID avec protection des données (c.-à-d. RAID 1, RAID 5, RAID 6, RAID 10).</li>
+		<li>Le disque de secours à chaud doit être du même type de disque dur que les disques qui composent le RAID Group (c.-à-d. SATA, SAS).</li>
+		<li>La taille du disque de secours à chaud doit être égale ou supérieure à la taille du plus petit disque du RAID Group.</li>
+	</ul>
+
+	<h4>Pour gérer les disques à chaud :</h4>
+	<ol>
+		<li>Cliquez sur <b>Gérer.</b></li>
+		<li>Pour affecter un disque de secours à chaud, trouvez la section <b>Disques disponibles</b> sur le côté droit, et cochez la case à côté du disque que vous souhaitez affecter comme secours à chaud. Pour supprimer un disque de secours à chaud, décochez la même case. Cliquez sur <b>Appliquer</b> pour enregistrer les paramètres.</li>
+	</ol>
+	<p>
+<div class="section">
+<h4>Remarque :</h4> 
+<ul>
+<li>Quand un disque de secours à chaud répare un RAID Group dégradé, toutes les données sur disque de secours à chaud seront effacées. Avant d'affecter un disque hot spare, assurez-vous que le disque ne contient pas de données importantes.</li>
+<li>Un RAID assemblé par des disques durs ne sera pas automatiquement réparé par des disques SSD hot spare, et vice versa.</li>
+</ul>
+</div>
+
+<h4>Pour configurer les paramètres hot spare pour un group RAID :</h4>
+<ol>
+<li>Cliquez sur <b>Configurer</b>.</li>
+<li>Dans l'onglet <b>Cibles Hot Spare</b>, les groupes RAID qui peuvent être protégés par des disques hot spare sont répertoriés. Si vous décochez les cases, les groupes RAID correspondants ne sont plus automatiquement réparés par ces disques hot spare en cas de dégradation.</li>
+<li>Dans l'onglet <b>Hot Spare inter-périphériques</b>, vous pouvez autoriser des disques hot spare sur un périphérique pour réparer un RAID dégradé qui se trouve sur un périphérique différent.</li>
+<li>Cliquez sur <b>OK</b> pour enregistrer les paramètres.</li>
+</ol>
+
+</body>
+</html>

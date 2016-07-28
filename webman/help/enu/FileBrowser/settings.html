@@ -1,0 +1,196 @@
+
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Manage File Station Options - Synology DSM Help</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="Learn how to customize File Station settings related to file management, shared links, and security.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Manage File Station Settings</h2>
+<p>To manage File Station settings, open <strong>File Station</strong> and click the <b>Settings</b> button.</p>
+
+<h3>General</h3>
+<p>
+Here you can enable File Station logs to record the activities of all users. The user activities include <b>Create folder</b>, <b>Upload</b>, <b>Download</b>, <b>Delete</b>, <b>Rename</b>, <b>Move</b>, <b>Copy</b> and <b>Property set</b>.
+</p>
+<h4>To enable File Station log:</h4>
+<ol>
+<li>If you want to record the activities of all users, tick <b>Enable File Station log</b>.
+</li>
+<li>
+Click <b>OK</b>.
+</li>
+</ol>
+<h4>To see the File Station log:</h4>
+<ol>
+<li>
+Click <b>View Logs</b>, which will lead you to <strong>Log Center</strong>.</li>
+<li>
+Click <b>File Transfer</b> tab.
+</li>
+</ol>
+
+<h4>To automatically overwrite files with drag-and-drop uploading or keyboard 
+shortcuts:</h4>
+<p>Tick <strong>Always overwrite files when I drag and drop them onto Web browser or paste with keyboard shortcuts</strong> if you want to automatically overwrite files with the same name when dragging and dropping files from your computer desktop onto web browser, or pasting files with keyboard shortcuts within File Station.</p>
+
+
+<h4>To enable smart drag and drop:</h4>
+<p>When you drag and drop files within File Station, this feature will automatically determine whether the transfer is a copy or move action.</p>
+
+<ol>
+<li>Select <strong>Enable smart drag and drop</strong>.</li>
+<li>Select either action to be always performed if there happens to be another user simultaneously transferring files with the same name to the same location:
+  <ul>
+<li><strong>Overwrite</strong>: Your transferred files will overwrite files with the same name.</li>
+<li><strong>Skip</strong>: Your transferred files will be skipped  and not overwrite files with the same name.</li>
+</ul>
+</li>
+<li>Click <strong>OK</strong>.</li>
+</ol>
+
+<div class="section">
+<h4>Note:</h4>
+<p>If you want to change the copy or move action determined by smart drag and drop, apply the following hotkeys to suit your needs:</p>
+<ul>
+<li>To shift to a copy action: Press Ctrl while performing drag and drop.</li>
+<li>To shift to a move action: Press Shift while performing drag and drop.</li>
+</ul>
+</div>
+
+
+<h4>To browse and manage files from the local computer with File Station:</h4>
+<ol>
+<li>
+Tick <b>Browse files from the local computer with File Station</b>.
+</li>
+<li>
+Click <b>OK</b>.
+</li>
+</ol>
+
+
+<h4>To share the DSM user list with non-admin users:</h4>
+<p>This option allows non-admin users to access the full DSM user list if they want to search for files owned by specific DSM users/groups or if they want to share file links with other DSM users.</p>
+
+<ol>
+<li>Select <strong>Share the DSM user list with non-admin users</strong>.</li>
+<li>Click <strong>OK</strong>.</li>
+</ol>
+
+
+<h3>Applying Default UNIX Permissions</h3>
+<p>Click <strong>Advanced Settings</strong>, and tick the option to apply the default UNIX permissions when uploading or creating files and folders. Applied permissions are the same as permissions applied by the UNIX command <strong>umask</strong>. When this option is enabled, UNIX permissions are 644 for files and 755 for folders. When this option is disabled, UNIX permissions are 666 for files and 777 for folders. The default umask value is 022.</p>
+<div class="section">
+<h4>Note:</h4>
+<ul>
+  <li>For Windows ACL enabled shared folders (all shares excluding &quot;photo&quot; and shares on external drives), please run the <strong>chmod</strong> command on your Linux or FTP client to change folder and file permission types from Windows ACL to UNIX.</li>
+  <li>Enabling this option might cause inconsistent permission issues between different protocols. To avoid inconsistencies, we suggest leaving this option disabled.</li>
+</ul>
+</div>
+<h3 class="disable-eds14">Mount/Connections</h3>
+<p class="disable-eds14">
+By default, all users can mount remote folders or virtual drives. Here you can limit the access to remote folder or virtual drive management to administrators only.
+</p>
+
+<div class="disable-eds14 section">
+<h4>Note:</h4>
+<p>Non-administrator users can only mount remote folders within their <b>home</b> folder.</p>
+</div>
+<h4 class="disable-eds14">To permit different users to mount remote folders or virtual drives:</h4>
+<ol class="disable-eds14">
+<li>
+Choose <b>All users</b> or <b>Administrators</b> in the <b>Remote Folder</b> or <b>Virtual Drive</b> section.
+</li>
+<li>
+Click <b>OK</b>.
+</li>
+</ol>
+<h4 class="disable-eds14">To permit different users to mount servers and cloud services:</h4>
+<ol class="disable-eds14">
+  <li>Choose from <b>All users</b>, <b>Administrators</b>, or <strong>Specific user</strong>. </li>
+  <li>Selecting <strong>Specific user</strong> will open a window allowing you to configure mounting permissions for different users. To enable access for a specific user, make sure the box is checked under the <strong>Enabled</strong> column. To disable access for a specific user, make sure the box is unchecked under the <strong>Enabled</strong> column. Once finished, click <strong>OK</strong> to close this window.</li>
+  <div class="section">
+    <h4>Note:</h4>
+    <ul>
+      <li>Users belonging to the <strong>administrators</strong> group can use this feature but cannot make any changes. Users logging in using <strong>guest</strong> can neither use this feature nor make any changes. Permissions for all other users can be set here.</li>
+    </ul>
+  </div>
+  <li>Click <strong>OK</strong>.</li>
+</ol>
+<h3>Shared Links</h3>
+<p>
+By default, all users can share file links. Here you can limit the access to shared links management to administrators only.
+</p>
+<h4>To permit different users to share file links:</h4>
+<ol>
+<li>
+Choose <b>All users</b>, <b>Administrators</b>, or <strong>Specific users</strong>.
+</li>
+<li>
+Click <b>OK</b>.
+</li>
+</ol>
+
+<h4>To open HTML files as plain text:</h4>
+
+<ol>
+<li>Tick the box <strong>Always open HTML files using plain text format</strong>. If this option is enabled, HTML files (i.e. HTM, HTML, JSP, XHTML files) are displayed using plain text format when users open them via a file sharing link. This option helps prevent malicious parties from hijacking user login sessions by using embedded script in HTML files.</li>
+<li>Click <strong>OK</strong>.</li>
+</ol>
+
+<h3>Speed Limit</h3>
+<p>You can enable a speed limit to control the maximum usable bandwidth for users and groups who transfer data via File Station.</p>
+
+
+<h4>To enable speed limit:</h4>
+<ol>
+  <li>Tick the box marked <b>Enable speed limit</b>, or <strong>Enable speed limit according to a schedule</strong> if you would like to implement a speed limit at specific times only. This is a server-wide setting and will override the settings of individual users and groups. Choosing <strong>No speed limit</strong> disables the speed limit settings of all users and groups.</li>
+  <li>Click <strong>Speed Limit Settings</strong> to modify the settings for individual users or groups. For each user and group, you can select one of the following:  </li>
+    <ul>
+      <li><strong>Apply Group Settings:</strong> The speed limit settings will be the same as the group to which the user belongs. </li>
+      <li><strong>No speed limit:</strong> No speed limit will be applied when group members transfer files with the service.</li>
+      <li><strong>Constant:</strong> A fixed, constant speed limit will be applied to the user or group members. Upload and download speed limits can be specified in the fields to the left.</li>
+      <li><strong>Variable:</strong> Two different speed limits can be specified and applied to the user or group members according to a schedule. Click the <strong>Customize</strong> button to modify the speed limit settings and set a schedule.</li>
+    </ul>
+
+  <li>Click <b>Apply</b>.</li>
+</ol>
+<div class="section">
+  <h4>Note:</h4>
+  <ul>
+    <li>For more details regarding group speed limit dynamics, please see <a href="../AdminCenter/file_group_edit.html">here</a>.</li>
+    <li>When setting speed limit for a user, the <strong>Result</strong> section displays the user's actual speed limit according to his individual and group settings. For example, if a user "Achilles" has an individual download limit of 100 KB/s, but belongs to a user group with a download limit of 500 KB/s, then the <strong>Results</strong> section will display "0/500."</li>
+  </ul>
+</div>
+
+
+
+<h3>Security</h3>
+
+<p>Here you can find the below security settings.</p>
+
+<h4>To open HTML files as plain text:</h4>
+
+<ol>
+<li>Tick the box <strong>Always open HTML files using plain text format</strong>. If this option is enabled, HTML files (i.e. HTM, HTML, JSP, XHTML files) are displayed using plain text format when opened in File Station. This option helps prevent malicious parties from hijacking user login sessions by using embedded script in HTML files.</li>
+<div class="section">
+<h4>Note:</h4>
+<ul>
+<li>This is not a global setting. Each user can choose whether or not to enabled this option according to his individual needs.</li>
+</ul>
+</div>
+<li>Click <strong>OK</strong>.</li>
+</ol>
+
+</body>
+</html>

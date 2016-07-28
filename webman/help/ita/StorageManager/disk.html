@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+	<h2>Disco rigido/SSD</h2>
+	<p>Questa sezione consente all'utente di monitorare lo stato dei dischi rigidi/SSD installati sul DiskStation offrendo le opzioni per la gestione e analisi delle prestazioni e dell'integrità dei dischi rigidi/SSD. Andare a <strong>Gestione archiviazione</strong> > <strong>Disco rigido/SSD</strong> per gestire queste opzioni.</p>
+
+	<h4>Per controllare le informazioni del disco rigido/SSD:</h4>
+	<ol>
+		<li>Andare alla scheda <b>HDD/SSD</b>.</li>
+		<li>Selezionare un'unità dall'elenco ed espanderla. Qui è possibile vedere lo stato di S.M.A.R.T., informazioni volume, nome modello, numero di serie, versione firmware e temperatura.</li>
+	</ol>	
+	
+	<h4>Per controllare le informazioni sulla salute:</h4>
+    <ol>
+      <li>Andare alla scheda <b>HDD/SSD</b>.</li>
+	  <li>Selezione un'unità.</li>
+      <li>Fare clic su <b>Informazioni salute</b>.</li>
+	  <li>Per passare nella scheda <strong>Panoramica</strong>. Qui troverete per quante ore l'unità è stata accesa, la temperatura corrente, conteggio riconnessione/reidentificazione, conteggio settore sbagliato e stato S.M.A.R.T. generale.</li>
+      <li>Andare sulla scheda <strong>Informazioni S.M.A.R.T.</strong>. I numeri elencati possono aiutare ad eseguire la diagnosi dello stato dell'unità.</li>
+    </ol>
+
+<div class="section">
+<h4>Nota:</h4>
+<p>
+   le unità SAS non supportano le Informazioni S.M.A.R.T.
+</p>
+</div>
+
+	<h4>Per eseguire un test S.M.A.R.T:</h4>
+	<P>Il test S.M.A.R.T. del disco aiuterà ad esaminare e riferire lo stato delle unità per possibili guasti delle unità. Nel caso vengano rilevati errori si consiglia di cambiare subito le unità. </P>
+    <ol>
+      <li>Andare alla scheda <strong>HDD/SSD</strong>.</li>
+      <li>Selezione un'unità.</li>
+      <li>Fare clic su <b>test S.M.A.R.T.</b></li>
+      <li>Scegliere un tipo di test e fare clic su <strong>Avvia</strong> per iniziare il test.</li>
+      <li>I risultati dell'ultimo test sono mostrati nella sezione <b>Risultato test</b>.</li>
+    </ol>
+    <div class="section">
+<h4>Nota:</h4>
+    <p>la durata del test varia in relazione all'ambiente di sistema.</p>
+</div>
+    <h4>Per programmare i test S.M.A.R.T.:</h4>
+    <p>È possibile programmare i test S.M.A.R.T. per essere eseguiti automaticamente creando delle attività.</p>
+    <ol>
+      <li>Andare alla scheda <strong>Programmazione test</strong>.</li>
+      <li>Fare clic su <strong>Crea</strong> per impostare una nuova attività.</li>
+      <li>Modificare le seguenti impostazioni nella scheda <strong>Generale</strong>:</li>
+      <ul>
+        <li><strong>Attività:</strong> immettere un nome per l'attività.</li>
+        <li><strong>Tipo test S.M.A.R.T.:</strong> scegliere se eseguire un test rapido o un test esteso.</li>
+        <li><strong>Intervallo test S.M.A.R.T.:</strong> scegliere di quali dischi rigidi/SSD eseguire il test tutte le volte che viene eseguito un test S.M.A.R.T..</li>
+      </ul>
+      <li>Nella scheda <strong>Programmazione</strong>, modificare le seguenti impostazioni:</li>
+      <ul>
+        <li><strong>Data:</strong> specificare quando eseguire un test S.M.A.R.T. È possibile programmare i test S.M.A.R.T. per essere eseguiti in dati giorni della settimana (ad esempio ogni giorno, nei fine settimana o ogni Domenica, ecc.) o in date specifiche (ad esempio 2015/10/21).</li>
+        <li><strong>Ora:</strong> specificare quante volte eseguire il test S.M.A.R.T. o la prima e l'ultima volta durante il giorno.</li>
+      </ul>
+      <li>Fare clic su <strong>OK</strong> per terminare.</li>
+    </ol>
+
+<h4>Per eseguire Secure Erase:</h4>
+<ol>
+<li>Andare alla scheda <b>HDD/SSD</b>.</li>
+<li>Selezionare un'unità e fare clic su <b>Secure Erase</b>.</li>
+</ol>
+
+
+<div class="section">
+<h4>Nota:</h4>
+<ul>
+<li>Secure Erase non può essere eseguito su dischi nell'unità di espansione.</li>
+<li>Secure Erase cancellerà in modo permanente tutti i dati archiviati sulla propria unità. Assicurarsi che l'unità scelta non sia in uso o sia stato effettuato il backup dei dati prima di procedere.</li>
+<li>Quando il sistema sta eseguendo Secure Erase, l'unità scelta sarà temporaneamente bloccata e quindi automaticamente sbloccata quando l'operazione è in completata.</li>
+<li>Se Secure Erase è interrotto in modo errato durante l'operazione, è possibile eseguire nuovamente Secure Erase direttamente sull'interfaccia utente. Se le unità sono rimosse o usate altrove quando sono ancora bloccate, inserire la password "synology" per sbloccare le unità.</li>
+</ul>
+</div>
+
+
+	<h3>Abilitazione del supporto scrittura cache per dischi rigidi</h3>
+	<p>L'abilitazione del supporto per la cache di scrittura migliora le prestazioni della DiskStation. Solamente alcuni modelli di dischi rigidi supportano questa funzione. Per garantire la protezione dei dati durante l'uso del supporto cache di scrittura, si consiglia di utilizzare un dispositivo UPS. Si consiglia inoltre di spegnere correttamente il sistema dopo l'uso. Disattivando la cache di scrittura si riduce la possibilità di perdita dei dati causata dalle interruzioni di corrente, riducendo anche le prestazioni del sistema.</p>
+
+	<h4>Abilitare il supporto scrittura cache: </h4>
+	<ol>
+		<li>Andare alla scheda <b>Gestione cache</b>.</li>
+		<li>Selezionare <b>Attiva scrittura cache</b>. Per impostazione predefinita, la funzione è disattivata.</li>
+		<li>Fare clic su <b>Applica</b>.</li>
+	</ol>
+	
+
+ 
+
+</body>
+</html>

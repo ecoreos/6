@@ -1,0 +1,130 @@
+﻿ <!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>ボリュームまたはディスク グループの修復 - Synology DSM ヘルプ</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="This article walks you through the steps to create a volume on DiskStation using Storage Manager.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>ボリューム または ディスクグループの修復</h2>
+
+<p>ボリューム エラーは、システム パーティションの故障やハードドライブのクラッシュなど、さまざまな理由で発生します。場合によっては、次の手順でエラーを分析して問題を修正することができます。</p>
+
+<div class="section">
+<h4>注意：</h4>
+<ul>
+<li>このチュートリアルで説明する<strong>復元</strong>機能は、データの冗長性を持つ RAID タイプ（RAID 1、RAID 5、RAID 6 など）でのみ使用できます。この機能を使って故障したハードドライブを復元したり、クラッシュしたボリュームのデータを回復できるという保証ではありませんのでご注意ください。</li>
+<li>クラッシュしたボリュームについては、弊社の<span class="last"><a href="https://account.synology.com/support/support_form.php?lang=enu" target="_blank">テクニカルサポート</a>にお問い合わせいただきますようお勧めします</span>。</li>
+</ul>
+</div>
+
+<h3>システムパーティションのエラー</h3>
+
+<p>システムパーティションでエラーが発生すると、システムパーティションにアクセスできないことを知らせるメッセージが表示されます。</p>
+<h4>システムパーティションを修復する：</h4>
+
+<ol>
+<li><strong>ストレージ マネージャ</strong>を開きます。</li>
+<img src="about:blank" class="help_image"/>
+
+<li><strong>[概要]</strong> を選択し、<strong>「修復」</strong>とマークされたリンクをクリックします。すると、システムがシステムパーティションを修復します。</li>
+
+<img src="about:blank" class="help_image"/>
+</ol>
+
+
+<h3>劣化したボリューム</h3>
+
+
+<p>ハードドライブが故障して、ボリュームやディスクグループが<strong>劣化</strong>しましたが、データは消失しませんでした。このようなエラーは、SHR、RAID 1、RAID 5、RAID 6、RAID 10 などのようにデータの冗長性を持つ RAID タイプでしか発生しません。</p>
+<p>ボリュームやディスクグループが劣化した場合は、故障したハードドライブを正常なものに交換すれば修復できます。</p>
+
+<div class="section">
+<h4>注意：</h4>
+<ul>
+<li>交換用ハードドライブのサイズは、必ずボリュームを構成するディスクの最小ディスクと同じまたはそれ以上のサイズにします。</li>
+<li>交換するハードドライブのステータスは、<strong>「初期化済み」</strong>または<strong>「未初期化」</strong>でなければなりません。</li>
+</ul>
+
+</div>
+
+<h4> 劣化したボリューム またはディスクグループを修復する：</h4>
+
+<ol>
+
+<li><strong>[ストレージ マネージャ]</strong> &gt; <strong>[ボリューム]</strong> または <strong>[ディスク グループ]</strong> を選択して、状態が<strong>劣化</strong>に変わっているか確認します。</li> 
+<img src="about:blank" class="help_image"/>
+
+<li>もしそのようになっている場合は、<strong>[HDD/SSD]</strong> タブを開いてどのハードディスクが故障したのかを確認してください。</li>
+<img src="about:blank" class="help_image"/>
+
+<li>故障したハードドライブを取り出して、新しいものと交換してください。</li>
+
+<div class="section">
+<h4>注意：</h4>
+<ul>
+<li>DiskStation がホットスワップに対応していない場合は、ハードドライブを取り出したり、装着したりする前に必ず電源をお切りください。</li>
+<li>交換用のハードドライブに保管されているデータは消去されます。</li>
+</ul>
+</div>
+
+<li>交換用のハードディスクが装着されたら、<strong>[ボリューム]</strong>タブか <strong>[ディスク グループ]</strong> タブを開いてください。</li>
+
+<li>劣化したボリュームまたはディスクグループを選択します。</li>
+
+<li><strong>[管理]</strong> をクリックします。</li>  
+<img src="about:blank" class="help_image"/>
+
+<li><strong>[復元]</strong> を選択し、<strong>[次へ]</strong> をクリックします。</li>  
+<img src="about:blank" class="help_image"/>
+
+<li>ボリュームに追加するハードドライブを選択します。次に、<strong>[次へ] をクリックします。</strong></li>
+<img src="about:blank" class="help_image"/>
+
+<li> ウィザードの手順に従って完了します。</li>
+</ol>
+
+
+
+
+<h3>ボリュームの修復</h3>
+<p>劣化したボリューム/ディスク グループ/iSCSI LUN を修復するには、故障したディスクを次の条件に合う使用可能なディスクと交換する必要があります。</p>
+<ul>
+<li>RAID 1、RAID 5、RAID 6 ボリュームについては、劣化したボリュームは RAID ボリュームの中でサイズが最も小さいディスクと同じサイズか、それ以上の使用可能なディスクで修復することができます。</li>
+<li>SHR-1 ボリュームについては、使用可能なディスクは次のいずれかの条件に合わなければなりません。(1) 故障したディスクのサイズと同じか、それ以上であること (2) RAID ボリュームで最大のディスクを除き、残りのディスクの中で最もサイズが大きいディスクと比べてサイズが同じであるか、大きいこと
+
+<ol>
+<li>例1：SHR-1 が 3TB、2TB、2TB、1TB のディスクで構成されている。3TB のディスクが故障した場合、2TB かそれ以上のディスクで修復できます。</li>
+<li>例2：SHR-1 が 4TB、4TB、2TB、2TB のディスクで構成されている。4TB のディスクが故障した場合、4TB かそれ以上のディスクで修復できます。</li>
+<li>例3：SHR-1 が 4TB、4TB、2TB、2TB のディスクで構成されている。2TB のディスクが故障した場合、2TB かそれ以上のディスクで修復できます。</li>
+</ol>
+</li>
+<li>SHR-2 ボリュームについては、使用可能なディスクは次のいずれかの条件に合わなければなりません。(1) 故障したディスクのサイズと同じか、それ以上であること (2) RAID ボリュームで最大の2台のディスクを除き、残りのディスクの中で最もサイズが大きいディスクと比べてサイズが同じであるか、大きいこと</li>
+</ul>
+<p>ディスクを上記の条件に合う Hot Spare として構成してある場合は、これを使ってボリューム/ディスク グループ/RAID Group/iSCSI LUN を修復することができます。</p>
+
+
+<h3>クラッシュしたボリュームを修復する</h3>
+
+<p>ボリュームの状態が<strong>「クラッシュ」</strong>になった場合は、お客様ご自身でボリュームを復元することはできません。この問題を解決するには、弊社の<a href="https://account.synology.com/support/support_form.php?lang=enu" target="_blank">テクニカルサポート</a>にご連絡ください。</p>
+
+<div class="section">
+<h4>サポートチームにお問い合わせになる前に</h4>
+
+<ul>
+<li>File Station、Windows File Service、FTP、その他のファイル サービスでファイルをコンピュータや外部ドライブにコピーすることで、DiskStation 上のデータを救うことができます。</li>
+<li>ボリュームがクラッシュしたときのハードディスクの順番を変えないでください。</li>
+<li>問題のあるハードドライブで S.M.A.R.T. テストを行ってください。これを行うには、<strong>[ストレージ マネージャ]</strong> &gt; <strong>[HDD/SSD]</strong> を選択します。問題のあるハードドライブを選択して、<strong>[S.M.A.R.T. テスト]</strong> をクリックします。<br />
+</li>
+</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,148 @@
+﻿<!DOCTYPE html>
+<html class="img-no-display">
+ <head>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>High Availability</title>
+
+
+ </head>
+ <body>
+<h2>개요</h2>
+	<p>이 페이지에는 high-availability 클러스터와 구성원 서버에 대한 기본 정보가 표시됩니다. 또한 high-availability 클러스터와 구성원 서버에서 유지 보수를 생성, 제거 또는 수행하기 위한 도구도 제공됩니다.</p>
+
+<h3>High Availability 클러스터 상태</h3>
+  <p>이 필드에는 high-availability 클러스터의 전체 상태가 표시되어 사용자에게 오류를 알려줍니다. 다음은 이 필드에 표시되는 가능한 상태 표입니다.</p>
+    <table>
+     <tr>
+      <th>상태</th>
+      <th>설명</th>
+     </tr>
+     <tr>
+      <td align="center"><strong>독립 실행형</strong></td>
+      <td>서버가 high-availability 클러스터에 결합되지 않습니다.</td>
+     </tr>
+     <tr>
+      <td align="center"><strong>정상</strong></td>
+      <td>High-availability 클러스터의 전체 상태가 양호합니다. 활성 서버에서 수동 서버로의 데이터 복제가 정상적으로 작동합니다.</td>
+     </tr>
+     <tr>
+      <td align="center"><strong>준비 중</strong></td>
+	  <td>High-availability 클러스터에 서버를 결합했으나 초기 데이터 복제가 아직 완료되지 않았습니다. 이 상태에서는 전환을 수행할 수 없습니다. 자세한 정보는 <a href="switchover_fail.html">전환</a>을 참조하십시오.</td>
+     </tr>
+     <tr>
+      <td align="center"><strong>로드 중</strong></td>
+	  <td>시스템이 클러스터 상태를 로드 중입니다. 상태 로드를 마치기 전에는 <b>전환</b>을 수행할 수 없습니다.</td>
+     </tr>
+     <tr>
+      <td align="center"><strong>경고</strong></td>
+      <td>HA 클러스터의 상태는 비정상이지만, 서비스가 여전히 기능을 하고 있습니다.</td>
+     </tr>
+     <tr>
+      <td align="center"><strong>위험</strong></td>
+	  <td>활성 서버와 수동 서버가 모두 오작동합니다. High-availability 클러스터를 정상적으로 작동할 수 없습니다. 모든 저장소 공간(RAID Group, 디스크 그룹, 볼륨 및 iSCSI LUN)의 상태를 확인하십시오.</td>
+     </tr>
+    </table>
+<h3>경고 메시지</h3>
+   <p>다음 표에는 시스템에서 오류가 발생할 경우 나타날 수 있는 경고 메시지가 나와 있습니다. 경고 메시지가 여러 개 나타난 경우에는 앞으로/뒤로 단추를 사용하여 메시지 간에 이동할 수 있습니다. </p>
+    <table>
+     <tr>
+      <th>경고/오류</th>
+      <th>설명</th>
+     </tr>
+     <tr>
+      <td align="center"><strong>모니터링된 서비스 오류</strong></td>
+      <td>모니터하는 하나 이상의 서비스에 오류가 발생했습니다.</td>
+     </tr>
+     <tr>
+      <td align="center"><strong>저장소 공간 저하됨</strong></td>
+      <td>활성 또는 수동 서버에서 저장소 공간(예: RAID Group, 디스크 그룹, 볼륨, iSCSI LUN 및 SSD 캐시)이 저하되었습니다. <b>저장소 상태</b> 페이지를 확인하십시오.</td>
+     </tr>
+     <tr>
+      <td align="center"><strong>저장소 공간 충돌함</strong></td>
+      <td>활성 또는 수동 서버에서 저장소 공간(예: RAID Group, 디스크 그룹, 볼륨, iSCSI LUN 및 SSD 캐시)이 충돌되었습니다. <b>저장소 상태</b> 페이지를 확인하십시오.</td>
+     </tr>
+     <tr>
+      <td align="center"><strong>수동 서버를 검색하지 못했습니다</strong></td>
+      <td>이 오류는 수동 서버가 오프라인이거나 Heartbeat 연결을 통해 활성 서버와 수동 서버를 연결할 수 없는 경우에 발생할 수 있습니다. 이 경우 전환을 수행할 수 없습니다.</td>
+     </tr>
+     <tr>
+      <td align="center"><strong>데이터를 수동 서버로 복제할 수 없습니다</strong></td>
+      <td>이 오류는 저장소 볼륨 또는 디스크가 실패한 경우에 발생할 수 있습니다. 이 경우 전환을 수행할 수 없습니다. <b>저장소 상태</b> 페이지를 확인하십시오.</td>
+     </tr>
+     <tr>
+      <td align="center"><strong>수동 서버를 선택하지 않음</strong></td>
+	  <td>수동 서버와 high-availability 클러스터의 연결이 해제된 경우 이 상태가 표시됩니다. 이 경우 전환을 수행할 수 없습니다. 수동 서버를 다시 연결하려면 <b>유지 관리</b> 드롭다운 메뉴를 클릭하고 <b>연결</b>을 클릭합니다. 수동 서버를 다시 연결하는 경우 전체 데이터를 복제해야 합니다.</td>
+     </tr>
+    </table>
+
+
+<h3>High Availability 클러스터 정보</h3>
+	<p>High-availability 클러스터 상태 아래에 있는 이 필드에는 클러스터에 대한 기본 정보가 표시됩니다. High-availability 클러스터가 없는 경우 이 필드에서만 high-availability 클러스터의 기능에 대한 설명을 제공합니다.</p>
+    <p>이 필드에는 다음 정보가 있습니다.</p>
+ <ul>
+    	<li><b>클러스터 서버 이름:</b> High-availability 클러스터에서 사용하는 서버 이름입니다. </li>
+   <li><b>클러스터 IP 주소:</b> High-availability 클러스터에서 사용하는 IP 주소입니다. 어느 서버에서 서비스를 실행하는지에 관계 없이 사용자는 이 IP 주소를 사용하여 high-availability 클러스터에 연결할 수 있습니다.</li>
+        <li><b>생성 시간:</b> High-availability 클러스터를 생성한 날짜입니다.</li>
+ </ul>
+
+
+<h3>High Availability 클러스터 작동 단추</h3>
+
+<p>다음과 같은 두 개의 단추는 high-availability 클러스터 정보 아래에 있습니다.</p>
+
+<ol>
+<li><b>HA 클러스터 생성:</b> High-availability 클러스터가 없는 경우 이 단추를 클릭하여 두 서버를 결합하고 high-availability 클러스터를 생성할 수 있습니다. High-availability 클러스터 생성에 대한 자세한 정보는 <a href="wizard.html">Synology High Availability 마법사</a>를 참조하십시오.</li>
+<li><b>관리:</b> 이 단추는 high-availability 클러스터가 있는 경우에만 사용할 수 있습니다. 다음 옵션을 포함합니다:
+<ul>
+<li><b>관리 마법사:</b> 다양한 관리 절차에 관한 지침을 포함하는 마법사를 실행합니다.</li>
+<li><b>전환:</b> 활성 서버에서 수동 서버로의 전환을 시작합니다. 이 프로세스 중에는 활성 서버가 서비스 제공을 중지하고 새로운 수동 서버가 됩니다. 그런 다음 이전 수동 서버가 새로운 활성 서버로 되어 high-availability 클러스터의 모든 서비스를 제공하기 시작합니다. 이 옵션은 수동 서버가 <b>오류</b> 상태에 있거나 선택되지 않은 경우에는 사용할 수 없습니다.</li>
+<li><b>DSM 업데이트:</b> <strong>제어판</strong>의 <strong>DSM 업데이트</strong> 페이지를 엽니다. 이곳에서 두 서버를 업데이트할 수 있습니다.</li>
+<li><b>HA 클러스터 제거:</b> high-availability 클러스터를 제거합니다.</li>
+<li><b>수동 서버 연결 해제:</b> 클러스터에서 수동 서버를 제거합니다. 연결 해제 후에 high-availability 클러스터에 서버를 다시 추가할 때 전체 데이터 복제를 수행해야 합니다. 이 옵션은 기존 수동 서버를 새 서버로 교체하는 경우에만 사용하는 것이 좋습니다.</li>
+<li><b>수동 서버 연결:</b> 클러스터에 수동 서버를 추가합니다. 이 옵션은 high-availability 클러스터에 수동 서버가 없을 때에만 사용할 수 있습니다.</li>
+<li><b>HA 클러스터 종료:</b> 활성 서버 및 수동 서버를 둘다 종료합니다.</li>
+<li><b>활성 서버 종료:</b> 활성 서버를 종료합니다.</li>
+<li><b>수동 서버 종료:</b> 수동 서버를 종료합니다.</li>
+<li><b>활성 서버 재부팅:</b> 활성 서버를 재부팅합니다.</li>
+<li><b>수동 서버 재부팅:</b> 수동 서버를 재부팅합니다.</li>
+<li><b>수동 서버의 신호음 비활성화:</b> 오류가 발생할 때 수동 서버의 신호음이 정지됩니다. 또다른 오류가 발생하면 수동 서버가 여전히 신호음을 울립니다.</li>
+</ul>
+</li>
+</ol>
+
+<div class="section">
+<h4>참고:</h4>
+<ul>
+<li>High-availability 클러스터를 제거한 후에 새 클러스터를 생성할 경우에는 전체 데이터 복제를 수행해야 합니다.</li>
+<li>수동 서버를 종료하거나 연결 해제한 경우, 활성 서버에서 오류가 발생하면 서비스를 전환할 수 없습니다.</li>
+</ul>
+</div>
+
+<h3>서버 및 데이터 복제 상태</h3>
+<p>이 섹션에는 활성 서버와 수동 서버의 상태 뿐 아니라 서버 간의 데이터 복제 흐름을 나타내는 이미지가 포함되어 있습니다.</p>
+<p>데이터 복제 이미지에는 다음과 같은 항목의 가능 여부 상태가 나타납니다.</p>
+	<ul>
+    	<li><b>데이터 복제가 정상적으로 작동합니다:</b> 활성 서버에서 수동 서버로 데이터가 흐르는 것으로 나타납니다.</li>
+    	<li><b>데이터 복제 안됨:</b> 데이터 흐름 이미지가 없는 상태로 나타납니다.</li>
+    </ul>
+
+
+<h3> 서버 정보</h3>
+ <p>이 섹션은 서버 이미지 아래에 있습니다. 활성 서버와 수동 서버에 대한 정보는 이 섹션에 표시됩니다. 수동 서버를 선택하지 않은 경우 이 섹션이 <b>해당 없음</b>으로 표시됩니다.</p>
+  <ul>
+   <li><b>서버 이름:</b> Synology 서버 이름입니다.</li>
+   <li><b>모델 이름:</b> Synology 서버 모델입니다.</li>
+   <li><b>시리얼 번호:</b> Synology 서버의 일련 번호입니다.</li>
+   <li><b>팬 상태:</b> 서버의 냉각 팬 상태입니다. 팬이 오작동하면 경고가 나타납니다. 이 경우에는 지역 대리점으로 도움을 요청하십시오.</li>
+   <li><b>온도:</b> Synology 서버의 온도입니다. </li>
+   <li><b>전원 상태:</b> 서버의 전원 공급 장치가 모두 정상적으로 작동하는지 여부가 나타납니다. 서버 모델에 여유 전원 공급 장치가 포함된 경우 둘 중 하나가 오작동하면 경고가 표시됩니다.</li>
+  </ul>
+
+ </body>
+</html>

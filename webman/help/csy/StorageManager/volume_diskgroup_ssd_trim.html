@@ -1,0 +1,45 @@
+ <!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>SSD TRIM – Nápověda Synology DSM</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="SSD TRIM improves the read and write performance of volumes created on SSDs, increasing efficiency as well as extending the lifetime of your SSDs.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>SSD TRIM</h2>
+<p>Pokud některý ze svazků sestává pouze z disků SSD (Solid State Drives), doporučujeme, abyste povolili funkci SSD TRIM. Tato funkce zvyšuje výkon čtení svazků a zápisu na svazky vytvořené v rámci řešení SSD, čímž dochází ke zvýšení efektivity a prodloužení životnosti SSD.</p>
+<h4>Postup povolení funkce SSD TRIM:</h4>
+<ol>
+  <li>Otevřete <strong>Správce úložiště</strong> a přejděte do části <strong>Svazek</strong>. </li>
+  <li>Vyberte svazek, který sestává pouze z disků SSD, a poté klikněte na tlačítko <b>Konfigurovat</b>.</li>
+  <li>V zobrazeném okně přejděte na kartu <b>SSD TRIM</b> a zaškrtněte políčko <strong>Povolit funkci TRIM</strong>.</li>
+  <li>Kliknutím na tlačítko <strong>Nastavit plán</strong> zadáte, kdy má systém provést operaci SSD TRIM.</li>
+  <li>Klikněte na možnost <strong>OK</strong>.</li>
+</ol>
+<div class="section">
+  <h4>Poznámka:</h4>
+  <ul>
+    <li>Funkce SSD TRIM je k dispozici pouze u některých modelů DiskStation a typů pole RAID. </li>
+    <li>Některé modely SSD nepodporují funkci SSD TRIM u svazků RAID 5 a RAID 6. Seznam kompatibilních zařízení najdete na stránkách <a href="http://www.synology.com/" target=_blank>www.synology.com</a>.</li>
+    <li>Funkci SSD TRIM nelze povolit v následujících situacích:
+      <ul>
+        <li>Ke svazku je připojena mezipaměť SSD.</li>
+        <li>Je nainstalován balíček <strong>Time Backup</strong>.</li>
+        <li>Pomocí balíčku <strong>Správce High Availability</strong> byl vytvořen cluster high-availability.</li>
+      </ul>
+    </li>
+    <li>Funkci SSD TRIM nelze povolit na jednotkách iSCSI LUN na úrovni bloků.</li>
+    <li>Operace SSD TRIM bude mít vliv na výkon systému. Čas dokončení operace TRIM závisí na velikosti a modelu SSD svazku.</li>
+    <li>Pokud je na svazku povolena TRIM, bude povolena také na dalších svazcích vytvořených ve stejné skupině disků nebo skupině RAID Group.</li>
+  </ul>
+</div>
+</body>
+</html>

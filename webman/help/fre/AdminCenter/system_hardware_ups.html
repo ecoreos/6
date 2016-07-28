@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Alimentation</title>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>UPS</h2>
+<p class="disable-eds14">Un onduleur (UPS) est un périphérique d'alimentation de secours qui permet au DiskStation de continuer à fonctionner pendant une courte période, si une panne de courant se produit. Cette fonction dans <strong>Panneau de configuration</strong> > <strong>Matériel et alimentation</strong> > <strong>UPS</strong> permet d'éviter des pertes de données en donnant suffisamment de temps au DiskStation pour enregistrer les données et démonter les volumes avant de perdre l'alimentation et de s'éteindre.</p>
+<p class="enable-eds14">Un onduleur (UPS) est un périphérique d'alimentation de secours qui permet au DiskStation de continuer à fonctionner pendant une courte période, si une panne de courant se produit. Cette fonction dans <strong>Panneau de configuration</strong> > <strong>Matériel et alimentation</strong> > <strong>UPS</strong> permet d'éviter des pertes de données en donnant suffisamment de temps au DiskStation pour enregistrer les données et démonter les volumes avant de perdre l'alimentation et de s'arrêter.</p>
+<div class="section">
+<h4>Mode Sécurité</h4>
+<p class="disable-eds14">Lorsque le DiskStation passe en mode Sécurité, il arrête tous les services et démonte les volumes afin d'éviter la perte de données et de s'arrêter en toute sécurité lorsque l'UPS n'a plus de courant. Par défaut, le système passe en mode Sécurité lorsque l'alimentation de l'UPS commence à faiblir. Vous pouvez également spécifier le délai avant que le DiskStation ne passe en mode Sécurité en cas de panne de courant. Cependant, si la batterie de l'UPS est faible avant la durée spécifiée, le système entre en mode Sécurité immédiatement.</p>
+<p class="enable-eds14">Lorsque le DiskStation passe en mode Sécurité, il arrête tous les services et démonte les volumes afin d'éviter la perte de données et de s'arrêter en toute sécurité lorsque l'UPS n'a plus de courant. Par défaut, le système passe en mode Sécurité lorsque l'alimentation de l'UPS commence à faiblir. Vous pouvez également spécifier le délai avant que le DiskStation ne passe en mode Sécurité en cas de panne de courant. Cependant, si la batterie de l'UPS est faible avant la durée spécifiée, le système entre en mode Sécurité immédiatement.</p>
+<p></p>
+<p class="disable-eds14">Dans les situations où le DiskStation s'arrête en cours de mode Sécurité, il se relancera automatiquement lorsque l'alimentation sera restaurée si vous avez activé l'option <strong>Redémarrer automatiquement après une panne de courant</strong> (sur <strong>Panneau de configuration</strong> > <strong>Matériel et alimentation</strong> > <strong>Général</strong>).</p>
+<p></p>
+</div>
+<h3>Prise en charge d'un onduleur local</h3>
+<p>Pour des détails concernant l'installation matérielle, veuillez consulter le manuel d'utilisation de votre UPS. Une fois l'installation terminée et le DiskStation branché à l'UPS, vous pouvez suivre les étapes ci-dessous pour activer la prise en charge de l'UPS.</p>
+<h4>Pour activer la prise en charge d'un UPS local :</h4>
+<OL>
+<li>Connectez l'UPS à un port USB du DiskStation.</li>
+<LI>Sur l'onglet <strong>UPS</strong>, cochez la case <b>Activer la prise en charge UPS</b>.</LI>
+<LI>Sélectionnez le moment où le DiskStation doit passer en mode Sécurité après une panne de courant.</LI>
+<LI>Choisissez s'il faut envoyer ou non un signal d'arrêt à l'UPS lorsque le système passe en mode Sécurité. La plupart des UPS peuvent s'allumer automatiquement lorsque le courant est rétabli.</LI>
+<LI>Cliquez sur <b>Appliquer</b>.</LI>
+</OL>
+<h3>Prise en charge d'un UPS SNMP</h3>
+<p>Votre DiskStation prend également en charge la connexion à des UPS SNMP (Simple Network Management Protocol). Pour des détails concernant l'installation matérielle, veuillez consulter le manuel d'utilisation de votre UPS SNMP. Une fois le DiskStation branché à l'UPS et connecté au même réseau, vous pouvez suivre les étapes ci-dessous pour activer sa prise en charge.</p>
+<h4>Pour activer la prise en charge d'un UPS SNMP :</h4>
+<ol>
+<LI>Sur l'onglet <strong>UPS</strong>, cochez la case <b>Activer la prise en charge UPS</b>.</LI>
+<li>Sélectionnez <strong>SNMP UPS</strong> dans le menu déroulant <strong>Type d'onduleur réseau</strong>.</li>
+<li>Dans le champ <strong>Adresse IP de l'onduleur SNMP</strong>, entrez l'adresse IP de l'onduleur SNMP.</li>
+<LI>Sélectionnez le moment où le DiskStation doit passer en mode Sécurité après une panne de courant.</LI>
+<li>Saisissez la chaîne de communauté pour l'UPS SNMP dans le champ <strong>Communauté SNMP</strong>.</li>
+<LI>Cliquez sur <b>Appliquer</b>.</LI>
+</ol>
+<div class="section">
+<h4>Remarque :</h4>
+<ul>
+<li>Il est vivement recommandé d'utiliser un <b>Onduleur SNMP</b> pour les déploiements de Synology High Availability (SHA).</li>
+<li>Le DiskStation prend en change les UPS SNMPv1 et SNMPv2c.</li>
+</ul>
+</div>
+<h3>Prise en charge d'un UPS réseau</h3>
+<p>Si deux produits Synology utilisent un UPS doté d'un seul port USB, alors un seul DiskStation peut obtenir des informations concernant l'état de l'UPS. Dans ce cas, un DiskStation peut faire office de « serveur UPS réseau » et se connecter à l'UPS via USB ou le réseau (selon l'appareil). Le serveur UPS réseau obtient les informations de l'onduleur et les transmet à l'autre DiskStation « client ».</p>
+<h4>Pour activer la prise en charge d'un UPS réseau :</h4>
+<OL>
+<li>Connectez-vous au DiskStation qui est connecté à l'UPS (via USB ou le réseau). Si la prise en charge d'un UPS local n'a pas encore été activée sur ce DiskStation, veuillez voir la section ci-dessus.</li>
+<LI>Dans l'onglet <strong>UPS</strong>, cochez la case <strong>Activer le serveur réseau UPS</strong> pour permettre au DiskStation de transmettre les informations de l'UPS au DiskStation client.</li>
+<li>Cliquez sur le bouton <strong>Périphériques DiskStation autorisés</strong> button.</li>
+<li>Sur la fenêtre qui apparaît, saisissez les adresses IP de l'autre DiskStation qui utilise l'UPS, mais n'est pas connecté via USB ou le réseau. Cliquez sur <strong>OK</strong>.</li>
+<li>Cliquez sur <strong>Appliquer</strong> pour enregistrer les paramètres.</li>
+</OL>
+<p>Maintenant le serveur UPS réseau peut obtenir les informations de l'UPS et les transmettre à l'autre DiskStation qui utilise l'UPS. Veuillez voir les instructions ci-dessous pour activer la prise en charge de l'UPS sur l'autre DiskStation.</p>
+<h4>Pour activer la prise en charge de l'UPS sur le DiskStation client :</h4>
+<ol>
+<li>Connectez-vous au DiskStation qui utilise l'UPS, mais n'est pas connecté via le USB ou le réseau.</li>
+<li>Sur l'onglet <strong>UPS</strong>, cochez la case <strong>Activer la prise en charge UPS</strong></li>
+<li>Sélectionnez <strong>Serveur onduleur Synology</strong> dans le menu déroulant <strong>Type d'onduleur réseau</strong>.</li>
+<li>Entrez l'adresse IP du serveur UPS réseau (c.-à-d. le DiskStation connecté à l'UPS) dans le champ <strong>IP du serveur réseau UPS</strong>.</li>
+<LI>Sélectionnez le moment où le DiskStation doit passer en mode Sécurité après une panne de courant. Pour simplifier les réglages du mode Sécurité, vous pouvez sélectionner <strong>Identique au serveur</strong>.</LI>
+<LI>Cliquez sur <b>Appliquer</b> pour enregistrer les paramètres.</LI>
+</OL>
+<div class="section">
+<h4>Configuration requise pour un UPS réseau :</h4>
+<UL>
+<LI>Pour transmettre les informations de l'UPS, chaque DiskStation doit être connecté au même réseau.</LI>
+<LI>Le périphérique réseau (p.ex. commutateur ou concentrateur) auquel chaque DiskStation est connecté doit être branché au même UPS. Dans le cas contraire, les DiskStation ne pourront pas transférer les informations de l'UPS en cas de panne de courant.</LI>
+</UL>
+</div>
+</body>
+</html>

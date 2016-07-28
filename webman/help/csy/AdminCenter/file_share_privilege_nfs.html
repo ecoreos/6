@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Sdílená složka</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2>Přiřazení oprávnění NFS</h2>
+<p>Jakékoli sdílené složce můžete přiřadit oprávnění NFS a umožnit tak klientům se systémem Linux přístup k této složce.</p>
+<h4>
+Postup přiřazení oprávnění NFS ke sdílené složce:
+</h4>
+<ol>
+<li>Ze seznamu sdílených složek vyberte sdílenou složku, kterou chcete upravit.</li>
+<li>Klikněte na možnost <strong>Upravit</strong> > <strong>Oprávnění NFS</strong>.</li>
+<li>Kliknutím na možnost <b>Vytvořit</b> přidejte pravidlo NFS.</li>
+<li>Zobrazí se automaticky otevírané okno. Zadejte níže uvedené možnosti.</li>
+<li><strong>Název hostitele nebo IP adresa:</strong> Zadejte IP adresu klienta NFS, který bude mít přístup ke sdílené složce. Hostitele lze zadat třemi způsoby:
+<ul>
+<li><strong>Jediný hostitel:</strong> Plně kvalifikovaný název domény nebo IP adresa.</li>
+<li><strong>Zástupné znaky:</strong> *, *.synology.com</li>
+<li><strong>IP adresa sítě:</strong> 203.74.205.32/255.255.252.0, /24</li>
+</ul>
+</li>
+<li><strong>Oprávnění:</strong> Vyberte oprávnění ke čtení / zápisu pro klienta NFS.</li>
+<li> <strong> Zabezpečení:</strong> Zadejte charakter zabezpečení, který chcete implementovat.
+  <ul>
+  <li><strong>AUTH_SYS:</strong> Pomocí funkce UID (identifikátor uživatele) a GID (identifikátor skupiny) klienta NFS ověříte přístupová oprávnění.</li>
+<li><strong>Ověřování Kerberos:</strong> Spusťte ověřování Kerberos při připojení klienta NFS ke sdílené složce. Klient bude mít přístup ke sdílené složce po úspěšném ověření Kerberos.</li>
+<li><strong>Integrita Kerberos:</strong> Spusťte ověřování Kerberos a zajistěte integritu paketů během přenosu dat.</li>
+<li><strong>Zabezpečení Kerberos:</strong> Spusťte ověřování Kerberos a šifrování paketů NFS během přenosu dat. Tím zamezíte zákeřným subjektům v úmyslném poškozování síťového provozu NFS.</li>
+</ul>
+</li>
+
+<li><strong>Squash</strong>: Toto pole umožňuje správu přístupových oprávnění uživatelů klienta NFS. Vyberte jednu z následujících položek:
+  <ul>
+    <li><strong>Žádné mapování:</strong> Umožňuje všem uživatelům klienta NFS, včetně uživatelů root, získat původní přístupová oprávnění.</li>
+    <li><strong>Mapovat uživatele root na uživatele admin:</strong> Umožňuje přiřazení oprávnění uživatelům root klienta NFS, která odpovídají oprávněním uživatele admin tohoto systému.</li>
+    <li><strong>Mapovat uživatele root na uživatele guest:</strong> Umožňuje přiřazení oprávnění uživatelům root klienta NFS, která odpovídají oprávněním uživatele guest tohoto systému.</li>
+    <li><strong>Mapovat všechny uživatele na uživatele admin:</strong> Umožňuje přiřazení oprávnění všem uživatelům klienta NFS, která odpovídají oprávněním uživatele admin tohoto systému.</li>
+  </ul>
+</li>
+
+<li><strong>Povolit asynchronní:</strong> Zaškrtnutím této možnosti umožníte zařízení DiskStation reagovat na požadavky klienta NFS ještě před dokončením změn, čímž je dosaženo vyššího výkonu.</li>
+<li><strong>Povolit připojení z portů bez oprávnění (porty vyšší než 1024):</strong> Zaškrtnutím této možnosti umožníte klientovi NFS použít port bez oprávnění (např. porty s číslem vyšším než 1024) při připojení k zařízení DiskStation. </li>
+<li><strong>Povolit uživatelům přístup k připojeným podsložkám:</strong> Zaškrtnutím této možnosti povolíte klientům NFS přístup k připojeným podsložkám.</li>
+<li>Postup dokončíte kliknutím na možnost <b>OK</b>.</li>
+  <li>Oprávnění NFS použijete kliknutím na možnost <b>OK</b>.</li>
+</ol>
+
+<div class="section">
+<h4>Poznámka:</h4>
+<ul>
+<li>Pokud má název serveru formát <strong>*.doména</strong>, musí IP adresa klienta NFS odpovídat záznamu DNS PTR, jinak nebude zařízení DiskStation moci vyhledat název *.doména vyhledáním příslušné IP adresy.</li>
+</ul>
+</div>
+
+
+<div class="section">
+<h4>Charaktery zabezpečení:</h4>
+<p> Přístup ke sdílené složce přes NFS s konkrétním uživatelským účtem: </p>
+<ul>
+<li>Pokud je implementován charakter zabezpečení <strong>AUTH_SYS</strong>: Klient musí mít stejný numerický identifikátor UID (identifikátor uživatele) a GID (identifikátor skupiny) v rámci klienta NFS a zařízení DiskStation. V opačném případě budou klientovi při přístupu ke sdílené složce přiřazena oprávnění <strong>ostatní</strong>. Chcete-li zabránit konfliktům oprávnění, můžete vybrat možnost <strong>Mapovat všechny uživatele na uživatele admin</strong> z nabídky <strong>Squash</strong> nebo přidělit oprávnění ke sdílené složce všem uživatelům.</li>
+<li>Pokud je implementován charakter zabezpečení <strong>Kerberos (krb5, krb5i, krb5p)</strong>: V části <strong>Win/Mac/NFS</strong> > <strong>Služba NFS</strong> > <strong>Nastavení Kerberos</strong> > <strong>Mapování ID</strong> můžete namapovat klienta NFS ke konkrétnímu uživateli nebo se připojit k doméně systému Windows / LDAP s příslušným uživatelským účtem. V opačném případě budou klientovi při přístupu ke sdílené složce přiřazena oprávnění <strong>guest</strong>.</li>
+<li>Pokud systém souborů externího zařízení, na kterém byly sdílené složky vytvořeny, je NTFS nebo FAT, bude možnost <strong>Mapovat všechny uživatele na uživatele admin</strong> vynucena.</li>
+</ul>
+<p>Chcete-li pro připojení zařízení DiskStation použít charaktery zabezpečení Kerberos, musíte v části <strong>Win/Mac/NFS</strong> > <strong>Služba NFS</strong> > <strong>Nastavení Kerberos</strong> nastavit ověřování Kerberos.</p>
+</div>
+
+</body>
+</html>

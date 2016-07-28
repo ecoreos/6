@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Alimentation</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Hibernation du HDD</h2>
+<p class="disable-eds14">Vous pouvez sp&eacute;cifier la dur&eacute;e pendant laquelle les disques durs restent inactifs avant d&apos;entrer en mode d&apos;hibernation HDD. Pendant l&apos;hibernation du HDD, les disques durs arr&ecirc;tent de tourner, ce qui r&eacute;duit la consommation d&apos;&eacute;nergie et prolonge la dur&eacute;e de vie des disques durs. Vous pouvez sp&eacute;cifier diff&eacute;rentes dur&eacute;es pour les disques durs internes et les disques durs externes eSATA/USB.</p>
+<p class="enable-eds14">Vous pouvez sp&eacute;cifier la dur&eacute;e pendant laquelle les disques durs restent inactifs avant d&apos;entrer en mode d&apos;hibernation HDD. Pendant l&apos;hibernation du HDD, les disques durs arr&ecirc;tent de tourner, ce qui r&eacute;duit la consommation d&apos;&eacute;nergie et prolonge la dur&eacute;e de vie des disques durs. Vous pouvez sp&eacute;cifier diff&eacute;rentes p&eacute;riodes de temps pour vos disques durs USB externes.</p>
+
+<div class="section">
+<h4>Remarque&nbsp;:</h4>
+<ul>
+<li>L&apos;hibernation HDD cesse lors de l&apos;acc&egrave;s.</li>
+<li>Seuls certains p&eacute;riph&eacute;riques de stockage USB externes prennent en charge l&apos;hibernation HDD.</li>
+</ul>
+</div>
+
+<div class="section">
+<h4>Pourquoi mon DiskStation n&apos;hiberne-t-il pas&nbsp;?</h4>
+
+<p>Veuillez noter que les services suivants emp&ecirc;cheront le DiskStation d&apos;entrer en mode d&apos;hibernation. En outre, le syst&egrave;me quittera le mode d&apos;hibernation deux minutes avant toute t&acirc;che planifi&eacute;e.</p>
+
+<p><strong>Paquets&nbsp;:</strong></p>
+<ul>
+  <li>Download Station&nbsp;: Le DiskStation ne peut pas hiberner si Download Station ex&eacute;cute eMule, un t&eacute;l&eacute;chargement planifi&eacute; RSS, ou des t&acirc;ches actives.</li>
+  <li>Mail Station&nbsp;: Le DiskStation ne peut pas hiberner si Mail Station r&eacute;cup&egrave;re des donn&eacute;es depuis POP3.</li>
+  <li>Surveillance Station&nbsp;: Le DiskStation ne peut pas hiberner si Surveillance Station enregistre.</li>
+  <li>Serveur multim&eacute;dia&nbsp;: Le DiskStation ne peut pas hiberner si le journal DMA est activ&eacute; dans les param&egrave;tres de Serveur multim&eacute;dia (allez &agrave; <strong>Menu principal</strong> &gt; <strong>Serveur multim&eacute;dia</strong> &gt; <strong>Serveur multim&eacute;dia</strong> &gt; <strong>Diagnostiquer</strong>).</li>
+  <li>Directory Server</li>
+  <li>Webalizer</li>
+  <li>Logitech<sup>&reg;</sup> Media Server</li>
+  <li>Plex Media Server</li>
+  <li>Autre logiciel tiers ou optware tel que SABnzbd</li>
+</ul>
+<p><strong>Processus&nbsp;:</strong></p>
+<ul>
+  <li>Miniatures et indexation&nbsp;: le DiskStation ne peut pas hiberner pendant la g&eacute;n&eacute;ration des miniatures ou la r&eacute;-indexation des fichiers multim&eacute;dia avant la mise &agrave; niveau. Pendant ce temps, le processus &quot;synoindexd&quot; affichera l&apos;&eacute;tat &quot;En cours d&apos;ex&eacute;cution&quot; (allez &agrave; <strong>Menu principal</strong> &gt; <strong>Moniteur de ressources</strong> &gt; <strong>Processus</strong>).</li>
+  <li>Local Master Browser&nbsp;: le DiskStation ne peut pas hiberner si Local Master Browser est activ&eacute; (allez &agrave; <strong>Panneau de configuration</strong> &gt; <strong>Win/Mac/NFS</strong> &gt; <strong>Service de fichiers Windows</strong> &gt; <strong>Activer Local Master Browser</strong>).</li>
+  <li>Lecteur Windows Media&nbsp;: Le DiskStation ne peut pas hiberner si le Service Partage r&eacute;seau du Lecteur Windows Media est activ&eacute; dans le r&eacute;seau local.</li>
+  <li>Le DiskStation ne peut pas hiberner si le nombre de processus concurrents n&eacute;cessite l&apos;&eacute;change, o&ugrave; si la capacit&eacute; de RAM a &eacute;t&eacute; d&eacute;pass&eacute;e et les disques durs sont utilis&eacute;s temporairement pour la lecture/&eacute;criture.</li>
+</ul>
+<p><strong>Autres</strong></p>
+<ul>
+  <li>P&eacute;riph&eacute;riques USB&nbsp;: Le DiskStation ne peut pas entrer en hibernation du syst&egrave;me si des appareils USB sont connect&eacute;s &agrave; l&apos;unit&eacute;. </li>
+</ul>
+
+</div>
+
+<h2 class="disable-eds14">Sommeil profond</h2>
+<p class="disable-eds14">Le sommeil profond les pour unit&eacute;s d&apos;expansion peut &ecirc;tre activ&eacute; via l&apos;interface du DiskStation associ&eacute;. Vous pouvez configurer l&apos;unit&eacute; d&apos;expansion et le DiskStation associ&eacute; pour &ecirc;tre inactifs pendant des dur&eacute;es diff&eacute;rentes. Par cons&eacute;quent, l&apos;unit&eacute; d&apos;expansion peut &ecirc;tre r&eacute;gl&eacute;e pour entrer dans un sommeil profond pendant que le DiskStation associ&eacute; reste en ligne.</p>
+<p class="disable-eds14">En mode sommeil profond&nbsp;:</p>
+<ul class="disable-eds14">
+  <li>Tous les voyants de l&apos;unit&eacute; d&apos;extension seront &eacute;teints.</li>
+<li>L&apos;alimentation des disques durs de l&apos;unit&eacute; d&apos;extension sera coup&eacute;e.</li>
+<li>Le ventilateur de l&apos;unit&eacute; d&apos;expansion s&apos;arr&ecirc;tera.</li>
+</ul>
+
+<div class="section disable-eds14">
+<h4>Remarque&nbsp;:</h4>
+<ul>
+<li>Le sommeil profond cesse lors de l&apos;acc&egrave;s.</li>
+<li>Pour assurer une op&eacute;ration normale lors de l&apos;utilisation de la fonction sommeil profond sur l&apos;unit&eacute; d&apos;expansion, vous devez d&eacute;placer le commutateur <b>Auto/Manual</b> sur le panneau arri&egrave;re sur <b>Auto</b>.</li>
+</ul>
+</div>
+
+<h2>Allumage/extinction auto</h2>
+<p>Vous pouvez sp&eacute;cifier la longueur de la p&eacute;riode de temps pendant laquelle le disque interne reste en hibernation avant que votre DiskStation s&apos;arr&ecirc;te automatiquement.</p>
+
+<div class="section">
+<h4>Remarque&nbsp;:</h4>
+<ul>
+<li>Vous devez d&apos;abord activer l&apos;hibernation du HDD.</li>
+<li>Vous devez d&apos;abord activer le service WOL afin que vous puissiez alimenter &agrave; distance votre DiskStation.</li>
+</ul>
+</div>
+
+</body>
+</html>
+

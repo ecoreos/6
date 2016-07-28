@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2><a name="leaf_volume"></a>Hot Spare</h2>
+<p>Hot spare 硬碟為備用硬碟，可自動更換毀損的硬碟來修復降級的 RAID Group。不須將 Hot spare 硬碟指定到任何 RAID Group 中，其就能為 Synology NAS 中的任一 RAID Group 進行修復 (請參照下方的支援 RAID 類型)。Hot spare 硬碟僅能為符合以下條件的 RAID Group 進行修復：</p>
+<ul>
+<li>RAID Group 必須具有資料保護機制 (如：RAID 1、RAID 5、RAID 6、RAID 10)。
+<li>Hot spare 硬碟的類型必須與 RAID Group 組成硬碟相同 (如：SATA、SAS)。
+<li>Hot spare 硬碟大小必須等於或大於 RAID Group 中最小的硬碟。
+</ul>
+<h4><a name="manage"></a>若要管理 Hot spare 硬碟：</h4>
+<ol>
+<li>按一下<b>管理</b>。</li>
+<li>若要指定 Hot spare 硬碟，請從右邊的<strong>可用硬碟</strong>清單勾選欲作為 Hot spare 的硬碟。若要移除 Hot spare 硬碟，請取消勾選該核取方塊。按一下<strong>套用</strong>來儲存設定。</li>
+</ol>
+
+<div class="section">
+<h4>注意：</h4> 
+<ul>
+<li>Hot spare 硬碟修復降級的 RAID Group 時，所有在此硬碟上的資料都會消失。在您指定 Hot spare 硬碟前，請確定硬碟上沒有重要資料。</li>
+<li>SSD hot spare 硬碟無法自動修復 HDD 所組成的 RAID，反之亦然</li>
+</ul>
+</div>
+
+
+<h4>若要為 RAID Group 設定 hot spare：</h4>
+<ol>
+<li>按一下<b>設定</b>。</li>
+<li><b>Hot Spare 目標</b>頁籤會列出所有可被 hot spare 硬碟保護的 RAID Group。若您取消勾選核取方塊，該 RAID Group 降級時，hot spare 硬碟將不會進行自動修復。</li>
+<li>在<b>跨裝置 Hot Spare</b> 頁籤中，您可以允許位於一裝置上的 hot spare 硬碟修復位於另一裝置上降級的 RAID。</li>
+<li>按一下<b>確定</b>來儲存設定。</li>
+</ol>
+
+
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Externí zařízení</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Externí zařízení</h2>
+
+<p>Přechodem do části <strong>Ovládací panel</strong> > <b>Externí zařízení</b> > <b>Externí zařízení</b> si zobrazíte seznam externích úložných zařízení připojených k serveru DiskStation.</p>
+
+
+<h3><a name="usbdisk"></a><a name="esatadisk"></a>Externí disky</h3>
+<p class="enable-eds14">Připojením externího disku k systému získáte možnost sdílet kapacitu disku pomocí systémově vytvořené sdílené složky <b>usbshare[číslo]</b> (pro disky USB). Sdílená složka bude automaticky odebrána, jakmile bude externí disk odpojen od systému.</p>
+<p class="disable-eds14">Připojením externího disku k systému získáte možnost sdílení kapacity disku pomocí systémově vytvořené sdílené složky <b>usbshare[číslo]</b> (v případě disků USB) nebo <b>satashare[číslo]</b> (v případě disků eSATA). Sdílená složka bude automaticky odebrána, jakmile bude externí disk odpojen od systému.</p>
+<p>DiskStation dokáže rozpoznat následující formáty: <span style="display: inline;" class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64"><b>Btrfs</b>, </span><b>ext3</b>, <b>ext4</b>, <b>FAT</b>, <b>FAT32</b>, <b>HFS</b>, <b>HFS Plus</b> a <b>NTFS</b>. Externí disk, který nelze rozpoznat, musí být před použitím v systému nejdříve naformátován.</p>
+<div class="section">
+<h4>Poznámka:</h4>
+<ol>
+<li>Některé modely podporují u systému HFS/HFS Plus jen čtení.</li>
+<li>Systém HFS/HFS Plus nepodporuje funkci deníku.</li>
+<li>Nezapomeňte externí disk před odpojením vysunout.</li>
+</ol>
+</div>
+
+<h4>Postup formátování disku:</h4>
+
+<p>Klikněte na možnost <b>Naformátovat</b> a postupujte podle pokynů průvodce. Na serveru DiskStation můžete naformátovat externí disky na formát <b>ext4</b> a <b>FAT32</b>.</p>
+
+<div class="section">
+<h4>Poznámka:</h4>
+<ol>
+<li>Před formátováním externího disku se přesvědčte, zda jste vytvořili zálohu všech dat. Během formátování budou odstraněna veškerá data. Tento proces nelze vrátit.</li>
+
+<li>Pokud chcete naformátovat externí disk s formátem ext3 nebo ext4, velikost disku musí být větší než 1 GB.</li>
+
+<li>Pokud je disk naformátován jako ext3 nebo ext4, rozpozná jej pouze zařízení DiskStation. Chcete-li na počítači PC nebo Mac načíst data přímo z externího disku, zvolte formát FAT32.</li>
+</ol>
+</div>
+
+
+<h4>Provedení testu S.M.A.R.T. Otestovat:</h4>
+<P>Disk S.M.A.R.T. Test vám pomůže ověřit a zaznamenat stav pevných disků a včas zjistit možné poruchy disků. V případě výskytu chyb doporučujeme disky okamžitě vyměnit. <br>Provedení testu S.M.A.R.T. Pro test stačí kliknout na <strong>S.M.A.R.T., tlačítko Test</strong> a postupovat podle pokynů průvodce.<br> Výsledky testu vyvoláte kliknutím na možnost <strong>S.M.A.R.T. Informace</strong>.</P>
+<div class="section">
+<h4>Poznámka:</h4>
+<p>Doba testu se může lišit v závislosti na prostředí systému.</p>
+</div>
+
+
+<div class="section disable-eds14">
+<h4>Omezení</h4>
+
+<p>Formátování disků není k dispozici v následujících situacích:</p>
+
+<ul>
+<li>Externí disk se inicializuje (tzn. externí zařízení bylo právě připojeno.)</li>
+<li>Kapacita externího disku je menší než 1 GB (formát ext3 nebo ext4).</li>
+<li>Externí disk se formátuje.</li>
+<li>Systém zálohuje soubory na externí disk.</li>
+<li>Externí disk je poškozený.</li>
+</ul>
+<h4>Odstraňování potíží</h4>
+<ol>
+<li>Externí disk nelze naformátovat. Proč?</li>
+<ul>
+<li>Ověřte, zda je externí disk správně připojený.</li>
+<li>Ověřte, zda externí disk není chráněný proti zápisu. Pokud ano, před formátováním jej odeberte. </li>
+</ul>
+<li>Systém souborů externího disku zobrazuje zprávu <b>Nepodporováno</b>, popř. systém nevytvoří sdílenou složku <b>usbshare[číslo]</b> nebo <b>satashare[číslo]</b> pro externí disk. Co mám dělat? </li>
+<ul>
+<li>Aktuální systém dokáže rozpoznat formáty <span style="display: inline;" class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64">Btrfs, </span>ext3, ext4, FAT, FAT32, HFS, HFS Plus a NTFS. Externí disk, který není naformátován na některý z výše uvedených formátů, nebude rozpoznán a jeho stav bude zobrazen jako <b>Nepodporováno</b>.</li>
+</ul>
+<li>Nelze získat přístup ke sdílené složce <b>usbshare[číslo]</b> nebo <b>satashare[číslo]</b>. Co mám dělat? </li>
+
+<ul>
+<li>To může být způsobeno problémem v systému souborů externího disku. Chcete-li tento problém vyřešit, připojte externí disk k počítači a proveďte kontrolu systému souborů.</li>
+</ul>
+<li>Může externí disk s formátem ext3 nebo ext4 získat přímý přístup k počítači PC nebo Mac?</li>
+<ul>
+<li>Ne, formát ext3 nebo ext4 dokáže rozpoznat pouze zařízení DiskStation. Chcete-li na počítači PC nebo Mac načíst data přímo z externího disku, zvolte formát FAT32. </li>
+</ul>
+<li>Proč se na externím disku nachází složka „lost+found“?</li>
+<ul>
+<li>Jedná se o výchozí systémovou složku, která je vytvořena automaticky v případě, že používáte systém souborů ext3/ext4. Existence této složky na externím disku je zcela běžná. Uživatelé administrators mají přístupová oprávnění a možnost správy obsahu této složky, doporučujeme však, abyste do této složky nezasahovali.</li>
+
+</ul>
+
+</ol>
+</div>
+<div class="section enable-eds14">
+<h4>Omezení</h4>
+
+<p>Formátování disků není k dispozici v následujících situacích:</p>
+
+<ul>
+<li>Externí disk se inicializuje (tzn. externí zařízení bylo právě připojeno.)</li>
+<li>Kapacita externího disku je menší než 1 GB (formát ext3 nebo ext4).</li>
+<li>Externí disk se formátuje.</li>
+<li>Systém zálohuje soubory na externí disk.</li>
+<li>Externí disk je poškozený.</li>
+</ul>
+<h4>Odstraňování potíží</h4>
+<ol>
+<li>Externí disk nelze naformátovat. Proč?</li>
+<ul>
+<li>Ověřte, zda je externí disk správně připojený.</li>
+<li>Ověřte, zda externí disk není chráněný proti zápisu. Pokud ano, před formátováním jej odeberte. </li>
+</ul>
+<li>Systém souborů externího disku zobrazuje zprávu <b>Nepodporováno</b> nebo systém nevytvoří sdílenou složku <b>usbshare[číslo]</b> pro externí disk. Co mám dělat? </li>
+<ul>
+<li>Aktuální systém dokáže rozpoznat formáty ext3, ext4, FAT, FAT32, HFS, HFS Plus a NTFS. Externí disk, který není naformátován na některý z výše uvedených formátů, nebude rozpoznán a jeho stav bude zobrazen jako <b>Nepodporováno</b>.</li>
+</ul>
+<li>Nelze získat přístup ke sdílené složce <b>usbshare[číslo]</b>. Co mám dělat? </li>
+
+<ul>
+<li>To může být způsobeno problémem v systému souborů externího disku. Chcete-li tento problém vyřešit, připojte externí disk k počítači a proveďte kontrolu systému souborů.</li>
+</ul>
+<li>Může externí disk s formátem ext3 nebo ext4 získat přímý přístup k počítači PC nebo Mac?</li>
+<ul>
+<li>Ne, formát ext3 nebo ext4 dokáže rozpoznat pouze zařízení DiskStation. Chcete-li na počítači PC nebo Mac načíst data přímo z externího disku, zvolte formát FAT32. </li>
+</ul>
+<li>Proč se na externím disku nachází složka „lost+found“?</li>
+<ul>
+<li>Jedná se o výchozí systémovou složku, která je vytvořena automaticky v případě, že používáte systém souborů ext3/ext4. Existence této složky na externím disku je zcela běžná. Uživatelé administrators mají přístupová oprávnění a možnost správy obsahu této složky, doporučujeme však, abyste do této složky nezasahovali.</li>
+
+</ul>
+
+</ol>
+</div>
+
+
+<h4>Chcete-li nastavit výchozí oprávnění pro všechna externí zařízení:</h4>
+<p>Výchozí oprávnění nastavíte kliknutím na možnost <strong>Výchozí oprávnění</strong> a zadáním uživatelů a skupin, které mohou mít přístup k externím zařízením a jejich obsahu a tato zařízení a obsah zobrazovat nebo upravovat. Pokud do serveru DiskStation zapojíte externí zařízení, budou zadaná oprávnění přiřazena tomuto externímu zařízení automaticky.</p>
+<p>V okně oprávnění nastavte výchozí oprávnění následovně:</p>
+<ol>
+<li>Z rozevírací nabídky vyberte jednu z následujících možností:</li>
+<ul>
+<li><b>Interní uživatel systému:</b> Přiřaďte oprávnění pro výchozí uživatele systému, jako je uživatel anonymního FTP/WebDAV.</li>
+<li><b>Místní uživatelé:</b> Přiřaďte oprávnění pro místní uživatele (včetně uživatele <b>guest</b>).</li>
+<li><b>Místní skupiny:</b> Přiřaďte oprávnění pro místní skupiny.</li>
+</ul>
+
+<li>Zaškrtnutím nebo zrušením zaškrtnutí příslušných políček pro jednotlivé uživatele nebo skupiny upravíte jejich přístupová oprávnění pro externí zařízení:</li>
+  <ul>
+<li><b>Čtení/zápis</b>: Uživatel nebo skupina budou mít přístup k souborům a složkám externích zařízení a mohou provádět jejich změny.</li>
+<li><b>Jen pro čtení</b>: Uživatel nebo skupina budou mít přístup k souborům a složkám externích zařízení.</li>
+<li><b>Žádný přístup</b>: Uživatel nebo skupina nebudou mít přístup k souborům a složkám externích zařízení.</li>
+</ul>
+</ol>
+
+
+</body>
+</html>

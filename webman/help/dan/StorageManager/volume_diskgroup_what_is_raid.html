@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Vælg en RAID-type - Synology DSM - Hjælp</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="A brief overview describing what RAID types are supported by Synology DiskStation Manager (DSM).">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Vælg en RAID-type</h2>
+
+<p>RAID (Redundant Array of Independent Disks) er en datalagringsteknologi, der muliggør, at flere harddiske kan kombineres til en lagerplads. Der er forskellige typer RAID, der hver yder forskellige niveauer af ydelse, lagerkapacitet og pålidelighed.</p>
+
+<p>Denne artikel indeholder en kort oversigt over RAID-typer, der understøttes af DiskStation, herunder implementeringskrav samt fordele og ulemper.</p>
+
+<!--1-->
+
+<h3>Understøttede RAID-typer</h3>
+
+<p>Denne tabel indeholder en kort oversigt over forskellige RAID-typer, der understøttes af DiskStation, herunder lagerkapacitet, min. antal harddisk, der kræves til RAID-typen, og antallet af harddiskfejl, der kan tolereres, før der opstår datatab. </p>
+
+<table>
+
+  <tr>
+
+    <th>Diskenhedstype</th>
+    <th>Antal harddiske</th>
+
+    <th>Harddiskfejl, der kan tolereres</th>
+    <th>Beskrivelse</th>
+
+    <th>Diskenhedskapacitet</th>
+
+  </tr>
+
+  <tr>
+
+    <td rowspan="3">SHR</td>
+    <td>1</td>
+
+    <td>0</td>
+    <td rowspan="3">
+    <div align="left">
+    <ul>
+    <li>Optimerer diskenhedsstørrelsen, når der kombineres harddiske med forskellige størrelser.</li>
+    <li>Hvis diskenheden er sammensat af to eller flere harddiske, beskyttes dataintegriteten.</li>
+    <li>Anbefales for startbrugere.</li>
+    </ul>
+    </div>
+    </td>
+
+    <td>1 x (harddiskstørrelse)</td>
+
+  </tr>
+  <tr>
+    <td>2 - 3</td>
+    <td>1</td>
+    <td rowspan="2">Optimeret af systemet.</td>
+  </tr>
+  <tr>
+    <td>≧4</td>
+    <td>1 - 2</td>
+  </tr>
+  
+  <tr>
+
+    <td>Basic</td>
+    <td>1</td>
+
+    <td>0</td>
+    <td>
+    <div align="left">
+    <ul>
+    <li>Består af én harddisk som en uafhængig enhed.</li>
+    <li>Giver ikke dataredundans.</li>
+    </ul>
+    </div>
+    </td>
+
+    <td>1 x (harddiskstørrelse)</td>
+
+  </tr>
+
+  <tr>
+
+    <td>JBOD</td>
+    <td>≧1</td>
+
+    <td>0</td>
+    <td>
+    <div align="left">
+    <ul>
+    <li>Kombinerer en samling harddiske til én lagerplads med en kapacitet, der er lige med summen af alle harddiskenes kapacitet.</li>
+    <li>Giver ikke dataredundans.</li>
+    </ul>
+    </div>
+    </td>
+
+    <td>Summen af alle harddiskstørrelser</td>
+
+  </tr>
+
+  <tr>
+
+    <td>RAID 0</td>
+    <td>≧2</td>
+
+    <td>0</td>
+    <td>
+    <div align="left">
+    <ul>
+    <li>Tilbyder "striping", hvilket er en proces til opdeling af data i blokke og spredning af datablokke på tværs af flere harddiske for at forbedre ydelsen.</li>
+    <li>Giver ikke dataredundans.</li>
+    </ul>
+    </div>
+    </td>
+
+    <td>Summen af alle harddiskstørrelser</td>
+
+  </tr>
+
+  <tr>
+
+    <td rowspan="3">RAID 1</td>
+    <td>2</td>
+
+    <td>1</td>
+    <td rowspan="3">
+    <div align="left">
+    <ul>
+    <li>Skriver identiske data til begge harddiske på samme tid.</li>
+    <li>Giver dataredundans.</li>
+    </ul>
+    </div>
+    </td>
+
+    <td rowspan="3">Mindste harddiskstørrelse</td>
+
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>3</td>
+  </tr>
+
+  <tr>
+
+    <td>RAID 5</td>
+    <td>≧3</td>
+
+    <td>1</td>
+
+    <td>
+    <div align="left">
+    <ul>
+    <li>Implementerer Striping på blokniveau med paritetsdata fordelt på alle medlemsharddiske, så dataredundans bliver mere effektiv end RAID 1.</li>
+    </ul>
+    </div>
+    </td>
+
+    <td>(N – 1) x (mindste harddiskstørrelse)</td>
+
+  </tr>
+
+  <tr>
+
+    <td>RAID 6</td>
+    <td>≧4</td>
+
+    <td>2</td>
+    <td>
+    <div align="left">
+    <ul>
+    <li>Implementerer tolags dataparitet for at lagre redundante data, der er lige med størrelsen på to harddiske, hvilket giver en højere grad af dataredundans end RAID 5.</li>
+    </ul>
+    </div>
+    </td>
+
+    <td>(N – 2) x (mindste harddiskstørrelse)</td>
+
+  </tr>
+
+  <tr>
+
+    <td>RAID 10</td>
+    <td>≧4<br /> (lige tal)</td>
+
+    <td>Halvdelen af den samlede harddisk</td>
+    <td>
+    <div align="left">
+    <ul>
+    <li>Giver ydelsen i RAID 0 og databeskyttelsesniveauet i RAID 1, og kombinerer harddiske i grupper på to, hvor data afspejles.</li>
+    </ul>
+    </div>
+    </td>
+
+    <td>(N / 2) x (mindste harddiskstørrelse)</td>
+
+  </tr>
+
+</table>
+
+
+<div class="section">
+<h4>Bemærk:</h4>
+<ul>
+<li>RAID-typer bortset fra "Grundlæggende" er kun tilgængelige på visse modeller, afhængigt af antal harddiskbåse og antal installerede harddiske.</li>
+<li>"N" står for det samlede antal harddiske på diskenheden.</li>
+</ul>
+</div>
+
+
+
+
+<!--2-->
+<h3>Synology Hybrid RAID (SHR)</h3>
+
+<p>Synology Hybrid RAID (SHR) er et automatisk RAID-styringssystem, der er designet til at forenkle lagerstyring og opfylde behovene for nye bruger, der ikke kender til RAID-typer. </p>
+<p>SHR kan kombinere harddiske af forskellig størrelse til at oprette en lagerdiskenhed med optimeret kapacitet og ydeevne, så der spildes så lidt harddiskplads som muligt og der ydes en mere fleksibel lagerløsning.  Når der er tilstrækkeligt med harddiske, tillader SHR for 1- eller 2-diskredundans, hvilket betyder, at SHR-diskenheden kan lide under et eller to harddiske med fejl uden at opleve datatab.</p>
+<img src="about:blank" class="help_image"/>
+
+
+
+
+
+
+<!--3-->
+
+<h3>RAID 0</h3>
+<p>RAID 0 kombinerer to eller flere harddiske for at øge ydeevnen og kapaciteten, men indeholder ingen Fault Tolerance. Én harddiskfejl vil medføre tab af alle data i arrayet. RAID 0 er nyttigt i ikke-kritiske kontorsystemer, hvor der er overvejelser om høj pris/ydeevne.</p>
+<img src="about:blank" class="help_image"/>
+
+
+
+
+
+
+<!--4-->
+
+<h3>RAID 1</h3>
+<p>RAID 1 implementeres oftest med to harddiske. Data på harddiskene spejles, så der er en Fault Tolerance i tilfælde af harddiskfejl. Læsydelsen øges, mens skiveydelsen bliver som på én harddisk. Én harddiskfejl kan bevares uden datatab. RAID 1 anvendes ofte, når Fault Tolerance er vigtigt, mens plads og ydelse ikke er kritiske krav.</p>
+<img src="about:blank" class="help_image"/>
+
+
+
+<!--5-->
+
+<h3>RAID 5</h3>
+<p>RAID 5 yder Fault Tolerance og øget læseydelse. Der kræves mindst tre harddiske. RAID 5 kan modstå tabet af én harddisk. I tilfælde af harddiskfejl genoprettes data fra den fejlede disk fra paritet og stripes over de resterende diske. Derfor påvirkes både læse- og skriveydelsen meget, mens en RAID 5-array går i tilstanden Degraderet. RAID 5 er ideel, når plads og pris er vigtigere end ydelse.</p>
+<img src="about:blank" class="help_image"/>
+
+
+
+<!--6-->
+
+<h3>RAID 6</h3>
+<p>RAID 6 minder om RAID 5, bortset fra at der er et yderligere striping-lag og således kan modstå to diskfejl. Der kræves mindst fire harddiske. Ydelsen i RAID 6 er lavere end i RAID 5 pga. denne yderligere Fault Tolerance. RAID 6 bliver attraktiv, når plads og pris er vigtigt, og der kræves modståelse af flere harddiskfejl.</p>
+<img src="about:blank" class="help_image"/>
+
+
+
+<!--7-->
+
+<h3>RAID 10</h3>
+<p>RAID 10 kombinerer fordelene i RAID 1 og RAID 0 Læse-og skriveydelsen øges, men kun halvdelen af den samlede plads er tilgængelig til datalagring. Fire eller flere harddiske kræves, så prisen bliver relativt høj, men ydelsen er god, og der er samtidig Fault Tolerance. Faktisk kan RAID 10 modstå flere harddiskfejl, under forudsætning af at fejlene ikke ligger inden for samme undergruppe. RAID 10 er ideel til programmer med højt input-/outputbehov, f.eks. databaseservere.</p>
+
+<img src="about:blank" class="help_image"/>
+
+
+</body>
+</html>

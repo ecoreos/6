@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+	<h2>Obecné</h2>
+	<p>Správce úložiště umožňuje uživatelům spravovat veškerý prostor úložiště v produktech Synology. Aby bylo možné dosáhnout zjednodušení správy úložiště a vytvoření flexibilních prostorů úložišť s ochranou dat, podporuje systém Synology DSM více typů skupin RAID Group.</p>
+
+<h4><a href="raid.html">Skupina RAID Group</a></h4>
+	<p>Pomocí zařízení DiskStation můžete spojovat více pevných disků do jedné jednotky úložiště zvané skupina RAID Group. Zařízení DiskStation nabízí následující typy skupin RAID Group:</p>
+	<ul>
+		<li><b>RAID Group pro jeden svazek nebo jednotku iSCSI LUN (na úrovni bloků)</b>:<ul>
+				<li>Přidělí veškerou dostupnou kapacitu do jediného svazku nebo jednotce iSCSI LUN (na úrovni bloků).</li>
+				<li>Nabízí vyšší výkon, ale menší flexibilitu správy úložiště.</li>
+                <li>Umožňuje vytvoření více jednotek iSCSI LUN (běžné soubory) ve svazcích.</li>
+                <li>Podporuje maximálně jedno pole RAID.</li>
+			</ul>
+		</li>
+		<li><b>RAID Group pro větší počet svazků nebo jednotek iSCSI LUN (na úrovni bloků)</b>:<ul>
+				<li>Podporuje vytváření více svazků nebo jednotek LUN (úroveň bloků) ve skupině RAID Group.</li>
+                <li>Poskytuje lepší flexibilitu při správě úložiště.</li>
+                <li>Umožňuje vytvoření více jednotek iSCSI LUN (běžné soubory) ve svazcích.</li>
+				<li>Podporuje slučování více polí RAID do jedné skupiny RAID Group (při konfiguraci jako RAID 5 nebo RAID 6).</li>
+			</ul>
+            </li>
+	</ul>
+
+<h4>Typ RAID</h4>    
+<p>Při vytváření skupiny RAID Group je nutné nejprve zvolit typ pole RAID. Různé typy polí RAID nabízejí různé úrovně ochrany dat, funkce úložiště a výkon. Zařízení DiskStation v současnosti podporuje následující typy RAID:</p>
+	<ul>
+	  <li><b>Základní</b>: Používá k vytvoření skupiny RAID Group jeden pevný disk. Základní skupiny RAID Group neumožňují redundanci dat.</li>
+	  <li><b>JBOD*</b>: Vytváří skupinu RAID Group spojením minimálně dvou pevných disků. Skupiny RAID Group JBOD neumožňují redundanci dat. Dostupná kapacita skupiny RAID Group JBOD odpovídá celkové kapacitě všech disků zahrnutých do skupiny. JBOD podporuje spojování pevných disků různých velikostí.</li>
+	  <li><b>RAID 0*</b>: Vytváří skupinu RAID Group spojením minimálně dvou pevných disků. RAID 0 neumožňuje redundanci dat. Pokud dojde k selhání jednoho z členských disků, dojde ke ztrátě dat ve skupině RAID Group. Dostupná kapacita skupiny RAID 0 Group odpovídá celkové kapacitě všech členských disků. RAID 0 podporuje spojování pevných disků různých velikostí.</li>
+	  <li><b>RAID 1*</b>: Vytváří skupinu RAID Group spojením 2–4 pevných disků. Systém zapisuje shodná data současně na všechny pevné disky. RAID 1 poskytuje ochranu dat, pokud funguje normálně alespoň jeden disk. Dostupná kapacita skupiny RAID 1 Group odpovídá velikosti nejmenšího členského disku.</li>
+	  <li><b>RAID 5*</b>: Vytváří skupinu RAID Group spojením minimálně tří pevných disků a rozkládá data i informace o paritě na všechny členské disky. RAID 5 zajišťuje redundanci dat. V případě selhání členského disku lze systém znovu vytvořit pomocí informací o paritě na ostatních členských discích. Podporuje spojování více polí RAID, pokud jsou vytvořena ve skupině RAID Group pro větší počet svazků nebo jednotek iSCSI LUN (na úrovni bloků). Celková kapacita skupiny RAID 5 Group = <span class="note_content"> Celková kapacita spojených polí RAID. Kapacita pole RAID = (počet pevných disků - 1) x (kapacita nejmenšího pevného disku)</span></li>
+	  <li><b>RAID 6*</b>: Vytváří skupinu RAID Group spojením minimálně čtyř pevných disků a rozkládá data i informace o paritě na všechny členské disky. RAID 6 zajišťuje redundanci dat. I v případě selhání dvou členských disků lze systém znovu vytvořit pomocí informací o paritě na ostatních členských discích. Podporuje spojování více polí RAID, pokud jsou vytvořena ve skupině RAID Group pro větší počet svazků nebo jednotek iSCSI LUN (na úrovni bloků). Celková kapacita skupiny RAID 6 Group = <span class="note_content"> Celková kapacita spojených polí RAID. Kapacita pole RAID = (počet pevných disků - 2) x (kapacita nejmenšího pevného disku)</span></li>
+	  <li><b>RAID 10*</b>: Vytváří skupinu RAID Group spojením minimálně čtyř pevných disků. Počet disků musí být sudý. RAID 10 nabízí výkonnost systému RAID 0 a navíc stejnou úroveň ochrany dat jako RAID 1. Dostupná kapacita skupiny RAID 10 Group = <span class="note_content">(kapacita nejmenšího pevného disku) X (počet pevných disků / 2)</span></li>
+	</ul>
+	<p><span class="note_head">Poznámka:</span> Typy polí RAID označené hvězdičkou (*) jsou dostupné pouze u modelů NAS s dostatečným počtem šachet na pevné disky.</p>
+
+
+<h4><a href="space.html">Typ svazku</a></h4>
+	<p>V závislosti na typu skupiny RAID Group existují dva typy svazků:</p>
+	<ul>
+		<li><b>Svazek na RAID Group pro jeden svazek nebo jednotky iSCSI LUN (na úrovni bloků)</b><ul>
+            	<li>Přidělí veškerou úložnou kapacitu ve skupině RAID Group do jednoho svazku. Nabízí vyšší výkon, ale menší flexibilitu správy.</li>
+                <li>Umožňuje vytvoření více jednotek iSCSI LUN (běžné soubory) ve svazcích.</li>
+            </ul></li>
+		<li><b>Svazek na RAID Group pro větší počet svazků nebo jednotek iSCSI LUN (na úrovni bloků)</b><ul>
+            	<li>Přidělí určenou část kapacity úložiště ve skupině RAID Group pro vytvoření svazku. Nabízí lepší flexibilitu správy a umožňuje podle potřeby rozšířit velikost svazku nebo vytvářet další svazky.</li>
+                <li>Umožňuje vytvoření více jednotek iSCSI LUN (běžné soubory) ve svazcích.</li>
+            </ul></li>
+	</ul>
+
+<h4 class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64">Formát svazku</h4>
+<p class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64">V závislosti na používaném systému souborů existují dva formáty svazků:</p>
+<ul class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64">
+	<li><strong>Nový formát svazku</strong>: Tento formát používá systém souborů <b>Btrfs</b>. Minimální velikost svazku v tomto formátu musí být alespoň 10 GB. Podporuje následující nové funkce, pomocí kterých můžete snadněji spravovat data:<ul>
+			<li><strong><a href="../DisasterRecovery/snapshots.html">Snímek sdílené složky</a>:</strong> Snímek zaznamená stav všech dat v okamžiku pořízení. Můžete tedy rychle obnovit data do předchozího okamžiku, kdy byl snímek pořízen, pokud někdo z uživatelů data na svazku obsahujícím snímky neúmyslně změní nebo smaže.</li>
+			<li><strong><a href="../AdminCenter/file_share_create.html#sharequota">Kvóta sdílené složky</a>:</strong> Můžete nastavit maximální kapacitu pro každou složku.</li>
+			<li><strong><a href="../AdminCenter/file_user_create.html#userquota">Kvóta pro uživatele</a> založená na sdílené složce:</strong> Můžete řídit, kolik místa ve sdílené složce může používat jednotlivý uživatel.</li>
+			<li><strong><a href="../AdminCenter/file_share_create.html#integrity_protection">Pokročilá ochrana integrity dat</a>:</strong> Sdílená složka je chráněna kontrolním součtem CRC32 a strategiemi copy-on-write.</li>
+		</ul>
+	</li>
+	<li><strong>Tradiční formát svazku</strong>: Tento formát používá systém souborů <b>ext4</b>. Minimální velikost svazku v tomto formátu musí být alespoň 10 GB. Jelikož je systém souborů ext4 podporován většinou produktů Synology, můžete snadno migrovat svazek v tomto formátu do jiného produktu Synology.</li>
+</ul>
+</body>
+</html>

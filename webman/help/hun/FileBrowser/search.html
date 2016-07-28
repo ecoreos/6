@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Fájlok és mappák keresése</title>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2>Fájlok és mappák keresése</h2>
+<p>A File Station <strong>Szűrő</strong> menüpontja lehetőséget biztosít a követelményeknek megfelelő fájlok vagy mappák megkereséséhez és megjelenítéséhez. Megszűrheti a jelen mappában található fájlokat vagy mappákat, vagy, amennyiben pontosabb keresési eredményeket szeretne elérni, végrehajthat az összes almappára kiterjedő összetett keresést is.</p>
+
+<h4>Fájlok, illetve mappák keresése az aktuális mappában:</h4>
+<ol>
+	<li>Nyissa meg azt a mappát a File Station alkalmazásban, ahol a keresni kívánt tartalom található.</li>
+	<li>A jobb felső sarokban látható <b>Szűrő</b> mezőben adjon meg egy kulcsszót; az ablak főterületén megjelennek a szűrt találatok.</li>
+</ol>
+
+<h4>Összetett keresés végrehajtása:</h4>
+<ol>
+	<li>Nyissa meg azt a mappát a File Station alkalmazásban, ahol a keresni kívánt tartalom található.</li>
+  <li>Az összetett keresőmenü felfedéséhez kattintson a jobb felső sarokban a <b>Szűrő</b> mező mellett található nagyító ikonra.</li>
+	<li>Adja meg a keresési feltételeket alább, vagy válasszon a legördülő menükből:<ul>
+			<li><b>Kulcsszó</b>: Kulcsszó alapján kereshet a kulcsszónak megfelelő nevű fájlokat és mappákat.<div class="section"><h4>Megjegyzés:</h4>
+				<ul>
+					<li>Helyettesítő karaktereket is használhat [*] (nulla vagy több karaktert) és [?] (egy tetszőleges karaktert) a kulcsszavakban. Például az [a<span class="note_content">*</span>n] kifejezés az [a<span class="note_content">ctio</span>n], az [a<span class="note_content">ttentio</span>n] és az [an] szót is jelentheti.</li>
+					<li>A kulcsszavakat szóközzel válassza el. A [File Station] kulcsszó megadása esetén például a [File], a [Station] vagy mindkét szót tartalmazó keresési eredményeket fog kapni.</li>
+					<li>Amennyiben pontos, kis- és nagybetűket is megkülönböztető keresést kíván végezni, tegye [„”] karakterek közé a kulcsszót. Például a [<span class="note_content">„Synology Inc.”</span>] kulcsszóra a [<span class="note_content">Synology Inc.</span>] találat megjelenik, de a [<span class="note_content">Synology Incorporation</span>] nem.</li>
+					<li class="disable-hi3535">Az alábbi műveleti jelek segítségével tovább finomíthatja a keresési eredményeket:<table width="84%" border="1">
+							<tbody>
+								<tr>
+									<th width="147" align="center">Műveleti jel</th>
+									<th width="229" align="center">Példa</th>
+									<th width="926" align="center">Használat</th>
+								</tr>
+								<tr>
+									<td align="center">&&</td>
+									<td align="center">[X] && [Y]</td>
+									<td><li>Az [X] és [Y] szót egyaránt tartalmazó találatok listázása</li></td>
+								</tr>
+								<tr>
+									<td align="center">||</td>
+									<td align="center">[X] || [Y]</td>
+									<td>
+										<li>Az [X], [Y] vagy mindkét szót tartalmazó találatok listázása</li>
+										<li>Az [X] és [Y] szavakat egyaránt tartalmazó találatok legfelül jelennek meg</li>
+									</td>
+								</tr>
+								<tr>
+									<td align="center">+</td>
+									<td align="center">+[X]</td>
+									<td><li>Az [X] szót tartalmazó találatok listázása</li></td>
+								</tr>
+								<tr>
+									<td align="center">-</td>
+									<td align="center">-[X]</td>
+									<td><li>Az [X] szót nem tartalmazó találatok listázása</li></td>
+								</tr>
+								<tr>
+									<td align="center">!</td>
+									<td align="center">![X]</td>
+									<td><li>Az [X] szót nem tartalmazó találatok listázása</li></td>
+								</tr>
+								<tr>
+									<td align="center">\</td>
+									<td align="center">\[KülönlegesKarakter]</td>
+									<td>
+										<li>Különleges karakterek: <span class="note_content">  +   -   &&	&nbsp; ||    !    (    )    {    }    [    ]    ^    "    ~    *    ?    :   \</span></li>
+										<li>A megadott különleges karaktert tartalmazó találatok listázása</li>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</li>
+				</ul>
+				</div>
+			</li>
+			<li class="disable-hi3535"><strong>Fájltartalomban való keresés engedélyezése</strong>: Keresés az indexelt fájlokban a kulcsszónak megfelelő fájltartalom vagy metaadatok alapján.</li>
+			<li><b>Hely</b>: Az összetett keresés tartományának és mélységének beállításához válasszon a legördülő menüből. Bármely más felsorolt megosztott mappát választva is testre szabhatja a keresési tartományt.</li>
+			<li><b>Fájltípus</b>: A <b>Kiterjesztés</b> elem segítségével a keresést bizonyos fájltípusokra korlátozhatja; a <b>Bármely mappa</b> választásával a keresést mappákra szűkíti le.</li>
+			<li><strong>Dátum</strong>: Válassza ki a <b>Módosított dátum</b>, <b>Létrehozás dátuma</b> vagy az <strong>Utolsó hozzáférés</strong> elemet, majd a megfelelő dátumokkal rendelkező fájlok megkereséséhez válasszon ki egy dátumot a naptárból.</li>
+			<li><b>Méret (MB):</b>: Válasszon az <b>egyenlő</b>, <b>nagyobb, mint</b> és <b>kevesebb, mint</b> elemek közül, majd adja meg a kereséshez használni kívánt fájlméretet. (Az <strong>egyenlő</strong> választásakor az eredmények közt a megközelítőleg a megadott méretnek megfelelő méretű fájlok fognak szerepelni.)</li>
+			<li><b>Tulajdonos/Csoport</b>: Válasszon a <b>Tulajdonos</b> és a <b>Csoport</b> lehetőség közül, majd a legördülő menüből jelölje ki, mely tulajdonoshoz vagy csoporthoz köthető fájlokat vagy mappákat kívánja megtalálni.<div class="section"><h4>Megjegyzés:</h4>
+				<ul>
+					<li>Részletes kereséshez meg kell adnia a <b>Helyet</b> és legalább egy másik keresőkifejezést.</li>
+					<li>Ha egy ISO mappa vagy egy távoli mappa egy indexelt megosztott mappára van telepítve, a benne található fájlokat nem lehet részletes kereséssel megtalálni.</li>
+				</ul>
+				</div>
+			</li>
+		</ul>
+	</li>
+	<li>A keresés indításához kattintson a <b>Keresés</b> elemre. A <b>Visszaállítás</b> elemre kattintva újra megadhatja a keresési szempontokat. Ha a keresés véget ér, a szempontoknak megfelelő fájlokat a rendszer kilistázza a File Station főablakában.</li>
+</ol>
+
+</body>
+</html>

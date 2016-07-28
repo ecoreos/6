@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>File Station</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>ファイル共有リンク</h2>
+
+<p>DiskStation に保存されているファイルやフォルダをすばやく簡単に共有できます。ファイルかフォルダを右クリックして、<strong>[ファイル共有リンク] </strong>を選択するだけです。これでリンクと QR コードが生成されます。これらは友達や他のユーザーに送信できます。これを受け取った人は DSM アカウントの有無に関わらず、リンクに従って選択したファイルやフォルダをダウンロードできます。</p>
+
+
+<h4>ファイル リンクを共有する：</h4>
+<ol>
+<li>共有するファイルまたはフォルダを選択します。</li>
+<li>選択したファイルまたはフォルダの 1 つを右クリックするか、<b>[操作]</b> メニューをクリックします。次に <b>[ファイル共有リンク]</b> を選択します。</li>
+<li>共有リンクと QR コードが、開いた画面に表示されます。</li>
+<li>次のオプションも変更できます。
+<ul>
+ <li><strong>有効期間</strong>：共有リンクへの有効なアクセス期間とアクセス時間をカスタマイズできます。
+  <ul>
+<li><strong>有効期間をカスタマイズ</strong>: 共有リンクをアクティブにしておく期間を決定します。指定した期間が過ぎると、リンクは無効になります。</li>
+<li><strong>有効なアクセス回数をカスタマイズ</strong>: 共有リンクにアクセスできる回数を決定します。指定した回数を超えると、リンクは無効になります。</li>
+</ul>
+</li>
+<li><strong>DSM ユーザーと共有</strong>：ドロップダウン リストから、リンクを共有する DSM ユーザーやグループを選択してください。ゲストアカウントやユーザーグループとは共有できませんのでご注意ください。</li>
+
+<li><strong>他の人との共有</strong>：DSM ユーザーでない人ともパスワードで保護されたリンクを共有できます。</li>
+
+</ul>
+</li>
+</ol>
+
+<h4> gofile.me リンクを有効にする：</h4> 
+<ol>
+<li><strong>[コントロールパネル]</strong> &gt; <strong>[QuickConnect]</strong> を選択し、<strong>[QuickConnect を有効にする]</strong> にチェックマークを付けてください。QuickConnect がまだ設定されていない場合は、このページで設定することができます。</li>
+<li>次に、<strong>[詳細設定]</strong> をクリックして、<strong>[ファイル共有]</strong> にチェックマークを付けてください。</li>
+<li>共有ファイルは gofile.me 共有リンクにアクセスすると、DSM アカウントが無くてもダウンロードできます。</li> 
+</ol>
+<h3>共有リンク ページをカスタマイズ</h3>
+<p>File Station には共有リンクページのスタイルを変更できるように、さまざまなオプションが用意されています。</p>
+<ol>
+<li><strong>[File Station]</strong> &gt; <strong>[設定]</strong> &gt; <strong>[共有リンク]</strong> &gt; <strong>[カスタム]</strong> を選択します。</li>
+<li><strong>[共有リンクページをカスタマイズする]</strong> を選択し、<strong>[カスタム設定]</strong> をクリックします。</li>
+<li>ページは次の方法でカスタマイズできます。
+  <ul>
+<li><strong>テンプレート</strong>: デフォルトのテンプレートを選択します。</li>
+<li><strong>背景</strong>: サムネイルまたは <strong>+</strong> をクリックしてデフォルトの壁紙、DiskStation に保管されている画像、以前適用した画像を選択します。</li>
+<li><strong>ロゴ</strong>: サムネイルまたは <strong>+</strong> をクリックしてアップロードした画像（1 MB以下）、DiskStation に保管されている画像、以前適用した画像を選択します。ロゴは 4 隅のどこにでも配置できます。</li>
+</ul>
+</li>
+<li><strong>[プレビュー]</strong> をクリックすると、調整が必要かどうかを確認できます。</li>
+<li><strong>[OK]</strong> をクリックすると、設定が適用されます。</li>
+</ol>
+
+<div class="section">
+<h4>注意：</h4>
+<ol>
+<li>カスタマイズした設定は、作成時間に関係なく共有したすべてのリンクに適用されます。</li>
+<li>壁紙/ロゴには次の形式の画像しか使用できません。.jpe、jpeg、.jpg、.bmp、.gif、.png</li></ol>
+</div>
+
+<h3>共有リンクの管理</h3>
+<p>既存の共有リンクは、<strong>[ツール]</strong> &gt; <strong>[共有リンク マネージャ]</strong> で管理できます。開いた画面には、既存の共有リンクを編集、共有、削除するためのオプションがあります。</p>
+
+<div class="section">
+<h4>注意：</h4>
+<ol>
+  <li>最大 1000 個の共有リンクを作成できます。</li>
+  <li>各共有リンクの<strong>「状態」</strong>セクションには、次のいずれかの状態が表示されます。
+<ul>
+<li><b>有効</b>: 共有リンクは正常に作動しています。</li>
+<li><b>期限切れ</b>: 共有リンクの有効期限が切れています。</li>
+<li><b>無効</b>：共有ファイルまたはフォルダは存在しません。またはファイルやフォルダにアクセスするための適切な権限を持っていない可能性もあります。</li>
+<li><b>まだ反映されていません</b>: 共有リンクはまだアクティブになっていません。</li>
+</ul>
+</li>
+</ol>
+
+</div>
+</body>
+</html>

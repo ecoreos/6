@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Win/Mac/NFS</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Service de fichiers Mac</h2>
+
+<p>
+Dans <strong>Panneau de configuration</strong> > <strong>Services de fichiers</strong> > <strong>Win/Mac/NFS</strong>, vous pouvez activer le service fichier Mac pour que votre DiskStation devienne un serveur fichier Mac (serveur AFP).</p>
+
+<h4>Pour activer le service de fichier Mac :</h4>
+<ol>
+<li>
+Cochez la case <b>Activer le service de fichiers Mac</b> pour que DiskStation soit un serveur de fichier Mac (serveur AFP).
+</li>
+<li>
+Paramétrez un dossier retour <b>Time Machine</b> si nécessaire. (Reportez-vous à la section ci-dessous pour plus d’informations.)
+</li>
+
+<li>
+Cliquez sur <b>Appliquer</b>.
+</li>
+
+</ol>
+
+<div class="section">
+<h4>Remarque :</h4>
+<ul>
+<li>Pour sauvegarder des données depuis Time Machine vers DiskStation, sélectionnez une dossier partagé depuis le menu déroulant. </li>
+<li> Les dossiers partagés qui sont utilisés par d'autres services ne seront pas disponibles pour Time Machine.</li>
+</ul>
+
+</div>
+
+
+
+<h3>Activation de l'accès au transfert</h3>
+<p>Cette option permet d'activer l'enregistrement des opérations d'accès aux fichiers, y compris créer, supprimer, lire, écrire, déplacer et renommer les fichiers ou des dossiers par le biais du protocole AFP, également appelé Apple Filing Protocol.</p>
+
+
+<h3>Paramètres avancés</h3>
+<h4>Application des permissions UNIX par défaut :</h4>
+<p>L'activation de cette option applique les permissions UNIX par défaut lors du chargement ou de la création de fichiers et dossiers. Les autorisations appliquées sont les mêmes que les autorisations appliquées par la commande UNIX <strong>umask</strong>. Lorsque cette option est activée, les permissions UNIX sont de 644 pour les fichiers et de 755 pour les dossiers. Lorsque cette option est désactivée, les permissions UNIX sont de 666 pour les fichiers et de 777 pour les dossiers. La valeur umask par défaut est 022.</p>
+
+<div class="section">
+<h4>Remarque :</h4>
+<p>L'activation de cette option pourrait provoquer des problèmes d'incohérence de permission entre différents protocoles. Afin d'éviter les incohérences, nous suggérons de laisser cette option désactivée.</p>
+</div>
+
+<h4>Libérer les ressources aussitôt après la déconnexion :</h4>
+<p>L'activation de cette option permet de libérer immédiatement les ressources lorsque la connexion au serveur AFP est brusquement interrompue. Si vous recevez un message d'erreur « Volume utilisé » lors de l'utilisation de Time Machine, désactivez cette option.</p>
+<h4>Pour activer la diffusion imprimante Bonjour :</h4>
+<p>Cochez <b>Activer la diffusion imprimante Bonjour</b> pour permettre aux clients Mac de rechercher et localiser l’imprimante connectée au DiskStation.</p>
+
+<h4 class="disable-hi3535">Pour effectuer des recherches sur le contenu de fichiers via Spotlight dans Finder :</h4>
+<p class="disable-hi3535">Une fois les dossiers complètement indexés et montés sur votre ordinateur Mac, vous pouvez utiliser Spotlight dans Finder pour rechercher les fichiers contenus et faire des recherches dans leur contenu.</p>
+<ol class="disable-hi3535">
+<li>Accédez à <strong>Panneau de configuration</strong> > <strong>Service d'indexation</strong> > <strong>Indexation de fichier</strong> > <strong>Liste des dossiers indexés</strong> > <strong>Créer</strong> pour indexer des dossiers spécifiques et des fichiers contenus par type de fichier.</li>
+<li>Cliquez sur <strong>OK</strong> pour procéder à l'indexation.</li>
+<li>Montez les dossiers indexés sur votre ordinateur Mac.</li>
+<li>Sur votre ordinateur Mac, cliquez sur le dossier monté souhaité dans le volet de gauche du Finder et utilisez Spotlight dans Finder pour rechercher les fichiers contenus.</li>
+
+</ol>
+
+<div class="section disable-hi3535">
+<h4>Remarque :</h4>
+<ul>
+<li>Pour effectuer des recherches dans des dossiers montés, utilisez Spotlight dans Finder. Spotlight sur le bureau du Mac ne permet que des recherches de dossiers locaux.</li>
+<li>Sous Mac OS X 10.9 et les versions ultérieures, Spotlight dans Finder prend en charge la recherche sur plusieurs dossiers montés par nom les catégorie de tag.</li>
+</ul>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>SNMP</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>SNMP</h2>
+
+<p>Usługa SNMP (dostępna na stronie <strong>Panel sterowania</strong> > <strong>Terminal i SNMP</strong> > <strong>SNMP</strong>) pozwala użytkownikom monitorować urządzenie DiskStation przy użyciu oprogramowania do zarządzania siecią. Obecnie są obsługiwane protokoły SNMPv1, SNMPv2c i SNMPv3. </p>
+
+
+<h3>Włączanie usługi SNMP</h3>
+
+<p>Zaznacz pole wyboru <b>Włącz usługę SNMP</b> i wykonaj poniższe kroki.</p>
+<h4>Aby włączyć usługę SNMPv1, SNMPv2c:</h4>
+<ol>
+<li>Zaznacz pole wyboru <b>Usługa SNMPv1, SNMPv2c</b>.
+<li>Wprowadź nazwę <b>Społeczności</b>.
+<li>Kliknij przycisk <b>Zastosuj.</b>
+</ol>
+<h4>Aby włączyć usługę SNMPv3:</h4>
+<ol>
+<li>Zaznacz pole wyboru <b>Usługa SNMPv3</b>.
+<li>Wprowadź <b>Nazwę użytkownika</b> i <b>Hasło</b>. Wprowadź ponownie hasło w polu <b>Potwierdź hasło</b>.
+<li>Kliknij przycisk <b>Zastosuj</b>.
+</ol>
+<p>W identyfikacji DiskStation będą pomagać także dodatkowe dane: <b>Nazwa</b>, <b>Lokalizacja</b> i <b>Kontakt</b>. Pola te są opcjonalne.
+</p>
+
+
+<div class="section">
+<h4>Uwaga:</h4>
+<ol>
+<li>Usługa SNMP obsługuje protokoły IPv4 i IPv6. </li>
+<li>Usługa SNMP obsługuje jednocześnie protokoły SNMPv1, SNMPv2c i SNMPv3. </li>
+</ol>
+</div>
+
+
+<div class="section">
+<h4>Ograniczenie społeczności SNMPv1, SNMPv2c:</h4>
+<p>Nazwa społeczności musi zawierać od 1 do 64 wyświetlanych znaków. Poniższe znaki są niedozwolone: <br>" ' \ oraz spacja.</p>
+<h4>Ograniczenie nazwy użytkownika SNMPv3:</h4>
+<p>Nazwa użytkownika musi zawierać od 1 do 64 wyświetlanych znaków. Poniższe znaki są niedozwolone: <br>" ' \ oraz spacja.</p>
+<h4>Ograniczenie hasła SNMPv3:</h4>
+<p>W haśle ważna jest wielkość liter i może ono zawierać od 8 do 127 wyświetlanych znaków, w tym litery, cyfry i symbole. Poniższe znaki są niedozwolone: <br>" ' \ oraz spacja.</p>
+<p> </p>
+</div>
+<h3>Pobieranie plików MIB firmy Synology</h3>
+<p class="disable-eds14">Firma Synology umożliwia monitorowanie serwera DiskStation za pośrednictwem systemów zarządzania siecią, z uwzględnieniem stanu systemu, dysków i wolumenów RAID.</p>
+
+<p class="enable-eds14">Firma Synology umożliwia monitorowanie serwera DiskStation za pośrednictwem systemów zarządzania siecią, z uwzględnieniem stanu systemu, dysków i wolumenów.</p>
+
+<p>Aby uzyskać więcej informacji i pobrać pliki, odwiedź <a href="http://www.synology.com/support/snmp_mib" target="_blank">witrynę internetową firmy Synology</a>.</p>
+
+<div class="section">
+<h4>Uwaga:</h4>
+<p>Systemy zarządzania siecią wykorzystują pliki MIB w celu uzyskania definicji monitorowanych urządzeń. Aby uzyskać szczegółowe informacje, przejdź: <a href="http://en.wikipedia.org/wiki/Management_information_base" target="_blank">tutaj</a>.</p>
+</div>
+
+</body>
+</html>

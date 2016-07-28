@@ -1,0 +1,50 @@
+ <!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+
+<title>Czyszczenie danych</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="Data scrubbing is a data maintenance feature that inspects volumes or disk groups and repairs any detected data inconsistencies.">
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Czyszczenie danych*</h2>
+<p>Czyszczenie danych to funkcja do zarządzania danymi, która sprawdza woluminy lub grupy dysków. Istnieją dwa rodzaje czyszczenia danych:</p>
+
+<ul>
+<li><strong>Czyszczenie RAID:</strong> Funkcji tej można użyć dla wolumenów lub grup dysków, które korzystają z macierzy SHR (z trzech lub więcej dysków twardych), RAID 5 lub RAID 6. Naprawia ona wszelkie wykryte niespójności danych.</li>
+<li><strong>Czyszczenie systemu plików:</strong> Funkcji tej można użyć dla woluminów z systemem plików Btrfs. Po wykryciu niespójnych danych z sumą kontrolną ścieżka pliku zostaje zapisana w centrum logów. Do naprawy danych stanowczo zaleca się używanie kopii zapasowej.</li>
+</ul>
+
+<p>Zaleca się regularne wykonywanie czyszczenia danych w celu zapewnienia spójności danych i uniknięcia utraty danych w razie awarii dysku twardego.</p>
+
+<h4>Aby przeprowadzić czyszczenie danych:</h4>
+
+<ol>
+<li>Otwórz aplikację <strong>Zarządzanie przechowywaniem</strong>.</li>
+<li>Przejdź do <strong>Wolumin</strong> lub <strong>Grupa dysków</strong>.</li>
+<li>Wybierz wolumin lub grupę dysków, dla której chcesz przeprowadzić czyszczenie danych.</li>
+<li>Kliknij przycisk <strong>Zarządzaj</strong>.</li>
+<li>Wybierz <strong>Czyszczenie danych</strong>.</li>
+<li>Wybierz rodzaj czyszczenia danych. (Jeśli dostępny jest tylko jeden rodzaj, system automatycznie pominie ten krok.)</li>
+</ol>
+
+<div class="section">
+<h4>Uwaga:</h4>
+<ul>
+<li>Czyszczenie danych można przeprowadzić tylko wtedy, gdy stan woluminu lub grupy dysków jest <strong>Normalny</strong>.</li>
+<li>Jeśli system zostanie zamknięty przed zakończeniem, należy ręcznie uruchomić czyszczenie danych ponownie od początku.</li>
+</ul></div>
+
+<p>____<br />*Ta funkcja jest dostępna tylko w niektórych modelach.</p>
+
+</body>
+</html>

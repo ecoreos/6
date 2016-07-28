@@ -1,0 +1,84 @@
+  <!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Lägg till en hårddisk till en Volym eller Diskgrupp - Synology DSM Hjälp</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="This article walks you through the steps to add an additional hard drive to an existing volume or disk group on your DiskStation.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script> <script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Lägg till en hårddisk för att utöka lagringskapaciteten</h2>
+
+<p>Om det finns tomma hårddiskfack i din DiskStation kan du installera ytterligare hårddiskar och lägga till dem till en befintlig volym eller diskgrupp. Denna artikel tillhandahåller instruktioner för att utöka en befintlig volym eller diskgrupp genom att installera ytterligare hårddiskar.</p>
+
+<h3>Innan du börjar</h3>
+
+<p>Innan du börjar, tillse att hårdiskarna du vill lägga till uppfyller följande krav på storlek:</p>
+<ul>
+  <li><strong>För SHR:</strong> Kapaciteten på den hårddisk du vill lägga till måste vara större eller lika stor än den största hårddisken i volymen eller diskgruppen eller vara likadan som alla hårddiskarna i volymen eller diskgruppen. Till exempel, om din SHR-volym är sammansatt av tre hårddiskar som är 2 TB, 1,5 TB och 1 TB var för sig, måste kapaciteten på din nya disk vara minst 2 TB eller motsvara 1,5 TB eller 1 TB.</li>
+  <li><strong>För RAID 5 och RAID 6:</strong> Kapaciteten på den hårddisk du vill lägga till måste vara större eller lika stor än den minsta hårddisken i volymen eller diskgruppen. Till exempel om dina volymer är sammansatta av tre hårddiskar som är 2 TB, 1,5 TB och 1 TB var för sig, måste kapaciteten på din nya disk vara minst 1 TB.</li>
+</ul>
+
+<div class="section">
+<h4>Kontrollera volymstatus</h4>
+
+<p>Tillse att statusen för din volym eller diskgrupp är <strong>Normal</strong>. Om inte, måste du först reparera den.</p>
+</div>
+
+
+<h3>  Lägg till en hårddisk till en Volym eller Diskgrupp</h3>
+
+<p>Hårddiskar kan läggas till följande RAID-typer: </p>
+
+<ul>
+<li>Synology Hybrid RAID (SHR)</li>
+<li>JBOD</li>
+<li>RAID 5</li>
+<li>RAID 6</li>
+</ul>
+
+<div class="section">
+<h4>Obs:</h4>
+<p>För SHR-volymer expanderas lagringskapaciteten bara när hårdiskar läggs till en volym med två eller fler hårddiskar.</p>
+</ul>
+</div>
+
+<h4>Att lägga till en hårddisk till en volym eller diskgrupp:</h4>
+
+<ol>
+<li>Stäng av din DiskStation. (Du kan hoppa över detta steg om din DiskStation stöder snabbväxling.)</li>
+<li>Sätt in en ny hårdisk i ett tomt hårddiskfack.</li>
+
+<div class="section">
+<h4>Obs:</h4>
+<p>För att förhindra att du skadar dig själv eller din DiskStation, vänligen följ instruktionerna för hårddiskinstallation som finns i <i>Snabb installationsguide</i> för din Synology-produkt.</p>
+</div>
+
+<li>Starta din DiskStation.</li>
+<li>Logga in på DSM med ett konto som hör till gruppen <strong>administrators</strong>.</li>
+<li>Öppna <strong>Lagringshanterare</strong>.</li>
+<img src="about:blank" class="help_image"/>
+
+<li>Vid denna punkt, vänligen gör följande:</li>
+  <ul class="list_abc">
+    
+  <li>Om du expanderar en enkel volym, gå till fliken <strong>Volym</strong>. Välj den volym du vill expandera. Klicka på <strong>Hantera</strong> och fortsätt till nästa steg. </li>
+<img src="about:blank" class="help_image"/>
+    
+  <li>Om du expanderar en diskgrupp, gå till fliken <strong>Diskgrupp</strong>. Välj den diskgrupp du vill utöka. Klicka på <strong>Hantera</strong> och fortsätt till nästa steg.</li>
+<img src="about:blank" class="help_image"/>
+  </ul>
+<li>Välj <strong>Utöka volymen (eller diskgruppen) genom att lägga till hårddiskar</strong>. Klicka sedan på <strong>Nästa</strong>.</li>
+<img src="about:blank" class="help_image"/>
+<li>Välj de hårddiskar med vilka du vill utöka volymen eller diskgruppen. Du kan lägga till hårddiskar genom att markera motsvarande kryssrutor. Klicka sedan på <strong>Nästa</strong>.</li>
+<img src="about:blank" class="help_image"/>
+<li>Följ stegen i guiden för att slutföra.</li>
+</ol>
+</body>
+</html>

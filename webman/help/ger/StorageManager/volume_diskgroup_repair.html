@@ -1,0 +1,130 @@
+ <!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Volume oder Diskgruppe reparieren - Hilfe zu Synology DSM</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="This article walks you through the steps to create a volume on DiskStation using Storage Manager.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Volume oder Diskgruppe reparieren</h2>
+
+<p>Volume-Fehler können aufgrund verschiedener Ursachen auftreten, etwa aufgrund beschädigter Systempartitionen oder abgestürzter Festplatten.  In einigen Fällen können Sie den Fehler mit den nachstehenden Schritten diagnostizieren und das Problem beheben.</p>
+
+<div class="section">
+<h4>Hinweise:</h4>
+<ul>
+<li>Die hier beschriebene Funktion <strong>Reparieren</strong> steht nur für RAID-Typen mit Datenredundanz zur Verfügung (z. B. RAID 1, RAID 5, RAID 6 usw.). Beachten Sie, dass durch diese Funktion keine defekten Festplatten repariert werden und auch nicht gewährleistet werden kann, dass die Daten auf abgestürzten Volumes wiederhergestellt werden können.</li>
+<li>Bei abgestürzten Volumes empfehlen sollten Sie sich zwecks Unterstützung an unseren <span class="last"><a href="https://account.synology.com/support/support_form.php?lang=enu" target="_blank">Technischen Support</a> wenden</span>.</li>
+</ul>
+</div>
+
+<h3>Defekte Systempartitionen</h3>
+
+<p>Wenn Systempartitionen defekt sind, sollte eine Meldung angezeigt werden, dass auf die Systempartitionen nicht zugegriffen werden kann.</p>
+<h4>Systempartitionen reparieren:</h4>
+
+<ol>
+<li>Öffnen Sie den <strong>Speicher-Manager</strong>.</li>
+<img src="about:blank" class="help_image"/>
+
+<li>Gehen Sie zu <strong>Übersicht</strong> und klicken Sie auf den Link, der mit <strong>Reparieren</strong> gekennzeichnet ist. Das System sollte die Systempartitionen reparieren.</li>
+
+<img src="about:blank" class="help_image"/>
+</ol>
+
+
+<h3>Fehlerhafte Volumes</h3>
+
+
+<p>Ein Volume oder eine Diskgruppe wird <strong>fehlerhaft</strong>, wenn eine Festplatte ausfällt, aber kein Datenverlust aufgetreten ist. Dies geschieht nur bei RAID-Typen mit Datenredundanz, z. B. SHR, RAID 1, RAID 5, RAID 6 und RAID 10. </p>
+<p>Ein fehlerhaftes Volume oder eine fehlerhafte Diskgruppe kann durch Ersetzen der fehlerhaften Festplatte durch eine funktionstüchtige und Reparieren des Volumes oder der Diskgruppe wiederhergestellt werden.</p>
+
+<div class="section">
+<h4>Hinweis:</h4>
+<ul>
+  <li>Die Ersatzfestplatte muss größer oder genauso groß sein wie die kleinste Festplatte im Volume.</li>
+  <li>Die Ersatzfestplatte muss den Status <strong>Initialisiert</strong> oder <strong>Nicht initialisiert</strong> haben.</li>
+</ul>
+
+</div>
+
+<h4> Fehlerhaftes Volume oder fehlerhafte Diskgruppe reparieren:</h4>
+
+<ol>
+
+<li>Gehen Sie zu <strong>Speicher-Manager</strong> > <strong>Volume</strong> oder <strong>Diskgruppe</strong> und überprüfen Sie, ob der Status auf <strong>Fehlerhaft</strong> umgestellt wurde.</li> 
+<img src="about:blank" class="help_image"/>
+
+<li>Gehen Sie, wenn dies der Fall ist, zur Registerkarte <strong>HDD/SSD</strong>, um festzustellen, welche Festplatte ausgefallen ist.</li>
+<img src="about:blank" class="help_image"/>
+
+<li>Bauen Sie die fehlerhafte Festplatte aus und ersetzen Sie sie durch eine neue.</li>
+
+<div class="section">
+<h4>Hinweis:</h4>
+<ul>
+<li>(Wenn Ihr DiskStation „Hot-Swapping“ (Austauschen während des Betriebs) nicht unterstützt, müssen Sie ihn vor dem Aus- und Einbau von Festplatten herunterfahren.)</li>
+<li>Auf der Ersatzfestplatte vorhandene Daten werden gelöscht.</li>
+</ul>
+</div>
+
+<li>Gehen Sie nach Einbau der Ersatzfestplatte zur Registerkarte <strong>Volume</strong> oder <strong>Diskgruppe</strong> zurück.</li>
+
+<li>Wählen Sie das fehlerhafte Volume oder die fehlerhafte Diskgruppe aus.</li>
+
+<li>Klicken Sie auf <strong>Verwalten</strong>.</li>  
+<img src="about:blank" class="help_image"/>
+
+<li>Wählen Sie <strong>Reparieren</strong> aus und klicken Sie auf <strong>Weiter</strong>. </li>  
+<img src="about:blank" class="help_image"/>
+
+<li>Wählen Sie die Ersatzfestplatte aus, die zum Volume hinzugefügt werden soll. Klicken Sie anschließend auf <strong>Weiter</strong>.</li>
+<img src="about:blank" class="help_image"/>
+
+<li> Folgen Sie den Anweisungen des Assistenten, um den Vorgang abzuschließen. </li>
+</ol>
+
+
+
+
+<h3>Volumes reparieren</h3>
+<p>Um ein fehlerhaftes Volume oder eine fehlerhafte Diskgruppe/iSCSI LUN zu reparieren, müssen Sie die ausgefallene Festplatte durch eine verfügbare Festplatte ersetzen, die die nachstehenden Kriterien erfüllt:</p>
+<ul>
+<li>Bei RAID-1-, RAID-5- oder RAID-6-Volumes kann das fehlerhafte Volume durch Einbauen einer verfügbaren Festplatte repariert werden, deren Kapazität gleich oder größer als die der kleinsten Festplatte im RAID-Volume ist.</li>
+<li>Bei Voumes des Typs SHR-1 muss die verfügbare Festplatte eines der folgenden Kriterien erfüllen: (1) Ihre Kapazität muss gleich oder größer als die der ausgefallenen Festplatte sein. (2) Abgesehen von der größten Festplatte im RAID-Volume muss ihre Kapazität gleich oder größer als die der größten verbleibenden Festplatte sein.
+
+<ol>
+<li>Beispiel 1: SHR-1 umfasst Festplatten mit 3 TB, 2 TB, 2 TB und 1 TB. Wenn die 3-TB-Festplatte ausfällt, kann sie durch eine verfügbare Festplatte ersetzt werden, deren Kapazität gleich oder größer als 2 TB ist.</li>
+<li>Beispiel 2: SHR-1 umfasst Festplatten mit 4 TB, 4 TB, 2 TB und 2 TB. Wenn die 4-TB-Festplatte ausfällt, kann sie durch eine verfügbare Festplatte ersetzt werden, deren Kapazität gleich oder größer als 4 TB ist.</li>
+<li>Beispiel 3: SHR-1 umfasst Festplatten mit 4 TB, 4 TB, 2 TB und 2 TB. Wenn die 2-TB-Festplatte ausfällt, kann sie durch eine verfügbare Festplatte ersetzt werden, deren Kapazität gleich oder größer als 2 TB ist.</li>
+</ol>
+</li>
+<li>Bei Voumes des Typs SHR-2 muss die verfügbare Festplatte eines der folgenden Kriterien erfüllen: (1) Ihre Kapazität muss gleich oder größer als die der ausgefallenen Festplatte sein. (2) Abgesehen von den beiden größten Festplatten im RAID-Volume muss ihre Kapazität gleich oder größer als die der größten verbleibenden Festplatte sein.</li>
+</ul>
+<p>Wenn Sie Festplatten als Hot-Spare-Festplatten konfiguriert haben, die die vorstehenden Kriterien erfüllen werden sie für die Reparatur des Volumes, der Diskgruppe, der RAID Group bzw. der iSCSI LUN verwendet.</p>
+
+
+<h3>Abgestürzte Volumes auflösen</h3>
+
+<p>Wenn der Status des Volumes <strong>Abgestürzt</strong> ist, können Sie das Volume nicht selbst reparieren. Zur Behebung dieses Problems wenden Sie sich bitte an unseren <a href="https://account.synology.com/support/support_form.php?lang=enu" target="_blank">Technischen Support</a>.</p>
+
+<div class="section">
+<h4>Führen Sie folgende Schritte durch, bevor Sie sich an den Support wenden:</h4>
+
+<ul>
+<li>Retten Sie Ihre Daten auf Ihrem DiskStation, indem Sie die Dateien über File Station, Windows File Service, FTP oder andere Dateidienste auf Ihren Computer oder externe Laufwerke kopieren.</li>
+<li>Behalten Sie die Reihenfolge der Festplatten bei, die beim Absturz des Volumes bestand.</li>
+<li>Führen Sie auf den problematischen Festplatten einen S.M.A.R.T.-Test durch. Gehen Sie hierzu zu <strong>Speicher-Manager</strong> > <strong>HDD/SSD</strong>. Wählen Sie die fragliche Festplatte aus und klicken Sie auf <strong>S.M.A.R.T</strong>. <br />
+</li>
+</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Externe apparaten</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Externe apparaten</h2>
+
+<p>Ga naar <strong>Configuratiescherm</strong> > <b>Externe apparaten</b> > <b>Externe apparaten</b> om de lijst van externe opslagapparaten te bekijken die verbonden zijn met uw DiskStation.</p>
+
+
+<h3><a name="usbdisk"></a><a name="esatadisk"></a>Externe schijven</h3>
+<p class="enable-eds14">Wanneer u een externe disk aansluit op het systeem kunt u de diskcapaciteit delen via een door het systeem gegenereerde gedeelde map met naam <b>usbshare[getal]</b> (voor USB-schijven). De gedeelde map wordt automatisch verwijderd als de externe schijf wordt uitgeworpen uit het systeem.</p>
+<p class="disable-eds14">Door een externe schijf op het systeem aan te sluiten, kunt u de schijfcapaciteit delen via een door het systeem aangemaakte gedeelde map, genaamd <b>usbshare[getal]</b> (voor USB-schijven) of <b>satashare[getal]</b> (voor eSATA-schijven). De gedeelde map wordt automatisch verwijderd als de externe schijf wordt uitgeworpen uit het systeem.</p>
+<p>DiskStation herkent de volgende indelingen: <span style="display: inline;" class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64"><b>Btrfs</b>, </span><b>ext3</b>, <b>ext4</b>, <b>FAT</b>, <b>FAT32</b>, <b>HFS</b>, <b>HFS Plus</b> en <b>NTFS</b>. Eventuele onherkende externe schijven moeten eerst geformatteerd worden voor het systeem ze kan gebruiken.</p>
+<div class="section">
+<h4>Opmerking:</h4>
+<ol>
+<li>Sommige modellen ondersteunen HFS/HFS Plus met alleen-lezen.</li>
+<li>Journal wordt niet ondersteund op HFS/HFS Plus.</li>
+<li>Controleer of u de externe schijf hebt uitgeworpen voor u ze ontkoppelt.</li>
+</ol>
+</div>
+
+<h4>Om de schijf te formatteren:</h4>
+
+<p>Klik op <b>Formatteren</b> en volg aanwijzingen van de wizard. U kunt de externe schijven formatteren in de indelingen <b>ext4</b> en <b>FAT32</b> met DiskStation.</p>
+
+<div class="section">
+<h4>Opmerking:</h4>
+<ol>
+<li>zorg ervoor dat u een back-up maakt van de gegevens voor u de externe schijf formatteert. Alle gegevens zullen worden verwijderd tijdens de procedure en kunnen niet meer worden hersteld.</li>
+
+<li>Om de externe schijf te formatteren in de indelingen ext3 of ext4 moet de schijf groter zijn dan 1GB.</li>
+
+<li>Als de schijf in de indelingen ext3 of ext4 is geformatteerd, wordt ze uitsluitend herkend door DiskStation. Selecteer de FAT32-indeling wanneer u gegevens rechtstreeks van uw externe schijf wilt lezen met een pc of Mac.</li>
+</ol>
+</div>
+
+
+<h4>Om een S.M.A.R.T.-test uit te voeren:</h4>
+<P>Een Disk S.M.A.R.T.-test onderzoekt en rapporteert de status van uw harde schijven en waarschuwt u voor mogelijke schijfstoringen. Wij raden u aan om de schijf te vervangen bij de detectie van fouten. <br> Klik op de knop <strong>S.M.A.R.T.-test</strong> en volg de aanwijzingen van de wizard om een S.M.A.R.T.-test uit te voeren.<br> Klik op <strong>S.M.A.R.T.-informatie</strong> om de testresultaten te selecteren.</P>
+<div class="section">
+<h4>Opmerking:</h4>
+<p>de duur van de test varieert al naargelang uw systeemomgeving.</p>
+</div>
+
+
+<div class="section disable-eds14">
+<h4>Beperkingen</h4>
+
+<p>Het formatteren van de schijf is niet beschikbaar in de volgende situaties:</p>
+
+<ul>
+<li>De externe schijf wordt geïnitialiseerd wanneer het externe apparaat net is aangesloten.</li>
+<li>De capaciteit van de externe schijf is minder dan 1GB (ext3- of ext4-indeling).</li>
+<li>De externe schijf wordt geformatteerd.</li>
+<li>Als het systeem bezig is met de back-up van bestanden op de externe schijf.</li>
+<li>De externe schijf is beschadigd.</li>
+</ul>
+<h4>Probleemoplossing</h4>
+<ol>
+<li>Het formatteren van de externe schijf is mislukt. Waarom?</li>
+<ul>
+<li>Controleer of de externe schijf correct is geplaatst.</li>
+<li>Controleer of de externe schijf beveiligd is tegen schrijven. Zo ja, verwijder ze voor de formattering. </li>
+</ul>
+<li>Het bestandssysteem van de externe schijf wordt aangeduid als <b>Niet ondersteund</b>, of het systeem maakt geen <b>usbshare[getal]</b> of <b>satashare[getal]</b> gedeelde map voor de externe schijf aan. Wat moet ik doen? </li>
+<ul>
+<li>Het huidige systeem herkent de indelingen <span style="display: inline;" class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64">Btrfs, </span>ext3, ext4, FAT, FAT32, HFS, HFS Plus en NTFS. Een externe schijf die niet is geformatteerd met bovenstaande types zal niet worden herkend en de status wordt weergegeven als <b>Niet ondersteund</b>.</li>
+</ul>
+<li>Ik heb geen toegang tot de <b>usbshare[getal]</b> of <b>satashare[getal]</b> gedeelde map. Wat moet ik doen? </li>
+
+<ul>
+<li>Dit kan door een probleem in het bestandssysteem van uw externe schijf worden veroorzaakt. Om het probleem op te lossen, sluit u de externe schijf aan op een pc en voert u een controle van het bestandssysteem uit.</li>
+</ul>
+<li>Kan mijn externe schijf met de indeling ext3 of ext4 op mijn pc of Mac worden aangesloten en is deze direct toegankelijk?</li>
+<ul>
+<li>Nee, ext3 of ext4 wordt uitsluitend herkend door DiskStation. Selecteer de FAT32-indeling wanneer u gegevens rechtstreeks van uw externe schijf wilt lezen met een pc of Mac. </li>
+</ul>
+<li>Waarom zie ik een map met de naam "lost+found" op mijn externe schijf?</li>
+<ul>
+<li>Dit is een standaardsysteemmap die automatisch wordt aangemaakt bij het gebruik van het ext3/ext4-bestandssysteem. Het is normaal dat u die map op uw externe schijf ziet. Hoewel de administrators gemachtigd zijn om de inhoud op de schijf te beheren, wordt aanbevolen de map ongemoeid te laten.</li>
+
+</ul>
+
+</ol>
+</div>
+<div class="section enable-eds14">
+<h4>Beperkingen</h4>
+
+<p>Het formatteren van de schijf is niet beschikbaar in de volgende situaties:</p>
+
+<ul>
+<li>De externe schijf wordt geïnitialiseerd wanneer het externe apparaat net is aangesloten.</li>
+<li>De capaciteit van de externe schijf is minder dan 1GB (ext3- of ext4-indeling).</li>
+<li>De externe schijf wordt geformatteerd.</li>
+<li>Als het systeem bezig is met de back-up van bestanden op de externe schijf.</li>
+<li>De externe schijf is beschadigd.</li>
+</ul>
+<h4>Probleemoplossing</h4>
+<ol>
+<li>Het formatteren van de externe schijf is mislukt. Waarom?</li>
+<ul>
+<li>Controleer of de externe schijf correct is geplaatst.</li>
+<li>Controleer of de externe schijf beveiligd is tegen schrijven. Zo ja, verwijder ze voor de formattering. </li>
+</ul>
+<li>Het bestandssysteem van de externe disk wordt aangeduid als <b>Niet ondersteund</b>, of het systeem maakt geen <b>usbshare[getal]</b> gedeelde map voor de externe disk. Wat moet ik doen? </li>
+<ul>
+<li>Het huidige systeem herkent de indelingen ext3, ext4, FAT, FAT32, HFS, HFS Plus en NTFS. Een externe schijf die niet is geformatteerd met bovenstaande types zal niet worden herkend en de status wordt weergegeven als <b>Niet ondersteund</b>.</li>
+</ul>
+<li>Ik heb geen toegang tot de <b>usbshare[getal]</b> of gedeelde map. Wat moet ik doen? </li>
+
+<ul>
+<li>Dit kan door een probleem in het bestandssysteem van uw externe schijf worden veroorzaakt. Om het probleem op te lossen, sluit u de externe schijf aan op een pc en voert u een controle van het bestandssysteem uit.</li>
+</ul>
+<li>Kan mijn externe schijf met de indeling ext3 of ext4 op mijn pc of Mac worden aangesloten en is deze direct toegankelijk?</li>
+<ul>
+<li>Nee, ext3 of ext4 wordt uitsluitend herkend door DiskStation. Selecteer de FAT32-indeling wanneer u gegevens rechtstreeks van uw externe schijf wilt lezen met een pc of Mac. </li>
+</ul>
+<li>Waarom zie ik een map met de naam "lost+found" op mijn externe schijf?</li>
+<ul>
+<li>Dit is een standaardsysteemmap die automatisch wordt aangemaakt bij het gebruik van het ext3/ext4-bestandssysteem. Het is normaal dat u die map op uw externe schijf ziet. Hoewel de administrators gemachtigd zijn om de inhoud op de schijf te beheren, wordt aanbevolen de map ongemoeid te laten.</li>
+
+</ul>
+
+</ol>
+</div>
+
+
+<h4>Standaardrechten instellen voor alle externe apparaten:</h4>
+<p>Om de standaardrechten in te stellen, klikt u op <strong>Standaardrechten</strong> en geeft u aan welke gebruikers of groepen toegang hebben tot externe apparaten en bijbehorende inhoud en deze kunnen bekijken of wijzigen. Wanneer u een extern apparaat op uw DiskStation aansluit, zullen de door u opgegeven rechten automatisch worden toegewezen aan het externe apparaat.</p>
+<p>Ga als volgt te werk om de standaardrechten in te stellen in het scherm rechten:</p>
+<ol>
+<li>Kies een van de opties uit in het vervolgkeuzemenu:</li>
+<ul>
+<li><b>Systeem interne gebruiker:</b> verleen machtigingen aan standaard systeemgebruikers zoals de Anonymous FTP/WebDAV-gebruiker.</li>
+<li><b>Lokale gebruikers:</b> machtigingen verlenen aan lokale gebruikers (inclusief <b>guest</b>).</li>
+<li><b>Lokale groepen:</b> machtigingen verlenen aan lokale groepen.</li>
+</ul>
+
+<li>Schakel de selectievakjes in of uit voor elke gebruiker of groep om hun toegangsmachtigingen tot externe apparaten aan te passen:</li>
+  <ul>
+<li><b>Lezen/Schrijven</b>: de gebruiker of groep heeft toegang tot de bestanden en mappen op externe apparaten en kan wijzigingen aanbrengen.</li>
+<li><b>Alleen-lezen</b>: de gebruiker of groep heeft toegang tot de bestanden en mappen op externe apparaten.</li>
+<li><b>Geen toegang</b>: de gebruiker of groep heeft geen toegang tot de bestanden en mappen op externe apparaten.</li>
+</ul>
+</ol>
+
+
+</body>
+</html>

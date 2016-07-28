@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Red</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2><a name="link_aggr"></a>Link Aggregation*</h2>
+<p>DiskStation admite múltiples LAN, permitiendo que combine esas interfaces LAN con ayuda de la tecnología Link Aggregation. Link Aggregation aumenta el ancho de banda del DiskStation mediante la adición de varias interfaces de red y proporciona la función de conmutación por error para el tráfico de manera que la conexión a la red se mantenga en casos de fallo de conexión.</p>
+<p>Después de que las interfaces LAN se combinen, verá una nueva interfaz llamada <b>Bond</b> en <b>Panel de control</b> > <b>Red</b> > <b>Interfaz de red</b>, que puede configurarse de la misma forma que lo haría con otras interfaces (como LAN o PPPoE).</p>
+
+
+<div class="section">
+<h4>Nota:</h4>
+<ul>
+<li>Al habilitar Link Aggregation, el tráfico de red se ajustará y equilibrará automáticamente para cada dispositivo conectado.</li>
+<li>Si las interfaces de red están conectadas a varios conmutadores, asegúrese de que los puertos de los conmutadores están en el mismo LAN o VLAN.</li>
+</ul>
+</div>
+
+
+<h4>Para combinar múltiples interfaces LAN con Link Aggregation:</h4>
+<ol>
+<li>Vaya al <strong>Panel de control</strong> > <strong>Red</strong> > <strong>Interfaz de red</strong>. Haga clic en <strong>Crear</strong> > <strong>Crear Bond</strong>.</li>
+
+<img src="about:blank" class="help_image"/>
+
+<li>Seleccione el modo que desee.<div class="section">
+<h4>Descripciones de los modos:</h4>
+<ul>
+<li><strong>Adaptive Load Balancing</strong>: Este modo optimiza el tráfico de red recibido y enviado por DiskStation sin importar que el conmutador sea compatible con Link Aggregation o no. Para evitar errores inesperados no habilite Link Aggregation en el conmutador incluso si es compatible.</li>
+<li><strong>IEEE 802.3ad Dinámico Link Aggregation</strong>: Este modo optimiza el tráfico de red recibido y enviado por el DiskStation y requiere que se habilite IEEE 802.3ad (Dynamic) Link Aggregation (LACP, 802.1AX) en los conmutadores. Si se utilizan varios conmutadores, estos deben ser apilables y se deben configurar correctamente.</li>
+<li><strong>Balance XOR</strong>: Este modo equilibra el tráfico de red recibido y enviado por el DiskStation y requiere que se habilite Static Link Aggregation en los conmutadores. Si se utilizan varios conmutadores, estos deben ser apilables y se deben configurar correctamente. Aunque el conmutador no sea compatible con Link Aggregation también es posible equilibrar el DiskStation. Con este modo se pueden detectar los enlaces perdidos, pero no la causa (por ejemplo, cuando los cables de Ethernet se desenchufan o el conmutador no está configurado correctamente).</li>
+<li><strong>Activo/En reposo</strong>: Este modo proporciona la característica de network fault tolerance al DiskStation. O sea, cuando la interfaz de la red activa se desconecta, uno de los otros puertos LAN tomará el control para mantener la conexión de red. Puede elegir este modo sin configurar el interruptor o con un interruptor compatible con IEEE 802.3ad Link Aggregation.</li>
+</ul>
+</div>
+</li>
+
+<img src="about:blank" class="help_image"/>
+
+<li>Seleccione las interfaces para crear Link Aggregation.</li>
+
+<img src="about:blank" class="help_image"/>
+
+<li>Configure los ajustes de IP. También puede habilitar VLAN en caso necesario. Haga clic en <b>Aplicar</b> para completar la configuración.</li>
+
+<img src="about:blank" class="help_image"/>
+
+<li>Cuando acabe, podrá ver la nueva interfaz denominada <b>Bond 1</b> en la lista <b>Interfaz de red</b>.</li>
+
+<img src="about:blank" class="help_image"/>
+
+</ol>
+
+<h4>Para editar la configuración de Link Aggregation:</h4>
+<ol>
+<li>Para cambiar el modo de Link Aggregation o ver la información de los dispositivos físicos, vaya a <b>Panel de control</b> > <b>Red</b> > <b>Interfaz de red</b>.</li>
+<li>Seleccione la interfaz <b>Bond 1</b> y, a continuación, haga clic en el botón <b>Editar</b>.</li>
+
+<img src="about:blank" class="help_image"/>
+
+<li>Vaya a las fichas correspondientes para modificar la configuración deseada.</li>
+</ol>
+
+<h4>Para eliminar Link Aggregation:</h4>
+<ol>
+<li>Vaya al <b>Panel de control</b> > <b>Red</b> > <b>Interfaz de red</b>.</li>
+<li>Seleccione la interfaz <b>Bond 1</b> y, a continuación, haga clic en el botón <b>Eliminar</b>.</li>
+
+<img src="about:blank" class="help_image"/>
+
+<li>Una vez terminado, verá que <b>Bond 1</b> se ha sustituido por dos interfaces LAN.</li>
+
+<img src="about:blank" class="help_image"/>
+
+</ol>
+
+<p>____<br> * Solo disponible en determinados modelos.</p>
+
+</body>
+</html>
+

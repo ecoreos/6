@@ -1,0 +1,78 @@
+ <!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>创建卷 - Synology DSM 帮助</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="This article walks you through the steps to create a volume on DiskStation using Storage Manager.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>创建卷</h2>
+
+<p>本章节将介绍如何在 DiskStation 上创建卷。在创建新卷时，您可选择下列方法之一：</p>
+
+<ul>
+<li><b>快速：</b>这是新手的最佳选择。如果您要自动优化存储容量和性能，则选择此方法，而无需担心技术方面的因素，如 RAID 级别。 </li>
+
+<li><b>自定义：</b>适用于要更精确地控制卷创建 (如 RAID 类型和容量分配)的高级用户。此选项支持不同的 RAID 类型，可让您创建单一或多个卷，并提供选项为各卷分配特定的容量值 (仅在 RAID 上创建多个卷时)。
+</li>
+</ul>
+
+<div class="section">
+<h4>在 RAID 上创建单一或多个存储卷？</h4>
+<p>当创建带自定义模式的卷时，您可选择以下选项之一：</p>
+<ul>
+<li><b>在 RAID 上创建单一存储卷</b>
+    <ul>
+<li>使用所选硬盘的所有可用容量来创建单一存储卷。</li>
+<li>提供较佳的运行速度和性能。</li>
+<li>支持不同 RAID 类型。</li>
+    </ul>
+  </li>
+<li><b>在 RAID 上创建多个存储卷</b>
+    <ul>
+<li>让您在硬盘组上创建多个存储卷。</li>
+<li>支持为不同存储卷分配特定容量。</li>
+<li>提供较大的存储空间管理灵活性。</li>
+<li>支持不同 RAID 类型。</li>
+    </ul>
+  </li>
+</ul>
+</div>
+
+
+<div class="section">
+<h4>开始进行之前的准备：</h4>
+<ul>
+<li>请在开始前确认硬盘上并无任何重要数据。所有现存的数据将在创建过程中被删除。</li>
+<li>进入 <b>HDD/SSD</b> 页面并确认每颗硬盘的状态为<b>正常</b>或<strong>未初始化</strong>。</li>
+</ul>
+</div>
+
+<div class="section enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64">
+<h4>注：</h4>
+<ul>
+<li>Btrfs 卷容量的下限为 10GB。</li>
+<li>Btrfs 卷将为元数据保留 4% 的空间。</li>
+</ul>
+</div>
+
+<h4>若要创建卷：</h4>
+<ol>
+<li>打开<b>存储管理器</b>。</li>
+<img src="about:blank" class="help_image"/>
+<li>进入<b>卷</b>并单击<b>创建</b>。</li>
+<img src="about:blank" class="help_image"/>
+<li>您将看到卷创建向导。选择<strong>快速</strong>或<strong>自定义</strong>，视需要而定。然后按向导的步骤完成创建卷。</li>
+<img src="about:blank" class="help_image"/>
+</ol>
+
+</body>
+</html>

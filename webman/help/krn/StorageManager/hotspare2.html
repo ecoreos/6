@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+	<h2>Hot Spare</h2>
+	<p>Hot spare 디스크는 오류 디스크를 자동으로 교체하여 문제가 발생한 RAID Group을 복구할 수 있는 대기 하드 디스크입니다. DiskStation 내의 임의 RAID Group을 복구할 수 있도록 Hot spare 디스크를 전역으로 할당할 수 있습니다. Hot Spare 디스크는 다음 조건을 만족하는 RAID Group만 복구할 수 있습니다.
+</p>
+	<ul>
+  <li>RAID Group의 RAID 유형이 데이터 보호를 지원해야 합니다(예: RAID 1, RAID 5, RAID 6, RAID 10).</li>
+		<li>Hot Spare 디스크의 하드 드라이브 유형이 RAID Group 멤버 디스크와 동일해야 합니다(예: SATA, SAS).</li>
+		<li>Hot Spare 디스크 크기가 RAID Group에서 가장 작은 디스크 크기와 같거나 커야 합니다.</li>
+	</ul>
+
+	<h4>Hot Spare 디스크 관리하기:</h4>
+	<ol>
+		<li><b>관리</b>를 클릭합니다.</li>
+		<li>Hot Spare 디스크를 할당하려면 오른쪽에서 <b>사용 가능한 디스크</b> 섹션을 찾은 다음 hot spare로 할당할 디스크 옆의 상자를 선택합니다. Hot Spare 디스크를 제거하려면 동일한 상자 선택을 해제합니다. <b>적용</b>을 클릭하여 설정을 저장합니다.</li>
+	</ol>
+	<p>
+<div class="section">
+<h4>참고:</h4> 
+<ul>
+<li>Hot Spare 디스크가 저하된 RAID Group을 복구하는 경우 ot Spare 디스크의 모든 데이터가 지워집니다. hot spare 디스크를 할당하기 전에 디스크에 중요한 데이터가 있는지 확인하십시오.</li>
+<li>HDD로 어셈블된 RAID는 SSD hot spare 디스크로 자동 복구되지 않으며 그 반대의 경우도 마찬가지입니다.</li>
+</ul>
+</div>
+
+<h4>RAID Group에 대한 hot spare 설정 구성하기:</h4>
+<ol>
+<li><b>구성</b>을 클릭하십시오.</li>
+<li><b>Hot Spare 대상</b> 탭에 hot spare 디스크로 보호할 수 있는 RAID Group이 나열됩니다. 상자를 선택 취소한 경우 저하되더라도 해당 RAID Group이 자동으로 복구되지 않습니다.</li>
+<li><b>장치 간 Hot Spare</b> 탭에서는 한 장치의 hot spare 디스크가 다른 장치에 있는 저하된 RAID를 복구하도록 할 수 있습니다.</li>
+<li><b>확인</b>을 클릭하여 설정을 저장합니다.</li>
+</ol>
+
+</body>
+</html>

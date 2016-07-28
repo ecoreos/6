@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>RAID 유형 선택 - Synology DSM 도움말</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="A brief overview describing what RAID types are supported by Synology DiskStation Manager (DSM).">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>RAID 유형 변경</h2>
+
+<p>RAID(독립 디스크의 중복 어레이)는 여러 개의 하드 드라이브를 단일 저장소 공간으로 결합할 수 있는 데이터 저장소 기술입니다. 여러 가지 유형의 RAID가 있으며 유형마다 서로 다른 성능, 저장 용량 및 안정성을 제공합니다.</p>
+
+<p>이 게시물에서는 구현 요구 사항뿐 아니라 장단점을 포함하여 DiskStation에서 지원하는 RAID 유형에 대한 간단한 개요를 제공합니다.</p>
+
+<!--1-->
+
+<h3>RAID 유형 지원</h3>
+
+<p>이 표는 DiskStation에서 지원하는 여러 RAID 유형에 대한 간단한 개요를 제공합니다. 여기에는 저장 용량, RAID 유형을 위해 필요한 하드 드라이브 최소 수, 데이터 손실이 발생하기 전까지 견딜 수 있는 하드 드라이브 수가 포함됩니다. </p>
+
+<table>
+
+  <tr>
+
+    <th>볼륨 유형</th>
+    <th>HDD 수</th>
+
+    <th>오류 해결이 가능한 하드 드라이브</th>
+    <th>설명</th>
+
+    <th>볼륨 용량</th>
+
+  </tr>
+
+  <tr>
+
+    <td rowspan="3">SHR</td>
+    <td>1</td>
+
+    <td>0</td>
+    <td rowspan="3">
+    <div align="left">
+    <ul>
+    <li>크기가 서로 다른 하드 드라이브를 결합할 때 볼륨 크기를 최적화합니다.</li>
+    <li>볼륨이 두 개 이상의 하드 드라이브로 이루어져 있을 경우 데이터 중복성을 제공합니다.</li>
+    <li>초보 사용자에게 권장됩니다.</li>
+    </ul>
+    </div>
+    </td>
+
+    <td>1 x (HDD 크기)</td>
+
+  </tr>
+  <tr>
+    <td>2-3</td>
+    <td>1</td>
+    <td rowspan="2">시스템에서 최적화합니다.</td>
+  </tr>
+  <tr>
+    <td>≧4</td>
+    <td>1-2</td>
+  </tr>
+  
+  <tr>
+
+    <td>기본</td>
+    <td>1</td>
+
+    <td>0</td>
+    <td>
+    <div align="left">
+    <ul>
+    <li>한 개의 하드 드라이브로 독립 유니트로서 구성됩니다.</li>
+    <li>데이터 중복성을 제공하지 않습니다.</li>
+    </ul>
+    </div>
+    </td>
+
+    <td>1 x (HDD 크기)</td>
+
+  </tr>
+
+  <tr>
+
+    <td>JBOD</td>
+    <td>≧1</td>
+
+    <td>0</td>
+    <td>
+    <div align="left">
+    <ul>
+    <li>하드 드라이브 모음을 단일 저장소 공간에 결합하며, 용량은 각 하드 드라이브 용량을 합한 것과 같습니다.</li>
+    <li>데이터 중복성을 제공하지 않습니다.</li>
+    </ul>
+    </div>
+    </td>
+
+    <td>모든 HDD 크기 합계</td>
+
+  </tr>
+
+  <tr>
+
+    <td>RAID 0</td>
+    <td>≧2</td>
+
+    <td>0</td>
+    <td>
+    <div align="left">
+    <ul>
+    <li>성능을 강화하기 위해 데이터를 블록으로 나누고 데이터 블록을 여러 하드 드라이브에 분산시키는 &quot;스트라이핑&quot;을 제공합니다.</li>
+    <li>데이터 중복성을 제공하지 않습니다.</li>
+    </ul>
+    </div>
+    </td>
+
+    <td>모든 HDD 크기 합계</td>
+
+  </tr>
+
+  <tr>
+
+    <td rowspan="3">RAID 1</td>
+    <td>2</td>
+
+    <td>1</td>
+    <td rowspan="3">
+    <div align="left">
+    <ul>
+    <li>동일한 데이터를 동시에 양쪽 하드 드라이브에 씁니다.</li>
+    <li>데이터 중복성을 제공합니다.</li>
+    </ul>
+    </div>
+    </td>
+
+    <td rowspan="3">최소 HDD 크기</td>
+
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>3</td>
+  </tr>
+
+  <tr>
+
+    <td>RAID 5</td>
+    <td>≧3</td>
+
+    <td>1</td>
+
+    <td>
+    <div align="left">
+    <ul>
+    <li>모든 멤버 하드 드라이브에 분산된 패리티 데이터로 블록 수준의 스트라이핑을 구현하여 RAID 1보다 효율적으로 데이터 중복성을 제공합니다.</li>
+    </ul>
+    </div>
+    </td>
+
+    <td>(N – 1) x (최소 HDD 크기)</td>
+
+  </tr>
+
+  <tr>
+
+    <td>RAID 6</td>
+    <td>≧4</td>
+
+    <td>2</td>
+    <td>
+    <div align="left">
+    <ul>
+    <li>두 레이어의 데이터 패리티를 구현하여 두 개의 하드 드라이브 크기와 동일한 중복 데이터를 저장하므로 RAID 5보다 데이터 중복의 정도가 더 큽니다.</li>
+    </ul>
+    </div>
+    </td>
+
+    <td>(N – 2) x (최소 HDD 크기)</td>
+
+  </tr>
+
+  <tr>
+
+    <td>RAID 10</td>
+    <td>≧4<br />(짝수)</td>
+
+    <td>전체 HDD의 반</td>
+    <td>
+    <div align="left">
+    <ul>
+    <li>RAID 0 성능과 RAID 1의 데이터 보호 수준을 제공하여 하드 드라이브를 데이터가 미러링되는 두 개의 그룹으로 결합니다.</li>
+    </ul>
+    </div>
+    </td>
+
+    <td>(N / 2) x (최소 HDD 크기)</td>
+
+  </tr>
+
+</table>
+
+
+<div class="section">
+<h4>참고:</h4>
+<ul>
+<li>&quot;Basic&quot;을 제외한 RAID 유형은 하드 드라이브 슬롯 수와 설치된 하드 드라이브 수에 따라 특정 모델에서만 사용할 수 있습니다.</li>
+<li>"N"은 해당 볼륨 내의 총 하드 드라이브 수를 나타냅니다.</li>
+</ul>
+</div>
+
+
+
+
+<!--2-->
+<h3>Synology Hybrid RAID (SHR)</h3>
+
+<p>Synology Hybrid RAID(SHR)는 저장소 관리를 단순화하고 RAID 유형에 익숙하지 않은 사용자의 요구를 충족시키도록 디자인된 자동화된 RAID 관리 시스템입니다. </p>
+<p>SHR은 크기가 다른 하드 드라이브를 결합하여 성능과 용량이 최적화된 저장소 볼륨을 만들 수 있어, 하드 드라이브 공간을 덜 소모하고 보다 유연한 저장소 솔루션을 제공합니다.  하드 드라이브가 충분하면 SHR가 1개 또는 2개의 디스크 중복을 허용합니다 - 이는 SHR 볼륨이 데이터 손실에 대한 문제 없이 하나 또는 두 개의 오류가 난 하드 드라이브를 여전히 사용할 수 있음을 의미합니다.</p>
+<img src="about:blank" class="help_image"/>
+
+
+
+
+
+
+<!--3-->
+
+<h3>RAID 0</h3>
+<p>RAID 0은 두 개 이상의 하드 드라이브를 결합하여 성능과 용량을 향상시키지만 오류 해결 기능이 없습니다. 단일 하드 드라이브 오류는 어레이에 있는 모든 데이터가 손실되는 결과를 가져옵니다. RAID 0은 높은 비용/성능 균형이 필요한 그다지 중요하지 않은 시스템에 유용합니다.</p>
+<img src="about:blank" class="help_image"/>
+
+
+
+
+
+
+<!--4-->
+
+<h3>RAID 1</h3>
+<p>RAID 1은 두 개의 하드 드라이브에 가장 자주 구현됩니다. 하드 드라이브의 데이터가 미러링되어, 하드 드라이브에 오류가 발생할 경우 오류 해결 기능을 제공합니다. 읽기 성능은 향상되는 반면 쓰기 성능은 단일 하드 드라이브와 비슷합니다. 단일 하드 드라이브 실패를 데이터 손실 없이 견뎌낼 수 있습니다. RAID 1은 종종 오류 해결 기능이 중요하고 공간이나 성능이 그다지 중요하지 않을 때 자주 사용됩니다.</p>
+<img src="about:blank" class="help_image"/>
+
+
+
+<!--5-->
+
+<h3>RAID 5</h3>
+<p>RAID 5는 오류 해결 기능과 향상된 읽기 성능을 제공합니다. 최소 3개의 하드 드라이브가 필요합니다. RAID 5는 단일 하드 드라이브 손실을 견딜 수 있습니다. 하드 드라이브가 실패하는 경우, 실패한 하드 드라이브의 데이터는 나머지 하드 드라이브에 스트라이프된 패리티에서 다시 구성됩니다. 결과적으로, RAID 5 어레이에 문제가 발생하면 읽기와 쓰기 성능이 모두 심한 영향을 받습니다. RAID 5는 공간과 비용이 성능보다 더 중요할 때 이상적입니다.</p>
+<img src="about:blank" class="help_image"/>
+
+
+
+<!--6-->
+
+<h3>RAID 6</h3>
+<p>RAID 6은 RAID 5와 비슷하지만, 스트라이핑에 대해 다른 레이어를 제공하고 두 개의 드라이브 실패를 견딜 수 있습니다. 최소 4개의 하드 드라이브가 필요합니다. RAID 6의 성능은 이 추가적인 오류 해결 기능으로 인해 RAID 5보다 떨어집니다. RAID 6은 공간과 비용이 중요하고 여러 개의 하드 드라이브 실패를 견뎌야 하는 경우에 매력적입니다.</p>
+<img src="about:blank" class="help_image"/>
+
+
+
+<!--7-->
+
+<h3>RAID 10</h3>
+<p>RAID 10은 RAID 1과 RAID 0의 장점을 결합합니다. 읽기와 쓰기 성능이 향상되지만 전체 공간의 반만 데이터 저장에 사용될 수 있습니다. 네 개 이상의 하드 드라이브가 필요하므로, 비용이 비교적 높지만 오류 해결 기능을 제공할 뿐 아니라 성능이 우수합니다. 실제로, RAID 10은 여러 개의 하드 드라이브 실패를 견딜 수 있습니다 – 실패가 동일한 하위 그룹 내에서 발생하지 않는다면. RAID 10은 데이터베이스 서버 같은 높은 입력/출력 수요가 있는 응용 프로그램에 이상적입니다.</p>
+
+<img src="about:blank" class="help_image"/>
+
+
+</body>
+</html>

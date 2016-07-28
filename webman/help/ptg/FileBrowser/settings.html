@@ -1,0 +1,195 @@
+
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Opções para Gerir a File Station - Ajuda do Synology DSM</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="Learn how to customize File Station settings related to file management, shared links, and security.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Gerir Definições File Station</h2>
+<p>Para gerir as definições da File Station, abra a <strong>File Station</strong> e clique no botão <b>Definições.</b></p>
+
+<h3>Geral</h3>
+<p>
+Aqui pode ativar os registos da File Station para registar as atividades de todos os utilizadores. As atividades do utilizador incluem <b>Criar pasta</b>, <b>Carregar</b>, <b>Transferir</b>, <b>Eliminar</b>, <b>Renomear</b>, <b>Mover</b>, <b>Copiar</b> e <b>Propriedade definida</b>.
+</p>
+<h4>Para ativar o registo da File Station:</h4>
+<ol>
+<li>Se pretender registar as atividades de todos os utilizadores, assinale a caixa de verificação <b>Ativar o registo da File Station</b>.
+</li>
+<li>
+Clique em <b>OK</b>.
+</li>
+</ol>
+<h4>Para visualizar o registo da File Station:</h4>
+<ol>
+<li>
+Clique em <b>Visualizar Registos</b>, que o encaminha para <strong>Centro de Registos</strong>.</li>
+<li>
+Clique no separador <b>Transferência de Ficheiros</b>.
+</li>
+</ol>
+
+<h4>Para substituir automaticamente os ficheiros com carregamento através de arrastar e largar ou atalhos de teclado:</h4>
+<p>Assinale <strong>Substituir ficheiros sempre que os arrasto e largo no navegador Web ou colo com atalhos de teclado</strong> se pretender substituir automaticamente os ficheiros com o mesmo nome quando os arrasta e larga do seu computador para o navegador Web ou cola ficheiros com atalhos de teclado na File Station.</p>
+
+
+<h4>Para ativar arrastar e largar inteligente:</h4>
+<p>Quando arrasta e larga ficheiros dentro da File Station, esta funcionalidade irá determinar automaticamente se a transferência é uma ação de cópia ou deslocação.</p>
+
+<ol>
+<li>Selecione <strong>Ativar arrastar e largar inteligente</strong>.</li>
+<li>Selecione uma das ações a realizar sempre caso haja outro utilizador a transferir ficheiros em simultâneo com o mesmo nome, para o mesmo local:
+  <ul>
+<li><strong>Substituir</strong>: Os ficheiros que transferir irão substituir os ficheiros com o mesmo nome.</li>
+<li><strong>Ignorar</strong>: Os ficheiros que transferir irão ignorados e não irão substituir os ficheiros com o mesmo nome.</li>
+</ul>
+</li>
+<li>Clique em <strong>OK</strong>.</li>
+</ol>
+
+<div class="section">
+<h4>Nota:</h4>
+<p>Se desejar alterar a ação de cópia ou deslocação determinada pelo arrastar e largar inteligente, aplique as seguintes teclas de atalho para se ajustar às suas necessidades:</p>
+<ul>
+<li>Para mudar para uma ação de cópia: Prima Ctrl enquanto realiza o arrastar e largar.</li>
+<li>Para mudar para uma ação de deslocação: Prima Shift enquanto realiza o arrastar e largar.</li>
+</ul>
+</div>
+
+
+<h4>Para percorrer e gerir ficheiros do computador local com File Station:</h4>
+<ol>
+<li>
+Assinale <b>Pesquisar ficheiros do computador local com a File Station</b>.
+</li>
+<li>
+Clique em <b>OK</b>.
+</li>
+</ol>
+
+
+<h4>Para partilhar a lista de utilizadores DSM com utilizadores não admin:</h4>
+<p>Esta opção permite aos utilizadores não admin acederem à lista completa de utilizadores DSM caso desejem procurar ficheiros de utilizadores/grupos DSM específicos, ou caso desejem partilhar ligações de ficheiros com outros utilizadores DSM.</p>
+
+<ol>
+<li>Selecione <strong>Partilhe a lista de utilizadores DSM com utilizadores não admin</strong>.</li>
+<li>Clique em <strong>OK</strong>.</li>
+</ol>
+
+
+<h3>Aplicar Permissões UNIX Predefinidas</h3>
+<p>Clique em <strong>Definições Avançadas</strong> e assinale a opção para aplicar as permissões UNIX predefinidas quando carregar ou criar ficheiros e pastas. As permissões aplicadas são as mesmas permissões aplicadas pelo comando UNIX <strong>umask</strong>. Quando esta opção estiver ativada, as permissões UNIX são 644 para ficheiros e 755 para pastas. Quando esta opção estiver desativada, as permissões UNIX são 666 para ficheiros e 777 para pastas. O valor umask predefinido é 022.</p>
+<div class="section">
+<h4>Nota:</h4>
+<ul>
+  <li>Para pastas partilhadas com ativação ACL do Windows (todas as partilhas, excluindo &quot;photo&quot; e partilhas em discos externos) execute o comando <strong>chmod</strong> no seu Linux ou cliente FTP para alterar os tipos de permissão de pasta e ficheiro do ACL do Windows para UNIX.</li>
+  <li>Ativar esta opção pode provocar questões de inconsistência de permissões entre diferentes protocolos. Para evitar inconsistências, sugerimos que deixe esta opção desativada.</li>
+</ul>
+</div>
+<h3 class="disable-eds14">Montagem/Ligações</h3>
+<p class="disable-eds14">
+Por predefinição, todos os utilizadores podem montar pastas remotas ou unidades virtuais. Aqui poderá limitar o acesso a uma pasta remota ou gestão de unidade virtual apenas para administradores.
+</p>
+
+<div class="disable-eds14 section">
+<h4>Nota:</h4>
+<p>Os utilizadores que não são administradores só podem montar pastas remotas na pasta <b>home</b>.</p>
+</div>
+<h4 class="disable-eds14">Para permitir a diferentes utilziadores montar pastas remotas ou unidades virtuais:</h4>
+<ol class="disable-eds14">
+<li>
+Escolha <b>Todos os utilizadores</b> ou <b>Administradores</b> na secção <b>Pasta Remota</b> ou <b>Unidade Virtual</b>.
+</li>
+<li>
+Clique em <b>OK</b>.
+</li>
+</ol>
+<h4 class="disable-eds14">Para permitir a diferentes utilizadores montar servidores e serviços na nuvem:</h4>
+<ol class="disable-eds14">
+  <li>Escolha entre <b>Todos os utilizadores</b>, <b>Administrators</b> ou <strong>Utilizador específico</strong>. </li>
+  <li>Ao selecionar <strong>Utilizador específico</strong>, irá abrir uma janela que lhe permite configurar as permissões de montagem para diferentes utilizadores. Para ativar o acesso a um utilizador específico, certifique-se de que a caixa está assinalada na coluna <strong>Ativado</strong>. Para desativar o acesso a um utilizador específico, certifique-se de que a caixa não está assinalada na coluna <strong>Desativado</strong>. Depois de concluído, clique em <strong>OK</strong> para fechar esta janela.</li>
+  <div class="section">
+    <h4>Nota:</h4>
+    <ul>
+      <li>Os utilizadores pertencentes ao grupo <strong>administrators</strong> podem utilizar esta funcionalidade mas não podem efetuar quaisquer alterações. Os utilizadores com início de sessão como <strong>guest</strong> não podem utilizar esta funcionalidade nem efetuar quaisquer alterações. As permissões para todos os outros utilizadores podem ser definidas aqui.</li>
+    </ul>
+  </div>
+  <li>Clique em <strong>OK</strong>.</li>
+</ol>
+<h3>Ligações partilhadas</h3>
+<p>
+Por predefinição, todos os utilizadores podem partilhar ligações de ficheiros. Aqui poderá limitar o acesso à gestão de ligações partilhadas apenas para administradores.
+</p>
+<h4>Para permitir que diferentes utilizadores partilhem ligações de ficheiros:</h4>
+<ol>
+<li>
+Escolha <b>Todos os utilizadores</b>, <b>Administrators</b> ou <strong>Utilizadores específicos</strong>.
+</li>
+<li>
+Clique em <b>OK</b>.
+</li>
+</ol>
+
+<h4>Para abrir ficheiros HTML como texto simples:</h4>
+
+<ol>
+<li>Assinale a caixa <strong>Abrir sempre os ficheiros HTML utilizando o formato de texto simples</strong>. Se esta opção estiver ativada, os ficheiros HTML (ou seja, os ficheiros HTM, HTML, JSP e XHTML) são apresentados com o formato de texto simples quando são abertos pelos utilizadores através de uma ligação de partilha de ficheiro. Esta opção evita que terceiros, com intenções maliciosas, se apropriem indevidamente dos inícios de sessão do utilizador com scripts integrados em ficheiros HTML.</li>
+<li>Clique em <strong>OK</strong>.</li>
+</ol>
+
+<h3>Limite de Velocidade</h3>
+<p>Pode ativar um limite de velocidade para controlar a largura de banda máxima utilizável para utilizadores e grupos que transferem dados através da File Station.</p>
+
+
+<h4>Para ativar o limite de velocidade:</h4>
+<ol>
+  <li>Selecione a caixa marcada <b>Ativar limite de velocidade</b> ou <strong>Ativar limite de velocidade de acordo com um agendamento</strong> se pretender implementar um limite de velocidade apenas em horas específicas. Esta é uma definição ao nível do servidor e irá substituir as definições de grupos e utilizadores individuais. A escolha de <strong>Sem limite de velocidade</strong> desativa as definições do limite de velocidade de todos os utilizadores e grupos.</li>
+  <li>Clique em <strong>Definições de Limite de Velocidade</strong> para modificar as definições de grupos ou utilizadores individuais. Para cada utilizador e grupo, pode selecionar uma das seguintes opções:  </li>
+    <ul>
+      <li><strong>Aplicar Definições de Grupo:</strong> As definições do limite de velocidade serão iguais às definições do grupo ao qual pertence o utilizador. </li>
+      <li><strong>Sem limite de velocidade:</strong> Não será aplicado qualquer limite de velocidade quando os membros do grupo transferirem ficheiros com o serviço.</li>
+      <li><strong>Constante:</strong> Será aplicado um limite de velocidade fixo e constante ao utilizador ou membros do grupo. Os limites de velocidade de carregamento e transferência podem ser especificados nos campos à esquerda.</li>
+      <li><strong>Variável:</strong> É possível especificar e aplicar dois limites de velocidade diferentes aos membros do grupo ou utilizadores de acordo com um agendamento. Clique no botão <strong>Personalizar</strong> para modificar as definições do limite de velocidade e definir um agendamento.</li>
+    </ul>
+
+  <li>Clique em <b>Aplicar</b>.</li>
+</ol>
+<div class="section">
+  <h4>Nota:</h4>
+  <ul>
+    <li>Para obter mais detalhes sobre a dinâmica do limite de velocidade de grupos, consulte <a href="../AdminCenter/file_group_edit.html">aqui</a>.</li>
+    <li>Quando definir o limite de velocidade para um utilizador, a secção <strong>Resultado</strong> apresenta o limite de velocidade real do utilizador de acordo com as definições de grupo e individuais. Por exemplo, se um utilizador "Achilles" tiver um limite de transferência individual de 100 KB/s, mas pertencer a um grupo de utilizadores com um limite de transferência de 500 KB/s, a secção <strong>Resultados</strong> apresenta "0/500".</li>
+  </ul>
+</div>
+
+
+
+<h3>Segurança</h3>
+
+<p>Aqui pode consultar as definições de segurança seguintes.</p>
+
+<h4>Para abrir ficheiros HTML como texto simples:</h4>
+
+<ol>
+<li>Assinale a caixa <strong>Abrir sempre os ficheiros HTML utilizando o formato de texto simples</strong>. Se esta opção estiver ativada, os ficheiros HTML (ou seja, os ficheiros HTM, HTML, JSP e XHTML) são apresentados com o formato de texto simples quando são abertos na File Station. Esta opção evita que terceiros, com intenções maliciosas, se apropriem indevidamente dos inícios de sessão do utilizador com scripts integrados em ficheiros HTML.</li>
+<div class="section">
+<h4>Nota:</h4>
+<ul>
+<li>Esta não é uma definição global. Cada utilizador pode escolher ativar ou não esta opção, de acordo com as suas necessidades individuais.</li>
+</ul>
+</div>
+<li>Clique em <strong>OK</strong>.</li>
+</ol>
+
+</body>
+</html>

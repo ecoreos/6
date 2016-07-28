@@ -1,0 +1,161 @@
+﻿<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>外接设备</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>外接设备</h2>
+
+<p>进入<strong>控制面板</strong> &gt; <b>外部设备</b> &gt; <b>外部设备</b>可查看连接到 DiskStation 的外接存储设备列表。</p>
+
+
+<h3><a name="usbdisk"></a><a name="esatadisk"></a>外接硬盘</h3>
+<p class="enable-eds14">将外接硬盘连上系统后，系统会自动创建一个名叫 <b>usbshare[编号]</b> 的共享文件夹，您可以用这个文件夹共享外接硬盘上的数据（适用于 USB 硬盘）。退出外接硬盘之后，该共享文件夹将被自动删除。</p>
+<p class="disable-eds14">将外接硬盘连上系统后，系统会自动创建一个名为 <b>usbshare[编号]</b>（针对 USB 硬盘）或 <b>satashare[编号]</b>（针对 eSATA 硬盘）的共享文件夹，您可以共享外接硬盘容量。退出外接硬盘之后，该共享文件夹将被自动删除。</p>
+<p>DiskStation 能够识别以下格式：<span style="display: inline;" class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64"><b>Btrfs</b>、</span><b>ext3</b>、<b>ext4</b>、<b>FAT</b>、<b>FAT32</b>、<b>HFS</b>、<b>HFS Plus</b> 和 <b>NTFS</b>。无法识别的外接硬盘必须先进行格式化才能使用。</p>
+<div class="section">
+<h4>注：</h4>
+<ol>
+<li>HFS/HFS Plus 在部分机型仅支持只读功能。</li>
+<li>HFS/HFS Plus 不支持日志功能。</li>
+<li>请确认先在用户接口上退出外接硬盘再将其取下。</li>
+</ol>
+</div>
+
+<h4>若要格式化硬盘：</h4>
+
+<p>单击<b>格式化</b>并按向导指示完成设置。您可在 DiskStation 上将外接硬盘格式化为 <b>ext4</b> 和 <b>FAT32</b> 格式。</p>
+
+<div class="section">
+<h4>注：</h4>
+<ol>
+<li>请确认您在格式化外接硬盘之前已将文件备份。所有文件在过程中会被删除且无法恢复。</li>
+
+<li>若要将外接硬盘格式化成 ext3 或 ext4 格式，硬盘容量必须大于 1 GB。</li>
+
+<li>格式化成 ext3 或 ext4 的硬盘只会被 DiskStation 识别。如果您要直接从计算机或 Mac 的外接硬盘读取数据，请选择 FAT32 格式。</li>
+</ol>
+</div>
+
+
+<h4>若要执行 S.M.A.R.T. 检测：</h4>
+<P>硬盘 S.M.A.R.T. 检测将检查硬盘并汇报硬盘的健康状态，提前警告可能将会发生的硬盘损毁。我们建议您在硬盘状况出现不良征状时，更换有问题的硬盘。<br> 若要执行 S.M.A.R.T. 检测，只需单击 <strong>S.M.A.R.T. 检测</strong>按钮，并按照向导指示操作即可。<br>若要检查检测结果，只需单击 <strong>S.M.A.R.T. 信息</strong>即可。</P>
+<div class="section">
+<h4>注：</h4>
+<p>检测时间根据系统环境而有所不同。</p>
+</div>
+
+
+<div class="section disable-eds14">
+<h4>限制</h4>
+
+<p>在以下情况下无法进行硬盘格式化：</p>
+
+<ul>
+<li>即外接硬盘刚刚插入，并正在运行初始化设置。</li>
+<li>外接硬盘容量小于 1 GB（ext3 或 ext4 格式）。</li>
+<li>外接硬盘正在进行格式化。</li>
+<li>系统正在将数据备份到外接硬盘。</li>
+<li>外接硬盘已损毁。</li>
+</ul>
+<h4>疑难解答</h4>
+<ol>
+<li>无法格式化外接硬盘。为什么？</li>
+<ul>
+<li>请检查外接硬盘是否已正确地链接在系统上。</li>
+<li>请检查外接硬盘有没有写入保护。如果有，请先删除写入保护再进行格式化。</li>
+</ul>
+<li>外接硬盘的文件系统显示为<b>不支持</b>，或系统没有为外接硬盘创建 <b>usbshare[编号]</b>或 <b>satashare[编号]</b>共享文件夹。该如何处理？</li>
+<ul>
+<li>当前系统支持的格式为 <span style="display: inline;" class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64">Btrfs、</span>ext3、ext4、FAT、FAT32、HFS、HFS Plus 以及 NTFS。使用其他文件系统的外接硬盘无法被识别，状态上会显示为<b>不支持</b>。</li>
+</ul>
+<li>我无法访问 <b>usbshare[编号]</b>或 <b>satashare[编号]</b>共享文件夹。该如何处理？</li>
+
+<ul>
+<li>这可能是由外接硬盘上的文件系统问题所造成的。若要解决这一问题，请将外接硬盘连接到计算机并执行文件系统检查。</li>
+</ul>
+<li>ext3 或 ext4 格式的外接硬盘是否可直接连接和接入到我的计算机或 Mac？</li>
+<ul>
+<li>不可以，只有 DiskStation 可以识别 ext3 或 ext4。如果您要直接从计算机或 Mac 的外接硬盘读取数据，请选择 FAT32 格式。</li>
+</ul>
+<li>为什么我会在外接硬盘上看到一个名为&ldquo;lost+found&rdquo;的文件夹？</li>
+<ul>
+<li>这是使用 ext3/ext4 文件系统时自动创建的系统默认文件夹。在外接硬盘中看到这个文件夹是正常现象。虽然系统管理员有访问与管理内容的权限，但我们强烈建议您不要对此文件夹进行任何动作。</li>
+
+</ul>
+
+</ol>
+</div>
+<div class="section enable-eds14">
+<h4>限制</h4>
+
+<p>在以下情况下无法进行硬盘格式化：</p>
+
+<ul>
+<li>即外接硬盘刚刚插入，并正在运行初始化设置。</li>
+<li>外接硬盘容量小于 1 GB（ext3 或 ext4 格式）。</li>
+<li>外接硬盘正在进行格式化。</li>
+<li>系统正在将数据备份到外接硬盘。</li>
+<li>外接硬盘已损毁。</li>
+</ul>
+<h4>疑难解答</h4>
+<ol>
+<li>无法格式化外接硬盘。为什么？</li>
+<ul>
+<li>请检查外接硬盘是否已正确地链接在系统上。</li>
+<li>请检查外接硬盘有没有写入保护。如果有，请先删除写入保护再进行格式化。</li>
+</ul>
+<li>外接硬盘的文件系统显示为<b>不支持</b>，或系统没有为外接硬盘创建 <b>usbshare[编号]</b>共享文件夹。该如何处理？</li>
+<ul>
+<li>当前系统支持的格式为 ext3、ext4、FAT、FAT32、HFS、HFS Plus 以及 NTFS。使用其他文件系统的外接硬盘无法被识别，状态上会显示为<b>不支持</b>。</li>
+</ul>
+<li>我无法访问 <b>usbshare[编号]</b> 共享文件夹。该如何处理？</li>
+
+<ul>
+<li>这可能是由外接硬盘上的文件系统问题所造成的。若要解决这一问题，请将外接硬盘连接到计算机并执行文件系统检查。</li>
+</ul>
+<li>ext3 或 ext4 格式的外接硬盘是否可直接连接和接入到我的计算机或 Mac？</li>
+<ul>
+<li>不可以，只有 DiskStation 可以识别 ext3 或 ext4。如果您要直接从计算机或 Mac 的外接硬盘读取数据，请选择 FAT32 格式。</li>
+</ul>
+<li>为什么我会在外接硬盘上看到一个名为&ldquo;lost+found&rdquo;的文件夹？</li>
+<ul>
+<li>这是使用 ext3/ext4 文件系统时自动创建的系统默认文件夹。在外接硬盘中看到这个文件夹是正常现象。虽然系统管理员有访问与管理内容的权限，但我们强烈建议您不要对此文件夹进行任何动作。</li>
+
+</ul>
+
+</ol>
+</div>
+
+
+<h4>若要为所有的外接设备设置默认权限：</h4>
+<p>您可单击<strong>默认权限</strong>并指定用户或群组可访问、查看或修改外接设备及其内容以设置默认权限。当外接设备插入 DiskStation 后，您指定的权限将自动指派给该外接设备。</p>
+<p>在权限窗口中，请执行下列步骤来设置默认权限:</p>
+<ol>
+<li>从操作下拉菜单中选择下列选项之一：</li>
+<ul>
+<li><b>系统内部用户：</b>为默认的系统用户指派权限，如 Anonymous FTP/WebDAV 用户。</li>
+<li><b>本地用户：</b>为本地用户指定权限（包括 <b>guest</b>）。</li>
+<li><b>本地群组：</b>为本地群组指定权限。</li>
+</ul>
+
+<li>勾选或取消勾选每个用户或群组的适当复选框来自定义外接设备的访问权限：</li>
+  <ul>
+<li><b>读取/写入</b>：该用户或群组可以访问并变更外接设备中的文件及文件夹。</li>
+<li><b>只读</b>：用户或群组可访问外接设备中的文件及文件夹。</li>
+<li><b>禁止访问</b>：用户或群组无法访问外接设备中的文件及文件夹。</li>
+</ul>
+</ol>
+
+
+</body>
+</html>

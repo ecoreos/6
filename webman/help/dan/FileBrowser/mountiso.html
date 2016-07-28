@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>File Station</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script> <script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Tilknyt virtuelle drev</h2>
+
+<p>
+Du kan tilknytte virtuelle drev for at få adgang til indhold i diskbilleder med File Station.
+</p>
+
+<h4>Sådan tilknytter du et virtuelt drev:</h4>
+<ol>
+<li>
+Vælg et diskbillede, og klik på <b>Værktøj</b> > <b>Tilknyt virtuelt drev</b>.
+</li>
+<img src="about:blank" class="help_image"/>
+<li>
+Klik på <b>Gennemse</b> for at vælge eller oprette en tom destinationsmappe på din DiskStation for at tilknytte det virtuelle drev.
+</li>
+<img src="about:blank" class="help_image"/>
+<li>
+Marker <b>Tilslut automatisk ved start</b>, hvis du ønsker, at DiskStation skal tilsluttes det virtuelle drev, hver gang systemet starter eller genstarter. Klik på <b>Tilknyt</b> for at fortsætte. Nu kan du navigere til destinationsmappen, hvor det virtuelle drev tilknyttes og få adgang til indhold på diskbilledet.
+</li>
+<img src="about:blank" class="help_image"/>
+</ol>
+
+<div class="section">
+<h4>Bem&aelig;rk:</h4>
+<p>Virtuelle drev og .iso-filer kan kun tilknyttes til undermapper under delte mapper.</p>
+</div>
+
+
+
+<h4>Sådan afbryder du et virtuelt drev:</h4>
+<ol>
+<li>Højreklik på destinationsmappen, hvor det virtuelle drev er tilsluttet, og vælg <b>Afbryd</b>.</li>
+<img src="about:blank" class="help_image"/>
+</ol>
+<ol>
+<span class="note_head">Bemærk:</span>
+<li>
+Understøttet diskbilledformat: "<b>.iso</b>"-filer med ISO 9660- og UDF-filsystem.
+</li>
+<li>
+Det maksimale antal virtuelle drev i baggrunden er 16.
+</li>
+<li class="enable-dockerx64">Tilknytning af virtuelle drev understøttes kun i tilstand med højt privilegium. Hvis du vil bruge denne funktion, skal du gå til Docker-pakken på din værts-DSM, vælge den <strong>Docker DSM</strong>, du vil aktivere krypterede delte mapper for, klikke på <strong>Rediger</strong> og markere feltet ved siden af <strong>Udfør container med høje privilegier</strong>.</li>
+
+</ol>
+</body>
+</html>

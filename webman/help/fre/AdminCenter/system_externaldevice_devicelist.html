@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Périphériques externes</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Périphériques externes</h2>
+
+<p>Accédez à <strong>Panneau de configuration</strong> > <b>Périphériques externes</b> > <b>Périphériques externes</b> pour afficher une liste des périphériques de stockage externes connectés à votre DiskStation.</p>
+
+
+<h3><a name="usbdisk"></a><a name="esatadisk"></a>Disques externes</h3>
+<p class="enable-eds14">En connectant un disque externe au système, vous pouvez partager la capacité du disque par le biais d’un dossier partagé créé par le système, appelé <b>usbshare[numéro]</b> (pour les disques USB). Le dossier partagé est supprimé automatiquement lorsque le disque externe est débranché du système.</p>
+<p class="disable-eds14">En connectant un disque externe au système, vous pouvez partager la capacité du disque par le biais d’un dossier partagé créé par le système appelé <b>usbshare[numéro]</b> (pour les disques USB) ou <b>satashare[numéro]</b> (pour les disques eSATA). Le dossier partagé est supprimé automatiquement lorsque le disque externe est débranché du système.</p>
+<p>DiskStation reconnaît les formats suivants : <span style="display: inline;" class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64"><b>Btrfs</b>, </span><b>ext3</b>, <b>ext4</b>, <b>FAT</b>, <b>FAT32</b>, <b>HFS</b>, <b>HFS Plus</b> et <b>NTFS</b>. Tout disque externe non reconnu doit être d'abord formaté avant d’être utilisé sur le système.</p>
+<div class="section">
+<h4>Remarque :</h4>
+<ol>
+<li>Certains modèles prennent en charge HFS/HFS Plus en lecture seulement.</li>
+<li>Le journal n'est pas pris en charge sur HFS/HFS Plus.</li>
+<li>Veillez à éjecter le disque externe avant de le débrancher.</li>
+</ol>
+</div>
+
+<h4>Pour formater le disque :</h4>
+
+<p>Cliquez sur <b>Formater</b> et suivez l'assistant. Vous pouvez formater vos disques externes aux formats <b>ext4</b> et <b>FAT32</b> dans votre DiskStation.</p>
+
+<div class="section">
+<h4>Remarque :</h4>
+<ol>
+<li>Veillez à sauvegarder les données avant de formater le disque externe. Toutes les données seront supprimées pendant le processus, et elles ne pourront pas être restaurées.</li>
+
+<li>Pour formater le disque externe au format ext3 ou ext4, la taille du disque doit être supérieure à 1 Go.</li>
+
+<li>Lorsque le disque est formaté au format ext3 ou ext4, il n’est reconnu que par DiskStation. Si vous souhaitez lire les données directement depuis votre disque externe avec un PC et/ou un Mac, choisissez le format FAT32.</li>
+</ol>
+</div>
+
+
+<h4>Pour planifier les tests S.M.A.R.T. :</h4>
+<P>Le test S.M.A.R.T. examine et génère un rapport sur l'état de vos disques durs, vous alertant à l'avance des défaillances imminentes des disques. Il est recommandé de changer rapidement votre disque si des erreurs sont détectées. <br> Pour effectuer le test S.M.A.R.T. Test, cliquez simplement sur le bouton <strong>Test S.M.A.R.T.</strong> et suivez l'assistant.<br> Pour vérifier les résultats du test, cliquez simplement sur <strong>Info S.M.A.R.T.</strong>.</P>
+<div class="section">
+<h4>Remarque :</h4>
+<p>La durée du test varie en fonction de votre environnement système.</p>
+</div>
+
+
+<div class="section disable-eds14">
+<h4>Limites</h4>
+
+<p>Le formatage du disque n'est pas disponible dans les situations suivantes :</p>
+
+<ul>
+<li>Le disque externe est en cours d'initialisation (lorsque le périphérique externe vient juste d'être branché).</li>
+<li>La capacité du disque externe est inférieure à 1 Go (format ext3 ou ext4).</li>
+<li>Le disque externe est en cours de formatage.</li>
+<li>Lorsque le système sauvegarde des fichiers sur le disque externe.</li>
+<li>Le disque externe est endommagé.</li>
+</ul>
+<h4>Dépannage</h4>
+<ol>
+<li>Échec de formatage du disque externe. Pourquoi ?</li>
+<ul>
+<li>Vérifiez que le disque externe est inséré correctement.</li>
+<li>Vérifiez que le disque externe n'est pas protégé en écriture. Le cas échéant, supprimez cette option avant de le formater. </li>
+</ul>
+<li>Le type de système de fichiers du disque externe est affiché comme <b>Non reconnu</b>, ou le système ne crée pas le dossier partagé <b>usbshare[numéro]</b> ou <b>esatashare[numéro]</b> pour le disque externe. Que faire ? </li>
+<ul>
+<li>Le système actuel reconnaît les formats <span style="display: inline;" class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64">Btrfs, </span>ext3, ext4, FAT, FAT32, HFS, HFS Plus et NTFS. Tout disque externe non formaté aux types ci-dessus n'est reconnu et son statut est noté comme <b>Non reconnu</b>.</li>
+</ul>
+<li>Je ne peux pas accéder au dossier partagé <b>usbshare[numéro]</b> ou <b>satashare[numéro]</b>. Que faire ? </li>
+
+<ul>
+<li>Cela peut être causé par un problème dans le système de fichiers sur votre disque externe. Pour corriger ce problème, veuillez connecter le disque externe à un PC et effectuez une vérification du système de fichiers.</li>
+</ul>
+<li>Mon disque externe au format ext3 ou ext4 peut-il être connecté à mon PC et/ou Mac et accédé directement ?</li>
+<ul>
+<li>Non, ext3 ou ext4 est uniquement reconnu par le DiskStation. Si vous souhaitez lire les données directement depuis votre disque externe avec un PC et/ou un Mac, choisissez le format FAT32. </li>
+</ul>
+<li>Pourquoi vois-je un dossier appelé « lost+found » dans mon disque externe ?</li>
+<ul>
+<li>Il s'agit d'un dossier système par défaut, créé automatiquement lors de l'utilisation du système de fichier ext3/ext4. Il est normal que vous le voyiez dans votre disque externe. Bien que les administrateurs disposent de l'autorisation d'accéder et de gérer son contenu, nous vous recommandons fortement de ne pas toucher à ce dossier.</li>
+
+</ul>
+
+</ol>
+</div>
+<div class="section enable-eds14">
+<h4>Limites</h4>
+
+<p>Le formatage du disque n'est pas disponible dans les situations suivantes :</p>
+
+<ul>
+<li>Le disque externe est en cours d'initialisation (lorsque le périphérique externe vient juste d'être branché).</li>
+<li>La capacité du disque externe est inférieure à 1 Go (format ext3 ou ext4).</li>
+<li>Le disque externe est en cours de formatage.</li>
+<li>Lorsque le système sauvegarde des fichiers sur le disque externe.</li>
+<li>Le disque externe est endommagé.</li>
+</ul>
+<h4>Dépannage</h4>
+<ol>
+<li>Échec de formatage du disque externe. Pourquoi ?</li>
+<ul>
+<li>Vérifiez que le disque externe est inséré correctement.</li>
+<li>Vérifiez que le disque externe n'est pas protégé en écriture. Le cas échéant, supprimez cette option avant de le formater. </li>
+</ul>
+<li>Le type de système de fichiers du disque externe est affiché comme <b>Non reconnu</b>, ou le système ne crée pas le dossier partagé <b>usbshare[numéro]</b> pour le disque externe. Que faire ? </li>
+<ul>
+<li>Le système actuel reconnaît les formats ext3, ext4, FAT, FAT32, HFS, HFS Plus et NTFS. Tout disque externe non formaté aux types ci-dessus n'est reconnu et son statut est noté comme <b>Non reconnu</b>.</li>
+</ul>
+<li>Je ne peux pas accéder au dossier partagé <b>usbshare[numéro].</b> Que faire ? </li>
+
+<ul>
+<li>Cela peut être causé par un problème dans le système de fichiers sur votre disque externe. Pour corriger ce problème, veuillez connecter le disque externe à un PC et effectuez une vérification du système de fichiers.</li>
+</ul>
+<li>Mon disque externe au format ext3 ou ext4 peut-il être connecté à mon PC et/ou Mac et accédé directement ?</li>
+<ul>
+<li>Non, ext3 ou ext4 est uniquement reconnu par le DiskStation. Si vous souhaitez lire les données directement depuis votre disque externe avec un PC et/ou un Mac, choisissez le format FAT32. </li>
+</ul>
+<li>Pourquoi vois-je un dossier appelé « lost+found » dans mon disque externe ?</li>
+<ul>
+<li>Il s'agit d'un dossier système par défaut, créé automatiquement lors de l'utilisation du système de fichier ext3/ext4. Il est normal que vous le voyiez dans votre disque externe. Bien que les administrateurs disposent de l'autorisation d'accéder et de gérer son contenu, nous vous recommandons fortement de ne pas toucher à ce dossier.</li>
+
+</ul>
+
+</ol>
+</div>
+
+
+<h4>Pour paramétrer les autorisations par défaut pour tous les appareils externes :</h4>
+<p>Vous pouvez paramétrer les autorisations par défaut en cliquant sur <strong>Autorisations par défaut</strong> et spécifiez quels utilisateurs ou groupes peuvent accéder, voir ou accéder aux appareils externes et leurs contenus. Lorsqu'un appareil externe est inséré dans votre DiskStation, les autorisations que vous avez spécifiées sont assignées automatiquement à l'appareil externe.</p>
+<p>Dans la fenêtre des autorisations, effectuez ce qui suit pour paramétrer les autorisations par défaut :</p>
+<ol>
+<li>Choisissez l'un des éléments suivants dans le menu déroulant :</li>
+<ul>
+<li><b>Utilisateur du système interne :</b> Attribue des privilèges d'accès aux utilisateurs système par défaut, tels que l'utilisateur anonyme FTP/WebDAV.</li>
+<li><b>Utilisateurs locaux :</b> Attribue des permissions aux utilisateurs locaux (y compris <b>invité</b>).</li>
+<li><b>Groupes locaux :</b> Attribue des permissions aux groupes locaux.</li>
+</ul>
+
+<li>Cochez ou décochez les cases appropriées pour chaque utilisateur ou groupe afin de personnaliser leurs privilèges d'accès pour les appareils externes :</li>
+  <ul>
+<li><b>Lecture/écriture</b> : L'utilisateur ou le groupe peut accéder et apporter des modifications aux fichiers et dossiers sur les appareils externes.</li>
+<li><b>Lecture seule</b> : L'utilisateur ou le groupe peut accéder aux fichiers et dossiers du sur les appareils externes.</li>
+<li><b>Pas d’accès</b> : L'utilisateur ou le groupe ne peut pas accéder aux fichiers et dossiers du sur les appareils externes.</li>
+</ul>
+</ol>
+
+
+</body>
+</html>

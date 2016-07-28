@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Välj en typ av RAID - Synology DSM Hjälp</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="A brief overview describing what RAID types are supported by Synology DiskStation Manager (DSM).">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Välj en typ av RAID</h2>
+
+<p>RAID (Redundant Array of Independent Disks) är en teknologi för datalagring som tillåter flera hårddiskar att kombineras till ett enda lagringsutrymme. Det finns olika typer av RAID, varav alla ger olika nivåer av prestanda, lagringskapacitet och tillförlitlighet.</p>
+
+<p>Denna artikel tillhandahåller en kortfattad översikt över RAID-typer som stöds av DiskStation, inklusive krav för implementering såväl som för- och nackdelar.</p>
+
+<!--1-->
+
+<h3>RAID-typer som stöds</h3>
+
+<p>Denna tabell tillhandahåller en kortfattad översikt över olika RAID-typer som har stöd av DiskStation, inklusive lagringskapacitet, minsta antal hårddiskar som krävs för RAID-typen och det antal fel på hårdiskar som tolereras innan det uppstår dataförlust. </p>
+
+<table>
+
+  <tr>
+
+    <th>Volymtyp</th>
+    <th>Antal HDD</th>
+
+    <th>Tolererbart antal fel på hårddisk</th>
+    <th>Beskrivning</th>
+
+    <th>Volymkapacitet</th>
+
+  </tr>
+
+  <tr>
+
+    <td rowspan="3">SHR</td>
+    <td>1</td>
+
+    <td>0</td>
+    <td rowspan="3">
+    <div align="left">
+    <ul>
+    <li>Optimerar volymstorleken när hårddiskar med olika storlekar kombineras.</li>
+    <li>Tillhandahåller dataredundans om volymen består av två eller fler hårddiskar.</li>
+    <li>Rekommenderas för nybörjare.</li>
+    </ul>
+    </div>
+    </td>
+
+    <td>1 x (hårddiskstorlek)</td>
+
+  </tr>
+  <tr>
+    <td>2-3</td>
+    <td>1</td>
+    <td rowspan="2">Optimerat av systemet.</td>
+  </tr>
+  <tr>
+    <td>≧4</td>
+    <td>1-2</td>
+  </tr>
+  
+  <tr>
+
+    <td>Basic</td>
+    <td>1</td>
+
+    <td>0</td>
+    <td>
+    <div align="left">
+    <ul>
+    <li>Består av en hårddisk som en oberoende enhet.</li>
+    <li>Tillhandahåller inte dataredundans.</li>
+    </ul>
+    </div>
+    </td>
+
+    <td>1 x (hårddiskstorlek)</td>
+
+  </tr>
+
+  <tr>
+
+    <td>JBOD</td>
+    <td>≧1</td>
+
+    <td>0</td>
+    <td>
+    <div align="left">
+    <ul>
+    <li>Kombinerar en samling hårddiskar till ett enda lagringsutrymme, med en kapacitet som den sammanlagda kapaciteten för alla hårddiskar.</li>
+    <li>Tillhandahåller inte dataredundans.</li>
+    </ul>
+    </div>
+    </td>
+
+    <td>Summan av alla hårddiskstorlekar</td>
+
+  </tr>
+
+  <tr>
+
+    <td>RAID 0</td>
+    <td>≧2</td>
+
+    <td>0</td>
+    <td>
+    <div align="left">
+    <ul>
+    <li>Erbjuder ”striping”, en process för uppdelning av data i block och spridning av datablocken över flera hårddiskar, för att öka prestandan.</li>
+    <li>Tillhandahåller inte dataredundans.</li>
+    </ul>
+    </div>
+    </td>
+
+    <td>Summan av alla hårddiskstorlekar</td>
+
+  </tr>
+
+  <tr>
+
+    <td rowspan="3">RAID 1</td>
+    <td>2</td>
+
+    <td>1</td>
+    <td rowspan="3">
+    <div align="left">
+    <ul>
+    <li>Skriver identiska data samtidigt till båda hårddiskarna.</li>
+    <li>Tillhandahåller dataredundans.</li>
+    </ul>
+    </div>
+    </td>
+
+    <td rowspan="3">Minsta hårddiskstorlek</td>
+
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>3</td>
+  </tr>
+
+  <tr>
+
+    <td>RAID 5</td>
+    <td>≧3</td>
+
+    <td>1</td>
+
+    <td>
+    <div align="left">
+    <ul>
+    <li>Implementerar striping på blocknivå med paritetsdata distribuerat över alla medlemshårddiskar och tillhandahåller därför dataredundans mer effektivt än RAID 1.</li>
+    </ul>
+    </div>
+    </td>
+
+    <td>(N – 1) x (minsta hårddiskstorlek)</td>
+
+  </tr>
+
+  <tr>
+
+    <td>RAID 6</td>
+    <td>≧4</td>
+
+    <td>2</td>
+    <td>
+    <div align="left">
+    <ul>
+    <li>Implementerar två lager av dataparitet för att lagra redundant data motsvarande storleken av två hårddiskar, vilket ger en högre grad av dataredundans än RAID 5.</li>
+    </ul>
+    </div>
+    </td>
+
+    <td>(N – 2) x (minsta hårddiskstorlek)</td>
+
+  </tr>
+
+  <tr>
+
+    <td>RAID 10</td>
+    <td>≧4<br /> (jämnt nummer)</td>
+
+    <td>Hälften av den totala hårddisken</td>
+    <td>
+    <div align="left">
+    <ul>
+    <li>Tillhandahåller prestanda som RAID 0 och en nivå på dataskydd som RAID 1, kombinerar hårddiskar i grupper om två i vilka data speglas.</li>
+    </ul>
+    </div>
+    </td>
+
+    <td>(N / 2) x (minsta hårddiskstorlek)</td>
+
+  </tr>
+
+</table>
+
+
+<div class="section">
+<h4>Obs:</h4>
+<ul>
+<li>RAID-typer, förutom ”Basic”, finns bara tillgängligt på vissa modeller, beroende på antal hårddiskfack och antal installerade hårddiskar.</li>
+<li>”N” representerar det totala antalet hårddiskar i volymen.</li>
+</ul>
+</div>
+
+
+
+
+<!--2-->
+<h3>Synology Hybrid RAID (SHR)</h3>
+
+<p>Synology Hybrid RAID (SHR) är ett automatiserat hanteringssystem för RAID, utformat för att förenkla lagringshantering och tillgodose behoven hos nya användare som är obekanta med RAID-typer. </p>
+<p>SHR kan kombinera hårddiskar i olika storlekar för att skapa en lagringsvolym med optimerad kapacitet och prestanda, vilket förspiller mindre hårddiskutrymme och tillhandahåller en mer flexibel lagringslösning.  När tillräckligt med hårddiskar är inkluderade medger SHR redundans för 1 eller 2 diskar - vilket betyder att Volymen SHR kan klara av fel på upp till en eller två hårddiskar utan att det uppstår dataförlust.</p>
+<img src="about:blank" class="help_image"/>
+
+
+
+
+
+
+<!--3-->
+
+<h3>RAID 0</h3>
+<p>RAID 0 kombinerar två eller fler hårdiskar för att öka prestandan och kapaciteten, men tillhandahåller ingen feltolerans. Ett fel på en enda hårddisk kommer att resultera i förlust av all data i denna array. RAID 0 är användbar för icke-kritiska system där en balans för högt pris/prestanda krävs.</p>
+<img src="about:blank" class="help_image"/>
+
+
+
+
+
+
+<!--4-->
+
+<h3>RAID 1</h3>
+<p>RAID 1 är oftast implementerad med två hårddiskar. Data på hårddiskarna speglas och tillhandahåller feltolerans i händelse av fel på hårddisk. Läsprestanda ökas medan skrivprestanda är likadan som för en enkel hårddisk. Ett fel på en enda hårdisk kan tålas utan dataförlust. RAID 1 används ofta när det är viktigt med feltolerans, medan utrymme och prestanda inte är kritiska krav.</p>
+<img src="about:blank" class="help_image"/>
+
+
+
+<!--5-->
+
+<h3>RAID 5</h3>
+<p>RAID 5 tillhandahåller feltolerans och ökad läsprestanda. Ett minimum om tre hårddiskar krävs. RAID 5 kan tåla förlusten av en enda hårddisk. I händelse av fel på hårddisk rekonstrueras data på den felaktiga hårddisken från paritet stripad över de kvarvarande hårddiskarna. Som ett resultat påverkas både läs- och skrivprestanda betydligt när en RAID 5-array är i läget trasig. RAID 5 är idealiskt när utrymme och kostnad är mer viktigt än prestanda.</p>
+<img src="about:blank" class="help_image"/>
+
+
+
+<!--6-->
+
+<h3>RAID 6</h3>
+<p>RAID 6 är liknande RAID 5 förutom att det tillhandahåller ett till lager av striping och kan tåla fel på två hårddiskar. Ett minimum om fyra hårddiskar krävs. Prestandan för RAID 6 är lägre än för RAID 5, beroende på denna ytterligare feltolerans. RAID 6 blir attraktivt när utrymme och kostnad är viktigt och förmåga att tåla fel på flertalet hårddiskar krävs.</p>
+<img src="about:blank" class="help_image"/>
+
+
+
+<!--7-->
+
+<h3>RAID 10</h3>
+<p>RAID 10 kombinerar fördelarna från RAID 1 och RAID 0. Läs- och skrivprestanda är ökad, men bara hälften av det totala utrymmet är tillgängligt för datalagring. Fyra eller fler hårddiskar krävs och gör kostnaden relativ hög men prestandan är utmärkt och på samma gång tillhandahålls feltolerans. Faktum är att RAID 10 kan tåla fel på flera hårddiskar -- förutsatt att felen inte är inom samma undergrupp. RAID 10 är idealiskt för applikationen med höga krav på indata/utdata, såsom databasservrar.</p>
+
+<img src="about:blank" class="help_image"/>
+
+
+</body>
+</html>

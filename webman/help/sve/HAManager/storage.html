@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+ <head>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>High Availability</title>
+
+
+ </head>
+ <body>
+<h2>Lagringsstatus</h2>
+	<p>Denna sida innehåller status för lagringsvolymer och iSCSI LUNs (blocknivå) på den aktiva och den passiv servern i high-availability-klustret.</p>
+    <p>Eftersom kapacitet och konfiguration på de motsvarande volymerna och iSCSI LUNs (blocknivå) på den aktiva och den passiva servern måste vara identiska, visas volymer och iSCSI LUN (blocknivå) på de två servrarna tillsammans som en enda enhet. Om du därför vill se status för volymer och iSCSI LUNs (blocknivå) på både den aktiva och den passiva servern måste du gå till sidan <b>Lagringsstatus</b> [vid åtkomst till ett high-availability-kluster är endast volymer och iSCSI LUNs (blocknivå) på den aktiva servern möjliga att se via <b>Lagringshanterare</b>].</p>
+
+    <p>Denna sida innehåller följande information:</p>
+		<ul>
+			<li><b>Namn:</b> Visar namn på volymer och iSCSI LUNs (blocknivå).</li>
+			<li><b>Används:</b> Visar procentuell användning av kapacitet på volymer och iSCSI LUNs (blocknivå).</li>
+			<li><b>Används/Totalt utrymme:</b>  Visar total och använd kapacitet på volymer och iSCSI LUNs (blocknivå).</li>
+            <li><b>Status:</b> Visar status på volymer, iSCSI LUNs (blocknivå) och SSD-cachar.</li>
+            <li><b>Beskrivning:</b> Visar beskrivning över fel och annan information som berör volym, iSCSI LUN (blocknivå) och SSD-cache.</li>
+		</ul>
+<h4>Reparera en felaktig volym eller iSCSI LUN (blocknivå):</h4>
+	<ul>
+		<li>Om en hårdisk i någon av servrarna har kraschat kan du gå till sidan <a href="disk.html">Diskstatus</a> för att avgöra vilken hårddisk som har kraschat och behöver bytas ut. Om så är fallet, vänligen gör följande:
+        	<ol>
+            	<li>Byt ut den kraschade hårddisken (för stegvis vägledning, se <i>Snabb installationsguide</i> för din Synology-produkt).</li>
+                <li>Gå till sidan <b>Lagringsstatus</b> och klicka på <b>Reparera</b>.</li>
+            </ol>
+        </li>
+        <li>Om den passiva servern är offline, kommer status för volymer och iSCSI LUNs (blocknivå) att indikera att ett fel har inträffar och ingen av diskarna på den passiva servern visas på sidan för Diskstatus. Om så är fallet, kan du försöka lösa problemet genom att göra följande:
+        	<ol>
+            	<li>Tillse att den passiva servern är påslagen.</li>
+                <li>Kontrollera alla strömkälllor.</li>
+                <li>Undersök alla anslutningar.</li>
+            </ol>
+        </li>
+        <li>Om ett filsystemfel uppstår på en volym eller iSCSI LUN (blocknivå) på någon av servrarna, vänligen gör följande:
+        	<ul>
+            	<li>Gå till sidan <b>Lagringsstatus</b>.</li>
+                <li>Klicka på <b>Reparera.</b></li>
+            </ul>
+        </li>
+	</ul>
+
+<p><span class="note_head">Obs:</span>  Maxgränsen för antalet volymer och iSCSI LUNs (blocknivå) på ett high-availability-kluster är 64.</p>
+
+ </body>
+</html>

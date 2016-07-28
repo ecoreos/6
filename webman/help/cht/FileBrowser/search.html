@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>搜尋檔案或資料夾</title>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2>搜尋檔案或資料夾</h2>
+<p>File Station 的<strong>篩選</strong>功能提供了各種選項，可搜尋並顯示符合條件的檔案或資料夾。您可以在目前的資料夾中篩選檔案或資料夾，或執行包含所有子資料夾的進階搜尋來取得更精確的搜尋結果。</p>
+
+<h4>若要搜尋目前資料夾中的檔案或資料夾：</h4>
+<ol>
+	<li>使用 File Station 來前往資料夾 (其中包含您要搜尋的內容)。</li>
+	<li>在右上角的<b>篩選</b>欄位中，請輸入關鍵字，並在視窗的主要區域中查看篩選結果。</li>
+</ol>
+
+<h4>若要執行進階搜尋：</h4>
+<ol>
+	<li>使用 File Station 來前往資料夾 (其中包含您要搜尋的內容)。</li>
+  <li>在右上角的<b>篩選</b>欄位旁，按一下放大鏡來顯示進階搜尋選單。</li>
+	<li>指定下列的搜尋條件或從下拉式選單選擇：<ul>
+			<li><b>關鍵字</b>：輸入關鍵字來搜尋名稱相符的檔案或資料夾。<div class="section"><h4>注意：</h4>
+				<ul>
+					<li>您可以在關鍵字中使用萬用字元 [*] (表示零個以上的字元) 以及 [?](表示一個隨機字元)。例如，[a<span class="note_content">*</span>n] 可以代表 [a<span class="note_content">ctio</span>n]、[a<span class="note_content">ttentio</span>n] 或 [an]。</li>
+					<li>您可以使用空白來區隔多個關鍵字。例如，使用關鍵字 [File Station] 將會列出包含 [File]、[Station] 或兩者的搜尋結果。</li>
+					<li>您可以在關鍵字的開頭和結尾處加入雙引號 [&quot;] 來執行精確、不限定大小寫的搜尋。例如，[<span class="note_content">&quot;Synology Inc.&quot;</span>] 可以代表 [<span class="note_content">Synology Inc.</span>]，但是不能代表 [<span class="note_content">Synology Incorporation</span>]。</li>
+					<li class="disable-hi3535">下列運算元可讓搜尋結果更加精準：<table width="84%" border="1">
+							<tbody>
+								<tr>
+									<th width="147" align="center">運算元</th>
+									<th width="229" align="center">範例</th>
+									<th width="926" align="center">用法</th>
+								</tr>
+								<tr>
+									<td align="center">&amp;&amp;</td>
+									<td align="center">[X] &amp;&amp; [Y]</td>
+									<td><li>列出包含 [X] 及 [Y] 兩者的搜尋結果</li></td>
+								</tr>
+								<tr>
+									<td align="center">||</td>
+									<td align="center">[X] || [Y]</td>
+									<td>
+										<li>列出包含 [X]、[Y] 或兩者的搜尋結果</li>
+										<li>[X] 及 [Y] 兩者皆包含的搜尋結果將置於清單頂端。</li>
+									</td>
+								</tr>
+								<tr>
+									<td align="center">+</td>
+									<td align="center">+[X]</td>
+									<td><li>列出含 [X] 的搜尋結果</li></td>
+								</tr>
+								<tr>
+									<td align="center">-</td>
+									<td align="center">-[X]</td>
+									<td><li>列出不含 [X] 的搜尋結果</li></td>
+								</tr>
+								<tr>
+									<td align="center">!</td>
+									<td align="center">![X]</td>
+									<td><li>列出不含 [X] 的搜尋結果</li></td>
+								</tr>
+								<tr>
+									<td align="center">\</td>
+									<td align="center">\[特殊字元]</td>
+									<td>
+										<li>特殊字元：<span class="note_content">&nbsp; + &nbsp;&nbsp;-&nbsp;&nbsp; &amp;&amp; &nbsp;&nbsp; || &nbsp;&nbsp; ! &nbsp;&nbsp; ( &nbsp;&nbsp; ) &nbsp;&nbsp; { &nbsp;&nbsp; } &nbsp;&nbsp; [ &nbsp;&nbsp; ] &nbsp;&nbsp; ^ &nbsp;&nbsp; &quot; &nbsp;&nbsp; ~ &nbsp;&nbsp; * &nbsp;&nbsp; ? &nbsp;&nbsp; : &nbsp;&nbsp;\</span></li>
+										<li>列出包含目標特殊字元的搜尋結果</li>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</li>
+				</ul>
+				</div>
+			</li>
+			<li class="disable-hi3535"><strong>啟動檔案內容搜尋</strong>：針對內容或中繼資料，找出符合關鍵字的索引檔案。</li>
+			<li><b>所在位置</b>：從下拉式選單中進行選擇來設定進階搜尋的廣度及深度。您也可以選擇列出的任何共用資料夾來自訂搜尋範圍。</li>
+			<li><b>檔案類型</b>：選擇<b>副檔名</b>來將搜尋範圍限制為特定類型的檔案，或是選擇<b>任何資料夾</b>來將搜尋範圍限制為僅搜尋資料夾。</li>
+			<li><strong>日期</strong>：選擇<b>修改日期</b>、<b>建立日期</b>或<strong>最近存取時間</strong>，然後從日曆中選擇日期來搜尋日期相符的檔案。</li>
+			<li><b>大小 (MB)</b>：從<b>等於</b>、<b>大於</b>及<b>小於</b>中進行選擇，然後輸入大小來搜尋大小相符的檔案。(選擇<strong>等於</strong>時，搜尋結果會包含與指定大小接近的檔案。)</li>
+			<li><b>擁有者/群組</b>：選擇<b>擁有者</b>或<b>群組</b>，然後從下拉式選單中進行選擇，藉此搜尋所選使用者或群組擁有的檔案或資料夾。<div class="section"><h4>注意：</h4>
+				<ul>
+					<li>若要執行進階搜尋，須指定<b>所在位置</b>及至少另外一項的搜尋條件。</li>
+					<li>如果共用資料夾已建立索引，並在其中掛載 ISO 資料夾或遠端資料夾，便無法透過進階搜尋找到資料夾內檔案。</li>
+				</ul>
+				</div>
+			</li>
+		</ul>
+	</li>
+	<li>按一下<b>搜尋</b>來開始搜尋，或是按一下<b>重置</b>並再次指定搜尋條件。搜尋完成之後，條件相符的檔案會列在 File Station 的主要區域中。</li>
+</ol>
+
+</body>
+</html>

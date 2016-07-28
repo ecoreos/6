@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+<meta content="en-us" http-equiv="Content-Language" />
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+<title>使用 Cloud Station 在我的 PC/Mac 上备份数据</title>
+</head>
+
+<body class="tutorial-content-box" >
+
+<h1>使用 Cloud Station 在我的 PC/Mac 上备份数据</h1>
+<div class="tutorials_content">
+<img src="../../images/Backup/1x/backup_from_PC/07_1_back_up_your_data_from_pc.png" />
+<h2>总览</h2>
+<p>Cloud Station Server 不仅是一个复杂的跨平台同步软件，用户可将其用作更智能的备份其个人计算机的方法。Cloud Station Backup 作为一个实时备份解决方案，具有即时和节省带宽的特点，可通过单个文件高达 32 个的历史版本提供更好的保护。</p>
+<h3 class="list_head">在 Synology NAS 上设置 Cloud Station Server</h3>
+<ol>
+
+<li>进入<b>套件中心</b>，找到 <b>Cloud Station Server</b>，然后单击<strong>安装</strong>。</li>
+ 
+<li>启动 <strong>Cloud Station Server</strong>。</li>
+<li>进入 <strong>Cloud Station</strong> 下的 <strong>概述</strong>并单击<strong>下载</strong>。(您还可从 <a href="https://www.synology.com/en-us/support/download" target="_blank">Synology 下载中心</a>下载 Cloud Station Backup。)</li>
+<img src="../../images/Backup/1x/backup_from_PC/download_backup.png" border="1" />
+<li>启动计算机上的安装程序并按说明安装 Cloud Station Backup。</li>
+<li>安装后，在计算机上运行 <strong>Cloud Station Backup</strong>。单击<strong>立即开始</strong>。</li>
+<img src="../../images/Backup/1x/backup_from_PC/start_now.png" border="1" />
+<li>输入运行 Cloud Station Server 的 Synology NAS 地址（或 QuickConnect ID）、用户名和密码。（您还可单击右侧的搜索图标，Cloud Station Backup 将自动搜索 LAN 中的其它 Synology NAS）。单击<strong>下一步</strong>。</li>
+<img src="../../images/Backup/1x/backup_from_PC/enter_credentials.png" border="1" />
+<li>选择备份源并取消勾选您不要同步的任何子文件夹。</li>
+<img src="../../images/Backup/1x/backup_from_PC/backup_settings_source.png" border="1" />
+<li>在 Synology NAS 上单击<strong>选择</strong>以选择一个文件夹。Cloud Station Backup 将在所选目的地以您计算机的名称创建备份文件夹。</li>
+<img src="../../images/Backup/1x/backup_from_PC/backup_destination.png" border="1" />
+<li>如果您要设置同步过滤器或规则，单击<strong>备份规则</strong>。</li>
+
+<li>单击<strong>下一步</strong>以查看您的备份设置，然后单击<strong>完成</strong>。</li>
+<img src="../../images/Backup/1x/backup_from_PC/summary.png" border="1" />
+<li>您可在主应用程序域中查看备份进程。</li>
+<img src="../../images/Backup/1x/backup_from_PC/progress.png" border="1" />
+</ol>
+
+<h3 class="list_head">下载或还原 Cloud Station Server 上同步文件的旧版本</h3>
+<ol>
+<li>进入 <strong>Cloud Station Server</strong>&gt; <strong>版本历史</strong>并找到您要还原的文件或文件夹。</li>
+  <img src="../../images/BuildCloud/1x/cloud_sync_files/version_history.png" />
+<li>请选择您要检索的文件，并单击<strong>操作</strong>。单击<strong>浏览以前的版本</strong>。如果计算机上的文件被意外删除或移动，可单击<strong>还原</strong>来恢复。</li>
+  <img src="../../images/BuildCloud/1x/cloud_sync_files/browse_previous versions_server.png" />
+<li>选择您要下载的文件版本，并单击<strong>下载</strong>。或者，如果您确认要还原选择的版本，单击<strong>还原</strong>，它将覆盖当前版本。</li>
+    <img src="../../images/BuildCloud/1x/cloud_sync_files/previous_versions.png" />
+
+</ol>
+
+
+<h3 class="list_head">5. 进一步保护您的数据</h3>
+  
+<p>要获得更多保护和备份数据的方法，请单击<a href="https://www.synology.com/knowledgebase/tutorials#BackupRestore" target="_blank">此外</a>查看教程以详细了解 DSM 提供的其它备份服务。</p>
+
+</div>
+<div class="page-info">
+  <ul>
+<li>此主题中的下一个：<a href="backup_backup.html">备份 Synology NAS 中的数据</a> </li>
+  </ul>
+</div>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+ <!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+
+<title>Depuración de datos</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="Data scrubbing is a data maintenance feature that inspects volumes or disk groups and repairs any detected data inconsistencies.">
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Depuración de datos*</h2>
+<p>La depuración de datos es una función de mantenimiento de datos que inspecciona los volúmenes o los grupos de discos. Hay dos opciones de depuración de datos:</p>
+
+<ul>
+<li><strong>Depuración de RAID:</strong> esta función se puede usar con volúmenes o grupos de discos que implementen SHR (compuestos por tres o más discos), RAID 5 o RAID 6. Puede reparar cualquier inconsistencia detectada en los datos.</li>
+<li><strong>Depuración del sistema de archivos:</strong> esta función se puede utilizar con volúmenes en el sistema de archivos Btrfs. Si se detectan datos que no son coherentes con la suma de comprobación, la ruta de archivo se registrará en el Centro de registros. Recomendamos encarecidamente que utilice una copia de seguridad para reparar los datos.</li>
+</ul>
+
+<p>Le recomendamos que realice regularmente una depuración de datos para garantizar la consistencia de los datos y evitar la pérdida de datos importantes en caso de que una unidad de disco duro falle.</p>
+
+<h4>Para realizar la depuración de datos:</h4>
+
+<ol>
+<li>Abra <strong>Administrador de almacenamiento</strong>.</li>
+<li>Vaya a <strong>Volumen</strong> o <strong>Grupo de discos</strong>.</li>
+<li>Seleccione el volumen o grupo de discos en el que desea realizar una depuración de datos.</li>
+<li>Haga clic en <strong>Administrar</strong>.</li>
+<li>Seleccione <strong>Depuración de datos</strong>.</li>
+<li>Seleccione el tipo de depuración de datos que desee (el sistema omitirá automáticamente este paso si solo hay un tipo disponible).</li>
+</ol>
+
+<div class="section">
+<h4>Nota:</h4>
+<ul>
+<li>La depuración de datos solo se puede realizar cuando el estado del volumen o grupo de discos sea <strong>Normal</strong>.</li>
+<li>Si el sistema se apaga antes de que el proceso termine, tendrá que reiniciar manualmente la depuración de datos desde el principio.</li>
+</ul></div>
+
+<p>____<br />*Solo disponible en ciertos modelos.</p>
+
+</body>
+</html>

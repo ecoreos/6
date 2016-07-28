@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Crear una carpeta compartida - Ayuda de Synology DSM</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="Shared folders are the basic directories where you can store and manage files and folders on your DiskStation. This article shows you how to create a shared folder.">
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2>Crear una carpeta compartida</h2>
+<p>Las carpetas compartidas son los directorios básicos en los que puede almacenar y administrar archivos y carpetas de su DiskStation. Antes de almacenar archivos, debe crear al menos una carpeta compartida en DSM. </p>
+
+<h4>Para crear una carpeta compartida:</h4>
+<ol>
+	<li>Vaya a <strong>Panel de control</strong> > <strong>Carpeta compartida</strong> y haga clic en <strong>Crear</strong>.<br /><img src="about:blank" class="help_image"/></li>
+	<li>Especifique un nombre y una descripción para la carpeta compartida.<br /><img src="about:blank" class="help_image disable-bromolow disable-grantley disable-avoton disable-braswell disable-broadwell disable-kvmx64"/><img src="../../../online_img/dsm/AdminCenter/file_share_create/howto571-5.png" class="help_image enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64"/></li>
+	<li>Seleccione un almacenamiento en el que desea crear la carpeta compartida (omita este paso si solo existe un almacenamiento).<br /><img src="about:blank" class="help_image disable-bromolow disable-grantley disable-avoton disable-braswell disable-broadwell disable-kvmx64"/><img src="../../../online_img/dsm/AdminCenter/file_share_create/howto571-6.png" class="help_image enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64"/></li>
+	<li>Si fuera necesario, modifique las siguientes opciones:<br /><img src="about:blank" class="help_image disable-bromolow disable-grantley disable-avoton disable-braswell disable-broadwell disable-kvmx64"/><img src="../../../online_img/dsm/AdminCenter/file_share_create/howto571-7.png" class="help_image enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64"/><ul>
+			<li><strong>Ocultar esta carpeta compartida en "Mis sitios de red":</strong> evita que la carpeta compartida aparezca en "Red" en el explorador de archivos de Windows. Esta opción no afecta los privilegios de acceso de la carpeta compartida.<div class="section"><h4>Nota:</h4>
+				<p>Ocultar una carpeta compartida en "Mis sitios de red" no afecta a sus derechos de acceso. Los derechos de acceso de las carpetas compartidas ocultas seguirán siendo los mismos. Los usuarios que tengan los derechos de acceso adecuados a la carpeta compartida seguirán pudiendo acceder a ella escribiendo "\\nombre del servidor\nombre de la carpeta compartida".</p>
+				</div>
+			</li>
+			<li><strong>Ocultar subcarpetas y archivos de usuarios sin permisos:</strong> cuando la opción <strong>Ocultar subcarpetas y archivos de usuarios sin permisos</strong> esté habilitada, si un usuario sin privilegios de lectura intenta acceder a una carpeta compartida a través del protocolo para compartir archivos de Windows, el usuario no podrá ver subcarpetas ni archivos dentro de la carpeta compartida. Esto evita que los usuarios puedan confundirse al conectarse a sus productos de Synology y encuentren un gran número de archivos y subcarpetas que no pueden abrir.<div class="section"><h4>Nota:</h4>
+				<ul>
+					<li>Esta función solo es compatible con el protocolo para compartir de archivos de Windows.</li>
+					<li>Puede modificar los ajustes de privilegios de cada carpeta y archivo de File Station haciendo clic en ellos con el botón derecho. Elija <strong>Propiedades</strong> en el menú desplegable y haga clic en la pestaña <strong>Permiso</strong>.</li>
+					<li>La carpeta compartida no se ocultará a los usuarios sin permiso al habilitar <strong>Ocultar subcarpetas y archivos de usuarios sin permisos</strong>. Solo se ocultarán las subcarpetas y los archivos dentro de esta carpeta compartida.</li>
+				</ul>
+				</div>
+			</li>
+		</ul>
+	</li>
+	<li><strong>Habilitar papelera de reciclaje:</strong> cuando se eliminan archivos de la carpeta compartida, se moverán a una carpeta llamada <strong>#recycle</strong>. El acceso a la papelera de reciclaje estará limitado a usuarios que pertenecen al grupo <strong>administrators</strong>.</li><a name="sharequota"></a><li class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64"><strong>Habilitar la cuota de carpetas compartidas:</strong> para especificar la capacidad máxima de cada carpeta compartida marque la casilla de verificación <strong>Habilitar la cuota de carpetas compartidas</strong> y escriba la capacidad máxima (por ejemplo, 10 GB) en el siguiente campo.<div class="section"><h4>Nota:</h4>
+		<ul>
+			<li>Solo cuando el almacenamiento utilice el sistema de archivos Btrfs, la opción <strong>Habilitar la cuota de carpetas compartidas</strong> estará disponible en las carpetas compartidas.</li>
+			<li>El uso del almacenamiento combinado de todos los directorios <strong>home</strong> de los usuarios no puede exceder la cuota de "<strong>homes</strong>".</li>
+		</ul>
+		</div>
+	</li><a name="integrity_protection"></a><li class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64"><strong>Habilitar la protección avanzada de la integridad de datos:</strong> para proteger una carpeta compartida con estrategias de <strong>suma de comprobación CRC32</strong> y <strong>copia en escritura</strong> puede <strong>habilitar la protección avanzada de la integridad de datos</strong> durante la creación de la carpeta compartida. La suma de comprobación CRC32 se aplica para comprobar si los datos siguen siendo idénticos a cuando se escribieron originalmente y avisará al usuario si se detecta cualquier daño. La copia en escritura ayuda a mejorar la consistencia de datos cuando se produce un cierre anómalo del sistema.<div class="section"><h4>Nota:</h4>
+		<ul>
+			<li>Esta opción está disponible solo para volúmenes que utilizan el sistema de archivos Btrfs.</li>
+			<li>Puede habilitar/deshabilitar esta opción para cada carpeta compartida durante su creación. Esta opción no se puede modificar después de crear la carpeta compartida.</li>
+			<li>Si se editan y actualizan constantemente archivos como bases de datos, la cantidad de archivos fragmentados podría incrementarse debido a la función de copia en escritura. Se recomienda deshabilitar esta opción para aumentar el rendimiento.</li>
+		</ul>
+		</div>
+	</li><a name="btrfs_compression"></a><li class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64"><strong>Habilitar compresión de archivos</strong>: el sistema de archivos Btrfs comprime automáticamente los datos de la carpeta compartida creada para ahorrar espacio de almacenamiento. Cuando se recuperan para su uso, los datos se descomprimen automáticamente.<div class="section"><h4>Nota:</h4>
+		<ul>
+			<li>Esta opción sólo está disponible cuando se crea una carpeta compartida en un volumen Btrfs o cuando se habilita la <strong>protección avanzada de la integridad de datos</strong>.</li>
+			<li>Esta opción no se puede modificar después de crear la carpeta compartida.</li>
+			<li>La tasa de compresión difiere de los tipos de datos: Los archivos de texto tienen la mayor tasa de compresión, mientras que los archivos multimedia (p. ej. imágenes, música o vídeos) pueden no comprimirse adecuadamente, ya que ya están comprimidos para la salida.</li>
+		</ul>
+		</div>
+	</li>
+	<li><strong>Cifrar esta carpeta compartida:</strong> si desea cifrar la carpeta compartida, haga lo siguiente:<ol>
+			<li>Especifique y confirme una nueva clave de cifrado. La clave de cifrado no puede incluir comas (,) ni signos de igual (=). </li>
+			<li>Si fuera necesario, marque la casilla <strong>Montar automáticamente al arrancar</strong> para montar la carpeta cifrada automáticamente cuando arranque el sistema. Si esta opción está deshabilitada, la carpeta compartida cifrada se desmontará la próxima vez que se reinicie DiskStation. Para ver una carpeta compartida desmontada o acceder a ella, deberá montar la carpeta manualmente importando o escribiendo la clave de cifrado.</li>
+		</ol>
+	</li>
+	<li>Haga clic en <strong>OK</strong> para terminar.</li>
+</ol>
+
+<div class="section"><h4>Reglas de nomenclatura de carpetas compartidas:</h4>
+<ul>
+	<li>Los nombres de las carpetas compartidas no distinguen entre mayúsculas y minúsculas y pueden incluir de 1 a 32 caracteres. Los nombres no pueden incluir los siguientes caracteres: <strong>! " # $ % & ' ( ) * + , / : ; <= > ? @ [ ] \ ^ ` { } | ~</strong></li>
+	<li>Los siguientes nombres están reservados para el uso del sistema: <strong>.</strong>, <strong>..</strong>, <strong>global</strong>, <strong>home</strong>, <strong>homes</strong>, <strong>printers</strong>, <strong>public</strong>, <strong>satashare</strong>, <strong>surveillance</strong>, <strong>usbbackup</strong>, <strong>usbshare</strong>. </li>
+	<li>El primer carácter de un nombre de carpeta compartida no puede ser un signo menos o un espacio y el último no puede ser un espacio.</li>
+	<li>La <strong>descripción</strong> de la carpeta compartida distingue entre mayúsculas y minúsculas, y está limitada a 64 caracteres Unicode que se pueden mostrar.</li>
+</ul>
+</div>
+
+
+<div class="section"><h4>Cifrado de carpetas compartidas:</h4>
+<p>El cifrado AES de 256 bits protege los datos bloqueando todos los intentos de acceso no autorizados. Una vez que se haya cifrado una carpeta compartida, ninguna otra persona sin clave de cifrado podrá acceder ni modificar los datos cifrados, aunque retiren los discos duros de su DiskStation y los monten en otro dispositivo.</p>
+</div>
+
+<div class="section"><h4>Nota:</h4>
+<ul>
+	<li>Las carpetas compartidas solo se pueden cifrar en el momento de su creación. </li>
+	<li>Los nombres de archivos y carpetas dentro de carpetas compartidas cifradas no pueden superar los 143 caracteres ingleses o los 43 caracteres asiáticos.</li>
+	<li>No se puede acceder a las carpetas compartidas a través de NFS.</li>
+	<li>Si restaura las contraseñas predeterminadas utilizando el botón de reinicio situado en DiskStation, las carpetas compartidas cifradas se desmontarán y la opción de montar automáticamente las carpetas compartidas codificadas se inhabilitará.</li>
+	<li class="enable-dockerx64">Las carpetas compartidas cifradas solo son compatibles en el modo con privilegios altos. Para usar esta función vaya al paquete Docker de su DSM host, seleccione el <strong>Docker DSM</strong> para el que desea habilitar las carpetas compartidas cifradas, haga clic en <strong>Editar</strong> y marque la casilla junto a <strong>Ejecutar contenedor usando privilegios altos</strong>.</li>
+</ul>
+</div>
+
+</body>
+</html>

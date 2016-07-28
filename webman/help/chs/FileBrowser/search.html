@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>搜索文件或文件夹</title>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2>搜索文件或文件夹</h2>
+<p>File Station 的<strong>过滤器</strong>为您提供了搜索并显示符合条件的文件或文件夹的选项。您可过滤当前文件夹中的文件或文件夹，或执行涵盖所有子文件夹的高级搜索以更精确地搜索结果。</p>
+
+<h4>若要搜索当前文件夹中的文件或子文件夹：</h4>
+<ol>
+	<li>用 File Station 进入包含您想要搜索内容的文件夹。</li>
+	<li>在右上角的<b>过滤器</b>栏中，输入关键字并在窗口的主要区域中查看过滤的结果。</li>
+</ol>
+
+<h4>若要执行高级搜索：</h4>
+<ol>
+	<li>用 File Station 进入包含您想要搜索内容的文件夹。</li>
+<li>单击右上角<b>过滤器</b>栏旁边的放大镜以显示高级搜索菜单。</li>
+	<li>指定以下搜索条件，或从下拉菜单中进行选择：
+		<ul>
+			<li><b>关键字</b>：输入关键字来搜索名称相符的文件或文件夹。
+				<div class="section"><h4>注：</h4>
+				<ul>
+					<li>您可在关键字中可使用统配符 [*] (亦即零个或多个字符) 和 [?] (亦即任意随机字符)。例如，[a<span class="note_content">*</span>n] 可以代表 [a<span class="note_content">ctio</span>n]、[a<span class="note_content">ttentio</span>n] 或 [an]。</li>
+					<li>您可用空格来分开多个关键字。例如，关键词 [File Station] 可搜索包含 [File]、[Station] 或两者的结果。</li>
+					<li>您可以在关键字的开头和结尾处加入双引号 ["] 进行精确、区分大小写的匹配项。例如，[<span class="note_content">“Synology Inc”</span>] 可代表 [<span class="note_content">Synology Inc.</span>]，但不能代表 [<span class="note_content">Synology Incorporation</span>]。
+					</li>
+					<li class="disable-hi3535">以下运算符可让搜索结果更精确：
+						<table width="84%" border="1">
+							<tbody>
+								<tr>
+									<th width="147" align="center">运算符</th>
+									<th width="229" align="center">例如</th>
+									<th width="926" align="center">使用方式</th>
+								</tr>
+								<tr>
+									<td align="center">&&</td>
+									<td align="center">[X] && [Y]</td>
+									<td><li>列示包含 [X] 和 [Y] 的匹配项</li></td>
+								</tr>
+								<tr>
+									<td align="center">||</td>
+									<td align="center">[X] || [Y]</td>
+									<td>
+										<li>列示保含 [X]、[Y] 或两者的匹配项</li>
+										<li>含有 [X] 和 [Y] 两者的匹配项列示于顶端</li>
+									</td>
+								</tr>
+								<tr>
+									<td align="center">+</td>
+									<td align="center">+[X]</td>
+									<td><li>列示含有 [X] 的匹配项</li></td>
+								</tr>
+								<tr>
+									<td align="center">-</td>
+									<td align="center">-[X]</td>
+									<td><li>列示不含 [X] 的匹配项</li></td>
+								</tr>
+								<tr>
+									<td align="center">!</td>
+									<td align="center">![X]</td>
+									<td><li>列示不含 [X] 的匹配项</li></td>
+								</tr>
+								<tr>
+									<td align="center">\</td>
+									<td align="center">\[SpecialCharacter]</td>
+									<td>
+										<li>特殊字符： <span class="note_content">&nbsp; + &nbsp;&nbsp;-&nbsp;&nbsp; &&	&nbsp;&nbsp;|| &nbsp;&nbsp; ! &nbsp;&nbsp; ( &nbsp;&nbsp; ) &nbsp;&nbsp; { &nbsp;&nbsp; } &nbsp;&nbsp; [ &nbsp;&nbsp; ] &nbsp;&nbsp; ^ &nbsp;&nbsp; " &nbsp;&nbsp; ~ &nbsp;&nbsp; * &nbsp;&nbsp; ? &nbsp;&nbsp; : &nbsp;&nbsp;\</span></li>
+										<li>列示含有上述目标特殊字符的匹配项</li>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</li>
+				</ul>
+				</div>
+			</li>
+			<li class="disable-hi3535"><strong>启用文件内容搜索</strong>：搜索索引文件，以找到匹配关键词的文件内容或元数据。</li>
+			<li><b>位置</b>：从下拉菜单中以设置高级搜索的范围和深度。您还可选择列示的任何其它共享文件夹以自定义搜索范围。</li>
+			<li><b>文件类型</b>：选择<b>文件扩展名</b>来将搜索范围限制为特定类型的文件，或是选择<b>任何文件夹</b>来将搜索范围限制为仅搜索文件夹。</li>
+			<li><strong>日期</strong>：选择<b>修改日期</b>、<b>创建日期</b>或<strong>最近访问</strong>，然后从日历中选择日期以搜索符合日期的文件。</li>
+			<li><b>大小 (MB)</b>：您可以选择<b>等于</b>、<b>大于</b>或<b>小于</b>，然后输入大小来搜索条件相符的文件。(如果您选择<strong>等于</strong>，则搜索结果将包含与指定大小近似的文件。)</li>
+			<li><b>所有者/群组</b>：选择<b>所有者</b>或<b>群组</b>，然后从下拉菜单中进行选择，搜索所选用户或群组拥有的文件或文件夹。
+				<div class="section"><h4>注：</h4>
+				<ul>
+					<li>要执行高级搜索，需指定<b>位置</b>用至少一个其它搜索条件。</li>
+					<li>如果在索引的共享文件夹中有 ISO 文件夹或远程文件夹，您将无法通过高级搜索找到其中的文件。</li>
+				</ul>
+				</div>
+			</li>
+		</ul>
+	</li>
+	<li>单击<b>搜索</b>来开始搜索，或是单击<b>重置</b>并再次指定搜索条件。搜索完成之后，条件相符的文件会列在 File Station 的主要区域中。</li>
+</ol>
+
+</body>
+</html>

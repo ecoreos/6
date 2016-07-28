@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+	<h2>HDD/SSD</h2>
+	<p>Bu bölüm, HDD/SSD performansını ve sağlığını analiz etmek ve yönetmek için seçenekler sunarak kullanıcının DiskStation içinde kurulu olan HDD/SSD'lerin durumunu izlemesini sağlar. Bu seçenekleri yönetmek için <strong>Depolama Yöneticisi</strong> > <strong>HDD/SSD</strong> bölümüne gidin.</p>
+
+	<h4>HDD/SSD bilgilerini kontrol etmek için:</h4>
+	<ol>
+		<li><b>HDD/SSD</b> sekmesine gidin.</li>
+		<li>Listeden bir sürücü seçerek genişletin. Burada S.M.A.R.T. durumunu, birim bilgisini, model adını, seri numarasını, donanım yazılımı sürümünü ve sıcaklığı görebilirsiniz.</li>
+	</ol>	
+	
+	<h4>Sağlık bilgisini kontrol etmek için:</h4>
+    <ol>
+      <li><b>HDD/SSD</b> sekmesine gidin.</li>
+	  <li>Bir sürücü seçin.</li>
+      <li><b>Sağlık Bilgisi</b>'ne tıklayın.</li>
+	  <li><strong>Genel Bakış</strong> sekmesine gidin. Burada sürücünün kaç saattir açık olduğunu, mevcut sıcaklığı, yeniden bağlanma/yeniden tanımlanma sayısını, bozuk sektör sayısını ve genel S.M.A.R.T. durumunu bulabilirsiniz.</li>
+      <li><strong>S.M.A.R.T. Bilgisi</strong> sekmesine gidin. Listelenen sayılar sürücünüzün durumunun tanılanmasında size yardımcı olabilir.</li>
+    </ol>
+
+<div class="section">
+<h4>Not:</h4>
+<p>
+   SAS sürücüler S.M.A.R.T. bilgisini desteklemez.
+</p>
+</div>
+
+	<h4>S.M.A.R.T. testini başlatmak için:</h4>
+	<P>S.M.A.R.T. Test, olası sürücü arızalarının uyarısını vermek amacıyla sürücülerinizin durumunu inceler ve rapor eder. Herhangi bir hatanın saptanması durumunda sürücünüzün hemen değiştirilmesi önerilir. </P>
+    <ol>
+      <li><strong>HDD/SSD</strong> sekmesine gidin.</li>
+      <li>Bir sürücü seçin.</li>
+      <li><b>S.M.A.R.T. Test</b> öğesine tıklayın.</li>
+      <li>Bir test tipini seçin ve testi başlatmak için <strong>Başlat</strong> üzerine tıklayın.</li>
+      <li>En son test sonuçları <b>Test Sonucu</b> bölümünde görüntülenir.</li>
+    </ol>
+    <div class="section">
+<h4>Not:</h4>
+    <p>Test zamanı sistem ortamınıza bağlı olarak değişir.</p>
+</div>
+    <h4>S.M.A.R.T. testlerini programlamak için:</h4>
+    <p>S.M.A.R.T. testleri görevlerin oluşturulmasıyla otomatik olarak çalışmak üzere programlanabilir.</p>
+    <ol>
+      <li><strong>Test Zamanlayıcısı</strong> sekmesine gidin.</li>
+      <li><strong>Oluştur</strong> düğmesine tıklayarak yeni bir görev oluşturun.</li>
+      <li>Aşağıdaki ayarları <strong>Genel</strong> sekmesinde değiştirin:</li>
+      <ul>
+        <li><strong>Görev:</strong> Görev için bir ad girin.</li>
+        <li><strong>S.M.A.R.T. Test Türü:</strong> Hızlı bir test veya genişletilmiş bir test yapmayı tercih edin.</li>
+        <li><strong>S.M.A.R.T. Test Serisi:</strong> S.M.A.R.T. testinin her yapılışında hangi HDD/SSD'lerin test edileceğini seçin.</li>
+      </ul>
+      <li><strong>Program</strong> sekmesinde, aşağıdaki ayarları modifiye edin:</li>
+      <ul>
+        <li><strong>Tarih:</strong> S.M.A.R.T. testinin ne zaman yapılacağını belirtin. S.M.A.R.T. testleri haftanın belirli günlerinde (ör. günlük, haftasonları veya her Pazar vb.) veya belirli tarihlerde (ör. 21/10/2015) yapılacak şekilde programlanabilir.</li>
+        <li><strong>Saat:</strong> S.M.A.R.T. testinin kaç defa yapılacağı ile birlikte her gün ilk ve son defayı belirtin.</li>
+      </ul>
+      <li>Bitirmek için <strong>Tamam</strong>'a tıklayın.</li>
+    </ol>
+
+<h4>Secure Erase yapmak için:</h4>
+<ol>
+<li><b>HDD/SSD</b> sekmesine gidin.</li>
+<li>Bir sürücü seçin ve <b>Secure Erase</b> üzerine tıklayın.</li>
+</ol>
+
+
+<div class="section">
+<h4>Not:</h4>
+<ul>
+<li>Secure Erase genişleme ünitelerindeki sürücülerde yapılamaz.</li>
+<li>Secure Erase sürücünüz üzerindeki tüm verileri tamamen silecektir. Seçilen sürücünüzün kullanımda olmadığından ya da bunu yapmadan önce verilerin yedeklenmiş olduğundan lütfen emin olun.</li>
+<li>Sistem Secure Erase yaparken, seçilen sürücü geçici olarak kilitlenir ve ardından işlem tamamlandığında otomatik olarak kilidi açılır.</li>
+<li>İşlem sırasında Secure Erase durdurulursa, Secure Erase'i doğrudan kullanıcı arayüzünde yeniden çalıştırabilirsiniz. Halen kilitli halde sürücüler çıkartılır veya başka yerde kullanılırsa, sürücülerin kilidini açmak için lütfen "synology" şifresini girin.</li>
+</ul>
+</div>
+
+
+	<h3>HDD için Yazma Önbellek Desteğini Etkinleştirme</h3>
+	<p>Yazma önbelleği desteğini etkinleştirmek DiskStation ürününüzün performansını arttırır. Sadece belirli HDD modelleri bu özelliği destekler. Yazma önbellek desteğini kullanırken, veri korumasını garantilemek için bir UPS cihazının kullanılması önemle tavsiye edilir. Aynı zamanda her kullanımdan sonra sistemin gereği gibi kapatılmasını da öneririz. Yazma önbelleğinin devre dışı bırakılması anormal güç kesintileri tarafından neden olunan veri kaybı ihtimalini azaltır ancak sistem performansı düşer.</p>
+
+	<h4>Yazma önbelleği desteğini etkinleştirmek için: </h4>
+	<ol>
+		<li><b>Önbellek Yönetimi</b> sekmesine gidin.</li>
+		<li><b>Yazma önbelleğini etkinleştir</b>'i işaretleyin. Varsayılan olarak bu işlev etkinleştirilmiştir.</li>
+		<li><b>Uygula</b>'ya tıklayın.</li>
+	</ol>
+	
+
+ 
+
+</body>
+</html>

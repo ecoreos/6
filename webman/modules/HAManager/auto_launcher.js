@@ -1,0 +1,3 @@
+/* Copyright (c) 2016 Synology Inc. All rights reserved. */
+
+Ext.define("SYNO.SDS.HA.AutoLauncher.Instance",{extend:"SYNO.SDS.AppInstance",initInstance:function(b){var a=this;if(!a.win){a.win=new SYNO.SDS.Window({appInstance:a});a.addInstance(a.win);if(_S("ha_safemode")){SYNO.SDS.TaskBar.rightTaskBar.hide();SYNO.SDS.Desktop.hotkeyPlugin.setHotkeyEnabled(false)}SYNO.SDS.AppLaunch("SYNO.SDS.HA.Instance")}}});

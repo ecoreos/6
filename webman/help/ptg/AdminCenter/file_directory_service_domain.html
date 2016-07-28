@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Win/Mac/NFS</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Dom&iacute;nio</h2>
+<p>O DiskStation pode ser associado a um dom&iacute;nio Windows. Depois de associado ao dom&iacute;nio, os utilizadores do dom&iacute;nio podem iniciar sess&atilde;o no DiskStation utilizando as respectivas palavras-passe e contas de dom&iacute;nio, permitindo aceder a ficheiros e utilizar as aplica&ccedil;&otilde;es DSM sem necessitar de lembrar outro conjunto de nomes de utilizador e palavra-passe.</p>
+<h4>Para aderir a um dom&iacute;nio:</h4>
+<ol>
+<li>V&aacute; para <strong>Painel de Controlo</strong> &gt; <strong>Servi&ccedil;o de Diret&oacute;rio</strong> &gt; <strong>Dom&iacute;nio</strong>.</li>
+<li>Assinale a caixa <strong>Aderir ao dom&iacute;nio</strong>.</li>
+<li>Introduza o nome de dom&iacute;nio e especifique o servidor DNS nos campos adequados.</li>
+<li>Se necess&aacute;rio, assinale a caixa <b>Op&ccedil;&otilde;es avan&ccedil;adas do dom&iacute;nio</b>. (Consulte abaixo para obter detalhes.)</li>
+<li>Clique em <b>Aplicar</b>.</li>
+<li>Na janela de pop-up, introduza o nome de utilizador e a palavra-passe do administrador do servidor de dom&iacute;nio.</li>
+<li>Clique em <b>OK</b>.</li>
+</ol>
+<div class="section">
+<h4>DNS Server</h4>
+<p>Recomenda-se que especifique um servidor DNS para ajudar o DiskStation a procurar o dom&iacute;nio. No entanto, se o dom&iacute;nio n&atilde;o estiver registado no servidor DNS, o procedimento para aderir ao dom&iacute;nio poder&aacute; falhar.</p>
+<h4>Tipo de Servidor do Dom&iacute;nio</h4>
+<p>Este campo mostra o tipo de dom&iacute;nio quando DiskStation adere a um dom&iacute;nio. O tipo de dom&iacute;nio ser&aacute; &quot;dom&iacute;nio AD&quot;.</p>
+<h4>Modo de Gest&atilde;o</h4>
+<p>Esta op&ccedil;&atilde;o vai determinar como gere os privil&eacute;gios dos utilizadores de grupos de dom&iacute;nio. </p>
+<ul>
+<li><b>Dom&iacute;nio de confian&ccedil;a</b>: Pode gerir utilizadores e grupos no dom&iacute;nio conjunto assim como dom&iacute;nios de confian&ccedil;a. Os utilizadores e os grupos podem ser filtrados com a lista pendente de dom&iacute;nio.</li>
+<li><b>Dom&iacute;nio &uacute;nico com OU</b>: Apenas os utilizadores e grupos no dom&iacute;nio conjunto ser&atilde;o exibidos neste modo. Este modo permite-lhe filtrar os utilizadores do dom&iacute;nio/grupos do dom&iacute;nio com a lista pendente OU (Unidade de Organiza&ccedil;&atilde;o).</li>
+</ul>
+<h4>Op&ccedil;&otilde;es Avan&ccedil;adas do Dom&iacute;nio</h4>
+<p>Na maioria dos casos, n&atilde;o &eacute; necess&aacute;rio preencher qualquer uma das op&ccedil;&otilde;es avan&ccedil;adas do dom&iacute;nio. As op&ccedil;&otilde;es avan&ccedil;adas do dom&iacute;nio apenas s&atilde;o necess&aacute;rias para ambientes espec&iacute;ficos do dom&iacute;nio. </p>
+<ul>
+<li><b>IP DC/FQDN</b>: Especifique um endere&ccedil;o IP DC (Controlador de Dom&iacute;nio) ou FQDN e o DiskStation ir&aacute; tentar comunicar com o mesmo. Se existir mais do que um endere&ccedil;o IP ou FQDN, insira uma v&iacute;rgula (,) entre cada um. Adicione um asterisco (*) ap&oacute;s o &uacute;ltimo endere&ccedil;o IP DC ou FQDN, se pretender, e o DiskStation ir&aacute; tentar comunicar com o outro DC se todos os que foram especificados tiverem falhado. Ser&aacute; necess&aacute;rio adicionar uma v&iacute;rgula entre o asterisco e o &uacute;ltimo endere&ccedil;o IP ou FQDN.</li>
+<li><b>Nome da NetBIOS do dom&iacute;nio</b>: Especifique o nome da NetBIOS do dom&iacute;nio.</li>
+<li><b>FQDN do dom&iacute;nio (nome do DNS)</b>: Especifique o FQDN (nome do DNS) do dom&iacute;nio.</li>
+<li><b>Registar interface DNS:</b> Quando aderir a um dom&iacute;nio, o NIC (Placa de Interface de Rede) especificado aqui ser&aacute; registado com o servidor DNS. Tenha em aten&ccedil;&atilde;o que se o nome do anfitri&atilde;o de DiskStation incluir um car&aacute;cter de sublinhado (_), o registo ir&aacute; falhar uma vez que os caracteres de sublinhado (_) n&atilde;o podem ser utilizados com DNS.</li>
+<li><b>Atualizar lista de utilizadores/grupos</b>: Especifique a frequ&ecirc;ncia com que DiskStation actualiza automaticamente a lista de utilizadores/grupos do dom&iacute;nio. Pode personalizar o per&iacute;odo de tempo para efetuar atualiza&ccedil;&otilde;es di&aacute;rias, semanais ou mensais. Al&eacute;m disso, as listas de utilizadores/grupos do dom&iacute;nio podem ser atualizadas manualmente indo para o separador <strong>Utilizador do dom&iacute;nio</strong> e clicando em <strong>Atualizar todos os dom&iacute;nios</strong>. Tenha em aten&ccedil;&atilde;o que as atualiza&ccedil;&otilde;es autom&aacute;ticas ir&atilde;o afetar a hiberna&ccedil;&atilde;o do sistema.</li>
+</ul>
+
+<h4>Associar a um Controlador de Dom&iacute;nio s&oacute; de leitura</h4>
+<p>Para associar o seu DiskStation a um controlador de dom&iacute;nio s&oacute; de leitura (read-only domain controller - RODC), &eacute; necess&aacute;rio especificar o &quot;nome completo do computador&quot; (FQDN) do seu controlador de dom&iacute;nio de leitura-escrita (read-write domain controller - RWDC) no campo <strong>DC IP/FQDN</strong>. O nome completo do computador deve estar no seguinte formato: <strong>NomeComputador.Dom&iacute;nio</strong>, por exemplo, &quot;ad01.synology.com&quot;.</p>
+
+</div>
+
+
+<div class="section">
+<h4>Nota:</h4>
+<ul>
+<li>Se o nome de utilizador do dom&iacute;nio incluir &ldquo;%&rdquo; ou &ldquo;$&rdquo;, pode n&atilde;o conseguir aceder &agrave; pasta home. Solicite ao seu administrador de dom&iacute;nio a atribui&ccedil;&atilde;o de um novo nome de utilizador.</li>
+<li>Os grupos do dom&iacute;nio <strong>Admins do Dom&iacute;nio</strong> e <strong>Admins da Empresa</strong> ser&atilde;o adicionados automaticamente ao grupo <strong>Administrators</strong> local. Assim, os utilizadores do dom&iacute;nio nestes grupos ter&atilde;o privil&eacute;gios administrativos no DiskStation, incluindo o acesso a servi&ccedil;os de ficheiros, tais como CIFS/FTP/AFP/WebDAV e outras aplica&ccedil;&otilde;es DSM.</li>
+<li>Pode tamb&eacute;m configurar os privil&eacute;gios de acesso dos utilizadores do dom&iacute;nio &agrave;s pastas partilhadas no DiskStation. Para obter mais informa&ccedil;&otilde;es, consulte <a href="file_directory_service_user_group.html">aqui</a>.</li>
+</ul>
+</div>
+
+
+
+<h3>Op&ccedil;&otilde;es do Dom&iacute;nio</h3>
+<p>Esta sec&ccedil;&atilde;o inclui as op&ccedil;&otilde;es adicionais do dom&iacute;nio abaixo.</p>
+<ul>
+<li><b>A DiskStation ir&aacute; sincronizar com um servidor NTP sempre que um utilizador do dom&iacute;nio iniciar sess&atilde;o:</b> A activa&ccedil;&atilde;o desta op&ccedil;&atilde;o ir&aacute; for&ccedil;ar a sincroniza&ccedil;&atilde;o do tempo entre DiskStation e o servidor NTP.</li>
+<li><b>Ativar a assinatura do servidor:</b> Se o cliente tiver activado a assinatura do cliente, a assinatura do servidor tamb&eacute;m tem de ser activada em DiskStation, deste modo, os utilizadores podem utilizar normalmente os servi&ccedil;os do dom&iacute;nio.</li>
+<li><b>Obter listas de utilizadores/grupos com o modo compat&iacute;vel com NT4:</b> A activa&ccedil;&atilde;o desta op&ccedil;&atilde;o permite que o sistema obtenha listas de utilizadores/grupos utilizando o modo RPC de NT4. Esta op&ccedil;&atilde;o pode ser ativada se n&atilde;o for poss&iacute;vel obter determinadas listas de utilizadores/grupos de dom&iacute;nio utilizando as predefini&ccedil;&otilde;es.</li>
+<li><b> Desativar permiss&otilde;es do administrador para Admins do Dom&iacute;nio e Admins da Empresa:</b>Um utilizador com permiss&otilde;es do administrador pode ter total controlo do seu DiskStation e dos seus ficheiros. Ativar esta op&ccedil;&atilde;o ir&aacute; permitir-lhe restringir as permiss&otilde;es de Admins do dom&iacute;nio e Admins da empresa para que sejam iguais &agrave;s do utilizador normal, herdando assim todas as permiss&otilde;es de ficheiro/pasta do utilizador normal.</li>
+<li><strong>Enumerar n&iacute;veis de grupo aninhados:</strong> Especifique o n&uacute;mero de membros do grupo do dom&iacute;nio aninhados e que podem ser enumerados.</li>
+</ul>
+
+</body>
+</html>

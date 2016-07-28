@@ -1,0 +1,85 @@
+ <!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>ボリュームやディスクグループにハードドライブを追加する - Synology DSM ヘルプ</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="This article walks you through the steps to add an additional hard drive to an existing volume or disk group on your DiskStation.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>ハードドライブを追加してストレージ容量を拡張する</h2>
+
+<p>DiskStation に使用していない空のハードドライブ スロットがある場合は、追加のハードドライブをインストールして、既存のボリュームやディスクグループに追加することができます。ここでは、追加のハードドライブをインストールして既存のボリュームやディスクグループを拡張する手順を説明します。</p>
+
+<h3>はじめる前に</h3>
+
+<p>作業を開始する前に、追加するハードドライブが最小サイズの要件を満たしていることを確認してください。</p>
+<ul>
+  <li><strong>SHR：</strong> 追加するハードドライブの容量は、ボリュームまたはディスクグループのハードドライブの中で最も大きいものと同等か、それよりも大きいもの、またはボリュームまたはディスクグループのハードドライブのいずれかと同等でなければなりません。例えば、2 TB、1.5 TB、1 TB の 3 つのハードドライブで構成されるボリュームの場合、新しいハードドライブは最低でも 2 TB、または 1.5 TB または 1 TB と同等のものを準備してください。</li>
+  <li><strong>RAID 5 および RAID 6：</strong> 追加するハードドライブの容量は、ボリュームまたはディスクグループのハードドライブの中で最も小さいものと同等か、それ以上でなければなりません。例えば、2 TB、1.5 TB、1 TB の 3 つのハードドライブで構成されるボリュームの場合、新しいハードドライブは最低でも 1 TB のものを準備してください。</li>
+</ul>
+
+<div class="section">
+<h4>ボリュームの状態を調べる</h4>
+
+<p>ボリュームまたはディスク グループの状態が<strong>正常</strong>であることを確認してください。正常でない場合は、まずこれを修復してください。</p>
+</div>
+
+
+<h3>  ボリュームやディスクグループにハードドライブを追加する</h3>
+
+<p>ハードドライブは、次の RAID タイプに追加できます。</p>
+
+<ul>
+<li>Synology Hybrid RAID (SHR)</li>
+<li>JBOD</li>
+<li>RAID 5</li>
+<li>RAID 6</li>
+</ul>
+
+<div class="section">
+<h4>注意：</h4>
+<p>SHR ボリュームについては、2 台以上のハードドライブをボリュームに追加する場合に限りストレージ容量を拡張できます。</p>
+</ul>
+</div>
+
+<h4>ボリュームやディスクグループにハードドライブを追加する：</h4>
+
+<ol>
+<li>DiskStation の電源を切ります。（DiskStation がホットスワップに対応している場合は、この手順は省略してください。）</li>
+<li>新しいハードドライブを空のハードドライブ スロットに挿入します。</li>
+
+<div class="section">
+<h4>注意：</h4>
+<p>ケガや DiskStation の故障の原因となりますので、必ず Synology 製品の<i>「クイック インストール ガイド」</i>に記載されているハード ドライブのインストールの手順に従ってください。</p>
+</div>
+
+<li>DiskStation の電源を入れます。</li>
+<li><strong>administrators</strong> グループに属するアカウントで DSM にログインします。</li>
+<li><strong>ストレージ マネージャ</strong>を開きます。</li>
+<img src="about:blank" class="help_image"/>
+
+<li>このとき、次の操作を行ってください。</li>
+  <ul class="list_abc">
+    
+  <li>RAID 上の 1 つのボリュームを拡張する場合は、<strong>[ボリューム]</strong> タブを開きます。増設するボリュームを選択します。<strong>[管理]</strong> をクリックして次の手順に進みます。</li>
+<img src="about:blank" class="help_image"/>
+    
+  <li>ディスク グループを拡張する場合は、<strong>[ディスク グループ]</strong> タブを開きます。増設するディスクグループを選択します。<strong>[管理]</strong> をクリックして次の手順に進みます。</li>
+<img src="about:blank" class="help_image"/>
+  </ul>
+<li><strong>[ハードディスクを追加してボリューム（ディスク グループ）を増設する]</strong> を選択します。次に、<strong>[次へ]</strong> をクリックします。</li>
+<img src="about:blank" class="help_image"/>
+<li>ボリュームまたはディスク グループを増設するためのハードドライブを選択します。チェックボックスにチェックマークを付けると、ハードドライブが追加されます。次に、<strong>[次へ]</strong> をクリックします。</li>
+<img src="about:blank" class="help_image"/>
+<li>ウィザードの手順に従って完了してください。</li>
+</ol>
+</body>
+</html>

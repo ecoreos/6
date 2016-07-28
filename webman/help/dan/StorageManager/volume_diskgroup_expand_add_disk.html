@@ -1,0 +1,84 @@
+ <!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Tilføj en harddisk til en diskenhed eller diskgruppe - Synology DSM - Hjælp</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="This article walks you through the steps to add an additional hard drive to an existing volume or disk group on your DiskStation.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script> <script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Tilføj en harddisk for at udvide lagerkapaciteten</h2>
+
+<p>Hvis der er tomme harddiskbåse på din DiskStation, kan du installere yderligere harddiske og tilføje dem til en eksisterende diskenhed eller diskgruppe. Denne artikel giver dig oplysninger om udvidelse af en eksisterende diskenhed eller diskgruppe ved at installere yderligere harddiske.</p>
+
+<h3>Før du begynder</h3>
+
+<p>Før du begynder, skal du sikre, at den harddisk, du vil tilføje, opfylder følgende størrelseskrav:</p>
+<ul>
+  <li><strong>For SHR:</strong> Kapaciteten på den harddisk, som du vil tilføje, skal være lig med eller større end den største harddisk på diskenheden eller i diskgruppen eller lige med enhver harddisk i på diskenheden eller i diskgruppen. Hvis din SHR-diskenhed f.eks. består af tre harddiske – henholdsvis 2 TB, 1,5 TB og 1 TB – skal kapaciteten for den nye harddisk være mindst 2 TB eller lig med 1,5 TB eller 1 TB.</li>
+  <li><strong>For RAID 5 og RAID 6:</strong> Kapaciteten på den harddisk, som du vil tilføje, skal være lig med eller større end den mindste harddisk på diskenheden eller i diskgruppen. Hvis din diskenhed f.eks. består af tre harddiske – henholdsvis 2 TB, 1,5 TB og 1 TB – skal kapaciteten for den nye harddisk være mindst 1 TB.</li>
+</ul>
+
+<div class="section">
+<h4>Check status for diskenhed</h4>
+
+<p>Sørg for, at status for din diskenhed eller diskgruppe er <strong>Normal</strong>. Hvis det ikke er tilfældes, skal du første reparere den.</p>
+</div>
+
+
+<h3>  Tilføj en harddisk til en diskenhed eller diskgruppe</h3>
+
+<p>Harddiske kan tilføjes til følgende RAID-typer: </p>
+
+<ul>
+<li>Synology Hybrid RAID (SHR)</li>
+<li>JBOD</li>
+<li>RAID 5</li>
+<li>RAID 6</li>
+</ul>
+
+<div class="section">
+<h4>Bemærk:</h4>
+<p>For SHR-diskenheder udvides lagerkapaciteten kun, når der tilføjes harddiske til en diskenhed med to eller flere diske.</p>
+</ul>
+</div>
+
+<h4>Sådan tilføjer du en harddisk til en diskenhed eller diskgruppe:</h4>
+
+<ol>
+<li>Sluk for din DiskStation. (Du kan springe dette trin over hvis DiskStation understøtter hot-swapping).</li>
+<li>Installer en nye harddisk i en tom harddiskbås.</li>
+
+<div class="section">
+<h4>Bemærk:</h4>
+<p>Undgå af skade dig selv eller din DiskStation ved at følge harddiskinstallationsvejledningen i <i>Hurtiginstallationsvejledning</i> til dit Synology-produkt.</p>
+</div>
+
+<li>Tænd for din DiskStation.</li>
+<li>Log ind på DSM med en konto fra gruppen <strong>administrators</strong>.</li>
+<li>Åbn <strong>Lagerstyring</strong>.</li>
+<img src="about:blank" class="help_image"/>
+
+<li>I det tilfælde skal du gøre følgende:</li>
+  <ul class="list_abc">
+    
+  <li>Hvis du udvider én diskenhed, skal du gå til fanen <strong>Diskenhed</strong>. Vælg den diskenhed, du vil udvide. Klik på <strong>Administrer</strong>, og fortsæt til næste trin. </li>
+<img src="about:blank" class="help_image"/>
+    
+  <li>Hvis du udvider en diskgruppe, skal du gå til fanen <strong>Diskgruppe</strong>. Vælg den diskgruppe, du vil udvide. Klik på <strong>Administrer</strong>, og fortsæt til næste trin.</li>
+<img src="about:blank" class="help_image"/>
+  </ul>
+<li>Vælg <strong>Udvid diskenheden (eller diskgruppen) ved at tilføje harddiske</strong>. Klik derefter på <strong>Næste</strong>.</li>
+<img src="about:blank" class="help_image"/>
+<li>Vælg de harddiske, som du vil udvide diskenhed eller diskgruppen med. Du kan tilføje harddiske ved at markere de tilhørende afkrydsningsfelter. Klik derefter på <strong>Næste</strong>.</li>
+<img src="about:blank" class="help_image"/>
+<li>Følg trinnene i guiden for at afslutte.</li>
+</ol>
+</body>
+</html>

@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>电源</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+
+
+<h2>UPS</h2>
+
+<p class="disable-eds14">UPS（Uninterruptible Power Supply，不间断电源）是备用电源设备，断电时它可让 DiskStation 继续运作一小段时间。在<strong>控制面板</strong> &gt; <strong>硬件和电源</strong> &gt; <strong>UPS</strong> 中的此功能有助于 DiskStation 在断电和关机之前有足够时间来保存数据和卸载卷，以避免数据丢失。</p>
+
+<p class="enable-eds14">UPS（Uninterruptible Power Supply，不间断电源）是备用电源设备，断电时它可让 DiskStation 继续运作一小段时间。在<strong>控制面板</strong> &gt; <strong>硬件和电源</strong> &gt; <strong>UPS</strong> 中的此功能有助于 DiskStation 在断电和停机之前有足够时间来保存数据和卸载卷，以避免数据丢失。</p>
+
+<div class="section">
+<h4>安全模式</h4>
+<p class="disable-eds14">当 DiskStation 进入安全模式时，它会停止所有服务并卸载卷，以避免数据丢失，并在 UPS 设备消耗完电力后安全关机。当 UPS 设备在电量不足的情况下开始运行时，系统会默认进入安全模式。您还可以指定断电发生后多久让 DiskStation 进入安全模式。但如果 UPS 设备在指定时间之前电量已不足，系统会立即进入安全模式。</p>
+
+<p class="enable-eds14">当 DiskStation 进入安全模式时，它会停止所有服务并卸载卷，以避免数据丢失，并在 UPS 设备消耗完电力后安全关机。当 UPS 设备在电量不足的情况下开始运行时，系统会默认进入安全模式。您还可以指定断电发生后多久让 DiskStation 进入安全模式。但如果 UPS 设备在指定时间之前电量已不足，系统会立即进入安全模式。</p>
+
+
+<p></p>
+<p class="disable-eds14">DiskStation 在安全模式下关闭的情况下，如果您已启用<strong>断电后自动重启</strong>选项（位于<strong>控制面板</strong> &gt; <strong>硬件和电源</strong> &gt; <strong>常规</strong>），则在供电恢复时它会自动开启。</p>
+
+<p></p>
+</div>
+
+
+
+
+<h3>本地不间断电源系统支持</h3>
+
+<p>如需有关硬件安装的详情，请参阅不间断电源系统设备的用户手册。安装完成且 DiskStation 已插入不间断电源系统设备后，您可以按照下列步骤启用不间断电源系统支持。</p>
+<h4>若要启用本地不间断电源系统支持：</h4>
+<OL>
+<li>请将不间断电源系统设备连接到 DiskStation 的 USB 端口。</li>
+<LI>请在<strong>不间断电源系统</strong>选项卡中，勾选<b>启用不间断电源系统支持</b>复选框。</LI>
+<LI>选择在断电后多久让 DiskStation 进入安全模式。</LI>
+<LI>选择是否要在系统进入安全模式时，发送关机信号至不间断电源系统设备。大多数不间断电源系统设备会在电源恢复时自动开启。</LI>
+<LI>单击<b>应用</b>。</LI>
+</OL>
+
+<h3>SNMP 不间断电源系统支持</h3>
+
+<p>您的 DiskStation 还支持连接到 SNMP（Simple Network Management Protocol，简单网络管理协议）不间断电源系统设备。如需有关硬件安装的详情，请参阅 SNMP 不间断电源系统设备的用户手册。在 DiskStation 插入不间断电源系统设备且连接到同一网络后，您可以按照下列步骤启用不间断电源系统支持。</p>
+<h4>若要启用 SNMP 不间断电源系统支持：</h4>
+<ol>
+<LI>请在<strong>不间断电源系统</strong>选项卡中，勾选<b>启用不间断电源系统支持</b>复选框。</LI>
+<li>从<strong>网络不间断电源系统类型</strong>下拉菜单中选取 <strong>SNMP 不间断电源系统</strong>。</li>
+<li>在 <strong>SNMP 不间断电源系统 IP 地址</strong>栏中，输入 SNMP 不间断电源系统设备的 IP 地址。</li>
+<LI>选择在断电后多久让 DiskStation 进入安全模式。</LI>
+<li>将 SNMP 不间断电源系统设备的共同体字符串输入到 <strong>SNMP 共同体</strong>字段。</li>
+<LI>单击<b>应用</b>。</LI>
+</ol>
+
+<div class="section">
+<h4>注：</h4>
+<ul>
+<li>强烈建议使用 <b>SNMP UPS</b> 以进行 Synology High Availability (SHA) 部署。</li>
+<li>DiskStation 支持 SNMPv1 和 SNMPv2c 不间断电源系统设备。</li>
+</ul>
+</div>
+
+
+<h3>网络不间断电源系统支持</h3>
+
+<p>如果有两台 Synology 产品共同使用一台不间断电源系统设备，而该设备只有一个 USB 端口，则只有一台 DiskStation 可以获取该不间断电源系统设备的状态信息。在这种情况下，一台 DiskStation 可用作&ldquo;网络不间断电源系统服务器&rdquo;并通过 USB 或网络（取决于设备）连接到不间断电源系统设备。网络不间断电源系统服务器将获取不间断电源系统信息并将其信息转发至另一个&ldquo;客户端&rdquo; DiskStation。</p>
+<h4>若要启用网络不间断电源系统支持：</h4>
+<OL>
+<li>请登录到连接不间断电源系统设备的 DiskStation（通过 USB 或网络）。如果未在 DiskStation 上启用本地不间断电源系统支持，请参阅上述章节。</li>
+<LI>在<strong>不间断电源系统</strong>选项卡中，勾选<strong>启用网络不间断电源系统服务器</strong>框来让 DiskStation 将不间断电源系统信息转发至客户端 DiskStation。</li>
+<li>单击<strong>允许的 DiskStation 设备</strong>按钮。</li>
+<li>在出现的窗口中，输入另一台非通过 USB 或网络连接使用不间断电源系统设备的 DiskStation 其 IP 地址。单击<strong>确定</strong>。</li>
+<li>单击<strong>应用</strong>来保存设置。</li>
+</OL>
+<p>现在，网络不间断电源系统服务器可以获取不间断电源系统信息并将信息转发至另一台正在使用不间断电源系统设备的 DiskStation。请按照下列说明来启用另一台 DiskStation 上的不间断电源系统支持。</p>
+<h4>若要启用客户端 DiskStation 的不间断电源系统支持：</h4>
+<ol>
+<li>请登录到另一台正在使用不间断电源系统设备的 DiskStation（非通过 USB 或网络连接）。</li>
+<li>在<strong>不间断电源系统</strong>选项卡中，勾选<strong>启用不间断电源系统支持</strong>框。</li>
+<li>从<strong>网络不间断电源系统类型</strong>下拉菜单中选择 <strong>Synology 不间断电源系统服务器</strong>。</li>
+<li>在<strong>网络不间断电源系统服务器 IP</strong> 栏中输入网络不间断电源系统服务器的 IP 地址（即连接到不间断电源系统设备的 DiskStation）。</li>
+<LI>选择在断电后多久让 DiskStation 进入安全模式。若要简化安全模式设置，您可以选择<strong>与服务器相同</strong>。</LI>
+<LI>单击<b>应用</b>来保存设置。</LI>
+</OL>
+<div class="section">
+<h4>网络不间断电源系统需求：</h4>
+<UL>
+<LI>若要转发不间断电源系统设备信息，每台 DiskStation 都应连接至相同的网络。</LI>
+<LI>各 DiskStation 连接的网络设备（例如交换器或集线器）应插入同一台不间断电源系统设备。否则，DiskStation 将无法在断电时转发不间断电源系统设备信息。</LI>
+</UL>
+</div>
+</body>
+</html>

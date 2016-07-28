@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Win/Mac/NFS</title>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Serviço de arquivos Mac</h2>
+<p>
+Em <strong>Painel de Controle</strong> > <strong>Serviços de arquivos</strong> > <strong>Win/Mac/NFS</strong>, você pode ativar o serviço de arquivos Mac para tornar DiskStation um servidor de arquivos Mac (servidor AFP).</p>
+<h4>Para ativar o serviço de arquivos Mac:</h4>
+<ol>
+<li>
+Marque <b>Ativar serviço de arquivos Mac</b> para tornar o DiskStation um servidor de arquivos Mac (servidor AFP).
+</li>
+<li>
+Configure a pasta de backup <b>Time Machine</b> se necessário. (Consulte a seção abaixo para mais informações.)
+</li>
+<li>
+Clique em <b>Aplicar</b>.
+</li>
+</ol>
+<div class="section">
+<h4>Nota:</h4>
+<ul>
+<li>Para fazer o backup de dados do Time Machine para o DiskStation, selecione uma pasta compartilhada no menu suspenso. </li>
+<li> As pastas compartilhadas que estão sendo usadas por outros serviços não estarão disponíveis para o Time Machine.</li>
+</ul>
+</div>
+<h3>Ativação do registro de transferência</h3>
+<p>Marcar essa opção habilita o registro das operações de acesso a arquivos, incluindo criação, exclusão, leitura, gravação, transferência e renomeação de arquivos ou pastas através do AFP, também conhecido como protocolo de arquivamento Apple.</p>
+<h3>Configurações avançadas</h3>
+<h4>Aplique as permissões UNIX padrão:</h4>
+<p>Ativar essa opção aplica as permissões UNIX padrão ao carregar ou criar arquivos e pastas. As permissões aplicadas são as mesmas das permissões aplicadas pelo comando UNIX <strong>umask</strong>. Quando essa opção está habilitada, as permissões UNIX são 644 para arquivos e 755 para pastas. Quando essa opção está desabilitada, as permissões UNIX são 666 para arquivos e 777 para pastas. O valor umask padrão é 022.</p>
+<div class="section">
+<h4>Nota:</h4>
+<p>Habilitar essa opção pode causar problemas de permissão inconsistente entre os diferentes protocolos. Para evitar inconsistências, sugerimos deixar essa opção desabilitada.</p>
+</div>
+<h4>Liberar recursos imediatamente após a desconexão:</h4>
+<p>A habilitação dessa opção libera recursos imediatamente quando a conexão do servidor AFP é desconectada inesperadamente. Se você receber mensagens de erro "Volume em uso" ao usar o Time Machine, habilite essa opção.</p>
+<h4>Para ativar o Bonjour Printer Broadcast:</h4>
+<p>Marque <b>Ativar Bonjour Printer Broadcast</b> para que os clientes Mac pesquisem e localizem a impressora conectada ao DiskStation.</p>
+<h4 class="disable-hi3535">Para pesquisar conteúdos de arquivo através do Spotlight no Finder:</h4>
+<p class="disable-hi3535">Após as pastas serem totalmente indexadas e montadas em seu computador Mac, você pode usar o Spotlight para pesquisar os arquivos dentro dela e seu conteúdo.</p>
+<ol class="disable-hi3535">
+<li>Vá para <strong>Painel de controle</strong> > <strong>Serviço de indexação</strong> > <strong>Indexação de arquivo</strong> > <strong>Lista de pastas indexadas</strong> > <strong>Criar</strong> para indexar pastas específicas e os arquivos dentro delas por tipo de arquivo.</li>
+<li>Clique em <strong>OK</strong> para executar a indexação.</li>
+<li>Monte as pastas indexadas no seu computador Mac.</li>
+<li>No seu computador Mac, clique na pasta montada desejada no painel esquerdo do Finder e use o Spotlight no Finder para pesquisar os arquivos dentro dela.</li>
+</ol>
+<div class="section disable-hi3535">
+<h4>Nota:</h4>
+<ul>
+<li>Para pesquisar nas pastas montadas, use o Spotlight no Finder. O Spotlight na mesa do Mac só permite a pesquisa de arquivos locais.</li>
+<li>No Mac OS X 10.9 e versões posteriores, o Spotlight no Finder suporta a pesquisa em pastas montadas por nome da marca e categoria.</li>
+</ul>
+</div>
+</body>
+</html>

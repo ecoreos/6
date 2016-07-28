@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Hot Spare</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2>Hot Spare*</h2>
+<p>Hot Spare-diskar är hårddiskar som står standby och kan reparera en trasig volym/diskgrupp/iSCSI LUN genom att automatiskt ersätta en trasig disk. Hot spare-diskar kan tilldelas globalt för att skydda valfri volym/diskgrupp/iSCSI LUN på din DiskStation så länge som följande villkor uppfylls av volym/diskgrupp/iSCSI LUN:</p>
+<ul>
+<li>RAID-typ för volym/Diskgrupp/iSCSI LUN måste ha dataskydd (dvs. RAID 1, RAID 5, RAID 6, RAID 10).</li>
+<li>Hot Spare-hårddiskens storlek måste vara lika stor eller större än den minsta hårddiskens storlek för volym/Diskgrupp/iSCSI LUN.</li>
+</ul>
+
+<h4>Installera hot spare-hårddiskar:</h4>
+<ol>
+<li>Klicka på <b>Hantera</b>.</li>
+<li>En dialog visas med hot spare-status för varje volym/diskgrupp/iSCSI LUN såväl som tillgängliga hårddiskar. Status för volym/diskgrupp/iSCSI LUN inkluderar följande:</li>
+<ul>
+<li><strong>Tilldelad:</strong> volym/diskgrupp/iSCSI LUN är skyddad av minst en tilldelad hot spare-disk.</li>
+<li><strong>Tillgängligt:</strong> Det finns tillgängliga hårddiskar som kan skydda volym/diskgrupp/iSCSI LUN men ingen hot spare har tilldelats ännu.</li>
+<li><strong>Ej tillgänglig:</strong> Det finns inte några tillgängliga hot spare-diskar som kan skydda volym/diskgrupp/iSCSI LUN.</li>
+</ul>
+<li>Avsnittet för <strong>Tillgängliga hårddiskar</strong> visar hårddiskar som kan tilldelas som hot spare-diskar. För att tilldela hot spare-diskar, markera kryssrutan vid disken du önskar tilldela som hot spare.</li>
+<li>Klicka på <b>Tillämpa</b> för att spara inställningarna.</li>
+</ol>
+<div class="section">
+<h4>Obs:</h4> 
+<ul>
+<li>När en hårddisk tilldelas som hot spare-disk blir all data på disken raderad. Före tilldelning av en hot spare-hårddisk ska du försäkra att hårddisken inte innehåller någon viktiga data.</li>
+<li>En RAID som är sammansatt av HDD:er repareras inte automatiskt av SSD-hot spare-diskar och tvärtom.</li>
+</ul>
+</div>
+
+<h4>Att konfigurera inställningar för hot spare för volymer/diskgrupper/iSCSI LUN:</h4>
+<ol>
+<li>Klicka på <b>Konfigurera</b>.</li>
+<li>På fliken <b>Hot Spare-mål</b> listas volymer/diskgrupper/iSCSI LUNs som kan skyddas av hot spare-diskar. Om du tar bort markeringarna i rutorna repareras inte motsvarande volymer/diskgrupper/iSCSI LUNs av hot spare-diskar när de är trasiga.</li>
+<li>På fliken <b>Hot Spare mellan enheter</b> kan du tillåta hot spare-diskar på en enhet att reparera en trasig RAID som finns på en annan enhet.</li>
+<li>Klicka på <b>OK</b> för att spara inställningarna.</li>
+</ol>
+
+
+
+<p>____<br />* Endast tillgängligt för vissa modeller.</p>
+
+</body>
+</html>

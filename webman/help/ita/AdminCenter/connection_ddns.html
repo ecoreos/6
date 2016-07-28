@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>DDNS</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>DDNS</h2>
+<p>DDNS (Dynamic Domain Name Service) semplifica la connessione di DiskStation tramite Internet eseguendo la mappatura del nome host sul relativo indirizzo IP. Ad esempio, DDNS consente di accedere a DiskStation utilizzando un nome dominio (ad esempio <i>www.john.synology.me</i>), senza dover ricordare l'indirizzo IP (ad esempio <i>172.16.254.1</i>).</p>
+
+<h3>Impostare il DDNS</h3>
+<p>È possibile puntare un nome host esistente sull'indirizzo IP di DiskStation, o registrarne uno nuovo fornito da Synology o altri fornitore del servizio DDNS. Consultare ciascun fornitore del servizio per informazioni relative alla registrazione di un nome host.
+</p>
+
+
+
+<h4>Per impostare il nome host DDNS:</h4>
+<ol>
+<li>Fare clic sul pulsante <b>Aggiungi</b>.</li>
+<li>Viene visualizzata una finestra di dialogo che consente di modificare le seguenti impostazioni:
+  <ul>
+<li><strong>Fornitore di servizio:</strong> selezionare un fornitore del servizio. Per registrare un nome host gratuito fornito da Synology, scegliere <b>Synology</b> dal menu a discesa, fare clic su <b>Registrati adesso</b>, e inserire le informazioni necessarie.</li>
+<li><strong>Nome host:</strong> inserire il nome host DDNS registrato, ad esempio <i>john.synology.me</i>.</li>
+<li><strong>Nome utente:</strong> inserire il nome utente del fornitore DDNS.</li>
+<li><strong>Password:</strong> inserire la password del fornitore DDNS.</li>
+<li><strong>Indirizzo esterno:</strong> inserire l'indirizzo IP esterno di DiskStation che utilizzerà il nome host.</li>
+<li><strong>Heartbeat:</strong> abilitare questa opzione per ricevere gli avvisi relativi allo stato del nome host mappato (solo per i nomi host forniti da Synology).</li>
+</ul>
+</li>
+<li>Fare clic su <strong>Test di connessione</strong> per vedere se le impostazioni sono corrette.</li>
+<li>Fare clic su <strong>OK</strong> per salvare e terminare.</li>
+</ol>
+
+<p>Una volta completata l'impostazione, è possibile accedere a DiskStation tramite Internet inserendo il nome host DDNS nel browser web.</p>
+<div class="section">
+<h4>Requisiti e limitazioni</h4>
+<ul> 
+<li>Il server del fornitore del servizio DDNS sono funzionanti.</li>
+<li>DiskStation può collegarsi a Internet.</li>
+<li>DDNS funziona solo in ambienti di rete dove non sono necessari server proxy.</li>
+<li>È anche possibile inserire un nome host per ciascun fornitore DDNS.</li>
+
+</ul>
+</div>
+
+<h3>Gestire i nomi host</h3>
+<p>Usare i seguenti pulsanti per gestire le voci del nome host esistente:</p>
+<ul>
+<li><strong>Elimina:</strong> rimuove la voce del nome host selezionato dall'elenco.</li>
+<li><strong>Modifica:</strong> cambia le impostazioni della voce del nome host selezionato.</li>
+<li><strong>Aggiorna adesso:</strong> aggiorna lo stato di tutte le voci del nome host che hanno il servizio DDNS abilitato.</li></ul>
+
+<h3>Configurare di un provider DDNS personalizzato</h3>
+<p>È possibile aggiungere un provider DDNS personalizzato se il provide non appare ancora nell'elenco dei provider di servizi.</p>
+<h4>Per configurare un provider DDNS personalizzato:</h4>
+<ol>
+<li>Cliccare su <b>Personalizza</b>.</li>
+<li>Viene visualizzata una finestra di dialogo che richiede di inserire le seguenti impostazioni:
+<ul>
+    <li><strong>Fornitore di servizio:</strong> inserire il nome del provider di servizi personalizzati.</li>
+    <li><strong>URL query:</strong> inserire il nome del provider di servizi personalizzati.</li>
+  </ul>
+</li>
+<li>Fare clic su <strong>Salva</strong> per aggiungere il provider di servizi personalizzati all'elenco dei provider di servizi DDNS.</li>
+</ol>
+<div class="section">
+<h4>Requisiti e limitazioni</h4>
+<ul>
+  <li>L'URL query deve corrispondere al protocollo specificato dal provider di servizi. L'URL è usato per aggiornare le informazioni IP sul server DDNS del provider.</li>
+  <li>Un'URL query in genere contiene i seguenti quattro parametri. Quando si inserire l'URL query, sostituire i seguenti parametri con la variabile corrispondente.</li>
+  <ul>
+    <li>Nome utente: __USERNAME__</li>
+    <li>Password: __PASSWORD__</li>
+    <li>Nome host: __HOSTNAME__</li>
+    <li>Indirizzo esterno: __MYIP__</li>
+  </ul>
+<li>L'URL query non deve contenere spazi o punti e virgola.</li>
+</ul>
+</div>
+</body>
+</html>

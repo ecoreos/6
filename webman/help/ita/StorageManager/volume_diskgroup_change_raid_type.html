@@ -1,0 +1,114 @@
+ <!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Cambiare il tipo di RAID di un volume o Gruppo Disco - Guida Synology DSM</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="This article provides instructions to change the RAID type of existing volumes and disk groups on your DiskStation.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Cambiare il tipo di RAID di un volume o Gruppo Disco</h2>
+
+<p>I volumi e i gruppi disco possono essere cambiati fa un tipo di RAID all'altro senza perdita di dati esistenti. Ad esempio, è possibile creare un volume RAID 1 su DiskStation e in seguito passare a RAID 5 se vengono installati altri dischi rigidi. In questo articolo sono fornite le istruzioni per cambiare il tipo di RAID dei volumi esistenti e gruppi disco su DiskStation.</p>
+<h3>Limitazioni tipo di RAID</h3>
+
+<p>Solo alcuni tipi di RAID possono essere cambiati con altri tipi di RAID. Per i dettagli, vedere la tabella riportata di seguito.</p>
+
+<table>
+  <tr>
+    <th width="50%">Tipo RAID</th>
+    <th width="50%">Può essere cambiato in...</th>
+  </tr>
+  <tr>
+    <td>Base</td>
+    <td>RAID 1<br /> RAID 5</td>
+  </tr>
+  <tr>
+    <td>RAID 1</td>
+    <td>RAID 5</td>
+  </tr>
+  <tr>
+    <td>RAID 5</td>
+    <td>RAID 6</td>
+  </tr>
+
+</table>
+
+<div class="section">
+<h4>Esempio:</h4>
+<p>RAID 1 può essere cambiato a RAID 5, ma RAID 5 non può essere cambiato a RAID 1.</p>
+</div>
+
+
+<h3>Requisiti del disco rigido</h3>
+
+<p>Per poter cambiare il tipo di RAID di un volume o gruppo disco, si deve avere un numero sufficiente di dischi rigidi disponibili installati in DiskStation. Per il numero minimo di dischi rigidi necessari per ciascun tipo di RAID, vedere di seguito.</p>
+
+<table>
+  <tr>
+    <th width="50%">Tipo RAID desiderato</th>
+    <th width="50%">Dischi rigidi necessari</th>
+  </tr>
+  <tr>
+    <td>RAID 1</td>
+    <td>2 o 4</td>
+  </tr>
+  <tr>
+    <td>RAID 5</td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>RAID 6</td>
+    <td>4</td>
+  </tr>
+</table>
+
+<div class="section">
+<h4>Esempio:</h4>
+<p>per cambiare un volume RAID 1 a RAID 5, sono necessari, in totale, almeno tre dischi rigidi (ad es. i due dischi rigidi che appartengono al volume RAID 1, più un disco rigido libero da aggiungere al volume).</p>
+</div>
+
+<h3>Modifica del tipo di RAID</h3>
+
+<p>Nell'esempio seguente, un volume <strong>Basic</strong> verrà modificato in un volume <strong>RAID 1</strong>.</p>
+
+<div class="section">
+<h4>Prima di cominciare:</h4>
+<ul>
+<li>Verificare che lo stato del volume o del gruppo disco sia su <b>Normale</b>.</li>
+<li>Quando si aggiungono nuovi dischi rigidi a un volume o gruppo disco, i nuovi dischi rigidi devono essere più grandi rispetto al disco rigido più piccolo nel volume o gruppo disco.</li>
+<li>Lo stato dei nuovi dischi rigidi deve essere <b>Inizializzato</b> o <b>Non inizializzato</b>.</li></ul>
+</div>
+
+<h4>Per cambiare il tipo di RAID di un volume:</h4>
+
+<ol>
+<li>Aprire <strong>Gestione archiviazione</strong>.</li>
+<img src="about:blank" class="help_image"/>
+<li>Andare su <b>Volume</b>.  Per modificare il tipo di RAID di un gruppo disco, quindi andare alla scheda <b>Gruppo Disco</b>.</li>
+<li>Selezionare il volume da cambiare e fare clic su <b>Gestisci</b>.</li>
+<img src="about:blank" class="help_image"/>
+
+<li>Quando la procedura guidata di configurazione appare, selezionare <b>Modifica del tipo di RAID</b>. Quindi fare clic su <b>Avanti</b>.</li>
+<img src="about:blank" class="help_image"/>
+
+
+<li>Selezionare il tipo di RAID di cui si vuole cambiare il volume. Fare clic su <b>Avanti</b>.</li>
+<img src="about:blank" class="help_image"/>
+
+
+<li>Selezionare quale disco rigido aggiungere al volume esistente. Quindi fare clic su <b>Avanti</b>.</li>
+<img src="about:blank" class="help_image"/>
+
+
+<li>Seguire le istruzioni della procedura guidata per terminare. I dati esistenti sul disco rigido aggiunto saranno eliminati.</li></ol>
+
+</body>
+</html>

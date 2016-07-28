@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>電源</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+
+
+<h2>不斷電供應系統</h2>
+
+<p class="disable-eds14">UPS (Uninterruptible Power Supply，「不斷電供應系統」) 是一種備援電源裝置，讓 DiskStation 可在斷電的情況下繼續維持短時間的運作。此功能位於<strong>控制台</strong> &gt; <strong>硬體 &amp; 電源</strong> &gt; <strong>不斷電系統</strong>，可在電源用盡及系統關機前，提供 DiskStation 足夠的時間來儲存資料並卸載儲存空間，避免資料遺失。</p>
+
+<p class="enable-eds14">UPS (Uninterruptible Power Supply，「不斷電供應系統」) 是一種備援電源裝置，讓 DiskStation 可在斷電的情況下繼續維持短時間的運作。此功能位於<strong>控制台</strong> &gt; <strong>硬體 &amp; 電源</strong> &gt; <strong>不斷電系統</strong>，可在電源用盡及系統關機前，提供 DiskStation 足夠的時間來儲存資料並卸載儲存空間，避免資料遺失。</p>
+
+<div class="section">
+<h4>安全模式</h4>
+<p class="disable-eds14">當 DiskStation 進入安全模式時，會先停止所有系統服務，並卸載所有儲存空間以保護資料安全，讓系統在不斷電系統裝置關機時能安全斷電。依照預設，當不斷電系統裝置電量不足時，系統便會進入安全模式。您也可以設定斷電後 DiskStation 轉入安全模式的時間。但若不斷電系統裝置在您設定的時間之前出現電量不足，系統仍會提早轉入安全模式。</p>
+
+<p class="enable-eds14">當 DiskStation 進入安全模式時，會先停止所有系統服務，並卸載所有儲存空間以保護資料安全，讓系統在不斷電系統裝置關機時能安全斷電。依照預設，當不斷電系統裝置電量不足時，系統便會進入安全模式。您也可以設定斷電後 DiskStation 轉入安全模式的時間。但若不斷電系統裝置在您設定的時間之前出現電量不足，系統仍會提早轉入安全模式。</p>
+
+
+<p></p>
+<p class="disable-eds14">如果您已啟動<strong>電力故障排除後自動重新開機</strong>選項 (設定路徑為<strong>控制台</strong> &gt; <strong>硬體 &amp; 電源</strong> &gt; <strong>一般</strong>)，則在安全模式下關機的 DiskStation 會在電力恢復後自動開機。</p>
+
+<p></p>
+</div>
+
+
+
+
+<h3>本地端不斷電系統支援</h3>
+
+<p>如欲取得硬體安裝的資訊，請參閱您不斷電系統裝置的使用手冊。當硬體安裝完畢，且不斷電系統裝置也外接至 DiskStation，您就可以按照下列步驟來啟動不斷電系統支援。</p>
+<h4>若要啟動本地端的不斷電系統：</h4>
+<OL>
+<li>將不斷電系統裝置連接至 DiskStation 的 USB 連接埠。</li>
+<LI>在<strong>不斷電系統</strong>頁籤，勾選<b>啟動不斷電系統支援</b>核取方塊。</LI>
+<LI>選擇斷電後 DiskStation 轉入安全模式的時間。</LI>
+<LI>選擇是否要在系統進入安全模式時，將關機訊號傳送給不斷電系統裝置。大部分不斷電系統裝置會在電力回復後自動開機。</LI>
+<LI>按一下<b>套用</b>。</LI>
+</OL>
+
+<h3>SNMP 不斷電系統支援</h3>
+
+<p>您的 DiskStation 也支援連接至 SNMP (Simple Network Management Protocol，「簡易網路管理通訊協定」) 的不斷電系統裝置。如欲取得硬體安裝的資訊，請參閱您 SNMP 不斷電系統裝置的使用手冊。當不斷電系統裝置外接至 DiskStation 且連接至同一個網路，您就可以按照下列步驟來啟動不斷電系統支援。</p>
+<h4>若要啟動 SNMP 不斷電系統支援：</h4>
+<ol>
+<LI>在<strong>不斷電系統</strong>頁籤，勾選<b>啟動不斷電系統支援</b>核取方塊。</LI>
+<li>從<strong>網路不斷電系統類型</strong>下拉式選單選擇 <strong>SNMP 不斷電系統</strong>。</li>
+<li>在 <strong>SNMP 不斷電系統 IP 位址</strong>欄位，輸入 SNMP 不斷電系統裝置的 IP 位址。</li>
+<LI>選擇斷電後 DiskStation 轉入安全模式的時間。</LI>
+<li>在 <strong>SNMP 社群</strong>欄位，輸入 SNMP 不斷電系統裝置的社群字串。</li>
+<LI>按一下<b>套用</b>。</LI>
+</ol>
+
+<div class="section">
+<h4>注意：</h4>
+<ul>
+<li>強烈建議您在部署 Synology High Availability (SHA) 時使用 <b>SNMP 不斷電系統</b>。</li>
+<li>DiskStation 支援 SNMPv1 及 SNMPv2 不斷電系統裝置。</li>
+</ul>
+</div>
+
+
+<h3>網路不斷電系統支援</h3>
+
+<p>如果有兩台 Synology 產品同時透過 USB 連接埠使用不斷電系統裝置，那麼只有一台 DiskStation 能夠取得裝置狀態的相關資訊。在此情況下，其中一台 DiskStation 可以扮演「網路不斷電系統伺服器」，並且透過 USB 或網路 (視裝置而定) 和不斷電系統裝置相連接。網路不斷電系統伺服器負責取得不斷電系統資訊，並轉送給另一台 DiskStation「用戶」。</p>
+<h4>若要啟動網路不斷電系統支援：</h4>
+<OL>
+<li>登入已外接不斷電系統裝置 (透過 USB 或網路) 的 DiskStation。如果本地端的不斷電系統支援在這台 DiskStation 尚未啟動，請參閱上方章節。</li>
+<LI>在<strong>不斷電系統</strong>頁籤，勾選<strong>啟動網路不斷電系統伺服器</strong>核取方塊，讓 DiskStation 可以轉送不斷電系統資訊給用戶端 DiskStation。</li>
+<li>按一下<strong>允許的 DiskStation 裝置</strong>按鈕。</li>
+<li>在顯示的視窗中，輸入另一台正在使用不斷電系統裝置、但未透過 USB 或網路連接的 DiskStation IP 位址。按一下<strong>確定</strong>。</li>
+<li>按一下<strong>套用</strong>來儲存設定。</li>
+</OL>
+<p>現在網路不斷電系統伺服器已經可以取得不斷電系統資訊，並轉送給另一台正在使用網路不斷電系統裝置的 DiskStation。請參閱以下說明來為另一台 DiskStation 啟動不斷電系統支援。</p>
+<h4>若要為用戶端 DiskStation 啟動不斷電系統支援：</h4>
+<ol>
+<li>登入另一台正在使用不斷電系統裝置，但不透過 USB 或網路連接的 DiskStation。</li>
+<li>在<strong>不斷電系統</strong>頁籤，勾選<strong>啟動不斷電系統支援</strong>核取方塊。</li>
+<li>從<strong>網路不斷電系統類型</strong>下拉式選單選擇 <strong>Synology 不斷電系統伺服器</strong>。</li>
+<li>在<strong>網路不斷電系統伺服器 IP 位址</strong>欄位，輸入網路不斷電系統伺服器的 IP 位址 (如外接至 DiskStation 的不斷電系統裝置)。</li>
+<LI>選擇斷電後 DiskStation 轉入安全模式的時間。若要簡化安全模式設定，您可以選擇<strong>與伺服器設定相同</strong>。</LI>
+<LI>按一下<b>套用</b>來儲存設定。</LI>
+</OL>
+<div class="section">
+<h4>網路不斷電系統的支援需求：</h4>
+<UL>
+<LI>若要轉送不斷電系統裝置資訊，每一台 DiskStation 都必須連接至同一個網路。</LI>
+<LI>每一台 DiskStation 所連接的網路裝置 (如交換器或集線器)，都必須外接至同一個不斷電系統裝置。否則，DiskStation 無法在斷電情況下轉送不斷電系統裝置資訊。</LI>
+</UL>
+</div>
+</body>
+</html>

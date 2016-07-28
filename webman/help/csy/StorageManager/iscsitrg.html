@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Správce úložiště</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2><a name="leaf_iscsitrg"></a>iSCSI Target*</h2>
+
+<p>iSCSI je typ služby SAN (storage area networking) umožňující přístup ke konsolidovanému úložišti dat na úrovni bloků. Usnadňuje přenosy dat po intranetu a správu úložiště na velké vzdálenosti. Namapováním jednotek iSCSI LUN k cílům iSCSI Target mohou klientské servery získat přístup ke kapacitě úložiště na základě iniciátoru iSCSI, jako by se jednalo o místní disky. V závislosti na modelu podporuje produkt Synology vytváření více cílů iSCSI Target, na které lze mapovat jednotky iSCSI LUN.</p>
+
+<p><span class="note_head">Poznámka: </span>Počet podporovaných cílů iSCSI Target se u různých produktů Synology liší. Podrobnosti o parametrech produktů získáte na webové stránce společnosti Synology.</p>
+
+<h4>Vytvoření cíle iSCSI Target:</h4>
+<ol>
+<li>Klikněte na tlačítko <b>Vytvořit</b>.</li>
+<li>Zadejte informace o cíli iSCSI Target, včetně položek <b>Název</b> a <b>IQN</b>, a rozhodněte se, zda chcete povolit <b>ověření CHAP</b>.</li>
+<li>Klikněte na možnost <b>Další</b>.</li>
+<li>Nastavte namapování jednotek iSCSI LUN. Vyberte možnost <b>Vytvořit novou jednotku iSCSI LUN</b> nebo <b>Namapovat stávající jednotky iSCSI LUN</b>.</li>
+<li>Klikněte na možnost <b>Další</b>.</li>
+<li>Pokud chcete nastavení změnit, klikněte na možnost <b>Zpět</b>, jinak nastavení potvrďte kliknutím na možnost <b>Použít</b>.</li>
+</ol>
+
+<div class="section">
+<h4>Vysvětlení pojmů</h4>
+<ul>
+<li><b>IQN</b>: IQN (iSCSI Qualified Name) je jedinečný název cíle iSCSI Target. Neměl by být v konfliktu s IQN cílů iSCSI Target na jiných serverech. IQN musí být kratší než 128 znaků a může obsahovat písmena (rozlišují se malá a velká písmena), čísla, dvojtečky, pomlčky a tečky. Doporučený formát pojmenování je iqn.[datum].[doména]:[identifikátor zařízení]; například: <i>iqn.2000-04.com.synology:uloziste.diskovepole.1</i>.</li>
+<li><b>Ověření CHAP</b>: Pokud vyberete možnost <b>CHAP</b>, server bude schopen ověřit totožnost klientů. Uživatelské jméno se může skládat z 1 až 12 písmen a čísel a heslo se může skládat z 12 až 16 písmen a čísel.</li>
+<li><b>Vzájemné ověření CHAP</b>: V režimu <b>Vzájemný CHAP</b> probíhá vzájemné ověření klienta i serveru. Jakékoli heslo CHAP použité k ověření klienta není možné konfigurovat pro ověření jakéhokoli serveru a jakékoli heslo CHAP použité k ověření serveru není možné konfigurovat pro ověření jakéhokoli klienta.</li></ul></div>
+
+
+<h4>Odebrání cíle iSCSI Target:</h4>
+<p>Můžete odebrat cíl iSCSI Target a veškeré namapované jednotky iSCSI LUN. Pokud odeberete jednotku iSCSI LUN, budou odstraněna všechna data na jednotce iSCSI LUN.</p>
+<ol>
+<li>Vyberte cíl iSCSI Target, který chcete odebrat.</li>
+<li>Klikněte na možnost <b>Odebrat</b>.</li>
+<li>Pokud chcete odebrat namapované jednotky iSCSI LUN, vyberte možnost <b>Odstranit také namapované jednotky iSCSI LUN</b> a vyberte jednotky, které chcete odebrat.</li>
+<li>Klikněte na možnost <b>OK</b>.</li>
+</ol>
+
+<h4>Úprava cíle iSCSI Target:</h4>
+<ol>
+<li>Vyberte cíl iSCSI Target, který chcete upravit.</li>
+<li>Klikněte na možnost <b>Upravit</b>.</li>
+<li>Upravte nastavení podle svých představ. Změny uložíte kliknutím na možnost <b>OK</b>.</li>
+</ol>
+
+<div class="section">
+<h4>Vysvětlení pojmů</h4>
+<ul>
+<li><b>Kontrolní součet CRC</b>: Pokud povolíte kontrolní součet CRC, bude se kontrolovat, zda během přenosu dat nedošlo k chybě.</li>
+<li><b>Více relací</b>: Povolení více relací od jednoho nebo více uživatelů, které se budou moci současně připojit ke stejnému cíli iSCSI Target. Kvůli ochraně souborů před poškozením a ochraně proti nečekané ztrátě dat se důrazně doporučuje používat sdílený systém souborů nebo clusterový systém, jako je VMware Virtual Machine File System (VMFS) nebo Oracle Cluster File System (OCFS).</li>
+<li><b>Maskování</b>: Maskování umožňuje exkluzivní přístup k cíli iSCSI Target ze strany specifikovaných IQN uživatelů iSCSI.</li>
+</ul></div>
+
+<h4>Povolení nebo zákaz cíle iSCSI Target:</h4>
+<ol>
+<li>Vyberte cíl iSCSI Target, který chcete povolit nebo zakázat.</li>
+<li>Klikněte na možnost <b>Povolit</b> nebo <b>Zakázat</b>.</li>
+</ol>
+<h4>Registrace cílů iSCSI Target na serveru iSNS</h4>
+<p>iSNS (Internet Storage Name Service) poskytuje mechanismus centralizovaných správ. Všechny cíle iSCSI Target je možné zaregistrovat na serveru iSNS.</p>
+<ol>
+<li>Klikněte na tlačítko <b>iSNS</b> a zaškrtněte pole <b>Povolit iSNS</b>.</li>
+<li>Zadejte IP adresu serveru iSNS. Použijte nastavení kliknutím na tlačítko <b>OK</b>.</li>
+</ol>
+<p>____<br />*K&nbsp;dispozici pouze u&nbsp;někter&yacute;ch modelů.</p>
+
+</body>
+</html>

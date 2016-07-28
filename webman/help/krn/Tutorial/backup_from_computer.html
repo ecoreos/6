@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+<meta content="en-us" http-equiv="Content-Language" />
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+<title>Cloud Station을 사용하여 PC/Mac의 데이터 백업</title>
+</head>
+
+<body class="tutorial-content-box" >
+
+<h1>Cloud Station을 사용하여 PC/Mac의 데이터 백업</h1>
+<div class="tutorials_content">
+<img src="../../images/Backup/1x/backup_from_PC/07_1_back_up_your_data_from_pc.png" />
+<h2>개요</h2>
+<p>Cloud Station Server는 정교한 크로스 플랫폼 동기화 소프트웨어일 뿐 아니라, 사용자들은 개인 컴퓨터를 더 스마트하게 백업하는 수단으로서 이것을 사용할 수 있습니다. 실시간 백업 솔루션인 Cloud Station Backup은 즉각적이고 대역폭을 덜 소모하며 단일 파일의 기록 버전을 최대 32개까지 보다 효율적으로 보호합니다.</p>
+<h3 class="list_head">Synology NAS에서 Cloud Station Server 설정</h3>
+<ol>
+
+<li><b>패키지 센터</b>로 이동하여 <b>Cloud Station Server</b>를 찾은 다음 <strong>설치</strong>를 클릭합니다.</li>
+ 
+<li><strong>Cloud Station Server</strong>를 실행합니다.</li>
+<li><strong>개요</strong>로 이동하여 <strong>Cloud Station Backup</strong> 아래에 있는 <strong>지금 다운로드</strong>를 클릭합니다. (<a href="https://www.synology.com/en-us/support/download" target="_blank">Synology 다운로드 센터</a>에서도 Cloud Station Backup을 다운로드할 수 있습니다.)</li>
+<img src="../../images/Backup/1x/backup_from_PC/download_backup.png" border="1" />
+<li>컴퓨터에서 설치 관리자를 실행하고 지침을 따라 Cloud Station Backup을 설치합니다. </li>
+<li>설치를 마친 후 컴퓨터에서 <strong>Cloud Station Backup</strong>을 실행합니다. <strong>지금 시작</strong>을 클릭합니다.</li>
+<img src="../../images/Backup/1x/backup_from_PC/start_now.png" border="1" />
+<li>Cloud Station Server를 실행 중인 Synology NAS의 주소(또는 QuickConnect ID), 사용자 이름 및 패스워드를 입력합니다. (오른쪽에서 검색 아이콘을 클릭하여 Cloud Station Backup이 LAN 내에서 다른 Synology NAS를 자동으로 검색할 수도 있습니다.) <strong>다음</strong>을 클릭합니다.</li>
+<img src="../../images/Backup/1x/backup_from_PC/enter_credentials.png" border="1" />
+<li>백업 소스를 선택하고 동기화하지 않을 하위 폴더의 선택을 취소합니다. </li>
+<img src="../../images/Backup/1x/backup_from_PC/backup_settings_source.png" border="1" />
+<li><strong>선택</strong>을 클릭하여 Synology NAS의 폴더를 선택합니다. 선택한 대상에 사용자의 컴퓨터 이름을 가진 백업 폴더가 생성됩니다.</li>
+<img src="../../images/Backup/1x/backup_from_PC/backup_destination.png" border="1" />
+<li>동기화 필터 또는 규칙을 설정하려면 <strong>백업 규칙</strong>을 클릭합니다.</li>
+
+<li><strong>다음</strong>을 클릭하여 백업 설정을 살펴보고 <strong>완료</strong>를 클릭합니다.</li>
+<img src="../../images/Backup/1x/backup_from_PC/summary.png" border="1" />
+<li>주 앱에서 백업 진행 상태를 볼 수 있습니다.</li>
+<img src="../../images/Backup/1x/backup_from_PC/progress.png" border="1" />
+</ol>
+
+<h3 class="list_head">Cloud Station Server에서 동기화된 파일의 이전 버전 다운로드 또는 복원</h3>
+<ol>
+  <li><strong>Cloud Station Server</strong> &gt; <strong>버전 기록</strong>으로 이동한 다음 복원할 파일 또는 폴더를 찾습니다.</li>
+  <img src="../../images/BuildCloud/1x/cloud_sync_files/version_history.png" />
+  <li>검색할 파일을 선택하고 <strong>작업</strong>을 클릭합니다. <strong>이전 버전 찾아보기</strong>를 클릭합니다. 파일이 컴퓨터에서 실수로 삭제되거나 제거된 경우 <strong>복원</strong>을 클릭하여 복원할 수 있습니다. </li>
+  <img src="../../images/BuildCloud/1x/cloud_sync_files/browse_previous versions_server.png" />
+<li>다운로드할 파일의 버전을 선택하고 <strong>다운로드</strong>를 클릭합니다. 또는, 선택한 버전을 복원하려는 것이 확실한 경우, <strong>복원</strong>을 클릭하면 현재 버전을 덮어씁니다.</li>
+    <img src="../../images/BuildCloud/1x/cloud_sync_files/previous_versions.png" />
+
+</ol>
+
+
+  <h3 class="list_head">5. 데이터를 추가로 보호</h3>
+  
+<p>데이터 보호 및 백업에 대한 자세한 내용은 <a href="https://www.synology.com/knowledgebase/tutorials#BackupRestore" target="_blank">여기</a>를 클릭하여 DSM에서 제공되는 다른 백업 서비스에 관해 상세히 다룬 자습서를 참조하십시오.</p>
+
+</div>
+<div class="page-info">
+  <ul>
+    <li>이 항목의 다음: <a href="backup_backup.html">Synology NAS에서 데이터 백업</a> </li>
+  </ul>
+</div>
+</body>
+
+</html>

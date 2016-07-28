@@ -1,0 +1,195 @@
+
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>File Station Seçeneklerini Yönetme - Synology DSM Yardım</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="Learn how to customize File Station settings related to file management, shared links, and security.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>File Station Ayarlarının Yönetimi</h2>
+<p>File Station ayarlarını yönetmek için, <strong>File Station</strong> öğesini açın ve <b>Ayarlar</b> düğmesine tıklayın.</p>
+
+<h3>Genel</h3>
+<p>
+Burada tüm kullanıcıların işlemlerini kaydetmek için File Station günlüklerini etkinleştirebilirsiniz. Kullanıcı işlemlerine <b>Klasör oluştur</b>, <b>Karşıya yükle</b>, <b>İndir</b>, <b>Sil</b>, <b>Yeniden adlandır</b>, <b>Taşı</b>, <b>Kopyala</b> ve <b>Özellik kümesi</b> dahildir.
+</p>
+<h4>File Station günlüğünü etkinleştirmek için:</h4>
+<ol>
+<li>Tüm kullanıcıların işlemlerini kaydetmek istiyorsanız, <b>File Station günlüğünü etkinleştir</b> seçeneğini işaretleyin.
+</li>
+<li>
+<b>Tamam</b>'a tıklayın.
+</li>
+</ol>
+<h4>File Station günlüğünü görmek için:</h4>
+<ol>
+<li>
+<b>Günlükleri Görüntüle</b>'ye tıkladığınızda <strong>Günlük Merkezi</strong>'ne yönlendirecektir.</li>
+<li>
+<b>Dosya Aktarma</b> sekmesine tıklayın.
+</li>
+</ol>
+
+<h4>Sürükle ve bırak kullanarak karşıya yüklemeyle ya da klavye kısayollarıyla dosyaların üzerine otomatik olarak yazmak için:</h4>
+<p>Eğer bilgisayarınızın masaüstünden web tarayıcınızın üzerine sürükleyip bıraktığınız veya File Station üzerinde klavye kısayolları ile yapıştırdığınız dosyaların üzerine otomatik olarak yazılmasını istiyorsanız <strong>Dosyaları Web tarayıcısına sürükleyip bıraktığımda veya klavye kısayollarıyla yapıştırdığımda her zaman dosyaların üzerine yazılsın</strong> seçeneğini işaretleyin.</p>
+
+
+<h4>Akıllı sürükle ve bırakı etkinleştirmek için:</h4>
+<p>File Station içinde dosyaları sürükleyip bırakırsanız, bu özellik otomatik olarak aktarımın bir kopyalama veya taşıma işlemi olup olmadığını saptar.</p>
+
+<ol>
+<li><strong>Akıllı sürükle ve bırakı etkinleştir</strong> seçimi yapın.</li>
+<li>Aynıadla aynı konuma eşzamanlı olarak dosyaları aktaran başka bir kullanıcı olması halinde her zaman yapılacak işlemlerden birisini seçin:
+  <ul>
+<li><strong>Üzerine yaz</strong>: Aktardığınız dosyalar aynı adla dosyaların üzerine yazar.</li>
+<li><strong>Atla</strong>: Aktardığınız dosyalar atlanır ve aynı adla dosyaların üzerine yazmaz.</li>
+</ul>
+</li>
+<li><strong>Tamam</strong>'a tıklayın.</li>
+</ol>
+
+<div class="section">
+<h4>Not:</h4>
+<p>Akıllı sürükle ve bırak ile saptanan kopyalama veya taşıma eyleminizi değiştirmek isterseniz, ihtiyaçlarınıza uyacak aşağıdaki kısayol tuşlarını uygulayın:</p>
+<ul>
+<li>Bir kopya eylemine geçiş yapmak için: Sürükle ve bırak yaparken Ctrl tuşuna basın.</li>
+<li>Bir taşıma eylemine geçiş yapmak için: Sürükle ve bırak yaparken Shift tuşuna basın.</li>
+</ul>
+</div>
+
+
+<h4>File Station ile yerel bilgisayar dosyalarına gözatmak ve yönetmek için:</h4>
+<ol>
+<li>
+<b>File Station ile yerel bilgisayar dosyalarına gözat</b>'ı işaretleyin.
+</li>
+<li>
+<b>Tamam</b>'a tıklayın.
+</li>
+</ol>
+
+
+<h4>DSM kullanıcı listesini admin olmayan kullanıcılarla paylaşmak için:</h4>
+<p>Bu seçenek belirli DSM kullanıcıları/grupları tarafından sahip olunan dosyaları aramak istemeleri halinde veya diğer DSM kullanıcıları ile dosya bağlantılarını paylaşmak istemeleri halinde admin olmayan kullanıcıların tüm DSM kullanıcı listesine erişmesine izin verir.</p>
+
+<ol>
+<li><strong>DSM kullanıcı listesini admin olmayan kullanıcılarla paylaş</strong> öğesini seçin.</li>
+<li><strong>Tamam</strong>'a tıklayın.</li>
+</ol>
+
+
+<h3>Varsayılan UNIX İzinlerinin Uygulanması</h3>
+<p><strong>Gelişmiş Ayarlar</strong>' tıklayın ve dosyaları ve klasörleri yüklerken veya oluştururken varsayılan UNIX izinlerini uygulama seçeneğini işaretleyin. Uygulanan izinler UNIX komutu <strong>umask</strong> tarafından uygulanan izinlerin aynısıdır. Bu seçenek etkinleştirildiğinde, UNIX izinleri dosyalar için 644 ve klasörler için 755'dir. Bu seçenek devre dışı bırakıldığında, UNIX izinleri dosyalar için 666 ve klasörler için 777'dir. Varsayılan umask değeri 022'dir.</p>
+<div class="section">
+<h4>Not:</h4>
+<ul>
+  <li>Windows ACL etkin paylaşımlı klasörler (harici sürücülerde bulunan &quot;photo&quot; ve paylaşımlar hariç tüm paylaşımlar) için, klasör ve dosya izni tiplerini Windows ACL'den UNIX'e değiştirmek amacıyla <strong>chmod</strong> komutunu Linux veya FTP istemcinizde çalıştırın.</li>
+  <li>Bu seçeneğin etkinleştirilmesi farklı protokoller arasında tutarsız izin sorunlarına neden olabilir. Tutarsızlıkları önlemek için, bu seçeneği devre dışı bırakmanızı öneririz.</li>
+</ul>
+</div>
+<h3 class="disable-eds14">Bağlantı/Bağlantılar</h3>
+<p class="disable-eds14">
+Varsayılan olarak, tüm kullanıcılar uzak klasörleri veya sanal sürücüleri tanıtabilirler. Burada uzak klasör veya sanal sürücü yönetimine erişimini yalnız yöneticilere sınırlandırabilirsiniz
+</p>
+
+<div class="disable-eds14 section">
+<h4>Not:</h4>
+<p>Yönetici olmayan kullanıcılar sadece <b>home</b> klasörleri içinde uzak klasörler tanıtabilirler.</p>
+</div>
+<h4 class="disable-eds14">Uzak klasörleri veya sanal sürücüleri farklı kullanıcıların tanıtmasına izin vermek için:</h4>
+<ol class="disable-eds14">
+<li>
+<b>Tüm kullanıcılar</b> veya <b>Administrators</b> seçimini <b>Uzak Klasör</b> veya <b>Sanal Sürücü</b> bölümünde yapın.
+</li>
+<li>
+<b>Tamam</b>'a tıklayın.
+</li>
+</ol>
+<h4 class="disable-eds14">Farklı kullanıcıların sunucuları ve bulut hizmetlerini tanıtmasına izin vermek için:</h4>
+<ol class="disable-eds14">
+  <li><b>Tüm kullanıcılar</b>, <b>Administrators</b> veya <strong>Belirli kullanıcı</strong> öğelerinden seçim yapın. </li>
+  <li><strong>Belirli kullanıcı</strong> seçimi yapılması farklı kullanıcılar için bağlama izinlerini yapılandırmanızı sağlayan bir pencere açar. Belirli bir kullanıcı için erişimi etkinleştirmek üzere, <strong>Etkinleştirilmiş</strong> sütunu altında kutunun işaretlenmiş olduğundan emin olun. Belirli bir kullanıcı için erişimi devre dışı bırakmak üzere, <strong>Etkinleştirilmiş</strong> sütunu altında kutunun işaretlenmiş olmadığından emin olun. Bittiğinde, bu pencereyi kapatmak için <strong>Tamam</strong>'a tıklayın.</li>
+  <div class="section">
+    <h4>Not:</h4>
+    <ul>
+      <li><strong>Administrators</strong> grubuna ait kullanıcılar bu özelliği kullanabilirler ancak herhangi bir değişiklik yapamazlar. <strong>Guest</strong> kullanarak oturum açan kullanıcılar ne bu özelliği kullanabilirler ne de herhangi bir değişiklik yapabilirler. Tüm diğer kullanıcılar için izinler burada ayarlanabilir.</li>
+    </ul>
+  </div>
+  <li><strong>Tamam</strong>'a tıklayın.</li>
+</ol>
+<h3>Paylaşımlı Bağlantılar</h3>
+<p>
+Varsayılan olarak, tüm kullanıcılar dosya linklerini paylaşabilirler. Burada paylaşılan linkler yönetimine erişimi yalnız yöneticilerle sınırlandırabilirsiniz.
+</p>
+<h4>Farklı kullanıcıların dosya linklerini paylaşmasına izin vermek için:</h4>
+<ol>
+<li>
+<b>Tüm kullanıcılar</b>, <b>Administrators</b> veya <strong>Belirli kullanıcılar</strong> seçimi yapın.
+</li>
+<li>
+<b>Tamam</b>'a tıklayın.
+</li>
+</ol>
+
+<h4>HTML dosyalarını düz metin olarak açmak için:</h4>
+
+<ol>
+<li><strong>Daima düz metin biçimini kullanarak HTML dosyalarını aç</strong> kutusunu işaretleyin. Eğer bu seçenek işaretlenirse, kullanıcılar bunları bir dosya paylaşım bağlantısı yoluyla açtıklarında HTML dosyaları (ör. HTM, HTML, JSP, XHTML dosyaları) düz metin biçimi kullanılarak görüntülenir. Bu seçenek HTML dosyalarında gömülü betik kullanarak zararlı kişilerin kullanıcı oturumunuzu ele geçirmesini önler.</li>
+<li><strong>Tamam</strong>'a tıklayın.</li>
+</ol>
+
+<h3>Hız Limiti</h3>
+<p>File Station yoluyla veri transfer eden kullanıcılar ve gruplar için maksimum kullanılabilir bant genişliğini kontrol etmek için bir hız limiti belirleyebilirsiniz.</p>
+
+
+<h4>Hız limitini etkinleştirmek için:</h4>
+<ol>
+  <li>Sadece belirli zamanlarda bir hız limitini uygulamak isterseniz <b>Hız limitini etkinleştir</b> veya <strong>Bir programa göre hız limitini etkinleştir</strong> kutularını işaretleyin. Bu sunucu ölçeğinde bir ayardır ve münferit kullanıcıların ve grupların ayarlarının yerini alacaktır. <strong>Hız limiti yok</strong> seçiminin yapılması tüm kullanıcılar ve gruplar için hız limiti ayarlarını devre dışı bırakır.</li>
+  <li>Münferit kullanıcılar veya gruplar için ayarları modifiye etmek üzere <strong>Hız Limiti Ayarları</strong>'na tıklayın. Her kullanıcı ve grup için, aşağıdakilerden birisini seçebilirsiniz:  </li>
+    <ul>
+      <li><strong>Grup Ayarlarını Uygula:</strong> Hız limiti ayarları kullanıcının ait olduğu grupla aynı olacaktır. </li>
+      <li><strong>Hız limiti yok:</strong> Grup üyeleri hizmet ile dosyaları transfer ettiğinde hiçbir hız limiti uygulanmayacaktır.</li>
+      <li><strong>Sabit:</strong> Kullanıcı veya grup üyelerine fiks, sabit bir hız limiti uygulanacaktır. Karşıya yükleme ve indirme hızı limitleri soldaki alanlarda belirtilebilir.</li>
+      <li><strong>Değişken:</strong> Bir programa göre iki farklı hız limiti belirlenebilir ve kullanıcı veya grup üyelerine uygulanabilir. Hız limiti ayarlarını değiştirmek ve bir program belirlemek için <strong>Özelleştir</strong> düğmesine tıklayın.</li>
+    </ul>
+
+  <li><b>Uygula</b>'ya tıklayın.</li>
+</ol>
+<div class="section">
+  <h4>Not:</h4>
+  <ul>
+    <li>Grup hız limiti dinamiği hakkında daha fazla bilgi için, lütfen <a href="../AdminCenter/file_group_edit.html">buraya</a> bakınız.</li>
+    <li>Bir kullanıcı için hız limitini ayarlarken, <strong>Sonuç</strong> bölümü kullanıcının gerçek hız limitini bireysel ve grup ayarlarına göre görüntüler. Örneğin, eğer bir kullanıcı "Achilles" 100 KB/s düzeyinde bir bireysel indirme limitine sahipse, ancak 500 KB/s düzeyinde bir indirme limitine sahip bir kullanıcı grubuna aitse, <strong>Sonuçlar</strong> kısmında "0/500" görüntülenir.</li>
+  </ul>
+</div>
+
+
+
+<h3>Güvenlik</h3>
+
+<p>Burada aşağıdaki güvenlik ayarlarını bulabilirsiniz.</p>
+
+<h4>HTML dosyalarını düz metin olarak açmak için:</h4>
+
+<ol>
+<li><strong>Daima düz metin biçimini kullanarak HTML dosyalarını aç</strong> kutusunu işaretleyin. Eğer bu seçenek işaretlenirse, File Station'da açıldığında HTML dosyaları (ör. HTM, HTML, JSP, XHTML dosyaları) düz metin biçimi kullanılarak görüntülenir. Bu seçenek HTML dosyalarında gömülü betik kullanarak zararlı kişilerin kullanıcı oturumunuzu ele geçirmesini önler.</li>
+<div class="section">
+<h4>Not:</h4>
+<ul>
+<li>Bu genel bir ayar değildir. Her kullanıcı kendi bireysel ihtiyaçlarına göre bu seçeneği etkinleştirip etkinleştirmemeyi seçebilir.</li>
+</ul>
+</div>
+<li><strong>Tamam</strong>'a tıklayın.</li>
+</ol>
+
+</body>
+</html>

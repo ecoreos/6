@@ -1,0 +1,2652 @@
+
+[]
+
+
+
+[AutoBlockAdd]
+Category: System
+Title: IP adresi engellenmiş
+Subject: IP adresi [%CLIENT_IP%] / %HOSTNAME%, %SERVICE% tarafından engellenmiştir
+
+Sayın kullanıcı,
+
+IP adresi [%CLIENT_IP%], %AUTOBLOCK_ATTEMPTS% başarısız deneme yaşadı, bunu %SERVICE% öğesinde (%HOSTNAME% üzerinde çalışan) oturum açmaya çalışırken %AUTOBLOCK_ATTEMPT_MIN% dakikada yaşadı, ve %AUTOBLOCK_TIME% içinde bloke edildi.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[BackupTaskCanceled]
+Category: Backup/Restore,Important
+Title: Yedekleme iptal edildi
+Subject: %TASK_TYPE% - %TASK_NAME%, %HOSTNAME% üzerinde iptal edildi
+
+Sayın kullanıcı,
+
+%HOSTNAME% üzerinde veri yedeklemesi iptal edildi.
+
+Yedekleme Görevi: %TASK_NAME%
+Yedekleme Hedefi: %DESTINATION_IP% %DESTINATION_PATH%
+Başlangıç Zamanı: %START_TIME%
+Süre: %DURATION%
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[BackupTaskFailed]
+Category: Backup/Restore,Important
+Title: Yedekleme başarısız oldu
+Subject: %TASK_TYPE% - %TASK_NAME%, %HOSTNAME% üzerinde başarısız oldu
+
+Sayın kullanıcı,
+
+%HOSTNAME% üzerinde veri yedeklemesi başarısız oldu.
+
+Lütfen daha fazla bilgi için Hyper Backup > Günlük öğesinde yedekleme günlüğünü kontrol edin.
+
+Yedekleme Görevi: %TASK_NAME%
+Yedekleme Hedefi: %DESTINATION_IP% %DESTINATION_PATH%
+Başlangıç Zamanı: %START_TIME%
+Süre: %DURATION%
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[BackupTaskFinished]
+Category: Backup/Restore
+Title: Yedekleme tamamlandı
+Subject: %TASK_TYPE% - %TASK_NAME%, %HOSTNAME% üzerinde başarılı
+
+Sayın kullanıcı,
+
+Yedekleme göreviniz %TASK_NAME% şimdi tamamlandı.
+
+Yedekleme Görevi: %TASK_NAME%
+Yedekleme Hedefi: %DESTINATION_IP% %DESTINATION_PATH%
+Başlangıç Zamanı: %START_TIME%
+Süre: %DURATION%
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[BackupTaskPartial]
+Category: Backup/Restore,Important
+Title: Yedekleme kısmen tamamlandı
+Subject: %TASK_TYPE% - %TASK_NAME%, %HOSTNAME% üzerinde kısmen başarılı
+
+Sayın kullanıcı,
+
+Yedekleme göreviniz %TASK_NAME% şimdi ufak istisnalarla tamamlandı.
+
+Lütfen daha fazla bilgi için Hyper Backup > Günlük öğesinde yedekleme günlüğünü kontrol edin.
+
+Yedekleme Görevi: %TASK_NAME%
+Yedekleme Hedefi: %DESTINATION_IP% %DESTINATION_PATH%
+Başlangıç Zamanı: %START_TIME%
+Süre: %DURATION%
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[CMSClientConnectFailed]
+Category: CMS
+Title: CMS Ana Bilgisayarına bağlantı başarısız oldu
+Subject: %HOSTNAME%, CMS Ana Bilgisayarına (%CMS_SERVER%) bağlanamıyor.
+
+Sayın kullanıcı,
+
+%HOSTNAME% sunucusu, CMS Ana Bilgisayarına (%CMS_SERVER%) bağlanamıyor. Lütfen her iki sunucunun ağ bağlantısını ve ayarlarını kontrol edin.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[CMSClientDetachSuccess]
+Category: CMS
+Title: CMS Ana Bilgisayarından çıkış başarılı
+Subject: %HOSTNAME%, CMS Ana Bilgisayarından (%CMS_SERVER%) çıktı.
+
+Sayın kullanıcı,
+
+Sunucu %HOSTNAME%, CMS Ana Bilgisayarından (%CMS_SERVER%) çıktı.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[CMSClientJoinSuccess]
+Category: CMS
+Title: CMS Ana Bilgisayarına katılım başarılı
+Subject: %HOSTNAME%, CMS Ana Bilgisayarına (%CMS_SERVER%) katıldı.
+
+Sayın kullanıcı,
+
+Sunucu %HOSTNAME%, CMS Ana Bilgisayarına (%CMS_SERVER%) katıldı. Bazı ayarlar CMS Ana Bilgisayarı tarafından yönetilecek.
+
+Saygılar,
+%COMPANY_NAME%
+
+
+[CpuFanResume]
+Category: System
+Title: CPU fanı yeniden başladı
+Subject: CPU fanı %FANID% (%HOSTNAME% (SN: %HOST_SN%) üzerindeki) sürdürüldü
+
+Sayın kullanıcı,
+
+CPU fanı %FANID% ( %HOSTNAME% (SN: %HOST_SN%) üzerindeki) sürdürüldü.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[CpuFanStop]
+Category: System,Important
+Title: CPU fanı durdu
+Subject: CPU fanı %FANID% (%HOSTNAME% (SN: %HOST_SN% üzerindeki) çalışmasını durdurdu
+
+Sayın kullanıcı,
+
+CPU fanı %FANID% ( %HOSTNAME% (SN: %HOST_SN% üzerindeki) çalışmasını durdurdu.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[DDNSFail]
+Category: System
+Title: DDNS kaydı başarısız
+Subject: DDNS hizmeti %EXTERNAL_IP% IP adresini %DDNS_HOST_NAME% sunucusuna kaydedemedi [%FAIL_REASON%]
+
+Sayın kullanıcı,
+
+Sistem harici %EXTERNAL_IP% IP adresini %DDNS_HOST_NAME% makinesine DDNS sunucusunda %DDNS_NAME% kaydedemedi. Bildirilen sebep [%FAIL_REASON%].
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[DRLunScheduleSnapshotFail]
+Category: Snapshot Replication,Important
+Title: Bir iSCSI LUN için bir anlık görüntü alınamadı
+Subject: LUN %LUNNAME% için %HOSTNAME% üzerinde bir anlık görüntü alınamadı
+
+Sayın kullanıcı,
+
+%HOSTNAME% üzerinde bir LUN anlık görüntüsü alınamadı. Ayrıntılı bilgi için lütfen Snapshot Replication'daki günlüğü kontrol edin.
+
+LUN: %LUNNAME%
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[DRReplicationCleanupTestFailoverCompletion]
+Category: Snapshot Replication,Important
+Title: Çoğaltım görevinin test üstlenmesi temizlendi
+Subject: %DRSITE_TARGET_NAME% öğesinin test üstlenmesi %DRSITE_HOSTNAME% üzerinde başarıyla temizlendi
+
+Sayın kullanıcı,
+
+Sistem %DRSITE_TARGET_NAME% öğesinin test üstlenmesini hedef sunucu (%DRSITE_HOSTNAME%) üzerinde başarıyla temizledi. Ayrıntılı bilgi için lütfen Snapshot Replication Günlük sayfasını kontrol edin.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[DRReplicationCleanupTestFailoverFail]
+Category: Snapshot Replication,Important
+Title: Çoğaltım görevinin test üstlenmesi temizlenemedi
+Subject: %DRSITE_TARGET_NAME% öğesinin test üstlenmesi %DRSITE_HOSTNAME% üzerinde temizlenemedi
+
+Sayın kullanıcı,
+
+Sistem %DRSITE_TARGET_NAME% öğesinin test üstlenmesini %DRSITE_HOSTNAME% üzerinde temizleyemedi. Ayrıntılı bilgi için lütfen Snapshot Replication Günlük sayfasını kontrol edin.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[DRReplicationExportCompletion]
+Category: Snapshot Replication,Important
+Title: Çoğaltım görevi başarıyla dışarı aktarıldı
+Subject: %MAINSITE_TARGET_NAME% başarıyla dışarı aktarıldı
+
+Sayın kullanıcı,
+
+Sistem %MAINSITE_TARGET_NAME% öğesini başarıyla dışarı aktardı. Ayrıntılı bilgi için lütfen Snapshot Replication Günlük sayfasını kontrol edin.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[DRReplicationExportFail]
+Category: Snapshot Replication,Important
+Title: Çoğaltım görevi dışarı aktarılamadı
+Subject: %MAINSITE_TARGET_NAME% dışarı aktarılamadı
+
+Sayın kullanıcı,
+
+Sistem %MAINSITE_TARGET_NAME% öğesini dışarı aktaramadı. Ayrıntılı bilgi için lütfen Snapshot Replication Günlük sayfasını kontrol edin.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[DRReplicationFailoverCompletion]
+Category: Snapshot Replication,Important
+Title: Çoğaltım görevinin üstlenmesi başarıyla yapıldı
+Subject: %DRSITE_TARGET_NAME% öğesinin %DRSITE_HOSTNAME% öğesi tarafından üstlenilmesi tamamlandı
+
+Sayın kullanıcı,
+
+Sistem %DRSITE_TARGET_NAME% öğesinin hedef sunucu (%DRSITE_HOSTNAME%) tarafından üstlenilmesini başarıyla yaptı. Ayrıntılı bilgi için lütfen Snapshot Replication Günlük sayfasını kontrol edin.
+
+Üstlenme sürümü: %SNAPSHOT_VERSION%
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[DRReplicationFailoverFail]
+Category: Snapshot Replication,Important
+Title: Çoğaltma görevinin üstlenilmesi yapılamadı
+Subject: %DRSITE_TARGET_NAME% öğesinin %DRSITE_HOSTNAME% tarafından üstlenilmesi yapılamadı
+
+Sayın kullanıcı,
+
+Sistem %DRSITE_TARGET_NAME% öğesinin hedef sunucu (%DRSITE_HOSTNAME%) tarafından üstlenilmesini başarıyla yapamadı. Ayrıntılı bilgi için lütfen Snapshot Replication Günlük sayfasını kontrol edin.
+
+Üstlenme sürümü: %SNAPSHOT_VERSION%
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[DRReplicationImportCompletion]
+Category: Snapshot Replication,Important
+Title: Çoğaltma görevi başarıyla içeri aktarıldı
+Subject: %DRSITE_TARGET_NAME% başarıyla içeri aktarıldı
+
+Sayın kullanıcı,
+
+Sistem %DRSITE_TARGET_NAME% öğesini başarıyla içeri aktardı. Ayrıntılı bilgi için lütfen Snapshot Replication Günlük sayfasını kontrol edin.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[DRReplicationImportFail]
+Category: Snapshot Replication,Important
+Title: Çoğaltma görevi içeri aktarılamadı
+Subject: %DRSITE_TARGET_NAME% içeri aktarılamadı
+
+Sayın kullanıcı,
+
+Sistem %DRSITE_TARGET_NAME% öğesini içeri aktaramadı. Ayrıntılı bilgi için lütfen Snapshot Replication Günlük sayfasını kontrol edin.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[DRReplicationInitialSyncCompletion]
+Category: Snapshot Replication,Important
+Title: İlk çoğaltım tamamlandı
+Subject: Çoğaltım görevi %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%) öğesinden %DRSITE_HOSTNAME% (%DRSITE_TARGET_NAME%) öğesine ilk çoğaltımı tamamladı
+
+Sayın kullanıcı,
+
+Çoğaltım görevi ilk çoğaltımı tamamladı. Ayrıntılı bilgi için lütfen Snapshot Replication Günlük sayfasını kontrol edin.
+
+Kaynak sunucu: %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%)
+Hedef sunucu: %DRSITE_HOSTNAME% (%DRSITE_TARGET_NAME%)
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[DRReplicationInitialSyncFail]
+Category: Snapshot Replication,Important
+Title: İlk çoğaltım yapılamadı
+Subject: Çoğaltım görevi %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%) öğesine ilk çoğaltımı yapamadı
+
+Sayın kullanıcı,
+
+Çoğaltım görevi %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%) öğesine ilk çoğaltımı yapamadı. Ayrıntılı bilgi için lütfen Snapshot Replication Günlük sayfasını kontrol edin.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[DRReplicationReprotectCompletion]
+Category: Snapshot Replication,Important
+Title: Çoğaltım görevi başarıyla tekrar korundu
+Subject: Çoğaltım görevi (%NEW_MAINSITE_TARGET_NAME%) başarıyla tekrar korundu
+
+Sayın kullanıcı,
+
+Sistem çoğaltım görevini (%NEW_MAINSITE_TARGET_NAME%) yeni kaynak sunucuya (%NEW_MAINSITE_HOSTNAME%) çoğaltılmış veriler (%NEW_DRSITE_TARGET_NAME%) yeni hedef sunucuda (%NEW_DRSITE_HOSTNAME%) olacak şekilde tekrar korudu. Ayrıntılı bilgi için lütfen Snapshot Replication Günlük sayfasını kontrol edin.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[DRReplicationReprotectFail]
+Category: Snapshot Replication,Important
+Title: Çoğaltım görevi tekrar korunamadı
+Subject: Çoğaltım görevi (%NEW_MAINSITE_TARGET_NAME%) tekrar korunamadı
+
+Sayın kullanıcı,
+
+Sistem çoğaltım görevini (%NEW_MAINSITE_TARGET_NAME%) yeni kaynak sunucuya (%NEW_MAINSITE_HOSTNAME%) çoğaltılmış veriler (%NEW_DRSITE_TARGET_NAME%) yeni hedef sunucuda (%NEW_DRSITE_HOSTNAME%) olacak şekilde tekrar koruyamadı. Ayrıntılı bilgi için lütfen Snapshot Replication Günlük sayfasını kontrol edin.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[DRReplicationScheduleSyncCompletion]
+Category: Snapshot Replication,Important
+Title: Programlı çoğaltım tamamlandı
+Subject: Çoğaltım görevi %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%) öğesinden %DRSITE_HOSTNAME% (%DRSITE_TARGET_NAME%) öğesine programlı çoğaltımı tamamladı
+
+Sayın kullanıcı,
+
+Çoğaltım görevi programlı çoğaltımı tamamladı. Ayrıntılı bilgi için lütfen Snapshot Replication Günlük sayfasını kontrol edin.
+
+Kaynak sunucu: %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%)
+Hedef sunucu: %DRSITE_HOSTNAME% (%DRSITE_TARGET_NAME%)
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[DRReplicationScheduleSyncFail]
+Category: Snapshot Replication,Important
+Title: Programlı çoğaltım yapılamadı
+Subject: Çoğaltım görevi %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%) öğesine programlı çoğaltımı yapamadı
+
+Sayın kullanıcı,
+
+Çoğaltım görevi %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%) öğesine programlı çoğaltımı yapamadı. Ayrıntılı bilgi için lütfen Snapshot Replication Günlük sayfasını kontrol edin.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[DRReplicationSwitchoverCompletion]
+Category: Snapshot Replication,Important
+Title: Çoğaltım görevinin geçişi başarıyla yapıldı
+Subject: %NEW_DRSITE_HOSTNAME% (%NEW_DRSITE_TARGET_NAME%) öğesinin %NEW_MAINSITE_HOSTNAME% öğesine geçişi başarıyla yapıldı
+
+Sayın kullanıcı,
+
+Sistem %NEW_DRSITE_HOSTNAME% (%NEW_DRSITE_TARGET_NAME%) öğesinin hedef sunucuya (%NEW_MAINSITE_HOSTNAME%) geçişini başarıyla yaptı. Ayrıntılı bilgi için lütfen Snapshot Replication Günlük sayfasını kontrol edin.
+
+Yeni kaynak sunucu: %NEW_MAINSITE_HOSTNAME% (%NEW_MAINSITE_TARGET_NAME%)
+Yeni hedef sunucu: %NEW_DRSITE_HOSTNAME% (%NEW_DRSITE_TARGET_NAME%)
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[DRReplicationSwitchoverFail]
+Category: Snapshot Replication,Important
+Title: Çoğaltma görevinin geçişi yapılamadı
+Subject: %NEW_DRSITE_HOSTNAME% (%NEW_DRSITE_TARGET_NAME%) öğesinin %NEW_MAINSITE_HOSTNAME% öğesine geçişi başarıyla yapılamadı
+
+Sayın kullanıcı,
+
+Sistem %NEW_DRSITE_HOSTNAME% (%NEW_DRSITE_TARGET_NAME%) öğesinin hedef sunucuya (%NEW_MAINSITE_HOSTNAME%) geçişini yapamadı. Ayrıntılı bilgi için lütfen Snapshot Replication Günlük sayfasını kontrol edin.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[DRReplicationSyncFail]
+Category: Snapshot Replication,Important
+Title: Çoğaltım yapılamadı
+Subject: Çoğaltım görevi %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%) öğesine çoğaltımı yapamadı
+
+Sayın kullanıcı,
+
+Çoğaltım görevi %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%) öğesine çoğaltımı yapamadı. Ayrıntılı bilgi için lütfen Snapshot Replication Günlük sayfasını kontrol edin.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[DRReplicationSyncNotFinishInNotifyTime]
+Category: Snapshot Replication,Important
+Title: Çoğaltma görevi tamamlanmadı
+Subject: %MAINSITE_TARGET_NAME% öğesinden %DRSITE_HOSTNAME% (%DRSITE_TARGET_NAME%) öğesine çoğaltım görevi tamamlanmadı
+
+Sayın kullanıcı,
+
+Çoğaltım görevi %NOTIFY_TIME% dakika içinde tamamlanmadı. Ayrıntılı bilgi için lütfen Snapshot Replication Günlük sayfasını kontrol edin.
+
+Kaynak sunucu: %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%)
+Hedef sunucu: %DRSITE_HOSTNAME% (%DRSITE_TARGET_NAME%)
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[DRReplicationSyncStop]
+Category: Snapshot Replication,Important
+Title: Çoğaltım durduruldu
+Subject: %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%) öğesine çoğaltım yapan çoğaltım görevi durduruldu
+
+Sayın kullanıcı,
+
+%MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%) öğesine çoğaltım yapan çoğaltım görevi durduruldu. Ayrıntılı bilgi için lütfen Snapshot Replication Günlük sayfasını kontrol edin.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[DRReplicationTestFailoverCompletion]
+Category: Snapshot Replication,Important
+Title: Çoğaltım görevinin test üstlenmesi başarıyla başlatıldı
+Subject: %TEST_TARGET_NAME% öğesinin test üstlenmesi şimdi müsait
+
+Sayın kullanıcı,
+
+%TEST_TARGET_NAME% öğesinin test üstlenmesi şimdi müsait. Ayrıntılı bilgi için lütfen Snapshot Replication Günlük sayfasını kontrol edin.
+
+Test sunucusu: %DRSITE_HOSTNAME%
+Test paylaşımlı klasörü/iSCSI LUN adı: %TEST_TARGET_NAME%
+Test sürümü: %SNAPSHOT_VERSION%
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[DRReplicationTestFailoverFail]
+Category: Snapshot Replication,Important
+Title: Çoğaltım görevinin test üstlenmesi başlatılamadı
+Subject: %TEST_TARGET_NAME% öğesinin test üstlenmesi %DRSITE_HOSTNAME% üzerinde başlatılamadı
+
+Sayın kullanıcı,
+
+Sistem hedef sunucu (%DRSITE_HOSTNAME%) üzerinde bir test üstlenmesini başlatamadı. Ayrıntılı bilgi için lütfen Snapshot Replication Günlük sayfasını kontrol edin.
+
+Test sunucusu: %DRSITE_HOSTNAME%
+Test paylaşımlı klasörü/iSCSI LUN adı: %TEST_TARGET_NAME%
+Test sürümü: %SNAPSHOT_VERSION%
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[DRShareTakeSnapshotFail]
+Category: Snapshot Replication,Important
+Title: Paylaşımlı klasör için bir anlık görüntü alınamadı
+Subject: %SHARE% paylaşımlı klasörü için %HOSTNAME% üzerinde bir anlık görüntü alınamadı
+
+Sayın kullanıcı,
+
+%HOSTNAME% üzerinde bir paylaşımlı klasör anlık görüntüsü alınamadı. Ayrıntılı bilgi için lütfen Snapshot Replication'daki günlüğü kontrol edin.
+
+Paylaşımlı klasör: %SHARE%
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[DRSnapshotScheduleTaskTooDenseFail]
+Category: Snapshot Replication,Important
+Title: Önceki programlı anlık görüntü görevi halen yapılıyor
+Subject: Önceki programlı anlık görüntü görevi halen %MAINSITE_TARGET_NAME% üzerinde çalışıyor.
+
+Sayın kullanıcı,
+
+%MAINSITE_TARGET_NAME% üzerinde programlı anlık görüntü görevi yapılamadı çünkü önceki anlık görüntü görevi halen çalışıyor. Ayrıntılı bilgi için lütfen Snapshot Replication Günlük sayfasını kontrol edin.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[DSMAutoUpdateReady]
+Category: System,Important
+Title: Sistem Otomatik Güncellemesi
+Subject: %OSNAME% Otomatik Güncellemesi, %HOSTNAME% üzerinde %COUNTDOWN_MINUTE% dakika sonra otomatik olarak başlayacak
+
+Sayın kullanıcı,
+
+%NEW_VERSION% otomatik olarak %COUNTDOWN_MINUTE% dakika sonra yüklenecek. Kurulumu iptal etmek istiyorsanız lütfen %HOSTNAME% girişi yaparak bildirim alanında iptal edin.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[DSMAutoUpdateShutdownStart]
+Category: System,Important
+Title: Sistem güncellemeleri planlanan kapanıştan önce yüklenecek
+Subject: %OSNAME% güncellemeleri planlanan kapanıştan önce otomatik olarak %HOSTNAME% üzerine kurulacak
+
+Sayın kullanıcı,
+
+%NEW_VERSION% planlanan kapanıştan önce yüklenecek ve yükleme tamamlandıktan sonra %HOSTNAME% kapatılacak. Lütfen işlem tamamlanmadan %DISKSTATION% sunucunuzu kapatmayın.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[DSMUpdateAvailable]
+Category: System,Important
+Title: Yeni %OSNAME% güncellemesi hazır
+Subject: %OSNAME% güncellemesi %HOSTNAME% üzerine kurulum için hazır
+
+Sayın kullanıcı,
+
+%OSNAME%'nin yeni sürümü indirildi ve kurulmak için hazır. Lütfen %HOSTNAME%'de oturum açın ve Denetim Masası > Güncelle ve Geri Yükle öğesine giderek %NEW_VERSION% öğesini indirin. %OSNAME% güncellemesi hakkında daha fazla bilgi için, lütfen %HTTP_URL% öğesine bakın.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[DeviceEjectedImproperly]
+Category: External Storage
+Title: Harici cihaz uygun şekilde çıkartılmamış
+Subject: %HOSTNAME% üzerindeki harici cihaz %DEVICE_NAME% uygun şekilde çıkartılmamış.
+
+Sayın kullanıcı,
+
+%HOSTNAME% üzerindeki harici cihaz %DEVICE_NAME% uygun şekilde çıkartılmamış. Veri kaybını önlemek için, fişini sökmeden önce cihazın çıkartılmasını öneririz.
+
+Saygılar,
+%COMPANY_NAME%
+
+
+[DiskTemperatureAbnormal]
+Category: Storage,Important
+Title: Disk Sıcaklığı çalışma sıcaklığı aralığında değil
+Subject: Disk %DISK_ID% çalışma sıcaklığı aralığı dahilinde değil
+
+Sayın kullanıcı,
+
+Disk %DISK_ID% [%MODEL%] sıcaklığı %REAL_TEMPERATURE% ºC ve bu da çalışma sıcaklığı aralığı, %MIN_TEMPERATURE% ºC ~ %MAX_TEMPERATURE% ºC dahilinde değil.
+Disklerinizi lütfen kabul edilebilir çalışma sıcaklığı dahilinde tutun.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[DiskTemperatureNormal]
+Subject: Disk %DISK_ID% çalışma sıcaklığı aralığı dahilinde
+
+Sayın kullanıcı,
+
+Disk %DISK_ID% [%MODEL%] sıcaklığı şimdi kabul edilebilir çalışma sıcaklığı aralığı, %MIN_TEMPERATURE% ºC ~ %MAX_TEMPERATURE% ºC dahilinde.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[DriveSlotDisabled]
+Category: Storage,Important
+Title: Sürücü yuvası devre dışı bırakılmış
+Subject: Sürücü yuvası [%DISK_ID%] devre dışı bırakılmış
+
+Sayın kullanıcı,
+
+Disk sürücü [%DISK_ID%] üzerindeki hatalar nedeniyle bir sürücü yuvası devre dışı bırakıldı. Lütfen sürücüyü değiştirin, etkinleştirin ve gerekirse kapasitesi düşmüş birimleri onarın.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[DsmProtectionCheckFailed]
+Category: System,Important
+Title: Sistem anormalliği algılandı
+Subject: %HOSTNAME% üzerinde anormallik algılandı. Tüm birimler çıkartıldı.
+
+Sayın kullanıcı,
+
+Sistem %HOSTNAME% üzerinde bir anormallik algıladı. Verilerinizi korumak amacıyla, tüm birimler çıkartılmıştır. Lütfen daha ileri yardım için Synology destek ekibine başvurun.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[EBoxHDEcc]
+Category: Storage,Important
+Title: Genişletme birimi diskinde I/O hatası
+Subject: %HOSTNAME% üzerindeki %EUNIT_ID% %DISK_ID% diskinde I/O hatası oluştu
+
+Sayın kullanıcı,
+
+%HOSTNAME% üzerindeki %EUNIT_ID% %DISK_ID% diskinde bir I/O hatası oldu, ancak birkaç denemeden sonra şimdi düzgün çalışıyor. Bozuk sektörler tarafından kaynaklanmış olabilir. Hata tekrar olursa, lütfen verilerinizi yedekleyin ve sabit sürücünüzde S.M.A.R.T. testi yaparak sabit diskin durumunu inceleyin.
+
+Saygılar,
+%COMPANY_NAME%
+
+
+[ESATADiskFull]
+Category: External Storage
+Title: eSATA disk dolu
+Subject: %DISK_NUMBER% eSATA diski %HOSTNAME% sisteminde yer olmadan çalışıyor
+
+Sayın kullanıcı,
+
+%DISK_NUMBER% eSATA diski %HOSTNAME% sisteminde yer olmadan çalışıyor. Lütfen aşağıdaki bilgilere bakın ve düzeltme işlemini yerine getirin.
+
+Toplam kapasite: %DISK_SIZE% GB
+Kullanılabilir kapasite: %FREE_SPACE% GB (%USAGE%%)
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[ESATAPartitionFull]
+Category: External Storage
+Title: eSATA bölümü dolu
+Subject: eSATA diskinin %DISK_NUMBER%, %PARTITION_NUMBER% bölümü %HOSTNAME% sisteminde yer olmadan çalışıyor
+
+Sayın kullanıcı,
+
+eSATA diskinin %DISK_NUMBER%, %PARTITION_NUMBER% bölümü %HOSTNAME% sisteminde yer olmadan çalışıyor. Lütfen aşağıdaki bilgilere bakın ve düzeltme işlemini yerine getirin.
+
+Toplam kapasite: %DISK_SIZE% GB
+Kullanılabilir kapasite: %FREE_SPACE% GB (%USAGE%%)
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[EUnitPowerFail]
+Category: System,Important
+Title: Genişleme ünitesinin yedek güç kaynağı arızalandı
+Subject: Güç kaynağı No.%POWERID% / %EUNIT_ID%, %HOSTNAME% sisteminde arızalandı
+
+Sayın kullanıcı,
+
+Güç kaynağı No.%POWERID% / %EUNIT_ID%, %HOSTNAME% sisteminde arızalandı.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[EUnitPowerResume]
+Category: System,Important
+Title: Genişletme biriminin yedeklemeli güç kaynağı arızalandı
+Subject: %HOSTNAME% üzerindeki %EUNIT_ID% Güç kaynak No.%POWERID% düzeldi
+
+Sayın kullanıcı,
+
+%HOSTNAME% üzerindeki %EUNIT_ID% Güç kaynak No.%POWERID% düzeldi.
+
+Saygılar,
+%COMPANY_NAME%
+
+
+[EboxFanResume]
+Category: System,Important
+Title: Genişletme ünitesi fanı yeniden başladı
+Subject: %EBOX_ID% fanı %FAN_ID%, %HOSTNAME% sisteminde yeniden başladı
+
+Sayın kullanıcı,
+
+%EBOX_ID% fanı %FAN_ID%, %HOSTNAME% sisteminde yeniden başladı.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[EboxFanStop]
+Category: System,Important
+Title: Genişletme ünitesi fanı durdu
+Subject: %EBOX_ID% fanı %FAN_ID%, %HOSTNAME% sisteminde çalışmasını durdurdu
+
+Sayın kullanıcı,
+
+%EBOX_ID% fanı %FAN_ID%, %HOSTNAME% sisteminde çalışmasını durdurdu.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[EboxLinkFail]
+Category: System,Important
+Title: Genişletme ünitesinde bağlantı hatası
+Subject: Genişletme ünitesi %EBOX_ID% (SAS Out - %LINK_ID%) / %HOSTNAME% (SN: %HOST_SN%) üzerindeki bağlantı yeniden sağlandı.
+
+Sayın kullanıcı,
+
+Genişletme ünitesi %EBOX_ID% (SAS Out - %LINK_ID%) / %HOSTNAME% (SN: %HOST_SN%) üzerinde bir bağlantı hatası oluştu.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[EboxLinkResume]
+Category: System,Important
+Title: Genişletme ünitesi bağlantısı kurtarıldı
+Subject: Genişletme ünitesi %EBOX_ID% (SAS Out - %LINK_ID%) / %HOSTNAME% (SN: %HOST_SN%) üzerindeki bağlantı yeniden sağlandı.
+
+Sayın kullanıcı,
+
+Genişletme ünitesi %EBOX_ID% (SAS Out - %LINK_ID%) / %HOSTNAME% (SN: %HOST_SN%) üzerindeki bağlantı kurtarıldı.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[ExpansionFrmInconsistent]
+Category: System,Important
+Title: Genişletme ünitesi donanım yazılımı tutarsız
+Subject: %HOSTNAME% genişletme ünitesindeki donanım yazılımı tutarsız.
+
+Sayın kullanıcı:
+
+%HOSTNAME% genişletme ünitesindeki donanım yazılımı tutarsızdır. Bu sorunu gidermek için, lütfen www.synology.com adresinde Synology Çevrimiçi Desteğe başvurun.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[ForgetPassword]
+Subject: Unutulan Şifreyi Sıfırla
+Sayın %USER%,
+
+Şifrenizi sıfırlamak için aşağıdaki bağlantıya tıklayabilirsiniz:
+%URL%
+
+Bu bağlantı 24 saat süresince çalışacaktır. Şifrenizi değiştirmeyi talep etmezseniz, lütfen bu mesajı göz ardı edin.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[HA_AbleSwitchover]
+Category: HA,Important
+Title: High-availability kümesinin değişimi tekrar işlevsel
+Subject: High-availability kümesinin %HOSTNAME% değişimi tekrar işlevsel
+
+Sayın kullanıcı,
+
+High-availability kümesinin %HOSTNAME% değişimi tekrar işlevsel. Daha fazla bilgi için lütfen Sistem Günlüklerini veya High Availability Manager Kayıtlar sayfasını kontrol edin.
+
+Eylem: %HA_ACTION%
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[HA_FailOver]
+Category: HA,Important
+Title: High-availability kümesi hatası algılandı
+Subject: high-availability kümesinde %HOSTNAME% hata algılandı
+
+Sayın kullanıcı,
+
+High-availability kümesinde %HOSTNAME% bir hata algılandı. Sistem pasif sunucuya aktaracaktır. Daha fazla bilgi için lütfen Sistem Kayıtlarını kontrol edin.
+
+Eylem: %HA_ACTION%
+Hata: %HA_PARAM_1%
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[HA_PassiveTimeout]
+Category: HA,Important
+Title: Yerel ana bilgisayar aktif sunucuyu algılayamadı
+Subject: [%HA_PARAM_1%] bir süre boyunca aktif sunucuyu algılayamadı
+
+Sayın kullanıcı,
+
+Pasif sunucu [%HA_PARAM_1%] kapatıldı çünkü bir süre boyunca aktif sunucuyu [%HA_PARAM_2%] algılayamadı. Lütfen önce aktif sunucuyu [%HA_PARAM_2%] çalıştırın. Aktif sunucu [%HA_PARAM_2%] artık kullanılamıyorsa, high-availability kümesini kaldırmak için lütfen aşağıdaki talimatları izleyin: [%HA_PARAM_1%] öğesini ön yükleyin ve 5 dakika bekleyin. %DISKSTATION% sunucunuz bir bip sesi verene kadar %DISKSTATION% sunucunuzun arka panelinde yer alan RESET düğmesini 4 saniye basılı tutun. Hemen bırakın. (Uyarı: RESET düğmesine sürekli olarak basılması işletim sisteminin yeniden yüklenmesine neden olur.) Sıfırlanacak sistem ayarları hakkında daha fazla bilgi için, lütfen bu eğitime başvurun: https://www.synology.com/knowledgebase/DSM/tutorial/General/How_to_reset_your_Synology_NAS.
+
+Eylem: %HA_ACTION%
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[HA_SwitchFail]
+Category: HA,Important
+Title: Hizmetler üstlenilemedi
+Subject: High-availability kümesi %HOSTNAME% hizmetleri üstlenilemedi
+
+Sayın kullanıcı,
+
+Sistem, hizmetleri high-availability kümesine %HOSTNAME% aktarmaya çalıştı ancak başarısız oldu. Daha fazla bilgi için lütfen Sistem Kayıtlarını kontrol edin.
+
+Eylem: %HA_ACTION%
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[HA_SwitchFinished]
+Category: HA,Important
+Title: High-availability kümesi şimdi çalışıyor
+Subject: High-availability kümesi %HOSTNAME% şu anda %HA_PARAM_1% üzerinde çalışıyor.
+
+Sayın kullanıcı,
+
+High-availability kümesi %HOSTNAME% şu anda %HA_PARAM_1% üzerinde çalışıyor. Daha fazla bilgi için lütfen Sistem Günlüklerini veya High Availability Manager Kayıtlar sayfasını kontrol edin.
+
+Eylem: %HA_ACTION%
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[HA_SwitchOver]
+Category: HA,Important
+Title: High-availability kümesinin aktarımı
+Subject: High-availability kümesinin %HOSTNAME%, %HA_PARAM_1%'ye geçişi.
+
+Sayın kullanıcı,
+
+High-availability kümesi %HOSTNAME% üzerinde bir geçiş başlatıldı. Hizmetler %HA_PARAM_1%'ye aktarılıyor. Daha fazla bilgi için lütfen Sistem Kayıtlarını kontrol edin.
+
+Eylem: %HA_ACTION%
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[HA_SyncComplete]
+Category: HA,Important
+Title: Tam veri geri çoğaltımı yapıldı
+Subject: High-availability kümesi %HOSTNAME% tam veri çoğaltımı tamamlandı
+
+Sayın kullanıcı,
+
+High-availability kümesi %HOSTNAME% tam veri çoğaltımı tamamlandı. Şu anda bir geçişin ve üstlenmenin gerekli olması durumunda pasif sunucu hizmetleri yüklenmeye hazırdır. Daha fazla bilgi için lütfen Sistem Günlüklerini veya High Availability Manager Kayıtlar sayfasını kontrol edin.
+
+Eylem: %HA_ACTION%
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[HA_UnableSwitchover]
+Category: HA,Important
+Title: High-availability kümesinin değişimi devre dışı bırakıldı
+Subject: High-availability kümesinin %HOSTNAME% değişimi devre dışı bırakıldı
+
+Sayın kullanıcı,
+
+High-availability kümesinin %HOSTNAME% değişimi devre dışı bırakıldı. Daha fazla bilgi için lütfen Sistem Günlüklerini veya High Availability Manager Kayıtlar sayfasını kontrol edin.
+
+Eylem: %HA_ACTION%
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[HA_UnbindLocal]
+Category: HA,Important
+Title: Yerel ana bilgisayar high-availability kümesinden kaldırıldı
+Subject: %HA_PARAM_1%, high-availability kümesinden %HA_PARAM_2% kaldırıldı
+
+Sayın kullanıcı,
+
+%HA_PARAM_1%, high-availability kümesinden %HA_PARAM_2% kaldırıldı. Daha fazla bilgi için lütfen Sistem Kayıtlarını kontrol edin.
+
+Eylem: %HA_ACTION%
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[HDEcc]
+Category: Storage,Important
+Title: Disk I/O hatası
+Subject: %HOSTNAME% üzerindeki %DISK_ID% sabit diskinde I/O hatası oluştu
+
+Sayın kullanıcı,
+
+%HOSTNAME% üzerindeki %DISK_ID% sabit diskinde bir I/O hatası oldu, ancak birkaç denemeden sonra şimdi düzgün çalışıyor. Bozuk sektörler tarafından kaynaklanmış olabilir. Bu hata tekrar olursa, lütfen verilerinizi yedekleyin ve sabit sürücünüzde S.M.A.R.T. testi yaparak sabit diskin durumunu inceleyin.
+
+Saygılar,
+%COMPANY_NAME%
+
+
+[HotSpareDiskPlugout]
+Category: Storage,Important
+Title: Global Hot Spare disk çıkartılmış.
+Subject: Hot Spare disk (%DISK_ID%) çıkartılmış
+
+Sayın kullanıcı,
+
+Sistem Hot Spare diskin (%DISK_ID%) çıkartılmış olduğunu algılamış durumdadır.
+Depolama hacmini korumak için disklerin Hot Spare içine eklenmesi önerilir.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[HotSpareRepairDone]
+Category: Storage,Important
+Title: Global Hot Spare onarımı tamamlandı
+Subject: Depolama hacminin (%STORAGE_ID%) onarımı tamamlandı
+
+Sayın kullanıcı,
+
+Sistem, bozulmuş depolama hacminin (%STORAGE_ID%) Hot Spare disk (%DISK_ID%) ile onarımını tamamladı.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[HotSpareRepairFailed]
+Category: Storage,Important
+Title: Global Hot Spare onarımı başarısız oldu
+Subject: Depolama hacmi (%STORAGE_ID%) onarılamadı
+
+Sayın kullanıcı,
+
+Sistem, bozulmuş depolama hacminin (%STORAGE_ID%) Hot Spare disk (%DISK_ID%) ile onarımını tamamlayamadı.
+Daha fazla bilgi için lütfen sistem günlüklerine bakın.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[HotSpareRepairNoProtect]
+Category: Storage,Important
+Title: Global Hot Spare: hangi hacimlerin korumalı olduğunu hatırlat
+Subject: Bazı depolama hacimleri Hot Spare tarafından korunmaz
+
+Sayın kullanıcı,
+
+Bazı depolama hacimleri (%STORAGE_ID%) Hot Spare tarafından korunmaz.
+Depolama hacmini korumak için disklerin Hot Spare içine eklenmesi önerilir.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[HotSpareRepairStart]
+Category: Storage,Important
+Title: Global Hot Spare onarımı devam ediyor
+Subject: Sistem, bozulmuş depolama hacmini (%STORAGE_ID%) onarmak için Hot Spare diskleri kullanıyor
+
+Sayın kullanıcı,
+
+Sistem, bozulmuş depolama hacmini (%STORAGE_ID%) onarmak için Hot Spare disk (%DISK_ID%) kullanıyor.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[ImproperShutdown]
+Category: System,Important
+Title: Hatalı kapatma
+Subject: %HOSTNAME% hatalı kapatma yaşadı
+
+Sayın kullanıcı,
+
+%HOSTNAME% güç kesintisiyle karşılaştı ve düzgün olmayan bir şekilde kapandı.
+
+Saygılar,
+%COMPANY_NAME%
+
+
+[InternalFanResume]
+Category: System
+Title: Sunucu fanı yeniden başladı
+Subject: Fan %FANID% (sunucu %HOSTNAME% (SN: %HOST_SN%) üzerindeki) sürdürüldü
+
+Sayın kullanıcı,
+
+Fan %FANID% (sunucu %HOSTNAME% (SN: %HOST_SN%) üzerindeki) sürdürüldü.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[InternalFanStop]
+Category: System,Important
+Title: Sunucu fanı durdu
+Subject: Fan %FANID% (sunucu %HOSTNAME% (SN: %HOST_SN% üzerindeki) çalışmasını durdurdu
+
+Sayın kullanıcı,
+
+Fan %FANID% (sunucu %HOSTNAME% (SN: %HOST_SN% üzerindeki) çalışmasını durdurdu.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[LocalLUNBkpError]
+Category: Backup/Restore,Important
+Title: Yerel LUN Yedeklemesi başarısız oldu
+Subject: Başarısız oldu - %HOSTNAME% üzerinde LUN Yedeklemesi
+
+Sayın kullanıcı,
+
+%HOSTNAME% üzerindeki yerel paylaşımlı klasöre LUN yedeklemesi başarısız. Daha fazla bilgi için Yedekleme ve Çoğaltma > Günlük'de DSM'deki yedekleme günlüğünü kontrol edin.
+
+LUN Adı: %LUN%
+Yedekleme Görevi: %BKP_TASK%
+Yedekleme Hedefi: %BKP_DST% %PATH%
+Başlangıç Zamanı: %TIME%
+Süre: %DUR%
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[LocalLUNBkpFinished]
+Category: Backup/Restore
+Title: Yerel LUN Yedeklemesi tamamlandı
+Subject: Tamamlandı - %HOSTNAME% üzerinde LUN Yedeklemesi
+
+Sayın kullanıcı,
+
+%HOSTNAME% üzerindeki yerel paylaşımlı klasöre LUN yedeklemesi tamamlandı.
+
+LUN Adı: %LUN%
+Yedekleme Görevi: %BKP_TASK%
+Yedekleme Hedefi: %BKP_DST% %PATH%
+Başlangıç Zamanı: %TIME%
+Süre: %DUR%
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[LocalLUNRecoverError]
+Category: Backup/Restore,Important
+Title: Yerel LUN geri yüklemesi başarısız oldu
+Subject: Başarısız oldu - %HOSTNAME% üzerinde LUN geri yüklemesi
+
+Sayın kullanıcı,
+
+%HOSTNAME% üzerindeki yerel paylaşımlı klasörden LUN geri yüklemesi başarısız. Daha fazla bilgi için Yedekleme ve Çoğaltma > Günlük'de DSM'deki yedekleme günlüğünü kontrol edin.
+
+LUN Adı: %LUN%
+Geri Yükleme Kaynağı: %BKP_SRC%  %SRC_PATH%
+Başlangıç Zamanı: %TIME%
+Süre: %DUR%
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[LocalLUNRecoverFinished]
+Category: Backup/Restore
+Title: Yerel LUN geri yüklemesi tamamlandı
+Subject: Tamamlandı - %HOSTNAME% üzerinde LUN geri yüklemesi
+
+Sayın kullanıcı,
+
+%HOSTNAME% üzerindeki yerel paylaşımlı klasörden LUN geri yüklemesi tamamlandı.
+
+LUN Adı: %LUN%
+Geri Yükleme Kaynağı: %BKP_SRC%  %SRC_PATH%
+Başlangıç Zamanı: %TIME%
+Süre: %DUR%
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[MyDSPasswordChanged]
+Category: System,Important
+Title: Synology Hesap parolası değişti
+Subject: %HOSTNAME% üzerindeki Synology Hesap parolanız değiştirildi
+
+Sayın kullanıcı,
+
+Bu, Synology hesabınızın [%MYDS_ACCOUNT%] parolasının Synology Hesabı (%HOSTNAME% üzerinde) yoluyla değiştirildiğine dair bir onaydır.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[NetLUNBkpError]
+Category: Backup/Restore,Important
+Title: Ağ LUN yedeklemesi başarısız oldu
+Subject: Başarısız oldu - %HOSTNAME% üzerinde LUN yedeklemesi
+
+Sayın kullanıcı,
+
+%HOSTNAME% üzerinde uzak paylaşımlı klasöre LUN yedeklemesi başarısız. Daha fazla bilgi için Yedekleme ve Çoğaltma > Günlük'de DSM'deki yedekleme günlüğünü kontrol edin.
+
+LUN Adı: %LUN%
+Yedekleme Görevi: %BKP_TASK%
+Yedekleme Hedefi: %BKP_DST%  %PATH%
+Başlangıç Zamanı: %TIME%
+Süre: %DUR%
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[NetLUNBkpOK]
+Category: Backup/Restore
+Title: Ağ LUN yedeklemesi tamamlandı
+Subject: Tamamlandı - %HOSTNAME% üzerinde LUN yedeklemesi
+
+Sayın kullanıcı,
+
+%HOSTNAME% üzerinde uzak paylaşımlı klasöre LUN yedeklemesi tamamlandı.
+
+LUN Adı: %LUN%
+Yedekleme Görevi: %BKP_TASK%
+Yedekleme Hedefi: %BKP_DST%  %PATH%
+Başlangıç Zamanı: %TIME%
+Süre: %DUR%
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[NetLUNRecoverError]
+Category: Backup/Restore,Important
+Title: Ağ LUN geri yüklemesi başarısız
+Subject: Başarısız oldu - %HOSTNAME% üzerinde LUN geri yüklemesi
+
+Sayın kullanıcı,
+
+%HOSTNAME% üzerinde uzak paylaşımlı klasörden LUN geri yüklemesi başarısız. Daha fazla bilgi için Yedekleme ve Çoğaltma > Günlük'de DSM'deki yedekleme günlüğünü kontrol edin.
+
+LUN Adı: %LUN%
+Geri Yükleme Kaynağı: %BKP_SRC%  %SRC_PATH%
+Başlangıç Zamanı: %TIME%
+Süre: %DUR%
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[NetLUNRecoverFinished]
+Category: Backup/Restore,Important
+Title: Ağ LUN Geri Yüklemesi tamamlandı
+Subject: Tamamlandı - %HOSTNAME% üzerinde LUN geri yüklemesi
+
+Sayın kullanıcı,
+
+%HOSTNAME% üzerinde uzak paylaşımlı klasörden LUN geri yüklemesi tamamlandı.
+
+LUN Adı: %LUN%
+Geri Yükleme Kaynağı: %BKP_SRC%  %SRC_PATH%
+Başlangıç Zamanı: %TIME%
+Süre: %DUR%
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[OTP_emergency_mail]
+Subject: %HOSTNAME% üzerinde %USER_NAME% için acil durum doğrulama kodu
+
+Sayın kullanıcı,
+
+Aşağıdaki, %HOSTNAME% üzerinde oturum açmak ve 2 adımlık doğrulama ayarlarınızı sıfırlamak için kullanılabilen tek kullanımlık bir acil durum doğrulama kodudur. Bir doğrulama kodu girmeniz istendiğinde lütfen bu 8 basamaklı kodu girin.
+
+Acil durum doğrulama kodu: %EMG_CODE%
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[OTP_emergency_mail_warning]
+Subject: %HOSTNAME% üzerinde %USER_NAME% için acil durum doğrulama kodu
+
+Sayın kullanıcı,
+
+Aşağıdaki, %HOSTNAME% üzerinde oturum açmak ve 2 adımlık doğrulama ayarlarınızı sıfırlamak için kullanılabilen tek kullanımlık bir acil durum doğrulama kodudur. Bir doğrulama kodu girmeniz istendiğinde lütfen bu 8 basamaklı kodu girin.
+
+Not: Acil durum kodu sınırınıza ulaştınız. Lütfen en kısa zamanda 2 adımlık doğrulama ayarlarınızı sıfırlayın.
+
+Acil durum oturum açma kodu: %EMG_CODE%
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[OverheatShutdownCPU]
+Category: System,Important
+Title: CPU aşırı ısınma kapatması
+Subject: %HOSTNAME% (SN: %HOST_SN% CPU aşırı ısınması nedeniyle kapandı
+
+Sayın kullanıcı,
+
+%HOSTNAME% (SN: %HOST_SN%) otomatik olarak kapandı, çünkü CPU aşırı ısınmaktaydı (%SHUTDOWN_TMP%°C üzerinde).
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[OverheatShutdownDisk]
+Category: System,Important
+Title: Disk aşırı ısınma kapatması
+Subject: %HOSTNAME% disk aşırı ısınması nedeniyle kapandı.
+
+Sayın kullanıcı,
+
+%HOSTNAME% otomatik olarak kapandı, çünkü disk %DISK_NUM% aşırı ısınmaktaydı ve %SHUTDOWN_TMP%°C sıcaklığa ulaşmıştı.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[OverheatShutdownThermal]
+Category: System,Important
+Title: Aşırı ısınma kapanması
+Subject: %HOSTNAME% (SN: %HOST_SN% aşırı ısınma nedeniyle kapandı
+
+Sayın kullanıcı,
+
+%HOSTNAME% (SN: %HOST_SN%) otomatik olarak kapandı, çünkü aşırı ısınmaktaydı (%SHUTDOWN_TMP%°C üzerinde).
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[PKGUpgrade]
+Subject: %HOSTNAME% için Paket Yükseltme Bilgisi
+
+Sayın kullanıcı,
+
+Aşağıdaki paketler %HOSTNAME% üzerinde güncelleme için hazır. Bunları güncellemek için %OSNAME%'de Paket Merkezini başlatabilirsiniz.
+
+Güncellenecek paketler:
+%PKG_SET%
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[Raid5SpareChanged]
+Category: Storage,Important
+Title: RAID5+spare birim kapasitesi düştü
+Subject: RAID5+spare birimi %VOLUME_ID% (%HOSTNAME% üzerinde) kapasitesi düştü
+
+Sayın kullanıcı,
+
+Birim %VOLUME_ID% (%HOSTNAME% üzerinde) RAID5+spare'den RAID5'e degrade oldu. Birimi RAID5+spare değerine geri döndürmek için, lütfen yedek bir disk hazırlayın ve ardından arızalı diski değiştirmek için "Ana Menü" > "Depolama Yöneticisi" > "Birim" > "Yönet" seçeneğine gidin.
+
+Daha fazla destek almak için, lütfen Synology Çevrimiçi Desteği ile temasa geçin: http://www.synology.com.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[RaidDiskFail]
+Category: Storage,Important
+Title: Disk Grubu içindeki HDD başarısız oldu
+Subject: %HOSTNAME% üzerindeki Disk Grubu içindeki sabit disk %DISK_ID% arızalandı
+
+Sayın kullanıcı,
+
+%HOSTNAME% üzerindeki Disk Grubu içindeki sabit disk %DISK_ID% arızalandı; lütfen değiştirin.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[RaidGroupCrashed]
+Category: Storage,Important
+Title: RAID Group çökmüş
+Subject: RAID Group %RAID_ID% (%HOSTNAME% üzerindeki) çökmüş
+
+Sayın kullanıcı,
+
+RAID Group %RAID_ID% (%HOSTNAME% üzerindeki) çökmüş. Sistem yeniden başlamayabilir.
+
+Daha fazla destek almak için, lütfen Synology Çevrimiçi Desteği ile temasa geçin: http://www.synology.com.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[RaidGroupDegraded]
+Category: Storage,Important
+Title: RAID Group bozulmuş
+Subject: RAID Group %RAID_ID% (%HOSTNAME% üzerindeki) kapasitesi düşmüş moda girdi [%ACTIVE_DISK%/%TOTAL_DISK%]
+
+Sayın kullanıcı,
+
+RAID Group %RAID_ID% (%HOSTNAME% üzerinde) kapasitesi düşmüş moda girdi. (Toplam sabit disk sayısı: %TOTAL_DISK%; Aktif sabit disk sayısı: %ACTIVE_DISK%) Lütfen düşüklüğün sebebini belirleyin ve düzeltici işlemleri yerine getirin.
+
+Daha fazla destek almak için, lütfen Synology Çevrimiçi Desteği ile temasa geçin: http://www.synology.com.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[RaidGroupDiskFail]
+Category: Storage,Important
+Title: RAID Group içindeki HDD başarısız oldu
+Subject: %HOSTNAME% üzerindeki RAID Group içindeki sabit disk %DISK_ID% arızalandı
+
+Sayın kullanıcı,
+
+%HOSTNAME% üzerindeki RAID Group içindeki sabit disk %DISK_ID% arızalandı; lütfen değiştirin.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[RaidGroupSyncDone]
+Category: Storage
+Title: RAID Group senkronizasyonu bitti
+Subject: RAID Group %RAID_ID% (%HOSTNAME% üzerinde) tutarlılık kontrolü bitti
+
+Sayın kullanıcı,
+
+RAID Group %RAID_ID% (%HOSTNAME% üzerinde) tutarlılık kontrolü bitti. Sistem artık kullanıma hazır.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[RaidGroupVolumeBadSector]
+Category: Storage,Important
+Title: RAID Group birimi arızalandı
+Subject: RAID Group birimi (%VOLUME_ID%) (%HOSTNAME% üzeerinde) arızalandı
+
+Sayın kullanıcı,
+
+%HOSTNAME% üzerindeki RAID Group biriminin (%VOLUME_ID%) arızalanması nedeniyle bazı dosyalar bozuldu. Dosyalar düşük kapasite modunda bozulma riskiyle karşı karşıya. Lütfen en kısa zamanda birimi onarın. Daha fazla ayrıntı için Ana Menü > Sistem Günlükleri seçeneğine gidebilirsiniz.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[RaidGroupiScsiBadSector]
+Category: Storage,Important
+Title: RAID Group’un iSCSI LUN’ı arızalandı
+Subject: %HOSTNAME% üzerindeki RAID Group’un iSCSI LUN‘ı arızalandı
+
+Sayın kullanıcı,
+
+%HOSTNAME% üzerindeki RAID Group‘unun iSCSI LUN‘u arızalandığından bazı dosyalar bozuldu. Dosyalar düşük kapasite modunda bozulma riskiyle karşı karşıya. Lütfen en kısa zamanda birimi onarın.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[RaidSuggestDataScrubbing]
+Category: Storage
+Title: RAID düzeltme hatırlatıcısı
+Subject: %HOSTNAME% üzerinde RAID düzeltme için hatırlatıcı
+
+Sayın kullanıcı,
+
+%HOSTNAME% üzerinde RAID düzeltme bir aydır yapılmadı. Veri bütünlüğünü sağlamak için RAID düzeltme yapmanızı öneririz.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[RaidSystemVolumeCrashed]
+Category: Storage,Important
+Title: Sistem birimi çöktü
+Subject: %HOSTNAME% sistemindeki sistem birimi (%SYSTEM_ID%) çöktü
+
+Sayın kullanıcı,
+
+%HOSTNAME% sistemindeki sistem birimi (%SYSTEM_ID%) çöktü. Sistem yeniden başlamayabilir.
+Daha fazla destek almak için, lütfen Synology Çevrimiçi Desteği ile temasa geçin: http://www.synology.com.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[RaidSystemVolumeDegrade]
+Category: Storage,Important
+Title: Sistem biriminin kapasitesi düştü
+Subject: Sistem birimi (%SYSTEM_ID%) (%HOSTNAME% üzerindeki) kapasitesi düşmüş moda girdi [%ACTIVE_DISK%/%TOTAL_DISK%]
+
+Sayın kullanıcı,
+
+%HOSTNAME% sistemindeki sistem birimi (%SYSTEM_ID%) kapasitesi düşmüş moda girdi. (Toplam sabit sürücü sayısı: %TOTAL_DISK%; aktif sabit sürücü sayısı: %ACTIVE_DISK%)
+
+Lütfen sistemi yeniden başlatın ve başlatılırken kendisini otomatik olarak onaracaktır.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[RaidSystemVolumeSyncDone]
+Category: Storage
+Title: Sistem üzerindeki tutarlılık sınaması tamamlandı
+Subject: %HOSTNAME% üzerindeki (%SYSTEM_ID%) sistem birimi tutarlılık kontrolü tamamlandı
+
+Sayın kullanıcı,
+
+%HOSTNAME% üzerindeki (%SYSTEM_ID%) sistem birimindeki tutarlılık kontrolünü tamamlandı. Sistem artık kullanıma hazır.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[RaidVolumeBadSector]
+Category: Storage,Important
+Title: Disk Grubu birimi arızalandı
+Subject: Disk Grubu birimi (%VOLUME_ID%) (%HOSTNAME% üzerinde) arızalandı
+
+Sayın kullanıcı,
+
+%HOSTNAME% üzerindeki Disk Grubu biriminin (%VOLUME_ID%) arızalanması nedeniyle bazı dosyalar bozuldu. Dosyalar düşük kapasite modunda bozulma riskiyle karşı karşıya. Lütfen en kısa zamanda birimi onarın. Daha fazla ayrıntı için "Ana Menü" > "Sistem Bilgisi" > "Günlük" > "Sistem günlüğü" seçeneğine gidebilirsiniz.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[RaidVolumeCrashed]
+Category: Storage,Important
+Title: Birim çökmüş
+Subject: %HOSTNAME% üzerindeki %VOLUME_ID% birim çöktü
+
+Sayın kullanıcı,
+
+%HOSTNAME% üzerindeki %VOLUME_ID% birim çöktü. Sistem yeniden başlamayabilir.
+
+Daha fazla destek almak için, lütfen Synology Çevrimiçi Desteği ile temasa geçin: http://www.synology.com.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[RaidVolumeDegrade]
+Category: Storage,Important
+Title: Birim kapasitesi düştü
+Subject: Birim %VOLUME_ID% (%HOSTNAME% üzerinde) kapasitesi düşmüş moda girdi [%ACTIVE_DISK%/%TOTAL_DISK%]
+
+Sayın kullanıcı,
+
+Birim %VOLUME_ID% (%HOSTNAME% üzerinde) kapasitesi düşmüş moda girdi. (Toplam sabit disk sayısı: %TOTAL_DISK%; Aktif sabit disk sayısı: %ACTIVE_DISK%) Lütfen düşüklüğün sebebini belirleyin ve düzeltici işlemleri yerine getirin.
+
+Volümü onarmak için, lütfen hasarlı diskleri yenileriyle değiştirin. Daha fazla bilgi için, resmi web sitemizde bulunan Synology'nin Bilgi Tabanını ziyaret edin.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[RaidVolumeFull]
+Category: Storage,Important
+Title: Birim dolu
+Subject: %HOSTNAME% sistemindeki %VOLUME_ID% birim yer olmadan çalışıyor
+
+Sayın kullanıcı,
+
+%HOSTNAME% üzerindeki %VOLUME_ID% birim yer olmadan çalışıyor; yer açmak için bazı dosyaları silin.
+
+Toplam kapasite: %VOLUME_SIZE% GB
+Kullanılabilir kapasite: %FREE_SPACE% GB (%USAGE%%)
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[RaidVolumeSyncDone]
+Category: Storage
+Title: Tutarlılık sınaması tamamlandı
+Subject: %HOSTNAME% üzerindeki %VOLUME_ID% birimi tutarlılık kontrolü tamamlandı
+
+Sayın kullanıcı,
+
+%HOSTNAME%, %VOLUME_ID% biriminde tutarlılık kontrolünü tamamlandı. Sistem artık kullanıma hazır.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[RaidiScsiBadSector]
+Category: Storage,Important
+Title: Disk Grubunun iSCSI LUN‘u arızalandı
+Subject: %HOSTNAME% üzerindeki Disk Grubunun iSCSI LUN‘ı arızalandı
+
+Sayın kullanıcı,
+
+%HOSTNAME% üzerindeki Disk Grubunun iSCSI LUN‘u arızalandığından bazı dosyalar bozuldu. Dosyalar düşük kapasite modunda bozulma riskiyle karşı karşıya. Lütfen en kısa zamanda birimi onarın.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[RaidiScsiCrashed]
+Category: Storage,Important
+Title: iSCSI LUN çöktü
+Subject: iSCSI LUN (%LUN_NAME%) (%HOSTNAME% üzerinde) çöktü
+
+Sayın kullanıcı,
+
+iSCSI LUN (%LUN_NAME%) (%HOSTNAME% üzerinde) çöktü. Sistem yeniden başlamayabilir.
+
+Daha fazla destek almak için, lütfen Synology Çevrimiçi Desteği ile temasa geçin: http://www.synology.com.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[RaidiScsiDegraded]
+Category: Storage,Important
+Title: iSCSI LUN kapasitesi düştü
+Subject: iSCSI LUN (%LUN_NAME%) (%HOSTNAME% üzerindeki) kapasitesi düşmüş moda girdi [%ACTIVE_DISK%/%TOTAL_DISK%]
+
+Sayın kullanıcı,
+
+iSCSI LUN (%LUN_NAME%) (%HOSTNAME% üzerinde) kapasitesi düşmüş moda girdi. (Toplam sabit disk sayısı: %TOTAL_DISK%; Aktif sabit disk sayısı: %ACTIVE_DISK%) Lütfen düşüklüğün sebebini belirleyin ve düzeltici işlemleri yerine getirin.
+
+iSCSI LUN onarımı yapmak için, lütfen hasarlı diskleri yenileriyle değiştirin. Daha fazla bilgi için, resmi web sitemizde bulunan Synology'nin Bilgi Tabanını ziyaret edin.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[RedundantPowerRecoveredProvide]
+Category: Power System
+Title: Yedek güç kaynağı kurtarıldı
+Subject: Güç kaynağı No.%POWERID% ( %HOSTNAME% (SN: %HOST_SN%) üzerindeki) kurtarıldı
+
+Sayın kullanıcı,
+
+Güç kaynağı No.%POWERID% (%HOSTNAME% (SN: %HOST_SN%) üzerindeki) kurtarıldı.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[RedundantPowerStopProvide]
+Category: Power System,Important
+Title: Yedek güç kaynağı arızalandı
+Subject: Güç kaynağı No.%POWERID% ( %HOSTNAME% (SN: %HOST_SN%) üzerindeki) arızalandı
+
+Sayın kullanıcı,
+
+Güç kaynağı No.%POWERID% (%HOSTNAME% (SN: %HOST_SN%) üzerindeki) arızalandı.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[RestoreTaskCanceled]
+Category: Backup/Restore,Important
+Title: Geri yükleme iptal edildi
+Subject: %TASK_TYPE%, %HOSTNAME% üzerinde iptal edildi
+
+Sayın kullanıcı,
+
+%HOSTNAME% üzerinde veri yedeklemesi iptal edildi.
+
+Geri Yükleme Kaynağı: %DESTINATION_IP% %DESTINATION_PATH%
+Başlangıç Zamanı: %START_TIME%
+Süre: %DURATION%
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[RestoreTaskFailed]
+Category: Backup/Restore,Important
+Title: Geri yükleme yapılamadı
+Subject: %TASK_TYPE%, %HOSTNAME% öğesinden geri yüklenemedi
+
+Sayın kullanıcı,
+
+Yedekleme verileri %HOSTNAME% öğesinden geri yüklenemedi.
+
+Lütfen daha fazla bilgi için Hyper Backup > Günlük öğesinde yedekleme günlüğünü kontrol edin.
+
+Geri Yükleme Kaynağı: %DESTINATION_IP% %DESTINATION_PATH%
+Başlangıç Zamanı: %START_TIME%
+Süre: %DURATION%
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[RestoreTaskFinished]
+Category: Backup/Restore
+Title: Geri yükleme tamamlandı
+Subject: %TASK_TYPE%, %HOSTNAME% üzerinde başarılı
+
+Sayın kullanıcı,
+
+Geri yükleme göreviniz %TASK_NAME% şimdi tamamlandı.
+
+Geri Yükleme Kaynağı: %DESTINATION_IP% %DESTINATION_PATH%
+Başlangıç Zamanı: %START_TIME%
+Süre: %DURATION%
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[SDCardFull]
+Category: External Storage
+Title: SD kart dolu
+Subject: %DISK_NUMBER% SD kart %HOSTNAME% üzerinde yer olmadan çalışıyor
+
+Sayın kullanıcı,
+
+%DISK_NUMBER% SD kart %HOSTNAME% üzerinde yer olmadan çalışıyor Lütfen aşağıdaki bilgilere bakın ve düzeltme işlemini yerine getirin.
+
+Toplam kapasite: %DISK_SIZE% GB
+Kullanılabilir kapasite: %FREE_SPACE% GB (%USAGE%%)
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[SDCardPartitionFull]
+Category: External Storage
+Title: SD kart bölümü dolu
+Subject: SD kartın %DISK_NUMBER%, %PARTITION_NUMBER% bölümü %HOSTNAME% sisteminde yer olmadan çalışıyor
+
+Sayın kullanıcı,
+
+SD kartın %DISK_NUMBER%, %PARTITION_NUMBER% bölümü %HOSTNAME% sisteminde yer olmadan çalışıyor Lütfen düzeltici işlemleri yerine getirin.
+
+Toplam kapasite: %DISK_SIZE% GB
+Kullanılabilir kapasite: %FREE_SPACE% GB (%USAGE%%)
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[SFPModuleUnsupported]
+Category: System,Important
+Title: Desteklenmeyen SFP+ modülü
+Subject: Desteklenmeyen bir SFP+ modülü %LAN% saptandı
+
+Sayın kullanıcı,
+
+Desteklenmeyen bir SFP+ modülü %LAN% algılandı ve ağ arabirim kartının sürücüsü devre dışı bırakıldı.
+Lütfen desteklenen bir modül takın ve %DISKSTATION% sunucunuzu tekrar başlatın.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[SSDCacheCrashed]
+Category: Storage,Important
+Title: SSD Önbellek çökmüş
+Subject: %HOSTNAME% üzerindeki SSD Önbellek %SSD_ID% çökmüş
+
+Sayın kullanıcı,
+
+%HOSTNAME% üzerindeki SSD Önbellek %SSD_ID% çökmüş. Daha fazla destek almak için, lütfen Synology Çevrimiçi Desteği ile temasa geçin: http://www.synology.com.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[SSDCacheDegraded]
+Category: Storage,Important
+Title: SSD önbellek kapasitesi düşmüş
+Subject: %HOSTNAME% üzerindeki SSD Önbellek %SSD_ID% kapasitesi düşmüş
+
+Sayın kullanıcı,
+
+%HOSTNAME% üzerindeki SSD Önbellek %SSD_ID% kapasitesi düşmüş Daha fazla destek almak için, lütfen Synology Çevrimiçi Desteği ile temasa geçin: http://www.synology.com.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[SSDCacheMissing]
+Category: Storage,Important
+Title: Okuma-yazma önbelleği kayıp
+Subject: %HOSTNAME% üzerindeki %SPACE_ID% okuma-yazma önbelleği kayıp
+
+Sayın kullanıcı,
+
+%HOSTNAME% üzerindeki %SPACE_ID% okuma-yazma önbelleği kayıp. Daha fazla destek almak için, lütfen Synology Çevrimiçi Desteği ile temasa geçin: http://www.synology.com.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[SecurityScanAlarm]
+Category: System,Important
+Title: Güvenlik Riskleri Bulundu
+Subject: %HOSTNAME% üzerinde güvenlik riskleri bulundu
+
+Sayın kullanıcı,
+
+Güvenlik Danışmanı %HOSTNAME% üzerinde planlı bir taramayı az önce tamamladı. İlgilenmeniz gereken çok sayıda güvenlik riski bulundu. %HOSTNAME% üzerinde %OSNAME%'de oturum açın ve Güvenlik Danışmanındaki raporu görüntüleyin.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[SecurityScanDSMOutOfDate]
+Category: System,Important
+Title: Sistem Güncel değil
+Subject: %HOSTNAME% üzerindeki %OSNAME% Güvenlik Danışmanı'ndan güncel değil
+
+Sayın kullanıcı,
+
+%HOSTNAME% üzerinde çalışan %OSNAME% güncel değil. %HOSTNAME% üzerinde %OSNAME%'de oturum açın, Denetim Masası'nı açın ve %OSNAME%'in en son sürümünü kurun. Ayrıntılı bir rapor için, lütfen Ana Menü > Güvenlik Danışmanı öğesine gidin.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[SecurityScanDSMPackageOutOfDate]
+Category: System,Important
+Title: Sistem ve Paketler Güncel değil
+Subject: %HOSTNAME% üzerindeki %OSNAME% ve paketler Güvenlik Danışmanı'ndan güncel değil
+
+Sayın kullanıcı,
+
+%HOSTNAME% üzerinde çalışan %OSNAME% ve %NUMBER% paketleri güncel değil. %HOSTNAME% üzerinde %OSNAME%'de oturum açın ve aşağıdakileri yapın:
+- Denetim Masasını açın ve %OSNAME%'in en son sürümünü kurun.
+- Paket Merkezini açın ve paketlerinizin en son sürümünü kurun.
+
+Ayrıntılı bir rapor için, lütfen Ana Menü > Güvenlik Danışmanı öğesine gidin.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[SecurityScanDanger]
+Category: System,Important
+Title: Zararlı Yazılım Algılandı
+Subject: %HOSTNAME% üzerinde zararlı yazılım algılandı
+
+Sayın kullanıcı,
+
+%HOSTNAME% üzerinde zararlı yazılım algılandı. Lütfen %HOSTNAME% üzerindeki %OSNAME%'de oturum açın ve bunu düzeltmek için Güvenlik Danışmanını açın.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[SecurityScanPackageOutOfDate]
+Category: System,Important
+Title: Paketler Güncel değil
+Subject: %HOSTNAME% üzerindeki paketler güncel değil
+
+Sayın kullanıcı,
+
+%HOSTNAME% üzerinde çalışan %NUMBER% paket güncel değil. Lütfen %HOSTNAME% üzerindeki %OSNAME%'de oturum açın ve paketlerinizin en son sürümünü kurmak için Paket Merkezini açın.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[ShareSyncError]
+Category: Backup/Restore,Important
+Title: Paylaşımlı klasör senkronizasyonu başarısız
+Subject: Başarısız oldu - Paylaşımlı Klasör Senkronizasyonu
+
+Sayın kullanıcı,
+
+%HOSTNAME% üzerinde paylaşımlı klasör senkronizasyonu başarısız. Daha fazla bilgi için DSM'de Günlük Merkezi'ndeki yedekleme günlüğünü kontrol edin.
+
+Senkronizasyon Görevi: %S2S_TASK%
+Senkronizasyon Sunucusu: %S2S_SERVER%
+Başlangıç Zamanı: %TIME%
+Süre: %DUR%
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[ShareSyncSuccess]
+Category: Backup/Restore
+Title: Paylaşımlı klasör senkronizasyonu tamamlandı
+Subject: Tamamlandı - Paylaşımlı Klasör Senkronizasyonu
+
+Sayın kullanıcı,
+
+%HOSTNAME% üzerinde Paylaşımlı Klasör Senkronizasyonu tamamlandı.
+
+Senkronizasyon Görevi: %S2S_TASK%
+Senkronizasyon Sunucusu: %S2S_SERVER%
+Başlangıç Zamanı: %TIME%
+Süre: %DUR%
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[SmartEBoxAbnor]
+Category: Storage,Important
+Title: Genişletme ünitesi diskinin S.M.A.R.T. durumu normal değil
+Subject: %HOSTNAME%'e bağlı %EUNIT_ID% üzerindeki Diskin %DISK_ID% S.M.A.R.T. durumu normal değil
+
+Sayın kullanıcı,
+
+%HOSTNAME%'e bağlı %EUNIT_ID% üzerindeki Diskin %DISK_ID% S.M.A.R.T. durumu normal değil Bu kaçınılmaz bir arızanın habercisi olabilir. Lütfen verilerinizi yedekleyin ve diski bir an önce değiştirin.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[SmartESataAbnor]
+Category: External Storage,Important
+Title: eSATA diskinin S.M.A.R.T. durumu normal değil
+Subject: %HOSTNAME% üzerindeki eSATA diskinin S.M.A.R.T. durumu normal değil
+
+Sayın kullanıcı,
+
+%HOSTNAME% üzerindeki eSATA diskinin S.M.A.R.T. durumu normal değil Bu kaçınılmaz bir arızanın habercisi olabilir. Lütfen verilerinizi yedekleyin ve diski bir an önce değiştirin.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[SmartIntAbnor]
+Category: Storage,Important
+Title: Dahili diskin S.M.A.R.T. durumu normal değil
+Subject: %HOSTNAME% üzerindeki Diskin %DISK_ID% S.M.A.R.T. durumu normal değil
+
+Sayın kullanıcı,
+
+%HOSTNAME% üzerindeki dahili Diskin %DISK_ID% S.M.A.R.T. durumu normal değil. Bu kaçınılmaz bir arızanın habercisi olabilir. Lütfen verilerinizi yedekleyin ve diski bir an önce değiştirin.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[SmartTestEBoxErr]
+Category: Storage,Important
+Title: Genişletme ünitesi diskinde S.M.A.R.T. test hatası
+Subject: Disk %DISK_ID% (%EUNIT_ID% üzerindeki %HOSTNAME%'e bağlı) S.M.A.R.T. testi başarısız
+
+Sayın kullanıcı,
+
+Sabit disk %DISK_ID% (%EUNIT_ID% üzerindeki %HOSTNAME%'e bağlı) S.M.A.R.T. testi başarısız. Lütfen verilerinizi yedekleyin ve diski en kısa sürede değiştirin.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[SmartTestESataErr]
+Category: External Storage,Important
+Title: eSATA diskte S.M.A.R.T. test hatası
+Subject: %HOSTNAME% üzerindeki eSATA disk S.M.A.R.T. testi başarısız
+
+Sayın kullanıcı,
+
+%HOSTNAME% üzerindeki eSATA disk S.M.A.R.T. testi başarısız. Lütfen verilerinizi yedekleyin ve diski en kısa sürede değiştirin.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[SmartTestIntErr]
+Category: Storage,Important
+Title: Dahili diskte S.M.A.R.T. test hatası
+Subject: Disk %DISK_ID% (%HOSTNAME% üzerindeki) S.M.A.R.T. testi başarısız
+
+Sayın kullanıcı,
+
+Sabit Disk %DISK_ID% (%HOSTNAME% üzerindeki) S.M.A.R.T. testi başarısız. Lütfen verilerinizi yedekleyin ve diski en kısa sürede değiştirin.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[StoragePoolCrashed]
+Category: Storage,Important
+Title: Disk grubu çöktü
+Subject: Disk grubu %RAID_ID% (%HOSTNAME% üzerindeki) çökmüş
+
+Sayın kullanıcı,
+
+Disk grubu %RAID_ID% (%HOSTNAME% üzerindeki) çökmüş. Sistem yeniden başlamayabilir.
+
+Daha fazla destek almak için, lütfen Synology Çevrimiçi Desteği ile temasa geçin: http://www.synology.com.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[StoragePoolDegraded]
+Category: Storage,Important
+Title: Disk grubunun kapasitesi düştü
+Subject: Disk grubu %RAID_ID% (%HOSTNAME% üzerindeki) kapasitesi düşmüş moda girdi [%ACTIVE_DISK%/%TOTAL_DISK%]
+
+Sayın kullanıcı,
+
+Disk grubu %RAID_ID% (%HOSTNAME% üzerinde) kapasitesi düşmüş moda girdi. (Toplam sabit disk sayısı: %TOTAL_DISK%; Aktif sabit disk sayısı: %ACTIVE_DISK%) Lütfen düşüklüğün sebebini belirleyin ve düzeltici işlemleri yerine getirin.
+
+Daha fazla destek almak için, lütfen Synology Çevrimiçi Desteği ile temasa geçin: http://www.synology.com.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[StoragePoolRaid5SpareChanged]
+Category: Storage,Important
+Title: Disk grubu - Raid5+spare kapasitesi düştü
+Subject: Disk grubu %RAID_ID% (%HOSTNAME% üzerindeki) RAID5'e düşmüş
+
+Sayın kullanıcı,
+
+Disk grubu %RAID_ID% (%HOSTNAME% üzerindeki) kapasitesi RAID5+spare'den RAID5'e düşmüş. RAID5+spare değerine geri döndürmek için, lütfen yedek bir disk hazırlayın ve ardından arızalı diski değiştirmek için "Ana Menü" > "Depolama Yöneticisi" > "Disk Grubu" seçeneğine gidin.
+
+Daha fazla destek almak için, lütfen Synology Çevrimiçi Desteği ile temasa geçin: http://www.synology.com.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[StoragePoolSyncDone]
+Category: Storage
+Title: Disk grubu senkronizasyonu sonlandırıldı
+Subject: Disk Grubu %RAID_ID% (%HOSTNAME% üzerinde) tutarlılık kontrolü bitti
+
+Sayın kullanıcı,
+
+Disk Grubu %RAID_ID% (%HOSTNAME% üzerinde) tutarlılık kontrolü bitti. Sistem artık kullanıma hazır.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[SynoReport]
+Subject: Disk kullanım raporu oluşturuldu
+
+Sayın kullanıcı,
+
+%PROFILE% disk kullanım raporu oluşturuldu. Raporu görüntülemek için, lütfen aşağıya bakın:
+%LINK%
+
+Saygılar,
+%COMPANY_NAME%
+
+
+[SynoReportFail]
+Subject: Depolama kullanım raporu oluşturulamadı
+
+Sayın kullanıcı,
+
+%PROFILE% kullanım raporu oluşturulurken bir hata meydana geldi.
+
+Neden: %MSG%
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[SystemInodeFull]
+Category: System
+Title: Sistem üzerindeki dosya sayısı limite yaklaşıyor
+Subject: %HOSTNAME% üzerindeki sistem bölümündeki dosya sayısı limite yaklaşıyor
+
+Sayın kullanıcı,
+
+%HOSTNAME% üzerindeki sistem bölümündeki dosya sayısı limite yaklaşıyor. Lütfen yardım için Synology destek ile iletişime geçin.
+
+Maksimum dosya sayısı: %TOTAL_INODE%
+Kalan dosya sayısı: %FREE_INODE% (%USAGE%%)
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[SystemVolumeCrashed]
+Category: System
+Title: Sistem depolama alanı çöktü
+Subject: %HOSTNAME% üzerindeki sistem depolama alanı çöktü
+
+Sayın kullanıcı,
+
+%HOSTNAME% üzerindeki sistem depolama alanı çöktü.
+
+Daha ileri yardım için, lütfen http://www.synology.com adresindeki Synology Çevrimiçi Desteğe başvurun.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[SystemVolumeFull]
+Category: System
+Title: Sistem depolama alanı dolu
+Subject: %HOSTNAME% üzerindeki sistem depolama alanı bitiyor
+
+Sayın kullanıcı,
+
+%HOSTNAME% üzerindeki kullanılabilir sistem depolama alanı bitiyor. Lütfen aşağıdaki bilgilere bakın ve alan açın.
+
+Toplam kapasite: %VOLUME_SIZE% GB
+Kullanılabilir kapasite: %FREE_SPACE% GB (%USAGE%%)
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[TPLUNReachSoftLimit]
+Category: Storage,Important
+Title: Yetersiz LUN depolaması
+Subject: %HOSTNAME% üzerindeki LUN %LUN_NAME% depolaması düşük çalışıyor
+
+Sayın kullanıcı,
+
+%HOSTNAME% üzerindeki LUN %LUN_NAME% serbest kapasitesi düşük çalışıyor. Lütfen daha fazla kapasite için birimi genişletin.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[TaskSchedulerResult]
+Subject: Görev Programlayıcı programlanmış bir görevi tamamladı
+
+Sayın kullanıcı,
+
+Görev Programlayıcı programlanmış bir görevi tamamladı.
+
+Görev: %TASK_ID%
+Başlangıç zamanı: %START_TIME%
+Bitiş zamanı: %STOP_TIME%
+Geçerli durum: %EXIT_CODE%
+Standart çıkış/hata:
+%OUTPUT%
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[TestMail]
+Subject: %HOSTNAME% sisteminden gelen test mesajı
+
+Sayın Kullanıcı,
+
+Tebrikler! E-posta bildirilerini %HOSTNAME% sistemine başarıyla kurdunuz.
+Daha fazla sistem yapılandırması için lütfen %HTTP_URL% adresini ziyaret edin.
+(Sunucuya bağlanamıyorsanız, lütfen yöneticiyle görüşün.)
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[UPSConnected]
+Category: Power System
+Title: UPS bağlandı
+Subject: %HOSTNAME%, UPS’e bağlandı.
+
+Sayın kullanıcı,
+
+%HOSTNAME%, UPS’e bağlandı.
+
+Saygılar,
+%COMPANY_NAME%
+
+
+[UPSDisconnect]
+Category: Power System,Important
+Title: UPS bağlantısı kesildi
+Subject: %HOSTNAME%, UPS bağlantısını kaybetti.
+
+Sayın kullanıcı,
+
+%HOSTNAME%, UPS bağlantısını kaybetti. Lütfen sunucu ayarlarını kontrol edin.
+
+Saygılar,
+%COMPANY_NAME%
+
+
+[UPSOnAC]
+Category: Power System,Important
+Title: UPS, AC moduna geri döndü
+Subject: %HOSTNAME%'e bağlı UPS aygıtı AC moduna geri döndü.
+
+Sayın kullanıcı,
+
+%HOSTNAME%'e bağlı UPS aygıtı AC moduna geri döndü.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[UPSOnBattery]
+Category: Power System,Important
+Title: UPS batarya moduna girdi
+Subject: %HOSTNAME%'e bağlı UPS aygıtı batarya moduna girdi.
+
+Sayın kullanıcı,
+
+%HOSTNAME%'e bağlı UPS aygıtı batarya moduna girdi. %HOSTNAME%, UPS aygıtının bataryası boşaldığında kapanacaktır. Lütfen %HOSTNAME%'i manuel olarak kapatın ya da en kısa zamanda harici güç kaynağını bağlayın.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[UPSPowerFail]
+Category: Power System,Important
+Title: UPS düşük bataryaya erişildi
+Subject: %HOSTNAME%'e bağlı UPS düşük bataryaya erişti.
+
+Sayın kullanıcı,
+
+%HOSTNAME%'e bağlı UPS düşük bataryaya erişti. Tüm hizmetler kapatıldı. UPS düzeltildiğinde hizmetler yeniden başlatılacaktır.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[USBCOPYDisconnect]
+Category: USB Copy
+Title: USBCopy bağlantısı kesildi
+Subject: %HOSTNAME% üzerindeki harici aygıt bağlatısı kesildi
+
+Sayın kullanıcı,
+
+Harici aygıtın bağlantısı kesildiğinden %HOSTNAME% üzerindeki %COPY% başarısız oldu.
+
+Saygılar,
+%COMPANY_NAME%
+
+
+[USBCOPYError]
+Category: USB Copy,Important
+Title: USBCopy başarısız oldu
+Subject: %HOSTNAME% üzerindeki %COPY% başarısız oldu
+
+Sayın kullanıcı,
+
+Bilinmeyen hatalar sebebiyle %HOSTNAME% üzerindeki %COPY% başarısız oldu.
+Hata kodu %ERR%. Daha fazla bilgi için lütfen USBCopy/SDCopy günlüğünü kontrol edin.
+
+Saygılar,
+%COMPANY_NAME%
+
+
+[USBCOPYFinished]
+Category: USB Copy
+Title: USBCopy tamamlandı
+Subject: %HOSTNAME% üzerindeki %COPY% tamamlandı
+
+Sayın kullanıcı,
+
+%HOSTNAME% üzerindeki %COPY% başarıyla tamamlandı.
+
+Saygılar,
+%COMPANY_NAME%
+
+
+[USBCOPYNospace]
+Category: USB Copy,Important
+Title: USBCopy iptal edildi
+Subject: %HOSTNAME% üzerindeki %COPY% iptal edildi
+
+Sayın kullanıcı,
+
+%HOSTNAME% üzerindeki %COPY% 	hedef paylaşımlı klasörde boş yer kalmadığından iptal edildi.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[USBDiskFail]
+Category: External Storage
+Title: USB disk arızalandı
+Subject: USB disk %DISK_ID% (%HOSTNAME% üzerindeki) arızalandı
+
+Sayın kullanıcı,
+
+USB disk %DISK_ID% (%HOSTNAME% üzerindeki) arızalandı.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[USBDiskFull]
+Category: External Storage
+Title: USB disk dolu
+Subject: %HOSTNAME% üzerindeki USB disk %DISK_NUMBER% alanı tükeniyor
+
+Sayın kullanıcı,
+
+%HOSTNAME% üzerindeki USB disk %DISK_NUMBER% alanı tükeniyor; lütfen düzeltici işlemleri yerine getirin.
+
+Toplam kapasite: %DISK_SIZE% GB
+Kullanılabilir kapasite: %FREE_SPACE% GB (%USAGE%%)
+
+Saygılar,
+%COMPANY_NAME%
+
+
+[USBPartitionFull]
+Category: External Storage
+Title: USB bölümü dolu
+Subject: USB diskinin %DISK_NUMBER%, %PARTITION_NUMBER% bölümü %HOSTNAME% sisteminde yer olmadan çalışıyor
+
+Sayın kullanıcı,
+
+USB diskinin %DISK_NUMBER%, %PARTITION_NUMBER% bölümü %HOSTNAME% sisteminde yer olmadan çalışıyor. Lütfen düzeltici işlemleri yerine getirin.
+
+Toplam kapasite: %DISK_SIZE% GB
+Kullanılabilir kapasite: %FREE_SPACE% GB (%USAGE%%)
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[UserChangePassword]
+Subject: %HOSTNAME% üzerindeki parolanız değiştirildi
+
+Sayın %USER_NAME%,
+
+Bu, %HOSTNAME% üzerindeki şifrenizin değiştirildiğine dair bir onaydır.
+
+Hesap ayarlarınızı değiştirmek için, lütfen tarayıcınızı %HTTP_URL% konumuna yönlendirin. (Sunucuya bağlanamıyorsanız, lütfen yöneticiyle görüşün.)
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[UserWelcome]
+Category: System
+Title: Yeni kullanıcı hoşgeldiniz
+Subject: %USER_NAME%, %HOSTNAME% sunucusuna hoşgeldiniz
+
+Sayın kullanıcı,
+
+%HOSTNAME% sistemine hoşgeldiniz!
+Tarayıcınızı %HTTP_URL% adresine yönlendirerek kişisel profilinizi değiştirebilirsiniz.
+(Sunucuya bağlanamıyorsanız, lütfen yöneticiyle görüşün.)
+
+Kullanıcı adınız: %USER_NAME%
+Parolanız: %PASSWD%
+
+Saygılar,
+%COMPANY_NAME%
+
+
+[VolumeInodeFull]
+Category: Storage,Important
+Title: Birim üzerindeki dosya sayısı limite yaklaşıyor
+Subject: Birim %VOLUME_ID% (%HOSTNAME% üzerindeki) üzerindeki dosya sayısı limite yaklaşıyor
+
+Sayın kullanıcı,
+
+Birim %VOLUME_ID% (%HOSTNAME% üzerindeki) üzerindeki dosya sayısı limite yaklaşıyor. Sayıyı azaltmak için lütfen bazı dosyaları silin.
+
+Maksimum dosya sayısı: %TOTAL_INODE%
+Kalan dosya sayısı: %FREE_INODE% (%USAGE%%)
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[VpncReconnectFail]
+Category: System
+Title: VPN İstemcisi yeniden araması başarısız oldu
+Subject: %HOSTNAME% üzerindeki VPN profilinin [%VPN_CLIENT%] yeniden bağlantısı başarısız oldu
+
+Sayın kullanıcı,
+
+Bağlantı kesildikten sonra %HOSTNAME% üzerindeki VPN profilinin [%VPN_CLIENT%] yeniden bağlantısı başarısız oldu Lütfen VPN istemcisi ve sunucu arasındaki bağlantıyı kontrol edin.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[aha_reboot_active]
+Category: AHA,Important
+Title: Aktif sunucuyu yeniden başlat
+Subject: High-availability kümesinin %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) aktif sunucusu yeniden başlatıldı
+
+Sayın kullanıcı,
+
+Bir yönetici high-availability kümesi %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) aktif sunucusunu yeniden başlattı.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[aha_reboot_active_fail]
+Category: AHA,Important
+Title: Aktif sunucu yeniden başlatılamadı
+Subject: High-availability kümesinin %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) aktif sunucusu yeniden başlatılamadı.
+
+Sayın kullanıcı,
+
+High-availability kümesinin %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) aktif sunucusu yeniden başlatılamadı. Ayrıntılı bilgi için lütfen High Availability Manager Günlük sayfasını kontrol edin.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[aha_reboot_passive]
+Category: AHA
+Title: Pasif sunucuyu yeniden başlat
+Subject: High-availability kümesinin %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) pasif sunucusu yeniden başlatıldı.
+
+Sayın kullanıcı,
+
+Bir kullanıcı high-availability kümesi %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) pasif sunucusunu yeniden başlattı.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[aha_reboot_passive_fail]
+Category: AHA
+Title: Pasif sunucu yeniden başlatılamadı.
+Subject: High-availability kümesinin %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) pasif sunucusu yeniden başlatılamadı.
+
+Sayın kullanıcı,
+
+High-availability kümesinin %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) pasif sunucusu yeniden başlatılamadı. Ayrıntılı bilgi için lütfen High Availability Manager Günlük sayfasını kontrol edin.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[aha_reboot_remote]
+Category: AHA
+Title: Bilinmeyen sunucuyu yeniden başlat
+Subject: High-availability kümesine %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) bağlı bilinmeyen sunucu yeniden başlatıldı
+
+Sayın kullanıcı,
+
+Bir kullanıcı high-availability kümesine %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) bağlı bilinmeyen sunucuyu yeniden başlattı.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[aha_reboot_remote_fail]
+Category: AHA
+Title: Bilinmeyen sunucu yeniden başlatılamadı
+Subject: High-availability kümesine %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) bağlı bilinmeyen sunucu yeniden başlatılamadı.
+
+Sayın kullanıcı,
+
+High-availability kümesine %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) bağlı bilinmeyen sunucu yeniden başlatılamadı. Ayrıntılı bilgi için lütfen High Availability Manager Günlük sayfasını kontrol edin.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[aha_recover_remote]
+Category: AHA,Important
+Title: Yeni bir sunucu ekle
+Subject: High-availability kümesine yeni bir sunucu ekleme
+
+Sayın kullanıcı,
+
+Bir yönetici bilinmeyen sunucunun kurtarılmasını başlattı. Sunucu şu anda high-availability kümesine %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) pasif sunucu olarak katılıyor. Ayrıntılı bilgi için lütfen High Availability Manager Günlük sayfasını kontrol edin.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[aha_recover_remote_fail]
+Category: AHA,Important
+Title: Yeni bir sunucu eklenemedi
+Subject: High-availability kümesine yeni bir sunucu eklenemedi
+
+Sayın kullanıcı,
+
+Bilinmeyen sunucu high-availability kümesine %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) pasif sunucu olarak katılamadı. Ayrıntılı bilgi için lütfen High Availability Manager Günlük sayfasını kontrol edin.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[aha_shutdown]
+Category: AHA,Important
+Title: High-availability kümesini kapat
+Subject: High-availability kümesi %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) kapatıldı
+
+Sayın kullanıcı,
+
+Bir kullanıcı high-availability kümesini %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) kapattı.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[aha_shutdown_active]
+Category: AHA,Important
+Title: Aktif sunucuyu kapat
+Subject: High-availability kümesinin %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) aktif sunucusu kapatıldı
+
+Sayın kullanıcı,
+
+Bir yönetici high-availability kümesinin %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) aktif sunucusunu kapattı.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[aha_shutdown_active_fail]
+Category: AHA,Important
+Title: Aktif sunucu kapatılamadı
+Subject: High-availability kümesinin %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) aktif sunucusu kapatılamadı.
+
+Sayın kullanıcı,
+
+High-availability kümesinin %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) aktif sunucusu kapatılamadı. Ayrıntılı bilgi için lütfen High Availability Manager Günlük sayfasını kontrol edin.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[aha_shutdown_fail]
+Category: AHA,Important
+Title: High-availability kümesi kapatılamadı
+Subject: High-availability kümesi %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) kapatılamadı.
+
+Sayın kullanıcı,
+
+High-availability kümesi %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) kapatılamadı. Ayrıntılı bilgi için lütfen High Availability Manager Günlük sayfasını kontrol edin.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[aha_shutdown_passive]
+Category: AHA,Important
+Title: Pasif sunucuyu kapat
+Subject: High-availability kümesinin %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) pasif sunucusu kapatıldı
+
+Sayın kullanıcı,
+
+Bir yönetici high-availability kümesinin %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) pasif sunucusunu kapattı.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[aha_shutdown_passive_fail]
+Category: AHA,Important
+Title: Pasif sunucu kapatılamadı
+Subject: High-availability kümesinin %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) pasif sunucusu kapatılamadı.
+
+Sayın kullanıcı,
+
+High-availability kümesinin %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) pasif sunucusu kapatılamadı. Ayrıntılı bilgi için lütfen High Availability Manager Günlük sayfasını kontrol edin.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[aha_shutdown_remote]
+Category: AHA
+Title: Bilinmeyen sunucuyu kapat
+Subject: High-availability kümesine %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) bağlı bilinmeyen sunucu kapatıldı.
+
+Sayın kullanıcı,
+
+Bir kullanıcı high-availability kümesine %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) bağlı bilinmeyen sunucuyu kapattı.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[aha_shutdown_remote_fail]
+Category: AHA,Important
+Title: Bilinmeyen sunucu kapatılamadı
+Subject: High-availability kümesine %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) bağlı bilinmeyen sunucu kapatılamadı.
+
+Sayın kullanıcı,
+
+High-availability kümesine %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) bağlı bilinmeyen sunucu kapatılamadı. Ayrıntılı bilgi için lütfen High Availability Manager Günlük sayfasını kontrol edin.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[aha_switchover]
+Category: AHA,Important
+Title: High-availability kümesinin değişimi
+Subject: High-availability kümesinin %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) hizmetleri %HA_REMOTE_HOST_SN%'ye aktarıldı
+
+Sayın kullanıcı,
+
+Sistem high-availability kümesinin %HOSTNAME%  (SN: %HA_LOCAL_HOST_SN%) bir geçişini başlattı. Hizmetler %HA_REMOTE_HOST_SN% öğesine aktarılacaktır. Ayrıntılı bilgi için lütfen High Availability Manager Günlük sayfasını kontrol edin.
+
+Neden: %HA_FAILOVER_REASON%
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[aha_switchover_fail]
+Category: AHA,Important
+Title: High-availability kümesinin değişimi yapılamadı
+Subject: High-availability kümesinin %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) hizmetleri %HA_REMOTE_HOST_SN%'ye aktarılamadı
+
+Sayın kullanıcı,
+
+Sistem high-availability kümesinde %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) bir geçiş yapmaya çalıştı. Ancak, hizmetler pasif sunucuya (SN: %HA_REMOTE_HOST_SN%) aktarılamadı. Ayrıntılı bilgi için lütfen High Availability Manager Günlük sayfasını kontrol edin.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[aha_takeover]
+Category: AHA,Important
+Title: High-availability kümesi üstlenme
+Subject: High-availability kümesinde %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) hatalar algılandı.
+
+Sayın kullanıcı,
+
+High-availability kümesinde %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) hatalar algılandı. Hizmetler pasif sunucuya aktarılacaktır. Ayrıntılı bilgi için lütfen High Availability Manager Günlük sayfasını kontrol edin.
+
+Hata: %HA_FAILOVER_REASON%
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[aha_upgrade_fail]
+Category: AHA,Important
+Title: High-availability kümesi yükseltilemedi
+Subject: High-availability kümesi %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) yükseltilemedi.
+
+Sayın kullanıcı,
+
+High-availability kümesi %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) yükseltilemedi. Ayrıntılı bilgi için lütfen High Availability Manager Günlük sayfasını kontrol edin.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[aha_upgrade_passive_fail]
+Category: AHA,Important
+Title: Pasif sunucu yükseltilemedi
+Subject: High-availability kümesinin %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) pasif sunucusu yükseltilemedi.
+
+Sayın kullanıcı,
+
+High-availability kümesinin %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) pasif sunucusu yükseltilemedi. Ayrıntılı bilgi için lütfen High Availability Manager Günlük sayfasını kontrol edin.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[aha_welcome]
+Category: AHA
+Title: High-availability kümesi çalışıyor
+Subject: High-availability kümesi %HOSTNAME% şimdi %HA_LOCAL_HOST_SN% üzerinde hizmetleri çalıştırıyor.
+
+Sayın kullanıcı,
+
+High-availability kümesi %HOSTNAME% hizmetleri şu anda %HA_LOCAL_HOST_SN% üzerinde çalışıyor. Ayrıntılı bilgi için lütfen High Availability Manager Günlük sayfasını kontrol edin.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[disk_health_monthly_report]
+Subject: %HOSTNAME% üzerindeki Aylık Disk Sağlığı Raporu
+
+Sayın kullanıcı,
+
+Aşağıdakiler %HOSTNAME% üzerindeki disklerin sağlığı hakkındaki aylık raporunuzdur. Ayrıca Depolama Yöneticisi > HDD/SSD > Sağlık Bilgisi öğesinde disklerin sağlığını da kontrol edebilirsiniz.
+
+%CONTENT%
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[eSynoscheduler_complete_task]
+Subject: Görev Programlayıcı tetiklenmiş bir görevi tamamladı
+
+Sayın kullanıcı,
+
+Görev Programlayıcı tetiklenmiş bir görevi tamamladı.
+
+Görev: %TASK%
+Başlangıç zamanı: %START_TIME%
+Bitiş zamanı: %END_TIME%
+Geçerli durum: %EXIT_CODE%
+Standart çıkış/hata:
+%OUT_PUT%
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[ext4_fs_err]
+Category: System,Important
+Title: Dosya sistemi hatası
+Subject: %HOSTNAME% üzerinde dosya sistemi hatası algılandı
+
+Sayın kullanıcı,
+
+%VOLUME_ID% birimi üzerinde bir dosya sistemi hatası algılandı. Lütfen en kısa sürede bunu onarmak için Depolama Yöneticisine gidin.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[file_cksum_err]
+Category: System,Important
+Title: Kontrol toplamı hatası
+Subject: %HOSTNAME% üzerinde kontrol toplamı hatası. Lütfen daha fazla bilgi için Günlük Merkezi'ni kontrol edin.
+
+Sayın kullanıcı,
+
+%FILE_PATH% dosyasında bir kontrol toplamı hatası saptandı. Dosyayı onarmak için lütfen daha önce yedeklenen bir versiyonu kullanın.
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[iSCSILunScheduleSnapshotFail]
+Category: Storage,Important
+Title: Bir iSCSI LUN için bir anlık görüntü alınamadı
+Subject: iSCSI LUN %LUNNAME% için %HOSTNAME% üzerinde bir anlık görüntü alınamadı
+
+Sayın kullanıcı,
+
+%HOSTNAME% üzerinde bir iSCSI LUN anlık görüntüsü alınamadı. Lütfen ayrıntılı bilgi için Depolama Yöneticisi'ni kontrol edin.
+
+LUN: %LUNNAME%
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[widget]
+eunit	=	"Genişletme birimi"
+link_fail	=	"Bağlantı hatası"
+

@@ -1,0 +1,84 @@
+ <!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Legg til en harddisk i et volum eller en diskgruppe - Synology DSM Hjelp</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="This article walks you through the steps to add an additional hard drive to an existing volume or disk group on your DiskStation.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script> <script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Legg til en harddisk for å utvide lagringskapasiteten</h2>
+
+<p>Hvis det finnes tomme harddiskåpninger på din DiskStation, kan du installere ytterligere harddisker og legge dem til i et eksisterende volum eller diskgruppe. Denne artikkelen gir deg instruksjoner for å utvide et eksisterende volum eller diskgruppe ved å installere ytterligere harddisker.</p>
+
+<h3>Før du starter</h3>
+
+<p>Før du starter, må du kontrollere at harddiskene du vil legge til oppfyller følgende krav til størrelse:</p>
+<ul>
+  <li><strong>For SHR:</strong> Kapasiteten til harddisken du vil legge til må være lik eller større enn den største harddisken i volumet eller diskgruppen, eller være lik harddiskene i volumet eller diskgruppen. For eksempel, hvis SHR-volumet består av tre harddisker – 2 TB, 1,5 TB, and 1 TB – må kapasiteten på den nye harddisken være minst 2 TB eller lik 1,5 TB eller 1 TB.</li>
+  <li><strong>For RAID 5 og RAID 6:</strong> Kapasiteten på harddisken du ønsker å legge til må være lik eller større enn den minste harddisken på volumet eller diskgruppen. For eksempel, hvis volumet består av tre harddisker – 2 TB, 1,5 TB, and 1 TB – må kapasiteten på den nye harddisken være minst 1 TB.</li>
+</ul>
+
+<div class="section">
+<h4>Kontroller volumstatus</h4>
+
+<p>Kontroller at statusen til volumet eller diskgruppen er <strong>Normal</strong>. Hvis ikke, må du først reparere det/den.</p>
+</div>
+
+
+<h3>  Legg til en harddisk i et volum eller en diskgruppe</h3>
+
+<p>Harddisker kan legges til i følgende RAID-typer: </p>
+
+<ul>
+<li>Synology Hybrid RAID (SHR)</li>
+<li>JBOD</li>
+<li>RAID 5</li>
+<li>RAID 6</li>
+</ul>
+
+<div class="section">
+<h4>Merk:</h4>
+<p>For SHR-volum blir lagringskapasiteten kun utvidet når du legger til harddisker i et volum med to eller flere harddisker.</p>
+</ul>
+</div>
+
+<h4>Slik legger du til en harddisk i et volum eller en diskgruppe:</h4>
+
+<ol>
+<li>Skru av din DiskStation. (Hopp over dette trinnet hvis din DiskStation støtter hot-swapping.)</li>
+<li>Sett inn en ny harddisk i en tom harddiskåpning.</li>
+
+<div class="section">
+<h4>Merk:</h4>
+<p>For å unngå å gjøre skade på deg selv eller din DiskStation, må du følge instruksjonene for harddiskinstallering i <i>Installasjonsveiledning</i> for ditt Synology-produkt.</p>
+</div>
+
+<li>Skru på din DiskStation.</li>
+<li>Logg inn på DSM med en konto som tilhører <strong>administrators</strong>-gruppen.</li>
+<li>Åpne <strong>Lagringshåndtering</strong>.</li>
+<img src="about:blank" class="help_image"/>
+
+<li>Deretter gjør du følgende:</li>
+  <ul class="list_abc">
+    
+  <li>Hvis du utvider et enkeltvolum, går du til fanen <strong>Volum</strong>. Velg volumet du ønsker å utvide. Klikk på <strong>Administrer</strong> og fortsett til neste trinn. </li>
+<img src="about:blank" class="help_image"/>
+    
+  <li>Hvis du utvider en diskgruppe, går du til fanen <strong>Diskgruppe</strong>. Velg diskgruppen du vil utvide. Klikk på <strong>Administrer</strong> og fortsett til neste trinn.</li>
+<img src="about:blank" class="help_image"/>
+  </ul>
+<li>Velg <strong>Utvid volumet (eller diskgruppen) ved å legge til harddisker</strong>. Deretter klikker du på <strong>Neste</strong>.</li>
+<img src="about:blank" class="help_image"/>
+<li>Velg harddiskene du vil utvide volumet eller diskgruppen med. Du kan legge til harddisker ved å merke av i de korresponderende boksene. Deretter klikker du på <strong>Neste</strong>.</li>
+<img src="about:blank" class="help_image"/>
+<li>Følg trinnene i veiviseren for å fullføre.</li>
+</ol>
+</body>
+</html>

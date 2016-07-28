@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Creazione di una cartella condivisa - Guida Synology DSM</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="Shared folders are the basic directories where you can store and manage files and folders on your DiskStation. This article shows you how to create a shared folder.">
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2>Creazione di una cartella condivisa</h2>
+<p>Le cartelle condivise sono directory di base dove è possibile salvare e gestire i file e cartelle sulla DiskStation. Prima di salvare qualsiasi file, è necessario creare almeno una cartella condivisa in DSM. </p>
+
+<h4>Per creare una cartella condivisa:</h4>
+<ol>
+	<li>Andare su <strong>Pannello di controllo</strong> > <strong>Cartella condivisa</strong> e fare clic su <strong>Crea</strong>.<br /><img src="about:blank" class="help_image"/></li>
+	<li>Specificare un nome e una descrizione per la cartella condivisa.<br /><img src="about:blank" class="help_image disable-bromolow disable-grantley disable-avoton disable-braswell disable-broadwell disable-kvmx64"/><img src="../../../online_img/dsm/AdminCenter/file_share_create/howto571-5.png" class="help_image enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64"/></li>
+	<li>Selezionare un volume in cui creare la cartella condivisa (saltare questo passaggio solo se esiste un solo volume).<br /><img src="about:blank" class="help_image disable-bromolow disable-grantley disable-avoton disable-braswell disable-broadwell disable-kvmx64"/><img src="../../../online_img/dsm/AdminCenter/file_share_create/howto571-6.png" class="help_image enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64"/></li>
+	<li>Modificare le seguenti opzioni, se necessario:<br /><img src="about:blank" class="help_image disable-bromolow disable-grantley disable-avoton disable-braswell disable-broadwell disable-kvmx64"/><img src="../../../online_img/dsm/AdminCenter/file_share_create/howto571-7.png" class="help_image enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64"/>
+		<ul>
+			<li><strong>Nascondere questa cartella condivisa in "La Mia Rete":</strong> Evitare che la cartella condivisa appaia in “Rete” in Windows File Explorer. Questa opzione non influisce sui privilegi di accesso della cartella condivisa.
+				<div class="section"><h4>Nota:</h4>
+				<p>nascondere una cartella condivisa in "La Mia Rete" non influisce sui diritti di accesso ad essa. Il diritto di accesso di una cartella condivisa nascosta resta invariato. Gli utenti che dispongono dei diritti di accesso alla cartella condivisa possono ancora accedervi immettendo "\\nome server\nome cartella condivisa".</p>
+				</div>
+			</li>
+			<li><strong>Nascondi sottocartelle e file da utenti senza autorizzazioni</strong> Quando viene abilitato <strong>Nascondi sottocartelle e file da utenti senza autorizzazioni</strong>, se un utente che non dispone dei privilegi di lettura tenta di accedere a una cartella condivisa tramite il protocollo Condivisione file di Windows, l'utente non sarà in grado di visualizzare le cartelle o i file nella cartella condivisa. In questo modo si evita di confondere gli utenti quando si connettono ai prodotti Synology e non possono accedere a file e sottocartelle.
+				<div class="section"><h4>Nota:</h4>
+				<ul>
+					<li>questa funzione è supportata solo tramite il protocollo di condivisione file di Windows.</li>
+					<li>È possibile modificare le impostazioni dei privilegi di ciascuna cartella e file in File Station facendo clic con il tasto destro sull'elemento. Scegliere <strong>Proprietà</strong> dal menu a discesa e fare clic sulla scheda <strong>Autorizzazione</strong>.</li>
+					<li>La cartella condivisa stessa non sarà nascosta dagli utenti senza autorizzazione abilitando <strong>Nascondi sottocartelle e file da utenti senza autorizzazioni</strong>. Solo sottocartelle e file in questa cartella condivisa saranno nascosti.</li>
+				</ul>
+				</div>
+			</li>
+		</ul>
+	</li>
+	<li><strong>Abilitazione del cestino:</strong> Quando i file nella cartella condivisa sono eliminati, vengono spostati in una cartella chiamata <strong>#recycle</strong>. L'accesso al cestino può essere limitato agli utenti appartenenti al gruppo <strong>administrators</strong>.</li>
+	<a name="sharequota"></a><li class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64"><strong>Abilita quota cartella condivisa:</strong> per specificare la capacità massima di ogni cartella condivisa, spuntare la casella <strong>Abilita quota cartella condivisa</strong> e inserire la capacità massima (es. 10 GB) nel campo seguente.
+		<div class="section"><h4>Nota:</h4>
+		<ul>
+			<li>solo quando l'archivio utilizza il file system BTRFS, l'opzione <strong>Abilita quota cartella condivisa</strong> saranno disponibili per le cartelle condivise.</li>
+			<li>L'utilizzo dell'archiviazione combinata delle directory <strong>home</strong> di tutti gli utenti non supera la quota di “<strong>homes</strong>”.</li>
+		</ul>
+		</div>
+	</li>
+	<a name="integrity_protection"></a><li class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64"><strong>Abilita protezione dell'integrità dei dati avanzata:</strong> per proteggere una cartella condivisa con le strategie <strong>Somma di controllo CRC32</strong> e <strong>copy-on-write</strong>, è possibile <strong>abilitare protezione dell'integrità dei dati avanzata</strong> durante la creazione della cartella condivisa. La somma di controllo CRC32 è applicata al controllo se i dati restano identici a quando sono stati scritti inizialmente e comunicherà all'utente il rilevamento di qualsiasi corruzione. Copy-on-write consente di migliorare la coerenza dei dati in caso di arresto anomalo del sistema.
+		<div class="section"><h4>Nota:</h4>
+		<ul>
+			<li>Quest'opzione è disponibile soltanto per i volumi che utilizzano il file system Btrfs.</li>
+			<li>È possibile abilitare/disabilitare quest'opzione per ogni cartella condivisa durante la relativa creazione. Quest'opzione non può essere modificata dopo la creazione della cartella condivisa.</li>
+			<li>Se file, quali i database, sono costantemente modificati e aggiornati, la quantità di file frammentati potrebbe aumentare a causa copy-on-write. Si consiglia di disabilitare quest'opzione per migliorare le prestazioni.</li>
+		</ul>
+		</div>
+	</li>
+    <a name="btrfs_compression"></a><li class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64"><strong>Abilita compressione file</strong>: i dati nella cartella condivisa creata saranno compressi automaticamente dal file system Btrf per salvare lo spazio di archiviazione. Quando sono recuperati per l'uso, i dati vengono decompressi automaticamente.
+		<div class="section"><h4>Nota:</h4>
+		<ul>
+			<li>Quest'opzione è disponibile solo quando si crea una cartella condivisa in un volume Btrfs o quando l'opzione <strong>Protezione integrità dati avanzata</strong> è abilitata.</li>
+			<li>Quest'opzione non può essere modificata dopo la creazione della cartella condivisa.</li>
+			<li>La velocità di compressione varia con i tipi di dati: I file di testo presentano la velocità di compressione più elevata, mentre i file multimediali (es. immagini, musica o video) potrebbero non essere correttamente compressi in quanto sono già compressi per l'output.</li>
+		</ul>
+		</div>
+	</li>
+	<li><strong>Crittografa questa cartella condivisa:</strong> se si desidera codificare la cartella condivisa, procedere come segue:
+		<ol>
+			<li>Specificare e confermare una nuova chiave di crittografia. La chiave di crittografia non può includere virgole (,) o segni uguale (=). </li>
+			<li>Se necessario, selezionare la casella <strong>Montaggio automatico all'avvio</strong> per montare la cartella crittografata automaticamente quando il sistema si avvia. Se l'opzione è disabilitata, la cartella crittografata condivisa sarà smontata al successivo avvio di DiskStation. Per vedere o accedere a una cartella condivisa non montata, sarà necessario montare manualmente la cartella importando o inserendo la chiave di codifica.</li>
+		</ol>
+	</li>
+	<li>Fare clic su <strong>OK</strong> per terminare.</li>
+</ol>
+
+<div class="section"><h4>Regole per i nomi della cartella condivisa:</h4>
+<ul>
+	<li>I nomi della cartella condivisa non fanno la distinzione tra lettere minuscole e maiuscole e possono comprendere tra 1-32 caratteri. I nomi non possono contenere i seguenti caratteri: <strong>! " # $ % & ' ( ) * + , / : ; <= > ? @ [ ] \ ^ ` { } | ~</strong></li>
+	<li>I seguenti nomi sono riservati per il sistema: <strong>.</strong>, <strong>..</strong>, <strong>global</strong>, <strong>home</strong>, <strong>homes</strong>, <strong>printers</strong>, <strong>public</strong>, <strong>satashare</strong>, <strong>surveillance</strong>, <strong>usbbackup</strong>, <strong>usbshare</strong>. </li>
+	<li>Il primo carattere di una cartella condivisa non può essere un segno meno o uno spazio; l'ultimo carattere non può essere uno spazio.</li>
+	<li>La cartella condivisa <strong>descrizione</strong> è limitata a maiuscole e minuscole, visualizzabili fino a 64 caratteri Unicode.</li>
+</ul>
+</div>
+
+
+<div class="section"><h4>Crittografia cartelle condivise:</h4>
+<p>La crittografia AES 256-bit protegge i dati bloccando tutti i tentativi di accesso non autorizzati. Dopo la crittografia, senza l'apposita chiave di crittografia, gli utenti non potranno accedere alla cartella condivisa o modificarne i dati crittografati, anche rimuovendo i dischi rigidi da DiskStation e montandoli su un altro dispositivo.</p>
+</div>
+
+<div class="section"><h4>Nota:</h4>
+<ul>
+	<li>Le cartelle condivise possono essere crittografate solo al momento della creazione. </li>
+	<li>I nomi dei file e delle cartelle nelle cartelle condivise crittografate non possono superare i 143 caratteri inglesi e 43 caratteri asiatici.</li>
+	<li>Le cartelle condivise crittografate non sono accessibili via NFS.</li>
+	<li>Se si ripristinano le password predefinite usando il pulsante di ripristino posto su DiskStation, le cartelle condivise crittografate verranno smontate, e l'opzione di montaggio automatico delle cartelle condivise crittografate verrà disabilitata.</li>
+	<li class="enable-dockerx64">Le cartelle condivise crittografate sono supportate solo nella modalità privilegi elevati. Per usare questa funzione, andare nel pacchetto Docker del DSM host, selezionare il <strong>Docker DSM</strong> per cui abilitare le cartelle condivise crittografate, fare clic su <strong>Modifica</strong> e spuntare le caselle accanto <strong>Esegui contenitore utilizzando i privilegi elevati</strong>.</li>
+</ul>
+</div>
+
+</body>
+</html>

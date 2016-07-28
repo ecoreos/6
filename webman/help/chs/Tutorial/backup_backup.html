@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+<meta content="en-us" http-equiv="Content-Language" />
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+<title>备份 Synology NAS 中的数据以确保数据安全</title>
+</head>
+
+<body class="tutorial-content-box" >
+
+<h1>备份 Synology NAS</h1>
+<div class="tutorials_content">
+<img src="../../images/Backup/1x/Backup/back_up_your_data_on_synology_nas_to_ensure_data_security.jpg" />
+<h2>总览</h2>
+<p>硬件故障造成的意外数据丟失或自然灾害对重要数据的潜在威胁，尤其在没有可靠备份解决方案的情况下。<strong>Hyper Backup</strong> 提供了直观和完整的备份/还原解决方案，以帮助您保留/还原重要数据副本以及从一个时间点还原应用程序和系统配置。支持以下存储目的地：</p>
+
+<ul>
+<li><strong>本地共享文件夹 (包括连接到 DiskStation 的外接存储设备)</strong></li>
+<li><strong>远程 Synology NAS</strong></li>
+<li><strong>远程 rsync 服务器</strong></li>
+<li><strong>远程 OpenStack Swift 服务器</strong></li>
+<li><strong>公共云 (Amazon S3、Microsoft Azure 和 OpenStack Swift 等)</strong></li>
+</ul>
+</div>
+
+<div class="section">
+<h4>注：</h4>
+<p>Hyper Backup 只能备份特定系统配置和应用程序。要了解更多信息，请咨询 Hyper Backup 的帮助文档。</p>
+</div>
+
+
+<h3 class="list_head">1. 创建本地备份到本地共享文件夹/外接存储设备</h3>
+<p><strong>Hyper Backup</strong> 提供了在不同的目的地类型之间类似的备份和还原程序。以下我们将介绍如何备份和还原本地数据，供您在执行其它任务时参考。</p>
+
+<ol>
+<li>登录 DSM 并找到套件 <strong>Hyper Backup</strong>。</li>
+<li>单击左下角的 <strong>+</strong>，然后选择<strong>数据备份任务</strong>。</li>
+<li>若要设置本地备份任务，选择<strong>本地共享文件夹</strong>。</li>
+<img src="../../images/Backup/1x/Backup/1.png" width="600" alt=""/>
+<li>选择<strong>创建备份任务</strong>并选择本地共享文件夹或连接到 DiskStation 的外接存储设备。</li>
+<img src="../../images/Backup/1x/Backup/2.png" width="600" alt=""/>
+<li>选择源文件夹以备份所含的数据。如果选择加密共享文件夹，则必须在备份过程保持装载。如果来源和目的地在同一卷上，则系统将用橙色感叹号来标记此类源文件夹。</li>
+<img src="../../images/Backup/1x/Backup/3.png" width="600" alt=""/>
+<li>选择要备份的应用程序。</li>
+<img src="../../images/Backup/1x/Backup/4.png" width="600" alt=""/>
+<li>指定以下备份设置以适合您的需求：
+  <ul>
+<li><strong>任务</strong>：为备份任务命名。</li>
+<li><strong>启用任务通知</strong>：选择将任务状态通过电子邮件、短信或推送服务通知您。</li>
+<li><strong>启用配置备份</strong>：备份系统配置 (如，用户证书信息)。对所有 DSM 用户默认强制执行此设置。</li>
+<li><strong>压缩备份数据</strong>：压缩备份数据可降低目标存储器的使用率。如果选择此选项，则需要更多的备份时间。</li>
+<li><strong>启用传输加密</strong> (仅适用于远程备份)：选择在传输到远程目的地 (如 rsync 服务器或公共云) 的过程中对备份数据进行加密。</li>
+<li><strong>Multipart Upload 文件拆分大小</strong> (仅适用于 S3 兼容服务器)：备份数据除以特定块大小。</li>
+<li><strong>启用客户端加密</strong>：选择通过密码保护备份数据以免在目标侧受到不需要的访问。</li>
+    
+<li><strong>启用备份计划</strong>：选择计划何时自动执行备份任务。</li>
+  </ul>
+  </li>
+  
+<img src="../../images/Backup/1x/Backup/5.png" width="600" alt=""/>
+<li>选择<strong>启用备份循环</strong>以设置循环计划：
+  
+  <ul>
+<li><strong>从最早的版本</strong>：当超出指定的<strong>版本数量</strong>后将删除最早的备份版本。</li>
+<li><strong>Smart Recycle</strong>：系统将保留每个备份版本，直至超出指定的版本数量。当循环被触发后，系统将先循环不符合任何条件的版本；如果所有已有的版本都符合以下条件，系统将循环最早的版本。
+  <ul>
+<li><strong>过去 24 小时，每小时的版本</strong>：系统会保留每个小时最早创建的备份版本。</li>
+<li><strong>过去 1 天至 1 个月内，每天的版本</strong>：系统会保留每天最早创建的备份版本。</li>
+<li><strong>较早 1 个月，每周的版本</strong>：系统会保留每周最早创建的备份版本。</li>
+  </ul>
+  
+  </li>
+<li><strong>版本数量</strong>：设置可能保留备份版本的上限。</li>
+<li>时间线：显示根据备份计划和循环方案而得到可能的备份保留结果：</li>
+  </ul>
+</li>
+
+<img src="../../images/Backup/1x/Backup/6.png" width="600" alt=""/>
+<li>单击<strong>完成</strong>来完成设置。</li>
+<li>若要立即执行备份任务，按备份向导的指示操作，并单击<strong>是</strong>。</li>
+</ol>
+
+
+<h3 class="list_head">2. 从本地共享文件夹/外接存储设备还原单个文件</h3>
+
+
+<ol>
+<li>进入<strong>Hyper Backup</strong>，在左侧面板上选择所需的备份任务，并单击<strong>备份资源管理器</strong> (放大镜图标)。如果任务受客户端加密的保护，请输入密码。</li>
+<img src="../../images/Backup/1x/Backup/Single_1.png" width="600" alt=""/>
+<li>找到并选择所需的文档以还原。您还可选择所需的版本以通过时间轴还原。</li>
+<img src="../../images/Backup/1x/Backup/Single_2.png" width="600" alt=""/>
+<li>单击<strong>还原</strong>可还原所选的文件/文件夹。</li>
+
+</ol>
+
+
+
+<h3 class="list_head">3. 将所有任务还原到所需的时间点</h3>
+
+<ol>
+<li>单击左下角的<strong>还原</strong>，然后单击<strong>数据</strong>。如果任务受客户端加密的保护，请输入密码。</li>
+
+<img src="../../images/Backup/1x/Backup/Restore_1.png" width="600" alt=""/>
+<li>选择要还原的任务。若要从其它存储库还原数据，请选择<strong>从其它存储库还原</strong>并找到任务以还原。</li>
+<img src="../../images/Backup/1x/Backup/Restore_2.png" width="600" alt=""/>
+<li>选择是否还原系统配置。如果您选择<strong>还原系统配置</strong>，请选择以下列表中的特定配置以还原。</li>
+<img src="../../images/Backup/1x/Backup/Restore_3.png" width="600" alt=""/>
+
+<li>找到并选择目标文件/任务以还原。您还可选择所需的版本以通过时间轴还原。</li>
+<img src="../../images/Backup/1x/Backup/Restore_4.png" width="600" alt=""/>
+<li>选择要还原的应用程序</li>
+<img src="../../images/Backup/1x/Backup/Restore_4.5.png" width="600" alt=""/>
+<li>将显示基本还原信息。</li>
+<img src="../../images/Backup/1x/Backup/Restore_5.png" width="600" alt=""/>
+<li>单击<strong>应用</strong>开始还原。</li>
+</ol>
+
+
+
+
+
+
+<div class="page-info">
+  <ul>
+<li>此主题中的前一个：<a href="backup_from_computer.html">使用 Cloud Station 在您的 PC/Mac 上备份数据</a> </li>
+  </ul>
+</div>
+</body>
+
+</html>

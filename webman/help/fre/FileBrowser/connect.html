@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Se connecter à des serveurs de fichiers différents avec File Station - Aide de Synology DSM</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="Learn how to customize File Station settings related to file management, shared links, and security.">
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Connexion à distance</h2>
+<p>Dans File Station, vous pouvez vous connecter à des services cloud publics (Box, Dropbox, Google Drive et Microsoft OneDrive) et à des serveurs de fichiers via toute une gamme de différents protocoles (FTP, STFP, WebDAV et WebDAV HTTPS).</p>
+<h4>Pour vous connecter à un service cloud :</h4>
+<ol>
+  <li>Accéder à <strong>Outils</strong> > <strong>Connexion à distance</strong> > <strong>Configuration de la connexion</strong>.</li>
+  <li>Choisissez le service cloud souhaité en cliquant sur l'icône, puis sur <strong>Suivant</strong>.</li>
+  <li>Dans la fenêtre contextuelle, suivez les instructions de l'assistant pour l'authentification du compte.</li>
+  <li>Une fois la configuration terminée, le service cloud cible s'affiche dans le volet de gauche.</li>
+</ol>
+<div class="section">
+<h4>Limitations propres au cloud :</h4>
+<ul>
+<li><strong>Box</strong> :
+<ul>
+  <li>Un catalogue partagé avec d'autres collaborateurs prend un suffixe composé du nom d'utilisateur du propriétaire.</li>
+  <li>Si des catalogues partagés avec d'autres collaborateurs utilisent un nom identique (un nom de catalogue avec pour suffixe le nom d'utilisateur du propriétaire), un seul de ces catalogues est affiché.</li>
+  <li>Vous ne pouvez ouvrir des fichiers portant ces extensions qu'avec Box : .gdoc, .gsheet et .boxnote.</li>
+  <li>Les noms de fichier sont sensibles à la casse.</li>
+  <li>Pour une configuration appropriée du pare-feu, veuillez vous reporter à <a href="https://support.box.com/hc/articles/200523728-Configuring-a-Firewall-for-Box-or-Box-Sync"  target="_blank">cet article</a>.</li>
+</ul>
+</li>
+<li><strong>Dropbox</strong> :
+<ul>
+<li>Il est impossible d'afficher un catalogue Dropbox s'il comporte plus de 25 000 fichiers.</li>
+<li>Il est impossible de renommer un catalogue Dropbox s'il comporte plus de 10 000 fichiers.</li>
+<li>Il est impossible de transférer des fichiers de plus de 10 Go.</li>
+<li>La tâche de chargement échoue si le transfert du fichier cible prend plus de 24 heures.</li>
+<li>Les noms de fichier sont sensibles à la casse.</li>
+<li>Pour une configuration appropriée du pare-feu, veuillez vous reporter à <a href="https://www.dropbox.com/help/23"  target="_blank">cet article</a>.</li>
+</ul>
+</li>
+<li><strong>Google Drive</strong> :
+<ul>
+  <li>Les fichiers/dossiers dont le chemin d'accès comporte plus de 2048 caractères ne s'affichent pas.</li>
+  <li>Les fichiers dont le nom comporte plus de 255 caractères ne s'affichent pas.</li>
+  <li>Les fichiers/catalogues portant un nom identique sont indiqués avec des heures de création individuelles.</li>
+<li>Si vous ouvrez un fichier propre à Google (par ex., Google Docs et Google Slides) via File Station, une URL s'affiche et vous permet d'accéder au fichier cible.</li>
+<li>Les dossiers <strong>My Drive</strong> et <strong>Starred</strong> affichés dans File Station correspondent respectivement aux dossiers « Mon Drive » et « Suivi » de Google Drive.</li>
+<li>Pour une configuration appropriée du pare-feu, veuillez vous reporter à <a href="https://support.google.com/drive/answer/2589954"  target="_blank">cet article</a>.</li>
+</ul>
+</li>
+<li><strong>Microsoft OneDrive</strong> :
+<ul>
+<li>Les fichiers de carnet OneNote ne s'affichent pas.</li>
+<li>Il est impossible de transférer des fichiers de plus de 10 Go.</li>
+<li>Il est possible que les fichiers (e.g., .png, .jpg, .docx, .pdf) affichent des tailles plus importantes (La taille originale plus la taille de la miniature). Cela n'a aucun effet sur la taille des fichiers originaux lorsque vous les téléchargez.</li>
+<li>Les noms de fichier sont sensibles à la casse.</li>
+</ul>
+</li>
+</ul>
+<p>Pour prendre connaissance de davantage de limitations, nous vous suggérons d'accéder au site Web officiel du service cloud concerné.</p>
+</div>
+<h4>Pour se connecter à un serveur de fichiers :</h4>
+<ol>
+  <li>Accéder à <strong>Outils</strong> > <strong>Connexion à distance</strong> > <strong>Configuration de la connexion</strong>.</li>
+  <li>Choisissez le protocole du serveur souhaité en cliquant sur l'icône, puis sur <strong>Suivant</strong>.</li>
+  <li>Fournissez les informations suivantes pour compléter la configuration :
+  <ul>
+  <li><strong>Nom d'hôte ou IP</strong> : Saisissez le nom d'hôte ou l'adresse IP du serveur de fichiers cible.</li>
+  <li><strong>Port</strong> : Saisissez le numéro de port du serveur de fichiers cible.</li>
+  <li><strong>Utilisateur</strong> et <strong>Mot de passe</strong> : Saisissez ces informations de connexion si le serveur de fichiers cible nécessite un compte/mot de passe</li>
+  <li><strong>Page de code</strong> : Sélectionnez le codage des caractères du serveur de fichiers cible pour afficher correctement les noms de fichiers.</li>
+  <li><strong>Nom du profile</strong> : Saisissez un nom unique afin d'identifier facilement ce serveur de fichiers.</li>
+  <li><strong>Utiliser une connexion WebDAV HTTPS</strong> : Cette option n'est disponible que lorsque vous configurez un protocole WebDAV et que le client et le serveur de fichiers prennent tous deux en charge WebDAV HTTPS.</li>
+  <li><strong>Autoriser une seule connexion par utilisateur</strong> : Cette option n'est disponible que si vous configurez un protocole FTP ou SFTP. Cochez cette option pour optimiser la connectivité si le serveur possède des limitations relatives au nombre de connexions.</li>
+  </ul>
+  </li>
+<li>Cliquez sur <strong>Appliquer</strong> pour enregistrer les paramètres. Le serveur de fichiers cible s'affiche dans le volet de gauche.</li> 
+</ol>
+<h4>Pour modifier un service cloud existant ou un profil de serveur de fichiers :</h4>
+<ol>
+  <li>Accéder à <strong>Outils</strong> > <strong>Connexion à distance</strong> > <strong>Liste de connexion</strong>.</li>
+  <li>Cliquez sur le service cloud ou le serveur de fichiers cible pour les gestions suivantes :
+    <ul>
+      <li>Modification : Cliquez sur <strong>Modifier</strong>, modifiez la configuration du profil actuel, et cliquez sur <strong>OK</strong>.</li>
+      <li>Déconnexion : Cliquez sur <strong>Déconnecter</strong> pour mettre un terme à la connexion.</li>
+  <li>Reconnexion : Cliquez sur <strong>Connecter</strong> pour rétablir la connexion. (Vous pouvez également cliquer sur la cible dans le volet de gauche de File Station pour la reconnexion.)</li>
+  <li>Suppression : Cliquez sur <strong>Supprimer</strong>, puis confirmez l'abandon du profil. (Vous pouvez également cliquer sur la cible dans le volet de gauche de File Station et cliquez sur <strong>Supprimer</strong> pour la suppression.)</li>
+    </ul>
+  </li>
+  </ol>
+  
+  
+<div class="section">
+  <h4>Remarque :</h4>
+<ul>
+  <li>Chaque utilisateur peut se connecter simultanément à un maximum de 100 services cloud et serveurs de fichiers.</li>
+  <li>Veillez à sélectionner le bon code de page afin d'éviter les erreurs imprévues. Unicode est recommandé si vous ne connaissez pas la page de code du serveur.</li>
+  <li>Certaines fonctions de File Station (par exemple, compresser dans, extraire, aperçu, etc.) ne peuvent pas être appliquées aux fichiers stockés sur des services cloud ou des serveurs de fichiers.</li>
+<li>Les vitesses de transfert de chaque service cloud ou serveur de fichiers connecté sont soumises aux paramètres de limite de vitesse de l'utilisateur.</li>
+<li>Chaque utilisateur est limité à trois transferts de fichiers simultanés à travers tous les services cloud ou serveurs de fichiers connectés.</li>
+<li>Pour configurer les paramètres WebDAV, WebDAV HTTPS et des services cloud, accédez à <strong>Panneau de configuration</strong> > <strong>Réseau</strong> > <strong>Général</strong> > <strong>Proxy</strong>. Si vous avez modifié les paramètres de proxy pendant la connexion à un service cloud ou un serveur de fichiers, déconnectez-vous, puis reconnectez-vous.</li>
+<li>La modification des informations des services cloud ou des serveurs de fichiers connectés n'a aucune incidence sur l'état de la connexion.</li>
+<li>Pour de libérer des ressources de connexion, un service cloud/serveur de fichiers est automatiquement déconnecté si les fichiers contenus demeurent inchangés pendant plus de 30 minutes. Cliquez sur le service cloud/serveur de fichiers pour rétablir la connexion.</li>
+<li>Le système ne peut pas afficher des fichiers/dossiers qui adoptent les formats de nom suivants :
+  <ul>
+    <li>Commençant par <strong>._</strong> ou <strong>.SYNOPPSDB</strong></li>
+    <li>Comprenant <strong>/</strong></li>
+<li>Nommés exactement <strong>.</strong>&nbsp;&nbsp;&nbsp;&nbsp;<strong>..</strong>&nbsp;&nbsp;&nbsp;&nbsp;<strong>'</strong>&nbsp;&nbsp;&nbsp;&nbsp;<strong>"</strong>&nbsp;&nbsp;&nbsp;&nbsp;<strong>.DS_Store</strong>&nbsp;&nbsp;&nbsp;&nbsp;<strong>@eaDir</strong>&nbsp;&nbsp;&nbsp;&nbsp;<strong>@sharebin</strong>&nbsp;&nbsp;&nbsp;&nbsp;<strong>@tmp</strong>&nbsp;&nbsp;&nbsp;&nbsp;<strong>.SynologyWorkingDirectory</strong></li>
+  </ul>
+</li>
+<li class="enable-dockerx64">La connexion distante n'est prise en charge qu'en mode à privilèges élevés. Pour utiliser cette fonction, accédez au paquet Docker sur votre DSM hôte, sélectionnez le <strong>Docker DSM</strong> pour lequel vous souhaitez activer des dossiers partagés chiffrés, cliquez sur <strong>Modifier</strong> et cochez la case en regard de <strong>Exécuter le conteneur à l'aide de privilèges élevés</strong>.</li>
+</ul>
+</div>
+</body>
+</html>

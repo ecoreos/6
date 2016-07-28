@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+	<h2>Hot Spare</h2>
+	<p>A Hot spare (működés közben cserélhető) lemezek készenléti merevlemezek, amelyek a meghibásodott lemez automatikus cseréjével képesek megjavítani egy csökkent állapotú RAID Groupot. A hot spare lemezeket úgy is beállíthatja, hogy globálisan működjenek, azaz a(z) DiskStation eszköz bármely RAID Groupjának javítására alkalmasak legyenek. Egy hot spare lemez csak a következő kritériumokkal rendelkező RAID Group javítására képes:</p>
+	<ul>
+  <li>A RAID Groupnak adatvédelmet biztosítani RAID-típusba kell tartoznia (azaz RAID 1, RAID 5, RAID 6, RAID 10).</li>
+		<li>A hot spare lemez merevlemeztípusának meg kell egyeznie a RAID Group taglemezeinek típusával (azaz SATA, SAS).</li>
+		<li>A hot spare lemeznek azonos méretűnek vagy nagyobbnak kell lennie, mint a RAID Group legkisebb lemeze.</li>
+	</ul>
+
+	<h4>Hot spare lemezek kezelése:</h4>
+	<ol>
+		<li>Kattintson a <b>Kezelés</b> gombra.</li>
+		<li>Hot spare lemez hozzárendeléséhez keresse meg a jobb oldalon az <b>Elérhető lemezek</b> részt, majd jelölje be a hot spare lemezként hozzárendelni kívánt lemez melletti jelölőnégyzetet. Hot spare lemez eltávolításához törölje ugyanezt a jelölőnégyzetet. A beállítások mentéséhez kattintson az <b>Alkalmaz</b> gombra.</li>
+	</ol>
+	<p>
+<div class="section">
+<h4>Megjegyzés:</h4> 
+<ul>
+<li>Amikor egy hot spare lemez kijavít egy csökkent állapotú RAID Groupot, a hot spare lemezen található összes adat törlődik. Mielőtt hot spare lemezként állít be egy lemezt, ellenőrizze, hogy nincsenek-e rajta fontos adatok.</li>
+<li>A HDD-kből összeállított RAID kijavítását az SSD hot spare lemezek nem végzik el automatikusan, és fordítva.</li>
+</ul>
+</div>
+
+<h4>RAID Group hot spare-beállításainak konfigurálása:</h4>
+<ol>
+<li>Kattintson a <b>Konfigurálás</b> opcióra.</li>
+<li>A <b>Hot Spare célok</b> lapon megjelennek a hot spare lemezekkel védhető RAID Groupok. Ha törli a jelölőnégyzetek bejelölését, a megfelelő RAID Groupok állapotromlása esetén nem fog automatikus javítás történni a hot spare lemezekről.</li>
+<li>Az <b>Eszközközi hot spare</b> lapon engedélyezheti, hogy az egyik eszközhöz tartozó hot spare lemezek kijavítsanak egy másik eszközhöz tartozó csökkent állapotba lépett RAID-et.</li>
+<li>A beállítások mentéséhez kattintson az <b>OK</b> gombra.</li>
+</ol>
+
+</body>
+</html>

@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Win/Mac/NFS</title>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Serviço de arquivos do Windows</h2>
+<p>O serviço de arquivos do Windows permite que clientes Windows, Mac e Linux com suporte a SMB/CIFS acessem dados armazenados no DiskStation. Se você desejar procurar arquivos no DiskStation através do Windows Explorer ou montar pastas compartilhadas como unidades de rede, ative essa opção em <strong>Painel de controle</strong> > <strong>Serviços de arquivos</strong> > <strong>Win/Mac/NFS</strong>.</p>
+<h4>Para ativar o serviço de arquivos Windows:</h4>
+<ol>
+<li>
+Marque <b>Ativar serviço de arquivos Windows</b>.
+</li>
+<li>
+Clique em <b>Aplicar</b>.
+</li>
+</ol>
+<div class="section disable-hi3535">
+<h4>Nota:</h4>
+<p>Depois de habilitar o serviço de arquivos do Windows, você pode montar as pastas totalmente indexadas no seu computador Mac via SMB e usar o Spotlight no Finder para pesquisar o conteúdo dos arquivos nas pastas montadas.</p>
+</div>
+<h3>Grupo de trabalho</h3>
+<p>Esta opção permite que você designe um sistema como membro de um grupo de trabalho específico para fins de gerenciamento de rede.</p>
+<div class="section">
+<h4>Nota:</h4>
+<ul>
+<li>O nome de um grupo de trabalho pode conter de 1 a 15 caracteres. O nome não pode ter os seguintes caracteres: [ ] ; : &quot; < > * + = \ / | ? ,</li>
+<li>Se você estiver usando um Mac que executa o OS X 10.9 e seu DiskStation estiver ingressado em um domínio do Windows, poderá entrar adicionando <strong>localhost\</strong> antes do seu nome de usuário local do DiskStation para acessar arquivos armazenados no DiskStation através do serviço de arquivos do Windows.</li>
+</ul>
+</div>
+<h3 class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64">Desabilitar acesso a versões anteriores</h3>
+<p class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64">No Windows Explorer, os usuários podem acessar instantâneos de pastas ou arquivos clicando na guia <strong>Versões anteriores</strong> dentro de uma pasta compartilhada, o que permite a restauração ou cópia de dados sem a ajuda do administrador. Se você escolher <strong>Desabilitar acesso a versões anteriores</strong>, a página “Versões anteriores” não exibirá nenhuma informação.</p>
+<div class="section enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64"><h4>Observação:</h4>
+<ul>
+	<li>Os usuários têm permissão de acessar apenas uma versão anterior se, no momento em que o instantâneo correspondente à versão anterior foi tirado, suas contas de usuários foram criadas ou receberam permissão de leitura da pasta compartilhada à qual corresponde o instantâneo tirado.</li>
+</ul>
+</div>
+<h3>Ativação do registro de transferência</h3>
+<p>Marcar essa opção ativará o registro das operações de acesso a arquivos, incluindo criação, exclusão, leitura, gravação, transferência e renomeação de arquivos ou pastas através do protocolo CIFS/SMB, também conhecido como protocolo de transferência de arquivos do Windows.</p>
+<h3>Configurações avançadas</h3>
+<p>Clique no botão <strong>Configurações avançadas</strong> para ver as opções abaixo.</p>
+<ul>
+<li><strong>Servidor WINS</strong>: O Serviço de cadastramento na Internet do Microsoft Windows (WINS) é um serviço de mapeamento de nome NetBIOS para endereço de IP. Os usuários do Windows localizarão o sistema em redes TCP/IP com mais facilidade se o sistema tiver sido configurado para ser registrado em um servidor WINS.</li>
+<li><strong>Protocolo máximo para serviço de arquivos do Windows</strong>: Dependendo da sua configuração de rede, você pode definir o mais alto nível de protocolo que será suportado pelo seu DiskStation.
+  <ul>
+    <li><strong>Habilitar SMB 2</strong>: O SMB (Server Message Block) 2 tem suporte desde o Windows Vista e é uma versão aprimorada do SMB. O SMB 2 adiciona a capacidade de incorporar várias ações SMB em uma única solicitação a fim de reduzir o número de pacotes de rede e melhorar o desempenho.</li>
+    <li><strong>Habilitar SMB 2 com MTU grande</strong>: A unidade máxima de transmissão (MTU) refere-se à maior unidade de dados que pode ser transmitida através de um protocolo de comunicação. Para aproveitar interfaces de rede mais rápidas, como Ethernet de 1 ou 10 gigabits, a Large MTU aumenta a unidade de transmissão máxima para 1 MB. A ativação da Large MTU aumenta a velocidade e a eficiência da transferência de arquivos grandes e, ao mesmo tempo, reduz o número de pacotes que precisam ser processados.</li>
+    <li><strong>Habilitar SMB 3</strong>: O SMB 3 é suportado desde o Windows 8 e Windows Server 2012. Ele é uma versão aprimorada do SMB 2. O SMB 3 suporta a transmissão por criptografia de arquivo baseada em AES, aumentando assim a segurança da transferência de arquivos ponto a ponto.</li>
+</ul>
+<div class="section">
+  <h4>Nota:</h4>
+  <ul>
+    <li>O SMB 2 tem suporte no Windows Vista, no Windows Server 2008 R2, no Windows 7 e em versões mais recentes.</li>
+    <li>A Large MTU tem suporte no Windows Server 2008 R2, no Windows 7 e em versões mais recentes.</li>
+    <li>Para tornar eficiente o Large MTU em seu computador com Windows, será necessário modificar as configurações de registro do computador. Para obter mais detalhes, consulte o suporte técnico da Microsoft (por exemplo, este <a href="http://technet.microsoft.com/en-us/library/ff625695(v=ws.10).aspx" target="_blank">artigo</a>).</li>
+    </ul>
+</div>
+<li><strong>Modo de criptografia de transporte</strong>: Quando o SMB 3 é habilitado, o Serviço de arquivos do Windows adicionará criptografia de transporte para fortalecer a segurança da transmissão de arquivos.
+  <ul>
+    <li><b>Desabilitar</b>: Nenhuma criptografia de transporte será aplicada.</li>
+    <li><b>Automático</b>: A criptografia de transporte será aplicada apenas a clientes que suportam esse recurso.</li>
+    <li><b>Forçar</b>: A criptografia de transporte será aplicada sempre. Isso fará com que os clientes que não suportam a criptografia de transporte não consigam usar o serviço de arquivos do Windows.</li>
+  </ul>
+</li>
+<div class="section">
+  <h4>Nota:</h4>
+  <ul>
+    <li>A criptografia de transporte é suportada no Windows 8, Windows Server 2012 e em versões mais recentes.</li>
+    <li>O login anônimo no serviço de arquivos do Windows não é suportado quando a criptografia de transporte está habilitada.</li>
+    <li>Quando a criptografia de transporte for habilitada, deixe a opção <b>Desabilitar Opportunistic Locking</b> desmarcada para evitar atingir os tempos limite do aplicativo.</li>
+    </ul>
+</div>
+<li><strong>Desabilitar Opportunistic Locking</strong>: Marcar esta opção desabilita o &quot;Bloqueio oportunista&quot; do CIFS, resultando em melhor desempenho quando aplicativos de bancos de dados acessarem arquivos de bancos de dados na pasta compartilhada do dispositivo DiskStation pela rede.</li>
+<li>
+  <strong>Ativar Local Master Browser</strong>: Quando existem vários computadores com Windows na mesma sub-rede, eles negociarão e elegerão um computador como o &quot;local master browser&quot;. O local master browser mantém listas de outros computadores dentro da subrede e seus recursos compartilhados e compartilha essas listas com outros computadores. Essa opção permite que o DiskStation assuma o papel de local master browser.
+</li>
+<div class="section">
+<h4>Nota:</h4>
+<p>A habilitação desta função desabilita a hibernação do disco rígido e ativa a conta do convidado sem uma senha.</p>
+</div>
+<li><strong>Habilitar o módulo VFS DirSort</strong>: Classifica os nomes de pasta e lista-os em ordem alfabética. Ativar esta opção afeta o desempenho do sistema.</li>
+<li><strong>Arquivos de veto</strong>: Oculta os arquivos de acordo com os critérios especificados. Os critérios podem incluir curingas (*) e entradas múltiplas devem ser separadas por barras (/). Por exemplo: <i>/abc*/*.txt/*.conf/</i>. Ativar esta opção afeta o desempenho do sistema.</li>
+<li><strong>Permitir links simbólicos nas pastas compartilhadas</strong>: Ativar essa opção permite que links simbólicos apontem para arquivos ou pastas na mesma pasta compartilhada. Eles podem ser criados usando o terminal de DSM.</li>
+<li><strong>Permitir links simbólicos entre pastas compartilhadas</strong>: Ativar essa opção permite que os links simbólicos apontem para arquivos ou pastas em diferentes pastas compartilhadas. Eles podem ser criados usando o terminal de DSM. Observe que ativar esta opção pode permitir que usuários sem privilégios de acesso visualizem e acessem pastas compartilhadas que são alvo dos links simbólicos.</li>
+<li><strong>Habilitar o módulo VFS MSDFS</strong>: Permite que links simbólicos apontem para arquivos ou pastas localizadas em outros servidores SMB. Com versões mais antigas do Windows, como o Windows XP, o cliente e o DiskStation precisam participar de um domínio do Windows antes de ativar essa opção. Para saber mais sobre como criar os links MSDFS, consulte <a href="http://www.samba.org/samba/docs/man/Samba-HOWTO-Collection/msdfs.html" target=_blank>aqui</a>. Observe que o cache do dispositivo cliente deve ser limpo após desabilitar esta opção, ou o desempenho normal poderá ser afetado.</li>
+<li><strong>Desabilitar múltiplas conexões do mesmo endereço IP</strong>: Quando essa opção estiver ativada, o DiskStation só permite uma conexão por endereço IP de clientes usando o Serviço de arquivos do Windows. Quando vários clientes com o mesmo endereço IP usarem o Windows File Service, o DiskStation irá manter o mais recente e derrubar as conexões mais antigas. Em ambientes NAT, o cliente poderá usar um único endereço de IP, caso em que se ativar essa opção isso poderá afetar o desempenho normal.</li>
+<li><strong>Coletar registros de depuração</strong>: Quando essa opção for ativada, registros detalhados serão armazenados para fins de depuração. Ativar esta opção afeta o desempenho do sistema.</li>
+<li><strong>Aplique as permissões UNIX padrão</strong>: Habilite essa opção para aplicar as permissões UNIX padrão ao fazer upload ou criar arquivos e pastas. A permissão UNIX será 744 para arquivos e 755 para pastas. Quando essa opção é desativada, a permissão UNIX é 777 para arquivos e pastas.</li>
+<div class="section enable-eds14">
+<h4>Nota:</h4>
+<ul>
+<li>Habilitar essa opção pode causar problemas de permissão inconsistente entre os diferentes protocolos. Para evitar inconsistências, sugerimos deixar essa opção desabilitada.</li>
+</ul>
+</div>
+<div class="section disable-eds14">
+<h4>Nota:</h4>
+<ul>
+  <li>Para pastas compartilhadas com a ACL do Windows habilitada (todos os compartilhamentos, exceto &quot;foto&quot; e compartilhamentos em unidades externas), execute o comando <strong>chmod</strong> no cliente Linux ou FTP para alterar os tipos de permissão de arquivos e pastas da ACL do Windows para UNIX.</li>
+  <li>Habilitar essa opção pode causar problemas de permissão inconsistente entre os diferentes protocolos. Para evitar inconsistências, sugerimos deixar essa opção desabilitada.</li>
+</ul>
+</div>
+<li><b>Não reservar espaço em disco ao criar arquivos</b>: Habilite essa opção para não permitir que espaço em disco seja reservado ao se criar arquivos no seu DiskStation .</li>
+<li><strong>Apagar cache SMB</strong>: Clique neste botão para excluir os seguintes arquivos do cache SMB, para fins de solução de problemas:
+  <ul>
+<li>/var/cache/samba/netsamlogon_cache.tdb</li>
+<li>/var/lib/samba/winbindd_cache.tdb</li>
+<li>/var/lib/samba/share_info.tdb</li>
+<li>/var/lib/samba/registry.tdb</li>
+<li>/run/samba/connections.tdb</li>
+<li>/run/samba/gencacche.tdb</li>
+<li>/run/samba/gencache_notran.tdb</li>
+</ul>
+</li>
+</ul>
+</body>
+</html>

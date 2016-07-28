@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Výběr typu pole RAID – Nápověda Synology DSM</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="A brief overview describing what RAID types are supported by Synology DiskStation Manager (DSM).">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Výběr typu pole RAID</h2>
+
+<p>RAID (Redundant Array of Independent Disks) je technologie ukládání dat, která umožňuje vytvořit z více pevných disků jeden úložný prostor. Existují různé typy polí RAID a každý z nich nabízí jinou úroveň výkonu, kapacity úložiště a spolehlivosti.</p>
+
+<p>Tento článek obsahuje stručný přehled typů RAID podporovaných zařízením DiskStation, včetně požadavků na implementaci a jejich výhod a nevýhod.</p><!--1--><h3>Podpora typů polí RAID</h3>
+
+<p>Tato tabulka nabízí stručný přehled různých typů RAID podporovaných zařízením DiskStation, včetně kapacity úložiště, minimálního počtu pevných disků požadovaných pro daný typ pole RAID a počtu závad pevných disků, při kterém ještě nedojde ke ztrátě dat. </p>
+
+<table>
+
+  <tr>
+
+    <th>Typ svazku</th>
+    <th>Počet disků HDD</th>
+
+    <th>Tolerovatelný počet závad pevných disků</th>
+    <th>Popis</th>
+
+    <th>Kapacita svazku</th>
+
+  </tr>
+
+  <tr>
+
+    <td rowspan="3">SHR</td>
+    <td>1</td>
+
+    <td>0</td>
+    <td rowspan="3">
+    <div align="left">
+    <ul>
+    <li>Optimalizuje velikost svazku při kombinaci pevných disků různých velikostí.</li>
+    <li>Provádí redundanci dat, pokud se svazek skládá ze dvou nebo více pevných disků.</li>
+    <li>Doporučuje se začátečníkům.</li>
+    </ul>
+    </div>
+    </td>
+
+    <td>1 x (velikost disku HDD)</td>
+
+  </tr>
+  <tr>
+    <td>2–3</td>
+    <td>1</td>
+    <td rowspan="2">Optimalizováno systémem.</td>
+  </tr>
+  <tr>
+    <td>≧4</td>
+    <td>1–2</td>
+  </tr>
+  
+  <tr>
+
+    <td>Základní</td>
+    <td>1</td>
+
+    <td>0</td>
+    <td>
+    <div align="left">
+    <ul>
+    <li>Skládá se z jednoho pevného disku jakožto nezávislé jednotky.</li>
+    <li>Neumožňuje redundanci dat.</li>
+    </ul>
+    </div>
+    </td>
+
+    <td>1 x (velikost disku HDD)</td>
+
+  </tr>
+
+  <tr>
+
+    <td>JBOD</td>
+    <td>≧1</td>
+
+    <td>0</td>
+    <td>
+    <div align="left">
+    <ul>
+    <li>Jednotlivé pevné disky seskupuje do jednoho úložného prostoru, jehož kapacita se rovná součtu kapacit jednotlivých pevných disků.</li>
+    <li>Neumožňuje redundanci dat.</li>
+    </ul>
+    </div>
+    </td>
+
+    <td>Součet velikostí všech pevných disků HDD</td>
+
+  </tr>
+
+  <tr>
+
+    <td>RAID 0</td>
+    <td>≧2</td>
+
+    <td>0</td>
+    <td>
+    <div align="left">
+    <ul>
+    <li>Obsahuje funkci „proužkování“, proces, při kterém jsou data rozdělena do bloků a tyto bloky rozmístěny na více pevných discích, což zvyšuje výkonnost.</li>
+    <li>Neumožňuje redundanci dat.</li>
+    </ul>
+    </div>
+    </td>
+
+    <td>Součet velikostí všech pevných disků HDD</td>
+
+  </tr>
+
+  <tr>
+
+    <td rowspan="3">RAID 1</td>
+    <td>2</td>
+
+    <td>1</td>
+    <td rowspan="3">
+    <div align="left">
+    <ul>
+    <li>Simultánně na oba pevné disky zapisuje stejná data.</li>
+    <li>Umožňuje redundanci dat.</li>
+    </ul>
+    </div>
+    </td>
+
+    <td rowspan="3">Velikost nejmenšího disku HDD</td>
+
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>3</td>
+  </tr>
+
+  <tr>
+
+    <td>RAID 5</td>
+    <td>≧3</td>
+
+    <td>1</td>
+
+    <td>
+    <div align="left">
+    <ul>
+    <li>Zavádí funkci proužkování dat na úrovni bloku s paritou, kdy jsou data rozmístěna napříč všemi začleněnými pevnými disky, díky čemuž je redundance dat účinnější než u typu RAID 1.</li>
+    </ul>
+    </div>
+    </td>
+
+    <td>(N – 1) x (velikost nejmenšího pevného disku HDD)</td>
+
+  </tr>
+
+  <tr>
+
+    <td>RAID 6</td>
+    <td>≧4</td>
+
+    <td>2</td>
+    <td>
+    <div align="left">
+    <ul>
+    <li>Zavádí dvě vrstvy parity dat umožňující uložení redundantních dat v objemu odpovídajícím velikosti dvou pevných disků, což znamená vyšší stupeň redundance dat než u typu RAID 5.</li>
+    </ul>
+    </div>
+    </td>
+
+    <td>(N – 2) x (velikost nejmenšího pevného disku HDD)</td>
+
+  </tr>
+
+  <tr>
+
+    <td>RAID 10</td>
+    <td>≧4<br /> (sudé číslo)</td>
+
+    <td>Polovina celkového počtu disků HDD</td>
+    <td>
+    <div align="left">
+    <ul>
+    <li>Poskytuje výkon typu RAID 0 a ochranu dat na úrovni typu RAID 1, kdy se pevné disky seskupují po dvou a data se zrcadlí z jednoho disku na druhý.</li>
+    </ul>
+    </div>
+    </td>
+
+    <td>(N / 2) x (velikost nejmenšího pevného disku HDD)</td>
+
+  </tr>
+
+</table>
+
+
+<div class="section">
+<h4>Poznámka:</h4>
+<ul>
+<li>Typy polí RAID jsou kromě typu „Základní“ dostupné pouze na některých modelech – záleží na počtu slotů pro pevné disky a na počtu nainstalovaných pevných disků.</li>
+<li>„N“ představuje celkový počet pevných disků v daném svazku.</li>
+</ul>
+</div><!--2--><h3>Synology Hybrid RAID (SHR)</h3>
+
+<p>Synology Hybrid RAID (SHR) představuje automatizovaný systém správy pole RAID, jehož účelem je zjednodušit správu úložiště a vyhovět potřebám nových uživatelů, kteří s poli RAID nejsou obeznámeni. </p>
+<p>Systém SHR umožňuje kombinovat různé velikosti pevných disků a vytvořit tak svazek úložiště s optimalizovanou kapacitou a výkonem, který méně plýtvá místem na pevném disku a poskytuje flexibilnější řešení úložiště. Při zapojení dostatečného počtu pevných disků umožňuje systém SHR jedno- nebo dvoudiskovou redundanci — na svazku SHR tak může dojít závadě jednoho či dvou pevných disků, aniž by došlo ke ztrátě dat.</p><img src="about:blank" class="help_image"/> <!--3--><h3>RAID 0</h3>
+<p>Typ RAID 0 kombinací dvou či více pevných disků zvyšuje výkon a kapacitu, nenabízí ale žádnou toleranci při závadě. Závada na jednom pevném disku způsobí ztrátu všech dat v poli. Typ RAID 0 je vhodný pro méně důležité systémy, kde se vyžaduje rovnováha mezi vysokou cenou a výkonem.</p><img src="about:blank" class="help_image"/> <!--4--><h3>RAID 1</h3>
+<p>Typ RAID 1 se nejčastěji používá se dvěma pevnými disky. Data na pevných discích se zrcadlí, což zajišťuje toleranci při závadě pevného disku. Výkon při čtení je vyšší, zatímco výkon při zápisu bude podobný jako u jediného pevného disku. Závada jednoho pevného disku se tak může obejít bez ztráty dat. Typ RAID 1 se často používá tam, kde je klíčová tolerance při závadě, zatímco požadavky na prostor a výkon nejsou rozhodující.</p><img src="about:blank" class="help_image"/> <!--5--><h3>RAID 5</h3>
+<p>Typ RAID 5 se vyznačuje tolerancí při závadě a vyšším výkonem při čtení. Jsou zapotřebí alespoň tři pevné disky. Typ RAID 5 unese závadu jednoho pevného disku. V případě závady pevného disku se data z tohoto pevného disku rekonstruují pomocí parity „naproužkované“ na ostatních pevných discích. Když je pole RAID 5 ve stavu omezeného režimu, má to v konečném důsledku výrazný vliv na výkon při čtení i zápisu. Typ RAID 5 je ideální tam, kde jsou prostor a náklady důležitější než výkon.</p><img src="about:blank" class="help_image"/> <!--6--><h3>RAID 6</h3>
+<p>Typ RAID 6 je podobný typu RAID 5 s tím rozdílem, že poskytuje jinou úroveň proužkování a dokáže unést dvě závady disku. Jsou zapotřebí nejméně čtyři pevné disky. Typ RAID 6 je kvůli této zvýšené toleranci při závadách méně výkonný než typ RAID 5. Typ RAID 6 je vhodný tehdy, když jsou důležitým faktorem prostor a náklady a vyžaduje se, aby systém unesl více závad pevných disků.</p><img src="about:blank" class="help_image"/> <!--7--><h3>RAID 10</h3>
+<p>Typ RAID 10 představuje kombinaci výhod typů RAID 1 a RAID 0. Výkon při čtení a zápisu je vyšší, avšak k ukládání dat je dostupná pouze polovina celkového prostoru. Kvůli požadavku na čtyři a více pevných disků se jedná o relativně nákladné řešení, které však nabízí skvělý výkon a zároveň toleranci při závadách. Typ RAID 10 je unese několik závad pevných disků -- za předpokladu, že k závadám nedojde ve stejné podskupině. Typ RAID 10 se výborně hodí pro aplikace, které se vyznačují častými požadavky na čtení a zápis, např. databázové servery.</p><img src="about:blank" class="help_image"/></body>
+</html>

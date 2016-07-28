@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>File Station</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script> <script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Montera virtuella enheter</h2>
+
+<p>
+Du kan montera virtuella enheter för att komma åt innehåll i skivbilder med File Station.
+</p>
+
+<h4>Montera en virtuell enhet:</h4>
+<ol>
+<li>
+Markera en skivbild och klicka på <b>Verktyg</b> > <b>Montera virtuell enhet</b>.
+</li>
+<img src="about:blank" class="help_image"/>
+<li>
+Klicka på <b>Bläddra</b> för att välja eller skapa en tom destinationsmapp på DiskStation för montering av den virtuella enheten.
+</li>
+<img src="about:blank" class="help_image"/>
+<li>
+Markera <b>Montera automatiskt vid start</b> om du vill att din DiskStation ska montera den virtuella enheten vid varje systemstart eller omstart. Klicka på <b>Montera</b> för att fortsätta. Du kan nu navigera till destinationsmappen där den virtuella enheten är monterad och komma åt innehållet på skivbilden.
+</li>
+<img src="about:blank" class="help_image"/>
+</ol>
+
+<div class="section">
+<h4>Obs:</h4>
+<p>Virtuella enheter och .iso-filer kan bara monteras till undermappar under delade mapparna.</p>
+</div>
+
+
+
+<h4>Att avmontera en virtuell enhet:</h4>
+<ol>
+<li>Högerklicka på destinationsmappen där den virtuella enheten är monterad och välj <b>Avmontera</b>.</li>
+<img src="about:blank" class="help_image"/>
+</ol>
+<ol>
+<span class="note_head">Obs: </span>
+<li>
+Skivbildsformat som stöds: ”<b>.iso</b>”-filer med filsystem ISO 9660 och UDF.
+</li>
+<li>
+Max antal samtidiga virtuella enheter är 16.
+</li>
+<li class="enable-dockerx64">Montering av virtuella enheter stöds endast i läget högt privilegie. För att använda den här funktionen, gå till filpaketet Docker på din DSM som är värd, välj den <strong>Docker DSM</strong> som du vill aktivera krypterade delade mappar för, klicka på <strong>Redigera</strong> och markera rutan bredvid <strong>Kör container med högt privilegie</strong>.</li>
+
+</ol>
+</body>
+</html>

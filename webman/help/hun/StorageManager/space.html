@@ -1,0 +1,157 @@
+﻿<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+	<h2>Kötet</h2>
+	<p>A kötetek olyan alapvető tárolóhelyek, amelyekre a felhasználó megosztott mappákat, iSCSI LUN-t (normál fájl) hozhat létre, adatokat menthet, illetve csomagokat telepíthet. Mielőtt bármilyen kötetet hozna létre, győződjön meg róla, hogy létrehozott-e már egy RAID Groupot. A RAID Groupokra vonatkozó további információkért lásd <a href="raid.html">RAID Group</a>.</p>
+
+	<h4>Kötet létrehozása:</h4>
+<ol>
+  <li>Győződjön meg róla, hogy a(z) DiskStation rendelkezik létező, lefoglalható tárhellyel bíró RAID Grouppal.</li>
+  <li>Kattintson a <strong>Létrehozás</strong> gombra.</li>
+		<li>Válassza ki a RAID Groupot, amelyen létre szeretné hozni a kötetet.</li>
+		<li>Módosítsa a kívánt beállításokat.</li>
+		<li>Állítsa be a kötet méretkiosztását. (A méretkiosztás beállítása nem áll rendelkezésre az egyetlen kötethez vagy iSCSI LUN-hoz való RAID Groupon létrehozott kötetek esetén)</li>
+</ol>
+
+<div class="section">
+<h4>Megjegyzés:</h4>
+<ul>
+	<li>A maximálisan lefoglalható kötetméret 200 TB.</li>
+	<li class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64">Btrfs kötetek esetén a lefoglalható minimális méret 10 GB.</li>
+    <li class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64">A Btrfs kötetek a fennálló hely 4%-át foglalják le a metaadatok számára.</li>
+</ul>
+</div>
+
+
+<h4>Kötet eltávolítása:</h4>
+	<ol>
+		<li>Válassza ki az eltávolítani kívánt kötetet.</li>
+		<li>Kattintson az <b>Eltávolítás</b> gombra, majd kövesse a varázsló utasításait a folyamat befejezéséig.</li>
+	</ol>
+<div class="section">
+<h4>Megjegyzés:</h4>
+<ul>
+<li>Egy kötet eltávolításával az említett köteten található összes adatot törli.</li>
+</ul>
+</div>
+
+<h4>Kötet kényszercsatolása:</h4>
+<p>A rendszer bootoláskor nem csatolja azon köteteket, melyeknek hiányzik a gyorsítótára. Ha a gyorsítótár nem állítható helyre, és Ön szeretne hozzáférni a kötethez, kattintson a <b>Kényszercsatolás</b> elemre. </p>
+
+<div class="section">
+<h4>Megjegyzés:</h4>
+<ul>
+<li>Ez a funkció csak bizonyos típusok esetében érhető el.</li>
+</ul>
+</div>
+
+	<h4>Kötet javítása:</h4>
+	<p>Ha a kötet állapota <b>Csökkent</b>, lépjen a <b>RAID Group</b> lapra, és keresse meg a megfelelő RAID Groupot. A kötet javításához kövesse a megjelenő utasításokat.</p>
+
+	<h4>A kötet méretének bővítése</h4>
+	<ul>
+		<li>Több kötethez vagy iSCSI LUN-hoz (blokkszint) való RAID Group-on létrehozott kötetek esetén.<ol>
+				<li>Válassza ki a bővíteni kívánt kötetet.</li>
+				<li>Kattintson a <b>Szerkesztés</b> gombra.</li>
+				<li>Adja meg az új méretet, majd a bővítéshez kattintson az <b>OK</b> gombra.</li>
+			</ol>
+		<li>Az egyetlen kötethez vagy iSCSI LUN (blokkszint) lehetőséghez való RAID Groupon létrehozott kötetek esetében lásd a <a href="raid.html">RAID Group</a> <b>RAID Group méretének bővítése</b> menüpontját, a kötet mérete az alapjául szolgáló RAID Group bővítése után kerül bővítésre.</li>
+	</ul>
+
+
+<h3>SSD TRIM</h3>
+
+<p>Ha egy kötet kizárólag csak SSD-kből (Solid State Drive – szilárdtest-meghajtó) áll, javasoljuk az SSD TRIM engedélyezését. Ez a funkció javítja az SSD-ken létrehozott kötetek olvasási és írási teljesítményét, növeli a hatékonyságot, valamint az SSD-k élettartamát is kiterjeszti.</p>
+
+<h4>SSD TRIM engedélyezése:</h4>
+
+<ol>
+  <li>Nyissa meg a <b>Tároláskezelőt</b>, majd lépjen a <b>Kötet</b> lehetőséghez.</li>
+  <li>Válasszon egy kizárólag SSD meghajtókból álló kötetet, majd kattintson a <b>Konfigurálás</b> gombra.</li>
+  <li>A megjelenő ablakban lépjen az <b>SSD TRIM</b> lapra, majd jelölje be a <b>TRIM engedélyezése</b> mezőt.</li>
+<li>Kattintson az <strong>Időzítés beállítása</strong> gombra annak kiválasztásához, hogy a rendszer mikor hajtsa végre az SSD TRIM műveletet.</li>
+<li>Kattintson az <strong>OK</strong> gombra.</li>
+</ol>
+
+<div class="section">
+<h4>Megjegyzés:</h4>
+<ul>
+
+<li>Az SSD TRIM csak bizonyos DiskStation modelleken és RAID-típusokon áll rendelkezésre. </li>
+
+
+<li>Egyes SSD modellek nem képesek SSD TRIM végrehajtására RAID 5 és RAID 6 köteteken. Lásd a <a href="http://www.synology.com/" target=_blank>www.synology.com/hu-hu</a> címen található kompatibilitási listát.</li>
+
+
+<li>Az SSD TRIM nem engedélyezhető a következő esetekben:<ul>
+    <li>A kötet SSD gyorsítótárral van csatolva.</li>
+    <li>Telepítve van a <strong>Time Backup</strong> csomag.</li>
+    <li>High-availability klaszter került létrehozásra a <strong>High Availability Managerrel</strong>.</li>
+  </ul>
+</li>
+<li>Az SSD TRIM nem engedélyezhető blokkszintű iSCSI LUN-okon.</li>
+<li>SSD TRIM végrehajtásakor csökken a rendszer teljesítménye. A TRIM végrehajtásának befejezéséhez szükséges idő a kötet méretétől és az SSD típusától függően változik.</li>
+
+<li>Ha egy köteten engedélyezi a TRIM funkciót, akkor az az ugyanazon Lemezcsoporton vagy RAID Groupon létrehozott többi köteten is engedélyezésre kerül.</li>
+
+</ul>
+</div>
+
+
+<h3>Fájlrendszer tisztítása*</h3>
+<p>A fájlrendszer tisztítása egy adatkarbantartási funkció, amely a köteteket ellenőrzi. Amennyiben a funkció az ellenőrzőösszeggel inkonzisztens adatokat talál, rögzíti a kérdéses fájl elérési útvonalát a Naplóközpontban, és javasolja, hogy egy biztonsági mentés segítségével javítsa ki az adatokat.</p>
+<p>Az adatok konzisztenciájának megőrzése érdekében javasoljuk, hogy végezze el rendszeresen a rendszer tisztítását.</p>
+
+<h4>Fájlrendszer tisztításának elvégzése:</h4>
+<ol>
+<li>Nyissa meg a <b>Tároláskezelőt</b>, majd lépjen a <b>Kötet</b> lehetőséghez.</li>
+<li>Válassza ki a kötetet, amelyen a fájlrendszer tisztítását el kívánja végezni.</li>
+<li>Kattintson a <b>Kezelés</b> gombra.</li>
+<li>Kattintson a <b>Fájlrendszer tisztítása</b> elemre.</li>
+</ol>
+
+<div class="section">
+<h4>Megjegyzés:</h4>
+<ul>
+<li>A fájlrendszer tisztítása csak <b>Btrfs</b> fájlrendszerrel rendelkező köteteken végezhető el.</li>
+<li>A fájlrendszer tisztítása csak akkor hajtható végre, ha a kötet állapota <strong>Normál</strong>.</li>
+<li>Az fájlrendszer tisztításának befejezése előtt ne kapcsolja ki a rendszert. Ha a rendszer a befejezés előtt leáll, a fájlrendszer tisztítását manuálisan kell újraindítani, és az egész műveletet elölről kell kezdeni.</li>
+</ul></div>
+
+<h3>Fájlrendszer töredezettségmentesítése*</h3>
+<p>Amennyiben az adatai folyamatosan változnak, a fájlrendszeren lévő töredezett fájlok mennyisége folyamatosan növekedni fog, ami a merevlemezen lévő fájlok lassabb elérését eredményezi. A fájlrendszer töredezettségmentesítése javíthatja a teljesítményt.</p>
+
+<h4>Fájlrendszer töredezettségmentesítésének elvégzése:</h4>
+
+<ol>
+<li>Nyissa meg a <strong>Tároláskezelőt</strong>, majd lépjen a <b>Kötet</b> lehetőséghez.</li>
+<li>Válassza ki a kötetet, amelyen a fájlrendszer töredezettségmentesítését el kívánja végezni.</li>
+<li>Kattintson a <strong>Kezelés</strong> gombra.</li>
+<li>Kattintson a <strong>Fájlrendszer töredezettségmentesítése</strong> elemre.</li>
+</ol>
+
+<div class="section">
+<h4>Megjegyzés:</h4>
+<ul>
+<li>A fájlrendszer töredezettségmentesítése csak <b>Btrfs</b> fájlrendszerrel rendelkező köteteken végezhető el.</li>
+<li>A fájlrendszer töredezettségmentesítése csak akkor hajtható végre, ha a kötet állapota <strong>Normál</strong>.</li>
+<li>Az fájlrendszer töredezettségmentesítésének befejezése előtt ne kapcsolja ki a rendszert. Ha a rendszer a befejezés előtt leáll, a fájlrendszer töredezettségmentesítését manuálisan kell újraindítani, és az egész műveletet elölről kell kezdeni.</li>
+<li>Amennyiben a kötet megosztott mappákról készült pillanatfelvételeket tartalmaz, a kötethasználat növekedhet.</li>
+</ul>
+</div>
+
+<p>____<br /> *Csak bizonyos típusokon érhető el.</p>
+
+
+
+</body>
+</html>

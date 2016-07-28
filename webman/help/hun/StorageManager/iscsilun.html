@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Tároláskezelő</title>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2><a name="leaf_iscsilun"></a>iSCSI LUN*</h2>
+<p>Az iSCSI egy hálózati tárhelyszolgáltatás, amely helyi hálózatokon vagy nagy távolságokon keresztül is lehetővé teszi adatok továbbítását. ISCSI LUN-ok iSCSI-tárolókra való leképezése esetén a kliensek úgy érhetik el ezeket a tárhelyeket, mintha azok helyi lemezek lennének. Egy iSCSI LUN (logikaiegység-szám) akár több iSCSI-tárolóhoz is leképezhető iSCSI tárhelyszolgáltatás biztosítása céljából. Az iSCSI LUN-ok kezeléséhez lépjen a <strong>Tároláskezelő</strong> > <strong>iSCSI LUN</strong> menüpontra.</p>
+
+<div class="section"><h4>Megjegyzés:</h4>
+<p>A támogatott iSCSI LUN-ok száma a(z) DiskStation típusától függően változik. A termék részletes műszaki leírását lásd a <a href="http://www.synology.com/" target="_blank">www.synology.com/hu-hu</a> címen.</p>
+</div>
+
+<p>A(z) DiskStation eszköz pillanatnyilag a következő iSCSI LUN típusokat támogatja:</p>
+<ul>
+	<li><b>iSCSI LUN (normál fájlok)</b>: Az iSCSI LUN-t úgy hozták létre, hogy a köteten található hely egy részét kijelölték számára felhasználásra. Mérete később szükség esetén bővíthető. Ez az iSCSI LUN-típus a Thin Provisioning, a VMware VAAI hardvergyorsítás támogatása, a Windows ODX támogatása, a LUN-pillanatfelvétel és LUN-klón funkciók segítségével rugalmas és dinamikus kapacitáskezelést tesz lehetővé.</li>
+	<li class="disable-bromolow disable-grantley disable-avoton disable-braswell disable-broadwell disable-kvmx64"><b>iSCSI LUN (blokkszintű) - egy LUN ugyanazon a RAID-en</b>: Az iSCSI LUN a kiválasztott tárhely teljes kapacitását felhasználhatja. Ezt javíthatja vagy bővítheti, valamint módosíthatja a RAID-típusát – akárcsak egy kötet esetében. További információt a <a href="space.html">Kötet</a> oldalon talál.</li>
+	<li class="disable-bromolow disable-grantley disable-avoton disable-braswell disable-broadwell disable-kvmx64"><b>iSCSI LUN (blokkszintű) - több LUN ugyanazon a RAID-en</b>: Az iSCSI LUN-t úgy hozták létre, hogy egy lemezcsoport specifikus tárhelyét jelölték ki számára. Az iSCSI LUN-t később bővítheti, ha még van elérhető hely a Lemezcsoporton. További információkat a <a href="raid.html">Lemezcsoport</a> oldalon talál.</li>
+	<li class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64"><b>iSCSI LUN (blokkszint)</b>: Ezt a fajta iSCSI LUN-t RAID Groupon hozzák létre. Optimális hozzáférési teljesítmény mellett rugalmas, dinamikus kapacitáskezelést biztosít. Ezt a típusú iSCSI LUN-t később a RAID Groupon elérhető, még ki nem osztott tárhely felhasználásával is bővítheti. További információt a <a href="raid.html">RAID Group</a> oldalon talál.</li>
+</ul>
+
+<div class="section"><h4>Megjegyzés:</h4>
+<p>A kibővített LUN-funkciókkal rendelkező iSCSI LUN-ok csak ext4<span style="display: inline;" class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64">/Btrfs</span> fájlrendszeren állnak rendelkezésre.</p>
+</div>
+
+<h4>iSCSI LUN létrehozása:</h4>
+<ol>
+	<li>Kattintson a <b>Létrehozás</b> gombra.</li>
+	<li>Válassza ki a létrehozni kívánt iSCSI LUN típusát.</li>
+	<li>Kövesse a varázsló utasításait a művelet befejezéséig.</li>
+</ol>
+
+<div class="section"><h4>Megjegyzés:</h4>
+<p>A kibővített LUN-funkciók csak az eredeti iSCSI LUN létrehozása során engedélyezhetők. Ez a beállítás később nem módosítható.</p>
+</div>
+
+<p>A speciális LUN helyfoglalási egység mérete optimalizálható bizonyos alkalmazásszerver-funkciókkal (pl. Microsoft Exchange vagy SQL Server), illetve virtualizációs szerverek és tárolásgyorsító technológiákkal (pl. Microsoft Windows ODX vagy VMware VAAI) való használatra. Ehhez tegye a következők valamelyikét:</p>
+<ul>
+	<li>Állítsa be a helyfoglalási egység méretét a kötet első speciális LUN-jának létrehozása során.</li>
+	<li>Állítsa be a helyfoglalási egység méretét a kötet első speciális LUN-jának létrehozásának véglegesítése előtt a <strong>Konfigurálás</strong> mezőben.</li>
+</ul>
+
+<p>Javasoljuk, hogy határozza meg a helyfoglalási egység méretét az alkalmazás számára, amennyiben a(z) DiskStation eszköz speciális iSCSI LUN-jaival az alkalmazásszerverről induló közvetlen kapcsolat használatával vagy RDM (pass-through) megoldással működik együtt. Ha a Synology Speciális LUN technológiáját Windows ODX klónozására szeretné használni, javasoljuk, hogy az NTFS-kötetet a DSM rendszerben meghatározott (vagy annál nagyobb) helyfoglalásiegység-mérettel formázza.</p>
+
+<div class="section"><h4>Megjegyzés:</h4>
+<p>Az egyes kötetek Speciális LUN helyfoglalási egysége csak egyszer állítható be.</p>
+</div>
+
+<h4>iSCSI LUN eltávolítása:</h4>
+<p>iSCSI LUN eltávolításakor az iSCSI LUN-on tárolt összes adat törlésre kerül. Az iSCSI LUN és az ahhoz leképezett iSCSI-tárolók közötti kapcsolat is elveszik.</p>
+<ol>
+	<li>Jelölje ki az eltávolítani kívánt iSCSI LUN-t.</li>
+	<li>Kattintson az <b>Eltávolítás</b> gombra, majd kövesse a varázsló utasításait a folyamat befejezéséig.</li>
+</ol>
+
+<div class="section"><h4>Megjegyzés:</h4>
+<p>A(z) DiskStation eszközön található VAAI LUN-ok törlése nem szabadít fel azonnal lemezterületet. Az adatok áthelyezésre kerülnek egy <strong>@EP_trash</strong> nevű fenntartott rendszermappába, majd egyenként törlődnek. Egy 100 GB méretű VAAI LUN DiskStation eszközről való törlése esetén például körülbelül 15–20 percbe telhet, mire a 100 GB hely felszabadul a lemezköteten.</p>
+</div>
+
+<h4>iSCSI LUN (blokkszint) kényszercsatolása:</h4>
+<p>Ha egy iSCSI LUN (blokkszint) gyorsítótára hiányzik, a rendszer indításkor nem csatolja az iSCSI LUN-t (blokkszint). Ha a gyorsítótár nem állítható helyre, ám Ön szeretne hozzáférni az iSCSI LUN-hoz (blokkszint), kattintson a <b>Kényszercsatolás</b> elemre.</p>
+
+<div class="section"><h4>Megjegyzés:</h4>
+<p>Ez a funkció csak bizonyos típusok esetében érhető el.</p>
+</div>
+
+<h4>iSCSI LUN szerkesztése:</h4>
+<ol>
+	<li>Jelölje ki a szerkeszteni kívánt iSCSI LUN-t.</li>
+	<li>Kattintson a <b>Szerkesztés</b> gombra.</li>
+	<li>Módosítsa a kívánt tulajdonságokat.</li>
+	<li>A beállítások mentéséhez kattintson az <b>OK</b> gombra.</li>
+</ol>	
+
+<div class="section"><h4>Megjegyzés:</h4>
+<p>Az adatvesztés elkerülése érdekében az iSCSI LUN kapacitásának módosítása közben csak a jelenlegi méretnél nagyobb értéket adhat meg.</p>
+</div>
+
+<h4>iSCSI LUN pillanatfelvétel készítése:</h4>
+<p>Az iSCSI LUN pillanatfelvétel az iSCSI LUN meghatározott időpontban készült, csak olvasható másolata.</p>
+<ol>
+	<li>Válassza ki az iSCSI LUN-t, amelyről pillanatfelvételeket szeretne készíteni.</li>
+	<li>Kattintson a <strong>Pillanatfelvétel</strong> elemre, majd válassza a <strong>Pillanatfelvétel készítése</strong> lehetőséget.</li>
+	<li>Adja meg a pillanatfelvétel leírását.</li>
+	<li>Igény szerint válassza ki a következő pillanatfelvétel-típusok valamelyikét:<ul>
+			<li><strong>Alkalmazáskonzisztens</strong>: Ez pillanatfelvétel-típus csak akkor készíthető el, ha a működési környezettől függően a Synology Snapshot Manager telepítve van a Windows szerveren vagy a VMware vCenter Server eszközön a DSM rendszerrel való kommunikáció céljából. Amikor alkalmazáskonzisztens pillanatfelvételek készítése indul el a DSM rendszeren, a rendszer egyben értesítést küld az összes alkalmazásnak, melyek az adatkonzisztencia fenntartásának céljából a memóriában szereplő összes adatot átküldik arra a LUN-ra, melyről pillanatfelvétel készül.</li>
+			<li><strong>Összeomlás-konzisztens</strong>: Ha a Synology Snapshot Manager egyik kliensen sincs telepítve, csak összeomlás-konzisztens pillanatfelvételeket készíthet a LUN-okról. Ezek indításakor az alkalmazások nem kapnak utasítást a memóriában található adatok LUN-ra küldésére, ezért az adatok konzisztenciája ebben az esetben nem garantált.</li>
+		</ul>
+	</li>
+	<li>Kattintson az <strong>OK</strong> gombra.</li>
+</ol>
+
+<h4>iSCSI LUN visszaállítása:</h4>
+<p>Válasszon egy meghatározott időpontban készült pillanatfelvételt az iSCSI LUN-on tárolt adatok visszaállításához.</p>
+<ol>
+	<li>Jelölje ki a visszaállítani kívánt iSCSI LUN-t.</li>
+	<li>Kattintson a <strong>Pillanatfelvétel</strong> elemre, majd válassza a <strong>Snapshot Manager</strong> lehetőséget.</li>
+	<li>Válassza ki a pillanatfelvételt, amelyre visszaállítást szeretne végezni, majd kattintson a <strong>Visszaállítás</strong> lehetőségre.</li>
+</ol>
+
+<h4>iSCSI LUN vagy pillanatfelvétel klónozása:</h4>
+<p>Készítsen írható másolatot egy iSCSI LUN-ról vagy egy iSCSI LUN pillanatfelvételről.</p>
+<ul>
+	<li>Válasszon egy iSCSI LUN-t a listáról, majd kattintson a <strong>Klón</strong> lehetőségre.</li>
+	<li>Válasszon egy iSCSI LUN pillanatfelvételt a <strong>Pillanatfelvétel-kezelő</strong> menüpontban, majd kattintson a <strong>Klón</strong> lehetőségre.</li>
+</ul>
+
+<div class="section"><h4>Megjegyzés:</h4>
+<ul>
+<li>Bizonyos típusok esetében az iSCSI LUN-ok visszaállítása, valamint iSCSI LUN-pillanatfelvételek készítése és klónozása érdekében a <b>Csomagkezelési központban</b> telepítenie kell a <b>Pillanatfelvétel és replikáció</b> csomagot.</li>
+	<li>Ha van olyan, a LUN-nal kapcsolatos, csatlakoztatott iSCSI-munkamenet, melyet a Windows Server vagy a VMware ESXi Server használ, javasoljuk, hogy az adatkonzisztencia megőrzésének érdekében telepítse a <b>Synology Snapshot Manager</b> beépülő modult. Ellenkező esetben a folytatás előtt le kell állítania az alkalmazásokat, illetve ki kell jelentkeznie a munkamenetekből.</li>
+	<li>A LUN-pillanatfelvétel, visszaállítás és klónozás funkciók kizárólag bővített LUN-funkciókkal felszerelt iSCSI LUN-okon állnak rendelkezésre.</li>
+	<li>Ha a létrehozott pillanatfelvétel/klón állapota <strong>Rendellenes</strong>/<strong>Tönkrement</strong>, törölje a pillanatfelvételt/klónt és hozzon létre egy újat.</li>
+	<li>A LUN pillanatfelvételre történő visszaállításával a LUN-on az adott pillanatfelvételt követően végzett összes módosítás elveszik.</li>
+	<li>Ha az iSCSI LUN állapota <b>Nem elérhető</b>, az azt jelenti, hogy adathiba történt az iSCSI LUN elérése közben. A rendszeren bekövetkező súlyos adatvesztés elkerülése érdekében ez az iSCSI LUN ideiglenesen nem érhető el. Támogatásért a lehető leghamarabb lépjen kapcsolatba a Synology ügyfélszolgálatával.</li>
+</ul>
+</div>
+
+
+<div class="section"><h4>Szószedet:</h4>
+<ul>
+	<li><b>Thin Provisioning</b>: A Thin Provisioning funkció dinamikus és igény szerint történő módon osztja ki a tárhelyet, ezzel optimális tárhelykihasználást biztosít. Ez a beállítás csak az <b>iSCSI LUN (normál fájlok)</b> esetén érhető el.</li>
+	<li><b>VMware VAAI</b>: A VMware vStorage APIs for Array Integration (VAAI) segítségével a rendszer VMware vSphere környezetben a virtuális tárhelytömbök számos standard műveletét át tudja adni az iSCSI-eszköznek, ezzel optimális tárhelyteljesítmény érhető el.</li>
+	<li><b>Windows ODX</b>: A Windows által a Windows Server 2012 és 8 operációs rendszerekhez kifejlesztett, Offload adatátvitelnek (Offload Data Transfer – ODX) nevezett új adatátviteli technológia. Az ODX a feldolgozandó feladatok egy részét a tárolótömbre bízza, ezzel javítja az átviteli sebességet.<br />Ha az adat forrása és célállomása egyazon köteten található LUN-okon található, a klónozás feldolgozására a Synology Speciális LUN technológiája segítségével kerül sor, ami akár 99,9%-os tárhely-felhasználási megtakarítást jelent, ugyanakkor a klónozást is felgyorsítja.</li>
+	<li><b>iSCSI Target feltérképezés</b>: iSCSI LUN leképezése egy vagy több iSCSI-tárolóra.</li>
+	<li><b>Synology Snapshot Manager</b>: A Synology Snapshot Manager egy szoftveres beépülő modul, amelynek segítségével közvetlenül a DiskStation Manager (DSM) alkalmazásból is készíthet alkalmazáskonzisztens pillanatfelvételeket.<ul>
+		    <li>VMware környezet esetén a Synology Snapshot Manager programot arra a Windows szerverre kell telepítenie, amelyre a VMware vCenter Server is telepítve van. Amikor pillanatfelvétel készítése indul el a DSM rendszeren, arról a VMware vCenter Server értesítést kap,majd az adatkonzisztencia fenntartásának céljából a memóriában szereplő összes adatot átküldi arra a LUN-ra, melyről pillanatfelvétel készül. Ha a pillanatfelvétel elkészült, a VMware vCenter Server folytatja a VMware adattár normál I/O működtetését. A Synology Snapshot Manager for VMware vCenter Server a vSphere 5.1 vagy újabb verzióit támogatja.</li>
+		    <li>Windows környezet esetén a Synology Snapshot Manager programot a Windows szerverre kell telepítenie. Amikor pillanatfelvétel készítése indul el a DSM rendszeren, a Synology Snapshot Manager a Microsoft kötet árnyékmásolata (VSS) szolgáltatása segítségével konzisztens, az adott időpontot lefedő másolatot készít az adatokról. A Synology Snapshot Manager for Windows a Windows Server 2008 R2, 2012 és 2012 R2 verzióit támogatja.</li>
+			<li>A Synology Snapshot Manager ingyenesen letölthető a <a href="http://www.synology.com/" target="_blank">www.synology.com/hu-hu</a> weboldalról.</li>
+		</ul>
+	</li>
+</ul>
+</div>
+<p>____<br /> *Csak bizonyos típusokon érhető el.</p>
+
+
+</body>
+</html>

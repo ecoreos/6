@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+	<h2>HDD/SSD</h2>
+	<p>Ebben a szakaszban a felhasználó felügyelheti a(z) DiskStation eszközbe szerelt HDD/SDD lemezek állapotát, illetve kezelheti és elemezheti a HDD/SSD lemezek teljesítményét és működőképességét. Ezen beállítások kezeléséhez lépjen a <strong>Tároláskezelő</strong> > <strong>HDD/SSD</strong> menüpontra.</p>
+
+	<h4>HDD/SSD lemezek adatainak ellenőrzése:</h4>
+	<ol>
+		<li>Lépjen a <b>HDD/SSD</b> lapra.</li>
+		<li>Válasszon egy meghajtót a listáról, majd nyissa le a hozzá tartozó menüt. Itt megtekintheti a S.M.A.R.T. állapotot, a kötetre vonatkozó információkat, a típus nevét, a sorozatszámot, a firmware állapotát, illetve a hőmérsékletet.</li>
+	</ol>	
+	
+	<h4>Állapotinformációk ellenőrzése:</h4>
+    <ol>
+      <li>Lépjen a <b>HDD/SSD</b> lapra.</li>
+	  <li>Válasszon egy meghajtót.</li>
+      <li>Kattintson az <b>Állapot információk</b> elemre.</li>
+	  <li>Lépjen az <strong>Áttekintés</strong> lapra. Ebben a szakaszból tudhatja meg, hogy hány órát töltött bekapcsolva a meghajtó, hogy mekkora a meghajtó aktuális hőmérséklete, az újracsatlakozások/ismételt azonosítások számát, a hibás szektorok számát, illetve az általános S.M.A.R.T. állapotot.</li>
+      <li>Lépjen a <strong>S.M.A.R.T. információk</strong> lapra. Az itt szereplő számok segíthetnek a meghajtó diagnosztizálásában.</li>
+    </ol>
+
+<div class="section">
+<h4>Megjegyzés:</h4>
+<p>A SAS meghajtók nem támogatják a S.M.A.R.T. információk biztosítását.</p>
+</div>
+
+	<h4>A S.M.A.R.T. teszt indítása:</h4>
+	<P>S.M.A.R.T. technológia teszt megvizsgálja a meghajtók állapotát, majd jelentést készít arról, figyelmeztetve Önt a meghajtóval kapcsolatos hibák állapotára. Ha a teszt hibát jelez, javasoljuk, hogy azonnal cserélje ki az érintett meghajtókat. </P>
+    <ol>
+      <li>Lépjen a <strong>HDD/SSD</strong> lapra.</li>
+      <li>Válasszon egy meghajtót.</li>
+      <li>Kattintson a <b>S.M.A.R.T. lehetőségre teszt</b> elemre.</li>
+      <li>Válasszon ki egy teszttípust, majd a teszt megkezdéséhez kattintson az <strong>Indítás</strong> lehetőségre.</li>
+      <li>A legfrissebb teszt eredmények a <b>Teszt eredmény</b> részben láthatóak.</li>
+    </ol>
+    <div class="section">
+<h4>Megjegyzés:</h4>
+    <p>A teszthez szükséges idő a rendszerkörnyezettől függően változó.</p>
+</div>
+    <h4>A S.M.A.R.T. tesztek ütemezése:</h4>
+    <p>A S.M.A.R.T. tesztek feladatok létrehozásával automatikus futtatásra ütemezhetők.</p>
+    <ol>
+      <li>Lépjen a <strong>Tesztütemező</strong> lapra.</li>
+      <li>Új feladat beállításához kattintson a <strong>Létrehozás</strong> lehetőségre.</li>
+      <li>Az <strong>Általános</strong> lapon módosítsa a következő beállításokat:</li>
+      <ul>
+        <li><strong>Feladat:</strong> Adja meg a feladat nevét.</li>
+        <li><strong>S.M.A.R.T. technológia teszt típusa:</strong> Adja meg, hogy gyors- vagy bővített tesztet szeretne végezni.</li>
+        <li><strong>S.M.A.R.T. technológia teszttartomány:</strong> A S.M.A.R.T. teszt elvégzésekor minden egyes alkalommal adja meg, hogy melyik HDD/SSD lemezt kívánja tesztelni.</li>
+      </ul>
+      <li>Az <strong>Ütemezés</strong> lapon módosítsa a következő beállításokat:</li>
+      <ul>
+        <li><strong>Dátum:</strong> Adja meg, hogy mikor szeretné elvégezni a S.M.A.R.T. tesztet. Beállíthatja, hogy a rendszer a hét bizonyos napjain (pl. minden hétköznap, minden vasárnap stb.) vagy megadott dátumokon (pl. 2015. 10. 21-én) végezzen S.M.A.R.T. tesztet.</li>
+        <li><strong>Idő:</strong> Adja meg, hogy hányszor szeretné elvégezni a S.M.A.R.T. tesztet, illetve az első és utolsó időpontot, melyen az egyes napokon szeretné elvégezni a tesztet.</li>
+      </ul>
+      <li>A befejezéshez kattintson az <strong>OK</strong> gombra.</li>
+    </ol>
+
+<h4>Secure Erase művelet elvégzése:</h4>
+<ol>
+<li>Lépjen a <b>HDD/SSD</b> lapra.</li>
+<li>Válasszon egy meghajtót, majd kattintson a <b>Secure Erase</b> elemre.</li>
+</ol>
+
+
+<div class="section">
+<h4>Megjegyzés:</h4>
+<ul>
+<li>A bővítőegységekben lévő meghajtókon nem végezhet Secure Erase műveletet.</li>
+<li>A Secure Erase művelet a meghajtón tárolt összes adatot véglegesen eltávolítja. A művelet elvégzése előtt ellenőrizze, hogy nincs-e használatban a kiválasztott meghajtó, és ha igen, végezzen biztonsági mentést a szükséges adatokról.</li>
+<li>Amikor a rendszer Secure Erase műveletet hajt végre, ideiglenesen zárolja, majd a művelet befejezését követően automatikusan feloldja a kiválasztott meghajtót.</li>
+<li>Ha a művelet közben megszakítja a Secure Erase műveletet, azt a felhasználói felületről közvetlenül ismét elindíthatja. Ha a zárolt meghajtót eltávolítja vagy máshol használja fel, feloldásához használja a „synology” jelszót.</li>
+</ul>
+</div>
+
+
+	<h3>Írási gyorsítótár támogatásának engedélyezése HDD lemezen</h3>
+	<p>Az írási gyorsítótár engedélyezésével javíthat a(z) DiskStation eszköz teljesítményén. Csak bizonyos HDD-modellek támogatják ezt a funkciót. Az írás gyorsítótár támogatás használata közben az adatvédelem biztosítása érdekében erősen javasolt egy UPS-eszköz használata. Használat után minden alkalommal javasoljuk a rendszer megfelelő leállítását is. Az írási gyorsítótár letiltása csökkenti a rendellenes áramkimaradás által okozott adatvesztés lehetőségét, de a rendszerteljesítmény csökkenni fog.</p>
+
+	<h4>Írási gyorsítótár támogatásának engedélyezése: </h4>
+	<ol>
+		<li>Lépjen a <b>Gyorsítótár kezelés</b> lapra.</li>
+		<li>Jelölje be az <b>Írási gyorsítótár engedélyezése</b> jelölőnégyzetet. Ez a funkció alapértelmezés szerint engedélyezett.</li>
+		<li>Kattintson az <b>Alkalmaz</b> gombra.</li>
+	</ol>
+	
+
+
+
+</body>
+</html>

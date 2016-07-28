@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Asignar permisos de carpetas compartidas - Ayuda de Synology DSM</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="You can specify which users or groups can access, view, or modify a shared folder and its contents. This article shows you how to assign and customize shared folder permissions in DSM.">
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+
+
+
+<h2>Asignar permisos de carpetas compartidas</h2>
+
+<p>Puede especificar los usuarios o grupos que pueden acceder, ver o modificar una carpeta compartida y sus contenidos. Los permisos de acceso de carpetas compartidas, adem&aacute;s de los archivos y subcarpetas individuales, se pueden personalizar para cada usuario o grupo.</p>
+
+<div class="section disable-eds14">
+<h4>Windows ACL:</h4>
+
+<p>En DSM 5.0 o una versi&oacute;n posterior, los permisos de acceso de carpetas compartidas se basan en Windows ACL de manera predeterminada. Carpetas compartidas de nueva creaci&oacute;n utilizan la configuraci&oacute;n de permisos de Windows ACL, que tambi&eacute;n permite la personalizaci&oacute;n de permisos de archivos y subcarpetas individuales. Adem&aacute;s, los permisos se pueden personalizar a trav&eacute;s de File Station o el explorador de archivos de Windows.</p>
+<p>Las siguientes carpetas compartidas no pueden utilizar el sistema de administraci&oacute;n de permisos de Windows ACL: <strong>photo</strong>, <strong>satashare</strong>, <strong>sdshare</strong>, <strong>surveillance</strong>, <strong>usbshare</strong>.</p>
+</div>
+<div class="section disable-eds14">
+<h4>Nota:</h4>  
+<p>Las carpetas <strong>home</strong> personales de los usuarios est&aacute;n situadas en la carpeta <strong>homes</strong>. Como ACL funciona en base a la herencia de permisos, si selecciona NA para un grupo/usuario en <strong>homes</strong>, los usuarios no tendr&aacute;n acceso a sus carpetas <strong>home</strong> personales. </p>
+</div>
+<h4>Para editar permisos de una carpeta compartida:</h4>
+
+<ol>
+
+<li>Vaya al <strong>Panel de control</strong> &gt; <strong>Carpeta compartida</strong>.</li><img src="about:blank" class="help_image"/><li>Seleccione la carpeta compartida cuyos permisos desea editar. Haga clic en <b>Editar</b>.</li><img src="../../../online_img/dsm/AdminCenter/file_share_privilege/howto450-2.png" class="help_image"/><li> Vaya a la pesta&ntilde;a <strong>Permisos</strong>.</li><img src="../../../online_img/dsm/AdminCenter/file_share_privilege/howto450-3.png" class="help_image"/><li>Elija una de las siguientes opciones del men&uacute; desplegable:<ul>
+<li><b>Usuario interno del sistema:</b> Asigne permisos para usuarios predeterminados del sistema, como el usuario FTP/WebDAV an&oacute;nimo. Antes de permitir que los usuarios de FTP an&oacute;nimo se conecten una carpeta compartida, deber&aacute; asignar permisos de acceso a este usuario.</li>
+<li><b>Usuarios locales:</b> Asigne permisos para usuarios locales (incluido <b>guest</b>).</li>
+<li><b>Grupos locales:</b> Asigne permisos para grupos locales.</li>
+</ul>
+</li><img src="about:blank" class="help_image"/><li>Marque o desmarque las casillas adecuadas para cada usuario o grupo, a fin de personalizar sus permisos de acceso de la carpeta compartida:<ul>
+<li><b>Lectura/Escritura</b>: El usuario o grupo puede acceder a los archivos y subcarpetas de la carpeta compartida y hacerles cambios.</li>
+<li><b>S&oacute;lo lectura</b>: El usuario o grupo puede acceder a los archivos y subcarpetas de la carpeta compartida.</li>
+<li><b>Sin acceso</b>: El usuario o grupo no puede acceder a los archivos o subcarpetas de la carpeta compartida.</li>
+</ul>
+</li><img src="about:blank" class="help_image"/><li>Haga clic en <b>OK</b> para terminar.</li>
+</ol>
+
+<div class="section">
+<h4>Nota:</h4>
+
+<ul>
+<li>Cuando encuentre conflictos de permisos, la prioridad de los permisos es la siguiente: Sin acceso &gt; Lectura/Escritura &gt; S&oacute;lo lectura.</li>
+<li>Al crear una carpeta compartida nueva, si los permisos del usuario perteneciente al grupo de <strong>administrators</strong> est&aacute; configurado como <b>Sin acceso</b>, estos usuarios solo podr&aacute;n ver la carpeta compartida en <strong>Panel de control</strong> &gt; <strong>Carpeta compartida</strong>.</li>
+</ul>
+</div>
+
+<h3 class="disable-eds14">Personalizaci&oacute;n de permisos de Windows ACL</h3>
+
+<p class="disable-eds14">Adem&aacute;s de las configuraciones descritas anteriormente, puede personalizar los permisos aun m&aacute;s con los pasos que se muestran a continuaci&oacute;n. </p>
+
+<div class="section disable-eds14">
+<h4>Nota:</h4>
+<p>Las configuraciones siguientes no se pueden utilizar en las siguientes carpetas compartidas: <strong>photo</strong>, <strong>satashare</strong>, <strong>sdshare</strong>, <strong>surveillance</strong>, <strong>usbshare</strong>.</p>
+</div>
+
+<h4 class="disable-eds14">Para personalizar permisos:</h4>
+<ol class="disable-eds14">
+  <li>En la pesta&ntilde;a <strong>Permisos</strong>, seleccione el usuario cuyos permisos desea personalizar. Haga clic en cualquier lugar de la columna<strong>Personalizar</strong>.</li><img src="about:blank" class="help_image"/><li>Realice cualquiera de las siguientes acciones en la ventana de <b>Editor de permisos</b> para administrar los permisos de ACL para el archivo o carpeta:<ol>
+        <li><b>Usuario o grupo:</b> Especifique el usuario o grupo que desea personalizar.</li><img src="about:blank" class="help_image"/><li><b>Heredar de:</b> Solo para ver. Vea la informaci&oacute;n aqu&iacute; para ver si el permiso se ha heredado (de una carpeta principal) o es expl&iacute;cito (mostrado como <b>Ninguno</b>). </li><img src="../../../online_img/dsm/AdminCenter/file_share_privilege/howto450-9.png" class="help_image"/><li><b>Tipo:</b> Elija <b>Permitir</b> o <b>Denegar</b> para otorgar o denegar el permiso al usuario o grupo.</li><img src="../../../online_img/dsm/AdminCenter/file_share_privilege/howto450-10.png" class="help_image"/><li><b>Aplicar a:</b> Si est&aacute; creando una entrada de permiso para una carpeta, marque las casillas de verificaci&oacute;n para aplicar la entrada de esta carpeta, las carpetas (o <b>Carpetas secundarias</b>) o archivos (o <b>Archivos secundarios</b>) en esta carpeta, o todos los archivos y carpetas incluidas en esta carpeta (o <b>Todos los descendientes</b>). </li><img src="../../../online_img/dsm/AdminCenter/file_share_privilege/howto450-11.png" class="help_image"/><li><b>Administraci&oacute;n:</b> Marque <b>Leer permisos</b>, <b>Cambiar permisos</b> o <b>Toma de posesi&oacute;n</b> para especificar la configuraci&oacute;n de permisos de acceso de usuario o grupo de la entrada. </li>
+        <li><b>Leer</b> o <b>Escribir:</b> Marque las casillas de verificaci&oacute;n en estos apartados para modificar la configuraci&oacute;n del permiso del grupo o usuario en el archivo o carpeta. </li>
+      </ol>    
+  <li> Haga clic en <b>OK</b>.</li>
+</ol>
+<div class="section disable-eds14">
+  <h4>Los permisos de ACL podr&aacute;n categorizarse de la siguiente manera:</h4>
+  <ul>
+    <li><b>Administraci&oacute;n:</b><ul>
+      <li><b>Cambiar permisos</b>: Controla si un usuario puede modificar los permisos del archivo o la carpeta.</li>
+      <li><b>Toma de posesi&oacute;n</b>: Controla si un usuario tiene propiedad del archivo o la carpeta.</li>
+    </ul></li>
+    <li><b>Lectura:</b><ul>
+      <li><b>Recorrer las carpetas/Ejecutar archivos</b>: Controla si un usuario puede ejecutar un archivo de programas.</li>
+      <li><b>Lista de carpetas/Lectura de datos</b>: Controla si un usuario puede leer datos en un archivo.</li>
+      <li><b>Leer atributos</b>: Controla si un usuario puede ver los atributos de un archivo.</li>
+      <li><b>Leer atributos extendidos</b>: Controla si un usuario puede ver los atributos ampliados de un archivo.</li>
+      <li><b>Leer permisos</b>: Controla si un usuario puede leer los permisos del archivo o la carpeta.</li>
+    </ul></li>
+    <li><b>Escritura:</b><ul>
+      <li><b>Crear archivos/Escribir datos</b>: Controla si un usuario puede modificar el contenido de un archivo.</li>
+      <li><b>Crear carpetas/anexar datos</b>: Controla si un usuario puede a&ntilde;adir datos al final de un archivo.</li>
+      <li><b>Escribir atributos</b>: Controla si un usuario puede modificar los atributos de un archivo.</li>
+      <li><b>Escribir atributos extendidos</b>: Controla si un usuario puede modificar los atributos ampliados de un archivo.</li>
+      <li><b>Eliminar subcarpetas y archivos</b>: Controla si un usuario puede borrar una carpeta.</li>
+      <li><b>Eliminar</b>: Controla si un usuario puede eliminar un archivo.</li>
+    </ul></li>
+  </ul>
+  <h4>Acerca de la herencia de permisos:</h4>
+  <p> Los permisos de ACL se heredan de objetos principales a objetos secundarios. Por ejemplo, si una entrada ACL de la carpeta &quot;ventas&quot; otorga permisos de &quot;Lectura&quot; al usuario &quot;Amy&quot;, entonces la entrada ACL se aplicar&aacute; a todos los archivos dentro de la carpeta &quot;ventas&quot; (como &quot;informe anual.xls&quot;), permitiendo al usuario abrir los archivos. Los permisos heredados se mostrar&aacute;n en gris, mientras que los propios permisos de objeto (o permisos &quot;expl&iacute;citos&quot;) se mostrar&aacute;n en negro. </p>
+</div>
+<div class="section disable-eds14">
+  <h4>Nota:</h4>
+  <ul>
+    <li>Solo se pueden a&ntilde;adir hasta 200 entradas de permiso expl&iacute;cito de ACL para un archivo o carpeta.</li>
+    <li>ACL de Windows s&oacute;lo se admite en sistemas de archivos ext4<span style="display: inline;" class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64">/Btrfs</span>. Para usuarios anteriores de DSM 2.3, debe crear al menos un volumen ext4<span style="display: inline;" class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64">/Btrfs</span> adicional para usar los permisos de Windows ACL. Esto implica que debe formatear al menos un disco y volver a crear un volumen. Formatear DiskStation provocar&aacute; el borrado de todos los datos almacenados y de la configuraci&oacute;n. Aseg&uacute;rese de realizar una copia de seguridad de los datos antes del procesamiento.</li>
+    <li>Para definir nuevos permisos para usuarios del dominio, aseg&uacute;rese de que los clientes de DSM y Windows se encuentren en el mismo dominio.</li>
+    <li>Al modificar permisos con Windows File Explorer, las reglas de <strong>Denegar</strong> aplicadas al grupo de <strong>Administradores de dominio</strong> se ignorar&aacute;.</li>
+  </ul>
+</div>
+
+
+</body>
+</html>

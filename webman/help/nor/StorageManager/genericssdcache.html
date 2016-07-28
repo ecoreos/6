@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2>SSD-hurtigbuffer*</h2>
+<p>SSD-hurtigbuffer kan forbedre ytelsen for tilfeldig tilgang ved å lagre ofte brukt data i SSD-hurtigbufferen. SSD-hurtigbuffer kan monteres på et volum eller iSCSI LUN (blokknivå). Det finnes to typer SSD-hurtigbuffer:</p>
+<ul>
+<li><strong>Skrivebeskyttet buffer</strong> kan bestå av 1 til 12 SSD-er som kan monteres i en Basic- eller RAID 0-konfigurasjon for å forbedre den tilfeldige leseytelsen til lagringsområdet den monteres på.
+<div class="section"><h4>Merk:</h4>
+	<p>Skrivebeskyttet SSD-hurtigbuffer lagrer kopier av data fra volumet. På denne måten vil ikke data gå tapt selv om den skrivebeskyttede bufferen har krasjet.</p>
+	</div>
+</li>
+<li><strong>Lese-skrivebuffer</strong> kan monteres i en RAID 1-/RAID 5-/RAID 6-konfigurasjon, avhengig av antall SSD-er (opptil 12 SSD-er), for å forbedre den tilfeldige lese- og skriveytelsen på lagringsområdet den er montert på.</li>
+</ul>
+
+<p>Begge typer SSD-hurtigbuffer implementerer en LRU-algoritme (Least Recently Used) for å bytte dataene i bufferen.</p>
+
+<div class="section">
+<h4>Viktig:</h4>
+<p>Før du installerer en SSD for bruk som buffer, må du se følgende merknader:</p>
+<ul>
+<li>Målet med å aktivere SSD-hurtigbuffer er å øke ytelsen for tilfeldig tilgang til en liten mengde data som ofte blir brukt på lagringsområdet. For eksempel, både store sekvensielle lese- og skriveoperasjoner (f.eks. HD-videostreaming) og helt tilfeldige lesemønstre mangler gjenlesingsmønstre, og vil dermed ikke ha noen særlig fordel av SSD-hurtigbufring. For generelle programmer anbefales det å aktivere alternativet <b>Hopp over sekvensiell I/O</b>, slik at sekvensiell I/O fortsatt slipper gjennom til diskene på lagringsområdet.</li>
+<li>Se kompatibilitetslisten på <a href="http://www.synology.com/" target=_blank>Synologys webområde</a> for å velge SSD for bruk som buffer på din DiskStation.</li>
+<li class="disable-alpine">SSD-hurtigbuffer krever en bestemt mengde systemminne avhengig av bufferstørrelsen, så montering av større SSD-hurtigbuffer kan bety at du må oppgradere minnet på DiskStation. For å holde systemet stabilt og raskt, kan kun 1/4 av det forhåndsinstallerte systemminnet brukes til SSD-hurtigbuffer. Hver 1 GB med SSD-hurtigbuffer krever omtrent 416 KB systemminne (utvidbart minne kan telles med).** Så hvis konfigurasjonen for skrivebeskyttet buffer er 2 x 128 GB SSD, vil den totale bufferstørrelsen være 256 GB og vil kreve minst 104 MB minne. Hvis konfigurasjonen for lese-skrivebuffer er 2 x 128 GB SSD, vil den totale bufferstørrelsen være 128 GB og vil kreve minst 52 MB minne. Hvis det ikke er tilstrekkelig minne, vil oppretting av SSD-hurtigbuffer eller størrelsen på SSD-hurtigbuffer være begrenset.</li>
+<li class="enable-alpine">Hver 1 GB med SSD-hurtigbuffer krever omtrent 416 KB systemminne (utvidbart minne kan telles med), og maksimum bufferstørrelse er 930 GB. Så hvis konfigurasjonen for skrivebeskyttet buffer er 2 x 128 GB SSD, vil den totale bufferstørrelsen være 256 GB og vil kreve minst 104 MB minne. Hvis konfigurasjonen for lese-skrivebuffer er 2 x 128 GB SSD, vil den totale bufferstørrelsen være 128 GB og vil kreve minst 52 MB minne. Hvis det ikke er tilstrekkelig minne, vil oppretting av SSD-hurtigbuffer eller størrelsen på SSD-hurtigbuffer være begrenset.</li>
+<li>Se produktspesifikasjonene for dine modeller på <a href="http://www.synology.com/" target=_blank>Synologys webområde</a> for maksimum tillatt størrelse på SSD-hurtigbuffer for din DiskStation.</li>
+<li>Når en lese-skrive-SSD-hurtigbuffer er degradert, vil bufferfunksjonen bli deaktivert og systemet vil begynne å skrive (dvs. synkronisere) bufret data fra SSD-en til HDD-ene. Når datasynkroniseringen er fullført, vil du ikke miste data selv om lese-skrivebufferen krasjer.</li>
+<li>Lese-skrivebuffer kan ikke brukes sammen med Time Backup. For eksempel, når du oppretter en SSD-hurtigbuffer med lese-skriveegenskaper, vil du ikke kunne kjøre Time Backup. Og motsatt, hvis du kjører Time Backup, vil du ikke kunne opprette en SSD-hurtigbuffer med lese-skriveegenskaper.</li>
+</ul>
+</div>
+
+<h4>Slik monterer du SSD-hurtigbuffer:</h4>
+<ol>
+  <li>Installer SSD-ene på din DiskStation. Se merknadene ovenfor først.</li>
+  <li>Gå til <strong>Lagringshåndtering</strong> > <strong>SSD-hurtigbuffer</strong>. Klikk på <b>Opprett</b>.</li>
+<li>Velg buffermodus (kun tilgjengelig for modeller som støtter lese-skrivebuffer).</li>
+<li>Finn rullegardinmenyen og velg volumet eller iSCSI LUN (blokknivå) som du vil montere SSD-hurtigbufferen på.</li>
+<li>Velg SSD-ene fra listen. Data på SSD-ene vil bli slettet, så forsikre deg om at ingen viktig data vil bli slettet.</li>
+<li>Klikk på <b>Bruk</b>.</li>
+</ol>
+
+<h4>Slik stanser du bufring av sekvensiell I/O: </h4>
+<p>Hvis ditt målvolum eller mål-iSCSI LUN (blokknivå) har utmerket sekvensiell I/O-ytelse, kan du få SSD-hurtigbufferen til å stanse bufringen av sekvensiell I/O og aksessere data direkte fra diskene dine for å få høyere hastighet og bedre ytelse. </p>
+<ol>
+<li>Klikk på <strong>Konfigurer</strong> for å åpne konfigurasjonsvinduet.</li>
+<li>Merk av for <strong>Hopp over sekvensiell I/O</strong>. </li>
+</ol>
+
+
+<h4>Slik fjerner du SSD-hurtigbuffer:</h4>
+<ol>
+<li>Klikk på <b>Fjern</b> for å fjerne denne SSD-hurtigbufferen fra DiskStation permanent.</li>
+<li>Med lese-skrivebuffer må du fjerne den med denne prosedyren (selv om din DiskStation er slått av), ellers vil volumet bryte sammen fordi delvise data kun eksisterer på bufferen.</li>
+</ol>
+
+<div class="section">
+<h4>Merk:</h4>
+<ul>
+<li>Når du monterer eller fjerner SSD-hurtigbuffer, vil systemet stanse alle relaterte tjenester (f.eks. delte mapper, installerte pakker, gjeldende tilkoblinger, etc.)</li>
+<li>Hvis en lese-skrivebuffer på et lagringsområde ikke oppdages ved oppstart, vil ikke systemet montere dette lagringsområdet. Finn og reinstaller SSD-ene i DiskStation og start på nytt for å montere lagringsområdet. Hvis du ikke finner SSD-ene, må du kanskje tvangsmontere lagringsområdet. Se <a href="space.html">Volum</a> eller <a href="iscsilun.html">iSCSI LUN</a>.</li>
+</ul>
+</div>
+
+<h4>Slik reparerer du SSD-hurtigbuffer:</h4>
+<ul>
+<li><strong>For lese-skrivebuffer:</strong> Hvis en av SSD-ene har krasjet, følger du trinnene nedenfor for å reparere den.
+  <ol>
+<li>Erstatt den sviktende SSD-en med en ny. (Den nye SSD-en må være av samme modell og størrelse som den gamle.)</li>
+<li>Klikk på <b>Reparer</b>-knappen.</li>
+<li>Velg SSD-en fra listen.</li>
+<li>Klikk på <b>Bruk</b>.</li>
+</ol>
+</li>
+<li><strong>For skrivebeskyttet buffer:</strong> Hvis en av SSD-ene har krasjet, fjerner du bufferen og erstatter den sviktende SSD-en. Deretter klikker du på <strong>Opprett</strong> for å sette opp en ny bufferkonfigurasjon.</li>
+</ul>
+
+
+<h3>Veiledning for SSD-hurtigbuffer</h3>
+<p>Denne funksjonen lar deg regne ut og vise den totale størrelsen og antallet på nylig åpnede filer på et spesifikt volum. Hvis du ikke har opprettet SSD-hurtigbuffere på det valgte volumet ennå, kan du rådføre deg med denne informasjonen for å finne ut hvor mye SSD-hurtigbuffer er egnet for ditt system. Hvis du har opprettet en SSD-hurtigbuffer på det valgte volumet fra før, vil analysen og forbruket av bufferen også bli vist her.</p>
+
+<h4>Slik bruker du Veiledning for SSD-hurtigbuffer:</h4>
+
+<ol>
+<li>Klikk på <b>Veiledning for SSD-hurtigbuffer</b> for å åpne veiviseren.</li>
+<li>Velg et volum for beregning og klikk deretter på <b>Neste</b>.</li>
+<li>Veiviseren vil automatisk begynne å regne ut den totale størrelsen og antallet på nylig åpnede filer på det valgte volumet. Utregningstiden varierer avhengig på ditt individuelle miljø.</li>
+</ol>
+<p>_____<br> *SSD-hurtigbuffer er kun tilgjengelig på enkelte modeller.<br> <span class="disable-alpine" style="display: inline;">** Dette gjelder ikke for lese-skrive-SSD-hurtigbuffere som er opprettet på DSM 5.1 eller eldre versjoner. Det vil si, hver 1 GB med SSD-hurtigbuffer som opprettes før DSM 5.2 vil fortsatt kreve 4 MB systemminne, selv ved bruk i DSM 5.2-miljøet.</span>
+  </p>
+</body>
+</html>

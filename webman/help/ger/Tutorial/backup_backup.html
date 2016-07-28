@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script> <script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+<meta content="en-us" http-equiv="Content-Language" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Sichern Sie Ihre Daten auf einem Synology NAS, um ihre Sicherheit zu gewährleisten</title>
+</head>
+
+<body class="tutorial-content-box" >
+
+<h1>Ihren Synology NAS sichern</h1>
+<div class="tutorials_content">
+<img src="../../images/Backup/1x/Backup/back_up_your_data_on_synology_nas_to_ensure_data_security.jpg" />
+<h2>Überblick</h2>
+<p>Unerwarteter Datenverlust infolge eines Festplattenfehlers oder einer Naturkatastrophe stellt eine potenzielle Bedrohung Ihrer wichtigsten Daten dar, insbesondere wenn keine zuverlässige Datensicherungslösung verfügbar ist. <strong>Hyper Backup</strong> ist eine intuitive und integrierte Lösung für die Sicherung und Wiederherstellung von Kopien Ihrer wertvollen Daten und die Wiederherstellung früherer Anwendungen und Systemkonfigurationen. Die folgenden Speicherziele werden unterstützt:</p>
+
+<ul>
+<li><strong>Lokale freigegebene Ordner (einschließlich an Ihrem DiskStation angeschlossene externe Speichergeräte)</strong></li>
+<li><strong>Remote Synology NAS</strong></li>
+<li><strong>Remote-rsync-Server</strong></li>
+<li><strong>Remote OpenStack Swift-Server</strong></li>
+<li><strong>Öffentliche Clouds (Amazon S3, Microsoft Azure, OpenStack Swift usw.)</strong></li>
+</ul>
+</div>
+
+<div class="section">
+<h4>Hinweis:</h4>
+<p>Hyper Backup sichert nur bestimmte Systemkonfigurationen und Anwendungen. Weitere Informationen finden Sie in der Hilfe und Dokumentation zu Hyper Backup.</p>
+</div>
+
+
+<h3 class="list_head">1. Aufgaben für die lokale Datensicherung in einem lokalen freigegebenen Ordner oder auf einem externen Speichergerät erstellen</h3>
+<p><strong>Hyper Backup</strong> bietet für unterschiedliche Zieltypen ähnliche Verfahren für die Datensicherung und Wiederherstellung. Nachstehend wird die lokale Sicherung und Wiederherstellung erläutert, die auch für andere Aufgabentypen zurate gezogen werden kann.</p>
+
+<ol>
+<li>Melden Sie sich bei DSM an und suchen Sie nach dem Paket <strong>Hyper Backup</strong>.</li>
+<li>Klicken Sie unten links auf <strong>+</strong> und wählen Sie <strong>Datensicherungsaufgabe</strong> aus.</li>
+<li>Wählen Sie zum Einrichten einer lokalen Datensicherungsaufgabe <strong>Lokaler gemeinsamer OrdnerLokaler</strong> aus.</li>
+<img src="../../images/Backup/1x/Backup/1.png" width="600" alt=""/>
+<li>Wählen Sie <strong>Datensicherungsaufgabe erstellen</strong> aus und wählen Sie einen lokalen Ordner oder ein an Ihrem DiskStation angeschlossenes externes Speichergerät aus.</li>
+<img src="../../images/Backup/1x/Backup/2.png" width="600" alt=""/>
+<li>Wählen Sie den (die) Quellordner mit den zu sichernden Daten aus. Verschlüsselte freigegebene Ordner müssen, wenn sie ausgewählt werden, während der Datensicherung angehängt bleiben. Wenn sich Quelle und Ziel auf demselben Volume befinden, werden die Quellordner vom System mit orangefarbenen Ausrufezeichen markiert.</li>
+<img src="../../images/Backup/1x/Backup/3.png" width="600" alt=""/>
+<li>Wählen Sie die Anwendung(en) aus, die Sie sichern möchten.</li>
+<img src="../../images/Backup/1x/Backup/4.png" width="600" alt=""/>
+<li>Legen Sie die nachstehenden Datensicherungseinstellungen gemäß Ihren Anforderungen fest:
+  <ul>
+  <li><strong>Aufgabe</strong>: Geben Sie der Datensicherungsaufgabe einen Namen.</li>
+  <li><strong>Aufgabenbenachrichtigung aktivieren</strong>: Geben Sie hier an, dass Sie per E-Mail, SMS oder Push-Dienst über den Aufgabenstatus informiert werden möchten.</li>
+  <li><strong>Konfigurationssicherung aktivieren</strong>: Über diese Option können Sie die Systemkonfigurationen (z. B. Benutzerdaten) sichern. Diese Einstellung wird standardmäßig bei allen Datensicherungsaufgaben erzwungen.</li>
+  <li><strong>Gesicherte Daten komprimieren</strong>: Sie können gesicherte Daten komprimieren, um Speicherplatz am ausgewählten Datensicherungsziel zu sparen. Wenn diese Option aktiviert ist, dauert die Datensicherung länger.</li>
+  <li><strong>Übertragungsverschlüsselung aktivieren</strong> (nur für Remote-Datensicherung): Aktivieren Sie diese Option, um die Sicherungsdaten während der Übertragung zu einem Remote-Ziel (z. B. ein rsync-Server oder eine öffentliche Cloud) zu verschlüsseln.</li>
+  <li><strong>Teilgröße bei mehrteiligem Upload</strong> (nur für S3-kompatible Server): Über diese Option können Sie die Sicherungsdaten entsprechend der angegebenen Teilgröße aufteilen.</li>
+  <li><strong>Client-seitige Verschlüsselung aktivieren</strong>: Wählen Sie diese Option aus, um die Sicherungsdaten mit einem Kennwort vor dem ungewünschten Zugriff auf der Zielseite zu schützen.</li>
+    
+  <li><strong>Sicherungszeitplan aktivieren</strong>: Über diese Option können Sie eine Zeit für die automatische Durchführung der Datensicherungsaufgabe angeben.</li>
+  </ul>
+  </li>
+  
+<img src="../../images/Backup/1x/Backup/5.png" width="600" alt=""/>
+<li>Wählen Sie <strong>Sicherungsrotation aktivieren</strong>, um das Rotationsschema einzurichten:
+  
+  <ul>
+  <li><strong>Von den frühesten Versionen</strong>: Löscht die frühesten vorhandenen Sicherungsversionen, wenn die angegebene <strong>Anzahl der Versionen</strong> überschritten wird.</li>
+  <li><strong>Smart Recycle</strong>: Das System verwahrt jede Sicherungsversion, bis die angegebene Anzahl der Versionen überschritten ist. Wenn die Rotation ausgelöst wird, rotiert das System zuerst die Versionen, die keine der Bedingungen erfüllen; wenn alle vorhandenen Versionen die nachstehenden Bedingungen erfüllen, rotiert das System die früheste Version:
+  <ul>
+  <li><strong>Stündliche Versionen der letzten 24 Stunden</strong>: Das System bewahrt die früheste in jeder Stunde erstellte Version auf.</li>
+  <li><strong>Tägliche Versionen vom vergangenen 1 Tag bis zu 1 Monat</strong>: Das System bewahrt die früheste an jedem Tag erstellte Version auf.</li>
+  <li><strong>Wöchentliche Version älter als 1 Monat</strong>: Das System bewahrt die früheste in jeder Woche erstellte Version auf.</li>
+  </ul>
+  
+  </li>
+  <li><strong>Anzahl der Versionen</strong>: Legt die Obergrenze möglicher verwahrter Sicherungsversionen fest.</li>
+  <li>Zeitachse: Zeigt das mögliche Ergebnis für die Aufbewahrung von Sicherungen gemäß Ihrem Sicherungszeitplan und Rotationsschema an.</li>
+  </ul>
+</li>
+
+<img src="../../images/Backup/1x/Backup/6.png" width="600" alt=""/>
+<li>Klicken Sie zum Beenden des Setups auf <strong>Übernehmen</strong>.</li>
+<li>Folgen Sie den Anweisungen des Sicherungsassistenten und klicken Sie auf <strong>Ja</strong>, um die Datensicherungsaufgabe sofort durchzuführen.</li>
+</ol>
+
+
+<h3 class="list_head">2. Einzelne Dateien aus einem lokalen freigegebenen Ordner bzw. von einem externen Speichergerät wiederherstellen</h3>
+
+
+<ol>
+<li>Gehen Sie zu <strong>Hyper Backup</strong>, wählen Sie im linken Fenster die gewünschte Datensicherungsaufgabe aus und klicken Sie auf <strong>Datensicherungs-Explorer</strong> (das Lupensymbol). Geben Sie das Kennwort ein, wenn die Aufgabe durch clientseitige Verschlüsselung geschützt ist.</li>
+<img src="../../images/Backup/1x/Backup/Single_1.png" width="600" alt=""/>
+<li>Gehen Sie zur Datei, die Sie wiederherstellen möchten, und wählen Sie sie aus. Über die Zeitachse können Sie auch die wiederherzustellende Version auswählen.</li>
+<img src="../../images/Backup/1x/Backup/Single_2.png" width="600" alt=""/>
+<li>Klicken Sie auf <strong>Wiederherstellen</strong>, um die ausgewählte Datei bzw. den ausgewählten Ordner wiederherzustellen.</li>
+
+</ol>
+
+
+
+<h3 class="list_head">3. Vollständige Aufgaben zur gewünschten Zeit wiederherstellen</h3>
+
+<ol>
+<li>Klicken Sie unten links auf <strong>Wiederherstellen</strong> und dann auf <strong>Daten</strong>. Geben Sie das Kennwort ein, wenn die Aufgabe durch clientseitige Verschlüsselung geschützt ist.</li>
+
+<img src="../../images/Backup/1x/Backup/Restore_1.png" width="600" alt=""/>
+<li>Wählen Sie eine wiederherzustellende Aufgabe aus. Um Daten von anderen Repositories wiederherzustellen, wählen Sie <strong>Von anderen Repositories wiederherstellen</strong> aus und gehen zu der wiederherzustellenden Aufgabe.</li>
+<img src="../../images/Backup/1x/Backup/Restore_2.png" width="600" alt=""/>
+<li>Wählen Sie aus, ob die Systemkonfigurationen wiederhergestellt werden sollen. Wenn Sie <strong>Systemkonfiguration wiederherstellen</strong> auswählen, müssen Sie die betreffenden wiederherzustellenden Konfigurationen in der nachstehenden Liste auswählen.</li>
+<img src="../../images/Backup/1x/Backup/Restore_3.png" width="600" alt=""/>
+
+<li>Gehen Sie zu der (den) Datei(en) bzw. zu der Aufgabe, die Sie wiederherstellen möchten, und wählen Sie sie aus. Über die Zeitachse können Sie auch die wiederherzustellende Version auswählen.</li>
+<img src="../../images/Backup/1x/Backup/Restore_4.png" width="600" alt=""/>
+<li>Wählen Sie die wiederherzustellenden Anwendungen aus.</li>
+<img src="../../images/Backup/1x/Backup/Restore_4.5.png" width="600" alt=""/>
+<li>Es werden grundlegende Informationen zur Wiederherstellung angezeigt.</li>
+<img src="../../images/Backup/1x/Backup/Restore_5.png" width="600" alt=""/>
+<li>Klicken Sie auf <strong>Übernehmen</strong>, um die Wiederherstellung zu starten.</li>
+</ol>
+
+
+
+
+
+
+<div class="page-info">
+  <ul>
+    <li>Vorheriges in diesem Thema: <a href="backup_from_computer.html">Daten auf dem eigenen PC/Mac mit Cloud Station sichern</a> </li>
+  </ul>
+</div>
+</body>
+
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Win/Mac/NFS</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+
+
+
+<h2>Servizio NFS</h2>
+<p>Il Servizio NFS consente ai client Linux di accedere ai dati su questo dispositivo DiskStation.</p>
+<h4>Per abilitare il servizio NFS:</h4>
+<ol>
+<li>Andare su <strong>Pannello di controllo</strong> > <strong>Servizi file</strong> > <strong>Win/Mac/NFS</strong> e mettere il segno di spunta su <b>Abilita NFS</b>.</li>
+<li>Fare clic su <b>Applica</b>.</li>
+</ol>
+
+
+<div class="section">
+  <h4>Nota:</h4>
+<ul>
+<li> DiskStation al momento supporta NFSv2, NFSv3 e NFSv4.</li>
+<li>Durante il montaggio, il parametro <strong>-o vers=2</strong>, <strong>-o vers=3</strong> o <strong>-o vers=4</strong> può essere aggiunto al comando mount per specificare quale versione NFS deve essere usata.</li>
+</ul>
+</div>
+
+
+<h4>Per configurare i privilegi di accesso dei client Linux a cartelle condivise:</h4>
+<p>Andare su <b>Pannello di controllo</b> > <b>Cartella condivisa</b>. Selezionare una cartella condivisa e fare clic su <strong>Modifica</strong> per gestire le regole NFS e regolare l'accesso accanto a questa cartella condivisa per client Linux.</p>
+
+
+<h3>Impostazione supporto NFSv4</h3>
+<p>È possibile determinare se il server NFT supporta NFSv4. Quando questa opzione è abilitata, il server NFS supporterà NFSv2, NFSv3 e NFSv4; altrimenti, solo NFSv2 e NFSv3 saranno supportati.</p>
+
+<h4>Per attivare il supporto NFSv4:</h4>
+<ol>
+<li>Selezionare <b>Abilita supporto NFSv4</b>.
+</li>
+<li>
+Nel campo <b>Dominio NFSv4</b>, inserire il nome del dominio NFSv4 che si vuole utilizzare. Questo campo è opzionale e può essere lasciato vuoto.</li>
+<li>
+Fare clic su <b>Applica</b>.
+</li>
+</ol>
+
+<div class="section">
+<h4>Nota:</h4>
+<p>Quando si utilizza NFSv4 per montare la cartella condivisa, tenere presente quanto segue. Altrimenti, le operazioni su file associate con il nome utente non verranno eseguite in modo corretto.</p>
+<ul>
+<li>Il client NFS deve attivare idmapd.</li>
+<li>Le impostazioni del dominio NFSv4 nel file idmapd.conf sul client NFS devono essere coerenti con il campo <b>Dominio NFSv4</b> su DiskStation.</li>
+</ul>
+
+</div>
+
+<h3>Impostazioni avanzate</h3>
+
+<h4>Applicazione di autorizzazioni UNIX predefinite</h4>
+<p> Quando si seleziona <strong>Applica autorizzazioni UNIX predefinite</strong>, sono applicati i permessi UNIX predefiniti impostati nel client Linux invece dei permessi Windows ACL quando si caricano o creano file e cartelle. Le autorizzazioni applicate sono le stesse applicate dal comando UNIX <strong>umask</strong>. Quando questa opzione è abilitata, le autorizzazioni UNIX sono 644 per i file e 755 per le cartelle. Quando questa opzione è disabilitata, le autorizzazioni UNIX sono 666 per i file e 777 per le cartelle. Il valore unmask predefinito è 022.</p><div class="section">
+<h4>Nota:</h4>
+<ul>
+  <li>Per le cartelle condivise abilitate per Windows ACL (tutte le condivisioni escluse le "foto" e le condivisioni sulle unità esterne), eseguire il comando <strong>chmod</strong> sul client Linux o FTP per cambiare la cartella e i tipi di permesso dei file da Windows ACL a UNIX.</li>
+  <li>L'abilitazione di questa funzione può causare problemi di autorizzazioni non coerenti tra diversi protocolli. Per evitare incoerenze, consigliamo di lasciare questa opzione disabilitata.</li>
+</ul>
+</div>
+
+<h4>Porta personalizzata</h4>
+<p>È possibile personalizzare numeri di porta per servizi statd e nlockmgr.</p>
+
+<ol>
+<li>Selezionare <strong>Porte personalizzate</strong>.</li>
+<li>Inserire i numeri di porta nella porta <strong>statd </strong>e<strong> nlockmgr</strong>.</li>
+<li>
+Fare clic su <b>Applica</b>.
+</li>
+</ol>
+
+<div class="section">
+<h4>Nota:</h4>
+<ul>
+<li>Se si desidera utilizzare servizi NFSv3, andare a <strong>Pannello di controllo</strong> &gt; <strong>Sicurezz</strong> &gt; <strong>Firewall</strong> e creare una regola del firewall che abilita "File server Mac/Linux" dall'elenco delle applicazioni integrate.</li>
+</ul>
+</div>
+<h4>Impostazione dimensioni del pacchetto di lettura/scrittura</h4>
+<p>Quando le dimensioni del pacchetto di lettura/scrittura non possono essere impostate sul client NFS, è possibile specificare il valore predefinito in questo campo.</p>
+
+<ol>
+<li>Selezionare le dimensioni del pacchetto desiderate dai campi <strong>Leggi dimensioni pacchetto</strong> e <strong>Scrivi dimensioni pacchetto</strong>.</li>
+<li>
+Fare clic su <b>Applica</b>.
+</li>
+<li>
+Rimonta la condivisione.
+</li>
+</ol>
+
+<div class="section">
+<h4>Nota:</h4>
+<ul>
+<li>Dopo aver modificato le dimensioni del pacchetto di lettura/scrittura, la cartella condivisa deve essere rimontata prima che le nuove impostazioni abbiano effetto.</li>
+<li>Queste impostazioni influenzano solo i client NFS che si collegano via UDP (Protocollo Datagramma Utente).</li>
+</ul>
+</div>
+
+
+
+
+<h3>Impostazioni Kerberos*</h3>
+<p>Kerberos è un protocollo di autenticazione di rete. Esso consente a client e server di comunicare su una rete non sicura per autenticare e provare le loro identità in modo sicuro. DiskStation fornisce opzioni per importare una chiave Kerberos esistente. Una volta importata con successo, i client NFS possono usare il protocollo di autenticazione Kerberos per collegarsi a DiskStation.</p>
+
+<h4> Per importare una chiave Kerberos: </h4>
+<ol>
+<li>Fare clic su <strong>Impostazioni Kerberos</strong>.</li>
+<li>Fare clic sul pulsante <b>Importa</b>.</li>
+<li>Scegliere la chiave Kerberos che si desidera importare.</li>
+<li>Fare clic su <b>OK</b>.</li>
+</ol>
+
+<h3><a name="idmap"></a>Mappatura ID Kerberos</h3>
+<p>È possibile mappare i singoli principi Kerberos agli account utente DSM locali.</p>
+<h4> Per mappare i principi Kerberos e gli account utente locali: </h4>
+<ol>
+<li>Fare clic su <strong>Impostazioni Kerberos</strong>.</li>
+<li>Andare sulla scheda <strong>Mappatura ID</strong>.</li>
+<li> Fare clic sul <b>Aggiungi</b>. Selezionare una delle seguenti opzioni.</li>
+<ul>
+<li><strong>Mappatura ID:</strong> immettere un principio Kerberos e l'account utente locale a cui deve essere mappato.</li>
+<li><strong>Elenco mappatura consigliata:</strong> questa opzione visualizza un elenco di principi Kerberos consigliati/opzioni mappatura utente locale che sono generate dal sistema.</li>
+</ul>
+</ol>
+<div class="section disable-eds14">
+  <h4> Nota: </h4>
+<ul>
+<li>Per mappare un client NFS che si collega attraverso Kerberos a un account utente Dominio/LDAP esistente, verificare di aver aggiunto il servizio directory. Inoltre, directory server deve avere un attributo che include il corrispondente principio Kerberos.</li>
+<ul>
+<li><strong>Utente di dominio:</strong> il formato per l'attributo corrispondente deve essere <strong>userPrincipalName</strong>.</li>
+<li><strong>Utente LDAP:</strong> il formato per l'attributo corrispondente deve essere <strong>GSSAuthName</strong>.</li>
+</ul>
+<li>Se l'utente non può essere mappato con successo a un utente locale o utente dominio/LDAP, l'utente dovrà essere mappato a "guest."
+<li>La priorità mappata è la seguente: Utente locale > Utente Dominio/LDAP > Guest. </li>
+<li>Per modificare le autorizzazioni di accesso dei client NFS, utilizzare l'Elenco di controllo di accesso Windows (ACL). Le opzioni relative alle credenziali che si trovano in <strong>Pannello di controllo</strong> > <strong>Utente</strong> non sono applicabili ai client NFS.</li>
+</ul>
+</div>
+<p>
+<br>____<br> * Disponibile solo su alcuni modelli.
+
+</p>
+
+
+
+</body>
+</html>

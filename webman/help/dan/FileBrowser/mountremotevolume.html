@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>File Station</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2>Tilknyt fjernmapper</h2>
+
+<p>
+Du kan tilknytte fjernmapper fra fjernservere (f.eks. netværkscomputere eller andre Synology NAS-enheder) for at navigere og administrere de tilknyttede mapper med File Station.
+</p>
+
+
+
+
+
+<h4>Sådan tilknytter du en delte CIFS-fjernmappe*:</h4>
+<ol>
+<li>Klik på <b>Værktøj</b> > <b>Tilknyt fjernmappe</b> > <strong>CIFS-delt mappe</strong>.</li>
+
+<img src="about:blank" class="help_image"/>
+
+<li>I feltet <b>Mappe</b> angiver du fjernmappestien i formatet <code>\\Remote_Server\Remote_Folder</code>, f.eks., <code>\\192.168.0.2\share</code> eller <code>\\chad\cheeseburger\pictures</code>.</li>
+<li>Hvis fjernserveren kræver adgangsprivilegier til fjernmappen, skal du indtaste dine brugerlegitimationsoplysninger til fjernserveren i felterne <b>Kontonavn</b> og <b>Adgangskode</b>.</li>
+<li>Klik på <b>Gennemse</b> for at vælge eller oprette en tom destinationsmappe på din DiskStation for at tilknytte fjernmappen.</li>
+
+<img src="about:blank" class="help_image"/>
+
+<li>Marker <b>Tilslut automatisk ved start</b>, hvis du ønsker, at DiskStation for at tilknytte fjernmappen ved hver systemstart eller genstart.</li>
+<li>Klik på <b>Tilknyt</b> for at få fjernmappen knyttet til destinationsmappen. Du kan nu navigere og administrere fjernmappen fra din DiskStation.</li>
+</ol>
+
+<h4>Sådan tilknytter du en delt NFS-mappe:</h4>
+
+<ol>
+<li>Klik på <b>Værktøj</b> > <b>Tilknyt fjernmappe</b> > <b>NFS-delt mappe</b>.</li>
+
+<img src="about:blank" class="help_image"/>
+
+<li>I feltet <b>Mappe</b> angiver du fjernmappestien i formatet <code>Remote_Server:/Remote_Folder_Path</code>, f.eks., <code>192.168.0.2:/volume1/share</code>.</li>
+<li>Vælg den ønskede NFS-version og transportprotokol.</li>
+<li>Klik på <b>Gennemse</b> for at vælge eller oprette en tom destinationsmappe på din DiskStation for at tilknytte fjernmappen.</li>
+
+<img src="about:blank" class="help_image"/>
+
+<li>Marker <b>Tilslut automatisk ved start</b>, hvis du ønsker, at din DiskStation tilknytter fjernmappen ved hver systemstart eller -genstart.</li>
+<li>Klik på <b>Tilknyt</b> for at få fjernmappen knyttet til destinationsmappen. Du kan nu navigere og administrere fjernmappen fra din DiskStation.</li>
+</ol>
+
+<div class="section">
+<h4>Bemærk:</h4>
+<p>NFSv4 understøtter kun TCP-protokollen.</p>
+</div>
+
+<h4>Sådan afbryder du en fjernmappe:</h4>
+<ol>
+<li>Vælg den fjernmappe, du vil fraknytte, og klik på <b>Værktøj</b> > <b>Afbryd</b>.</li>
+
+<img src="about:blank" class="help_image"/>
+
+<li>Ellers kan du bare højreklikke på fjernmappen og vælge <b>Afbryd</b>.</li>
+
+<img src="about:blank" class="help_image"/>
+
+</ol>
+
+<div class="section">
+<h4>Bem&aelig;rk:</h4>
+<ul>
+<li>Det maksimale antal fjernmapper i baggrunden er 100.</li>
+<li>Du m&aring; kun tilknytte fjernmapper fra en fjernserver, der underst&oslash;tter CIFS- eller NFS-protokollen.
+</li>
+<li>Fjernmapper kan kun tilknyttes til undermapper under delte mapper.</li>
+<li class="enable-dockerx64">Tilknytning af fjernmapper underst&oslash;ttes kun i tilstand med h&oslash;jt privilegium. Hvis du vil bruge denne funktion, skal du g&aring; til Docker-pakken p&aring; din v&aelig;rts-DSM, v&aelig;lge den <strong>Docker DSM</strong>, du vil aktivere krypterede delte mapper for, klikke p&aring; <strong>Rediger</strong> og markere feltet ved siden af <strong>Udf&oslash;r container med h&oslash;je privilegier</strong>.</li>
+</ul>
+</div>
+
+
+
+<p>____<br />* Findes kun på bestemte modeller. </p>
+
+</body>
+</html>

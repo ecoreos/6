@@ -1,0 +1,188 @@
+﻿<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Dispositivos Externos</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2><a name="usbprinter"></a>Impressoras</h2>
+<p>DiskStation pode ser um servidor de impress&atilde;o, permitindo a computadores clientes ou dispositivos m&oacute;veis aceder a impressoras ligadas a DiskStation. Para al&eacute;m disso, a Impress&atilde;o Sem Fios Apple e Google Cloud Print permite-lhe imprimir remotamente usando dispositivos iOS ou produtos e servi&ccedil;os Google.</p>
+<p>Visite <a href="http://www.synology.com" target="_blank">www.synology.com</a> para consultar as impressoras compat&iacute;veis.</p>
+
+<h3>Configurar Impressoras</h3>
+<p>Consulte as seguintes instru&ccedil;&otilde;es para configurar e ligar uma impressora <span style="display: inline;" class="disable-rc18015xsp">USB ou</span> de rede ao seu DiskStation.</p>
+
+
+<h4 class="disable-rc18015xsp">Para configurar uma impressora USB:</h4>
+<ol class="disable-rc18015xsp">
+<li>Ligue a impressora &agrave; corrente el&eacute;trica e a uma porta USB no DiskStation.</li>
+<li>Aceda a <strong>Painel de Controlo</strong> &gt; <strong>Dispositivos Externos</strong> &gt; <strong>Impressora</strong>.</li>
+<li>Selecione a impressora que deseja configurar. Note que o DiskStation n&atilde;o consegue reconhecer impressoras ligadas por hubs USB.</li>
+<li>Clique em <b>Gestor de Impressoras</b> e selecione <b>Configurar Impressora</b>.</li>
+<li>Na janela de di&aacute;logo, selecione um dos seguintes modos:
+<ul>
+<li><b>Network MFP:</b> Permite que clientes dentro da rede local usem as fun&ccedil;&otilde;es de impress&atilde;o, digitaliza&ccedil;&atilde;o e fax da sua impressora multifun&ccedil;&otilde;es. As fun&ccedil;&otilde;es de digitaliza&ccedil;&atilde;o e fax est&atilde;o dispon&iacute;veis apenas para computadores Windows.</li>
+<li><b>Impressora de Rede:</b> Escolha este modo para impressoras que apenas suportem impress&atilde;o ou se desejar permitir que clientes utilizem apenas a fun&ccedil;&atilde;o de impress&atilde;o.</li>
+</ul>
+</li>
+<li>Configurar as defini&ccedil;&otilde;es Impress&atilde;o Sem Fios Apple ou Google Cloud Print (opcional).</li>
+<li>Clique em <b>Guardar</b>.</li>
+</ol>
+
+<div class="section disable-rc18015xsp">
+<h4>Nota:</h4>
+<p>Uma rede MFP apenas pode ser acedida por um cliente de cada vez.</p>
+</div>
+
+
+<h4>Para configurar uma impressora de rede:</h4>
+<ol>
+<li>Ligue a impressora &agrave; corrente el&eacute;trica e &agrave; mesma rede local do seu DiskStation.</li>
+<li>Aceda a <strong>Painel de Controlo</strong> &gt; <strong>Dispositivos Externos</strong> &gt; <strong>Impressora</strong>.</li>
+<li>Clique em <b>Adicionar Impressora de Rede</b> e siga as instru&ccedil;&otilde;es do assistente de configura&ccedil;&atilde;o.</li>
+</ol>
+
+<div class="section">
+<h4>Nota:</h4>
+<ul>
+<li><strong>Nome da impressora:</strong> Tem de ser introduzido um nome de impressora durante a configura&ccedil;&atilde;o e pode incluir at&eacute; 32 caracteres, incluindo letras, n&uacute;meros e subtra&ccedil;os.</li>
+	<li><strong>Protocolo:</strong> No geral, as impressoras de rede HP utilizam Socket; As impressoras de rede Canon utilizam BJNP; e outras utilizam na maioria LPR.</li>
+<li><strong>Nome de fila:</strong> Introduzir um nome de fila &eacute; necess&aacute;rio para impressoras de rede LPR e IPP, mas n&atilde;o se aplica a impressoras Socket e BJNP.</li>
+<li><strong>Sem Network MFP:</strong> Impressoras de rede ligadas a DiskStation n&atilde;o conseguem usar o modo MFP de Rede de momento.</li>
+<li><strong>Sem Impressoras USB:</strong> As impressoras USB partilhadas por um produto Synology n&atilde;o podem ser configuradas como impressoras de rede.</li>
+</ul>
+</div>
+
+
+<h3>Gest&atilde;o de Impressoras</h3>
+<p>O separador impressora inclui as seguintes op&ccedil;&otilde;es para gerir impressoras <span style="display: inline;" class="disable-rc18015xsp">USB ou </span>de rede ligadas a DiskStation.</p>
+
+<ul>
+<li><b>Obter Informa&ccedil;&otilde;es:</b> Apresenta informa&ccedil;&otilde;es relativas &agrave; impressora seleccionada, como nome de dispositivo, fabricante, estado, etc.</li>
+<li><strong>Remover:</strong> Remove e desliga uma impressora da DiskStation.</li>
+<li><strong>Gestor de Impressora:</strong> Inclui as seguintes op&ccedil;&otilde;es:
+<ul>
+<li><strong>Configurar Impressora</strong>: Edita as defini&ccedil;&otilde;es da impressora, como Impress&atilde;o Sem Fios Apple ou Google Cloud Print (consulte as instru&ccedil;&otilde;es, abaixo).</li>
+<li><strong>Limpar o espa&ccedil;o spool:</strong> Cancela todas as tarefas de impress&atilde;o em todas as impressoras.</li>
+<li><strong>Imprimir p&aacute;gina de teste:</strong> Imprime uma p&aacute;gina de teste para garantir que as configura&ccedil;&otilde;es est&atilde;o correctas.</li>
+<li><b>Libertar Impressora:</b> Desliga a impressora e cliente (apenas para modo MFP de Rede). Quando um cliente se liga a uma impressora multifuncional para receber faxes ou digitalizar ficheiros, a tarefa poder&aacute; demorar muito tempo. Caso necess&aacute;rio, a liga&ccedil;&atilde;o pode ser interrompida para permitir ao cliente seguinte na fila aceder &agrave; impressora.</li>
+</ul></li>
+</ul>
+
+
+<h4>Para activar Impress&atilde;o Sem Fios Apple:</h4>
+<ol>
+<li>Aceda a <strong>Painel de Controlo</strong> &gt; <strong>Dispositivos Externos</strong> &gt; <strong>Impressora</strong>.</li>
+<li>Selecione uma impressora a partir da lista de dispositivos.</li>
+<li>Clique em <b>Gestor de Impressoras</b> &gt; <b>Configurar Impressora</b>.</li>
+<li>Assinale a caixa <b>Activar Impress&atilde;o Sem Fios Apple</b>.</li>
+<li>Selecione a marca e controlador da sua impressora.</li>
+<li>Clique em <b>Guardar</b>.</li>
+</ol>
+
+<p>Depois de conclu&iacute;da a configura&ccedil;&atilde;o, pode imprimir uma p&aacute;gina de teste clicando em <b>Gestor de Impressoras</b> &gt; <b>Imprimir P&aacute;gina de Teste</b>.</li>
+
+<div class="section">
+<h4>Nota:</h4>
+<ul>
+<li>A ativa&ccedil;&atilde;o da Impress&atilde;o Sem Fios Apple tamb&eacute;m ativa a Emiss&atilde;o de Impressora Bonjour para DSM.</li>
+<li>A Impress&atilde;o Sem Fios Apple est&aacute; dispon&iacute;vel para iOS 4.2 ou posterior.</li>
+</ul>
+</div>
+
+
+<h4>Para ativar Google Cloud Print:</h4>
+<ol>
+<li>Aceda a <strong>Painel de Controlo</strong> &gt; <strong>Dispositivos Externos</strong> &gt; <strong>Impressora</strong>.</li>
+<li>Selecione uma impressora a partir da lista de dispositivos.</li>
+<li>Clique em <b>Gestor de Impressoras</b> &gt; <b>Configurar Impressora</b>.</li>
+<li>Assinale a caixa <b>Ativar Google Cloud Print</b>.</li>
+<li>Introduza os seguintes detalhes:
+<ul>
+
+<li>As informa&ccedil;&otilde;es da sua conta Google.</li>
+<li>A marca e controlador da sua impressora.</li>
+</ul>
+<li>Clique em <b>Guardar</b>.</li>
+</ol>
+<p>Depois de conclu&iacute;da a configura&ccedil;&atilde;o, pode imprimir uma p&aacute;gina de teste clicando em <b>Gestor de Impressoras</b> &gt; <b>Imprimir P&aacute;gina de Teste</b>.</li>
+</p>
+<p>Para gerir tarefas do Google Cloud Print, clique na liga&ccedil;&atilde;o <a href="http://www.google.com/cloudprint/manage.html" target="_blank">Google Cloud Print</a>.</p>
+
+
+<h3>Acesso &agrave;s Impressoras</h3>
+<p>Consulte a sec&ccedil;&atilde;o seguinte para aceder a impressoras com um PC ou Mac.</p>
+<h4><a name="others"></a>Para aceder a impressoras com um PC Windows:</h4>
+<p>
+A melhor forma de aceder ao servi&ccedil;o de impress&atilde;o do dispositivo DiskStation &eacute; configurar a liga&ccedil;&atilde;o &agrave; impressora com o Synology Assistant. Consulte a Ajuda para as instru&ccedil;&otilde;es detalhadas.
+</p>
+
+<p>Se o Synology Assistant n&atilde;o estiver instalado no seu computador, veja abaixo outras formas de aceder ao servi&ccedil;o de impress&atilde;o do dispositivo DiskStation.</p>
+<p><strong>Tipo 1. Impressora Partilhada de Rede</strong></p>
+<ol>
+<li>No seu PC, abra <b>Rede</b> no Explorador de Ficheiros e clique duas vezes em DiskStation.</li>
+
+<li>Clique duas vezes em <span style="display: inline;" class="disable-rc18015xsp"><b>usbprinter</b> ou </span><b>nome de impressora de rede</b>. O sistema pede que instale o controlador correto e depois clique em <b>Sim</b>.</li>
+
+<li>Obtenha o controlador da impressora a partir do CD ou no website do fabricante. Selecione o fabricante e modelo da impressora ou clique em <strong>Ler Disco</strong> para selecionar a localiza&ccedil;&atilde;o do controlador. Em seguida, clique em <b>OK</b>.</li>
+<li>O sistema ir&aacute; iniciar a configura&ccedil;&atilde;o da impressora de rede. Uma vez conclu&iacute;da a configura&ccedil;&atilde;o, poder&aacute; come&ccedil;ar a usar a impressora. </li>
+</ol>
+
+
+<p><strong>Tipo 2. Porta LPR (Recomendado)</strong></p>
+<ol>
+<li>No seu PC, clique em <b>Iniciar</b> e aceda a <b>Dispositivos e Impressoras</b>.</li>
+<li>Clique em <b>Adicionar impressora</b>. </li>
+	<li>Escolha <strong>Adicionar uma impressora de rede, sem fios ou Bluetooth.</strong> </li>
+	<li>Escolha <strong>A impressora que quero n&atilde;o est&aacute; na lista.</strong></li>
+<li>Selecione <b>Adicionar uma impressora usando o endere&ccedil;o TCP/IP ou nome de anfitri&atilde;o</b>. Clique em <b>Seguinte</b> para continuar.</li>
+<li>Escolha o tipo de Dispositivo para ser <b>Dispositivo Porta TCP/IP.</b></li>
+<li>Insira o endere&ccedil;o IP do DiskStation. Clique em <b>Seguinte</b> para continuar.</li>
+<li>Selecione <b>Tipo do dispositivo:</b> <strong>Personalizado</strong> &gt; <strong>Defini&ccedil;&otilde;es</strong> &gt; .... Clique em <b>Seguinte</b> para continuar.</li>
+
+<li>Selecione <b>LPR</b> para protocolo; Introduza <span style="display: inline;" class="disable-rc18015xsp"><b>usbprinter</b> ou </span><b>nome de impressora de rede</b> para Nome da Fila e assinale a caixa de verifica&ccedil;&atilde;o <b>Ativada a Contagem Byte LPR</b>. Clique em <b>OK</b> para continuar.</li>
+
+<li>Obtenha o controlador da impressora a partir do CD ou no website do fabricante. Selecione o fabricante e modelo da impressora ou clique em <strong>Ler Disco</strong> para selecionar a localiza&ccedil;&atilde;o do controlador. Em seguida, clique em <b>OK</b>.</li>
+	<li>O sistema ir&aacute; iniciar a configura&ccedil;&atilde;o da impressora de rede. Uma vez conclu&iacute;da a configura&ccedil;&atilde;o, poder&aacute; come&ccedil;ar a usar a impressora.</li>
+</ol>
+
+<h4>Para aceder a impressoras com Mac:</h4>
+<p>
+Os utilizadores Mac podem aceder ao servi&ccedil;o de impress&atilde;o do dispositivo DiskStation ativando a Emiss&atilde;o de Impressora Bonjour do DSM e adicionando a impressora &agrave;s Prefer&ecirc;ncias do Sistema.</p>
+<P>Certifique-se de que o seu DiskStation est&aacute; a utilizar a impressora Postscript antes de prosseguir.
+</p>
+<p><strong>Passo 1. Activar a Emiss&atilde;o de Impressora Bonjour do DSM:</strong></p>
+<ol>
+<li>
+Inicie sess&atilde;o no DSM como <b>admin</b> ou como um utilizador pertencente ao grupo de <b>administrators</b>.
+</li>
+<li>
+Aceda a <b>Painel de Controlo</b> &gt;<strong>Servi&ccedil;os de Ficheiros</strong> &gt; <b>Win/Mac/NFS</b>.
+</li>
+<li>
+Assinale a caixa de verifica&ccedil;&atilde;o <b>Ativar Emiss&atilde;o de Impressora Bonjour</b>.
+</li>
+</ol>
+
+<p><strong>Passo 2. Aceder &agrave; impressora com Mac</strong></p>
+<ol>
+<li>
+No seu Mac, aceda a <b>Prefer&ecirc;ncias do Sistema</b> &gt; <b>Impress&atilde;o e digitaliza&ccedil;&atilde;o</b> e depois clique em <b>+</b>.
+</li>
+
+<li>
+Escolha <span style="display: inline;" class="disable-rc18015xsp"><b>usbprinter[number]</b> ou</span><b>nome de impressora de rede</b> no menu pendente. O seu Mac configurar&aacute; automaticamente a impressora.
+</li>
+
+</ol>
+</div>
+</body>
+</html>

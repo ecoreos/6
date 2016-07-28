@@ -1,0 +1,188 @@
+﻿<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>외부 장치</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2><a name="usbprinter"></a>프린터</h2>
+<p>DiskStation은(는) 인쇄 서버가 되어 클라이언트 컴퓨터나 모바일 장치에서 DiskStation에 연결된 프린터에 액세스할 수 있습니다. 또한, Apple 무선 인쇄 및 Google Cloud Print를 지원하므로 iOS 장치나 Google 제품 및 서비스를 사용하여 원격으로 인쇄할 수 있습니다.</p>
+<p>호환되는 프린터를 보려면 <a href="http://www.synology.com" target="_blank">www.synology.com</a>을 방문하십시오.</p>
+
+<h3>프린터 설정</h3>
+<p>아래 지침을 참조하여 <span style="display: inline;" class="disable-rc18015xsp">USB 또는 </span>네트워크 프린터를 설정하고 DiskStation에 연결하십시오.</p>
+
+
+<h4 class="disable-rc18015xsp">USB 프린터 설정하기:</h4>
+<ol class="disable-rc18015xsp">
+<li>전원을 켜고 DiskStation의 USB 포트에 프린터를 연결합니다.</li>
+<li><strong>제어판</strong> &gt; <strong>외부 장치</strong> &gt; <strong>프린터</strong>로 이동합니다.</li>
+<li>설정할 프린터를 선택합니다. DiskStation에서는 USB 허브를 통해 연결된 프린터는 인식할 수 없다는 점에 유의하십시오.</li>
+<li><b>프린터 관리자</b>를 클릭하고 <b>프린터 설정</b>을 선택합니다.</li>
+<li>대화 상자에서 다음 모드 중 하나를 선택합니다:
+<ul>
+<li><b>네트워크 MFP:</b> 로컬 네트워크 내의 클라이언트가 다목적 프린터의 인쇄, 스캔 및 팩스 기능을 사용할 수 있습니다. 스캔과 팩스 기능은 Windows 컴퓨터에서만 사용할 수 있습니다.</li>
+<li><b>네트워크 프린터:</b> 인쇄만 지원하는 프린터를 사용하는 경우나 클라이언트에게 인쇄 기능만 사용할 수 있게 하려는 경우 이 모드를 선택합니다.</li>
+</ul>
+</li>
+<li>Apple 무선 인쇄 또는 Google Cloud Print 설정을 구성합니다(옵션).</li>
+<li><b>저장</b>을 클릭하십시오.</li>
+</ol>
+
+<div class="section disable-rc18015xsp">
+<h4>참고:</h4>
+<p>네트워크 MFP에는 하나의 클라이언트에서만 동시에 액세스할 수 있습니다.</p>
+</div>
+
+
+<h4>네트워크 프린터를 설치하려면:</h4>
+<ol>
+<li>전원을 켜고 네트워크 프린터를 DiskStation와(과) 동일한 로컬 네트워크에 연결합니다.</li>
+<li><strong>제어판</strong> &gt; <strong>외부 장치</strong> &gt; <strong>프린터</strong>로 이동합니다.</li>
+<li><b>네트워크 프린터 추가</b>를 클릭하고 설정 마법사의 지침을 따릅니다.</li>
+</ol>
+
+<div class="section">
+<h4>참고:</h4>
+<ul>
+<li><strong>프린터 이름:</strong> 프린터 이름은 설정하는 동안 입력해야 하며 문자, 숫자, 밑줄을 포함 32자까지 사용할 수 있습니다.</li>
+	<li><strong>프로토콜:</strong> 일반적으로 HP 네트워크 프린터는 소켓, Canon 네트워크 프린터는 BJNP, 기타 대부분은 LPR을 사용합니다.</li>
+<li><strong>대기열 이름:</strong> LPR 및 IPP 네트워크 프린터에 대기열 이름을 입력해야 하지만, 소켓이나 BJNP 프린터에는 적용되지 않습니다.</li>
+<li><strong>네트워크 MFP 없음:</strong> DiskStation에 연결된 네트워크 프린터는 현재 네트워크 MFP 모드를 사용하지 않습니다.</li>
+<li><strong>USB 프린터 없음:</strong> Synology 제품에 의해 공유되는 USB 프린터는 네트워크 프린터로 설정할 수 없습니다.</li>
+</ul>
+</div>
+
+
+<h3>프린터 관리</h3>
+<p>프린터 탭에는 DiskStation에 연결된 <span style="display: inline;" class="disable-rc18015xsp">USB 또는 </span>네트워크 프린터를 관리하는 다음 옵션이 있습니다.</p>
+
+<ul>
+<li><b>정보 얻기:</b> 장치 이름, 제조업체, 상태 등과 같은 선택한 프린터와 관련된 정보를 표시합니다.</li>
+<li><strong>제거:</strong> DiskStation에서 프린터를 제거하거나 연결을 끊습니다.</li>
+<li><strong>프린터 관리자:</strong> 다음 옵션을 포함합니다:
+<ul>
+<li><strong>프린터 설정</strong>: Apple 무선 인쇄 또는 Google Cloud Print 같은 프린터 설정을 편집합니다(지침은 아래 참조).</li>
+<li><strong>스풀 공간 정리:</strong> 모든 프린터의 모든 인쇄 작업을 취소합니다.</li>
+<li><strong>테스트 페이지 인쇄:</strong> 테스트 페이지를 인쇄하여 구성이 올바른지 확인합니다.</li>
+<li><b>프린터 잠금 해제:</b> 프린터와 클라이언트의 연결을 해제합니다(네트워크 MFP 모드에만 해당). 클라이언트가 다목적 프린터에 연결하여 팩스를 받거나 파일을 스캔하면 작업이 오래 걸릴 수 있습니다. 필요한 경우, 대기 중인 다음 클라이언트가 프린터를 이용하도록 연결을 중지할 수 있습니다.</li>
+</ul></li>
+</ul>
+
+
+<h4>Apple 무선 인쇄 활성화하기:</h4>
+<ol>
+<li><strong>제어판</strong> &gt; <strong>외부 장치</strong> &gt; <strong>프린터</strong>로 이동합니다.</li>
+<li>장치 목록에서 프린터를 선택합니다.</li>
+<li><b>프린터 관리자</b> &gt; <b>프린터 설정</b>을 클릭합니다.</li>
+<li><b>Apple 무선 인쇄 활성화</b> 상자를 선택합니다.</li>
+<li>프린터의 브랜드와 드라이버를 선택합니다.</li>
+<li><b>저장</b>을 클릭하십시오.</li>
+</ol>
+
+<p>설정이 완료되면 <b>프린터 관리자</b> &gt; <b>테스트 페이지 인쇄</b>를 클릭하여 테스트 페이지를 인쇄할 수 있습니다.</li>
+
+<div class="section">
+<h4>참고:</h4>
+<ul>
+<li>Apple 무선 인쇄를 활성화하면 DSM에 대한 Bonjour 프린터 브로드캐스트도 활성화됩니다.</li>
+<li>Apple 무선 인쇄는 iOS 4.2 이상에서 사용할 수 있습니다.</li>
+</ul>
+</div>
+
+
+<h4>Google Cloud Print 활성화하기:</h4>
+<ol>
+<li><strong>제어판</strong> &gt; <strong>외부 장치</strong> &gt; <strong>프린터</strong>로 이동합니다.</li>
+<li>장치 목록에서 프린터를 선택합니다.</li>
+<li><b>프린터 관리자</b> &gt; <b>프린터 설정</b>을 클릭합니다.</li>
+<li><b>Google Cloud Print 활성화</b> 상자를 선택합니다.</li>
+<li>다음 세부 사항을 입력합니다:
+<ul>
+
+<li>Google 계정 정보.</li>
+<li>프린터의 브랜드 및 드라이버.</li>
+</ul>
+<li><b>저장</b>을 클릭하십시오.</li>
+</ol>
+<p>설정이 완료되면 <b>프린터 관리자</b> &gt; <b>테스트 페이지 인쇄</b>를 클릭하여 테스트 페이지를 인쇄할 수 있습니다.</li>
+</p>
+<p>Google Cloud Print 작업을 관리하려면 <a href="http://www.google.com/cloudprint/manage.html" target="_blank">Google Cloud Print</a> 링크를 클릭합니다.</p>
+
+
+<h3>프린터에 액세스</h3>
+<p>PC 또는 Mac을 사용하여 프린터에 액세스하려면 아래 섹션을 참조하십시오.</p>
+<h4><a name="others"></a>Windows PC를 사용하여 프린터에 액세스하기:</h4>
+<p>
+DiskStation 장치의 인쇄 서비스에 액세스하는 가장 좋은 방법은 Synology Assistant를 사용하여 프린터에 연결을 설정하는 것입니다. 자세한 지침은 해당 도움말을 참조하십시오.
+</p>
+
+<p>Synology Assistant가 컴퓨터에 설치되지 않은 경우 아래의 다른 방법에 따라 DiskStation 장치의 인쇄 서비스에 액세스하십시오.</p>
+<p><strong>유형 1. 공유 네트워크 프린터</strong></p>
+<ol>
+<li>PC의 파일 탐색기에서 <b>네트워크</b>를 열고 DiskStation을(를) 더블 클릭합니다.</li>
+
+<li><span style="display: inline;" class="disable-rc18015xsp"><b>usbprinter</b> 또는 </span><b>네트워크 프린터 이름</b>을 더블 클릭합니다. 시스템에서 올바른 드라이버를 설치하라는 메시지가 표시되면 <b>예</b>를 클릭합니다.</li>
+
+<li>제조업체의 CD나 웹사이트에서 프린터 드라이버를 가져옵니다. 프린터의 제조업체와 모델을 선택하거나 <strong>디스크 있음</strong>을 클릭하여 드라이버의 위치를 선택합니다. <b>확인</b>을 클릭합니다.</li>
+<li>시스템이 네트워크 프린터 설치를 시작합니다. 설정이 완료되면 프린터를 사용할 수 있습니다. </li>
+</ol>
+
+
+<p><strong>유형 2. LPR 포트 (권장)</strong></p>
+<ol>
+<li>PC에서 <b>시작</b>을 클릭하고 <b>장치 및 프린터</b>로 이동합니다.</li>
+<li><b>프린터 추가</b>를 클릭합니다. </li>
+	<li><strong>네트워크, 무선 또는 Bluetooth 프린터 추가</strong>를 선택합니다. </li>
+	<li><strong>원하는 프린터가 목록에 없습니다</strong>를 선택합니다.</li>
+<li><b>TCP/IP 주소 또는 호스트 이름을 사용하여 프린터 추가</b>를 선택합니다. <b>다음</b>을 클릭하여 계속 진행합니다.</li>
+<li>장치 유형이 <b>TCP/IP 포트 장치</b>가 되도록 선택합니다.</li>
+<li>DiskStation의 IP 주소를 입력합니다. <b>다음</b>을 클릭하여 계속 진행합니다.</li>
+<li><b>장치 유형:</b> <strong>사용자 지정</strong> &gt; <strong>설정</strong> &gt; …을 선택합니다. <b>다음</b>을 클릭하여 계속 진행합니다.</li>
+
+<li>프로토콜에서 <b>LPR</b>을 선택하고 대기열 이름에 <span style="display: inline;" class="disable-rc18015xsp"><b>usbprinter</b> 또는 </span><b>네트워크 프린터 이름</b>을 입력한 후, <b>LPR 바이트 계산 사용</b> 선택 상자를 선택합니다. <b>확인</b>을 클릭해서 계속 진행합니다.</li>
+
+<li>제조업체의 CD나 웹사이트에서 프린터 드라이버를 가져옵니다. 프린터의 제조업체와 모델을 선택하거나 <strong>디스크 있음</strong>을 클릭하여 드라이버의 위치를 선택합니다. <b>확인</b>을 클릭합니다.</li>
+	<li>시스템이 네트워크 프린터 설치를 시작합니다. 설정이 완료되면 프린터를 사용할 수 있습니다.</li>
+</ol>
+
+<h4>Mac을 사용하여 프린터에 액세스하기:</h4>
+<p>
+Mac 사용자는 시스템 설정에서 DSM Bonjour 프린터 브로드캐스트를 활성화하고 프린터를 추가함으로써 DiskStation 장치의 인쇄 서비스에 액세스할 수 있습니다.</p>
+<P>계속하기 전에 DiskStation이(가) Postscript 프린터를 사용 중인지 확인하십시오.
+</p>
+<p><strong>단계 1. DSM의 Bonjour 프린터 브로드캐스트 활성화</strong></p>
+<ol>
+<li>
+DSM에 <b>admin</b> 또는 <b>administrators</b> 그룹에 속하는 사용자로 로그인합니다.
+</li>
+<li>
+<b>제어판</b> &gt; <strong>파일 서비스</strong> &gt; <b>Win/Mac/NFS</b>로 이동합니다.
+</li>
+<li>
+<b>Bonjour 프린터 브로드캐스트 활성화</b>를 선택하십시오.
+</li>
+</ol>
+
+<p><strong>단계 2. Mac을 사용하여 프린터에 액세스</strong></p>
+<ol>
+<li>
+Mac에서 <b>시스템 설정</b> &gt; <b>인쇄 및 스캔</b>으로 이동한 다음 <b>+</b>를 클릭합니다.
+</li>
+
+<li>
+드롭다운 메뉴에서 <span style="display: inline;" class="disable-rc18015xsp"><b>usbprinter[number]</b> 또는 </span><b>네트워크 프린터 이름</b>을 선택합니다. Mac에서 프린터를 자동으로 설정합니다.
+</li>
+
+</ol>
+</div>
+</body>
+</html>

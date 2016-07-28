@@ -1,0 +1,130 @@
+﻿ <!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>볼륨 또는 디스크 그룹 복구 - Synology DSM 도움말</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="This article walks you through the steps to create a volume on DiskStation using Storage Manager.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>볼륨 또는 디스크 그룹 복구</h2>
+
+<p>손상된 시스템 파티션이나 충돌한 하드 드라이브 같은 다양한 문제로 인해 볼륨 오류가 생길 수 있습니다.  일부 경우에 아래 단계에 따라 오류를 진단하고 문제를 해결할 수 있습니다.</p>
+
+<div class="section">
+<h4>참고:</h4>
+<ul>
+<li>여기에 설명된 <strong>복구</strong> 기능은 데이터 중복 기능이 있는 RAID 유형(예: RAID 1, RAID 5, RAID 6 등)에만 사용할 수 있습니다. 이 기능은 고장난 하드 드라이브는 복구하지 못하며, 충돌한 볼륨의 데이터 복원을 보장할 수도 없다는 점에 유의하십시오.</li>
+<li>충돌한 볼륨의 경우, 당사 <span class="last"><a href="https://account.synology.com/support/support_form.php?lang=enu" target="_blank">기술 지원</a>에 도움을 요청하는 것이 좋습니다</span>.</li>
+</ul>
+</div>
+
+<h3>실패한 시스템 파티션</h3>
+
+<p>시스템 파티션에 오류가 발생하면 시스템 파티션에 액세스할 수 없음을 알리는 메시지가 표시됩니다.</p>
+<h4>시스템 파티션 복구하기:</h4>
+
+<ol>
+<li><strong>저장소 관리자</strong>를 엽니다.</li>
+<img src="about:blank" class="help_image"/>
+
+<li><strong>개요</strong>로 이동하고 <strong>복구</strong>라고 표시된 링크를 클릭합니다. 시스템이 시스템 파티션을 복구합니다.</li>
+
+<img src="about:blank" class="help_image"/>
+</ol>
+
+
+<h3>저하된 볼륨</h3>
+
+
+<p>하드 드라이브에 오류가 있지만 데이터 손실은 발생하지 않은 경우 볼륨 또는 디스크 그룹은 <strong>저하됨</strong> 상태가 됩니다. 이러한 상황은 SHR, RAID 1, RAID 5, RAID 6, RAID 10처럼 데이터 중복을 제공하는 RAID 유형에서만 발생합니다. </p>
+<p>저하된 볼륨 또는 디스크 그룹은 오류가 있는 하드 드라이브를 양호한 것으로 교체하고 볼륨 또는 디스크 그룹을 복구하여 해결할 수 있습니다.</p>
+
+<div class="section">
+<h4>참고:</h4>
+<ul>
+  <li>교체 하드 드라이브 크기는 볼륨 내에서 가장 작은 디스크 크기보다 크거나 같아야 합니다.</li>
+  <li>교체할 하드 드라이브의 상태는 <strong>초기화됨</strong> 또는 <strong>초기화 되지 않음</strong>이어야 합니다.</li>
+</ul>
+
+</div>
+
+<h4> 저하된 볼륨 또는 디스크 그룹 복구하기:</h4>
+
+<ol>
+
+<li><strong>저장소 관리자</strong> &gt; <strong>볼륨</strong> 또는 <strong>디스크 그룹</strong>으로 이동하여 상태가 <strong>저하됨</strong>으로 변경되었는지 확인합니다.</li> 
+<img src="about:blank" class="help_image"/>
+
+<li>그러한 경우 <strong>HDD/SSD</strong> 탭으로 이동하여 오류가 있는 하드 드라이브를 확인합니다.</li>
+<img src="about:blank" class="help_image"/>
+
+<li>오류가 있는 하드 드라이브를 제거하고 새 것으로 교체합니다.</li>
+
+<div class="section">
+<h4>참고:</h4>
+<ul>
+<li>DiskStation에서 핫스왑을 지원하지 않는 경우에는 하드 드라이브를 제거하고 설치하기 전에 전원을 꺼야 한다는 점을 기억하십시오.</li>
+<li>교체 하드 드라이브에 있는 기존 데이터는 삭제됩니다.</li>
+</ul>
+</div>
+
+<li>교체 하드 드라이브를 설치한 후, <strong>볼륨</strong> 또는 <strong>디스크 그룹</strong> 탭으로 돌아갑니다.</li>
+
+<li>저하된 볼륨이나 디스크 그룹을 선택합니다.</li>
+
+<li><strong>관리</strong>를 클릭합니다.</li>  
+<img src="about:blank" class="help_image"/>
+
+<li><strong>복구</strong>를 선택하고 <strong>다음</strong>을 클릭합니다. </li>  
+<img src="about:blank" class="help_image"/>
+
+<li>볼륨에 추가할 교체 하드 드라이브를 선택합니다. 그리고 나서 <strong>다음</strong>을 클릭합니다.</li>
+<img src="about:blank" class="help_image"/>
+
+<li> 마법사의 지시를 따라 마칩니다. </li>
+</ol>
+
+
+
+
+<h3>볼륨 수리</h3>
+<p>성능이 저하된 볼륨/디스크 그룹/iSCSI LUN을 수리하려면, 고장난 디스크를 다음 기준에 맞는 가용한 디스크로 교체해야 합니다.</p>
+<ul>
+<li>RAID 1, RAID 5 또는 RAID 6 볼륨의 경우, 저한된 볼륨은 크기가 RAID 볼륨에서 가장 작은 디스크 크기와 같거나 더 큰 가용한 디스크를 사용하여 수리할 수 있습니다.</li>
+<li>SHR-1 볼륨의 경우, 가용한 디스크는 다음 기준 중 하나를 충족해야 합니다: (1) 고장난 디스크의 크기보다 크거나 같음; (2) RAID 볼륨의 가장 큰 디스크를 제외하고, 남은 디스크 중 가장 큰 디스크의 크기와 같거나 더 커야 합니다.
+
+<ol>
+<li>예 1: SHR-1은 3TB, 2TB, 2TB 및 1TB 디스크로 구성됩니다. 3TB 디스크가 고장난 경우, 크기가 2TB보다 크거나 같은 가용한 디스크로 수리할 수 있습니다.</li>
+<li>예 2: SHR-1은 4TB, 4TB, 2TB 및 2TB 디스크로 구성됩니다. 4TB 디스크가 고장난 경우, 크기가 4TB보다 크거나 같은 가용한 디스크로 수리할 수 있습니다.</li>
+<li>예 3: SHR-1은 4TB, 4TB, 2TB 및 2TB 디스크로 구성됩니다. 2TB 디스크가 고장난 경우, 크기가 2TB보다 크거나 같은 가용한 디스크로 수리할 수 있습니다.</li>
+</ol>
+</li>
+<li>SHR-2 볼륨의 경우, 가용한 디스크는 다음 기준 중 하나를 충족해야 합니다: (1) 고장난 디스크의 크기보다 크거나 같음; (2) RAID 볼륨에서 가장 큰 디스크 두 개를 제외하고, 남은 디스크 중 가장 큰 디스크보다 크거나 같아야 합니다.</li>
+</ul>
+<p>디스크를 위의 기준에 맞는 핫 스페어 디스크로 구성한 경우, 디스크는 볼륨/디스크 그룹/RAID Group/iSCSI LUN을 수리하는 데 사용됩니다.</p>
+
+
+<h3>충돌한 볼륨 해결</h3>
+
+<p>볼륨의 상태가 <strong>충돌함</strong>이 되면 사용자의 힘으로 볼륨을 복구할 수 없습니다. 이 문제를 해결하려면 당사의 <a href="https://account.synology.com/support/support_form.php?lang=enu" target="_blank">기술 지원</a>에 문의하여 도움을 받는 것이 좋습니다.</p>
+
+<div class="section">
+<h4>지원부에 문의하기 전에:</h4>
+
+<ul>
+<li>File Station, Windows 파일 서비스, FTP 또는 기타 파일 서비스를 통해 파일을 컴퓨터 또는 외부 장치에 복사하여 DiskStation에서 데이터를 복구합니다.</li>
+<li>하드 드라이브 순서를 볼륨이 충돌할 당시와 동일하게 유지합니다.</li>
+<li>문제가 있는 하드 드라이브에 S.M.A.R.T. 테스트를 수행하십시오. 이를 수행하려면 <strong>저장소 관리자</strong> &gt; <strong>HDD/SSD</strong>로 이동합니다. 문제가 있는 하드 드라이브를 선택하고 <strong>S.M.A.R.T 테스트</strong>를 클릭합니다. <br />
+</li>
+</ul>
+</div>
+</body>
+</html>

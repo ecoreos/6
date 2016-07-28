@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Rechercher des fichiers ou dossiers</title>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script> <script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2>Rechercher des fichiers ou dossiers</h2>
+<p>Le <strong>Filtre</strong> de File Station offre des options pour rechercher et afficher les fichiers ou dossiers qui répondent à vos critères. Vous pouvez filtrer les fichiers ou dossiers dans le dossier actuel, ou effectuer une recherche avancée qui couvre tous les sous-dossiers pour des résultats plus détaillés.</p>
+
+<h4>Pour rechercher des fichiers ou dossiers dans le dossier actuel :</h4>
+<ol>
+	<li>Utilisez File Station pour accéder au dossier contenant le contenu que vous souhaitez rechercher.</li>
+	<li>Dans le champ <b>Filtre</b> dans le coin supérieur droit, saisissez un mot clé et consultez le résultat filtré dans la zone principale de la fenêtre.</li>
+</ol>
+
+<h4>Pour effectuer une recherche avancée :</h4>
+<ol>
+	<li>Utilisez File Station pour accéder au dossier contenant le contenu que vous souhaitez rechercher.</li>
+  <li>Cliquez sur l'icône de la loupe à côté du champ <b>Filtre</b> dans le coin supérieur droit pour faire apparaître le panneau de recherche avancée.</li>
+	<li>Spécifier les critères de recherche ci-dessous ou à partir des menus déroulants :
+		<ul>
+			<li><b>Mot-clé </b>: Saisissez un mot clé pour rechercher les fichiers ou dossiers avec des noms correspondants.
+				<div class="section"><h4>Remarque :</h4>
+				<ul>
+					<li>Vous pouvez utiliser des caractères de remplacement [*] (signifie zéro ou plus de caractères) et [?] (signifie un caractère quelconque) dans vos mots-clés. Par exemple, [a<span class="note_content">*</span>n] peut représenter [a<span class="note_content">ctio</span>n], [a<span class="note_content">ttentio</span>n], ou [an].</li>
+					<li>Vous pouvez utiliser des espaces pour séparer des mots-clés. Par exemple, le mot-clé [File Station] donne des résultats de recherche qui contiennent [File], [Station], ou les deux.</li>
+					<li>Vous pouvez ajouter des guillemets ["] au début et à la fin du mot-clé pour rechercher les correspondances exactes sensibles à la casse. Par exemple, [<span class="note_content">"Synology Inc."</span>] peut représenter [<span class="note_content">Synology Inc.</span>], mais ne peut pas représenter [<span class="note_content">Synology Incorporation</span>].
+					</li>
+					<li class="disable-hi3535">Les opérateurs ci-dessous peuvent être utilisés pour affiner les résultats de la recherche :
+						<table width="84%" border="1">
+							<tbody>
+								<tr>
+									<th width="147" align="center">Opérateur</th>
+									<th width="229" align="center">Exemple</th>
+									<th width="926" align="center">Utilisation</th>
+								</tr>
+								<tr>
+									<td align="center">&&</td>
+									<td align="center">[X] && [Y]</td>
+									<td><li>Répertorie les correspondances qui contiennent à la fois [X] et [Y]</li></td>
+								</tr>
+								<tr>
+									<td align="center">||</td>
+									<td align="center">[X] || [Y]</td>
+									<td>
+										<li>Répertorie les correspondances qui contiennent [X], [Y] ou les deux</li>
+										<li>Les correspondances qui contiennent à la fois [X] et [Y] sont répertoriées en haut</li>
+									</td>
+								</tr>
+								<tr>
+									<td align="center">+</td>
+									<td align="center">+[X]</td>
+									<td><li>Répertorie les correspondances qui contiennent [X]</li></td>
+								</tr>
+								<tr>
+									<td align="center">-</td>
+									<td align="center">-[X]</td>
+									<td><li>Répertorie les correspondances qui ne contiennent pas [X]</li></td>
+								</tr>
+								<tr>
+									<td align="center">!</td>
+									<td align="center">![X]</td>
+									<td><li>Répertorie les correspondances qui ne contiennent pas [X]</li></td>
+								</tr>
+								<tr>
+									<td align="center">\</td>
+									<td align="center">\[SpecialCharacter]</td>
+									<td>
+										<li>Caractères spéciaux : <span class="note_content">&nbsp; + &nbsp;&nbsp;-&nbsp;&nbsp; &&	&nbsp;&nbsp;|| &nbsp;&nbsp; ! &nbsp;&nbsp; ( &nbsp;&nbsp; ) &nbsp;&nbsp; { &nbsp;&nbsp; } &nbsp;&nbsp; [ &nbsp;&nbsp; ] &nbsp;&nbsp; ^ &nbsp;&nbsp; " &nbsp;&nbsp; ~ &nbsp;&nbsp; * &nbsp;&nbsp; ? &nbsp;&nbsp; : &nbsp;&nbsp;\</span></li>
+										<li>Répertorie les correspondances qui contiennent un caractère cible spécial ci-dessus</li>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</li>
+				</ul>
+				</div>
+			</li>
+			<li class="disable-hi3535"><strong>Activer la recherche par contenu de fichier</strong> : Rechercher des fichiers indexés avec le contenu des fichiers ou des métadonnées correspondent aux mots-clés.</li>
+			<li><b>Emplacement</b> : Sélectionnez un élément du menu déroulant pour définir l'étendue et la profondeur de la recherche avancée. Vous pouvez également personnaliser le champ de recherche en sélectionnant d'autres dossiers partagés listés.</li>
+			<li><b>Type de fichier </b>: Choisissez <b>Extension</b> pour limiter le champ de recherche à des types de fichier spécifiques, ou choisissez <b>Tous les dossiers</b> pour rechercher des dossiers uniquement.</li>
+			<li><strong>Date</strong> : Choisissez entre <b>Date de modification</b>, <b>Date de création</b> et <strong>Dernier accès</strong>, puis choisissez une date dans le calendrier pour rechercher les fichiers avec des dates correspondantes.</li>
+			<li><b>Dimension (Mo) </b>: Choisissez parmi <b>équivaut à</b>, <b>est plus grand que</b>, et <b>est inférieur à, </b>puis entrez une taille pour rechercher les fichiers ayant la taille correspondante. (Quand vous choisissez <strong>équivaut à</strong>, les résultats de recherche incluront les fichiers d'environ la même taille spécifiée.)</li>
+			<li><b>Propriétaire/groupe </b>: Choisissez <b>Propriétaire</b> ou <b>Groupe</b>, puis choisissez dans le menu déroulant pour rechercher des fichiers ou des dossiers appartenant au propriétaire ou groupe sélectionné.
+				<div class="section"><h4>Remarque :</h4>
+				<ul>
+					<li>Pour effectuer une recherche avancée, vous devez spécifier l'<b>Emplacement</b> et au moins un autre critère de recherche.</li>
+					<li>Si un dossier ISO ou un dossier distant est monté dans un dossier partagé indexé, il est impossible de trouver les fichiers qui se trouvent à l'intérieur via une recherche avancée.</li>
+				</ul>
+				</div>
+			</li>
+		</ul>
+	</li>
+	<li>Cliquez sur <b>Rechercher</b> pour commencer la Recherche, ou cliquez sur <b>Réinitialiser</b> et spécifiez à nouveau le critère de recherche. Lorsque la recherche est terminée, les fichiers correspondants seront listés dans la zone principale de File Station.</li>
+</ol>
+
+</body>
+</html>

@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Wyszukiwanie plików i folderów</title>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2>Wyszukiwanie plików i folderów</h2>
+<p>Funkcja <strong>Filtruj</strong> aplikacji File Station umożliwia wyszukiwanie oraz wyświetlanie plików i folderów spełniających określone kryteria. Można filtrować pliki lub foldery w bieżącym folderze, a także przeprowadzać bardziej zaawansowane wyszukiwanie obejmujące wszystkie podfoldery, co umożliwia uzyskanie bardziej precyzyjnych wyników.</p>
+
+<h4>Aby wyszukać pliki lub foldery w bieżącym folderze:</h4>
+<ol>
+	<li>Za pomocą aplikacji File Station przejdź do folderu, który chcesz przeszukać.</li>
+	<li>W polu <b>Filtruj</b> w prawym górnym rogu wprowadź słowo kluczowe. Wyniki filtrowania zostaną wyświetlone w głównym obszarze okna.</li>
+</ol>
+
+<h4>Aby przeprowadzić wyszukiwanie zaawansowane:</h4>
+<ol>
+	<li>Za pomocą aplikacji File Station przejdź do folderu, który chcesz przeszukać.</li>
+  <li>Kliknij ikonę lupy obok pola <b>Filtruj</b> w prawym górnym rogu, aby wyświetlić menu zaawansowanego wyszukiwania.</li>
+	<li>Określ kryteria wyszukiwania poniżej lub wybierz z list rozwijanych:<ul>
+			<li><b>Słowo kluczowe</b>: wprowadź słowo kluczowe, aby wyszukać pliki lub foldery o pasujących nazwach.<div class="section"><h4>Uwaga:</h4>
+				<ul>
+					<li>W słowach kluczowych można używać symboli wieloznacznych [*] (zastępuje zero lub więcej znaków) i [?] (zastępuje jeden dowolny znak). Na przykład [z<span class="note_content">*</span>e] może oznaczać [z<span class="note_content">darzeni</span>e], [z<span class="note_content">dani</span>e] lub [ze].</li>
+					<li>Do rozdzielenia słów kluczowych można użyć spacji. Na przykład słowo kluczowe (File Station) prowadzi do wyników wyszukiwania, które zawierają słowo [File], [Station] lub oba wyrazy.</li>
+					<li>Na początku i na końcu słowa kluczowego można dodać cudzysłów ["], aby wyszukać dokładne dopasowania z uwzględnieniem wielkości liter. Na przykład [<span class="note_content">Synology Inc.</span>] może reprezentować [<span class="note_content">Synology Inc.</span>], ale nie może przedstawiać [<span class="note_content">Synology Incorporation</span>].</li>
+					<li class="disable-hi3535">W celu ulepszenia wyników wyszukiwania można użyć poniższych operatorów:<table width="84%" border="1">
+							<tbody>
+								<tr>
+									<th width="147" align="center">Operator</th>
+									<th width="229" align="center">Przykład</th>
+									<th width="926" align="center">Użycie</th>
+								</tr>
+								<tr>
+									<td align="center">&&</td>
+									<td align="center">[X] && [Y]</td>
+									<td><li>Lista pasujących wyników, które zawierają [X] i [Y]</li></td>
+								</tr>
+								<tr>
+									<td align="center">||</td>
+									<td align="center">[X] || [Y]</td>
+									<td>
+										<li>Lista pasujących wyników, które zawierają [X], [Y] lub oba</li>
+										<li>Wyniki zawierające zarówno [X], jak i [Y] będą umieszczone na początku listy</li>
+									</td>
+								</tr>
+								<tr>
+									<td align="center">+</td>
+									<td align="center">+[X]</td>
+									<td><li>Lista pasujących wyników, które zawierają [X]</li></td>
+								</tr>
+								<tr>
+									<td align="center">-</td>
+									<td align="center">-[X]</td>
+									<td><li>Lista pasujących wyników, które nie zawierają [X]</li></td>
+								</tr>
+								<tr>
+									<td align="center">!</td>
+									<td align="center">![X]</td>
+									<td><li>Lista pasujących wyników, które nie zawierają [X]</li></td>
+								</tr>
+								<tr>
+									<td align="center">\</td>
+									<td align="center">\[ZnakSpecjalny]</td>
+									<td>
+										<li>Znaki specjalne: <span class="note_content">  +   -   &&	&nbsp; ||    !    (    )    {    }    [    ]    ^    "    ~    *    ?    :   \</span></li>
+										<li>Lista pasujących wyników, które zawierają wskazany powyżej znak specjalny</li>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</li>
+				</ul>
+				</div>
+			</li>
+			<li class="disable-hi3535"><strong>Włącz przeszukiwanie zawartości plików</strong>: Wyszukaj zindeksowane pliki, których zawartość lub metadane pasują do słów kluczowych. </li>
+			<li><b>Lokalizacja</b>: z listy rozwijanej wybierz zakres i głębokość wyszukiwania zaawansowanego. Zakres wyszukiwania można także dostosować, wybierając z listy dowolne pozostałe foldery udostępnione.</li>
+			<li><b>Typ pliku</b>: wybierz pozycję <b>Rozszerzenie</b>, aby ograniczyć zakres wyszukiwania do plików określonego typu, lub wybierz pozycję <b>Dowolny folder</b>, aby wyszukać tylko foldery.</li>
+			<li><strong>Data</strong>: wybierz pozycję <b>Data modyfikacji</b>, <b>Data utworzenia</b> i <strong>Ostatni dostęp</strong>, a następnie z kalendarza wybierz żądaną datę, aby wyszukać pliki o pasujących datach.</li>
+			<li><b>Rozmiar (MB)</b>: wybierz pozycję <b>równa się</b>, <b>jest większe niż</b> i <b>jest mniejsze niż</b>, a następnie wprowadź wielkość, aby wyszukać pliki o pasujących wielkościach (po wybraniu pozycji <strong>równa się</strong> w wynikach wyszukiwania będą uwzględniane pliki o wielkości zbliżonej do podanej wartości).</li>
+			<li><b>Właściciel/grupa</b>: wybierz pozycję <b>Właściciel</b> lub <b>Grupa</b>, a następnie z listy rozwijanej wybierz pozycję, aby wyszukać pliki lub foldery należące do wybranego właściciela lub grupy.<div class="section"><h4>Uwaga:</h4>
+				<ul>
+					<li>Aby wykonać wyszukiwanie zaawansowane, trzeba określić kryterium <b>Lokalizacja</b> i przynajmniej jedno inne kryterium.</li>
+					<li>Jeżeli w indeksowanym folderze udostępnionym zamontowany jest folder ISO lub folder zdalny, nie można wyszukiwać plików w tym folderze za pomocą funkcji wyszukiwania zaawansowanego.</li>
+				</ul>
+				</div>
+			</li>
+		</ul>
+	</li>
+	<li>Kliknij przycisk <b>Szukaj</b>, aby rozpocząć wyszukiwanie, lub przycisk <b>Resetuj</b> i określ ponownie kryteria wyszukiwania. Po ukończeniu wyszukiwania pasujące pliki zostaną wyświetlone w głównym obszarze aplikacji File Station.</li>
+</ol>
+
+</body>
+</html>

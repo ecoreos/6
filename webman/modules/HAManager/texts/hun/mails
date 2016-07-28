@@ -1,0 +1,149 @@
+
+[HA_ConfSyncError]
+Subject: A(z) %HOSTNAME% high-availability klaszter szinkronizálási hibát érzékelt a rendszerkonfiguráció ellenőrzése során.
+
+Kedves felhasználó!
+
+A(z) %HOSTNAME% high-availability klaszter szinkronizálási hibát érzékelt az aktív és passzív szerverek rendszerkonfigurációjának ellenőrzése során. A rendszer a rendszerkonfigurációk teljes szinkronizálásának végrehajtásával megkísérelte kijavítani a hibát. További információkért ellenőrizze a High Availability Manager Rendszernaplók vagy Naplók oldalát.
+
+Tevékenység: %HA_ACTION%
+Hiba: %HA_PARAM_1%
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[HA_FailOver]
+Subject: Hiba a következőn: high-availability klaszter, %HOSTNAME%.
+
+Kedves felhasználó!
+
+Hiba történt a következőn: high-availability klaszter, %HOSTNAME%. A rendszer átkapcsolja a szolgáltatásokat a passzív kiszolgálóra. További információkért ellenőrizze a rendszernaplókat.
+
+Művelet: %HA_ACTION%
+Hiba: %HA_PARAM_1%
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[HA_MismatchedSsdCache]
+Subject: Az SSD-gyorsítótár lemezei nem azonosak a(z) %HOSTNAME% high-availability klaszterben
+
+Kedves felhasználó!
+
+A(z) %HA_PARAM_1% passzív szerveren működő SSD-gyorsítótárhoz tartozó lemezek nem azonosak az aktív szerver lemezeivel a következőben: %HA_PARAM_2% SSD gyorsítótár.
+
+További információkért ellenőrizze a High Availability Manager Naplók oldalát.
+
+Tevékenység: %HA_ACTION%
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[HA_SplitBrain]
+Subject: Tudathasadásos hiba a következőn: high-availability klaszter, %HOSTNAME%
+
+Kedves felhasználó!
+
+Tudathasadásos hiba a következőn: high-availability klaszter, %HOSTNAME%. További információkért ellenőrizze a rendszernaplókat.
+
+Művelet: %HA_ACTION%
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[HA_StatusChange]
+Subject: A(z) %HOSTNAME% high-availability klaszter állapota a következőről: %HA_PARAM_1%, a következőre változott: %HA_PARAM_2%.
+
+Kedves felhasználó!
+
+A(z) %HOSTNAME% high-availability klaszter állapota a következőről: %HA_PARAM_1%, a következőre változott: %HA_PARAM_2%. További információkért ellenőrizze a High Availability Manager Rendszernaplók vagy Naplók oldalát.
+
+Tevékenység: %HA_ACTION%
+Leírás: %HA_PARAM_3%
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[HA_SwitchFail]
+Subject: A következő szolgáltatásainak átkapcsolása sikertelen: high-availability klaszter, %HOSTNAME%
+
+Kedves felhasználó!
+
+A rendszer megkísérelte átkapcsolni a szolgáltatásokat a következő passzív kiszolgálójára: high-availability klaszter, %HOSTNAME%, de nem járt sikerrel. További információkért ellenőrizze a rendszernaplókat.
+
+Művelet: %HA_ACTION%
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[HA_SwitchFinished]
+Subject: A(z) %HOSTNAME% high-availability klaszter mostantól szolgáltatásokat futtat %HA_PARAM_1% eszközön.
+
+Kedves felhasználó!
+
+A következő high-availability klaszter: %HOSTNAME% mostantól szolgáltatásokat futtat a következő eszközön: %HA_PARAM_1%. További információkért ellenőrizze a High Availability Manager Rendszernaplók vagy Naplók oldalát.
+
+Tevékenység: %HA_ACTION%
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[HA_SwitchOver]
+Subject: High-availability klaszter, %HOSTNAME% átkapcsolása a következőre: %HA_PARAM_1%.
+
+Kedves felhasználó!
+
+Valaki a következő átkapcsolását kezdeményezte: high-availability klaszter, %HOSTNAME%. A szolgáltatások átkapcsolásra kerülnek e következőre: %HA_PARAM_1%. További információkért ellenőrizze a rendszernaplókat.
+
+Művelet: %HA_ACTION%
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[HA_SwitchOver_With_Reason]
+Subject: A(z) %HOSTNAME% high-availability klaszter átkapcsolást kezdeményezett következőre: %HA_PARAM_1%.
+
+Kedves felhasználó!
+
+Átkapcsolást kezdeményeztek a(z) %HOSTNAME% high-availability klaszterre. A szolgáltatások átkapcsolásra kerülnek e következőre: %HA_PARAM_1%. További információkért ellenőrizze a rendszernaplókat.
+
+Művelet: %HA_ACTION%
+Ok: %HA_PARAM_2%
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[HA_SyncComplete]
+Subject: A(z) %HOSTNAME% high-availability klaszterének teljes adatreplikációja befejeződött.
+
+Kedves felhasználó!
+
+A(z) %HOSTNAME% high-availability klaszterének teljes adatreplikációja befejeződött. A passzív szerver most készen áll a szolgáltatások átvételére abban az esetben, ha feladatátvételre van szükség. További információkért ellenőrizze a High Availability Manager Rendszernaplók vagy Naplók oldalát.
+
+Tevékenység: %HA_ACTION%
+
+Üdvözlettel:
+%COMPANY_NAME%
+
+
+[HA_UnbindLocal]
+Subject: A localhost eltávolításra került a high-availability klaszterből
+
+Kedves felhasználó!
+
+A(z) %HA_PARAM_1% eltávolításra került a következő high-availability klaszterből: %HA_PARAM_2%. További információkért ellenőrizze a rendszernaplókat.
+
+Tevékenység: %HA_ACTION%
+
+Üdvözlettel:
+%COMPANY_NAME%
+

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>LDAP</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script> <script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>LDAP</h2>
+<p>LDAP, bir LDAP istemcisi olarak DiskStation sunucunuzun mevcut bir dizin hizmetine katılmasına olanak sağlar ve ardından LDAP sunucusundan (veya "directory server") kullanıcı veya grup bilgilerini alır. LDAP kullanıcılarının veya gruplarının DSM uygulamalarına ve paylaşılan klasörlere erişim önceliklerini yerel DSM kullanıcılarında veya gruplarında olduğu gibi yönetebilirsiniz. LDAP hakkında daha fazla bilgi için lütfen <a href="http://en.wikipedia.org/wiki/LDAP" target="_blank">buraya</a> bakın.</p>
+
+<p>Desteklenen LDAP standardı LDAP sürüm 3 (RFC 2251)'dir.</p>
+<h4>DiskStation sunucusunu bir dizin hizmetine eklemek için:</h4>
+<ol>
+<li><b>Denetim Masası</b> &gt; <b>Dizin Hizmeti</b> öğesine gidin</li>
+<img src="about:blank" class="help_image"/>
+<li><b>LDAP</b> sekmesine gidin ve <b>LDAP İstemcisini etkinleştir</b> öğesini işaretleyin.</li>
+<img src="about:blank" class="help_image"/>
+<li>LDAP sunucusunun IP adresini veya etki alanını <b>LDAP Sunucu adresi</b> alanına girin.</li>
+<img src="about:blank" class="help_image"/>
+<li><b>Şifreleme</b> indirmeli menüsünden bir şifreleme türü seçerek LDAP bağlantısını LDAP sunucusuna şifreleyin.</li>
+<img src="about:blank" class="help_image"/>
+<li>LDAP sunucusuna ait Base DN bilgisini <b>Base DN</b> alanına girin.</li>
+<img src="about:blank" class="help_image"/>
+<li>LDAP sunucunuza bağlı olarak uygun <b>Profil</b>'i seçin. Örneğin Synology Directory Server veya Mac Open Directory kullanıyorsanız <b>Standart</b> seçimi yapın.</li>
+<img src="about:blank" class="help_image"/>
+<li>Samba şemasını desteklemeyen LDAP sunucusu kullanıcılarının CIFS aracılığıyla DiskStation dosyalarına erişimine izin vermek için <b>CIFS düz metin parola doğrulamasını etkinleştir</b> seçeneğini işaretleyin. LDAP kullanıcılarının bilgisayarlarını kullanarak DiskStation dosyalarına CIFS aracılığıyla başarılı bir şekilde erişmelerini sağlamak için aşağıdaki bölüme bakın.</li>
+<img src="about:blank" class="help_image"/>
+<li><b>Uygula</b>'ya tıklayın.</li>
+<li>
+  Bind DN (veya LDAP yönetici hesabı) ve parolayı alanlara girin, ardından <b>Tamam</b>'a tıklayın.
+</li>
+<img src="about:blank" class="help_image"/>
+</ol>
+
+
+<div class="section">
+<h4>CIFS Desteği ve İstemci Bilgisayarı Ayarları Hakkında</h4>
+<p>
+CIFS düz metin parola doğrulaması etkinleştirildikten sonra, CIFS aracılığıyla DiskStation dosyalarına erişim sağlamak amacıyla LDAP kullanıcıları bilgisayarlarının ayarlarını değiştirmesi gerekebilir:
+</p>
+<ul>
+<li>
+Eğer DiskStation sunucunuz bir Synology LDAP sunucusu (veya <b>Directory Server</b> paketini yükleyen ve çalıştıran başka bir DiskStation sunucusu) tarafından ya da Samba şemasını destekleyen LDAP sunucusu tarafından sağlanan dizin hizmetine katılıyorsa ve tüm LDAP kullanıcıları doğru sambaNTParola özniteliklerine sahipse, LDAP kullanıcıları DiskStation dosyalarınıza CIFS yoluyla <b>CIFS düz metin parola doğrulamasını etkinleştir</b> öğesini etkinleştirmeden veya kendi bilgisayarlarının ayarlarını değiştirmeden erişebilirler. Aksi taktirde, CIFS yoluyla DiskStation dosyalarına erişebilmek için LDAP kullanıcılarının kendi bilgisayarlarının <a href="http://en.wikipedia.org/wiki/Pluggable_Authentication_Modules" target="_blank">PAM</a> desteğini etkinleştirmeleri gerekecektir. Ancak, bunu yapmanız LDAP kullanıcılarının parolasını DiskStation sunucusuna düz metin olarak gönderecektir (şifreleme yapmadan), dolayısıyla güvenlik seviyesini düşürecektir.
+</li>
+
+</ul>
+<h4>Windows ayarlarını değiştirmek için:</h4>
+<ol>
+<li><b>Başlat</b> > <b>Çalıştır</b>'a gidin, ilgili alana <b>regedit</b> girin ve ardından <b>Tamam</b>'a tıklayarak Kayıt Düzenleyicisini açın.</li>
+<li>
+Windows sürümünüze bağlı olarak, aşağıdaki kaydı bulun veya oluşturun:
+</li>
+<ul>
+<li>
+<b>Windows 2000, XP, Vista ve Windows 7:</b><br> [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanWorkStation\Parameters]
+</li>
+<li>
+<b>Windows NT:</b><br> [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Rdr\Parameters]
+</li>
+<li>
+<b>Windows 95 (SP1), 98 ve Me:</b><br> [HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\VxD\VNETSUP]
+</li>
+</ul>
+<li>
+DWORD değeri <b>EnablePlainTextPassword</b> oluşturun ve değiştirin ve değer verisini <b>0</b>'dan <b>1</b>'e değiştirin.
+</li>
+<li>
+Değişikliğin uygulanması için Windows'u yeniden başlatın.
+</li>
+</ol>
+<h4>Mac OS X'in ayarlarını değiştirmek için:</h4>
+<ol>
+<li><b>Uygulamalar</b> > <b>Yardımcı Programlar</b>'a giderek <b>Terminal</b>'i açın.
+</li>
+<li>
+Boş bir dosya oluşturun <b>/etc/nsmb.conf</b>:
+<pre>
+sudo touch /etc/nsmb.conf
+</pre>
+</li>
+<li>
+vi ile <b>/etc/nsmb.conf</b> açın:
+<pre>
+sudo vi /etc/nsmb.conf
+</pre>
+</li>
+<li>
+Metin girmek için "<b>i</b>" girin ve aşağıdakileri yapıştırın:
+<pre>
+[default]<br / >
+minauth=none
+</pre>
+</li>
+<li>
+Esc tuşuna basın ve ardından "<b>ZZ</b>" girerek değişiklikleri kaydedin ve vi'den çıkın.
+</li>
+</ol>
+<h4>Linux'in ayarlarını değiştirmek için:</h4>
+<p><b>smbclient</b> kullanıyorsanız, lütfen aşağıdaki anahtarları <b>smb.conf</b> öğesinin <b>[global]</b> kısmına ekleyin:
+
+<p style="font-family:sans; margin-top:0px; padding-left:20px;line-height:1.25em;"> parolaları şifrele = hayır <br> istemci düz metin yetk = evet <br> istemci lanman yetk = evet <br> istemci ntlmv2 yetk = hayır </p>
+<p><b>mount.cifs</b> kullanıyorsanız, aşağıdaki komutu çalıştırın:</b>
+<p style="font-family:sans; margin-top:0px; padding-left:20px;line-height:1.25em;">echo 0x30030 > /proc/fs/cifs/SecurityFlags</p>
+<p>Daha fazla bilgi için, lütfen bkz. <a href="https://www.kernel.org/doc/readme/Documentation-filesystems-cifs-README" target=_blank>https://www.kernel.org/doc/readme/Documentation-filesystems-cifs-README</a></p>
+
+</p>
+</div>
+<div class="section">
+<h4>Profiller Hakkında</h4>
+
+<p>Farklı LDAP sunucuları hesap adları, grup adları için ya da hesapları ve grupları ayırmak için farklı öznitelikler kullanabilirler. <b>Profil</b> seçeneği kullanıcı ve grup bilgilerinin LDAP özniteliklerine nasıl haritalanacağını belirlemenize veya özelleştirmenize olanak tanır. LDAP sunucunuza bağlı olarak aşağıdaki profillerden bir tanesi seçilebilir:</p>
+
+<ul>
+<li><b>Standart:</b> Synology Directory Server veya Mac Open Directory kullanan sunucular için.</li>
+<li><b>IBM Lotus Domino:</b> IBM Lotus Domino 8.5 kullanan sunucular için.</li>
+<li><b>Özel:</b> Haritalamaları özelleştirmenizi sağlar. Ayrıntılar için aşağıdaki bölüme bakın.</li>
+</ul>
+
+<p>LDAP öznitelik haritalamalarını özelleştirmeden önce, bazı arkaplan bilgilerine ihtiyacınız vardır. Synology DSM ve <strong>Profil</strong> editörü RFC 2307'ye bağlıdır. Örneğin, <b>filter</b> > <b>passwd</b> öğelerini <b>userFilter</b> olarak belirlerseniz, DiskStation LDAP sunucunuzda <b>objectClass=userFilter</b> ile olan kayıtları LDAP hesapları olarak yorumlar. <b>passwd</b> > <b>uid</b> öğesini <b>username</b> olarak belirlerseniz, DiskStation LDAP sunucunuzdaki <b>username</b> hesap adı olarak yorumlar. Haritalamanın boş bırakılması RFC 2307 kurallarını uygular.</p>
+<p>DiskStation bir LDAP hesap tanımlayıcı (<strong>uidNumber</strong>) yada bir grup tanımlayıcı (<strong>gidNumber</strong>) olarak işlev görmek için sabit bir tamsayı gerektirir. Ancak, LDAP sunucularının tamamı bu tür öznitelikleri temsil için tamsayılar kullanmaz. Dolayısıyla, bu tür öznitelikleri tamsayılara dönüştürmek için bir anahtar kelime <b>HASH()</b> sunulmaktadır. Örneğin, LDAP sunucunuz <b>userid</b> özniteliğini bir LDAP hesabı için eşsiz taımlayıcı olarak onaltılı bir değerle kullanabilir. Bu durumda, <b>passwd</b> > <b>uidNumber</b> öğesini <b>HASH(userid)</b> olarak ayarlayabilirsiniz ve ardından DiskStation bunu bir tamsayıya dönüştürür.</p>
+
+<p>Aşağıda özelleştirilebilir özniteliklerin bir özeti bulunmaktadır:</p>
+
+<ul>
+	<li><b>filter</b></li>
+	<ul>
+		<li><b>grup</b>: grup için gerekli objectClass.</li>
+		<li><b>passwd</b>: kullanıcı için gerekli objectClass.</li>
+		<li><b>shadow</b>: kullanıcı şifreleri için gerekli objectClass.</li>
+	</ul>
+	<li><b>grup</b></li>
+	<ul>
+		<li><b>cn</b>: grup adı.</li>
+		<li><b>gidNumber</b>: Bu grup için GID numarası.</li>
+		<li><b>memberUid</b>: bu grubun üyeleri.</li>
+	</ul>
+	<li><b>passwd</b></li>
+	<ul>
+		<li><b>uidNumber</b>: Bu kullanıcının UID numarası.</li>
+		<li><b>uid</b>: kullanıcı adı.</li>
+		<li><b>gidNumber</b>: bu kullanıcı için birinci GID numarası.</li>
+	</ul>
+	<li><b>shadow</b></li>
+	<ul>
+		<li><b>uid</b>: kullanıcı adı.</li>
+		<li><b>userPassword</b>: kullanıcı şifresi.</li>
+	</ul>
+</ul>
+</div>
+<div class="section">
+<h4>UID/GID kaydırma hakkında</h4>
+<p>LDAP kullanıcıları/grupları ile yerel kullanıcılar/gruplar arasındaki UID/GID çakışmalarından kaçınmak için LDAP kullanıcılarını/gruplarını 1000000 kaydırmak için UID/GID kaydırmayı etkinleştirebilirsiniz. Bu seçenek sadece Synology olmayan LDAP sunucuları içindir ve her kullanıcı/grup için benzersiz bir sayısal ID atanmıştır.</p>
+</div>
+</body>
+</html>

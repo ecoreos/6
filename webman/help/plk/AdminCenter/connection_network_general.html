@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Sieć</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2>Ogólne</h2>
+
+<p>Ogólne opcje dotyczące sieci, takie jak domyślna brama, serwer DNS, serwer proxy i IPv6 tunneling są dostępne na stronie <strong>Panel sterowania</strong> > <strong>Sieć</strong> > <strong>Ogólne</strong>.</p>
+
+
+<h3>Zmiana nazwy urządzenia DiskStation</h3>
+<p>Aby zmienić nazwę urządzenia DiskStation, wprowadź nową nazwę i kliknij przycisk <b>Zastosuj</b>.</p>
+<p>W nazwie serwera nie jest istotna wielkość liter. Nazwa ta może zawierać od 1 do 15 znaków, w tym litery, cyfry podkreślenia i znaki minus. Pierwszym znakiem nazwy musi być litera.</p>
+
+
+<h3>Określanie domyślnej bramy</h3>
+<p>W celu skonfigurowania domyślnej bramy wprowadź jej adres IP i kliknij przycisk <b>Zastosuj</b>, aby zapisać ustawienie.</p>
+
+
+<h3>Określanie adresu IP serwera DNS</h3>
+<p>Adres IP serwera DNS można skonfigurować ręcznie. W takim przypadku należy wprowadzić adres IP preferowanego serwera DNS. Wprowadzić można także adres IP alternatywnego serwera DNS na wypadek problemów z preferowanym serwerem DNS. Po odpowiednim skonfigurowaniu adresów IP serwerów DNS kliknij przycisk <strong>Zastosuj</strong>, aby zapisać ustawienia.</p>
+
+
+<div class="section">
+<h4>Uwaga:</h4>
+<p>Pola Serwer DNS oraz Brama domyślna zostaną skonfigurowane automatycznie i nie będzie można ich zmienić, jeżeli wszystkie interfejsy będą skonfigurowane automatycznie lub w przypadku korzystania z połączenia PPPoE.</p>
+</div>
+
+
+
+<h3><a name="proxy"></a>Połączenie za pośrednictwem serwera proxy</h3>
+<p>Aby umożliwić urządzeniu DiskStation łączenie się za pośrednictwem serwera proxy, zaznacz pole wyboru <b>Połącz za pośrednictwem serwera proxy</b>, wprowadź <b>Adres</b> i <b>Port</b>, a następnie kliknij przycisk <b>Zastosuj</b>.</p>
+
+
+<div class="section">
+<h4>Uwaga:</h4>
+<ul>
+<li>Kliknij pozycję <strong>Ustawienia zaawansowane</strong>, aby skonfigurować serwer proxy HTTP, serwer proxy HTTPS i dane uwierzytelniania.
+<li>Ustawienia serwera proxy HTTPS są domyślnie takie same jak serwera proxy HTTP.</li>
+<li>Jeżeli zaznaczysz pole wyboru <b>Połącz za pośrednictwem serwera proxy</b>, Aktualizacja DSM i Centrum pakietów, a także niektóre inne pakiety będą łączyć się z Internetem za pośrednictwem serwera proxy.</li>
+<li>Jeżeli jest zaznaczone pole wyboru <b>Pomiń serwer proxy w przypadku adresów lokalnych</b>, serwer DNS używany przez serwer DiskStation musi obsługiwać zapytania dotyczące urządzeń w sieci lokalnej.</li>
+</ul>
+</div>
+
+
+<h3>Włączanie funkcji IPv6 Tunneling</h3>
+<p>Dopóki protokół IPv6 nie zastąpi całkowicie protokołu IPv4, wymagany jest IPv6 tunneling, aby umożliwić hostom z adresami IPv6 dostęp do usług IPv4. Ta technika umożliwia kierowanie ruchu IPv6 w sieciach IPv4.<br> Jeżeli nie masz pewności, jak skonfigurować IPv6 lub masz problemy z połączeniem, skontaktuj się ze swoim usługodawcą internetowym.</p>
+<h4>Aby włączyć funkcję IPv6 Tunnel:</h4>
+<ol>
+<li>Zaznacz pole wyboru <b>Włącz Tunnel</b>, aby włączyć obsługę usługi Tunnel.</li>
+
+<li>W polu <b>Adres serwera</b> wprowadź nazwę hosta lub adres IP dostawcy usługi Tunnel, na przykład: anonymous.freenet6.net.</li>
+
+<li>Wybierz opcję <b>Połącz anonimowo</b> lub <b>Połącz z istniejącym kontem</b>.</li>
+</ol>
+
+<div class="section">
+<h4>Uwaga:</h4>
+<p>Uwaga: zewnętrzny adres IPv6 może zostać automatycznie zaktualizowany przez usługodawcę. Urządzenie DiskStation nie usunie jednak od razu starego adresu IPv6.</p>
+</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+ <head>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>High Availability</title>
+
+
+ </head>
+ <body>
+  <h2>Zamykanie i resetowanie</h2>
+  <p>Poniższa instrukcja prowadzi przez procedurę zamykania, usuwania lub resetowania klastra high-availability.</p>
+
+  <h4> Aby zamknąć klaster high-availability przy użyciu pakietu Synology High Availability:</h4>
+  <p>Skorzystaj z poniższej instrukcji, jeżeli chcesz zamknąć klaster high-availability w celu przeniesienia serwer&oacute;w w inne miejsce lub przeprowadzić czynności konserwacyjne, ale bez usuwania konfiguracji klastra high-availability.</p>
+  <ol>
+   <li>Zaloguj się do DSM.</li>
+   <li>Otw&oacute;rz Synology High Availability.</li>
+   <li>Kliknij przycisk <b>Zarządzanie</b>.</li>
+   <li>Wybierz <b>Zamknij klaster HA</b>.</li>
+   <li>Pojawi się komunikat z prośbą o potwierdzenie. Kliknij przycisk <b>Tak</b>, aby potwierdzić.</li>
+  </ol>
+
+  <h4>Aby ręcznie zamknąć klaster high-availability:</h4>
+  <p> Klaster high-availability można także zamknąć ręcznie, używając przycisk&oacute;w zasilania na każdym z serwer&oacute;w. </p>
+  <ol>
+   <li>Naciśnij i przytrzymaj przycisk zasilania na jednym z serwer&oacute;w (aktywnym lub pasywnym), dop&oacute;ki serwer nie wyemituje sygnału dźwiękowego.</li>
+   <li>Po całkowitym zamknięciu jednego serwera zaczekaj co najmniej 30 sekund (serwer będący wciąż online potrzebuje czasu na zapisanie ustawień).</li>
+   <li>Naciśnij i przytrzymaj przycisk zasilania na drugim serwerze, dop&oacute;ki serwer nie wyemituje sygnału dźwiękowego.</li>
+   <li>Poczekaj na całkowite zamknięcie serwera.</li>
+  </ol>
+<div class="section">
+<h4>Włączanie zasilania serwer&oacute;w:</h4>   
+<p>Kiedy zechcesz włączyć serwery ponownie, włącz oba serwery &mdash; aktywny i pasywny &mdash; jednocześnie (lub w ciągu pięciu minut). Jeżeli włączysz tylko jeden serwer, będzie on pr&oacute;bował włączyć drugi serwer, wysyłając komunikat Wake-on-LAN.</p>
+<h4>Nieprawidłowe zamknięcie:</h4>
+<p>Po utworzeniu klastra high-availability włączana jest automatycznie w Panelu sterowania funkcja ponownego uruchamiania po awarii zasilania. W razie nieprawidłowego wyłączenia serwer&oacute;w w wyniku awarii zasilania zostaną one automatycznie włączone ponownie po przywr&oacute;ceniu zasilania.</p>
+</div>
+
+<h4>Aby usunąć klaster high-availability:</h4>
+ <p>Aby usunąć powiązanie obu serwer&oacute;w oraz klaster high-availability w celu powiązania innego serwera, skorzystaj z następującej instrukcji.</p>
+  <ol>
+   <li>Przejdź do strony <b>Przegląd</b>.</li>
+   <li>Kliknij przycisk <b>Zarządzanie</b>.</li> 
+   <li>Wybierz <b>Usuń klaster HA</b>.</li>
+  </ol>
+  <p>Po potwierdzeniu system usunie klaster high-availability. W polu stanu będzie wyświetlany postęp procesu usuwania. Po pomyślnym usunięciu klastra high-availability nastąpi przekierowanie na oryginalny adres IP aktywnego serwera. Stan obu serwer&oacute;w zmieni się na <b>Autonomiczny</b>.</li>
+  
+ <h4>Aby zresetować nieprawidłowo działający klaster high-availability:</h4>
+  <p>Jeżeli wskutek błędu &bdquo;rozdwojenia jaźni&rdquo; lub innych problem&oacute;w nie możesz uzyskać dostępu do systemu DSM ani klastra Synology High Availability, możesz spr&oacute;bować wymusić usunięcie powiązania klastra high-availability, naciskając przycisk <b>Reset</b> znajdujący się na serwerach.</p>
+  <ol>
+   <li>Naciśnij i przytrzymaj przycisk <b>Reset</b> (zazwyczaj znajdujący się na panelu tylnym serwera), dop&oacute;ki serwer nie wyemituje sygnału dźwiękowego.
+   <li>System usunie klaster high-availability, a stan obu serwer&oacute;w zmieni się na <b>Autonomiczny</b>.</li>
+   <li>Naciśnięcie przycisku <b>Reset</b> powoduje także przywr&oacute;cenie wartości domyślnych niekt&oacute;rych ustawień, takich jak adres IP, serwery DNS i hasło administratora. Ponadto nastąpią poniższe zmiany:</li>
+   <ul>
+    <li>Hasło administratora zostanie zresetowane i będzie puste.</li>
+    <li>Konto Guest będzie wyłączone.</li>
+    <li>Usługa DHCP będzie włączona w odniesieniu do adresu IP, serwer&oacute;w DNS, bramy i innych interfejs&oacute;w sieciowych.</li>
+    <li>Ramki JumboFrames będą wyłączone, a wartość MTU zostanie ustawiona na 1500.</li>
+    <li>Port zarządzania zostanie zresetowany do wartości 5000/5001.</li>
+    <li>Ustawienie PPPoE zostanie zresetowane do wartości domyślnej.</li>
+    <li>Automatyczne blokowanie adres&oacute;w IP zostanie wyłączone (zablokowany adres IP nie zostanie usunięty).</li>
+    <li>Funkcja Link Aggregation zostanie wyłączona.</li>
+    <li>Reguły zapory sieciowej zostaną wyłączone (reguły nie zostaną usunięte).</li>
+   </ul>
+  </ol>
+
+<div class="section">
+<h4>Uwaga:</h4>
+<p>Podczas procedury usuwania klastra high-availability mogą wystąpić niekompletne operacje zapisywania danych. Aby zapewnić kompletność danych, należy przeprowadzić replikację danych na podstawie serwera aktywnego, ponieważ na serwerze pasywnym może brakować pewnych aktualizacji danych.</p>
+</div>
+ </body>
+</html>

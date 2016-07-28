@@ -1,0 +1,81 @@
+ <!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Nahrazení pevného disku ve svazku nebo diskové skupině – Nápověda Synology DSM</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="This article walks you through the steps to replace a hard drive of an existing volume or disk group on DiskStation in order to increase storage capacity."><link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Nahrazení pevných disků pro rozšíření kapacity úložiště</h2>
+
+<p>Při používání určitých typů RAID můžete rozšířit kapacitu úložiště svazku nebo diskové skupiny nahrazením starých pevných disků většími pevnými disky. Tento článek obsahuje důležité informace týkající se procesu rozšíření a také ukázku postupu výměny existujících pevných disků za účelem zvýšení kapacity úložiště.</p>
+
+<div class="section">
+  <h4>Poznámka:</h4>
+<p>Postup popsaný v tomto článku lze použít pouze ve spojení s SHR, RAID 1, RAID 5 a RAID 6. Pokud chcete vyměnit více pevných disků, musíte je vyměnit po jednom. Po výměně jednoho pevného disku je třeba opravit svazek nebo skupinu disků a teprve poté vyměňovat další. U typů RAID 1, RAID 5 a RAID 6 dojde k rozšíření kapacity svazku po výměně všech pevných disků.</p>
+
+</div>
+
+
+<h3 class="list_head"><a name="t1"></a>  Než začnete</h3>
+
+<p>Před výměnou pevného disku si pročtěte následující poznámky:<br/><ul>
+<li><b>Zálohování dat:</b> Ačkoli během rozšíření nebudou smazána žádná existující data, důrazně vám doporučujeme všechna svoje data předtím zazálohovat.</li>
+<li><b>Status svazku nebo skupiny disků:</b> Než začnete, ujistěte se, že stav vašeho svazku nebo skupiny disků je <b>Normální</b>. Pokud ne, musíte jej opravit.</li>
+<li><b>Budou data v průběhu rozšiřování svazku dostupná?</b> V průběhu rozšiřování svazků nebo skupin disků budou data vašeho systému dostupná, přestože během prvního spuštění procesu může systém některá spojení dočasně přerušit.</li>
+</ul>
+
+<div class="section">
+<h4>Synology Hybrid RAID (SHR)</h4>
+
+<p>Jelikož svazky SHR optimalizují kapacitu úložiště na základě počtu a velikosti nainstalovaných pevných disků, postupujte při rozšiřování kapacity podle následujících pokynů:</p>
+
+<ul>
+<li>Pokud je kapacita všech existujících pevných disků stejná, musíte při rozšíření kapacity úložiště vyměnit alespoň dva pevné disky za větší. Například pokud váš SHR svazek obsahuje tři pevné disky, každý o velikosti 2 TB, musíte pro zvýšení kapacity svazku vyměnit nejméně dva pevné disky.</li>
+<li>Pokud je kapacita existujících pevných disků různá, musí být kapacita nových pevných disků stejná nebo vyšší než kapacita největšího stávajícího pevného disku. Pro optimální využití kapacity musíte rovněž vyměnit jako první ten nejmenší z pevných disků. Například pokud váš svazek SHR obsahuje tři pevné disky o velikosti 4 TB, 3 TB a 2 TB, musí být kapacita vašich nových pevných disků pro výměnu alespoň 4 TB. Nejdříve byste měli vyměnit pevné disky o velikosti 3 TB a 2 TB.</i>
+</li>
+</ul>
+</div>
+
+<div class="section">
+<h4>RAID 5 a RAID 6</h4>
+
+<p>Při výměně pevných disků ve svazcích nebo skupinách disků typu RAID 5 nebo RAID 6 je třeba jako první vyměnit nejmenší disk. Úložná kapacita svazku RAID 5 je (počet pevných disků – 1) x (velikost nejmenšího pevného disku), u svazku RAID 6 je (počet pevných disků – 2) x (velikost nejmenšího pevného disku). Pro maximální využití pevného disku je proto zapotřebí vyměnit jako první nejmenší pevný disk.</p>
+
+<p>Například pokud váš svazek RAID 5 obsahuje tři pevné disky o velikosti 4 TB, 3 TB a 2 TB, bude dostupná kapacita vašeho svazku 4 TB. Pokud vyměníte disk o velikosti 4 TB nebo 3 TB, kapacita svazku se nezmění. Pro zvýšení kapacity vašeho svazku je třeba nejdříve vyměnit pevný disk o velikosti 2 TB.</p>
+</div>
+
+
+
+<h3>Nahrazení pevného disku pro rozšíření kapacity úložiště</h3>
+
+<p>Níže uvedený postup představuje ukázku nahrazení pevných disků ve svazku SHR.</p>
+
+<h4>Postup nahrazení pevných disků:</h4>
+<ol>
+<li>Otevřete <b>Správce úložiště</b>.</li><img src="about:blank" class="help_image"/><li>Přejděte do části <strong>Svazek</strong> a podívejte se, který stávající pevný disk je nejmenší.</li><img src="../../../online_img/dsm/StorageManager/volume_diskgroup_expand_replace_disk/check_disk.png" class="help_image"/><li>Vypněte zařízení DiskStation. (Tento krok přeskočte, pokud vaše zařízení DiskStation podporuje výměnu disků za chodu.)</li>
+<li>Odeberte nejmenší ze začleněných pevných disků a nainstalujte nový, větší pevný disk.</li>
+
+<div class="section">
+<h4>Poznámka:</h4>
+<p>Při instalaci pevného disku se řiďte pokyny uvedenými v <i>Rychlé instalační příručce</i> vašeho produktu Synology, abyste se nezranili nebo nepoškodili zařízení DiskStation.</p>
+</div>
+
+<li>Zapněte zařízení DiskStation.</li>
+<li>Znovu otevřete <strong>Správce úložiště</strong>.</li>
+<li>Přejděte do části <strong>HDD/SSD</strong> a zkontrolujte, jestli byl nový pevný disk rozpoznán.</li><img src="about:blank" class="help_image"/><li>Stav vašeho svazku by měl být <b>Omezený režim</b>. Vyberte svazek a klikněte na možnost <strong>Správa</strong>.</li><img src="../../../online_img/dsm/StorageManager/volume_diskgroup_expand_replace_disk/volume_manage.png" class="help_image"/><li>Vyberte možnost <b>Opravit</b>.</li><img src="../../../online_img/dsm/StorageManager/volume_diskgroup_expand_replace_disk/manage_repair.png" class="help_image"/><li>Vyberte náhradní pevný disk, který chcete přidat do svazku. Poté dokončete postup podle pokynů v průvodci.</li><img src="../../../online_img/dsm/StorageManager/volume_diskgroup_expand_replace_disk/choose_disks.png" class="help_image"/><li>Opakujte výše uvedený postup, dokud nebudou všechny požadované pevné disky nahrazeny za větší.</li>
+</ol>
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+ <head>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>High Availability</title>
+
+
+ </head>
+ <body>
+<h2>Überblick</h2>
+	<p>Diese Seite zeigt allgemeine Informationen über den High Availability-Cluster und Mitglieder-Server an. Zusätzlich bietet diese Seite Werkzeuge zum Erstellen, Entfernen oder dem Ausführen von Wartungsarbeiten an High Availability-Clustern und Mitglieder-Servern.</p>
+
+<h3>High Availability-Cluster-Status</h3>
+  <p>Dieses Feld zeigt den Gesamtstatus des High Availability-Clusters an und benachrichtigt Sie bei Fehlern. Es folgt eine Tabelle mit Bedingungen, die in diesem Feld angezeigt werden können:</p>
+    <table>
+     <tr>
+      <th>Status</th>
+      <th>Beschreibung</th>
+     </tr>
+     <tr>
+      <td align="center"><strong>Einzeln</strong></td>
+      <td>Die Server sind nicht in einem High Availability-Cluster kombiniert.</td>
+     </tr>
+     <tr>
+      <td align="center"><strong>In Ordnung</strong></td>
+      <td>Der Gesamtzustand des High Availability-Clusters ist gut. Replikation von Daten vom aktiven Server auf den passiven Server funktioniert normal.</td>
+     </tr>
+     <tr>
+      <td align="center"><strong>Vorbereitung</strong></td>
+	  <td>Die Server wurden erfolgreich zu einem High Availability-Cluster kombiniert, aber die erstmalige Datenreplikation wurde noch nicht abgeschlossen. Die Übergabe kann zu diesem Zeitpunkt nicht durchgeführt werden. Weitere Details entnehmen Sie bitte <a href="switchover_fail.html">Übergabe</a>.</td>
+     </tr>
+     <tr>
+      <td align="center"><strong>Laden</strong></td>
+	  <td>Das System lädt den Cluster-Status. <b>Übergabe</b> kann erst ausgeführt werden, nachdem der Status geladen wurde.</td>
+     </tr>
+     <tr>
+      <td align="center"><strong>Warnhinweis</strong></td>
+      <td>Der Status des HA-Clusters ist abnormal, aber die Dienste funktionieren noch.</td>
+     </tr>
+     <tr>
+      <td align="center"><strong>Gefahr</strong></td>
+	  <td>Sowohl der aktive und der passive Server sind defekt. Der High Availability-Cluster kann nicht normal funktionieren. Prüfen Sie den Status aller Speicherplätze (z. B. RAID Groups, Diskgruppen, Volumes und iSCSI LUNs).</td>
+     </tr>
+    </table>
+<h3>Warnmeldungen</h3>
+   <p>Die folgende Tabelle zeigt Warnmeldungen an, die angezeigt werden könnten, wenn ein Fehler im System auftritt. Wenn mehr als eine Warnmeldung angezeigt wird, können Sie mit den Vorwärts-/Rückwärts-Schaltflächen zwischen ihnen umschalten. </p>
+    <table>
+     <tr>
+      <th>Warnung/Fehler</th>
+      <th>Beschreibung</th>
+     </tr>
+     <tr>
+      <td align="center"><strong>Überwachter Dienst fehlerhaft</strong></td>
+      <td>Ein Fehler ist bei einem oder mehreren überwachten Diensten aufgetreten.</td>
+     </tr>
+     <tr>
+      <td align="center"><strong>Speicherplatz zeigt Leistungseinbußen</strong></td>
+      <td>Ein Speicherplatz (z. B. RAID Group, Diskgruppe, Volume, iSCSI LUN und SSD Cache) auf dem aktiven oder passiven Server zeigt Leistungseinbußen. Überprüfen Sie die Seite <b>Speicher-Status</b>.</td>
+     </tr>
+     <tr>
+      <td align="center"><strong>Speicherplatz abgestürzt</strong></td>
+      <td>Ein Speicherplatz (z. B. RAID Group, Diskgruppe, Volume, iSCSI LUN und SSD Cache) auf dem aktiven oder passiven Server ist abgestürzt. Überprüfen Sie die Seite <b>Speicher-Status</b>.</td>
+     </tr>
+     <tr>
+      <td align="center"><strong>Erkennung des passiven Servers fehlgeschlagen</strong></td>
+      <td>Dieser Fehler kann auftreten, wenn der passive Server offline ist oder der aktive und der passive Server nicht über die Heartbeat-Verbindung verbunden werden können. In diesem Fall ist die Übergabe nicht verfügbar.</td>
+     </tr>
+     <tr>
+      <td align="center"><strong>Daten können nicht auf den passiven Server repliziert werden</strong></td>
+      <td>Dieser Fehler kann wegen eines Fehlers des Speicher-Volumes oder der Festplatte auftreten. In diesem Fall ist die Übergabe nicht verfügbar. Überprüfen Sie die Seite <b>Speicher-Status</b>.</td>
+     </tr>
+     <tr>
+      <td align="center"><strong>Passiver Server ist nicht ausgewählt</strong></td>
+	  <td>Wenn der passive Server vom High Availability-Cluster getrennt ist, wird dieser Status angezeigt. In diesem Fall ist die Übergabe nicht verfügbar. Wenn Sie den passiven Server wieder einbinden möchten, klicken Sie auf das Dropdown-Menü <b>Beibehalten</b> und auf <b>Bind</b>. Wenn Sie den passiven Server wieder einbinden, wird eine vollständige Datenreplikation notwendig.</td>
+     </tr>
+    </table>
+
+
+<h3>High Availability-Cluster-Informationen</h3>
+	<p>Dieses Feld befindet sich unter dem High Availability-Cluster-Status und zeigt grundlegende Informationen über den Cluster an. Wenn ein High Availability-Cluster nicht existiert, wird dieses Feld nur die Beschreibung einer Funktion des High Availability-Clusters anzeigen.</p>
+    <p>Dieses Feld enthält die folgenden Informationen:</p>
+ <ul>
+    	<li><b>Cluster-Servername:</b> Der vom high-availability Cluster verwendete Servername. </li>
+   <li><b>Cluster IP-Adresse:</b> Die vom high-availability Cluster verwendete IP-Adresse. Unabhängig davon, auf welchem Server Dienste ausgeführt werden, können sich Benutzer mit dieser IP-Adresse mit dem High Availability-Cluster verbinden.</li>
+        <li><b>Erstellungszeit:</b> Das Erstellungsdatum des high-availability-Clusters.</li>
+ </ul>
+
+
+<h3>High Availability-Cluster-Bedienschaltflächen</h3>
+
+<p>Die folgenden zwei Schaltflächen befinden sich unter den High Availability-Cluster-Informationen:</p>
+
+<ol>
+<li><b>HA Cluster erstellen:</b> Wenn kein high-availability Cluster existiert, können Sie auf diese Schaltfläche klicken, um zwei Server zu kombinieren und einen high-availability Cluster zu erstellen. Weitere Informationen über die Erstellung eines High Availability-Clusters finden Sie unter <a href="wizard.html">Synology High Availability Manager Assistent</a>.</li>
+<li><b>Verwaltung:</b> Diese Schaltfläche ist nur verfügbar, wenn ein high-availability Cluster existiert. Sie enthält die folgenden Optionen:
+<ul>
+<li><b>Verwaltungsassistent:</b> Startet einen Assistenten, der Anweisungen für die verschiedenen Verwaltungsverfahren beinhaltet.</li>
+<li><b>Übergabe:</b> Initiiert eine Übergabe vom aktiven auf den passiven Server. Während des Vorgangs stoppt der aktive Server die Bereitstellung von Diensten und wird zum neuen passiven Server. Der alte passive Server wird in dem Fall zum neuen aktiven Server und beginnt mit der Bereitstellung von Diensten des High Availability-Clusters. Diese Option ist nicht verfügbar, wenn der passive Server <b>defekt</b> oder nicht ausgewählt ist.</li>
+<li><b>DSM aktualisieren:</b> Öffnet die Seite <strong>DSM aktualisieren</strong> der <strong>Systemsteuerung</strong>. Von hier aus können beide Server aktualisiert werden.</li>
+<li><b>HA Cluster entfernen:</b> Entfernt den high-availability-Cluster.</li>
+<li><b>Passiven Server entfernen:</b> Entfernt den passiven Server aus dem Cluster. Wird der Server nach den Trennen wieder zum High Availability-Cluster hinzugefügt, ist eine vollständige Datenreplikation notwendig. Wir empfehlen daher dieser Option nur zu verwenden, wenn Sie den existierenden passiven Server durch einen neuen austauschen möchten.</li>
+<li><b>Passiven Server binden:</b> Fügt einen passiven Server zu einem Cluster hinzu. Diese Option ist nur dann verfügbar, wenn im High Availability-Cluster kein passiver Server vorhanden ist.</li>
+<li><b>HA Cluster herunterfahren:</b> Fährt den aktiven und passiven Server herunter.</li>
+<li><b>Aktiven Server herunterfahren:</b> Fährt den aktiven Server herunter.</li>
+<li><b>Passiven Server herunterfahren:</b> Fährt den passiven Server herunter.</li>
+<li><b>Aktiven Server neu starten:</b> Startet den aktiven Server neu.</li>
+<li><b>Passiven Server neu starten:</b> Startet den passiven Server neu.</li>
+<li><b>Signalton auf passivem Server deaktivieren:</b> Deaktiviert den Signalton des passiven Servers, wenn ein Fehler auftritt. Der passive Server gibt trotzdem einen Signalton ab, wenn später ein anderer Fehler auftritt.</li>
+</ul>
+</li>
+</ol>
+
+<div class="section">
+<h4>Hinweis:</h4>
+<ul>
+<li>Wenn ein High Availability-Cluster entfernt wird, ist eine vollständige Datenreplikation notwendig, wenn Sie einen Neuen erstellen möchten.</li>
+<li>Wenn Sie den passiven Server herunterfahren oder trennen, können Dienste bei einem Fehler auf dem aktiven Server nicht umgeschaltet werden.</li>
+</ul>
+</div>
+
+<h3>Server- und Datenreplikationsstatus</h3>
+<p>Dieser Abschnitt enthält Bilder, die den Status des aktiveren und passiven Servers anzeigen, sowie die Datenreplikation zwischen den beiden Servern.</p>
+<p>Das Bild der Datenreplikation zeigt die folgenden möglichen Situationen an:</p>
+	<ul>
+    	<li><b>Datenreplikation funktioniert normal:</b> Dies wird durch die Darstellung des Datenflusses vom aktiven Server zum passiven Server angezeigt.</li>
+    	<li><b>Keine Datenreplikation:</b> Dies wird durch das Fehlen des Daten-Flow-Bilde angezeigt.</li>
+    </ul>
+
+
+<h3> Serverinformationen</h3>
+ <p>Dieser Abschnitt befindet sich unter den Server-Images. Informationen hinsichtlich des aktiven und passiven Servers werden in diesem Abschnitt angezeigt. Wenn kein passiver Server ausgewählt wurde, wird dieser Abschnitt <b>N/A</b> anzeigen.</p>
+  <ul>
+   <li><b>Servername:</b> Synology Servername.</li>
+   <li><b>Modellname:</b> Synology Server Modell.</li>
+   <li><b>Seriennummer:</b> Seriennummer des Synology-Servers.</li>
+   <li><b>Lüfterstatus:</b> Status der Lüfter eines Servers. Wenn ein Lüfter ausfällt, wird eine Warnung angezeigt. Wenden Sie sich in diesem Fall an Ihren Händler vor Ort, um Hilfe zu erhalten.</li>
+   <li><b>Temperatur:</b> Temperatur des Synology-Servers. </li>
+   <li><b>Stromstatus:</b> Zeigt an, ob die Stromversorgungen an einem Server normal funktionieren oder nicht. Wenn das Synology Modell mit redundanten Stromquellen ausgestattet ist, wird eine Warnung angezeigt, wenn eine von ihnen ausfällt.</li>
+  </ul>
+
+ </body>
+</html>

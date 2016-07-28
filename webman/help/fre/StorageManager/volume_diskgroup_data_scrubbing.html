@@ -1,0 +1,43 @@
+ <!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+
+<title>Nettoyage du RAID - Aide Synology DSM</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="Data scrubbing is a data maintenance feature that inspects volumes or disk groups and repairs any detected data inconsistencies.">
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script> <script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Nettoyage du RAID*</h2>
+<p>Le nettoyage du RAID est un paramètre de maintenance des données qui inspecte les volumes ou groupes de disques et répare les incohérences de données détectées. Cette fonction peut être utilisée avec les volumes ou groupes de disques qui implémentent SHR (comportant trois disques ou plus), RAID 5 ou RAID 6. </p>
+
+<p>Nous recommandons d’effectuer régulièrement le nettoyage du RAID afin de maintenir la cohérence des données et d’éviter de perdre des données critiques en cas de panne de disque dur.</p>
+
+<h4>Pour effectuer le nettoyage du RAID :</h4>
+
+<ol>
+<li>Ouvrez <strong>Gestionnaire de stockage</strong>.</li>
+<li>Accédez à <strong>Volume</strong> ou <strong>Groupe de disques</strong>.</li>
+<li>Sélectionnez le volume ou groupe de disques sur lequel vous souhaitez effectuer le nettoyage du RAID.</li>
+<li>Cliquez sur <strong>Gérer.</strong></li>
+<li>Sélectionnez <strong>Nettoyage du RAID</strong>.</li>
+</ol>
+
+<div class="section">
+<h4>Remarque :</h4>
+<ul>
+<li>Le nettoyage du RAID ne peut être effectué que lorsque le statut du volume ou groupe de disques est <strong>Normal</strong>.</li>
+<li>N'éteignez pas le système avant la fin du nettoyage du RAID. Si le système est arrêté avant la fin, le nettoyage du RAID doit être redémarré depuis le début.</li>
+</ul></div>
+
+<p>____<br /> *Uniquement pris en charge sur certains modèles.</p>
+
+</body>
+</html>

@@ -1,0 +1,104 @@
+ <!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Reparar un volumen o Grupo de discos - Ayuda de Synology DSM</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="This article walks you through the steps to create a volume on DiskStation using Storage Manager."><link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Reparar un volumen o Grupo de discos</h2>
+
+<p>Los errores de volúmenes pueden ocurrir por diferentes motivos, como por ejemplo, particiones dañadas del sistema o unidades de disco duro averiadas. En algunos casos, podrá seguir los pasos que se indican a continuación para diagnosticar el error y solucionar el problema.</p>
+
+<div class="section">
+<h4>Notas:</h4>
+<ul>
+<li>La función <strong>Reparar</strong> descrita aquí está disponible solo para tipos RAID con redundancia de datos (por ejemplo, RAID 1, RAID 5, RAID 6, etc.). Observe que esta función no repara unidades de disco duro rotas, ni garantiza la recuperación de datos de volúmenes averiados.</li>
+<li>Para volúmenes averiados, recomendamos que se ponga en contacto con nuestro <span class="last"><a href="https://account.synology.com/support/support_form.php?lang=enu" target="_blank">Soporte técnico</a> para obtener asistencia</span>.</li>
+</ul>
+</div>
+
+<h3>Particiones del sistema averiadas</h3>
+
+<p>Cuando se averían las particiones de los sistemas, aparecerá un mensaje indicando que no es posible acceder a las mismas.</p>
+<h4>Para reparar particiones del sistema:</h4>
+
+<ol>
+<li>Abra <strong>Administrador de almacenamiento</strong>.</li><img src="about:blank" class="help_image"/><li>Vaya a <strong>Visión general</strong> y haga clic en el enlace marcado como <strong>Reparar</strong>. El sistema debería reparar las particiones del sistema.</li><img src="../../../online_img/dsm/StorageManager/volume_diskgroup_repair/fail_system_partitions.png" class="help_image"/></ol>
+
+
+<h3>Volúmenes degradados</h3>
+
+
+<p>Un volumen o grupo de discos se convierte en <strong>Degradado</strong> cuando se avería una unidad de disco duro, pero no se produce una pérdida de datos. Esto solo ocurre con tipos de RAID que ofrecen redundancia de datos, como por ejemplo, SHR, RAID 1, RAID 5, RAID 6 y RAID 10. </p>
+<p>Un volumen o grupo de discos degradado se puede arreglar mediante la sustitución de la unidad de disco duro averiada por una sin problemas y después reparando el volumen o grupo de discos.</p>
+
+<div class="section">
+<h4>Nota:</h4>
+<ul>
+  <li>El tamaño de la unidad de disco duro de sustitución debe ser superior o igual al tamaño del disco más pequeño del volumen.</li>
+  <li>El estado de la unidad de disco duro de sustitución debe ser <strong>Iniciado</strong> o <strong>No iniciado</strong>.</li>
+</ul>
+
+</div>
+
+<h4> Para reparar un volumen o grupo de discos degradado:</h4>
+
+<ol>
+
+<li>Vaya a <strong>Administrador de almacenamiento</strong> > <strong>Volumen</strong> o <strong>Grupo de discos</strong> para confirmar que el estado ha cambiado a <strong>Degradado</strong>.</li><img src="about:blank" class="help_image"/><li>De ser así, vaya a la pestaña <strong>HDD/SSD </strong>para ver qué unidad de disco duro se ha averiado.</li><img src="../../../online_img/dsm/StorageManager/volume_diskgroup_repair/hdd_ssd.png" class="help_image"/><li>Retire cualquier unidad de disco duro dañada y sustitúyala por otra nueva.</li>
+
+<div class="section">
+<h4>Nota:</h4>
+<ul>
+<li>Si su DiskStation no es compatible con el intercambio en caliente, recuerde apagarlo antes de eliminar e instalar unidades de disco duro.</li>
+<li>Los datos existentes en la unidad de disco duro de sustitución se eliminarán.</li>
+</ul>
+</div>
+
+<li>Tras sustituir las unidades de disco duro, vuelva a la pestaña <strong>Volumen</strong> o <strong>Grupo de discos</strong>.</li>
+
+<li>Seleccione el volumen o grupo de discos degradado.</li>
+
+<li>Haga clic en <strong>Administrar</strong>.</li><img src="about:blank" class="help_image"/><li>Seleccione <strong>Reparar</strong> y haga clic en <strong>Siguiente</strong>. </li><img src="../../../online_img/dsm/StorageManager/volume_diskgroup_repair/manage_repair.png" class="help_image"/><li>Seleccione las unidades de disco duro nuevas que desea agregar al volumen. A continuación haga clic en <strong>Siguiente.</strong></li><img src="../../../online_img/dsm/StorageManager/volume_diskgroup_repair/choose_disks.png" class="help_image"/><li> Siga las instrucciones del asistente para finalizar. </li>
+</ol>
+
+
+
+
+<h3>Reparar volúmenes</h3>
+<p>Para reparar un reparar un volumen/grupo de discos/iSCSI LUN degradado, debe sustituir el disco defectuoso por otro disco disponible que cumpla los siguientes criterios:</p>
+<ul>
+<li>Para volúmenes RAID 1, RAID 5 o RAID 6, el volumen degradado puede repararse por un disco disponible cuyo tamaño sea igual o mayor al tamaño del disco más pequeño en el volumen RAID.</li>
+<li>Para volúmenes SHR-1, el disco disponible debe cumplir uno de los criterios siguientes: (1) Su tamaño debe ser igual o superior al tamaño del disco defectuoso; (2) Sin incluir el disco más grande del volumen RAID, su tamaño debe ser igual o mayor que el disco de mayor tamaño restante.<ol>
+<li>Ejemplo 1: SHR-1 está compuesto por discos de 3 TB, 2 TB, 2 TB y 1 TB. Si el disco de 3 TB falla, puede repararse por un disco disponible cuyo tamaño sea igual o mayor que 2 TB.</li>
+<li>Ejemplo 2: SHR-1 está compuesto por discos de 4TB, 4TB, 2 TB y 2TB. Si el disco de 4TB falla, puede repararse por un disco disponible cuyo tamaño sea igual o mayor que 4TB.</li>
+<li>Ejemplo 3: SHR-1 está compuesto por discos de 4TB, 4TB, 2 TB y 2TB. Si el disco de 2TB falla, puede repararse por un disco disponible cuyo tamaño sea igual o mayor que 2 TB.</li>
+</ol>
+</li>
+<li>Para volúmenes SHR-2, el disco disponible debe cumplir uno de los criterios siguientes: (1) Su tamaño debe ser igual o superior al tamaño del disco defectuoso; (2) Sin incluir los dos discos más grandes del volumen RAID, su tamaño debe ser igual o mayor que el disco de mayor tamaño restante.</li>
+</ul>
+<p>Si ha configurado discos como Hot Spare que cumplan los criterios anteriores, estos se usarán para reparar el volumen/grupo de discos/RAID Group/iSCSI LUN.</p>
+
+
+<h3>Resolver volúmenes averiados</h3>
+
+<p>Cuando el estado de un volumen cambia a <strong>Averiado</strong>, no podrá reparar el volumen usted mismo. Para solucionar este problema, recomendamos que se ponga en contacto con nuestro <a href="https://account.synology.com/support/support_form.php?lang=enu" target="_blank">Soporte técnico</a> para solicitar ayuda.</p>
+
+<div class="section">
+<h4>Antes de ponerse en contacto con el equipo de Soporte técnico:</h4>
+
+<ul>
+<li>Recupere los datos de DiskStation copiando los archivos al ordenador o discos externos mediante File Station, el servicio de archivos Windows, FTP u otros servicios de archivos.</li>
+<li>Mantenga el orden de las unidades de disco duro tal y como estaba cuando el volumen se estropeó.</li>
+<li>Realice una prueba de S.M.A.R.T. en las unidades de discos duros con problemas. Para ello, vaya a <strong>Administrador de almacenamiento</strong> > <strong>HDD/SSD</strong>. Elija la unidad de disco duro en cuestión y haga clic en <strong>Prueba de S.M.A.R.T</strong>. <br /></li>
+</ul>
+</div>
+</body>
+</html>

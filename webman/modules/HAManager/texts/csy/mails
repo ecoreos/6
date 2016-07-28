@@ -1,0 +1,149 @@
+
+[HA_ConfSyncError]
+Subject: Cluster high-availability %HOSTNAME% zaznamenal chybu synchronizace při kontrole konfigurace systému.
+
+Vážený uživateli,
+
+cluster high-availability %HOSTNAME% zaznamenal chybu synchronizace při kontrole konfigurace systému aktivního a pasivního serveru. Systém se pokusil opravit chybu provedením kompletní synchronizace konfigurací systému. Podrobnější údaje naleznete v systémových protokolech nebo na stránce protokolů aplikace High Availability Manager.
+
+Akce: %HA_ACTION%
+Chyba: %HA_PARAM_1%
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[HA_FailOver]
+Subject: Na clusteru high-availability %HOSTNAME% byla zaznamenána chyba.
+
+Vážený uživateli,
+
+na clusteru high-availability %HOSTNAME% byla zaznamenána chyba. Systém provede přepnutí služeb na pasivní server. Další informace naleznete v systémových protokolech.
+
+Akce: %HA_ACTION%
+Chyba: %HA_PARAM_1%
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[HA_MismatchedSsdCache]
+Subject: Disky mezipaměti SSD na clusteru high-availability %HOSTNAME% nejsou shodné
+
+Vážený uživateli,
+
+disky spadající pod následující mezipaměť SSD na pasivním serveru %HA_PARAM_1% nejsou shodné s disky na aktivním serveru: Mezipaměť SSD %HA_PARAM_2%.
+
+Podrobnější údaje naleznete na stránce protokolů aplikace High Availability Manager.
+
+Akce: %HA_ACTION%
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[HA_SplitBrain]
+Subject: Došlo k chybě split brain clusteru high-availability %HOSTNAME%
+
+Vážený uživateli,
+
+došlo k chybě split brain clusteru high-availability %HOSTNAME%. Další informace naleznete v systémových protokolech.
+
+Akce: %HA_ACTION%
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[HA_StatusChange]
+Subject: Stav clusteru high-availability %HOSTNAME% byl změněn z %HA_PARAM_1% na %HA_PARAM_2%.
+
+Vážený uživateli,
+
+stav clusteru high-availability %HOSTNAME% byl změněn z %HA_PARAM_1% na %HA_PARAM_2%. Podrobnější údaje naleznete v systémových protokolech nebo na stránce protokolů aplikace High Availability Manager.
+
+Akce: %HA_ACTION%
+Popis: %HA_PARAM_3%
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[HA_SwitchFail]
+Subject:  Nepodařilo se přepnout služby clusteru high-availability %HOSTNAME%
+
+Vážený uživateli,
+
+systém se pokusil o přepnutí služeb na pasivní server clusteru high-availability %HOSTNAME%, tato operace se však nezdařila. Další informace naleznete v systémových protokolech.
+
+Akce: %HA_ACTION%
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[HA_SwitchFinished]
+Subject: Cluster high-availability %HOSTNAME% nyní poskytuje služby na %HA_PARAM_1%.
+
+Vážený uživateli,
+
+služby clusteru high-availability %HOSTNAME% jsou nyní poskytovány na %HA_PARAM_1%. Podrobnější údaje naleznete v systémových protokolech nebo na stránce protokolů aplikace High Availability Manager.
+
+Akce: %HA_ACTION%
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[HA_SwitchOver]
+Subject:  Přepnutí clusteru high-availability %HOSTNAME% na %HA_PARAM_1%.
+
+Vážený uživateli,
+
+některá z osob zahájila proces přepnutí clusteru high-availability %HOSTNAME%. Služby budou nyní přepnuty na %HA_PARAM_1%. Další informace naleznete v systémových protokolech.
+
+Akce: %HA_ACTION%
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[HA_SwitchOver_With_Reason]
+Subject: Cluster High-availability %HOSTNAME% zahájil proces přesměrování služeb na server %HA_PARAM_1%.
+
+Vážený uživateli,
+
+Byl zahájen proces přepnutí clusteru high-availability %HOSTNAME%. Služby budou nyní přesměrovány na server %HA_PARAM_1%. Další informace naleznete v systémových protokolech.
+
+Akce: %HA_ACTION%
+Důvod: %HA_PARAM_2%
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[HA_SyncComplete]
+Subject: Kompletní replikace dat clusteru high-availability %HOSTNAME% je dokončena.
+
+Vážený uživateli,
+
+kompletní replikace dat clusteru high-availability %HOSTNAME% je dokončena. Pasivní server je nyní připraven převzít služby v případě nutného přepnutí. Podrobnější údaje naleznete v systémových protokolech nebo na stránce protokolů aplikace High Availability Manager.
+
+Akce: %HA_ACTION%
+
+S pozdravem
+%COMPANY_NAME%
+
+
+[HA_UnbindLocal]
+Subject: Z clusteru high-availability byl odebrán místní hostitel
+
+Vážený uživateli,
+
+z clusteru high-availability %HA_PARAM_2% byl odebrán hostitel %HA_PARAM_1%. Další informace naleznete v systémových protokolech.
+
+Akce: %HA_ACTION%
+
+S pozdravem
+%COMPANY_NAME%
+

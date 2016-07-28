@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Przypisywanie uprawnień do folderu udostępnionego &mdash; pomoc systemu Synology DSM</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="You can specify which users or groups can access, view, or modify a shared folder and its contents. This article shows you how to assign and customize shared folder permissions in DSM.">
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+
+
+
+<h2>Przypisywanie uprawnień do folderu udostępnionego</h2>
+
+<p>Można określić, kt&oacute;rzy użytkownicy lub kt&oacute;re grupy mogą uzyskiwać dostęp do folderu udostępnionego i jego zawartości oraz je wyświetlać i modyfikować. Uprawnienia dostępu do folder&oacute;w udostępnionych, a także indywidualnych plik&oacute;w i podfolder&oacute;w można dostosować dla poszczeg&oacute;lnych użytkownik&oacute;w i grup.</p>
+
+<div class="section disable-eds14">
+<h4>Lista kontroli dostępu systemu Windows (ACL):</h4>
+
+<p>W systemie DSM 5.0 lub nowszych wersjach uprawnienia dostępu do folder&oacute;w udostępnionych są oparte domyślnie na listach Windows ACL. Do nowo tworzonych folder&oacute;w udostępnionych stosuje się ustawienia uprawnień Windows ACL, co umożliwia także dostosowywanie uprawnień do poszczeg&oacute;lnych plik&oacute;w i podfolder&oacute;w. Uprawnienia można też dostosowywać za pośrednictwem aplikacji File Station lub programu Eksplorator plik&oacute;w w systemie Windows.</p>
+<p>Do następujących folder&oacute;w udostępnionych nie można stosować systemu zarządzania uprawnieniami Windows ACL: <strong>photo</strong>, <strong>satashare</strong>, <strong>sdshare</strong>, <strong>surveillance</strong>, <strong>usbshare</strong>.</p>
+</div>
+<div class="section disable-eds14">
+<h4>Uwaga:</h4>  
+<p>Osobiste foldery <strong>home</strong> użytkownik&oacute;w znajdują się w folderze <strong>homes</strong>. Ponieważ działanie list ACL opiera się na dziedziczeniu uprawnień, po ustawieniu uprawnienia NA dla użytkownika lub grupy w folderze <strong>homes</strong> użytkownicy nie będą mieli dostępu do osobistego folderu <strong>home</strong>. </p>
+</div>
+<h4>Aby edytować uprawnienia do folderu udostępnionego:</h4>
+
+<ol>
+
+<li>Wybierz pozycje <strong>Panel sterowania</strong> &gt; <strong>Folder wsp&oacute;łdzielony</strong>.</li><img src="about:blank" class="help_image"/><li>Wybierz folder udostępniony, kt&oacute;rego uprawnienia mają być edytowane. Kliknij przycisk <b>Edytuj</b>.</li><img src="../../../online_img/dsm/AdminCenter/file_share_privilege/howto450-2.png" class="help_image"/><li> Przejdź do karty <strong>Uprawnienia</strong>.</li><img src="../../../online_img/dsm/AdminCenter/file_share_privilege/howto450-3.png" class="help_image"/><li>Z&nbsp;listy rozwijanej wybierz jedną z poniższych opcji:<ul>
+<li><b>Wewnętrzny użytkownik systemu:</b> przypisanie uprawnień domyślnym użytkownikom systemu, na przykład anonimowemu użytkownikowi FTP/WebDAV. Zanim będzie można zezwolić anonimowym użytkownikom FTP na łączenie się z folderem udostępnionym, należy przypisać temu użytkownikowi uprawnienia.</li>
+<li><b>Użytkownicy lokalni:</b> przypisanie uprawnień użytkownikom lokalnym (w tym użytkownikowi <b>guest</b>).</li>
+<li><b>Grupy lokalne:</b> przypisanie uprawnień grupom lokalnym.</li>
+</ul>
+</li><img src="about:blank" class="help_image"/><li>Zaznacz lub usuń zaznaczenie p&oacute;l wyboru poszczeg&oacute;lnych użytkownik&oacute;w lub grup, aby dostosować ich uprawnienia dostępu do folderu udostępnionego:<ul>
+<li><b>Odczyt/Zapis</b>: użytkownik lub grupa może uzyskać dostęp do plik&oacute;w i podfolder&oacute;w w folderze udostępnionym oraz dokonywać w nich zmiany.</li>
+<li><b>Tylko do odczytu</b>: użytkownik lub grupa może uzyskiwać dostęp do plik&oacute;w i podfolder&oacute;w w folderze udostępnionym.</li>
+<li><b>Brak dostępu</b>: użytkownik lub grupa nie może uzyskiwać dostępu do plik&oacute;w i podfolder&oacute;w w folderze udostępnionym.</li>
+</ul>
+</li><img src="about:blank" class="help_image"/><li>Kliknij przycisk <b>OK</b>, aby zakończyć.</li>
+</ol>
+
+<div class="section">
+<h4>Uwaga:</h4>
+
+<ul>
+<li>W razie wystąpienia konfliktu uprawnień będą one mieć następujący priorytet: Brak dostępu &gt; Odczyt/Zapis &gt; Tylko do odczytu.</li>
+<li>Kiedy podczas tworzenia nowego folderu udostępnionego uprawnienia użytkownik&oacute;w należących do grupy <strong>administrators</strong> zostaną ustawione na <b>Brak dostępu</b>, tacy użytkownicy będą mogli wyświetlić ten folder udostępniony tylko na stronie <strong>Panel sterowania</strong> &gt; <strong>Folder wsp&oacute;łdzielony</strong>.</li>
+</ul>
+</div>
+
+<h3 class="disable-eds14">Dostosowywanie uprawnień Windows ACL</h3>
+
+<p class="disable-eds14">Opr&oacute;cz używania opisanych powyżej ustawień można dostosować uprawnienia precyzyjniej, wykonując poniższe czynności. </p>
+
+<div class="section disable-eds14">
+<h4>Uwaga:</h4>
+<p>Poniższych ustawień nie można używać w odniesieniu do następujących folder&oacute;w udostępnionych: <strong>photo</strong>, <strong>satashare</strong>, <strong>sdshare</strong>, <strong>surveillance</strong>, <strong>usbshare</strong>.</p>
+</div>
+
+<h4 class="disable-eds14">Aby dostosować uprawnienia:</h4>
+<ol class="disable-eds14">
+  <li>Na karcie <strong>Uprawnienia</strong> wybierz użytkownika, kt&oacute;rego uprawnienia do aplikacji mają być zmodyfikowane. Kliknij dowolne miejsce kolumny <strong>Niestandardowe</strong>.</li><img src="about:blank" class="help_image"/><li>W&nbsp;oknie <b>Edytor uprawnień</b> wykonaj jedną z następujących czynności, aby zarządzać uprawnieniami ACL do danego pliku lub folderu:<ol>
+        <li><b>Użytkownik lub grupa:</b> określ użytkownika lub grupę, kt&oacute;rych uprawnienia chcesz dostosować.</li><img src="about:blank" class="help_image"/><li><b>Dziedzicz z:</b> tylko do wyświetlania. Wyświetl informacje o tym, czy uprawnienie jest dziedziczone (z folderu nadrzędnego) czy jawne (pokazywane jako <b>Brak</b>). </li><img src="../../../online_img/dsm/AdminCenter/file_share_privilege/howto450-9.png" class="help_image"/><li><b>Typ:</b> wybierz <b>Zezwalaj</b> lub <b>Odm&oacute;w</b>, aby przyznać uprawnienie użytkownikowi lub grupie albo go im odm&oacute;wić.</li><img src="../../../online_img/dsm/AdminCenter/file_share_privilege/howto450-10.png" class="help_image"/><li><b>Zastosuj do:</b> podczas tworzenia wpisu uprawnień do folderu zaznacz te pola wyboru, aby zastosować wpis do tego folderu, folder&oacute;w (lub <b>Folder&oacute;w podrzędnych</b>) albo plik&oacute;w (lub <b>Plik&oacute;w podrzędnych</b>) w tym folderze bądź do wszystkich plik&oacute;w i folder&oacute;w zawartych w tym folderze (lub <b>Wszystkich zależnych</b>). </li><img src="../../../online_img/dsm/AdminCenter/file_share_privilege/howto450-11.png" class="help_image"/><li><b>Administracja:</b> zaznacz pole wyboru <b>Odczyt uprawnień</b>, <b>Zmień uprawnienia</b> lub <b>Przejmij własność</b>, aby określić uprawnienie dostępu użytkownika lub grupy do danej pozycji uprawnień. </li>
+        <li><b>Odczyt</b> lub <b>Zapis:</b> zaznacz pola wyboru w tych obszarach, aby zmodyfikować ustawienia uprawnień użytkownika lub grupy do danego pliku lub folderu. </li>
+      </ol>    
+  <li> Kliknij przycisk <b>OK</b>.</li>
+</ol>
+<div class="section disable-eds14">
+  <h4>Uprawnienia ACL można podzielić na następujące kategorie:</h4>
+  <ul>
+    <li><b>Administracja:</b><ul>
+      <li><b>Zmień uprawnienia</b>: określenie, czy użytkownik może zmienić uprawnienia do pliku lub folderu.</li>
+      <li><b>Przejmij własność</b>: określenie, czy użytkownik jest właścicielem pliku lub folderu.</li>
+    </ul></li>
+    <li><b>Odczyt:</b><ul>
+      <li><b>Przechodzenie po folderach/Wykonywanie plik&oacute;w</b>: określenie, czy użytkownik może uruchomić plik programu.</li>
+      <li><b>Wyświetlanie listy folder&oacute;w/Odczyt danych</b>: określenie, czy użytkownik może odczytać dane z pliku.</li>
+      <li><b>Odczyt atrybut&oacute;w</b>: określenie, czy użytkownik może wyświetlać atrybuty pliku.</li>
+      <li><b>Odczyt atrybut&oacute;w rozszerzonych</b>: określenie, czy użytkownik może wyświetlać atrybuty rozszerzone pliku.</li>
+      <li><b>Odczyt uprawnień</b>: określenie, czy użytkownik może odczytać uprawnienia do pliku lub folderu.</li>
+    </ul></li>
+    <li><b>Zapis:</b><ul>
+      <li><b>Tworzenie plik&oacute;w/Zapis danych</b>: określenie, czy użytkownik może zmieniać zawartość pliku.</li>
+      <li><b>Tworzenie folder&oacute;w/Dołączanie danych</b>: określenie, czy użytkownik może dodawać dane do końca pliku.</li>
+      <li><b>Zapis atrybut&oacute;w</b>: określenie, czy użytkownik może zmieniać atrybuty pliku.</li>
+      <li><b>Zapis atrybut&oacute;w rozszerzonych</b>: określenie, czy użytkownik może zmieniać atrybuty rozszerzone pliku.</li>
+      <li><b>Usuwanie podfolder&oacute;w i plik&oacute;w</b>: określenie, czy użytkownik może usunąć folder.</li>
+      <li><b>Usuń</b>: określenie, czy użytkownik może usunąć plik.</li>
+    </ul></li>
+  </ul>
+  <h4>Informacje o dziedziczeniu uprawnień:</h4>
+  <p> Uprawnienia ACL są dziedziczone przez obiekty podrzędne po obiektach nadrzędnych. Jeżeli na przykład wpis listy ACL dla folderu &bdquo;sprzedaż&rdquo; przyznaje uprawnienie &bdquo;Odczyt&rdquo; użytkownikowi &bdquo;Amy&rdquo;, wpis ACL zostanie zastosowany do wszystkich plik&oacute;w w folderze &bdquo;sprzedaż&rdquo; (np. pliku &bdquo;raport roczny.xls&rdquo;), co pozwala użytkownikowi na otwieranie plik&oacute;w. Odziedziczone uprawnienia będą wyświetlane w kolorze szarym, a własne uprawnienia (czyli &bdquo;jawne&rdquo;) &mdash; w kolorze czarnym. </p>
+</div>
+<div class="section disable-eds14">
+  <h4>Uwaga:</h4>
+  <ul>
+    <li>W przypadku pliku lub folderu można dodać tylko do 200 wpis&oacute;w jawnych uprawnień listy ACL.</li>
+    <li>Listy Windows ACL są obsługiwane tylko w systemach plik&oacute;w ext4<span style="display: inline;" class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64">/Btrfs</span>. Aby używać uprawnień Windows ACL, użytkownicy poprzedniej wersji DSM 2.3 muszą utworzyć co najmniej jeden wolumin ext4<span style="display: inline;" class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64">/Btrfs</span>. Oznacza to, że trzeba sformatować co najmniej jeden dysk twardy i odtworzyć wolumin. Formatowanie dysk&oacute;w serwera DiskStation spowoduje usunięcie wszystkich przechowywanych danych i ustawień. Przed kontynuacją utw&oacute;rz kopię zapasową wszystkich danych.</li>
+    <li>Aby m&oacute;c określić nowe uprawnienia dla użytkownik&oacute;w domeny, klienty system&oacute;w DSM i Windows muszą być w tej samej domenie.</li>
+    <li>Podczas modyfikacji uprawnień przy użyciu programu Eksplorator plik&oacute;w w systemie Windows reguły <strong>Odm&oacute;w</strong> zastosowane do grupy <strong>Domain Admins</strong> będą ignorowane.</li>
+  </ul>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,149 @@
+
+[HA_ConfSyncError]
+Subject: O high-availability cluster %HOSTNAME% detetou um erro de sincronização durante a verificação da configuração do sistema.
+
+Caro utilizador,
+
+O high-availability cluster %HOSTNAME% detetou um erro de sincronização durante a verificação da configuração do sistema dos servidores passivo e ativo. O sistema tentou resolver o erro com uma sincronização total das configurações do sistema. Consulte os registos de sistema ou a página de Registos do High Availability Manager para obter mais informações.
+
+Ação: %HA_ACTION%
+Erro: %HA_PARAM_1%
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[HA_FailOver]
+Subject: Erro detetado no cluster de high-availability %HOSTNAME%.
+
+Caro utilizador,
+
+Foi detetado um erro no cluster de high-availability %HOSTNAME%. O sistema mudará os serviços para o servidor passivo. Verifique os Registos de sistema para obter mais informações.
+
+Ação: %HA_ACTION%
+Erro: %HA_PARAM_1%
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[HA_MismatchedSsdCache]
+Subject: Os discos da cache SSD não são idênticos no cluster de high-availability %HOSTNAME%
+
+Caro utilizador,
+
+Os discos pertencentes à seguinte cache SSD no servidor passivo %HA_PARAM_1% não são idênticos aos discos no servidor ativo: Cache SSD %HA_PARAM_2%.
+
+Consulte a página de Registos do High Availability Manager para obter mais informações.
+
+Ação: %HA_ACTION%
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[HA_SplitBrain]
+Subject: Ocorreu um erro de split-brain no cluster de high-availability  %HOSTNAME%
+
+Caro utilizador,
+
+Ocorreu um um erro de split-brain no cluster de high-availability %HOSTNAME% Verifique os Registos de sistema para obter mais informações.
+
+Ação: %HA_ACTION%
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[HA_StatusChange]
+Subject: O estado do cluster de high-availability %HOSTNAME% mudou de %HA_PARAM_1% para %HA_PARAM_2%.
+
+Caro utilizador,
+
+O estado do cluster de high-availability %HOSTNAME% mudou de %HA_PARAM_1% para %HA_PARAM_2%. Consulte os registos de sistema ou a página de Registos do High Availability Manager para obter mais informações.
+
+Ação: %HA_ACTION%
+Descrição: %HA_PARAM_3%
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[HA_SwitchFail]
+Subject: Não foi possível mudar os serviços do cluster de high-availability  %HOSTNAME%
+
+Caro utilizador,
+
+O sistema tentou mudar os serviços para o servidor passivo do cluster de high-availability %HOSTNAME%, mas não teve êxito. Verifique os Registos de sistema para obter mais informações.
+
+Ação: %HA_ACTION%
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[HA_SwitchFinished]
+Subject: O cluster de High-availability %HOSTNAME% está agora a executar serviços em %HA_PARAM_1%.
+
+Caro utilizador,
+
+Os serviços do cluster de high-availability %HOSTNAME% estão agora a ser executados em %HA_PARAM_1%. Consulte os registos de sistema ou a página de Registos do High Availability Manager para obter mais informações.
+
+Ação: %HA_ACTION%
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[HA_SwitchOver]
+Subject: Mudança de cluster de high-availability %HOSTNAME% para %HA_PARAM_1%.
+
+Caro utilizador,
+
+Alguém iniciou uma mudança do cluster de high-availability %HOSTNAME%. Os serviços serão mudados para %HA_PARAM_1%. Verifique os Registos de sistema para obter mais informações.
+
+Ação: %HA_ACTION%
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[HA_SwitchOver_With_Reason]
+Subject: O cluster de high-availability %HOSTNAME% iniciou uma mudança para %HA_PARAM_1%.
+
+Caro utilizador,
+
+Foi iniciada uma mudança no cluster de high-availability %HOSTNAME%. Os serviços serão mudados para %HA_PARAM_1%. Verifique os Registos de sistema para obter mais informações.
+
+Ação: %HA_ACTION%
+Razão: %HA_PARAM_2%
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[HA_SyncComplete]
+Subject: A duplicação total dos dados do cluster de high-availability %HOSTNAME% está concluída.
+
+Caro utilizador,
+
+A duplicação total dos dados do cluster de high-availability %HOSTNAME% está concluída. O servidor passivo está agora pronto a tomar controlo dos serviços caso seja necessária uma mudança. Consulte os registos de sistema ou a página de Registos do High Availability Manager para obter mais informações.
+
+Ação: %HA_ACTION%
+
+Atenciosamente,
+%COMPANY_NAME%
+
+
+[HA_UnbindLocal]
+Subject: Localhost foi removido do cluster de high-availability
+
+Caro utilizador,
+
+%HA_PARAM_1% foi removido do cluster de high-availability %HA_PARAM_2%. Verifique os Registos de sistema para obter mais informações.
+
+Ação: %HA_ACTION%
+
+Atenciosamente,
+%COMPANY_NAME%
+

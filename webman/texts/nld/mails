@@ -1,0 +1,2647 @@
+
+[]
+
+
+
+[AutoBlockAdd]
+Category: System
+Title: IP-adres geblokkeerd
+Subject: IP-adres [%CLIENT_IP%] van %HOSTNAME% is geblokkeerd door %SERVICE%
+
+Beste gebruiker
+
+Het IP-adres [%CLIENT_IP%] heeft %AUTOBLOCK_ATTEMPTS% mislukte pogingen gedaan om aan te melden bij %SERVICE% die wordt uitgevoerd op %HOSTNAME% binnen %AUTOBLOCK_ATTEMPT_MIN% minuten, en werd geblokkeerd om %AUTOBLOCK_TIME%.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[BackupTaskCanceled]
+Category: Backup/Restore,Important
+Title: Back-up geannuleerd
+Subject: %TASK_TYPE% - %TASK_NAME% geannuleerd op %HOSTNAME%
+
+Beste gebruiker
+
+Gegevensback-up op %HOSTNAME% is geannuleerd.
+
+Back-uptaak: %TASK_NAME%
+Back-updoel: %DESTINATION_IP% %DESTINATION_PATH%
+Starttijd: %START_TIME%
+Duur: %DURATION%
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[BackupTaskFailed]
+Category: Backup/Restore,Important
+Title: Back-up mislukt
+Subject: %TASK_TYPE% - %TASK_NAME% mislukt op %HOSTNAME%
+
+Beste gebruiker
+
+Gegevensback-up op %HOSTNAME% is mislukt.
+
+Controleer het back-uplogboek in Hyper Backup > Logboek voor meer informatie.
+
+Back-uptaak: %TASK_NAME%
+Back-updoel: %DESTINATION_IP% %DESTINATION_PATH%
+Starttijd: %START_TIME%
+Duur: %DURATION%
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[BackupTaskFinished]
+Category: Backup/Restore
+Title: Back-up voltooid
+Subject: %TASK_TYPE% - %TASK_NAME% voltooid op %HOSTNAME%
+
+Beste gebruiker
+
+Uw back-uptaak %TASK_NAME% is nu voltooid.
+
+Back-uptaak: %TASK_NAME%
+Back-updoel: %DESTINATION_IP% %DESTINATION_PATH%
+Starttijd: %START_TIME%
+Duur: %DURATION%
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[BackupTaskPartial]
+Category: Backup/Restore,Important
+Title: Back-up gedeeltijk voltooid
+Subject: %TASK_TYPE% - %TASK_NAME% gedeeltelijk voltooid op %HOSTNAME%
+
+Beste gebruiker
+
+Uw back-uptaak %TASK_NAME% is voltooid met kleine uitzonderingen.
+
+Controleer het back-uplogboek in Hyper Backup > Logboek voor meer informatie.
+
+Back-uptaak: %TASK_NAME%
+Back-updoel: %DESTINATION_IP% %DESTINATION_PATH%
+Starttijd: %START_TIME%
+Duur: %DURATION%
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[CMSClientConnectFailed]
+Category: CMS
+Title: Verbinding met de CMS-host mislukt
+Subject: %HOSTNAME% kan geen verbinding maken met de CMS-host (%CMS_SERVER%).
+
+Beste gebruiker
+
+De server %HOSTNAME% kan geen verbinding maken met de CMS-host (%CMS_SERVER%). Controleer de netwerkverbinding en instellingen van beide servers.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[CMSClientDetachSuccess]
+Category: CMS
+Title: Loskoppeling van CMS-host is uitgevoerd
+Subject: %HOSTNAME% is losgekoppeld van de CMS-host (%CMS_SERVER%).
+
+Beste gebruiker
+
+De server %HOSTNAME% is losgekoppeld van de CMS-host (%CMS_SERVER%).
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[CMSClientJoinSuccess]
+Category: CMS
+Title: Koppeling aan CMS-host is uitgevoerd
+Subject: %HOSTNAME% is gekoppeld aan de CMS-host (%CMS_SERVER%).
+
+Beste gebruiker,
+
+De server %HOSTNAME% is gekoppeld aan de CMS-host (%CMS_SERVER%). Bepaalde instellingen worden beheerd door de CMS-host.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[CpuFanResume]
+Category: System
+Title: CPU-ventilator is weer opgestart
+Subject: CPU-ventilator %FANID% op %HOSTNAME% (SN: %HOST_SN%) is weer opgestart
+
+Beste gebruiker
+
+CPU-ventilator %FANID% op %HOSTNAME% (SN: %HOST_SN%) is weer opgestart.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[CpuFanStop]
+Category: System,Important
+Title: CPU-ventilator is gestopt
+Subject: CPU-ventilator %FANID% op %HOSTNAME% (SN: %HOST_SN%) is gestopt
+
+Beste gebruiker
+
+CPU-ventilator %FANID% op %HOSTNAME% (SN: %HOST_SN%) is gestopt.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[DDNSFail]
+Category: System
+Title: DDNS-registratie mislukt
+Subject: De DDNS-service kon het IP-adres %EXTERNAL_IP% niet registreren naar %DDNS_HOST_NAME% [%FAIL_REASON%]
+
+Beste gebruiker
+
+Het systeem kon het externe IP-adres %EXTERNAL_IP% niet registreren naar %DDNS_HOST_NAME% in de DDNS-server %DDNS_NAME%. De vermelde oorzaak is [%FAIL_REASON%].
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[DRLunScheduleSnapshotFail]
+Category: Snapshot Replication,Important
+Title: Het maken van een snapshot van iSCSI LUN is mislukt
+Subject: Het maken van een snapshot van LUN %LUNNAME% op %HOSTNAME% is mislukt
+
+Beste gebruiker
+
+Het maken van een LUN-snapshot op %HOSTNAME% is mislukt. Controleer het logboek in Snapshot Replication voor gedetailleerde informatie.
+
+LUN: %LUNNAME%
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[DRReplicationCleanupTestFailoverCompletion]
+Category: Snapshot Replication,Important
+Title: Failover-test van de replicatietaak opschonen
+Subject: Het opschonen van de failover-test van %DRSITE_TARGET_NAME% op %DRSITE_HOSTNAME% is voltooid
+
+Beste gebruiker
+
+Het systeem heeft de failover-test van %DRSITE_TARGET_NAME% op de doelserver (%DRSITE_HOSTNAME%) voltooid. Controleer de logboekpagina van Snapshot Replication voor gedetailleerde informatie.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[DRReplicationCleanupTestFailoverFail]
+Category: Snapshot Replication,Important
+Title: Het opschonen van de failover-test van de replicatietaak is mislukt
+Subject: Het opschonen van de failover-test van %DRSITE_TARGET_NAME% op %DRSITE_HOSTNAME% is mislukt
+
+Beste gebruiker
+
+Het opschonen door het systeem van de failover-test van %DRSITE_TARGET_NAME% op %DRSITE_HOSTNAME% is mislukt. Controleer de logboekpagina van Snapshot Replication voor gedetailleerde informatie.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[DRReplicationExportCompletion]
+Category: Snapshot Replication,Important
+Title: Opnieuw beveiligen van de replicatietaak is voltooid
+Subject: %MAINSITE_TARGET_NAME% is met succes geëxporteerd
+
+Beste gebruiker
+
+Het systeem heeft %MAINSITE_TARGET_NAME% met succes geëxporteerd. Controleer de logboekpagina van Snapshot Replication voor gedetailleerde informatie.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[DRReplicationExportFail]
+Category: Snapshot Replication,Important
+Title: Exporteren van replicatietaak is mislukt
+Subject: Exporteren van %MAINSITE_TARGET_NAME% is mislukt
+
+Beste gebruiker
+
+Het exporteren van %MAINSITE_TARGET_NAME% door het systeem is mislukt. Controleer de logboekpagina van Snapshot Replication voor gedetailleerde informatie.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[DRReplicationFailoverCompletion]
+Category: Snapshot Replication,Important
+Title: Failover van replicatietaak voltooid
+Subject:Failover van %DRSITE_TARGET_NAME% op %DRSITE_HOSTNAME% is voltooid
+
+Beste gebruiker
+
+Het systeem heeft een failover van %DRSITE_TARGET_NAME% op doelserver (%DRSITE_HOSTNAME%) met succes uitgevoerd. Controleer de logboekpagina van Snapshot Replication voor gedetailleerde informatie.
+
+Failoverversie: %SNAPSHOT_VERSION%
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[DRReplicationFailoverFail]
+Category: Snapshot Replication,Important
+Title: Failover van de replicatietaak is mislukt
+Subject: Failover van %DRSITE_TARGET_NAME% naar %DRSITE_HOSTNAME% is mislukt
+
+Beste gebruiker
+
+Het uitvoeren van de failover van %DRSITE_TARGET_NAME% naar doelserver (%DRSITE_HOSTNAME%) door het systeem is mislukt. Controleer de logboekpagina van Snapshot Replication voor gedetailleerde informatie.
+
+Failoverversie: %SNAPSHOT_VERSION%
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[DRReplicationImportCompletion]
+Category: Snapshot Replication,Important
+Title: Replicatietaak is met succes geïmporteerd
+Subject: %DRSITE_TARGET_NAME% is met succes geïmporteerd
+
+Beste gebruiker
+
+Het systeem heeft %DRSITE_TARGET_NAME% met succes geïmporteerd. Controleer de logboekpagina van Snapshot Replication voor gedetailleerde informatie.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[DRReplicationImportFail]
+Category: Snapshot Replication,Important
+Title: Importeren van replicatietaak is mislukt
+Subject: Importeren van %DRSITE_TARGET_NAME% is mislukt
+
+Beste gebruiker
+
+Het importeren van %DRSITE_TARGET_NAME% door het systeem is mislukt. Controleer de logboekpagina van Snapshot Replication voor gedetailleerde informatie.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[DRReplicationInitialSyncCompletion]
+Category: Snapshot Replication,Important
+Title: Initiële replicatie voltooid
+Subject: Replicatietaak %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%) heeft de initiële replicatie van naar %DRSITE_HOSTNAME% (%DRSITE_TARGET_NAME%) voltooid
+
+Beste gebruiker
+
+De replicatietaak heeft de initiële replicatie voltooid. Controleer de logboekpagina van Snapshot Replication voor gedetailleerde informatie.
+
+Bronserver: %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%)
+Doelserver: %DRSITE_HOSTNAME% (%DRSITE_TARGET_NAME%)
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[DRReplicationInitialSyncFail]
+Category: Snapshot Replication,Important
+Title: Uitvoeren van initiële replicatie is mislukt
+Subject: Het uitvoeren van de initiële replicatie naar %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%) door de replicatietaak is mislukt
+
+Beste gebruiker
+
+Het uitvoeren van de initiële replicatie naar %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%) door de replicatietaak is mislukt. Controleer de logboekpagina van Snapshot Replication voor gedetailleerde informatie.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[DRReplicationReprotectCompletion]
+Category: Snapshot Replication,Important
+Title: Opnieuw beveiligen van de replicatietaak is voltooid
+Subject: Replicatietaak (%NEW_MAINSITE_TARGET_NAME%) is met succes opnieuw beveiligd
+
+Beste gebruiker
+
+Het systeem heeft de replicatietaak (%NEW_MAINSITE_TARGET_NAME%) opnieuw beveiligd naar de nieuwe bronserver (%NEW_MAINSITE_HOSTNAME%) met de gerepliceerde gegevens (%NEW_DRSITE_TARGET_NAME%) op de nieuwe doelserver (%NEW_DRSITE_HOSTNAME%). Controleer de logboekpagina van Snapshot Replication voor gedetailleerde informatie.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[DRReplicationReprotectFail]
+Category: Snapshot Replication,Important
+Title: Opnieuw beveiligen van de replicatietaak is mislukt
+Subject: Opnieuw beveiligen van replicatietaak (%NEW_MAINSITE_TARGET_NAME%) is mislukt
+
+Beste gebruiker
+
+De herbeveiliging van de replicatietaak (%NEW_MAINSITE_TARGET_NAME%) door het systeem naar de nieuwe bronserver (%NEW_MAINSITE_HOSTNAME%) met de gerepliceerde gegevens (%NEW_DRSITE_TARGET_NAME%) op de nieuwe doelserver (%NEW_DRSITE_HOSTNAME%) is mislukt. Controleer de logboekpagina van Snapshot Replication voor gedetailleerde informatie.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[DRReplicationScheduleSyncCompletion]
+Category: Snapshot Replication,Important
+Title: Geplande replicatie voltooid
+Subject: De replicatietaak heeft de geplande replicatie vanaf %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%) naar %DRSITE_HOSTNAME% (%DRSITE_TARGET_NAME%) voltooid
+
+Beste gebruiker
+
+De replicatietaak heeft de geplande replicatie voltooid. Controleer de logboekpagina van Snapshot Replication voor gedetailleerde informatie.
+
+Bronserver: %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%)
+Doelserver: %DRSITE_HOSTNAME% (%DRSITE_TARGET_NAME%)
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[DRReplicationScheduleSyncFail]
+Category: Snapshot Replication,Important
+Title: Uitvoeren van de geplande replicatie is mislukt
+Subject:Het uitvoeren van de geplande replicatie naar %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%) door de replicatietaak is mislukt
+
+Beste gebruiker
+
+Het uitvoeren van de geplande replicatie naar %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%) door de replicatietaak is mislukt. Controleer de logboekpagina van Snapshot Replication voor gedetailleerde informatie.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[DRReplicationSwitchoverCompletion]
+Category: Snapshot Replication,Important
+Title: Overschakeling van replicatietaak is voltooid
+Subject: Overschakeling van %NEW_DRSITE_HOSTNAME% (%NEW_DRSITE_TARGET_NAME%) naar %NEW_MAINSITE_HOSTNAME% is voltooid
+
+Beste gebruiker
+
+Het systeem heeft de overschakeling van %NEW_DRSITE_HOSTNAME% (%NEW_DRSITE_TARGET_NAME%) naar %NEW_MAINSITE_HOSTNAME% met succes uitgevoerd. Controleer de logboekpagina van Snapshot Replication voor gedetailleerde informatie.
+
+Nieuwe bronserver: %NEW_MAINSITE_HOSTNAME% (%NEW_MAINSITE_TARGET_NAME%)
+Nieuwe doelserver: %NEW_DRSITE_HOSTNAME% (%NEW_DRSITE_TARGET_NAME%)
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[DRReplicationSwitchoverFail]
+Category: Snapshot Replication,Important
+Title: Overschakeling van de replicatietaak is mislukt
+Subject: Overschakeling van %NEW_DRSITE_HOSTNAME% (%NEW_DRSITE_TARGET_NAME%) naar %NEW_MAINSITE_HOSTNAME% is mislukt
+
+Beste gebruiker
+
+De overschakeling van %NEW_DRSITE_HOSTNAME% (%NEW_DRSITE_TARGET_NAME%) naar %NEW_MAINSITE_HOSTNAME% door het systeem is mislukt. Controleer de logboekpagina van Snapshot Replication voor gedetailleerde informatie.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[DRReplicationSyncFail]
+Category: Snapshot Replication,Important
+Title: Het uitvoeren van de replicatie is mislukt
+Subject:Het uitvoeren van de replicatie naar %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%) door de replicatietaak is mislukt
+
+Beste gebruiker
+
+Het uitvoeren van de replicatie naar %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%) door de replicatietaak is mislukt. Controleer de logboekpagina van Snapshot Replication voor gedetailleerde informatie.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[DRReplicationSyncNotFinishInNotifyTime]
+Category: Snapshot Replication,Important
+Title: Replicatietaak is niet voltooid
+Subject: Replicatietaak %MAINSITE_TARGET_NAME% naar %DRSITE_HOSTNAME% (%DRSITE_TARGET_NAME%) is niet voltooid
+
+Beste gebruiker
+
+De replicatietaak is niet voltooid binnen de tijdsduur van %NOTIFY_TIME% minuten. Controleer de logboekpagina van Snapshot Replication voor gedetailleerde informatie.
+
+Bronserver: %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%)
+Doelserver: %DRSITE_HOSTNAME% (%DRSITE_TARGET_NAME%)
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[DRReplicationSyncStop]
+Category: Snapshot Replication,Important
+Title: Replicatie is gestopt
+Subject: Het uitvoeren van de replicatie naar %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%) door de replicatietaak is gestopt
+
+Beste gebruiker
+
+Het uitvoeren van de replicatie naar %MAINSITE_HOSTNAME% (%MAINSITE_TARGET_NAME%) door de replicatietaak is gestopt. Controleer de logboekpagina van Snapshot Replication voor gedetailleerde informatie.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[DRReplicationTestFailoverCompletion]
+Category: Snapshot Replication,Important
+Title: De failover-test van replicatietaak is gestart
+Subject: Failover-test van %TEST_TARGET_NAME% is nu beschikbaar
+
+Beste gebruiker
+
+Failover-test van %TEST_TARGET_NAME% is nu beschikbaar. Controleer de logboekpagina van Snapshot Replication voor gedetailleerde informatie.
+
+Testserver: %DRSITE_HOSTNAME%
+Test gedeelde map/iSCSI LUN-naam: %TEST_TARGET_NAME%
+Testversie: %SNAPSHOT_VERSION%
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[DRReplicationTestFailoverFail]
+Category: Snapshot Replication,Important
+Title: Het starten van de failover-test van de replicatietaak is mislukt
+Subject: Het starten van de failover-test van %TEST_TARGET_NAME% op %DRSITE_HOSTNAME% is mislukt
+
+Beste gebruiker
+
+Het starten door het systeem van een failover-test op de doelserver (%DRSITE_HOSTNAME%) is mislukt. Controleer de logboekpagina van Snapshot Replication voor gedetailleerde informatie.
+
+Testserver: %DRSITE_HOSTNAME%
+Test gedeelde map/iSCSI LUN-naam: %TEST_TARGET_NAME%
+Testversie: %SNAPSHOT_VERSION%
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[DRShareTakeSnapshotFail]
+Category: Snapshot Replication,Important
+Title: Het maken van een snapshot van een gedeelde map is mislukt
+Subject: Het maken van een snapshot van gedeelde map %SHARE% op %HOSTNAME% is mislukt
+
+Beste gebruiker
+
+Het maken van een gedeelde map snapshot op %HOSTNAME% is mislukt. Controleer het logboek in Snapshot Replication voor gedetailleerde informatie.
+
+Gedeelde map: %SHARE%
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[DRSnapshotScheduleTaskTooDenseFail]
+Category: Snapshot Replication,Important
+Title: De eerdere geplande snapshottaak wordt nog steeds uitgevoerd
+Subject: De eerdere geplande snapshottaak wordt nog steeds uitgevoerd op %MAINSITE_TARGET_NAME%.
+
+Beste gebruiker
+
+Het uitvoeren van de geplande snapshottaak op %MAINSITE_TARGET_NAME% is mislukt omdat de eerdere snapshottaak nog steeds wordt uitgevoerd. Controleer de logboekpagina van Snapshot Replication voor gedetailleerde informatie.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[DSMAutoUpdateReady]
+Category: System,Important
+Title: Automatische systeemupdate
+Subject: De automatische update van %OSNAME% wordt automatisch gestart op %HOSTNAME% in %COUNTDOWN_MINUTE% minuten
+
+Beste gebruiker
+
+%NEW_VERSION% wordt automatisch geïnstalleerd in %COUNTDOWN_MINUTE% minuten. Wilt u de installatie annuleren, meld u dan aan bij %HOSTNAME% en voer de annulering uit in het meldingsgebied.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[DSMAutoUpdateShutdownStart]
+Category: System,Important
+Title: Nog voor de geplande uitschakeling te installeren systeemupdates
+Subject: %OSNAME%-updates worden automatisch geïnstalleerd %HOSTNAME% voordat de geplande uitschakeling wordt uitgevoerd
+
+Beste gebruiker
+
+%NEW_VERSION% wordt geïnstalleerd voordat de geplande uitschakeling wordt uitgevoerd en %HOSTNAME% wordt na de voltooiing van de installatie uitgeschakeld. Schakel uw %DISKSTATION% niet uit voordat de installatie is voltooid.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[DSMUpdateAvailable]
+Category: System,Important
+Title: Nieuwe %OSNAME% kan worden bijgewerkt
+Subject: De %OSNAME%-update is gereed voor installatie op %HOSTNAME%
+
+Beste gebruiker
+
+Er is een nieuwe versie van %OSNAME% gedownload en klaar voor installatie. Meld u aan bij %HOSTNAME% en ga naar Configuratiescherm > Bijwerken en herstellen om %NEW_VERSION% te installeren. Om meer te weten over %OSNAME%-update zie %HTTP_URL%.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[DeviceEjectedImproperly]
+Category: External Storage
+Title: Extern apparaat is niet juist uitgeworpen
+Subject: Het externe apparaat %DEVICE_NAME% op %HOSTNAME% is niet juist uitgeworpen.
+
+Beste gebruiker,
+
+Het externe apparaat %DEVICE_NAME% op %HOSTNAME% is niet juist uitgeworpen. Om gegevensverlies te voorkomen, raden wij aan om eerst het apparaat uit te werpen en pas daarna los te koppelen.
+
+Met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[DiskTemperatureAbnormal]
+Category: Storage,Important
+Title: De schijftemperatuur bevindt zich niet binnen het temperatuurbereik
+Subject: Disk %DISK_ID% bevindt zich niet binnen het temperatuurbereik
+
+Beste gebruiker
+
+De temperatuur van schijf %DISK_ID% [%MODEL%] is %REAL_TEMPERATURE% en bevindt zich niet binnen het toegelaten temperatuurbereik van %MIN_TEMPERATURE% ºC ~ %MAX_TEMPERATURE% ºC.
+Houd de temperatuur van uw schijven binnen het toegelaten temperatuurbereik.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[DiskTemperatureNormal]
+Subject: Disk %DISK_ID% bevindt zich binnen het temperatuurbereik
+
+Beste gebruiker
+
+De temperatuur van schijf %DISK_ID% [%MODEL%] bevindt zich nu binnen het toegelaten temperatuurbereik van %MIN_TEMPERATURE% ºC ~ %MAX_TEMPERATURE% ºC.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[DriveSlotDisabled]
+Category: Storage,Important
+Title: Schijfsleuf is uitgeschakeld
+Subject: Schijfsleuf [%DISK_ID%] is uitgeschakeld
+
+Beste gebruiker
+
+Een schijfsleuf is uitgeschakeld door fouten op de harde schijf [%DISK_ID%]. Vervang de schijf, schakel de schijf in en herstel indien nodig beschadigde volumes.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[DsmProtectionCheckFailed]
+Category: System,Important
+Title: Systeemafwijking gedetecteerd
+Subject: Afwijking gedetecteerd op %HOSTNAME%. Alle volumes zijn ontkoppeld.
+
+Beste gebruiker
+
+Het systeem heeft een afwijking gedetecteerd op %HOSTNAME%. Om uw gegevens te beschermen zijn alle volumes ontkoppeld. Neem voor verdere ondersteuning contact op met het Synology-ondersteuningsteam.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[EBoxHDEcc]
+Category: Storage,Important
+Title: I/O-fout in schijf van uitbreidingseenheid
+Subject: I/O-fout opgetreden in harde schijf %DISK_ID% van %EUNIT_ID% op %HOSTNAME%
+
+Beste gebruiker,
+
+De harde schijf %DISK_ID% van %EUNIT_ID% op %HOSTNAME% heeft een I/O-fout, maar werkt na verschillende pogingen weer normaal. Dit is mogelijk veroorzaakt door slechte sectoren. Als de fout opnieuw optreedt, moet u een back-up maken van uw gegevens en de S.M.A.R.T.-test uitvoeren op uw harde schijf om de status van de harde schijf te controleren.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[ESATADiskFull]
+Category: External Storage
+Title: eSATA-schijf vol
+Subject: De eSATA-schijf %DISK_NUMBER% op %HOSTNAME% heeft bijna geen vrije ruimte meer
+
+Beste gebruiker
+
+De eSATA-schijf %DISK_NUMBER% op %HOSTNAME% heeft bijna geen vrije ruimte meer. Raadpleeg de onderstaande informatie en voer een herstelactie uit.
+
+Totale capaciteit: %DISK_SIZE% GB
+Beschikbare capaciteit: %FREE_SPACE% GB (%USAGE%%)
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[ESATAPartitionFull]
+Category: External Storage
+Title: eSATA-partitie vol
+Subject: Partitie %PARTITION_NUMBER% van eSATA-schijf %DISK_NUMBER% op %HOSTNAME% heeft bijna geen vrije ruimte meer
+
+Beste gebruiker
+
+Partitie %PARTITION_NUMBER% van eSATA-schijf %DISK_NUMBER% op %HOSTNAME% heeft bijna geen vrije ruimte meer. Raadpleeg de onderstaande informatie en voer een herstelactie uit.
+
+Totale capaciteit: %DISK_SIZE% GB
+Beschikbare capaciteit: %FREE_SPACE% GB (%USAGE%%)
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[EUnitPowerFail]
+Category: System,Important
+Title: Redundante voeding van uitbreidingseenheid mislukt
+Subject: Voedingnr.%POWERID% van %EUNIT_ID% op %HOSTNAME% is mislukt
+
+Beste gebruiker
+
+Voedingnr.%POWERID% van %EUNIT_ID% op %HOSTNAME% is mislukt.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[EUnitPowerResume]
+Category: System,Important
+Title: Redundante voeding van uitbreidingseenheid hersteld
+Subject: Voeding Nr.%POWERID% van %EUNIT_ID% op %HOSTNAME% is hersteld
+
+Beste gebruiker,
+
+Voeding Nr.%POWERID% van %EUNIT_ID% op %HOSTNAME% is hersteld.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[EboxFanResume]
+Category: System,Important
+Title: Ventilator van uitbreidingseenheid werkt weer
+Subject: %EBOX_ID% ventilator %FAN_ID% op %HOSTNAME% werd hervat
+
+Beste gebruiker
+
+%EBOX_ID% ventilator %FAN_ID% op %HOSTNAME% werd hervat.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[EboxFanStop]
+Category: System,Important
+Title: Ventilator van uitbreidingseenheid is gestopt
+Subject: %EBOX_ID% ventilator %FAN_ID% op %HOSTNAME% is gestopt
+
+Beste gebruiker
+
+%EBOX_ID% ventilator %FAN_ID% op %HOSTNAME% is gestopt.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[EboxLinkFail]
+Category: System,Important
+Title: Verbindingsfout op uitbreidingseenheid
+Subject: Er is een verbindingsfout opgetreden op uitbreidingseenheid %EBOX_ID% (SAS Out - %LINK_ID%) van %HOSTNAME% (SN: %HOST_SN%)
+
+Beste gebruiker
+
+Er is een verbindingsfout opgetreden op uitbreidingseenheid %EBOX_ID% (SAS Out - %LINK_ID%) van%HOSTNAME% (SN: %HOST_SN%).
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[EboxLinkResume]
+Category: System,Important
+Title: Verbinding van de uitbreidingseenheid is hervat
+Subject: De verbinding van de uitbreidingseenheid %EBOX_ID% is hervat (SAS Out - %LINK_ID%) van %HOSTNAME% %HOST_SN%)
+
+Beste gebruiker
+
+De verbinding van de uitbreidingseenheid %EBOX_ID% (SAS Out - %LINK_ID%) van%HOSTNAME% (SN: %HOST_SN%) is hervat.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[ExpansionFrmInconsistent]
+Category: System,Important
+Title: Firmware uitbreidingseenheid is inconsistent
+Subject: De firmware van de uitbreidingseenheid van %HOSTNAME% is inconsistent.
+
+beste gebruiker,
+
+De firmware van de uitbreidingseenheid van %HOSTNAME% is inconsistent. Om dit probleem op te lossen, neemt u contact op met Synology Online Support op www.synology.com.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[ForgetPassword]
+Subject: Vergeten wachtwoord herstellen
+Beste %USER%,
+
+Klik op de volgende koppeling om uw wachtwoord te herstellen:
+%URL%
+
+Deze koppeling blijft 24 uur geldig. Hebt u deze wijziging van uw wachtwoord niet aangevraagd dan kunt u dit bericht negeren.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[HA_AbleSwitchover]
+Category: HA,Important
+Title: Overschakelen van de high-availability-cluster is opnieuw functioneel
+Subject: Overschakelen van de high-availability-cluster %HOSTNAME% is opnieuw functioneel
+
+Beste gebruiker
+
+De overschakeling van de high-availability-cluster %HOSTNAME% is opnieuw functioneel. Controleer de systeemlogboeken of de pagina Logboeken van High Availability Manager voor meer informatie.
+
+Actie: %HA_ACTION%
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[HA_FailOver]
+Category: HA,Important
+Title: High-availability-clusterfout gedetecteerd
+Subject: Er is een fout gedetecteerd op high-availability-cluster %HOSTNAME%
+
+Beste gebruiker
+
+Er is een fout gedetecteerd op high-availability-cluster %HOSTNAME%. Het systeem zal een failover naar de passieve server uitvoeren. Controleer de systeemlogboeken voor meer informatie.
+
+Actie: %HA_ACTION%
+Fout: %HA_PARAM_1%
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[HA_PassiveTimeout]
+Category: HA,Important
+Title: Lokale host kan de actieve server niet detecteren
+Subject: [%HA_PARAM_1%] heeft de actieve server niet gedetecteerd gedurende een bepaalde periode
+
+Beste gebruiker
+
+De passieve server [%HA_PARAM_1%] is uitgeschakeld omdat de actieve server [%HA_PARAM_2%] gedurende een bepaalde periode niet kon worden gedetecteerd. Schakel eerst de stroom van de actieve server [%HA_PARAM_2%] in. Is actieve server [%HA_PARAM_2%] niet meer beschikbaar, volg dan de onderstaande instructies om de high-availability-cluster te verwijderen: Start [%HA_PARAM_1%] opnieuw op en wacht 5 minuten. Houd de knop RESET op het achterpaneel van uw %DISKSTATION% gedurende 4 seconden ingedrukt tot uw %DISKSTATION% een geluidsignaal weergeeft. Laat de knop onmiddellijk los. (Waarschuwing: door de RESET-knop continu ingedrukt te houden, wordt het besturingssysteem opnieuw geïnstalleerd). Voor meer informatie over de syteeminstellingen die worden teruggezet, lees deze tutorial: https://www.synology.com/knowledgebase/DSM/tutorial/General/How_to_reset_your_Synology_NAS.
+
+Actie: %HA_ACTION%
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[HA_SwitchFail]
+Category: HA,Important
+Title: Failover van services mislukt
+Subject: Failover van services van high-availability-cluster %HOSTNAME% is mislukt
+
+Beste gebruiker
+
+Het systeem heeft vergeefs geprobeerd om een failover van services naar de passieve server van de high-availability-cluster %HOSTNAME% uit te voeren. Controleer de systeemlogboeken voor meer informatie.
+
+Actie: %HA_ACTION%
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[HA_SwitchFinished]
+Category: HA,Important
+Title: High-availability-cluster in werking
+Subject: High-availability-cluster %HOSTNAME% werkt op %HA_PARAM_1%.
+
+Beste gebruiker
+
+De services van de high-availability-cluster %HOSTNAME% worden nu uitgevoerd op %HA_PARAM_1%. Controleer de systeemlogboeken of de pagina Logboeken van High Availability Manager voor meer informatie.
+
+Actie: %HA_ACTION%
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[HA_SwitchOver]
+Category: HA,Important
+Title: Overschakelen van de high-availability-cluster
+Subject: Overschakelen van high-availability-cluster %HOSTNAME% naar %HA_PARAM_1%.
+
+Beste gebruiker
+
+Er is een overschakeling geactiveerd op high-availability-cluster %HOSTNAME%. Services worden overgeschakeld naar %HA_PARAM_1%. Controleer de systeemlogboeken voor meer informatie.
+
+Actie: %HA_ACTION%
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[HA_SyncComplete]
+Category: HA,Important
+Title: Volledige gegevensreplicatie is voltooid
+Subject: De volledige gegevensreplicatie van de high-availability-cluster %HOSTNAME% is voltooid
+
+Beste gebruiker
+
+De volledige gegevensreplicatie van de high-availability cluster %HOSTNAME% is voltooid. De passieve server is nu gereed om de services over te nemen bij een eventuele overschakeling of failover. Controleer de systeemlogboeken of de pagina Logboeken van High Availability Manager voor meer informatie.
+
+Actie: %HA_ACTION%
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[HA_UnableSwitchover]
+Category: HA,Important
+Title: Overschakelen van de high-availability-cluster is uitgeschakeld
+Subject: Overschakelen van de high-availability-cluster %HOSTNAME% is uitgeschakeld
+
+Beste gebruiker
+
+De overschakeling van de high-availability-cluster %HOSTNAME% is uitgeschakeld. Controleer de systeemlogboeken of de pagina Logboeken van High Availability Manager voor meer informatie.
+
+Actie: %HA_ACTION%
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[HA_UnbindLocal]
+Category: HA,Important
+Title: Lokale host is verwijderd van de high-availability-cluster
+Subject: %HA_PARAM_1% is verwijderd uit de high-availability-cluster %HA_PARAM_2%
+
+Beste gebruiker
+
+%HA_PARAM_1% is verwijderd uit de high-availability-cluster %HA_PARAM_2%. Controleer de systeemlogboeken voor meer informatie.
+
+Actie: %HA_ACTION%
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[HDEcc]
+Category: Storage,Important
+Title: Schijf I/O-fout
+Subject: I/O-fout opgetreden in harde schijf %DISK_ID% op %HOSTNAME%
+
+Beste gebruiker,
+
+De harde schijf %DISK_ID% op %HOSTNAME% heeft een I/O-fout, maar werkt na verschillende pogingen weer normaal. Dit is mogelijk veroorzaakt door slechte sectoren. Als deze fout opnieuw optreedt, moet u een back-up maken van uw gegevens en de S.M.A.R.T.-test uitvoeren op uw harde schijf om de status van de harde schijf te controleren.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[HotSpareDiskPlugout]
+Category: Storage,Important
+Title: De Global Hot Spare-schijf is losgekoppeld.
+Subject: De Hot Spare-schijf (%DISK_ID%) is losgekoppeld
+
+Beste gebruiker
+
+Het systeem heeft gedetecteerd dat de Hot Spare-schijf (%DISK_ID%) is losgekoppeld.
+Wij raden aan om schijven aan de Hot Spare toe te voegen om de opslagruimte te beschermen.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[HotSpareRepairDone]
+Category: Storage,Important
+Title: De Global Hot Spare-herstelling is voltooid
+Subject: De herstelling van de opslagruimte (%STORAGE_ID%) is voltooid
+
+Beste gebruiker
+
+Het systeem heeft de herstelling van de beschadigde opslagruimte (%STORAGE_ID%) met Hot Spare-schijf (%DISK_ID%) uitgevoerd.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[HotSpareRepairFailed]
+Category: Storage,Important
+Title: De Global Hot Spare-herstelling is mislukt
+Subject: De herstelling van de opslagruimte (%STORAGE_ID%) is mislukt
+
+Beste gebruiker
+
+Herstel van de beschadigde opslagruimte (%STORAGE_ID%) door het systeem met Hot Spare-schijf (%DISK_ID%) is mislukt.
+Voor meer informatie verwijzen we naar de systeemlogboeken.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[HotSpareRepairNoProtect]
+Category: Storage,Important
+Title: Global Hot Spare: herinner welke ruimte niet worden beschermd
+Subject: enkele opslagruimtes worden niet beschermd door Hot Spare
+
+Beste gebruiker
+
+Enkele opslagruimtes (%STORAGE_ID%) worden niet beschermd door Hot Spare.
+Wij raden aan om schijven aan de Hot Spare toe te voegen om de opslagruimte te beschermen.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[HotSpareRepairStart]
+Category: Storage,Important
+Title: Bezig met herstellen van Global Hot Spare
+Subject: Het systeem gebruikt Hot Spare-schijven om beschadigde opslagruimte (%STORAGE_ID%) te herstellen
+
+Beste gebruiker
+
+Het systeem gebruikt nu de Hot Spare-schijf (%DISK_ID%) om de beschadigde opslagruimte (%STORAGE_ID%) te herstellen.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[ImproperShutdown]
+Category: System,Important
+Title: Abnormaal afgesloten
+Subject: %HOSTNAME% werd abnormaal afgesloten
+
+Beste gebruiker,
+
+%HOSTNAME% werd abnormaal afgesloten omwille van een stroomstoring.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[InternalFanResume]
+Category: System
+Title: Serverventilator is weer opgestart
+Subject: Ventilator %FANID% van server %HOSTNAME% (SN: %HOST_SN%) is weer opgestart
+
+Beste gebruiker
+
+De ventilator %FANID% van server %HOSTNAME% (SN: %HOST_SN%) is weer opgestart.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[InternalFanStop]
+Category: System,Important
+Title: Serverventilator is gestopt
+Subject: Ventilator %FANID% van server %HOSTNAME% (SN: %HOST_SN%) is gestopt
+
+Beste gebruiker
+
+De ventilator %FANID% van server %HOSTNAME% (SN: %HOST_SN%) is gestopt.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[LocalLUNBkpError]
+Category: Backup/Restore,Important
+Title: Lokale LUN-back-up is mislukt
+Subject: Mislukt - LUN-back-up op %HOSTNAME%
+
+Beste gebruiker
+
+LUN-back-up op %HOSTNAME% naar lokaal gedeelde map is mislukt. Controleer het back-uplogboek in DSM bij Back-up en replicatie > Logboek voor meer informatie.
+
+LUN-naam: %LUN%
+Back-uptaak: %BKP_TASK%
+Back-updoel: %BKP_DST% %PATH%
+Starttijd: %TIME%
+Duur: %DUR%
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[LocalLUNBkpFinished]
+Category: Backup/Restore
+Title: Lokale LUN-back-up is voltooid
+Subject: Voltooid - LUN-back-up op %HOSTNAME%
+
+Beste gebruiker
+
+LUN-back-up op %HOSTNAME% naar lokaal gedeelde map is voltooid.
+
+LUN-naam: %LUN%
+Back-uptaak: %BKP_TASK%
+Back-updoel: %BKP_DST% %PATH%
+Starttijd: %TIME%
+Duur: %DUR%
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[LocalLUNRecoverError]
+Category: Backup/Restore,Important
+Title: Lokale LUN-herstel is mislukt
+Subject: Mislukt - LUN-herstel op %HOSTNAME%
+
+Beste gebruiker
+
+LUN-herstel op %HOSTNAME% vanaf lokaal gedeelde map is mislukt. Controleer het back-uplogboek in DSM bij Back-up en replicatie > Logboek voor meer informatie.
+
+LUN-naam: %LUN%
+Herstelbron: %BKP_SRC%  %SRC_PATH%
+Starttijd: %TIME%
+Duur: %DUR%
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[LocalLUNRecoverFinished]
+Category: Backup/Restore
+Title: Lokale LUN-herstel is voltooid
+Subject: Voltooid - LUN-herstel op %HOSTNAME%
+
+Beste gebruiker
+
+LUN-herstel op %HOSTNAME% vanaf lokaal gedeelde map is voltooid.
+
+LUN-naam: %LUN%
+Herstelbron: %BKP_SRC%  %SRC_PATH%
+Starttijd: %TIME%
+Duur: %DUR%
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[MyDSPasswordChanged]
+Category: System,Important
+Title: Synology Account-wachtwoord gewijzigd
+Subject: Uw Synology Account-wachtwoord op %HOSTNAME% is gewijzigd
+
+Beste gebruiker
+
+Dit is een bevestiging dat het wachtwoord van uw Synology-account [%MYDS_ACCOUNT%] is gewijzigd via Synology Account op %HOSTNAME%.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[NetLUNBkpError]
+Category: Backup/Restore,Important
+Title: Netwerk-LUN-back-up is mislukt
+Subject: Mislukt - LUN-back-up op %HOSTNAME%
+
+Beste gebruiker
+
+LUN-back-up op %HOSTNAME% naar extern gedeelde map is mislukt. Controleer het back-uplogboek in DSM bij Back-up en replicatie > Logboek voor meer informatie.
+
+LUN-naam: %LUN%
+Back-uptaak: %BKP_TASK%
+Back-updoel: %BKP_DST%  %PATH%
+Starttijd: %TIME%
+Duur: %DUR%
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[NetLUNBkpOK]
+Category: Backup/Restore
+Title: Netwerk-LUN-back-up is voltooid
+Subject: Voltooid - LUN-back-up op %HOSTNAME%
+
+Beste gebruiker
+
+LUN-back-up op %HOSTNAME% naar extern gedeelde map is voltooid.
+
+LUN-naam: %LUN%
+Back-uptaak: %BKP_TASK%
+Back-updoel: %BKP_DST%  %PATH%
+Starttijd: %TIME%
+Duur: %DUR%
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[NetLUNRecoverError]
+Category: Backup/Restore,Important
+Title: Netwerk-LUN-herstel is mislukt
+Subject: Mislukt - LUN-herstel op %HOSTNAME%
+
+Beste gebruiker
+
+LUN-herstel op %HOSTNAME% vanaf extern gedeelde map is mislukt. Controleer het back-uplogboek in DSM bij Back-up en replicatie > Logboek voor meer informatie.
+
+LUN-naam: %LUN%
+Herstelbron: %BKP_SRC%  %SRC_PATH%
+Starttijd: %TIME%
+Duur: %DUR%
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[NetLUNRecoverFinished]
+Category: Backup/Restore,Important
+Title: Netwerk-LUN-herstel is voltooid
+Subject: Voltooid - LUN-herstel op %HOSTNAME%
+
+Beste gebruiker
+
+LUN-herstel op %HOSTNAME% vanaf extern gedeelde map is voltooid.
+
+LUN-naam: %LUN%
+Herstelbron: %BKP_SRC%  %SRC_PATH%
+Starttijd: %TIME%
+Duur: %DUR%
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[OTP_emergency_mail]
+Subject: Noodverificatiecode voor %USER_NAME% van %HOSTNAME%
+
+Beste gebruiker
+
+Deze eenmalige noodverificatiecode dient om u aan te melden bij %HOSTNAME% en uw 2-stapsverificatie opnieuw in te stellen. Vul deze 8-cijferige code in wanneer u om de invoer van de verificatiecode wordt gevraagd.
+
+Noodverificatiecode: %EMG_CODE%
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[OTP_emergency_mail_warning]
+Subject: Noodverificatiecode voor %USER_NAME% van %HOSTNAME%
+
+Beste gebruiker
+
+Deze eenmalige noodverificatiecode dient om u aan te melden bij %HOSTNAME% en uw 2-stapsverificatie opnieuw in te stellen. Vul deze 8-cijferige code in wanneer u om de invoer van de verificatiecode wordt gevraagd.
+
+Opmerking: u hebt uw noodcodelimiet bereikt. Stel uw 2-stapsverificatie-instellingen zo snel mogelijk opnieuw in.
+
+Noodaanmeldcode: %EMG_CODE%
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[OverheatShutdownCPU]
+Category: System,Important
+Title: Uitschakeling van de CPU als gevolg van oververhitting
+Subject: %HOSTNAME% (SN: %HOST_SN%) is uitgeschakeld als gevolg van oververhitting van de CPU
+
+Beste gebruiker
+
+%HOSTNAME% (SN: %HOST_SN%) is automatisch uitgeschakeld als gevolg van oververhitting van de CPU (hoger dan %SHUTDOWN_TMP%°C).
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[OverheatShutdownDisk]
+Category: System,Important
+Title: Uitschakeling door oververhitting van de schijf
+Subject: %HOSTNAME% is uitgeschakeld als gevolg van oververhitting van de schijf.
+
+Beste gebruiker
+
+Door oververhitting van schijf %DISK_NUM% en het bereiken van de uitschakelingstemperatuur van %SHUTDOWN_TMP%°C is %HOSTNAME% automatisch uitgeschakeld.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[OverheatShutdownThermal]
+Category: System,Important
+Title: Uitschakeling door oververhitting
+Subject: %HOSTNAME% (SN: %HOST_SN%) is uitgeschakeld als gevolg van oververhitting
+
+Beste gebruiker
+
+%HOSTNAME% (SN: %HOST_SN%) is automatisch uitgeschakeld als gevolg van oververhitting (hoger dan %SHUTDOWN_TMP%°C).
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[PKGUpgrade]
+Subject: Informatie over pakketupgrade voor %HOSTNAME%
+
+Beste gebruiker
+
+De volgende pakketten zijn gereed voor bijwerken op %HOSTNAME%. U kunt Package Center starten in %OSNAME% om ze bij te werken.
+
+Bij te werken pakketten:
+%PKG_SET%
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[Raid5SpareChanged]
+Category: Storage,Important
+Title: RAID5+spare volume is gedegradeerd
+Subject: RAID5+spare volume %VOLUME_ID% op %HOSTNAME% is gedegradeerd
+
+Beste gebruiker
+
+Volume %VOLUME_ID% op %HOSTNAME% is gedegradeerd van RAID5+spare naar RAID5. Om het volume weer te wijzigen naar RAID5+spare, neemt u een reserveschijf en gaat u naar "Hoofdmenu" > "Opslagbeheer" > "Volume" > "Beheren" om de defecte schijf te vervangen.
+
+Neem voor verdere ondersteuning contact op met de online-ondersteuning van Synology: http://www.synology.com.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[RaidDiskFail]
+Category: Storage,Important
+Title: HDD in de schijfgroep defect
+Subject: Harde schijf %DISK_ID% in de schijfgroep op %HOSTNAME% is defect
+
+Beste gebruiker
+
+De harde schijf %DISK_ID% in de schijfgroep op %HOSTNAME% is defect, vervang de schijf.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[RaidGroupCrashed]
+Category: Storage,Important
+Title: RAID Group vastgelopen
+Subject: RAID Group %RAID_ID% op %HOSTNAME% is vastgelopen
+
+Beste gebruiker
+
+RAID Group %RAID_ID% op %HOSTNAME% is vastgelopen. Het systeem start mogelijk niet op.
+
+Neem voor verdere ondersteuning contact op met de online-ondersteuning van Synology: http://www.synology.com.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[RaidGroupDegraded]
+Category: Storage,Important
+Title: RAID Group beschadigd
+Subject: RAID Group %VOLUME_ID% op  %HOSTNAME% is overgegaan in de beschadigde modus [%ACTIVE_DISK%/%TOTAL_DISK%]
+
+Beste gebruiker
+
+RAID Group %RAID_ID% op %HOSTNAME% is in de beschadigde modus gegaan. (Totaal aantal harde schrijven: %TOTAL_DISK%; aantal actieve harde schijven: %ACTIVE_DISK%) Onderzoek de oorzaak van de beschadigde modus en voer een herstelactie uit.
+
+Neem voor verdere ondersteuning contact op met de online-ondersteuning van Synology: http://www.synology.com.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[RaidGroupDiskFail]
+Category: Storage,Important
+Title: HDD in de RAID Group defect
+Subject: Harde schijf %DISK_ID% in de RAID Group op %HOSTNAME% is defect
+
+Beste gebruiker
+
+De harde schijf %DISK_ID% in de RAID Group op %HOSTNAME% is defect, vervang de schijf.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[RaidGroupSyncDone]
+Category: Storage
+Title: RAID Group-sync voltooid
+Subject: Consistentiecontrole van RAID Group %RAID_ID% op %HOSTNAME% is voltooid
+
+Beste gebruiker
+
+De consistentiecontrole van RAID Group %RAID_ID% op %HOSTNAME% is voltooid. Het systeem is nu gebruiksklaar.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[RaidGroupVolumeBadSector]
+Category: Storage,Important
+Title: RAID Group-volume is defect
+Subject: RAID Group-volume (%VOLUME_ID%) op %HOSTNAME% is defect
+
+Beste gebruiker
+
+Een aantal bestanden is beschadigd omdat het RAID Group-volume (%VOLUME_ID%) op %HOSTNAME% defect is. Bestanden dreigen beschadigd te raken in beschadigde modus. Herstel het volume zo snel mogelijk. Ga naar Hoofdmenu > Systeemlogboeken voor meer details.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[RaidGroupiScsiBadSector]
+Category: Storage,Important
+Title: iSCSI LUN van RAID Group is defect
+Subject: iSCSI LUN van RAID Group op %HOSTNAME% is defect
+
+Beste gebruiker
+
+Een aantal bestanden is beschadigd omdat iSCSI LUN van de RAID Group op %HOSTNAME% defect is. Bestanden dreigen beschadigd te raken in beschadigde modus. Herstel het volume zo snel mogelijk.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[RaidSuggestDataScrubbing]
+Category: Storage
+Title: RAID-gegevensopschoning herinnering
+Subject: Herinnering van gegevens opschonen op %HOSTNAME%
+
+Beste gebruiker
+
+De RAID-gegevensopschoning op %HOSTNAME% is al langer dan een maand niet uitgevoerd. Wij raden u aan om RAID-gegevensopschoning uit te voeren om de gegevensintegriteit te garanderen.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[RaidSystemVolumeCrashed]
+Category: Storage,Important
+Title: Systeemvolume vastgelopen
+Subject: Systeemvolume (%SYSTEM_ID%) op %HOSTNAME% is vastgelopen
+
+Beste gebruiker
+
+Systeemvolume (%SYSTEM_ID%) op %HOSTNAME% is vastgelopen. Het systeem start mogelijk niet op.
+Neem voor verdere ondersteuning contact op met de online-ondersteuning van Synology: http://www.synology.com.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[RaidSystemVolumeDegrade]
+Category: Storage,Important
+Title: Systeemvolume beschadigd
+Subject: Systeemvolume (%SYSTEM_ID%) op %HOSTNAME% is overgegaan in de beschadigde modus [%ACTIVE_DISK%/%TOTAL_DISK%]
+
+Beste gebruiker
+
+Systeemvolume (%SYSTEM_ID%) op %HOSTNAME% is overgegaan in de beschadigde modus. (Totaal aantal harde schrijven: %TOTAL_DISK%; aantal actieve harde schijven: %ACTIVE_DISK%)
+
+Start het systeem opnieuw op. Het systeem zal zichzelf automatisch herstellen na opstarten.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[RaidSystemVolumeSyncDone]
+Category: Storage
+Title: Consistentiecontrole op systeem voltooid
+Subject: De consistentiecontrole van het systeemvolume (%SYSTEM_ID%) op %HOSTNAME% is voltooid
+
+Beste gebruiker
+
+%HOSTNAME% heeft de controle van de consistentie op het systeemvolume (%SYSTEM_ID%). Het systeem is nu gebruiksklaar.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[RaidVolumeBadSector]
+Category: Storage,Important
+Title: Schijfgroepvolume is defect
+Subject: Schijfgroepvolume (%VOLUME_ID%) op %HOSTNAME% is defect
+
+Beste gebruiker
+
+Een aantal bestanden is beschadigd omdat het schijfgroepvolume (%VOLUME_ID%) op %HOSTNAME% defect is. Bestanden dreigen beschadigd te raken in beschadigde modus. Herstel het volume zo snel mogelijk. Ga naar "Hoofdmenu" > "Systeemgegevens" > "Logboek" > "Systeemlogboek" voor meer details.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[RaidVolumeCrashed]
+Category: Storage,Important
+Title: Volume vastgelopen
+Subject: Volume %VOLUME_ID% op %HOSTNAME% is vastgelopen
+
+Beste gebruiker
+
+Volume %VOLUME_ID% op %HOSTNAME% is vastgelopen. Het systeem start mogelijk niet op.
+
+Neem voor verdere ondersteuning contact op met de online-ondersteuning van Synology: http://www.synology.com.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[RaidVolumeDegrade]
+Category: Storage,Important
+Title: Volume beschadigd
+Subject: Volume %VOLUME_ID% op %HOSTNAME% is overgegaan in de beschadigde modus [%ACTIVE_DISK%/%TOTAL_DISK%]
+
+Beste gebruiker
+
+Volume %VOLUME_ID% op %HOSTNAME% is overgegaan in de beschadigde modus. (Totaal aantal harde schrijven: %TOTAL_DISK%; aantal actieve harde schijven: %ACTIVE_DISK%) Onderzoek de oorzaak van de beschadigde modus en voer een herstelactie uit.
+
+Om het volume te repareren, vervangt u de defecte schijven door nieuwe harde schijven. Voor meer informatie bezoekt u de Kennisdatabase van Synology op onze officiële website.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[RaidVolumeFull]
+Category: Storage,Important
+Title: Volume vol
+Subject: Volume %VOLUME_ID% op %HOSTNAME% heeft bijna geen vrije ruimte meer
+
+Beste gebruiker
+
+Er is bijna geen beschikbare ruimte meer op volume %VOLUME_ID% op %HOSTNAME%. Verwijder enkele bestanden om vrije ruimte te maken.
+
+Totale capaciteit: %VOLUME_SIZE% GB
+Beschikbare capaciteit: %FREE_SPACE% GB (%USAGE%%)
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[RaidVolumeSyncDone]
+Category: Storage
+Title: Consistentiecontrole voltooid
+Subject: Consistentiecontrole van volume %VOLUME_ID% op %HOSTNAME% is voltooid
+
+Beste gebruiker
+
+%HOSTNAME% heeft de consistentiecontrole op volume %VOLUME_ID% beëindigd. Het systeem is nu gebruiksklaar.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[RaidiScsiBadSector]
+Category: Storage,Important
+Title: iSCSI LUN van schijfgroep is defect
+Subject: iSCSI LUN van schijfgroep op %HOSTNAME% is defect
+
+Beste gebruiker
+
+Een aantal bestanden is beschadigd omdat iSCSI LUN van de schijfgroep op %HOSTNAME% defect is. Bestanden dreigen beschadigd te raken in beschadigde modus. Herstel het volume zo snel mogelijk.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[RaidiScsiCrashed]
+Category: Storage,Important
+Title: iSCSI LUN vastgelopen
+Subject: iSCSI LUN (%LUN_NAME%) op %HOSTNAME% is vastgelopen
+
+Beste gebruiker
+
+iSCSI LUN (%LUN_NAME%) op %HOSTNAME% is vastgelopen. Het systeem start mogelijk niet op.
+
+Neem voor verdere ondersteuning contact op met de online-ondersteuning van Synology: http://www.synology.com.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[RaidiScsiDegraded]
+Category: Storage,Important
+Title: iSCSI LUN is beschadigd
+Subject: iSCSI LUN (%LUN_NAME%) op %HOSTNAME% is overgeschakeld naar de beschadigde modus [%ACTIVE_DISK%/%TOTAL_DISK%]
+
+Beste gebruiker
+
+iSCSI LUN (%LUN_NAME%) op %HOSTNAME% is overschakeld naar de beschadigde modus. (Totaal aantal harde schrijven: %TOTAL_DISK%; aantal actieve harde schijven: %ACTIVE_DISK%) Onderzoek de oorzaak van de beschadigde modus en voer een herstelactie uit.
+
+Om de iSCSI LUN te repareren, vervangt u de defecte schijven door nieuwe harde schijven. Voor meer informatie bezoekt u de Kennisdatabase van Synology op onze officiële website.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[RedundantPowerRecoveredProvide]
+Category: Power System
+Title: Redundante voeding hersteld
+Subject: Voedingnr.%POWERID% op %HOSTNAME% (SN: %HOST_SN%) is hersteld
+
+Beste gebruiker
+
+Voedingnr.%POWERID% op %HOSTNAME% (SN: %HOST_SN%) is hersteld.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[RedundantPowerStopProvide]
+Category: Power System,Important
+Title: Redundante voeding mislukt
+Subject: Voedingnr.%POWERID% op %HOSTNAME% (SN: %HOST_SN%) is mislukt
+
+Beste gebruiker
+
+Voedingnr.%POWERID% op %HOSTNAME% (SN: %HOST_SN%) is mislukt.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[RestoreTaskCanceled]
+Category: Backup/Restore,Important
+Title: Terugzetten geannuleerd
+Subject: %TASK_TYPE% geannuleerd op %HOSTNAME%
+
+Beste gebruiker
+
+Gegevensherstel op %HOSTNAME% is geannuleerd.
+
+Herstelbron: %DESTINATION_IP% %DESTINATION_PATH%
+Starttijd: %START_TIME%
+Duur: %DURATION%
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[RestoreTaskFailed]
+Category: Backup/Restore,Important
+Title: Herstel mislukt
+Herstel van Subject: %TASK_TYPE% vanuit %HOSTNAME% is mislukt
+
+Beste gebruiker
+
+Herstel van back-upgegevens vanuit %HOSTNAME% is mislukt.
+
+Controleer het back-uplogboek in Hyper Backup > Logboek voor meer informatie.
+
+Herstelbron: %DESTINATION_IP% %DESTINATION_PATH%
+Starttijd: %START_TIME%
+Duur: %DURATION%
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[RestoreTaskFinished]
+Category: Backup/Restore
+Title: Terugzetten voltooid
+Subject: %TASK_TYPE% voltooid op %HOSTNAME%
+
+Beste gebruiker
+
+Uw hersteltaak %TASK_NAME% is nu voltooid.
+
+Herstelbron: %DESTINATION_IP% %DESTINATION_PATH%
+Starttijd: %START_TIME%
+Duur: %DURATION%
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[SDCardFull]
+Category: External Storage
+Title: SD-kaart vol
+Subject: SD card %DISK_NUMBER% op %HOSTNAME% heeft bijna geen vrije ruimte meer
+
+Beste gebruiker
+
+Er is bijna geen beschikbare ruimte meer op SD-kaart %DISK_NUMBER% op %HOSTNAME%. Raadpleeg de onderstaande informatie en voer een herstelactie uit.
+
+Totale capaciteit: %DISK_SIZE% GB
+Beschikbare capaciteit: %FREE_SPACE% GB (%USAGE%%)
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[SDCardPartitionFull]
+Category: External Storage
+Title: SD-kaartpartitie vol
+Subject: Partitie %PARTITION_NUMBER% of SD-kaart %DISK_NUMBER% op %HOSTNAME% heeft bijna geen vrije ruimte meer
+
+Beste gebruiker
+
+Partitie %PARTITION_NUMBER% of SD-kaart %DISK_NUMBER% op %HOSTNAME% heeft bijna geen vrije ruimte meer. Onderneem een correctieve actie.
+
+Totale capaciteit: %DISK_SIZE% GB
+Beschikbare capaciteit: %FREE_SPACE% GB (%USAGE%%)
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[SFPModuleUnsupported]
+Category: System,Important
+Title: Niet ondersteunde SFP+ module
+Subject: Er is een niet ondersteunde SFP+ module %LAN% gedetecteerd
+
+Beste gebruiker
+
+Er is een niet ondersteunde SFP+ module %LAN% gedetecteerd en het stuurprogramma van de netwerkinterfacekaart is uitgeschakeld.
+Installeer een ondersteunde module en start opnieuw uw %DISKSTATION%.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[SSDCacheCrashed]
+Category: Storage,Important
+Title: SSD-cache vastgelopen
+Subject: SSD-cache %SSD_ID% op %HOSTNAME% is vastgelopen
+
+Beste gebruiker
+
+De SSD-cache %SSD_ID% op %HOSTNAME% is vastgelopen. Neem voor verdere ondersteuning contact op met de online-ondersteuning van Synology: http://www.synology.com.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[SSDCacheDegraded]
+Category: Storage,Important
+Title: SSD-cache beschadigd
+Subject: SSD-cache %SSD_ID% op %HOSTNAME% is beschadigd
+
+Beste gebruiker
+
+SSD-cache %SSD_ID% op %HOSTNAME% is beschadigd. Neem voor verdere ondersteuning contact op met de online-ondersteuning van Synology: http://www.synology.com.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[SSDCacheMissing]
+Category: Storage,Important
+Title: Lees-/schrijfcache ontbreekt
+Subject: De lees-/schrijfcache van %SPACE_ID% op %HOSTNAME% ontbreekt
+
+Beste gebruiker
+
+De lees-/schrijfcache van %SPACE_ID% op %HOSTNAME% ontbreekt. Neem voor verdere ondersteuning contact op met de online-ondersteuning van Synology: http://www.synology.com.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[SecurityScanAlarm]
+Category: System,Important
+Title: Beveiligingsrisico's gevonden
+Subject: Beveiligingsrisico's gevonden op %HOSTNAME%
+
+Beste gebruiker
+
+Security Advisor heeft een geplande scan voltooid op %HOSTNAME%. Er zijn meerdere beveiligingsrisico's gevonden die uw aandacht vereisen. Meld u aan bij %OSNAME% op %HOSTNAME% en bekijk het rapport in Security Advisor.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[SecurityScanDSMOutOfDate]
+Category: System,Important
+Title: Systeem niet bijgewerkt
+Subject: %OSNAME% op %HOSTNAME% is niet bijgewerkt door Security Advisor
+
+Beste gebruiker
+
+De %OSNAME%-versie op %HOSTNAME% is niet bijgewerkt. Meld u aan bij %OSNAME% op %HOSTNAME%, op het Configuratiescherm en installeer de laatste versie van %OSNAME%. Voor een gedetailleerd rapport gaat u naar Hoofdmenu > Security Advisor.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[SecurityScanDSMPackageOutOfDate]
+Category: System,Important
+Title: Systeem en pakketten zijn niet bijgewerkt
+Subject: %OSNAME% en pakketten op %HOSTNAME% zijn niet bijgewerkt door Security Advisor
+
+Beste gebruiker
+
+%OSNAME% en %NUMBER% pakket(ten) op %HOSTNAME% is/zijn niet bijgewerkt. Meld u aan bij %OSNAME% op %HOSTNAME% en voer de volgende handelingen uit:
+- Open Configuratiescherm en installeer de laatste versie van %OSNAME%.
+- Open Package Center en installeer de laatste versie(s) van uw pakket(ten).
+
+Voor een gedetailleerd rapport gaat u naar Hoofdmenu > Security Advisor.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[SecurityScanDanger]
+Category: System,Important
+Title: Malware gedetecteerd
+Subject: Malware gedetecteerd op %HOSTNAME%
+
+Beste gebruiker
+
+Er is Malware gedetecteerd op %HOSTNAME%. Meld u aan bij %OSNAME% op %HOSTNAME% en open Security Advisor om dit probleem op te lossen.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[SecurityScanPackageOutOfDate]
+Category: System,Important
+Title: Pakketten zijn niet bijgewerkt
+Subject: Pakketten op %HOSTNAME% zijn niet bijgewerkt
+
+Beste gebruiker
+
+%NUMBER% pakket(ten) op %HOSTNAME% is/zijn niet bijgewerkt. Meld u aan bij %OSNAME% op %HOSTNAME%, open Package Center en installeer de laatste versie van uw pakket(ten).
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[ShareSyncError]
+Category: Backup/Restore,Important
+Title: Synchronisatie van gedeelde map is mislukt
+Subject: Mislukt - Synchronisatie van gedeelde map
+
+Beste gebruiker
+
+Synchronisatie van gedeelde map op %HOSTNAME% is mislukt. Controleer het back-uplogboek in DSM bij Log Center voor meer informatie.
+
+Synchronisatietaak: %S2S_TASK%
+Synchronisatieserver: %S2S_SERVER%
+Starttijd: %TIME%
+Duur: %DUR%
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[ShareSyncSuccess]
+Category: Backup/Restore
+Title: Synchronisatie gedeelde map is niet voltooid
+Subject: Voltooid - Synchronisatie gedeelde map
+
+Beste gebruiker
+
+Synchronisatie gedeelde map op %HOSTNAME% is voltooid.
+
+Synchronisatietaak: %S2S_TASK%
+Synchronisatieserver: %S2S_SERVER%
+Starttijd: %TIME%
+Duur: %DUR%
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[SmartEBoxAbnor]
+Category: Storage,Important
+De Title: S.M.A.R.T.-status van de uitbreidingsschijf is niet normaal
+De Subject: S.M.A.R.T.-status van schijf %DISK_ID% op %EUNIT_ID% en aangesloten op %HOSTNAME% is niet normaal
+
+Beste gebruiker
+
+De S.M.A.R.T.-status van schijf %DISK_ID% op %EUNIT_ID% en aangesloten op %HOSTNAME% is niet normaal. Dit kan een indicatie zijn van een imminente storing. Maak een back-up van uw gegevens en vervang de schijven zo snel mogelijk.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[SmartESataAbnor]
+Category: External Storage,Important
+De Title: S.M.A.R.T.-status van de eSATA-schijf is niet normaal
+De Subject: S.M.A.R.T.-status van de eSATA-schijf op %HOSTNAME% is niet normaal
+
+Beste gebruiker
+
+De S.M.A.R.T.-status van de eSATA-schijf op %HOSTNAME% is niet normaal. Dit kan een indicatie zijn van een imminente storing. Maak een back-up van uw gegevens en vervang de schijven zo snel mogelijk.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[SmartIntAbnor]
+Category: Storage,Important
+Title: De S.M.A.R.T.-status van de interne schijf is niet normaal
+Subject: S.M.A.R.T.-status van schijf %DISK_ID% op %HOSTNAME% is niet normaal
+
+Beste gebruiker
+
+S.M.A.R.T.-status van de interne schijf %DISK_ID% op %HOSTNAME% is niet normaal. Dit kan een indicatie zijn van een imminente storing. Maak een back-up van uw gegevens en vervang de schijf zo snel mogelijk.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[SmartTestEBoxErr]
+Category: Storage,Important
+Title: S.M.A.R.T.-test mislukt op schijf uitbreidingseenheid
+Subject: S.M.A.R.T.-test mislukt voor schijf %DISK_ID% in %EUNIT_ID% aangesloten op %HOSTNAME%
+
+Beste gebruiker
+
+S.M.A.R.T.-test op harde schijf %DISK_ID% in %EUNIT_ID% aangesloten op %HOSTNAME% is mislukt. Maak een back-up van uw gegevens en vervang de schijf zo snel mogelijk.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[SmartTestESataErr]
+Category: External Storage,Important
+Title: S.M.A.R.T.-test op eSATA-schijf mislukt
+Subject: S.M.A.R.T.-test op eSATA-schijf op %HOSTNAME% is mislukt
+
+Beste gebruiker
+
+S.M.A.R.T. test op eSATA-schijf op %HOSTNAME% is mislukt. Maak een back-up van uw gegevens en vervang de schijf zo snel mogelijk.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[SmartTestIntErr]
+Category: Storage,Important
+Title: S.M.A.R.T.-test op interne schijf mislukt
+Subject: S.M.A.R.T.-test mislukt op schijf %DISK_ID% op %HOSTNAME%
+
+Beste gebruiker
+
+S.M.A.R.T.-test op harde schijf %DISK_ID% op %HOSTNAME% is mislukt. Maak een back-up van uw gegevens en vervang de schijf zo snel mogelijk.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[StoragePoolCrashed]
+Category: Storage,Important
+Title: Schijfgroep vastgelopen
+Subject: Schijfgroep %RAID_ID% op %HOSTNAME% is vastgelopen
+
+Beste gebruiker
+
+Schijfgroep %RAID_ID% op %HOSTNAME% is vastgelopen. Het systeem start mogelijk niet op.
+
+Neem voor verdere ondersteuning contact op met de online-ondersteuning van Synology: http://www.synology.com.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[StoragePoolDegraded]
+Category: Storage,Important
+Title: Schijfgroep beschadigd
+Subject: Schijfgroep %VOLUME_ID% op  %HOSTNAME% is overgegaan in de beschadigde modus [%ACTIVE_DISK%/%TOTAL_DISK%]
+
+Beste gebruiker
+
+Schijfgroep %RAID_ID% op %HOSTNAME% is in de beschadigde modus gegaan. (Totaal aantal harde schrijven: %TOTAL_DISK%; aantal actieve harde schijven: %ACTIVE_DISK%) Onderzoek de oorzaak van de beschadigde modus en voer een herstelactie uit.
+
+Neem voor verdere ondersteuning contact op met de online-ondersteuning van Synology: http://www.synology.com.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[StoragePoolRaid5SpareChanged]
+Category: Storage,Important
+Title: Schijfgroep - Raid5+spare gedegradeerd
+Subject: Schijfgroep %RAID_ID% op %HOSTNAME% is gedegradeerd naar RAID5
+
+Beste gebruiker
+
+Schijfgroep %RAID_ID% op %HOSTNAME% is gedegradeerd van RAID5+spare naar RAID5. Om het terug te wijzigen naar RAID5+spare, neemt u een reserveschijf en gaat u naar "Hoofdmenu" > "Opslagbeheer" > "Schijfgroep" om de defecte schijf te vervangen.
+
+Neem voor verdere ondersteuning contact op met de online-ondersteuning van Synology: http://www.synology.com.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[StoragePoolSyncDone]
+Category: Storage
+Title: Synchronisatie schijfgroep voltooid
+Subject: Consistentiecontrole van schijfgroep %RAID_ID% op %HOSTNAME% is voltooid
+
+Beste gebruiker
+
+De consistentiecontrole van schijfgroep %RAID_ID% op %HOSTNAME% is voltooid. Het systeem is nu gebruiksklaar.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[SynoReport]
+Subject: Er is een schijfgebruikrapport gegenereerd
+
+Beste gebruiker,
+
+Er is een schijfgebruikrapport van %PROFILE% gegenereerd. Bekijk hier het rapport:
+%LINK%
+
+Met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[SynoReportFail]
+Subject: Het genereren van het opslaggebruikrapport is mislukt
+
+Beste gebruiker
+
+Tijdens het genereren van het gebruiksrapport van %PROFILE% is een fout opgetreden.
+
+Reden: %MSG%
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[SystemInodeFull]
+Category: System
+Title: Bestandentelling op het systeem heeft de limiet bereikt
+Subject: Bestandentelling op de systeempartitie van %HOSTNAME% heeft de limiet bereikt
+
+Beste gebruiker
+
+Bestandentelling op de systeempartitie van %HOSTNAME% heeft de limiet bereikt Neem contact op met Synology voor ondersteuning.
+
+Het maximum aantal bestanden: %TOTAL_INODE%
+Het resterend aantal bestanden: %FREE_INODE% (%USAGE%%)
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[SystemVolumeCrashed]
+Category: System
+Title: Systeemopslagruimte vastgelopen
+Subject: De systeemopslagruimte op %HOSTNAME% is vastgelopen
+
+Beste gebruiker
+
+De systeemopslagruimte op %HOSTNAME% is vastgelopen.
+
+Voor verdere ondersteuning neemt u contact op met de online-ondersteuning van Synology via http://www.synology.com
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[SystemVolumeFull]
+Category: System
+Title: Systeemopslagruimte is vol
+Subject: De systeemopslagruimte op %HOSTNAME% is bijna vol
+
+Beste gebruiker
+
+Er is bijna geen beschikbare ruimte op de systeemopslag %HOSTNAME%. Raadpleeg de onderstaande informatie en maak ruimte vrij.
+
+Totale capaciteit: %VOLUME_SIZE% GB
+Beschikbare capaciteit: %FREE_SPACE% GB (%USAGE%%)
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[TPLUNReachSoftLimit]
+Category: Storage,Important
+Title: Onvoldoende LUN-opslag
+Subject: LUN %LUN_NAME% opslag op %HOSTNAME% wordt bijna volledig gebruikt
+
+Beste gebruiker
+
+Er is weinig vrije capaciteit van LUN %LUN_NAME% op %HOSTNAME%. Breidt het volume uit voor meer capaciteit.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[TaskSchedulerResult]
+Subject: Taakplanner heeft een geplande taak voltooid
+
+Beste gebruiker
+
+Taakplanner heeft een geplande taak voltooid.
+
+Taak: %TASK_ID%
+Starttijd: %START_TIME%
+Stoptijd: %STOP_TIME%
+Huidige status: %EXIT_CODE%
+Standaard uitvoer/fout:
+%OUTPUT%
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[TestMail]
+Subject: Testbericht van %HOSTNAME%
+
+Beste gebruiker
+
+Gefeliciteerd! U hebt het e-mailbericht ingesteld op %HOSTNAME%.
+Voor bijkomende systeemconfiguraties, ga naar %HTTP_URL%.
+(Neem contact op met de systeembeheerder als u geen verbinding kunt maken met de server.)
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[UPSConnected]
+Category: Power System
+Title: UPS verbonden
+Subject: %HOSTNAME% is verbonden met UPS.
+
+Beste gebruiker,
+
+%HOSTNAME% is verbonden met UPS.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[UPSDisconnect]
+Category: Power System,Important
+Title: UPS verbinding verbroken
+Subject: Verbinding van %HOSTNAME% met UPS is verbroken.
+
+Beste gebruiker,
+
+Verbinding van %HOSTNAME% met UPS is verbroken. Controleer de serverinstellingen.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[UPSOnAC]
+Category: Power System,Important
+Title: UPS is teruggekeerd naar AC-modus
+Subject: Het UPS-apparaat dat is aangesloten op %HOSTNAME% is teruggekeerd naar AC-modus.
+
+Beste gebruiker
+
+Het UPS-apparaat dat is aangesloten op %HOSTNAME% is teruggekeerd naar AC-modus.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[UPSOnBattery]
+Category: Power System,Important
+Title: UPS is overgeschakeld naar de batterijmodus
+Subject: Het UPS-apparaat dat is aangesloten op %HOSTNAME% is overgeschakeld naar de batterijmodus.
+
+Beste gebruiker
+
+Het UPS-apparaat dat is aangesloten op %HOSTNAME% is overgeschakeld naar de batterijmodus. Als de batterij leeg is, wordt %HOSTNAME% uitgeschakeld. Schakel %HOSTNAME% handmatig uit of sluit een externe stroombron aan.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[UPSPowerFail]
+Category: Power System,Important
+Title: UPS-accu is bijna leeg
+Subject: Accu van UPS aangesloten op %HOSTNAME% is bijna leeg
+
+Beste gebruiker
+
+Accu van UPS aangesloten op %HOSTNAME% is bijna leeg. Alle services worden uitgeschakeld. De services zullen opnieuw worden opgestart zodra de UPS is hersteld.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[USBCOPYDisconnect]
+Category: USB Copy
+Title: Verbinding USBCopy verbroken
+Subject: Verbinding met extern apparaat op %HOSTNAME% is verbroken
+
+Beste gebruiker,
+
+Het %COPY%-proces op %HOSTNAME% is mislukt omdat de verbinding met het externe apparaat is verbroken.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[USBCOPYError]
+Category: USB Copy,Important
+Title: USBCopy mislukt
+Subject: Het %COPY%-proces op %HOSTNAME% is mislukt
+
+Beste gebruiker,
+
+Het %COPY%-proces op %HOSTNAME% is mislukt wegens onbekende fouten.
+De foutcode is %ERR%. Kijk in het logboek van USBCopy/SDCopy voor meer informatie.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[USBCOPYFinished]
+Category: USB Copy
+Title: USBCopy voltooid
+Subject: Het %COPY%-proces op %HOSTNAME% is voltooid
+
+Beste gebruiker,
+
+Het %COPY%-proces op %HOSTNAME% is voltooid.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[USBCOPYNospace]
+Category: USB Copy,Important
+Title: USBCopy geannuleerd
+Subject: De %COPY% op %HOSTNAME% is geannuleerd
+
+Beste gebruiker
+
+Het %COPY%-proces op %HOSTNAME% is geannuleerd omdat er onvoldoende vrije ruimte is op de gedeelde doelmap.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[USBDiskFail]
+Category: External Storage
+Title: USB-schijf defect
+Subject: S.M.A.R.T.-test mislukt op USB-schijf %DISK_ID% op %HOSTNAME%
+
+Beste gebruiker
+
+S.M.A.R.T.-test mislukt op USB-schijf %DISK_ID% op %HOSTNAME%.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[USBDiskFull]
+Category: External Storage
+Title: USB-schijf vol
+Subject: USB-schijf %DISK_NUMBER% op %HOSTNAME% heeft bijna geen vrije ruimte meer
+
+Beste gebruiker,
+
+Er is onvoldoende ruimte beschikbaar op USB-schijf %DISK_NUMBER% op %HOSTNAME%. Voer een herstelactie uit.
+
+Totale capaciteit: %DISK_SIZE% GB
+Beschikbare capaciteit: %FREE_SPACE% GB (%USAGE%%)
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[USBPartitionFull]
+Category: External Storage
+Title: USB-partitie vol
+Subject: Partitie %PARTITION_NUMBER% of USB-schijf %DISK_NUMBER% op %HOSTNAME% heeft bijna geen vrije ruimte meer
+
+Beste gebruiker
+
+Partitie %PARTITION_NUMBER% van USB-schijf %DISK_NUMBER% op %HOSTNAME% heeft bijna geen vrije ruimte meer. Onderneem een correctieve actie.
+
+Totale capaciteit: %DISK_SIZE% GB
+Beschikbare capaciteit: %FREE_SPACE% GB (%USAGE%%)
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[UserChangePassword]
+Subject: Uw wachtwoord op %HOSTNAME% is gewijzigd
+
+Beste %USER_NAME%,
+
+Dit is een bevestiging dat uw wachtwoord op %HOSTNAME% is gewijzigd.
+
+Ga naar %HTTP_URL% in de browser om uw accountinstellingen te wijzigen. (Neem contact op met de systeembeheerder als u geen verbinding kunt maken met de server.)
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[UserWelcome]
+Category: System
+Title: Welkom nieuwe gebruiker
+Subject: Welkom %USER_NAME% op de server %HOSTNAME%
+
+Beste gebruiker,
+
+Welkom bij %HOSTNAME%!
+U kunt via uw browser naar %HTTP_URL% gaan om uw persoonlijk profiel te wijzigen.
+(Neem contact op met de systeembeheerder als u geen verbinding kunt maken met de server.)
+
+Uw gebruikersnaam: %USER_NAME%
+Uw wachtwoord: %PASSWD%
+
+Met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[VolumeInodeFull]
+Category: Storage,Important
+Title: Bestandstelling op het volume heeft de limiet bereikt
+Subject: Bestandstelling op volume %VOLUME_ID% van %HOSTNAME% heeft de limiet bereikt
+
+Beste gebruiker
+
+Bestandentelling op volume %VOLUME_ID% van %HOSTNAME% heeft de limiet bereikt. Verwijder enkele bestanden om het aantal te verlagen.
+
+Het maximum aantal bestanden: %TOTAL_INODE%
+Het resterend aantal bestanden: %FREE_INODE% (%USAGE%%)
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[VpncReconnectFail]
+Category: System
+Title: Het opnieuw kiezen van de VPN-client is mislukt
+Subject: Het opnieuw verbinden van het VPN-profiel [%VPN_CLIENT%] op %HOSTNAME% is mislukt
+
+Beste gebruiker
+
+Het opnieuw verbinden van het VPN-profiel [%VPN_CLIENT%] op %HOSTNAME% is mislukt na verbreking van de verbinding. Controleer de verbinding tussen de VPN-client en de server.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[aha_reboot_active]
+Category: AHA,Important
+Title: Actieve server opnieuw opstarten
+Subject: De actieve server van de high-availability-cluster %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) is opnieuw opgestart
+
+Beste gebruiker
+
+Een administrator heeft de actieve server high-availability-cluster %HOSTNAME% opnieuw opgestart (SN: %HA_LOCAL_HOST_SN%).
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[aha_reboot_active_fail]
+Category: AHA,Important
+Title: Het opnieuw starten van de actieve server is mislukt
+Subject: Het opnieuw starten van de actieve server van de high-availability-cluster %HOSTNAME% is mislukt (SN: %HA_LOCAL_HOST_SN%)
+
+Beste gebruiker
+
+De actieve server van de high-availability-cluster%HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) kon niet opnieuw worden opgestart. Controleer de logboekpagina van High Availability Manager voor gedetailleerde informatie.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[aha_reboot_passive]
+Category: AHA
+Title: Passieve server opnieuw opstarten
+Subject: De passieve server van de high-availability-cluster %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) is opnieuw opgestart.
+
+Beste gebruiker
+
+Een gebruiker heeft de passieve server high-availability-cluster %HOSTNAME% opnieuw opgestart (SN: %HA_LOCAL_HOST_SN%).
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[aha_reboot_passive_fail]
+Category: AHA
+Title: Het opnieuw starten van de passieve server is mislukt.
+Subject: Het opnieuw starten van de passieve server van de high-availability-cluster %HOSTNAME% is mislukt (SN: %HA_LOCAL_HOST_SN%)
+
+Beste gebruiker
+
+De passieve server van de high-availability-cluster %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) kon niet opnieuw worden opgestart. Controleer de logboekpagina van High Availability Manager voor gedetailleerde informatie.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[aha_reboot_remote]
+Category: AHA
+Title: Onbekende server opnieuw opstarten
+Subject: De onbekende server die verbonden is met de high-availability-cluster %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) is opnieuw opgestart
+
+Beste gebruiker
+
+Een gebruiker heeft de onbekende server high-availability-cluster %HOSTNAME% opnieuw opgestart (SN: %HA_LOCAL_HOST_SN%).
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[aha_reboot_remote_fail]
+Category: AHA
+Title: Het opnieuw starten van de onbekende server is mislukt
+Subject: Het opnieuw starten van de onbekende server verbonden met de high-availability-cluster %HOSTNAME% is mislukt (SN: %HA_LOCAL_HOST_SN%)
+
+Beste gebruiker
+
+De onbekende server die verbonden is met de high-availability-cluster %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) kon niet opnieuw worden opgestart. Controleer de logboekpagina van High Availability Manager voor gedetailleerde informatie.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[aha_recover_remote]
+Category: AHA,Important
+Title: Een nieuwe server toevoegen
+Subject: Een nieuwe server toevoegen aan de high-availability-cluster
+
+Beste gebruiker
+
+Een beheerder heeft het terugzetten van de onbekende server gestart. De server wordt nu als passieve server gekoppeld aan de high-availability-cluster %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%). Controleer de logboekpagina van High Availability Manager voor gedetailleerde informatie.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[aha_recover_remote_fail]
+Category: AHA,Important
+Title: Toevoegen van nieuwe server is mislukt.
+Subject: Het toevoegen van een nieuwe server aan high-availability-cluster is mislukt
+
+Beste gebruiker
+
+Het koppelen van de onbekende server als passieve server aan de high-availability-cluster %HOSTNAME% is mislukt (SN: %HA_LOCAL_HOST_SN%). Controleer de logboekpagina van High Availability Manager voor gedetailleerde informatie.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[aha_shutdown]
+Category: AHA,Important
+Title: high-availability-cluster uitschakelen
+Subject: High-availability-cluster %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) is uitgeschakeld
+
+Beste gebruiker
+
+Een gebruiker heeft de high-availability-cluster %HOSTNAME% uitgeschakeld (SN: %HA_LOCAL_HOST_SN%).
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[aha_shutdown_active]
+Category: AHA,Important
+Title: Actieve server uitschakelen
+Subject: De actieve server van de high-availability-cluster %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) is uitgeschakeld
+
+Beste gebruiker
+
+Een administrator heeft de actieve server van de high-availability-cluster %HOSTNAME% uitgeschakeld (SN: %HA_LOCAL_HOST_SN%).
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[aha_shutdown_active_fail]
+Category: AHA,Important
+Title: Uitschakelen van de actieve server is mislukt
+Subject: Uitschakelen van de actieve server van de high-availability-cluster %HOSTNAME% is mislukt (SN: %HA_LOCAL_HOST_SN%)
+
+Beste gebruiker
+
+De actieve server van de high-availability-cluster%HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) kon niet worden uitgeschakeld. Controleer de logboekpagina van High Availability Manager voor gedetailleerde informatie.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[aha_shutdown_fail]
+Category: AHA,Important
+Title: Uitschakelen van de high-availability-cluster is mislukt
+Subject: Uitschakelen van de high-availability-cluster %HOSTNAME% is mislukt (SN: %HA_LOCAL_HOST_SN%)
+
+Beste gebruiker
+
+De high-availability cluster %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) kon niet worden uitgeschakeld. Controleer de logboekpagina van High Availability Manager voor gedetailleerde informatie.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[aha_shutdown_passive]
+Category: AHA,Important
+Title: Passieve server uitschakelen
+Subject: De passieve server van de high-availability-cluster %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) is uitgeschakeld
+
+Beste gebruiker
+
+Een administrator heeft de passieve server van de high-availability-cluster %HOSTNAME% uitgeschakeld (SN: %HA_LOCAL_HOST_SN%).
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[aha_shutdown_passive_fail]
+Category: AHA,Important
+Title: Uitschakelen van de passieve server is mislukt
+Subject: Uitschakelen van de passieve server van de high-availability-cluster %HOSTNAME% is mislukt (SN: %HA_LOCAL_HOST_SN%)
+
+Beste gebruiker
+
+De passieve server van de high-availability-cluster %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) kon niet worden uitgeschakeld. Controleer de logboekpagina van High Availability Manager voor gedetailleerde informatie.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[aha_shutdown_remote]
+Category: AHA
+Title: Onbekende server uitschakelen
+Subject: De onbekende server die verbonden is met de high-availability-cluster %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) is uitgeschakeld.
+
+Beste gebruiker
+
+Een gebruiker heeft de onbekende server high-availability-cluster %HOSTNAME% uitgeschakeld (SN: %HA_LOCAL_HOST_SN%).
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[aha_shutdown_remote_fail]
+Category: AHA,Important
+Title: Uitschakelen van de onbekende server is mislukt
+Subject: Uitschakelen van de onbekende server verbonden met de high-availability-cluster %HOSTNAME% is mislukt (SN: %HA_LOCAL_HOST_SN%)
+
+Beste gebruiker
+
+De onbekende server die verbonden is met de high-availability-cluster %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) kon niet worden uitgeschakeld. Controleer de logboekpagina van High Availability Manager voor gedetailleerde informatie.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[aha_switchover]
+Category: AHA,Important
+Title: Overschakelen van de high-availability-cluster
+Subject: Services van de high-availability-cluster %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) worden overgeschakeld naar %HA_REMOTE_HOST_SN%
+
+Beste gebruiker
+
+Het systeem heeft een overschakeling geactiveerd van de high-availability-cluster %HOSTNAME%. %HA_LOCAL_HOST_SN%). Services worden overgeschakeld naar %HA_REMOTE_HOST_SN%. Controleer de logboekpagina van High Availability Manager voor gedetailleerde informatie.
+
+Reden: %HA_FAILOVER_REASON%
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[aha_switchover_fail]
+Category: AHA,Important
+Title: De overschakeling van de high-availability-cluster is mislukt
+Subject: Services van de high-availability-cluster %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) konden niet worden overgeschakeld naar %HA_REMOTE_HOST_SN%
+
+Beste gebruiker
+
+Het systeem heeft gepoogd om een overschakeling uit te voeren naar high-availability-cluster %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%). De overschakeling van de services naar de passieve server is echter mislukt (SN: %HA_REMOTE_HOST_SN%). Controleer de logboekpagina van High Availability Manager voor gedetailleerde informatie.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[aha_takeover]
+Category: AHA,Important
+Title: High-availability-cluster failover
+Subject: Er zijn een fouten gedetecteerd op high-availability-cluster %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%)
+
+Beste gebruiker
+
+Er zijn een fouten gedetecteerd op high-availability-cluster %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%). De services worden overgeschakeld naar de passieve server. Controleer de logboekpagina van High Availability Manager voor gedetailleerde informatie.
+
+Fout: %HA_FAILOVER_REASON%
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[aha_upgrade_fail]
+Category: AHA,Important
+Title: Het upgraden van de high-availability-cluster is mislukt
+Subject: Het upgraden van de high-availability-cluster %HOSTNAME% is mislukt (SN: %HA_LOCAL_HOST_SN%)
+
+Beste gebruiker
+
+De high-availability cluster %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) kon niet worden geüpgraded. Controleer de logboekpagina van High Availability Manager voor gedetailleerde informatie.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[aha_upgrade_passive_fail]
+Category: AHA,Important
+Title: Upgraden van de passieve server is mislukt
+Subject: Het upgraden van de passieve server van high-availability-cluster %HOSTNAME% is mislukt (SN: %HA_LOCAL_HOST_SN%)
+
+Beste gebruiker
+
+De passieve server van de high-availability-cluster %HOSTNAME% (SN: %HA_LOCAL_HOST_SN%) kon niet worden geüpgraded. Controleer de logboekpagina van High Availability Manager voor gedetailleerde informatie.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[aha_welcome]
+Category: AHA
+Title: High-availability-cluster in werking
+Subject: De high-availability-cluster %HOSTNAME% bestuurt nu de services op %HA_LOCAL_HOST_SN%
+
+Beste gebruiker
+
+De services van de high-availability-cluster %HOSTNAME% lopen nu op %HA_LOCAL_HOST_SN%. Controleer de logboekpagina van High Availability Manager voor gedetailleerde informatie.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[disk_health_monthly_report]
+Subject: Maandelijks schijfintegriteitsrapport op %HOSTNAME%
+
+Beste gebruiker
+
+Dit het maandelijks schijfintegriteitsrapport van de schijven op %HOSTNAME%. U kunt de integriteit van individuele schijven ook controleren op Opslagbeheer > HDD/SSD > Integriteitsinfo.
+
+%CONTENT%
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[eSynoscheduler_complete_task]
+Subject: Taakplanner heeft een geactiveerde taak voltooid
+
+Beste gebruiker
+
+Taakplanner heeft een geactiveerde taak voltooid.
+
+Taak: %TASK%
+Starttijd: %START_TIME%
+Stoptijd: %END_TIME%
+Huidige status: %EXIT_CODE%
+Standaard uitvoer/fout:
+%OUT_PUT%
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[ext4_fs_err]
+Category: System,Important
+Title: Bestandssysteemfout
+Subject: Bestandssysteemfout gedetecteerd op %HOSTNAME%.
+
+Beste gebruiker
+
+Er is een bestandssysteemfout gedetecteerd op volume %VOLUME_ID%. Ga naar Opslagbeheer om het onmiddellijk te repareren.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[file_cksum_err]
+Category: System,Important
+Title: Controlesomfout
+Subject: Controlesomfout op %HOSTNAME%. Controleer Log Center voor gedetailleerde informatie.
+
+Beste gebruiker
+
+Er is een controlesomfout gedetecteerd in bestand %FILE_PATH%. Gebruik de eerder opgeslagen versie om het bestand te repareren.
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+
+
+[iSCSILunScheduleSnapshotFail]
+Category: Storage,Important
+Title: Het maken van een snapshot van iSCSI LUN is mislukt
+Subject: Het maken van een snapshot van LUN iSCSI LUN %LUNNAME% op %HOSTNAME% is mislukt
+
+Beste gebruiker
+
+Het maken van een iSCSI LUN-snapshot op %HOSTNAME% is mislukt. Zie Opslagbeheer voor meer informatie.
+
+LUN: %LUNNAME%
+
+met vriendelijke groeten,
+%COMPANY_NAME%
+

@@ -1,0 +1,149 @@
+
+[HA_ConfSyncError]
+Subject: High-availability-kluster %HOSTNAME% upptäckte ett synkroniseringsfel vid kontroll av systemets konfiguration.
+
+Bäste användare,
+
+High-availability-klustret %HOSTNAME% upptäckte ett synkroniseringsfel vid kontroll av systemkonfiguration för den aktiva servern och den passiva servern. Systemet har försökt att åtgärda felet genom att utföra en fullständig synkronisering av systemkonfiguration. Vänligen se systemloggar på sidan Loggfiler i High Availability Manager för mer information.
+
+Åtgärd: %HA_ACTION%
+Fel: %HA_PARAM_1%
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[HA_FailOver]
+Subject: Fel upptäcktes på high-availability-klustret %HOSTNAME%.
+
+Bäste användare,
+
+Ett fel har upptäckts på high-availability-klustret %HOSTNAME%. Systemet kommer att göra en övergång av tjänster till den passiva servern. Vänligen se systemloggar för ytterligare information.
+
+Åtgärd: %HA_ACTION%
+Fel: %HA_PARAM_1%
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[HA_MismatchedSsdCache]
+Subject: Diskarna för SSD-cache är inte identiska på high-availability kluster %HOSTNAME%
+
+Bäste användare,
+
+Diskarna som hör till följande SSD-cache på den passiva servern %HA_PARAM_1% är inte identisk med disken på den aktiva servern: SSD-cache %HA_PARAM_2%.
+
+Vänligen Kontrollera Loggfiler för High Availability Manager för mer information.
+
+Åtgärd: %HA_ACTION%
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[HA_SplitBrain]
+Subject: Ett fel av typen redundansklyvning inträffade på high-availability-klustret %HOSTNAME%
+
+Bäste användare,
+
+Ett fel av typen redundansklyvning inträffade på high-availability-klustret %HOSTNAME%. Vänligen se systemloggar för ytterligare information.
+
+Åtgärd: %HA_ACTION%
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[HA_StatusChange]
+Subject: Status för high-availability-klustret %HOSTNAME% har ändrats från %HA_PARAM_1% till %HA_PARAM_2%.
+
+Bäste användare,
+
+Statusen för high-availability-klustret %HOSTNAME% har ändrats från %HA_PARAM_1% till %HA_PARAM_2%. Vänligen se systemloggar på sidan Loggfiler i High Availability Manager för mer information.
+
+Åtgärd: %HA_ACTION%
+Beskrivning: %HA_PARAM_3%
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[HA_SwitchFail]
+Subject: Misslyckades utföra en övergång av tjänster för high-availability-klustret %HOSTNAME%
+
+Bäste användare,
+
+Systemet försökte utföra en övergång av tjänster till den passiva servern på high-availability-klustret %HOSTNAME% men misslyckades. Vänligen se systemloggar för ytterligare information.
+
+Åtgärd: %HA_ACTION%
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[HA_SwitchFinished]
+Subject: High-availability-klustret %HOSTNAME% kör nu tjänster på %HA_PARAM_1%.
+
+Bäste användare,
+
+Tjänsterna för high-availability-klustret %HOSTNAME% körs nu på %HA_PARAM_1%. Vänligen se systemloggar på sidan Loggfiler i High Availability Manager för mer information.
+
+Åtgärd: %HA_ACTION%
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[HA_SwitchOver]
+Subject: Övergång av high-availability-klustret %HOSTNAME% till %HA_PARAM_1%.
+
+Bäste användare,
+
+Någon har initierat en övergång av high-availability-klustret %HOSTNAME%. Tjänster kommer att föras över till %HA_PARAM_1%. Vänligen se systemloggar för ytterligare information.
+
+Åtgärd: %HA_ACTION%
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[HA_SwitchOver_With_Reason]
+Subject: High-availability-kluster %HOSTNAME% initierade en övergång till %HA_PARAM_1%.
+
+Bäste användare,
+
+En övergång har initierats på high-availability-klustret %HOSTNAME%. Tjänster kommer att föras över till %HA_PARAM_1%. Vänligen se systemloggar för ytterligare information.
+
+Åtgärd: %HA_ACTION%
+Orsak: %HA_PARAM_2%
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[HA_SyncComplete]
+Subject: Fullständig datareplikering av high-availability-klustret %HOSTNAME% har slutförts.
+
+Bäste användare,
+
+Fullständig datareplikering av high-availability-klustret %HOSTNAME% har slutförts. Den passiva servern är nu klar att ta över tjänster om en övergång behövs. Vänligen se systemloggar på sidan Loggfiler i High Availability Manager för mer information.
+
+Åtgärd: %HA_ACTION%
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+
+
+[HA_UnbindLocal]
+Subject: Localhost har tagits bort från high-availability-klustret
+
+Bäste användare,
+
+%HA_PARAM_1% har tagits bort från high-availability-klustret %HA_PARAM_2%. Vänligen se systemloggar för ytterligare information.
+
+Åtgärd: %HA_ACTION%
+
+Med vänliga hälsningar,
+%COMPANY_NAME%
+

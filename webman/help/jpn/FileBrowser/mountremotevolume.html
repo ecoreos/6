@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>File Station</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2>リモートフォルダをマウント</h2>
+
+<p>
+リモートサーバー (ネットワークコンピュータや他の Synology NAS デバイスなど) からリモートフォルダをマウントして、File Station でマウントしたフォルダを簡単にナビゲートすることができます。
+</p>
+
+
+
+
+
+<h4>リモート CIFS 共有フォルダをマウントするには：</h4>
+<ol>
+<li><b>[ツール]</b> > <b>[リモート フォルダをマウント]</b> > <strong>[CIFS 共有フォルダ]</strong> をクリックします。</li>
+
+<img src="about:blank" class="help_image"/>
+
+<li><b>[フォルダ]</b> 欄に、<code>\\Remote_Server\Remote_Folder</code> の形式でリモート フォルダのパスを指定します。例：<code>\\192.168.0.2\share</code> or <code>\\chad\cheeseburger\pictures</code></li>
+<li>リモート サーバーがリモート フォルダに対してアクセス権を必要とする場合は、リモート サーバーのログイン情報を <b>[アカウント名]</b> と <b>[パスワード]</b> 欄に入力してください。</li>
+<li><b>[参照]</b> をクリックして、リモートフォルダをマウントするために DiskStation に空白のマウント先フォルダを選択または作成します。</li>
+
+<img src="about:blank" class="help_image"/>
+
+<li>システムを起動またはリブートする度に、DiskStation をリモートフォルダにマウントするには、<b>[スタートアップで自動的にマウントする]</b> にチェックマークを付けてください。</li>
+<li><b>[マウント]</b> をクリックし、リモート フォルダをディスティネーション フォルダにマウントします。DiskStation からリモート フォルダをナビゲートしたり、管理したりすることが可能になりました。</li>
+</ol>
+
+<h4>リモート NFS 共有フォルダをマウントするには：</h4>
+
+<ol>
+<li><b>[ツール]</b> > <b>[リモート フォルダをマウント]</b> > <b>[NFS 共有フォルダ]</b> をクリックします。</li>
+
+<img src="about:blank" class="help_image"/>
+
+<li><b>[フォルダ]</b> 欄に、<code>Remote_Server:/Remote_Folder_Path</code> の形式でリモート フォルダのパスを指定します。例：<code>192.168.0.2:/volume1/share</code></li>
+<li>NFS バージョンと転送プロトコルを選択します。</li>
+<li><b>[参照]</b> をクリックして、リモートフォルダをマウントするために DiskStation に空白のマウント先フォルダを選択または作成します。</li>
+
+<img src="about:blank" class="help_image"/>
+
+<li>システムを起動またはリブートする度に、DiskStation をリモートフォルダにマウントするには、<b>[スタートアップで自動的にマウントする]</b> にチェックマークを付けてください。</li>
+<li><b>[マウント]</b> をクリックし、リモート フォルダをディスティネーション フォルダにマウントします。DiskStation からリモート フォルダをナビゲートしたり、管理したりすることが可能になりました。</li>
+</ol>
+
+<div class="section">
+<h4>注意：</h4>
+<p>NFSv4 は TCP プロトコルのみサポートしています。</p>
+</div>
+
+<h4>リモートフォルダをマウント解除するには：</h4>
+<ol>
+<li>マウント解除したいリモートフォルダを選択し、<b>[ツール]</b> > <b>[アンマウント]</b> をクリックします。</li>
+
+<img src="about:blank" class="help_image"/>
+
+<li>または、リモートフォルダを右クリックして <b>[アンマウント]</b> を選択します。</li>
+
+<img src="about:blank" class="help_image"/>
+
+</ol>
+
+<div class="section">
+<h4>注意：</h4>
+<ul>
+<li>同時に稼働可能なリモートフォルダの数は 100 台です。</li>
+<li>CIFS プロトコルまたは NFS プロトコルに対応するリモートサーバーからしかリモートフォルダをマウントすることはできません。
+</li>
+<li>リモート フォルダは、共有フォルダの中のサブフォルダにしかマウントできません。</li>
+<li class="enable-dockerx64">リモートフォルダのマウントは、高権限モードでのみサポートされています。この機能を使用するには、ホスト DSM で Docker パッケージを選択し、暗号化した共有フォルダを有効にする <strong>[Docker DSM]</strong> を選択します。次に、<strong>[編集]</strong> をクリックし、<strong>[高権限実行コンテナを使う]</strong> にチェックマークを付けます。</li>
+</ul>
+</div>
+
+
+<p>____<br /> * 特定のモデルでのみ使用できます。</p>
+
+</body>
+</html>

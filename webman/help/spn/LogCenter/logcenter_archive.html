@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Centro de registros</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+
+</head>
+<body>
+<h2>Configuración de archivo</h2>
+
+<p>La página de <strong>Configuración de archivo</strong> ofrece opciones para configurar cómo y dónde se archivan los registros recibidos por el Centro de registros. Utilice las opciones siguientes para especificar la ubicación de almacenamiento y las reglas para crear archivos de registros automáticamente.</p>
+
+
+<h3>Destino de almacenamiento para archivos</h3>
+
+<p>El destino se refiere a la carpeta donde se almacenan y archivan los registros recibidos por el Centro de registros. Haga clic en <strong>Seleccionar ubicación</strong> para elegir la carpeta.</p>
+<p>Si desea que los registros locales de DiskStation se archiven en el mismo destino, marque la casilla designada <strong>Archivar registros locales en la ubicación de almacenamiento especificada anteriormente</strong>. En la mayoría de casos, esto proporciona más espacio de almacenamiento para los registros locales, lo que le permite mantener un sistema de registros más completo.</p><!--DSM#61793: Describe how logs are archived in data volume--><div class="section">
+<h4>Nota:</h4>
+<p>Los registros locales (registros de sistema, de conexión y de transferencia de archivos) se guardan en una partición del sistema que tiene un almacenamiento limitado. Cuando se habilita <strong>Archivar los registros locales a la ubicación de almacenamiento indicada anteriormente</strong>, todos los registros se archivan en el destino indicado de acuerdo con las <strong>reglas de archivo</strong>. Para examinar los registros locales, haga clic en <strong>Abrir archivo de registros</strong> y seleccione <strong>SYNOSYSLOGDB__LOCALARCH.DB</strong>.</p>
+</div>
+
+
+<h3>Reglas de archivo</h3>
+
+<p>Los registros se archivan automáticamente según los criterios definidos en la sección de <strong>Reglas de archivo</strong>. Los registros se pueden archivar automáticamente cuando el tamaño de la base de datos de registros alcance un tamaño especificado, el número de registros individuales alcance un número específico o los registros alcancen una antigüedad específica.</p>
+
+<h3>Formato de archivo</h3>
+<p>Esta sección incluye las siguientes opciones.</p>
+<ul>
+<li><strong>Archivar registros con formato de texto además del formato predeterminado:</strong> Guarda archivos como archivos de solo texto, además de los archivos SQLite predeterminados.</li>
+<li><strong>Comprimir registros de archivos:</strong> Guarda archivos de registros como archivos comprimidos en formato ZIP.</li>
+<li><strong>Archivar registros de manera separada según el dispositivo:</strong> Guarda archivos separados para dispositivos cliente individuales que envían registros a DiskStation.</li>
+</ul>
+
+</body>

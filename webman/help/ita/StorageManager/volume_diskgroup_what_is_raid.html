@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Scegliere un tipo RAID - Guida Synology DSM</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="A brief overview describing what RAID types are supported by Synology DiskStation Manager (DSM).">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Scegliere un tipo RAID</h2>
+
+<p>RAID (Redundant Array of Independent Disks) è una tecnologia per l'archiviazione dei dati che consente a più dischi rigidi di essere combinati in un singolo spazio di archiviazione. Sono presenti diversi tipi di RAID, ciascuno dei quali fornisce diversi livelli di prestazioni, capacità di archiviazione e affidabilità.</p>
+
+<p>In questo articolo è fornita una breve panoramica dei tipi RAID supportati da DiskStation, inclusi i requisiti di implementazione nonché vantaggi e svantaggi.</p>
+
+<!--1-->
+
+<h3>Tipi di RAID supportati</h3>
+
+<p>Questa tabella fornisce una breve panoramica dei diversi tipi di RAID supportati da DiskStation, inclusi capacità di archiviazione, numero minimo di dischi rigidi necessario per il tipo di RAID e numero di guasti del disco rigido che possono essere tollerati prima della perdita dei dati. </p>
+
+<table>
+
+  <tr>
+
+    <th>Tipo di volume</th>
+    <th>Numero di HDD</th>
+
+    <th>Guasti disco rigido tollerabili</th>
+    <th>Descrizione</th>
+
+    <th>Capacità volume</th>
+
+  </tr>
+
+  <tr>
+
+    <td rowspan="3">SHR</td>
+    <td>1</td>
+
+    <td>0</td>
+    <td rowspan="3">
+    <div align="left">
+    <ul>
+    <li>Ottimizza le dimensioni del volume quando si combinano dischi rigidi di dimensioni diverse.</li>
+    <li>Fornisce la ridondanza dati se il volume è composto da due o più dischi rigidi.</li>
+    <li>Raccomandato per utenti principianti.</li>
+    </ul>
+    </div>
+    </td>
+
+    <td>1 x (dimensioni HDD)</td>
+
+  </tr>
+  <tr>
+    <td>2-3</td>
+    <td>1</td>
+    <td rowspan="2">Ottimizzato dal sistema.</td>
+  </tr>
+  <tr>
+    <td>≧4</td>
+    <td>1-2</td>
+  </tr>
+  
+  <tr>
+
+    <td>Base</td>
+    <td>1</td>
+
+    <td>0</td>
+    <td>
+    <div align="left">
+    <ul>
+    <li>Composto da un disco rigido come unità indipendente.</li>
+    <li>Non fornisce la ridondanza dei dati.</li>
+    </ul>
+    </div>
+    </td>
+
+    <td>1 x (dimensioni HDD)</td>
+
+  </tr>
+
+  <tr>
+
+    <td>JBOD</td>
+    <td>≧1</td>
+
+    <td>0</td>
+    <td>
+    <div align="left">
+    <ul>
+    <li>Combina una raccolta di dischi rigidi in un singolo spazio di archiviazione con capacità pari alla somma della capacità totale dei dischi rigidi.</li>
+    <li>Non fornisce la ridondanza dei dati.</li>
+    </ul>
+    </div>
+    </td>
+
+    <td>Somma di tutte le dimensioni dei dischi rigidi</td>
+
+  </tr>
+
+  <tr>
+
+    <td>RAID 0</td>
+    <td>≧2</td>
+
+    <td>0</td>
+    <td>
+    <div align="left">
+    <ul>
+    <li>Offre lo "striping", un processo per la divisione dei dati in blocchi e la diffusione dei blocchi attraverso diversi dischi rigidi per migliorare le prestazioni.</li>
+    <li>Non fornisce la ridondanza dei dati.</li>
+    </ul>
+    </div>
+    </td>
+
+    <td>Somma di tutte le dimensioni dei dischi rigidi</td>
+
+  </tr>
+
+  <tr>
+
+    <td rowspan="3">RAID 1</td>
+    <td>2</td>
+
+    <td>1</td>
+    <td rowspan="3">
+    <div align="left">
+    <ul>
+    <li>Scrive dati identici a entrambi i dischi rigidi simultaneamente.</li>
+    <li>Fornisce la ridondanza dei dati.</li>
+    </ul>
+    </div>
+    </td>
+
+    <td rowspan="3">Dimensioni HDD più piccolo</td>
+
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>3</td>
+  </tr>
+
+  <tr>
+
+    <td>RAID 5</td>
+    <td>≧3</td>
+
+    <td>1</td>
+
+    <td>
+    <div align="left">
+    <ul>
+    <li>Implementa lo striping di livello blocco con dati parità distribuiti tra tutti i dischi rigidi membri, fornendo quindi una ridondanza dei dati più efficiente rispetto a RAID 1.</li>
+    </ul>
+    </div>
+    </td>
+
+    <td>(N – 1) x (dimensione minore HDD)</td>
+
+  </tr>
+
+  <tr>
+
+    <td>RAID 6</td>
+    <td>≧4</td>
+
+    <td>2</td>
+    <td>
+    <div align="left">
+    <ul>
+    <li>Implementa due livelli di parità dei dati per archiviare i dati di ridondanza uguali alle dimensioni dei due dischi rigidi, fornendo un grado più elevato di ridondanza dati rispetto a RAID 5.</li>
+    </ul>
+    </div>
+    </td>
+
+    <td>(N – 2) x (dimensione minore HDD)</td>
+
+  </tr>
+
+  <tr>
+
+    <td>RAID 10</td>
+    <td>≧4<br /> (numero pari)</td>
+
+    <td>Metà del n. totale HDD</td>
+    <td>
+    <div align="left">
+    <ul>
+    <li>Fornisce le prestazioni di RAID 0 e il livello di protezione dati di RAID 1, combinando i dischi rigidi in gruppi di due in cui i dati sono in mirroring.</li>
+    </ul>
+    </div>
+    </td>
+
+    <td>(N / 2) x (dimensione minore HDD)</td>
+
+  </tr>
+
+</table>
+
+
+<div class="section">
+<h4>Nota:</h4>
+<ul>
+<li>I tipi di RAID eccetto per "Basic" sono disponibili solo su certi modelli in base al numero di slot per disco rigido e al numero di dischi rigidi installati.</li>
+<li>"N" rappresenta il numero totale di dischi rigidi all'interno del volume.</li>
+</ul>
+</div>
+
+
+
+
+<!--2-->
+<h3>Synology Hybrid RAID (SHR)</h3>
+
+<p>Synology Hybrid RAID (SHR) è un sistema di gestione RAID automatizzato, progettato per semplificare la gestione dell'archiviazione e soddisfare le necessità dei nuovi utenti che non hanno familiarità con i tipi RAID. </p>
+<p>SHR può combinare dischi rigidi di diverse dimensioni per creare un volume di archiviazione con prestazioni e capacità ottimizzata, perdendo meno spazio sul disco rigido e fornendo una soluzione di archiviazione più flessibile.  Se sono inclusi dischi rigidi sufficienti, SHR consente la ridondanza per 1 o 2 dischi - ovvero il volume SHR può sopportare un massimo di uno o due dischi rigidi guasti senza perdita di dati.</p>
+<img src="about:blank" class="help_image"/>
+
+
+
+
+
+
+<!--3-->
+
+<h3>RAID 0</h3>
+<p>RAID 0 combina due o più dischi rigidi per aumentare prestazioni e capacità, ma senza tolleranza dei guasti. Un guasto di un solo disco rigido risulterà nella perdita di tutti i dati sull'array. RAID 0 è utile per sistemi non critici, quando è necessario un equilibrio prestazioni/prezzo elevato.</p>
+<img src="about:blank" class="help_image"/>
+
+
+
+
+
+
+<!--4-->
+
+<h3>RAID 1</h3>
+<p>RAID 1 è più spesso implementato con due dischi rigidi. I dati sui dischi rigidi sono in mirroring, fornendo una tolleranza ai guasti in caso di guasto del disco rigido. Prestazioni in lettura migliorate, mentre le prestazioni in scrittura saranno simili a quelle di un disco rigido singolo. Il guasto a un singolo disco rigido può essere sostenuto senza perdita di dati. RAID 1 è spesso usato quando la tolleranza di guasto è fondamentale, mentre lo spazio e le prestazioni non sono requisiti critici.</p>
+<img src="about:blank" class="help_image"/>
+
+
+
+<!--5-->
+
+<h3>RAID 5</h3>
+<p>RAID 5 fornisce tolleranza al guasto e prestazioni di lettura migliorate. È necessario un minimo di tre dischi rigidi. RAID 5 può sostenere la perdita di un singolo disco rigido. In caso di guasto di un disco rigido, i dati provenienti dal disco rigido guasto sono ricostruiti dalla parità con striping attraverso i dischi rigidi riparati. Come risultato, le prestazioni in scrittura e lettura sono gravemente influenzate mentre un array RAID 5 è in uno stato danneggiato. RAID 5 è ideale quando lo spazio e il costo sono più importanti delle prestazioni.</p>
+<img src="about:blank" class="help_image"/>
+
+
+
+<!--6-->
+
+<h3>RAID 6</h3>
+<p>RAID 6 è simile a RAID 5, tranne che fornisce un altro livello di striping e consente sostenere due guasti ai dischi. È necessario un minimo di quattro dischi rigidi. Le prestazioni di RAID 6 sono inferiori a quelle di RAID 5 a causa della tolleranza aggiuntiva ai guasti. RAID 6 risulta appropriato quando lo spazio e il costo sono importanti ed è necessario il supporto di più guasti dei dischi rigidi.</p>
+<img src="about:blank" class="help_image"/>
+
+
+
+<!--7-->
+
+<h3>RAID 10</h3>
+<p>RAID 10 combina i vantaggi di RAID 1 e RAID 0. Prestazioni in lettura e scrittura migliorate, ma solo metà dello spazio totale è disponibile per l'archiviazione dei dati. Sono necessari quattro o più dischi rigidi, facendo lievitare i costi, ma le prestazioni sono buone e, nel contempo, viene fornita la tolleranza ai guasti. Infatti, un RAID 10 può sostenere più guasti dei dischi rigidi, purché i guasti non siano nello stesso sottogruppo. RAID 10 è ideale per applicazioni con elevate richieste di ingresso/uscita, come server di database.</p>
+
+<img src="about:blank" class="help_image"/>
+
+
+</body>
+</html>

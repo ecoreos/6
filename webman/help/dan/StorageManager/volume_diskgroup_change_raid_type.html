@@ -1,0 +1,114 @@
+ <!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Udskift RAID-type for en diskenhed eller diskgruppe - Synology DSM - Hjælp</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="This article provides instructions to change the RAID type of existing volumes and disk groups on your DiskStation.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Udskift RAID-type for en diskenhed eller diskgruppe</h2>
+
+<p>Diskenheder og diskgrupper kan ændres fra en RAID-type til en anden uden at miste eksisterende data. Du kan f.eks. oprette en RAID 1-diskenhed på din DiskStation og senere ændre til RAID 5, hvis du installerer flere harddiske. Denne artikel giver oplysninger om ændring af RAID-type for eksisterende diskeheder og diskgrupper på din DiskStation.</p>
+<h3>RAID-typebegrænsninger</h3>
+
+<p>Kun nogle RAID-typer kan ændres til andre RAID-typer. Se i nedenstående tabel for at få flere oplysninger.</p>
+
+<table>
+  <tr>
+    <th width="50%">RAID-type</th>
+    <th width="50%">Kan ændres til...</th>
+  </tr>
+  <tr>
+    <td>Basic</td>
+    <td>RAID 1<br /> RAID 5</td>
+  </tr>
+  <tr>
+    <td>RAID 1</td>
+    <td>RAID 5</td>
+  </tr>
+  <tr>
+    <td>RAID 5</td>
+    <td>RAID 6</td>
+  </tr>
+
+</table>
+
+<div class="section">
+<h4>Eksempel:</h4>
+<p>RAID 1 kan ændres til RAID 5, men RAID 5 kan ikke ændres til RAID 1.</p>
+</div>
+
+
+<h3>Harddiskkrav:</h3>
+
+<p>Hvis du vil ændre RAID-type for en diskenhed eller diskgruppe, skal der være tilstrækkeligt med tilgængelige harddiske installeret på din DiskStation. Nedenfor vises minimumantallet af harddiske, der kræves til hver RAID-type.</p>
+
+<table>
+  <tr>
+    <th width="50%">Ønsket RAID-type</th>
+    <th width="50%">Krævede harddiske</th>
+  </tr>
+  <tr>
+    <td>RAID 1</td>
+    <td>2 eller 4</td>
+  </tr>
+  <tr>
+    <td>RAID 5</td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>RAID 6</td>
+    <td>4</td>
+  </tr>
+</table>
+
+<div class="section">
+<h4>Eksempel:</h4>
+<p>Hvis du vil ændre en RAID 1-diskenhed til RAID 5, skal du bruge mindst tre harddiske i alt (dvs. de to harddiske, der hører til RAID 1-diskenheden plus en ledig harddisk, der skal tilføjes til diskenheden).</p>
+</div>
+
+<h3>Skift RAID-type</h3>
+
+<p>I nedenstående eksempel vil vi ændre en <strong>Basic</strong>-diskenhed til en<strong>RAID 1</strong>-diskenhed.</p>
+
+<div class="section">
+<h4>Før du begynder:</h4>
+<ul>
+<li>Sørg for, at status for din diskenhed eller diskgruppe er <b>Normal</b>.</li>
+<li>Når du tilføjer nye harddiske til en diskenhed eller diskgruppe skal de nye harddiske værre større end den mindste disk på diskenheden eller i diskgruppen.</li>
+<li>Status for de nye harddiske skal være <b>Initialiseret</b> eller <b>Ikke initialiseret</b>.</li></ul>
+</div>
+
+<h4>Sådan skifter du RAID-typen for en diskenhed:</h4>
+
+<ol>
+<li>Åbn <strong>Lagerstyring</strong>.</li>
+<img src="about:blank" class="help_image"/>
+<li>Gå til <b>Diskenhed</b>.  (Hvis du vil ændre RAID-type for en diskgruppe, skal du gå til fanen <b>Diskgruppe</b>).</li>
+<li>Vælg den diskenhed, du vil ændre, og klik på <b>Administrer</b>.</li>
+<img src="about:blank" class="help_image"/>
+
+<li>Når konfigurationsguiden vises, vælger du <b>Skift RAID-type.</b> Klik derefter på <b>Næste</b>.</li>
+<img src="about:blank" class="help_image"/>
+
+
+<li>Vælg den RAID-type, som du vil skifte til. Klik på <b>Næste</b>.</li>
+<img src="about:blank" class="help_image"/>
+
+
+<li>Vælg de(n) udskiftningsharddisk(e), som du vil tilføje til diskenheden. Klik derefter på <b>Næste</b>.</li>
+<img src="about:blank" class="help_image"/>
+
+
+<li>Følg vejledningen i guiden for at afslutte. Bemærk, at eksisterende data på den tilføjede harddisk skal slettes.</li></ol>
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+ <!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Create a Volume - Synology DSM Help</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="This article walks you through the steps to create a volume on DiskStation using Storage Manager.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Create a Volume</h2>
+
+<p>This article explains how to create a volume on your DiskStation. When creating a new volume, you can choose one of the following methods:</p>
+
+<ul>
+  <li><b>Quick:</b> This is the best option for beginners. Choose this method if you want to automatically optimize storage capacity and performance, without worrying about technical aspects, such as RAID levels. </li>
+
+<li><b>Custom:</b> For advanced users who want to control the finer aspects of volume creation, such as RAID types and capacity allocation. This option supports different RAID types, allows you to create single or multiple volumes, and provides options to allocate specific amounts of capacity for each volume (only when creating multiple volumes on RAID).
+</li>
+</ul>
+
+<div class="section">
+<h4>Single or Multiple Volumes on RAID?</h4>
+<p>When creating a volume with custom mode, you can choose one of the following options:</p>
+<ul>
+  <li><b>Single Volume on RAID</b>
+    <ul>
+      <li>Creates a single volume using all of the available capacity of the selected hard drives.</li>
+      <li>Provides better speed and performance.</li>
+      <li>Supports different RAID types.</li>
+    </ul>
+  </li>
+  <li><b>Multiple Volumes on RAID</b>
+    <ul>
+      <li>Allows you to create multiple volumes on a disk group.</li>
+      <li>Supports allocating specific amounts of capacity to each volume.</li>
+      <li>Provides greater storage management flexibility.</li>
+      <li>Supports different RAID types.</li>
+    </ul>
+  </li>
+</ul>
+</div>
+
+
+<div class="section">
+<h4>Before You Start:</h4>
+<ul>
+<li>Before starting, make sure there is no important data on hard drives. All existing data will be deleted during the creation process.</li>
+<li>Go to the <b>HDD/SSD</b> page and make sure the status of each hard drive is <b>Normal</b> or <strong>Not initialized</strong>.</li>
+</ul>
+</div>
+
+<div class="section enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64">
+<h4>Note:</h4>
+<ul>
+<li>The minimum size for a Btrfs volume is 10GB.</li>
+<li>Btrfs volumes will reserve 4% of space for metadata.</li>
+</ul>
+</div>
+
+<h4>To create a volume:</h4>
+<ol>
+<li>Open <b>Storage Manager</b>.</li>
+<img src="about:blank" class="help_image"/>
+<li>Go to <b>Volume</b> and click <b>Create</b>.</li>
+<img src="about:blank" class="help_image"/>
+<li>You'll see the volume creation wizard. Select <strong>Quick</strong> or <strong>Custom</strong> depending on your needs. Then follow the steps of the wizard to finish creating the volume.</li>
+<img src="about:blank" class="help_image"/>
+</ol>
+
+</body>
+</html>

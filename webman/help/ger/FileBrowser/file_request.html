@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>File Station</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Dateianforderungen erstellen</h2>
+
+<p>Dateianforderungen sind Einladungen zum Hochladen von Dateien, die an Nicht-DSM-Benutzer geschickt werden. Mithilfe von Anforderungs-Links können Nicht-DSM-Benutzer mehrere Dateien direkt zu File Station auf Ihrem DiskStation hochladen, ohne dass sie entsprechende Benutzerkonten und Berechtigungen zum Hochladen von Dateien benötigen.</p>
+
+<h4>Links für Dateianforderung erstellen:</h4>
+<ol>
+<li>Gehen Sie zu <strong>File Station</strong> und wählen Sie einen Ordner als Upload-Ziel aus.</li>
+<li>Klicken Sie auf <strong>Aktion</strong> Oder rechtsklicken Sie auf den Zielordner und wählen Sie <strong>Dateianforderung erstellen</strong> aus.</li>
+<li>Im Popup-Fenster können Sie die nachstehenden Informationen finden/ändern:
+<ul>
+<li><strong>Dateipfad</strong>: Hier wird der Pfad des Zielverzeichnisses angezeigt.</li>
+<li><strong>Link</strong>: Hier wird der Anforderungs-Link angezeigt, der für bestimmte Benutzer freigegeben wird.</li>
+<li><strong>Ihr Name</strong>: Geben Sie einen Namen zur Identifizierung des Anforderers ein. Der voreingestellte Wert ist Ihr Benutzername.</li>
+<li><strong>Nachricht</strong>: Hier können Sie die Nachricht für die gewünschten Benutzer anpassen.</li>
+<li><strong>Kennwortschutz aktivieren</strong>: Wählen Sie diese Option aus, damit nur Benutzer mit dem Kennwort Dateien über den erstellten Link hochladen können. Geben Sie das Kennwort in das Feld unten ein.</li>
+<li><strong>Gültigkeitszeitraum</strong>: Klicken Sie auf diese Schaltfläche, um die Dauer dieses Links für Dateianforderung anzupassen:
+<ul>
+<li><strong>Stoppzeit einrichten</strong>: Wählen Sie diese Option aus, um nach Datum und Zeit zu bestimmen, wann der Link zum Hochladen von Dateien nicht mehr funktioniert.</li>
+<li><strong>Startzeit einrichten</strong>: Wählen Sie diese Option aus, um nach Datum und Zeit zu bestimmen, ab wann der Link zum Hochladen von Dateien funktioniert.</li>
+<li><strong>Anzahl zulässiger Zugriffe</strong>: Wählen Sie diese Option aus, um festzulegen wie oft auf den Link zugegriffen werden kann.</li>
+</ul>
+
+</li>
+
+</ul>
+
+
+</li>
+<li>Klicken Sie auf <strong>Speichern</strong>, um die Einstellungen abzuschließen.</li>
+</ol>
+
+
+<h4>Links für Dateianforderung freigeben:</h4>
+<p>Gehen Sie, um nach der URL für Dateianforderungen zu suchen, zu <strong>File Station</strong> > <strong>Extras</strong> > <strong>Verwaltung freigegebener Links</strong> dnd doppelklicken Sie auf den gewünschten Link. Sie können den Link auf eine der nachstehenden Weisen freigeben:</p>
+
+<ul>
+<li>Kopieren Sie einfach die URL für die betreffenden Benutzer.</li>
+<li>Senden Sie den Link über <strong>die Standard-E-Mail</strong> (Ihr DSM-E-Mail-Konto) oder über <strong>E-Mail</strong> (eine E-Mail-Anwendung eines Drittanbieters). Erstbenutzer sollten der Anleitung des Assistenten folgen, um das zu verwendende E-Mail-Konto einzurichten.</li>
+</ul>
+
+<h4>Dateien hochladen:</h4>
+<p>Gehen Sie wie folgt vor, wenn Sie gebeten werden, Dateien über den Link hochzuladen:</p>
+<ol>
+<li>Öffnen Sie die angegebene URL auf dem lokalen Computer oder auf einem Mobilgerät (Android oder iOS). Geben Sie, soweit erforderlich, das Kennwort ein.</li>
+<li>Geben Sie auf der Upload-Seite einen Namen ein, der Sie identifiziert.</li>
+<li>Ziehen Sie einfach die hochzuladende(n) Datei(en) und legen Sie sie ab oder klicken Sie auf <strong>Dateien hinzufügen</strong>, um die Datei(en) auszuwählen.</li>
+<li>Klicken Sie auf <strong>Hochladen</strong>, um die Anforderung abzuschließen.</li>
+</ol>
+
+<div class="section">
+<h4>Hinweis:</h4>
+<ul>
+<li>Ordner können über einen Link für Dateianforderung nicht hochgeladen werden.</li>
+<li>Ordner im freigegebenen Ordner "web" können nicht als Zielordner angegeben werden.</li>
+<li>Die Upload-Funktion ist vom Browser abhängig:
+<ul>
+<li>Internet Explorer 8 und Internet Explorer 9 unterstützen nicht das Hochladen von Dateien per Drag-and-Drop.</li>
+<li>Chrome auf iOS-Geräten unterstützt nur das Hochladen von Bildern.</li>
+<li>Safari auf iOS-Geräten unterstützt nur das Hochladen von Bildern.</li>
+<li>Für Browser auf Android-Geräten gelten keine Einschränkungen in Bezug auf den Dateityp.</li>
+</ul>
+</li>
+
+</ul>
+
+</div>
+
+
+<h4>Hochgeladene Dateien suchen:</h4>
+<p>Die von einem Benutzer hochgeladenen Dateien erscheinen im selben Ordner auf dem Ziel. Standardmäßig hat der Ordner den Namen <strong>Uploader_Name (Anforderer_Name)</strong>.</p>
+<p>Werden die Dateien beispielsweise von <strong>Watson</strong> zu <strong>Holmes</strong> hochgeladen, finden Sie die Dateien im Ordner mit dem Namen <strong>Watson (Holmes)</strong>.</p>
+
+
+<h3>Verwalten von Links für Dateianforderung</h3>
+
+<h4>Links für Dateianforderung ändern:</h4>
+<p>Nachdem Sie einen Link für Dateianforderung erstellt haben, können Sie die zugehörigen Einstellungen unter <strong>File Station</strong> > <strong>Extras</strong> > <strong>Verwaltung freigegebener Links</strong> ändern.</p>
+
+<ol>
+<li>Doppelklicken Sie auf den gewünschten Link oder wählen Sie den Link aus und klicken Sie auf <strong>Bearbeiten</strong>.</li>
+<li>Ändern Sie im Popup-Fenster die Einstellungen.</li>
+<li>Klicken Sie auf <strong>Speichern</strong>, um die neuen Einstellungen zu übernehmen.</li>
+</ol>
+
+<h4>Links für Dateianforderung löschen:</h4>
+<ol>
+<li>Gehen Sie zu <strong>File Station</strong> > <strong>Extras</strong> > <strong>Verwaltung freigegebener Links</strong>.</li>
+<li>Wählen Sie den (die) gewünschten Link(s) aus und klicken Sie auf <strong>Löschen</strong>. Die entsprechende(n) URL(s) für Dateianforderung ist sofort ohne Funktion.</li>
+</ol>
+
+<h4>Berechtigungen für Dateianforderungen zuweisen:</h4>
+<p>Als <strong>admin</strong> oder als Benutzer der Gruppe <strong>administrators</strong> können Sie Benutzern Berechtigungen zuweisen, damit sie Links für Dateianforderung erstellen können.</p>
+
+
+<ol>
+<li>Gehen Sie zu <strong>File Station</strong> > <strong>Einstellungen</strong> > <strong>Freigegebene Links</strong> > <strong>Links für Dateianforderung</strong>.</li>
+<li>Wählen Sie die Benutzertypen aus, um ihnen Berechtigungen für Dateianforderungen zuzuweisen.</li>
+<li>Klicken Sie auf <strong>OK</strong>, um die Einstellungen zu speichern.</li>
+</ol>
+
+
+
+
+
+</body>
+</html>

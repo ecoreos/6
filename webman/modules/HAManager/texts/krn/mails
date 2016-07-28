@@ -1,0 +1,149 @@
+
+[HA_ConfSyncError]
+Subject: High-availability 클러스터 %HOSTNAME%에서 시스템 구성 확인 중에 동기화 오류를 발견했습니다.
+
+사용자님께
+
+High-availability 클러스터 %HOSTNAME%에서 활성 서버와 수동 서버의 시스템 구성 확인 중에 동기화 오류를 발견했습니다. 시스템에서 시스템 구성 전체 동기화를 수행하여 오류 수정을 시도했습니다. 자세한 정보는 시스템 로그 또는 High Availability Manager의 로그 페이지를 확인하십시오.
+
+작업: %HA_ACTION%
+오류: %HA_PARAM_1%
+
+감사합니다.
+%COMPANY_NAME%
+
+
+[HA_FailOver]
+Subject: High-availability 클러스터 %HOSTNAME%에서 오류가 발견되었습니다.
+
+사용자님께,
+
+High-availability 클러스터 %HOSTNAME%에서 오류가 발견되었습니다. 시스템에서 서비스를 수동 서버로 전환합니다. 자세한 정보는 시스템 로그를 참조하십시오.
+
+작업: %HA_ACTION%
+오류: %HA_PARAM_1%
+
+감사합니다.
+%COMPANY_NAME%
+
+
+[HA_MismatchedSsdCache]
+Subject: SSD 캐시 디스크가 high-availability 클러스터 %HOSTNAME%에서 동일하지 않습니다.
+
+사용자님께
+
+수동 서버 %HA_PARAM_1%에서 다음 SSD 캐시에 속한 디스크가 활성 서버의 디스크와 동일하지 않습니다: SSD 캐시 %HA_PARAM_2%.
+
+자세한 정보는 High Availability Manager의 로그 페이지를 확인하십시오.
+
+작업: %HA_ACTION%
+
+감사합니다.
+%COMPANY_NAME%
+
+
+[HA_SplitBrain]
+Subject: High-availability 클러스터 %HOSTNAME%에 브레인 분할 오류가 발생했습니다.
+
+사용자님께,
+
+High-availability 클러스터 %HOSTNAME%에 브레인 분할 오류가 발생했습니다. 자세한 정보는 시스템 로그를 참조하십시오.
+
+작업: %HA_ACTION%
+
+감사합니다.
+%COMPANY_NAME%
+
+
+[HA_StatusChange]
+Subject: High-availability 클러스터 %HOSTNAME%의 상태가 %HA_PARAM_1%에서 %HA_PARAM_2%(으)로 변경되었습니다.
+
+사용자님께
+
+High-availability 클러스터 %HOSTNAME%의 상태가 %HA_PARAM_1%에서 %HA_PARAM_2%(으)로 변경되었습니다. 자세한 정보는 시스템 로그 또는 High Availability Manager의 로그 페이지를 확인하십시오.
+
+작업: %HA_ACTION%
+설명: %HA_PARAM_3%
+
+감사합니다.
+%COMPANY_NAME%
+
+
+[HA_SwitchFail]
+Subject: High-availability 클러스터 %HOSTNAME%의 서비스를 전환하지 못했습니다.
+
+사용자님께,
+
+시스템에서 high-availability 클러스터 %HOSTNAME%의 수동 서버로 서비스를 전환하려고 시도하였지만 실패했습니다. 자세한 정보는 시스템 로그를 참조하십시오.
+
+작업: %HA_ACTION%
+
+감사합니다.
+%COMPANY_NAME%
+
+
+[HA_SwitchFinished]
+Subject: 현재 High-availability 클러스터 %HOSTNAME%이(가) %HA_PARAM_1%에서 서비스를 실행하고 있습니다.
+
+사용자님께
+
+현재 High-availability 클러스터 %HOSTNAME%의 서비스를 %HA_PARAM_1%에서 실행하고 있습니다. 자세한 정보는 시스템 로그 또는 High Availability Manager의 로그 페이지를 확인하십시오.
+
+작업: %HA_ACTION%
+
+감사합니다.
+%COMPANY_NAME%
+
+
+[HA_SwitchOver]
+Subject: High-availability 클러스터 %HOSTNAME%을(를) %HA_PARAM_1%(으)로 전환합니다.
+
+사용자님께,
+
+누군가 high-availability 클러스터 %HOSTNAME%의 전환을 시작하였습니다. 서비스가 %HA_PARAM_1%(으)로 전환됩니다. 자세한 정보는 시스템 로그를 참조하십시오.
+
+작업: %HA_ACTION%
+
+감사합니다.
+%COMPANY_NAME%
+
+
+[HA_SwitchOver_With_Reason]
+Subject: High-availability 클러스터 %HOSTNAME%이(가) %HA_PARAM_1%으로의 전환을 시작하였습니다.
+
+사용자님께,
+
+High-availability 클러스터 %HOSTNAME%에서 전환이 시작되었습니다. 서비스가 %HA_PARAM_1%(으)로 전환됩니다. 자세한 정보는 시스템 로그를 참조하십시오.
+
+작업: %HA_ACTION%
+원인: %HA_PARAM_2%
+
+감사합니다.
+%COMPANY_NAME%
+
+
+[HA_SyncComplete]
+Subject: High-availability 클러스터 %HOSTNAME%의 전체 데이터 복제를 완료했습니다.
+
+사용자님께
+
+High-availability 클러스터 %HOSTNAME%의 전체 데이터 복제를 완료했습니다. 전환이 필요한 경우 수동 서버에서 서비스를 처리할 준비가 되었습니다. 자세한 정보는 시스템 로그 또는 High Availability Manager의 로그 페이지를 확인하십시오.
+
+작업: %HA_ACTION%
+
+감사합니다.
+%COMPANY_NAME%
+
+
+[HA_UnbindLocal]
+Subject: 로컬호스트가 high-availability 클러스터 에서 제거되었습니다
+
+사용자님께
+
+%HA_PARAM_1%을(를) High-availability 클러스터 %HA_PARAM_2%에서 제거했습니다. 자세한 정보는 시스템 로그를 참조하십시오.
+
+작업: %HA_ACTION%
+
+감사합니다.
+%COMPANY_NAME%
+

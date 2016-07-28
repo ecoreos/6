@@ -1,0 +1,101 @@
+ <!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Byt ut en hårddisk i en Volym eller Diskgrupp - Synology DSM Hjälp</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="This article walks you through the steps to replace a hard drive of an existing volume or disk group on DiskStation in order to increase storage capacity.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Byt ut hårddiskar för att utöka lagringskapaciteten</h2>
+
+<p>När vissa RAID-typer används kan du utöka lagringskapaciteten för en volym eller diskgrupp genom att byta ut äldre hårddiskar mot nya som har större storlekar. Denna artikel tillhandahåller viktig information om processen för utökning såväl som ett exempel på hur att byta ut befintliga hårddiskar för att utöka lagringskapacitet.</p>
+
+<div class="section">
+  <h4>Obs:</h4>
+<p>Förfarandet som beskrivs i denna artikel fungerar bara med SHR, RAID 1, RAID 5 och RAID 6. Om du planerar att byta ut flera hårddiskar måste du vara försiktig, så att du byter ut hårddiskarna en i taget. Efter utbyte av en hårddisk måste du reparera volymen eller diskgruppen innan du byter ut nästa. För RAID 1, RAID 5 och RAID 6 kommer kapaciteten för volym att utökas när väl alla diskar har bytts ut.</p>
+
+</div>
+
+
+<h3 class="list_head"><a name="t1"></a>  Innan du börjar</h3>
+
+<p>Innan du byter ut en hårddisk, vänligen se följande noteringar:<br/>
+
+<ul>
+<li><b>Säkerhetskopiera data:</b> Även om processen för utökning inte kommer att ta bort någon befintlig data rekommenderar vi å det bestämdaste säkerhetskopiering av dina data innan du fortsätter.</li>
+<li><b>Status för Volym eller Diskgrupp:</b> Först av allt, tillse att statusen för din volym eller diskgrupp är <b>Normal</b>. Om inte, måste du först reparera den.</li>
+<li><b>Är data fortfarande åtkomligt under utökning?</b> Data på ditt system kommer att vara tillgängligt vid utökning av volymer eller diskgrupper; även om systemet upphäver anslutningar temporärt när processen först börjar.</li>
+</ul>
+
+<div class="section">
+<h4>SHR (Synology Hybrid RAID)</h4>
+
+<p>Eftersom SHR-volymer optimerar lagringskapacitet baserat på antal och storlek av installerade hårddiskar, vänligen följ vägledningen här nedanför för att på rätt sätt utöka kapaciteten:</p>
+
+<ul>
+<li>Om kapaciteten av alla befintliga hårddiskar är likadan måste du byta ut minst två hårddiskar mot större för att kunna utöka lagringskapaciteten. Till exempel om din SHR-volym består av tre 2 TB hårddiskar så måste du byta ut minst två hårddiskar för att öka volymens kapacitet.</li>
+<li>Om kapaciteten för befintliga hårddiskar skiljer sig från de nya, ska utbyteshårddiskarna vara lika stora eller större än befintliga hårddiskar. Dessutom måste du byta ut mindre hårddiskar först för att optimera användningen av kapaciteten. Till exempel om dina SHR-volymer består av tre hårddiskar som är 4 TB, 3 TB och 2 TB var för sig, måste din nya utbyteshårddisk vara på minst 4 TB. Dessutom måste du först byta ut hårddiskarna med 3 TB och 2 TB.</i>
+</li>
+</ul>
+</div>
+
+<div class="section">
+<h4>RAID 5- och RAID 6</h4>
+
+<p>Vid utbyte av en hårddisk för volymer eller diskgrupper med RAID 5 eller RAID 6, ska den minsta hårddisken alltid bytas ut först. Lagringskapaciteten hos volymer med RAID 5 är (antal hårddiskar – 1) x (minsta hårddiskens storlek), och RAID 6 är (antalet hårddiskar – 2) x (minsta hårddiskens storlek). Därför ska den minsta hårddisken alltid bytas ut först för att maximera hårddiskanvändning.</p>
+
+<p>Till exempel, om din volym med RAID 5 innehåller tre hårddiskar om 4 TB, 3 TB och 2 TB var för sig kommer den tillgängliga kapaciteten för din volym att vara 4 TB. Om du byter ut hårddiskarna med 4 TB eller 3 TB kommer kapaciteten för den volymen inte att förändras. För att öka kapaciteten för din volyms kapacitet måste hårdisken med 2 TB bytas ut först.</p>
+</div>
+
+
+
+<h3>Byt ut hårddisk för att utöka lagringskapaciteten</h3>
+
+<p>I stegen här nedanför kommer vi att tillhandahålla ett exempel på att byta ut hårddiskar på en SHR-volym.</p>
+
+<h4>Att byta ut hårddiskar:</h4>
+<ol>
+<li>Öppna <b>Lagringshanterare</b>.</li>
+<img src="about:blank" class="help_image"/>
+<li>Gå till <strong>Volym</strong> för att se vilken av de befintliga hårddiskarna som är minst.</li>
+<img src="about:blank" class="help_image"/>
+
+<li>Stäng av din DiskStation. (Du kan hoppa över detta steg om din DiskStation stöder snabbväxling.)</li>
+<li>Ta bort den minsta av medlemsdiskarna och installera en ny, större hårddisk.</li>
+
+<div class="section">
+<h4>Obs:</h4>
+<p>För att förhindra att du skadar dig själv eller din DiskStation, vänligen följ instruktionerna för hårddiskinstallation som finns i <i>Snabb installationsguide</i> för din Synology-produkt.</p>
+</div>
+
+<li>Starta din DiskStation.</li>
+<li>Öppna <strong>Lagringshanterare</strong> igen.</li>
+<li>Gå till <strong>HDD/SSD</strong> för att säkerställa att den nya hårddisken känns igen.</li>
+<img src="about:blank" class="help_image"/>
+
+
+<li>Status för din volym bör vara <b>Trasig</b>. Välj volymen och klicka på <strong>Hantera</strong>.</li>
+<img src="about:blank" class="help_image"/>
+<li>Välj <b>Reparera</b>.</li>
+<img src="about:blank" class="help_image"/>
+
+<li>Välj den utbyteshårddisk som ska läggas till volymen. Följ sedan stegen i guiden för att slutföra.</li>
+<img src="about:blank" class="help_image"/>
+<li>Repetera ovanstående förfarande till dess alla önskade hårddiskar har bytts ut mot större.</li>
+</ol>
+
+
+
+
+
+
+</body>
+</html>

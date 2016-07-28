@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Win/Mac/NFS</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Mac-filservice</h2>
+
+<p>
+I <strong>Kontrollpanel</strong> > <strong>Filtjänster</strong> > <strong>Win/Mac/NFS</strong> kan du aktivera Mac-filservice för att göra DiskStation till en Mac filserver (AFP-server).</p>
+
+<h4>Aktivera Mac-filservice:</h4>
+<ol>
+<li>
+Markera <b>Aktivera Mac-filservice</b> för att göra DiskStation till en Mac-filserver (AFP-server).
+</li>
+<li>
+Ställ in en säkerhetskopieringsmapp för <b>Time Machine</b> om det behövs. (Se avsnittet nedan för mer information.)
+</li>
+
+<li>
+Klicka på <b>Tillämpa</b>.
+</li>
+
+</ol>
+
+<div class="section">
+<h4>Obs:</h4>
+<ul>
+<li>För att säkerhetskopiera data från Time Machine till DiskStation, välj en delad mapp från rullgardinsmenyn. </li>
+<li> Delade mappar som används av andra tjänster kommer inte att vara tillgängliga för Time Machine.</li>
+</ul>
+
+</div>
+
+
+
+<h3>Aktivera loggning av överföring</h3>
+<p>Att markera detta alternativ aktiverar loggning av filåtkomstågärder, inklusive skapande, radering, läsning, skrivning, flyttning och namnbyte för filer eller mappar via AFP även känt som Apple Filing Protocol.</p>
+
+
+<h3>Avancerade inställningar</h3>
+<h4>Tillämpa standardrättigheter för UNIX:</h4>
+<p>Aktivering av detta alternativ applicerar standardrättigheterna för UNIX för att ladda upp eller skapa filer och mappar. Tillämpade behörigheter är de samma som de behörigheter som appliceras av UNIX-kommandot <strong>umask</strong>. När detta alternativ är aktiverat är behörigheterna för UNIX 644 för filer och 755 för mappar. När detta alternativ är avaktiverat är behörigheterna för UNIX 666 för filer och 777 för mappar. Standardvärdet för umask är 022.</p>
+
+<div class="section">
+<h4>Obs:</h4>
+<p>Aktivering av detta alternativ kan orsaka problem med inkonsekventa behörigheter mellan olika protokoll. För att undvika inkonsekvens rekommenderar vi att detta alternativ lämnas avaktiverat.</p>
+</div>
+
+<h4>Frigör omedelbart resurser efter frånkoppling:</h4>
+<p>Aktivering av det här alternativet frigör omedelbart resurser när anslutningen till AFP-server oväntat kopplar från. Om du tar emot felmeddelandet ”Volymen används” när Time Machine används, vänligen aktivera det här alternativet.</p>
+<h4>Aktivera Bonjour Skrivarsändning:</h4>
+<p>Markera <b>Aktivera Bonjour Skrivarsändning</b> för att tillåta Mac-klienter att bläddra efter och hitta skrivare som är anslutna till DiskStation.</p>
+
+<h4 class="disable-hi3535">Att söka efter filers innehåll via Spotlight på Finder: via Spotlight i Finder:</h4>
+<p class="disable-hi3535">När mappar är fullständigt indexerade och sedan monterade på din Mac-dator kan du använda Spotlight i Finder för att söka efter de filer den innehåller och dessa filers innehåll.</p>
+<ol class="disable-hi3535">
+<li>Gå till <strong>Kontrollpanel</strong> > <strong>Indexeringstjänst</strong> > <strong>Filindexering</strong> > <strong>Lista över indexerade mappar</strong> > <strong>Skapa</strong> för att indexera specifika mappar och de filer de innehåller efter filtyp.</li>
+<li>Klicka på <strong>OK</strong> för att utföra indexering.</li>
+<li>Montera de indexerade mapparna på din Mac-dator.</li>
+<li>På din Mac-dator, klicka på den önskade monterade mappen i den vänstra panelen i Finder och använd Spotlight i Finder för att söka efter de filer den innehåller.</li>
+
+</ol>
+
+<div class="section disable-hi3535">
+<h4>Obs:</h4>
+<ul>
+<li>För att söka i monterade mappar, använd Spotlight i Finder. Med Spotlight på skrivbordet i Mac är det endast möjligt att söka efter lokala filer.</li>
+<li>På Mac OS X 10.9 och senare versioner har Spotlight i Finder stöd för att söka inom monterade mappar per taggnamn och kategori.</li>
+</ul>
+</div>
+
+</body>
+</html>

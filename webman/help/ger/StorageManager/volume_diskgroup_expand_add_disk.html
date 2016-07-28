@@ -1,0 +1,84 @@
+ <!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Festplatte zu einem Volume oder einer Diskgruppe hinzufügen - Synology DSM Hilfe</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="This article walks you through the steps to add an additional hard drive to an existing volume or disk group on your DiskStation.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script> <script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Festplatte zur Erweiterung der Speicherkapazität hinzufügen</h2>
+
+<p>Wenn Ihr DiskStation leere Festplatteneinschübe hat, können Sie weitere Festplatten einbauen und zu einem vorhandenen Volume oder einer vorhandenen Diskgruppe hinzufügen. Dieser Artikel enthält Anweisungen, um ein vorhandenes Volume oder eine vorhandene Diskgruppe durch Einbauen weiterer Festplatten zu erweitern.</p>
+
+<h3>Bevor Sie beginnen</h3>
+
+<p>Vergewissern Sie sich, bevor Sie beginnen, dass die Festplatten, die hinzugefügt werden sollen, diese Größenanforderungen erfüllen:</p>
+<ul>
+  <li><strong>Für SHR:</strong> Die Kapazität des Laufwerks, das hinzugefügt werden soll, muss mindestens so groß sein wie die des größten Laufwerks im Volume oder der Diskgruppe oder genau der Kapazität eines Festplattenlaufwerks im Volume oder der Diskgruppe entsprechen. Wenn Ihr SHR-Volume z. B. aus drei Laufwerken (2 TB, 1,5 TB und 1 TB) besteht, dann muss das neue Laufwerk mindestens 2 TB oder genau 1,5 TB bzw. 1 TB groß sein.</li>
+  <li><strong>Für RAID 5 und RAID 6:</strong> Die Kapazität des Laufwerks, das hinzugefügt werden soll, muss gleich oder größer als die des kleinsten Laufwerks im Volume oder der Diskgruppe sein. Wenn Ihr Volume z. B. aus drei Laufwerken – 2 TB, 1,5 TB und 1 TB – besteht, dann muss das neue Laufwerk mindestens 1 TB groß sein.</li>
+</ul>
+
+<div class="section">
+<h4>Volume-Status überprüfen</h4>
+
+<p>Der Status des Volumes oder der Diskgruppe muss <strong>Normal</strong> sein. Falls dies nicht der Fall ist, müssen Sie es bzw. sie zuerst reparieren.</p>
+</div>
+
+
+<h3>  Festplatte zu einem Volume oder einer Diskgruppe hinzufügen</h3>
+
+<p>Festplatten können zu den folgenden RAID-Typen hinzugefügt werden: </p>
+
+<ul>
+<li>Synology Hybrid RAID (SHR)</li>
+<li>JBOD</li>
+<li>RAID 5</li>
+<li>RAID 6</li>
+</ul>
+
+<div class="section">
+<h4>Hinweis:</h4>
+<p>Bei SHR-Volumes wird die Speicherkapazität nur erweitert, wenn Festplatten zu einem Volume mit zwei oder mehr Festplatten hinzugefügt werden.</p>
+</ul>
+</div>
+
+<h4>Festplatte zu einem Volume oder einer Diskgruppe hinzufügen:</h4>
+
+<ol>
+<li>Schalten Sie den DiskStation aus. (Sie können diesen Schritt auslassen, wenn Ihr DiskStation Hot-Swapping unterstützt.)</li>
+<li>Setzen Sie die neue Festplatte in einen leeren Festplatteneinschub ein.</li>
+
+<div class="section">
+<h4>Hinweis:</h4>
+<p>Um Verletzungen oder Schäden am DiskStation zu vermeiden, folgen Sie bitte den Anweisungen für den Festplatteneinbau in der <i>Schnellinstallationsanleitung</i> für Ihr Synology-Produkt.</p>
+</div>
+
+<li>Schalten Sie den DiskStation ein.</li>
+<li>Melden Sie sich bei DSM mit einem Konto an, das zur Gruppe <strong>administrators</strong> gehört.</li>
+<li>Öffnen Sie den <strong>Speicher-Manager</strong>.</li>
+<img src="about:blank" class="help_image"/>
+
+<li>Führen Sie jetzt folgende Schritte durch:</li>
+  <ul class="list_abc">
+    
+  <li>Gehen Sie, wenn Sie ein einzelnes Volume erweitern, zur Registerkarte <strong>Volume</strong>. Wählen Sie das Volume aus, das Sie erweitern möchten. Klicken Sie auf <strong>Verwalten</strong> und fahren Sie mit dem nächsten Schritt fort. </li>
+<img src="about:blank" class="help_image"/>
+    
+  <li>Gehen Sie, wenn eine Diskgruppe erweitert werden soll, zur Registerkarte <strong>Diskgruppe</strong>. Wählen Sie die Diskgruppe aus, die Sie erweitern möchten. Klicken Sie auf <strong>Verwalten</strong> und fahren Sie mit dem nächsten Schritt fort.</li>
+<img src="about:blank" class="help_image"/>
+  </ul>
+<li>Wählen Sie die Option <strong>Volume (oder Diskgruppe) durch Hinzufügen von Festplatten erweitern</strong> aus. Klicken Sie anschließend auf <strong>Weiter</strong>.</li>
+<img src="about:blank" class="help_image"/>
+<li>Wählen Sie die Festplatten aus, mit denen Sie das Volume oder die Diskgruppe erweitern möchten. Festplatten können hinzugefügt werden, indem die entsprechenden Kontrollkästchen aktiviert werden. Klicken Sie anschließend auf <strong>Weiter</strong>.</li>
+<img src="about:blank" class="help_image"/>
+<li>Folgen Sie den Schritten des Assistenten, um den Vorgang abzuschließen.</li>
+</ol>
+</body>
+</html>

@@ -1,0 +1,77 @@
+  <!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Skapa en Volym - Synology DSM Hjälp</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="This article walks you through the steps to create a volume on DiskStation using Storage Manager.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script> <script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Skapa en Volym</h2>
+
+<p>Denna artikel förklarar hur att skapa en volym på din DiskStation. När du skapar en ny volym kan du välja en av följande metoder:</p>
+
+<ul>
+  <li><b>Snabb:</b> Detta är det bästa alternativet för nybörjare. Välj denna metod om du automatiskt vill optimera lagringskapacitet och prestanda utan att bekymra dig om tekniska aspekter, såsom RAID-nivåer. </li>
+
+<li><b>Anpassat:</b> För avancerade användare som mer i detalj vill kontrollera aspekterna av att skapa volymen, såsom RAID-typer och allokering av kapacitet. Detta alternativ stöder olika RAID-typer, låter dig skapa enkla eller flera volymer och tillhandahåller alternativ att allokera specifika mängder av kapacitet för varje volym (endast när flera volymer skapas på RAID).
+</li>
+</ul>
+
+<div class="section">
+<h4>Enkla eller flera volymer på RAID?</h4>
+<p>När du skapar en volym i anpassat läge kan du välja en av följande metoder:</p>
+<ul>
+  <li><b>Enkel volym på RAID</b>
+    <ul>
+      <li>Skapar en enkel volym som använder all tillgänglig kapacitet hos de valda hårddiskarna.</li>
+      <li>Ger bättre hastighet och prestanda.</li>
+      <li>Har stöd för olika RAID-typer.</li>
+    </ul>
+  </li>
+  <li><b>Flera volymer på RAID</b>
+    <ul>
+      <li>Låter dig skapa flera volymer på en diskgrupp.</li>
+      <li>Har stöd för att allokera exakt mängd kapacitet för varje volym.</li>
+      <li>Ger ökad flexibilitet gällande lagringshantering.</li>
+      <li>Har stöd för olika RAID-typer.</li>
+    </ul>
+  </li>
+</ul>
+</div>
+
+
+<div class="section">
+<h4>Innan du börjar:</h4>
+<ul>
+<li>Innan du börjar, säkerställ att det inte finns någon viktig data på hårddiskarna. All befintlig data kommer att tas bort under processen för skapandet.</li>
+<li>Gå till sidan <b>HDD/SDD</b> och säkerställ att statusen för varje hårddisk är <b>Normal</b> eller <strong>Ej initierat</strong>.</li>
+</ul>
+</div>
+
+<div class="section enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64">
+<h4>Obs:</h4>
+<ul>
+<li>Den minsta storleken för en Btrfs-volym är 10GB.</li>
+<li>Btrfs-volymer reserverar 4% mer plats för metadata.</li>
+</ul>
+</div>
+
+<h4>Skapa en volym:</h4>
+<ol>
+<li>Öppna <b>Lagringshanterare</b>.</li>
+<img src="about:blank" class="help_image"/>
+<li>Gå till <b>Volym</b> och klicka på <b>Skapa</b>.</li>
+<img src="about:blank" class="help_image"/>
+<li>Du kommer att se guiden för att skapa volym. Välj <strong>Snabb</strong> eller <strong>Anpassad</strong>, beroende på dina behov. Följ sedan stegen i guiden för att slutföra skapandet av volymen.</li>
+<img src="about:blank" class="help_image"/>
+</ol>
+
+</body>
+</html>

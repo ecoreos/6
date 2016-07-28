@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>File Station</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Připojení virtuálních jednotek</h2>
+
+<p>Můžete připojit virtuální jednotky pro přístup na obsah bitových kopií disků pomocí služby File Station.</p>
+
+<h4>Pro připojení virtuální jednotky:</h4>
+<ol>
+<li>Vyberte bitovou kopii disku a klikněte na možnost <b>Nástroje</b> > <b>Připojit virtuální jednotku</b>.</li><img src="about:blank" class="help_image"/><li>Klikněte na položku <b>Procházet</b> a vyberte nebo vytvořte na zařízení DiskStation prázdnou cílovou složku pro připojení virtuální jednotky.</li><img src="../../../online_img/dsm/FileStation/mountiso/02.png" class="help_image"/><li>Zaškrtněte políčko <b>Automaticky připojit při spuštění</b>, pokud chcete, aby zařízení DiskStation připojilo virtuální jednotku při každém spuštění systému nebo restartování. Pokračujte kliknutím na tlačítko <b>Připojit</b>. Nyní můžete přejít na cílovou složku, kde je připojena virtuální jednotka, a získat přístup k obsahu bitové kopie disku.</li><img src="../../../online_img/dsm/FileStation/mountiso/03.png" class="help_image"/></ol>
+
+<div class="section">
+<h4>Poznámka:</h4>
+<p>Virtuální jednotky a soubory .iso je možné připojovat pouze k podsložkám pod sdílenými složkami.</p>
+</div>
+
+
+
+<h4>Pro odpojení virtuální jednotky:</h4>
+<ol>
+<li>Klikněte pravým tlačítkem na cílovou složku, ke které je připojena virtuální jednotka, a vyberte možnost <b>Odpojit</b>.</li><img src="about:blank" class="help_image"/></ol>
+<ol><span class="note_head">Poznámka: </span><li>Podporované formáty bitové kopie disku: Soubory „<b>.iso</b>“ používají standard ISO 9660 a souborový systém UDF.</li>
+<li>Maximální počet souběžných virtuálních jednotek je 16.</li>
+<li class="enable-dockerx64">Připojování virtuálních jednotek je podporováno pouze v režimu s vysokým oprávněním. Chcete-li používat tuto funkci, přejděte do balíčku Docker v hostitelském systému DSM, vyberte <strong>Docker DSM</strong>, pro který chcete povolit šifrované sdílené složky, klikněte na možnost <strong>Upravit</strong> a zaškrtněte políčko vedle možnosti <strong>Spustit kontejner s vysokými oprávněními</strong>.</li>
+
+</ol>
+</body>
+</html>

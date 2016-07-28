@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+	<h2>HDD/SSD</h2>
+	<p>Cette section vous permet de suivre le statut du HDD/SSD installé sur votre DiskStation, avec des options pour gérer et analyser les performances et l'état de santé du HDD/SSD. Allez dans <strong>Gestionnaire de stockage</strong> > <strong>HDD/SSD</strong> pour gérer ces options.</p>
+	<h4>Pour vérifier les infos HDD/SSD :</h4>
+	<ol>
+		<li>Accédez à l'onglet <b>HDD/SSD</b>.</li>
+		<li>Sélectionnez un lecteur dans la liste et développez-le. Ici, vous verrez l'état S.M.A.R.T., les infos de volume, le nom du modèle, le numéro de série, la version du firmware et la température.</li>
+	</ol>	
+	
+	<h4>Pour vérifier l'état de santé du disque :</h4>
+    <ol>
+      <li>Accédez à l'onglet <b>HDD/SSD</b>.</li>
+	  <li>Sélectionnez un lecteur.</li>
+      <li>Cliquez sur <b>Infos de santé</b>.</li>
+	  <li>Accédez à l'onglet <strong>Vue d'ensemble</strong>. Ici, vous allez découvrir combien d'heures le lecteur a été alimenté, la température actuelle, le nombre de reconnections/réidentifications, le nombre de secteurs défectueux, et l'état S.M.A.R.T. général.</li>
+      <li>Allez dans l'onglet <strong>Infos S.M.A.R.T.</strong>. Les chiffres répertoriés peuvent vous aider à diagnostiquer l'état de votre disque.</li>
+    </ol>
+<div class="section">
+<h4>Remarque :</h4>
+<p>
+   Les disques SAS ne prennent pas en charge les infos S.M.A.R.T.
+</p>
+</div>
+	<h4>Pour démarrer un test S.M.A.R.T. :</h4>
+	<P>Le test S.M.A.R.T. examinera et fera un rapport sur l'état de vos disques durs, vous alertant des éventuelles défaillances du disque. Il est recommandé de changer rapidement vos disques si des erreurs sont détectées. </P>
+    <ol>
+      <li>Accédez à l'onglet <strong>HDD/SSD</strong>.</li>
+      <li>Sélectionnez un lecteur.</li>
+      <li>Cliquez sur <b>Test S.M.A.R.T.</b></li>
+      <li>Choisissez un type de test et cliquez sur <strong>Démarrer</strong> pour commencer le test.</li>
+      <li>Les résultats du test sont affichés dans la section <b>Résultats du test</b>.</li>
+    </ol>
+    <div class="section">
+<h4>Remarque :</h4>
+    <p>La durée du test varie en fonction de votre environnement système.</p>
+</div>
+    <h4>Pour planifier les tests S.M.A.R.T. :</h4>
+    <p>Les tests S.M.A.R.T. peuvent être planifiés pour exécution automatique en créant des tâches.</p>
+    <ol>
+      <li>Accédez à l'onglet <strong>Planificateur de test</strong>.</li>
+      <li>Cliquez sur le bouton <strong>Créer</strong> pour configurer une nouvelle tâche.</li>
+      <li>Modifiez les paramètres suivants sur l'onglet <strong>Généralités</strong> :</li>
+      <ul>
+        <li><strong>Tâche :</strong> Entrez un nom pour la tâche.</li>
+        <li><strong>Type de test S.M.A.R.T. :</strong> Choisissez d'effectuer un test rapide ou un test étendu.</li>
+        <li><strong>Plage de test S.M.A.R.T. :</strong> Choisissez les HDD/SSD à tester chaque fois que le test S.M.A.R.T. est effectué.</li>
+      </ul>
+      <li>Sur l'onglet <strong>Planification</strong>, modifiez les paramètres suivants :</li>
+      <ul>
+        <li><strong>Date :</strong> Spécifiez quand effectuer le test S.M.A.R.T. Les tests S.M.A.R.T. peuvent être planifiés pour s'exécuter certains jours de la semaine (p.ex. tous les jours, les weekends ou tous les dimanches, etc.) ou à des dates spécifiques (par exemple 21/10/2015).</li>
+        <li><strong>Nbre de fois :</strong> Spécifiez combien de fois le test S.M.A.R.T. est effectué, ainsi que la première et la dernière heure d'exécution chaque jour.</li>
+      </ul>
+      <li>Cliquez sur <strong>OK</strong> pour terminer.</li>
+    </ol>
+<h4>Pour effectuer Secure Erase :</h4>
+<ol>
+<li>Accédez à l'onglet <b>HDD/SSD</b>.</li>
+<li>Sélectionnez un lecteur et cliquez sur <b>Secure Erase</b>.</li>
+</ol>
+<div class="section">
+<h4>Remarque :</h4>
+<ul>
+<li>Secure Erase ne peut pas être utilisé sur les lecteurs dans les unités d'expansion.</li>
+<li>Secure Erase va supprimer de manière permanente les données stockées sur votre lecteur. Assurez-vous que le lecteur choisi n'est pas utilisé ou que les données ont été sauvegardées avant de ce faire.</li>
+<li>Lorsque le système effectue Secure Erase, le lecteur choisi sera temporairement verrouillé et ensuite déverrouillé automatiquement lorsque l'opération est terminée.</li>
+<li>Si Secure Erase est arrêté incorrectement pendant l'opération, vous pouvez réexécuter Secure Erase directement sur l'interface utilisateur. Si les lecteurs sont supprimés ou utilisés ailleurs lorsqu'ils sont toujours verrouillés, veuillez entrer le mot de passe "synology" pour déverrouiller les lecteurs.</li>
+</ul>
+</div>
+	<h3>Activation de la prise en charge du cache en écriture pour le disque dur</h3>
+	<p>L'activation de la prise en charge du cache en écriture améliore les performances de votre DiskStation. Seuls certains modèles de disques durs prennent en charge cette fonctionnalité. Pour assurer la protection des données avec la prise en charge du cache en écriture, l'utilisation d'un onduleur est fortement recommandée. Il est également suggéré que le système soit arrêté correctement à chaque fois après usage. La désactivation du cache en écriture permettra d'éviter les pertes de données causées par des pannes de courant anormales, mais les performances du système diminueront.</p>
+	<h4>Pour activer la prise en charge du cache en écriture : </h4>
+	<ol>
+		<li>Accédez à l’onglet <b>Gestion du cache</b>.</li>
+		<li>Cochez <b>Activer le cache d'écriture</b>. Par défaut, cette fonction est désactivée.</li>
+		<li>Cliquez sur <b>Appliquer</b>.</li>
+	</ol>
+	
+ 
+</body>
+</html>

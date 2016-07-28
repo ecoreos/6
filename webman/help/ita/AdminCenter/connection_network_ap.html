@@ -1,0 +1,197 @@
+
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Rete</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2><a name="wireless_ap"></a>Hotspot*</h2>
+<p>Il dispositivo DiskStation supporta la creazione di un hotspot per condividere la sua connessione di rete con altri dispositivi wireless, se si ha un adattatore Wi-Fi USB gi&agrave; installato o DiskStation dispone di un Wi-Fi integrato. &Egrave; possibile impostare DiskStation come punto di accesso wireless (AP) o router wireless, a seconda di come si desidera usare Internet.</p>
+
+<table>
+<tr>
+<th width="23%">Modalit&agrave; Hotspot</th>
+<th width="77%">Descrizione</th>
+</tr>
+<tr>
+<th>AP Wireless</th>
+<td>
+<ul>
+<li>Fa da ponte tra la propria LAN e la rete Wi-Fi.</li>
+<li>La LAN e i client wireless avranno la stessa rete locale.</li>
+<li>Applicabile quando si ha gi&agrave; un router e si vuole utilizzare il proprio DiskStation come punto di accesso supplementare a una rete esistente.</li> 
+<li>Consente la condivisione delle risorse di rete, come dispositivi DLNA, stampanti, Synology Web Assistant o altri dispositivi che si affidano a trasmissioni in rete.</li>
+<li>Il server DHCP sar&agrave; disabilitato sui dispositivi DiskStation che agiscono come AP wireless. Per riattivare il server DHCP per il proprio DiskStation, rimuovere i dongle Wi-Fi e riavviare DiskStation.</li>
+<li>Per i modelli con pi&ugrave; porte LAN, solo LAN 1 sar&agrave; utilizzata per ponte con AP wireless.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Router wireless</th>
+<td>
+<ul>
+<li>Consente di impostare una rete wireless dove i dispositivi sono su una subnet privata.</li>
+</ul>
+</td>
+</tr>
+</table>
+
+
+<div class="section">
+<h4>Nota.</h4>
+
+<ol>
+<li>Alcuni modelli richiedono la connessione con dongle wireless per poter creare hotspot. Per l&apos;elenco completo di dongle wireless supportati visitare il sito <a href="http://www.synology.com/support/faq/444" target=_blank>www.synology.com</a>.</li>
+<li>Per modelli non DS213air, l&apos;opzione Wireless Hotspot in DSM 4.3 &egrave; rinominata in &quot;Wireless Router&quot; in DSM 5.0 e successivi.</li>
+</ul>
+</ol>
+
+</div>
+
+<h3>Gestire le impostazioni hotspot</h3>
+<p>Questa sezione illustra come abilitare e gestire le impostazioni hotspot di DiskStation.</p>
+
+
+<h4>Per trasformare DiskStation in un hotspot:</h4>
+<ol>
+<li>Andare su <strong>Pannello di controllo</strong> &gt; <strong>Wireless</strong> &gt; <strong>Mappa di rete</strong>. Scegliere <strong>AP Wireless</strong> o <strong>Router Wireless</strong>.</li>
+<li>Andare alla scheda <strong>Wi-Fi</strong> e fare clic su <strong>Modifica</strong> per gestire le seguenti impostazioni:</li>
+<ul>
+<li><strong>Nome (SSID):</strong> immettere un nome per la rete wireless.</li>
+<li><strong>Mostra/Nascondi:</strong> scegliere se rendere visibile o meno la rete wireless ad altri dispositivi.</li>
+<li><strong>Modalit&agrave; wireless:</strong> selezionare uno standard wireless. Ciascuno standard supporta varie larghezze di banda e frequenze.</li>
+<li><strong>Larghezza canale:</strong> selezionare una larghezza del canale (disponibile solo quando &egrave; utilizzata la modalit&agrave; wireless 802.11n).</li>
+<li><strong>Canale:</strong> selezionare una frequenza per la rete wireless. Per prestazioni migliori, scegliere una frequenza diversa da quella usata dalla reti vicine.</li>
+<li><strong>Potenza trasmissione:</strong> scegliere l&apos;intensit&agrave; del segnale della rete wireless.</li>
+<li><strong>N° massimo di connessioni:</strong> scegliere il numero di dispositivi client che possono connettersi alla rete. L&apos;impostazione massima sono 256 connessioni.</li>
+<li><strong>Abilita WMM QoS:</strong> Wi-Fi Multimedia (WMM) QoS (Qualit&agrave; del servizio) tramite Wi-Fi. Questa opzione consente alla rete wireless di assegnare la priorit&agrave; al traffico e di ottimizzare la quantit&agrave; di risorse condivise tra le applicazioni.</li>
+</ul>
+</ol>
+
+
+
+<h4>Per impostare la programmazione wireless:*</h4>
+<p>L&apos;abilitazione della programmazione della rete wireless consente di controllare quando la rete wireless di DiskStation &egrave; attiva e accessibile.</p>
+<ol>
+<li>Andare alla scheda <strong>Wi-Fi</strong> e fare clic su <strong>Modifica</strong>. </li>
+<li>Selezionare la casella <strong>Abilita programmazione</strong>.</li>
+
+<li>Fare clic su <strong>Imposta programmazione</strong>.</li>
+<li>Nella schermata di programmazione, selezionare quando la rete wireless sar&agrave; attiva.</li>
+</ol>
+
+
+<h3>Impostazioni di sicurezza</h3>
+<p><strong>Pannello di controllo</strong> &gt; <strong>Wireless</strong> &gt; <strong>Wi-Fi</strong> fornisce opzioni per modificare le impostazioni di sicurezza della propria rete wireless.</p>
+
+
+<h4>Per impostare la protezione wireless:</h4>
+<ol>
+
+<li>Fare clic su <strong>Modifica</strong>.</li>
+<li>Scegliere uno dei seguenti protocolli di sicurezza nel menu a discesa <strong>Impostazioni di sicurezza</strong>:</li>
+<ul>
+<li><strong>WEP:</strong> un protocollo di protezione di base in cui gli utenti immetteranno una password per accedere alla rete wireless, offrendo per&ograve; una protezione minima.</li>
+<li><strong>WPA/WPA2 personale:</strong> Consigliato. Agli utenti viene chiesto di immettere una password per accedere alla rete wireless; &egrave; molto pi&ugrave; sicura del WEP.</li>
+<li><strong>WPA/WPA2 Enterprise:</strong>* un protocollo di protezione progettato per le imprese che richiede l&apos;autenticazione degli utenti con un server di autenticazione esterno.</li>
+
+</ul>
+</ol>
+
+<h4>Per abilitare il WPS (Wi-Fi Protected Setup):*</h4>
+<p>WPS (Wi-Fi Protected Setup) &egrave; uno standard promosso dalla Wi-Fi Alliance per semplificare le impostazioni di sicurezza del wireless per gli utenti. &Egrave; possibile utilizzare il pulsante Premi o un numero PIN per mantenere sicura la rete Wi-Fi. Fare clic su <strong>WPS</strong> per abilitare Wi-Fi Protected Setup.</p>
+
+
+<h3>Rete ospiti*</h3>
+<p>Oltre alla creazione di una rete wireless host, DiskStation supporta anche la creazione di una rete wireless ospiti. Le impostazioni della rete ospiti possono essere limitate per restringere l&apos;accesso degli utenti, &egrave; molto utile alle imprese o altre istituzioni che desiderano rendere disponibile la rete wireless ai visitatori e allo stesso tempo evitare che accedano alla rete host.</p>
+
+
+<h4>Per abilitare la rete ospiti:</h4>
+
+<ol>
+<li>Andare su <strong>Pannello di controllo</strong> &gt; <strong>Wireless</strong> &gt; <strong>Wi-Fi</strong>. </li>
+<li>Fare clic su <strong>Modifica</strong> per gestire le seguenti impostazioni sulla scheda <strong>Rete ospiti</strong>:</li>
+
+<ul>
+<li><strong>Nome (SSID):</strong> immettere un nome per la rete wireless.</li>
+<li><strong>Mostra/Nascondi:</strong> scegliere se rendere visibile o meno la rete wireless ad altri dispositivi.</li>
+<li><strong>N° massimo di connessioni:</strong> scegliere il numero di dispositivi client che possono connettersi alla rete. L&apos;impostazione massima sono 256 connessioni.</li>
+</ul>
+</ol>
+
+<h4>Per impostare la protezione della rete ospiti:</h4>
+<p>Scegliere uno dei seguenti protocolli di sicurezza nel menu a discesa <strong>Impostazioni di sicurezza</strong>:</p>
+<ul>
+<li><strong>WEP:</strong> un protocollo di protezione di base in cui gli utenti immetteranno una password per accedere alla rete wireless, offrendo per&ograve; una protezione minima.</li>
+<li><strong>WPA/WPA2 personale:</strong> Consigliato. Agli utenti viene chiesto di immettere una password per accedere alla rete wireless; &egrave; molto pi&ugrave; sicura del WEP.</li>
+</ul>
+
+
+<h4>Per impostare la programmazione della rete ospiti:</h4>
+<p>L&apos;abilitazione della programmazione della rete ospiti consente di controllare quando la rete wireless ospiti di DiskStation &egrave; attiva e accessibile.</p>
+
+<ol>
+<li>Selezionare la casella <strong>Abilita programmazione rete ospiti</strong>.</li>
+<li>Fare clic su <strong>Imposta programmazione ospiti</strong>.</li>
+<li>Nella schermata di programmazione, selezionare quando la rete wireless ospiti sar&agrave; attiva.</li>
+</ol>
+
+<div class="section">
+<h4>Nota.</h4>
+<p>La rete wireless ospiti non pu&ograve; essere attivata nei periodi di tempo in cui la rete wireless host &egrave; disattivata.</p>
+</div>
+
+
+<h3>Impostazione filtro MAC*</h3>
+<p>Il filtro MAC (su <strong>Pannello di controllo</strong> &gt; <strong>Wireless</strong>) specifica quali indirizzi MAC sono consentiti per accedere alla rete wireless, in modo da poter bloccare o consentire l&apos;accesso solo a dispositivi specifici. Questa funzione controlla solamente l&apos;accesso alla rete e non le impostazioni di crittografia.</p>
+
+
+<h4>Per creare regole filtro MAC:</h4>
+<ol>
+<li>Inserire la descrizione e l&apos;indirizzo MAC del dispositivo.</li>
+<li>Scegliere una politica di accesso:<ul>
+<li><strong>Rifiuta:</strong> limita l&apos;accesso alla rete wireless all&apos;indirizzo MAC specificato.</li>
+<li><strong>Consenti:</strong> consente l&apos;accesso alla rete wireless agli indirizzi MAC specificati.</li>
+</ul> 
+</ol>
+
+
+
+<h3>Controllo genitori*</h3>
+<p>La funzione Controllo genitori consente di controllare quando ciascun dispositivo client collegato alla rete locale di DiskStation pu&ograve; accedere a Internet. Ad esempio, se il computer dei bambini o dispositivi mobile sono collegati a Internet attraverso DiskStation, &egrave; possibile configurare le impostazioni del controllo genitori per limitare il loro utilizzo di Internet in base al dispositivo specifico e all&apos;orario.</p>
+
+<h4>Per abilitare il Controllo genitori:</h4>
+<ol>
+<li>Andare su <strong>Pannello di controllo</strong> &gt; <strong>Wireless</strong> &gt; <strong>Impostazioni Controllo genitori</strong>.</li>
+
+<li>Fare clic sul pulsante <strong>Aggiungi</strong> per aggiungere un dispositivo client.</li>
+<ul>
+<li><strong>Nome del client:</strong> Scegliere un dispositivo che &egrave; collegato a DiskStation o immettere manualmente un nome (ad es. laptop di Louisa).</li>
+<li><strong>Indirizzo MAC:</strong> immettere l&apos;indirizzo MAC del dispositivo di cui si vuole controllare l&apos;utilizzo di Internet.</li>
+<li><strong>Imposta programmazione:</strong> scegliere a che ora il dispositivo specifico potr&agrave; accedere a Internet attraverso il DiskStation.</li>
+</ul>
+</ol>
+
+<h3>Elenco connessioni*</h3>
+<p>L&apos;elenco delle connessioni (su <strong>Pannello di controllo</strong> &gt; <strong>Wireless</strong>) visualizza le informazioni relative ai dispositivi connessi a DiskStation. Da qui &egrave; possibile aggiungere i dispositivi direttamente all&apos;elenco filtri MAC.</p>
+
+<h4>Per aggiungere i dispositivi all&apos;elenco filtri MAC:</h4>
+<ol>
+<li>Selezionare la casella di controllo accanto al dispositivo da aggiungere il filtro MAC.</li>
+<li>Fare clic su <strong>Aggiungi a elenco filtri MAC</strong>.</li>
+</ol>
+
+
+
+<p>____<br> * Disponibile solo su modelli specifici.<br></body>
+</html>

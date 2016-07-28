@@ -1,0 +1,50 @@
+ <!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+
+<title>데이터 스크럽</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="Data scrubbing is a data maintenance feature that inspects volumes or disk groups and repairs any detected data inconsistencies.">
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>데이터 스크럽*</h2>
+<p>데이터 스크럽은 볼륨 또는 디스크 그룹을 조사하는 데이터 유지 관리 기능입니다. 데이터 스크럽은 두 가지 유형이 있습니다:</p>
+
+<ul>
+<li><strong>RAID 스크럽:</strong> 이 기능은 SHR(3개 이상의 디스크로 구성), RAID 5 또는 RAID 6를 구현하는 볼륨 또는 디스크 그룹에 사용될 수 있습니다. 이는 감지된 데이터 불일치를 복구할 수 있습니다.</li>
+<li><strong>파일 시스템 스크럽:</strong> 이 기능은 Btrfs 파일 시스템의 볼륨에 사용될 수 있습니다. 체크섬과 일치하지 않는 데이터가 감지되면 파일 경로가 로그 센터에 기록됩니다. 백업을 사용하여 데이터를 복구하는 것이 좋습니다.</li>
+</ul>
+
+<p>데이터 일관성을 유지하고 하드 드라이브 오류 발생 시 데이터 손실을 방지하기 위해 정기적으로 데이터 스크럽을 수행하는 것이 좋습니다.</p>
+
+<h4>데이터 스크럽 수행하기:</h4>
+
+<ol>
+<li><strong>저장소 관리자</strong>를 엽니다.</li>
+<li><strong>볼륨</strong> 또는 <strong>디스크 그룹</strong>으로 이동합니다.</li>
+<li>데이터 스크럽을 수행할 볼륨이나 디스크 그룹을 선택합니다.</li>
+<li><strong>관리</strong>를 클릭합니다.</li>
+<li><strong>데이터 스크럽</strong>을 선택합니다.</li>
+<li>원하는 데이터 스크럽 유형을 선택합니다. (사용 가능한 유형이 하나뿐이면 시스템이 이 단계를 자동으로 건너뜁니다.)</li>
+</ol>
+
+<div class="section">
+<h4>참고:</h4>
+<ul>
+<li>볼륨 또는 디스크 그룹의 상태가 <strong>정상</strong>일 때만 데이터 스크럽을 수행할 수 있습니다.</li>
+<li>완료 전에 시스템이 종료된 경우 수동으로 처음부터 데이터 스크럽을 다시 시작해야 합니다.</li>
+</ul></div>
+
+<p>____<br />*일부 모델에서만 사용할 수 있습니다.</p>
+
+</body>
+</html>

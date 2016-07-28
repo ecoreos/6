@@ -1,0 +1,20 @@
+<ion-view title=" {{title}} ">
+	<ion-content class="file-request-ct">
+		<h1 class="request-name hide-on-keyboard-open">{{request_name}}</h1>
+		<h1 class="request-desc hide-on-keyboard-open"> {{request_desc}} </h1>
+		<h2 class="request-welcome-msg"> {{request_info}}</h2>
+		<form name="uploadForm" novalidate class="upload-form">
+			<label class="item item-input item-username">
+				<div class="icon account"></div>
+				<input type="text" name="name" placeholder="{{your_name}}"
+					ng-model="uploader_name"
+					ng-model-options="{ updateOn: 'default blur', debounce: { default: 500, blur: 0 } }"
+					required="" uploaduser textfield>
+			</label>
+			<div class="username-error-msg">{{request_name_error}}</div>
+			<button type="" class="button button-block button-outline button-positive" ng-disabled="!uploadForm.$valid"
+			ng-click="addFiles()"> {{add_file_text}} </button>
+			<input type="file" id="{{add_file_btn_id}}" name="add_file_btn" uploadbtn="filelist" multiple ng-show="false">
+		</form>
+	</ion-content>
+</ion-view>

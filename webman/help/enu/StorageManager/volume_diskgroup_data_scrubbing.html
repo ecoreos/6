@@ -1,0 +1,44 @@
+ <!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+
+<title>RAID Scrubbing - Synology DSM Help</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="Data scrubbing is a data maintenance feature that inspects volumes or disk groups and repairs any detected data inconsistencies.">
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>RAID Scrubbing*</h2>
+<p>RAID scrubbing is a data maintenance feature that inspects volumes or disk groups and repairs any detected data inconsistencies. This function can be used with volumes or disk groups that implement SHR (comprised of three or more disks), RAID 5, or RAID 6. </p>
+
+<p>We recommend regularly performing RAID scrubbing in order to maintain data consistency and avoid losing any critical data in the event of hard drive failure.</p>
+
+<h4>To perform RAID scrubbing:</h4>
+
+<ol>
+<li>Open <strong>Storage Manager</strong>.</li>
+<li>Go to <strong>Volume</strong> or <strong>Disk Group</strong>.</li>
+<li>Select the volume or disk group on which to perform RAID scrubbing.</li>
+<li>Click <strong>Manage</strong>.</li>
+<li>Select <strong>RAID scrubbing</strong>.</li>
+</ol>
+
+<div class="section">
+<h4>Note:</h4>
+<ul>
+<li>RAID scrubbing can only be performed when the status of the volume or disk group is <strong>Normal</strong>.</li>
+<li>Please do not shut down the system before RAID scrubbing is completed. If the system is shut down before completion, RAID scrubbing must be restarted from the beginning.</li>
+</ul></div>
+
+<p>____<br />*Only available on certain models.</p>
+
+</body>
+</html>

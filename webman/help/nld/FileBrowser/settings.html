@@ -1,0 +1,195 @@
+
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>File Station-opties beheren - Synology DSM Help</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="Learn how to customize File Station settings related to file management, shared links, and security.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>File Station-instellingen beheren</h2>
+<p>Om de File Station-instellingen te beheren, opent u <strong>File Station</strong> en klikt u vervolgens op de knop <b>Instellingen</b>.</p>
+
+<h3>Algemeen</h3>
+<p>
+Hier kunt u de File Station-logboeken inschakelen om de activiteiten van alle gebruikers te registreren. De gebruikersactiviteiten omvatten <b>Map maken</b>, <b>Uploaden</b>, <b>Downloaden</b>, <b>Verwijderen</b>, <b>Naam wijzigen</b>, <b>Verplaatsen</b>, <b>Kopiëren</b> en <b>Eigenschappenset</b>.
+</p>
+<h4>Om het File Station-logboek in te schakelen:</h4>
+<ol>
+<li>Als u de activiteiten van alle gebruikers wilt registreren, selecteert u <b>File Station-logboek inschakelen</b>.
+</li>
+<li>
+Klik op <b>OK</b>.
+</li>
+</ol>
+<h4>Om het logboek van File Station weer te geven:</h4>
+<ol>
+<li>
+Klik op <b>Logboeken weergeven</b> waardoor u in <strong>Log Center</strong> terechtkomt.</li>
+<li>
+Klik op het tabblad <b>Bestandsoverdracht</b>.
+</li>
+</ol>
+
+<h4>Om automatisch bestanden te overschrijven met uploaden door slepen-en-neerzetten of met sneltoetsen:</h4>
+<p>Schakel het selectievakje <strong>Bestanden altijd overschrijven bij het slepen-en-neerzetten in de webbrowser of plakken met toetsenbordsneltoetsen</strong> in als u bestanden met dezelfde naam automatisch wilt overschrijven tijdens het slepen-en-neerzetten van bestanden van uw computerbureaublad naar de webbrowser, of bij het plakken van bestanden met toetsenbordsneltoetsen in File Station.</p>
+
+
+<h4>Intelligent slepen en neerzetten inschakelen:</h4>
+<p>bij het slepen en neerzetten van bestanden in File Station detecteert deze functie automatisch of het om een kopieer- of verplaatsbewerking gaat.</p>
+
+<ol>
+<li>Selecteer <strong>Intelligent slepen en neerzetten inschakelen</strong>.</li>
+<li>selecteer een van de onderstaande constant uit te voeren handeling wanneer andere gebruikers gelijktijdig bestanden met dezelfde naam overdragen naar dezelfde locatie:
+  <ul>
+<li><strong>Overschrijven</strong>: uw overgedragen bestanden zullen bestanden met dezelfde naam overschrijven.</li>
+<li><strong>Overslaan</strong>: uw overgedragen bestanden worden overgeslagen en bestanden met dezelfde naam worden niet overschreven.</li>
+</ul>
+</li>
+<li>Klik op <strong>OK</strong>.</li>
+</ol>
+
+<div class="section">
+<h4>Opmerking:</h4>
+<p>pas de gewenste onderstaande sneltoetsen toe wanneer u de door intelligent slepen en neerzetten bepaalde kopieer- en verplaatsbewerking wilt wijzigen:</p>
+<ul>
+<li>Omschakelen naar een kopieerbewerking: druk op Ctrl tijdens het slepen en neerzetten.</li>
+<li>Omschakelen naar een verplaatsbewerking: druk op Shift tijdens het slepen en neerzetten.</li>
+</ul>
+</div>
+
+
+<h4>Om bestanden op een lokale computer te doorzoeken met File Station:</h4>
+<ol>
+<li>
+Selecteer <b>Bestanden op een lokale computer doorzoeken met File Station</b>.
+</li>
+<li>
+Klik op <b>OK</b>.
+</li>
+</ol>
+
+
+<h4>De DSM-gebruikerslijst delen met non-admin-gebruikers:</h4>
+<p>met deze optie hebben non-admin-gebruikers toegang tot de volledige DSM-gebruikerslijst om naar bestanden van specifieke DSM-gebruikers/groepen te zoeken of om bestandskoppelingen met andere DSM-gebruikers te delen.</p>
+
+<ol>
+<li>Selecteer <strong>De DSM-gebruikerslijst delen met non-admin-gebruikers</strong>.</li>
+<li>Klik op <strong>OK</strong>.</li>
+</ol>
+
+
+<h3>Standaard UNIX-machtigingen toepassen</h3>
+<p>Klik op <strong>Geavanceerde instellingen</strong> en schakel de optie in om standaard UNIX-machtigingen toe te passen bij het uploaden of maken van bestanden en mappen. Toegepaste machtigingen zijn hetzelfde als machtigingen die worden toegepast met de UNIX-opdracht <strong>umask</strong>. Door deze optie in te schakelen geldt 644 als UNIX-machtiging voor bestanden en 755 voor mappen. Door deze optie uit te schakelen geldt 666 als UNIX-machtiging voor bestanden en 777 voor mappen. De standaard umask-waarde is 022.</p>
+<div class="section">
+<h4>Opmerking:</h4>
+<ul>
+  <li>voor Windows ACL-ingeschakelde gedeelde mappen (alle gedeelde mappen, exclusief &quot;photo&quot; en gedeelde mappen op externe schijven) voert u de opdracht <strong>chmod</strong> uit op uw Linux- of FTP-client om de map- en bestandsmachtigingstypes te wijzen van Windows ACL naar UNIX.</li>
+  <li>Door het inschakelen van deze optie kunnen inconsistente machtigingsproblemen tussen verschillende protocollen ontstaan. Om inconsistenties te vermijden raden wij u aan om deze optie uitgeschakeld te laten.</li>
+</ul>
+</div>
+<h3 class="disable-eds14">Koppelen/verbindingen</h3>
+<p class="disable-eds14">
+Standaard kunnen alle gebruikers externe mappen of virtuele schrijven koppelen. Hier kunt u de toegang tot het beheer van externe mappen of virtuele schijven beperken tot administrators.
+</p>
+
+<div class="disable-eds14 section">
+<h4>Opmerking:</h4>
+<p>niet-administrators kunnen alleen externe mappen in hun <b>home</b> koppelen.</p>
+</div>
+<h4 class="disable-eds14">Verschillende gebruikers toestemming verlenen om externe mappen of virtuele schijven te koppelen:</h4>
+<ol class="disable-eds14">
+<li>
+Selecteer <b>Alle gebruikers</b> of <b>Administrators</b> in het gedeelte <b>Externe map</b> of <b>Virtueel station</b>.
+</li>
+<li>
+Klik op <b>OK</b>.
+</li>
+</ol>
+<h4 class="disable-eds14">Verschillende gebruikers toestemming verlenen om servers en cloudservices te koppelen:</h4>
+<ol class="disable-eds14">
+  <li>Selecteer <b>Alle gebruikers</b>, <b>Administrators</b> of <strong>Specifieke gebruiker</strong>. </li>
+  <li>Bij de selectie van <strong>Specifieke gebruikerr</strong> wordt een venster geopend waarin u de koppelingsmachtigingen kunt configureren voor verschillende gebruikers. Om de toegangsrechten voor een specifieke gebruiker in te schakelen, moet u het selectievakje in de kolom <strong>Ingeschakeld</strong> inschakelen. Om de toegangsrechten van een specifieke gebruiker uit te schakelen, moet u het selectievakje in de kolom <strong>Ingeschakeld</strong> uitschakelen. Eenmaal voltooid, klik <strong>OK</strong> om dit venster te sluiten.</li>
+  <div class="section">
+    <h4>Opmerking:</h4>
+    <ul>
+      <li>alleen gebruikers van de groep <strong>administrators</strong> kunnen deze functie gebruiken, maar niet wijzigen. Als <strong>Gast</strong> aangemelde gebruikers kunnen deze functie niet gebruiken of wijzigen. Hier kunt u de bevoegdheden voor alle andere gebruikers instellen.</li>
+    </ul>
+  </div>
+  <li>Klik op <strong>OK</strong>.</li>
+</ol>
+<h3>Gedeelde koppelingen</h3>
+<p>
+Standaard kunnen alle gebruikers bestandskoppelingen delen. Hier kunt u de toegang tot het beheer van gedeelde koppelingen beperken tot alleen administrators.
+</p>
+<h4>Verschillende gebruikers toestemming verlenen om bestandskoppelingen te delen:</h4>
+<ol>
+<li>
+Selecteer <b>Alle gebruikers</b>, <b>Administrators</b> of <strong>Specifieke gebruikers</strong>.
+</li>
+<li>
+Klik op <b>OK</b>.
+</li>
+</ol>
+
+<h4>Om HTML-bestanden te openen als platte tekst:</h4>
+
+<ol>
+<li>schakel het selectievakje <strong>HTML-bestanden altijd openen als platte tekst</strong> in. Door deze optie in te schakelen, worden HTML-bestanden (HTM-, HTML-, JSP- en XHTML-bestanden) weergegeven als platte tekst wanneer gebruikers de bestanden via een gedeelde bestandskoppeling openen. Deze optie helpt te voorkomen dat malafide derden uw aanmeldingssessies kapen door gebruik van een ingesloten script in HTML-bestanden.</li>
+<li>Klik op <strong>OK</strong>.</li>
+</ol>
+
+<h3>Snelheidslimiet</h3>
+<p>U kunt een snelheidslimiet inschakelen om de maximaal bruikbare bandbreedte in te stellen voor gebruikers en groepen die gegevens via File Station overdragen.</p>
+
+
+<h4>Om snelheidslimiet in te schakelen:</h4>
+<ol>
+  <li>schakel het selectievakje <b>Snelheidslimiet inschakelen</b> of <strong>Snelheidslimiet volgens schema inschakelen</strong> in als u enkel een snelheidslimiet op gezette tijden wilt implementeren. Dit is een globale serverinstelling die voorrang heeft op alle instellingen van individuele gebruikers en groepen. Selecteer <strong>Geen snelheidslimiet</strong> om de snelheidslimietinstellingen van alle gebruikers en groepen uit te schakelen.</li>
+  <li>Klik op <strong>Instellingen snelheidslimiet</strong> om de instellingen van individuele gebruikers of groepen te wijzigen. Voor elke gebruiker en groep kunt u een van de volgende opties selecteren:  </li>
+    <ul>
+      <li><strong>Groepsinstellingen toepassen:</strong> de snelheidslimietinstellingen zullen gelijk zijn aan die van de groep waartoe de gebruiker behoort. </li>
+      <li><strong>Geen snelheidslimiet:</strong> er wordt geen snelheidslimiet toegepast wanneer groepsleden bestanden via de service overdragen.</li>
+      <li><strong>Constant:</strong> een vaste en constante snelheidslimiet wordt toegepast op de gebruikers of groepsleden. In de velden links kunt u de upload- en downloadsnelheidslimieten opgeven.</li>
+      <li><strong>Variabel:</strong> om twee verschillende snelheidslimieten op te geven en volgens een schema toe te passen op de gebruikers of groepsleden. Klik op de knop <strong>Aanpassen</strong> om de snelheidslimietinstellingen te wijzigen en een schema op te stellen.</li>
+    </ul>
+
+  <li>Klik op <b>Toepassen</b>.</li>
+</ol>
+<div class="section">
+  <h4>Opmerking:</h4>
+  <ul>
+    <li>meer informatie over de werking van snelheidslimieten voor groepen vindt u <a href="../AdminCenter/file_group_edit.html">hier</a>.</li>
+    <li>Bij het instellen van een snelheidslimiet voor een gebruiker ziet u in het gedeelte <strong>Resultaat</strong> de actuele snelheidslimiet van de gebruiker in overeenstemming met zijn individuele en groepsinstellingen. Als gebruiker "Achilles" bijvoorbeeld een individuele downloadlimiet heeft van 100 KB/s, maar deel uitmaakt van een gebruikersgroep met een downloadlimiet van 500 KB/s, wordt in het gedeelte <strong>Resultaten</strong> "0/500" weergegeven.</li>
+  </ul>
+</div>
+
+
+
+<h3>Beveiliging</h3>
+
+<p>Hier vindt u de onderstaande beveiligingsinstellingen.</p>
+
+<h4>Om HTML-bestanden te openen als platte tekst:</h4>
+
+<ol>
+<li>schakel het selectievakje <strong>HTML-bestanden altijd openen als platte tekst</strong> in. Door deze optie in te schakelen, worden HTML-bestanden (HTM-, HTML-, JSP- en XHTML-bestanden) bij het openen in File Station weergegeven als platte tekst. Deze optie helpt te voorkomen dat malafide derden uw aanmeldingssessies kapen door gebruik van een ingesloten script in HTML-bestanden.</li>
+<div class="section">
+<h4>Opmerking:</h4>
+<ul>
+<li>dit is geen algemene instelling. Elke gebruiker kan deze optie desgewenst in- of uitschakelen.</li>
+</ul>
+</div>
+<li>Klik op <strong>OK</strong>.</li>
+</ol>
+
+</body>
+</html>

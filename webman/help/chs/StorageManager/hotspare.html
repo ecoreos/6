@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Hot Spare</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2>Hot Spare*</h2>
+<p>热备用硬盘是备用的硬盘，它可通过自动更换发生故障的硬盘来修复处于堪用状态的卷/硬盘组/iSCSI LUN。热备用硬盘可被整体指定为保护 DiskStation 中的任何卷/硬盘组/iSCSI LUN，只要卷/硬盘组/iSCSI LUN 符合下列条件：</p>
+<ul>
+<li>存储卷/硬盘组/iSCSI LUN 的 RAID 类型必须具有数据保护功能 (即 RAID 1、RAID 5、RAID 6、RAID 10)。</li>
+<li>热备用硬盘容量必须等于或大于存储卷/硬盘组/iSCSI LUN 中最小硬盘的容量。</li>
+</ul>
+
+<h4>设置热备用硬盘：</h4>
+<ol>
+<li>单击<b>管理</b>。</li>
+<li>将出现一个对话框，显示每个卷/硬盘组/iSCSI LUN 以及可用硬盘的热备用状态。卷/硬盘组/iSCSI LUN 状态包括以下内容：</li>
+<ul>
+<li><strong>已分配：</strong>卷/硬盘组/iSCSI LUN 至少受到一个指定的热备用硬盘的保护。</li>
+<li><strong>可用：</strong>有可用于保护卷/硬盘组/iSCSI LUN 的硬盘，但尚未指定热备用。</li>
+<li><strong>无法使用：</strong>无可用于保护卷/硬盘组/iSCSI LUN 的热备用硬盘。</li>
+</ul>
+<li><strong>可用硬盘</strong>扇区显示可指定为热备用硬盘的硬盘。要指定热备用硬盘，请勾选要指定为热备用硬盘旁的框。</li>
+<li>单击<b>应用</b>来保存设置。</li>
+</ol>
+<div class="section">
+<h4>注：</h4> 
+<ul>
+<li>当一个硬盘被指定为热备用硬盘时，硬盘上的所有数据将被擦除。指定热备用硬盘之前，请确认该硬盘中没有重要数据。</li>
+<li>安装有硬件的 RAID 不可通过 SSD 热备用硬盘来自动修复，反之亦然。</li>
+</ul>
+</div>
+
+<h4>若要为卷/硬盘组/iSCSI LUN 配置热备用设置：</h4>
+<ol>
+<li>单击<b>配置</b>。</li>
+<li>在 <b>Hot Spare 目的地</b>选项卡中，将列出受热备用硬盘保护的卷/硬盘组/iSCSI LUN。当处于堪用状态时，相应的卷/硬盘组/iSCSI LUN 可通过热备用硬盘自动修复。</li>
+<li>在<b>跨设备 Hot Spare</b> 选项卡中，您可让一个设备上的热备用硬盘来修复不同设备上处于堪用状态的 RAID。</li>
+<li>单击<b>确定</b>来保存设置。</li>
+</ol>
+
+
+
+<p>____<br />* 仅适用于特定机型。</p>
+
+</body>
+</html>

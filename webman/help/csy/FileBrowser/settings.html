@@ -1,0 +1,170 @@
+﻿
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Správa možností služby File Station – Nápověda Synology DSM</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="Learn how to customize File Station settings related to file management, shared links, and security.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Správa nastavení služby File Station</h2>
+<p>Chcete-li spravovat nastavení služby File Station, otevřete aplikaci <strong>File Station</strong> a klikněte na tlačítko <b>Nastavení</b>.</p>
+
+<h3>Obecné</h3>
+<p>Zde je možné aktivovat protokoly služby File Station zaznamenávající aktivity všech uživatelů. Mezi aktivity uživatelů patří mimo jiné úkony <b>Vytvořit složku</b>, <b>Odeslat</b>, <b>Stáhnout</b>, <b>Odstranit</b>, <b>Přejmenovat</b>, <b>Přesunout</b>, <b>Kopírovat</b> a <b>Vlastnost nastavena</b>.</p>
+<h4>Povolení protokolu služby File Station:</h4>
+<ol>
+<li>Pokud chcete zaznamenávat aktivity všech uživatelů, zaškrtněte možnost <b>Aktivovat protokol File Station</b>.</li>
+<li>Klikněte na možnost <b>OK</b>.</li>
+</ol>
+<h4>Zobrazení protokolu služby File Station:</h4>
+<ol>
+<li>Kliknutím na možnost <b>Zobrazit protokoly</b> přejdete do části <strong>Centrum protokolů</strong>.</li>
+<li>Klikněte na kartu <b>Přenos souborů</b>.</li>
+</ol>
+
+<h4>Pokud se soubory při odesílání přetažením nebo pomocí klávesových zkratek mají automaticky přepisovat:</h4>
+<p>Chcete-li automaticky přepisovat soubory se stejným názvem při jejich přetažení z plochy počítače do webového prohlížeče nebo při vložení souborů pomocí klávesových zkratek v rámci služby File Station, zaškrtněte políčko <strong>Vždy přepsat soubory, pokud je přetažením přesunu do webového prohlížeče nebo je vložím pomocí klávesových zkratek</strong>.</p>
+
+
+<h4>Povolení inteligentního přesouvání:</h4>
+<p>Při přetažení souborů v rámci služby File Station tato funkce automaticky určí, jestli se jedná o kopírování nebo o přesunutí.</p>
+
+<ol>
+<li>Vyberte položku <strong>Povolit inteligentní přesouvání</strong>.</li>
+<li>Vyberte, která akce se má provést pokaždé, když do stejného umístění přesouvá soubory se stejným názvem současně jiný uživatel:<ul>
+<li><strong>Přepsat</strong>: Vámi přesunuté soubory se přepíší soubory se stejným názvem.</li>
+<li><strong>Přeskočit</strong>: Vámi přesunuté soubory se přeskočí a nepřepíší soubory se stejným názvem.</li>
+</ul>
+</li>
+<li>Klikněte na možnost <strong>OK</strong>.</li>
+</ol>
+
+<div class="section">
+<h4>Poznámka:</h4>
+<p>Chcete-li změnit akci kopírování nebo přesunutí zvolenou funkcí inteligentního přesouvání, použijte podle potřeby následující klávesové zkratky:</p>
+<ul>
+<li>Změnit na akci kopírování: Při přetahování stiskněte klávesu Ctrl.</li>
+<li>Změnit na akci přesunutí: Při přetahování stiskněte klávesu Shift.</li>
+</ul>
+</div>
+
+
+<h4>Procházení a správa souborů z místního počítače pomocí služby File Station:</h4>
+<ol>
+<li>Zaškrtněte možnost <b>Procházet soubory z místního počítače pomocí služby File Station</b>.</li>
+<li>Klikněte na možnost <b>OK</b>.</li>
+</ol>
+
+
+<h4>Sdílení seznamu uživatelů systému DSM s jinými uživateli než správci:</h4>
+<p>Tato možnost umožňuje jiným uživatelům než správcům přístup k úplnému seznamu uživatelů systému DSM, když chtějí hledat soubory vlastněné konkrétními uživateli či skupinami systému DSM nebo když chtějí sdílet odkazy souborů s jinými uživateli systému DSM.</p>
+
+<ol>
+<li>Vyberte možnost <strong>Sdílet seznam uživatelů systému DSM s jinými uživateli než správci</strong>.</li>
+<li>Klikněte na možnost <strong>OK</strong>.</li>
+</ol>
+
+
+<h3>Použití výchozích oprávnění systému UNIX</h3>
+<p>Klikněte na možnost <strong>Rozšířená nastavení</strong>. Zaškrtnutím této položky se budou při odesílání nebo vytváření souborů a složek používat výchozí oprávnění systému UNIX. Použitá oprávnění jsou stejná jako oprávnění použitá příkazem <strong>umask</strong> systému UNIX. Pokud je tato možnost povolena, má oprávnění UNIX pro soubory hodnotu 644 a pro složky hodnotu 755. Pokud je tato možnost zakázána, má oprávnění UNIX pro soubory hodnotu 666 a pro složky hodnotu 777. Výchozí hodnota umask je 022.</p>
+<div class="section">
+<h4>Poznámka:</h4>
+<ul>
+  <li>U sdílených složek s povoleným Windows ACL (všechny sdílené složky s výjimkou složky „photo“ a sdílené složky na externích jednotkách) proveďte pomocí příkazu <strong>chmod</strong> na klientovi se systémem Linux nebo na klientovi FTP změnu typů oprávnění složek a souborů z Windows ACL na UNIX.</li>
+  <li>Povolení této možnosti může způsobit problémy s konzistencí oprávnění mezi různými protokoly. Chcete-li zamezit nekonzistencím, doporučujeme, aby tato možnost byla i nadále zakázána.</li>
+</ul>
+</div>
+<h3 class="disable-eds14">Připojit / připojení</h3>
+<p class="disable-eds14">Podle výchozího nastavení mohou vzdálené složky nebo virtuální jednotky připojovat všichni uživatelé. Zde je možné omezit přístup ke vzdálené složce nebo správě virtuálních jednotek pouze na správce.</p>
+
+<div class="disable-eds14 section">
+<h4>Poznámka:</h4>
+<p>Uživatelé, kteří nejsou správci, mohou připojovat vzdálené složky pouze ve své složce <b>home</b>.</p>
+</div>
+<h4 class="disable-eds14">Povolení připojovat vzdálené složky nebo virtuální jednotky jiným uživatelům:</h4>
+<ol class="disable-eds14">
+<li>Vyberte v části <b>Vzdálená složka</b> nebo <b>Virtuální disk</b> možnost <b>Všichni uživatelé</b> nebo uživatelé <b>Administrators</b>.</li>
+<li>Klikněte na možnost <b>OK</b>.</li>
+</ol>
+<h4 class="disable-eds14">Povolení připojovat servery a cloudové služby jiným uživatelům:</h4>
+<ol class="disable-eds14">
+  <li>Vyberte z možností <b>Všichni uživatelé</b>, <b>Správci</b> nebo <strong>Určitý uživatel</strong>. </li>
+  <li>Vyberete-li možnost <strong>Určitý uživatel</strong>, otevře se okno, ve kterém je možné konfigurovat oprávnění k připojování pro různé uživatele. Chcete-li určitému uživateli povolit přístup, musí být zaškrtnuté políčko ve sloupci <strong>Povoleno</strong>. Chcete-li určitému uživateli přístup zakázat, musí být políčko ve sloupci <strong>Povolení</strong> prázdné. Po dokončení zavřete okno kliknutím na možnost <strong>OK</strong>.</li>
+  <div class="section">
+    <h4>Poznámka:</h4>
+    <ul>
+      <li>Uživatelé patřící do skupiny <strong>administrators</strong> mohou tuto funkci používat, ale nemohou provádět žádné změny. Uživatelé přihlašující se jako <strong>host</strong> nemohou tuto funkci ani používat, ani provádět žádné změny. Zde je možné nastavit oprávnění pro všechny ostatní uživatele.</li>
+    </ul>
+  </div>
+  <li>Klikněte na možnost <strong>OK</strong>.</li>
+</ol>
+<h3>Sdílené odkazy</h3>
+<p>Podle výchozího nastavení mohou sdílet odkazy na soubory všichni uživatelé. Zde je možné omezit přístup ke správě sdílených odkazů pouze na správce.</p>
+<h4>Povolení sdílení odkazů na soubory jiným uživatelům:</h4>
+<ol>
+<li>Vyberte z možností <b>Všichni uživatelé</b>, <b>Správci</b> nebo <strong>Určitý uživatel</strong>.</li>
+<li>Klikněte na možnost <b>OK</b>.</li>
+</ol>
+
+<h4>Otevření souborů HTML jako prostého textu:</h4>
+
+<ol>
+<li>Zaškrtněte políčko <strong>Vždy otevírat soubory HTML ve formátu prostého textu</strong>. Pokud je tato možnost povolená, budou se soubory HTML (tj. soubory HTM, HTML, JSP, XHTML) zobrazovat ve formátu prostého textu, když je uživatelé otevřou pomocí odkazu sdílení souboru. Tato možnost pomáhá zabránit napadení relací přihlášení uživatelů pomocí skriptu vloženého v souborech HTML.</li>
+<li>Klikněte na možnost <strong>OK</strong>.</li>
+</ol>
+
+<h3>Omezení rychlosti</h3>
+<p>Povolením omezení rychlosti je možné řídit maximální využitelnou šířku pásma pro uživatele a skupiny přenášející data prostřednictvím služby File Station.</p>
+
+
+<h4>Povolení omezení rychlosti:</h4>
+<ol>
+  <li>Zaškrtněte políčko <b>Povolit omezení rychlosti</b> nebo <strong>Povolit omezení rychlosti podle plánu</strong>, chcete-li implementovat omezení rychlosti pouze v určitou dobu. Jedná se o nastavení na straně serveru, které přepíše nastavení jednotlivých uživatelů a skupin. Výběrem možnosti <strong>Bez omezení rychlosti</strong> zakážete nastavení omezení rychlosti všech uživatelů a skupin.</li>
+  <li>Kliknutím na možnost <strong>Nastavení omezení rychlosti</strong> je možné upravit nastavení pro jednotlivé uživatele nebo skupiny. Pro jednotlivé uživatele a skupiny můžete vybrat jednu z následujících možností:  </li>
+    <ul>
+      <li><strong>Použít nastavení skupin:</strong> Nastavení omezení rychlosti bude stejné jako nastavení pro skupinu, do které uživatel patří. </li>
+      <li><strong>Bez omezení rychlosti:</strong> Při přenosu souborů členy skupiny pomocí této služby se nebude uplatňovat žádné omezení rychlosti.</li>
+      <li><strong>Konstantní:</strong> Pro uživatele nebo členy skupiny bude uplatněno pevné, konstantní omezení rychlosti. Omezení rychlosti odesílání a stahování lze zadat do polí vlevo.</li>
+      <li><strong>Variabilní:</strong> Pro uživatele nebo členy skupiny lze zadat a uplatnit dva různé typy omezení rychlosti podle plánu. Kliknutím na tlačítko <strong>Nastavit</strong> upravíte nastavení omezení rychlosti a nastavíte plán.</li>
+    </ul>
+
+  <li>Klikněte na možnost <b>Použít</b>.</li>
+</ol>
+<div class="section">
+  <h4>Poznámka:</h4>
+  <ul>
+    <li>Další podrobnosti o dynamice omezení rychlosti pro skupiny najdete <a href="../AdminCenter/file_group_edit.html">v tomto odkazu</a>.</li>
+    <li>Při nastavování omezení rychlosti pro uživatele se v části <strong>Výsledek</strong> zobrazuje jeho aktuální omezení rychlosti vycházející z jeho individuálních nastavení nebo nastavení skupiny. Pokud má například uživatel „Achileus“ nastaveno individuální omezení stahování na 100 kB/s, ale patří do uživatelské skupiny s omezením stahování nastaveným na 500 kB/s, zobrazí se v části <strong>Výsledek</strong> hodnota „0/500“.</li>
+  </ul>
+</div>
+
+
+
+<h3>Zabezpečení</h3>
+
+<p>Zde se nacházejí níže uvedená bezpečnostní nastavení.</p>
+
+<h4>Otevření souborů HTML jako prostého textu:</h4>
+
+<ol>
+<li>Zaškrtněte políčko <strong>Vždy otevírat soubory HTML ve formátu prostého textu</strong>. Pokud je tato možnost povolena, budou se soubory HTML (tj. soubory HTM, HTML, JSP, XHTML) při otevření ve službě File Station zobrazovat ve formátu prostého textu. Tato možnost pomáhá zabránit napadení relací přihlášení uživatelů pomocí skriptu vloženého v souborech HTML.</li>
+<div class="section">
+<h4>Poznámka:</h4>
+<ul>
+<li>Nejedná se o globální nastavení. Každý uživatel si podle svých vlastních potřeb může vybrat, jestli chce tuto volbu zapnout nebo ne.</li>
+</ul>
+</div>
+<li>Klikněte na možnost <strong>OK</strong>.</li>
+</ol>
+
+</body>
+</html>

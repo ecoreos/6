@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>DSM の更新</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h1><a name="leaf_update"></a>ファームウェアの更新</h1>
+<p>定期的に、Synology は DSM　の無償アップデートをリリースします。これらの更新には、新しい機能、機能向上、パフォーマンス強化が含まれます。</p>
+<p><span class="note_head">重要：</span> 通常、DSM を更新しても DiskStation のデータに影響しません。しかしデータの安全性を保護するために、開始前にデータをバックアップすることをお勧めします。</p>
+
+<h2>手動 DSM の更新を実行</h2>
+<p>
+.pat アップデートファイルは Synology の<a href="http://www.synology.com/support/download.php" target="_blank">ダウンロード センター</a>からダウンロードして手動 DSM 更新を実行することができます。
+</p>
+<h4>手動 DSM の更新を実行する：</h4>
+
+<ol>
+<li><a href="http://www.synology.com" target="_blank">www.synology.com</a> にアクセスし、最新のファームウェア更新をローカルコンピュータにダウンロードしてください。ファイルを解凍して、「.pat] 更新ファイルを入手します。</li>
+<li><b>[手動 DSM の更新]</b> をクリックして、手動 DSM の更新ページに移動します</li>
+<li><b>[参照]</b> をクリックしてアップデートファイルを選択します。</li>
+<li><b>[適用]</b> をクリックして DSM の更新を開始します。更新が完了すると、システムは自動的に再起動します。</li>
+</ol>
+<div class="section">
+<h4>トラブルシュート：</h4>
+<p>DSM が更新できない場合は、以下のアドバイスに従い問題解消に役立ててください。</p>
+<ul>
+<li>更新プロセスがユーザー、または停電などの予期せぬ出来事によって中断されていないか確認します。</li>
+<li>DSM のバージョンを確認します。新しいバージョンのファームウェアのみシステムを更新することができます。</li>
+<li>更新ファイルが破損した恐れがあるため、再び DSM 更新をダウンロードします。</li>
+</ul>
+<p>問題が解消されない場合は、Synology の<a href="https://account.synology.com/support/support_form.php" target="_blank">テクニカルサポート</a>にお問い合わせください。</p>
+</div>
+
+<h2>自動 DSM の更新を実行</h2>
+<p>
+手動更新以外は、<b>DSM の更新</b>に移動する度に、新しい DSM がダウンロードできるかどうかを Synology に確認し、その結果を緑や赤のテキストで表示します。最新の DSM がダウンロードできる場合は、最新の DSM がダウンロードさて更新が実行されます。 
+</p>
+<h4>最新の DSM をダウンロードして更新を実行する：</h4>
+<ol>
+<li>最新の DSM がダウンロードできる場合は、<b>[ダウンロード]</b> リンクをクリックして最新の DSM をダウンロードします。</li>
+<li>次のデスクトップ通知のいずれかが表示され、ダウンロードが正常に行われたかどうかを知らせます：<b>DSM のダウンロードが完了しました</b> または <b>DSM のダウンロードに失敗しました</b>。</li>
+<li>
+デスクトップの通知ウィンドウをクリックして <b>DSM の更新</b>に移動します。
+</li>
+<li>
+以下のいずれかを行います。
+<ul>
+<li>
+DSM のダウンロードが完了した場合は、<b>[今すぐ更新]</b> をクリックして、DSM の更新をすぐに開始します。
+</li>
+<li>
+最新の DSM のダウンロードに失敗した場合は、<b>[再試行]</b> をクリックして Synology から最新の DSM を再度ダウンロードします。
+</li>
+</ul>
+</li>
+</ol>
+<h4>アップデートを定期的に確認する：</h4>
+<ol>
+<li><b>[DSM のアップデートを自動的にチェックする]</b> にチェックマークを付けます。</li>
+<li>更新プランを選択して、<b>[インストールの予約]</b> を設定します。</li>
+<li><b>[OK]</b> をクリックします。</li>
+</ol>
+<p>DSM アップデートがダウンロードされ、インストールの準備ができると、デスクトップに通知が表示されます。DSM を自動的に更新したくない場合は、デスクトップ通知でこれをキャンセルしてください。または <strong>[更新設定]</strong> を変更してください。<strong>[電源管理]</strong> で <strong>[シャットダウン]</strong> を有効にした場合は、DSM アップデートは予約されたシャットダウンが行われる前にインストールされます。 </p>
+
+<div class="section">
+<h4>トラブルシュート：</h4>
+<p>最新の DSM の確認またはダウンロード中にエラーメッセージ（赤のテキスト）が表示された場合の問題解決方法：</p>
+<ul>
+<li>DiskStation がインターネットに接続されているか確認する。</li>
+<li>Synologyのダウンロードサーバーが一時的にビジーである。後でダウンロードを再度行う。</li>
+</ul>
+<p>問題が解消されない場合は、Synology の<a href="https://account.synology.com/support/support_form.php" target="_blank">テクニカルサポート</a>にお問い合わせください。</p>
+</div>
+
+</body>
+</html>

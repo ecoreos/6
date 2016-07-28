@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+	<h2>HDD/SSD</h2>
+	<p>Tato část vám umožňuje monitorovat stav disků HDD/SSD nainstalovaných na vašem zařízení DiskStation a poskytuje možnosti pro správu a analýzu výkonu a stavu disku HDD/SSD. Tyto možnosti je možné spravovat u položky <strong>Správce úložiště</strong> > <strong>HDD/SSD</strong>.</p>
+
+	<h4>Kontrola informací o disku HDD/SSD:</h4>
+	<ol>
+		<li>Přejděte na kartu <b>HDD/SSD</b>.</li>
+		<li>Vyberte v seznamu disk a rozbalte ho. Zde se zobrazuje stav S.M.A.R.T., informace o svazku, název modelu, sériové číslo, verze firmwaru a teplota.</li>
+	</ol>	
+	
+	<h4>Kontrola informací o stavu</h4>
+    <ol>
+      <li>Přejděte na kartu <b>HDD/SSD</b>.</li>
+	  <li>Vyberte disk.</li>
+      <li>Klikněte na možnost <b>Informace o stavu</b>.</li>
+	  <li>Přejděte na kartu <strong>Přehled</strong>. Zde zjistíte, kolik hodin byl disk napájen, aktuální teplotu, počet opakovaných připojení/identifikací, počet vadných sektorů a celkový stav S.M.A.R.T.</li>
+      <li>Přejděte na kartu <strong>Informace S.M.A.R.T. </strong>. Uvedená čísla vám pomohou dále diagnostikovat stav disku.</li>
+    </ol>
+
+<div class="section">
+<h4>Poznámka:</h4>
+<p>Disky SAS informace S.M.A.R.T. nepodporují.</p>
+</div>
+
+	<h4>Spuštění testu S.M.A.R.T.:</h4>
+	<P>Test S.M.A.R.T. Tento test prozkoumá a nahlásí stav pevných disků a upozorní na možné závady disku. V případě výskytu libovolných chyb doporučujeme disky okamžitě vyměnit. </P>
+    <ol>
+      <li>Přejděte na kartu <strong>HDD/SSD</strong>.</li>
+      <li>Vyberte disk.</li>
+      <li>Klikněte na možnost<b> Test S.M.A.R.T.</b></li>
+      <li>Vyberte typ testu a kliknutím na možnost <strong>Spustit</strong> test zahajte.</li>
+      <li>Výsledky posledního testu jsou uvedeny v části <b>Výsledek testu</b>.</li>
+    </ol>
+    <div class="section">
+<h4>Poznámka:</h4>
+    <p>Doba testu se může lišit v závislosti na prostředí systému.</p>
+</div>
+    <h4>Naplánování testů S.M.A.R.T.:</h4>
+    <p>Vytvořením úloh můžete naplánovat automatické spouštění testů S.M.A.R.T.</p>
+    <ol>
+      <li>Přejděte na kartu <strong>Plánovač testů</strong>.</li>
+      <li>Kliknutím na možnost <strong>Vytvořit</strong> nastavíte novou úlohu.</li>
+      <li>Na kartě <strong>Obecné</strong> upravíte následující nastavení:</li>
+      <ul>
+        <li><strong>Úloha:</strong> Zadejte název úlohy.</li>
+        <li><strong>Test S.M.A.R.T.  – Typ testu:</strong> Vyberte provedení rychlého nebo rozšířeného testu.</li>
+        <li><strong>Test S.M.A.R.T.  – Rozsah testu:</strong> Vyberte, který disk HDD/SSD otestovat při každém provedené testu S.M.A.R.T.</li>
+      </ul>
+      <li>Na kartě <strong>Plán</strong> upravte následující nastavení:</li>
+      <ul>
+        <li><strong>Datum:</strong> Určete, kdy se má test S.M.A.R.T. provádět. Spuštění testů S.M.A.R.T. je možné plánovat na určité dny v týdnu (např. denně, o víkendech, každou neděli apod.) nebo ke konkrétnímu datu (např. 21. 10. 2015).</li>
+        <li><strong>Čas:</strong> Určete, kolikrát se má test S.M.A.R.T. provést, včetně prvního a posledního provedení každý den.</li>
+      </ul>
+      <li>Postup dokončíte kliknutím na možnost <strong>OK</strong>.</li>
+    </ol>
+
+<h4>Provedení funkce Secure Erase:</h4>
+<ol>
+<li>Přejděte na kartu <b>HDD/SSD</b>.</li>
+<li>Vyberte disk a klikněte na možnost <b>Secure Erase</b>.</li>
+</ol>
+
+
+<div class="section">
+<h4>Poznámka:</h4>
+<ul>
+<li>Funkci Secure Erase není možné provést u disků na rozšiřovacích jednotkách.</li>
+<li>Funkce Secure Erase trvale odebere veškerá data uložená na disku. Přesvědčte se, že se vybraný disk nepoužívá nebo že data byla před vymazáním zálohována.</li>
+<li>Když systém provádí funkci Secure Erase, vybraný disk se dočasně zamkne a po dokončení operace zase automaticky odemkne.</li>
+<li>Jestliže se funkce Secure Erase během provádění nevhodně ukončí, je možné funkci Secure Erase znovu spustit přímo na uživatelském rozhraní. Jestliže se disky odeberou nebo použijí někde jinde, pokud jsou stále zamknuté, použijte k jejich odemknutí heslo „synology“.</li>
+</ul>
+</div>
+
+
+	<h3>Povolení podpory mezipaměti pro zápis u disku HDD</h3>
+	<p>Zapnutím podpory mezipaměti pro zápis zvýšíte výkon zařízení DiskStation. Tuto funkci podporují jen některé modely disků HDD. Kvůli zajištění ochrany dat při používání podpory mezipaměti pro zápis se důrazně doporučuje používat záložní zdroj. Také doporučujeme po každém použití systém řádně vypnout. Vypnutím mezipaměti pro zápis snížíte pravděpodobnost ztráty dat v důsledku výpadku napájení, ale sníží se výkon systému.</p>
+
+	<h4>Povolení podpory mezipaměti pro zápis: </h4>
+	<ol>
+		<li>Přejděte na kartu <b>Správa mezipaměti</b>.</li>
+		<li>Zaškrtněte možnost <b>Povolit mezipaměť pro zápis</b>. Ve výchozím nastavení je tato funkce povolena.</li>
+		<li>Klikněte na možnost <b>Použít</b>.</li>
+	</ol>
+	
+
+ 
+</body>
+</html>

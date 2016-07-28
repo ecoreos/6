@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Urządzenia zewnętrzne</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Urządzenia zewnętrzne</h2>
+
+<p>Przejdź do <strong>Panel sterowania</strong> > <b>Urządzenia zewnętrzne</b> > <b>Urządzenia zewnętrzne</b>, aby wyświetlić listę zewnętrznych urządzeń pamięci masowej podłączonych do DiskStation.</p>
+
+
+<h3><a name="usbdisk"></a><a name="esatadisk"></a>Zewnętrzne dyski</h3>
+<p class="enable-eds14">Podłączając zewnętrzny dysk do systemu, możesz udostępnić jego pojemność za pomocą utworzonego przez system folderu udostępnionego o nazwie <b>usbshare[numer]</b> (dla dysków USB). Udostępniony folder zostanie usunięty automatyczne po wysunięciu zewnętrznego dysku z systemu.</p>
+<p class="disable-eds14">Podłączając zewnętrzny dysk do systemu, możesz udostępnić jego pojemność za pomocą utworzonego przez system folderu udostępnionego o nazwie <b>usbshare[numer]</b> (dla dysków USB) lub <b>satashare[numer]</b> (dla dysków eSATA). Udostępniony folder zostanie usunięty automatyczne po wysunięciu zewnętrznego dysku z systemu.</p>
+<p>DiskStation Rozpoznaje on następujące formaty: <span style="display: inline;" class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64"><b>Btrfs</b>, </span><b>ext3</b>, <b>ext4</b>, <b>FAT</b>, <b>FAT32</b>, <b>HFS</b>, <b>HFS Plus</b> i <b>NTFS</b>. Nierozpoznane dyski zewnętrzne będą musiały zostać sformatowane przez użyciem w systemie.</p>
+<div class="section">
+<h4>Uwaga:</h4>
+<ol>
+<li>Niektóre modele obsługują HFS/HFS Plus w trybie tylko do odczytu.</li>
+<li>Dziennik nie jest obsługiwany w HFS/HFS Plus.</li>
+<li>Upewnij się, że dysk został wysunięty przed jego odłączeniem.</li>
+</ol>
+</div>
+
+<h4>Aby sformatować dysk:</h4>
+
+<p>Kliknij przycisk <b>Formatuj</b>, co spowoduje otwarcie kreatora. Zewnętrzne dyski możesz sformatować w systemie <b>ext4</b> i <b>FAT32</b> za pomocą DiskStation.</p>
+
+<div class="section">
+<h4>Uwaga:</h4>
+<ol>
+<li>Upewnij się, że dane zostały zarchiwizowane przed sformatowaniem dysku zewnętrznego. Podczas tej procedury wszystkie dane zostaną usunięte i nie będzie można ich odzyskać.</li>
+
+<li>Aby sformatować dysk zewnętrzny w systemie ext3 lub ext4, rozmiar dysku musi przekraczać 1 GB.</li>
+
+<li>Kiedy dysk zostanie sformatowany w systemie ext3 lub ext4, zostanie on rozpoznany tylko przez DiskStation. Jeśli chcesz odczytać dane bezpośrednio z dysku zewnętrznego za pomocą komputera PC lub Mac, wybierz format FAT32.</li>
+</ol>
+</div>
+
+
+<h4>Aby przeprowadzić test S.M.A.R.T., :</h4>
+<P>Dysk S.M.A.R.T. Test ten bada i raportuje stan dysku twardego, zapewniając możliwość wczesnego ostrzegania o zbliżającej się awarii. W przypadku wykrycia błędów zalecamy wymianę dysku. <br>Aby przeprowadzić test S.M.A.R.T., należy kliknąć przycisk <strong>Test S.M.A.R.T.</strong> i postępować zgodnie z wytycznymi kreatora.<br> Aby sprawdzić wyniki testu, kliknij przycisk <strong>Informacje S.M.A.R.T.</strong>.</P>
+<div class="section">
+<h4>Uwaga:</h4>
+<p>Czas testu różni się w zależności od środowiska systemowego.</p>
+</div>
+
+
+<div class="section disable-eds14">
+<h4>Ograniczenia</h4>
+
+<p>Formatowanie dysku nie jest dostępne w następujących sytuacjach:</p>
+
+<ul>
+<li>Dysk zewnętrzny jest inicjowany, tj, kiedy urządzenie zewnętrzne zostało właśnie podłączone.</li>
+<li>Pojemność dysku zewnętrznego jest mniejsza niż 1 GB (format ext3 lub ext4).</li>
+<li>Dysk zewnętrzny jest formatowany.</li>
+<li>Kiedy system archiwizuje pliki na dysku zewnętrznym.</li>
+<li>Dysk zewnętrzny jest uszkodzony.</li>
+</ul>
+<h4>Rozwiązywanie problemów:</h4>
+<ol>
+<li>Nie udało się sformatować dysku zewnętrznego. Dlaczego?</li>
+<ul>
+<li>Sprawdź, czy dysk zewnętrzny jest prawidłowo podłączony.</li>
+<li>Sprawdź, czy dysk zewnętrzny nie jest chroniony przed zapisem. Jeśli tak, usuń blokadę przed formatowaniem. </li>
+</ul>
+<li>System plików dysku zewnętrznego jest pokazany jako <b>Nieobsługiwany</b> lub system nie tworzy folderu udostępnionego <b>usbshare[numer]</b> lub <b>satashare[numer]</b> na dysku zewnętrznym. Co mam zrobić? </li>
+<ul>
+<li>Bieżący system rozpoznaje formaty <span style="display: inline;" class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64">Btrfs, </span>ext3, ext4, FAT, FAT32, HFS, HFS Plus i NTFS. Dysk zewnętrzny niesformatowany w systemie podanym powyżej nie zostanie rozpoznany i jego stan będzie wyświetlany jako <b>Nieobsługiwany</b>.</li>
+</ul>
+<li>Nie mogę uzyskać dostępu do folderu udostępnionego <b>usbshare[numer]</b> lub <b>satashare[numer]</b>. Co mam zrobić? </li>
+
+<ul>
+<li>Może to wynikać z problemu w systemie plików na dysku zewnętrznym. Aby go rozwiązać, podłącz dysk zewnętrzny do komputera PC i przeprowadź kontrolę systemu plików.</li>
+</ul>
+<li>Czy mój dysk zewnętrzny w formacie ext3 lub ext4 może zostać podłączony do mojego komputera PC i Mac i bezpośrednio obsłużony?</li>
+<ul>
+<li>Nie, format ext3 lub ext4 jest rozpoznawany tylko przez DiskStation. Jeśli chcesz odczytać dane bezpośrednio z dysku zewnętrznego za pomocą komputera PC lub Mac, wybierz format FAT32. </li>
+</ul>
+<li>Dlaczego widzę folder o nazwie „lost+found” na dysku zewnętrznym?</li>
+<ul>
+<li>Jest to domyślny folder systemowy, który jest tworzony automatycznie podczas korzystania z systemu plików ext3/ext4. Obecność tego folderu na dysku zewnętrznym jest normalna. Choć administratorzy mają prawo dostępu i zarządzania treścią tego folderu, zaleca się pozostawienie go w spokoju.</li>
+
+</ul>
+
+</ol>
+</div>
+<div class="section enable-eds14">
+<h4>Ograniczenia</h4>
+
+<p>Formatowanie dysku nie jest dostępne w następujących sytuacjach:</p>
+
+<ul>
+<li>Dysk zewnętrzny jest inicjowany, tj, kiedy urządzenie zewnętrzne zostało właśnie podłączone.</li>
+<li>Pojemność dysku zewnętrznego jest mniejsza niż 1 GB (format ext3 lub ext4).</li>
+<li>Dysk zewnętrzny jest formatowany.</li>
+<li>Kiedy system archiwizuje pliki na dysku zewnętrznym.</li>
+<li>Dysk zewnętrzny jest uszkodzony.</li>
+</ul>
+<h4>Rozwiązywanie problemów:</h4>
+<ol>
+<li>Nie udało się sformatować dysku zewnętrznego. Dlaczego?</li>
+<ul>
+<li>Sprawdź, czy dysk zewnętrzny jest prawidłowo podłączony.</li>
+<li>Sprawdź, czy dysk zewnętrzny nie jest chroniony przed zapisem. Jeśli tak, usuń blokadę przed formatowaniem. </li>
+</ul>
+<li>System plików dysku zewnętrznego jest pokazany jako <b>Nieobsługiwany</b> lub system nie tworzy folderu udostępnionego <b>usbshare[numer]</b> na dysku zewnętrznym. Co mam zrobić? </li>
+<ul>
+<li>Bieżący system rozpoznaje formaty ext3, ext4, FAT, FAT32, HFS, HFS Plus i NTFS. Dysk zewnętrzny niesformatowany w systemie podanym powyżej nie zostanie rozpoznany i jego stan będzie wyświetlany jako <b>Nieobsługiwany</b>.</li>
+</ul>
+<li>Nie mogę uzyskać dostępu do folderu udostępnionego <b>usbshare[numer]</b>. Co mam zrobić? </li>
+
+<ul>
+<li>Może to wynikać z problemu w systemie plików na dysku zewnętrznym. Aby go rozwiązać, podłącz dysk zewnętrzny do komputera PC i przeprowadź kontrolę systemu plików.</li>
+</ul>
+<li>Czy mój dysk zewnętrzny w formacie ext3 lub ext4 może zostać podłączony do mojego komputera PC i Mac i bezpośrednio obsłużony?</li>
+<ul>
+<li>Nie, format ext3 lub ext4 jest rozpoznawany tylko przez DiskStation. Jeśli chcesz odczytać dane bezpośrednio z dysku zewnętrznego za pomocą komputera PC lub Mac, wybierz format FAT32. </li>
+</ul>
+<li>Dlaczego widzę folder o nazwie „lost+found” na dysku zewnętrznym?</li>
+<ul>
+<li>Jest to domyślny folder systemowy, który jest tworzony automatycznie podczas korzystania z systemu plików ext3/ext4. Obecność tego folderu na dysku zewnętrznym jest normalna. Choć administratorzy mają prawo dostępu i zarządzania treścią tego folderu, zaleca się pozostawienie go w spokoju.</li>
+
+</ul>
+
+</ol>
+</div>
+
+
+<h4>Aby ustawić domyślne zezwolenia dla wszystkich urządzeń zewnętrznych:</h4>
+<p>Zezwolenia domyślne można ustawić, klikając <strong>Domyślne zezwolenia</strong> i określając, którzy użytkownicy lub grupy mogą otwierać, wyświetlać lub modyfikować urządzenia zewnętrzne i ich zawartość. Kiedy urządzenie zewnętrzne zostanie wsunięte do DiskStation, określone zezwolenia zostaną przypisane automatycznie do tego urządzenia zewnętrznego.</p>
+<p>W oknie zezwoleń wykonaj następujące czynności, aby ustawić domyślne zezwolenia:</p>
+<ol>
+<li>Wybierz jeden z następujących elementów z rozwijanego menu:</li>
+<ul>
+<li><b>Użytkownik wewnętrzny systemu:</b> Przydziel zezwolenia dla użytkowników domyślnego systemu, takich jak użytkownik Anonymous FTP/WebDAV.</li>
+<li><b>Lokalni użytkownicy:</b> Przydziel zezwolenia dla lokalnych użytkowników (włącznie z <b>gościem</b>).</li>
+<li><b>Lokalne grupy:</b> Przydziel zezwolenia lokalnym grupom.</li>
+</ul>
+
+<li>Zaznacz lub usuń zaznaczenie odpowiednich pól dla każdego użytkownika lub grupy, aby dostosować ich zezwolenia dostępu do urządzeń zewnętrznych:</li>
+  <ul>
+<li><b>Odczyt/zapis</b>: Użytkownik lub grupa mogą uzyskać dostęp i dokonać zmian w plikach lub folderach na urządzeniach zewnętrznych.</li>
+<li><b>Tylko odczyt</b>: Użytkownik lub grupa mogą uzyskać dostęp do plików i folderów na urządzeniach zewnętrznych.</li>
+<li><b>Brak dostępu</b>: Użytkownik lub grupa nie mają dostępu do plików i folderów na urządzeniach zewnętrznych.</li>
+</ul>
+</ol>
+
+
+</body>
+</html>

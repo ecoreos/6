@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Opslagbeheer</title>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2><a name="leaf_iscsilun"></a>iSCSI LUN*</h2>
+<p>Een iSCSI is een opslagnetwerkservice die de overdracht van gegevens over lokale netwerken of grote afstanden bevordert. Door iSCSI LUN's toe te wijzen aan iSCSI Targets kunnen clients op dezelfde manier toegang krijgen tot de opslagruimte als bij lokale schijven. Een iSCSI LUN (logical unit number) kan worden toegewezen aan meerdere iSCSI Targets voor de verlening van iSCSI-opslagservices.  Ga naar <strong>Opslagbeheer</strong> > <strong>iSCSI LUN</strong> om iSCSI LUN's te beheren.</p>
+
+<div class="section"><h4>Opmerking:</h4>
+<p>het aantal ondersteunde iSCSI LUN's is afhankelijk van het model DiskStation. Ga voor een gedetailleerde productspecificatie naar <a href="http://www.synology.com/" target="_blank">www.synology.com</a>.</p>
+</div>
+
+<p>DiskStation ondersteunt momenteel de volgende iSCSI-LUN-types:</p>
+<ul>
+	<li><b>iSCSI LUN (gewone bestanden)</b>: de iSCSI LUN wordt gemaakt door een deel van de volumeruimte toe te wijzen voor gebruik. U kunt de grootte nadien indien nodig uitbreiden. Dit type iSCSI LUN biedt de flexibiliteit van dynamisch capaciteitsbeheer met Thin Provisioning, VMware VAAI-hardwareversnellingsondersteuning, Windows ODX-ondersteuning, LUN snapshot en LUN clone.</li>
+	<li class="disable-bromolow disable-grantley disable-avoton disable-braswell disable-broadwell disable-kvmx64"><b>iSCSI LUN (block-niveau) - één LUN op RAID</b>: De iSCSI LUN wordt gemaakt met de volledige ruimte van een volume. U kunt hem herstellen of uitbreiden, of het RAID-type wijzigen, op dezelfde manier als een volume. Zie de pagina <a href="space.html">Volume</a> voor meer informatie.</li>
+	<li class="disable-bromolow disable-grantley disable-avoton disable-braswell disable-broadwell disable-kvmx64"><b>iSCSI LUN (block-niveau) - meerdere LUNs op RAID</b>: De iSCSI LUN wordt gemaakt door een specifieke ruimte van een Diskgroep aan te wijzen. U kunt de iSCSI LUN later uitbreiden als er nog ruimte beschikbaar is op de Diskgroep. Zie de pagina <a href="raid.html">Diskgroep</a> voor meer informatie.</li>
+	<li class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64"><b>iSCSI LUN (blokniveau)</b>: Dit iSCSI LUN-type wordt op een RAID Group gemaakt en biedt de flexibiliteit van dynamisch capaciteitsbeheer naast geoptimaliseerde toegangsprestaties. U kunt de iSCSI LUN later uitbreiden met behulp van niet toegewezen ruimte op de RAID Group. Zie de pagina <a href="raid.html">RAID Group</a> voor meer informatie.</li>
+</ul>
+
+<div class="section"><h4>Opmerking:</h4>
+<p>iSCSI LUN's met geavanceerde LUN-functies worden alleen ondersteund op het bestandssysteem ext4<span style="display: inline;" class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64">/Btrfs</span>.</p>
+</div>
+
+<h4>Om een iSCSI LUN te maken:</h4>
+<ol>
+	<li>Klik op <b>Maken</b>.</li>
+	<li>Selecteer het type iSCSI LUN dat u wilt maken.</li>
+	<li>Volg de wizard om het proces te voltooien.</li>
+</ol>
+
+<div class="section"><h4>Opmerking:</h4>
+<p>geavanceerde LUN-functies kunnen alleen bij de eerste iSCSI LUN-creatie worden ingeschakeld. Deze instelling kan achteraf niet worden gewijzigd.</p>
+</div>
+
+<p>Ga als volgt te werk om de unitgrootte van geavanceerde LUN-toewijzing voor bepaalde functies van de toepassingsserver te optimaliseren, zoals Microsoft Exchange of SQL Server, of van virtualisatieservers en opslagversnellingstechnologieën, zoals Microsoft Windows ODX of VMware:</p>
+<ul>
+	<li>Stel de toewijzingsunitgrootte in tijdens het maken van de eerste geavanceerde LUN van een volume.</li>
+	<li>Stel de toewijzingsunitgrootte in bij <strong>Configureren</strong> voor u de eerste geavanceerde LUN maakt van een volume.</li>
+</ul>
+
+<p>We raden u aan om de toewijzingsunitgrootte voor uw toepassing in te stellen wanneer u de directe verbinding van uw toepassingsserver of RDM (pass-through) werkmethoden voor Advanced iSCSI LUN's op DiskStation gebruikt. Om Synology Advanced LUN-technologie voor klonen op Windows ODX te gebruiken, raden wij u aan om het NTFS-volume te formatteren met een toewijzingsunitgrootte gelijk aan (of groter dan) die u voor DSM hebt opgegeven.</p>
+
+<div class="section"><h4>Opmerking:</h4>
+<p>de toewijzingsunit van Advanced LUN kan voor elk volume slechts een keer worden ingesteld.</p>
+</div>
+
+<h4>Om een iSCSI LUN te verwijderen:</h4>
+<p>Wanneer u een iSCSI LUN verwijdert, worden alle gegevens op de iSCSI LUN verwijderd. De verbindingen tussen de iSCSI LUN en een toegewezen iSCSI Target gaat ook verloren.</p>
+<ol>
+	<li>Selecteer de iSCSI LUN die u wilt verwijderen.</li>
+	<li>Klik op <b>Verwijderen</b> en volg de wizard om het proces te voltooien.</li>
+</ol>
+
+<div class="section"><h4>Opmerking:</h4>
+<p>het verwijderen van VAAI LUN's op DiskStation levert niet onmiddellijke vrije-schijfruimte op. De gegevens worden naar de gereserveerde systeemmap <strong>@EP_trash</strong> verplaatst en stuk voor stuk verwijderd. Als bijvoorbeeld een 100 GB VAAI LUN van DiskStation wordt verwijderd, kan het ongeveer 15 tot 20 minuten duren voor de 100 GB schijfruimte is vrijgemaakt.</p>
+</div>
+
+<h4>Om koppelen van een iSCSI LUN (blokniveau) te forceren:</h4>
+<p>als de cache op een iSCSI LUN (blokniveau) ontbreekt, zal het systeem bij het opnieuw opstarten niet de iSCSI LUN (blokniveau) koppelen. Is de cache niet herstelbaar en wilt u toegang tot de iSCSI LUN (blokniveau), klik dan op <b>Koppelen forceren</b>.</p>
+
+<div class="section"><h4>Opmerking:</h4>
+<p>deze functie is alleen beschikbaar voor bepaalde modellen.</p>
+</div>
+
+<h4>Om een iSCSI LUN te bewerken:</h4>
+<ol>
+	<li>Selecteer de iSCSI LUN die u wilt bewerken.</li>
+	<li>Klik op <b>Bewerken</b>.</li>
+	<li>Gewenste eigenschappen bewerken.</li>
+	<li>Klik op <b>OK</b> om de instellingen op te slaan.</li>
+</ol>	
+
+<div class="section"><h4>Opmerking:</h4>
+<p>om gegevensverlies te vermijden tijdens het bewerken van de iSCSI LUN-capaciteit kunt u deze alleen maar groter maken dan de huidige grootte.</p>
+</div>
+
+<h4>Om een iSCSI LUN snapshot te maken:</h4>
+<p>Een snapshot van een iSCSI LUN is een alleen-lezenkopie van een iSCSI LUN op een bepaald tijdstip.</p>
+<ol>
+	<li>Selecteer de iSCSI LUN waarop u snapshot wilt maken.</li>
+	<li>Klik op <strong>Snapshot</strong> en selecteer <strong>Een snapshot maken</strong>.</li>
+	<li>Voer de beschrijving voor deze snapshot in.</li>
+	<li>Selecteer een van de volgende snapshottypes:
+		<ul>
+			<li><strong>Toepassingsconsistent</strong>: Het gebruik van dit snapshottype vereist de installatie van Synology Snapshot Manager op uw Windows-server of VMware vCenter Server, afhankelijk van uw besturingsomgeving zodat communicatie met DSM mogelijk is. Bij de activering van toepassingsconsistente snapshots in DSM ontvangen toepassingen hiervan een melding en worden alle gegevens in het LUN-geheugen leeggemaakt waarop het snapshot wordt gemaakt om gegevensconsistentie te garanderen.</li>
+			<li><strong>Crash-consistent</strong>: Is Synology Snapshot Manager niet geïnstalleerd op een van uw clients, dan kunt u alleen crash-consistente snapshots van LUN's maken. Bij de activering ontvangen toepassingen hiervan geen melding en worden alle gegevens in het LUN-geheugen leeggemaakt en wordt gegevensconsistentie niet gegarandeerd.</li>
+		</ul>
+	</li>
+	<li>Klik op <strong>OK</strong>.</li>
+</ol>
+
+<h4>Om een iSCSI LUN te herstellen:</h4>
+<p>Selecteer een tijdstip-snapshot om de gegevens van een iSCSI LUN te herstellen.</p>
+<ol>
+	<li>Selecteer de iSCSI LUN die u wilt herstellen.</li>
+	<li>Klik op <strong>Snapshot</strong> en selecteer <strong>Snapshotmanager</strong>.</li>
+	<li>Selecteer een snapshot dat u wilt herstellen en klik op <strong>Herstellen</strong>.</li>
+</ol>
+
+<h4>Een iSCSI LUN of snapshot klonen:</h4>
+<p>Maak een schrijfbare kopie van een iSCSI LUN of een iSCSI LUN-snapshot.</p>
+<ul>
+	<li>Selecteer een iSCSI LUN in de lijst en klik op <strong>Klonen</strong>.</li>
+	<li>Selecteer een iSCSI LUN-snapshot in <strong>Snapshot Manager</strong> en klik op <strong>Klonen</strong>.</li>
+</ul>
+
+<div class="section"><h4>Opmerking:</h4>
+<ul>
+<li>bij sommige modellen moet u naar <b>Package Center</b> gaan en <b>Snapshot en replicatie</b> installeren voor toegang tot bepaalde functies zoals iSCSI LUN's herstellen of het maken en klonen van iSCSI LUN-snapshots.</li>
+	<li>is er minstens een verbonden iSCSI-sessie gekoppeld aan deze LUN en wordt Windows Server of VMware ESXi Server gebruikt dan raden wij de installatie aan van de invoegtoepassing <b>Synology Snapshot Manager</b> om mogelijke inconsistenties van gegevens te voorkomen, of alle toepassingen te moeten stoppenzetten en deze sessies bij de initiators te moeten afmelden vooraleer verder te gaan.</li>
+	<li>LUN-snapshot, herstellen en kloonfuncties zijn alleen beschikbaar op iSCSI LUN's met geavanceerde LUN-functies.</li>
+	<li>Als u een snapshot of een kloon hebt gemaakt en de status staat op <strong>Abnormaal</strong>/<strong>Vastgelopen</strong>, verwijder dan dit snapshot/deze kloon en maak een nieuwe.</li>
+	<li>Alle wijzigingen van een LUN na het maken van een snapshot gaan verloren wanneer u de LUN met deze snapshot herstelt.</li>
+	<li>Als de status van iSCSI LUN verandert in <b>Niet beschikbaar</b>, betekent dit dat er een aantal gegevensgerelateerde fouten zijn opgetreden bij toegang tot iSCSI LUN. Om ernstig gegevensverlies op uw systeem te voorkomen, zal deze iSCSI LUN tijdelijk ontoegankelijk zijn. Neem zo snel mogelijk contact op met Synology voor ondersteuning.</li>
+</ul>
+</div>
+
+
+<div class="section"><h4>Woordenlijst:</h4>
+<ul>
+	<li><b>Thin Provisioning</b>: Thin Provisioning is een methode om opslagruimte te optimaliseren door opslagruimte op dynamische wijze en op verzoek toe te wijzen. Deze instelling is alleen beschikbaar voor <b>iSCSI LUN (gewone bestanden)</b>.</li>
+	<li><b>VMware VAAI</b>: De VMware vStorage APIs for Array Integration (VAAI) kunnen de taken van de standaardbewerkingen in virtuele-opslagarrays naar iSCSI-apparaten in de VMware vSphere-omgeving ontlasten en de opslagprestaties optimaliseren.</li>
+	<li><b>Windows ODX</b>: een nieuwe gegevensoverdrachttechnologie ontwikkeld door Windows voor Windows Server 2012 en 8 met de naam Offload Data Transfer (ODX). ODX verbetert de overdrachtsprestaties door de werklast van de opslagarray te verlichten.<br />Als de gegevenbron en bestemming op LUN's van hetzelfde volume staan, zal klonen door Synology Advanced LUN-technologie worden uitgevoerd waardoor tot 99,9% opslagruimte wordt bespaard en klonen wordt versneld.</li>
+	<li><b>iSCSI Target toewijzen</b>: hiermee kunt u de iSCSI LUN's toewijzen aan een of meer iSCSI Targets.</li>
+	<li><b>Synology Snapshot Manager</b>: Synology Snapshot Manager is een invoegtoepassing waarmee u toepassingsconsistente snapshots van uw DiskStation Manager (DSM) kunt maken.
+		<ul>
+		    <li>Voor VMware-omgevingen moet u Synology Snapshot Manager installeren op de Windows-server waar VMware vCenter Server is geïnstalleerd. Bij de activering van een snapshot op DSM ontvangt de VMware vCenter Server hiervan een melding en worden alle gegevens op het geheugen van de LUN leeggemaakt waarvan het snapshot wordt gemaakt om gegevensconsistentie te garanderen. Na het voltooien van het snapshot zal VMware vCenter Server de normale I/O-werking van de VMware datastore hervatten. Synology Snapshot Manager for VMware vCenter Server ondersteunt vSphere 5.1 of hogere versies.</li>
+		    <li>Voor Windows-omgevingen moet u Synology Snapshot Manager installeren op uw Windows-server. Bij activering van een snapshot op DSM, gebruikt Synology Snapshot Manager de Microsoft Volume Shadow Copy Service (VSS)-technologie om consistente point-in-time kopieën van gegevens te maken. Synology Snapshot Manager for Windows ondersteunt Windows Server 2008 R2, 2012 en 2012 R2.</li>
+			<li>U kunt Synology Snapshot Manager gratis downloaden van <a href="http://www.synology.com/" target="_blank">www.synology.com</a>.</li>
+		</ul>
+	</li>
+</ul>
+</div>
+<p>____<br />*Alleen beschikbaar op bepaalde modellen.</p>
+
+
+</body>
+</html>

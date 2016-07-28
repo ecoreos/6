@@ -1,0 +1,136 @@
+﻿<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>用 File Station 连接到不同的文件服务器 - Synology DSM 帮助</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="Learn how to customize File Station settings related to file management, shared links, and security.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>远程连接</h2>
+
+<p>在 File Station 中，您可通过各种不同的协议 (FTP、STFP、WebDAV 和 WebDAV HTTPS) 连接到公共云服务 (Box、Dropbox、Google Drive 和 Microsoft OneDrive) 和文件服务器。</p>
+
+<h4>若要连接至云服务：</h4>
+<ol>
+<li>进入<strong>工具</strong> &gt; <strong>远程连接</strong> &gt; <strong>连接设置</strong>。</li>
+<li>单击该图标并单击<strong>下一步</strong>以选择所需的云服务。</li>
+<li>在弹出窗口中，按向导的说明进行帐户认证。</li>
+<li>设置完成后，目标云服务将显示在左侧面板中。</li>
+</ol>
+
+
+<div class="section">
+<h4>云特定限制：</h4>
+<ul>
+<li><strong>Box</strong>：
+<ul>
+<li>与其它合作者共享的类别将以拥有者的用户名添加后缀。</li>
+<li>如果与其它合作者共享的类别使用相同的名称 (以拥有者的用户名为后缀的类别名称)，此类别将只显示一个。</li>
+<li>您只有通过 Box 才能打开这些扩展名的文件。.gdoc、.gsheet 和 .boxnote。</li>
+<li>文件名有大小写之分。</li>
+<li>要了解有关正确的防火墙设置，请参见<a href="https://support.box.com/hc/articles/200523728-Configuring-a-Firewall-for-Box-or-Box-Sync" target="_blank">本文章</a>。</li>
+</ul>
+</li>
+
+<li><strong>Dropbox</strong>：
+<ul>
+<li>如果 Dropbox 类别含有超过 25000 个文件，则该类别无法显示。</li>
+<li>如果 Dropbox 类别含有超过 10000 个文件，则该类别无法重命名。</li>
+<li>超过 10 GB 的文件无法上传。</li>
+<li>如果目标文件上传超过 24 小时，则上传任务将失败。</li>
+<li>文件名有大小写之分。</li>
+<li>要了解有关正确的防火墙设置，请参见<a href="https://www.dropbox.com/help/23"  target="_blank">本文章</a>。</li>
+</ul>
+</li>
+
+<li><strong>Google 云端硬盘</strong>：
+<ul>
+<li>路径超过 2048 个字符的文件/文件夹将不显示。</li>
+<li>文件名超过 255 个字符的文件将不显示。</li>
+<li>相同名称的文件/类别将被标记相同的创建时间。</li>
+<li>如果您通过 File Station 打开 Google 特定文件 (如 Google 文档和 Google 幻灯片)，将显示一个 URL 以让您访问目标文件。</li>
+<li>在 File Station 显示的<strong>我的云端硬盘</strong>和<strong>已加星标</strong>文件夹分别与 Google 云端硬盘中&ldquo;My Drive&rdquo;和&ldquo;Starred&rdquo;文件夹相对应。</li>
+<li>要了解有关正确的防火墙设置，请参见<a href="https://support.google.com/drive/answer/2589954"  target="_blank">本文章</a>。</li>
+</ul>
+</li>
+
+<li><strong>Microsoft OneDrive</strong>：
+<ul>
+<li>OneNote 记事本文件将不会显示。</li>
+<li>超过 10 GB 的文件无法上传。</li>
+<li>文件 (例如，.png、.jpg、.docx、.pdf) 可能显示较大的文件大小 (原始大小加缩略图大小)。这不会影响其被下载时的原始文件大小。</li>
+<li>文件名有大小写之分。</li>
+
+</ul>
+</li>
+</ul>
+
+<p>要了解更多限制，我们建议您访问官方网站以获取有关云服务的信息。</p>
+
+
+</div>
+
+
+<h4>若要连接至文件服务器：</h4>
+<ol>
+<li>进入<strong>工具</strong> &gt; <strong>远程连接</strong> &gt; <strong>连接设置</strong>。</li>
+<li>单击该图标并单击<strong>下一步</strong>以选择所需的服务器协议。</li>
+<li>提供以下信息以完成设置：
+  <ul>
+<li><strong>主机名或 IP</strong>：输入目标文件服务器的主机名或 IP。</li>
+<li><strong>端口</strong>：输入目标文件服务器的端口号。</li>
+<li><strong>用户</strong>和<strong>密码</strong>：如果目标文件服务器需要帐户/密码，请输入此登录信息。</li>
+<li><strong>代码页</strong>：选择目标文件服务器的字符编码以正确显示文件名。</li>
+<li><strong>配置文件名称</strong>：输入独特的名称以轻松识别该文件服务器。</li>
+<li><strong>使用 WebDAV HTTPS 连接</strong>：本选项仅在您设置 WebDAV 协议以及当客户端和文件服务器支持 WebDAV HTTPS 时可用。</li>
+<li><strong>一个用户只允许一个连接</strong>：此选项仅在您设置 FTP 或 SFTP 协议时可用。当服务器有连接数量限制时，勾选此选项可优化连接。</li>
+  </ul>
+  </li>
+<li>单击<strong>应用</strong>以保存该设置。左侧面板中将显示目标文件服务器。</li> 
+</ol>
+<h4>若要修改现有的云服务或文件服务器配置文件：</h4>
+<ol>
+<li>进入<strong>工具</strong> &gt; <strong>远程连接</strong> &gt; <strong>连接列表</strong>。</li>
+<li>单击目标云服务或文件服务器以进行以下管理：
+    <ul>
+<li>编辑：单击<strong>编辑</strong>，更改当前配置文件的配置，然后单击<strong>确定</strong>。</li>
+<li>断开连接：单击<strong>断开连接</strong>可终止连接。</li>
+<li>重新连接：单击<strong>连接</strong>以恢复继续。(或者，单击 File Station 左侧面板中的目标以重新连接。)</li>
+<li>删除：单击<strong>删除</strong>，然后确认放弃该配置文件。(或者，单击 File Station 左侧面板中的目标并单击<strong>删除</strong>以进行删除。)</li>
+    </ul>
+  </li>
+  </ol>
+  
+  
+<div class="section">
+<h4>注：</h4>
+<ul>
+<li>每个用户可同时连接不超过 100 个云服务和文件服务器。</li>
+<li>请确认您选择了正确的服务器代码页以避免意外错误。如果您不知道服务器代码面，建议选择 Unicode。</li>
+<li>某些 File Station 功能 (例如，压缩、解压缩、预览等) 无法应用于存储在云服务或文件服务器中的文件。</li>
+<li>各连接的云服务或文件服务器传输速度取决于用户速度限制设置。</li>
+<li>各用户可在所有云服务和文件服务器之间最多同时执行三个文件传输任务。</li>
+<li>若要配置 WebDAV、WebDAV HTTPS 和云服务代理服务器设置，请进入<strong>控制面板</strong> &gt; <strong>网络</strong> &gt; <strong>常规</strong> &gt; <strong>代理服务器</strong>。如果您在连接到云服务或文件服务器的过程中已更改代理服务器设置，请断开连接然后重新连接。</li>
+<li>修改所连接云服务或文件服务器的信息不会影响到连接状态。</li>
+<li>若要发布连接资源，如果所含的文件超过 30 分钟未接触，则云服务/文件服务器将自动断开连接。单击云服务/文件服务器以恢复连接。</li>
+<li>系统不显示采用以下命名格式的文件/文件夹：
+  <ul>
+<li>以 <strong>._</strong> 或 <strong>.SYNOPPSDB</strong> 开头</li>
+<li>包括 <strong>/</strong></li>
+<li>确切命名为 <strong>.</strong>&nbsp;&nbsp;&nbsp;&nbsp;<strong>..</strong>&nbsp;&nbsp;&nbsp;&nbsp;<strong>'</strong>&nbsp;&nbsp;&nbsp;&nbsp;<strong>&quot;</strong>&nbsp;&nbsp;&nbsp;&nbsp;<strong>.DS_Store</strong>&nbsp;&nbsp;&nbsp;&nbsp;<strong>@eaDir</strong>&nbsp;&nbsp;&nbsp;&nbsp;<strong>@sharebin</strong>&nbsp;&nbsp;&nbsp;&nbsp;<strong>@tmp</strong>&nbsp;&nbsp;&nbsp;&nbsp;<strong>.SynologyWorkingDirectory</strong></li>
+  </ul>
+</li>
+<li class="enable-dockerx64">只有在高权限模式下才支持远程连接。若要使用此功能，请进入主 DSM 的 Docker 套件，选择您要为其启用加密共享文件夹的 <strong>Docker DSM</strong>，单击<strong>编辑</strong>，	然后勾选<strong>使用高权限执行容器</strong>旁的复选框。</li>
+
+</ul>
+</div>
+</body>
+</html>

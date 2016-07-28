@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+	<h2>ボリューム</h2>
+	<p>「ボリューム」とは、共有フォルダ、iSCSI LUN（通常ファイル）を作成したり、データを保存したり、パッケージをインストールするために使用される基本的なストレージ スペースのことです。ボリュームを作成する前に、RAID Group が既に作成されていることを確認してください。RAID Group についての詳細は、<a href="raid.html">RAID Group</a> を参照してください。
+</p>
+
+	<h4>ボリュームを構築する：</h4>
+<ol>
+  <li>DiskStation に、割り当てられるスペースを持つ既存の RAID Group があるか確認してください。</li>
+  <li><strong>[作成]</strong> ボタンをクリックします。</li>
+		<li>ボリュームを作成したい RAID Group を選択します。</li>
+		<li>任意の設定を調整します。</li>
+		<li>ボリュームのサイズを割り当てます。（割り当てサイズの設定は、1 つのボリュームの RAID Group、または iSCSI LUN で作成したボリュームでは行えません）
+		</li>
+</ol>
+
+<div class="section">
+<h4>注意：</h4>
+<ul>
+	<li>割り当て可能なボリュームのサイズは、最大 200 TB までです。</li>
+	<li class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64">Btrfs ボリュームに割り当てる最大サイズは、10 GB です。</li>
+    <li class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64">Btrfs ボリュームには、4% のスペースがメタデータのために予約されています。</li>
+</ul>
+</div>
+
+
+<h4>ボリュームを削除する：</h4>
+	<ol>
+		<li>削除するボリュームを選択します。</li>
+		<li><b>[削除]</b> ボタンをクリックし、ウィザードに従って作業を完了します。</li>
+	</ol>
+<div class="section">
+<h4>注意：</h4>
+<ul>
+<li>ボリュームを削除すると、当該ボリュームの既存のデータがすべて削除されます。</li>
+</ul>
+</div>
+
+<h4>ボリュームを強制マウントする：</h4>
+<p>ボリューム上にキャッシュがない場合は、システムはブートアップ時にボリュームをマウントしません。キャッシュを復元できず、ボリュームにアクセスしたい場合は、<b>[強制マウント]</b> を選択できます。</p>
+
+<div class="section">
+<h4>注意：</h4>
+<ul>
+<li>この機能は、特定の機種でのみ利用できます。</li>
+</ul>
+</div>
+
+	<h4>ボリュームを修復する：</h4>
+	<p>ボリュームの状態が <b>[降等]</b> になっている場合は、その <b>[RAID Group]</b> タブを選択し、適切な RAID Group を探します。次に提案される指示に従って、修正してください。
+</p>
+
+	<h4>ボリュームのサイズを拡張する</h4>
+	<ul>
+		<li>複数のボリュームまたは iSCSI LUN（ブロックレベル）で構成される RAID Group 上のボリューム。
+<ol>
+				<li>増設するボリュームを選択します。</li>
+				<li><b>[編集]</b> をクリックします。</li>
+				<li>新しいサイズを入力し、<b>[OK]</b> をクリックして拡張します。</li>
+			</ol>
+		<li>1 つのボリューム または iSCSI LUN で構成された RAID Group 上に作成されたボリュームの場合は、<a href="raid.html">RAID Group</a> の <b>RAID Group のサイズを拡張する</b>をお読みください。ボリューム サイズは RAID Group が拡張された後で拡張されます。
+	  </li>
+	</ul>
+
+
+<h3>SSD TRIM</h3>
+
+<p>ボリュームが SSD (Solid State Drives) だけで構成されている場合は、SSD TRIM を有効にするようお勧めします。この機能は、SSD 上に構築したボリュームの読み取り速度と書き込み速度を高め、効率を高めると同時に SSD の寿命も長くします。</p>
+
+<h4>SSD TRIM を有効にする：</h4>
+
+<ol>
+  <li><b>[ストレージ マネージャ]</b> を開き、<b>[ボリューム]</b> を選択します。</li>
+  <li>SSD の全体を構成するボリュームを選択し、<b>[構成]</b> ボタンをクリックします。</li>
+  <li>開いた画面で <b>[SSD TRIM]</b> タブを開き、<b>[TRIM を有効にする]</b> にチェックマークを付けます。</li>
+<li><strong>[予約の設定]</strong> ボタンをクリックして、システムがいつ SSD TRIM を実行するのかを選択します。</li>
+<li><strong>[OK]</strong> をクリックします。</li>
+</ol>
+
+<div class="section">
+<h4>注意：</h4>
+<ul>
+
+<li>SSD TRIM は 特定の DiskStation モデルと RAID タイプでしか実行できません。</li>
+
+
+<li>一部の SSD モデルは RAID 5 と RAID 6 ボリュームでは SSD TRIM を実行できません。<a href="http://www.synology.com/" target=_blank>www.synology.com</a> でリストをご参照ください。</li>
+
+
+<li>次の状態のときには、SSD TRIM を有効にすることはできません：
+  <ul>
+    <li>ボリュームが SSD キャッシュと共にマウントされている。</li>
+    <li><strong>Time Backup</strong> パッケージがインストールされている。</li>
+    <li>High-availability クラスタが <strong>High Availability マネージャ</strong>で構築されている。</li>
+  </ul>
+</li>
+<li>SSD TRIM はブロックレベル iSCSI LUN で有効にすることはできません。</li>
+<li>SSD TRIM を実行している間は、システムの性能に影響します。TRIM を完了するのに要する時間は、ボリューム サイズと SSD のモデルによって異なります。</li>
+
+<li>ボリュームで TRIM を有効にすると、同じディスク グループまたは RAID Group 上に作成した別のボリュームでも有効になります。</li>
+
+</ul>
+</div>
+
+
+<h3>ファイル システム スクラブ*</h3>
+<p>ファイルシステムのスクラビングは、ボリュームを調べるデータメンテナンス機能です。チェックサムと一致しないデータがあることが検出される場合、ファイルパスがログセンターに記録され、データ修復のためのバックアップを使用することが推奨されます。</p>
+<p>データの整合性を保証するために、ファイルシステムのスクラビングを定期的に実行されることをお勧めします。</p>
+
+<h4>ファイルシステムのスクラビングを実行するには：</h4>
+<ol>
+<li><b>[ストレージ マネージャ]</b> を開き、<b>[ボリューム]</b> を選択します。</li>
+<li>ファイルシステムのスクラビングを実行するボリュームを選択してください。</li>
+<li><b>[管理]</b> をクリックしてください。</li>
+<li><b>[ファイル システム スクラブ]</b> を選択します。</li>
+</ol>
+
+<div class="section">
+<h4>注意：</h4>
+<ul>
+<li>ファイルシステムのスクラビングは、<b>Btrfs</b> ファイルシステムの中のボリュームでのみ実行できます。</li>
+<li>RAID のスクラビングは、ボリュームの状態が、<strong>正常</strong> である場合にのみ実行できます。</li>
+<li>ファイルシステムのスクラビングが完了する前に、本システムをシャットダウンしないでください。システムが完了前にシャットダウンされる場合、手動でファイルシステムのスクラビングを始めからやり直す必要があります。</li>
+</ul></div>
+
+<h3>ファイル システムのデフラグ*</h3>
+<p>常にデータが編集されている場合は、分散したファイルの量がファイル システム内で増加します。この場合、ハードドライブ上のファイルへのアクセスが遅くなりました。ファイルシステムのデフラグを実行すると、性能を高めることができます。</p>
+
+<h4>ファイル システムのデフラグを実行：</h4>
+
+<ol>
+<li><strong>[ストレージ マネージャ]</strong> を開き、<b>[ボリューム]</b> を選択します。</li>
+<li>ファイルシステムの最適化を実行するボリュームを選択してください。</li>
+<li><strong>[管理]</strong> をクリックしてください。</li>
+<li><strong>[ファイル システムのデフラグを実行]</strong> を選択します。</li>
+</ol>
+
+<div class="section">
+<h4>注意：</h4>
+<ul>
+<li>ファイル システムのデフラグは、<b>Btrfs</b> ファイルシステムのボリューム上でしか実行できません。</li>
+<li>ファイル システムのデフラグは、ボリュームの状態が <strong>[正常]</strong> の場合にしか実行できません。</li>
+<li>システムのデフラグが完了する前にシステムをシャットダウンすることはお止めください。システムが完了前にシャットダウンされる場合、手動でファイルシステムの最適化を始めからやり直す必要があります。</li>
+<li>ボリュームに共有フォルダのスナップショットが含まれている場合は、ボリューム使用量が増加する場合があります。</li>
+</ul>
+</div>
+
+<p>____<br />*特定の機種でのみ利用できます。</p>
+
+
+
+</body>
+</html>

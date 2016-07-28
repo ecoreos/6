@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Win/Mac/NFS</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Doména</h2>
+<p>Vaše zařízení DiskStation se může připojit k doméně systému Windows. Po připojení k doméně se mohou uživatelé domény přihlásit do zařízení DiskStation pomocí účtů a hesel domény a mohou tak používat soubory a aplikace systému DSM, aniž by si museli pamatovat další sadu uživatelských jmen a hesel.</p>
+<h4>Připojení do domény:</h4>
+<ol>
+<li>Přejděte do části <strong>Ovládací panel</strong> > <strong>Adresářová služba</strong> > <strong>Doména</strong>.</li>
+<li>Zaškrtněte políčko <strong>Připojit k doméně</strong>.</li>
+<li>Do příslušných polí zadejte název domény a určete server DNS.</li>
+<li>V případě potřeby zaškrtněte políčko <b>Rozšířené možnosti domény</b>. (Podrobnosti najdete níže.)</li>
+<li>Klikněte na možnost <b>Použít</b>.</li>
+<li>V okně, které se otevře, zadejte uživatelské jméno a heslo správce doménového serveru.</li>
+<li>Klikněte na možnost <b>OK</b>.</li>
+</ol>
+<div class="section">
+<h4>DNS Server</h4>
+<p>Doporučuje se určit server DNS, aby mohlo zařízení DiskStation snáze vyhledat doménu. Pokud však doména není registrována na serveru DNS, připojení k doméně se nemusí podařit.</p>
+<h4>Typ doménového serveru</h4>
+<p>Toto pole zobrazuje typ domény po připojení zařízení DiskStation k doméně. Typ domény bude „Doména AD“.</p>
+<h4>Režim správy</h4>
+<p>Tato možnost určuje způsob správy oprávnění uživatelů a skupin domény. </p>
+<ul>
+<li><b>Důvěryhodná doména</b>: Můžete spravovat jak uživatele a skupiny v připojené doméně, tak důvěryhodné domény. Uživatele a skupiny lze filtrovat pomocí rozevíracího seznamu domény.</li>
+<li><b>Jednoduchá doména s OJ</b>: V tomto režimu se zobrazí pouze uživatelé a skupiny v připojené doméně. V tomto režimu můžete filtrovat uživatele/skupiny domény pomocí rozevíracího seznamu OJ (organizační jednotky).</li>
+</ul>
+<h4>Rozšířené možnosti domény</h4>
+<p>Ve většině případů nemusíte zadávat žádné rozšířené možnosti domény. Rozšířené možnosti domény jsou nutné pouze v určitých prostředích domén. </p>
+<ul>
+<li><b>DC IP/FQDN</b>: Zadejte IP adresu doménového řadiče (DC) nebo FQDN a zařízení DiskStation se s ním pokusí komunikovat. Pokud zadáváte více IP adres nebo FQDN, použijte mezi jednotlivými položkami čárku (,). Pokud chcete, můžete za poslední IP adresu doménového řadiče nebo FQDN zadat hvězdičku (*). Nepodaří-li se komunikace se zadanými adresami, zařízení DiskStation se pokusí komunikovat s jiným doménovým řadičem. Mezi hvězdičku a poslední IP adresu nebo FQDN musíte vložit čárku.</li>
+<li><b>Název NetBIOS domény</b>: Zadejte název NetBIOS domény.</li>
+<li><b>FQDN domény (název DNS)</b>: Zadejte název FQDN (název DNS) domény.</li>
+<li><b>Zaregistrovat rozhraní DNS:</b> Při připojování do domény se na serveru DNS zaregistruje zde zadaná karta NIC (Network Interface Card). Pamatujte si, že pokud název hostitele zařízení DiskStation obsahuje podtržítko (_), dojde k selhání registrace, protože podtržítka nelze používat ve spojení s DNS.</li>
+<li><b>Aktualizovat seznam uživatelů/skupin</b>: Zadejte, jak často má zařízení DiskStation automaticky aktualizovat seznam uživatelů/skupin. Můžete upravit časové období tak, aby byly aktualizace prováděny denně, týdně nebo měsíčně. Kromě toho můžete seznamy uživatelů/skupin domény aktualizovat ručně přechodem na kartu <strong>Uživatel domény</strong> a kliknutím na možnost <strong>Aktualizovat všechny domény</strong>. Pamatujte si, že automatické aktualizace ovlivňují režim spánku systému.</li>
+</ul>
+
+<h4>Připojení k ovladači domény pouze pro čtení</h4>
+<p>Chcete-li připojit zařízení DiskStation k ovladači domény pouze pro čtení (RODC), musíte do pole <strong>DC IP/FQDN</strong> zadat „celý název počítače“ (FQDN) svého ovladače domény pro čtení a zápis (RWDC). Celý název počítače by měl být uveden v následujícím formátu: <strong>NázevPočítače.Doména</strong>, např. „ad01.synology.com“.</p>
+
+</div>
+
+
+<div class="section">
+<h4>Poznámka:</h4>
+<ul>
+<li>Jestliže vaše uživatelské jméno v doméně obsahuje znaky „%“ nebo „$“, je možné, že nebudete mít přístup ke své složce uživatele. Požádejte svého správce domény, aby vám přidělil nové uživatelské jméno.</li>
+<li>Skupiny domén <strong>Domain Admins</strong> a <strong>Enterprise Admins</strong> budou automaticky přidány do místní skupiny <strong>Administrators</strong>. Proto budou mít uživatelé domény v těchto skupinách oprávnění správce v zařízení DiskStation, včetně přístupu k souborovým službám, jako například CIFS/FTP/AFP/WebDAV, a k ostatním aplikacím systému DSM.</li>
+<li>Můžete také nakonfigurovat oprávnění přístupu uživatelů domény ke sdíleným složkám zařízení DiskStation. Další informace naleznete <a href="file_directory_service_user_group.html">zde</a>.</li>
+</ul>
+</div>
+
+
+
+<h3>Možnosti domény</h3>
+<p>Tato část obsahuje následující možnosti další domény.</p>
+<ul>
+<li><b>Stanice DiskStation provede synchronizaci se serverem NTP pokaždé, když se uživatel domény přihlásí:</b> Povolením této možnosti provedete vynucenou synchronizaci času mezi zařízením DiskStation a serverem NTP.</li>
+<li><b>Povolit podepisování serveru:</b> Pokud klient povolil podepisování klientu, musí být podepisování serveru povoleno také v zařízení DiskStation, aby mohli uživatelé normálně používat doménové služby.</li>
+<li><b>Získat seznamy uživatelů/skupin s režimem kompatibility NT4:</b> Povolením této možnosti umožníte systému získávat seznamy uživatelů/skupin pomocí režimu NT4 RPC. Tuto možnost lze povolit, pokud některé seznamy uživatelů/skupin domény nelze získat pomocí výchozích nastavení.</li>
+<li><b> Zakázat oprávnění správce pro správce domény a podnikové správce:</b> Uživatel s oprávněním správce může mít plnou kontrolu nad zařízením DiskStation a jeho soubory. Povolíte-li tuto možnost, můžete omezit oprávnění správce domény a podnikového správce tak, aby byla stejná jako oprávnění normálního uživatele a dědila tak všechna oprávnění pro soubory/složky normálního uživatele.</li>
+<li><strong>Zobrazit úrovně vnořených skupin:</strong> Zadejte počet vnořených členů skupiny domény, které lze zobrazit.</li>
+</ul>
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Síť</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2>Obecné</h2>
+
+<p>Nastavení možností sítě, jako je výchozí brána, DNS, proxy a IPv6 tunneling, najdete v části <strong>Ovládací panel</strong> > <strong>Síť</strong> > <strong>Obecné</strong>.</p>
+
+
+<h3>Přejmenování zařízení DiskStation</h3>
+<p>Chcete-li přejmenovat zařízení DiskStation, zadejte nový název serveru a klikněte na možnost <b>Použít</b>.</p>
+<p>V názvu serveru se rozlišují malá a velká písmena. Název může obsahovat 1 až 15 znaků, včetně písmen, čísel, podtržítek a symbolu mínus. Prvním znakem názvu musí být písmeno.</p>
+
+
+<h3>Zadání výchozí brány</h3>
+<p>Stačí pouze zadat IP adresu výchozí brány a nastavení uložit kliknutím na možnost <b>Použít</b>.</p>
+
+
+<h3>Zadání IP adresy serveru DNS</h3>
+<p>IP adresu serveru DNS můžete ručně nastavit. V takovém případě je nutné zadat IP adresu preferovaného serveru DNS. Lze zadat také alternativní IP adresu serveru DNS, a to pro případ vytvoření zálohy, pokud dojde k problémům se serverem DNS. Jakmile budou nastaveny podle potřeby IP adresy serveru DNS, uložte nastavení kliknutím na možnost <strong>Použít</strong>.</p>
+
+
+<div class="section">
+<h4>Poznámka:</h4>
+<p>Pole Server DNS a Výchozí brána budou vyplněna automaticky a nelze je změnit, pokud byla síťová rozhraní nakonfigurována automaticky nebo pokud používáte připojení PPPoE.</p>
+</div>
+
+
+
+<h3><a name="proxy"></a>Připojení prostřednictvím serveru proxy</h3>
+<p>Chcete-li na zařízení DiskStation povolit připojení prostřednictvím serveru proxy, zaškrtněte položku <b>Připojit prostřednictvím serveru proxy</b>, zadejte hodnoty <b>Adresa</b> a <b>Port</b> a klikněte na možnost <b>Použít</b>.</p>
+
+
+<div class="section">
+<h4>Poznámka:</h4>
+<ul>
+<li>Kliknutím na položku <strong>Rozšířená nastavení</strong> provedete konfiguraci serveru proxy HTTP, proxy HTTPS a údajů pro ověření.
+<li>Ve výchozím nastavení jsou hodnoty serveru proxy HTTPS stejné jako u proxy HTTP.</li>
+<li>Je-li zaškrtnuta možnost <b>Připojit prostřednictvím serveru proxy</b>, služby Aktualizace firmwaru DSM, Centrum balíčků a další balíčky se budou vždy připojovat k Internetu prostřednictvím serveru proxy.</li>
+<li>Pokud je zaškrtnuta možnost <b>Záložní server proxy pro místní adresy</b>, ověřte, zda server DNS využívaný zařízením DiskStation dokáže překládat dotazy pro zařízení v místní síti.</li>
+</ul>
+</div>
+
+
+<h3>Povolení funkce IPv6 Tunneling</h3>
+<p>Dříve než protokol IPv6 zcela nahradí protokol IPv4, je pro připojení hostitelů s adresou IPv6 ke službám IPv4 vyžadována funkce IPv6 tunneling. Tato technika nabízí způsob přenosu IPv6 v rámci stávajících sítí IPv4.<br> Pokud si nejste jistí, jakým způsobem nakonfigurovat protokol IPv6 nebo vyřešit problémy s připojením, obraťte se na poskytovatele internetových služeb.</p>
+<h4>Postup povolení tunelu IPv6:</h4>
+<ol>
+<li>Chcete-li povolit podporu tunelu, zaškrtněte políčko <b>Povolit tunel</b>.</li>
+
+<li>Do pole <b>Adresa serveru</b> zadejte název hostitele nebo IP adresu poskytovatele tunelu, například: anonymous.freenet6.net.</li>
+
+<li>Vyberte jednu z možností <b>Připojit anonymně</b> nebo <b>Připojit se stávajícím účtem</b>.</li>
+</ol>
+
+<div class="section">
+<h4>Poznámka:</h4>
+<p>Vaše externí adresa IPv6 může být automaticky aktualizována poskytovatelem služeb. Zařízení DiskStation však neodstraní původní adresu IPv6 okamžitě.</p>
+</div>
+
+
+
+</body>
+</html>

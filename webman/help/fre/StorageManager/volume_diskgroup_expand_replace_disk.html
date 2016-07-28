@@ -1,0 +1,69 @@
+ <!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Remplacer un disque dur dans un Volume ou un groupe de disques - Aide Synology DSM</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="This article walks you through the steps to replace a hard drive of an existing volume or disk group on DiskStation in order to increase storage capacity.">
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Remplacer les disques durs pour étendre la capacité de stockage</h2>
+<p>Lors de l'utilisation de certains types de RAID, vous pouvez étendre la capacité de stockage d'un volume ou groupe de disques en remplaçant les anciens disques durs avec des disques de plus grandes tailles. Cet article fournit des informations importantes concernant le processus d'extension ainsi qu'un exemple sur la façon de remplacer les disques durs existants afin d'étendre la capacité de stockage.</p>
+<div class="section">
+  <h4>Remarque :</h4>
+<p>La procédure décrite dans cet article fonctionne uniquement avec SHR, RAID 1, RAID 5 et RAID 6. Si vous planifiez un remplacement de plusieurs disques durs, vous devez faire attention à remplacer les disques durs un par un. Après avoir remplacé un disque dur, vous devez remplacer le volume ou le groupe de disques en remplaçant le suivant. Pour RAID 1, RAID 5 et RAID 6, la capacité du volume étendra une fois que tous les disques durs ont été remplacés.</p>
+</div>
+<h3 class="list_head"><a name="t1"></a>  Avant de commencer</h3>
+<p>Avant de remplacer un disque dur, consultez les notes suivantes :<br/>
+<ul>
+<li><b>Sauvegarder des données :</b> Bien que le processus d'extension du processus ne supprime pas les données existantes, nous recommandons fortement de sauvegarder vos données avant de procéder.</li>
+<li><b>État du volume ou groupe de disques :</b> Avant de commencer, assurez-vous que l'état de votre volume ou Disk Group est <b>Normal</b>. Si ce n'est pas le cas, vous devez le réparer.</li>
+<li><b>Est-ce que les données sont toujours accessibles pendant l'extension?</b> Les données de votre système seront toujours disponibles pendant l'extension des volumes ou des groupes de disque; bien que le système puisse suspendre temporairement des connexions lors du premier démarrage du processus.</li>
+</ul>
+<div class="section">
+<h4>SHR (Synology Hybrid RAID)</h4>
+<p>Comme les volumes SHR optimisent la capacité de stockage basée sur le nombre et la taille des disques durs installés, veuillez suivre les lignes directrices ci-dessous afin d'étendre correctement la capacité :</p>
+<ul>
+<li>Si la capacité des disques durs existants est égales, vous devez remplacer au moins deux disques durs avec des disques durs plus grands afin d'étendre la capacité de stockage. Par exemple, si votre volume SHR comporte trois disques durs de 2 To, alors vous devez remplacer au moins deux disques durs afin d'étendre la capacité du volume.</li>
+<li>Si la capacité des disques durs existants est différente, alors les nouveaux disques durs de remplacement doivent être égaux ou supérieurs au plus gros disque dur existant. En outre, vous devez remplacer les disques durs membres les plus petits en premier afin d'optimiser l'utilisation de la capacité. Par exemple, si votre volume SHR comporte trois disques durs qui sont de 4 To, 3 To et 2 To, respectivement, alors vos nouveaux disques durs de remplacement doivent être d'au moins 4 To. En outre, vous devriez d'abord remplacer les disques durs de 3 To et 2 To.</i>
+</li>
+</ul>
+</div>
+<div class="section">
+<h4>RAID 5 et RAID 6</h4>
+<p>Lors du remplacement de disques durs de volumes ou groupes de disques RAID 5 ou RAID 6, le plus petit disque dur doit être remplacé en premier. La capacité de stockage des volumes RAID 5 est de (nombre de disques durs – 1) x (taille du plus petit disque dur), et RAID 6 est (nombre de disques durs – 2) x (taille du plus petit disque dur). Par conséquent, le plus petit disque dur doit être remplacé en premier afin de maximiser l'utilisation des disques durs.</p>
+<p>Par exemple, si votre volume RAID 5 comporte trois disques durs qui sont de 4 To, 3 To et 2 To, respectivement, alors vos nouveaux disques durs de remplacement doivent être d'au moins 4 To. Si vous remplacez les disques de 4 To ou 3 To, la capacité du volume ne changera pas. Pour augmenter la capacité de votre volume, le disque dur de 2 To doit être remplacé en premier.</p>
+</div>
+<h3>Remplacer le disque dur pour étendre la capacité de stockage</h3>
+<p>Dans les étapes suivantes, nous vous fournissons un exemple de remplacement des disques durs d'un volume SHR.</p>
+<h4>Pour remplacer les disques durs :</h4>
+<ol>
+<li>Ouvrez <b>Gestionnaire de stockage</b>.</li>
+<img src="about:blank" class="help_image"/>
+<li>Allez à <strong>Volume</strong> pour voir quel disque dur existant est le plus petit.</li>
+<img src="about:blank" class="help_image"/>
+<li>Éteignez votre DiskStation. (Vous pouvez ignorer cette étape si votre DiskStation prend en charge l'échange à chaud.)</li>
+<li>Retirez le plus petit des disques durs et installez un nouveau disque dur plus grand.</li>
+<div class="section">
+<h4>Remarque :</h4>
+<p>Afin d'éviter de vous blesser ou d'endommager votre DiskStation, veuillez suivre les instructions d'installation de disque dur trouvées dans le <i>Guide d'installation rapide</i> de votre produit Synology.</p>
+</div>
+<li>Allumez votre DiskStation.</li>
+<li>Ouvrez de nouveau <strong>Gestionnaire de stockage</strong>.</li>
+<li>Allez à <strong>HDD/SSD</strong> pour vous assurer que le nouveau disque dur est reconnu.</li>
+<img src="about:blank" class="help_image"/>
+<li>Le statut de votre volume devrait être <b>Dégradé</b>. Sélectionnez le volume et cliquez sur <strong>Gérer</strong>.</li>
+<img src="about:blank" class="help_image"/>
+<li>Sélectionnez <b>Réparer</b>.</li>
+<img src="about:blank" class="help_image"/>
+<li>Sélectionnez le disques dur de remplacement que vous voudriez ajouter au volume. Puis suivez les étapes de l'assistant pour terminer.</li>
+<img src="about:blank" class="help_image"/>
+<li>Répétez le processus ci-dessus jusqu'au remplacement des disques durs externes désirés par des plus grands.</li>
+</ol>
+</body>
+</html>

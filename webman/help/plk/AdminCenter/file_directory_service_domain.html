@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Win/Mac/NFS</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Domena</h2>
+<p>DiskStation może dołączyć do domeny Windows. Po dołączeniu do domeny jej użytkownicy mogą logować się do urządzenia DiskStation przy użyciu własnych kont domeny i haseł, co zapewnia im dostęp do plików i korzystanie z aplikacji DSM bez potrzeby pamiętania innych zestawów nazw użytkownika i haseł.</p>
+<h4>Aby dołączyć do domeny:</h4>
+<ol>
+<li>Wybierz <strong>Panel sterowania</strong> > <strong>Usługa katalogowa</strong> > <strong>Domena</strong>.</li>
+<li>Zaznacz pole <strong>Dołącz do domeny</strong>.</li>
+<li>Wprowadź nazwę domeny i określ serwer DNS w odpowiednich polach.</li>
+<li>W razie potrzeby zaznacz pole <b>Zaawansowane opcje domeny</b>. (Szczegółowe informacje można znaleźć poniżej).</li>
+<li>Kliknij przycisk <b>Zastosuj</b>.</li>
+<li>W wyskakującym oknie wprowadź nazwę użytkownika i hasło administratora serwera domeny.</li>
+<li>Kliknij <b>OK</b>.</li>
+</ol>
+<div class="section">
+<h4>DNS Server</h4>
+<p>Zalecamy określenie serwera DNS aby ułatwić wyszukiwanie domeny przez urządzenie DiskStation. Jeśli jednak domena nie jest zarejestrowana na serwerze DNS, procedura dołączania do domeny może się nie powieść.</p>
+<h4>Typ serwera domeny</h4>
+<p>To pole pokazuje typ domeny, gdy urządzenie DiskStation dołącza do domeny. Typ domeny zostanie określony jako Domena AD.</p>
+<h4>Tryb zarządzania</h4>
+<p>Ta opcja określa sposób zarządzania uprawnieniami użytkowników i grup domeny. </p>
+<ul>
+<li><b>Zaufana domena</b>: Umożliwia zarządzanie użytkownikami i grupami w dołączonej domenie, a także w zaufanych domenach. Użytkowników i grupy można filtrować przy użyciu listy rozwijanej domeny.</li>
+<li><b>Pojedyncza domena z jednostką organizacyjną</b>: W tym trybie będą wyświetlani tylko użytkownicy i grupy w dołączonej domenie. Ten tryb pozwala filtrować grupy użytkowników/domen z wykorzystaniem listy rozwijanej jednostki organizacyjnej (OU).</li>
+</ul>
+<h4>Zaawansowane opcje domeny</h4>
+<p>W większości wypadków nie musisz wypełniać żadnej z zaawansowanych opcji domeny. Zaawansowane opcje domeny są wymagane tylko w specyficznych środowiskach domen. </p>
+<ul>
+<li><b>DC IP/FQDN</b>: Określ adres IP lub nazwę FQDN kontrolera domeny (DC). Urządzenie DiskStation podejmie próbę nawiązania połączenia z kontrolerem. Jeśli istnieje więcej niż jeden adres IP lub nazwa FQDN, oddziel je przecinkami (,). Dodanie gwiazdki (*) po ostatnim adresie IP lub nazwie FQDN kontrolera DC spowoduje, że urządzenie DiskStation podejmie próbę nawiązania połączenia z innym kontrolerem DC, jeśli wszystkie określone zawiodą. Między gwiazdką a ostatnim adresem IP lub nazwą FQDN należy wstawić przecinek.</li>
+<li><b>Nazwa domeny NetBIOS</b>: Określ nazwę domeny NetBIOS.</li>
+<li><b>Domena FQDN (nazwa DNS)</b>: Określ FQDN (nazwę DNS) domeny.</li>
+<li><b>Zarejestruj interfejs DNS:</b> W przypadku dołączania do domeny określona tu karta interfejsu sieciowego (NIC) zostanie zarejestrowana w serwerze DNS. Należy pamiętać, że jeśli w nazwie hosta urządzenia DiskStation znajdują się znaki podkreślenia (_), rejestracja nie powiedzie się, ponieważ znaki podkreślenia (_) nie mogą być używane w DNS.</li>
+<li><b>Zaktualizuj listę użytkowników i grup</b>: Określ jak często urządzenie DiskStation ma automatycznie aktualizować listę użytkowników/grup domeny. Okres można dostosować, aby aktualizacje były przeprowadzane raz dziennie, raz na tydzień lub raz na miesiąc. Ponadto listy użytkowników/grup domeny można zaktualizować ręcznie przez wybranie karty <strong>Użytkownik domeny</strong> i kliknięcie opcji <strong>Aktualizuj wszystkie domeny</strong>. Należy pamiętać, że automatyczne aktualizacje mają wpływ na hibernację systemu.</li>
+</ul>
+
+<h4>Dołączenie do kontrolera tylko do odczytu</h4>
+<p>Aby dołączyć urządzenie DiskStation do kontrolera domeny tylko do odczytu (RODC), należy określić pełną nazwę komputera (FQDN) dla kontrolera domeny do zapisu i odczytu (RWDC) w polu <strong>DC IP/FQDN</strong>. Pełna nazwa komputera powinna być zapisana w następującym formacie: <strong>NazwaKomputera.Domena</strong>, np. ad01.synology.com.</p>
+
+</div>
+
+
+<div class="section">
+<h4>Uwaga:</h4>
+<ul>
+<li>Jeśli nazwa użytkownika domeny zawiera znaki % i $, uzyskanie dostępu do folderu głównego może być niemożliwe. W takiej sytuacji należy poprosić administratora domeny o nadanie nowej nazwy użytkownika.</li>
+<li>Grupy domen <strong>Domain Admins</strong> i <strong>Enterprise Admins</strong> zostaną automatycznie dodane do grupy lokalnej <strong>Administrators</strong>. Dlatego też użytkownicy domeny w tych grupach będą mieli uprawnienia administratora urządzenia DiskStation, w tym dostęp do usług plików takich jak CIFS/FTP/AFP/WebDAV i innych aplikacji DSM.</li>
+<li>Oprócz tego można skonfigurować uprawnienia dostępu użytkowników domeny do folderów współdzielonych w urządzeniu DiskStation. Aby uzyskać więcej informacji, zobacz <a href="file_directory_service_user_group.html">tutaj</a>.</li>
+</ul>
+</div>
+
+
+
+<h3>Opcje domeny</h3>
+<p>W tym obszarze dostępne są poniższe opcje dodatkowej domeny.</p>
+<ul>
+<li><b>Stacja DiskStation zsynchronizuje czas z serwerem NTP za każdym razem, gdy użytkownik domenowy zaloguje się:</b> Włączenie tej opcji spowoduje wymuszenie synchronizacji czasu pomiędzy urządzeniem DiskStation i serwerem NTP.</li>
+<li><b>Włącz podpisywanie serwera:</b> Jeśli klient włączył podpisywanie klienta, należy także włączyć podpisywanie serwera w urządzeniu DiskStation, co pozwoli użytkownikom normalnie korzystać z usług domeny.</li>
+<li><b>Pobierz listy użytkowników i grup przy użyciu trybu kompatybilnego z NT4:</b> Włączenie tej opcji pozwala systemowi pobierać listy użytkowników/grup przy użyciu trybu NT4 RPC. Tę opcję można włączyć, jeśli niektórych list użytkowników/grup nie można pobrać przy użyciu domyślnych ustawień.</li>
+<li><b> Wyłącz uprawnienia administratora dla administratorów domeny i administratorów przedsiębiorstwa:</b> Użytkownik z uprawnieniami administratora może mieć pełną kontrolę nad urządzeniem DiskStation i jego plikami. Włączenie tej opcji pozwoli ograniczyć uprawnienia grup Domain Admins i Enterprise Admins do takich samych jak w przypadku normalnych użytkowników, dziedziczących wszystkie uprawnienia plików/folderów normalnych użytkowników.</li>
+<li><strong>Wylicz poziomy grup zagnieżdżonych:</strong> Określ liczbę zagnieżdżonych członków grupy domeny, jaka może być wyliczana.</li>
+</ul>
+
+</body>
+</html>

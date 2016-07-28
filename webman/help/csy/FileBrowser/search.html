@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Hledání souborů nebo složek</title>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2>Hledání souborů nebo složek</h2>
+<p><strong>Filtr</strong> služby File Station nabízí možnosti hledání a zobrazení souborů nebo složek, které odpovídají zadaným kritériím. Možné je filtrovat soubory nebo složky v aktuální složce nebo spustit rozšířené hledání pokrývající všechny podsložky a získat tak přesnější výsledky.</p>
+
+<h4>Hledání souborů nebo složek v aktuální složce:</h4>
+<ol>
+	<li>Pomocí služby File Station přejděte do složky s obsahem, který chcete prohledat.</li>
+	<li>Do pole <b>Filtr</b> v pravém horním rohu zadejte klíčové slovo. Tím v hlavní oblasti okna zobrazíte filtrované výsledky.</li>
+</ol>
+
+<h4>Provedení rozšířeného hledání:</h4>
+<ol>
+	<li>Pomocí služby File Station přejděte do složky s obsahem, který chcete prohledat.</li>
+  <li>Kliknutím na ikonu lupy vedle pole <b>Filtr</b> v pravém horním rohu zobrazíte nabídku rozšířeného hledání.</li>
+	<li>Zadejte následující kritéria hledání nebo vyberte možnosti z rozevíracích nabídek:<ul>
+			<li><b>Klíčové slovo</b>: Zadáním klíčového slova je možné vyhledat soubory nebo složky s odpovídajícími názvy.<div class="section"><h4>Poznámka:</h4>
+				<ul>
+					<li>V klíčových slovech je možné použít zástupné znaky [*] (znamenající žádný nebo několik znaků) a [?] (znamenající jeden náhodný znak). Například výraz [p<span class="note_content">*</span>a] může zastupovat slova [p<span class="note_content">ráv</span>a], [p<span class="note_content">oruch</span>a] nebo [pa].</li>
+					<li>Jednotlivá klíčová slova je možné oddělit mezerami. Například klíčové slovo [File Station] způsobí vyhledání výsledků obsahujících slovo [File], [Station] nebo obou.</li>
+					<li>Pokud chcete hledat přesné shody s rozlišením malých a velkých písmen, přidejte na začátek a konec klíčového slova dvojité uvozovky ["]. Například [<span class="note_content">"Synology Inc."</span>] může zastupovat výraz [<span class="note_content">Synology Inc.</span>], ale nemůže zastupovat výraz [<span class="note_content">Synology Incorporation</span>].</li>
+					<li class="disable-hi3535">Ke zpřesnění výsledků hledání můžete použít následující operátory:<table width="84%" border="1">
+							<tbody>
+								<tr>
+									<th width="147" align="center">Operátor</th>
+									<th width="229" align="center">Příklad</th>
+									<th width="926" align="center">Využití</th>
+								</tr>
+								<tr>
+									<td align="center">&&</td>
+									<td align="center">[X] && [Y]</td>
+									<td><li>Vypíše shody obsahující jak [X], tak [Y]</li></td>
+								</tr>
+								<tr>
+									<td align="center">||</td>
+									<td align="center">[X] || [Y]</td>
+									<td>
+										<li>Vypíše shody obsahující [X], [Y] nebo obojí</li>
+										<li>Shody obsahující [X] i [Y] budou uvedeny nahoře</li>
+									</td>
+								</tr>
+								<tr>
+									<td align="center">+</td>
+									<td align="center">+[X]</td>
+									<td><li>Vypíše shody obsahující [X]</li></td>
+								</tr>
+								<tr>
+									<td align="center">-</td>
+									<td align="center">-[X]</td>
+									<td><li>Vypíše shody neobsahující [X]</li></td>
+								</tr>
+								<tr>
+									<td align="center">!</td>
+									<td align="center">![X]</td>
+									<td><li>Vypíše shody neobsahující [X]</li></td>
+								</tr>
+								<tr>
+									<td align="center">\</td>
+									<td align="center">\[SpeciálníZnak]</td>
+									<td>
+										<li>Speciální znaky: <span class="note_content">  +   -   &&	&nbsp; ||    !    (    )    {    }    [    ]    ^    "    ~    *    ?    :   \</span></li>
+										<li>Vypíše shody obsahující výše uvedené speciální znaky</li>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</li>
+				</ul>
+				</div>
+			</li>
+			<li class="disable-hi3535"><strong>Povolit hledání obsahu souboru</strong>: Vyhledá indexované soubory s obsahem nebo metadaty odpovídajícími klíčovým slovům.</li>
+			<li><b>Umístění</b>: V rozevírací nabídce nastavte rozsah a míru podrobnosti rozšířeného hledání. Rozsah hledání je možné upravit výběrem libovolné další sdílené složky ze seznamu.</li>
+			<li><b>Typ souboru</b>: Pomocí možnosti <b>Přípona</b> omezíte rozsah hledání na určitý typ souborů. Volbou možnosti <b>Libovolná složka</b> vyhledáte jen složky.</li>
+			<li><strong>Datum</strong>: Vyberte možnost <b>Datum úpravy</b>, <b>Datum vytvoření</b> nebo <strong>Poslední přístup</strong> a na základě konkrétního data z kalendáře vyhledejte soubory s odpovídajícími daty.</li>
+			<li><b>Velikost (MB)</b>: Soubory s odpovídající velikostí vyhledáte pomocí možností <b>rovná se</b>, <b>je větší než</b> nebo <b>je menší než</b> a zadáním velikosti. (Pokud vyberete možnost <strong>rovná se</strong>, budou výsledky hledání obsahovat soubory, které mají přibližně stejnou velikost odpovídající zadané hodnotě.)</li>
+			<li><b>Vlastník/skupina</b>: Pomocí možnosti <b>Vlastník</b> nebo <b>Skupina</b> a příslušné položky z rozevírací nabídky vyhledáte soubory nebo složky patřící vybranému vlastníkovi nebo skupině.<div class="section"><h4>Poznámka:</h4>
+				<ul>
+					<li>Při rozšířeném vyhledávání je třeba stanovit <b>Umístění</b> a ještě alespoň jedno další kritérium vyhledávání.</li>
+					<li>Pokud je v indexované sdílené složce připojena složka ISO nebo vzdálená složka, nelze soubory v ní pomocí rozšířeného vyhledávání najít.</li>
+				</ul>
+				</div>
+			</li>
+		</ul>
+	</li>
+	<li>Kliknutím na možnost <b>Hledat</b> zahájíte hledání a kliknutím na možnost <b>Obnovit</b> znovu zadáte kritéria hledání. Po dokončení hledání se příslušné soubory zobrazí v hlavní oblasti služby File Station.</li>
+</ol>
+
+</body>
+</html>

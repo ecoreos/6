@@ -1,0 +1,149 @@
+
+[HA_ConfSyncError]
+Subject: High-availability-skyen %HOSTNAME% oppdaget en synkroniseringsfeil under kontroll av systemkonfigurasjoner.
+
+Kjære bruker,
+
+High-availability-skyen %HOSTNAME% oppdaget en synkroniseringsfeil under kontroll av systemkonfigurasjoner på den aktive og den passive serveren. Systemet prøvde å reparere feilen ved å utføre en fullstendig synkronisering av systemkonfigurasjoner. Se i Systemlogger eller på siden Logger for High Availability Manager for mer informasjon.
+
+Handling: %HA_ACTION%
+Feil: %HA_PARAM_1%
+
+Med vennlig hilsen,
+%COMPANY_NAME%
+
+
+[HA_FailOver]
+Subject:  Feil oppdaget på high-availability-skyen %HOSTNAME%.
+
+Kjære bruker,
+
+En feil ble oppdaget på high-availability-skyen %HOSTNAME%. Systemet vil overføre tjenestene til den passive serveren. Se i Systemlogger for mer informasjon.
+
+Handling: %HA_ACTION%
+Feil: %HA_PARAM_1%
+
+Med vennlig hilsen,
+%COMPANY_NAME%
+
+
+[HA_MismatchedSsdCache]
+Subject: SSD-hurtigbufferdisker samsvarer ikke på high-availability-skyen %HOSTNAME%
+
+Kjære bruker,
+
+Diskene som tilhører følgende SSD-hurtigbuffer på den passive serveren %HA_PARAM_1% samsvarer ikke med diskene på den aktive serveren: SSD-hurtigbuffer %HA_PARAM_2%.
+
+Se Logger-siden til High Availability Manager for mer informasjon.
+
+Handling: %HA_ACTION%
+
+Med vennlig hilsen,
+%COMPANY_NAME%
+
+
+[HA_SplitBrain]
+Subject: Delt hjerne-feil oppsto på high-availability-skyen %HOSTNAME%
+
+Kjære bruker,
+
+En delt hjerne-feil oppsto på high-availability-skyen %HOSTNAME%. Se i Systemlogger for mer informasjon.
+
+Handling: %HA_ACTION%
+
+Med vennlig hilsen,
+%COMPANY_NAME%
+
+
+[HA_StatusChange]
+Subject: Statusen til high-availability-skyen %HOSTNAME% har endret seg fra %HA_PARAM_1% til %HA_PARAM_2%.
+
+Kjære bruker,
+
+Statusen til high-availability-skyen %HOSTNAME% har endret seg fra %HA_PARAM_1% til %HA_PARAM_2%. Se i Systemlogger eller på siden Logger for High Availability Manager for mer informasjon.
+
+Handling: %HA_ACTION%
+Beskrivelse: %HA_PARAM_3%
+
+Med vennlig hilsen,
+%COMPANY_NAME%
+
+
+[HA_SwitchFail]
+Subject:  Kan ikke overføre tjenester på high-availability-skyen %HOSTNAME%
+
+Kjære bruker,
+
+Systemet forsøkte å overføre tjenester til den passive serveren i high-availability-skyen %HOSTNAME%, men mislyktes. Se i Systemlogger for mer informasjon.
+
+Handling: %HA_ACTION%
+
+Med vennlig hilsen,
+%COMPANY_NAME%
+
+
+[HA_SwitchFinished]
+Subject: High-availability-skyen %HOSTNAME% kjører nå tjenester på %HA_PARAM_1%.
+
+Kjære bruker,
+
+Tjenestene i high-availability-skyen %HOSTNAME% kjøres nå på %HA_PARAM_1%. Se i Systemlogger eller på siden Logger for High Availability Manager for mer informasjon.
+
+Handling: %HA_ACTION%
+
+Med vennlig hilsen,
+%COMPANY_NAME%
+
+
+[HA_SwitchOver]
+Subject: Overføring av tjenester i high-availability-skyen %HOSTNAME% til %HA_PARAM_1%.
+
+Kjære bruker,
+
+Noen har startet en overføring av tjenester i high-availability-skyen %HOSTNAME%. Tjenester overføres til %HA_PARAM_1%. Se i Systemlogger for mer informasjon.
+
+Handling: %HA_ACTION%
+
+Med vennlig hilsen,
+%COMPANY_NAME%
+
+
+[HA_SwitchOver_With_Reason]
+Subject: High-availability-skyen %HOSTNAME% initierte overføring av tjenester til %HA_PARAM_1%.
+
+Kjære bruker,
+
+Overføring av tjenester ble innledet i high-availability-skyen %HOSTNAME%. Tjenester vil bli overført til %HA_PARAM_1%. Se i Systemlogger for mer informasjon.
+
+Handling: %HA_ACTION%
+Årsak: %HA_PARAM_2%
+
+Med vennlig hilsen,
+%COMPANY_NAME%
+
+
+[HA_SyncComplete]
+Subject: Fullstendig datakopiering av high-availability-skyen %HOSTNAME% er fullført.
+
+Kjære bruker,
+
+Fullstendig datakopiering av high-availability-skyen %HOSTNAME% er fullført. Den passive serveren er nå klar til å ta over tjenestene i tilfelle det blir nødvendig med overføring av tjenester. Se i Systemlogger eller på siden Logger for High Availability Manager for mer informasjon.
+
+Handling: %HA_ACTION%
+
+Med vennlig hilsen,
+%COMPANY_NAME%
+
+
+[HA_UnbindLocal]
+Subject: Lokal vert ble fjernet fra high-availability-skyen
+
+Kjære bruker,
+
+%HA_PARAM_1% ble fjernet fra high-availability-skyen %HA_PARAM_2%. Se i Systemlogger for mer informasjon.
+
+Handling: %HA_ACTION%
+
+Med vennlig hilsen,
+%COMPANY_NAME%
+

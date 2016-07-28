@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2>Cache SSD*</h2>
+<p>Le cache SSD peut améliorer les performances de l'accès aléatoire en stockant les données fréquemment accédées sur le cache SSD. Le cache SSD peut être monté sur un volume ou iSCSI LUN (niveau bloc). Il existe deux types de caches SSD :</p>
+<ul>
+<li>Un <strong>Cache en lecture seule</strong> peut se composer de 1 à 12 SSD montés respectivement en configuration basique ou montés en configuration RAID 0 pour améliorer les performances de lecture aléatoire de l'espace de stockage sur lequel il est monté.
+<div class="section"><h4>Remarque :</h4>
+	<p>Un cache SSD en lecture seule copie les données du volume ; par conséquent, aucune perte de données ne survient, même si le cache en lecture seule plante.</p>
+	</div>
+</li>
+<li>Un <strong>Cache de lecture/écriture</strong> peut être monté sur une configuration RAID 1 / RAID 5 / RAID 6, en fonction du nombre de SSD (jusqu'à 12) pour améliorer les performances de lecture et d'écriture aléatoire de l'espace de stockage sur lequel il est monté.</li>
+</ul>
+
+<p>Les deux types de caches SSD implémentent un algorithme LRU (Moins récemment utilisé) pour remplacer les données dans le cache.</p>
+
+<div class="section">
+<h4>Important :</h4>
+<p>Avant d'installer des SSD pour faire office de cache, veuillez consulter les notes suivantes :</p>
+<ul>
+<li>L'objectif de l'activation d'un cache SSD est d'augmenter les performances de l'accès aléatoire à une petite partie des données fréquemment accédées dans l'espace de stockage. Par exemple, d'importantes opérations de lecture ou d'écriture (par ex. la diffusion de vidéos HD) et les modèles de lecture de données entièrement aléatoires manquent de modèles de relecture, et ne profitent donc pas significativement d'un cache SSD. Pour des applications générales, il est recommandé d'activer l'option <b>Omettre les E/S séquentielles</b> afin que les E/S séquentielles passent encore par les disques durs de l'espace de stockage.</li>
+<li>Référez-vous à la liste de compatibilité sur le <a href="http://www.synology.com/" target=_blank>site web Synology</a> pour connaître les caches SSD qui peuvent être utilisés sur votre DiskStation.</li>
+<li class="disable-alpine">Un cache SSD requiert une certaine quantité de mémoire système en fonction de la taille du cache, aussi lorsque vous montez un cache SSD plus important, vous devrez peut-être mettre à niveau la mémoire du DiskStation. Afin que le système reste stable et rapide, seul 1/4 de la mémoire système pré-installée est utilisable par le cache SSD. Chaque Go de cache SSD requiert approximativement 416 Ko de mémoire système (on peut inclure la mémoire d'extension) Par conséquent, si la configuration du cache en lecture seulement est de 2 SSD x 128 Go, la taille totale du cache sera de 256 Go et requiert au moins 104 Mo de mémoire ; si la configuration de cache en lecture/écriture est de 2 SSD x 128 Go, la taille de cache total sera de 128 Go et requiert au moins 52 Mo de mémoire. Si la mémoire est insuffisante, la création de cache SSD est restreinte ou la taille du cache SSD sera limitée.</li>
+<li class="enable-alpine">Chaque Go de cache SSD requiert approximativement 416 Ko de mémoire système (on peut inclure la mémoire d'extension) et la taille maximale du cache est de 930 Go. Par conséquent, si la configuration du cache en lecture seulement est de 2 SSD x 128 Go, la taille totale du cache sera de 256 Go et requiert au moins 104 Mo de mémoire ; si la configuration de cache en lecture/écriture est de 2 SSD x 128 Go, la taille de cache total sera de 128 Go et requiert au moins 52 Mo de mémoire. Si la mémoire est insuffisante, la création de cache SSD est restreinte ou la taille du cache SSD sera limitée.</li>
+<li>Veuillez vous référer aux spécifications produit de vos modèles sur le <a href="http://www.synology.com/" target=_blank>site web Synology</a> pour la taille maximale de cache SSD autorisée sur votre DiskStation.</li>
+<li>Lorsqu'un cache lecture-écriture SSD est dégradé, la fonction de cache est désactivée et le système commence l'écriture des données du cache (c'est-à-dire la synchronisation) du SSD vers les disques durs. Une fois la synchronisation des données terminée, aucune perte de données ne se produit, même si le cache lecture-écriture plante.</li>
+<li>Le cache lecture-écriture ne peut pas être utilisé avec Time Backup. Par exemple, lorsque vous créez un cache lecture-écriture SSD, vous ne pourrez pas exécuter Time Backup. Inversement, si vous exécutez Time Backup, vous ne pourrez pas créer un cache lecture-écriture SSD.</li>
+</ul>
+</div>
+
+<h4>Pour monter le cache SSD :</h4>
+<ol>
+  <li>Installez les SSD dans votre DiskStation. Veuillez voir les notes ci-dessus d'abord.</li>
+  <li>Allez dans <strong>Gestionnaire de stockage</strong> > <strong>Cache SSD</strong>. Cliquez sur <b>Créer</b>.</li>
+<li>Sélectionnez le mode cache (uniquement disponible pour les modèles qui prennent en charge le cache lecture-écriture).</li>
+<li>Trouvez le menu déroulant, et sélectionnez le volume ou iSCSI LUN (niveau bloc) sur lequel vous souhaitez monter le cache SSD.</li>
+<li>Choisissez les SSD dans la liste. Les données sur les SSD seront effacées, aussi veuillez vous assurer qu'aucunes données importantes ne seront effacées.</li>
+<li>Cliquez sur <b>Appliquer</b>.</li>
+</ol>
+
+<h4>Pour arrêter le cache séquentiel des E/S : </h4>
+<p>Si votre volume cible ou iSCSI LUN (au niveau bloc) fait montre d'excellentes performances d'E/S séquentielles, vous pouvez faire en sorte que le cache SSD cesse de cacher les E/S séquentielles et les données d'accès directement depuis vos disques durs afin d'obtenir une vitesse supérieure et une meilleure performance. </p>
+<ol>
+<li>Cliquez sur <strong>Configurer</strong> pour ouvrir la fenêtre de configuration.</li>
+<li>Cochez <strong>Omettre les E/S séquentielles</strong>. </li>
+</ol>
+
+
+<h4>Pour supprimer le cache SSD :</h4>
+<ol>
+<li>Cliquez sur <b>Supprimer</b> pour supprimer définitivement ce cache SSD du DiskStation.</li>
+<li>Pour le cache en lecture/écriture, vous devez le supprimer via cette procédure (même si votre DiskStation est hors tension), autrement un plantage du volume va se produire du fait que des données partielles résident uniquement dans le cache.</li>
+</ol>
+
+<div class="section">
+<h4>Remarque :</h4>
+<ul>
+<li>Lors du montage ou de la suppression du cache SSD, le système arrêtera tous les services associés (p.ex. les dossiers partagés, paquets installés, connexions actuelles, etc.)</li>
+<li>Si un cache lecture-écriture sur un espace de stockage n'est pas détecté lorsque vous démarrez, le système ne montera pas cet espace de stockage. Veuillez trouver et réinstaller les SSD sur le DiskStation et redémarrer pour monter l'espace de stockage. Si vous ne pouvez pas trouver les SSD, vous aurez peut-être besoin de monter en force l'espace de stockage. Veuillez vous référer à <a href="space.html">Volume</a> ou à <a href="iscsilun.html">iSCSI LUN</a>.</li>
+</ul>
+</div>
+
+<h4>Pour réparer le cache SSD :</h4>
+<ul>
+<li><strong>Pour les caches lecture/écriture :</strong> Si l'un des SSD a planté, veuillez suivre les étapes ci-dessus pour le réparer.
+  <ol>
+<li>Remplacez le SSD défectueux par un nouveau. (Le nouveau SSD doit être du même modèle et de la même taille que l'ancien).</li>
+<li>Cliquez sur le bouton <b>Réparer</b>.</li>
+<li>Sélectionnez le SSD dans la liste.</li>
+<li>Cliquez sur <b>Appliquer</b>.</li>
+</ol>
+</li>
+<li><strong>Pour les caches en lecture seulement :</strong> Si l'un des SSD a craché, veuillez retirer le cache et remplacer le SSD défectueux. Ensuite cliquez sur <strong>Créer</strong> pour créer une nouvelle configuration de cache.</li>
+</ul>
+
+
+<h3>Conseiller du cache SSD</h3>
+<p>Cette section vous permet de calculer et d'afficher le nombre total et la taille des fichiers consultés récemment sur​un volume spécifique. Si vous n'avez pas encore créé de caches SSD sur le volume sélectionné, cette information peut être référencée lors de l'évaluation du nombre de caches SSD adapté à votre système. Si précédemment vous avez créé un cache SSD sur le volume sélectionné, l'analyse et l'utilisation du cache seront également affichées ici.</p>
+
+<h4>Pour utiliser le conseiller du cache SSD :</h4>
+
+<ol>
+<li>Cliquez sur <b>Conseiller du xache SSD Advisor</b> pour ouvrir l'assistant.</li>
+<li>Sélectionnez un volume pour le calcul et cliquez ensuite sur <b>Suivant</b>.</li>
+<li>L'assistant commencera automatiquement à additionner la taille et le nombre des fichiers accédés récemment sur ​​le volume sélectionné. La durée du calcul varie en fonction de votre environnement individuel.</li>
+</ol>
+<p>_____<br> *Le cache SSD n'est disponible que sur certains modèles.<br> <span class="disable-alpine" style="display: inline;">** Cela ne s'applique pas aux caches lecture-écriture SSD créés sous DSM 5.1 ou les versions antérieures. Cela signifie que chaque 1 Go de cache SSD créé avant DSM 5.2 nécessite encore 4 Mo de mémoire système, même en cas d'utilisation dans un environnement DSM 5.2.</span>
+  </p>
+</body>
+</html>

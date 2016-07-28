@@ -1,0 +1,101 @@
+ <!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Festplatte in einem Volume oder einer Diskgruppe ersetzen - Hilfe zu Synology DSM</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="This article walks you through the steps to replace a hard drive of an existing volume or disk group on DiskStation in order to increase storage capacity.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Festplatten zum Erweitern der Speicherkapazität ersetzen</h2>
+
+<p>Bei bestimmten RAID-Typen kann die Speicherkapazität eines Volumes oder einer Diskgruppe durch Ersetzen alter Festplatten durch größere erweitert werden. Dieser Artikel enthält wichtige Informationen zur Erweiterung sowie ein Beispiel für den Austausch vorhandener Festplatten zum Erweitern der Speicherkapazität.</p>
+
+<div class="section">
+  <h4>Hinweis:</h4>
+<p>Das in diesem Artikel beschriebene Verfahren funktioniert nur mit SHR, RAID 1, RAID 5 und RAID 6. Wenn Sie mehrere Festplatten ersetzen möchten, müssen Sie vorsichtig eine Festplatte nach der anderen ersetzen. Nach dem Austausch einer Festplatte muss das Volume oder die Diskgruppe vor dem Ersetzen der nächsten repariert werden. Bei RAID 1, RAID 5 und RAID 6 wird die Volume-Kapazität nach dem Austausch aller Festplatten erweitert.</p>
+
+</div>
+
+
+<h3 class="list_head"><a name="t1"></a>  Bevor Sie beginnen</h3>
+
+<p>Lesen Sie vor dem Austausch einer Festplatte die folgenden Hinweise:
+<br/>
+<ul>
+<li><b>Daten sichern:</b> Obwohl die Erweiterung keine vorhandenen Daten löscht, sollten Sie Ihre Daten unbedingt sichern, bevor Sie fortfahren.</li>
+<li><b>Volume- oder Diskgruppenstatus:</b> Vor dem Start muss der Status des Volumes oder der Diskgruppe <b>Normal</b> sein. Falls dies nicht der Fall ist, müssen Sie es bzw. sie zuerst reparieren.</li>
+<li><b>Sind die Daten auch während der Erweiterung zugänglich?</b> Die Daten auf Ihrem System sind während der Erweiterung von Volumes oder Diskgruppen verfügbar, obwohl das System zu Beginn des Verfahrens vorübergehend die Verbindungen aussetzen kann.</li>
+</ul>
+
+<div class="section">
+<h4>SHR (Synology Hybrid RAID)</h4>
+
+<p>Da SHR-Volumes die Speicherkapazität basierend auf der Anzahl und Größe der eingebauten Festplatten optimiert, müssen Sie bei der Erweiterung der Kapazität die nachstehenden Richtlinien beachten:</p>
+
+<ul>
+<li>Wenn die Kapazität der vorhandenen Festplatten gleich ist, müssen Sie mindestens zwei Festplatten durch größere ersetzen, um die Speicherkapazität zu erweitern. Wenn Ihr SHR-Volume z. B. aus drei 2 TB-Festplatten besteht, müssen Sie mindestens zwei Festplatten austauschen, um die Volume-Kapazität zu erhöhen.</li>
+<li>Ist die Kapazität der vorhandenen Festplatten unterschiedlich, müssen die neuen Festplatten gleich oder größer als die Festplatten sein, die durch sie ersetzt werden. Darüber hinaus müssen die kleineren vorhandenen Festplatten zuerst ausgetauscht werden, um die Kapazitätsauslastung zu optimieren. Wenn Ihr SHR-Volume z. B. drei Festplatten mit einer Größe von 4 TB, 3 TB bzw. 2 TB umfasst, müssen die neuen Festplatten eine Größe von mindestens 4 TB haben. Darüber hinaus sollten Sie die 3-TB- oder 2-TB-Festplatten zuerst austauschen.</i>
+</li>
+</ul>
+</div>
+
+<div class="section">
+<h4>RAID 5 und RAID 6</h4>
+
+<p>Beim Ersetzen von Festplatten von RAID 5- oder RAID 6-Volumes oder -Diskgruppen sollte immer zuerst die kleinste Festplatte ausgetauscht werden. Die Speicherkapazität von RAID 5-Volumes ist (Anzahl der Laufwerke – 1) x (Größe des kleinsten Laufwerks) und die von RAID 6 ist (Anzahl der Laufwerke – 2) x (Größe des kleinsten Laufwerks). Daher sollte die kleinste Festplatte immer zuerst ausgetauscht werden, um die Festplattennutzung zu maximieren.</p>
+
+<p>Wenn Ihr RAID 5-Volume z. B. drei Festplatten mit einer Größe von 4 TB, 3 TB bzw. 2 TB umfasst, beträgt die verfügbare Kapazität des Volumes 4 TB. Wenn Sie die 4 TB- oder 3 TB-Festplatte austauschen, ändert sich die Kapazität des Volumes nicht. Um die Kapazität des Volumes zu erhöhen, müssen Sie erst die 2 TB-Festplatte austauschen.</p>
+</div>
+
+
+
+<h3>Festplatte zum Erweitern der Speicherkapazität austauschen</h3>
+
+<p>Die nachfolgenden Schritte beschreiben ein Beispiel für den Austausch von Festplatten eines SHR-Volumes.</p>
+
+<h4>Festplatten ersetzen:</h4>
+<ol>
+<li>Öffnen Sie den <b>Speicher-Manager</b>.</li>
+<img src="about:blank" class="help_image"/>
+<li>Gehen Sie zu <strong>Volume</strong>, um zu überprüfen, welche vorhandene Festplatte die kleinste ist.</li>
+<img src="about:blank" class="help_image"/>
+
+<li>Schalten Sie den DiskStation aus. (Sie können diesen Schritt auslassen, wenn Ihr DiskStation Hot-Swapping unterstützt.)</li>
+<li>Bauen Sie die kleinste Festplatte des Volumes aus und eine neue größere ein.</li>
+
+<div class="section">
+<h4>Hinweis:</h4>
+<p>Um Verletzungen oder Schäden am DiskStation zu vermeiden, folgen Sie bitte den Anweisungen für den Festplatteneinbau in der <i>Schnellinstallationsanleitung</i> für Ihr Synology-Produkt.</p>
+</div>
+
+<li>Schalten Sie den DiskStation ein.</li>
+<li>Öffnen Sie wieder den <strong>Speicher-Manager</strong>.</li>
+<li>Gehen Sie zu <strong>HDD/SSD</strong>, um sicherzustellen, dass die neue Festplatte erkannt wird.</li>
+<img src="about:blank" class="help_image"/>
+
+
+<li>Das Volume muss den Status <b>Fehlerhaft</b> haben. Wählen Sie das Volume aus und klicken Sie auf <strong>Verwalten</strong>.</li>
+<img src="about:blank" class="help_image"/>
+<li>Wählen Sie <b>Reparieren</b> aus.</li>
+<img src="about:blank" class="help_image"/>
+
+<li>Wählen Sie die Ersatzfestplatte aus, die zum Volume hinzugefügt werden soll. Folgen Sie den Anweisungen des Assistenten, um den Vorgang abzuschließen.</li>
+<img src="about:blank" class="help_image"/>
+<li>Wiederholen Sie den obigen Vorgang, bis alle gewünschten Festplatten durch größere ersetzt sind.</li>
+</ol>
+
+
+
+
+
+
+</body>
+</html>

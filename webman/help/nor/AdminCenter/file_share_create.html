@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Opprette en delt mappe - Synology DSM Hjelp</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="Shared folders are the basic directories where you can store and manage files and folders on your DiskStation. This article shows you how to create a shared folder.">
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2>Opprette en delt mappe</h2>
+<p>Delte mapper er grunnleggende kataloger hvor du kan lagre og administrere filer og mapper på din DiskStation. Før du lagrer filer, må du opprette minst én delt mappe i DSM. </p>
+
+<h4>Slik oppretter du en delt mappe:</h4>
+<ol>
+	<li>Gå til <strong>Kontrollpanel</strong> > <strong>Delt mappe</strong> og klikk på <strong>Opprett</strong>.<br /><img src="about:blank" class="help_image"/></li>
+	<li>Spesifiser et navn og en beskrivelse for den delte mappen.<br /><img src="about:blank" class="help_image disable-bromolow disable-grantley disable-avoton disable-braswell disable-broadwell disable-kvmx64"/><img src="../../../online_img/dsm/AdminCenter/file_share_create/howto571-5.png" class="help_image enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64"/></li>
+	<li>Velg et lagringsområde hvor du vil opprette den delte mappen (hopp over dette trinnet hvis det kun eksisterer ett lagringsområde).<br /><img src="about:blank" class="help_image disable-bromolow disable-grantley disable-avoton disable-braswell disable-broadwell disable-kvmx64"/><img src="../../../online_img/dsm/AdminCenter/file_share_create/howto571-6.png" class="help_image enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64"/></li>
+	<li>Endre følgende alternativer, om nødvendig:<br /><img src="about:blank" class="help_image disable-bromolow disable-grantley disable-avoton disable-braswell disable-broadwell disable-kvmx64"/><img src="../../../online_img/dsm/AdminCenter/file_share_create/howto571-7.png" class="help_image enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64"/>
+		<ul>
+			<li><strong>Skjul denne delte mappen i ”Mine nettverkssteder”:</strong> Forhindrer at den delte mappen vises under "Nettverk" i Windows-filutforsker. Dette alternativet påvirker ikke tilgangsrettighetene til den delte mappen.
+				<div class="section"><h4>Merk:</h4>
+				<p>Å skjule en delt mappe i Mine nettverkssteder har ingen innvirkning på tilgangsrettighetene. Tilgangsrettighetene til den skjulte delte mappen vil forbli uforandret. Brukere som har tilstrekkelige tilgangsrettigheter til den delte mappen, kan fremdeles få tilgang til den ved å skrive inn "\\server name\shared folder name".</p>
+				</div>
+			</li>
+			<li><strong>Skjul undermapper og filer for brukere uten tillatelser:</strong>Når <strong>Skjul undermapper og filer for brukere uten tillatelser</strong> er aktivert, kan ikke en bruker uten leserettigheter som prøver å åpne en delt mappe gjennom Windows File Sharing-protokoll se undermapper eller filer i den delte mappen. Dette forhindrer at brukere blir forvirret når de kobler seg til Synology-produktene sine og støter på et stort antall filer og undermapper som de ikke kan åpne.
+				<div class="section"><h4>Merk:</h4>
+				<ul>
+					<li>Denne funksjonen støttes kun med Windows File Sharing-protokoll.</li>
+					<li>Du kan endre rettighetsinnstillinger for hver mappe og fil i File Station ved å høyreklikke på dem. Velg <strong>Egenskaper</strong> i rullegardinmenyen og klikk på fanen <strong>Tillatelse</strong>.</li>
+					<li>Selve den delte mappen vil ikke bli skjult for brukere uten tillatelser ved å aktivere <strong>Skjul undermapper og filer for brukere uten tillatelser</strong>. Kun undermappene og filene i denne delte mappen vil bli skjult.</li>
+				</ul>
+				</div>
+			</li>
+		</ul>
+	</li>
+	<li><strong>Aktiver papirkurv:</strong> Når filer i den delte mappen slettes, vil de bli flyttet til en mappe med navnet <strong>#recycle</strong>. Tilgang til papirkurven kan begrenses til brukere som tilhører gruppen <strong>administrators</strong>.</li>
+	<a name="sharequota"></a><li class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64"><strong>Aktiver kvote for delt mappe:</strong> For å spesifisere maksimumskapasiteten for hver mappe, merker du av for <strong>Aktiver kvote for delt mappe</strong> og angir maksimumskapasiteten (f.eks. 10 GB) i følgende felt.
+		<div class="section"><h4>Merk:</h4>
+		<ul>
+			<li>Kun når lagringsområdet bruker Btrfs-filsystemet vil alternativet <strong>Aktiver kvote for delt mappe</strong> være tilgjengelig for delte mapper.</li>
+			<li>Det kombinerte lagringsforbruket til alle brukernes <strong>home</strong>-kataloger kan ikke overskride kvoten for "<strong>homes</strong>".</li>
+		</ul>
+		</div>
+	</li>
+	<a name="integrity_protection"></a><li class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64"><strong>Aktiver avansert beskyttelse av dataintegritet:</strong> For å beskytte en delt mappe med <strong>CRC32 checksum</strong> og <strong>kopier-ved-skriving</strong>, kan du <strong>aktivere avansert beskyttelse av dataintegritet</strong> ved opprettingen av den delte mappen. CRC32 checksum brukes til å kontrollere om dataene er identiske med da de opprinnelig ble skrevet, og vil varsle brukeren hvis datakorrupsjon oppdages. Kopier-ved-skriving bidrar til å forbedre datakonsistens ved unormale systemavslutninger.
+		<div class="section"><h4>Merk:</h4>
+		<ul>
+			<li>Dette alternativet er kun tilgjengelig for volumene som bruker Btrfs-filsystemet.</li>
+			<li>Du kan aktivere/deaktivere dette alternativet for hver delt mappe ved oppretting. Dette alternativet kan ikke endres etter at den delte mappen er opprettet.</li>
+			<li>Hvis filer, f.eks. databaser, endres og oppdateres kontinuerlig, kan andelen fragmenterte filer øke pga. kopiering ved skriving. Det blir anbefalt at du deaktiverer dette alternativet for å forbedre ytelsen.</li>
+		</ul>
+		</div>
+	</li>
+    <a name="btrfs_compression"></a><li class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64"><strong>Aktiver filkomprimering</strong>: Data i den opprettede delte mappen blir automatisk komprimert av Btrfs-filsystemet for å spare lagringsplass. Når dataene hentes for bruk, blir de pakket ut automatisk.
+		<div class="section"><h4>Merk:</h4>
+		<ul>
+			<li>Dette alternativet er kun tilgjengelig når du oppretter en delt mappe i et Btrfs-volum, eller når <strong>Avansert beskyttelse av dataintegritet</strong> er aktivert.</li>
+			<li>Dette alternativet kan ikke endres etter at den delte mappen er opprettet.</li>
+			<li>Komprimeringsgraden varierer i henhold til datatyper: Tekstfiler har den høyeste komprimeringsgraden, mens multimediafiler (f.eks. bilder, musikk eller videoer) muligens ikke kan komprimeres så mye siden de allerede er komprimert for utdata.</li>
+		</ul>
+		</div>
+	</li>
+	<li><strong>Krypter denne delte mappen:</strong> Dersom du ønsker å kryptere den delte mappen, gjør du som følger:
+		<ol>
+			<li>Spesifiser og bekreft en ny krypteringsnøkkel. Krypteringsnøkkelen kan ikke inneholde komma (,) eller er-lik-tegn (=). </li>
+			<li>Om nødvendig, merker du av for <strong>Automatisk montering ved oppstart</strong> for å montere den krypterte mappen automatisk når systemet starter opp. Hvis dette alternativet er deaktivert, vil den krypterte delte mappen være umontert neste gang DiskStation starter. Hvis du vil vise eller få tilgang til en demontert delt mappe, må du montere mappen manuelt ved å importere eller angi krypteringsnøkkelen.</li>
+		</ol>
+	</li>
+	<li>Klikk på <strong>OK</strong> for å fullføre.</li>
+</ol>
+
+<div class="section"><h4>Navneregler for delt mappe:</h4>
+<ul>
+	<li>Navn på delte mapper skiller mellom store og små bokstaver og kan inneholde 1-32 tegn. Navn kan ikke inneholde følgende tegn: <strong>! " # $ % & ' ( ) * + , / : ; <= > ? @ [ ] \ ^ ` { } | ~</strong></li>
+	<li>Følgende navn er reservert for systembruk: <strong>.</strong>, <strong>..</strong>, <strong>global</strong>, <strong>home</strong>, <strong>homes</strong>, <strong>printers</strong>, <strong>public</strong>, <strong>satashare</strong>, <strong>surveillance</strong>, <strong>usbbackup</strong>, <strong>usbshare</strong>. </li>
+	<li>Det første tegnet i et delt mappenavn kan ikke være et minustegn eller et mellomrom, og det siste tegnet kan ikke være et mellomrom.</li>
+	<li>Den delte mappen <strong>description</strong> skiller mellom store og små bokstaver og kan bestå av inntil 64 visbare Unicode-tegn.</li>
+</ul>
+</div>
+
+
+<div class="section"><h4>Kryptere delte mapper:</h4>
+<p>AES 256-bit-kryptering beskytter data ved å blokkere alle ikke-autoriserte tilgangsforsøk. Når en delt mappe er kryptert, vil ikke personer uten krypteringsnøkkelen få tilgang til eller kunne endre de krypterte dataene selv om de fjerner harddiskene fra din DiskStation og monterer dem på en annen enhet.</p>
+</div>
+
+<div class="section"><h4>Merk:</h4>
+<ul>
+	<li>Delte mapper kan kun krypteres når du oppretter dem. </li>
+	<li>Navn på filer og mapper i krypterte delte mapper kan ikke overskride 143 norske tegn eller 43 asiatiske tegn.</li>
+	<li>Du får ikke tilgang til krypterte, delte mapper via NFS.</li>
+	<li>Hvis passord blir gjenopprettet til standard med reset-knappen på DiskStation, vil krypterte delte mapper bli demontert, og alternativet for å montere krypterte delte mapper automatisk vil bli deaktivert.</li>
+	<li class="enable-dockerx64">Krypterte delte mapper støttes kun i utvidede rettigheter-modus. For å bruke denne funksjonen, går du til Docker-pakken på verts-DSM, velger den <strong>Docker DSM</strong> du vil aktivere krypterte delte mapper for, klikker på <strong>Rediger</strong> og merker av for <strong>Utfør container med utvidede rettigheter</strong>.</li>
+</ul>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Sauvegarde et réplication</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head> 
+<body>
+<h2>Synchro du dossier partagé</h2>
+<p>Le service Synchro du dossier partagé permet aux utilisateurs de synchroniser les dossiers partagés depuis une machine Synology NAS (la source) vers d'autres machines Synology NAS (les destinations) sur un réseau local ou sur Internet.</p>
+<p>La première synchronisation du dossier partagé effectue une synchronisation complète du ou des dossiers partagés sélectionnés. Ensuite, seuls les fichiers modifiés sont synchronisés. Les fichiers qui ont été supprimés de la source sont également supprimés de la destination.</p>
+
+<div class="section">
+<h4>Remarque :</h4>
+<ul>
+<li>Synchro du dossier partagé est une solution de synchronisation à sens unique, qui synchronise les fichiers de la source vers la destination. Pour une solution de synchronisation bidirectionnelle, utilisez <strong>Cloud Station ShareSync</strong>.</li>
+<li>S'il existe un dossier partagé du même nom sur la destination (Par ex. SharedFolder) que dans le dossier partagé de la source, le dossier de destination est nommé « SharedFolder_1 ».</li>
+<li>S'il n'existe pas de dossier partagé portant le même nom sur la destination que le nom du dossier partagé de la source, un dossier est créé en prenant le nom du volume correspondant ou du premier volume disponible.</li>
+<li>Par défaut, aucun utilisateur ne possède de privilège pour accéder au dossier partagé sur la destination. Contactez l'<strong>admin</strong> de la destination pour obtenir les privilèges.</li>
+</ul>
+</p>
+</div>
+
+<h3>Activation du service</h3>
+<h4>Activer la Synchro du dossier partagé :</h4>
+<p>Vous devez prélablement activer le service sur le Synology NAS de destination.</p>
+<ol>
+<li>Accédez à <strong>Panneau de configuration</strong> > <strong>Service de fichiers</strong> > <strong>rsync</strong>.</li>
+<li>Sélectionnez <strong>Activer le service rsync</strong> pour activer le service Synchro du dossier partagé.</li>
+<li>Cliquez sur <strong>Appliquer</strong>.</li>
+</ol>
+
+
+<h4>Afin de déconnecter les dossiers partagés du Synology NAS de destination :</h4>
+
+<p>Si différentes sources synchronisent simultanément un dossier partagé identique sur un DiskStation de destination, il y a conflit. Vous devez déconnecter le dossier partagé côté source avant qu'une autre source puisse synchroniser son dossier sur la destination. 
+
+<ol>
+<li>Connectez-vous au Synology NAS de destination, puis accédez à <strong>Panneau de configuration</strong> > <strong>Synchro du dossier partagé</strong> > <strong>Liste de connexion</strong>.</li>
+<li>Sélectionnez la connexion en conflit sur le Synology NAS source, et cliquez sur <strong>Déconnecter</strong> pour la supprimer.</li>
+</ol>
+
+<p>Il est alors possible pour une autre source de synchroniser le dossier partagé sur le DiskStation de destination.</p>
+
+<h3>Gérer les tâches de synchronisation</h3>
+
+<h4>Pour créer une tâche de synchronisation :</h4>
+<ol>
+<li>Connectez-vous au Synology NAS source, puis accédez à <b>Panneau de configuration</b> > <b>Synchro du dossier partagé</b> > <strong>Liste des tâches</strong>.</li>
+<li>Cliquez sur <b>Créer</b>.</li>
+<li>Entrez un nom pour la tâche.</li>
+<li>Sélectionnez le dossier partagé que vous souhaitez synchroniser à la destination.</li>
+<li>Spécifiez le Synology NAS de destination et les options suivantes de synchronisation :</li>
+<ul>
+<li><strong>Personnalisez le port de chiffrement SSH pour la synchronisation du dossier partagé chiffré</strong> : Specifiez le port de chiffrement souihaité pour le chiffrement du transfert SSH.</li>
+<li><strong>Activer le cryptage du transfert SSH</strong> : Chiffre les données pendant le transfert. Ceci offre une plus grande sécurité, tandis que le transfert non chiffré offre davantage de performances. Vous pouvez choisir selon vos besoins.
+</li> 
+<li><strong>Activer la compression du transfert </strong>: Comprime les données pendant le transfert. Cela économise la bande passante du réseau, mais augmente la charge du processeur.</li>
+<li><strong>Activer la synchronisation au niveau des blocs</strong> : Transfère seulement les données différentielles au lieu de fichiers entiers. Cela économise la bande passante du réseau, mais augmente la charge du processeur.</li>
+</ul>
+<li>Lorsque vous y êtes invité, sélectionnez l'une des options suivantes pour décider quand procéder à la synchronisation de la source sur la destination :</li>
+<ul>
+<li><strong>Exécuter la synchro sur modification</strong>: Exécute la tâche de synchronisation immédiatement après un changement sur le dossier partagé source.</li>
+<li><strong>Exécuter la synchro manuellement</strong>: Exécute manuellement la tâche de synchronisation depuis le dossier partagé source.</li>
+<li><strong>Calendrier avancé</strong> : Cliquez sur <strong>Plan de calendrier</strong> pour indiquer quand effectuer la tâche de synchronisation.</li>
+
+</ul>
+<li>Cliquez sur <strong>Appliquer</strong>. Vous pouvez maintenant voir la tâche de synchronisation sur la liste des tâches, qui est effectuée selon le programme spécifié.</li></ol>
+<h4>Pour gérer une tâche de synchronisation :</h4>
+<ol>
+<li>Sur le Synology NAS source, accédez au <strong>Panneau de configuration</strong> > <strong>Synchro du dossier partagé</strong>, cliquez sur <strong>Liste des tâches</strong> et sélectionnez la tâche souhaitée.</li>
+<li>Procédez de l'une des manières suivantes :</li>
+<ul>
+<li>
+Cliquez sur <b>Modifier</b> pour modifier la tâche.
+</li>
+<li>
+Cliquez sur <b>Supprimer</b> pour supprimer la tâche.
+</li> 
+<li>
+Si la tâche de synchronisation n’est pas en cours, cliquez sur <b>Synchroniser maintenant</b> pour effectuer la tâche immédiatement.
+</li>
+<li>
+Si la tâche de synchronisation est en cours, cliquez sur <b>Annuler</b> pour arrêter la tâche en cours.
+</li>
+
+<div class="section">
+<h4>Remarque :</h4>
+<p>
+Si le programme pour une tâche de synchronisation est défini sur <b> Exécuter la synchro sur modification</b>, cliquer sur <b>Annuler</b> arrête la tâche de synchronisation en cours. Cependant, si des modifications sont apportées au contenu du ou des dossiers partagés contrôlés par la tâche de synchronisation, la Synchro du dossier partagé reprend la tâche.</p>
+</div>
+
+<li>
+Cliquez sur <b>Synchro complète</b> pour synchroniser toutes les données. La Synchro du dossier partagé exécute une synchronisation complète, et synchronise uniquement les parties modifiées après la première synchronisation. Vous pouvez synchroniser manuellement toutes les données à nouveau en cliquant à nouveau sur ce bouton.
+</li>
+</ul>
+</ol>
+
+<div class="section disable-eds14">
+<h4>Plus d’informations</h4>
+<ol>
+<li>Le nom de la tâche doit comporter de 1 à 32 caractères Unicode et ne doit pas contenir les caractères suivants :<br> <span class="letterSpace5">! " # $ % & ' ( ) * + , / : ; <= > ? @ [ ] \ ^ ` { } | ~ </span></li>
+<li>Si vous synchronisez des dossiers partagés de système de fichiers ext4 vers ext3, vous pouvez rencontrer des erreurs lorsque la tâche contient plus de 32 000 dossiers.</li>
+<li>Si les dossiers partagés dans le DiskStation de destination ont été synchronisés avec un autre DiskStation auparavant, Synchro du dossier partagé effectue une synchronisation complète pour la tâche.</li>
+<li>Pour effectuer des tâches Synchro du dossier partagé, vous devez disposer du privilège administrateur du DiskStation de destination. Soit vous disposez du mot de passe de son compte administrateur, soit vous êtes dans son groupe d'administration.</li>
+<li>Lors de la synchronisation vers le DiskStation de destination sur Internet, vous pouvez entrer le nom du serveur par son adresse IP externe ou son nom d'hôte. Cependant, si vous choisissez d'entrer son nom d'hôte, le nom doit être au format FQDN (nom de domaine complet), comme &quot;www.synology.com&quot;.</li>
+<li>Pour la transmission de port, Synchro du dossier partagé utilise le port 22 pour le transfert chiffré et le port 873 pour le transfert non chiffré.</li>
+<li>Les appareils de stockage externe ne sont pas pris en charge par la Synchro du dossier partagé.</li>
+<li>Lorsque la tâche Synchro du dossier partagé est ouverte, le ou les dossiers partagés chiffrés à la destination sont automatiquement montés ; toutefois, pour accéder aux données qui s'y trouvent, vous devez préalablement monter le ou les dossiers partagés chiffrés sur à la destination.</li>
+<li>La Synchro du dossier partagé programmée n'est pas exécutée à l'heure spécifiée si aucune modification n'a été apportée au dossier partagé sélectionné.</li>
+<li>Pour optimiser les performances, nous suggérons de faire en sorte que chaque tâche de synchronisation comprenne moins de 200 dossiers partagés.</li>
+<li>La fonction <strong>Accueil utilisateur</strong> est désactivée sur le DiskStation de destination si le dossier partagé <strong>homes</strong> est synchronisé depuis le DiskStation source vers le DiskStation de destination.</li>
+
+<li>Pour les modèles disposant de processeurs non Intel, vous pouvez synchroniser jusqu'à 100 000 dossiers partagés (y compris les sous-dossiers) à l'aide de la Synchro du dossier partagé.</li>
+ <li>La Synchro du dossier partagé peut sauvegarder les paramètres de Windows ACL lorsque le système de fichiers de la destination est ext4.</li>
+ 
+ <li>La Synchro du dossier partagé échoue si vous procédez à la synchronisation vers un serveur de destination qui partage le même nom que votre DiskStation.</li>
+ 
+<li>Les permissions avancées sur le dossier partagé à la source ne seront pas synchronisées avec la destination. En outre, une règle de lecture seule pour le groupe d'administrateurs sera créée dans la destination. </li> 
+
+  </ol>
+</div>
+<div class="section enable-eds14">
+<h4>Plus d’informations</h4>
+<ol>
+<li>Le nom de la tâche doit comporter de 1 à 32 caractères Unicode et ne doit pas contenir les caractères suivants :<br> <span class="letterSpace5">! " # $ % & ' ( ) * + , / : ; <= > ? @ [ ] \ ^ ` { } | ~ </span></li>
+<li>Si vous synchronisez des dossiers partagés de système de fichiers ext4 vers ext3, vous pouvez rencontrer des erreurs lorsque la tâche contient plus de 32 000 dossiers.</li>
+<li>Si les dossiers partagés dans le DiskStation de destination ont été synchronisés avec un autre DiskStation auparavant, Synchro du dossier partagé effectue une synchronisation complète pour la tâche.</li>
+<li>Pour effectuer des tâches Synchro du dossier partagé, vous devez disposer du privilège administrateur du DiskStation de destination. Soit vous disposez du mot de passe de son compte administrateur, soit vous êtes dans son groupe d'administration.</li>
+<li>Lors de la synchronisation vers le DiskStation de destination sur Internet, vous pouvez entrer le nom du serveur par son adresse IP externe ou son nom d'hôte. Cependant, si vous choisissez d'entrer son nom d'hôte, le nom doit être au format FQDN (nom de domaine complet), comme &quot;www.synology.com&quot;.</li>
+<li>Pour la transmission de port, Synchro du dossier partagé utilise le port 22 pour le transfert chiffré et le port 873 pour le transfert non chiffré.</li>
+<li>Les appareils de stockage externe ne sont pas pris en charge par la Synchro du dossier partagé.</li>
+<li>Lorsque la tâche Synchro du dossier partagé est ouverte, le ou les dossiers partagés chiffrés à la destination sont automatiquement montés ; toutefois, pour accéder aux données qui s'y trouvent, vous devez préalablement monter le ou les dossiers partagés chiffrés sur à la destination.</li>
+<li>La Synchro du dossier partagé programmée n'est pas exécutée à l'heure spécifiée si aucune modification n'a été apportée au dossier partagé sélectionné.</li>
+<li>Pour optimiser les performances, nous suggérons de faire en sorte que chaque tâche de synchronisation comprenne moins de 200 dossiers partagés.</li>
+<li>La fonction <strong>Accueil utilisateur</strong> est désactivée sur le DiskStation de destination si le dossier partagé <strong>homes</strong> est synchronisé depuis le DiskStation source vers le DiskStation de destination.</li>
+<li>Pour les modèles disposant de processeurs non Intel, vous pouvez synchroniser jusqu'à 100 000 dossiers partagés (y compris les sous-dossiers) à l'aide de la Synchro du dossier partagé.</li>
+ 
+ <li>La Synchro du dossier partagé échoue si vous procédez à la synchronisation vers un serveur de destination qui partage le même nom que votre DiskStation.</li>
+ 
+<li>Les permissions avancées sur le dossier partagé à la source ne seront pas synchronisées avec la destination. En outre, une règle de lecture seule pour les utilisateurs du groupe administrateur sera créée dans la destination. </li> 
+ 
+ </ol>
+</div>
+</body></html>

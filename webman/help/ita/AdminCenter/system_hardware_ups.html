@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Alimentazione</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+
+
+<h2>UPS</h2>
+
+<p class="disable-eds14">Un UPS (gruppo di continuità) è un dispositivo di alimentazione di backup che consente a DiskStation di continuare a funzionare per un breve periodo in caso di guasti elettrici. Questa funzione in <strong>Pannello di controllo</strong> > <strong>Hardware e Alimentazione</strong> > <strong>UPS</strong> aiuta a prevenire la perdita di dati fornendo a DiskStation tempo a sufficienza per salvare i dati e smontare i volumi prima di rimanere senza alimentazione e spegnersi.</p>
+
+<p class="enable-eds14">Un UPS (gruppo di continuità) è un dispositivo di alimentazione di backup che consente a DiskStation di continuare a funzionare per un breve periodo in caso di guasti elettrici. Questa funzione in <strong>Pannello di controllo</strong> > <strong>Hardware e Alimentazione</strong> > <strong>UPS</strong> aiuta a prevenire la perdita di dati fornendo a DiskStation tempo a sufficienza per salvare i dati e smontare i volumi prima di rimanere senza alimentazione e spegnersi.</p>
+
+<div class="section">
+<h4>Modalità sicura</h4>
+<p class="disable-eds14">Quando DiskStation entra in modalità sicura, tutti i servizi vengono interrotti e i volumi vengono smontati modo da evitare la perdita dei dati ed eseguire lo spegnimento sicuro quando si riduce l'alimentazione fornita dall'UPS. Per impostazione predefinita, il sistema entra in Modalità sicura quando si riduce l'alimentazione dell'UPS. È anche possibile specificare quanto tempo prima il DiskStation deve accedere alla Modalità sicura in caso di assenza di corrente. Tuttavia, se la batteria dell'UPS si scarica prima del periodo specificato, il sistema entra subito in Modalità sicura.</p>
+
+<p class="enable-eds14">Quando DiskStation entra in modalità sicura, tutti i servizi vengono interrotti e i volumi vengono smontati in modo da evitare la perdita dei dati ed eseguire lo spegnimento sicuro quando si riduce l'alimentazione fornita dall'UPS. Per impostazione predefinita, il sistema entra in Modalità sicura quando si riduce l'alimentazione dell'UPS. È anche possibile specificare quanto tempo prima il DiskStation deve accedere alla Modalità sicura in caso di assenza di corrente. Tuttavia, se la batteria dell'UPS si scarica prima del periodo specificato, il sistema entra subito in Modalità sicura.</p>
+
+
+<p></p>
+<p class="disable-eds14">Nelle situazioni in cui DiskStation si spegne durante la Modalità sicura, si riaccende automaticamente quando l'alimentazione è ripristinata se è stata abilitata l'opzione <strong>Riavvia automaticamente dopo interruzione di corrente</strong> (in <strong>Pannello di controllo</strong> > <strong>Hardware e Alimentazione</strong> > <strong>Generale</strong>).</p>
+
+<p></p>
+</div>
+
+
+
+
+<h3>Supporto UPS locale</h3>
+
+<p>Per informazioni relative all'installazione hardware, consultare il manuale utente dell'UPS. Una volta completata l'installazione e la DiskStation è stata collegata all'UPS, è possibile attenersi alle procedure di seguito per abilitare il supporto UPS.</p>
+<h4>Per abilitare il supporto UPS locale:</h4>
+<OL>
+<li>Collegare l'UPS alla porta USB della DiskStation.</li>
+<LI>Nella scheda <strong>UPS</strong>, selezionare la casella di controllo <b>Attiva il supporto UPS</b>.</LI>
+<LI>Selezionare quando DiskStation deve accedere alla Modalità sicura in caso di assenza di alimentazione.</LI>
+<LI>Scegliere se inviare o meno un segnale di chiusura all'UPS quando il sistema entra in Modalità sicura. Molti UPS si accendono automaticamente quando viene ripristinata l'alimentazione.</LI>
+<LI>Fare clic su <b>Applica</b>.</LI>
+</OL>
+
+<h3>Supporto UPS SNMP</h3>
+
+<p>DiskStation supporta inoltre il collegamento agli UPS SNMP (Simple Network Management Protocol). Per informazioni relative all'installazione hardware, consultare il manuale utente dell'UPS SNMP. Una volta collegato DiskStation al dispositivo e alla stessa rete, è possibile attenersi alle procedure di seguito per abilitare il supporto UPS.</p>
+<h4>Per abilitare il supporto UPS SNMP:</h4>
+<ol>
+<LI>Nella scheda <strong>UPS</strong>, selezionare la casella di controllo <b>Attiva il supporto UPS</b>.</LI>
+<li>Selezionare <strong>UPS SNMP</strong> nel menu a discesa <strong>Tipo UPS in rete</strong>.</li>
+<li>Nel campo <strong>Indirizzo IP UPS SNMP</strong>, inserire l'indirizzo IP del dispositivo UPS SNMP.</li>
+<LI>Selezionare quando DiskStation deve accedere alla Modalità sicura in caso di assenza di alimentazione.</LI>
+<li>Inserire la stringa della comunità per il dispositivo UPS SNMP nel campo <strong>Comunità SNMP</strong>.</li>
+<LI>Fare clic su <b>Applica</b>.</LI>
+</ol>
+
+<div class="section">
+<h4>Nota:</h4>
+<ul>
+<li>Si consiglia vivamente di utilizzare <b>SNMP UPS</b> per le distribuzioni SHA (Synology High Availability).</li>
+<li>DiskStation supporta i dispositivi UPS SNMPv1 e SNMPv2c.</li>
+</ul>
+</div>
+
+
+<h3>Supporto UPS di rete</h3>
+
+<p>Se sono presenti due prodotti Synology che utilizzano un UPS con una sola porta USB, solo un DiskStation può ottenere le informazioni relative allo stato dell'UPS. In questo caso, DiskStation può agire da "server UPS di rete" e connettersi all'UPS tramite USB o rete (in relazione al dispositivo). Il server UPS di rete ottiene le informazioni UPS e le trasmette a DiskStation "client".</p>
+<h4>Per abilitare il supporto UPS in rete:</h4>
+<OL>
+<li>Accedere a DiskStation collegato all'UPS (tramite USB o rete). Se il supporto UPS locale ancora non è stato abilitato su questa DiskStation, consultare la sezione precedente.</li>
+<LI>Nella scheda <strong>UPS</strong>, selezionare la casella <strong>Abilita il server di rete UPS</strong> per consentire a DiskStation di trasmettere le informazioni dell'UPS a DiskStation client.</li>
+<li>Fare clic sul pulsante <strong>Dispositivi DiskStation consentiti</strong>.</li>
+<li>Nella finestra visualizzata, inserire gli indirizzi IP del DiskStation che sta utilizzando l'UPS, ma non è connesso tramite USB o rete. Fare clic su <strong>OK</strong>.</li>
+<li>Fare clic su <strong>Applica</strong> per salvare le impostazioni.</li>
+</OL>
+<p>A questo punto il server UPS di rete può ottenere le informazioni dell'UPS e trasmetterle a DiskStation utilizzando l'UPS. Consultare le istruzioni di seguito per abilitare il supporto UPS sull'altro DiskStation.</p>
+<h4>Per abilitare il supporto UPS su DiskStation client:</h4>
+<ol>
+<li>Accedere all'altro DiskStation che sta utilizzando l'UPS, ma non tramite USB o rete.</li>
+<li>Nella scheda <strong>UPS</strong>, selezionare la casella di controllo <strong>Attiva il supporto UPS</strong>.</li>
+<li>Selezionare <strong>Server Gruppo di continuità Synology</strong> nel menu a discesa <strong>Tipo Gruppo di continuità di rete</strong>.</li>
+<li>Inserire l'indirizzo IP del server UPS di rete (ad esempio la DiskStation collegata all'UPS) nel campo <strong>IP del server di rete UPS</strong>.</li>
+<LI>Selezionare quando DiskStation deve accedere alla Modalità sicura in caso di assenza di alimentazione. Per rendere più semplici le impostazioni della Modalità sicura, è possibile selezionare <strong>Come il server</strong>.</LI>
+<LI>Fare clic su <b>Applica</b> per salvare le impostazioni.</LI>
+</OL>
+<div class="section">
+<h4>Requisiti dell'UPS di rete:</h4>
+<UL>
+<LI>Per trasmettere le informazioni dell'UPS, ciascun DiskStation deve essere collegato alla stessa rete.</LI>
+<LI>Il dispositivo di rete (ad esempio switch o hub) al quale è collegato ciascun DiskStation deve essere collegato allo stesso UPS. In caso contrario DiskStations non sarà in grado di trasmettere le informazioni dell'UPS in caso di assenza di corrente.</LI>
+</UL>
+</div>
+</body>
+</html>

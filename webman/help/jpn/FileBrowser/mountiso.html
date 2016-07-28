@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>File Station</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>仮想ドライブをマウント</h2>
+
+<p>
+File Station を使用するとディスクイメージのコンテンツにアクセスするために、仮想ドライブをマウントすることができます。
+</p>
+
+<h4>仮想ドライブをマウントするには：</h4>
+<ol>
+<li>
+ディスクイメージを選択し、<b>[ツール]</b> &gt; <b>[仮想ドライブをマウント]</b> を選択します。
+</li>
+<img src="about:blank" class="help_image"/>
+<li>
+<b>[参照]</b> をクリックして、仮想ドライブをマウントするために DiskStation に空白のマウント先フォルダを選択または作成します。
+</li>
+<img src="about:blank" class="help_image"/>
+<li>
+システムを起動またはリブートする度に、DiskStation を仮想ドライブにマウントするには、<b>[スタートアップで自動的にマウントする]</b> にチェックマークを付けてください。<b>[マウント]</b> をクリックして続行します。以上で仮想ドライブがマウントされているマウント先フォルダをナビゲートして、ディスクイメージのコンテンツにアクセスすることができます。
+</li>
+<img src="about:blank" class="help_image"/>
+</ol>
+
+<div class="section">
+<h4>注意：</h4>
+<p>仮想ドライブおよび .iso ファイルは、共有フォルダの中のサブフォルダにしかマウントできません。</p>
+</div>
+
+
+
+<h4>仮想ドライブをマウント解除するには：</h4>
+<ol>
+<li>仮想ドライブがマウントされるマウント先フォルダを右クリックして、<b>[マウント解除]</b> を選択します。</li>
+<img src="about:blank" class="help_image"/>
+</ol>
+<ol>
+<span class="note_head">注意： </span>
+<li>
+サポートされるディスクイメージ形式は、ISO 9660 および UDF ファイルシステムを使用した「<b>.iso</b>」ファイルです。
+</li>
+<li>
+同時に稼働可能な仮想ドライブの数は 16 台です。
+</li>
+<li class="enable-dockerx64">仮想ドライブのマウントは、高権限モードでのみサポートされています。この機能を使用するには、ホスト DSM で Docker パッケージを選択し、暗号化した共有フォルダを有効にする <strong>[Docker DSM]</strong> を選択します。次に、<strong>[編集]</strong> をクリックし、<strong>[高権限実行コンテナを使う]</strong> にチェックマークを付けます。</li>
+
+</ol>
+</body>
+</html>

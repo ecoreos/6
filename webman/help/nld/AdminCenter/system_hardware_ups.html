@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Stroom</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+
+
+<h2>UPS</h2>
+
+<p class="disable-eds14">Een UPS (Uninterruptible Power Supply) is een back-upvoedingsapparaat waarmee DiskStation gedurende een korte tijdspanne kan blijven werken in geval van een stroompanne. De functie <strong>Configuratiescherm</strong> > <strong>Hardware en stroom</strong> > <strong>UPS</strong> helpt gegevensverlies te voorkomen door DiskStation voldoende tijd te geven om gegevens op te slaan en volumes te ontkoppelen vooraleer de stroom verloren gaat en af te sluiten.</p>
+
+<p class="enable-eds14">Een UPS (Uninterruptible Power Supply) is een back-upvoedingsapparaat waarmee DiskStation gedurende een korte tijdspanne kan blijven werken in geval van een stroompanne. De functie <strong>Configuratiescherm</strong> > <strong>Hardware en stroom</strong> > <strong>UPS</strong> helpt gegevensverlies te voorkomen door DiskStation voldoende tijd te geven om gegevens op te slaan en volumes te ontkoppelen vooraleer de stroom verloren gaat en stopt.</p>
+
+<div class="section">
+<h4>Veilige modus</h4>
+<p class="disable-eds14">Wanneer DiskStation in Veilige Modus overschakelt, worden alle services gestopt en volumes ontkoppelt om gegevensverlies te voorkomen en veilig uit te schakelen wanneer het UPS-apparaat zonder stroom komt te zitten. Standaard schakelt het systeem in Veilige modus wanneer het UPS-apparaat zonder stroom raakt. U kunt bovendien aangeven hoe lang het duurt voor DiskStation in Veilige modus schakelt in geval van een stroompanne. Als de batterij van het UPS-apparaat echter bijna leeg is voor het opgegeven tijdstip, schakelt het systeem onmiddellijk in Veilige modus</p>
+
+<p class="enable-eds14">Wanneer DiskStation in Veilige Modus overschakelt, worden alle services gestopt en volumes ontkoppelt om gegevensverlies te voorkomen en veilig uit te schakelen wanneer het UPS-apparaat zonder stroom komt te zitten. Standaard schakelt het systeem in Veilige modus wanneer het UPS-apparaat zonder stroom raakt. U kunt bovendien aangeven hoe lang het duurt voor DiskStation in Veilige modus schakelt in geval van een stroompanne. Als de batterij van het UPS-apparaat echter bijna leeg is voor het opgegeven tijdstip, schakelt het systeem onmiddellijk in Veilige modus</p>
+
+
+<p></p>
+<p class="disable-eds14">In situaties waarbij DiskStation in de veilige modus uitschakelt, wordt het apparaat automatisch opnieuw gestart zodra de stroomvoorziening is hersteld indien u de optie <strong>Automatisch opnieuw starten na een stroomuitval</strong> hebt ingeschakeld (bij <strong>Configuratiescherm</strong> > <strong>Hardware en stroom</strong> > <strong>Algemeen</strong>).</p>
+
+<p></p>
+</div>
+
+
+
+
+<h3>Lokale UPS-ondersteuning</h3>
+
+<p>Meer gegevens over hardware-installatie vindt u in de gebruikershandleiding van uw UPS-apparaat. Zodra de installatie is voltooid en DiskStation op het UPS-apparaat is aangesloten, kunt u onderstaande stappen volgen om UPS-ondersteuning in te schakelen.</p>
+<h4>Om lokale UPS-ondersteuning in te schakelen:</h4>
+<OL>
+<li>Sluit het UPS-apparaat aan op de USB-poort van DiskStation.</li>
+<LI>Schakel op het tabblad <strong>UPS</strong> het selectievakje voor <b>UPS-ondersteuning inschakelen</b> in.</LI>
+<LI>Selecteer wanneer DiskStation in Veilige modus moet schakelen nadat een stroompanne is opgetreden.</LI>
+<LI>U kunt beslissen om al dan niet een uitschakelingssignaal naar het UPS-apparaat te versturen wanneer het systeem overschakelt op de Veilige modus. De meeste UPS-apparaten kunnen automatisch inschakelen zodra de stroom is hersteld.</LI>
+<LI>Klik op <b>Toepassen</b>.</LI>
+</OL>
+
+<h3>SNMP UPS-ondersteuning</h3>
+
+<p>Uw DiskStation ondersteunt tevens een verbinding met SNMP (Simple Network Management Protocol) UPS-apparaten. Meer gegevens over de hardware-installatie vindt u in de gebruikershandleiding van uw SNMP UPS-apparaat. Zodra de installatie is voltooid en DiskStation op het apparaat is aangesloten en met hetzelfde netwerk is verbonden, kunt u onderstaande stappen volgen om UPS-ondersteuning in te schakelen.</p>
+<h4>Om SNMP UPS-ondersteuning in te schakelen:</h4>
+<ol>
+<LI>Schakel op het tabblad <strong>UPS</strong> het selectievakje voor <b>UPS-ondersteuning inschakelen</b> in.</LI>
+<li>Selecteer <strong>SNMP UPS</strong> uit de vervolgkeuzelijst <strong>Netwerk UPS-type</strong>.</li>
+<li>Voer in het veld <strong>SNMP UPS IP-adres</strong> het IP-adres van het SNMP UPS-apparaat in.</li>
+<LI>Selecteer wanneer DiskStation in Veilige modus moet schakelen nadat een stroompanne is opgetreden.</LI>
+<li>Voer de community-tekenreeks voor het SNMP UPS-apparaat in het veld <strong>SNMP community</strong> in.</li>
+<LI>Klik op <b>Toepassen</b>.</LI>
+</ol>
+
+<div class="section">
+<h4>Opmerking:</h4>
+<ul>
+<li>voor Synology High Availability (SHA) configuraties wordt het gebruik van <b>SNMP UPS</b> aangeraden.</li>
+<li>DiskStation ondersteunt SNMPv1- en SNMPv2c UPS-apparaten.</li>
+</ul>
+</div>
+
+
+<h3>Netwerk UPS-ondersteuning</h3>
+
+<p>Als er twee Synology-producten gebruikmaken van een UPS-apparaat met een enkele USB-poort, zal slechts een DiskStation gegevens verkrijgen over de status van het UPS-apparaat. In dit geval kan een DiskStation fungeren als "netwerk UPS-server" en een verbinding maken met het UPS-apparaat via USB of het netwerk (afhankelijk van het apparaat). De netwerk UPS-server verkrijgt UPS-gegevens en stuurt die door naar de andere "client" DiskStation.</p>
+<h4>Om netwerk UPS-ondersteuning in te schakelen</h4>
+<OL>
+<li>Meld u aan bij DiskStation die verbonden is met het UPS-apparaat (via USB of netwerk). Raadpleeg het bovenstaande gedeelte als lokale UPS-ondersteuning nog niet is ingeschakeld op deze DiskStation.</li>
+<LI>Schakel op het tabblad <strong>UPS</strong> het selectievakje voor <strong>Netwerk UPS-server inschakelen</strong> in om DiskStation toestemming te geven om UPS-gegevens door te sturen naar de client DiskStation.</li>
+<li>Klik op de knop <strong>Gemachtigde DiskStation-apparaten</strong>.</li>
+<li>Voer in het venster dat verschijnt de IP-adressen in van het andere DiskStation die het UPS-apparaat gebruikt, maar niet via USB of het netwerk is verbonden. Klik op <strong>OK</strong>.</li>
+<li>Klik op <strong>Toepassen</strong> om de instellingen op te slaan.</li>
+</OL>
+<p>Nu kan de UPS-server UPS-gegevens verkrijgen en naar het andere DiskStation dat het UPS-apparaat gebruikt doorsturen. Bekijk de onderstaande instructies om UPS-ondersteuning voor het andere DiskStation in te schakelen.</p>
+<h4>Om UPS-ondersteuning op de client DiskStation in te schakelen:</h4>
+<ol>
+<li>Meld u aan bij DiskStation die verbonden is met het UPS-apparaat, maar niet is verbonden via USB of het netwerk.</li>
+<li>Schakel op het tabblad <strong>UPS</strong> het selectievakje voor <strong>UPS-ondersteuning inschakelen</strong> in.</li>
+<li>Selecteer <strong>Synology UPS-server</strong> uit de vervolgkeuzelijst <strong>Netwerk UPS-type</strong>.</li>
+<li>Voer het IP-adres van de netwerk UPS-server in (i.e. DiskStation die verbonden is met het UPS-apparaat) in het veld <strong>Netwerk UPS-server IP</strong>.</li>
+<LI>Selecteer wanneer DiskStation in Veilige modus moet schakelen nadat een stroompanne is opgetreden. Om de instellingen voor Veilige modus te vereenvoudigen, kunt u <strong>Idem als server</strong> selecteren.</LI>
+<LI>Klik op <b>Toepassen</b> om de instellingen op te slaan.</LI>
+</OL>
+<div class="section">
+<h4>Vereisten voor netwerk UPS:</h4>
+<UL>
+<LI>Om UPS-apparaatgegevens door te sturen, moet elke DiskStation met hetzelfde netwerk zijn verbonden.</LI>
+<LI>Het netwerkapparaat (bv. switch of hub) waarmee DiskStation is verbonden moet op hetzelfde UPS-apparaat zijn aangesloten. Zo niet, zal DiskStations de UPS-apparaatgegevens niet kunnen doorsturen in geval van een stroompanne.</LI>
+</UL>
+</div>
+</body>
+</html>

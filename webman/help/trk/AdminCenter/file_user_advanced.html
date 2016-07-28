@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Gelişmiş Kullanıcı Ayarları</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Gelişmiş Kullanıcı Ayarları</h2>
+
+<p>Gelişmiş kullanıcı ayarlarını değiştirmek için <strong>Denetim Masası</strong> > <strong>Kullanıcı</strong> > <strong>Gelişmiş</strong>'e gidebilirsiniz. Aşağıdaki seçenekler bulunmaktadır. </p>
+
+<h3>Kullanıcıların Unutulan Şifreleri Sıfırlamalarına İzin Ver</h3>
+<p>Kullanıcıların e-posta yoluyla unuttukları şifreleri yeniden belirlemelerine izin vermek istiyorsanız, <strong>Yönetici dışındaki kullanıcıların unutulan şifreleri e-posta ile sıfırlamasına izin ver</strong> seçeneğini etkinleştirebilirsiniz. Bu seçenek etkinleştirildiğinde, <strong>Şifrenizi unuttunuz mu?</strong> adındaki bir bağlantı DSM oturum açma sayfasında görüntülenir. Eğer bir kullanıcı şifresini unutursa, bu bağlantıya tıklayabilir ve kullanıcı adını girebilir. Bu durumda, sistem kullanıcıya unutulan şifresini sıfırlamak için bir bağlantı içeren bir e-posta gönderecektir. </p>
+
+<div class="section">
+<h4>Not:</h4>
+<ul>
+<li>Bu seçeneği etkinleştirmeden önce, SMTP e-posta bildirimlerini etkinleştirmiş olduğunuzdan emin olun. Bunu yapmak için, <strong>Denetim Masası</strong> > <strong>Bildirim</strong> öğesine gidin.</li>
+<li>Sistemden mesajlar almak için, kullanıcılar hesaplarının kullanıcı bilgileri kısmında bir e-posta adresi belirtmelidirler.</li>
+<li><strong>administrators</strong> grubu üyesi kullanıcılar bu seçenekle şifreleri sıfırlayamazlar.</li>
+<li>Etki alanı kullanıcıları bu seçenekle şifreleri sıfırlayamazlar.</li>
+<li>LDAP kullanıcıları, DiskStation LDAP dizin sunucusu olarak işlev gördüğü sürece bu seçenekle şifreleri sıfırlayabilirler.</li>
+
+</ul>
+</div>
+
+
+<h3>Şifre Gücü</h3>
+<p>DiskStation sunucunuz üzerindeki kullanıcılar için şifre gücü kurallarını belirleyebilirsiniz.</p>
+
+<div class="section">
+<h4>Not:</h4>
+<p>Şifre gücü kuralları sadece yeni şifreler için geçerlidir. Örneğin, yeni şifre gücü kuralları sadece yeni bir kullanıcı hesabı oluşturulurken veya mevcut bir kullanıcı şifresini değiştirdiğinde uygulanır. Mevcut şifreler ve içeri alınan kullanıcı hesaplarına ait olanlar yeni şifre kurallarından hariç tutulurlar.</p>
+</div>
+<h4>Şifre gücü kurallarını etkinleştirmek için:</h4>
+<ol>
+<li><b>Parola gücü kurallarını uygula</b> kutusunu işaretleyerek parola kısıtlamalarını etkinleştirin.</li>
+<li>Aşağıdaki kurallardan birden fazla parola kısıtlaması seçin:</li>
+<ul>
+<li><b>Kullanıcının adını ve açıklamasını şifreye dahil etme</b>: Şifre kullanıcı adını veya kullanıcı açıklamasını içermelidir. Ancak UTF-8 kodlu karakterler hariçtir.</li>
+<li><b>Büyük/küçük karma harfleri dahil et</b>: Şifre büyük ve küçük harfler içermelidir.</li>
+<li><b>Sayısal karakter dahil et</b>: Şifrede en az bir sayı (0~9) bulunmalıdır.</li>
+<li><b>Özel karakter dahil et</b>: Şifrede en az bir ASCII özel karakteri bulunmalıdır (örn., ~, `, !, @, #, $, %, ^, &, *, (, ), -, _, =, +, [, {, ], }, \, |, ;, :, ', ", <, >, /, ?).</li>
+<li><b>Minimum şifre uzunluğu</b>: Şifre en az metin alanında belirtilen değerde olmalıdır. Uzunluk 6 ile 127 arasında olmalıdır.</li>
+</ul>
+<li>Ayarları kaydetmek için <b>Uygula</b>'ya tıklayın.</li>
+</ol>
+
+
+
+<h3>2 Adımlık Doğrulama</h3>
+<p>2 adımlı doğrulama, DSM kullanıcı hesapları için geliştirilmiş güvenlik sağlar. Hesaplarını daha iyi korumak için DSM yöneticilerini ya da tüm DSM kullanıcılarını 2 adımlı doğrulamayı etkinleştirmek zorunda bırakabilirsiniz.</p>
+
+<h4>DSM kullanıcılarına 2 adımlı doğrulamayı zorunlu kılmak için:</h4>
+
+<ol>
+<li><strong>Aşağıdaki kullanıcılar için 2 adımlı doğrulamayı iste</strong> kutusunu işaretleyerek bunu uygulamak istediğiniz kullanıcıları seçin.</li>
+<div class="section">
+<h4>Not:</h4>
+<p><b>Kişisel</b> > <b>Hesap</b> bölümünde henüz 2 adımlı doğrulamayı yapılandırmadıysanız, bu zorunluluğu uygulamadan önce gereken ayarları tamamlamanıza yardımcı olmak için 2 adımlı doğrulama kurulum sihirbazı başlatılır.</p>
+</div>
+
+<li>Bu zorunluluk uygulandığında 2 adımlı doğrulamayı etkinleştirmemiş kullanıcıların DSM'de oturum açmadan önce ayarları tamamlamaları istenir.</li>
+</ol>
+
+<div class="section">
+<h4>Not:</h4>
+<p>2 adımlı doğrulama zorunluluğunu burada devre dışı bırakmak, her bir kullanıcının 2 adımlı doğrulama ayarını etkilemez veya devre dışı bırakmaz. Kullanıcılar kendi 2 adımlı doğrulama ayarlarını muhafaza edebilir veya bu ayarları devre dışı bırakmak için <b>Kişisel</b> > <b>Hesap</b> bölümüne gidebilirler.</p>
+</div>
+
+
+<h3>Kullanıcı Anasayfa</h3>
+
+<p>Her kullanıcıya kişisel bir ana sayfa klasörü oluşturmak için kullanıcı <b>home</b> etkinleştirilmelidir, <b>guest</b> bunun dışındadır. Tüm kullanıcılar kendi ana sayfa klasörlerine CIFS, AFP, FTP veya File Station yoluyla erişebilirler.</p>
+<p><strong>administrators</strong> grubuna ait kullanıcılar <b>homes</b> varsayılan paylaşımlı klasörünün içindeki tüm kişisel klasörlere erişebilirler. Home klasörünün adı kullanıcı hesabı ile aynıdır.</p>
+
+<h4>Kullanıcı ana sayfa hizmetini etkinleştirmek için:</h4>
+<ol>
+<li><b>Kullanıcı ana sayfa hizmetini etkinleştir</b> kutusunu işaretleyin.</li>
+<li>Birden fazla birim varsa, <b>homes</b> klasörünün depolanacağı konumu seçin.</li>
+<li><b>Uygula</b>'ya tıklayın.</li>
+</ol>
+
+<div class="section">
+<h4>Not:</h4>
+<p>Yerel kullanıcı ana sayfa hizmeti devre dışı bırakıldığında, aynı zamanda etki alanı kullanıcı ana sayfa hizmeti de devre dışı bırakılacaktır.</p>
+</div>
+
+<h4>Kullanıcı ana sayfa hizmetini devre dışı bırakmak için:</h4>
+<ol>
+<li><b>Kullanıcı ana sayfa hizmetini etkinleştir</b>'in işaretini kaldırın.</li>
+<li><b>Uygula</b>'ya tıklayın.</li>
+</ol>
+<p>Kullanıcı ana sayfa servisi engellendikten sonra, <b>homes</b> paylaşımlı klasörü admin erişimi için ayrılacaktır.  Kullanıcı ana sayfa servisi yeniden etkinleştirildiğinde kullanıcılar home klasörlerine tekrar erişebileceklerdir.</p>
+
+<div class="section">
+<h4>Not:</h4>
+<ol>
+<li><b>Homes</b> paylaşımlı klasörünü silmek için, önce kullanıcı ana sayfa servisi devre dışı bırakılmalıdır.</li>
+<li>Yerel kullanıcı ana sayfa hizmeti devre dışı bırakılırsa etki alanı kullanıcı ana sayfa hizmeti devre dışı olacaktır.</li> 
+</ol> 
+</div>
+
+
+</body>	
+</html> 

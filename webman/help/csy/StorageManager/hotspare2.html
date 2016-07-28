@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+	<h2>Hot Spare</h2>
+	<p>Disky Hot Spare jsou pohotovostní pevné disky, které dokážou opravit poškozenou skupinu RAID Group automatickým nahrazením poškozeného disku. Disky Hot Spare mohou být globálně přiděleny na opravu libovolné skupiny RAID Group v rámci zařízení DiskStation. Disk Hot Spare dokáže opravit pouze skupinu RAID Group splňující následující kritéria:</p>
+	<ul>
+  <li>Typem RAID dané skupiny RAID Group musí být typ s ochranou dat (např. RAID 1, RAID 5, RAID 6, RAID 10).</li>
+		<li>Typ pevného disku Hot Spare musí být stejný jako disky členů skupiny RAID Group (tj. SATA, SAS).</li>
+		<li>Velikost disku Hot Spare musí být stejná nebo větší než velikost nejmenšího disku ve skupině RAID Group.</li>
+	</ul>
+
+	<h4>Správa disků Hot Spare:</h4>
+	<ol>
+		<li>Klikněte na možnost <b>Správa</b>.</li>
+		<li>Chcete-li přiřadit disk Hot Spare, vyhledejte na pravé straně část <b>Dostupné disky</b> a zaškrtněte políčko vedle disku, který chcete přiřadit jako Hot Spare. Chcete-li odebrat disk Hot Spare, zrušte zaškrtnutí tohoto políčka. Nastavení uložíte kliknutím na možnost <b>Použít</b>.</li>
+	</ol>
+	<p>
+<div class="section">
+<h4>Poznámka:</h4> 
+<ul>
+<li>Když disk Hot Spare opraví poškozenou skupinu RAID Group, budou všechna data na disku Hot Spare vymazána. Před přidělením disku Hot Spare zajistěte, aby se na tomto disku nenacházela žádná důležitá data.</li>
+<li>Svazek RAID sestavený z pevných disků HDD nebude automaticky opraven disky SSD Hot Spare a opačně.</li>
+</ul>
+</div>
+
+<h4>Konfigurace nastavení disků Hot Spare pro skupinu RAID Group:</h4>
+<ol>
+<li>Klikněte na možnost <b>Konfigurovat</b>.</li>
+<li>Na kartě <b>Cíle disků Hot Spare</b> jsou uvedeny skupiny RAID Group, které lze chránit pomocí disků Hot Spare. Zrušíte-li zaškrtnutí těchto políček, nebudou příslušné skupiny RAID Group v případě poškození automaticky opraveny pomocí disků Hot Spare.</li>
+<li>Na kartě <b>Disky Hot Spare pro různá zařízení</b> je možné povolit, aby disky Hot Spare na jednom zařízení opravily poškozený svazek RAID nacházející se na jiném zařízení.</li>
+<li>Nastavení uložíte kliknutím na možnost <b>OK</b>.</li>
+</ol>
+
+</body>
+</html>

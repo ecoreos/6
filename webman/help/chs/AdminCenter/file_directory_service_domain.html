@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Win/Mac/NFS</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>域</h2>
+<p>您的 DiskStation 可加入 Windows 域。加入 Windows 域后，域用户可以使用其域帐号及密码登录 DiskStation 来访问文件及使用 DSM 应用程序，而无需记住另一套用户名和密码。</p>
+<h4>若要加入域：</h4>
+<ol>
+<li>请进入<strong>控制面板</strong> &gt; <strong>目录服务</strong> &gt; <strong>域</strong>。</li>
+<li>勾选<strong>加入域</strong>复选框。</li>
+<li>在相应的栏目中输入域名并指定 DNS 服务器。</li>
+<li>如需要，勾选<b>高级域选项</b>复选框。（参阅下述内容来了解详情。）</li>
+<li>单击<b>应用</b>。</li>
+<li>在弹出的窗口中，输入该域服务器管理员的用户名和密码。</li>
+<li>单击<b>确定</b>。</li>
+</ol>
+<div class="section">
+<h4>DNS Server</h4>
+<p>建议您指定 DNS 服务器来帮助 DiskStation 搜索域。若您没有在 DNS 服务器上注册域，则加入域的程序可能会失败。</p>
+<h4>域服务器类型</h4>
+<p>当 DiskStation 加入域时，此栏将显示域类型。域类型为&ldquo;AD domain&rdquo;。</p>
+<h4>管理模式</h4>
+<p>此选项将决定您管理域用户和群组的方式。</p>
+<ul>
+<li><b>受信任域</b>：您可管理加入域和受信任域中的用户和群组。可通过域下拉列表来过滤用户和群组。</li>
+<li><b>带组织单元的单域</b>：仅有加入域的用户和群组将在此模式下显示。此模式可让您通过 OU（组织单元）下拉列表来过滤域用户/域群组。</li>
+</ul>
+<h4>高级域选项</h4>
+<p>正常状况下您不需要填写高级域选项。仅在特殊域环境时，您才需要填写高级域选项。</p>
+<ul>
+<li><b>DC IP/FQDN</b>：指定 DC（域控制面板）的 IP 地址或 FQDN，DiskStation 会尝试与该地址进行通信。如果有多个 IP 地址或 FQDN，请在两者之间插入逗号（,）隔开。如需要，您可以在最后一个 DC IP 地址或 FQDN 的末尾加上星号（*），DiskStation 将会在与您指定的 DC（域控制面板）通信失败后，尝试和其他的 DC 通信。同时以英文逗号将最后一个 IP 地址或 FQDN 与星号隔开。</li>
+<li><b>域的 NetBIOS 名称</b>：指定域的 NetBIOS 名称。</li>
+<li><b>域的 FQDN（DNS 名称）</b>：指定域的 FQDN（DNS 名称）。</li>
+<li><b>注册 DNS 接口：</b>加入域后，在此指定的网络接口卡将注册到 DNS 服务器。请注意，如果 DiskStation 的主机名包括下划线（_），则注册会失败，因为下划线（_）不能与 DNS 一起使用。</li>
+<li><b>更新用户/组列表</b>：指定 DiskStation 自动更新域用户/群组列表的频率。您可以自定义执行更新的时间周期，如每天、每周或每月。此外，您可以进入<strong>域用户</strong>选项卡，单击<strong>更新所有域</strong>来手动更新域用户/群组列表。请注意，自动更新会影响系统休眠。</li>
+</ul>
+
+<h4>加入只读域控制面板</h4>
+<p>若要让 DiskStation 加入只读域控制面板（RODC），您需要在 <strong>DC IP/FQDN</strong> 栏内指定读写域控制面板（RWDC）的&ldquo;完整计算机名称&rdquo;（FQDN）。完整计算机名称的格式如下：<strong>ComputerName.Domain</strong>，如&ldquo;ad01.synology.com&rdquo;。</p>
+
+</div>
+
+
+<div class="section">
+<h4>注：</h4>
+<ul>
+<li>如果您的域用户名称包含&ldquo;%&rdquo;或&ldquo;$&rdquo;，则可能无法访问您的 home 文件夹。请向域管理员要求一个新的用户名。</li>
+<li>域组 <strong>Domain Admins</strong> 和 <strong>Enterprise Admins</strong> 将自动添加到本地 <strong>administrators</strong> 组中。因此，这些组中的域用户将拥有 DiskStation 的管理权限，包括访问文件服务（如 CIFS/FTP/AFP/WebDAV）以及其它 DSM 应用程序。</li>
+<li>您也可以设置域用户对 DiskStation 共享文件夹的访问权限。参阅<a href="file_directory_service_user_group.html">此处</a>以了解更多信息。</li>
+</ul>
+</div>
+
+
+
+<h3>域选项</h3>
+<p>此区域包括下列其他域选项。</p>
+<ul>
+<li><b>域用户每次登录时 DiskStation 将自动与 NTP 服务器同步：</b>启动此选项将强制同步 DiskStation 与 NTP 服务器之间的时间。</li>
+<li><b>启用服务器签发：</b>如果客户端已启用客户端签发，则 DiskStation 也必须启用服务器签发，这样用户才能正常使用域服务。</li>
+<li><b>通过 NT4 兼容模式获取用户/组列表：</b>启动此选项可让系统获取使用 NT4 RPC 模式的用户/群组列表。如果使用默认设置无法获取特定域用户/群组列表，您可以启动此选项。</li>
+<li><b> 禁用 Domain Admins 和 Enterprise Admins 的管理员权限：</b>有管理员权限的用户可完全控制您的 DiskStation 及其文件。启用此选项可让您将 Domain Admins 和 Enterprise Admins 的权限限制为普通用户，并继承所有普通用户文件/文件夹的权限。</li>
+<li><strong>列举嵌套组的级别数：</strong>指定可以被列举的嵌套数量、域群组成员。</li>
+</ul>
+
+</body>
+</html>

@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>File Station</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>ファイル要請の作成</h2>
+
+<p>ファイル要請は、非 DSM ユーザーにファイルをアップロードしてもらうために送信する招待状です。ファイル要請リンクを受け取った非 DSM ユーザーは、相当するユーザー アカウントやファイル アップロード権がなくても、複数のファイルを直接 DiskStation 上の File Station にアップロードすることができます。</p>
+
+<h4>ファイル要請リンクを作成する：</h4>
+<ol>
+<li><strong>[File Station]</strong> を選択し、アップロード先としてのフォルダを選択します。</li>
+<li><strong>[操作]</strong> をクリックするか、ディスティネーション フォルダを右クリックして、<strong>[ファイル要請を作成]</strong> を選択します。</li>
+<li>ポップアップ画面で、次の情報を見たり/編集したりすることができます。
+<ul>
+<li><strong>ファイル パス</strong>：ディスティネーションのディレクトリ パスをリストします。</li>
+<li><strong>リンク</strong>：ターゲットのユーザーと共有するファイル要請リンクがリストされます。</li>
+<li><strong>お名前</strong>：要請者の ID を示す名前を入力します。デフォルト値はあなたのユーザー名です。</li>
+<li><strong>メッセージ</strong>：ターゲット ユーザーへのメッセージをカスタマイズします。</li>
+<li><strong>パスワード保護を有効にする</strong>：パスワードを知っているユーザーだけが作成したリンクを介してファイルをアップロードできます。下のボックスにパスワードを指定します。</li>
+<li><strong>有効期間</strong>：このファイル要請リンクの有効期間をカスタマイズします。
+<ul>
+<li><strong>停止時刻の設定</strong>：ファイルをアップロードできる期限を日付と時刻で指定します。</li>
+<li><strong>開始時刻の設定</strong>：ファイルをアップロードできるようになる日付と時刻を指定します。</li>
+<li><strong>許可されたアクセスの数</strong>：リンクに何回アクセスできるかを指定します。</li>
+</ul>
+
+</li>
+
+</ul>
+
+
+</li>
+<li><strong>[保存] </strong>をクリックして、設定を完了します。</li>
+</ol>
+
+
+<h4>ファイル要請リンクを共有する：</h4>
+<p>ファイル要請 URL を探すには、<strong>[File Station]</strong> &gt; <strong>[ツール]</strong> &gt; <strong>[Shared Links Manager]</strong> を選択して任意のリンクをダブルクリックします。次のいずれかの方法でリンクを共有できます。</p>
+
+<ul>
+<li>URL をターゲットのユーザーにコピーします。</li>
+<li><strong>デフォルトのEメール</strong>（あなたの DSM Eメール アカウント）か <strong>メール</strong>（サードパーティのEメール アプリケーション）でリンクを送信します。初めての方は、ウィザードの指示にしたがって使用する Eメール アカウントを設定してください。</li>
+</ul>
+
+<h4>ファイルをアップロードする：</h4>
+<p>リンクを介してファイルをアップロードするよう要求されたら、次の操作を行ってください。</p>
+<ol>
+<li>ローカル コンピュータかモバイル デバイス（Android か iOS）で与えられた URL を開きます。要求されたらパスワードを入力してください。</li>
+<li>アップロード ページであなたのIDを示す名前を入力します。</li>
+<li>ファイルをドラッグ・アンド・ドロップしてアップロードするか、<strong>[ファイルを追加]</strong> をクリックしてファイルを選択します。</li>
+<li><strong>[アップロード] </strong>をクリックして、要請を完了します。</li>
+</ol>
+
+<div class="section">
+<h4>注意：</h4>
+<ul>
+<li>フォルダはファイル要請リンクを介してアップロードすることはできません。</li>
+<li>[ウェブ] 共有フォルダ内のフォルダをディスティネーション フォルダとして指定することはできません。</li>
+<li>アップロード機能はウェブ ブラウザごとに異なります。
+<ul>
+<li>Internet Explorer 8 および Internet Explorer 9 は、ドラッグ・アンド・ドロップ操作によるファイル アップロードには対応していません。</li>
+<li>iOS デバイス上の Chrome は、画像のアップロードのみ対応しています。</li>
+<li>iOS デバイス上の Safari は、画像と動画のアップロードのみ対応しています。</li>
+<li>Android デバイスのウェブ ブラウザは、ファイルタイプの制限を受けません。</li>
+</ul>
+</li>
+
+</ul>
+
+</div>
+
+
+<h4>アップロードしたファイルを検索する：</h4>
+<p>同一ユーザーがアップロードしたファイルは、すべてディスティネーション内の同じフォルダに保管されます。デフォルトでは、ファイル名は <strong>Uploader_Name (Requestor_Name)</strong> となっています。</p>
+<p>例えば、ファイルが <strong>Watson</strong> から <strong>Holmes</strong> にアップロードされた場合、ファイルは <strong>Watson (Holmes)</strong> という名前のフォルダにあります。</p>
+
+
+<h3>ファイル要請リンクの管理</h3>
+
+<h4>ファイル要請リンクを変更する：</h4>
+<p>ファイル要請リンクを作成した後は、<strong>[File Station]</strong> &gt; <strong>[ツール]</strong> &gt; <strong>[Shared Links Manager]</strong> で設定を変更することができます。</p>
+
+<ol>
+<li>任意のリンクをダブルクリックするか、またはリンクを選択し、<strong>[編集]</strong> をクリックします。</li>
+<li>ポップアップ画面で関連する設定を変更してください。</li>
+<li><strong>[保存] </strong>をクリックして、新しい設定を適用します。</li>
+</ol>
+
+<h4>ファイル要請リンクを削除する：</h4>
+<ol>
+<li><strong>[File Station]</strong> &gt; <strong>[ツール]</strong> &gt; <strong>[Shared Links Manager]</strong> を選択します。</li>
+<li>削除したいリンクを選択し、<strong>[削除]</strong> をクリックします。相当するファイル要請 URL が直ちに機能しなくなります。</li>
+</ol>
+
+<h4>リクエスト申請権限を割り当てる：</h4>
+<p><strong>admin</strong> または <strong>administrators</strong> グループに属するユーザーは、ファイル要請リンクを作成できるように、ユーザーに権限を割り当てることができます。</p>
+
+
+<ol>
+<li><strong>[File Station]</strong> &gt; <strong>[設定]</strong> &gt; <strong>[共有リンク]</strong> &gt; <strong>[ファイル要請リンク]</strong> を選択します。</li>
+<li>リクエスト申請権限を割り当てるユーザー タイプを選択します。</li>
+<li><strong>[OK]</strong> をクリックして、設定を保存します。</li>
+</ol>
+
+
+
+
+
+</body>
+</html>

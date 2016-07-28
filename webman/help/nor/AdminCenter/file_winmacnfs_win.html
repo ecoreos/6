@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Win/Mac/NFS</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Windows-filtjeneste</h2>
+
+<p>Windows-filtjeneste gir Windows-, Mac- og Linux-klienter med støtte for SMB/CIFS tilgang til data som er lagret på DiskStation. Hvis du vil bla gjennom filer på DiskStation via Windows Explorer eller montere delte mapper som nettverksstasjoner, aktiverer du dette alternativet i <strong>Kontrollpanel</strong> > <strong>Filtjenester</strong> > <strong>Win/Mac/NFS</strong>.</p>
+
+
+<h4>Aktiver Windows-filtjeneste:</h4>
+<ol>
+<li>
+Merk av for <b>Aktiver Windows-filtjeneste</b>.
+</li>
+<li>
+Klikk på <b>Bruk</b>.
+</li>
+</ol>
+
+<div class="section disable-hi3535">
+<h4>Merk:</h4>
+<p>Når du har aktivert Windows-filtjeneste, kan du montere indekserte mapper på Mac-datamaskinen din via SMB og bruke Spotlight i Finder til å søke etter filinnholdet i de monterte mappene.</p>
+</div>
+
+
+<h3>Arbeidsgruppe</h3>
+<p>Dette alternativet lar deg tilordne systemet som et medlem av en bestemt arbeidsgruppe for nettverksadministrative formål.</p>
+
+<div class="section">
+
+<h4>Merk:</h4>
+<ul>
+<li>Navnet på en arbeidsgruppe kan inneholde fra 1 til 15 tegn. Navnet kan ikke inneholde følgende tegn: [ ] ; : &quot; < > * + = \ / | ? ,</li>
+<li>Hvis du bruker en Mac som kjører OS X 10.9, og din DiskStation er tilknyttet et Windows-domene, kan du logge inn ved å legge til <strong>localhost\</strong> foran ditt lokale DiskStation-brukernavn for å få tilgang til filer som lagres på DiskStation via Windows-filtjeneste.</li>
+</ul>
+</div>
+
+<h3 class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64">Nekt tilgang til Tidligere versjoner</h3>
+<p class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64">I Windows Utforsker kan brukere aksessere snapshots av mapper eller filer ved å klikke på fanen <strong>Tidligere versjoner</strong> i en delt mappe, slik at de kan gjenopprette eller kopiere data uten hjelp fra administrator. Hvis du velger <strong>Nekt tilgang til Tidligere versjoner</strong>, vil ikke siden "Tidligere versjoner" vise noe informasjon.</p>
+
+<div class="section enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64"><h4>Merk:</h4>
+<ul>
+	<li>Brukerekan kun aksessere en tidligere versjon hvis brukerkontoen allerede er opprettet når snapshotet som korresponderer med den tidligere versjonen blir tatt og de har lesetillatelse for den delte mappen som det korresponderende snapshotet tilhører.</li>
+</ul>
+</div>
+
+<h3>Aktivere overføringslogger</h3>
+<p>Hvis du merker av for dette alternativet, aktiveres logging av filtilgangsoperasjoner, inkludert oppretting, sletting, lesing, skriving, flytting og endring av navn på filer eller mapper gjennom CIFS/SMB-protokollen, også kjent som Windows-filoverføringsprotokoll.</p>
+
+<h3>Avanserte innstillinger</h3>
+<p>Klikk på knappen <strong>Avanserte innstillinger</strong> for å se alternativene nedenfor.</p>
+<ul>
+<li><strong>WINS-server</strong>: Microsoft Windows Internet Name Service (WINS) er en NetBIOS navn- til-IP-adresse-tilordningstjeneste. Windows-brukere kan lettere lokalisere systemet på TCP/IP-nettverk hvis systemet er konfigurert til å registrere hos en WINS-server.</li>
+<li><strong>Maks. protokoll for Windows-filtjeneste</strong>: Avhengig av nettverkskonfigurasjonen din, kan du angi det høyeste protokollnivået som støttes av din DiskStation.
+  <ul>
+    <li><strong>Aktiver SMB 2</strong>: SMB (Server Message Block) 2 har vært støttet siden Windows Vista og er den forbedrede versjonen av SMB. SMB 2 tilfører evnen til å samle flere SMB-handlinger i én enkelt forespørsel for å redusere antallet nettverkspakker og forbedre ytelsen.</li>
+    <li><strong>Aktiver SMB 2 med Large MTU</strong>: Maximum transmission unit (MTU, maksimum overføringsenhet) refererer til den største dataenheten som kan sendes over en kommunikasjonsprotokoll. For å dra nytte av raskere nettverksgrensesnitt, som 1- eller 10-gigabit Ethernet, øker Large MTU maksimum overføringsenhet (MTU) til 1 megabyte (MB). Aktivering av Large MTU forbedrer hastigheten og effektiviteten til store filoverføringer og reduserer antallet pakker som må behandles.</li>
+    <li><strong>Aktiver SMB 3</strong>: SMB 3 har vært støttet siden Windows 8 og Windows Server 2012. Dette er den forbedrede versjonen av SMB 2. SMB 3 støtter AES-basert overføring av krypterte filer, og forbedrer dermed sikkerheten ved peer-to-peer-overføringer.</li>
+</ul>
+<div class="section">
+  <h4>Merk:</h4>
+  <ul>
+    <li>SMB 2 støttes av Windows Vista, Windows Server 2008 R2, Windows 7 og nyere.</li>
+    <li>Stor MTU støttes av Windows Server 2008 R2, Windows 7 og nyere.</li>
+    <li>For å gjøre stor MTU effektiv med din Windows-datamaskin, vil du måtte endre registerinnstillingene på datamaskinen din. For mer informasjon, se Microsofts tekniske kundestøtte (som denne <a href="http://technet.microsoft.com/en-us/library/ff625695(v=ws.10).aspx" target="_blank">artikkelen</a>).</li>
+    </ul>
+</div>
+<li><strong>Transportkrypteringsmodus</strong>: Når SMB 3 er aktivert, vil Windows-filtjeneste legge til transportkryptering for å forbedre sikkerheten ved filoverføring.
+  <ul>
+    <li><b>Deaktiver</b>: Ingen transportkryptering vil bli tatt i bruk.</li>
+    <li><b>Auto</b>: Transportkryptering vil kun bli tatt i bruk for klienter som støtter denne funksjonen.</li>
+    <li><b>Tving</b>: Transportkryptering vil alltid bli tatt i bruk. Dette vil føre til at klienter som ikke støtter transportkryptering ikke vil kunne bruke Windows-filtjeneste.</li>
+  </ul>
+</li>
+<div class="section">
+  <h4>Merk:</h4>
+  <ul>
+    <li>Transportkryptering støttes på Windows 8, Windows Server 2012 og nyere.</li>
+    <li>Anonym pålogging for Windows-filtjeneste støttes ikke når transportkryptering er aktivert.</li>
+    <li>Når transportkryptering er aktivert, må du la <b>Deaktiver Opportunistic Locking</b> være uavmerket for å unngå at programmet blir tidsavbrutt.</li>
+    </ul>
+</div>
+<li><strong>Deaktiver Opportunistic Locking</strong>: Dersom du merker av dette alternativer, vil du deaktivere &quot;Opportunistisk låsing&quot; av CIFS, noe som medfører økt ytelse når databaseprogrammer søker tilgang til databasefiler i den delte mappen på DiskStation-enheten via nettverket.</li>
+<li>
+  <strong>Aktiver Local Master Browser</strong>: Når flere Windows-datamaskiner eksisterer på det samme delnettet, vil de forhandle og velge én datamaskin som &quot;local master browser&quot;. Valgt Local Master Browser bevarer lister over de andre datamaskinene på delnettet og deres delte ressurser, og deler disse listene med de andre datamaskinene. Dette alternativet lar DiskStation ta rollen som Local Master Browser.
+</li>
+
+<div class="section">
+<h4>Merk:</h4>
+<p>Aktivering av denne funksjonen deaktiverer dvalemodus for harddisker og aktiverer gjestekontoen uten passord.</p>
+</div>
+
+
+<li><strong>Aktiver DirSort VFS-modul</strong>: Sorterer mappenavn og lister dem opp alfabetisk. Aktivering av dette alternativet påvirker systemytelsen.</li>
+
+<li><strong>Veto filer</strong>: Skjuler filer i henhold til spesifiserte kriterier. Kriterier kan inkludere jokertegn (*), og flere oppføringer må separeres med skråstrek (/). For eksempel: <i>/abc*/*.txt/*.conf/</i>. Aktivering av dette alternativet påvirker systemytelsen.</li>
+
+<li><strong>Tillat symbolske koblinger innad i delte mapper</strong>: Aktivering av dette alternativet lar symbolske koblinger peke mot filer eller mapper innad i den samme delte mappen. Symbolske koblinger kan opprettes ved hjelp av DSM-terminal.</li>
+
+<li><strong>Tillat symbolske koblinger mellom delte mapper</strong>: Aktivering av dette alternativet lar symbolske koblinger peke mot filer og mapper i andre delte mapper. Symbolske koblinger kan opprettes ved hjelp av DSM-terminal. Vær oppmerksom på at aktivering av dette alternativet kan la bukere uten tilgangsrettigheter vise og få tilgang til delte mapper som er mål for symbolske koblinger.</li>
+
+<li><strong>Aktiver MSDFS VFS-modul</strong>: Lar symbolske koblinger peke mot filer og mapper på andre SMB-servere. Med eldre versjoner av Windows, som Windows XP, må klienten og DiskStation tilknyttes et Windows-domene før du aktiverer dette alternativet. For å finne ut mer om oppretting av MSDFS-koblinger, se <a href="http://www.samba.org/samba/docs/man/Samba-HOWTO-Collection/msdfs.html" target=_blank>her</a>. Vær oppmerksom på at bufferen til klientenheten bør tømmes etter deaktivering av dette alternativet, ellers kan normal ytelse bli påvirket.</li>
+
+<li><strong>Deaktiver flere tilkoblinger fra den samme IP-adressen</strong>: Når dette alternativet er aktivert, vil DiskStation kun tillate én tilkobling per IP-adresse fra klienter som bruker Windows-filtjeneste. Når flere klienter med den samme IP-adressen bruker Windows-filtjeneste, vil DiskStation beholde den nyligste tilkoblingen og avbryte alle andre tilkoblinger. I et NAT-miljø kan brukeren bruke en enkelt IP-adresse, og da vil aktivering av dette alternativet kunne påvirke den normale ytelsen.</li>
+
+<li><strong>Samle feilsøkingslogger</strong>: Når dette alternativet er aktivert, vil detaljerte logger bli lagret for feilsøkingsformål. Aktivering av dette alternativet påvirker systemytelsen.</li>
+<li><strong>Bruk standard UNIX-tillatelser</strong>: Aktiver dette alternativet for å ta i bruk standard UNIX-tillatelser når du laster opp eller oppretter filer og mapper. UNIX-tillatelsen vil være 744 for filer og 755 for mapper. Når dette alternativet er deaktivert, er UNIX-tillatelsen 777 for filer og mapper.</li>
+<div class="section enable-eds14">
+<h4>Merk:</h4>
+<ul>
+<li>Aktivering av dette alternativet kan forårsake problemer med inkonsekvente tillatelser mellom forskjellige protokoller. For å unngå inkonsekvens, foreslår vi at dette alternativet er deaktivert.</li>
+</ul>
+</div>
+<div class="section disable-eds14">
+<h4>Merk:</h4>
+<ul>
+  <li>For Windows ACL-aktiverte delte mapper (alle delinger utenom &quot;photo&quot; og delinger på eksterne disker) kjører du <strong>chmod</strong>-kommandoen på Linux- eller FTP-klienten din for å endre tillatelsestypen for mapper og filer fra Windows ACL til UNIX.</li>
+  <li>Aktivering av dette alternativet kan forårsake problemer med inkonsekvente tillatelser mellom forskjellige protokoller. For å unngå inkonsekvens, foreslår vi at dette alternativet er deaktivert.</li>
+</ul>
+</div>
+<li><b>Ikke reserver diskplass ved oppretting av filer</b>: Aktiver dette alternativet for å hindre at diskplass blir reservert ved oppretting av filer på din DiskStation .</li>
+<li><strong>Tøm SMB-buffer</strong>: Klikk på denne knappen for å slette følgende SMB-bufferfiler for feilsøkingsformål:
+  <ul>
+
+<li>/var/cache/samba/netsamlogon_cache.tdb</li>
+<li>/var/lib/samba/winbindd_cache.tdb</li>
+<li>/var/lib/samba/share_info.tdb</li>
+<li>/var/lib/samba/registry.tdb</li>
+<li>/run/samba/connections.tdb</li>
+<li>/run/samba/gencacche.tdb</li>
+<li>/run/samba/gencache_notran.tdb</li>
+</ul>
+</li>
+
+</ul>
+
+</body>
+</html>

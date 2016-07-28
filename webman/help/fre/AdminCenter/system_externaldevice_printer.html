@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Périphériques externes</title>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2><a name="usbprinter"></a>Imprimantes</h2>
+<p>DiskStation peut devenir un serveur d'impression, permettant aux ordinateurs clients ou appareils mobiles d'accéder à des imprimantes connectées à DiskStation. De plus, la prise en charge de l'impression sans fil Apple et de Google Cloud Print vous permet d'imprimer à distance en utilisant des appareils iOS ou des produits et services Google.</p>
+<p>Rendez-vous sur <a href="http://www.synology.com" target="_blank">www.synology.com</a> pour connaître les imprimantes compatibles.</p>
+<h3>Configurer les imprimantes</h3>
+<p>Consultez les instructions ci-dessous pour configurer et connecter une imprimante <span style="display: inline;" class="disable-rc18015xsp">USB ou </span>réseau avec votre DiskStation.</p>
+<h4 class="disable-rc18015xsp">Pour configurer une imprimante USB :</h4>
+<ol class="disable-rc18015xsp">
+<li>Allumez et connectez l'imprimante à un port USB sur le DiskStation.</li>
+<li>accédez à <strong>Panneau de configuration</strong> > <strong>Périphériques externes</strong> > <strong>Imprimante</strong>.</li>
+<li>Sélectionnez l'imprimante que vous voulez configurer. Veuillez noter que le DiskStation ne peut pas reconnaître les imprimantes connectées via des concentrateurs USB.</li>
+<li>Cliquez sur <b>Gestionnaire d'imprimante</b> et sélectionnez <b>Configurer l'imprimante</b>.</li>
+<li>Dans la boîte de dialogue, sélectionnez l'un des modes suivants :
+<ul>
+<li><b>Network MFP :</b> Permet aux clients sur le réseau local d'utiliser les fonctions imprimer, numériser et télécopie de votre imprimante multifonctions. Les fonctions numérisation et télécopie sont disponibles uniquement pour les ordinateurs Windows.</li>
+<li><b>Imprimante réseau :</b> Choisissez ce mode pour les imprimantes qui ne prennent en charge que l'impression ou si vous souhaitez autoriser les clients à utiliser la fonction d'impression uniquement.</li>
+</ul>
+</li>
+<li>Configurez les paramètres d'Impression sans fil Apple ou de Google Cloud Print (optionnel).</li>
+<li>Cliquez sur <b>Enregistrer</b>.</li>
+</ol>
+<div class="section disable-rc18015xsp">
+<h4>Remarque :</h4>
+<p>Un MFP réseau ne peut être accédé que par un seul client à la fois.</p>
+</div>
+<h4>Pour configurer une imprimante réseau :</h4>
+<ol>
+<li>Allumez et connectez l'imprimante réseau au même réseau local que votre DiskStation.</li>
+<li>accédez à <strong>Panneau de configuration</strong> > <strong>Périphériques externes</strong> > <strong>Imprimante</strong>.</li>
+<li>Cliquez sur <b>Ajouter une imprimante réseau</b> et suivez les instructions de l'assistant de configuration.</li>
+</ol>
+<div class="section">
+<h4>Remarque :</h4>
+<ul>
+<li><strong>Nom de l'imprimante :</strong> Lors de la configuration, vous devez saisir un nom d'imprimante qui peut comporter jusqu'à 32 caractères, comprenant des lettres, des chiffres et des traits de soulignement.</li>
+	<li><strong>Protocole :</strong> En général, les imprimantes réseau HP utilisent Socket ; les imprimantes réseau Canon utilisent BJNP ; et d’autres utilisent le plus souvent LPR.</li>
+<li><strong>Nom de la file d'attente :</strong> Il est nécessaire d'entrer un nom de file d'attente pour les imprimantes réseau LPR et IPP, mais cela ne s'applique pas aux imprimantes Socket ou BJNP.</li>
+<li><strong>Pas de Network MFP :</strong> Les imprimantes réseau connectées à DiskStation ne peuvent actuellement pas utiliser le mode Network MFP.</li>
+<li><strong>Pas d'imprimante USB :</strong> Les imprimantes USB partagées par un produit Synology ne peuvent pas être définies comme imprimantes réseau.</li>
+</ul>
+</div>
+<h3>Gestion des imprimantes</h3>
+<p>L'onglet des imprimantes comprend les options suivantes pour gérer les imprimantes <span style="display: inline;" class="disable-rc18015xsp">USB ou </span>réseau connectées au DiskStation.</p>
+<ul>
+<li><b>Obtenir des informations :</b> Affiche des informations relatives à l'imprimante sélectionnée, telles que le nom du périphérique, le fabricant, l'état, etc.</li>
+<li><strong>Supprimer :</strong> Supprime et déconnecte une imprimante du DiskStation.</li>
+<li><strong>Gestionnaire d'imprimante :</strong> Comprend les options suivantes :
+<ul>
+<li><strong>Configurer l'imprimante </strong> : Modifiez les paramètres de l’imprimante, telles que l'impression sans fil Apple ou Google Cloud Print (voir les instructions ci-dessous).</li>
+<li><strong>Nettoyer l'espace de la file d’attente :</strong> Annule toutes les tâches d'impression sur toutes les imprimantes.</li>
+<li><strong>Imprimer une page test :</strong> Imprime une page de test pour s'assurer que les configurations sont correctes.</li>
+<li><b>Libérer l'imprimante :</b> Déconnecte l'imprimante et le client (pour le mode Network MFP uniquement). Lorsqu'un client se connecte à une imprimante multifonctions pour recevoir des télécopies ou pour scanner des fichiers, la tâche peut prendre un certain temps. Si nécessaire, la connexion peut être arrêtée afin de permettre au client suivant dans la file d'attente d’accéder à l'imprimante.</li>
+</ul></li>
+</ul>
+<h4>Pour activer l'impression sans fil Apple :</h4>
+<ol>
+<li>accédez à <strong>Panneau de configuration</strong> > <strong>Périphériques externes</strong> > <strong>Imprimante</strong>.</li>
+<li>Sélectionnez une imprimante dans la liste des périphériques.</li>
+<li>Cliquez sur <b>Gestionnaire d'imprimante</b> > <b>Configurer l'imprimante</b>.</li>
+<li>Cochez la case <b>Activer l'impression sans fil Apple</b>.</li>
+<li>Sélectionnez la marque et le pilote de votre imprimante.</li>
+<li>Cliquez sur <b>Enregistrer</b>.</li>
+</ol>
+<p>Une fois la configuration terminée, vous pouvez imprimer une page de test en cliquant sur <b>Gestionnaire d'imprimante</b> > <b>Imprimer une page test</b>.</li>
+<div class="section">
+<h4>Remarque :</h4>
+<ul>
+<li>L'activation de l'impression sans fil Apple active également la fonction Diffusion imprimante Bonjour pour DSM.</li>
+<li>L'impression sans fil Apple est disponible pour iOS 4.2 ou les versions ultérieures.</li>
+</ul>
+</div>
+<h4>Pour activer Google Cloud Print :</h4>
+<ol>
+<li>accédez à <strong>Panneau de configuration</strong> > <strong>Périphériques externes</strong> > <strong>Imprimante</strong>.</li>
+<li>Sélectionnez une imprimante dans la liste des périphériques.</li>
+<li>Cliquez sur <b>Gestionnaire d'imprimante</b> > <b>Configurer l'imprimante</b>.</li>
+<li>Cochez la case <b>Activer Google Cloud Print</b>.</li>
+<li>Saisissez les détails suivants :
+<ul>
+<li>Vos informations de compte Google.</li>
+<li>La marque et le pilote de votre imprimante.</li>
+</ul>
+<li>Cliquez sur <b>Enregistrer</b>.</li>
+</ol>
+<p>Une fois la configuration terminée, vous pouvez imprimer une page de test en cliquant sur <b>Gestionnaire d'imprimante</b> > <b>Imprimer une page test</b>.</li>
+</p>
+<p>Pour gérer les tâches Google Cloud Print, cliquez sur le lien <a href="http://www.google.com/cloudprint/manage.html" target="_blank">Google Cloud Print</a>.</p>
+<h3>Accès aux imprimantes</h3>
+<p>Voyez la section ci-dessous pour accéder aux imprimantes à l'aide d'un PC ou d'un Mac.</p>
+<h4><a name="others"></a>Pour accéder aux imprimantes à l'aide d'un PC Windows :</h4>
+<p>
+La meilleure façon d'accéder au service d'impression d'un périphérique DiskStation est de configurer la connexion à l’imprimante avec Synology Assistant. Consultez son Aide pour des instructions détaillées.
+</p>
+<p>Si Synology Assistant n'est pas installé sur votre ordinateur, voir ci-dessous pour d'autres manières d'accéder au service d'impression du périphérique DiskStation.</p>
+<p><strong>Type 1. Imprimante réseau partagée</strong></p>
+<ol>
+<li>Sur votre PC, ouvrez <b>Réseau</b> dans l'Explorateur de fichiers et double-cliquez sur le DiskStation.</li>
+<li>Double-cliquez sur <span style="display: inline;" class="disable-rc18015xsp"><b>usbprinter</b> ou </span><b>nom d'imprimante réseau</b> ; le système vous invite à installer le bon pilote, puis cliquez sur <span style="display: inline;" class="disable-rc18015xsp"><b>Oui</b>.</li>
+<li>Veuillez obtenir le pilote de l'imprimante sur le CD ou le site Web du fabricant. Sélectionnez le fabricant et le modèle de l'imprimante, ou cliquez sur <strong>Disque fourni</strong> pour sélectionner l'emplacement du pilote. Cliquez ensuite sur <b>OK</b>.</li>
+<li>Le système commence la configuration de l'imprimante réseau. Après la fin de la configuration, vous pouvez commencer à utiliser l'imprimante. </li>
+</ol>
+<p><strong>Type 2. Port LPR (Recommandé)</strong></p>
+<ol>
+<li>Sur votre PC, cliquez sur <b>Démarrer</b> puis accédez à <b>Périphériques et imprimantes</b>.</li>
+<li>Cliquez sur <b>Ajouter une imprimante</b>. </li>
+	<li>Choisissez <strong>Ajouter une imprimante réseau, sans fil ou Bluetooth.</strong> </li>
+	<li>Choisissez <strong>Mon imprimante ne figure pas dans la liste.</strong></li>
+<li>Sélectionnez <b>Ajouter une imprimante à l'aide d'une adresse TCP/IP ou d'un nom d'hôte</b>. Cliquez sur <b>Suivant</b> pour continuer.</li>
+<li>Choisissez le Type de périphérique <b>Périphérique de port TCP/IP.</b>.</li>
+<li>Entrez l'adresse IP du DiskStation. Cliquez sur <b>Suivant</b> pour continuer.</li>
+<li>Sélectionnez <b>Type de périphérique :</b> <strong>Personnalisé</strong> > <strong>Paramètres</strong> > …. Cliquez sur <b>Suivant</b> pour continuer.</li>
+<li>Sélectionnez <b>LPR</b> en guise de protocole ; entrez <span style="display: inline;" class="disable-rc18015xsp"><b>usbprinter</b> ou </span><b>nom d'imprimante réseau</b> pour le nom de file d'attente et cochez <span style="display: inline;" class="disable-rc18015xsp"><b>Comptage des octets LPR activé</b>. Cliquez sur <b>OK</b> pour continuer.</li>
+<li>Veuillez obtenir le pilote de l'imprimante sur le CD ou le site Web du fabricant. Sélectionnez le fabricant et le modèle de l'imprimante, ou cliquez sur <strong>Disque fourni</strong> pour sélectionner l'emplacement du pilote. Cliquez ensuite sur <b>OK</b>.</li>
+	<li>Le système commence la configuration de l'imprimante réseau. Après la fin de la configuration, vous pouvez commencer à utiliser l'imprimante.</li>
+</ol>
+<h4>Pour accéder aux imprimantes à l'aide d'un Mac :</h4>
+<p>
+Les utilisateurs de Mac peuvent accéder au service d'impression du DiskStation en activant la diffusion imprimante Bonjour de DSM et en ajoutant l'imprimante dans les Préférences du système.</p>
+<P>Vérifiez bien que votre DiskStation utilise une imprimante Postscript avant de faire quoi que ce soit.
+</p>
+<p><strong>Etape 1. Pour activer la diffusion imprimante Bonjour de DSM :</strong></p>
+<ol>
+<li>
+Connectez-vous à DSM en tant qu'<b>admin</b> ou utilisateur appartenant au groupe <b>administrators</b>.
+</li>
+<li>
+accédez à <b>Panneau de configuration</b> > <strong>Services de fichiers</strong> > <b>Win/Mac/NFS</b>.
+</li>
+<li>
+Cochez <b>Activer la diffusion imprimante Bonjour</b>.
+</li>
+</ol>
+<p><strong>Etape 2. Accès à l'imprimante à l'aide d'un Mac.</strong></p>
+<ol>
+<li>
+Sur votre Mac, allez dans <b>Préférences du système</b> > <b>Imprimer et numériser</b>, puis cliquez sur <b>+</b>.
+</li>
+<li>
+Choisissez  <span style="display: inline;" class="disable-rc18015xsp"><b>usbprinter[number]</b> ou </span><b>nom d'imprimante réseau</b> dans le menu déroulant. Votre Mac configurera l'imprimante automatiquement.
+</li>
+</ol>
+</div>
+</body>
+</html>

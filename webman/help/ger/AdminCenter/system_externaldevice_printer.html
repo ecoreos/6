@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Externe Geräte</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2><a name="usbprinter"></a>Drucker</h2>
+<p>DiskStation kann als Druckserver fungieren, sodass Client-Computer oder Mobilgeräte auf Drucker zugreifen können, die an DiskStation angeschlossen sind. Zusätzlich ermöglicht die Unterstützung von Apple Wireless Printing und Google Cloud Print das Drucken per Fernzugriff mit iOS-Geräten oder Google-Produkten und -Diensten.</p>
+<p>Kompatible Drucker finden Sie unter <a href="http://www.synology.com" target="_blank">www.synology.com</a>.</p>
+
+<h3>Einrichten von Druckern</h3>
+<p>Befolgen Sie die nachstehenden Anweisungen, um einen <span style="display: inline;" class="disable-rc18015xsp">USB- oder </span>Netzwerkdrucker für den DiskStation einzurichten und mit ihm zu verbinden.</p>
+
+
+<h4 class="disable-rc18015xsp">USB-Drucker einrichten:</h4>
+<ol class="disable-rc18015xsp">
+<li>Schalten Sie den Drucker ein und schließen Sie ihn an den USB-Port von DiskStation an.</li>
+<li>Gehen Sie zu <strong>Systemsteuerung</strong> > <strong>Externe Geräte</strong> > <strong>Drucker</strong>.</li>
+<li>Wählen Sie den Drucker aus, den Sie einrichten möchten. Beachten Sie, dass DiskStation keine Drucker erkennen kann, die über USB-Hubs verbunden sind.</li>
+<li>Klicken Sie auf <b>Druckermanager</b> und wählen Sie <b>Drucker einrichten</b> aus.</li>
+<li>Wählen Sie einen der folgenden Modi im Dialogfenster aus:
+<ul>
+<li><b>Netzwerk MFP:</b> Ermöglicht Clients innerhalb des lokalen Netzwerks, die Druck-, Scan- und Faxfunktionen Ihres Multifunktionsdruckers zu verwenden. Die Scan- und Faxfunktionen sind nur für Windows-Computer verfügbar.</li>
+<li><b>Netzwerkdrucker:</b> Wählen Sie diesen Modus für Drucker aus, die nur das Drucken unterstützen, oder wenn Sie den Clients nur die Verwendung der Druckfunktion erlauben möchten.</li>
+</ul>
+</li>
+<li>Konfigurieren Sie die Einstellungen von Apple Wireless Printing oder Google Cloud Print (optional).</li>
+<li>Klicken Sie auf <b>Speichern</b>.</li>
+</ol>
+
+<div class="section disable-rc18015xsp">
+<h4>Hinweis:</h4>
+<p>Auf ein Netzwerk-MFP-Gerät kann jeweils nur von einem Client aus gleichzeitig zugegriffen werden.</p>
+</div>
+
+
+<h4>Netzwerkdrucker einrichten:</h4>
+<ol>
+<li>Schalten Sie den Netzwerkdrucker ein und verbinden Sie ihn mit demselben Netzwerk wie DiskStation.</li>
+<li>Gehen Sie zu <strong>Systemsteuerung</strong> > <strong>Externe Geräte</strong> > <strong>Drucker</strong>.</li>
+<li>Klicken Sie auf <b>Netzwerkdrucker hinzufügen</b> und folgen Sie den Anweisungen des Einrichtungsassistenten.</li>
+</ol>
+
+<div class="section">
+<h4>Hinweis:</h4>
+<ul>
+<li><strong>Druckername:</strong> Ein Druckername muss während der Einrichtung eingegeben werden und bis zu 32 Zeichen umfassen, einschließlich Buchstaben, Zahlen und Unterstriche.</li>
+	<li><strong>Protokoll:</strong> Im Allgemeinen verwenden HP-Netzwerkdrucker Socket, Canon-Netzwerkdrucker verwenden BJNP und andere verwenden meist LPR.</li>
+<li><strong>Warteschlangenname:</strong> Die Eingabe eines Warteschlangennamens ist für LPR- und IPP-Netzwerkdrucker erforderlich, aber nicht für Socket- oder BJNP-Drucker.</li>
+<li><strong>Kein Netzwerk-MFP:</strong> An DiskStation angeschlossene Netzwerkdrucker können gegenwärtig den Modus "Netzwerk MFP" nicht nutzen.</li>
+<li><strong>Keine USB-Drucker:</strong> Von einem Synology-Produkt freigegebene USB-Drucker können nicht als Netzwerkdrucker eingerichtet werden.</li>
+</ul>
+</div>
+
+
+<h3>Verwalten von Druckern</h3>
+<p>Die Registerkarte "Drucker" enthält die folgenden Optionen zur Verwaltung von <span style="display: inline;" class="disable-rc18015xsp">USB- oder </span>Netzwerkdruckern, die mit dem DiskStation verbunden sind.</p>
+
+<ul>
+<li><b>Info abrufen:</b> Zeigt Informationen zum ausgewählten Drucker an, wie Gerätename, Hersteller, Status, usw.</li>
+<li><strong>Entfernen:</strong> Entfernt und trennt einen Drucker von DiskStation.</li>
+<li><strong>Drucker-Manager:</strong> Enthält die folgenden Optionen:
+<ul>
+<li><strong>Drucker einrichten</strong>: Geben Sie die Druckereinstellungen wie etwa Apple Wireless Printing oder Google Cloud Print ein (zur Anleitung siehe unten).</li>
+<li><strong>Spool-Platz bereinigen:</strong> Verwirft sämtliche Druckaufgaben auf allen Druckern.</li>
+<li><strong>Testseite drucken:</strong> Druckt eine Testseite, um sicherzustellen, dass die Einstellungen korrekt sind.</li>
+<li><b>Drucker freigeben:</b> Trennt den Drucker und den Client (nur für Modus "Netzwerk MFP"). Wenn sich ein Client mit einem Multifunktionsdrucker für den Empfang von Faxen oder zum Scannen von Dateien verbindet, könnte dieser Vorgang etwas dauern. Die Verbindung kann bei Bedarf gestoppt werden, damit der nächste Client in der Schlange auf den Drucker zugreifen kann.</li>
+</ul></li>
+</ul>
+
+
+<h4>Apple Wireless Printing aktivieren:</h4>
+<ol>
+<li>Gehen Sie zu <strong>Systemsteuerung</strong> > <strong>Externe Geräte</strong> > <strong>Drucker</strong>.</li>
+<li>Wählen Sie einen Drucker aus der Geräteliste aus.</li>
+<li>Klicken Sie auf <b>Druckermanager</b> > <b>Drucker einrichten</b>.</li>
+<li>Aktivieren Sie das Kontrollkästchen <b>Apple Wireless Printing aktivieren</b>.</li>
+<li>Wählen Sie die Marke und den Treiber Ihres Druckers aus.</li>
+<li>Klicken Sie auf <b>Speichern</b>.</li>
+</ol>
+
+<p>Nach Abschluss der Einrichtung können Sie eine Testseite drucken, indem Sie auf <b>Druckermanager</b> > <b>Testseite drucken</b> klicken.</li>
+
+<div class="section">
+<h4>Hinweis:</h4>
+<ul>
+<li>Die Aktivierung von Apple Wireless Printing aktiviert auch Bonjour Printer Broadcast für DSM.</li>
+<li>Apple Wireless Printing ist für iOS 4.2 oder höher verfügbar.</li>
+</ul>
+</div>
+
+
+<h4>Google Cloud Print aktivieren:</h4>
+<ol>
+<li>Gehen Sie zu <strong>Systemsteuerung</strong> > <strong>Externe Geräte</strong> > <strong>Drucker</strong>.</li>
+<li>Wählen Sie einen Drucker aus der Geräteliste aus.</li>
+<li>Klicken Sie auf <b>Druckermanager</b> > <b>Drucker einrichten</b>.</li>
+<li>Markieren Sie das Kontrollkästchen <b>Google Cloud Print aktivieren</b>.</li>
+<li>Geben Sie die folgenden Details ein:
+<ul>
+
+<li>Ihre Google-Kontoinformationen</li>
+<li>Die Marke und den Treiber Ihres Druckers</li>
+</ul>
+<li>Klicken Sie auf <b>Speichern</b>.</li>
+</ol>
+<p>Nach Abschluss der Einrichtung können Sie eine Testseite drucken, indem Sie auf <b>Druckermanager</b> > <b>Testseite drucken</b> klicken.</li>
+</p>
+<p>Um Google Cloud Print-Aufgaben zu verwalten, klicken Sie auf den Link <a href="http://www.google.com/cloudprint/manage.html" target="_blank">Google Cloud Print</a>.</p>
+
+
+<h3>Zugreifen auf Drucker</h3>
+<p>Weitere Informationen zum Zugreifen auf Drucker von einem PC oder Mac aus finden Sie im nachfolgenden Abschnitt.</p>
+<h4><a name="others"></a>Mit einem Windows-PC auf Drucker zugreifen:</h4>
+<p>
+Die Einrichtung der Druckerverbindung mithilfe von Synology Assistant ist der beste Weg, um auf den Druckdienst des DiskStation-Geräts zuzugreifen. Ausführliche Anleitungen finden Sie in der entsprechenden Hilfe.
+</p>
+
+<p>Falls Synology Assistant nicht auf Ihrem Computer installiert ist, haben Sie folgende Möglichkeiten, um auf den Druckdienst von DiskStation zuzugreifen.</p>
+<p><strong>Typ 1. Freigegebener Netzwerkdrucker</strong></p>
+<ol>
+<li>Öffnen Sie von Ihrem PC aus in File Explorer den Link <b>Netzwerk</b> und doppelklicken Sie auf DiskStation.</li>
+
+<li>Doppelklicken Sie auf <span style="display: inline;" class="disable-rc18015xsp"><b>usbprinter</b> oder </span><b>Netzwerk-Druckername</b>. Das System fordert Sie zur Installation des korrekten Treibers auf. Klicken Sie anschließend auf <span style="display: inline;" class="disable-rc18015xsp"><b>Ja</b>.</li>
+
+<li>Laden Sie den Druckertreiber von der CD oder der Website des Herstellers. Wählen Sie den Hersteller und das Modell des Druckers aus oder klicken Sie auf <strong>Disk vorhanden</strong>, um den Speicherort des Treibers anzugeben. Klicken Sie anschließend auf <b>OK</b>.</li>
+<li>Das System beginnt, den Netzwerkdrucker einzurichten. Nach Abschluss der Einrichtung können Sie den Drucker verwenden. </li>
+</ol>
+
+
+<p><strong>Typ 2. LPR-Anschluss (empfohlen)</strong></p>
+<ol>
+<li>Klicken Sie auf Ihrem PC auf <b>Start</b> und gehen Sie zu <b>Geräte und Drucker</b>.</li>
+<li>Klicken Sie auf <b>Drucker hinzufügen</b>. </li>
+	<li>Wählen Sie <strong>Netzwerk, WLAN- oder Bluetooth-Drucker hinzufügen</strong> aus. </li>
+	<li>Wählen Sie <strong>Der gewünschte Drucker ist nicht aufgelistet</strong> aus.</li>
+<li>Wählen Sie <b>Einen Drucker über eine TCP/IP-Adresse oder Hostname hinzufügen</b> aus. Klicken Sie auf <b>Weiter</b>, um fortzufahren.</li>
+<li>Wählen Sie als Gerätetyp <b>TCP/IP-Port-Gerät</b> aus.</li>
+<li>Geben Sie die IP-Adresse des DiskStation ein. Klicken Sie auf <b>Weiter</b>, um fortzufahren.</li>
+<li>Wählen Sie den <b>Gerätetyp</b> aus: <strong>Benutzerdefiniert</strong> > <strong>Einstellungen</strong> > …. Klicken Sie auf <b>Weiter</b>, um fortzufahren.</li>
+
+<li>Wählen Sie als Protokoll <b>LPR</b> aus. Geben Sie <span style="display: inline;" class="disable-rc18015xsp"><b>usbprinter</b> oder </span><b>Netzwerk-Druckername</b> als Warteschlangennamen ein und aktivieren Sie das Kontrollkästchen <span style="display: inline;" class="disable-rc18015xsp"><b>LPR-Bytezählung aktiviert</b>. Klicken Sie auf <b>OK</b>, um fortzufahren.</li>
+
+<li>Laden Sie den Druckertreiber von der CD oder der Website des Herstellers. Wählen Sie den Hersteller und das Modell des Druckers aus oder klicken Sie auf <strong>Disk vorhanden</strong>, um den Speicherort des Treibers anzugeben. Klicken Sie anschließend auf <b>OK</b>.</li>
+	<li>Das System beginnt, den Netzwerkdrucker einzurichten. Nach Abschluss der Einrichtung können Sie den Drucker verwenden.</li>
+</ol>
+
+<h4>Mit einem Mac auf Drucker zugreifen:</h4>
+<p>
+Mac-Benutzer können auf den Druckdienst des DiskStation-Geräts zugreifen, indem Sie den Bonjour Printer Broadcast von DSM aktivieren und den Drucker unter „Systemeinstellungen“ hinzufügen.</p>
+<P>Vergewissern Sie sich zuerst, dass Ihr DiskStation einen PostScript-Drucker verwendet, bevor Sie fortfahren.
+</p>
+<p><strong>Schritt 1. Bonjour Printer Broadcast von DSM aktivieren</strong></p>
+<ol>
+<li>
+Melden Sie sich bei DSM als <b>admin</b> oder Benutzer der Gruppe <b>administrators</b> an.
+</li>
+<li>
+Gehen Sie zu <b>Systemsteuerung</b> > <strong>Dateidienste</strong> > <b>Win/Mac/NFS</b>.
+</li>
+<li>
+Aktivieren Sie <b>Bonjour Printer Broadcast aktivieren</b>.
+</li>
+</ol>
+
+<p><strong>Schritt 2. 	Auf den Drucker mit dem Mac zugreifen</strong></p>
+<ol>
+<li>
+Gehen Sie auf Ihrem Mac zu <b>Systemeinstellungen</b> > <b>Drucken und Scannen</b>, und klicken Sie dann auf <b>+</b>.
+</li>
+
+<li>
+Wählen Sie <span style="display: inline;" class="disable-rc18015xsp"><b>usbprinter[Nummer]</b> oder </span><b>Netzwerk-Druckername</b> im Dropdown-Menü aus. Der Mac richtet den Drucker automatisch ein.
+</li>
+
+</ol>
+</div>
+</body>
+</html>

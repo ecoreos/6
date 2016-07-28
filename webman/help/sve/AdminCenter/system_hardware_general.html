@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Ström</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Allmänt</h2>
+
+<p>
+<strong>Kontrollpanel</strong> > <strong>Hårdvara & Ström</strong> > <strong>Allmänt</strong> tillhandahåller alternativ för att aktivera power recovery, Wake on LAN (WOL) och minneskompression. Du kan också ändra ljudkontroll och läge för fläkthastighet här.
+</p>
+
+<h3>
+Strömåterställning
+</h3>
+<p>Om systemet stängs av på grund av strömförlust, gör strömåterställningsfunktionen att systemet kan starta upp automatiskt då strömmen återfås.</p>
+<h3>Vakna med LAN*</h3>
+<p>Aktivering av Wake on LAN (WOL) låter dig starta din DiskStation över det lokala nätverket eller Internet genom att använda IP-adressen (eller DDNS-värdnamn) och MAC-adressen för din DiskStation genom att använda en WOL-applikation, såsom Synology Assistant DS finder eller valfri annan WOL-applikation.</p>
+<p>Vakna med LAN fungerar endast efter att DiskStation stängts av ordentligt, genom att den fysiska <b>Ström</b>knappen tryckts in eller klickning på <b>Stäng av</b> i gränssnittet för DSM. Ha strömsladden inkopplad i ett fungerande strömuttag efter avstängning.</p>
+<div class="section">
+	<h4>Obs:</h4>
+	<p class="disable-rc18015xsp">Funktionen WOL har inte stöd på 10GbE LAN-portar (om sådana finns på din DiskStation).</p>
+	<ul class="enable-rc18015xsp">
+		<li>Funktionen WOL har inte stöd på 10GbE LAN-portar (om sådana finns på din DiskStation).</li>
+		<li>Funktionen WOL är som standard aktiverad på 1GbE LAN-portar för DiskStation och kan inte avaktiveras.</li>
+	</ul>
+</div>
+<h3>Fläkthastighetsläge*</h3>
+<p>Följande alternativ för fläkthastighetsläge finns:</p>
+<ul>
+<li><strong>Kylningsläge:</strong> Fläkten arbetar med hastighet, vilket kyler ner DiskStation mer men låter mer.</li>
+<li><strong>Tyst läge:</strong> Fläkten arbetar med låg hastighet, låter mindre men DiskStation kan komma att bli varmare.</li>
+<li><strong>Lågeffekt:</strong> Fläkten arbetar med låg hastighet, låter mindre men DiskStation kan komma att bli varmare. Dessutom kommer fläkten att stanna när DiskStation är kyld, för att spara ström. Lågeffektläge är bara tillgängligt på vissa modeller.</li>
+</ul>
+<h3>Ljudkontroll</h3>
+<p>DiskStation kan avge ett pipljud när speciella händelser eller fel inträffar. Klicka på kryssrutorna för listade händelser för att låta DiskStation göra dig uppmärksam när fel inträffar.</p>
+
+<h4>För att stoppa pipljudet:</h4>
+<ul>
+<li>Om DiskStation avger pipljud, klicka på knappen <strong>Pip av</strong> för att inaktivera det. </li>
+</ul>
+
+
+
+<h3>Minneskomprimering*</h3>
+<p>Du kan aktivera Minneskomprimering för att förbättra den allmänna svarbarheten vid last genom att komprimera de senaste använda data i minnet.</p>
+<p>När du har flera applikationer igång och minnet börjar bli fullt krymper den dynamiska minneskomprimeringen storlek för sällan använda poster i minnet, vilket minskar minnesanvändning. När posterna behövs igen kan de omedelbart dekomprimeras. Detta minskar behovet av att läsa och skriva minnesswapfiler på disk, vilket förbättrar effektivitet och svarstid.</p>
+<p>För att aktivera Minneskompression, markera helt enkelt kryssrutan.</p>
+
+
+<h3>LED*</h3>
+
+<p>I <strong>Kontrollpanel</strong> > <strong>Hårdvara & Ström</strong> > <strong>Allmänt</strong> > <strong>Kontroll av ljudstyrka på LED</strong> kan du justera ljusstyrkan för LED-indikatorerna på din DiskStation.</p>
+
+<div class="section">
+<h4>Obs:</h4>
+<p>Inställningarna för ljusstyrka tillämpas på alla LED-indikatorer på din DiskStation (dvs. ström, STATUS, LAN, diskstatus, osv.).</p>
+</div>
+
+
+<h4>Att justera ljusstyrkan för LED:</h4>
+<p>Det finns fyra tillgängliga nivåer för ljusstyrka för LED-indikatorerna på din DiskStation.</p>
+<ol>
+<li>Klicka och dra pekaren på skalan för ljusstyrka i valfri riktning:
+  <ul>
+<li>Höger: Ökar ljusstyrkan för LED.</li>
+<li>Vänster: Minskar ljusstyrkan för LED.</li>
+</ul>
+</li>
+<li>Klicka på <strong>Tillämpa</strong> för att spara inställningen.</li>
+</ol>
+
+
+
+<h4>Att justera ljusstyrkan för LED per schema:</h4>
+<p>LED-indikatorerna kan ändra sin nivå på ljusstyrka på den schemalagda tiden.</p>
+
+<ol>
+<li>Klicka på <strong>Lägg till schema</strong>.</li>
+<li>Klicka på valfri nedanstående typ av ljusstyrka:
+<ul>
+<li><strong>Standardljusstyrka</strong>: Den högsta ljusstyrkan</li>
+<li><strong>Justerad ljusstyrka</strong>: Den nivå på ljusstyrka som specificerats på skalan för ljusstryka</li>
+</ul>
+</li>
+<li>Klicka på de önskade punkterna för att anpassa schemat för ljusstyrka.</li>
+<li>Klicka på <strong>OK</strong> och <strong>Tillämpa</strong> för att spara inställningarna.</li>
+</ol>
+
+
+
+
+<p>____<br> * Endast tillgängligt för vissa modeller. </p>
+</body>
+</html>

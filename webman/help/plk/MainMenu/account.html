@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Opcje</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2><a name="leaf_user"></a>Konto</h2>
+
+<p>Zakładka Konto umożliwia edytowanie podstawowych ustawień konta, takich jak opis, hasło, adres e-mail i weryfikacja 2-etapowa. Aby wyświetlić tę zakładkę, kliknij ikonę w kształcie postaci w prawym górnym rogu pulpitu, a następnie wybierz <strong>Osobiste</strong>.</p>
+
+
+
+<h3>Modyfikowanie ustawień konta</h3>
+
+<p>Edytować można następujące ustawienia konta:</p>
+<ul>
+<li><strong>Opis:</strong> Wprowadź opis konta. Opis użytkownika może się składać z maksymalnie 64 wyświetlanych znaków Unicode.</li>
+<li><strong>Nowe hasło:</strong> Aby zmienić hasło do konta, wprowadź tu nowe hasło i potwierdź je w polu <strong>Potwierdź hasło</strong> poniżej. W haśle rozróżniana jest wielkość liter i jest ono ograniczone do 127 wyświetlanych znaków, w tym liter, cyfr, symboli i spacji.</li>
+<li><strong>E-mail:</strong> Wprowadź adres e-mail (dotyczy tylko użytkowników innych niż admin).</li>
+<li><strong>Wyświetl język:</strong> Określ język wyświetlany swojego konta. Określony tutaj język wyświetlania będzie mieć wyższy priorytet niż język określony w obszarze <b>Panel sterowania</b> > <b>Opcje regionalne</b> > <b>Język</b>.</li>
+</ul>
+<p>Po zmodyfikowaniu ustawień konta kliknij <b>OK</b>, aby zapisać zmiany.</p>
+
+
+<h3>Dwustopniowe uwierzytelnianie użytkowników</h3>
+
+<p>Weryfikacja 2-etapowa zapewnia wyższy poziom bezpieczeństwa konta DSM. Jeśli włączono weryfikację 2-etapową, aby zalogować się do systemu DSM, użytkownik musi wprowadzić hasło i jednorazowy kod weryfikacyjny. Kody weryfikacyjne otrzymuje się z aplikacji uwierzytelniających zainstalowanych na urządzeniu mobilnym. Dzięki temu, jeśli dana osoba chce uzyskać dostęp do Twojego konta, będzie potrzebować nie tylko nazwy użytkownika i hasła, ale również Twojego urządzenia mobilnego.</p>
+
+<div class="section">
+<h4>Wymagania:</h4>
+<p>Weryfikacja 2-etapowa wymaga urządzenia mobilnego i aplikacji uwierzytelniającej, która może obsługiwać protokół Time-based One-Time Password (TOTP). Aplikacje uwierzytelniające to m.in. Google Authenticator (Android/iPhone/BlackBerry) lub Authenticator (Windows Phone).</p>
+</div>
+
+<h4>Aby włączyć weryfikację 2-etapową:</h4>
+
+<ol>
+<li>Wybierz <strong>Osobiste</strong> > karta <strong>Konto</strong>, a następnie zaznacz pole wyboru <strong>Włącz weryfikację 2-etapową</strong>, aby uruchomić kreatora konfiguracji weryfikacji 2-etapowej.</li>
+<li>Na pierwszym ekranie wprowadź adres e-mail. W przypadku utraty urządzenia mobilnego można będzie przesyłać na ten adres awaryjne kody weryfikacyjne.</li>
+<li>Pobierz i zainstaluj aplikację uwierzytelniającą, taką jak Google Authenticator (Android/iPhone/BlackBerry) lub Authenticator (Windows Phone).</li>
+<li>Po wyświetleniu następnego ekranu uruchom aplikację uwierzytelniającą i zeskanuj kod QR. Zamiast tego można także kliknąć łącze, aby ręcznie wprowadzić tajny klucz.</li>
+<li>Następnie aplikacja uwierzytelniająca wygeneruje 6-znakowy kod weryfikacyjny. Wprowadź ten kod w polu tekstowym kreatora, aby potwierdzić prawidłowość konfiguracji. W przypadku błędu sprawdź, czy czas systemu urządzenia mobilnego jest zsynchronizowany z czasem systemowym DSM. Ponadto kody weryfikacyjne są okresowo aktualizowane, dlatego też należy upewnić się, że wprowadzony kod nie wygasł.</li>
+<li>Po zakończeniu działania kreatora konfiguracji kliknij <strong>OK</strong>, aby zapisać ustawienia.</li>
+</ol>
+
+
+
+<h4>Aby zalogować się do DSM z wykorzystaniem weryfikacji 2-etapowej:</h4>
+
+<p>Po włączeniu weryfikacji 2-etapowej w celu zalogowania się do DSM będzie wymagane wprowadzenie 6-znakowego kodu weryfikacyjnego.</p>
+
+<ol>
+<li>Na ekranie logowania DSM wprowadź standardowo nazwę użytkownika i hasło.</li>
+<li>Po wyświetleniu monitu o wprowadzenie kodu weryfikacyjnego uruchom aplikację uwierzytelniającą w urządzeniu mobilnym.</li>
+<li>Znajdź i wprowadź 6-cyfrowy kod weryfikacyjny do swojego konta. Jeśli urządzenie mobilne zostało zagubione, możesz kliknąć łącze <b>Zgubiłeś telefon?</b>, a kod używany w nagłych wypadkach zostanie przesłany na Twój adres e-mail.</li>
+</ol>
+
+<div class="section">
+<h4>Uwaga:</h4>
+<ul>
+<li><strong>Ustawienia SMTP:</strong> W celu odbierania kodów awaryjnych za pośrednictwem poczty e-mail należy prawidłowo skonfigurować ustawienia serwera SMTP w obszarze <b>Panel sterowania</b> > <b>Powiadomienia</b>.</li>
+<li><strong>Limit kodów awaryjnych:</strong> Każdego użytkownika obowiązuje limit 5 kodów awaryjnych. Po przekroczeniu tego limitu należy wyłączyć i włączyć ponownie weryfikację 2-etapową, aby można było odbierać kolejne kody awaryjne.</li>
+<li>Możesz wymusić weryfikację 2-etapową w systemie DSM oraz wszystkich powiązanych aplikacjach mobilnych Synology (np. DSM mobile oraz DS file).</li>
+
+</ul>
+</div>
+
+
+<h4>Aby zresetować ustawienia weryfikacji 2-etapowej użytkowników:</h4>
+
+<p>Użytkownicy należący do grupy <strong>administrators</strong> mogą resetować ustawienia weryfikacji 2-etapowej innych użytkowników.<ol>
+<li>Wybierz kolejno <strong>Panel sterowania</strong> > <strong>Użytkownik</strong>.</li>
+<li>Kliknij dwukrotnie użytkownika, którego weryfikacja 2-etapowa ma być zresetowana.</li>
+<li>Na karcie <strong>Informacje użytkownika</strong> kliknij przycisk <strong>Resetuj weryfikację 2-etapową</strong>.</li>
+</ol>
+
+<div class="section">
+<h4>Uwaga:</h4>
+<p>Jeśli użytkownik należący do grupy <strong>administratorów</strong> nie jest dostępny, możesz wcisnąć fizyczny przycisk reset na swoim DiskStation, aby zresetować ustawienia DSM i wyłączyć weryfikację 2-etapową.</p>
+</div>
+
+
+<h3>Aktywność na koncie</h3>
+<p>Aktywność konta wyświetla aktywność logowania Twojego konta DSM, włącznie z bieżącymi połączeniami, zaufanymi urządzeniami i historią logowania.</p>
+
+
+<h4>Aby sprawdzić aktywność swojego konta:</h4>
+<p>Kliknij przycisk <strong>Aktywność konta</strong>. W wyświetlonym oknie dostępne są następujące zakładki:<ul>
+<li><strong>Podłączeni użytkownicy:</strong> W zakładce tej wyświetlane są następujące informacje:<ul>
+<li><strong>Data i godzina:</strong> Czas dostępu do konta.</li>
+<li><strong>Nazwa i IP klienta:</strong> Nazwa i adres IP urządzenia, które uzyskało dostęp do konta. Nazwa klienta pojawia się tylko wtedy, gdy dostęp do konta odbywa się przy użyciu protokołu CIFS.</li>
+<li><strong>Usługa:</strong> Protokół używany do uzyskania dostępu do danego konta.</li>
+<li><strong>Zasoby:</strong> Zasoby systemowe używane przez dane konto.</li>
+</ul></li>
+
+<li><strong>Zaufane urządzenia:</strong> W zakładce tej wyświetlana jest strona poświęcona zarządzaniem urządzeniami zaufanymi:<ul>
+<li><strong>Bieżące urządzenie jest niezaufane/zaufane:</strong> Kliknij <strong>Zaufaj temu urządzeniu</strong>, jeśli chcesz zaufać danemu urządzeniu. Od tego momentu podczas logowania się do DSM na tym urządzeniu weryfikacja 2-etapowa nie będzie wymagana.</li>
+
+<li><strong>Nie ufaj innym urządzeniom:</strong> Możesz przestać ufać innym urządzeniom (np. innym komputerom lub urządzeniom mobilnym), które już uznałeś za zaufane. Oznacza to, że podczas logowania się do DSM na tych urządzeniach będzie wymagana 2-etapowa weryfikacja.</li>
+</ul></li>
+
+
+<li><strong>Historia logowania:</strong> W zakładce tej wyświetlane są ostatnie sesje logowania oraz następujące informacje:<ul>
+<li><strong>Data i godzina:</strong> Czas dostępu do konta.</li>
+<li><strong>Zdarzenie:</strong> Wyświetl nazwę i adres IP użytkownika.</li>
+</ul>
+</li>
+</ul>
+
+
+<div class="section">
+<h4>Uwaga:</h4>
+<p>Urządzenie, które zostało przez Ciebie oznaczone jako zaufane, zostanie zapamiętane tylko wtedy, gdy będziesz logować się przy użyciu tego samego konta i przez tę samą przeglądarkę. W następujących scenariuszach wciąż konieczne będzie wprowadzanie hasła jednorazowego do weryfikacji 2-etapowej, nawet jeśli urządzenie zostało wcześniej oznaczone jako zaufane:</p>
+<ul>
+<li>Logujesz się przy użyciu tego samego konta, ale przez inną przeglądarkę.</li>
+<li>Wyczyszczono ciasteczka z przeglądarki.</li>
+<li>Ufasz urządzeniu podczas logowania się jako Użytkownik A, a następnie ufasz temu samemu urządzeniu, logując się jako Użytkownik B. Jeśli logujesz się ponownie jako Użytkownik A, nadal będziesz musiał wprowadzić hasło do 2-etapowej weryfikacji.</li>
+</ul>
+
+</div>
+
+
+</body>
+</html>

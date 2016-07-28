@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>從 File Station 連線至不同的檔案伺服器 &ndash; Synology DSM 說明</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="Learn how to customize File Station settings related to file management, shared links, and security.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>遠端連線</h2>
+
+<p>在 File Station 中，您可以連線至公有雲端服務 (Box、Dropbox、Google Drive、Microsoft OneDrive)，以及透過不同的通訊協定 (FTP、SFTP、WebDAV、WebDAV HTTPS) 連線至檔案伺服器。</p>
+
+<h4>若要連線至雲端服務：</h4>
+<ol>
+  <li>前往<strong>工具</strong> &gt; <strong>遠端連線</strong> &gt; <strong>連線設定</strong>。</li>
+  <li>選擇您要連線的雲端服務並按一下圖示，再按一下<strong>下一步</strong>。</li>
+  <li>依據精靈的說明在彈出視窗中進行帳號認證。</li>
+  <li>設定完成後，您要連線的雲端服務便會出現在左側面板中。</li>
+</ol>
+
+
+<div class="section">
+<h4>雲端服務特定限制：</h4>
+<ul>
+<li><strong>Box</strong>：<ul>
+  <li>與其他協作者 (collaborator) 共用的目錄，名稱之後會加上所有者的使用者帳號。</li>
+  <li>若有多個與其他協作者共用的目錄採用相同名稱 (即目錄名稱後加上所有者的使用者帳號)，僅會顯示其中一個目錄。</li>
+  <li>唯有透過 Box，才能開啟使用下列副檔名的檔案：.gdoc、.gsheet、.boxnote。</li>
+  <li>檔案名稱不區分大小寫。</li>
+  <li>若要正確設定防火牆，請參閱<a href="https://support.box.com/hc/articles/200523728-Configuring-a-Firewall-for-Box-or-Box-Sync"  target="_blank">本篇文章</a>。</li>
+</ul>
+</li>
+
+<li><strong>Dropbox</strong>：<ul>
+<li>若 Dropbox 目錄中含有超過 25000 個檔案，該目錄將無法顯示。</li>
+<li>若 Dropbox 目錄中含有超過 10000 個檔案，該目錄將無法重新命名。</li>
+<li>無法上傳超過 10 GB 的檔案。</li>
+<li>若檔案上傳耗時超過 24 小時，該項上傳任務則會失敗。</li>
+<li>檔案名稱不區分大小寫。</li>
+<li>若要正確設定防火牆，請參閱<a href="https://www.dropbox.com/help/23"  target="_blank">本篇文章</a>。</li>
+</ul>
+</li>
+
+<li><strong>Google Drive</strong>：<ul>
+  <li>若檔案 / 資料夾路徑長度大於 2048 個字元，將不會顯示該檔案 / 資料夾。</li>
+  <li>若檔案名稱長度大於 255 個字元，將不會顯示該檔案。</li>
+  <li>若檔案 / 目錄採用相同名稱，將在名稱之後個別加註建立時間。</li>
+<li>若透過 File Station 開啟 Google 專屬的檔案 (例如 Google Doc 和 Google Slide)，將會顯示網址來讓您存取檔案。</li>
+<li>File Station 中的 <strong>My Drive</strong> 與 <strong>Starred</strong> 資料夾各自對應到 Google Drive 中的「我的雲端硬碟」及「已加星號」資料夾。</li>
+<li>若要正確設定防火牆，請參閱<a href="https://support.google.com/drive/answer/2589954"  target="_blank">本篇文章</a>。</li>
+</ul>
+</li>
+
+<li><strong>Microsoft OneDrive</strong>：<ul>
+<li>OneNote 筆記本檔案將不會顯示。</li>
+<li>無法上傳超過 10 GB 的檔案。</li>
+<li>檔案 (如 .png、.jpg、.docx、.pdf) 可能顯示較大的檔案大小 (為原始檔案大小加上縮圖大小)。下載檔案時，原始檔案大小將不受影響。</li>
+<li>檔案名稱不區分大小寫。</li>
+
+</ul>
+</li>
+</ul>
+
+<p>若要瞭解更多限制，建議您前往該雲端服務所屬的官方網站了解詳情。</p>
+
+
+</div>
+
+
+<h4>若要連線至檔案伺服器：</h4>
+<ol>
+  <li>前往<strong>工具</strong> &gt; <strong>遠端連線</strong> &gt; <strong>連線設定</strong>。</li>
+  <li>選擇您要使用的伺服器通訊協定並按一下圖示，再按一下<strong>下一步</strong>。</li>
+  <li>提供下列資訊來完成設定：<ul>
+  <li><strong>主機名稱或 IP</strong>：輸入您要連線的檔案伺服器的主機名稱或 IP 位址。</li>
+  <li><strong>連接埠</strong>：輸入檔案伺服器的連接埠編號。</li>
+  <li><strong>帳號名稱</strong>及<strong>密碼</strong>：若檔案伺服器要求帳號 / 密碼，請輸入登入資訊。</li>
+  <li><strong>語言編碼</strong>：選擇檔案伺服器的字元編碼，讓檔案名稱能正確顯示。</li>
+  <li><strong>設定檔名稱</strong>：輸入特定名稱以方便您辨認此檔案伺服器。</li>
+  <li><strong>使用 WebDAV HTTPS 連線</strong>：唯有當您在設定 WebDAV 通訊協定，而且檔案伺服器與用戶端皆支援 WebDAV HTTPS 時，才能勾選此選項。</li>
+  <li><strong>僅允許每位使用者建立單一連線</strong>：唯有當您在設定 FTP 或 SFTP 通訊協定時，才能勾選此選項。當伺服器限制連線數量時，勾選此選項可最佳化連線能力。</li>
+  </ul>
+  </li>
+<li>按一下<strong>套用</strong>來儲存設定。您要連線的檔案伺服器便會出現在左側面板中。</li> 
+</ol>
+<h4>若要修改現有雲端服務或檔案伺服器的設定檔：</h4>
+<ol>
+  <li>前往<strong>工具</strong> &gt; <strong>遠端連線</strong> &gt; <strong>連線清單</strong>。</li>
+  <li>按一下您要修改的雲端服務或檔案伺服器，來進行下列管理：<ul>
+      <li>編輯：按一下<strong>編輯</strong>，更改目前設定檔的內容，再按一下<strong>確定</strong>。</li>
+      <li>中斷連線：按一下<strong>斷線</strong>來終止連線。</li>
+  <li>重新連線：按一下<strong>連線</strong>來恢復連線。(此外，可在 File Station 左側面板中按一下該雲端服務或伺服器來重新連線。)</li>
+  <li>刪除：按一下<strong>刪除</strong>，並確認捨棄該設定檔。(此外，可在 File Station 左側面板中按一下該雲端服務或伺服器，再按一下<strong>刪除</strong>便可刪除設定檔。)</li>
+    </ul>
+  </li>
+  </ol>
+  
+  
+<div class="section">
+  <h4>注意：</h4>
+<ul>
+  <li>每位使用者最多可同時連線至 100 個雲端服務及檔案伺服器。</li>
+  <li>請確認您是否已選擇正確的伺服器語言編碼，以避免錯誤發生。若不清楚伺服器的語言編碼，建議您選擇 Unicode。</li>
+  <li>儲存於雲端服務或檔案伺服器中的檔案無法使用某些 File Station 的功能 (例如壓縮到、解壓縮、預覽等)。</li>
+<li>所有雲端服務或檔案伺服器連線後的傳輸速度皆受限於使用者設定的速度限制。</li>
+<li>在所有連線的雲端服務或檔案伺服器中，每位使用者最多可同時進行三項檔案傳輸。</li>
+<li>若要設定 WebDAV、WebDAV HTTPS、雲端服務的代理伺服器，請前往<strong>控制台</strong> &gt; <strong>網路</strong> &gt; <strong>一般</strong> &gt; <strong>代理伺服器</strong>。若您在連線至雲端服務或檔案伺服器時變更代理伺服器設定，請先中斷連線後再重新連線。</li>
+<li>若已連線的雲端服務或檔案伺服器資訊被修改，連線狀態不會受到影響。</li>
+<li>若超過 30 分鐘未處理任何檔案，將自動中斷雲端服務 / 檔案伺服器連線，以釋放連線資源。請按一下該雲端服務 / 檔案伺服器來恢復連線。</li>
+<li>系統無法顯示採用下列命名格式的檔案 / 資料夾：<ul>
+    <li>開頭為 <strong>._</strong> 或 <strong>.SYNOPPSDB</strong></li>
+    <li>名稱內含 <strong>/</strong></li>
+    <li>名稱完全符合 <strong>.</strong>&nbsp;&nbsp;&nbsp;&nbsp;<strong>..</strong>&nbsp;&nbsp;&nbsp;&nbsp;<strong>
+'</strong>&nbsp;&nbsp;&nbsp;&nbsp;<strong>"</strong>&nbsp;&nbsp;&nbsp;&nbsp;<strong>.DS_Store</strong>&nbsp;&nbsp;&nbsp;&nbsp;<strong>@eaDir</strong>&nbsp;&nbsp;&nbsp;&nbsp;<strong>@sharebin</strong>&nbsp;&nbsp;&nbsp;&nbsp;<strong>@tmp</strong>&nbsp;&nbsp;&nbsp;&nbsp;<strong>.SynologyWorkingDirectory</strong>
+</li>
+  </ul>
+</li>
+<li class="enable-dockerx64">遠端連線只在高權限模式支援。若需使用此功能，請至主機 Docker 套件選擇你想要編輯的 Docker DSM，點一下<strong>編輯</strong>並勾選<strong>使用更高的權限執行容器</strong> 選項。</li>
+
+</ul>
+</div>
+</body>
+</html>

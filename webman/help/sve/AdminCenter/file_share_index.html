@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Delad mapp</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Indexfiler</h2>
+<p>
+Att indexera en delad mapp eller dess undermappar kan hjälpa dig att snabbt hitta filer och innehåll under filsökning.
+</p>
+
+
+<div class="section">
+<h4>Obs:</h4>
+<p>Fjärrmappar, molnmappar eller .iso-mappar som monterats på din DiskStation kan inte indexeras.</p>
+</div>
+
+
+<h4>Att indexera mappar och filinnehåll:</h4>
+<p>Om du har mappar indexerade blir dessa mappar och de filer de innehåller automatiskt indexerade efter filnamn. Du kan vidare indexera filers innehåll/metadata inom de indexerade mapparna efter filtyp. Indexering av filinnehåll erbjuder snabbare och mer djupgående sökning i den indexerade filernas innehåll/metadata.</p>
+
+<ol>
+<li>Gå till <strong>Kontrollpanel</strong> > <strong>Indexeringstjänst</strong> > <strong>Filindexering</strong> och klicka på <strong>Lista över indexerade mappar</strong>.</li>
+<li>I popup-fönstret, klicka på <strong>Skapa</strong> > <strong>Välj</strong> för att visa mappar som är klara att indexeras.</li>
+<li>Välj de önskade mapparna och klicka på <strong>Välj</strong>. För att skapa en ny mapp för indexering, klicka på <strong>Skapa mapp</strong> och fortsätt.</li>
+<li>Klicka på den mapp du vill indexera och klicka på <strong>Välj</strong>.</li>
+<li>För att indexera specifika typer av filinnehåll, gå till <strong>Filtyp</strong> och välj <strong>Bild</strong>, <strong>Ljud</strong>, <strong>Video</strong> eller <strong>Dokument</strong> för indexering.</li>
+
+<li>Klicka på <strong>OK</strong> för att slutföra indexeringen.</li>
+</ol>
+
+<div class="section">
+<h4>Obs:</h4>
+<ul>
+<li>Maximalt antal samtidiga indexerade mappar är 1000.</li>
+<li>Om du väljer <strong>Aktivera sökning av filinnehåll</strong> i File Station kan du söka bland filinnehåll i de indexerade mapparna.</li>
+<li>Volymen som är värd för den indexerade mappen måste ha mer än 10 MB tillgängligt utrymme. I annat fall pausas indexeringen. För att återuppta indexeringen, utöka volymen och klicka på <strong>Skapa nytt index</strong>.</li>
+<li>Om du har indexerat en mapp och dess undermapp(ar) på samma gång indexerar systemet endast undermappar(na) för att hushålla med systemresurser.</li>
+<li class="disable-hi3535">När mappar är fullständigt indexerade och sedan monterade på en Mac-dator med protokollen SMB eller AFP kan de som använder Mac använda Spotlight i Finder för att söka efter innehåll i filerna.</li>
+</ul>
+
+</div>
+
+
+<h4>Att radera indexerade mappar:</h4>
+
+<ol>
+<li>Gå till <strong>Kontrollpanel</strong> > <strong>Indexeringstjänst</strong> > <strong>Filindexering</strong> > <strong>Lista över indexerade mappar</strong> och välj önskad indexerad mapp(ar).</li>
+<li>Klicka på <strong>Radera</strong> för att sluta indexera mapp(ar).</li>
+</ol>
+
+<h2>Skapa ett nytt filregister</h2>
+<p>
+Under normala omständigheter behöver du bara indexera en mapp en gång. Om en fil i en mapp matchar specifika sökkriteria men ändå inte hittas vid en filsökning kan du dock behöva skapa nytt index för filerna för att återskapa indexstrukturen.
+</p>
+<h4>Att skapa du ett nytt index i en delad mapp:</h4>
+<ol>
+<li>Gå till <strong>Kontrollpanel</strong> > <strong>Indexeringstjänst</strong> > <strong>Filindexering</strong> > <strong>Lista över indexerade mappar</strong>.</li>
+<li>Välj listad mapp(ar) att skapa nytt index för.</li>
+<li>Klicka på <b>Skapa nytt index</b>.</li>
+</ol>
+
+<div class="section">
+<h4>Obs:</h4>
+<p>File Station stöder inte indexering av filer på fjärrmappar eller externa lagringsenheter (t.ex. USB-diskar/SD-kort).</p>
+</div>
+
+
+<h2>Hantera filindexering via skrivbordet</h2>
+<p>När filindexering börjar ser du <strong>Indexeringsförlopp</strong> (en ikon med ett flytande förstoringsglas) på aktivitetsfältet. Eftersom filindexering kräver mer CPU-resurser låter detta dig hushålla med CPU-resurser.</p>
+
+
+<ul>
+<li>För att pausa/fortsätta filindexering, klicka på knappen för uppspelning.</li>
+<li>För att fördröja filindexering till en lämplig tid, välj det önskade alternativet från rullgardinsmenyn.</li>
+<li>För att visa vilka mappar som har indexerats, klicka på <strong>Visa lista över indexerade mappar</strong>.</li>
+</ul>
+
+<div class="section">
+<h4>Obs:</h4>
+<ul>
+<li>Om du pausar åtgärden för indexering kan den bara återupptas genom att klicka på knappen för uppspelning på skrivbordets aktivitetsfält.</li>
+</ul>
+
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Notifica</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>SMS</h2>
+<p class="disable-eds14">&Egrave; possibile attivare le notifiche SMS in modo che DiskStation possa inviare i messaggi di notifica tramite SMS quando cambia lo stato o si verificano errori nel sistema, ad esempio perdita della connessione, modifica del comportamento della ventola, interruzione dell&apos;alimentazione, mancanza di spazio nel volume di archiviazione o errori di backup e ripristino, ecc.</p>
+
+<p class="enable-eds14">&Egrave; possibile attivare le notifiche SMS in modo che DiskStation possa inviare i messaggi di notifica tramite SMS quando cambia lo stato o si verificano errori nel sistema, ad esempio perdita della connessione, interruzione dell&apos;alimentazione, mancanza di spazio nel volume di archiviazione o errori di backup e ripristino, ecc.</p>
+
+
+<h4>Per abilitare le notifiche SMS:</h4>
+<p>Selezionare <b>Abilita notifiche SMS</b> e completare i seguenti passaggi:</p>
+<ol>
+<li>Selezionare un fornitore di servizio SMS dall&apos;elenco a discesa <b>Fornitore di servizio SMS</b>. Il fornitore di servizio predefinito &egrave; &quot;clickatell&quot;.</li>
+<li>Fare clic su <b>Aggiungi provider di servizio SMS</b> per creare una nuova configurazione di fornitore SMS o su <b>Elimina</b> per eliminare la configurazione di fornitore SMS selezionato.</li>
+<li>Nel campo <b>Nome utente</b>, immettere il nome utente del proprio account di servizio SMS.</li>
+<li>Nei campi <b>Password</b> e <b>Conferma password</b>, inserire e confermare la password dell&apos;account di servizio SMS.</li>
+<li>Inserire <b>Numero telefonico principale</b> o <b>Numero telefonico secondario</b>. Se sono inseriti entrambe i numeri, i messaggi SMS di notifica verranno inviati a entrambi i numeri.</li>
+<li>Se non si desidera ricevere troppi messaggi, selezionare <b>Abilita intervallo limite tra gli SMS</b> e limitare il numero di messaggi di notifica a un messaggio per l&apos;intervallo specificato.</li>
+<li>Fare clic su <b>Invia un messaggio SMS di prova</b> per inviare un messaggio SMS di prova al numero telefonico specificato. Se non si riceve alcun messaggio, significa che la configurazione non &egrave; corretta.</li>
+<li>Fare clic su <b>Applica</b> per salvare la configurazione, o su <b>Reimposta</b> per annullare la configurazione.</li>
+</ol>
+<p><span class="note_head">Nota. </span>La lingua della notifica SMS &egrave; impostata su <strong>Lingua notifica</strong>. Per cambiare la lingua di notifica SMS, andare in <strong>Menu principale</strong> &gt; <strong>Pannello di controllo</strong> &gt; <strong>Opzioni regionali</strong>, fare clic sulla scheda <strong>Lingua</strong> e scegliere la lingua preferita dal menu a discesa nella sezione <strong>Lingua notifica</strong>.</p>
+<ol><span class="note_head">Limitazioni:</span><li>Nome utente: tiene conto delle maiuscole e minuscole e deve essere costituito da un numero di caratteri Unicode compreso tra 1 e 32.</li>
+<li>Password: tiene conto delle maiuscole/minuscole e deve essere composta da 0 - 128 caratteri visualizzabili, includendo lettere, numeri, segni e spazi.</li>
+<li>L&apos;intervallo tra gli SMS deve essere compreso tra 1 e 10000 minuti.</li>
+</ol>
+<h4>Creare una configurazione di fornitore SMS:</h4>
+<ol>
+<li>Fare clic su <b>Aggiungi provider di servizio SMS</b>.</li>
+<li>Nel campo <b>Nome provider</b>, immettere il nome del fornitore di servizio SMS.</li>
+<li>Nel campo <b>URL SMS</b>, immettere un URL SMS con il contenuto del messaggio impostato su &quot;Hello world&quot;. &Egrave; possibile ottenere l&apos;URL SMS dal fornitore di servizio SMS.</li>
+<li>Fare clic su <b>Avanti</b>.</li>
+<li>Il sistema suddivider&agrave; l&apos;URL SMS in diversi parametri. Definire ciascun parametro selezionando la categoria corrispondente. Pu&ograve; essere utilizzata ogni categoria di parametro, tranne <b>Altro</b>.</li>
+</ol>
+<ol><a name='smshowto'></a><span class="note_head">Limitazioni:</span><li>Nome provider: tiene conto delle maiuscole e minuscole e deve essere costituito da un numero di caratteri Unicode compreso tra 1 e 32.</li>
+<li>URL SMS: tiene conto delle maiuscole e minuscole e deve essere costituito da un numero di caratteri Unicode compreso tra 1 e 500. Il numero di parametri deve essere compreso tra 4 e 10. Questo URL SMS serve esclusivamente a scopo di impostazione. Non verr&agrave; inviato un SMS al termine dell&apos;impostazione. Il formato di questo URL &egrave; fornito dal provider di servizi SMS e l&apos;URL deve includere i seguenti parametri: nome utente, password, telefono di destinazione e contenuto del messaggio. Usando Clickatell come esempio, un possibile URL &egrave;: https://api.clickatell.com/http/sendmsg?user=TestUser&amp;password=TestPassword&amp;api_id=3148203&amp;to=886123456789&amp;text=Hello+world. Nel parametro &quot;Contenuto del messaggio&quot;, lo spazio tra &quot;Hello&quot; e &quot;world&quot; verr&agrave; sostituito da un carattere particolare definito dal provider.</li>	
+
+</ol>
+</body>
+</html>

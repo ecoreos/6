@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Win/Mac/NFS</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Mac-filtjeneste</h2>
+
+<p>
+I <strong>Kontrollpanel</strong> > <strong>Filtjenester</strong> > <strong>Win/Mac/NFS</strong> kan du aktivere Mac-filtjeneste for å omgjøre DiskStation til en Mac-filserver (AFP-server).</p>
+
+<h4>Aktiver Mac-filtjeneste:</h4>
+<ol>
+<li>
+Merk av for <b>Aktiver Mac-filtjeneste</b> hvis du vil gjøre DiskStation til en Mac-filserver (AFP-server).
+</li>
+<li>
+Angi en <b>Time Machine</b>-sikkerhetskopimappe om nødvendig. (Se seksjonen nedenfor, for mer informasjon.)
+</li>
+
+<li>
+Klikk på <b>Bruk</b>.
+</li>
+
+</ol>
+
+<div class="section">
+<h4>Merk:</h4>
+<ul>
+<li>Hvis du vil sikkerhetskopiere data fra Time Machine til DiskStation, velger du en delt mappe fra rullegardinmenyen. </li>
+<li> Delte mapper som brukes til andre tjenester vil ikke være tilgjengelige for Time Machine.</li>
+</ul>
+
+</div>
+
+
+
+<h3>Aktivere overføringslogger</h3>
+<p>Hvis du merker av for dette alternativet, aktiveres logging av filtilgangsoperasjoner, inkludert oppretting, sletting, lesing, skriving, flytting og endring av navn på filer eller mapper gjennom AFP, også kjent som Apple Filing Protocol.</p>
+
+
+<h3>Avanserte innstillinger</h3>
+<h4>Bruk standard UNIX-tillatelser:</h4>
+<p>Aktivering av dette alternativet tar i bruk standard UNIX-tillatelser når du laster opp eller oppretter filer og mapper. Tillatelser som brukes er de samme som tillatelsene som brukes av UNIX-kommandoen <strong>umask</strong>. Når dette alternativet er aktivert, er UNIX-tillatelser 644 for filer og 755 for mapper. Når dette alternativet er deaktivert, er UNIX-tillatelser 666 for filer og 777 for mapper. Standard umask-verdi er 022.</p>
+
+<div class="section">
+<h4>Merk:</h4>
+<p>Aktivering av dette alternativet kan forårsake problemer med inkonsekvente tillatelser mellom forskjellige protokoller. For å unngå inkonsekvens, foreslår vi at dette alternativet er deaktivert.</p>
+</div>
+
+<h4>Frigi ressurser umiddelbart etter frakobling:</h4>
+<p>Aktivering av dette alternativet frigir ressurser umiddelbart når AFP-servertilkoblingen uventet blir avbrutt. Hvis du mottar "Volum i bruk"-feilmeldinger mens du bruker Time Machine, aktiverer du dette alternativet.</p>
+<h4>For å aktivere Bonjour skriverutsendelse:</h4>
+<p>Merk av for <b>Aktiver Bonjour Printer Broadcast</b> for å la Mac-klienter bla gjennom og finne skriveren som er koblet til DiskStation.</p>
+
+<h4 class="disable-hi3535">Slik søker du etter filinnhold med Spotlight i Finder:</h4>
+<p class="disable-hi3535">Når mappene er indeksert og montert på Mac-datamaskinen din, kan du bruke Spotlight i Finder til å søke etter iboende filer og innholdet i dem.</p>
+<ol class="disable-hi3535">
+<li>Gå til <strong>Kontrollpanel</strong> > <strong>Indekseringstjeneste</strong> > <strong>Filindeksering</strong> > <strong>Indeksert mappeliste</strong> > <strong>Opprett</strong> for å indeksere spesifikke mapper og iboende filer etter filtype.</li>
+<li>Klikk på <strong>OK</strong> for å utføre indekseringen.</li>
+<li>Monter de indekserte mappene på Mac-datamaskinen din.</li>
+<li>På Mac-datamaskinen din klikker du på ønsket montert mappe i panelet til venstre i Finder og bruker Spotlight i Finder til å søke etter iboende filer.</li>
+
+</ol>
+
+<div class="section disable-hi3535">
+<h4>Merk:</h4>
+<ul>
+<li>For å søke i monterte mapper, bruker du Spotlight i Finder. Spotlight på Mac-skrivebordet lar deg kun søke etter lokale filer.</li>
+<li>I Mac OS X 10.9 og nyere versjoner har Spotlight i Finder støtte for søk i monterte mapper etter taggnavn og kategori.</li>
+</ul>
+</div>
+
+</body>
+</html>

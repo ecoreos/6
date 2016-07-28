@@ -1,0 +1,199 @@
+
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Ağ</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2><a name="wireless_ap"></a>Ortak Erişim Noktası*</h2>
+<p>DiskStation aygıtınız bir Wi-Fi USB adaptör kurmuş olmanız ya da DiskStation sunucunuzda dahili Wi-Fi olması halinde İnternet bağlantısını diğer aygıtlarla paylaşmak için bir ortak erişim noktası oluşturulmasını destekler. İnterneti nasıl kullanmak istediğinize bağlı olarak DiskStation sunucunuzu bir kablosuz erişim noktası (AP) veya kablosuz yönlendirici olarak ayarlayabilirsiniz.</p>
+
+<table>
+<tr>
+<th width="23%">Ortak Erişim Noktası Modu</th>
+<th width="77%">Açıklama</th>
+</tr>
+<tr>
+<th>Kablosuz erişim noktası</th>
+<td>
+<ul>
+<li>LAN ve Wi-Fi ağınızı birbirine bağlar.</li>
+<li>LAN ve kablosuz istemcileriniz aynı yerel ağ üzerinde olacaklardır.</li>
+<li>Bir yönlendiriciniz olduğunda ve DiskStation sunucunuzu mevcut ağa ilave bir erişim noktası olarak kullanmak istediğinizde geçerlidir.</li> 
+<li>DLNA aygıtları, yazıcılar, Synology Web Assistant veya ağ yayınlarına dayanan diğer hizmetler gibi ağ kaynaklarının paylaşımına olanak tanır.</li>
+<li>DHCP sunucusu kablosuz erişim noktaları olarak işlev gören DiskStation aygıtlarında devre dışı bırakılacaktır. DiskStation sunucunuz için DHCP sunucusunu yeniden aktive etmek için, Wi-Fi donanım aygıtlarını kaldırın ve DiskStation sunucusunu yeniden başlayın.</li>
+<li>Çok sayıda LAN bağlantı noktasına sahip modeller için, kablosuz erişim noktası ile köprü kurmak üzere sadece LAN 1 kullanılacaktır.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Kablosuz Yönlendirici</th>
+<td>
+<ul>
+<li>Aygıtların özel bir alt ağ üzerinde olduğu bir kablosuz ağ kurar.</li>
+</ul>
+</td>
+</tr>
+</table>
+
+
+<div class="section">
+<h4>Not:</h4>
+
+<ol>
+<li>Bazı modeller, ortak erişim noktaları oluşturmak için kablosuz donanım aygıtları bağlamayı gerektirir. Desteklenen kablosuz donanım aygıtlarının tam bir listesi için <a href="http://www.synology.com/support/faq/444" target=_blank>www.synology.com</a> adresini ziyaret edin.</li>
+<li>DS213air dışı modeller için, DSM 4.3'deki Kablosuz Erişim Noktası seçeneği DSM 5.0'da "Kablosuz Yönlendirici" olarak yeniden adlandırılır.</li>
+</ul>
+</ol>
+
+</div>
+
+<h3>Ortak Erişim Noktası Ayarlarını Yönetme</h3>
+<p>Bu kısım, DiskStation sunucunuzun ortak erişim noktası ayarlarının nasıl etkinleştirilip yönetildiğini açıklar.</p>
+
+
+<h4>DiskStation cihazını ortak erişim noktasına dönüştürmek için:</h4>
+<ol>
+<li><strong>Denetim Masası</strong> > <strong>Kablosuz</strong> > <strong>Ağ Haritası</strong>'na gidin. <strong>Kablosuz Erişim Noktası</strong> veya <strong>Kablosuz Yönlendirici</strong> öğesini seçin.</li>
+<li>Aşağıdaki ayarları yönetmek için <strong>Wi-Fi</strong> sekmesine giderek <strong>Düzenle</strong>'yi tıklayın:</li>
+<ul>
+<li><strong>Ad (SSID):</strong> Kablosuz ağ için bir ad girin.</li>
+<li><strong>Göster/Gizle:</strong> Kablosuz ağın diğer aygıtlar tarafından görülebilir olup olmayacağını seçin.</li>
+<li><strong>Kablosuz modu:</strong> Bir kablosuz standardı seçin. Her standart, çeşitli bant genişliklerini ve frekanslarını destekler.</li>
+<li><strong>Kanal genişliği:</strong> Bir kanal genişliği seçin (yalnızca 802.11n kablosuz modu kullanılırken mevcuttur).</li>
+<li><strong>Kanal:</strong> Kablosuz ağ için bir frekans seçin. Daha iyi performans için, yakın çevredeki ağlar tarafından kullanılanlardan farklı bir frekans seçin.</li>
+<li><strong>Aktarım gücü:</strong> Kablosuz ağın bir sinyal gücünü seçin.</li>
+<li><strong>Maks. bağlantı:</strong> Ağa kaç tane istemci aygıtın bağlanabileceğini seçin. En yüksek bağlantı ayarı 256'dır.</li>
+<li><strong>WMM QoS etkinleştir:</strong> Wi-Fi üzerinden Wi-Fi Multimedia (WMM) QoS (Hizmet Kalitesi). Bu seçenek, kablosuz ağın trafiği önceliklendirmesine ve kaynakların uygulamalar arasında paylaştırılmasını en uygun hale getirmesine olanak tanır.</li>
+</ul>
+</ol>
+
+
+
+<h4>Bir kablosuz programı ayarlamak için:*</h4>
+<p>Bir kablosuz ağ programını etkinleştirmek, DiskStation ürününüzün kablosuz ağının ne zaman etkin ve erişilebilir olduğunu kontrol etmenize olanak tanır.</p>
+<ol>
+<li><strong>Wi-Fi</strong> sekmesine giderek <strong>Düzenle</strong>'yi tıklayın. </li>
+<li><strong>Zaman çizelgesini etkinleştir</strong> onay kutusunu işaretleyin.</li>
+
+<li><strong>Program ayarla</strong>'ya tıklayın.</li>
+<li>Program ekranında, kablosuz ağın ne zaman etkin olacağını seçin.</li>
+</ol>
+
+
+<h3>Güvenlik Ayarları</h3>
+<p><strong>Denetim Masası</strong> > <strong>Kablosuz</strong> > <strong>Wi-Fi</strong> bölümü, kablosuz ağınızın güvenlik ayarlarını düzenleyen seçenekleri sunar.</p>
+
+
+<h4>Kablosuz güvenliğini ayarlamak için:</h4>
+<ol>
+
+<li><strong>Düzenle</strong>'ye tıklayın.</li>
+<li><strong>Güvenlik Ayarları</strong> açılan menüsünden aşağıda güvenlik protokollerinden birini seçin:</li>
+<ul>
+<li><strong>WEP:</strong> Kullanıcıların, kablosuz ağa erişmek için bir şifre girmelerini gerektiren ama düşük düzey koruma sağlayan bir temel güvenlik protokolü.</li>
+<li><strong>WPA/WPA2 Kişisel:</strong> Önerilen. Kullanıcıların, kablosuz ağa erişmek için bir şifre girmelerini gerektirir ve WEP'den daha güvenlidir.</li>
+<li><strong>WPA/WPA2 Kurumsal:</strong>* Harici bir kimlik doğrulama sunucusuyla kullanıcıların kimliklerinin doğrulanmasını gerektiren, kurumlar içi tasarlanmış bir güvenlik protokolü.</li>
+
+</ul>
+</ol>
+
+<h4>Wi-Fi Protected Setup özelliğini etkinleştirmek için:*</h4>
+<p>Wi-Fi Protected Setup , Wi-Fi Alliance tarafından kullanıcılar için kablosuz güvenlik ayarlarını basitleştirmek amacıyla sunulan bir standarttır. Wi-Fi ağınızı güvende tutmak için bir Düğme veya PIN numarası kullanabilirsiniz. Wi-Fi Protected Setup özelliğini etkinleştirmek için <strong>WPS</strong>'e tıklayın.</p>
+
+
+<h3>Misafir Ağ*</h3>
+<p>Ana kablosuz ağ oluşturmaya ek olarak, DiskStation ürününüz, bir misafir kablosuz ağ oluşturmayı da destekler. Misafir ağın ayarları, kullanıcıların erişimini kısıtlamak için sınırlandırılabilir. Bu, ziyaretçiler için bir kablosuz ağ sağlamak ama ana ağa erişmelerini engellemek isteyen kurumlar ya da diğer kuruluşlar için yararlıdır.</p>
+
+
+<h4>Misafir ağı etkinleştirmek için:</h4>
+
+<ol>
+<li><strong>Denetim Masası</strong> > <strong>Kablosuz</strong> > <strong>Wi-Fi</strong>'a gidin. </li>
+<li><strong>Misafir Ağı</strong> sekmesinde aşağıdaki ayarları yönetmek için <strong>Düzenle</strong>'ye tıklayın:</li>
+
+<ul>
+<li><strong>Ad (SSID):</strong> Kablosuz ağ için bir ad girin.</li>
+<li><strong>Göster/Gizle:</strong> Kablosuz ağın diğer aygıtlar tarafından görülebilir olup olmayacağını seçin.</li>
+<li><strong>Maks. bağlantı:</strong> Ağa kaç tane istemci aygıtın bağlanabileceğini seçin. En yüksek bağlantı ayarı 256'dır.</li>
+</ul>
+</ol>
+
+<h4>Misafir ağ güvenliğini ayarlamak için:</h4>
+<p><strong>Güvenlik Ayarları</strong> açılan menüsünden aşağıda güvenlik protokollerinden birini seçin:</p>
+<ul>
+<li><strong>WEP:</strong> Kullanıcıların, kablosuz ağa erişmek için bir şifre girmelerini gerektiren ama düşük düzey koruma sağlayan bir temel güvenlik protokolü.</li>
+<li><strong>WPA/WPA2 Kişisel:</strong> Önerilen. Kullanıcıların, kablosuz ağa erişmek için bir şifre girmelerini gerektirir ve WEP'den daha güvenlidir.</li>
+</ul>
+
+
+<h4>Bir misafir ağ programı ayarlamak için:</h4>
+<p>Bir misafir ağ programını etkinleştirmek, DiskStation ürününüzün misafir kablosuz ağının ne zaman etkin ve erişilebilir olduğunu kontrol etmenize olanak tanır.</p>
+
+<ol>
+<li><strong>Misafir ağ programını etkinleştir</strong> onay kutusunu işaretleyin.</li>
+<li><strong>Misafir programını ayarla</strong>'ya tıklayın.</li>
+<li>Program ekranında, misafir kablosuz ağın ne zaman etkin olacağını seçin.</li>
+</ol>
+
+<div class="section">
+<h4>Not:</h4>
+<p>Misafir kablosuz ağ, ana kablosuz ağın devre dışı olduğu zaman aralıklarında etkin olamaz.</p>
+</div>
+
+
+<h3>MAC Filtre Ayarı*</h3>
+<p>MAC filtresi, (<strong>Denetim Masası</strong> > <strong>Kablosuz</strong> bölümünde) belirli aygıtları engellemenize ya da aygıtlara erişim vermenize olanak tanıyacak şekilde, hangi MAC adreslerinin kablosuz ağa erişmesine izin verileceğini belirler. Bu özellik, diğer şifreleme ayarlarını değil yalnızca ağ erişimini kontrol eder.</p>
+
+
+<h4>MAC filtresi kuralları oluşturmak için:</h4>
+<ol>
+<li>Bir cihazın açıklamasını ve MAC adresini girin.</li>
+<li>Bir erişim politikası seçin:
+<ul>
+<li><strong>İzin verme:</strong> Belirtilen MAC adresinin kablosuz ağa erişmesini kısıtlar.</li>
+<li><strong>İzin ver:</strong> Belirtilen MAC adresinin kablosuz ağa erişmesine izin verir.</li>
+</ul> 
+</ol>
+
+
+
+<h3>Ebeveyn Denetimi*</h3>
+<p>Ebeveyn denetimi özelliği DiskStation'in yerel ağına bağlı olan her istemci cihazının internete ne zaman erişebileceğini kontrol etmenizi sağlar. Örneğin, çocuklarınızın bilgisayarları veya mobil cihazları DiskStation üzerinden internete bağlanıyorsa, belirli cihazlara ve zamanlara göre internet kullanımlarını kısıtlayacak şekilde ebeveyn denetimi ayarlarını yapılandırabilirsiniz.</p>
+
+<h4>Ebeveyn Denetimini etkinleştirmek için:</h4>
+<ol>
+<li><strong>Denetim Masası</strong> > <strong>Kablosuz</strong> > <strong>Ebeveyn Denetimi Ayarları</strong>'na gidin.</li>
+
+<li>Bir istemci cihazını eklemek için <strong>Ekle</strong> düğmesine tıklayın.</li>
+<ul>
+<li><strong>İstemci Adı:</strong> DiskStation sunucusuna bağlı olan bir cihaz seçin veya manuel olarak bir ad girin (ör. Louisa'nın dizüstü bilgisayarı).</li>
+<li><strong>MAC Adresi:</strong> İnternet kullanımını kontrol etmek istediğiniz cihazın MAC adresini girin.</li>
+<li><strong>Programı ayarla:</strong> Belirtilen cihazın ne zaman DiskStation yoluyla internete erişmesine izin verileceğini seçin.</li>
+</ul>
+</ol>
+
+<h3>Bağlantı Listesi*</h3>
+<p>Bağlantı listesi (<strong>Denetim Masası</strong> > <strong>Kablosuz</strong> bölümünde), DiskStation ile bağlantıda olan cihazlara ilişkin bilgileri görüntüler. Aygıtlar, burada doğrudan MAC filtresi listesine eklenebilir.</p>
+
+<h4>MAC filtresi listesine aygıtlar eklemek için:</h4>
+<ol>
+<li>MAC filtresine eklemek istediğiniz aygıtın yanındaki kutuyu işaretleyin.</li>
+<li><strong>MAC Filtresi Listesine Ekle</strong> öğesine tıklayın.</li>
+</ol>
+
+
+
+<p>____<br> * Sadece belirli modellerde vardır.<br>
+</body>
+</html>

@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Справка DSM — клиент SSO</title>
+<meta name="author" content="Synology Inc.">
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2>Клиент SSO</h2>
+
+<p>Если DiskStation присоединен к тому же домену или службе LDAP, что и сервер SSO, можно настроить DiskStation в качестве клиента SSO. Пользователи получат доступ к службам, которые предоставляет DiskStation, войдя на сервер SSO со своими учетными данными.</p>
+
+<p>Перед началом работу проверьте, что DiskStation к тому же домену или службе LDAP, как и сервер SSO.</p>
+
+<h4>Настройка DiskStation в качестве клиента SSO</h4>
+<ol>
+	<li>Выберите <strong>Панель управления</strong> > <strong>Домен/LDAP</strong> > <strong>Клиент SSO</strong>.</li>
+	<li>Установите флажок <strong>Включить службу SSO</strong>.</li>
+	<li>Укажите значение в поле <strong>URL-адрес сервера SSO</strong> и <strong>Код приложения</strong> под флажком.<div class="section"><h4>Примечание.</h4>
+	<p>Чтобы получить код приложения, используйте один из следующих методов.</p>
+	<ul>
+		<li><strong>Метод 1.</strong><ol>
+				<li>Войдите в систему DSM, которая работает, как сервер SSO.</li>
+				<li>Добавьте продукт DiskStation, который будет использоваться как клиентское приложение, в список приложений на сервере SSO. Подробное описание шагов можно найти в статье Справки, выбрав <strong>SSO Server</strong> > <strong>Список приложений</strong>.</li>
+				<li>Скопируйте и вставьте код приложения, выделенный SSO Server, добавив DiskStation на сервере SSO.</li>
+			</ol>
+		</li>
+		<li><strong>Метод 2.</strong><ol>
+				<li>Введя значение в поле <strong>URL-адрес сервера SSO</strong>*, нажмите <strong>Быстрая регистрация</strong> рядом с полем идентификатора приложения.</li>
+				<li>В поле регистрации введите учетные данные администратора сервера SSO в полях <strong>Администратор сервера</strong> и <strong>Пароль</strong>.</li>
+				<li>В поле <strong>Название приложения</strong> укажите название клиентского приложения.</li>
+				<li>Проверьте, что в поле <strong>URI перенаправления</strong> указана страница входа в DiskStation.</li>
+				<li>Нажмите кнопку <strong>OK</strong>, и DiskStation будет добавлен на сервере SSO (идентификатор приложения будет заполнен автоматически).</li>
+			</ol>
+		</li>
+	</ul>
+<p>______</p><p style="margin-left: 20px; text-indent: -10px;">* Необходимо ввести такой же URL-адрес сервера SSO (имя хоста или IP-адрес), что и при настройке каждого клиента SSO.</p>
+</div>
+	</li>
+	<li>Нажмите <strong>Применить</strong>, чтобы сохранить настройки.</li>
+</ol>
+
+<div class="section"><h4>Примечание.</h4>
+<ul>
+	<li>Если сервер SSO использует протокол HTTPS, возможна блокировка входа SSO браузерами, если по умолчанию используется доверенный сертификат.</li>
+	<li>Для доступа к серверу SSO по протоколу HTTP (если DiskStation, установленный как клиент SSO, использует подключение по HTTPS), пользователи должны настроить параметры браузеров, чтобы разрешить использование незащищенного подключения.</li>
+	<li>IP-адрес сервера SSO в формате IPv6 не поддерживается, если установлен флажок для параметра <strong>Повысить уровень безопасности с помощью HTTP-заголовка Content Security Policy (CSP)</strong> в <strong>Панель управления</strong> > <strong>Безопасность</strong> > <strong>Безопасность</strong> в DSM.</li>
+</ul>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+	<h2>RAID Group*</h2>
+	<p>Mit dem DiskStation können Sie mehrere Festplatten in einer als RAID Group bezeichneten Speichereinheit organisieren. Volumes oder iSCSI LUNs (Block-Ebene) können auf RAID Groups erstellt werden. Volumes oder iSCSI LUNs können erweitert werden, wenn eine RAID Group über Speicherplatz verfügt, der zugeordnet werden kann. Verschiedene RAID-Typen bieten unterschiedliche Ebenen des Datenschutzes. Eine allgemeine Liste über die von Ihrem DiskStation unterstützten RAID-Typen finden Sie unter <a href="general.html">Allgemein</a>.
+</p>
+
+<h4>RAID Group erstellen:</h4>
+	<ol>
+		<li>Klicken Sie auf die Schaltfläche <b>Erstellen</b>.</li>
+		<li>Wählen Sie eine der folgenden Optionen aus: 
+	  <ul>
+				<li>RAID Group für einzelnes Volume oder iSCSI LUN (Block-Ebene): Bietet bessere Leistung.</li>
+				<li>RAID Group für mehrere Volumes oder iSCSI LUNs (Block-Ebene): Bietet bessere Flexibilität bei der Verwaltung.</li>
+			</ul>
+		</li>
+		<li>Folgen Sie dem Assistenten, um den Vorgang abzuschließen.</li>
+	</ol>
+<div class="section">
+<h4>Hinweis: </h4>
+<ul>
+<li>Eine RAID Group muss aus Festplatten desselben Typs bestehen. Sie können weder SATA- und SAS-Festplatten noch SSDs und Festplatten gleichzeitig verwenden, um ein RAID zu erstellen.</li>
+<li>Eine RAID Group für mehrere Volumes oder iSCSI LUNs (Block-Ebene), die <b>RAID 5</b> oder <b>RAID 6</b> verwendet, kann mehrere <b>RAID Arrays</b> enthalten. Jedes RAID Array, das zur selben RAID Group gehört, ist vom selben RAID-Typ (z. B. RAID 5 oder RAID 6). Die maximale Anzahl der Festplatten pro RAID Array kann 6, 12 oder 24 sein. Sie können die maximale Anzahl der Festplatten beim Erstellen der RAID Group festlegen. Diese Anzahl kann später nicht mehr geändert werden. Wurde einem RAID Array die maximale Anzahl an Festplatten zugewiesen, kann die nächste zur RAID Group hinzugefügte Festplatte einem neuen RAID Array zugewiesen werden. Das neue RAID Array muss die minimale Anzahl an Festplatten enthalten, die für diesen bestimmten RAID-Typ benötigt werden (d. h. drei Festplatten für RAID 5 und vier Festplatten für RAID 6).
+</li>
+<li>Wenn Sie eine RAID Group auf einer bestimmten Festplatte erstellen möchten, die Festplatte aber unter <b>RAID Group-Erstellungsassistent</b> nicht erscheint, können Sie den Status der Festplatte unter <b>Festplattenverwaltung</b> überprüfen.</li>
+</ul>
+</div>
+
+	<h4>RAID Group entfernen:</h4>
+	<ol>
+		<li>Wählen Sie die RAID Group aus, die Sie entfernen möchten.</li>
+		<li>Klicken Sie auf die Schaltfläche <b>Entfernen</b> und folgen Sie dem Assistenten, um den Vorgang durchzuführen.</li>
+	</ol>
+
+<div class="section">
+<h4>Hinweis: </h4>
+<ul>
+<li>Volumes und iSCSI LUNs auf der RAID Gruppe werden gelöscht, wenn Sie die RAID Gruppe entfernen. Stellen Sie sicher, dass keine wichtigen Daten gelöscht werden.</li>
+</ul>
+</div>
+
+
+	<h4>RAID Group reparieren:</h4>
+	<p>Eine RAID Group, deren Status <b>Fehlerhaft</b> ist, kann repariert werden, wenn die RAID Group einer der folgenden Typen ist: RAID 1, RAID 5, RAID 6 und RAID 10. In der RAID Group vorhandene Daten werden nicht gelöscht.</p>
+	<p>Gehen Sie zum Reparieren einer RAID Group gemäß den folgenden Schritten vor:</p>
+	<ol>
+		<li>Schalten Sie den DiskStation aus. (Sie können diesen Schritt auslassen, wenn Ihr Modell Hot-Swapping unterstützt.)</li>
+		<li>Tauschen Sie die unter Disk-Informationen im RAID Group-Status angezeigte fehlerhafte Festplatte aus.</li>
+		<li>Klicken Sie auf <b>Verwalten</b>.</li>
+		<li>Wählen Sie <b>Reparieren</b> aus.</li>
+		<li>Folgen Sie dem Assistenten, um den Vorgang abzuschließen.</li>
+        </ol>
+        
+<div class="section">
+<h4>Hinweis:</h4>
+<ul>
+<li>Die Ersatzfestplatte muss größer oder genauso groß sein wie die kleinste Festplatte der RAID Group.</li>
+<li>Der Status der Ersatzfestplatte muss "Initialisiert" oder "Nicht initialisiert" sein.</li>
+</ul>
+</div>
+
+	<h4>RAID-Typ einer RAID Group ändern:</h4>
+	<p>Um den RAID-Typ einer RAID Group zu ändern, müssen verfügbare Festplatten auf Ihrem DiskStation installiert sein. Derzeit werden die folgenden RAID-Umstellungen unterstützt:</p>
+	<ul>
+		<li>Basic auf RAID 1 oder RAID 5</li>
+		<li>RAID 1 auf RAID 5</li>
+		<li>RAID 5 auf RAID 6</li>
+      <li>Fügen Sie dem RAID 1 eine Mirror-Disk hinzu</li>
+	</ul>
+	<p>Führen Sie die nachstehenden Schritte durch, um den RAID-Typ Ihrer RAID Group zu ändern:</p>
+	<ol>
+		<li>Wählen Sie die RAID Group aus, die Sie ändern möchten.</li>
+		<li>Klicken Sie auf <b>Verwalten</b>.</li>
+		<li>Wählen Sie <b>RAID-Typ ändern</b> aus.</li>
+		<li>Folgen Sie dem Assistenten, um den Vorgang abzuschließen.</li>
+        </ol>
+<div class="section">
+<h4>Hinweis: </h4>
+<ul>
+<li>Der Status einer RAID Group muss <b>Normal</b> sein, bevor ihr RAID-Typ geändert werden kann. Andernfalls kommt es zum Datenverlust. Wenn die RAID Group den Status <b>Fehlerhaft</b> hat, müssen Sie sie zuerst reparieren.</li>
+<li>Um den RAID-Typ einer RAID Group zu ändern, müssen genügend Festplatten auf Ihrem DiskStation installiert und die Größe der neuen Festplatte muss größer als die kleinste Festplatte in der RAID Group sein.</li>
+<li>Der Status der neuen Festplatte muss „initialisiert“ oder „nicht initialisiert“ sein.</li>
+<li>Der RAID Typ einer RAID Group mit mehreren RAID Arrays kann nicht geändert werden.</li>
+</ul>
+</div>
+
+	<h4>Größe einer RAID Group erweitern:</h4>
+	<p>Sie können die Größe einer RAID Group erweitern, indem Sie vorhandene Festplatten durch größere ersetzen oder Festplatten hinzufügen.</p>
+
+<div class="section">
+<h4>Hinweis: </h4>
+<ul>
+  <li>Um eine RAID Group mit Festplatten mit 3 TB oder mehr zu erweitern, muss Ihre RAID Group mit DSM 3.0 oder später erstellt worden sein.
+</ul>
+</div>
+
+	<h4>RAID Group durch Ersetzen vorhandener Festplatten durch größere erweitern:</h4>
+	<p>Sie können eine RAID Group erweitern, indem Sie vorhandene Festplatten in den folgenden RAID-Typen durch größere ersetzen: RAID 1, RAID 5 und RAID 6. Zusammenhängende Volumes oder iSCSI LUN in RAID Group für einzelne Volumes oder iSCSI LUNs werden automatisch erweitert.  Führen Sie die folgenden Schritte durch:</p>
+	<ol>
+    <li>Schalten Sie den DiskStation aus. Sie können diesen Schritt auslassen, wenn Ihr Modell Hot-Swapping unterstützt.</li>
+		<li>Tauschen Sie eine Festplatte gegen eine größere aus.</li>
+		<li>Schalten Sie den DiskStation ein und reparieren Sie die RAID Group.</li>
+		<li>Wiederholen Sie die Schritte 1 bis 3, bis alle Festplatten durch größere ersetzt sind.</li>
+		<li>Das System erweitert die RAID Group automatisch.</li>
+	</ol>
+
+<div class="section">
+<h4>Hinweis: </h4>
+<ul>
+<li>Alle Dienste des Speicher-Managers werden bei der Erweiterung vorübergehend angehalten.</li> 
+<li>Sie können die Festplatte nur erweitern, wenn die RAID Group den Status <b>Normal</b> hat; andernfalls gehen Daten verloren. Wenn die RAID Group den Status <b>Fehlerhaft</b> hat, müssen Sie sie zuerst reparieren.</li>
+	</ul>
+</div>
+
+	<h4>RAID Group durch Hinzufügen von Festplatten erweitern:</h4>
+	<p>Diese Funktion gilt für die RAID-Typen JBOD, RAID 5 und RAID 6. Gegen Sie wie folgt vor:</p>
+	<ol>
+		<li>Wählen Sie die RAID Group aus, die Sie erweitern möchten.</li>
+		<li>Klicken Sie auf <b>Verwalten</b>.</li>
+		<li>Wählen Sie <b>Festplatte hinzufügen</b> aus.</li>
+		<li>Folgen Sie dem Assistenten, um die Installation abzuschließen.</li>
+</ol>
+<div class="section">
+<h4>Hinweis: </h4>
+<ul>
+		<li>Der RAID Group muss den Status <b>Normal</b> haben.</li>
+		<li>Bei den RAID Group-Typen RAID 5 und RAID 6 muss die Festplatte größer sein als die kleinste Festplatte der RAID Group.</li>
+		<li>Der Status der ausgewählten Festplatte muss „Initialisiert“ oder „Nicht initialisiert“ sein.</li>
+	</ul>
+    </div>
+
+	<h4>RAID Group-Beschreibung bearbeiten:</h4>
+	<ol>
+		<li>Wählen Sie die RAID Group aus, die Sie bearbeiten möchten.</li>
+		<li>Klicken Sie auf <b>Verwalten</b>.</li>
+		<li>Wählen Sie <b>Beschreibung bearbeiten</b> aus.</li>
+		<li>Bearbeiten Sie die Beschreibung und klicken Sie auf <b>OK</b>, um die Änderungen zu speichern.</li>
+	</ol>
+	<h3>RAID-Bereinigung</h3>
+    <p>Die RAID-Bereinigung ist eine Wartungsfunktion für Daten, die RAID Groups überprüft und erkannte Dateninkonsistenzen repariert. Diese Funktion kann bei RAID Groups des Typs RAID 5 oder RAID 6 verwendet werden. </p>
+    <p>Wir empfehlen eine regelmäßige Ausführung der RAID-Bereinigung, um die Datenkonsistenz zu erhalten und den Verlust wichtiger Daten im Fall eines Festplattendefekts zu vermeiden.</p>
+    <h4>RAID-Bereinigung durchführen:</h4>
+    <ol>
+      <li>Wählen Sie die RAID Group aus, in der die RAID-Bereinigung ausgeführt werden soll.</li>
+      <li>Klicken Sie auf <strong>Verwalten</strong>.</li>
+      <li>Wählen Sie <strong>RAID-Bereinigung</strong> aus.</li>
+    </ol>
+    <div class="section">
+      <h4>Hinweis:</h4>
+      <ul>
+        <li>Die RAID-Bereinigung kann nur ausgeführt werden, wenn der Status der RAID Group <strong>Normal</strong> ist.</li>
+        <li>Fahren Sie das System nicht herunter, bevor die RAID-Bereinigung abgeschlossen ist. Wenn das System vorher heruntergefahren wird, muss die RAID-Bereinigung neu gestartet werden.</li>
+      </ul>
+    </div>
+    
+<p>____<br />*Nur bei bestimmten Modellen verfügbar.</p>    
+</body>
+</html>

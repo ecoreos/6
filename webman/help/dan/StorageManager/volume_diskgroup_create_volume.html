@@ -1,0 +1,77 @@
+ <!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Opret en diskenhed - Synology DSM - Hjælp</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="This article walks you through the steps to create a volume on DiskStation using Storage Manager.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script> <script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Opret en diskenhed</h2>
+
+<p>Denne artikel forklarer, hvordan du opretter en diskenhed på din DiskStation. Du kan vælge en af følgende metoder ved oprettelse af en ny diskenhed:</p>
+
+<ul>
+  <li><b>Kvik:</b> Dette er den bedste metode for begyndere. Vælg denne metode, hvis du automatisk vil optimere lagerkapaciteten og ydelsen uden at tænke på tekniske aspekter, f.eks. RAID-niveauer. </li>
+
+<li><b>Tilpasset</b>: For avancerede brugere, som vil kontrollere de finere aspekter af diskenhedsoprettelse, f.eks. RAID-typer og kapacitetsallokering. Denne mulighed understøtter forskellige RAID-typer, så du kan oprette enkelt eller flere diskenhed(er), og der er valgmuligheder til at allokere specifikke kapacitetsmængder til hver diskenhed (kun når der oprettes flere diskenheder på RAID).
+</li>
+</ul>
+
+<div class="section">
+<h4>Enkel eller flere diskenheder på RAID?</h4>
+<p>Du kan vælge en af følgende muligheder ved oprettelse af en diskenhed med tilpasset tilstand:</p>
+<ul>
+  <li><b>Enkelt diskenhed på RAID</b>
+    <ul>
+      <li>Opretter en diskenhed med hele den tilgængelige kapacitet for de valgte harddiske.</li>
+      <li>Giver højere hastighed og bedre ydelse.</li>
+      <li>Understøtter forskellige RAID-typer.</li>
+    </ul>
+  </li>
+  <li><b>Flere diskenheder på RAID</b>
+    <ul>
+      <li>Sætter dig i stand til at oprette flere diskenheder i en diskgruppe.</li>
+      <li>Understøtter allokering af bestemt kapacitetsmængde på hver diskenhed.</li>
+      <li>Giver bedre lagerstyringsfleksibilitet.</li>
+      <li>Understøtter forskellige RAID-typer.</li>
+    </ul>
+  </li>
+</ul>
+</div>
+
+
+<div class="section">
+<h4>Før du begynder:</h4>
+<ul>
+<li>Sørg for, at der ikke er vigtige data på harddiskene. Alle eksisterende data bliver slettet under oprettelsesprocessen.</li>
+<li>Gå til siden <b>HDD/SSD</b>, og sørg for, at status for hver harddisk er <b>Normal</b> eller <strong>Ikke initialiseret</strong>.</li>
+</ul>
+</div>
+
+<div class="section enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64">
+<h4>Bemærk:</h4>
+<ul>
+<li>Mindste størrelse til en Btrfs-diskenhed er 10 GB.</li>
+<li>Btrfs-diskenheder vil reservere 4 % af pladsen til metadata.</li>
+</ul>
+</div>
+
+<h4>Sådan opretter du en diskenhed:</h4>
+<ol>
+<li>Åbn <b>Lagerstyring</b>.</li>
+<img src="about:blank" class="help_image"/>
+<li>Gå til <b>Diskenhed</b>, og klik på <b>Opret</b>.</li>
+<img src="about:blank" class="help_image"/>
+<li>Du ser oprettelsesguiden til diskenhed Vælg <strong>Kvik</strong> eller <strong>Tilpasset</strong>, afhængigt af behovene. Følg trinnene i guiden for at afslutte.</li>
+<img src="about:blank" class="help_image"/>
+</ol>
+
+</body>
+</html>

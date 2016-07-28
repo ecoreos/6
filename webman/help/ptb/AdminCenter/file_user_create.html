@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Cria&ccedil;&atilde;o de Usu&aacute;rios - Ajuda do Synology DSM</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="This article shows you how to create users in DSM.">
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2><a name="leaf_user"></a>Criar usu&aacute;rio</h2>
+<p>Voc&ecirc; pode criar e gerenciar v&aacute;rias contas de usu&aacute;rio em seu DiskStation.</p>
+<h4 class="disable-eds14">Para criar um usu&aacute;rio:</h4>
+<ol class="disable-eds14">
+<li>V&aacute; at&eacute; <strong>Painel de controle</strong> &gt; <strong>﻿Usu&aacute;rio</strong>.</li>
+<img src="about:blank" class="help_image"/>
+<li>Clique no bot&atilde;o <b>Criar</b> e depois em Criar usu&aacute;rio. Essa a&ccedil;&atilde;o abre o <b>Assistente de cria&ccedil;&atilde;o de usu&aacute;rio</b>.</li>
+<img src="about:blank" class="help_image"/>
+<li>Na p&aacute;gina <strong>Informa&ccedil;&otilde;es do usu&aacute;rio</strong>, especifique as seguintes op&ccedil;&otilde;es:
+<ul>
+<li><strong>Nome:</strong> Digite um nome para o usu&aacute;rio. Essa se&ccedil;&atilde;o &eacute; obrigat&oacute;ria.</li>
+<li><strong>Descri&ccedil;&atilde;o:</strong> Digite uma descri&ccedil;&atilde;o breve para o usu&aacute;rio.</li>
+<li><strong>E-mail:</strong> Digite um endere&ccedil;o de e-mail para o usu&aacute;rio. As notifica&ccedil;&otilde;es do sistema, como mensagens de redefini&ccedil;&atilde;o da senha, s&atilde;o enviadas ao endere&ccedil;o especificado aqui.</li>
+<li><strong>Enviar um e-mail de notifica&ccedil;&atilde;o para o usu&aacute;rio rec&eacute;m criado:</strong> Se essa op&ccedil;&atilde;o estiver ativada, o sistema ir&aacute; enviar uma mensagem para o usu&aacute;rio avisando sobre a nova conta. Essa op&ccedil;&atilde;o exige a ativa&ccedil;&atilde;o das notifica&ccedil;&otilde;es por e-mail do sistema em <b>Menu principal</b> &gt; <b>Painel de controle</b> &gt; <b>Notifica&ccedil;&atilde;o</b> &gt; <strong>E-mail</strong>. Por padr&atilde;o a senha do usu&aacute;rio n&atilde;o &eacute; exibida na mensagem de notifica&ccedil;&atilde;o. Entretanto, se voc&ecirc; desejar exibir a senha na mensagem de notifica&ccedil;&atilde;o, marque a caixa <strong>Exibir senha de usu&aacute;rio no e-mail de notifica&ccedil;&atilde;o</strong>.</li>
+<li><strong>N&atilde;o permitir que o usu&aacute;rio altere a senha da conta:</strong> Se essa op&ccedil;&atilde;o estiver ativada, o usu&aacute;rio n&atilde;o poder&aacute; alterar sua senha usada para o login no DSM.</li></ul>
+</li>
+<li>Na p&aacute;gina <strong>Grupo</strong> &gt; <strong>Criar</strong> &gt; <strong>Assistente de cria&ccedil;&atilde;o de grupo</strong>, especifique o grupo ao qual o novo usu&aacute;rio deve pertencer (por exemplo, usu&aacute;rios, administrators, etc.). </li>
+<li>Na p&aacute;gina <strong>Atribuir permiss&otilde;es de pastas compartilhadas</strong>, escolha as pastas compartilhadas que o novo usu&aacute;rio pode acessar, modificando seus privil&eacute;gios de acesso. A prioridade dos privil&eacute;gios &eacute; a seguinte: <strong>Nenhum acesso</strong> &gt; <strong>Leitura/Grava&ccedil;&atilde;o</strong> &gt; <strong>Somente leitura</strong>.
+  
+  <ul>
+    <li><strong>Visualizar:</strong> Esta coluna exibe os privil&eacute;gios reais de acesso da pasta compartilhada do usu&aacute;rio de acordo com os grupos e configura&ccedil;&otilde;es atuais aos quais o usu&aacute;rio pertence.</li>
+  <li><strong>Permiss&otilde;es de grupo:</strong> Esta coluna exibe os privil&eacute;gios de acesso da pasta compartilhada atribu&iacute;dos de acordo com os grupos de usu&aacute;rios aos quais o usu&aacute;rio pertence.</li></ul>
+  <a name="userquota"></a>
+  <li class="disable-dockerx64">Na p&aacute;gina <strong>Configura&ccedil;&atilde;o da cota do usu&aacute;rio</strong>, voc&ecirc; pode controlar o espa&ccedil;o de armazenamento que pode ser usado pelo novo usu&aacute;rio. Para restringir a quantidade de espa&ccedil;o que o usu&aacute;rio pode usar, marque a caixa em <strong>Ativar cota</strong> para cada volume<span style="display: inline;" class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64">/pasta compartilhada</span>. Em seguida, insira a quantidade m&aacute;xima de espa&ccedil;o que pode ser usado, no campo <strong>Cota</strong> (por exemplo, 10 GB).</li>
+<li>Na p&aacute;gina <strong>Atribuir permiss&otilde;es de aplicativos</strong>, voc&ecirc; pode controlar quantos servi&ccedil;os o usu&aacute;rio pode acessar.</li>
+<li>Na p&aacute;gina <strong>Configura&ccedil;&atilde;o do Limite de Velocidade de Grupo</strong>, voc&ecirc; pode habilitar um limite de velocidade para diferentes servi&ccedil;os (por exemplo: File Station, FTP, etc.), para restringir a quantidade de largura de banda consumida pelo usu&aacute;rio ao transferir arquivos. Para cada servi&ccedil;o, voc&ecirc; pode selecionar uma das seguintes op&ccedil;&otilde;es:
+  <ul>
+  <li><strong>Nenhum:</strong> As configura&ccedil;&otilde;es do limite de velocidade ser&atilde;o iguais &agrave;s do grupo ao qual o usu&aacute;rio pertence.</li>
+  <li><strong>Constante:</strong> Um limite de velocidade fixo e constante ser&aacute; aplicado. Voc&ecirc; pode especificar os limites de velocidade de upload e download nos campos &agrave; esquerda.</li>
+  <li><strong>Vari&aacute;vel:</strong> Dois limites de velocidade diferentes podem ser especificados e aplicados ao usu&aacute;rio, de acordo com uma programa&ccedil;&atilde;o. Clique no bot&atilde;o <strong>Personalizar</strong> para modificar as configura&ccedil;&otilde;es de limite de velocidade e a programa&ccedil;&atilde;o.</li></ul>
+<li>Depois de confirmar as configura&ccedil;&otilde;es, clique em <b>Aplicar</b> para encerrar.</li>
+</ol>
+<h4 class="enable-eds14">Para criar um usu&aacute;rio:</h4>
+<ol class="enable-eds14">
+<li>V&aacute; at&eacute; <strong>Painel de controle</strong> &gt; <strong>﻿Usu&aacute;rio</strong>.</li>
+<img src="about:blank" class="help_image"/>
+<li>Clique no bot&atilde;o <b>Criar</b> e depois em Criar usu&aacute;rio. Essa a&ccedil;&atilde;o abre o <b>Assistente de cria&ccedil;&atilde;o de usu&aacute;rio</b>.</li>
+<img src="about:blank" class="help_image"/>
+<li>Na p&aacute;gina <strong>Informa&ccedil;&otilde;es do usu&aacute;rio</strong>, especifique as seguintes op&ccedil;&otilde;es:
+<ul>
+<li><strong>Nome:</strong> Digite um nome para o usu&aacute;rio. Essa se&ccedil;&atilde;o &eacute; obrigat&oacute;ria.</li>
+<li><strong>Descri&ccedil;&atilde;o:</strong> Digite uma descri&ccedil;&atilde;o breve para o usu&aacute;rio.</li>
+<li><strong>E-mail:</strong> Digite um endere&ccedil;o de e-mail para o usu&aacute;rio. As notifica&ccedil;&otilde;es do sistema, como mensagens de redefini&ccedil;&atilde;o da senha, s&atilde;o enviadas ao endere&ccedil;o especificado aqui.</li>
+<li><strong>Enviar um e-mail de notifica&ccedil;&atilde;o para o usu&aacute;rio rec&eacute;m criado:</strong> Se essa op&ccedil;&atilde;o estiver ativada, o sistema ir&aacute; enviar uma mensagem para o usu&aacute;rio avisando sobre a nova conta. Essa op&ccedil;&atilde;o exige a ativa&ccedil;&atilde;o das notifica&ccedil;&otilde;es por e-mail do sistema em <b>Menu principal</b> &gt; <b>Painel de controle</b> &gt; <b>Notifica&ccedil;&atilde;o</b> &gt; <strong>E-mail</strong>. Por padr&atilde;o a senha do usu&aacute;rio n&atilde;o &eacute; exibida na mensagem de notifica&ccedil;&atilde;o. Entretanto, se voc&ecirc; desejar exibir a senha na mensagem de notifica&ccedil;&atilde;o, marque a caixa <strong>Exibir senha de usu&aacute;rio no e-mail de notifica&ccedil;&atilde;o</strong>.</li>
+<li><strong>N&atilde;o permitir que o usu&aacute;rio altere a senha da conta:</strong> Se essa op&ccedil;&atilde;o estiver ativada, o usu&aacute;rio n&atilde;o poder&aacute; alterar sua senha usada para o login no DSM.</li></ul>
+<li>Na p&aacute;gina <strong>Grupo</strong> &gt; <strong>Criar</strong> &gt; <strong>Assistente de cria&ccedil;&atilde;o de grupo</strong>, especifique o grupo ao qual o novo usu&aacute;rio deve pertencer (por exemplo, usu&aacute;rios, administrators, etc.). </li>
+<li>Na p&aacute;gina <strong>Atribuir permiss&otilde;es de pastas compartilhadas</strong>, escolha as pastas compartilhadas que o novo usu&aacute;rio pode acessar, modificando seus privil&eacute;gios de acesso. A prioridade dos privil&eacute;gios &eacute; a seguinte: <strong>Nenhum acesso</strong> &gt; <strong>Leitura/Grava&ccedil;&atilde;o</strong> &gt; <strong>Somente leitura</strong>.</li>  
+  <ul>
+    <li><strong>Visualizar:</strong> Esta coluna exibe os privil&eacute;gios reais de acesso da pasta compartilhada do usu&aacute;rio de acordo com os grupos e configura&ccedil;&otilde;es atuais aos quais o usu&aacute;rio pertence.</li>
+  <li><strong>Permiss&otilde;es de grupo:</strong> Esta coluna exibe os privil&eacute;gios de acesso da pasta compartilhada atribu&iacute;dos de acordo com os grupos de usu&aacute;rios aos quais o usu&aacute;rio pertence.</li></ul>
+<li>Na p&aacute;gina <strong>Atribuir permiss&otilde;es de aplicativos</strong>, voc&ecirc; pode controlar quantos servi&ccedil;os o usu&aacute;rio pode acessar.</li>
+<li>Na p&aacute;gina <strong>Configura&ccedil;&atilde;o do Limite de Velocidade de Grupo</strong>, voc&ecirc; pode habilitar um limite de velocidade para diferentes servi&ccedil;os (por exemplo: File Station, FTP, etc.), para restringir a quantidade de largura de banda consumida pelo usu&aacute;rio ao transferir arquivos. Para cada servi&ccedil;o, voc&ecirc; pode selecionar uma das seguintes op&ccedil;&otilde;es:</li>
+  <ul>
+  <li><strong>Nenhum:</strong> As configura&ccedil;&otilde;es do limite de velocidade ser&atilde;o iguais &agrave;s do grupo ao qual o usu&aacute;rio pertence.</li>
+  <li><strong>Constante:</strong> Um limite de velocidade fixo e constante ser&aacute; aplicado. Voc&ecirc; pode especificar os limites de velocidade de upload e download nos campos &agrave; esquerda.</li>
+  <li><strong>Vari&aacute;vel:</strong> Dois limites de velocidade diferentes podem ser especificados e aplicados ao usu&aacute;rio, de acordo com uma programa&ccedil;&atilde;o. Clique no bot&atilde;o <strong>Personalizar</strong> para modificar as configura&ccedil;&otilde;es de limite de velocidade e a programa&ccedil;&atilde;o.</li></ul>
+</li>
+</ul>
+<li>Depois de confirmar as configura&ccedil;&otilde;es, clique em <b>Aplicar</b> para encerrar.</li>
+</ol>
+ 
+<div class="section">
+<h4>Limita&ccedil;&atilde;o do nome de usu&aacute;rio:</h4>
+<ul>
+<li>O nome de usu&aacute;rio diferencia mai&uacute;sculas e min&uacute;sculas e deve ter de 1 a 64 caracteres Unicode, mas n&atilde;o pode conter os s&iacute;mbolos a seguir:<br> ! &quot; # $ % &amp; ' ( ) * + , / : ; &lt; = &gt; ? @ [ ] \ ^ ` { } | ~</li>
+<li>O primeiro caractere n&atilde;o pode ser um sinal de menos nem um espa&ccedil;o e o &uacute;ltimo caractere n&atilde;o pode ser um espa&ccedil;o.</li>
+<li>Os seguintes nomes de usu&aacute;rio s&atilde;o reservados para uso do sistema: mailer-daemon, postmaster.</li>
+<li>A descri&ccedil;&atilde;o do usu&aacute;rio pode incluir at&eacute; 64 caracteres Unicode vis&iacute;veis.</li>
+</ul>
+<h4>Limita&ccedil;&atilde;o da senha:</h4>
+<ul>
+<li>A senha diferencia mai&uacute;sculas de min&uacute;sculas e &eacute; limitada at&eacute; 127 caracteres vis&iacute;veis, inclusive letras, n&uacute;meros, sinais e espa&ccedil;os.</li>
+</ul>
+<h4 class="disable-eds14 disable-dockerx64">Limita&ccedil;&atilde;o de cota:</h4>
+<ul class="disable-eds14 disable-dockerx64">
+<li>A cota de uso de armazenamento m&aacute;xima que pode ser inserida para cada usu&aacute;rio &eacute; de aproximadamente 4 TB (4095 GB).</li>
+</ul>
+</div>
+</body>
+</html>

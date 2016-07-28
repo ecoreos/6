@@ -1,0 +1,195 @@
+
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Gestione delle opzioni di File Station - Guida Synology DSM</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="Learn how to customize File Station settings related to file management, shared links, and security.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Gestione delle impostazioni di File Station</h2>
+<p>Per gestire le impostazioni di <strong>File Station</strong>, aprire File Station e fare clic sul pulsante <b>Impostazioni</b>.</p>
+
+<h3>Generale</h3>
+<p>
+Da qui è possibile abilitare i registri File Station per registrare le attività di tutti gli utenti. Le attività dell'utente includono: <b>Crea cartella</b>, <b>Carica</b>, <b>Download</b>, <b>Elimina</b>, <b>Rinomina</b>, <b>Sposta</b>, <b>Copia</b> e <b>Insieme proprietà</b>.
+</p>
+<h4>Per attivare il registro File Station:</h4>
+<ol>
+<li>Per registrare le attività di tutti gli utenti, selezionare <b>Attiva registro File Station</b>.
+</li>
+<li>
+Fare clic su <b>OK</b>.
+</li>
+</ol>
+<h4>Per visualizzare il registro File Station:</h4>
+<ol>
+<li>
+Fare clic su <b>Visualizza registri</b> che riporta al <strong>Log Center</strong>.</li>
+<li>
+Fare clic sulla scheda <b>Trasferimento file</b>.
+</li>
+</ol>
+
+<h4>Per sovrascrivere automaticamente i file utilizzando il caricamento per trascinamento o i collegamenti da tastiera:</h4>
+<p>Selezionare <strong>Sovrascrive sempre i file quando vengono trascinati sul browser web o incollati con i collegamenti da tastiera</strong> per sovrascrivere automaticamente i file con lo stesso nome quando i file vengono trascinati dal desktop del computer al browser web, o i file vengono incollati in File Station utilizzando i collegamenti da tastiera.</p>
+
+
+<h4>Per abilitare la funzione intelligente di trascinamento e rilascio:</h4>
+<p>Quando si trascinano e rilasciano file in File Station, questa funzione determinerà automaticamente se il trasferimento è un'azione di copia o di spostamento.</p>
+
+<ol>
+<li>Selezionare <strong>Abilitare un trascina e rilascia intelligente</strong>.</li>
+<li>Selezionare un'azione da eseguire sempre nel caso in cui un altro utente, contemporaneamente, trasferisce file con lo stesso nome nella stessa posizione:
+  <ul>
+<li><strong>Sovrascrivi</strong>: i file trasferiti sovrascriveranno i file con lo stesso nome.</li>
+<li><strong>Ignora</strong>: i file trasferiti saranno ignorati e non sovrascriveranno i file con lo stesso nome.</li>
+</ul>
+</li>
+<li>Fare clic su <strong>OK</strong>.</li>
+</ol>
+
+<div class="section">
+<h4>Nota:</h4>
+<p>per modificare l'azione di copia o di spostamento determinata con il trascinamento e rilascio intelligente, è possibile applicare i seguenti collegamenti rapidi a seconda delle specifiche esigenze:</p>
+<ul>
+<li>Per passare a un'azione di copia: Premere Ctrl durante il trascinamento e il rilascio.</li>
+<li>Per passare a un'azione di spostamento: Premere Maiusc durante il trascinamento e il rilascio.</li>
+</ul>
+</div>
+
+
+<h4>Per scorrere e gestire i file dal computer locale con File Station:</h4>
+<ol>
+<li>
+Selezionare <b>Scorri file dal computer locale con File Station</b>.
+</li>
+<li>
+Fare clic su <b>OK</b>.
+</li>
+</ol>
+
+
+<h4>Condividere l'elenco utenti DSM con utenti non-admin:</h4>
+<p>Quest'opzione consente a utenti non-admin di accedere all'elenco completo di utenti DSM per ricercare i file di specifici utenti/gruppi DSM o per condividere link di file con altri utenti DSM.</p>
+
+<ol>
+<li>Selezionare <strong>Condividere l'elenco utenti DSM con utenti non-admin</strong>.</li>
+<li>Fare clic su <strong>OK</strong>.</li>
+</ol>
+
+
+<h3>Applicazione di autorizzazioni UNIX predefinite</h3>
+<p>Fare clic su <strong>Impostazioni avanzate</strong> e mettere il segno di spunta sull'opzione per applicare le autorizzazioni UNIX predefinite quando si caricano o creano file e cartelle. Le autorizzazioni applicate sono le stesse applicate dal comando UNIX <strong>umask</strong>. Quando questa opzione è abilitata, le autorizzazioni UNIX sono 644 per i file e 755 per le cartelle. Quando questa opzione è disabilitata, le autorizzazioni UNIX sono 666 per i file e 777 per le cartelle. Il valore unmask predefinito è 022.</p>
+<div class="section">
+<h4>Nota:</h4>
+<ul>
+  <li>per le cartelle condivise abilitate per Windows ACL (tutte le condivisioni escluse le &quot;foto&quot; e le condivisioni sulle unità esterne), eseguire il comando <strong>chmod</strong> sul client Linux o FTP per cambiare la cartella e i tipi di permesso dei file da Windows ACL a UNIX.</li>
+  <li>l'abilitazione di questa funzione può causare problemi di autorizzazioni non coerenti tra diversi protocolli. Per evitare incoerenze, consigliamo di lasciare questa opzione disabilitata.</li>
+</ul>
+</div>
+<h3 class="disable-eds14">Montaggio/Connessioni</h3>
+<p class="disable-eds14">
+Per impostazione predefinita, tutti gli utenti possono montare cartelle remote e unità virtuali. Qui è possibile limitare l'accesso alla gestione della cartella remota o dell'unità virtuale ai soli amministratori.
+</p>
+
+<div class="disable-eds14 section">
+<h4>Nota:</h4>
+<p>utenti non-amministratori possono montare le cartelle remote solo all'interno della rispettiva cartella <b>home</b>.</p>
+</div>
+<h4 class="disable-eds14">Per consentire a utenti differenti di montare cartelle remote o unità virtuali:</h4>
+<ol class="disable-eds14">
+<li>
+Scegliere <b>Tutti gli utenti</b> o <b>Administrators</b> nella sezione <b>Cartella remota</b> o <b>Unità virtuale</b>.
+</li>
+<li>
+Fare clic su <b>OK</b>.
+</li>
+</ol>
+<h4 class="disable-eds14">Per consentire ai seguenti utenti di montare i server e i servizi cloud:</h4>
+<ol class="disable-eds14">
+  <li>Scegliere <b>Tutti gli utenti</b>, <b>Administrators</b> o <strong>Utente specifico</strong>. </li>
+  <li>Scegliendo <strong>Utente specifico</strong> verrà visualizzata una finestra nella quale sarà possibile configurare i permessi di montaggio per diversi utenti. Per abilitare l'accesso per un utente specifico, verificare che la casella sia selezionata nella colonna <strong>Abilitato</strong>. Per disabilitare l'accesso per un utente specifico, verificare che la casella sia deselezionata nella colonna <strong>Abilitato</strong> Al termine, fare clic su <strong>OK</strong> per chiudere la finestra.</li>
+  <div class="section">
+    <h4>Nota:</h4>
+    <ul>
+      <li>gli utenti che appartengono al gruppo <strong>administrators</strong> possono utilizzare questa funzione, ma non possono apportare modifiche. Gli utenti che effettuano l'accesso usando <strong>guest</strong> non possono né utilizzare questa funzione né apportare modifiche. I permessi per tutti gli altri utenti possono essere impostati qui.</li>
+    </ul>
+  </div>
+  <li>Fare clic su <strong>OK</strong>.</li>
+</ol>
+<h3>Collegamenti condivisi</h3>
+<p>
+Per impostazione predefinita, tutti gli utenti possono condividere collegamenti ai file. Da qui è possibile limitare l'accesso alla gestione dei collegamenti condivisi ai soli amministratori.
+</p>
+<h4>Per consentire a diversi utenti di condividere i link dei file:</h4>
+<ol>
+<li>
+Scegliere <b>Tutti gli utenti</b>, <b>Amministratori</b> o <strong>Utenti specifici</strong>.
+</li>
+<li>
+Fare clic su <b>OK</b>.
+</li>
+</ol>
+
+<h4>Per aprire i file HTML come testo semplice:</h4>
+
+<ol>
+<li>Selezionare la casella <strong>Apri sempre i file HTML usando il formato testo semplice</strong>. Se questa opzione è abilitata, i file HTML (ad es. i file HTM, HTML, JSP, XHTML) sono visualizzati usando il formato testo semplice quando gli utenti li aprono mediante un link di condivisione di file. Questa opzione aiuta a prevenire che parti malintenzionate possano prendere il controllo delle sessioni di accesso dell'utente usando script nascosti nei file HTML.</li>
+<li>Fare clic su <strong>OK</strong>.</li>
+</ol>
+
+<h3>Limite velocità</h3>
+<p>L'abilitazione del limite di velocità consente di controllare la larghezza di banda massima utilizzabile per utenti e gruppi specifici durante il trasferimento di dati tramite File Station.</p>
+
+
+<h4>Per abilitare il limite di velocità:</h4>
+<ol>
+  <li>Spuntare la casella contrassegnata <b>Abilita limite velocità</b> o <strong>Abilita il limite di velocità in base a una pianificazione</strong> se si desidera implementare un limite di velocità solo in orario specifico. Si tratta di un'impostazione del server e annullerà le impostazioni dei singoli utenti e gruppi. Scegliendo <strong>Nessun limite di velocità</strong> si disabilita l'impostazione del limite di velocità di tutti gli utenti e gruppi.</li>
+  <li>Fare clic su <strong>Impostazioni limite velocità</strong> per modificare le impostazioni per i singoli utenti o gruppi. Per ogni utente e gruppo, è possibile selezionare una delle seguenti:  </li>
+    <ul>
+      <li><strong>Applica impostazioni gruppo:</strong> le impostazioni del limite di velocità saranno le stesse del gruppo a cui l'utente appartiene. </li>
+      <li><strong>Nessun limite di velocità:</strong> nessun limite di velocità sarà applicato quando i membri del gruppo trasferiscono file con il servizio.</li>
+      <li><strong>Costante:</strong> un limite di velocità costante fisso sarà applicato all'utente o ai membri del gruppo. I limiti di velocità di upload e download possono essere specificati nei campi a sinistra.</li>
+      <li><strong>Variabile:</strong> due diversi limiti di velocità possono essere specificati e applicati all'utente o ai membri del gruppo in base alla programmazione. Fare clic sul pulsante <strong>Personalizza</strong> per modificare le impostazioni del limite di velocità e impostare una programmazione.</li>
+    </ul>
+
+  <li>Fare clic su <b>Applica</b>.</li>
+</ol>
+<div class="section">
+  <h4>Nota:</h4>
+  <ul>
+    <li>Per ulteriori informazioni sulle dinamiche dei limiti di velocità gruppo, consultare <a href="../AdminCenter/file_group_edit.html">qui</a>.</li>
+    <li>Quando viene impostato il limite di velocità per un utente, la sezione <strong>Risultato</strong> visualizza il limite di velocità attuale dell'utente in base alle sue impostazioni individuali e di gruppo. Ad esempio, se l'utente "Achille" ha un limite di download individuale di 100 KB/s, ma appartiene a un gruppo utente con un limite di download di 500 KB/s, la sezione <strong>Risultati</strong> mostrerà "0/500".</li>
+  </ul>
+</div>
+
+
+
+<h3>Sicurezza</h3>
+
+<p>Qui è possibile trovare le seguenti impostazioni di sicurezza.</p>
+
+<h4>Per aprire i file HTML come testo semplice:</h4>
+
+<ol>
+<li>Selezionare la casella <strong>Apri sempre i file HTML usando il formato testo semplice</strong>. Se quest'opzione è abilitata, i file HTML (ad es. i file HTM, HTML, JSP, XHTML) sono visualizzati usando il formato testo semplice quando aperti in File Station. Questa opzione aiuta a prevenire che parti malintenzionate possano prendere il controllo delle sessioni di accesso dell'utente usando script nascosti nei file HTML.</li>
+<div class="section">
+<h4>Nota:</h4>
+<ul>
+<li>non è un'impostazione globale. Ogni utente può scegliere se abilitare o meno questa opzione in base alle proprie necessità.</li>
+</ul>
+</div>
+<li>Fare clic su <strong>OK</strong>.</li>
+</ol>
+
+</body>
+</html>

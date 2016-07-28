@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+ <head>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>High Availability</title>
+
+
+ </head>
+ <body>
+<h2>Estado de almacenamiento</h2>
+	<p>Esta p&aacute;gina detalla el estado de los vol&uacute;menes de almacenamiento e iSCSI LUN (nivel de bloques) en los servidores activo y pasivo del cl&uacute;ster high-availability.</p>
+    <p>Dado que la capacidad y las configuraciones de los vol&uacute;menes e iSCSI LUN (nivel de bloques) correspondientes de los servidores activo y pasivo deben ser id&eacute;nticas, los vol&uacute;menes e iSCSI LUN (nivel de bloques) de los dos servidores se muestran juntos como unidades individuales. Por tanto, si desea ver el estado de los vol&uacute;menes e iSCSI LUNs (nivel de bloques) del servidor activo y del servidor pasivo, debe ir a la p&aacute;gina <b>Estado de almacenamiento</b> [al acceder a un cl&uacute;ster high-availability, en el <b>Administrador de almacenamiento</b> solo se pueden ver los vol&uacute;menes e iSCSI LUNs (nivel de bloques) del servidor activo].</p>
+
+    <p>Esta p&aacute;gina contiene la siguiente informaci&oacute;n:</p>
+		<ul>
+			<li><b>Nombre:</b> muestra los nombres de los vol&uacute;menes e iSCSI LUN (nivel de bloques).</li>
+			<li><b>Usado:</b> muestra el porcentaje de capacidad usada de los vol&uacute;menes e iSCSI LUN (nivel de bloques).</li>
+			<li><b>Tama&ntilde;o usado/total:</b>  muestra la capacidad total y usada de los vol&uacute;menes e iSCSI LUN (nivel de bloques).</li>
+            <li><b>Estado:</b> muestra el estado de los vol&uacute;menes e iSCSI LUNs (nivel de bloques) y cach&eacute;s de SSD.</li>
+            <li><b>Descripci&oacute;n:</b> muestra la descripci&oacute;n de los errores u otra informaci&oacute;n en relaci&oacute;n con el volumen iSCSI LUN (nivel de bloques) y el cach&eacute; de SSD.</li>
+		</ul>
+<h4>Para reparar un fallo de funcionamiento en un volumen o iSCSI LUN (nivel de bloques):</h4>
+	<ul>
+		<li>Si un disco duro de uno de los servidores se ha averiado, puede ir a la p&aacute;gina <a href="disk.html">Estado del disco</a> para saber cu&aacute;l es el disco duro que se ha averiado y necesita ser sustituido. En este caso, haga lo siguiente:<ol>
+            	<li>Sustituya el disco duro averiado (para ver los pasos para la instalaci&oacute;n del disco duro, consulte la <i>Gu&iacute;a de instalaci&oacute;n r&aacute;pida</i> de su producto Synology).</li>
+                <li>Vaya a la p&aacute;gina <b>Estado de almacenamiento</b> y haga clic en <b>Reparar</b>.</li>
+            </ol>
+        </li>
+        <li>Si el servidor pasivo est&aacute; desconectado, el estado de los vol&uacute;menes e iSCSI LUN (nivel de bloques) indicar&aacute; que se ha producido un error, y no aparecer&aacute; ninguno de los discos del servidor pasivo en la p&aacute;gina Estado del disco. En este caso, puede intentar resolver el problema haciendo lo siguiente:<ol>
+            	<li>Aseg&uacute;rese de que el servidor pasivo est&aacute; encendido.</li>
+                <li>Compruebe todas las fuentes de alimentaci&oacute;n.</li>
+                <li>Examine todas las conexiones.</li>
+            </ol>
+        </li>
+        <li>Si se produce un error en el sistema de archivos de un volumen o iSCSI LUN (nivel de bloques) de uno de los servidores, haga lo siguiente:<ul>
+            	<li>Vaya a la p&aacute;gina <b>Estado de almacenamiento</b>.</li>
+                <li>Haga clic en <b>Reparar</b>.</li>
+            </ul>
+        </li>
+	</ul>
+
+<p><span class="note_head">Nota:</span>  El l&iacute;mite de vol&uacute;menes e iSCSI LUN (nivel de bloques) de un cl&uacute;ster high-availability es 64.</p>
+
+ </body>
+</html>

@@ -1,0 +1,95 @@
+ <!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Zmiana typu macierzy RAID woluminu lub grupy dysków — pomoc Synology DSM</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="This article provides instructions to change the RAID type of existing volumes and disk groups on your DiskStation."><link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Zmiana typu macierzy RAID woluminu lub grupy dysków</h2>
+
+<p>Typy macierzy RAID dla woluminów i grup dysków można zmieniać bez utraty istniejących danych. Można np. w urządzeniu DiskStation utworzyć wolumin RAID 1, a następnie w przypadku instalacji większej liczby dysków twardych zmienić go na macierz RAID 5. Niniejszy artykuł zawiera instrukcje zmiany typu macierzy RAID dla istniejących woluminów i grup dysków w urządzeniu DiskStation.</p>
+<h3>Ograniczenia typów macierzy RAID</h3>
+
+<p>Nie wszystkie typy macierzy RAID można zmienić na inne typy macierzy RAID. Szczegółowe informacje można znaleźć w poniższej tabeli.</p>
+
+<table>
+  <tr>
+    <th width="50%">Typ RAID</th>
+    <th width="50%">Można zmienić na...</th>
+  </tr>
+  <tr>
+    <td>Podstawowy</td>
+    <td>RAID 1<br /> RAID 5</td>
+  </tr>
+  <tr>
+    <td>RAID 1</td>
+    <td>RAID 5</td>
+  </tr>
+  <tr>
+    <td>RAID 5</td>
+    <td>RAID 6</td>
+  </tr>
+
+</table>
+
+<div class="section">
+<h4>Na przykład:</h4>
+<p>Macierz RAID 1 można zmienić na RAID 5, jednakże macierzy RAID 5 nie można zmienić na RAID 1.</p>
+</div>
+
+
+<h3>Wymagania dotyczące dysków twardych</h3>
+
+<p>Aby można było zmienić typ macierzy RAID woluminu lub grupy dysków, w urządzeniu DiskStation musi być zainstalowana odpowiednia liczba dysków twardych. Poniższa tabela zawiera minimalną liczbę dysków twardych do każdego typu macierzy RAID.</p>
+
+<table>
+  <tr>
+    <th width="50%">Żądany typ macierzy RAID</th>
+    <th width="50%">Wymagane dyski twarde</th>
+  </tr>
+  <tr>
+    <td>RAID 1</td>
+    <td>2 lub 4</td>
+  </tr>
+  <tr>
+    <td>RAID 5</td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>RAID 6</td>
+    <td>4</td>
+  </tr>
+</table>
+
+<div class="section">
+<h4>Na przykład:</h4>
+<p>W celu zmiany woluminu RAID 1 na RAID 5 wymagane są łącznie co najmniej trzy dyski twarde (np. dwa dyski twarde należące do woluminu RAID 1 oraz jeden wolny dysk twardy dodawany do woluminu).</p>
+</div>
+
+<h3>Zmiana typu macierzy RAID</h3>
+
+<p>W poniższym przykład przedstawiono zmianę woluminu <strong>Podstawowy</strong> na wolumin <strong>RAID 1</strong>.</p>
+
+<div class="section">
+<h4>Przed rozpoczęciem:</h4>
+<ul>
+<li>Upewnij się, że stan woluminu lub grupy dysków jest <b>Normalny</b>.</li>
+<li>Podczas dodawania nowych dysków twardych do woluminu lub grupy dysków należy upewnić się, że nowe dyski twarde mają większą pojemność niż najmniejszy dysk twardy w woluminie lub grupie dysków.</li>
+<li>Nowe dyski twarde muszą mieć stan <b>Zainicjowany</b> lub <b>Nie zainicjowany</b>.</li></ul>
+</div>
+
+<h4>Aby zmienić typ RAID woluminu:</h4>
+
+<ol>
+<li>Otwórz aplikację <strong>Zarządzanie przechowywaniem</strong>.</li><img src="about:blank" class="help_image"/><li>Wybierz <b>Wolumin</b>. (Aby zmienić typ macierzy RAID dla grupy dysków, wybierz kartę <b>Grupa dysków</b>).</li>
+<li>Wybierz wolumin, który ma zostać zmieniony, a następnie kliknij <b>Zarządzaj</b>.</li><img src="about:blank" class="help_image"/><li>Po wyświetleniu kreatora konfiguracji zaznacz opcję <b>Zmień typ macierzy RAID</b>. Następnie kliknij przycisk <b>Dalej</b>.</li><img src="../../../online_img/dsm/StorageManager/volume_diskgroup_change_raid_type/change_raid_type.png" class="help_image"/><li>Wybierz docelowy typ macierzy RAID. Kliknij <b>Dalej</b>.</li><img src="../../../online_img/dsm/StorageManager/volume_diskgroup_change_raid_type/choose_raid.png" class="help_image"/><li>Zaznacz dyski twarde, które mają być dodane do istniejącego woluminu. Następnie kliknij przycisk <b>Dalej</b>.</li><img src="../../../online_img/dsm/StorageManager/volume_diskgroup_change_raid_type/choose_disks.png" class="help_image"/><li>Aby zakończyć operację, wykonaj instrukcje kreatora. Należy pamiętać, że wszystkie istniejące dane na dodawanym dysku twardym zostaną usunięte.</li></ol>
+
+</body>
+</html>

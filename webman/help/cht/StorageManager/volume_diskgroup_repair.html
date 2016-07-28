@@ -1,0 +1,128 @@
+ <!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>修復儲存空間或磁碟群組 - Synology DSM 說明</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="This article walks you through the steps to create a volume on Synology NAS using Storage Manager.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>修復儲存空間或磁碟群組</h2>
+
+<p>導致儲存空間出現錯誤的原因有許多，例如系統磁區損毀或硬碟故障。在某些情況下，您可以依照下列步驟來進行診斷並修正問題。</p>
+
+<div class="section">
+<h4>注意：</h4>
+<ul>
+<li>此處提到的<strong>修復</strong>功能僅適用於可提供資料備援的 RAID 類型 (如：RAID 1、RAID 5、RAID 6)。請注意，此功能無法修復故障的硬碟，也不保證能夠挽回已損毀之儲存空間上的資料。</li>
+<li>針對已損毀的儲存空間，建議您聯絡我們的<span class="last"><a href="https://account.synology.com/support/support_form.php?lang=enu" target="_blank">技術支援</a>尋求協助</span>。</li>
+</ul>
+</div>
+
+<h3>已損毀的系統磁區</h3>
+
+<p>當系統磁區損毀時，您應會看見一則訊息，通知您目前無法存取系統磁區。</p>
+<h4>若要修復系統磁區：</h4>
+
+<ol>
+<li>開啟<strong>儲存空間管理員</strong>。</li>
+<img src="about:blank" class="help_image"/>
+
+<li>前往<strong>系統概況</strong>並按一下<strong>修復</strong>連結。系統應會修復系統磁區。</li>
+
+<img src="about:blank" class="help_image"/>
+</ol>
+
+
+<h3>堪用的儲存空間</h3>
+
+
+<p>當儲存空間或磁碟群組中有一顆硬碟故障、但資料尚未遺失時，儲存空間或磁碟群組會進入<strong>堪用</strong>狀態。此情況只會出現在具有資料備援功能的 RAID 類型，例如 SHR、RAID 1、RAID 5、RAID 6 及 RAID 10。 </p>
+<p>您可以將故障硬碟更換為正常硬碟，並修復儲存空間或磁碟群組，藉此修復堪用的儲存空間或磁碟群組。</p>
+
+<div class="section">
+<h4>注意：</h4>
+<ul>
+  <li>更換用的硬碟大小必須大於或等於儲存空間中最小硬碟的大小。</li>
+  <li>更換用的硬碟狀態必須為<strong>已初始化</strong>或<strong>未初始化</strong>。</li>
+</ul>
+
+</div>
+
+<h4> 若要修復堪用的儲存空間或磁碟群組：</h4>
+
+<ol>
+
+<li>前往<strong>儲存空間管理員</strong> &gt; <strong>儲存空間</strong>或<strong>磁碟群組</strong>來確認狀態已變更為<strong>堪用</strong>。</li> 
+<img src="about:blank" class="help_image"/>
+
+<li>若事實如此，請前往 <strong>HDD/SSD</strong> 頁籤來查看哪顆硬碟已損毀。</li>
+<img src="about:blank" class="help_image"/>
+
+<li>移除損毀的硬碟，並以新硬碟置換損毀的硬碟。</li>
+
+<div class="section">
+<h4>注意：</h4>
+<ul>
+<li>如果您的 DiskStation 不支援熱插拔功能，移除或安裝硬碟之前請記得先關機。</li>
+<li>更換用硬碟上的所有資料將被清除。</li>
+</ul>
+</div>
+
+<li>安裝完更換用硬碟之後，回到<strong>儲存空間</strong>或<strong>磁碟群組</strong>頁籤。</li>
+
+<li>選擇堪用的儲存空間或磁碟群組。</li>
+
+<li>按一下<strong>管理</strong>。</li>  
+<img src="about:blank" class="help_image"/>
+
+<li>選擇<strong>修復</strong>並按一下<strong>下一步</strong>。 </li>  
+<img src="about:blank" class="help_image"/>
+
+<li>選擇要新增至儲存空間的更換用硬碟。然後按一下<strong>下一步</strong>。</li>
+<img src="about:blank" class="help_image"/>
+
+<li> 依照精靈的指示來完成操作。 </li>
+</ol>
+
+
+<h3>修復儲存空間</h3>
+<p>若要修復堪用的儲存空間 / 磁碟群組 / iSCSI LUN，您需使用符合下列條件的可用硬碟來更換損毀的硬碟：</p>
+<ul>
+<li>針對 RAID 1、RAID 5 或 RAID 6 儲存空間，可用硬碟大小須等於或大於 RAID 儲存空間中最小的硬碟，即可修復堪用的儲存空間。</li>
+<li>針對 SHR-1 儲存空間，可用硬碟須符合下列任一條件：(1) 可用硬碟的大小須等於或大於損毀硬碟的大小；(2) 去除 RAID 儲存空間中最大的硬碟之後，可用硬碟的大小須等於或大於所剩的最大硬碟。
+
+<ol>
+<li>範例 1：SHR-1 由 3TB、2TB、2TB 及 1TB 硬碟組成。若 3TB 硬碟損毀，您可使用大小等於或大於 2TB 的可用硬碟來進行修復。</li>
+<li>範例 2：SHR-1 由 4TB、4TB、2TB 及 2TB 硬碟組成。若 4TB 硬碟損毀，您可使用大小等於或大於 4TB 的可用硬碟來進行修復。</li>
+<li>範例 3：SHR-1 由 4TB、4TB、2TB 及 2TB 硬碟組成。若 2TB 硬碟損毀，您可使用大小等於或大於 2TB 的可用硬碟來進行修復。</li>
+</ol>
+</li>
+<li>針對 SHR-2 儲存空間，可用硬碟須符合下列任一條件：(1) 可用硬碟的大小須等於或大於損毀硬碟的大小；(2) 去除 RAID 儲存空間中最大的兩顆硬碟之後，可用硬碟的大小須等於或大於所剩的最大硬碟。</li>
+</ul>
+<p>若您有將硬碟設定為 hot spare 且符合上述條件，它們將會用來修復儲存空間 / 磁碟群組 / RAID Group / iSCSI LUN。</p>
+
+
+<h3>解決已損毀的儲存空間</h3>
+
+<p>當儲存空間狀態變為<strong>已損毀</strong>，您將無法自行修復該儲存空間。若要解決此問題，建議您聯絡我們的<a href="https://account.synology.com/support/support_form.php?lang=enu" target="_blank">技術支援</a>尋求協助。</p>
+
+<div class="section">
+<h4>在聯絡技術支援之前：</h4>
+
+<ul>
+<li>透過 File Station、Windows 檔案服務、FTP 或其他檔案服務來將 DiskStation 上的檔案複製至您的電腦或外接硬碟，以救回您的資料。</li>
+<li>將硬碟保持在儲存空間損毀時的排列順序。</li>
+<li>請針對有問題的硬碟執行 S.M.A.R.T. 檢測。若要執行此操作，請前往<strong>儲存空間管理員</strong> &gt; <strong>HDD/SSD</strong>。選取該硬碟然後按一下 <strong>S.M.A.R.T 檢測</strong>。 <br />
+</li>
+</ul>
+</div>
+</body>
+</html>

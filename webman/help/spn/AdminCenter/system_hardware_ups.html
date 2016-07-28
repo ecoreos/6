@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Alimentación</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+
+
+<h2>SAI</h2>
+
+<p class="disable-eds14">Una SAI o UPS (Fuente de alimentación ininterrumpida) es un dispositivo de alimentación de reserva que permite que su DiskStation siga funcionando durante un breve periodo de tiempo si se produce un corte de electricidad. Esta función en <strong>Panel de control</strong> > <strong>Hardware y alimentación</strong> > <strong>UPS</strong> ayuda a evitar pérdidas de datos dando a DiskStation tiempo suficiente para guardar los datos y desmontar los volúmenes antes de perder la corriente y apagarse.</p>
+
+<p class="enable-eds14">Una SAI o UPS (Fuente de alimentación ininterrumpida) es un dispositivo de alimentación de reserva que permite que su DiskStation siga funcionando durante un breve periodo de tiempo si se produce un corte de electricidad. Esta función en <strong>Panel de control</strong> > <strong>Hardware y alimentación</strong> > <strong>UPS</strong> ayuda a evitar pérdidas de datos dando a DiskStation tiempo suficiente para guardar los datos y desmontar los volúmenes antes de perder la corriente y apagarse.</p>
+
+<div class="section">
+<h4>Modo seguro</h4>
+<p class="disable-eds14">Cuando DiskStation entra en el Modo seguro, se detienen todos los servicios y se desmontan los volúmenes para evitar que se pierdan datos y garantizar un apagado seguro cuando el dispositivo SAI se quede sin energía. De forma predeterminada, el sistema entrará en el Modo seguro cuando el dispositivo SAI empiece a quedarse sin energía. También puede especificar la cantidad de tiempo antes de que la unidad DiskStation entre en el Modo seguro cuando se produzca un corte de electricidad. Sin embargo, si el dispositivo SAI se queda sin batería antes del tiempo especificado, el sistema entrará en el Modo seguro inmediatamente.</p>
+
+<p class="enable-eds14">Cuando DiskStation entra en el Modo seguro, se detienen todos los servicios y se desmontan los volúmenes para evitar que se pierdan datos y garantizar un apagado seguro cuando el dispositivo SAI se quede sin energía. De forma predeterminada, el sistema entrará en el Modo seguro cuando el dispositivo SAI empiece a quedarse sin energía. También puede especificar la cantidad de tiempo antes de que la unidad DiskStation entre en el Modo seguro cuando se produzca un corte de electricidad. Sin embargo, si el dispositivo SAI se queda sin batería antes del tiempo especificado, el sistema entrará en el Modo seguro inmediatamente.</p>
+
+
+<p></p>
+<p class="disable-eds14">En situaciones en las que DiskStation se apaga mientras está en Modo Seguro, se volverá a encender automáticamente cuando se restaure la alimentación si ha habilitado la opción <strong>Reiniciar automáticamente después de un corte de electricidad</strong> (situada en el <strong>Panel de control</strong> > <strong>Hardware y alimentación</strong> > <strong>General</strong>).</p>
+
+<p></p>
+</div>
+
+
+
+
+<h3>Compatibilidad con SAI local</h3>
+
+<p>Para obtener información sobre la instalación de hardware, consulte el manual de usuario de su dispositivo SAI. Tras completar la instalación y conectar la unidad DiskStation al dispositivo SAI, puede seguir estos pasos para habilitar la compatibilidad con SAI.</p>
+<h4>Para habilitar la compatibilidad con SAI local:</h4>
+<OL>
+<li>Conecte el dispositivo SAI a un puerto USB de DiskStation.</li>
+<LI>En la pestaña <strong>UPS</strong>, active la casilla de verificación <b>Habilitar compatibilidad con SAI</b>.</LI>
+<LI>Seleccione el momento en que la unidad DiskStation debería entrar en el Modo seguro después de un corte de electricidad.</LI>
+<LI>Elija si desea enviar una señal de apagado al dispositivo SAI cuando el sistema entre en el Modo seguro. La mayoría de dispositivos SAI pueden encenderse automáticamente cuando se restablece la electricidad.</LI>
+<LI>Haga clic en <b>Aplicar</b>.</LI>
+</OL>
+
+<h3>Compatibilidad con SAI de SNMP</h3>
+
+<p>Su DiskStation también permite la conexión a dispositivos SAI de SNMP (Protocolo sencillo de administración de red). Para obtener información sobre la instalación de hardware, consulte el manual de usuario de su dispositivo SAI de SNMP. Tras conectar DiskStation al dispositivo y a la misma red, puede seguir estos pasos para habilitar la compatibilidad con SAI.</p>
+<h4>Para habilitar la compatibilidad con SAI de SNMP:</h4>
+<ol>
+<LI>En la pestaña <strong>UPS</strong>, active la casilla de verificación <b>Habilitar compatibilidad con SAI</b>.</LI>
+<li>Seleccione <strong>SAI de SNMP</strong> en el menú desplegable <strong>Tipo de SAI de red</strong>.</li>
+<li>En el campo <strong>Dirección IP de SAI de SNMP</strong>, introduzca la dirección IP del dispositivo SAI de SNMP.</li>
+<LI>Seleccione el momento en que la unidad DiskStation debería entrar en el Modo seguro después de un corte de electricidad.</LI>
+<li>Introduzca la cadena de comunidad del dispositivo SAI de SNMP en el campo <strong>Comunidad de SNMP</strong>.</li>
+<LI>Haga clic en <b>Aplicar</b>.</LI>
+</ol>
+
+<div class="section">
+<h4>Nota:</h4>
+<ul>
+<li>Se recomienda encarecidamente utilizar <b>SAI de SNMP</b> para instalaciones Synology High Availability (SHA).</li>
+<li>DiskStation es compatible con dispositivos UPS SNMPv1 y SNMPv2c.</li>
+</ul>
+</div>
+
+
+<h3>Compatibilidad con SAI de red</h3>
+
+<p>Si hay dos productos de Synology utilizando un dispositivo SAI con un único puerto USB, solo una unidad DiskStation podrá obtener información sobre el estado del dispositivo SAI. En ese caso, una unidad DiskStation puede actuar como "servidor de SAI de red" y conectarse al dispositivo SAI por USB o red (dependiendo del dispositivo). El servidor de SAI de red obtiene la información del SAI y la transmite al otro DiskStation "cliente".</p>
+<h4>Para habilitar la compatibilidad con SAI de red:</h4>
+<OL>
+<li>Inicie sesión en la unidad DiskStation conectada al dispositivo SAI (por USB o red). Si aún no se ha habilitado la compatibilidad con SAI en esta unidad DiskStation, consulte la sección anterior.</li>
+<LI>En la pestaña <strong>UPS</strong>, marque la casilla <strong>Habilitar servidor UPS de red</strong> de red para permitir que la unidad DiskStation transmita la información del SAI a la unidad DiskStation cliente.</li>
+<li>Haga clic en el botón <strong>Dispositivos DiskStation permitidos</strong>.</li>
+<li>En la ventana que aparece, introduzca las direcciones IP de la otra unidad DiskStation que utiliza el dispositivo SAI, pero que no está conectada a través de USB o red. Haga clic en <strong>OK</strong>.</li>
+<li>Haga clic en <strong>Aplicar</strong> para guardar la configuración.</li>
+</OL>
+<p>Ahora el servidor de SAI de red puede obtener la información del SAI y transmitirla a la otra unidad DiskStation que utiliza el dispositivo SAI. Consulte las siguientes instrucciones para habilitar la compatibilidad con el SAI en la otra unidad DiskStation.</p>
+<h4>Para habilitar la compatibilidad con SAI en la unidad DiskStation cliente:</h4>
+<ol>
+<li>Inicie sesión en la otra unidad DiskStation que utiliza el dispositivo SAI pero no está conectada por USB o red.</li>
+<li>En la pestaña <strong>UPS</strong>, active la casilla <strong>Habilitar compatibilidad con SAI</strong>.</li>
+<li>Seleccione <strong>Servidor SAI de Synology</strong> en el menú desplegable <strong>Tipo de SAI de red</strong>.</li>
+<li>Introduzca la dirección IP del servidor de SAI de red (por ejemplo, la unidad DiskStation conectada al dispositivo SAI) en el campo <strong>IP del servidor UPS de red</strong>.</li>
+<LI>Seleccione el momento en que la unidad DiskStation debería entrar en el Modo seguro después de un corte de electricidad. Para simplificar la configuración del Modo seguro, puede seleccionar <strong>Igual que el servidor</strong>.</LI>
+<LI>Haga clic en <b>Aplicar</b> para guardar la configuración.</LI>
+</OL>
+<div class="section">
+<h4>Requisitos del SAI de red:</h4>
+<UL>
+<LI>Para transmitir la información del dispositivo SAI, todas las unidades DiskStation deberían estar conectadas a la misma red.</LI>
+<LI>El dispositivo de red (p. ej., switch o concentrador) al que esté conectada cada una de las unidades DiskStation debería estar conectado al mismo dispositivo SAI. De lo contrario, las unidades DiskStation no podrán transmitir la información del dispositivo SAI si se produce un corte de electricidad.</LI>
+</UL>
+</div>
+</body>
+</html>

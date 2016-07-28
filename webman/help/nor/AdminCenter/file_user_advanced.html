@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Avanserte brukerinnstillinger</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Avanserte brukerinnstillinger</h2>
+
+<p>For å endre avanserte brukerinnstillinger, kan du gå til <strong>Kontrollpanel</strong> > <strong>Bruker</strong> > <strong>Avansert</strong>. Alternativene nedenfor er tilgjengelige. </p>
+
+<h3>La brukere tilbakestille glemte passord</h3>
+<p>Hvis du vil la brukere tilbakestille glemte passord via e-post, kan du aktivere <strong>Tillat at brukere som ikke er admin kan tilbakestille glemte passord via e-post</strong>. Når dette alternativet er aktivert, vil en kobling som er merket med <strong>Har du glemt passordet ditt?</strong> vises på innloggingssiden for DSM. Hvis en bruker glemmer passordet sitt, kan han klikke på denne koblingen og angi brukernavnet sitt. I så tilfelle, vil systemet sende en e-post til brukeren med en kobling for å tilbakestille det glemte passordet. </p>
+
+<div class="section">
+<h4>Merk:</h4>
+<ul>
+<li>Før du aktiverer dette alternativet, må du forsikre deg om at du allerede har aktivert SMTP-e-postvarslinger. For å gjøre dette, går du til <strong>Kontrollpanel</strong> > <strong>Varsling</strong>.</li>
+<li>For å motta meldinger fra systemet, må brukere oppgi en e-postadresse i kontoseksjonen for brukerinformasjon.</li>
+<li>Brukere som tilhører gruppen <strong>administrators</strong> kan ikke tilbakestille passord med dette alternativet.</li>
+<li>Domenebrukere kan ikke tilbakestille passord med dette alternativet.</li>
+<li>LDAP-brukere kan tilbakestille passord med dette alternativet, så lenge DiskStation tjener som LDAP-katalogserver.</li>
+
+</ul>
+</div>
+
+
+<h3>Passordstyrke</h3>
+<p>Du kan sette opp regler for passordstyrke for brukere på din DiskStation.</p>
+
+<div class="section">
+<h4>Merk:</h4>
+<p>Regler for passordstyrke gjelder kun for nye passord. For eksempel, nye regler for passordstyrke gjelder kun når man oppretter en ny brukerkonto eller når en eksisterende bruker endrer passordet sitt. Eksisterende passord og de som tilhører importerte brukerkontoer er unntatt de nye passordreglene.</p>
+</div>
+<h4>Slik aktiverer du regler for passordstyrke:</h4>
+<ol>
+<li>Merk av for <b>Bruk regler for passordstyrke</b> for å aktivere passordbegrensninger.</li>
+<li>Velg mer enn én av passordbegrensningene fra reglene nedenfor:</li>
+<ul>
+<li><b>Ekskluder navn og beskrivelse av bruker fra passord</b>: Passordet må ikke inneholde brukernavnet eller brukerbeskrivelsen. Men UTF-8 utvidede tegn er ekskludert.</li>
+<li><b>Inkluder blanding av små og store bokstaver</b>: Passordet må inneholde både store og små bokstaver.</li>
+<li><b>Inkluder numerisk tegn</b>: Passordet må inneholde minst ett numerisk tegn (0~9).</li>
+<li><b>Inkluder spesialtegn</b>: Passordet må inneholde minst ett ASCII-spesialtegn (f.eks. ~, `, !, @, #, $, %, ^, &, *, (, ), -, _, =, +, [, {, ], }, \, |, ;, :, ', ", <, >, /, ?).</li>
+<li><b>Minimal passordlengde</b>: Passordet må minst være verdien som er spesifisert i tekstfeltet. Lengden må være et tall mellom 6 og 127.</li>
+</ul>
+<li>Klikk på <b>Bruk</b> for å lagre innstillingene.</li>
+</ol>
+
+
+
+<h3>2-trinnsverifikasjon</h3>
+<p>2-trinnsverifikasjon gir deg forbedret sikkerhet for DSM-brukerkontoer. Du kan tvinge DSM-administratorer eller alle DSM-brukere til å aktivere 2-trinnsverifikasjon for ytterligere beskyttelse for kontoene deres.</p>
+
+<h4>Slik tvinger du gjennom 2-trinnsverifikasjon for DSM-brukere:</h4>
+
+<ol>
+<li>Merk av for <strong>Bruk 2-trinnsverifikasjon for følgende brukere</strong> og velg hvilke brukere du vil ta i bruk dette for.</li>
+<div class="section">
+<h4>Merk:</h4>
+<p>Hvis du ikke har konfigurert 2-trinnsverifikasjon ennå i <b>Personl.</b> > <b>Konto</b>, vil oppsettveiviseren for 2-trinnsverifikasjon åpnes for å hjelpe deg med å fullføre de påkrevde innstillingene før du kan ta i bruk dette alternativet.</p>
+</div>
+
+<li>Når alternativet er tatt i bruk, vil brukere som ikke har aktivert 2-trinnsverifikasjon bli bedt om å fullføre innstillingene før de kan logge seg inn på DSM.</li>
+</ol>
+
+<div class="section">
+<h4>Merk:</h4>
+<p>Deaktivering av tvunget 2-trinnsverifikasjon her vil ikke påvirke eller deaktivere innstillingene for 2-trinnsverifikasjon for hver bruker.  Brukere kan beholde sine innstillinger for 2-trinnsverifikasjon, eller gå til <b>Personl.</b> > <b>Konto</b> for å deaktivere disse innstillingene.</p>
+</div>
+
+
+<h3>Brukerhjem</h3>
+
+<p>Aktiver brukerhjem for å opprette en personlig <b>home</b>-mappe for hver bruker, unntatt for <b>guest</b>. Alle brukere kan få tilgang til sin egen home-mappe via CIFS, AFP, FTP eller File Station.</p>
+<p>Brukere som tilhører <strong>administrators</strong>-gruppen har tilgang til alle personlige mapper som ligger i den delte standardmappen <b>homes</b>. Navnet på home-mappen er det samme som brukerkontoen.</p>
+
+<h4>Slik aktiverer du brukerhjemtjenesten:</h4>
+<ol>
+<li>Merk av for <b>Aktiver brukerhjemtjeneste</b>.</li>
+<li>Hvis det finnes flere volum, velger du hvor du vil at mappen <b>homes</b> skal lagres.</li>
+<li>Klikk på <b>Bruk</b>.</li>
+</ol>
+
+<div class="section">
+<h4>Merk:</h4>
+<p>Så snart den lokale brukerhjemtjenesten er deaktivert, vil hjemtjenesten for domenebrukeren bli deaktivert samtidig.</p>
+</div>
+
+<h4>Slik deaktiverer du brukerhjemtjenesten:</h4>
+<ol>
+<li>Fjern avmerkingen for <b>Aktiver brukerhjemtjeneste</b>.</li>
+<li>Klikk på <b>Bruk</b>.</li>
+</ol>
+<p>Hvis brukerhjemtjenesten deaktiveres, vil den delte mappen <b>homes</b> bli reservert for administratortilgang.  Brukere vil få tilgang til sine home-mapper på nytt når brukerhjemtjenesten aktiveres igjen.</p>
+
+<div class="section">
+<h4>Merk:</h4>
+<ol>
+<li>For å slette <b>homes</b> delte mappe, må brukerhjemtjenesten deaktiveres først.</li>
+<li>Brukerhjemtjenestene for domenebruker kan bli deaktivert, dersom den lokale brukerhjemtjenesten er deaktivert.</li> 
+</ol> 
+</div>
+
+
+</body>	
+</html> 

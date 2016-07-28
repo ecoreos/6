@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Win/Mac/NFS</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+
+
+
+<h2>NFS-Dienst</h2>
+<p>Der NFS-Dienst ermöglicht einem Linux-Client den Zugriff auf Daten des DiskStation-Geräts.</p>
+<h4>So wird der NFS-Dienst aktiviert:</h4>
+<ol>
+<li>Gehen Sie zu <strong>Systemsteuerung</strong> > <strong>Dateidienste</strong> > <strong>Win/Mac/NFS</strong>, und markieren Sie <b>NFS aktivieren</b>.</li>
+<li>Klicken Sie auf <b>Übernehmen</b>.</li>
+</ol>
+
+
+<div class="section">
+  <h4>Hinweis:</h4>
+<ul>
+<li> Der DiskStation unterstützt zurzeit NFSv2, NFSv3 und NFSv4.</li>
+<li>Beim Mounten kann der Parameter <strong>-o vers=2</strong>, <strong>-o vers=3</strong> oder <strong>-o vers=4</strong> zum Mount-Befehl hinzugefügt werden, um festzulegen, welche NFS-Version verwendet werden soll.</li>
+</ul>
+</div>
+
+
+<h4>Zugriffsberechtigungen für Linux-Clients für freigegebene Ordner konfigurieren:</h4>
+<p>Gehen Sie zu <b>Systemsteuerung</b> > <b>Freigegebener Ordner</b>. Wählen Sie einen freigegebenen Ordner aus und klicken Sie auf <strong>Bearbeiten</strong>, um die NFS-Regeln zu verwalten und das Zugriffsrecht von Linux-Clients auf diesen freigegebenen Ordner zu regeln.</p>
+
+
+<h3>NFSv4-Unterstützung konfigurieren</h3>
+<p>Sie können wählen, ob der NFS-Server NFSv4 unterstützt. Wenn diese Option aktiviert ist, unterstützt der NFS-Server NFSv2, NFSv3 und NFSv4. Andernfalls werden nur NFSv2 und NFSv3 unterstützt.</p>
+
+<h4>So aktivieren Sie die NFSv4-Unterstützung:</h4>
+<ol>
+<li>Aktivieren Sie <b>NFSv4-Unterstützung aktivieren</b>.
+</li>
+<li>
+Geben Sie in das Feld <b>NFSv4-Domain</b> den zu verwendenden Namen der NFSv4-Domain ein. Dieses Feld ist optional und kann leer gelassen werden.</li>
+<li>
+Klicken Sie auf <b>Übernehmen</b>.
+</li>
+</ol>
+
+<div class="section">
+<h4>Hinweis:</h4>
+<p>Beachten Sie Folgendes, wenn NFSv4 für das Anhängen des freigegebenen Ordners verwendet wird. Sonst schlagen die mit dem Benutzernamen verknüpften Dateiaktionen fehl.</p>
+<ul>
+<li>Der NFS-Client muss „idmapd“ unterstützen.</li>
+<li>Die NFSv4-Domaineinstellungen in der Datei „idmapd.conf“ auf Ihrem NFS-Client müssen mit dem Feld <b>NFSv4-Domain</b> des DiskStation übereinstimmen.</li>
+</ul>
+
+</div>
+
+<h3>Erweiterte Einstellungen</h3>
+
+<h4>Standard-UNIX-Berechtigungen anwenden</h4>
+<p> Wenn das Kontrollkästchen <strong>Standard-UNIX-Berechtigungen anwenden</strong> markiert ist, werden standardmäßig UNIX-Berechtigungen anstelle von Windows ACL-Berechtigungen für den Linux-Client angewendet, wenn Dateien und Ordner hochgeladen oder erstellt werden. Angewandte Berechtigungen sind identisch mit den Berechtigungen, die vom UNIX-Befehl <strong>umask</strong> angewendet werden. Wenn diese Option aktiviert ist, sind die UNIX-Berechtigungen für Dateien 644 und für Ordner 755. Wenn diese Option deaktiviert ist, sind die UNIX-Berechtigungen für Dateien 666 und für Ordner 777. Der Standardwert für „umask“ ist 022.</p><div class="section">
+<h4>Hinweis:</h4>
+<ul>
+  <li>Führen Sie für freigegebene Ordner, für die Windows ACL aktiviert ist (alle freigegebenen Ordner, außer &quot;photo&quot; und freigegebene Ordner auf externen Festplatten), den Befehl <strong>chmod</strong> auf Ihrem Linux- oder FTP-Client aus, um die Ordner- und Dateiberechtigungstypen von Windows ACL auf UNIX umzustellen.</li>
+  <li>Die Aktivierung dieser Option kann zu inkonsistenten Berechtigungen zwischen verschiedenen Protokollen führen. Um Inkonsistenzen zu vermeiden, empfehlen wir, diese Option deaktiviert zu lassen.</li>
+</ul>
+</div>
+
+<h4>Benutzerdefinierter Port</h4>
+<p>Sie können Portnummern für „statd“- und „nlockmgr“-Dienste benutzerspezifisch anpassen.</p>
+
+<ol>
+<li>Wählen Sie <strong>Benutzerspezifisch angepasste Ports</strong> aus.</li>
+<li>Geben Sie Portnummern in <strong>statd-Port</strong> und <strong>nlockmgr-Port</strong> ein.</li>
+<li>
+Klicken Sie auf <b>Übernehmen</b>.
+</li>
+</ol>
+
+<div class="section">
+<h4>Hinweis:</h4>
+<ul>
+<li>Gehen Sie, wenn NFSv3-Dienste verwendet werden sollen, zu <strong>Systemsteuerung</strong> &gt; <strong>Sicherheit</strong> &gt; <strong>Firewall</strong> und erstellen Sie eine Firewall-Regel, die &quot;Mac/Linux-Dateiserver&quot; aus der Liste der integrierten Anwendungen aktiviert.</li>
+</ul>
+</div>
+<h4>Lesen/Schreiben-Paketgröße konfigurieren</h4>
+<p>Wenn die Lese-/Schreib-Paketgröße auf Ihrem NFS-Client nicht eingestellt werden kann, können Sie den Standardwert in diesem Feld festlegen.</p>
+
+
+<ol>
+<li>Wählen Sie die gewünschte Paketgröße aus den Feldern <strong>Lese-Paketgröße</strong> und <strong>Schreib-Paketgröße</strong> aus.</li>
+<li>
+Klicken Sie auf <b>Übernehmen</b>.
+</li>
+<li>
+Stellen Sie die Freigabe wieder bereit.
+</li>
+</ol>
+
+<div class="section">
+<h4>Hinweis:</h4>
+<ul>
+<li>Nach dem Ändern der Lese-/Schreib-Paketgröße muss der freigegebene Ordner wieder bereitgestellt werden, bevor die neuen Einstellungen wirksam werden können.</li>
+<li>Diese Einstellungen wirken sich nur auf NFS-Clients aus, die eine Verbindung über UDP (User Datagram Protocol) herstellen.</li>
+</ul>
+</div>
+
+
+
+
+<h3>Kerberos-Einstellungen*</h3>
+<p>Kerberos ist ein Netzwerk-Authentifizierungsprotokoll. Es ermöglicht Clients und Servern die Kommunikation über ein nicht sicheres Netzwerk, um ihre Identitäten gegenseitig sicher zu authentifizieren und nachzuweisen. Der DiskStation bietet Optionen für das Importieren eines vorhandenen Kerberos-Schlüssels. Nach dem erfolgreichen Importieren können NFS-Clients das Kerberos-Authentifizierungsprotokoll für die Verbindung zu DiskStation verwenden.</p>
+
+<h4> So importieren Sie einen Kerberos-Schlüssel: </h4>
+<ol>
+<li>Klicken Sie auf <strong>Kerberos-Einstellungen</strong>.</li>
+<li>Klicken Sie auf die Schaltfläche <b>Importieren</b>.</li>
+<li>Wählen Sie den zu importierenden Kerberos-Schlüssel.</li>
+<li>Klicken Sie auf <b>OK</b>.</li>
+</ol>
+
+<h3><a name="idmap"></a>Kerberos-ID-Zuordnung</h3>
+<p>Sie können einzelne Kerberos-Principals lokalen DSM-Benutzerkonten zuordnen.</p>
+<h4> So ordnen Sie Kerberos-Prinzipalen lokale Benutzerkonten zu: </h4>
+<ol>
+<li>Klicken Sie auf <strong>Kerberos-Einstellungen</strong>.</li>
+<li>Gehen Sie auf die Registerkarte <strong>ID-Zuordnung</strong>.</li>
+<li> Klicken Sie auf <b>Hinzufügen</b>. Wählen Sie eine der folgenden Optionen.</li>
+<ul>
+<li><strong>ID-Zuordnung:</strong> Geben Sie den Kerberos-Principal und das lokale Benutzerkonto ein, dem dieser zugeordnet werden soll.</li>
+<li><strong>Vorgeschlagene Zuordnungsliste:</strong> Diese Option zeigt eine Liste der vorgeschlagenen Zuordnungsoptionen der Kerberos-Principals bzw. lokalen Benutzer an, die vom System erzeugt werden.</li>
+</ul>
+</ol>
+<div class="section disable-eds14">
+  <h4> Hinweis: </h4>
+<ul>
+<li>Vergewissern Sie sich, dass Sie sich beim Verzeichnisdienst angemeldet haben, wenn Sie einen NFS-Client zuordnen möchten, der die Verbindung zu einem bestehenden Domain- bzw. LDAP-Benutzerkonto über Kerberos herstellt. Außerdem muss der Directory Server ein Attribut besitzen, das den entsprechenden Kerberos-Principal einschließt.</li>
+<ul>
+<li><strong>Domainbenutzer:</strong> Das Format für das entsprechende Attribut muss <strong>userPrincipalName</strong> sein.</li>
+<li><strong>LDAP-Benutzer:</strong> Das Format für das entsprechende Attribut muss <strong>GSSAuthName</strong> sein.</li>
+</ul>
+<li>Wenn der Benutzer einem lokalen Benutzer oder einem Domain/LDAP-Benutzer nicht zugeordnet werden kann, erhält der Benutzer die Zuordnung &quot;guest&quot; (Gast).
+<li>Die zugeordnete Priorität ist wie folgt: Lokaler Benutzer > Domain-/LDAP-Benutzer > Guest. </li>
+<li>Verwenden Sie, wenn Sie die Zugriffsberechtigungen von NFS-Clients ändern möchten, die Windows-Zugriffssteuerungsliste (ACL). Die Berechtigungsoptionen unter <strong>Systemsteuerung</strong> > <strong>Benutzer</strong> gelten nicht für NFS-Clients.</li>
+</ul>
+</div>
+<p>
+<br>____<br> * Nur bei bestimmten Modellen verfügbar.
+
+</p>
+
+
+
+</body>
+</html>

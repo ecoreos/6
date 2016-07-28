@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+	<h2>HDD/SSD</h2>
+	<p>This section allows you to monitor the status of the HDD/SSD installed on your DiskStation, providing options to manage and analyze HDD/SSD performance and health. Go to <strong>Storage Manager</strong> > <strong>HDD/SSD</strong> to manage these options.</p>
+
+	<h4>To check HDD/SSD info:</h4>
+	<ol>
+		<li>Go to the <b>HDD/SSD</b> tab.</li>
+		<li>Select a drive from the list and expand it. Here you will see the S.M.A.R.T. status, volume info, model name, serial number, firmware version, and temperature.</li>
+	</ol>	
+	
+	<h4>To check health info:</h4>
+    <ol>
+      <li>Go to the <b>HDD/SSD</b> tab.</li>
+	  <li>Select a drive.</li>
+      <li>Click <b>Health Info</b>.</li>
+	  <li>Go to the <strong>Overview</strong> tab. Here you will find out how many hours the drive has been powered on, the current temperature, reconnection/re-identification count, bad sector count, and the overall S.M.A.R.T. status.</li>
+      <li>Go to the <strong>S.M.A.R.T. Info</strong> tab. The numbers listed can help you further diagnose the status of your drive.</li>
+    </ol>
+
+<div class="section">
+<h4>Note:</h4>
+<p>
+   SAS drives do not support S.M.A.R.T. info.
+</p>
+</div>
+
+	<h4>To start a S.M.A.R.T. test:</h4>
+	<P>S.M.A.R.T. Test will examine and report the status of your drives, alerting you to possible drives failures. We recommended promptly changing your drives if any errors are detected. </P>
+    <ol>
+      <li>Go to the <strong>HDD/SSD</strong> tab.</li>
+      <li>Select a drive.</li>
+      <li>Click <b>S.M.A.R.T. Test</b>.</li>
+      <li>Choose a test type and click <strong>Start</strong> to begin the test.</li>
+      <li>The latest test results are displayed in the <b>Test Result</b> section.</li>
+    </ol>
+    <div class="section">
+<h4>Note:</h4>
+    <p>Test time varies depending on your system environment.</p>
+</div>
+    <h4>To schedule S.M.A.R.T. tests:</h4>
+    <p>S.M.A.R.T. tests can be scheduled to run automatically by creating tasks.</p>
+    <ol>
+      <li>Go to the <strong>Test Scheduler</strong> tab.</li>
+      <li>Click <strong>Create</strong> to set up a new task.</li>
+      <li>Modify the following settings on the <strong>General</strong> tab:</li>
+      <ul>
+        <li><strong>Task:</strong> Enter a name for the task.</li>
+        <li><strong>S.M.A.R.T. Test Type:</strong> Choose to perform a quick test or extended test.</li>
+        <li><strong>S.M.A.R.T. Test Range:</strong> Choose which HDD/SSD to test each time the S.M.A.R.T. test is performed.</li>
+      </ul>
+      <li>On the <strong>Schedule</strong> tab, modify the following settings:</li>
+      <ul>
+        <li><strong>Date:</strong> Specify when to perform the S.M.A.R.T. test. S.M.A.R.T. tests can be scheduled to run on certain days of the week (e.g. daily, weekends, or every Sunday, etc.) or on specific dates (e.g. 2015/10/21).</li>
+        <li><strong>Time:</strong> Specify how many times the S.M.A.R.T. test is performed, as well as the first and last time each day.</li>
+      </ul>
+      <li>Click <strong>OK</strong> to finish.</li>
+    </ol>
+
+<h4>To perform Secure Erase:</h4>
+<ol>
+<li>Go to the <b>HDD/SSD</b> tab.</li>
+<li>Select a drive and click <b>Secure Erase</b>.</li>
+</ol>
+
+
+<div class="section">
+<h4>Note:</h4>
+<ul>
+<li>Secure Erase cannot be performed on drives in expansion units.</li>
+<li>Secure Erase will permanently remove all the data stored on your drive. Please make sure the chosen drive is not in use or the data has been backed up before doing so.</li>
+<li>When the system is performing Secure Erase, the chosen drive will be temporarily locked and then automatically unlocked when the operation is completed.</li>
+<li>If Secure Erase is stopped improperly during the operation, you can re-execute Secure Erase directly on the user interface. If the drives are removed or used elsewhere when they are still being locked, please enter the password "synology" to unlock the drives.</li>
+</ul>
+</div>
+
+
+	<h3>Enabling Write Cache Support for HDD</h3>
+	<p>Enabling write cache support enhances the performance of your DiskStation. Only certain HDD models support this feature. To ensure data protection while using write cache support, usage of a UPS device is strongly recommended. We also suggest the system be shut down properly every time after use. Disabling write cache will reduce the chances of data loss caused by abnormal power outages, but system performance will decline.</p>
+
+	<h4>To enable write cache support: </h4>
+	<ol>
+		<li>Go to the <b>Cache Management</b> tab.</li>
+		<li>Tick <b>Enable write cache</b>. By default, this function is enabled.</li>
+		<li>Click <b>Apply</b>.</li>
+	</ol>
+	
+
+
+
+</body>
+</html>

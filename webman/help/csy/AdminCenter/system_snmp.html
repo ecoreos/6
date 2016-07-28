@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>SNMP</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>SNMP</h2>
+
+<p>Služba SNMP (v části <strong>Ovládací panel</strong> > <strong>Terminál a SNMP</strong> > <strong>SNMP</strong>) umožňuje uživatelům sledovat zařízení DiskStation pomocí softwaru pro správu sítě. Aktuálně jsou podporovány protokoly SNMPv1, SNMPv2c a SNMPv3. </p>
+
+
+<h3>Povolení služby SNMP</h3>
+
+<p>Zaškrtněte možnost <b>Povolit službu SNMP</b> a postupujte podle níže uvedených kroků.</p>
+<h4>Postup povolení služby SNMPv1, SNMPv2c:</h4>
+<ol>
+<li>Zaškrtněte možnost <b>Služba SNMPv1, SNMPv2c</b>.
+<li>Zadejte název položky <b>Komunita</b>.
+<li>Klikněte na možnost <b>Použít</b>.
+</ol>
+<h4>Postup povolení služby SNMPv3:</h4>
+<ol>
+<li>Zaškrtněte možnost <b>Služba SNMPv3</b>.
+<li>Zadejte <b>Uživatelské jméno</b> a <b>Heslo</b>. Poté je nutné opětovným zadáním <b>Potvrdit heslo</b>.
+<li>Klikněte na možnost <b>Použít</b>.
+</ol>
+<p>Zadáním hodnot <b>Název</b>, <b>Umístění</b> a <b>Kontakt</b> můžete usnadnit identifikaci zařízení DiskStation. Tato pole jsou volitelná.
+</p>
+
+
+<div class="section">
+<h4>Poznámka:</h4>
+<ol>
+<li>Služba SNMP podporuje protokoly IPv4 a IPv6. </li>
+<li>Služba SNMP podporuje současně protokoly SNMPv1, SNMPv2c a SNMPv3. </li>
+</ol>
+</div>
+
+
+<div class="section">
+<h4>Omezení komunity SNMPv1, SNMPv2c:</h4>
+<p>Název komunity musí být v rozsahu 1 až 64 zobrazitelných znaků. Následující znaky nejsou povoleny: <br>" ' \ a mezera.</p>
+<h4>Omezení uživatelského jména SNMPv3:</h4>
+<p>Uživatelské jméno musí být v rozsahu 1 až 64 zobrazitelných znaků. Následující znaky nejsou povoleny: <br>" ' \ a mezera.</p>
+<h4>Omezení hesla SNMPv3:</h4>
+<p>V hesle se rozlišují malá a velká písmena a mělo by obsahovat 8 až 127 zobrazitelných znaků, včetně písmen, čísel a symbolů. Následující znaky nejsou povoleny: <br>" ' \ a mezera.</p>
+<p> </p>
+</div>
+<h3>Stahování souborů Synology MIB</h3>
+<p class="disable-eds14">Společnost Synology nabízí možnost sledování zařízení DiskStation přes systémy správy sítě, včetně sledování stavu systémů, disků a svazků RAID.</p>
+
+<p class="enable-eds14">Společnost Synology nabízí možnost sledování zařízení DiskStation přes systémy správy sítě, včetně sledování stavu systémů, disků a svazků.</p>
+
+<p>Více informací a možnost stažení souvisejících souborů najdete na <a href="http://www.synology.com/support/snmp_mib" target="_blank">webové stránce společnosti Synology</a>.</p>
+
+<div class="section">
+<h4>Poznámka:</h4>
+<p>Systémy správy sítě využívají soubory MIB pro účely definic sledovaných služeb. Více informací najdete: <a href="http://en.wikipedia.org/wiki/Management_information_base" target="_blank">zde</a>.</p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,149 @@
+
+[HA_ConfSyncError]
+Subject: High-availability cluster %HOSTNAME% detected a synchronization error during system configuration check.
+
+Dear user,
+
+The high-availability cluster %HOSTNAME% detected a synchronization error during system configuration check of the active and passive servers. The system attempted to fix the error by performing a full synchronization of system configurations. Please check System Logs or the Logs page of High Availability Manager for further information.
+
+Action: %HA_ACTION%
+Error: %HA_PARAM_1%
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[HA_FailOver]
+Subject: Error detected on high-availability cluster %HOSTNAME%.
+
+Dear user,
+
+An error has been detected on the high-availability cluster %HOSTNAME%. The system will switchover services to the passive server. Please check System Logs for further information.
+
+Action: %HA_ACTION%
+Error: %HA_PARAM_1%
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[HA_MismatchedSsdCache]
+Subject: SSD cache disks are not identical on high-availability cluster %HOSTNAME%
+
+Dear user,
+
+The disks belonging to the following SSD cache on the passive server %HA_PARAM_1% are not identical to the disks on the active server: SSD cache %HA_PARAM_2%.
+
+Please check the Logs page of High Availability Manager for further information.
+
+Action: %HA_ACTION%
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[HA_SplitBrain]
+Subject: Split-brain error occurred on high-availability cluster %HOSTNAME%
+
+Dear user,
+
+A split-brain error occurred on the high-availability cluster %HOSTNAME%. Please check System Logs for further information.
+
+Action: %HA_ACTION%
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[HA_StatusChange]
+Subject: Status of high-availability cluster %HOSTNAME% has changed from %HA_PARAM_1% to %HA_PARAM_2%.
+
+Dear user,
+
+The status of the high-availability cluster %HOSTNAME% has changed from %HA_PARAM_1% to %HA_PARAM_2%. Please check System Logs or the Logs page of High Availability Manager for further information.
+
+Action: %HA_ACTION%
+Description: %HA_PARAM_3%
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[HA_SwitchFail]
+Subject: Failed to switchover services of high-availability cluster %HOSTNAME%
+
+Dear user,
+
+The system attempted to switchover services to the passive server of the high-availability cluster %HOSTNAME%, but failed. Please check System Logs for further information.
+
+Action: %HA_ACTION%
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[HA_SwitchFinished]
+Subject: High-availability cluster %HOSTNAME% is now running services on %HA_PARAM_1%.
+
+Dear user,
+
+The services of the high-availability cluster %HOSTNAME% are now running on %HA_PARAM_1%. Please check System Logs or the Logs page of High Availability Manager for further information.
+
+Action: %HA_ACTION%
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[HA_SwitchOver]
+Subject: Switchover of high-availability cluster %HOSTNAME% to %HA_PARAM_1%.
+
+Dear user,
+
+Someone has initiated a switchover of the high-availability cluster %HOSTNAME%. Services will be switched over to %HA_PARAM_1%. Please check System Logs for further information.
+
+Action: %HA_ACTION%
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[HA_SwitchOver_With_Reason]
+Subject: High-availability cluster %HOSTNAME% initiated a switchover to %HA_PARAM_1%.
+
+Dear user,
+
+A switchover has been initiated on the high-availability cluster %HOSTNAME%. Services will be switched to %HA_PARAM_1%. Please check System Logs for further information.
+
+Action: %HA_ACTION%
+Reason: %HA_PARAM_2%
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[HA_SyncComplete]
+Subject: Full data replication of the high-availability cluster %HOSTNAME% is complete.
+
+Dear user,
+
+Full data replication of the high-availability cluster %HOSTNAME% is complete. The passive server is now ready to take over services in the event a switchover is necessary. Please check System Logs or the Logs page of High Availability Manager for further information.
+
+Action: %HA_ACTION%
+
+Sincerely,
+%COMPANY_NAME%
+
+
+[HA_UnbindLocal]
+Subject: Localhost has been removed from the high-availability cluster
+
+Dear user,
+
+%HA_PARAM_1% has been removed from the high-availability cluster %HA_PARAM_2%. Please check System Logs for further information.
+
+Action: %HA_ACTION%
+
+Sincerely,
+%COMPANY_NAME%
+

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Bestanden of mappen zoeken</title>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script> <script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2>Bestanden of mappen zoeken</h2>
+<p>De <strong>Filter</strong> van File Station biedt u opties om bestanden of mappen die beantwoorden aan uw criteria te zoeken en weer te geven. U kunt de bestanden of mappen in de huidige map doorbladeren of geavanceerd zoeken in alle onderliggende mappen voor een verfijnd zoekresultaat.</p>
+
+<h4>Om bestanden of mappen in de huidige map te zoeken:</h4>
+<ol>
+	<li>gebruik File Station om naar de map te gaan met de inhoud waarin u wilt zoeken.</li>
+	<li>Voer in het veld <b>Filter</b> in de rechterbovenhoek een trefwoord in en bekijk het gefilterde resultaat in het hoofdgedeelte van het venster.</li>
+</ol>
+
+<h4>Om een geavanceerde zoekopdracht uit te voeren:</h4>
+<ol>
+	<li>gebruik File Station om naar de map te gaan met de inhoud waarin u wilt zoeken.</li>
+  <li>Klik op het vergrootglaspictogram naast het veld <b>Filter</b> in de rechterbovenhoek om het menu Geavanceerd zoeken weer te geven.</li>
+	<li>Specificeer de onderstaande zoekcriteria of kies uit de vervolgkeuzemenu's:
+		<ul>
+			<li><b>Trefwoord</b>: voer een trefwoord in waarop u de bestanden of mappen wilt doorzoeken.
+				<div class="section"><h4>Opmerking:</h4>
+				<ul>
+					<li>u kunt jokertekens [*] (een aantal willekeurige tekens) en [?] (een willekeurig teken) in het trefwoord gebruiken. Bijvoorbeeld, [a<span class="note_content">*</span>n] kan [a<span class="note_content">ctio</span>n], [a<span class="note_content">ttentio</span>n] of [an] betekenen.</li>
+					<li>U kunt spaties gebruiken om meerdere trefwoorden te scheiden. Zo levert bijvoorbeeld het trefwoord [File Station] zoekresultaten op die [File], [Station] of beide bevatten.</li>
+					<li>U kunt dubbele aanhalingstekens ["] aan het begin en het einde van het trefwoord toevoegen om te zoeken naar exacte hoofdlettergevoelige resultaten. Bijvoorbeeld: [<span class="note_content">"Synology Inc."</span>] kan voor [<span class="note_content">Synology Inc.</span>] staan, maar niet voor [<span class="note_content">Synology Incorporation</span>].
+					</li>
+					<li class="disable-hi3535">De onderstaande operators kunnen voor het verfijnen van zoekresultaten worden gebruikt:
+						<table width="84%" border="1">
+							<tbody>
+								<tr>
+									<th width="147" align="center">Operator</th>
+									<th width="229" align="center">Bijvoorbeeld</th>
+									<th width="926" align="center">Gebruik</th>
+								</tr>
+								<tr>
+									<td align="center">&&</td>
+									<td align="center">[X] && [Y]</td>
+									<td><li>Lijst met resultaten de zowel [X] als [Y] bevatten</li></td>
+								</tr>
+								<tr>
+									<td align="center">||</td>
+									<td align="center">[X] || [Y]</td>
+									<td>
+										<li>Lijst met resultaten die [X], [Y] of beide bevatten</li>
+										<li>Resultaten die zowel [X] als [Y] bevatten worden bovenin de lijst weergegeven</li>
+									</td>
+								</tr>
+								<tr>
+									<td align="center">+</td>
+									<td align="center">+[X]</td>
+									<td><li>Lijst met resultaten die [X] bevatten</li></td>
+								</tr>
+								<tr>
+									<td align="center">-</td>
+									<td align="center">-[X]</td>
+									<td><li>Lijst met resultaten die [X] niet bevatten</li></td>
+								</tr>
+								<tr>
+									<td align="center">!</td>
+									<td align="center">![X]</td>
+									<td><li>Lijst met resultaten die [X] niet bevatten</li></td>
+								</tr>
+								<tr>
+									<td align="center">\</td>
+									<td align="center">\[SpecialCharacter]</td>
+									<td>
+										<li>Speciale tekens: <span class="note_content">&nbsp; + &nbsp;&nbsp;-&nbsp;&nbsp; &&	&nbsp;&nbsp;|| &nbsp;&nbsp; ! &nbsp;&nbsp; ( &nbsp;&nbsp; ) &nbsp;&nbsp; { &nbsp;&nbsp; } &nbsp;&nbsp; [ &nbsp;&nbsp; ] &nbsp;&nbsp; ^ &nbsp;&nbsp; " &nbsp;&nbsp; ~ &nbsp;&nbsp; * &nbsp;&nbsp; ? &nbsp;&nbsp; : &nbsp;&nbsp;\</span></li>
+										<li>Lijst met resultaten die een bovenstaand speciaal teken bevatten</li>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</li>
+				</ul>
+				</div>
+			</li>
+			<li class="disable-hi3535"><strong>Bestandsinhoud zoeken inschakelen</strong>: zoeken naar geïndexeerde bestanden met de bestandsinhoud of metagegevens die overeenkomen met de trefwoorden.</li>
+			<li><b>Locatie</b>: selecteer uit de vervolgkeuzelijst om bereik en diepte voor geavanceerd zoeken in te stellen. U kunt het zoekbereik ook aanpassen door een van de andere getoonde gedeelde mappen te selecteren.</li>
+			<li><b>Bestandstype</b>: selecteer <b>Extensie</b> om het zoekbereik te beperken tot bepaalde bestandstypes of selecteer <b>Elke map</b> om uitsluitend naar mappen te zoeken.</li>
+			<li><strong>Datum</strong>: Kies <b>Gewijzigd op</b>, <b>Gemaakt op</b> of <strong>Laatst geopend</strong>, en kies vervolgens een datum uit de kalender om te zoeken naar bestanden met overeenkomstige datum.</li>
+			<li><b>Grootte (MB)</b>: selecteer <b>gelijk aan</b>, <b>is groter dan</b> of <b>is kleiner dan</b> en voer vervolgens een grootte in om te zoeken naar bestanden met overeenkomstige grootte. (Kiest u <strong>gelijk aan</strong>, dan worden bestanden die ongeveer even groot zijn als de opgegeven grootte ook in de resultatenlijst weergegeven).</li>
+			<li><b>Eigenaar/groep</b>: selecteer <b>Eigenaar</b> of <b>Groep</b> en kies vervolgens in de vervolgkeuzelijst de eigenaar of groep om naar bestanden of mappen van de desbetreffende eigenaar of groep te zoeken.
+				<div class="section"><h4>Opmerking:</h4>
+				<ul>
+					<li>om een geavanceerde zoekopdracht uit te voeren, moet u een <b>Locatie</b> en minstens een zoekcriterium opgeven.</li>
+					<li>Met geavanceerd zoeken is het niet mogelijk om bestanden te vinden die in een ISO-map of een externe map staan die aan een geïndexeerde gedeelde map is gekoppeld.</li>
+				</ul>
+				</div>
+			</li>
+		</ul>
+	</li>
+	<li>Klik op <b>Zoeken</b> om het zoeken te starten of klik op <b>Opnieuw instellen</b> om de zoekcriteria opnieuw in te voeren. Na het voltooien van de zoekopdracht worden de gevonden bestanden in het hoofdgebied van File Station weergegeven.</li>
+</ol>
+
+</body>
+</html>

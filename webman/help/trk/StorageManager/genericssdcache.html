@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2>SSD Önbellek*</h2>
+<p>SSD önbellek, SSD önbellek üzerine sık erişilen verileri kaydederek rastgele erişim performansını iyileştirebilir. SSD önbellek bir birim veya iSCSI LUN (Blok-Seviyesi) üzerine takılabilir. İki tür SSD önbellek vardır:</p>
+<ul>
+<li><strong>Salt okunur önbellek</strong> tanıtıldığı depolama alanının rastgele okuma performansını arttırmak için temel veya bir RAID 0 yapılandırmasında tanıtılabilen 1 ila 12 SSD'den oluşur.
+<div class="section"><h4>Not:</h4>
+	<p>SSD salt okunur önbellek birimden gelen verilerin kopyalarını saklar; böylece, salt okunur bellek çökse bile hiçbir veri kaybı olmaz.</p>
+	</div>
+</li>
+<li><strong>Okuma-yazma önbelleği</strong> tanıtıldığı depolama alanının rastgele okuma ve yazma performansını arttırmak için, SSD'lerin sayısına (12 adet SSD'ye kadar) bağlı olarak, bir RAID 1 / RAID 5 / RAID 6 yapılandırmasında tanıtılabilir.</li>
+</ul>
+
+<p>Her iki tip SSD önbelleği de önbellekteki verileri değiştirmek için bir LRU (En Az Yeni Kullanılan) algoritması uygular.</p>
+
+<div class="section">
+<h4>Önemli:</h4>
+<p>Bir önbellek olarak kullanmak üzere herhangi bir SSD kurmadan önce, lütfen aşağıdaki notları inceleyin:</p>
+<ul>
+<li>SSD önbelleğinin etkinleştirilmesinin amacı, depolama alanında sıklıkla erişilen verilerin küçük bir kısmına rastgele erişim performansını artırmaktır. Örneğin, hem büyük sıralı okuma hem de yazma işlemleri (ör. HD video yayını) ve tamamen rastgele veri okuma düzenleri tekrar okuma düzenlerini içermediklerinden, SSD önbelleğe alma işleminden ciddi miktarda faydalanmazlar. Genel uygulamalar için, sıralı I/O'nun depolama alanı sürücülerinden geçebilmesi amacıyla <b>Sıralı I/O Atla</b>'nın etkinleştirilmesi önerilir.</li>
+<li>DiskStation ürününüzde önbellek olarak kullanılacak SSD'yi seçmek için <a href="http://www.synology.com/" target=_blank>Synology web sitesi</a>'ndeki uyumluluk listesine bakın.</li>
+<li class="disable-alpine">SSD önbellek önbellek boyutuna göre belirli bir sistem belleği gerektirdiğinden, daha büyük SSD önbellek tanıtmak DiskStation belleğinin yükseltilmesini gerektirebilir. Sistemi kararlı ve hızlı tutmak amacıyla, SSD önbellek için önyüklü sistem hafızasının sadece 1/4'ü kullanılabilir. Her 1 GB'lık SSD önbelleği, yaklaşık 416 KB sistem belleği gerektirir (genişletilebilir bellek de sayılabilir)**. Bu nedenle, salt okunur önbellek yapılandırması 2 x 128 GB SSD ise toplam önbellek boyutu 256 GB olacaktır ve en az 104 MB bellek gerektirecektir, eğer salt okunur önbellek yapılandırması 2 x 128 GB SSD ise toplam önbellek boyutu 128 GB olacaktır ve en az 52 MB bellek gerektirecektir. Bellek yetersiz ise, SSD önbellek oluşumu kısıtlanır veya SSD önbellek boyutu sınırlandırılır.</li>
+<li class="enable-alpine">Her 1GB'lık SSD önbelleği, yaklaşık 416 KB sistem belleği gerektirir (genişletilebilir bellek de sayılabilir) ve maksimum önbellek boyutu 930 GB'tır. Bu nedenle, salt okunur önbellek yapılandırması 2 x 128 GB SSD ise toplam önbellek boyutu 256 GB olacaktır ve en az 104 MB bellek gerektirecektir, eğer salt okunur önbellek yapılandırması 2 x 128 GB SSD ise toplam önbellek boyutu 128 GB olacaktır ve en az 52 MB bellek gerektirecektir. Bellek yetersiz ise, SSD önbellek oluşumu kısıtlanır veya SSD önbellek boyutu sınırlandırılır.</li>
+<li>DiskStation ürününüzde izin verilen maksimum SSD önbellek boyutu için <a href="http://www.synology.com/" target=_blank>Synology web sitesi</a>'ndeki modellerinizin ürün özelliklerine bakın.</li>
+<li>Bir okuma-yazma SSD önbelleğinin kapasitesi düştüğünde, önbelleğe alma özelliği devre dışı bırakılır ve sistem SSD'den HDD'lere önbelleğe alınan verileri yazmaya (ör. senkronize etme) başlar. Veri senkronizasyonu tamamlandıktan sonra, okuma-yazma önbelleğinin kapasitesi düşse bile hiçbir veri kaybı olmaz.</li>
+<li>Okuma-yazma önbelleği Time Backup ile birlikte kullanılamaz. Örneğin, bir okuma-yazma SSD önbelleği oluşturduğunuzda, Time Backup çalıştıramazsınız. Tam tersine, Time Backup çalıştırıyorsanız, bir okuma-yazma SSD önbelleği oluşturamazsınız.</li>
+</ul>
+</div>
+
+<h4>SSD önbellek bağlama:</h4>
+<ol>
+  <li>DiskStation ürününüze SSD'leri kurun. Lütfen önce yukarıdaki notlara bakın.</li>
+  <li><strong>Depolama Yöneticisi</strong> > <strong>SSD Önbelleği</strong>'ne gidin. <b>Oluştur</b>'a tıklayın.</li>
+<li>Önbellek modunu seçin (sadece okuma-yazma önbelleğini destekleyen modeller için mevcut).</li>
+<li>Açılır menüden SSD önbelleği monte etmek istediğiniz bölüm veya iSCSI LUN (Blok-Seviyesi) seçimi yapın.</li>
+<li>SSD'leri listeden seçin. SSD'lerdeki veriler silineceğinden, lütfen önemli verilerin silinmeyeceğinden emin olun.</li>
+<li><b>Uygula</b>'ya tıklayın.</li>
+</ol>
+
+<h4>Sıralı I/O önbelleğe almayı durdurmak için: </h4>
+<p>Hedef biriminiz veya iSCSI LUN (Blok Seviyesi) mükemmel sıralı I/O performansına sahipse, daha yüksek hız ve daha iyi performans için SSD önbelleğinin sıralı I/O önbelleğe almayı durdurmasını ve verilere doğrudan sürücülerinizden erişmesini sağlayabilirsiniz. </p>
+<ol>
+<li>Yapılandırma penceresini açmak için <strong>Yapılandır</strong> üzerine tıklayın.</li>
+<li><strong>Sıralı I/O Atla</strong> öğesini işaretleyin. </li>
+</ol>
+
+
+<h4>SSD önbelleği kaldırmak için:</h4>
+<ol>
+<li>DiskStation içindeki SSD önbelleğini kalıcı olarak kaldırmak için <b>Kaldır</b> seçeneğine tıklayın.</li>
+<li>Okuma-yazma önbelleği için bu prosedür aracılığıyla kaldırmanız gerekir (DiskStation kapalı olsa bile), aksi takdirde kısmi veriler sadece önbellekte yer aldıklarından birim çökecektir.</li>
+</ol>
+
+<div class="section">
+<h4>Not:</h4>
+<ul>
+<li>SSD önbelleği bağlarken veya kaldırırken, sistem tüm ilgili hizmetleri durdurur (paylaşılan klasörler, kurulu paketler, mevcut bağlantılar vb. gibi)</li>
+<li>Bir depolama alanındaki bir okuma yazma önbelleği başlatma sırasında algılanmazsa, sistem o depolama alanını bağlamaz. Lütfen DiskStation sunucusundaki SSD'leri bulun veya yeniden kurun ve depolama alanını bağlamak için yeniden başlatın. SSD'leri bulamazsanız, depolama alanını zorla tanıtmanız gerekebilir. Lütfen <a href="space.html">Birim</a> veya <a href="iscsilun.html">iSCSI LUN</a> öğesine bakın.</li>
+</ul>
+</div>
+
+<h4>SSD önbelleği onarmak için:</h4>
+<ul>
+<li><strong>Okuma-yazma önbelleği için:</strong> SSD'lerden bir tanesi çökmüş ise, onarmak için aşağıdaki adımları izleyin.
+  <ol>
+<li>Arızalı SSD'yi yenisiyle değiştirin. (Yeni SSD eskisiyle aynı model ve boyutta olmalıdır).</li>
+<li><b>Onar</b> düğmesine tıklayın.</li>
+<li>SSD'yi listeden seçin.</li>
+<li><b>Uygula</b>'ya tıklayın.</li>
+</ol>
+</li>
+<li><strong>Salt okunur önbellek için:</strong> SSD'lerden bir tanesi çökmüş ise, lütfen önbelleği kaldırın ve arızalı SSD'yi değiştirin. Ardından yeni bir önbellek yapılandırması yapmak için <strong>Oluştur</strong>'a tıklayın.</li>
+</ul>
+
+
+<h3>SSD Önbellek Danışmanı</h3>
+<p>Bu işlev belirli bir birimdeki yeni erişilen dosyaların toplam sayısını ve büyüklüğünü hesaplamanızı ve görüntülemenizi sağlar. Seçili birimde henüz SSD önbelleği oluşturmadıysanız, bu bilgiye sisteminiz için ne kadar SSD önbelleğinin uygun olduğu değerlendirilirken başvurulabilir.  Seçili birimde daha önce SSD önbelleği oluşturduysanız, önbelleğin analizi ve kullanım oranı da burada görüntülenecektir.</p>
+
+<h4>SSD Önbellek Danışmanını kullanmak için:</h4>
+
+<ol>
+<li>Sihirbazı açmak için <b>SSD Önbellek Danışmanı</b>'na tıklayın.</li>
+<li>Hesaplama için bir birim seçip <b>İleri</b>'ye tıklayın.</li>
+<li>Sihirbaz otomatik olarak seçilen bir birimde yeni erişilen dosyaların sayısını ve büyüklüğünü toplamaya başlar. Hesaplama zamanı sizin ortamınıza bağlı olarak değişir.</li>
+</ol>
+<p>_____<br> *SSD önbellek yalnızca belirli modellerde kullanılabilir.<br> <span class="disable-alpine" style="display: inline;">** Bu, DSM 5.1 veya daha eski sürümlerde oluşturulan okuma-yazma SSD önbellekleri için geçerli değildir. Yani, DSM 5.2'den önce oluşturulan SSD önbelleğin her 1 GB'ı DSM 5.2 ortamında kullanıldığında bile 4 MB sistem belleği gerektirecektir.</span>
+  </p>
+</body>
+</html>

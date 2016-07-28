@@ -1,0 +1,114 @@
+ <!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Het RAID-type van een volume of schijfgroep wijzigen - Synology DSM Help</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="This article provides instructions to change the RAID type of existing volumes and disk groups on your DiskStation.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>RAID-type van een volume of schijfgroep wijzigen</h2>
+
+<p>Het RAID-type van volumes en schijfgroepen kan worden gewijzigd zonder dat u daarbij bestaande gegevens verliest. Zo kunt u bijvoorbeeld een RAID 1-volume op uw DiskStation maken en later naar een RAID 5 veranderen wanneer u meer harde schijven installeert. In dit artikel leggen we uit hoe u het RAID-type van bestaande volumes en schijfgroepen op uw DiskStation kunt wijzigen.</p>
+<h3>Beperkingen van RAID-type</h3>
+
+<p>Allen bepaalde RAID-types kunnen naar bepaalde andere RAID-types worden gewijzigd. Zie de onderstaande tabel voor meer details.</p>
+
+<table>
+  <tr>
+    <th width="50%">RAID-type</th>
+    <th width="50%">Kan worden gewijzigd naar…</th>
+  </tr>
+  <tr>
+    <td>Basic</td>
+    <td>RAID 1<br /> RAID 5</td>
+  </tr>
+  <tr>
+    <td>RAID 1</td>
+    <td>RAID 5</td>
+  </tr>
+  <tr>
+    <td>RAID 5</td>
+    <td>RAID 6</td>
+  </tr>
+
+</table>
+
+<div class="section">
+<h4>Bijvoorbeeld:</h4>
+<p>RAID 1 kan worden gewijzigd naar RAID 5, maar RAID 5 kan niet worden gewijzigd naar RAID 1.</p>
+</div>
+
+
+<h3>Harde schijf-vereisten</h3>
+
+<p>Om het RAID-type van een volume of schijfgroep te wijzigen, moet er een toereikend aantal beschikbare harde schijven op uw DiskStation geïnstalleerd zijn. Zie hieronder het minimum aantal harde schijven voor elk RAID-type.</p>
+
+<table>
+  <tr>
+    <th width="50%">Gewenst RAID-type</th>
+    <th width="50%">Vereist aantal harde schijven</th>
+  </tr>
+  <tr>
+    <td>RAID 1</td>
+    <td>2 of 4</td>
+  </tr>
+  <tr>
+    <td>RAID 5</td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>RAID 6</td>
+    <td>4</td>
+  </tr>
+</table>
+
+<div class="section">
+<h4>Bijvoorbeeld:</h4>
+<p>wilt u een RAID 1-volume wijzigen naar RAID 5, dan moet u minstens drie harde schijven hebben (ofwel twee harde schijven van RAID 1-volume plus één aan het volume toe te voegen lege harde schijf).</p>
+</div>
+
+<h3>RAID-type wijzigen</h3>
+
+<p>In het onderstaande voorbeeld wordt een <strong>Basic</strong>-volume gewijzigd naar een <strong>RAID 1</strong>-volume.</p>
+
+<div class="section">
+<h4>Voor u begint:</h4>
+<ul>
+<li>Controleer of de status van uw volume of schijfgroep op <b>Normaal</b> staat.</li>
+<li>Wanneer u nieuwe harde schijven aan een volume of schijfgroep toevoegt, moeten ze groter zijn dan de kleinste harde schijf in het volume of schijfgroep.</li>
+<li>De status van de nieuwe harde schijven moet <b>Geïnitialiseerd</b> of <b>Niet geïnitialiseerd</b> zijn.</li></ul>
+</div>
+
+<h4>Het RAID-type van een volume te wijzigen</h4>
+
+<ol>
+<li>Open <strong>Opslagbeheer</strong>.</li>
+<img src="about:blank" class="help_image"/>
+<li>Ga naar <b>Volume</b>.  (wilt u het RAID-type van een schijfgroep wijzigen, ga dan naar het tabblad <b>Schijfgroep</b>.)</li>
+<li>Selecteer het volume dat u wilt wijzigen en klik op <b>Beheren</b>.</li>
+<img src="about:blank" class="help_image"/>
+
+<li>Zodra de installatiewizard verschijnt, selecteert u <b>RAID-type wijzigen</b>. Klik vervolgens op <b>Volgende</b>.</li>
+<img src="about:blank" class="help_image"/>
+
+
+<li>Selecteer het gewenste RAID-type voor het volume. Klik op <b>Volgende</b>.</li>
+<img src="about:blank" class="help_image"/>
+
+
+<li>Selecteer welke harde schijf(schijven) toe te voegen aan het bestaande volume. Klik vervolgens op <b>Volgende</b>.</li>
+<img src="about:blank" class="help_image"/>
+
+
+<li>Volg de instructies van de wizard om de installatie te voltooien. Denk erom dat de bestaande gegevens op de toegevoegde harde schijven worden verwijderd.</li></ol>
+
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2>Pamięć podręczna SSD*</h2>
+<p>Pamięć podręczna SSD może zwiększyć wydajność losowego dostępu przez zapisanie często wykorzystywanych danych do pamięci podręcznej SSD. Pamięć podręczna SSD może zostać odmontowana z woluminu lub jednostki iSCSI LUN (poziom bloku). Istnieją dwa typy pamięci podręcznej SSD:</p>
+<ul>
+<li><strong>Pamięć podręczna tylko do odczytu</strong> może składać się z od 1 do 12 dysków SSD, które można zamontować w konfiguracji podstawowej lub RAID 0 w celu zwiększenia wydajności losowego odczytu pamięci masowej, na której jest zamontowana.<div class="section"><h4>Uwaga:</h4>
+	<p>W pamięci podręcznej tylko do odczytu dysku półprzewodnikowego (SSD) przechowywane są kopie danych z woluminu — dzięki temu nawet w przypadku uszkodzenia pamięci podręcznej do odczytu nie zostaną utracone żadne dane.</p>
+	</div>
+</li>
+<li><strong>Pamięć podręczną do odczytu i zapisu</strong> w zależności od liczby dysków SSD (do 12 dysków SSD) można zamontować w konfiguracji RAID 1 / RAID 5 / RAID 6 w celu zwiększenia wydajności losowego odczytu i zapisu pamięci masowej, na której jest zamontowana.</li>
+</ul>
+
+<p>W obu typach pamięci podręcznej SSD jest wykorzystywany algorytm LRU (Least Recently Used) w celu wymiany danych w pamięci podręcznej.</p>
+
+<div class="section">
+<h4>Ważne:</h4>
+<p>Przed instalacją dysków SSD do wykorzystania w charakterze pamięci podręcznej zapoznaj się z następującymi uwagami:</p>
+<ul>
+<li>Celem włączenia pamięci podręcznej SSD jest zwiększenie wydajności losowego dostępu do niewielkich fragmentów danych, które są często wykorzystywane w przestrzeni pamięci masowej. Na przykład w dużych sekwencyjnych operacjach odczytu i zapisu (np. podczas przesyłania strumieni wideo HD) oraz we w pełni losowych wzorcach odczytu danych nie występują wzorce odczytu ponownego, przez co w takich sytuacjach zastosowanie pamięci podręcznej SSD nie zwiększy znacząco wydajności. W ogólnych zastosowaniach zalecane jest włączenie opcji <b>Pomiń sekwencyjne we/wy</b>, dzięki czemu sekwencyjne operacje we/wy nadal będą przechodziły przez dyski pamięci masowej.</li>
+<li>Lista zgodności dysków SSD, które można wykorzystać w charakterze pamięci podręcznej serwera , DiskStationznajduje się w <a href="http://www.synology.com/" target=_blank>witrynie firmy Synology</a>.</li>
+<li class="disable-alpine">Pamięć podręczna SSD wymaga określonej ilości pamięci systemowej w zależności od wielkości pamięci podręcznej. W związku z tym zamontowanie większej pamięci podręcznej SSD może wymagać rozbudowy pamięci RAM serwera DiskStation. Aby zachować stabilność i szybkość działania systemu, na pamięć podręczną SSD można przeznaczyć tylko 1/4 zainstalowanej fabrycznie pamięci systemowej. Każdy 1 GB pamięci podręcznej SSD wymaga około 416 KB pamięci systemowej (można uwzględnić pamięć rozszerzaną). W związku z tym, jeżeli konfiguracja pamięci podręcznej tylko do odczytu składa się z dwóch dysków SSD po 128 GB każdy, łączny rozmiar pamięci podręcznej wynosi 256 GB i wymaga co najmniej 104 MB pamięci. Natomiast gdy konfiguracja pamięci podręcznej do odczytu i zapisu to 2 dyski po 128 GB SSD, łączny rozmiar pamięci podręcznej wynosi 128 GB i wymaga co najmniej 52 MB pamięci. Jeżeli ilość pamięci RAM będzie niewystarczająca, utworzenie pamięci podręcznej SSD będzie niemożliwe lub wielkość pamięci podręcznej SSD zostanie ograniczona.</li>
+<li class="enable-alpine">Każdy 1 GB pamięci podręcznej SSD wymaga około 416 KB pamięci systemowej (można uwzględnić pamięć rozszerzaną), a maksymalny rozmiar pamięci podręcznej wynosi 930 GB. W związku z tym, jeżeli pamięć podręczna tylko do odczytu ma konfigurację 2 x 128 GB SSD, łączny rozmiar pamięci podręcznej wynosi 256 GB i wymaga co najmniej 104 MB pamięci. Natomiast gdy pamięć podręczna do odczytu i zapisu ma konfigurację 2 x 128 GB SSD, łączny rozmiar pamięci podręcznej wynosi 128 GB i wymaga co najmniej 52 MB pamięci. Jeżeli ilość pamięci RAM będzie niewystarczająca, utworzenie pamięci podręcznej SSD będzie niemożliwe lub wielkość pamięci podręcznej SSD zostanie ograniczona.</li>
+<li>Więcej informacji na temat maksymalnej wielkości pamięci podręcznej SSD na serwerze DiskStation można znaleźć w specyfikacjach produktu danego modelu w <a href="http://www.synology.com/" target=_blank>witrynie firmy Synology</a>.</li>
+<li>W przypadku obniżonej sprawności pamięci podręcznej SSD do odczytu i zapisu funkcja pamięci podręcznej zostanie wyłączona. Dane przechowywane w pamięci podręcznej zostaną zapisane (zsynchronizowane) na dyskach HDD. Po zakończeniu synchronizacji danych żadne dane nie zostaną utracone, nawet w przypadku awarii pamięci podręcznej do odczytu i zapisu.</li>
+<li>Pamięci podręcznej do odczytu i zapisu nie można używać razem z funkcją Time Backup. Jeśli na przykład zostanie utworzona pamięć podręczna SSD do odczytu i zapisu, nie będzie można uruchamiać funkcji Time Backup. I odwrotnie – gdy działa już funkcja Time Backup, nie będzie można utworzyć pamięci podręcznej SSD do odczytu i zapisu.</li>
+</ul>
+</div>
+
+<h4>Aby zamontować pamięć podręczną SSD:</h4>
+<ol>
+  <li>Zainstaluj dyski SSD w serwerze DiskStation. Zapoznaj się z powyższymi ważnymi uwagami.</li>
+  <li>Wybierz pozycje <strong>Zarządzanie przechowywaniem</strong> > <strong>Pamięć podręczna SSD</strong>. Kliknij przycisk <b>Utwórz</b>.</li>
+<li>Wybierz tryb pamięci podręcznej (tylko w przypadku modeli obsługujących pamięć podręczną do odczytu i zapisu).</li>
+<li>Z listy rozwijanej wybierz wolumin lub jednostkę iSCSI LUN (na poziomie bloku), na których ma być zamontowana pamięć podręczna SSD.</li>
+<li>Z listy wybierz dyski SSD. Dane na tych dyskach SSD zostaną usunięte. Sprawdź, czy nie spowoduje to utraty żadnych ważnych danych.</li>
+<li>Kliknij przycisk <b>Zastosuj</b>.</li>
+</ol>
+
+<h4>Aby zatrzymać buforowanie sekwencyjnego we/wy: </h4>
+<p>Jeśli wolumin docelowy lub jednostka iSCSI LUN (z poziomem bloku) ma wysoką wydajność sekwencyjnego we/wy, należy wyłączyć buforowanie tej czynności i zezwolić na bezpośredni dostęp do danych z dysku SSD. Pozwoli to uzyskać wyższą szybkość i wydajność pracy. </p>
+<ol>
+<li>Kliknij przycisk <strong>Konfiguruj</strong>, aby otworzyć okno konfiguracji.</li>
+<li>Zaznacz pole <strong>Pomiń sekwencyjne we/wy</strong>. </li>
+</ol>
+
+
+<h4>Aby usunąć pamięć podręczną SSD:</h4>
+<ol>
+<li>Kliknij przycisk <b>Usuń</b>, aby nieodwracalnie usunąć tę pamięć podręczną SSD z serwera DiskStation.</li>
+<li>Pamięć podręczną do odczytu i zapisu należy usunąć przy użyciu tej procedury (nawet jeżeli serwer DiskStation jest wyłączony). W przeciwnym razie dojdzie do awarii woluminu, ponieważ w pamięci podręcznej jest przechowywana tylko część danych.</li>
+</ol>
+
+<div class="section">
+<h4>Uwaga:</h4>
+<ul>
+<li>Podczas montowania lub usuwania pamięci podręcznej SSD system zatrzyma wszystkie powiązane usługi (np. foldery udostępnione, zainstalowane pakiety, bieżące połączenia itp.).</li>
+<li>Jeżeli podczas uruchamiania systemu pamięć podręczna do odczytu i zapisu nie zostanie wykryta, system nie zamontuje tej przestrzeni magazynowej. Aby zamontować przestrzeń magazynową, znajdź i zainstaluj ponownie dyski SSD w serwerze DiskStation, a następnie uruchom system ponownie. Jeżeli dysków SSD nie uda się znaleźć, być może trzeba będzie wymusić montowanie przestrzeni magazynowej. Więcej informacji można znaleźć w temacie <a href="space.html">Wolumin</a> lub <a href="iscsilun.html">iSCSI LUN</a>.</li>
+</ul>
+</div>
+
+<h4>Aby naprawić pamięć podręczną SSD:</h4>
+<ul>
+<li><strong>W przypadku pamięci podręcznej do odczytu i zapisu:</strong> jeżeli jeden z dysków SSD jest uszkodzony, wykonaj poniższe czynności, aby go naprawić.<ol>
+<li>Wymień nieprawidłowo działający dysk SSD na nowy. (Nowy dysk SSD musi być taki sam pod względem modelu i pojemności).</li>
+<li>Kliknij przycisk <b>Reperuj</b>.</li>
+<li>Z listy wybierz dysk SSD.</li>
+<li>Kliknij przycisk <b>Zastosuj</b>.</li>
+</ol>
+</li>
+<li><strong>W przypadku pamięci podręcznej tylko do odczytu:</strong> jeżeli jeden z dysków SSD jest uszkodzony, usuń pamięć podręczną i zastąp uszkodzony dysk SSD. Następnie kliknij przycisk <strong>Utwórz</strong>, aby utworzyć nową konfigurację pamięci podręcznej.</li>
+</ul>
+
+
+<h3>Inspektor pamięci podręcznej SSD</h3>
+<p>Ta funkcja umożliwia obliczanie i wyświetlanie łącznej wielkości i liczby plików, do których uzyskiwano ostatnio dostęp na konkretnym woluminie. Jeżeli na wybranym woluminie nie utworzono jeszcze żadnych pamięci podręcznych SSD, informacji tych można użyć do oceny potrzebnej ilości pamięci podręcznej SSD w systemie. Jeżeli utworzono poprzednio pamięć podręczną SSD na wybranym woluminie, w tym miejscu będą wyświetlane także analiza i dane o wykorzystaniu tej pamięci podręcznej.</p>
+
+<h4>Aby użyć funkcji Inspektor pamięci podręcznej SSD:</h4>
+
+<ol>
+<li>Kliknij przycisk <b>Inspektor pamięci podręcznej SSD</b>, aby otworzyć kreatora.</li>
+<li>Wybierz wolumin do obliczenia i kliknij przycisk <b>Dalej</b>.</li>
+<li>Kreator zacznie automatycznie obliczanie łącznej liczby i wielkości plików, do których uzyskiwano ostatnio dostęp na wybranym woluminie. Czas obliczeń zależy od danego środowiska.</li>
+</ol>
+<p>_____<br> * Pamięć podręczna SSD jest dostępna tylko w niektórych modelach.<br> <span class="disable-alpine" style="display: inline;">** Nie dotyczy pamięci podręcznych SSD do odczytu i zapisu utworzonych w systemie DSM w wersji 5.1 lub starszej. Oznacza to, że każdy 1 GB pamięci podręcznej SSD utworzonej w systemie DSM w wersji starszej niż 5.2 wymaga 4 MB pamięci systemowej, nawet jeżeli pamięć podręczna będzie wykorzystywana w systemie DSM 5.2.</span></p>
+</body>
+</html>

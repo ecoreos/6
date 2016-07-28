@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+ <head>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>High Availability</title>
+
+
+ </head>
+ <body>
+<h2>Depolama Durumu</h2>
+	<p>Bu sayfa high-availability kümesinin aktif ve pasif sunucularındaki depolama birimlerinin ve iSCSI LUN'ların (Blok-Seviyesi) durumuna ilişkin ayrıntıları görüntüler.</p>
+    <p>Aktif ve pasif sunuculardaki ilgili birimlerin ve iSCSI LUN'ların (Blok-Seviyesi) kapasitesi ve yapılandırmalarının benzer olması gerektiğinden, iki sunucu üzerindeki birimler ve iSCSI LUN (Blok-Seviyesi) birlikte tek üniteler halinde görüntülenir. Dolayısıyla, aktif ve pasif sunuculardaki birimlerin ve iSCSI LUN'ların (Blok-Seviyesi) durumunu görüntülemek isterseniz, <b>Depolama Durumu</b> sayfasına gitmeniz gerekir [bir high-availability kümesine erişirken, <b>Depolama Yöneticisi</b>'nde sadece aktif sunucudaki birimler ve iSCSI LUN'lar görüntülenebilir].</p>
+
+    <p>Bu sayfa aşağıdaki bilgileri içerir:</p>
+		<ul>
+			<li><b>İsim:</b> Birimlerin ve iSCSI LUN'ların (Blok-Seviyesi) adlarını görüntüler.</li>
+			<li><b>Kullanılan:</b> Birimlerin ve iSCSI LUN'ların (Blok-Seviyesi) kullanılan kapasite yüzdesini görüntüler.</li>
+			<li><b>Kullanılan/Toplam Boyut:</b>  Birimlerin ve iSCSI LUN'ların (Blok-Seviyesi) toplam ve kullanılan kapasitesini görüntüler.</li>
+            <li><b>Durum:</b> Birimlerin, iSCSI LUN'ların (Blok-Seviyesi) ve SSD önbelleklerin durumunu görüntüler.</li>
+            <li><b>Açıklama:</b> Birime, iSCSI LUN'a (Blok-Seviyesi) ve SSD önbelleğe ait hataları ve diğer bilgileri görüntüler.</li>
+		</ul>
+<h4>Arızalı bir birim veya iSCSI LUN (Blok-Seviyesi) onarımı için:</h4>
+	<ul>
+		<li>Sunuculardan bir tanesindeki bir sabit disk çökmüşse, hangi sabit diskin çöktüğünü ve değiştirilmesi gerektiğini belirlemek için <a href="disk.html">Disk Durumu</a> sayfasına gidebilirsiniz. Bu durumda, lütfen aşağıdakini yapın:
+        	<ol>
+            	<li>Çökmüş sabit diski değiştirin (sabit disk kurulumu hakkındaki adımlar için, lütfen Synology ürününüze ait <i>Hızlı Kurulum Kılavuzu</i>'na bakın).</li>
+                <li><b>Depolama Durumu</b> sayfasına gidin ve <b>Onar</b>'a tıklayın.</li>
+            </ol>
+        </li>
+        <li>Pasif sunucu çevrimdışı ise, birimlerin ve iSCSI LUN'ların (Blok-Seviyesi) durumu bir hata oluştuğunu gösterir ve pasif sunucudaki disklerin her biri Disk Durumu sayfasında görünür. Bu durumda, aşağıdakileri yaparak sorunu çözmeyi deneyebilirsiniz:
+        	<ol>
+            	<li>Pasif sunucunun açık olduğundan emin olun.</li>
+                <li>Tüm güç kaynaklarını kontrol edin.</li>
+                <li>Tüm bağlantıları inceleyin.</li>
+            </ol>
+        </li>
+        <li>Sunuculardan bir tanesindeki bir birimde veya iSCSI LUN'da (Blok-Seviyesi) bir dosya sistemi hatası olması durumunda, lütfen aşağıdakileri yapın:
+        	<ul>
+            	<li><b>Depolama Durumu</b> sayfasına gidin.</li>
+                <li><b>Onar</b> üzerine tıklayın.</li>
+            </ul>
+        </li>
+	</ul>
+
+<p><span class="note_head">Not:</span>  High-availability kümesindeki birimlerin ve iSCSI LUN'ların (Blok-Seviyesi) limiti 64'dir.</p>
+
+ </body>
+</html>

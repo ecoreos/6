@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Ressourcenmonitor</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script> <script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h1><a name="leaf_update"></a>Ressourcenmonitor</h1>
+<p class="disable-dockerx64">Mit dem Ressourcen-Monitor überwachen Sie die Auslastung der CPU, des Speichers, des Volumes und des Netzwerkdurchflusses. Sie können die Überwachung entweder in Echtzeit vornehmen oder die aufgezeichneten Daten anzeigen.</p>
+<p class="enable-dockerx64">Mit dem Ressourcenmonitor überwachen Sie die Auslastung der CPU, des Speichers und des Netzwerkdurchflusses. Sie können die Überwachung entweder in Echtzeit vornehmen oder die aufgezeichneten Daten anzeigen.</p>
+<div class="section">
+<h4>Hinweis:</h4>
+<ul>
+<li>Die aufgezeichneten Daten werden nur angezeigt, wenn <strong>Nutzungsverlauf aktivieren</strong> auf der Registerkarte <strong>Einstellungen</strong> aktiviert ist.</li>
+<li class="enable-dockerx64">Bei Docker DSM zeigt <strong>CPU und Speicher</strong> Nutzungsinformationen über den <strong>Docker-Host</strong> an.</li>
+</ul>
+</div>
+<h2>Leistung</h2>
+<p>Klicken Sie auf die Registerkarte <strong>Leistung</strong>, um die Ressourcennutzungsdaten anzuzeigen. Details zu Datum, Uhrzeit und Informationen zum Diagramm werden angezeigt, wenn Sie den Mauszeiger darauf richten.</p>
+
+<h3>CPU</h3>
+<p>Die gesamte CPU-Auslastung kann unter <strong>Benutzer</strong>, <strong>System</strong> und <strong>I/O Warten</strong> angezeigt werden. Die CPU-Auslastung sollte hoch sein, wenn der Ressourcenmonitor das erste Mal gestartet wird, denn das System muss die Ressourcendaten erst sammeln und gleichzeitig die UI-Seite laden.</p>
+<p><strong>Benutzer</strong> zeigt den Prozentsatz der CPU an, der für die Ausführung von Benutzeranwendungen verwendet wird. <strong>System</strong> zeigt den Prozentsatz der CPU an, der für den Systemkern verwendet wird, sowie Hardware-Software IRQs. <strong>I/O Warten</strong> zeigt den Prozentsatz der CPU an, der für I/O Warten genutzt wird.</p>
+<p><strong>Auslastung</strong> ist die Summe der CPU-Auslastung durch <strong>Benutzer</strong> und <strong>System</strong>.</p>
+<p>Die Durchschnittsleistung innerhalb von 1, 5 und 15 Minuten wird mit der Zahl der ausführbaren Prozesse (Run-Queue Length) angezeigt (d. h. die Anzahl der Prozesse, die gegenwärtig ausgeführt werden, plus die Anzahl der wartenden Prozesse). </p>
+<div class="section">
+<h4>Erklärung der Begriffe</h4>
+<ul>
+<li><b>I/O Warten</b>: I/O Warten zeigt an, dass sich die CPU im Leerlauf befindet und nicht von einem anderen Programm verwendet wird. </li>
+<p>I/O Warten ist ein normales Verhalten. Da die Geschwindigkeit der CPU um ein Vielfaches höher als die von I/O ist, ist es normal, dass die CPU häufig auf die Übertragungen von Festplatten oder aus dem Netzwerk warten muss. Wenn der Prozentsatz von "I/O Warten" allerdings extrem hoch ist, bedeutet dies, dass die CPU die meiste Zeit mit "I/O Warten" verbringt und womöglich nicht gut ausgelastet sein ist. Sie können eine effizientere Festplattenkonfiguration (z. B. SHR oder RAID 5) oder Netzwerkkonfigurationen (z. B. Bonding) nutzen, um eine bessere Systemleistung zu erreichen.</p> 
+</ul>
+</div>
+<h3>Arbeitsspeicher</h3>
+<p>Die gesamte Nutzung des physikalischen Speichers und des Auslagerungsspeichers wird angezeigt. Die Speicherauslastung bleibt hoch, weil das System häufig aufgerufene Daten im Zwischenspeicher behält, damit die Daten schnell aufgerufen werden können, ohne dass auf die Festplatte zugegriffen werden muss. Der Zwischenspeicher wird geleert, wenn der Gesamtspeicher nicht mehr ausreicht.</p>
+<p>Eine hohe Auslastung des Auslagerungsspeichers weist auf zu wenig Systemspeicher hin und wirkt sich auf die Leistung des Systems aus. Sie können die Werte für Swap in und Swap out durch Auswahl von <strong>Swap</strong> oben aus dem Dropdown-Menü anzeigen. </p>
+
+<h3>Netzwerk</h3>
+<p>Das Netzwerk-Durchflussdiagramm zeigt die Daten, die in KB pro Sekunde gesendet und empfangen werden. Wenn PPPoE aktiviert ist, wird die Übertragungsrate auch auf dem Diagramm angezeigt.</p>
+
+<h3 class="disable-dockerx64">Datenträger</h3>
+<p class="disable-dockerx64">Sie können die gesamte Festplattennutzung, die Übertragungsrate oder IOPS anzeigen, indem Sie oben im Diagramm auf das Dropdown-Menü klicken. Sie können unten auf <strong>Alle anzeigen</strong> klicken, um weitere Datenträger durch Markieren der Kästchen auszuwählen und ihre Daten zur Darstellung hinzuzufügen.</p>
+
+
+<h3 class="disable-eds14 disable-dockerx64">Volume</h3>
+<p class="disable-eds14 disable-dockerx64">Diese Seite zeigt den Gesamtübertragungsstatus von Volumes an. Klicken Sie auf das Dropdown-Menü über dem Diagramm, um die Übertragungsauslastung, Übertragungsrate oder IOPS anzuzeigen. Klicken Sie auf <strong>Alle anzeigen</strong>, um einzelne Volumes auszuwählen und zur Grafik hinzuzufügen.</p>
+
+<h3 class="disable-eds14 disable-dockerx64">iSCSI</h3>
+<p class="disable-eds14 dixable-dockerx64">Diese Seite zeigt den Gesamtstatus der aktuell ausgeführten iSCSI-LUNs an. Klicken Sie auf das Dropdown-Menü über dem Diagramm, um eine LUN auszuwählen und ihren Status anzuzeigen. Drei Diagramme werden standardmäßig angezeigt: <strong>Durchsatz</strong>, <strong>IOPS</strong> und <strong>Latenz</strong>.      Für detailliertere Informationen klicken Sie auf <strong>Diagramme auswählen</strong>, um weitere Diagramme anzuzeigen. </p>
+
+
+<h2>Prozess</h2>
+<p>Klicken Sie auf die Registerkarte <strong>Prozesse</strong>, um die CPU- und Speicherauslastung jedes Prozesses in absteigender CPU-Auslastung anzuzeigen.</p>
+<p>Der Prozess <strong>Status</strong> enthält <strong>Ausgeführt</strong>, <strong>Ruhe</strong> und <strong>Angehalten</strong>. Die Linux-Äquivalente des Prozessstatus sind <strong>Ausgeführt</strong>, <strong>Angehalten/Überwacht</strong>, <strong>Ruhe</strong>. </p>
+<p><strong>Hinter Ruhe</strong> kann ein Buchstabe für weitere Informationen stehen, z. B. 'D' für Ruhezustand der Festplatte, 'Z' für Zombie, 'X' für tot.</p>
+
+<h2>Verbundene Benutzer</h2>
+<p> Auf dieser Registerkarte werden Clients angezeigt und verwaltet, die aktuell mit dem System verbunden sind und auf die Ressourcen zugreifen. Dieser Bereich zeigt Clients an, die über HTTP, TELNET, SSH, SMB/CIFS, AFP, FTP und NFS verbunden sind.</p>
+<h4>Verwalten Sie die aktuellen Verbindungen mit einer der folgenden Methoden:</h4>
+<ul>
+<li>Klicken Sie auf <b>Speichern</b>, um die aktuelle Liste in eine HTML-Datei zu exportieren.</li>
+<li>Klicken Sie auf <b>Aktualisieren</b>, um die Liste zu aktualisieren.</li>
+<li>Klicken Sie auf <b>Verbindung trennen</b>, um den Benutzer am weiteren Zugriff auf die Ressource zu hindern. Der getrennte Benutzer benötigt eine erneute Autorisierung, bevor er wieder auf die Ressource zugreifen kann.</li>
+<li>Klicken Sie auf <b>Benutzer deaktivieren</b>, um den Benutzer zu deaktivieren. Gehen Sie, wenn Sie den Benutzer wieder aktivieren möchten, zu <b>Hauptmenü</b> > <b>Systemsteuerung</b> > <b>Benutzer</b>.</li>
+</ul>
+<div class="section">
+<h4>Hinweis:</h4>
+<ul>
+<li>Die Option <strong>Verbindung trennen</strong> funktioniert nicht bei NFS-Clients.</li>
+<li>Falls NFS-Clients freigegebene Ordner nicht korrekt trennen, werden sie möglicherweise immer noch in der Liste der verbundenen Benutzer angezeigt.</li>
+<li>Wenn der DiskStation neu gestartet wird, werden NFS-Clients, die vorher verbunden waren, nicht in der Liste der verbundenen Benutzer angezeigt.</li>
+</ul>
+</div>
+
+
+<h2>Geschwindigkeitseinschränkung</h2>
+<p>Auf der Registerkarte <strong>Geschwindigkeitseinschränkung</strong> können Sie die Liste der Dateitransfers, für welche die Geschwindigkeitseinschränkung auf DiskStation gilt, anzeigen und verwalten.</p>
+<h4>Liste aktualisieren:</h4>
+<p>Klicken Sie auf <strong>Aktualisieren</strong>, um die Seite neu zu laden und Sie erhalten die neuesten Aufzeichnungen.</p>
+<h4>Dateiübertragung stoppen:</h4>
+<p>Klicken Sie auf <b>Verbindung trennen</b>, um den Dateitransfer zu stoppen. Sie müssen die Dateiübertragung erneut starten, um den Prozess erfolgreich abzuschließen.</p>
+
+
+<h2>Einstellungen</h2>
+<p>Klicken Sie auf <strong>Einstellungen</strong>, um die folgenden Optionen einzustellen:</p>
+<ul>
+<li>Wählen Sie die <strong>Echtzeitdauer</strong> in Minuten aus dem Dropdown-Menü aus.</li>
+<li>Markieren Sie <strong>Nutzungsverlauf aktivieren</strong>, wenn Sie die aufgezeichneten Daten sehen möchten. Wenn die Option aktiviert ist, können Sie im Dropdown-Menü rechts bei Ansicht der Leistungsdiagramme zwischen <strong>Echtzeit</strong>, <strong>1 Tag</strong>, <strong>1 Woche</strong>, <strong>1 Monat</strong> und <strong>1 Jahr</strong> auswählen.</li> 
+</ul>
+<p>Klicken Sie auf <strong>Übernehmen</strong>, um die Einstellungen zu speichern.</p>
+</body>
+</html>

@@ -1,0 +1,130 @@
+ <!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Repair a Volume or Disk Group - Synology DSM Help</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="This article walks you through the steps to create a volume on DiskStation using Storage Manager.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Repair a Volume or Disk Group</h2>
+
+<p>Volume errors might occur due to various reasons, such as damaged system partitions or crashed hard drives.  In some cases, you can follow the steps below to  diagnose the error and fix the issue.</p>
+
+<div class="section">
+<h4>Notes:</h4>
+<ul>
+<li>The <strong>Repair</strong> function described here is available only for RAID types with data redundancy (e.g. RAID 1, RAID 5, RAID 6, etc.). Please note this function does not repair broken hard drives, nor does it guarantee data on crashed volumes will be rescued.</li>
+<li>For crashed volumes, we recommend contacting our <span class="last"><a href="https://account.synology.com/support/support_form.php?lang=enu" target="_blank">Technical Support</a> for assistance</span>.</li>
+</ul>
+</div>
+
+<h3>Failed System Partitions</h3>
+
+<p>When system partitions fail, you should see a message informing you that the system partitions cannot be accessed.</p>
+<h4>To repair system partitions:</h4>
+
+<ol>
+<li>Open <strong>Storage Manager</strong>.</li>
+<img src="about:blank" class="help_image"/>
+
+<li>Go to <strong>Overview</strong> and click the link marked <strong>Repair</strong>. The system should repair the system partitions.</li>
+
+<img src="about:blank" class="help_image"/>
+</ol>
+
+
+<h3>Degraded Volumes</h3>
+
+
+<p>A volume or disk group becomes <strong>Degraded</strong> when a hard drive fails, but data loss has not occurred. This only happens with RAID types that provide data redundancy, such as SHR, RAID 1, RAID 5, RAID 6, and RAID 10. </p>
+<p>A degraded volume or disk group can be fixed by replacing the failed hard drive with a healthy one and repairing the volume or disk group.</p>
+
+<div class="section">
+<h4>Note:</h4>
+<ul>
+  <li>The size of the replacement hard drive must be larger or equal to the size of the smallest disk in the volume.</li>
+  <li>The status of the hard drive for replacement must be <strong>Initialized</strong> or <strong>Not Initialized</strong>.</li>
+</ul>
+
+</div>
+
+<h4> To repair a degraded volume or disk group:</h4>
+
+<ol>
+
+<li>Go to <strong>Storage Manager</strong> > <strong>Volume</strong> or <strong>Disk Group</strong> to confirm the status has changed to <strong>Degraded</strong>.</li> 
+<img src="about:blank" class="help_image"/>
+
+<li>If so, go to  the <strong>HDD/SSD </strong>tab to see which hard drive has failed.</li>
+<img src="about:blank" class="help_image"/>
+
+<li>Remove the failed hard drive and replace it with a new one.</li>
+
+<div class="section">
+<h4>Note:</h4>
+<ul>
+<li>If your DiskStation does not support hot-swapping, please remember to power it off before removing and installing any hard drives.</li>
+<li>Existing data on the replacement hard drive will be erased.</li>
+</ul>
+</div>
+
+<li>After the replacement hard drive has been installed, return to the <strong>Volume</strong> or <strong>Disk Group</strong> tab.</li>
+
+<li>Select the degraded volume or disk group.</li>
+
+<li>Click <strong>Manage</strong>.</li>  
+<img src="about:blank" class="help_image"/>
+
+<li>Select <strong>Repair</strong> and click <strong>Next</strong>. </li>  
+<img src="about:blank" class="help_image"/>
+
+<li>Select the replacement hard drive which you would like to add to the volume. Then click <strong>Next.</strong></li>
+<img src="about:blank" class="help_image"/>
+
+<li> Follow the instructions of the wizard to finish. </li>
+</ol>
+
+
+
+
+<h3>Repair Volumes</h3>
+<p>To repair a degraded volume/Disk Group/iSCSI LUN, you need to replace the failed disk with an available disk that matches the following criteria:</p>
+<ul>
+<li>For RAID 1, RAID 5 or RAID 6 volumes, the degraded volume can be repaired by an available disk whose size is equal to or larger than the size of the smallest disk in the RAID volume.</li>
+<li>For SHR-1 volumes, the available disk must meet one of the following criteria: (1) Its size must be equal to or larger than the size of the failed disk; (2) With the largest disk in the RAID volume excluded, its size must be equal to or larger than the size of the largest remaining disk.
+
+<ol>
+<li>Example 1: SHR-1 is composed of 3TB, 2TB, 2TB, and 1TB disks. If the 3TB disk fails, it can be repaired by an available disk whose size is equal to or larger than 2TB.</li>
+<li>Example 2: SHR-1 is composed of 4TB, 4TB, 2TB, and 2TB disks. If the 4TB disk fails, it can be repaired by an available disk whose size is equal to or larger than 4TB.</li>
+<li>Example 3: SHR-1 is composed of 4TB, 4TB, 2TB, and 2TB disks. If the 2TB disk fails, it can be repaired by an available disk whose size is equal to or larger than 2TB.</li>
+</ol>
+</li>
+<li>For SHR-2 volumes, the available disk must meet one of the following criteria: (1) Its size must be equal to or larger than the size of the failed disk; (2) With the two largest disks in the RAID volume excluded, its size must be equal to or larger than the largest remaining disk.</li>
+</ul>
+<p>If you have configured disks as hot spares that match the above criteria, they will be used for repairing the volume/Disk Group/RAID Group/iSCSI LUN.</p>
+
+
+<h3>Resolve Crashed Volumes</h3>
+
+<p>When the status of a volume becomes<strong> Crashed</strong>, you cannot repair the volume by yourself. To solve this problem, we recommend contacting our <a href="https://account.synology.com/support/support_form.php?lang=enu" target="_blank">Technical Support </a> for help.</p>
+
+<div class="section">
+<h4>Before You Contact Support:</h4>
+
+<ul>
+<li>Rescue your data on your DiskStation by copying the files to your computer or external drives via File Station, Windows File Service, FTP or other file services.</li>
+<li>Keep the order of the hard drives the same as when the volume crashed.</li>
+<li>Please perform an S.M.A.R.T. test on the problematic hard drives. To do so, go to <strong>Storage Manager</strong> > <strong>HDD/SSD</strong>. Choose the hard drive in question and click <strong>S.M.A.R.T Test</strong>. <br />
+</li>
+</ul>
+</div>
+</body>
+</html>

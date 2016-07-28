@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Skapa en användare - Synology DSM Hjälp</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="This article shows you how to create users in DSM.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2><a name="leaf_user"></a>Skapa en användare</h2>
+<p>Du kan skapa och hantera flera användare på din DiskStation.</p>
+
+
+<h4 class="disable-eds14">Skapa en användare:</h4>
+<ol class="disable-eds14">
+<li>Gå till <strong>Kontrollpanel</strong> > <strong>Användare</strong>.</li>
+<img src="about:blank" class="help_image"/>
+<li>Klicka på knappen <b>Skapa</b> och sedan på Skapa användare. Denna åtgärd startar <b>Guiden Skapa Användare</b>.</li>
+<img src="about:blank" class="help_image"/>
+<li>På sidan för <strong>Användarinformation</strong>, specificera följande alternativ:
+<ul>
+<li><strong>Namn:</strong> Ange ett namn för användaren. Detta avsnitt är obligatoriskt.</li>
+<li><strong>Beskrivning:</strong> Ange ett kortfattad beskrivning av användaren.</li>
+<li><strong>E-post:</strong> Ange en e-postadress för användaren. Systemmeddelanden, såsom meddelanden om återställning av lösenord, sänds till den adress som specificeras här.</li>
+<li><strong>Skicka ett meddelande till den nyskapade användaren:</strong> Om detta alternativ är aktiverat, kommer systemet att skicka ett meddelande till användaren för att meddela denna om det nya kontot. Detta alternativ kräver aktivering av systemmeddelanden via e-post i <b>Huvudmeny</b> > <b>Kontrollpanel</b> > <b>Meddelande</b> > <strong>E-post</strong>. Som standardinställning visas inte användarens lösenord i e-postmeddelandet. Om du emellertid vill visa lösenordet i meddelandet, vänligen markera rutan <strong>Visa användarens lösenord i e-postmeddelandet</strong>.</li>
+<li><strong>Förbjud användaren att ändra kontolösenord:</strong> Om detta alternativ är aktiverat, kommer användaren inte att kunna ändra lösenordet som används för att logga in på DSM.</li></ul>
+</li>
+<li>På sidan <strong>Grupp</strong> > <strong>Skapa</strong> > <strong>Guiden Skapa grupp</strong>, specificera de grupper till vilka den nya användaren ska tillhöra, (t.ex. användare, administrators, etc.). </li>
+<li>På sidan <strong>Tilldela behörigheter för delade mappar</strong>, välj vilka delade mappar den nya användaren har åtkomst till genom att ändra dennas åtkomsträttigheter. Prioriteten för privilegier är enligt följande: <strong>Ingen åtkomst</strong> > <strong>Läsa/skriva</strong> > <strong>Endast läsbar</strong>.
+  
+  <ul>
+    <li><strong>Förhandsgranska:</strong> Denna kolumn visar användarens faktiska åtkomsträttigheter till delade mappar, i enlighet med nuvarande inställningar och de grupper som användaren tillhör.</li>
+  <li><strong>Gruppbehörigheter:</strong> Denna kolumn visar åtkomstprivilegier till delade mappar, i enlighet med de grupper som användaren tillhör.</li></ul>
+  <a name="userquota"></a>
+  <li class="disable-dockerx64">På sidan <strong>Användarkvot</strong>, kan du kontrollera hur mycket lagringsutrymme som kan användas av den nya användaren. För att begränsa den mängd utrymme användaren kan använda, markera rutan under <strong>Aktivera kvot</strong>, för varje volym<span style="display: inline;" class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64">/delad mapp</span>. Ange sedan den maximala mängden utrymme som kan användas i fältet för <strong>Kvota</strong>, (t.ex. 10 GB).</li>
+<li>På sidan <strong>Tilldela behörigheter för applikationer</strong> kan du kontrollera till vilka tjänster användaren har åtkomst.</li>
+<li>På sidan <strong>Inställning för grupphastighetsbegränsning</strong>, kan du aktivera hastighetsbegränsning för olika typer av tjänster (t.ex. File Station, FTP, osv.) för att begränsa den mängd bandbredd användaren använder vid överföring av filer. För varje tjänst kan du välja en av de följande:
+  <ul>
+  <li><strong>Ingen:</strong> Inställningen för hastighetsbegränsning kommer att vara samma som för gruppen användaren tillhör.</li>
+  <li><strong>Konstant:</strong> En fast, konstant hastighetsbegränsning kommer att appliceras. Du kan specificera hastighetsbegränsningarna för uppladdning och nedladdning i fälten till vänster.</li>
+  <li><strong>Variabel:</strong> Två olika hastighetsbegränsningar kan specificeras och appliceras på användaren, i enlighet med ett schema. Klicka på knappen <strong>Anpassa</strong> för att ändra inställningarna för hastighetsbegränsning och ställa in schemat.</li></ul>
+<li>Efter att du ändrat inställningarna, klicka på <b>Tillämpa</b> för att slutföra.</li>
+</ol>
+
+<h4 class="enable-eds14">Skapa en användare:</h4>
+<ol class="enable-eds14">
+<li>Gå till <strong>Kontrollpanel</strong> > <strong>Användare</strong>.</li>
+<img src="about:blank" class="help_image"/>
+<li>Klicka på knappen <b>Skapa</b> och sedan på Skapa användare. Denna åtgärd startar <b>Guiden Skapa Användare</b>.</li>
+<img src="about:blank" class="help_image"/>
+<li>På sidan för <strong>Användarinformation</strong>, specificera följande alternativ:
+<ul>
+<li><strong>Namn:</strong> Ange ett namn för användaren. Detta avsnitt är obligatoriskt.</li>
+<li><strong>Beskrivning:</strong> Ange ett kortfattad beskrivning av användaren.</li>
+<li><strong>E-post:</strong> Ange en e-postadress för användaren. Systemmeddelanden, såsom meddelanden om återställning av lösenord, sänds till den adress som specificeras här.</li>
+<li><strong>Skicka ett meddelande till den nyskapade användaren:</strong> Om detta alternativ är aktiverat, kommer systemet att skicka ett meddelande till användaren för att meddela denna om det nya kontot. Detta alternativ kräver aktivering av systemmeddelanden via e-post i <b>Huvudmeny</b> > <b>Kontrollpanel</b> > <b>Meddelande</b> > <strong>E-post</strong>. Som standardinställning visas inte användarens lösenord i e-postmeddelandet. Om du emellertid vill visa lösenordet i meddelandet, vänligen markera rutan <strong>Visa användarens lösenord i e-postmeddelandet</strong>.</li>
+<li><strong>Förbjud användaren att ändra kontolösenord:</strong> Om detta alternativ är aktiverat, kommer användaren inte att kunna ändra lösenordet som används för att logga in på DSM.</li></ul>
+<li>På sidan <strong>Grupp</strong> > <strong>Skapa</strong> > <strong>Guiden Skapa grupp</strong>, specificera de grupper till vilka den nya användaren ska tillhöra, (t.ex. användare, administrators, etc.). </li>
+<li>På sidan <strong>Tilldela behörigheter för delade mappar</strong>, välj vilka delade mappar den nya användaren har åtkomst till genom att ändra dennas åtkomsträttigheter. Prioriteten för privilegier är enligt följande: <strong>Ingen åtkomst</strong> > <strong>Läsa/skriva</strong> > <strong>Endast läsbar</strong>.</li>  
+  <ul>
+    <li><strong>Förhandsgranska:</strong> Denna kolumn visar användarens faktiska åtkomsträttigheter till delade mappar, i enlighet med nuvarande inställningar och de grupper som användaren tillhör.</li>
+  <li><strong>Gruppbehörigheter:</strong> Denna kolumn visar åtkomstprivilegier till delade mappar, i enlighet med de grupper som användaren tillhör.</li></ul>
+<li>På sidan <strong>Tilldela behörigheter för applikationer</strong> kan du kontrollera till vilka tjänster användaren har åtkomst.</li>
+<li>På sidan <strong>Inställning för grupphastighetsbegränsning</strong>, kan du aktivera hastighetsbegränsning för olika typer av tjänster (t.ex. File Station, FTP, osv.) för att begränsa den mängd bandbredd användaren använder vid överföring av filer. För varje tjänst kan du välja en av de följande:</li>
+  <ul>
+  <li><strong>Ingen:</strong> Inställningen för hastighetsbegränsning kommer att vara samma som för gruppen användaren tillhör.</li>
+  <li><strong>Konstant:</strong> En fast, konstant hastighetsbegränsning kommer att appliceras. Du kan specificera hastighetsbegränsningarna för uppladdning och nedladdning i fälten till vänster.</li>
+  <li><strong>Variabel:</strong> Två olika hastighetsbegränsningar kan specificeras och appliceras på användaren, i enlighet med ett schema. Klicka på knappen <strong>Anpassa</strong> för att ändra inställningarna för hastighetsbegränsning och ställa in schemat.</li></ul>
+</li>
+</ul>
+<li>Efter att du ändrat inställningarna, klicka på <b>Tillämpa</b> för att slutföra.</li>
+</ol>
+ 
+<div class="section">
+<h4>Begränsningar för användarnamn:</h4>
+
+<ul>
+<li>Användarnamnet är inte skiftlägeskänsligt och kan innehålla mellan 1 och 64 Unicode-tecken, men kan inte innehålla följande symboler:<br> ! " # $ % & ' ( ) * + , / : ; < = > ? @ [ ] \ ^ ` { } | ~</li>
+<li>Det första tecknet får inte vara ett minustecken eller ett mellanslag och sista tecknet får inte vara ett mellanslag.</li>
+<li>Följande användarnamn är reserverade för systembruk: mailer-daemon, postmaster.</li>
+<li>Användarbeskrivningen kan innehålla upp till 64 Unicode-tecken.</li>
+</ul>
+<h4>Lösenordsbegränsningar:</h4>
+<ul>
+<li>Lösenordet är skiftlägeskänsligt och är begränsat till 127 tecken, inklusive bokstäver, siffror, tecken och mellanslag.</li>
+</ul>
+<h4 class="disable-eds14 disable-dockerx64">Kvotbegränsning:</h4>
+<ul class="disable-eds14 disable-dockerx64">
+<li>Den högsta kvot för användning av lagring som kan anges för varje användare är ungefärligen 4 TB (4095 GB).</li>
+</ul>
+</div>
+
+</body>
+</html>

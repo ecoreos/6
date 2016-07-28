@@ -1,0 +1,149 @@
+
+[HA_ConfSyncError]
+Subject: High-availability kümesi %HOSTNAME% sistem yapılandırma kontrolü sırasında bir senkronizasyon hatası algıladı.
+
+Sayın kullanıcı,
+
+High-availability kümesi %HOSTNAME% aktif ve pasif sunucuların sistem yapılandırma kontrolü sırasında bir senkronizasyon hatası algıladı. Sistem, sistem yapılandırmalarının tam bir senkronizasyonunu gerçekleştirerek hatayı düzeltmeye çalıştı. Daha fazla bilgi için lütfen Sistem Günlüklerini veya High Availability Manager Kayıtlar sayfasını kontrol edin.
+
+Eylem: %HA_ACTION%
+Hata: %HA_PARAM_1%
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[HA_FailOver]
+Subject:  High-availability kümesinde %HOSTNAME% hata algılandı.
+
+Sayın kullanıcı,
+
+High-availability kümesinde %HOSTNAME% bir hata algılandı. Sistem hizmetleri pasif sunucuya aktaracaktır. Daha fazla bilgi için lütfen Sistem Kayıtlarını kontrol edin.
+
+İşlem: %HA_ACTION%
+Hata: %HA_PARAM_1%
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[HA_MismatchedSsdCache]
+Subject: SSD önbellek diskleri high-availability kümesinde aynı değil %HOSTNAME%
+
+Sayın kullanıcı,
+
+Pasif sunucu %HA_PARAM_1% üzerinde bulunan aşağıdaki SSD önbelleğe ait diskler aktif sunucu üzerindeki disklerle aynı değildir: SSD önbellek %HA_PARAM_2%.
+
+Daha fazla bilgi için lütfen High Availability Manager Kayıtlar sayfasını kontrol edin.
+
+Eylem: %HA_ACTION%
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[HA_SplitBrain]
+Subject: High-availability kümesinde %HOSTNAME% bölünmüş beyin hatası oluştu
+
+Sayın kullanıcı,
+
+High-availability kümesinde %HOSTNAME% bölünmüş beyin hatası oluştu. Daha fazla bilgi için lütfen Sistem Kayıtlarını kontrol edin.
+
+İşlem: %HA_ACTION%
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[HA_StatusChange]
+Subject: High-availability kümesi %HOSTNAME%, %HA_PARAM_1% yerine %HA_PARAM_2% olarak değişti.
+
+Sayın kullanıcı,
+
+High-availability kümesi %HOSTNAME% durumu, %HA_PARAM_1% yerine %HA_PARAM_2% olarak değişti. Daha fazla bilgi için lütfen Sistem Günlüklerini veya High Availability Manager Kayıtlar sayfasını kontrol edin.
+
+Eylem: %HA_ACTION%
+Açıklama: %HA_PARAM_3%
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[HA_SwitchFail]
+Subject:  High-availability kümesi %HOSTNAME% hizmetleri aktarılamadı
+
+Sayın kullanıcı,
+
+Sistem, hizmetleri high-availability kümesine %HOSTNAME% aktarmaya çalıştı ancak başarısız oldu. Daha fazla bilgi için lütfen Sistem Kayıtlarını kontrol edin.
+
+İşlem: %HA_ACTION%
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[HA_SwitchFinished]
+Subject: High-availability kümesi %HOSTNAME% şu anda %HA_PARAM_1% üzerinde hizmetleri çalıştırıyor.
+
+Sayın kullanıcı,
+
+High-availability kümesi %HOSTNAME% şu anda %HA_PARAM_1% üzerinde çalışıyor. Daha fazla bilgi için lütfen Sistem Günlüklerini veya High Availability Manager Kayıtlar sayfasını kontrol edin.
+
+Eylem: %HA_ACTION%
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[HA_SwitchOver]
+Subject:  High-availability kümesinin %HOSTNAME%, %HA_PARAM_1%'ye geçişi.
+
+Sayın kullanıcı,
+
+Bir kişi high-availability kümesinin %HOSTNAME% geçişini başlattı. Hizmetler %HA_PARAM_1%'ye aktarılacaktır. Daha fazla bilgi için lütfen Sistem Kayıtlarını kontrol edin.
+
+İşlem: %HA_ACTION%
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[HA_SwitchOver_With_Reason]
+Subject: High-availability kümesi %HOSTNAME% şu anda %HA_PARAM_1%'e bir geçiş başlattı.
+
+Sayın kullanıcı,
+
+High-availability kümesi %HOSTNAME% üzerinde bir geçiş başlatıldı. Hizmetler %HA_PARAM_1%'e aktarılacaktır. Daha fazla bilgi için lütfen Sistem Kayıtlarını kontrol edin.
+
+İşlem: %HA_ACTION%
+Neden: %HA_PARAM_2%
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[HA_SyncComplete]
+Subject: High-availability kümesi %HOSTNAME% tam veri çoğaltımı tamamlandı.
+
+Sayın kullanıcı,
+
+High-availability kümesi %HOSTNAME% tam veri çoğaltımı tamamlandı. Şu anda bir geçişin gerekli olması durumunda pasif sunucu hizmetleri yüklenmeye hazırdır. Daha fazla bilgi için lütfen Sistem Günlüklerini veya High Availability Manager Kayıtlar sayfasını kontrol edin.
+
+Eylem: %HA_ACTION%
+
+Saygılarımızla,
+%COMPANY_NAME%
+
+
+[HA_UnbindLocal]
+Subject: Yerel ana bilgisayar high-availability kümesinden kaldırıldı
+
+Sayın kullanıcı,
+
+%HA_PARAM_1%, high-availability kümesinden %HA_PARAM_2% kaldırıldı. Daha fazla bilgi için lütfen Sistem Kayıtlarını kontrol edin.
+
+Eylem: %HA_ACTION%
+
+Saygılarımızla,
+%COMPANY_NAME%
+

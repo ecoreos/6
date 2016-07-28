@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>File Station</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>装载虚拟驱动器</h2>
+
+<p>
+您可以装载虚拟驱动器，在 File Station 上访问光盘映像内容。
+</p>
+
+<h4>若要装载虚拟驱动器：</h4>
+<ol>
+<li>
+选择光盘映像文件并单击<b>工具</b> > <b>装载虚拟驱动器</b>。
+</li>
+<img src="about:blank" class="help_image"/>
+<li>
+单击<b>浏览</b>选择一个目的地，或在 DiskStation 上添加一个空的目的地文件夹来装载虚拟驱动器。
+</li>
+<img src="about:blank" class="help_image"/>
+<li>
+如果您想要让 DiskStation 在每次系统开机或重新启动时自动装载此虚拟驱动器，请勾选<b>开机时自动装载</b>。单击<b>装载</b>继续。现在您可以前往已装载虚拟驱动器的目的地文件夹，并且访问光盘映像内容。
+</li>
+<img src="about:blank" class="help_image"/>
+</ol>
+
+<div class="section">
+<h4>注：</h4>
+<p>虚拟驱动器和 .iso 文件只能装置到共享文件夹下的子文件夹。</p>
+</div>
+
+
+
+<h4>若要卸载虚拟驱动器：</h4>
+<ol>
+<li>右键单击已装载虚拟驱动器的目的地文件夹并选择<b>卸载</b>。</li>
+<img src="about:blank" class="help_image"/>
+</ol>
+<ol>
+<span class="note_head">注： </span>
+<li>
+支持的光盘映像文件格式："<b>.iso</b>“文件，使用 ISO 9660 和 UDF 文件系统。
+</li>
+<li>
+最多可同时装载 16 个虚拟驱动器。
+</li>
+<li class="enable-dockerx64">仅在高权限模式下才支持装载虚拟盘。若要使用此功能，请进入主 DSM 的 Docker 套件，选择您要为其启用加密共享文件夹的 <strong>Docker DSM</strong>，单击<strong>编辑</strong>，	然后勾选<strong>使用高权限执行容器</strong>旁的复选框。</li>
+
+</ol>
+</body>
+</html>

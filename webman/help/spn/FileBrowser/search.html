@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Buscar archivos o carpetas</title>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2>Buscar archivos o carpetas</h2>
+<p>El campo <strong>Filtrar</strong> de File Station le ofrece opciones para buscar y visualizar archivos o carpetas que cumplen sus criterios. Puede filtrar archivos o carpetas en la carpeta actual, o bien realizar una búsqueda avanzada que abarque todas las subcarpetas para obtener unos resultados más refinados.</p>
+
+<h4>Buscar archivos o carpetas en la carpeta actual:</h4>
+<ol>
+	<li>Utilice File Station para ir a la carpeta que contiene contenido que desea buscar.</li>
+	<li>En el campo <b>Filtrar</b> en la esquina superior derecha del campo, escriba una palabra clave y verá los resultados filtrados en el área principal de la ventana.</li>
+</ol>
+
+<h4>Para realizar una búsqueda avanzada:</h4>
+<ol>
+	<li>Utilice File Station para ir a la carpeta que contiene contenido que desea buscar.</li>
+  <li>Haga clic en el icono de lupa que hay junto al campo <b>Filtrar</b> en la esquina superior derecha para ver el menú de búsqueda avanzada.</li>
+	<li>Especifique los criterios de búsqueda que se indican a continuación o elija en los menús desplegables:<ul>
+			<li><b>Palabra clave</b>: introduzca una palabra clave para buscar archivos o carpetas con los nombres coincidentes.<div class="section"><h4>Nota:</h4>
+				<ul>
+					<li>Puede utilizar los comodines [*] (que significa 0 o más caracteres) y [?] (que significa un carácter aleatorio) en los teclados. Por ejemplo, [a<span class="note_content">*</span>n] puede representar [a<span class="note_content">ctio</span>n], [a<span class="note_content">ttentio</span>n], o [an].</li>
+					<li>Puede utilizar espacios para separar varias palabras clave. Por ejemplo, la palabra clave [File Station] generará resultados de búsqueda que contengan la palabra [File], la palabra [Station], o ambas.</li>
+					<li>Puede añadir comillas ["] al principio y final de las palabras clave para buscar coincidencias exactas que distingan entre mayúsculas y minúsculas. Por ejemplo, [<span class="note_content">"Synology Inc."</span>] puede representar a [<span class="note_content">Synology Inc.</span>] pero no a [<span class="note_content">Synology Incorporation</span>].</li>
+					<li class="disable-hi3535">Los operadores que se mencionan a continuación se pueden utilizar para delimitar los resultados de la búsqueda:<table width="84%" border="1">
+							<tbody>
+								<tr>
+									<th width="147" align="center">Operador</th>
+									<th width="229" align="center">Ejemplo</th>
+									<th width="926" align="center">Uso</th>
+								</tr>
+								<tr>
+									<td align="center">&&</td>
+									<td align="center">[X] && [Y]</td>
+									<td><li>Muestra las coincidencias que contienen tanto [X] como [Y]</li></td>
+								</tr>
+								<tr>
+									<td align="center">||</td>
+									<td align="center">[X] || [Y]</td>
+									<td>
+										<li>Muestra las coincidencias que contienen [X], [Y], o ambos</li>
+										<li>Las coincidencias que contienen tanto [X] como [Y] aparecen en la parte superior</li>
+									</td>
+								</tr>
+								<tr>
+									<td align="center">+</td>
+									<td align="center">+[X]</td>
+									<td><li>Muestra las coincidencias que contienen [X]</li></td>
+								</tr>
+								<tr>
+									<td align="center">-</td>
+									<td align="center">-[X]</td>
+									<td><li>Muestra las coincidencias que no contienen [X]</li></td>
+								</tr>
+								<tr>
+									<td align="center">!</td>
+									<td align="center">![X]</td>
+									<td><li>Muestra las coincidencias que no contienen [X]</li></td>
+								</tr>
+								<tr>
+									<td align="center">\</td>
+									<td align="center">\[carácter especial]</td>
+									<td>
+										<li>Caracteres especiales: <span class="note_content">  +   -   &&	&nbsp; ||    !    (    )    {    }    [    ]    ^    "    ~    *    ?    :   \</span></li>
+										<li>Muestra las coincidencias que contienen uno de los caracteres especiales objetivo mencionados anteriormente.</li>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</li>
+				</ul>
+				</div>
+			</li>
+			<li class="disable-hi3535"><strong>Habilitar búsqueda de contenido de archivos</strong>: busca archivos indexados cuyos metadatos o contenido de archivo coincidan con las palabras clave.</li>
+			<li><b>Ubicación</b>: Seleccione en el menú desplegable para establecer el rango y la profundidad de la búsqueda avanzada. También puede personalizar el ámbito de búsqueda seleccionando cualquier otra carpeta compartida de la lista.</li>
+			<li><b>Tipo de archivo</b>: elija <b>Extensión</b> para limitar el ámbito de búsqueda a tipos de archivos específicos; también puede elegir <b>Cualquier carpeta</b> para buscar solo en carpetas.</li>
+			<li><strong>Fecha</strong>: elija <b>Fecha de modificación</b>, <b>Fecha de creación</b> o <strong>Último acceso</strong> y luego elija una fecha del calendario para buscar archivos con fechas coincidentes.</li>
+			<li><b>Tamaño (MB)</b>: elija entre <b>igual a</b>, <b>es mayor que</b>, y <b>es menor que</b>, e introduzca un tamaño para buscar archivos con los tamaños coincidentes (si elige <strong>igual a</strong>, los resultados de la búsqueda incluirán archivos de aproximadamente el mismo tamaño especificado).</li>
+			<li><b>Propietario/Grupo</b>: Elija <b>Propietario</b> o <b>Grupo</b>, y luego elija del menú desplegable para buscar archivos o carpetas que pertenezcan al propietario o grupo seleccionados.<div class="section"><h4>Nota:</h4>
+				<ul>
+					<li>Para realizar búsquedas avanzadas deberá especificar una <b>Ubicación</b> y al menos otro criterio de búsqueda.</li>
+					<li>Si se monta una carpeta ISO en una carpeta remota o en una carpeta compartida indexada, no podrá encontrar los archivos en su interior con la búsqueda avanzada.</li>
+				</ul>
+				</div>
+			</li>
+		</ul>
+	</li>
+	<li>Haga clic en <b>Buscar</b> para iniciar la búsqueda, o haga clic en <b>Restablecer</b> y vuelva a especificar los criterios de búsqueda. Una vez completada la búsqueda, los archivos coincidentes se enumerarán en el área principal de File Station.</li>
+</ol>
+
+</body>
+</html>

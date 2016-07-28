@@ -1,0 +1,71 @@
+﻿ <!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Добавление жесткого диска в том или группу дисков — Справка Synology DSM</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="This article walks you through the steps to add an additional hard drive to an existing volume or disk group on your DiskStation."><link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Добавление жесткого диска для расширения емкости системы хранения</h2>
+
+<p>При наличии пустых слотов для жестких дисков на DiskStation можно установить дополнительные жесткие диски и добавить их в существующий том или группу дисков. Эта статья содержит инструкции по расширению существующих томов или групп дисков путем установки дополнительных жестких дисков.</p>
+
+<h3>Перед началом работы</h3>
+
+<p>Перед началом работы убедитесь, что добавляемые жесткие диски отвечают следующим требованиям к размерам:</p>
+<ul>
+  <li><strong>Для SHR:</strong> Емкость добавляемого жесткого диска должна быть не меньше самого большого жесткого диска в томе или группе дисков или равняться любому жесткому диску в томе или группе дисков. Например, если том SHR состоит из трех жестких дисков емкостью 2, 1,5 и 1 ТБ, то емкость нового диска должна быть не меньше 2 ТБ или равняться 1,5 ТБ либо 1 ТБ.</li>
+  <li><strong>Для RAID 5 и RAID 6:</strong> Емкость добавляемого жесткого диска должна быть не меньше самого малого жесткого диска в томе или группе дисков. Например, если том состоит из трех жестких дисков емкостью 2, 1,5 и 1 ТБ, то емкость нового диска должна быть не меньше 1 ТБ.</li>
+</ul>
+
+<div class="section">
+<h4>Проверка состояния тома</h4>
+
+<p>Убедитесь, что состояние тома или группы дисков является <strong>Нормальным</strong>. В противном случае сначала необходимо его/ее исправить.</p>
+</div>
+
+
+<h3>  Добавление жесткого диска в том или группу дисков</h3>
+
+<p>Жесткие диски могут быть добавлены в следующие типы RAID: </p>
+
+<ul>
+<li>Synology Hybrid RAID (SHR)</li>
+<li>JBOD</li>
+<li>RAID 5</li>
+<li>RAID 6</li>
+</ul>
+
+<div class="section">
+<h4>Примечание</h4>
+<p>Для томов SHR объем хранилища можно увеличить за счет подключения жестких дисков к тому с двумя и более жесткими дисками.</p>
+</ul>
+</div>
+
+<h4>Добавление жесткого диска в том или группу дисков:</h4>
+
+<ol>
+<li>Выключите DiskStation. (Если DiskStation поддерживает горячую замену, пропустите этот шаг.)</li>
+<li>Вставьте новый жесткий диск в пустой отсек для жестких дисков.</li>
+
+<div class="section">
+<h4>Примечание</h4>
+<p>Во избежание получения травм и повреждения сервера DiskStation следуйте инструкции по установке жестких дисков в <i>Руководстве по быстрой установке</i> вашего устройства Synology.</p>
+</div>
+
+<li>Включите DiskStation.</li>
+<li>Выполните вход в DSM с учетной записью пользователя, принадлежащего группе <strong>administrators</strong>.</li>
+<li>Откройте <strong>Диспетчер хранения</strong>.</li><img src="about:blank" class="help_image"/><li>Теперь выполните следующие действия:</li>
+  <ul class="list_abc">
+    
+  <li>При расширении одного тома перейдите к вкладке <strong>Том</strong>: Выберите том, который необходимо расширить. Нажмите <strong>Управление</strong> и перейдите к следующему шагу. </li><img src="about:blank" class="help_image"/><li>При расширении группы дисков перейдите к вкладке <strong>Группа дисков</strong>: Выберите группу дисков, которую необходимо расширить. Нажмите <strong>Управление</strong> и перейдите к следующему шагу.</li><img src="../../../online_img/dsm/StorageManager/volume_diskgroup_expand_add_disk/diskgroup_manage.png" class="help_image"/></ul>
+<li>Выберите <strong>Расширить том (или группу дисков) с помощью добавления жестких дисков</strong>. Затем нажмите <strong>Далее</strong>.</li><img src="about:blank" class="help_image"/><li>Выберите жесткие диски, с помощью которых вы хотите расширить том или группу дисков. Можно добавлять жесткие диски, ставя соответствующие флажки. Затем нажмите <strong>Далее</strong>.</li><img src="../../../online_img/dsm/StorageManager/volume_diskgroup_expand_add_disk/choose_disks.png" class="help_image"/><li>Выполните инструкции мастера для завершения операции.</li>
+</ol>
+</body>
+</html>

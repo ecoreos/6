@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Valgmuligheder</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script> <script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2><a name="leaf_user"></a>Konto</h2>
+
+<p>Fanen Konto indeholder valgmuligheder til redigering af grundlæggende kontoindstillinger, f.eks. beskrivelse, adgangskode, e-mail og 2-trins verificering. Klik på det personformerede ikon øverst til højre på skrivebordet for at se denne fane, og vælg <strong>Personl.</strong>.</p>
+
+
+
+<h3>Ændring af kontoindstillinger</h3>
+
+<p>Følgende kontoindstillinger kan redigeres:</p>
+<ul>
+<li><strong>Beskrivelse:</strong> Indtast en beskrivelse på kontoen Brugerbeskrivelser kan indeholde op til 64 synlige Unicode-tegn.</li>
+<li><strong>Ny adgangskode:</strong> Hvis du vil ændre din kontos adgangskode, skal du indtast en ny her og bekræfte den i feltet <strong>Bekræft adgangskode</strong> nedenfor. Adgangskoder skelner mellem store og små bogstaver og kan indeholder op til 127 synlige tegn herunder bogstaver, tal, symboler og mellemrum.</li>
+<li><strong>E-mail:</strong> Indtast en e-mailadresse (kun for ikke-admin-brugere).</li>
+<li><strong>Skærmsprog:</strong> Angiv visningssproget for din konto. Det visningssprog, du angav her, vil få højere prioritet end det angivet i <b>Kontrolpanel</b> > <b>Regionale valgmuligheder</b> > <b>Sprog</b>.</li>
+</ul>
+<p>Efter ændring af kontoindstillinger skal du klikke på <b>OK</b> for at gemme ændringerne.</p>
+
+
+<h3>2-trins verificering</h3>
+
+<p>2-trins verificering giver forbedret sikkerhed til din DSM-konto. Hvis 2-trins verificering er aktiveret, skal du indtaste din adgangskode ud over en engangs verificeringskode, når du logger ind på DSM. Verificeringskoder hentes fra godkendelsesprogrammet, der er installeret på mobilenheden. Hvis derfor nogen ønsker at få adgang til kontoen, skal han ikke kun bruge dit brugernavn og din adgangskode, men også mobilenheden.</p>
+
+<div class="section">
+<h4>Krav:</h4>
+<p>2-trins verificering kræver en mobilenhed og et godkendelsesprogram, der understøtter den tidsbaserede engangsadgangskode (Time-based One-Time Password (TOTP))-protokol. Godkendelsesprogrammer omfatter Google Authenticator (Android/iPhone/BlackBerry) eller Authenticator (Windows Phone).</p>
+</div>
+
+<h4>Sådan aktiverer du 2-trinsverificering:</h4>
+
+<ol>
+<li>Gå til <strong>Personl.</strong> > fanen <strong>Konto</strong>, og marker feltet <strong>Aktiver 2-trins verificering</strong> for at starte guiden til konfiguration af 2-trins verificering.</li>
+<li>På den første skærm indtaster du en e-mailadresse. Nødverificeringskoder kan sendes til denne e-mailadresse i tilfælde af, at du mister mobilenheden.</li>
+<li>Download og installer et godkendelsesprogram, f.eks. Google Authenticator (Android/iPhone/BlackBerry) eller Authenticator (Windows Phone).</li>
+<li>På følgende skærm åbner du godkendelsesprogrammet og scanner QR-koden. Alternativt kan du klikke på linket for manuelt at indtaste en hemmelig nøgle.</li>
+<li>Så genererer dit godkendelsesprogram en 6-cifret verificeringskode. Indtast denne kode i guidens tekstfelt for at bekræfte, at konfigurationerne er rigtige. Hvis der sker en fejl, skal du sørge for, at systemtiden på mobilenheden er synkroniseret med systemtiden på DSM. Verificeringskoder opdateres også regelmæssigt, så sørg for, at den indtastede kode ikke er udløbet.</li>
+<li>Når konfigurationsguiden er færdig, skal du klikke på <strong>OK</strong> for at gemme indstillingerne.</li>
+</ol>
+
+
+
+<h4>Sådan logger du ind på DSM med 2-trins verificering:</h4>
+
+<p>Når 2-trins verificeringen er aktiveret, bliver du bedt om at indtaste en 6-cifret verificeringskode, når du logger ind på DSM.</p>
+
+<ol>
+<li>På DSMs loginskærm indtaster du brugernavn og adgangskode som sædvanligt.</li>
+<li>Når du bedes om at indtaste en verificeringskode, skal du åbne godkendelsesprogrammet på mobilenheden.</li>
+<li>Find og indtast den 6-cifrede verificeringskode til kontoen. Hvis du mister mobilenheden, kan du klikke på linket <b>Telefon mistet?</b>, hvorefter en nødkode bliver sendt til e-mailadressen.</li>
+</ol>
+
+<div class="section">
+<h4>Bemærk:</h4>
+<ul>
+<li><strong>SMTP-indstillinger:</strong> For at modtage nødkoder via e-mail, skal SMTP-serverindstillinger fundet i <b>Kontrolpanel</b> > <b>Underretning</b> konfigureres korrekt.</li>
+<li><strong>Nødkodegrænse:</strong> Hver bruger er begrænset til 5 nødkoder. Hvis du overskrider denne grænse, skal du deaktivere og aktivere 2-trins verificeringen, før du kan modtage flere nødkoder.</li>
+<li>2-trins verificering kan gennemtvinges på DSM og aller relaterede Synology-mobilprogrammer (f.eks. DSM mobile og DS file).</li>
+
+</ul>
+</div>
+
+
+<h4>Sådan nulstiller brugeres indstillinger for 2-trins-verificering:</h4>
+
+<p>Bruger, der hører til gruppen <strong>administrators</strong>, kan nulstille indstillingerne for 2-trins verificering for andre brugere. 
+<ol>
+<li>Gå til <strong>Kontrolpanel</strong> > <strong>Bruger</strong>.</li>
+<li>Dobbeltklik på den bruger, hvis 2-trins verificering, du vil nulstille.</li>
+<li>På fanen <strong>Brugeroplysninger</strong> klikker du på knappen <strong>Nulstil 2-trins verificering</strong>.</li>
+</ol>
+
+<div class="section">
+<h4>Bemærk:</h4>
+<p>Hvis en bruger, der tilhører gruppen <strong>administrators</strong>, ikke er tilgængelig, kan du trykke på den fysiske Reset-knap på din DiskStation for at nulstille DSM-indstillingerne og deaktivere 2-trins verificering.</p>
+</div>
+
+
+<h3>Kontoaktivitet</h3>
+<p>Kontoaktivitet viser login-aktivitet på din DSM-konto, herunder aktuelle forbindelser, enheder, der er tillid til og loginoversigt.</p>
+
+
+<h4>Sådan kontrollerer du din kontoaktivitet:</h4>
+<p>Klik på knappen <strong>Kontoaktivitet</strong>. Der vises en pop op, som viser følgende faner:
+
+<ul>
+<li><strong>Tilsluttede brugere:</strong>  Denne fane viser følgende oplysninger:
+  <ul>
+<li><strong>Dato og tid:</strong> Hvornår kontoen blev åbnet.</li>
+<li><strong>Klientnavn og IP:</strong> Navn og IP-adresse på den enhed, som åbnede kontoen. Kun klientnavnet vises, når kontoen åbnes med CIFS-protokol.</li>
+<li><strong>Tjeneste:</strong> Den protokol, der blev brugt til at åbne kontoen.</li>
+<li><strong>Ressource:</strong> Systemressourcer, der blev brugt af kontoen.</li>
+</ul></li>
+
+<li><strong>Enheder, der er tillid til:</strong> Denne fane viser styringssiden for den enhed, der er tillid til:
+   <ul>
+<li><strong>Der er tillid/ikke tillid til aktuel enhed:</strong> Klik på <strong>Stol på denne enhed</strong>, hvis du vælger at stole på den aktuelle enhed, hvorefter 2-trinsverificering ikke længere kræves, når du logger ind på DSM på denne enhed.</li>
+
+<li><strong>Ophæv tillid til andre enheder:</strong> Du kan ophæve tillid til andre enheder (f.eks. computere eller mobilenheder), der har været tillid til. Det betyder, at 2-trinsverificering kræves, når du logger ind på DSM på disse enheder.</li>
+</ul></li>
+
+
+<li><strong>Loginoversigt:</strong> Denne fane viser seneste loginsessioner og følgende oplysninger:
+<ul>
+<li><strong>Dato og tid:</strong> Hvornår kontoen blev åbnet.</li>
+<li><strong>Begivenhed:</strong> Viser brugernavn og IP-adresse.</li>
+</ul>
+</li>
+</ul>
+
+
+<div class="section">
+<h4>Bemærk:</h4>
+<p>Den enhed, som du markerer, du har tillid til, bliver kun husket, når du logger ind med den samme konto og fra den samme browser. Du bliver stadig bedt om at indtaste en OTP (engangsadgangskode) til 2-trinsverificering i følgende scenarier, selv om du har haft tillid til en enhed tidligere:</p>
+<ul>
+<li>Du logger ind med den samme konto, men på en anden browser.</li>
+<li>Dine cookies er blevet fjernet fra browseren.</li>
+<li>Du stoler på en enhed, når du logger ind som bruger A, og stoler så på den samme enhed, når du logger ind som bruger B. Når du logger ind som bruger A igen, skal du stadig indtaste en adgangskode til 2-trinsverificering.</li>
+</ul>
+
+</div>
+
+
+</body>
+</html>

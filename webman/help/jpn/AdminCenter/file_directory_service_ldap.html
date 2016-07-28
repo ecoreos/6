@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>LDAP</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>LDAP</h2>
+<p>LDAP は DiskStation を LDAP クライアントとして既存のディレクトリサービスに追加し、LDAP サーバー（または「directory server」）からユーザー情報やグループ情報を取得できるようにします。ローカル DSM ユーザーやグループで行う場合と同じように、LDAP ユーザーまたはグループの DSM アプリケーションや共有フォルダへのアクセス権を管理することができます。LDAP に関する詳細は、<a href="http://en.wikipedia.org/wiki/LDAP" target="_blank">こちら</a>を参照してください。</p>
+
+<p>サポートされる LDAP 規格は LDAP バージョン 3 (RFC 2251) です。</p>
+<h4>DiskStation をディレクトリ サービスに追加するには：</h4>
+<ol>
+<li><b>[コントロール パネル]</b> &gt; <b>[ディレクトリ サービス]</b> を選択します</li>
+<img src="about:blank" class="help_image"/>
+<li><b>[LDAP]</b> タブをクリックして、<b>[LDAP クライアントを有効にする]</b> にチェックマークを付けます。</li>
+<img src="about:blank" class="help_image"/>
+<li>LDAP サーバーの IP アドレスまたはドメイン名を <b>[LDAP サーバーアドレス]</b> 欄に入力します。</li>
+<img src="about:blank" class="help_image"/>
+<li><b>[暗号化]</b> ドロップダウン メニューから暗号化の種類を選択して、LDAP サーバーへの LDAP 接続を暗号化します。</li>
+<img src="about:blank" class="help_image"/>
+<li><b>[Base DN]</b> 欄に LDAP サーバーの Base DN を入力します。</li>
+<img src="about:blank" class="help_image"/>
+<li>LDAP サーバーに応じて、適切な <b>[プロファイル]</b> を選択してください。例えば、Synology Directory Server または Mac Open Directory を使用している場合は、<b>[標準]</b> を選択します。</li>
+<img src="about:blank" class="help_image"/>
+<li>Samba スキーマに対応しない LDAP サーバーのユーザーが CIFS で DiskStation のファイルにアクセスできるようにするには、<b>[CIFS 書式なしパスワード認証]</b> にチェックマークを付けてください。LDAP ユーザーがそれぞれのコンピュータを使用して、CIFS を介して DiskStation ファイルにアクセスできるようにするには、下のセクションを参照してください。</li>
+<img src="about:blank" class="help_image"/>
+<li><b>[適用]</b> をクリックします。</li>
+<li>
+  Bind DN（または LDAP 管理者のアカウント）を入力し、専用の欄にパスワードを入力した後、<b>[OK]</b> をクリックします。
+</li>
+<img src="about:blank" class="help_image"/>
+</ol>
+
+
+<div class="section">
+<h4>CIFS サポートとクライアントコンピュータの設定について</h4>
+<p>
+CIFS を介して DiskStation ファイルにアクセスできるようにするには、CIFS 書式なしパスワード認証を有効にした後、LDAP ユーザーがコンピュータの設定を変更する必要があるかもしれません：
+</p>
+<ul>
+<li>
+DiskStation を Synology LDAP サーバー（または <b>[Directory Server]</b> パッケージがインストールされ、実行された別の DiskStation）が提供するディレクトリ サービス、または Samba スキーマに対応する LDAP サーバーに接続し、すべての LDAP ユーザーが正しい sambaNTPassword 属性を持っている場合は、LDAP ユーザーは <b>[CIFS 書式なしパスワード認証]</b> にチェックマークを付けたり、コンピュータの設定を変更したりしなくても、CIFS で DiskStation のファイルにアクセスすることができます。そうしなければ、LDAP ユーザーはコンピュータの <a href="http://en.wikipedia.org/wiki/Pluggable_Authentication_Modules" target="_blank">PAM</a> サポートを有効にして、CIFS で DiskStation のファイルにアクセスできるようにする必要があります。ただし、これを行うと LDAP ユーザーパスワードがテキストのみ形式（暗号化せずに）で DiskStation に転送するため、セキュリティレベルが下がります。
+</li>
+
+</ul>
+<h4>Windows 設定を編集するには：</h4>
+<ol>
+<li><b>[スタート]</b> > <b>[ファイル名を指定して実行]</b> を選択し、<b>regedit</b> と入力した後、<b>[OK]</b> をクリックするとレジストリ エディタが開きます。</li>
+<li>
+Windows バージョンによって、次のレジストリを検索するか作成します：
+</li>
+<ul>
+<li>
+<b>Windows 2000、XP、Vista、Windows 7：</b><br> [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanWorkStation\Parameters]
+</li>
+<li>
+<b>Windows NT：</b><br> [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Rdr\Parameters]
+</li>
+<li>
+<b>Windows 95 (SP1)、98、Me：</b><br> [HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\VxD\VNETSUP]
+</li>
+</ul>
+<li>
+DWORD 値 <b>EnablePlainTextPassword</b> を作成または変更し、その値を <b>0</b> から <b>1</b> に変更します。
+</li>
+<li>
+変更内容を有効にするために、Windows を再起動します。
+</li>
+</ol>
+<h4>Mac OS X の設定を変更する：</h4>
+<ol>
+<li><b>[アプリケーション]</b> > <b>[ユーティリティ]</b> を選択し、<b>端末</b>を開きます。
+</li>
+<li>
+空白のファイル <b>/etc/nsmb.conf</b> を作成します。
+<pre>
+sudo touch /etc/nsmb.conf
+</pre>
+</li>
+<li>
+vi で <b>/etc/nsmb.conf</b> を開きます。
+<pre>
+sudo vi /etc/nsmb.conf
+</pre>
+</li>
+<li>
+「<b>i</b>」を入力してテキストを挿入し、次のキーを貼り付けます：
+<pre>
+[default]<br / >
+minauth=none
+</pre>
+</li>
+<li>
+Esc キーを押して「<b>ZZ</b>」と入力し、変更内容を保存して vi を終了します。
+</li>
+</ol>
+<h4>Linux の設定を変更する：</h4>
+<p><b>smbclient</b> をご使用の方は、<b>smb.conf</b> の <b>[global]</b> セクションに次のキーを追加してください：
+
+<p style="font-family:sans; margin-top:0px; padding-left:20px;line-height:1.25em;"> encrypt passwords = no <br> client plaintext auth = yes <br> client lanman auth = yes <br> client ntlmv2 auth = no </p>
+<p><b>mount.cifs</b> をお使いの方は、次のコマンドを実行してください：</b>
+<p style="font-family:sans; margin-top:0px; padding-left:20px;line-height:1.25em;">echo 0x30030 > /proc/fs/cifs/SecurityFlags</p>
+<p>詳しくは、<a href="https://www.kernel.org/doc/readme/Documentation-filesystems-cifs-README" target=_blank>https://www.kernel.org/doc/readme/Documentation-filesystems-cifs-README</a> を参照してください</p>
+
+</p>
+</div>
+<div class="section">
+<h4>プロファイルについて</h4>
+
+<p>LDAP サーバーによってアカウント名、グループ名に使用する属性や、アカウントとグループを区別するための属性は異なります。<b>[プロファイル]</b> オプションは、ユーザーやグループ情報がどのように LDAP の属性に割り当てられるかを指定したり、カスタマイズしたりします。次のプロファイルの 1 つは、LDAP サーバーによって選択できます：</p>
+
+<ul>
+<li><b>標準：</b> Synology Directory Server または Mac Open Directory を起動するサーバー向け。</li>
+<li><b>IBM Lotus Domino：</b> IBM Lotus Domino 8.5 を起動するサーバー向け。</li>
+<li><b>カスタマイズ：</b> マッピングをカスタマイズできます。詳細は、次のセクションをお読みください。</li>
+</ul>
+
+<p>LDAP の属性のマッピングをカスタマイズするには、多少の知識が必要です。Synology DSM と <strong>プロファイル</strong> エディタ両方とも RFC 2307 に準拠しています。例えば、<b>[filter]</b> > <b>[passwd]</b> を <b>userFilter</b> として指定することができます。この場合、DiskStation は LDAP サーバー上の <b>objectClass=userFilter</b> を LDAP アカウントとして記録を解釈します。<b>passwd</b> > <b>uid</b> を <b>username</b> として指定すると、DiskStation は LDAP サーバー上の <b>username</b> をアカウント名として解釈します。マッピングを指定しなければ、RFC 2307 規則が適用されます。</p>
+<p>DiskStation が LDAP アカウント識別子（<strong>uidNumber</strong>）、またはグループ識別子（<strong>gidNumber</strong>）として機能するには、固定整数が必要です。ただし、すべての LDAP サーバーが整数を使ってこのような属性を代表する訳ではありません。したがって、このような属性を整数に変換するために、<b>HASH()</b> と言うキーワードが提供されています。例えば、LDAP サーバーが十六進数を持つ <b>userid</b> と言う属性を LDAP アカウントの専用識別子として使用する場合があります。この場合、<b>passwd</b> > <b>uidNumber</b> を <b>HASH(userid)</b> に設定すると、DiskStation がそれを整数に変換します。</p>
+
+<p>以下は、カスタマイズできる属性をまとめたものです。</p>
+
+<ul>
+	<li><b>filter</b></li>
+	<ul>
+		<li><b>group</b>：グループに必要な objectClass です。</li>
+		<li><b>passwd</b>：ユーザーに必要な objectClass です。</li>
+		<li><b>shadow</b>：ユーザー パスワードに必要な objectClass です。</li>
+	</ul>
+	<li><b>group</b></li>
+	<ul>
+		<li><b>cn</b>：グループ名。</li>
+		<li><b>gidNumber</b>: このグループの GID 番号。</li>
+		<li><b>memberUid</b>: このグループのメンバー。</li>
+	</ul>
+	<li><b>passwd</b></li>
+	<ul>
+		<li><b>uidNumber</b>: このユーザーの UID 番号。</li>
+		<li><b>uid</b>: ユーザー名。</li>
+		<li><b>gidNumber</b>：このユーザーのプライマリ GID 番号。</li>
+	</ul>
+	<li><b>shadow</b></li>
+	<ul>
+		<li><b>uid</b>: ユーザー名。</li>
+		<li><b>userPassword</b>：ユーザー パスワード。</li>
+	</ul>
+</ul>
+</div>
+<div class="section">
+<h4>UID/GID シフトについて</h4>
+<p>LDAP ユーザー/グループとローカル ユーザー/グループの間で UID/GID の競合の発生を阻止するには、UID/GID シフトを有効にして、LDAP ユーザー/グループの UID/GID を 1000000 ごとシフトします。このオプションは、非 Synology LDAP サーバーである LDAP サーバー専用であり、各ユーザー/グループごとに専用の数字 ID を持っています。</p>
+</div>
+</body>
+</html>

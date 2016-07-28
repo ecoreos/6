@@ -1,0 +1,104 @@
+ <!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Oprava svazku nebo skupiny disků – Nápověda Synology DSM</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="This article walks you through the steps to create a volume on DiskStation using Storage Manager."><link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Oprava svazku nebo skupiny disků</h2>
+
+<p>Chyby ve svazku se mohou vyskytnout z různých důvodů, jako jsou poškozené systémové oddíly nebo poškozené pevné disky. V některých případech můžete pomocí následujících kroků zjistit chybu a opravit ji.</p>
+
+<div class="section">
+<h4>Poznámky:</h4>
+<ul>
+<li>Zde popisovaná funkce <strong>Opravit</strong> je dostupná pouze pro typy RAID s redundancí dat (např. RAID 1, RAID 5, RAID 6, atd.). Pamatujte si, že tato funkce nedokáže opravit rozbité pevné disky a také nezaručuje záchranu dat v poškozených svazcích.</li>
+<li>V případě poškozených svazků doporučujeme požádat o pomoc naši <span class="last"><a href="https://account.synology.com/support/support_form.php?lang=enu" target="_blank">technickou podporu</a></span>.</li>
+</ul>
+</div>
+
+<h3>Poškozené systémové oddíly</h3>
+
+<p>V případě selhání systémových oddílů se vám zobrazí zpráva informující o tom, že nelze přistupovat do systémových oddílů.</p>
+<h4>Oprava systémových oddílů:</h4>
+
+<ol>
+<li>Otevřete <strong>Správce úložiště</strong>.</li><img src="about:blank" class="help_image"/><li>Přejděte do části <strong>Přehled</strong> a klikněte na odkaz označený jako <strong>Opravit</strong>. Systém by měl systémové oddíly opravit.</li><img src="../../../online_img/dsm/StorageManager/volume_diskgroup_repair/fail_system_partitions.png" class="help_image"/></ol>
+
+
+<h3>Svazky s omezeným režimem</h3>
+
+
+<p>Svazek nebo skupina disků je ve stavu <strong>Omezený režim</strong>, když dojde k selhání pevného disku, ale nedojde ke ztrátě dat. Dochází k tomu pouze u typů RAID zajišťujících redundanci dat, například SHR, RAID 1, RAID 5, RAID 6 a RAID 10. </p>
+<p>Svazek nebo diskovou skupinu v omezeném režimu lze opravit nahrazením poškozeného pevného disku za funkční disk a opravením svazku nebo diskové skupiny.</p>
+
+<div class="section">
+<h4>Poznámka:</h4>
+<ul>
+  <li>Velikost náhradního pevného disku musí být stejná nebo větší než velikost nejmenšího disku ve svazku.</li>
+  <li>Stav náhradního pevného disku musí být <strong>Inicializováno</strong> nebo <strong>Není inicializováno</strong>.</li>
+</ul>
+
+</div>
+
+<h4> Oprava svazku nebo skupiny disků v omezeném režimu:</h4>
+
+<ol>
+
+<li>Přejděte do části <strong>Správce úložiště</strong> > <strong>Svazek</strong> nebo <strong>Disková skupina</strong> a zkontrolujte, jestli se stav změnil na <strong>Omezený režim</strong>.</li><img src="about:blank" class="help_image"/><li>Pokud ano, tak přejděte na kartu <strong>HDD/SSD </strong>a zkontrolujte, u kterého pevného disku došlo k selhání.</li><img src="../../../online_img/dsm/StorageManager/volume_diskgroup_repair/hdd_ssd.png" class="help_image"/><li>Odeberte poškozený pevný disk a nahraďte jej novým.</li>
+
+<div class="section">
+<h4>Poznámka:</h4>
+<ul>
+<li>Pokud vaše zařízení DiskStation nepodporuje výměnu za chodu, nezapomeňte je před odebráním a instalací pevných disků vypnout.</li>
+<li>Stávající data na náhradním pevném disku budou vymazána.</li>
+</ul>
+</div>
+
+<li>Po nainstalování náhradního pevného disku se vraťte na kartu <strong>Svazek</strong> nebo <strong>Disková skupina</strong>.</li>
+
+<li>Vyberte svazek nebo skupinu disků v omezeném režimu.</li>
+
+<li>Klikněte na možnost <strong>Správa</strong>.</li><img src="about:blank" class="help_image"/><li>Vyberte možnost <strong>Opravit</strong> a klikněte na možnost <strong>Další</strong>. </li><img src="../../../online_img/dsm/StorageManager/volume_diskgroup_repair/manage_repair.png" class="help_image"/><li>Vyberte náhradní pevný disk, který chcete přidat do svazku. Potom klikněte na možnost <strong>Další.</strong></li><img src="../../../online_img/dsm/StorageManager/volume_diskgroup_repair/choose_disks.png" class="help_image"/><li> Dokončete postup podle pokynů v průvodci. </li>
+</ol>
+
+
+
+
+<h3>Oprava svazků</h3>
+<p>Chcete-li opravit poškozený svazek, diskovou skupinu nebo jednotku iSCSI LUN, musíte vyměnit vadný disk za dostupný disk splňující následující kritéria:</p>
+<ul>
+<li>U svazků RAID 1, RAID 5 nebo RAID 6 lze poškozený svazek opravit pomocí dostupného disku, jehož velikost je stejná nebo větší než velikost nejmenšího disku ve svazku RAID.</li>
+<li>U svazků SHR-1 musí dostupný disk splňovat jedno z následujících kritérií: (1) Jeho velikost musí být rovna velikosti nebo větší než je velikost vadného disku; (2) V případě vyloučení největšího disku ve svazku RAID musí být jeho velikost stejná jako nebo větší než je velikost největšího zbývajícího disku.<ol>
+<li>Příklad 1: SHR-1 se skládá z disků o velikosti 3 TB, 2 TB, 2 TB a 1 TB. Pokud dojde k selhání disku o velikosti 3 TB, lze jej opravit dostupným diskem o velikosti rovné nebo větší než 2 TB.</li>
+<li>Příklad 2: SHR-1 se skládá z disků o velikosti 4 TB, 4 TB, 2 TB a 2 TB. Pokud dojde k selhání disku o velikosti 4 TB, lze jej opravit dostupným diskem o velikosti rovné nebo větší než 4 TB.</li>
+<li>Příklad 3: SHR-1 se skládá z disků o velikosti 4 TB, 4 TB, 2 TB a 2 TB. Pokud dojde k selhání disku o velikosti 2 TB, lze jej opravit dostupným diskem o velikosti rovné nebo větší než 2 TB.</li>
+</ol>
+</li>
+<li>U svazků SHR-2 musí dostupný disk splňovat jedno z následujících kritérií: (1) Jeho velikost musí být stejná jako nebo větší než je velikost vadného disku; (2) V případě vyloučení dvou největších disků ve svazku RAID musí být jeho velikost stejná jako nebo větší než je největší zbývající disk.</li>
+</ul>
+<p>Pokud máte nakonfigurované disky Hot Spare jako disky splňující výše uvedená kritéria, použijí se tyto disky k opravě svazku/skupiny disků/skupiny RAID Group/jednotky iSCSI LUN.</p>
+
+
+<h3>Řešení problémů s vadnými disky</h3>
+
+<p>Pokud má stav svazku hodnotu <strong>Porucha</strong>, nemůžete svazek opravit sami. Chcete-li tento problém vyřešit, doporučujeme, abyste se obrátili na naši <a href="https://account.synology.com/support/support_form.php?lang=enu" target="_blank">technickou podporu</a>.</p>
+
+<div class="section">
+<h4>Dříve než kontaktujete podporu:</h4>
+
+<ul>
+<li>Zachraňte data ve svém zařízení DiskStation tím, že soubory zkopírujete do svého počítače nebo na externí disky pomocí stanice File Station, souborové služby Windows, FTP nebo jiné souborové služby.</li>
+<li>Zachovejte stejné pořadí pevných disků, jaké bylo v okamžiku poruchy svazku.</li>
+<li>Spusťte test S.M.A.R.T. na problematických pevných discích. Tyto možnosti nastavíte v části <strong>Správce úložiště</strong> > <strong>HDD/SSD</strong>. Vyberte příslušný pevný disk a klikněte na možnost <strong>Test S.M.A.R.T</strong>. <br /></li>
+</ul>
+</div>
+</body>
+</html>

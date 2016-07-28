@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Administrador de almacenamiento</title>
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2><a name="leaf_iscsilun"></a>iSCSI LUN*</h2>
+<p>iSCSI es un servicio de conexión a red de almacenamiento que facilita la transferencia de datos a través de redes locales o largas distancias. Asignando iSCSI LUN a iSCSI Target, los clientes pueden acceder a los espacios de almacenamiento como si fueran discos locales. Un iSCSI LUN (número de unidad lógica) se puede asignar a uno o varios iSCSI Target para proporcionar servicios de almacenamiento iSCSI. Vaya a <strong>Administrador de almacenamiento</strong> > <strong>iSCSI LUN</strong> para administrar los iSCSI LUN.</p>
+
+<div class="section"><h4>Nota:</h4>
+<p>El número de iSCSI LUN compatibles varía según el modelo de DiskStation. Para obtener las especificaciones detalladas del producto, visite <a href="http://www.synology.com/" target="_blank">www.synology.com</a>.</p>
+</div>
+
+<p>DiskStation actualmente es compatible con los siguientes tipos de iSCSI LUN:</p>
+<ul>
+	<li><b>iSCSI LUN (archivos normales)</b>: el iSCSI LUN se crea designando una porción del espacio de volumen para su uso. Puede ampliar su tamaño más tarde cuando sea necesario. Este tipo de iSCSI LUN ofrece la flexibilidad de una administración de capacidad dinámica con Thin Provisioning, compatibilidad con la aceleración de hardware VMware VAAI, compatibilidad con Windows ODX, instantánea de LUN y clon de LUN.</li>
+	<li class="disable-bromolow disable-grantley disable-avoton disable-braswell disable-broadwell disable-kvmx64"><b>iSCSI LUN (nivel de bloques): LUN único en RAID</b>: el iSCSI LUN se crea utilizando todo el espacio de un volumen. Puede repararlo o expandirlo, o bien cambiar su tipo de RAID, igual que usar un volumen. Consulte la página <a href="space.html">Volumen</a> para obtener más información.</li>
+	<li class="disable-bromolow disable-grantley disable-avoton disable-braswell disable-broadwell disable-kvmx64"><b>iSCSI LUN (nivel de bloques): LUN múltiple en RAID</b>: el iSCSI LUN se crea designando un espacio específico de un Grupo de discos. Puede ampliar el iSCSI LUN más tarde si hay espacio disponible en el Grupo de discos. Consulte la página <a href="raid.html">Grupo de discos</a> para obtener más información.</li>
+	<li class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64"><b>iSCSI LUN (nivel de bloques)</b>: este tipo de iSCSI LUN está creado en un RAID Group y ofrece la flexibilidad de una administración de capacidad dinámica además de un rendimiento de acceso optimizado. Este tipo de iSCSI LUN se puede ampliar más adelante usando espacio sin asignar en el RAID Group. Consulte la página <a href="raid.html">RAID Group</a> para obtener más información.</li>
+</ul>
+
+<div class="section"><h4>Nota:</h4>
+<p>Los iSCSI LUN con características de LUN avanzadas solo están disponibles en el sistema de archivos ext4<span style="display: inline;" class="enable-bromolow enable-grantley enable-avoton enable-braswell enable-broadwell enable-kvmx64">/Btrfs</span>.</p>
+</div>
+
+<h4>Para crear un iSCSI LUN:</h4>
+<ol>
+	<li>Haga clic en <b>Crear</b>.</li>
+	<li>Seleccione el tipo de iSCSI LUN que desee crear.</li>
+	<li>Siga el asistente para completar el proceso.</li>
+</ol>
+
+<div class="section"><h4>Nota:</h4>
+<p>Las características de LUN avanzadas solo se pueden habilitar durante la creación inicial de iSCSI LUN. Este ajuste no se puede modificar más adelante.</p>
+</div>
+
+<p>El tamaño de la unidad de asignación de LUN avanzada se puede optimizar para ciertas características del servidor de aplicaciones, como por ejemplo Microsoft Exchange o SQL Server, o servidores de visualización y tecnologías de aceleración de almacenamiento, como Microsoft Windows ODX o VMware VAAI, haciendo una de las siguientes acciones:</p>
+<ul>
+	<li>Configure el tamaño de la unidad de asignación durante la creación del primer LUN avanzado de un volumen.</li>
+	<li>Configure el tamaño de la unidad de asignación en <strong>Configurar</strong> antes de crear el primer LUN avanzado de un volumen.</li>
+</ul>
+
+<p>Le recomendamos que especifique el tamaño de la unidad de asignación para su aplicación cuando utilice la conexión directa desde su servidor de aplicaciones o métodos RDM (pass-through) para trabajar con iSCSI LUN avanzados en DiskStation. Si desea aprovechar la tecnología de LUN avanzados de Synology para realizar la clonación en Windows ODX, le recomendamos formatear el volumen NTFS con el tamaño de la unidad de asignación igual (o mayor que) el que ha especificado en DSM.</p>
+
+<div class="section"><h4>Nota:</h4>
+<p>La unidad de asignación de LUN avanzado de cada volumen se puede configurar solo una vez.</p>
+</div>
+
+<h4>Para quitar un iSCSI LUN:</h4>
+<p>Al quitar un iSCSI LUN, se eliminarán todos los datos del iSCSI LUN. También se perderán las conexiones entre el iSCSI LUN y cualquier iSCSI Target asignado.</p>
+<ol>
+	<li>Seleccione el iSCSI LUN que desea quitar.</li>
+	<li>Haga clic en el botón <b>Quitar</b> y siga el asistente para completar el proceso.</li>
+</ol>
+
+<div class="section"><h4>Nota:</h4>
+<p>Al borrar VAAI LUN de DiskStation, no se libera espacio de disco inmediatamente. Los datos se trasladan a una carpeta reservada del sistema llamada <strong>@EP_trash</strong> y se eliminan uno por uno. Por ejemplo, si se elimina un VAAI LUN de 100 GB de DiskStation, se puede tardar unos 15-20 minutos en liberar los 100 GB de espacio en el volumen del disco.</p>
+</div>
+
+<h4>Para realizar un montaje forzoso de iSCSI LUN (nivel de bloques):</h4>
+<p>Si falta la caché en un iSCSI LUN (nivel de bloques), el sistema no montará el iSCSI LUN (nivel de bloques) al arrancar. Si no se puede recuperar la caché y desea acceder a iSCSI LUN (nivel de bloques), puede hacer clic en <b>Montaje forzoso</b>.</p>
+
+<div class="section"><h4>Nota:</h4>
+<p>Esta función solo está disponible en determinados modelos.</p>
+</div>
+
+<h4>Para editar un iSCSI LUN:</h4>
+<ol>
+	<li>Seleccione el iSCSI LUN que desea editar.</li>
+	<li>Haga clic en <b>Editar</b>.</li>
+	<li>Edite las propiedades que desee.</li>
+	<li>Haga clic en <b>OK</b> para guardar la configuración.</li>
+</ol>	
+
+<div class="section"><h4>Nota:</h4>
+<p>Para evitar la pérdida de datos al editar la capacidad de iSCSI LUN, solo podrá hacerla mayor del tamaño actual.</p>
+</div>
+
+<h4>Para tomar una instantánea de iSCSI LUN:</h4>
+<p>Una instantánea de un iSCSI LUN es una copia puntual de solo lectura de un iSCSI LUN.</p>
+<ol>
+	<li>Seleccione el iSCSI LUN del que desea sacar instantáneas.</li>
+	<li>Haga clic en <strong>Instantánea</strong> y elija <strong>Tomar una instantánea</strong>.</li>
+	<li>Introduzca una descripción para esta instantánea.</li>
+	<li>Elija uno de los siguientes tipos de instantáneas de acuerdo con sus necesidades:<ul>
+			<li><strong>Consistente con aplicaciones</strong>: este tipo de instantánea solo se puede tomar cuando se ha instalado Synology Snapshot Manager en su servidor Windows o VMware vCenter Server, según su entorno operativo para comunicarse con DSM. Cuando se activan instantáneas consistentes con aplicaciones en DSM, las aplicaciones recibirán una notificación y pasarán todos los datos de la memoria al LUN en el que se toma la instantánea para garantizar la consistencia de los mismos.</li>
+			<li><strong>Consistente con averías</strong>: si no se ha instalado Synology Snapshot Manager en ninguno de sus clientes, solo podrá capturar instantáneas consistentes con averías de los LUN. Cuando se activan, las aplicaciones no recibirán notificaciones para pasar los datos de la memoria al LUN y por tanto no se garantizará la consistencia de los datos.</li>
+		</ul>
+	</li>
+	<li>Haga clic en <strong>OK</strong>.</li>
+</ol>
+
+<h4>Para restaurar un iSCSI LUN:</h4>
+<p>Seleccione una instantánea puntual para restaurar los datos de un iSCSI LUN.</p>
+<ol>
+	<li>Seleccione el iSCSI LUN que desea restaurar.</li>
+	<li>Haga clic en <strong>Instantánea</strong> y elija <strong>Administrador de instantáneas</strong>.</li>
+	<li>Seleccione la instantánea que desea restaurar y haga clic en <strong>Restaurar</strong>.</li>
+</ol>
+
+<h4>Para clonar un iSCSI LUN o una instantánea:</h4>
+<p>Realice una copia grabable de un iSCSI LUN o de una instantánea de iSCSI LUN.</p>
+<ul>
+	<li>Seleccione un iSCSI LUN de la lista y haga clic en <strong>Clonar</strong>.</li>
+	<li>Seleccione una instantánea de iSCSI LUN de <strong>Snapshot Manager</strong> y haga clic en <strong>Clonar</strong>.</li>
+</ul>
+
+<div class="section"><h4>Nota:</h4>
+<ul>
+<li>En determinados modelos, deberá ir a <b>Centro de paquetes</b> e instalar <b>Instantánea y replicación</b> para funciones como la restauración de iSCSI LUN, o la realización y clonación de instantáneas de iSCSI LUN.</li>
+	<li>Si hay al menos una sesión iSCSI conectada asociada a este LUN y Windows Server o VMware ESXi Server la utilizan, recomendamos instalar el complemento <b>Synology Snapshot Manager</b> para evitar posibles inconsistencias de datos, de lo contrario deberá detener todas las aplicaciones y cerrar estas sesiones desde los iniciadores antes de proceder.</li>
+	<li>Las funciones de instantánea, restauración y clonación de LUN solo están disponibles en iSCSI LUN con características de LUN avanzadas.</li>
+	<li>Si ha tomado una instantánea o ha creado un clon, y el estado ha pasado a ser <strong>Anormal</strong>/<strong>Averiado</strong>, elimine dicha instantánea/clon y cree otra/o.</li>
+	<li>Todos los cambios realizados en un LUN hasta después de crear una instantánea se perderán si restaura el LUN en esta instantánea.</li>
+	<li>Si el estado de un iSCSI LUN cambia a <b>No disponible</b>, significa que se han producido algunos errores relacionados con el sistema al acceder a iSCSI LUN. Para evitar una grave pérdida de datos en su sistema, este iSCSI LUN no estará accesible temporalmente. Póngase en contacto con Synology para solicitar asistencia lo antes posible.</li>
+</ul>
+</div>
+
+
+<div class="section"><h4>Glosario:</h4>
+<ul>
+	<li><b>Thin Provisioning</b>: Thin Provisioning es un método que permite optimizar el uso del almacenamiento asignando espacio de almacenamiento de modo dinámico y bajo demanda. Esta configuración solo está disponible para <b>iSCSI LUN (archivos normales)</b>.</li>
+	<li><b>VMware VAAI</b>: las VMware vStorage APIs for Array Integration (VAAI) pueden liberar la carga de las operaciones estándar en matrices de almacenamiento virtual trasladándola al dispositivo iSCSI en el entorno VMware vSphere y optimizar así el rendimiento de almacenamiento.</li>
+	<li><b>ODX de Windows</b>: una nueva tecnología de transferencia de datos desarrollada por Windows en Windows Server 2012 y 8 llamada Offload Data Transfer (ODX). ODX mejora la transferencia de datos descargando parte de la carga en la matriz de almacenamiento.<br />Si el origen y el destino de datos están situados en los LUN situados en el mismo volumen, la clonación se procesará mediante la tecnología Synology Advanced LUN, que ahorrará hasta un 99,9 % del consumo de espacio de almacenamiento y acelerará la clonación al mismo tiempo.</li>
+	<li><b>Asignación de iSCSI Target</b>: asigna el iSCSI LUN a uno o varios iSCSI Target.</li>
+	<li><b>Synology Snapshot Manager</b>: Synology Snapshot Manager es un complemento de software que permite tomar instantáneas consistentes con las aplicaciones directamente desde DiskStation Manager (DSM).<ul>
+		    <li>En el entorno VMware, necesitará instalar Synology Snapshot Manager en el servidor Windows donde esté instalado VMware vCenter Server. Cuando se active una instantánea en DSM, VMware vCenter Server recibirá una notificación y pasará todos los datos de la memoria al LUN en el que se toma la instantánea para garantizar la consistencia de los mismos. Cuando se haya completado la instantánea, VMware vCenter Server continuará con el funcionamiento E/S normal del almacén de datos VMware. Synology Snapshot Manager for VMware vCenter Server es compatible con vSphere 5.1 o versiones más recientes.</li>
+		    <li>En entornos Windows, necesitará instalar Synology Snapshot Manager en su servidor Windows. Cuando se active una instantánea en DSM, Synology Snapshot Manager aprovechará la tecnología de Microsoft Volume Shadow Copy Service (VSS) para producir copias puntuales de datos consistentes. Synology Snapshot Manager for Windows es compatible con Windows Server 2008 R2, 2012 y 2012 R2.</li>
+			<li>Synology Snapshot Manager se puede descargar de manera gratuita desde <a href="http://www.synology.com/" target="_blank">www.synology.com</a>.</li>
+		</ul>
+	</li>
+</ul>
+</div>
+<p>____<br />*Solo disponible en ciertos modelos.</p>
+
+
+</body>
+</html>

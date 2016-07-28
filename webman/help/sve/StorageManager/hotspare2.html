@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+	<h2>Hot Spare</h2>
+	<p>Hot Spare-hårddiskar är reservhårddiskar som kan reparera en trasig RAID Group genom att automatiskt ersätta en kraschad hårddisk. Hot spare-diskar kan tilldelas globalt för att reparera valfri RAID Group på din DiskStation. En Hot Spare-hårddisk kan endast reparera en RAID Group som uppfyller följande kriterier:
+</p>
+	<ul>
+  <li>RAID-typen på RAID Group måste ha dataskydd (dvs. RAID 1, RAID 5, RAID 6 eller RAID 10).</li>
+		<li>Hot Spare-hårddiskens typ måste vara samma som typen på medlemsdiskarna på aktuell RAID Group (dvs. SATA eller SAS).</li>
+		<li>Hot Spare-hårddiskens storlek måste vara lika stor eller större än den minsta hårddiskens storlek i aktuell RAID Group.</li>
+	</ul>
+
+	<h4>För att hantera hot spare-hårddiskar:</h4>
+	<ol>
+		<li>Klicka på <b>Hantera</b>.</li>
+		<li>För att tilldela en hot spare-hårddisk, hitta avsnittet <b>Tillgängliga diskar</b> på höger sida och markera rutan bredvid hårddisken som du vill tilldela som hot spare. Lämna samma ruta tom för att ta bort en hot spare-hårddisk. Klicka på <b>Tillämpa</b> för att spara inställningarna.</li>
+	</ol>
+	<p>
+<div class="section">
+<h4>Obs:</h4> 
+<ul>
+<li>När en hot spare-hårddisk reparerar en trasig RAID Group så raderas all data på hot spare-hårddisken. Före tilldelning av en hot spare-hårddisk ska du försäkra att hårddisken inte innehåller någon viktiga data.</li>
+<li>En RAID som är sammansatt av HDD:er repareras inte automatiskt av SSD-hot spare-diskar och tvärtom.</li>
+</ul>
+</div>
+
+<h4>Att konfigurera hot spare-inställningar för RAID Group:</h4>
+<ol>
+<li>Klicka på <b>Konfigurera</b>.</li>
+<li>På fliken <b>Hot Spare-mål</b> listas RAID Groups som kan skyddas av hot spare-diskar. Om du tar bort markeringarna i rutorna repareras inte motsvarande RAID Groups av hot spare-diskar när de är trasiga.</li>
+<li>På fliken <b>Hot Spare mellan enheter</b> kan du tillåta hot spare-diskar på en enhet att reparera en trasig RAID som finns på en annan enhet.</li>
+<li>Klicka på <b>OK</b> för att spara inställningarna.</li>
+</ol>
+
+</body>
+</html>

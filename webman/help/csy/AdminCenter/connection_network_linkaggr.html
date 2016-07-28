@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Síť</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2><a name="link_aggr"></a>Link Aggregation*</h2>
+<p>DiskStation podporuje funkci multi-LAN, díky které můžete pomocí technologie Link Aggregation tato rozhraní LAN kombinovat. Funkce Link Aggregation zvyšuje šířku pásma vašeho zařízení DiskStation tím, že spojuje několik síťových rozhraní, umožňuje tak převzít provoz a udržet síťové připojení, pokud dojde k jeho výpadku.</p>
+<p>Po sloučení rozhraní LAN do rozhraní uvidíte na seznamu u možnosti <b>Ovládací panel</b> > <b>Síť</b> > <b>Síťové rozhraní</b> nové rozhraní s názvem <b>Bond</b>, které můžete nakonfigurovat stejným způsobem jako ostatní rozhraní (např. LAN nebo PPPoE).</p>
+
+
+<div class="section">
+<h4>Poznámka:</h4>
+<ul>
+<li>Po aktivaci funkce Link Aggregation se síťový provoz automaticky přizpůsobí a vyrovná podle jednotlivých připojených zařízení.</li>
+<li>Pokud jsou síťová rozhraní připojena k více přepínačům, zkontrolujte, zda jsou porty přepínačů v stejné LAN nebo VLAN.</li>
+</ul>
+</div>
+
+
+<h4>Postup kombinování síťových rozhraní pomocí funkce Link Aggregation:</h4>
+<ol>
+<li>Přejděte do části <strong>Ovládací panel</strong> > <strong>Síť</strong> > <strong>Síťové rozhraní</strong>. Klepněte na možnost <strong>Vytvořit</strong> > <strong>Vytvořit propojení Bond</strong>.</li>
+
+<img src="about:blank" class="help_image"/>
+
+<li>Vyberte požadovaný režim.<div class="section">
+<h4>Popisy režimů:</h4>
+<ul>
+<li><strong>Adaptive Load Balancing</strong>: Tento režim optimalizuje tok dat v síti, který odesílá a přijímá vaše zařízení DiskStation, bez ohledu na to, jestli přepínač podporuje funkci Link Aggregation. Abyste předešli neočekávaným chybám, neaktivujte funkci Link Aggregation na přepínači, ani když je podporována.</li>
+<li><strong>IEEE 802.3ad dynamická Link Aggregation</strong>: Tento režim optimalizuje tok dat v síti, který odesílá a přijímá vaše zařízení DiskStation, a pro aktivaci na jednom nebo více přepínačích vyžaduje IEEE 802.3ad (dynamickou) Link Aggregation (LACP, 802.1AX). Pokud používáte více přepínačů, musejí být tyto přepínače sdružitelné a správně nastaveny.</li>
+<li><strong>Balance XOR</strong>: Tento režim vyrovnává tok dat v síti, který odesílá a přijímá vaše zařízení DiskStation, a pro aktivaci na jednom nebo více přepínačích vyžaduje statickou Link Aggregation. Pokud používáte více přepínačů, musejí být tyto přepínače sdružitelné a správně nastaveny. Tok dat, který odesílá vaše zařízení DiskStation, lze vyrovnávat i tehdy, pokud přepínač funkci Link Aggregation nepodporuje. V tomto režimu lze zjistit ztracená spojení, ale ne příčinu ztráty (např. pokud jsou ethernetové kabely odpojeny nebo přepínače špatně nastaveny).</li>
+<li><strong>Aktivní/Pohotovostní</strong>: Tento režim vašemu zařízení DiskStation zajišťuje funkci „network fault tolerance“. To znamená, že pokud aktivní síťové rozhraní vypadne z provozu, jeden z ostatních LAN portů bude síťové připojení zajišťovat místo něj. Tento režim můžete zvolit bez nastavení přepínače nebo s přepínačem, který podporuje IEEE 802.3ad Link Aggregation.</li>
+</ul>
+</div>
+</li>
+
+<img src="about:blank" class="help_image"/>
+
+<li>Vyberte rozhraní pro vytvoření Link Aggregation.</li>
+
+<img src="about:blank" class="help_image"/>
+
+<li>Nakonfigurujte následující IP. V případě nutnosti můžete povolit síť VLAN. Nastavení dokončíte kliknutím na možnost <b>Použít</b>.</li>
+
+<img src="about:blank" class="help_image"/>
+
+<li>Po dokončení se v seznamu <b>Síťové rozhraní</b> zobrazí nové rozhraní s názvem <b>Bond 1</b>.</li>
+
+<img src="about:blank" class="help_image"/>
+
+</ol>
+
+<h4>Úprava nastavení Link Aggregation:</h4>
+<ol>
+<li>Pokud chcete změnit režim Link Aggregation nebo zobrazit informace o fyzických zařízeních, přejděte k možnosti <b>Ovládací panel</b> > <b>Síť</b> > <b>Síťové rozhraní</b>.</li>
+<li>Vyberte rozhraní <b>Bond 1</b> a klikněte na tlačítko <b>Upravit</b>.</li>
+
+<img src="about:blank" class="help_image"/>
+
+<li>Přejděte na odpovídající karty a upravte požadovaná nastavení.</li>
+</ol>
+
+<h4>Odebrání funkce Link Aggregation:</h4>
+<ol>
+<li>Přejděte do části <b>Ovládací panel</b> > <b>Síť</b> > <b>Síťové rozhraní</b>.</li>
+<li>Vyberte rozhraní <b>Bond 1</b> a klikněte na tlačítko <b>Odstranit</b>.</li>
+
+<img src="about:blank" class="help_image"/>
+
+<li>Po dokončení uvidíte, že rozhraní <b>Bond 1</b> nyní nahradila dvě rozhraní LAN.</li>
+
+<img src="about:blank" class="help_image"/>
+
+</ol>
+
+<p>____<br> * K dispozici pouze u některých modelů.</p>
+
+</body>
+</html>
+

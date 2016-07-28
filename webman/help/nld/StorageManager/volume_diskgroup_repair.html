@@ -1,0 +1,130 @@
+ <!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Een volume of schijfgroep herstellen - Synology DSM Help</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="This article walks you through the steps to create a volume on DiskStation using Storage Manager.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Een volume of schijfgroep herstellen</h2>
+
+<p>Volumefouten kunnen om verschillende redenen optreden, zoals beschadigde systeempartities of vastgelopen harde schijven.  In bepaalde gevallen kunt u met de onderstaande stappen een diagnose van de fout uitvoeren en het probleem op lossen.</p>
+
+<div class="section">
+<h4>Opmerkingen:</h4>
+<ul>
+<li>de functie <strong>Herstellen</strong> is alleen beschikbaar voor RAID-types met gegevensredundantie (bv. RAID 1, RAID 5, RAID 6 enz.). Denk eraan dat deze functie geen beschadigde harde schijven herstelt en niet garandeert dat gegevens op de vastgelopen volumes worden hersteld.</li>
+<li>Voor vastgelopen volumes raden we u aan om contact op te nemen met onze <span class="last"><a href="https://account.synology.com/support/support_form.php?lang=enu" target="_blank">Technische ondersteuning</a></span>.</li>
+</ul>
+</div>
+
+<h3>Defecte systeempartities</h3>
+
+<p>Wanneer systeempartities falen, krijgt u een melding dat de systeempartities niet toegankelijk zijn.</p>
+<h4>Systeempartities herstellen:</h4>
+
+<ol>
+<li>Open <strong>Opslagbeheer</strong>.</li>
+<img src="about:blank" class="help_image"/>
+
+<li>Ga naar <strong>Overzicht</strong> en klik op de gemarkeerde koppeling <strong>Herstellen</strong>. Het systeem herstelt de systeempartities.</li>
+
+<img src="about:blank" class="help_image"/>
+</ol>
+
+
+<h3>Beschadigde volumes</h3>
+
+
+<p>Een volume of schijfgroep raakt <strong>beschadigd</strong> als een harde schijf defect is, maar er geen gegevensverlies is opgetreden. Dit gebeurt alleen bij RAID-types met gegevensredundantie zoals SHR, RAID 1, RAID 5, RAID 6 en RAID 10.</p>
+<p>Een beschadigd volume of beschadigde schijfgroep kan worden hersteld door plaatsing van een nieuwe schijf en herstel van het volume of de schijfgroep.</p>
+
+<div class="section">
+<h4>Opmerking:</h4>
+<ul>
+  <li>de omvang van de nieuwe harde schijf moet groter zijn dan of gelijk aan de kleinste schijf in het volume.</li>
+  <li>De status van de harde schijf moet <strong>Geïnitialiseerd</strong> of <strong>Niet geïnitialiseerd</strong> zijn.</li>
+</ul>
+
+</div>
+
+<h4> Om een beschadigd volume of beschadigde schijfgroep te herstellen:</h4>
+
+<ol>
+
+<li>Ga naar <strong>Opslagbeheer</strong> > <strong>Volume</strong> of <strong>Schijfgroep</strong> om te controleren of de status is gewijzigd naar <strong>Beschadigd</strong>.</li> 
+<img src="about:blank" class="help_image"/>
+
+<li>Zo ja, ga naar het tabblad <strong>HDD/SSD</strong>om na te gaan welke harde schijf defect is.</li>
+<img src="about:blank" class="help_image"/>
+
+<li>Verwijder de defecte harde schijf en vervang deze door een nieuwe harde schijf.</li>
+
+<div class="section">
+<h4>Opmerking:</h4>
+<ul>
+<li>als uw DiskStation geen hot-swap ondersteunt, vergeet dan niet om hem eerst uit te schakelen voor u harde schijven verwijdert of installeert.</li>
+<li>Alle bestaande gegevens op de nieuwe harde schijf worden verwijderd.</li>
+</ul>
+</div>
+
+<li>Na installatie van de vervangingsschijf gaat u naar het tabblad <strong>Volume</strong> of <strong>Schijfgroep</strong>.</li>
+
+<li>Selecteer het beschadigde volume of de beschadigde schijfgroep.</li>
+
+<li>Klik op <strong>Beheren</strong>.</li>  
+<img src="about:blank" class="help_image"/>
+
+<li>Selecteer <strong>Herstellen</strong> en klik op <strong>Volgende</strong>. </li>  
+<img src="about:blank" class="help_image"/>
+
+<li>Selecteer de vervangingsschijf die u wilt toevoegen aan het volume. Klik vervolgens op <strong>Volgende.</strong></li>
+<img src="about:blank" class="help_image"/>
+
+<li> Volg de instructies van de wizard om de installatie te voltooien. </li>
+</ol>
+
+
+
+
+<h3>Volumes herstellen</h3>
+<p>Om een beschadigd volume/Disk Group/iSCSI LUN te herstellen, moet u de beschadigde schijf vervangen door een beschikbare schijf die aan de volgende criteria voldoet:</p>
+<ul>
+<li>bij RAID 1-, RAID 5- of RAID 6-volumes kan het beschadigde volume niet worden hersteld door een beschikbare schijf die groter is dan of gelijk aan de kleinste schijf in het RAID-volume.</li>
+<li>Bij SHR-1-volumes moet de beschikbare schijf aan de volgende criteria voldoen: (1) ze moet gelijk zijn aan of groter dan de defecte schijf; (2) met uitzondering van het grootste RAID-volume, moet ze gelijk zijn aan of groter dan de grootste schijf.
+
+<ol>
+<li>Voorbeeld 1: SHR-1 bestaat uit 3TB-, 2TB-, 2TB- en 1TB-schijven. Raakt de 3TB-schijf beschadigd, dan moet ze worden vervangen door een beschikbare schijf die gelijk is aan of groter dan 2TB.</li>
+<li>Voorbeeld 2: SHR-1 bestaat uit 4TB-, 4TB-, 2TB- en 2TB-schijven. Raakt de 4TB-schijf beschadigd, dan moet ze worden vervangen door een beschikbare schijf die gelijk is aan of groter dan 4TB.</li>
+<li>Voorbeeld 3: SHR-1 bestaat uit 4TB-, 4TB-, 2TB- en 2TB-schijven. Raakt de 2TB-schijf beschadigd, dan moet ze worden vervangen door een beschikbare schijf die gelijk is aan of groter dan 2TB.</li>
+</ol>
+</li>
+<li>Bij SHR-2-volumes moet de beschikbare schijf aan de volgende criteria voldoen: (1) ze moet gelijk zijn aan of groter dan de defecte schijf; (2) met uitzondering van de twee grootste RAID-volumes, moet ze gelijk zijn aan of groter dan de resterende grootste schijf.</li>
+</ul>
+<p>Hebt u schijven geconfigureerd als hot spares die aan de bovengenoemde criteria voldoen, dan worden die gebruikt om het beschadigde volume/Disk Group/RAID Group/iSCSI LUN te herstellen.</p>
+
+
+<h3>Vastgelopen volumes oplossen</h3>
+
+<p>Als de status van een volume <strong>Vastgelopen</strong> is, kunt u het volume niet zelf herstellen. Om dit probleem op te lossen, raden wij u aan om contact op te nemen met onze <a href="https://account.synology.com/support/support_form.php?lang=enu" target="_blank">Technische ondersteuning</a>.</p>
+
+<div class="section">
+<h4>Voor u contact op neemt met de technische ondersteuning:</h4>
+
+<ul>
+<li>Herstel uw gegevens op uw DiskStation door de bestanden naar uw computer o f externe schijven te kopiëren via File Station, Windows-bestandsservice, FTP of andere bestandsservices.</li>
+<li>Houd dezelfde volgorde van harde schijven aan die voor het vastgelopen volume van toepassing was.</li>
+<li>Voer een S.M.A.R.T.-test uit op de problematische harde schijven. Ga daarvoor naar <strong>Opslagbeheer</strong> > <strong>HDD/SSD</strong>. Kies de desbetreffende harde schijf en klik op <strong>S.M.A.R.T.-test</strong>. <br />
+</li>
+</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Cache do SSD*</h2>
+<p>O cache do SSD pode aprimorar o desempenho do acesso aleat&oacute;rio armazenando dados acessados frequentemente no cache do SSD. O cache do SSD pode ser montado em um volume ou iSCSI LUN (n&iacute;vel de bloco). H&aacute; dois tipos de cache do SSD:</p>
+<ul>
+<li>O <strong>Cache apenas leitura</strong> pode consistir em 1 ou 12 SSDs que podem ser montados respectivamente em uma configura&ccedil;&atilde;o b&aacute;sica ou RAID 0 para aprimorar o desempenho da leitura aleat&oacute;ria do espa&ccedil;o de armazenamento em que &eacute; montado.
+<div class="section"><h4>Nota:</h4>
+	<p>O cache somente leitura do SSD armazena c&oacute;pias dos dados do volume, assim, n&atilde;o ocorrem perdas de dados mesmo que o cache somente leitura falhe.</p>
+	</div>
+</li>
+<li>O <strong>Cache de leitura e grava&ccedil;&atilde;o</strong> pode ser montado em uma configura&ccedil;&atilde;o RAID 1 / RAID 5 / RAID 6, dependendo do n&uacute;mero de SSDs (at&eacute; 12 SSDs) para melhorar o desempenho de leitura e grava&ccedil;&atilde;o aleat&oacute;rias do espa&ccedil;o de armazenamento no qual ele est&aacute; montado.</li>
+</ul>
+<p>Os dois tipos de cache SSD utilizam um algoritmo LRU (usado menos recentemente) para trocar os dados no cache.</p>
+<div class="section">
+<h4>Importante:</h4>
+<p>Antes instalar SSDs para usar como cache, verifique as seguintes observa&ccedil;&otilde;es:</p>
+<ul>
+<li>O objetivo de habilitar o cache do SSD &eacute; aumentar o desempenho do acesso aleat&oacute;rio para uma pequena parte de dados acessada frequentemente no espa&ccedil;o de armazenamento. Por exemplo, as opera&ccedil;&otilde;es sequenciais de leitura ou grava&ccedil;&atilde;o (ex.: transmiss&atilde;o de v&iacute;deo HD) e os padr&otilde;es de leitura de dados totalmente aleat&oacute;rios n&atilde;o t&ecirc;m padr&otilde;es de releitura e, portanto, n&atilde;o se beneficiar&atilde;o significativamente do cache do SSD. Para aplica&ccedil;&otilde;es gerais, recomenda-se habilitar a op&ccedil;&atilde;o <b>Ignorar E/S sequencial</b> de modo que a E/S sequencial ainda possa passar pelas unidades do espa&ccedil;o de armazenamento.</li>
+<li>Consulte a lista de compatibilidade no <a href="http://www.synology.com/" target=_blank>site do Synology</a> para selecionar o SSD a ser usado como cache em seu DiskStation.</li>
+<li class="disable-alpine">O cache do SSD requer uma determinada quantidade de mem&oacute;ria do sistema, dependendo do tamanho do cache, portanto, a montagem de cache do SSD maior pode precisar de upgrade de mem&oacute;ria do DiskStation. Para manter o sistema est&aacute;vel e r&aacute;pido, apenas 1/4 da mem&oacute;ria do sistema pr&eacute;-instalado pode ser usada para cache do SSD. Cada 1 GB do cache do SSD exige aproximadamente 416 KB de mem&oacute;ria do sistema (a mem&oacute;ria expans&iacute;vel pode ser contada)**. Portanto, se a configura&ccedil;&atilde;o do cache de somente leitura for 2 x 128&nbsp;GB SSD, o tamanho total do cache ser&aacute; 256&nbsp;GB e exigir&aacute; pelo menos 104 MB de mem&oacute;ria. Se a configura&ccedil;&atilde;o do cache de leitura e grava&ccedil;&atilde;o for 2 x 128&nbsp;GB SSD, o tamanho total do cache ser&aacute; 128&nbsp;GB e exigir&aacute; pelo menos 52 MB de mem&oacute;ria. Se a mem&oacute;ria n&atilde;o for suficiente, a cria&ccedil;&atilde;o do cache do SSD ser&aacute; restrita ou o tamanho do cache do SSD ser&aacute; limitado.</li>
+<li class="enable-alpine">Cada 1 GB do cache do SSD exige aproximadamente 416 KB de mem&oacute;ria do sistema (a mem&oacute;ria expans&iacute;vel pode ser contada) e o tamanho m&aacute;ximo do cache &eacute; 930 GB. Portanto, se a configura&ccedil;&atilde;o do cache de somente leitura for 2 x 128&nbsp;GB SSD, o tamanho total do cache ser&aacute; 256&nbsp;GB e exigir&aacute; pelo menos 104 MB de mem&oacute;ria. Se a configura&ccedil;&atilde;o do cache de leitura e grava&ccedil;&atilde;o for 2 x 128&nbsp;GB SSD, o tamanho total do cache ser&aacute; 128&nbsp;GB e exigir&aacute; pelo menos 52 MB de mem&oacute;ria. Se a mem&oacute;ria n&atilde;o for suficiente, a cria&ccedil;&atilde;o do cache do SSD ser&aacute; restrita ou o tamanho do cache do SSD ser&aacute; limitado.</li>
+<li>Consulte as especifica&ccedil;&otilde;es do produto de seus modelos no <a href="http://www.synology.com/" target=_blank>site do Synology</a> para verificar o tamanho m&aacute;ximo de mem&oacute;ria cache SSD permitida em seu DiskStation.</li>
+<li>Quando um cache SSD de leitura/grava&ccedil;&atilde;o &eacute; degradado, o recurso de cache &eacute; desabilitado e o sistema come&ccedil;a a grava&ccedil;&atilde;o (isto &eacute; sincroniza&ccedil;&atilde;o) dos dados em cache do SSD para os HDDs. Ap&oacute;s a conclus&atilde;o da sincroniza&ccedil;&atilde;o dos dados, nenhuma perda de dados ocorre, mesmo se o cache de leitura/grava&ccedil;&atilde;o tiver sido danificado.</li>
+<li>O cache de leitura e grava&ccedil;&atilde;o n&atilde;o pode ser usado junto com o Time Backup. Por exemplo, quando voc&ecirc; criar um cache de SSD de leitura e grava&ccedil;&atilde;o, n&atilde;o ser&aacute; capaz de executar o Time Backup. Do mesmo modo, se voc&ecirc; estiver executando o Time Backup, n&atilde;o ser&aacute; capaz de criar um cache de SSD de leitura e grava&ccedil;&atilde;o.</li>
+</ul>
+</div>
+<h4>Para montar o cache do SSD:</h4>
+<ol>
+  <li>Instale os SSDs no seu DiskStation. Veja as observa&ccedil;&otilde;es acima primeiro.</li>
+  <li>V&aacute; para <strong>Gerenciador de armazenamento</strong> &gt; <strong>Cache do SSD</strong>. Clique em <b>Criar</b>.</li>
+<li>Selecione o modo do cache (dispon&iacute;vel apenas nos modelos que suportam cache de leitura e grava&ccedil;&atilde;o).</li>
+<li>Localize o menu suspenso e selecione o volume ou iSCSI LUN (n&iacute;vel de bloqueio) no qual deseja montar o cache do SSD.</li>
+<li>Escolha os SSDs na lista. Os dados nos SSDs ser&atilde;o apagados, por isso certifique-se de que nenhum dado importante ser&aacute; exclu&iacute;do.</li>
+<li>Clique em <b>Aplicar</b>.</li>
+</ol>
+<h4>Para interromper a E/S do cache sequencial: </h4>
+<p>Se o volume alvo ou iSCSI LUN (n&iacute;vel de bloqueio) tiver excelente desempenho de E/S sequencial, voc&ecirc; pode impedir o cache do SSD de fazer o cache de E/S sequencial e acessar dados diretamente de suas unidades para obter maior velocidade e melhor desempenho. </p>
+<ol>
+<li>Clique em <strong>Configurar</strong> para abrir a janela de configura&ccedil;&atilde;o.</li>
+<li>Marque <strong>Ignorar E/S sequencial</strong>. </li>
+</ol>
+<h4>Para remover o cache do SSD:</h4>
+<ol>
+<li>Clique em <b>Remover</b> para remover permanentemente este cache do SSD do DiskStation.</li>
+<li>Para o cache de leitura e grava&ccedil;&atilde;o, voc&ecirc; deve remov&ecirc;-lo por meio deste procedimento (mesmo se o seu DiskStation estiver desligado). Caso contr&aacute;rio, ocorrer&aacute; uma paralisa&ccedil;&atilde;o do volume, porque os dados parciais residem apenas no cache.</li>
+</ol>
+<div class="section">
+<h4>Nota:</h4>
+<ul>
+<li>Ao montar ou remover o cache do SSD, o sistema parar&aacute; todos os servi&ccedil;os relacionados (por exemplo, pastas compartilhadas, pacotes instalados, conex&otilde;es atuais, etc.)</li>
+<li>Se nenhum cache de leitura e grava&ccedil;&atilde;o for detectado em um espa&ccedil;o de armazenamento durante a inicializa&ccedil;&atilde;o, o sistema n&atilde;o montar&aacute; esse espa&ccedil;o de armazenamento. Encontre e reinstale os SSDs no DiskStation e reinicie para montar o espa&ccedil;o de armazenamento. Se n&atilde;o for poss&iacute;vel encontrar os SSDs, pode ser necess&aacute;rio for&ccedil;ar a montagem do espa&ccedil;o de armazenamento. Consulte <a href="space.html">Volume</a> ou <a href="iscsilun.html">iSCSI LUN</a>.</li>
+</ul>
+</div>
+<h4>Para reparar o cache do SSD:</h4>
+<ul>
+<li><strong>Para cache de leitura e grava&ccedil;&atilde;o:</strong> Se um dos SSDs apresentar uma falha, siga as etapas abaixo para repar&aacute;-lo.
+  <ol>
+<li>Substitua o SSD com erro por um novo. (O novo SSD deve ser do mesmo modelo e tamanho que o antigo).</li>
+<li>Clique no bot&atilde;o <b>Reparar</b>.</li>
+<li>Selecione o SSD na lista.</li>
+<li>Clique em <b>Aplicar</b>.</li>
+</ol>
+</li>
+<li><strong>Para cache de somente leitura:</strong> Se um dos SSDs apresentar uma falha, remova o cache e substitua o SSD com defeito. Em seguida, clique em <strong>Criar</strong> para criar uma nova configura&ccedil;&atilde;o de cache.</li>
+</ul>
+<h3>Supervisor de Cache de SSD</h3>
+<p>Esta fun&ccedil;&atilde;o permite que voc&ecirc; calcule e visualize o tamanho total e o n&uacute;mero de arquivos acessados recentemente em um volume espec&iacute;fico. Se voc&ecirc; ainda n&atilde;o criou nenhum caches SSD no volume selecionado, essa informa&ccedil;&atilde;o poder&aacute; ser referenciada ao avaliar quanto de cache SSD &eacute; adequado para o seu sistema. Se voc&ecirc; criou anteriormente um cache SSD no volume selecionado, a an&aacute;lise e uso do cache tamb&eacute;m ser&atilde;o exibidos aqui.</p>
+<h4>Para usar o Assistente de Cache SSD:</h4>
+<ol>
+<li>Clique em <b>Assistente de Cache SSD</b> para abrir o assistente.</li>
+<li>Selecione um volume para o c&aacute;lculo e clique em <b>Avan&ccedil;ar</b>.</li>
+<li>O assistente ir&aacute; come&ccedil;ar a totalizar automaticamente o tamanho e o n&uacute;mero de arquivos acessados recentemente no volume selecionado. O tempo de c&aacute;lculo varia dependendo de seu ambiente individual.</li>
+</ol>
+<p>_____<br> * O cache SSD est&aacute; dispon&iacute;vel apenas em modelos espec&iacute;ficos.<br> <span class="disable-alpine" style="display: inline;">** Isso n&atilde;o se aplica aos caches SSD de leitura/grava&ccedil;&atilde;o criados no DSM 5.1 ou vers&otilde;es anteriores. Isto &eacute;, cada 1 GB de cache SSD criado antes do DSM 5.2 ainda exigir&aacute; 4 MB de mem&oacute;ria do sistema mesmo quando usado no ambiente DSM 5.2.</span>
+  </p>
+</body>
+</html>

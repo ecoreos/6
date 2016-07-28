@@ -1,0 +1,85 @@
+ <!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Add a Hard Drive to a Volume or Disk Group - Synology DSM Help</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="This article walks you through the steps to add an additional hard drive to an existing volume or disk group on your DiskStation.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Add a Hard Drive to Expand Storage Capacity</h2>
+
+<p>If there are empty hard drive slots on your DiskStation, you can install additional hard drives and add them to an existing volume or disk group. This article provides instructions to expand an existing volume or disk group by installing additional hard drives.</p>
+
+<h3>Before You Start</h3>
+
+<p>Before starting, make sure the hard drives that you want to add meet the following size requirements:</p>
+<ul>
+  <li><strong>For SHR:</strong> The capacity of the hard drive you wish to add must be equal to or larger than the largest hard drive in the volume or disk group, or be equal to any of the hard drives in the volume or disk group. For example, if your SHR volume is composed of three hard drives – 2 TB, 1.5 TB, and 1 TB respectively – then the capacity of the new hard drive must be at least 2 TB or equal to 1.5 TB or 1 TB.</li>
+  <li><strong>For RAID 5 and RAID 6:</strong> The capacity of the hard drive you wish to add must be equal to or larger than the smallest hard drive in the volume or disk group. For example, if your volume is composed of three hard drives – 2 TB, 1.5 TB, and 1 TB respectively – then the capacity of the new hard drive must be at least 1 TB.</li>
+</ul>
+
+<div class="section">
+<h4>Check Volume Status</h4>
+
+<p>Make sure the status of your volume or disk group is <strong>Normal</strong>. If not, you must first repair it.</p>
+</div>
+
+
+<h3>  Add a Hard Drive to a Volume or Disk Group</h3>
+
+<p>Hard drives can be added to the following RAID types: </p>
+
+<ul>
+<li>Synology Hybrid RAID (SHR)</li>
+<li>JBOD</li>
+<li>RAID 5</li>
+<li>RAID 6</li>
+</ul>
+
+<div class="section">
+<h4>Note:</h4>
+<p>For SHR volumes, storage capacity is only expanded when adding hard drives to a volume with two or more hard drives.</p>
+</ul>
+</div>
+
+<h4>To add a hard drive to a volume or disk group:</h4>
+
+<ol>
+<li>Turn off your DiskStation. (Skip this step if your DiskStation supports hot-swapping.)</li>
+<li>Insert a new hard drive into an empty hard drive slot.</li>
+
+<div class="section">
+<h4>Note:</h4>
+<p>To avoid harming yourself or damaging your DiskStation, please follow the hard drive installation instructions found in the <i>Quick Installation Guide</i> for your Synology product.</p>
+</div>
+
+<li>Turn on your DiskStation.</li>
+<li>Log in to DSM with an account belonging to the <strong>administrators</strong> group.</li>
+<li>Open <strong>Storage Manager</strong>.</li>
+<img src="about:blank" class="help_image"/>
+
+<li>At this point, please do the following:</li>
+  <ul class="list_abc">
+    
+  <li>If you are expanding a single volume, go to the <strong>Volume</strong> tab. Select the volume you wish to expand. Click <strong>Manage</strong> and continue to the next step. </li>
+<img src="about:blank" class="help_image"/>
+    
+  <li>If you are expanding a disk group, go to the <strong>Disk Group</strong> tab. Select the disk group you wish to expand. Click <strong>Manage</strong> and continue to the next step.</li>
+<img src="about:blank" class="help_image"/>
+  </ul>
+<li>Select <strong>Expand the volume (or disk group) by adding hard disks</strong>. Then click <strong>Next</strong>.</li>
+<img src="about:blank" class="help_image"/>
+<li>Select the hard drives with which you wish to expand the volume or disk group. You can add hard drives by checking the corresponding checkboxes. Then click <strong>Next</strong>.</li>
+<img src="about:blank" class="help_image"/>
+<li>Follow the steps of the wizard to finish.</li>
+</ol>
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Dispositivi esterni</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2><a name="usbprinter"></a>Stampanti</h2>
+<p>DiskStation può diventare un server di stampa in modo da consentire ai computer client o ai dispositivi mobile di accedere alle stampanti collegate a DiskStation. Inoltre, il supporto per la Stampa wireless Apple e Google Cloud Print consente di stampare da remoto utilizzando i dispositivi iOS o i prodotti e servizi di Google.</p>
+<p>Per le stampanti compatibili consultare <a href="http://www.synology.com" target="_blank">www.synology.com</a>.</p>
+
+<h3>Configurare le stampanti</h3>
+<p>Fare riferimento alle istruzioni di seguito per configurare e connettere una stampante <span style="display: inline;" class="disable-rc18015xsp">USB </span>o di rete a DiskStation.</p>
+
+
+<h4 class="disable-rc18015xsp">Per configurare una stampante USB:</h4>
+<ol class="disable-rc18015xsp">
+<li>Accendere e collegare la stampante a una porta USB su DiskStation.</li>
+<li>Andare su <strong>Pannello di controllo</strong> > <strong>Dispositivi esterni</strong> > <strong>Stampante</strong>.</li>
+<li>Selezionare la stampante da configurare. DiskStation non è in grado di riconoscere le stampanti collegate tramite hub USB.</li>
+<li>Fare clic su <b>Gestione stampanti</b> e selezionare <b>Imposta stampante</b>.</li>
+<li>Nella finestra di dialogo, selezionare una delle seguenti modalità:
+<ul>
+<li><b>MFP di rete:</b> consente ai client nella rete locale di usare le funzioni di stampa, scansione e fax della stampante multifunzione. Le funzioni di scansione e di fax sono disponibili solo per computer Windows.</li>
+<li><b>Stampante di rete:</b> scegliere questa modalità per le stampanti che supportano solamente la stampa o per consentire ai client di usare solo la funzione di stampa.</li>
+</ul>
+</li>
+<li>Configurare le impostazioni di Stampa wireless Apple o Google Cloud Print (opzionale).</li>
+<li>Fare clic su <b>Salva</b>.</li>
+</ol>
+
+<div class="section disable-rc18015xsp">
+<h4>Nota:</h4>
+<p>è possibile accedere a un MFP di rete soltanto mediante un solo client per volta.</p>
+</div>
+
+
+<h4>Per configurare una stampante di rete:</h4>
+<ol>
+<li>Accendere e collegare la stampante di rete alla stessa LAN di DiskStation.</li>
+<li>Andare su <strong>Pannello di controllo</strong> > <strong>Dispositivi esterni</strong> > <strong>Stampante</strong>.</li>
+<li>Fare clic su <b>Aggiungi stampante di rete</b> e seguire le istruzioni della procedura guidata.</li>
+</ol>
+
+<div class="section">
+<h4>Nota:</h4>
+<ul>
+<li><strong>Nome stampante:</strong> durante la configurazione deve essere inserito un nome che comprende fino a 32 caratteri, incluse lettere, numeri e segni di sottolineatura.</li>
+	<li><strong>Protocollo:</strong> in generale, le stampanti di rete HP utilizzano un Socket; le stampanti di rete Canon utilizzano BJNP, mentre le altre utilizzano LPR.</li>
+<li><strong>Nome coda:</strong> l'inserimento di un nome coda per le stampanti di rete LPR e IPP è obbligatorio, ma non si applica alle stampanti Socket o BJNP.</li>
+<li><strong>Nessuna MFP di rete:</strong> al momento le stampanti di rete collegate a DiskStation non possono usare la modalità MFP di rete.</li>
+<li><strong>Nessuna stampante USB:</strong> le stampanti USB condivise da un prodotto Synology non possono essere impostare come stampanti di rete.</li>
+</ul>
+</div>
+
+
+<h3>Gestire le stampanti</h3>
+<p>La scheda stampanti comprende le seguenti opzioni per gestire le stampanti <span style="display: inline;" class="disable-rc18015xsp">USB </span>o di rete collegate a DiskStation.</p>
+
+<ul>
+<li><b>Ricevi informazioni:</b> visualizza le informazioni relative alla stampante selezionata, ad esempio il nome dispositivo, produttore, stato, ecc.</li>
+<li><strong>Rimuovi:</strong> rimuove e disconnette una stampante da DiskStation.</li>
+<li><strong>Gestione stampanti:</strong> comprende le seguenti opzioni:
+<ul>
+<li><strong>Imposta stampante</strong>: Modificare le impostazioni della stampante, come Stampa wireless Apple o Google Cloud Print (vedere le istruzioni di seguito).</li>
+<li><strong>Pulizia spazio spooler:</strong> cancella tutti i processi di stampa da tutte le stampanti.</li>
+<li><strong>Stampa pagina di prova:</strong> stampa una pagina di prova per verificare che le configurazioni siano corrette.</li>
+<li><b>Rilascia stampante:</b> disconnette la stampante e il client (solo per la modalità MFP di rete). Quando un client si connette a una stampante multifunzione per ricevere i fax o per eseguire la scansione dei file, questo processo potrebbe richiedere del tempo. Se necessario, la connessione può essere interrotta in modo da consentire al client successivo di accedere alla stampante.</li>
+</ul></li>
+</ul>
+
+
+<h4>Per abilitare la Stampa wireless Apple:</h4>
+<ol>
+<li>Andare su <strong>Pannello di controllo</strong> > <strong>Dispositivi esterni</strong> > <strong>Stampante</strong>.</li>
+<li>Selezionare la stampante dall'elenco dispositivi.</li>
+<li>Fare clic su <b>Gestione stampanti</b> > <b>Imposta stampante</b>.</li>
+<li>Selezionare la casella <b>Abilita Stampa wireless Apple</b>.</li>
+<li>Selezionare la marca e il driver della stampante.</li>
+<li>Fare clic su <b>Salva</b>.</li>
+</ol>
+
+<p>Una volta completata la configurazione, è possibile stampare la pagina di prova facendo clic su <b>Gestione stampanti</b> > <b>Stampa pagina di prova</b>.</li>
+
+<div class="section">
+<h4>Nota:</h4>
+<ul>
+<li>L'abilitazione della Stampa wireless Apple abilita anche Bonjour Printer Broadcast per DSM.</li>
+<li>La Stampa wireless Apple è disponibile solo per iOS 4.2 o successivi.</li>
+</ul>
+</div>
+
+
+<h4>Per abilitare Google Cloud Print:</h4>
+<ol>
+<li>Andare su <strong>Pannello di controllo</strong> > <strong>Dispositivi esterni</strong> > <strong>Stampante</strong>.</li>
+<li>Selezionare la stampante dall'elenco dispositivi.</li>
+<li>Fare clic su <b>Gestione stampanti</b> > <b>Imposta stampante</b>.</li>
+<li>Mettere un segno di spunta sulla casella <b>Abilita Google Cloud Print</b>.</li>
+<li>Immettere le seguenti informazioni:
+<ul>
+
+<li>Le informazioni dell'account Google.</li>
+<li>La marca e il driver della stampante.</li>
+</ul>
+<li>Fare clic su <b>Salva</b>.</li>
+</ol>
+<p>Una volta completata la configurazione, è possibile stampare la pagina di prova facendo clic su <b>Gestione stampanti</b> > <b>Stampa pagina di prova</b>.</li>
+</p>
+<p>Per gestire i processi di Google Cloud Print, fare clic sul collegamento a <a href="http://www.google.com/cloudprint/manage.html" target="_blank">Google Cloud Print</a>.</p>
+
+
+<h3>Accesso stampanti</h3>
+<p>Per accedere alle stampanti usando un PC o Mac, vedere la sezione seguente.</p>
+<h4><a name="others"></a>Per accedere alle stampanti usando un PC Windows:</h4>
+<p>
+Il modo migliore per accedere al servizio di stampa di DiskStation è impostare la connessione alla stampante con Synology Assistant. Per le istruzioni dettagliate, consultare la Guida.
+</p>
+
+<p>Nel caso in cui Synology Assistant non è installato sul computer, vedere di seguito per altre modalità di accesso al servizio stampa di DiskStation.</p>
+<p><strong>Tipo 1. Stampante di rete condivisa</strong></p>
+<ol>
+<li>Sul PC, aprire <b>Rete</b> in Esplora file e fare doppio clic su DiskStation.</li>
+
+<li>Fare doppio clic su <span style="display: inline;" class="disable-rc18015xsp"><b>usbprinter</b> o </span><b>nome stampante di rete</b>; il sistema chiede di installare il driver corretto, quindi fare clic su <span style="display: inline;" class="disable-rc18015xsp"><b>Sì</b>.</li>
+
+<li>Scaricare i driver della stampante dal CD o dal sito Web del produttore. Selezionare il produttore e il modello della stampante, oppure fare clic su <strong>Ho un disco</strong> per selezionare la posizione del driver. Quindi fare clic su <b>OK</b>.</li>
+<li>Verrà avviata l'installazione della stampante di rete. Al termine della configurazione, sarà possibile iniziare a usare la stampante. </li>
+</ol>
+
+
+<p><strong>Tipo 2. Porta LPR (Consigliato)</strong></p>
+<ol>
+<li>Sul PC, fare clic su <b>Start</b> e andare su <b>Dispositivi e stampanti.</b></li>
+<li>Fare clic su <b>Aggiungi stampante</b>. </li>
+	<li>Scegliere <strong>Aggiungi stampante di rete, wireless o Bluetooth</strong>. </li>
+	<li>Scegliere <strong>La stampante non è presente nell'elenco.</strong>.</li>
+<li>Selezionare <b>Aggiungi stampante utilizzando l'indirizzo TCP/IP o il nome host</b>. Fare clic su <b>Avanti</b> per continuare.</li>
+<li>Scegliere il tipo di dispositivo come <b>Dispositivo porta TCP/IP.</b></li>
+<li>Inserire l'indirizzo IP del DiskStation. Fare clic su <b>Avanti</b> per continuare.</li>
+<li>Selezionare <b>Tipo di dispositivo:</b> <strong>Personalizza</strong> > <strong>Impostazioni</strong> > …. Fare clic su <b>Avanti</b> per continuare.</li>
+
+<li>Selezionare <b>LPR</b>come protocollo; inserire <span style="display: inline;" class="disable-rc18015xsp"><b>usbprinter</b> or </span><b>nome stampante di rete</b> come Nome coda, quindi spuntare la casella di controllo <span style="display: inline;" class="disable-rc18015xsp"><b>Conteggio byte LPR attivato</b>. Fare clic su <b>OK</b> per continuare.</li>
+
+<li>Scaricare i driver della stampante dal CD o dal sito Web del produttore. Selezionare il produttore e il modello della stampante, oppure fare clic su <strong>Ho un disco</strong> per selezionare la posizione del driver. Quindi fare clic su <b>OK</b>.</li>
+	<li>Verrà avviata l'installazione della stampante di rete. Una volta completata la configurazione è possibile iniziare a usare la stampante.</li>
+</ol>
+
+<h4>Per accedere alle stampanti usando Mac:</h4>
+<p>
+Gli utenti Mac possono accedere al servizio di stampa di DiskStation abilitando il Bonjour printer broadcast del DSM e aggiungendo la stampante nelle preferenze di sistema.</p>
+<P>Prima di procedere, verificare che DiskStation utilizzi una stampante Postscript.
+</p>
+<p><strong>Passo 1. Abilitare il broadcast della stampante Bonjour del DSM</strong></p>
+<ol>
+<li>
+Accedere al DSM come <b>admin</b> o come utente appartenente al gruppo <b>administrators</b>.
+</li>
+<li>
+Andare su <b>Pannello di controllo</b> > <strong>Servizi file</strong> > <b>Win/Mac/NFS</b>.
+</li>
+<li>
+Selezionare <b>Abilita Bonjour Printer Broadcast</b>.
+</li>
+</ol>
+
+<p><strong>Passo 2. Accedere alla stampante da Mac</strong></p>
+<ol>
+<li>
+Sul MAC, andare su <b>Preferenze di sistema</b> > <b>Stampa e scansione</b> e quindi fare clic su <b>+</b>.
+</li>
+
+<li>
+Scegliere <span style="display: inline;" class="disable-rc18015xsp"><b>usbprinter[numero]</b> o </span><b>nome stampante di rete</b> nel menu a discesa. Il Mac imposterà la stampante automaticamente.
+</li>
+
+</ol>
+</div>
+</body>
+</html>

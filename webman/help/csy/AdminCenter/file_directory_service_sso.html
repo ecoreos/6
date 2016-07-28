@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Nápověda aplikace DSM – Klient SSO</title>
+<meta name="author" content="Synology Inc.">
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2>Klient SSO</h2>
+
+<p>Pokud se zařízení DiskStation připojilo ke stejné doméně nebo službě LDAP jako server SSO, můžete nastavit zařízení DiskStation jako klienta SSO. Po přihlášení k serveru SSO pomocí svých přihlašovacích údajů mohou uživatelé využívat služby poskytované zařízením DiskStation.</p>
+
+<p>Než začnete, ověřte si, jestli se zařízení DiskStation připojilo do stejné domény nebo služby LDAP jako server SSO.</p>
+
+<h4>Nastavení zařízení DiskStation jako klienta SSO:</h4>
+<ol>
+	<li>Přejděte do nabídky <strong>Ovládací panel</strong> > <strong>Doména/LDAP</strong> > <strong>Klient SSO</strong>.</li>
+	<li>Zaškrtněte políčko <strong>Povolit službu SSO</strong>.</li>
+	<li>Do polí pod zaškrtávacím políčkem zadejte <strong>adresu URL serveru SSO</strong> a <strong>ID aplikace</strong>.<div class="section"><h4>Poznámka:</h4>
+	<p>ID aplikace získáte jedním z těchto dvou způsobů:</p>
+	<ul>
+		<li><strong>Metoda č. 1:</strong><ol>
+				<li>Přihlaste se do systému DSM spuštěného jako server SSO.</li>
+				<li>Přidejte zařízení DiskStation, které bude sloužit jako klientská aplikace, do seznamu aplikací na serveru SSO. Podrobné pokyny najdete v článku nápovědy pro <strong>Server SSO</strong> > <strong>Seznam aplikací</strong>.</li>
+				<li>Po přidání zařízení DiskStation do serveru SSO zkopírujte a vložte ID aplikace přidělené serverem SSO.</li>
+			</ol>
+		</li>
+		<li><strong>Metoda č. 2:</strong><ol>
+				<li>Po zadání <strong>adresy URL serveru SSO</strong> klikněte na položku <strong>Rychlá registrace</strong> vedle pole ID aplikace.</li>
+				<li>V rámečku registrace zadejte do polí <strong>Správce serveru</strong> a <strong>Heslo</strong> přihlašovací údaje účtu správce serveru SSO.</li>
+				<li>Do pole <strong>Název aplikace</strong> zadejte název své klientské aplikace.</li>
+				<li>Přesvědčte se, jestli možnost <strong>Přesměrovat URI</strong> odkazuje přesně na přihlašovací stránku zařízení DiskStation.</li>
+				<li>Klikněte na možnost <strong>OK</strong>. Zařízení DiskStation se přidá do serveru SSO a ID aplikace se automaticky vyplní.</li>
+			</ol>
+		</li>
+	</ul>
+<p>______</p><p style="margin-left: 20px; text-indent: -10px;">* Je potřeba, abyste při konfiguraci všech klientů SSO zadali totožnou adresu URL serveru SSO (název hostitele nebo IP).</p>
+</div>
+	</li>
+	<li>Nastavení uložte kliknutím na možnost <strong>Použít</strong>.</li>
+</ol>
+
+<div class="section"><h4>Poznámka:</h4>
+<ul>
+	<li>Pokud server SSO používá protokol HTTPS, mohou prohlížeče přihlášení SSO zablokovat, protože schází důvěryhodný certifikát.</li>
+	<li>Pokud se k vašemu serveru SSO přistupuje prostřednictvím protokolu HTTP a pokud zařízení DiskStation (nastavené jako klient SSO) používá připojení HTTPS, musí uživatelé nakonfigurovat nastavení svých prohlížečů tak, aby mohli používat nezabezpečené připojení.</li>
+	<li>IP adresa serveru SSO ve formátu IPv6 nebude podporována, pokud jste v systému DSM v části <strong>Ovládací panel</strong> > <strong>Zabezpečení</strong> > <strong>Zabezpečení</strong> zaškrtli políčko <strong>Vylepšit zabezpečení pomocí záhlaví HTTP Content Security Policy (CSP)</strong>.</li>
+</ul>
+</div>
+
+</body>
+</html>

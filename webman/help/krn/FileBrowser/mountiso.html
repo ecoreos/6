@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>File Station</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>가상 드라이브 마운트</h2>
+
+<p>
+가상 드라이브를 마운트하여 File Station으로 디스크 이미지의 내용에 액세스할 수 있습니다.
+</p>
+
+<h4>가상 드라이브를 마운트하려면 다음과 같이 하십시오:</h4>
+<ol>
+<li>
+디스크 이미지를 선택하고 <b>도구</b> > <b>가상 드라이브 마운트</b>를 클릭합니다.
+</li>
+<img src="about:blank" class="help_image"/>
+<li>
+가상 드라이브를 마운트하기 위해 DiskStation에서 빈 대상 폴더를 선택하거나 만들려면 <b>찾아보기</b>를 클릭하십시오.
+</li>
+<img src="about:blank" class="help_image"/>
+<li>
+시스템을 시작하거나 재부팅할 때마다 DiskStation에서 가상 드라이브를 마운트하도록 하려면 <b>시작 시 자동 마운트</b>를 선택하십시오. <b>마운트</b>를 클릭해서 계속 진행합니다. 이제 가상 드라이브가 마운트된 대상 폴더를 탐색할 수 있고 디스크 이미지 내용에 액세스할 수 있습니다.
+</li>
+<img src="about:blank" class="help_image"/>
+</ol>
+
+<div class="section">
+<h4>참고:</h4>
+<p>가상 드라이브 및 .iso 파일은 공유 폴더의 하위 폴더에만 마운트할 수 있습니다.</p>
+</div>
+
+
+
+<h4>가상 드라이브의 마운트를 해제하려면 다음과 같이 하십시오:</h4>
+<ol>
+<li>가상 드라이브가 마운트된 대상 폴더를 마우스 오른쪽 단추로 클릭하고 <b>마운트 해제</b>를 선택합니다.</li>
+<img src="about:blank" class="help_image"/>
+</ol>
+<ol>
+<span class="note_head">참고: </span>
+<li>
+지원되는 디스크 이미지 형식: "<b>.iso</b>" 파일(ISO 9660 및 UDF 파일 시스템 사용).
+</li>
+<li>
+동시에 사용 가능한 가상 드라이브 최대 수는 16입니다.
+</li>
+<li class="enable-dockerx64">가상 드라이브 마운트는 높은 권한 모드에서만 지원됩니다. 이 기능을 사용하려면, 호스트 DSM의 Docker 패키지로 가서, 암호화된 공유 폴더를 활성화할 <strong>Docker DSM</strong>을 선택하고, <strong>편집</strong>을 클릭하고 <strong>높은 권한을 사용하여 컨테이너 실행</strong> 옆의 상자를 선택합니다.</li>
+
+</ol>
+</body>
+</html>

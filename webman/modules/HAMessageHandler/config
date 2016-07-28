@@ -1,0 +1,1 @@
+{"DataIncompleteApp.js":{"SYNO.SDS.App.DataIncompleteApp.Instance":{"type":"app","hidden":true,"autoLaunch":true,"allowMultiInstance":false,"title":"volume:volume_ha_data_incomplete_notification"},"SYNO.SDS.App.DataIncompleteApp.Notification":{"type":"lib","title":"volume:volume_ha_data_incomplete_notification"}}}

@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Correo electrónico - Ayuda de Synology DSM</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="Enabling email notifications allows your DiskStation to send messages to your email when specified events occur."><link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Correo electrónico</h2>
+<p class="disable-eds14">Habilitar las notificaciones por correo electrónico permite a DiskStation enviarle mensajes a su correo electrónico cuando se produzcan determinados eventos, como errores del sistema, pérdidas de conexión a la red, fallos en el comportamiento del ventilador, cortes de alimentación o no se puedan completar las tareas de copias de seguridad.</p>
+
+<p class="enable-eds14">Habilitar las notificaciones por correo electrónico permite a DiskStation enviarle mensajes cuando se producen eventos específicos, como errores del sistema, pérdidas de conexión a la red, cortes de alimentación o fallos de tareas de copias de seguridad.</p>
+
+
+<h4>Para habilitar las notificaciones por correo electrónico:</h4>
+<ol>
+<li>Vaya al <strong>Panel de control</strong> > <strong>Notificación</strong> > <strong>Correo electrónico</strong>.</li>
+<li>Marque <strong>Habilitar las notificaciones de correo electrónico</strong>.</li>
+<li>Introduzca una o más direcciones de correo electrónico en el campo <strong>Destinatarios</strong>. Las notificaciones del sistema se enviarán a las direcciones introducidas aquí. Se permite introducir dos direcciones. Puede separar varias direcciones con un punto y coma (;).</li>
+<li>Si fuera necesario, agregue un prefijo de asunto en el campo <strong>Prefijo del asunto</strong>. Este prefijo se agregará al asunto de cada mensaje enviado por DiskStation para que pueda identificar y filtrar los mensajes con facilidad.</li>
+<li>Si desea utilizar un servidor de correo electrónico de terceros (por ejemplo, Gmail, Outlook, Yahoo!) para transmitir mensajes, consulte la sección sobre "correos electrónicos de terceros" a continuación. Si desea utilizar un servidor personalizado, consulte la sección sobre "servidor SMTP personalizado". </li>
+</ol>
+
+
+
+
+<h4>Para utilizar un servicio de correo electrónico de terceros:</h4>
+<ol>
+
+
+<li>En el menú de <strong>Proveedor de servicios</strong>, elija un servicio de correo electrónico de terceros, como Gmail, Yahoo o Outlook.</li>
+<li>Introduzca su nombre de usuario y contraseña para el servicio de correo electrónico seleccionado.</li>
+<li>Haga clic en <strong>Aplicar</strong> para guardar la configuración.</li>
+<li>Puede hacer clic en <strong>Enviar un correo electrónico de prueba</strong> para ver si la configuración es correcta.</li>
+</ol>
+
+<h4>Para utilizar un servidor SMTP personalizado:</h4>
+<ol>
+
+
+<li>En el menú <strong>Proveedor de servicios</strong>, seleccione <strong>Servidor SMTP personalizado</strong>.</li>
+<li>Introduzca el nombre del servidor SMTP o la dirección IP en el campo <strong>Servidor SMTP</strong>. </li>
+<li>Escriba el número de puerto SMTP en el campo <strong>Puerto SMTP</strong> (si ha especificado un puerto SMTP diferente al configurar las reglas de reenvío de puerto, introduzca ese número).</li>
+<li>Si su servidor SMTP requiere autenticación, marque <strong>Se requiere autenticación</strong> y escriba su <strong>Nombre de usuario</strong> y <strong>Contraseña</strong> para el servidor de correo electrónico. </li>
+<li>Si su servidor SMTP requiere una conexión SSL/TLS, marque <strong>Es necesaria una conexión segura (SSL/TLS)</strong>.<li>Si desea personalizar el nombre del remitente que aparece en los mensajes de correo electrónico enviados por DiskStation, introduzca el nombre en el campo <strong>Nombre del remitente</strong>. Si desea personalizar la dirección de correo electrónico del remitente, introduzca la dirección de correo electrónico en el campo <strong>Correo electrónico del remitente</strong>. Si el campo está en blanco, se utilizará la primera dirección de correo electrónico en el campo de <strong>Destinatarios</strong>.</li>
+<li>Haga clic en <strong>Aplicar</strong> para guardar la configuración.</li>
+<li>Puede hacer clic en <strong>Enviar un correo electrónico de prueba</strong> para ver si la configuración es correcta.</li>
+</ol>
+
+
+
+
+
+
+<div class="section">
+<h4>Nota:</h4>
+<ul>
+<li>Si desea enviar un mensaje de bienvenida a cada nueva cuenta de usuario creada, marque <strong>Enviar mensajes de bienvenida a usuarios nuevos</strong> y cada usuario recibirá un mensaje de bienvenida cuando se cree su cuenta.</li>
+<li>El idioma de las notificaciones de correo electrónico se puede configurar en <strong>Idioma de notificación</strong>. Para cambiar el idioma de notificación por correo electrónico, vaya a <strong>Menú principal</strong> > <strong>Panel de control</strong> > <strong>Opciones regionales</strong>, haga clic en la pestaña <strong>Idioma</strong> y, a continuación, seleccione el idioma que prefiera en el menú desplegable de la sección <strong>Idioma de notificación</strong>.</li>
+<li>Si utiliza el servidor SMTP de Gmail y ha habilitado la verificación en dos pasos, recuerde que debe utilizar su "contraseña específica de la aplicación" proporcionada por Google para la autenticación SMTP.</li>
+</ul>
+</div>
+
+<div class="section">
+<h4>Nombre del dominio del servidor SMTP:</h4>
+<p>El servidor SMTP puede ser una dirección IP o un nombre de dominio. En el segundo caso, asegúrese de haber introducido una dirección IP de DNS server válida en <b>Menú principal</b> > <b>Panel de control</b> > <b>Red</b> y que el servidor se encuentre en Internet. </p>
+
+
+</div>
+</body>
+</html>

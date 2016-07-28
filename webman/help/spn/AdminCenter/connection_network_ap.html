@@ -1,0 +1,197 @@
+
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Red</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2><a name="wireless_ap"></a>Zona activa*</h2>
+<p>El dispositivo DiskStation admite la creaci&oacute;n de zonas activas para compartir su conexi&oacute;n de Internet con otros dispositivos inal&aacute;mbricamente si ha instalado un adaptador USB Wi-Fi o si el DiskStation tiene Wi-Fi incorporada. Puede configurar el DiskStation para que act&uacute;e como un punto de acceso (AP) o un enrutador inal&aacute;mbrico, dependiendo de c&oacute;mo quiera utilizar Internet.</p>
+
+<table>
+<tr>
+<th width="23%">Modo de zona activa</th>
+<th width="77%">Descripci&oacute;n</th>
+</tr>
+<tr>
+<th>AP inal&aacute;mbrico</th>
+<td>
+<ul>
+<li>Crea un puente entre su LAN y Wi-Fi.</li>
+<li>Sus clientes LAN e inal&aacute;mbricos estar&aacute;n en la misma red local.</li>
+<li>Se puede aplicar cuando ya tenga un enrutador y desee utilizar su DiskStation como un punto de acceso adicional a una red existente.</li> 
+<li>Permite compartir recursos de red, como dispositivos DLNA, impresoras, Synology Web Assistant u otros servicios que dependen de transmisiones en la red.</li>
+<li>El DHCP Server se inhabilitar&aacute; en los dispositivos DiskStation que act&uacute;en como AP. Para reactivar el DHCP Server en su DiskStation, quite los dongles de Wi-Fi y reinicie el DiskStation.</li>
+<li>En modelos con varios puertos LAN, solo se utilizar&aacute; LAN 1 para crear el puente con el AP inal&aacute;mbrico.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Enrutador inal&aacute;mbrico</th>
+<td>
+<ul>
+<li>Configura una red inal&aacute;mbrica en la que los dispositivos se encuentran en una subred privada.</li>
+</ul>
+</td>
+</tr>
+</table>
+
+
+<div class="section">
+<h4>Nota:</h4>
+
+<ol>
+<li>Algunos modelos requieren la conexi&oacute;n de dongles inal&aacute;mbricos para crear zonas activas. Para ver una lista de los dongles inal&aacute;mbricos compatibles, visite <a href="http://www.synology.com/support/faq/444" target=_blank>www.synology.com</a>.</li>
+<li>En modelos que no sean DS213air, la opci&oacute;n de zona activa inal&aacute;mbrica en DSM 4.3 se ha denominado &quot;Enrutador inal&aacute;mbrico&quot; en DSM 5.0 y posteriores.</li>
+</ul>
+</ol>
+
+</div>
+
+<h3>Administrar la configuraci&oacute;n de la zona activa</h3>
+<p>En esta secci&oacute;n se explica c&oacute;mo habilitar y administrar la configuraci&oacute;n de la zona activa de su DiskStation.</p>
+
+
+<h4>Para convertir el DiskStation en una zona activa:</h4>
+<ol>
+<li>Vaya al <strong>Panel de control</strong> &gt; <strong>Inal&aacute;mbrico</strong> &gt; <strong>Mapa de red</strong>. Elija <strong>AP inal&aacute;mbrico</strong> o <strong>Enrutador inal&aacute;mbrico</strong>.</li>
+<li>Vaya a la pesta&ntilde;a <strong>Wi-Fi</strong> y haga clic en <strong>Editar</strong> para administrar las siguientes configuraciones:</li>
+<ul>
+<li><strong>Nombre (SSID):</strong> Introduzca un nombre para la red inal&aacute;mbrica.</li>
+<li><strong>Mostrar/Ocultar:</strong> Elija si desea que la red inal&aacute;mbrica est&eacute; visible para otros dispositivos.</li>
+<li><strong>Modo inal&aacute;mbrico:</strong> Seleccione un est&aacute;ndar inal&aacute;mbrico. Cada est&aacute;ndar admite varios anchos de banda y frecuencias.</li>
+<li><strong>Ancho de canal:</strong> Seleccione un ancho de canal (solo disponible al utilizar el modo inal&aacute;mbrico 802.11n).</li>
+<li><strong>Canal:</strong> Seleccione una frecuencia para la red inal&aacute;mbrica. Para un mejor rendimiento, seleccione una frecuencia diferente de las utilizadas por redes cercanas.</li>
+<li><strong>Potencia de transmisi&oacute;n:</strong> Seleccione una potencia de se&ntilde;al de la red inal&aacute;mbrica.</li>
+<li><strong>Conexiones m&aacute;x.:</strong> Seleccione el n&uacute;mero de dispositivos cliente que podr&aacute;n conectarse a la red. El n&uacute;mero mayor de conexiones es de 256.</li>
+<li><strong>Habilitar WMM QoS:</strong> QoS (Calidad de servicio) de Wi-Fi Multimedia (WMM) por Wi-Fi. Esta opci&oacute;n permite a la red inal&aacute;mbrica priorizar el tr&aacute;fico y optimizar el modo en que se comparten los recursos entre las aplicaciones.</li>
+</ul>
+</ol>
+
+
+
+<h4>Para configurar un programa inal&aacute;mbrico:*</h4>
+<p>Al habilitar un programa de red inal&aacute;mbrica, podr&aacute; controlar cu&aacute;ndo estar&aacute; activa y accesible la red inal&aacute;mbrica de su DiskStation.</p>
+<ol>
+<li>Vaya a la pesta&ntilde;a <strong>Wi-Fi</strong> y haga clic en <strong>Editar</strong>. </li>
+<li>Marque la casilla <strong>Habilitar programa</strong>.</li>
+
+<li>Haga clic en <strong>Establecer el programa</strong>.</li>
+<li>En la pantalla del programa, seleccione cu&aacute;ndo estar&aacute; activa la red inal&aacute;mbrica.</li>
+</ol>
+
+
+<h3>Par&aacute;metros de seguridad</h3>
+<p><strong>Panel de control</strong> &gt; <strong>Inal&aacute;mbrico</strong> &gt; <strong>Wi-Fi</strong> proporciona opciones para editar la configuraci&oacute;n de seguridad de su red inal&aacute;mbrica.</p>
+
+
+<h4>Para configurar la seguridad inal&aacute;mbrica:</h4>
+<ol>
+
+<li>Haga clic en <b>Editar</b>.</li>
+<li>Elija uno de los siguientes protocolos de seguridad del men&uacute; desplegable <strong>Configuraci&oacute;n de seguridad</strong>:</li>
+<ul>
+<li><strong>WEP:</strong> Un protocolo de seguridad b&aacute;sica que obliga a los usuarios a introducir una contrase&ntilde;a para acceder a la red inal&aacute;mbrica, pero ofrece protecci&oacute;n m&iacute;nima.</li>
+<li><strong>WPA/WPA2 Personal:</strong> Recomendado. Obliga a los usuarios a introducir una contrase&ntilde;a para acceder a la red inal&aacute;mbrica y es m&aacute;s seguro que el protocolo WEP.</li>
+<li><strong>WPA/WPA2 Empresa:</strong>* Un protocolo de seguridad dise&ntilde;ado para empresas que requiere la autenticaci&oacute;n de los usuarios con un servidor de autenticaci&oacute;n externo.</li>
+
+</ul>
+</ol>
+
+<h4>Para habilitar Wi-Fi Protected Setup:*</h4>
+<p>WPS (Wi-Fi Protected Setup) es un est&aacute;ndar promovido por la Wi-Fi Alliance para simplificar la configuraci&oacute;n de seguridad inal&aacute;mbrica para los usuarios. Puede utilizar un pulsador o un n&uacute;mero PIN para que su red Wi-Fi permanezca segura. Haga clic en <strong>WPS</strong> para habilitar Wi-Fi Protected Setup.</p>
+
+
+<h3>Red de invitados*</h3>
+<p>Adem&aacute;s de crear una red inal&aacute;mbrica de host, su DiskStation tambi&eacute;n permite crear una red inal&aacute;mbrica de invitados. La configuraci&oacute;n de la red de invitados se puede limitar a restringir el acceso de los usuarios, lo que resulta &uacute;til para empresas u otras instituciones que quieran ofrecer una red inal&aacute;mbrica para visitantes de forma que no puedan acceder a la red de host.</p>
+
+
+<h4>Para habilitar la red de invitados:</h4>
+
+<ol>
+<li>Vaya al <strong>Panel de control</strong> &gt; <strong>Inal&aacute;mbrico</strong> &gt; <strong>Wi-Fi</strong>. </li>
+<li>Haga clic en <strong>Editar</strong> para administrar las siguientes configuraciones en la pesta&ntilde;a <strong>Red de invitados</strong>:</li>
+
+<ul>
+<li><strong>Nombre (SSID):</strong> Introduzca un nombre para la red inal&aacute;mbrica.</li>
+<li><strong>Mostrar/Ocultar:</strong> Elija si desea que la red inal&aacute;mbrica est&eacute; visible para otros dispositivos.</li>
+<li><strong>Conexiones m&aacute;x.:</strong> Seleccione el n&uacute;mero de dispositivos cliente que podr&aacute;n conectarse a la red. El n&uacute;mero m&aacute;ximo de conexiones es de 256.</li>
+</ul>
+</ol>
+
+<h4>Para configurar la seguridad de la red de invitados:</h4>
+<p>Elija uno de los siguientes protocolos de seguridad del men&uacute; desplegable <strong>Configuraci&oacute;n de seguridad</strong>:</p>
+<ul>
+<li><strong>WEP:</strong> Un protocolo de seguridad b&aacute;sica que obliga a los usuarios a introducir una contrase&ntilde;a para acceder a la red inal&aacute;mbrica, pero ofrece protecci&oacute;n m&iacute;nima.</li>
+<li><strong>WPA/WPA2 Personal:</strong> Recomendado. Obliga a los usuarios a introducir una contrase&ntilde;a para acceder a la red inal&aacute;mbrica y es m&aacute;s seguro que el protocolo WEP.</li>
+</ul>
+
+
+<h4>Para configurar un programa de red de invitados:</h4>
+<p>Al habilitar un programa de red de invitados, podr&aacute; controlar cu&aacute;ndo estar&aacute; activa y accesible la red inal&aacute;mbrica de invitados de su DiskStation.</p>
+
+<ol>
+<li>Marque la casilla <strong>Habilitar programa de red de invitados</strong>.</li>
+<li>Haga clic en <strong>Establecer programa de invitados.</strong></li>
+<li>En la pantalla del programa, seleccione cu&aacute;ndo estar&aacute; activa la red inal&aacute;mbrica de invitados.</li>
+</ol>
+
+<div class="section">
+<h4>Nota:</h4>
+<p>La red inal&aacute;mbrica de invitados no puede estar activa durante aquellos periodos de tiempo en los que la red inal&aacute;mbrica de host est&eacute; desactivada.</p>
+</div>
+
+
+<h3>Configuraci&oacute;n de filtro MAC*</h3>
+<p>El filtro MAC (en <strong>Panel de control</strong> &gt; <strong>Inal&aacute;mbrico</strong>) especifica qu&eacute; direcciones MAC tienen permiso para acceder a la red inal&aacute;mbrica, de forma que pueda bloquear o permitir el acceso a determinados dispositivos. Esta funci&oacute;n solo controla el acceso a la red, ninguna otra configuraci&oacute;n de cifrado.</p>
+
+
+<h4>Para crear reglas de filtro MAC:</h4>
+<ol>
+<li>Introduzca la descripci&oacute;n y la direcci&oacute;n MAC de un dispositivo.</li>
+<li>Elija una pol&iacute;tica de acceso:<ul>
+<li><strong>Denegar:</strong> Limita el acceso a la red inal&aacute;mbrica a la direcci&oacute;n MAC especificada.</li>
+<li><strong>Permitir:</strong> Permite el acceso a la red inal&aacute;mbrica a la direcci&oacute;n MAC especificada.</li>
+</ul> 
+</ol>
+
+
+
+<h3>Control parental*</h3>
+<p>El control parental le permite controlar el momento en que cada dispositivo cliente conectado a la red local de DiskStation puede acceder a Internet. Por ejemplo, si los ordenadores o los dispositivos m&oacute;viles de sus hijos se conectan a Internet a trav&eacute;s de DiskStation, entonces puede configurar el control parental para restringir su uso de Internet de acuerdo con dispositivos y tiempos espec&iacute;ficos.</p>
+
+<h4>Para habilitar el control parental:</h4>
+<ol>
+<li>Vaya al <strong>Panel de control</strong> &gt; <strong>Inal&aacute;mbrico</strong> &gt; <strong>Configuraci&oacute;n de control parental</strong>.</li>
+
+<li>Haga clic en el bot&oacute;n de <strong>Agregar</strong> para agregar un dispositivo cliente.</li>
+<ul>
+<li><strong>Nombre del cliente:</strong> Elija un dispositivo que est&eacute; conectado a DiskStation o introduzca un nombre manualmente (por ejemplo, port&aacute;til de Luisa).</li>
+<li><strong>Direcci&oacute;n MAC:</strong> Introduzca la direcci&oacute;n MAC del dispositivo cuyo uso de Internet desea controlar.</li>
+<li><strong>Establecer el programa:</strong> Elija a qu&eacute; hora el dispositivo especificado podr&aacute; acceder a Internet a trav&eacute;s de DiskStation.</li>
+</ul>
+</ol>
+
+<h3>Lista de conexiones*</h3>
+<p>La lista de conexiones (en <strong>Panel de control</strong> &gt; <strong>Inal&aacute;mbrico</strong>) muestra informaci&oacute;n referente a dispositivos conectados a DiskStation. Los dispositivos se pueden a&ntilde;adir directamente desde aqu&iacute; a la lista de filtros MAC.</p>
+
+<h4>Para a&ntilde;adir dispositivos a la lista de filtros MAC:</h4>
+<ol>
+<li>Active la casilla que hay junto al dispositivo que desea a&ntilde;adir al filtro MAC.</li>
+<li>Haga clic en <strong>Agregar a la Lista de filtros MAC</strong>.</li>
+</ol>
+
+
+
+<p>____<br> * Solo disponible en determinados modelos.<br></body>
+</html>

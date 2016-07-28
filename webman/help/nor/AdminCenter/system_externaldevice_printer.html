@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Eksterne enheter</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2><a name="usbprinter"></a>Skrivere</h2>
+<p>DiskStation kan gjøres om til en skriverserver som lar klientdatamaskiner eller mobile enheter få tilgang til skrivere som er tilkoblet DiskStation. I tillegg lar støtte for Apple Wireless Printing og Google Cloud Print deg ta fjernutskrifter ved hjelp av iOS-enheter eller Google-produkter og -tjenester.</p>
+<p>Besøk <a href="http://www.synology.com" target="_blank">www.synology.com</a> for kompatible skrivere.</p>
+
+<h3>Sette opp skrivere</h3>
+<p>Se instruksjonene nedenfor for å sette opp og koble til en <span style="display: inline;" class="disable-rc18015xsp">USB- eller </span>nettverksskriver med din DiskStation.</p>
+
+
+<h4 class="disable-rc18015xsp">Slik setter du opp en USB-skriver:</h4>
+<ol class="disable-rc18015xsp">
+<li>Slå på og koble skriveren til en USB-port på DiskStation.</li>
+<li>Gå til <strong>Kontrollpanel</strong> > <strong>Eksterne enheter</strong> > <strong>Skriver</strong>.</li>
+<li>Velg skriveren du ønsker å sette opp. Vær oppmerksom på at DiskStation ikke kjenner igjen skrivere som kobles til via USB-huber.</li>
+<li>Klikk på <b>Skriveradministrator</b> og velg <b>Konfigurer skriver</b>.</li>
+<li>I dialogboksen velger du én av følgende modi:
+<ul>
+<li><b>Network MFP:</b> Lar klienter på det lokale nettverket bruke utskrifts-, skannings- og faksfunksjonene til din universalskriver. Skannings- og faksfunksjoner er bare tilgjengelig for Windows-datamaskiner.</li>
+<li><b>Nettverksskriver:</b> Velg denne modusen for skrivere som kun støtter skriving, eller hvis du vil la klienter kun bruke utskriftsfunksjonen.</li>
+</ul>
+</li>
+<li>Konfigurer innstillinger for Apple Wireless Printing eller Google Cloud Print (valgfritt).</li>
+<li>Klikk på <b>Lagre</b>.</li>
+</ol>
+
+<div class="section disable-rc18015xsp">
+<h4>Merk:</h4>
+<p>En nettverks-MFP kan kun aksesseres av én klient om gangen.</p>
+</div>
+
+
+<h4>Slik setter du opp en nettverksskriver:</h4>
+<ol>
+<li>Slå på og koble nettverksskriveren til det samme lokale nettverket som DiskStation.</li>
+<li>Gå til <strong>Kontrollpanel</strong> > <strong>Eksterne enheter</strong> > <strong>Skriver</strong>.</li>
+<li>Klikk på <b>Legg til nettverksskriver</b> og følg instruksjonene i installasjonsveiviseren.</li>
+</ol>
+
+<div class="section">
+<h4>Merk:</h4>
+<ul>
+<li><strong>Skrivernavn:</strong> Et skrivernavn må angis under oppsett og kan inneholde opp til 32 tegn, inkludert bokstaver, tall og understrek.</li>
+	<li><strong>Protokoll:</strong> HP-nettverksskrivere bruker stort sett Socket; Canon-nettverksskrivere bruker BJNP; og andre bruker stort sett LPR.</li>
+<li><strong>Kønavn:</strong> Det påkreves å angi et kønavn for LPR- og IPP-nettverksskrivere, men ikke for Socket- eller BJNP-skrivere.</li>
+<li><strong>Ingen Network MFP:</strong> Nettverksskrivere som er tilkoblet DiskStation kan for tiden ikke bruke Network MFP-modus.</li>
+<li><strong>Ingen USB-skrivere:</strong> USB-skrivere som er delt av et Synology-produkt kan ikke angis som nettverksskrivere.</li>
+</ul>
+</div>
+
+
+<h3>Administrere skrivere</h3>
+<p>Skriverfanen inkluderer følgende alternativer for å administrere <span style="display: inline;" class="disable-rc18015xsp">USB- eller </span>nettverksskrivere som er tilkoblet DiskStation.</p>
+
+<ul>
+<li><b>Få informasjon:</b> Viser informasjon vedrørende den valgte skriveren, som enhetsnavn, fabrikant, status, etc.</li>
+<li><strong>Fjern:</strong> Fjerner og kobler fra en skriver fra DiskStation.</li>
+<li><strong>Skriveradministrator:</strong> Inkluderer følgende alternativer:
+<ul>
+<li><strong>Sett opp skriver</strong>: Rediger skriverinnstillinger, som Apple Wireless Printing eller Google Cloud Print (se nedenfor for instruksjoner).</li>
+<li><strong>Rydd opp spoleplassen:</strong> Avbryter alle skriveoppgaver på alle skrivere.</li>
+<li><strong>Skriv ut testside:</strong> SKriver ut en testside for å kontrollere at konfigurasjonene er korrekte.</li>
+<li><b>Løs ut skriver:</b> Kobler fra skriveren og klienten (kun for Network MFP-modus). Når en klient kobler til en universalskriver for å motta fakser eller skanne filer, kan oppgaven ta lang tid. Om nødvendig, kan tilkoblingen stanses for å la neste klient i køen få tilgang til skriveren.</li>
+</ul></li>
+</ul>
+
+
+<h4>Slik aktiverer du Apple Wireless Printing:</h4>
+<ol>
+<li>Gå til <strong>Kontrollpanel</strong> > <strong>Eksterne enheter</strong> > <strong>Skriver</strong>.</li>
+<li>Velg en skriver fra enhetslisten.</li>
+<li>Klikk på <b>Skriveradministrator</b> > <b>Konfigurer skriver</b>.</li>
+<li>Merk av for <b>Aktiver Apple Wireless Printing</b>.</li>
+<li>Velg skriverens merke og driver.</li>
+<li>Klikk på <b>Lagre</b>.</li>
+</ol>
+
+<p>Når oppsett er fullført, kan du skrive ut en testside ved å klikke på <b>Skriveradministrator</b> > <b>Skriv ut testside</b>.</li>
+
+<div class="section">
+<h4>Merk:</h4>
+<ul>
+<li>Aktivering av Apple Wireless Printing aktiverer også Bonjour Printer Broadcast for DSM.</li>
+<li>Apple Wireless Printing er tilgjengelig for iOS 4.2 eller nyere.</li>
+</ul>
+</div>
+
+
+<h4>Slik aktiverer du Google Cloud Print:</h4>
+<ol>
+<li>Gå til <strong>Kontrollpanel</strong> > <strong>Eksterne enheter</strong> > <strong>Skriver</strong>.</li>
+<li>Velg en skriver fra enhetslisten.</li>
+<li>Klikk på <b>Skriveradministrator</b> > <b>Konfigurer skriver</b>.</li>
+<li>Merk av for <b>Aktiver Google Cloud Print</b>.</li>
+<li>Angi følgende informasjon:
+<ul>
+
+<li>Din Google-kontoinformasjon.</li>
+<li>Din skrivers merke og driver.</li>
+</ul>
+<li>Klikk på <b>Lagre</b>.</li>
+</ol>
+<p>Når oppsett er fullført, kan du skrive ut en testside ved å klikke på <b>Skriveradministrator</b> > <b>Skriv ut testside</b>.</li>
+</p>
+<p>For å administrere Google Print-oppgaver, klikker du på koblingen <a href="http://www.google.com/cloudprint/manage.html" target="_blank">Google Cloud Print</a>.</p>
+
+
+<h3>Få tilgang til skrivere</h3>
+<p>Se seksjonen nedenfor for å få tilgang til skrivere med en PC eller Mac.</p>
+<h4><a name="others"></a>Slik får du tilgang til skrivere med en Windows-PC:</h4>
+<p>
+Den beste måten å få tilgang til DiskStation-enhetens utskriftstjeneste er å sette opp tilkoblingen til skriveren med Synology Assistant. Se hjelp i dette programmet hvis du vil ha detaljerte instruksjoner.
+</p>
+
+<p>Hvis Synology Assistant ikke er installert på datamaskinen, kan du se nedenfor etter andre måter å få tilgang til DiskStation-enhetens utskriftstjeneste på.</p>
+<p><strong>Type 1. Delt nettverksskriver</strong></p>
+<ol>
+<li>Åpne <b>Nettverk </b> i filutforsker på PC-en din og dobbeltklikk på DiskStation.</li>
+
+<li>Dobbeltklikk på <span style="display: inline;" class="disable-rc18015xsp"><b>usbprinter</b> eller </span><b>network printer name</b>; systemet ber deg om å installere korrekt driver, og da klikker du på <b>Ja</b>.</li>
+
+<li>Få skriverdriveren fra CD-en eller fra fabrikantens webområde. Velg fabrikanten og modellen på skriveren, eller klikk på <strong>Har disk</strong> for å velge plasseringen til driveren. Deretter klikk <b>OK</b>.</li>
+<li>Systemet vil begynne å installere nettverksskriveren. Når oppsett er fullført, kan du ta i bruk skriveren. </li>
+</ol>
+
+
+<p><strong>Type 2. LPR Port (Anbefalt)</strong></p>
+<ol>
+<li>Klikk på <b>Start</b> på PC-en din og gå til <b>Enheter og skrivere</b>.</li>
+<li>Klikk på <b>Legg til skriver</b>. </li>
+	<li>Velg <strong>Legg til en nettverksskriver, trådløs skriver eller Bluetooth-skriver.</strong> </li>
+	<li>Velg <strong>Skriveren jeg ønsker er ikke på listen.</strong></li>
+<li>Velg <b>Legg til en skriver med TCP/IP-adresse eller vertsnavn</b>. Klikk på <b>Neste</b> for å fortsette.</li>
+<li>Velg enhetstypen som skal være <b>TCP/IP-portenhet.</b></li>
+<li>Angi IP-adressen til DiskStation. Klikk på <b>Neste</b> for å fortsette.</li>
+<li>Velg <b>Enhetstype:</b> <strong>Egendefinert</strong> > <strong>Innstillinger</strong> > …. Klikk på <b>Neste</b> for å fortsette.</li>
+
+<li>Velg <b>LPR</b> som protokoll, fyll inn <span style="display: inline;" class="disable-rc18015xsp"><b>usbprinter</b> eller </span><b>network printer name</b> som kønavn, og merk av for <b>LPR-bit opptelling aktivert</b>. Klikk på <b>OK</b> for å fortsette.</li>
+
+<li>Få skriverdriveren fra CD-en eller fra fabrikantens webområde. Velg fabrikanten og modellen på skriveren, eller klikk på <strong>Har disk</strong> for å velge plasseringen til driveren. Deretter klikk <b>OK</b>.</li>
+	<li>Systemet vil begynne å installere nettverksskriveren. Når oppsettet er fullført, kan du ta i bruk skriveren.</li>
+</ol>
+
+<h4>Slik får du tilgang til skrivere med en Mac:</h4>
+<p>
+Mac-brukere har tilgang til DiskStation-enhetens utskriftstjeneste ved å aktivere DSMs Bonjour skriverkringkasting og legge til skriveren i Systemegenskaper.</p>
+<P>Kontroller at DiskStation bruker Postscript-skriver for du går videre.
+</p>
+<p><strong>Trinn 1. Aktiver DSMs Bonjour skriverkringkasting</strong></p>
+<ol>
+<li>
+Logg inn på DSM som <b>admin</b> eller en bruker tilhørende <b>administrators</b>-gruppen.
+</li>
+<li>
+Gå til <b>Kontrollpanel</b> > <strong>Filtjenester</strong> > <b>Win/Mac/NFS</b>.
+</li>
+<li>
+Merk av for <b>Aktiver Bonjour Printer Broadcast</b>.
+</li>
+</ol>
+
+<p><strong>Trinn 2. Få tilgang til skriver med Mac</strong></p>
+<ol>
+<li>
+Gå til <b>Systempreferanser</b> > <b>Skriv ut & skann</b> på din Mac og klikk på <b>+</b>.
+</li>
+
+<li>
+Velg <span style="display: inline;" class="disable-rc18015xsp"><b>usbprinter[nummer]</b> eller </span><b>network printer name</b> fra rullegardinmenyen. Din Mac vil konfigurere skriveren automatisk.
+</li>
+
+</ol>
+</div>
+</body>
+</html>

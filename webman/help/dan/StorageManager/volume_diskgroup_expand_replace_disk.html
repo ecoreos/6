@@ -1,0 +1,101 @@
+ <!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Udskift en harddisk på en diskenhed eller i en diskgruppe - Synology DSM - Hjælp</title>
+<meta name="author" content="Synology Inc.">
+<meta name="description" content="This article walks you through the steps to replace a hard drive of an existing volume or disk group on DiskStation in order to increase storage capacity.">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Udskift harddiske for at udvide lagerkapaciteten</h2>
+
+<p>Når du bruger bestemte RAID-typer, kan du udvide lagerkapaciteten for en diskenhed eller diskgruppe ved at udskifte gamle harddiske med større. Denne artikel indeholder vigtige oplysninger om udvidelsesprocessen samt et eksempel på, hvordan eksisterende harddiske udskiftes for at udvide lagerkapaciteten</p>
+
+<div class="section">
+  <h4>Bemærk:</h4>
+<p>Den procedure, der beskrives i denne artikel fungerer kun med SHR, RAID 1, RAID 5 og RAID 6. Hvis du planlægger at udskifte flere harddiske, skal du nøje udskifte harddiskene en for en. Efter udskiftning af en harddisk, skal diskenheden eller diskgruppen repareres, før den næste harddisk udskiftes. For RAID 1-, RAID 5- og RAID 6-diskenheder bliver diskenhedskapaciteten udvidet, når alle harddiske er udskiftet.</p>
+
+</div>
+
+
+<h3 class="list_head"><a name="t1"></a>  Før du begynder</h3>
+
+<p>Se følgende noter, før du udskifter en harddisk:<br/>
+
+<ul>
+<li><b>Backup data:</b> Selv om diskenhedens udvidelsesproces ikke vil slette eksisterende data, så anbefaler vi kraftigt, at der udføres backup, før du går videre.</li>
+<li><b>Status for diskenhed eller diskgruppe:</b> Sørg for, at status for din diskenhed eller diskgruppe er <b>Normal</b>, før du begynder. Hvis det ikke er tilfældes, skal du første reparere den.</li>
+<li><b>Er der stadig adgang til data under udvidelsen af diskenheden?</b> Data på dit system bliver tilgængelige under udvidelse af diskenheder og diskgrupper. Selv om systemet kan blive midlertidigt suspenderet, når processen startes første gang.</li>
+</ul>
+
+<div class="section">
+<h4>SHR (Synology Hybrid RAID)</h4>
+
+<p>Da SHR-diskenheder optimerer lagerkapaciteten baseret på antallet og størrelsen af installerede harddiske, skal du følge nedenstående retningslinjer for at udvide kapaciteten korrekt:</p>
+
+<ul>
+<li>Hvis kapaciteten af alle eksisterende harddiske er ens, skal du udskifte mindst to harddiske med større for at udvide lagerkapaciteten. Hvis f.eks. din SHR-diskenhed består af tre 2 TB-harddiske, skal du udskifte mindst to harddiske for at udvide kapaciteten.</li>
+<li>Hvis kapaciteten af eksisterende harddiske er forskellig, skal de nye udskiftningsharddiske være lig med eller større end den største eksisterende harddisk. Derudover skal du udskifte mindre harddiske først for at optimere kapacitetsudnyttelsen. Hvis f.eks. din SHR-diskenhed indeholder 3 harddiske på henholdsvis 4 TB, 3 TB og 2 TB, skal de nye udskiftningsharddiske være mindst 4 TB. Derudover skal du først udskifte 3 TB eller 2 TB-harddiskene.</i>
+</li>
+</ul>
+</div>
+
+<div class="section">
+<h4>RAID 5 og RAID 6</h4>
+
+<p>Ved udskiftning af harddiske på RAID 5- eller RAID 6-diskenheder eller diskgrupper, skal den mindste harddisk altid udskiftes først. Lagerkapaciteten på RAID 5-diskenheder er (antal harddiske - 1) x (mindste harddiskstørrelse) og på RAID 6 (antal harddiske - 2) x (mindste harddiskstørrelse). Derfor skal den mindste harddisk altid udskiftes først for at maksimere harddiskbrugen.</p>
+
+<p>Hvis f.eks. din RAID 5-diskenhed indeholder 3 harddiske på henholdsvis 4 TB, 3 TB og 2 TB, vil den tilgængelige kapacitet på diskenheden være 4 TB. Hvis du udskifter 4 TB- eller 3 TB-diskene, vil kapaciteten på diskenheden ikke ændres. Hvis du vil øge kapaciteten på diskenheden, skal 2 TB-harddisken udskiftes først.</p>
+</div>
+
+
+
+<h3>Udskift harddisk for at udvide lagerkapaciteten</h3>
+
+<p>I nedenstående trin viser vi et eksempel på udskiftning af harddiske på en SHR-diskenhed.</p>
+
+<h4>Sådan udskrifter du harddiske:</h4>
+<ol>
+<li>Åbn <b>Lagerstyring</b>.</li>
+<img src="about:blank" class="help_image"/>
+<li>Gå til <strong>Diskenhed</strong> for at se den harddisk, der er mindst.</li>
+<img src="about:blank" class="help_image"/>
+
+<li>Sluk for din DiskStation. (Du kan springe dette trin over hvis DiskStation understøtter hot-swapping).</li>
+<li>Fjern den mindst af medlemsharddiskene, og installer en ny større harddisk.</li>
+
+<div class="section">
+<h4>Bemærk:</h4>
+<p>Undgå af skade dig selv eller din DiskStation ved at følge harddiskinstallationsvejledningen i <i>Hurtiginstallationsvejledning</i> til dit Synology-produkt.</p>
+</div>
+
+<li>Tænd for din DiskStation.</li>
+<li>Åbn <strong>Lagerstyring</strong> igen.</li>
+<li>Gå til <strong>Harddisk/SSD</strong> for at sikre, at den nye harddisk anerkendes.</li>
+<img src="about:blank" class="help_image"/>
+
+
+<li>Status for din diskenhed skulle være <b>Degraderet</b>. Vælg den ønskede diskenhed, og klik på <strong>Administrer</strong>.</li>
+<img src="about:blank" class="help_image"/>
+<li>Vælg <b>Reparer</b>.</li>
+<img src="about:blank" class="help_image"/>
+
+<li>Vælg den udskiftningsharddisk, som du vil tilføje til diskenheden. Følg trinnene i guiden for at afslutte.</li>
+<img src="about:blank" class="help_image"/>
+<li>Gentag ovenstående proces, til alle ønskede harddiske er udskiftet med større.</li>
+</ol>
+
+
+
+
+
+
+</body>
+</html>

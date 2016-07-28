@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2>SSD 缓存*</h2>
+<p>SSD cache 可通过将经常访问的数据存储在 SSD 缓存上来提高随机访问的性能。SSD 缓存可在卷或 iSCSI LUN（段落分块）上装载。您可以使用两种 SSD 缓存：</p>
+<ul>
+<li>在基本或 RAID 0 配置中，<strong>只读缓存</strong>可含有 1 个至 12 个 SSD，以提高其所在存储空间的随机读取性能。
+<div class="section"><h4>注：</h4>
+	<p>SSD 只读缓存存储了该卷的数据副本；因此，即便只读缓存损毁也不会有数据丢失。</p>
+	</div>
+</li>
+<li>在 RAID 1 / RAID 5 / RAID 6 配置中可装载<strong>读写缓存</strong>，以提高其所在存储空间的随机读取和写入性能。</li>
+</ul>
+
+<p>两种类型的 SSD 缓存都实施了 LRU（最近最少使用）算法以交换缓存中的数据。</p>
+
+<div class="section">
+<h4>重要事项：</h4>
+<p>在安装任何 SSD 以用作缓存之前，请先检查下列注意事项：</p>
+<ul>
+<li>启用 SSD 缓存的目的是提高随机访问存储空间中经常访问的小部分数据的性能。例如，大量连续读取或写入操作（例如，HD 视频串流）和没有重读模式的整个随机数据读取模式，这样将不会从 SSD 缓存获益太多。对于一般的应用程序，建议启用<b>跳过连续 I/O</b> 选项，这样连续 I/O 就仍可到达存储空间所在的硬盘。</li>
+<li>请参阅 <a href="http://www.synology.com/" target=_blank>Synology 网站</a>中的兼容性列表来选择 DiskStation 中用作缓存的 SSD。</li>
+<li class="disable-alpine">SSD 缓存需要一定量的系统内存（取决于缓存大小），因此当您装载容量较大的 SSD 缓存驱动器时，可能需要升级 DiskStation 的内存。为保持系统运作稳定且快速，仅四分之一的预安装系统内存可以作为 SSD 缓存之用。1 GB 的 SSD 缓存需要约 416 MB 的系统内存（可算上扩展内存）**。因此，如果只读缓存配置为 2 x 128 GB SSD，则缓存总大小将为 256 GB 并且至少需要 104 MB 的内存；如果读写缓存配置为 2 x 128 GB SSD，则缓存总大小将为 128 GB 并且至少需要 52 MB 的内存。如果内存不足，则 SSD 缓存的创建或 SSD 缓存大小将受限。</li>
+<li class="enable-alpine">每 1 GB 的 SSD 缓存需要约 416 MB 的系统内存（可算上扩展内存），缓存最大上限为 930 GB。因此，如果只读缓存配置为 2 x 128 GB SSD，则缓存总大小将为 256 GB 并且至少需要 104 MB 的内存；如果读写缓存配置为 2 x 128 GB SSD，则缓存总大小将为 128 GB 并且至少需要 52 MB 的内存。如果内存不足，则 SSD 缓存的创建或 SSD 缓存大小将受限。</li>
+<li>请参阅 <a href="http://www.synology.com/" target=_blank>Synology 网站</a>中的您所购产品型号的规格以使 DiskStation 中允许的 SSD 缓存达到最大。</li>
+<li>当读写 SSD 缓存处于堪用状态时，缓存功能将被禁用，系统将开始从 SSD 将缓存数据写入到硬盘 (即同步)。在数据同步完成后，将不会有数据丢失，即便读写缓存损毁也是一样。</li>
+<li>读写缓存无法与 Time Backup 一起使用。例如，当创建读写 SSD 缓存时，您将无法运行 Time Backup。反之，如果您在运行 Time Backup，将无法创建读写 SSD 缓存。</li>
+</ul>
+</div>
+
+<h4>若要装载 SSD 缓存：</h4>
+<ol>
+  <li>请将 SSD 缓存驱动器安装到 DiskStation。安装前请先参阅上述注意事项。</li>
+  <li>进入<strong>存储管理器</strong> &gt; <strong>SSD 缓存</strong>。单击<b>创建</b>。</li>
+<li>选择缓存模式（仅适用于支持读写缓存的机型）。</li>
+<li>找到下拉菜单，选择您要装载 SSD 缓存的卷或 iSCSI LUN（块级）。</li>
+<li>从列表中选择 SSD 缓存驱动器。SSD 上的数据将被删除，因此请确认不会删除重要的数据。</li>
+<li>单击<b>应用</b>。</li>
+</ol>
+
+<h4>若要停止缓存连续 I/O：</h4>
+<p>如果目标卷或 iSCSI LUN（段落分块）具有出色的连续 I/O 性能（与 SSD 缓存所用 SSD RAID 相比），您可以让 SSD 缓存停止缓存连续 I/O 并直接从硬盘访问数据，以获取更高的速度和更好的性能。</p>
+<ol>
+<li>单击<strong>配置</strong>来打开配置窗口。</li>
+<li>勾选<strong>跳过连续 I/O</strong>。</li>
+</ol>
+
+
+<h4>若要删除 SSD 缓存：</h4>
+<ol>
+<li>单击<b>删除</b>可从 DiskStation 永久性删除此 SSD 缓存。</li>
+<li>对于读写缓存，您必须通过此流程删除它（即使 DiskStation 关机同样如此），否则由于部分数据只驻留于缓存中将造成卷损毁。</li>
+</ol>
+
+<div class="section">
+<h4>注：</h4>
+<ul>
+<li>装载或删除 SSD 缓存的过程中，系统将停止所有相关服务（如共享文件夹、安装的套件、当前连接等）。</li>
+<li>如果开机时未检测到存储空间中的读写缓存，则系统不会装载该存储空间。请在 DiskStation 中找到并重新安装 SSD，然后重新启动以装载该存储空间。如果您无法找到 SSD，则可能需要强制装载存储空间。请参阅<a href="space.html">卷</a>或 <a href="iscsilun.html">iSCSI LUN</a>。</li>
+</ul>
+</div>
+
+<h4>若要修复 SSD 缓存：</h4>
+<ul>
+<li><strong>对于读写缓存：</strong>如果有一个 SSD 损毁，请按照下列步骤进行修复。
+  <ol>
+<li>用新 SSD 更换故障 SSD。(新 SSD 的型号和容量必须与旧的相同)。</li>
+<li>单击<b>修复</b>按钮。</li>
+<li>从列表中选择 SSD。</li>
+<li>单击<b>应用</b>。</li>
+</ol>
+</li>
+<li><strong>对于只读缓存：</strong>如果有一个 SSD 损毁，请删除该缓存并更换故障 SSD。然后单击<strong>创建</strong>以配置新缓存。</li>
+</ul>
+
+
+<h3>SSD 缓存建议</h3>
+<p>此功能可让您计算及查看特定卷中最近访问文件的总大小和数量。如果您尚未在所选卷上创建任何 SSD 缓存，可参考这些信息来计算适合您计算机的 SSD 缓存容量。如果您之前已在所选卷上创建了 SSD 缓存，缓存的分析和使用情况也将显示在此处。</p>
+
+<h4>若要使用 SSD 缓存建议：</h4>
+
+<ol>
+<li>单击 <b>SSD 缓存建议</b>打开向导。</li>
+<li>请选择要进行计算的卷，然后单击<b>下一步</b>。</li>
+<li>向导将自动开始计算所选卷中最近访问文件的总大小和数量。计算时间将根据具体环境而有所不同。</li>
+</ol>
+<p>_____<br> * 仅特定机型支持 SSD 缓存。<br> <span class="disable-alpine" style="display: inline;">** 此功能不适用于 DSM 5.1 或更早版本上创建的读写 SSD 缓存。即，DSM 5.2 之前创建的每 1 GB 的 SSD 缓存仍需要 4 MB 的系统内存，即便在 DSM 5.2 环境下使用也是一样。</span>
+  </p>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Speciális felhasználói beállítások</title>
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Speciális felhasználói beállítások</h2>
+
+<p>A speciális felhasználói beállítások módosításához menjen a <strong>Vezérlőpult</strong> > <strong>Felhasználó</strong> > <strong>Speciális</strong> menüpontra. Az alábbi lehetőségek állnak rendelkezésre. </p>
+
+<h3>Elfelejtett jelszavak visszaállításának lehetővé tétele felhasználók számára</h3>
+<p>Ha lehetővé szeretné tenni a felhasználók számára az elfelejtett jelszavak e-mail segítségével történő visszaállítását, engedélyezheti az <strong>Elfelejtett jelszó e-mailes visszaállításának engedélyezése nem-admin felhasználóknak</strong> lehetőséget. Ha ez a lehetőség engedélyezve van, a DSM bejelentkező oldalán megjelenik egy <strong>Elfelejtette a jelszavát?</strong> megjelölésű hivatkozás. Ha egy felhasználó elfelejti a jelszavát, akkor rákattinthat erre a hivatkozásra és megadhatja felhasználónevét. Ebben az esetben a rendszer e-mailt küld a felhasználónak, ami tartalmaz egy hivatkozást az elfeledett jelszavának visszaállításához. </p>
+
+<div class="section">
+<h4>Megjegyzés:</h4>
+<ul>
+<li>Ennek a lehetőségnek az engedélyezése előtt győződjön meg róla, hogy már engedélyezte az SMTP email értesítéseket. Ennek megtételéhez menjen a <strong>Vezérlőpult</strong> > <strong>Értesítés</strong> menüpontra.</li>
+<li>A felhasználóknak, ha üzeneteket szeretnének kapni a rendszertől, a fiókjuk felhasználói információk részében meg kell adniuk egy email címet.</li>
+<li>Az <strong>administrators</strong> csoporthoz tartozó felhasználók ezzel az opcióval nem állíthatnak vissza jelszavakat.</li>
+<li>Tartományfelhasználók nem állíthatnak vissza jelszavakat ezzel az opcióval.</li>
+<li>LDAP felhasználók visszaállíthatnak jelszavakat ezzel az opcióval, feltéve, hogy a(z) DiskStation szolgál az LDAP directoty server könyvtárkiszolgálóként.</li>
+
+</ul>
+</div>
+
+
+<h3>Jelszó erősség</h3>
+<p>Jelszóerősségi szabályokat állíthat fel a felhasználók számára a(z) DiskStation eszközön.</p>
+
+<div class="section">
+<h4>Megjegyzés:</h4>
+<p>A jelszóerősségi szabályok csak az új jelszavakra vonatkoznak. Az új jelszóerősségi szabályok például csak egy új felhasználói fiók létrehozásakor kerülnek alkalmazásra, vagy ha egy létező felhasználó megváltoztatja a jelszavát. A létező jelszavakra, illetve az importált felhasználói fiókokhoz tartozó jelszavakra nem vonatkoznak az új jelszószabályok.</p>
+</div>
+<h4>Jelszóerősségi szabályok engedélyezése:</h4>
+<ol>
+<li>A jelszavakra vonatkozó korlátozások életbe léptetéséhez jelölje be a <b>Jelszóerősségi szabályok alkalmazása</b> jelölőnégyzetet.</li>
+<li>Válasszon ki az alábbi szabályok közül egynél több jelszókorlátozást:</li>
+<ul>
+<li><b>A jelszó ne tartalmazza a felhasználó nevét és leírását</b>: A jelszó nem tartalmazhatja a felhasználónevet és a felhasználóhoz tartozó leírást. Az UTF-8 kódolású karaktereket a készülék kihagyja.</li>
+<li><b>Kis- és nagybetűket is tartalmazzon</b>: A jelszónak mind nagybetűket, mind pedig kisbetűket is tartalmaznia kell.</li>
+<li><b>Számkaraktert tartalmazzon</b>: A jelszónak tartalmaznia kell legalább egy számjegyet (0~9).</li>
+<li><b>Speciális karaktert tartalmazzon</b>: A jelszóban szerepelnie kell legalább egy különleges ASCII karakternek (pl. ~, `, !, @, #, $, %, ^, &, *, (, ), -, _, =, +, [, {, ], }, \, |, ;, :, ', ", <, >, /, ?).</li>
+<li><b>Jelszó minimális hossza</b>: A jelszónak legalább a szövegmezőben megadott értékűnek kell lennie. A hossz 6 és 127 közötti lehet.</li>
+</ul>
+<li>Kattintson az <b>Alkalmaz</b> gombra a beállítások mentéséhez.</li>
+</ol>
+
+
+
+<h3>Kétlépéses ellenőrzés</h3>
+<p>A kétlépéses ellenőrzés nagyobb biztonságot nyújt a DSM felhasználói fiókok számára. Ön kényszerítheti a DSM adminisztrátorokat, illetve valamennyi DSM felhasználót arra, hogy fiókjaik további védelme érdekében engedélyezzék a kétlépéses ellenőrzést.</p>
+
+<h4>DSM felhasználók kényszerítése a kétlépéses ellenőrzésre:</h4>
+
+<ol>
+<li>Jelölje be a <strong>Kétlépéses ellenőrzés végrehajtása a következő felhasználók esetén</strong> jelölőnégyzetet, majd válassza ki, hogy ezt melyik felhasználókra kívánja alkalmazni.</li>
+<div class="section">
+<h4>Megjegyzés:</h4>
+<p>Ha még nem konfigurálta a kétlépéses ellenőrzést az <b>Egyéni</b> > <b>Fiók</b> menüpontban, akkor elindításra kerül a kétlépéses ellenőrzés beállítása varázsló, és az ilyen kényszerítés alkalmazása előtt segít befejezni a szükséges beállításokat.</p>
+</div>
+
+<li>Ha ez a kényszerítés alkalmazva van, akkor a kétlépéses ellenőrzést még nem engedélyező felhasználókat megkérik, hogy a DSM programba történő belépésük előtt fejezzék be a beállításokat.</li>
+</ol>
+
+<div class="section">
+<h4>Megjegyzés:</h4>
+<p>A kétlépéses ellenőrzés itteni letiltása nem befolyásolja, illetve nem tiltja le minden egyes felhasználó kétlépéses ellenőrzésre vonatkozó beállításait. A felhasználók megtarthatják a kétlépéses ellenőrzésre vonatkozó saját beállításaikat, vagy ezen beállítások letiltásához elmehetnek az <b>Egyéni</b> > <b>Fiók</b> menüpontra.</p>
+</div>
+
+
+<h3>Felhasználói kezdőlap</h3>
+
+<p>Ha minden egyes felhasználó számára személyes <b>home</b> mappát szeretne létrehozni, engedélyezze a felhasználói kezdőlapokat, kivéve a <b>guest</b> fiókot. Minden felhasználó hozzáférhet saját home mappájához CIFS, AFP, FTP, vagy File Station segítségével.</p>
+<p>Az <strong>administrators</strong> csoportba tartozó felhasználók az alapértelmezett megosztott <b>homes</b> mappában található összes személyes mappához hozzáférhetnek. A kezdőlap mappa neve megegyezik a felhasználói fiók nevével.</p>
+
+<h4>A felhasználói kezdőlap szolgáltatás engedélyezése:</h4>
+<ol>
+<li>Jelölje be a következőt: <b>Felhasználói kezdőlap szolgáltatás engedélyezése</b>.</li>
+<li>Ha több kötet van, akkor válassza ki, hol kívánja tárolni a <b>homes</b> mappát.</li>
+<li>Kattintson az <b>Alkalmaz</b> gombra.</li>
+</ol>
+
+<div class="section">
+<h4>Megjegyzés:</h4>
+<p>Ha a helyi felhasználói kezdőlap szolgáltatás le van tiltva, a domain felhasználói kezdőlap szolgáltatás is párhuzamosan letiltásra kerül.</p>
+</div>
+
+<h4>A felhasználói kezdőlap szolgáltatás tiltása:</h4>
+<ol>
+<li>Törölje a következő kijelölését: <b>Felhasználói otthon szolgáltatás engedélyezése</b>.</li>
+<li>Kattintson az <b>Alkalmaz</b> gombra.</li>
+</ol>
+<p>A felhasználói otthon szolgáltatás letiltása után a <b>homes</b> megosztott mappához csak az adminisztrátor férhet hozzá.  A felhasználók újra hozzáférhetnek kezdőlap mappáikhoz, amikor ismét engedélyezi a felhasználói kezdőlap szolgáltatást.</p>
+
+<div class="section">
+<h4>Megjegyzés:</h4>
+<ol>
+<li>A <b>homes</b> megosztott mappa törléséhez először le kell tiltani a felhasználói kezdőlap szolgáltatást.</li>
+<li>A domain felhasználói kezdőlap szolgáltatás letiltásra kerül, ha a helyi felhasználói kezdőlap szolgáltatást letiltják.</li> 
+</ol> 
+</div>
+
+
+</body>	
+</html> 

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>File Station</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+
+<h2>Remote-Ordner bereitstellen</h2>
+
+<p>
+Sie können Remote-Ordner von Remote-Servern (z. B. Netzwerkcomputer oder andere Synology NAS) bereitstellen, sodass Sie eingelegte Ordner mit File Station navigieren und verwalten können.
+</p>
+
+
+
+
+
+<h4>Einen freigegebenen Remote-CIFS-Ordner anhängen:</h4>
+<ol>
+<li>Klicken Sie auf <b>Extras</b> > <b>Remote-Ordner anhängen</b> > <strong>Freigegebener CIFS-Ordner</strong>.</li>
+
+<img src="about:blank" class="help_image"/>
+
+<li>Geben Sie im Feld <b>Ordner</b> den Remote-Ordnerpfad im Format <code>\\Remote_Server\Remote_Folder</code> ein, z. B. <code>\\192.168.0.2\share</code> oder <code>\\chad\cheeseburger\pictures</code>.</li>
+<li>Geben Sie, wenn der Remote-Server Zugriffsberechtigung für den Remote-Ordner benötigt, Ihre Anmeldedaten für den Remote-Server in die Felder <b>Kontoname</b> und <b>Passwort</b> ein.</li>
+<li>Klicken Sie auf <b>Durchsuchen</b>, um einen leeren Zielordner auf Ihrem DiskStation für das Anhängen des Remote-Ordners auszuwählen oder zu erstellen.</li>
+
+<img src="about:blank" class="help_image"/>
+
+<li>Aktivieren Sie <b>Beim Start automatisch anhängen</b>, wenn der DiskStation den Remote-Ordner bei jedem Systemstart bzw. Neustart anhängen soll.</li>
+<li>Klicken Sie auf <b>Anhängen</b>, um den Remote-Ordner an den Zielordner anzuhängen. Sie können nun den Remote-Ordner über Ihren DiskStation navigieren und verwalten.</li>
+</ol>
+
+<h4>Einen freigegebenen Remote-NFS-Ordner anhängen:</h4>
+
+<ol>
+<li>Klicken Sie auf <b>Extras</b> > <b>Remote-Ordner anhängen</b> > <b>Freigegebener NFS-Ordner</b>.</li>
+
+<img src="about:blank" class="help_image"/>
+
+<li>Geben Sie im Feld <b>Ordner</b> den Remote-Ordnerpfad im Format <code>Remote_Server:/Remote_Folder_Path</code> ein, z. B. <code>192.168.0.2:/volume1/share</code>.</li>
+<li>Wählen Sie die gewünschte NFS-Version und das gewünschte Übertragungsprotokoll aus.</li>
+<li>Klicken Sie auf <b>Durchsuchen</b>, um einen leeren Zielordner auf Ihrem DiskStation für das Anhängen des Remote-Ordners auszuwählen oder zu erstellen.</li>
+
+<img src="about:blank" class="help_image"/>
+
+<li>Aktivieren Sie <b>Beim Start automatisch anhängen</b>, wenn Ihr DiskStation den Remote-Ordner bei jedem Systemstart bzw. Neustart anhängen soll.</li>
+<li>Klicken Sie auf <b>Anhängen</b>, um den Remote-Ordner an den Zielordner anzuhängen. Sie können nun den Remote-Ordner über Ihren DiskStation navigieren und verwalten.</li>
+</ol>
+
+<div class="section">
+<h4>Hinweis:</h4>
+<p>NFSv4 unterstützt ausschließlich das TCP-Protokoll.</p>
+</div>
+
+<h4>Remote-Ordner trennen:</h4>
+<ol>
+<li>Wählen Sie den Remote-Ordner aus, den Sie trennen möchten, und klicken Sie auf <b>Extras</b> > <b>Trennen</b>.</li>
+
+<img src="about:blank" class="help_image"/>
+
+<li>Sie können auch einfach auf den Remote-Ordner rechtsklicken und <b>Trennen</b> auswählen.</li>
+
+<img src="about:blank" class="help_image"/>
+
+</ol>
+
+<div class="section">
+<h4>Hinweis:</h4>
+<ul>
+<li>Die maximale Anzahl von gleichzeitigen Remote-Ordnern ist 100.</li>
+<li>Sie d&uuml;rfen nur Remote-Ordner eines Remote-Servers anh&auml;ngen, der das CIFS- oder NFS-Protokoll unterst&uuml;tzt.
+</li>
+<li>Remote-Ordner k&ouml;nnen nur an Unterordner unter freigegebenen Ordnern angeh&auml;ngt werden.</li>
+<li class="enable-dockerx64">Das Anh&auml;ngen von Remote-Ordnern wird nur im Modus hoher Priorit&auml;t unterst&uuml;tzt. Gehen Sie, um diese Funktion zu verwenden, zum Docker-Paket des Host-DSM, w&auml;hlen Sie das <strong>Docker DSM</strong> aus, f&uuml;r das Sie verschl&uuml;sselte freigegebene Ordner aktivieren m&ouml;chten, klicken Sie auf <strong>Bearbeiten</strong> und aktivieren Sie das Kontrollk&auml;stchen neben <strong>Container mit hoher Priorit&auml;t ausf&uuml;hren</strong>.</li>
+</ul>
+</div>
+
+
+
+<p>____<br />* Nur bei bestimmten Modellen verfügbar.</p>
+
+</body>
+</html>

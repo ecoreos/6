@@ -1,0 +1,163 @@
+﻿<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+	<h2>RAID Group*</h2>
+	<p>Pomocí zařízení DiskStation je možné spojovat více pevných disků do jedné jednotky úložiště zvané RAID Group. Nad skupinami RAID Group lze vytvářet svazky nebo jednotky iSCSI LUN (na úrovni bloku). Pokud má skupina RAID Group přidělitelné místo, lze svazky nebo jednotky iSCSI LUN rozšířit. Různé typy polí RAID nabízejí různé úrovně ochrany dat. Obecný seznam typů RAID podporovaných zařízením DiskStation naleznete v části <a href="general.html">Obecné</a>.</p>
+
+<h4>Vytvoření skupiny RAID Group:</h4>
+	<ol>
+		<li>Klikněte na tlačítko <b>Vytvořit</b>.</li>
+		<li>Zvolte jednu z následujících možností:<ul>
+				<li>RAID Group pro jeden svazek nebo jednotku iSCSI LUN (na úrovni bloků): Poskytuje lepší výkon.</li>
+				<li>RAID Group pro větší počet svazků nebo jednotek iSCSI LUN (na úrovni bloků): Poskytuje lepší flexibilitu při správě.</li>
+			</ul>
+		</li>
+		<li>Proces dokončete pomocí průvodce.</li>
+	</ol>
+<div class="section">
+<h4>Poznámka: </h4>
+<ul>
+<li>Skupina RAID Group se musí skládat z pevných disků stejného typu. K vytvoření svazku RAID není možné používat současně pevné disky SATA a SAS, ani disky SSD a pevné disky HDD.</li>
+<li>Skupina RAID Group pro větší počet svazků nebo jednotek iSCSI LUN (na úrovni bloků), která používá typ <b>RAID 5</b> nebo <b>RAID 6</b>, může obsahovat více <b>polí RAID</b>. Každé pole RAID patřící do stejné skupiny RAID Group bude stejného typu RAID (např. RAID 5 nebo RAID 6). Maximální počet disků u každého pole RAID může být 6, 12 nebo 24. Maximální počet disků je možné nastavit při vytváření skupiny RAID Group a tento počet nelze později změnit. Když byl do pole RAID přiřazen maximální počet disků, může se další disk přidaný do skupiny RAID Group přiřadit do nového pole RAID. Nové pole RAID musí obsahovat minimální počet disků nutný pro daný typ RAID (tj. tři disky u typu RAID 5 a čtyři disky u typu RAID 6).</li>
+<li>Pokud chcete vytvořit skupinu RAID Group s určitým pevným diskem, který se ale nezobrazuje v <b>Průvodci vytvořením skupiny RAID Group</b>, zkontrolujte stav pevného disku v části <b>Správa pevného disku HDD</b>.</li>
+</ul>
+</div>
+
+	<h4>Odebrání skupiny RAID Group:</h4>
+	<ol>
+		<li>Vyberte skupinu RAID Group, kterou chcete odebrat.</li>
+		<li>Klikněte na tlačítko <b>Odebrat</b> a postup dokončete pomocí průvodce.</li>
+	</ol>
+
+<div class="section">
+<h4>Poznámka: </h4>
+<ul>
+<li>Pokud skupinu RAID Group odeberete, svazky a jednotky iSCSI LUN ve skupině RAID Group se odstraní. Dávejte pozor, aby nedošlo k odstranění důležitých dat.</li>
+</ul>
+</div>
+
+
+	<h4>Oprava skupiny RAID Group:</h4>
+	<p>Skupinu RAID Group, jejíž stav je <b>Omezený režim</b>, lze opravit, pokud je skupina RAID Group jednoho z následujících typů: RAID 1, RAID 5, RAID 6 a RAID 10. Stávající data ve skupině RAID Group nebudou odstraněna.</p>
+	<p>Skupinu RAID Group opravíte pomocí tohoto postupu:</p>
+	<ol>
+		<li>Vypněte zařízení DiskStation. (Pokud váš model podporuje výměnu disků za chodu, je možné tento krok přeskočit.)</li>
+		<li>Vyměňte vadný pevný disk tak, jak je uvedeno v části Informace o disku v okně Stav skupiny RAID Group.</li>
+		<li>Klikněte na možnost <b>Správa</b>.</li>
+		<li>Vyberte možnost <b>Opravit</b>.</li>
+		<li>Proces dokončete pomocí průvodce.</li>
+        </ol>
+        
+<div class="section">
+<h4>Poznámka:</h4>
+<ul>
+<li>Velikost náhradního pevného disku musí být stejná nebo větší než velikost nejmenšího disku ve skupině RAID Group.</li>
+<li>Stav náhradního pevného disku musí být „Inicializováno“ nebo „Není inicializováno“.</li>
+</ul>
+</div>
+
+	<h4>Změna typu pole RAID skupiny RAID Group</h4>
+	<p>Při změně typu pole RAID skupiny RAID Group je třeba mít v zařízení DiskStation k dispozici nainstalované pevné disky. V současnosti jsou podporovány následující změny typu RAID:</p>
+	<ul>
+		<li>Základní na RAID 1 nebo RAID 5</li>
+		<li>RAID 1 na RAID 5</li>
+		<li>RAID 5 na RAID 6</li>
+      <li>Přidat zrcadlový disk do pole RAID 1</li>
+	</ul>
+	<p>Pokud chcete změnit typ RAID skupiny RAID Group, použijte následující postup:</p>
+	<ol>
+		<li>Vyberte skupinu RAID Group, kterou chcete změnit.</li>
+		<li>Klikněte na možnost <b>Správa</b>.</li>
+		<li>Vyberte možnost <b>Změnit typ pole RAID</b>.</li>
+		<li>Proces dokončete pomocí průvodce.</li>
+        </ol>
+<div class="section">
+<h4>Poznámka: </h4>
+<ul>
+<li>Před změnou typu pole RAID musí být stav skupiny RAID Group <b>Normální</b>. Jinak dojde ke ztrátě dat. Když je skupina RAID Group ve stavu <b>Omezený režim</b>, nejprve ji opravte.</li>
+<li>Abyste mohli změnit typ pole RAID skupiny RAID Group, musí být v zařízení DiskStation nainstalován dostatečný počet pevných disků a velikost nového disku musí být větší než nejmenší disk ve skupině RAID Group.</li>
+<li>Nový pevný disk musí mít stav „Inicializováno“ nebo stav „Není inicializováno“.</li>
+<li>Typ RAID skupiny RAID Group s více poli RAID nelze změnit.</li>
+</ul>
+</div>
+
+	<h4>Rozšíření velikosti skupiny RAID Group</h4>
+	<p>Velikost skupiny RAID Group je možné rozšířit výměnou stávajících pevných disků za větší disky nebo přidáním pevných disků.</p>
+
+<div class="section">
+<h4>Poznámka: </h4>
+<ul>
+  <li>Chcete-li rozšířit skupinu RAID Group disky o velikosti 3 TB nebo většími, ověřte, jestli byla skupina RAID Group vytvořena pomocí systému DSM 3.0 nebo novějšího.</ul>
+</div>
+
+	<h4>Rozšíření skupiny RAID Group výměnou stávajících pevných disků za větší disky:</h4>
+	<p>Skupinu RAID Group je možné rozšířit výměnou stávajících pevných disků za větší disky v následujících typech RAID: RAID 1, RAID 5 a RAID 6. Přidružené svazky nebo jednotky iSCSI LUN na skupině RAID Group pro samostatný svazek nebo jednotku iSCSI LUN se rozšíří automaticky. Postupujte podle následujících pokynů:</p>
+	<ol>
+    <li>Vypněte zařízení DiskStation. Pokud váš model podporuje výměnu disků za chodu, je možné tento krok přeskočit.</li>
+		<li>Vyměňte jeden pevný disk za jiný s větší kapacitou.</li>
+		<li>Zapněte zařízení DiskStation a opravte skupinu RAID Group.</li>
+		<li>Opakujte kroky 1 až 3, dokud se všechny pevné disky nevymění za větší.</li>
+		<li>Systém rozšíří skupinu RAID Group automaticky.</li>
+	</ol>
+
+<div class="section">
+<h4>Poznámka: </h4>
+<ul>
+<li>Během procesu rozšíření budou všechny služby Správce úložiště dočasně zastaveny.</li> 
+<li>Pevný disk lze rozšířit pouze tehdy, když je skupina RAID Group ve stavu <b>Normální</b>, jinak dojde ke ztrátě dat. Když je skupina RAID Group ve stavu <b>Omezený režim</b>, nejprve ji opravte.</li>
+	</ul>
+</div>
+
+	<h4>Rozšíření skupiny RAID Group přidáním pevných disků:</h4>
+	<p>Tato funkce je k dispozici pro systémy RAID typu JBOD, RAID 5 a RAID 6. Postup:</p>
+	<ol>
+		<li>Vyberte skupinu RAID Group, kterou chcete rozšířit.</li>
+		<li>Klikněte na možnost <b>Správa</b>.</li>
+		<li>Vyberte možnost <b>Přidat disk</b>.</li>
+		<li>Proveďte nastavení pomocí průvodce.</li>
+</ol>
+<div class="section">
+<h4>Poznámka: </h4>
+<ul>
+		<li>Stav skupiny RAID Group musí být <b>Normální</b>.</li>
+		<li>V případě skupiny RAID Group typu RAID 5 a RAID 6 musí být velikost pevného disku větší než velikost nejmenšího disku skupiny RAID Group.</li>
+		<li>Stav vybraného pevného disku musí být „Inicializováno“ nebo „Není inicializováno“.</li>
+	</ul>
+    </div>
+
+	<h4>Úprava popisu skupiny RAID Group:</h4>
+	<ol>
+		<li>Vyberte skupinu RAID Group, kterou chcete upravit</li>
+		<li>Klikněte na možnost <b>Správa</b>.</li>
+		<li>Vyberte možnost <b>Upravit popis</b>.</li>
+		<li>Upravte popis a výsledek uložte kliknutím na možnost <b>OK</b>.</li>
+	</ol>
+	<h3>Scrubbing pole RAID</h3>
+    <p>Scrubbing pole RAID je funkce údržby dat, která zkontroluje skupiny RAID Group a opraví případně zjištěné chyby v datech. Tuto funkci je možné použít u skupin RAID Group implementujících typy RAID 5 nebo RAID 6. </p>
+    <p>Scrubbing pole RAID doporučujeme provádět pravidelně, aby zůstala zachována konzistence dat a předešlo se ztrátě kritických dat v případě závady disku.</p>
+    <h4>Provedení scrubbingu pole RAID:</h4>
+    <ol>
+      <li>Vyberte skupinu RAID Group, na které chcete provést scrubbing pole RAID.</li>
+      <li>Klikněte na možnost <strong>Správa</strong></li>
+      <li>Vyberte možnost <strong>Scrubbing pole RAID</strong>.</li>
+    </ol>
+    <div class="section">
+      <h4>Poznámka:</h4>
+      <ul>
+        <li>Scrubbing pole RAID lze provést pouze tehdy, když je stav skupiny RAID Group <strong>Normální</strong>.</li>
+        <li>Nevypínejte systém, dokud se scrubbing pole RAID nedokončí. Pokud dojde před dokončením k vypnutí systému, je nutné spustit scrubbing pole RAID od začátku.</li>
+      </ul>
+    </div>
+    
+<p>____<br />*K dispozici pouze u některých modelů.</p>    
+</body>
+</html>

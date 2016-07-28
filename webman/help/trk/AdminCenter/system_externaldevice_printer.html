@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Harici Aygıtlar</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2><a name="usbprinter"></a>Yazıcılar</h2>
+<p>DiskStation, istemci bilgisayarların ya da mobil aygıtların DiskStation ürününe bağlı yazıcılara erişmesine olanak tanıyan bir yazdırma sunucusu olabilir. Bunun yanı sıra, Apple Kablosuz Yazdırma ve Google Cloud Print desteği, iOS aygıtlarını ya da Google ürünleri ve hizmetlerini kullanarak uzaktan yazdırmanıza olanak tanır.</p>
+<p>Uyumlu yazıcılar için <a href="http://www.synology.com" target="_blank">www.synology.com</a> adresini ziyaret edin.</p>
+
+<h3>Yazıcıları Kurma</h3>
+<p>Bir <span style="display: inline;" class="disable-rc18015xsp">USB ya da</span> ağ yazıcısını kurmak ve DiskStation ürününüze bağlamak için aşağıdaki talimatlara bakın.</p>
+
+
+<h4 class="disable-rc18015xsp">Bir USB yazıcısı kurmak için:</h4>
+<ol class="disable-rc18015xsp">
+<li>Yazıcıyı açıp, DiskStation üzerindeki bir USB bağlantı noktasına bağlayın.</li>
+<li><strong>Denetim Masası</strong> > <strong>Harici Aygıtlar</strong> > <strong>Yazıcı</strong>'ya gidin.</li>
+<li>Kurmak istediğiniz yazıcıyı seçin. Lütfen DiskStation ürününün USB yıldız göbekler aracılığıyla bağlı yazıcıları tanıyamadığına dikkat edin.</li>
+<li><b>Yazıcı Yöneticisi</b>'ne tıklayıp <b>Yazıcı Kur</b>'u seçin.</li>
+<li>İletişim kutusunda aşağıdaki modlardan birini seçin:
+<ul>
+<li><b>Ağ MFP:</b> Yerel ağ içindeki istemcilerin, çok işlevli yazıcınızın yazdırma, tarama ve faks işlevlerini kullanmasına olanak tanır. Tarama ve faks işlevleri yalnızca Windows bilgisayarları tarafından kullanılabilir.</li>
+<li><b>Ağ Yazıcısı:</b> Yalnızca yazdırmayı destekleyen yazıcılar için veya istemcilerin yalnızca yazdırma işlevini kullanmalarına izin vermek istediğinizde bu modu seçin.</li>
+</ul>
+</li>
+<li>Apple Kablosuz Yazdırma ya da Google Cloud Print ayarlarını yapılandırın (isteğe bağlı).</li>
+<li><b>Kaydet</b>'e tıklayın.</li>
+</ol>
+
+<div class="section disable-rc18015xsp">
+<h4>Not:</h4>
+<p>Bir ağ MFP'sine sadece bir istemci tarafından eş zamanlı olarak erişilebilir.</p>
+</div>
+
+
+<h4>Bir ağ yazıcısı kurmak için:</h4>
+<ol>
+<li>Ağ yazıcısını açın ve DiskStation ürününüzle aynı yerel ağa bağlayın.</li>
+<li><strong>Denetim Masası</strong> > <strong>Harici Aygıtlar</strong> > <strong>Yazıcı</strong>'ya gidin.</li>
+<li><b>Ağ Yazıcısı Ekle</b>'ye tıklayıp, kurulum sihirbazının talimatlarını izleyin.</li>
+</ol>
+
+<div class="section">
+<h4>Not:</h4>
+<ul>
+<li><strong>Yazıcı Adı:</strong> Kurulum sırasında bir yazıcı adı girilmelidir ve harfler, sayılar ve alt çizgilerle birlikte en fazla 32 karakter içerebilir.</li>
+	<li><strong>Protokol:</strong> Genelde, HP ağ yazıcıları Soket, Canon ağ yazıcıları BJNP ve diğerleri de çoğunlukla LPR kullanır.</li>
+<li><strong>Kuyruk Adı:</strong> LPR ve IPP ağ yazıcıları için bir kuyruk adının girilmesi gereklidir ama Soket ya da BJNP yazıcılara uygulanmaz.</li>
+<li><strong>Ağ MFP Yok:</strong> DiskStation ürününe bağlı ağ yazıcıları şu an için Ağ MFP modunu kullanamaz.</li>
+<li><strong>USB Yazıcılar Yok:</strong> Bir Synology ürünü tarafından paylaşılan USB yazıcılar, ağ yazıcıları olarak ayarlanamaz.</li>
+</ul>
+</div>
+
+
+<h3>Yazıcıları Yönetme</h3>
+<p>Yazıcı sekmesi, DiskStation ürününe bağlı <span style="display: inline;" class="disable-rc18015xsp">USB ya da</span> ağ yazıcılarını yönetmek için aşağıdaki seçenekleri içerir.</p>
+
+<ul>
+<li><b>Bilgi Al:</b> Seçilen yazıcıyla ilgili, aygıt adı, üretici, durum vb. bilgileri görüntüler.</li>
+<li><strong>Kaldır:</strong> Bir yazıcıyı kaldırır ve DiskStation ürününden bağlantısını keser.</li>
+<li><strong>Yazıcı Yöneticisi:</strong> Aşağıdaki seçenekleri içerir:
+<ul>
+<li><strong>Yazıcı Kur</strong>: Apple Kablosuz Yazdırma ya da Google Cloud Print gibi yazıcı ayarlarını düzenleyin (aşağıdaki talimatlara bakın).</li>
+<li><strong>Kuyruk alanını temizle:</strong> Tüm yazıcılardaki tüm yazdırma görevlerini iptal eder.</li>
+<li><strong>Test Sayfasını Yazdır:</strong> Yapılandırmaların doğru olduğundan emin olmak için bir test sayfası yazdırın.</li>
+<li><b>Yazıcıyı Serbest Bırak:</b> Yazıcı ve istemcinin bağlantısını kesin (yalnızca Ağ MFP modu için). Bir istemci, faks almak ya da dosyaları taramak için çok işlevli bir yazıcıya bağlandığında görev uzun zaman alabilir. Gerekirse, sıradaki diğer istemcinin yazıcıya erişmesine olanak tanımak için bağlantı durdurulabilir.</li>
+</ul></li>
+</ul>
+
+
+<h4>Apple Kablosuz Yazdırma'yı etkinleştirmek için:</h4>
+<ol>
+<li><strong>Denetim Masası</strong> > <strong>Harici Aygıtlar</strong> > <strong>Yazıcı</strong>'ya gidin.</li>
+<li>Aygıt listesinden bir yazıcı seçin.</li>
+<li><b>Yazıcı Yöneticisi</b> > <b>Yazıcı Kur</b>'a tıklayın.</li>
+<li><b>Apple Kablosuz Yazdırma'yı Etkinleştir</b> kutusunu işaretleyin.</li>
+<li>Yazıcınızın markasını ve sürücüsünü seçin.</li>
+<li><b>Kaydet</b>'e tıklayın.</li>
+</ol>
+
+<p>Kurulum tamamlandıktan sonra, <b>Yazıcı Yöneticisi</b> > <b>Test Sayfasını Yazdır</b>'a tıklayarak bir test sayfası yazdırabilirsiniz.</li>
+
+<div class="section">
+<h4>Not:</h4>
+<ul>
+<li>Apple Kablosuz Yazdırma'yı etkinleştirmek, DSM için Bonjour Yazıcı Yayınını da etkinleştirir.</li>
+<li>Apple Kablosuz Yazdırma iOS 4.2 veya sonrası için kullanılabilir.</li>
+</ul>
+</div>
+
+
+<h4>Google Cloud Print'i etkinleştirmek için:</h4>
+<ol>
+<li><strong>Denetim Masası</strong> > <strong>Harici Aygıtlar</strong> > <strong>Yazıcı</strong>'ya gidin.</li>
+<li>Aygıt listesinden bir yazıcı seçin.</li>
+<li><b>Yazıcı Yöneticisi</b> > <b>Yazıcı Kur</b>'a tıklayın.</li>
+<li><b>Google Cloud Print’i Etkinleştir</b> onay kutusunu işaretleyin.</li>
+<li>Aşağıdaki ayrıntıları girin:
+<ul>
+
+<li>Google hesabı bilgileriniz.</li>
+<li>Yazıcınızın markası ve sürücüsü.</li>
+</ul>
+<li><b>Kaydet</b>'e tıklayın.</li>
+</ol>
+<p>Kurulum tamamlandıktan sonra, <b>Yazıcı Yöneticisi</b> > <b>Test Sayfasını Yazdır</b>'a tıklayarak bir test sayfası yazdırabilirsiniz.</li>
+</p>
+<p>Google Cloud Print görevlerini yönetmek için <a href="http://www.google.com/cloudprint/manage.html" target="_blank">Google Cloud Print</a> bağlantısına tıklayın.</p>
+
+
+<h3>Yazıcılara Erişme</h3>
+<p>PC veya Mac kullanarak yazıcılara erişmek için aşağıdaki bölüme göz atın.</p>
+<h4><a name="others"></a>Windows PC kullanarak yazıcılara erişme:</h4>
+<p>
+DiskStation cihazının yazdırma hizmetlerine erişmenin en iyi yolu Synology Assistant ile yazıcıya bağlantı kurmaktır. Ayrıntılı talimatlar için Yardım'a başvurun.
+</p>
+
+<p>Bilgisayarınıza Synology Assistant yüklü değilse, DiskStation cihazının yazdırma hizmetlerine erişmenin diğer yollarını görmek için aşağıya bakın.</p>
+<p><strong>Tip 1. Paylaşımlı Ağ Yazıcısı</strong></p>
+<ol>
+<li>Bilgisayarınızdaki Dosya Gezgini'nde <b>Ağ</b>'ı açıp DiskStation öğesine çift tıklayın.</li>
+
+<li><span style="display: inline;" class="disable-rc18015xsp"><b>usbprinter</b> ya da </span><b>network printer name</b> öğesine çift tıklayın; sistem, doğru sürücüyü yüklemenizi istediğinde <b>Evet</b>'e tıklayın.</li>
+
+<li>Lütfen yazıcı sürücüsünü CD'den ya da üreticinin web sitesinden edinin. Yazıcının üreticisini ve modelini seçin veya sürücünün konumunu seçmek için <strong>Disketi Var</strong>'a tıklayın. Ardından <b>Tamam</b> tuşuna tıklayın.</li>
+<li>Sistem ağ yazıcısını kurmaya başlar. Kurulum tamamlandıktan sonra yazıcıyı kullanmaya başlayabilirsiniz. </li>
+</ol>
+
+
+<p><strong>Tip 2. LPR Bağlantı Noktası (Önerilen)</strong></p>
+<ol>
+<li>Bilgisayarınızda <b>Başlat</b>'a tıklayın ve <b>Aygıtlar ve Yazıcılar</b>'a gidin.</li>
+<li><b>Yazıcı Ekle</b>'ye tıklayın. </li>
+	<li><strong>Bir ağ, kablosuz ya da Bluetooth yazıcı ekle</strong>'yi seçin. </li>
+	<li><strong>İstediğim yazıcı listelenmiyor</strong>'u seçin.</li>
+<li><b>TCP/IP adresi ya da ana bilgisayar adı kullanarak yazıcı ekle</b>'yi seçin. Devam etmek için <b>İleri</b>'ye tıklayın.</li>
+<li>Aygıt türünü be <b>TCP/IP Bağlantı Noktası Aygıtı</b> olacak şekilde seçin.</li>
+<li>DiskStation IP adresini girin. Devam etmek için <b>İleri</b>'ye tıklayın.</li>
+<li><b>Aygıt Türü</b> seçimini yapın: <strong>Özel</strong> > <strong>Ayarlar</strong> > …. Devam etmek için <b>İleri</b>'ye tıklayın.</li>
+
+<li>Protokol için <b>LPR</b> seçin; Kuyruk Adı olarak <span style="display: inline;" class="disable-rc18015xsp"><b>usbprinter</b> ya da </span><b>network printer name</b> girin ve <b>LPR Bayt Sayma Etkin</b> onay kutusunu işaretleyin. Devam etmek için <b>Tamam</b> üzerine tıklayın.</li>
+
+<li>Lütfen yazıcı sürücüsünü CD'den ya da üreticinin web sitesinden edinin. Yazıcının üreticisini ve modelini seçin veya sürücünün konumunu seçmek için <strong>Disketi Var</strong>'a tıklayın. Ardından <b>Tamam</b> tuşuna tıklayın.</li>
+	<li>Sistem ağ yazıcısını kurmaya başlar. Kurulum tamamlandıktan sonra yazıcıyı kullanmaya başlayabilirsiniz.</li>
+</ol>
+
+<h4>Mac kullanarak yazıcılara erişmek için:</h4>
+<p>
+Mac kullanıcıları DSM'in Bonjour yazıcı yayınını etkinleştirerek ve Sistem Tercihlerine yazıcı ekleyerek DiskStation cihazının yazdırma hizmetlerine erişim sağlayabilir.</p>
+<P>Lütfen devam etmeden önce DiskStation sunucunuzun Postscript yazıcı kullandığından emin olun.
+</p>
+<p><strong>Adım 1. DSM Bonjour yazıcı yayınını etkinleştirin</strong></p>
+<ol>
+<li>
+DSM'de <b>admin</b> olarak veya <b>administrators</b> grubunun üyesi olarak oturum açın.
+</li>
+<li>
+<b>Denetim Masası</b> > <strong>Dosya Hizmetleri</strong> > <b>Win/Mac/NFS</b> bölümüne gidin.
+</li>
+<li>
+<b>Bonjour Yazıcı Yayınını Etkinleştir</b>'i işaretleyin.
+</li>
+</ol>
+
+<p><strong>Adım 2. Mac kullanarak yazıcıya erişim</strong></p>
+<ol>
+<li>
+Mac'inizde, <b>Sistem Tercihleri</b> > <b>Yazdır ve Tara</b>'ya gidin ve ardından <b>+</b> işaretine tıklayın.
+</li>
+
+<li>
+Açılan menüden <span style="display: inline;" class="disable-rc18015xsp"><b>usbprinter[number]</b> ya da </span><b>network printer name</b> seçin. Mac'iniz yazıcıyı otomatik olarak ayarlayacaktır.
+</li>
+
+</ol>
+</div>
+</body>
+</html>

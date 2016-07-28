@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html class="img-no-display">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Win/Mac/NFS</title>
+
+
+<link href="../../help.css" type="text/css" rel="stylesheet" />
+<link href="../../scrollbar/flexcroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../scrollbar/flexcroll.js"></script>
+<script type="text/javascript" src="../../scrollbar/initFlexcroll.js"></script>
+</head>
+<body>
+<h2>Domän</h2>
+<p>Din DiskStation kan ansluta till en Windows-domän. Efter att den anslutits till domänen kan användare logga in till DiskStation genom att använda deras domänkonton och -lösenord, vilket låter den få åtkomst till filer och använda program på DSM, utan att behov av att komma ihåg ytterligare en uppsättning användarnamn och lösenord.</p>
+<h4>Anslut till en domän:</h4>
+<ol>
+<li>Gå till <strong>Kontrollpanel</strong> > <strong>Katalogtjänst</strong> > <strong>Domän</strong>.</li>
+<li>Markera rutan <strong>Anslut till domän</strong>.</li>
+<li>Ange domännamnet och specificera DNS-server i därför avsedda fält.</li>
+<li>Om nödvändigt, markera rutan <b>Avancerade domänalternativ</b>. (Se här nedanför för mer information.)</li>
+<li>Klicka på <b>Tillämpa</b>.</li>
+<li>Ange användarnamnet och lösenordet för domänserverns administratör i popup-fönstret.</li>
+<li>Klicka på <b>OK</b>.</li>
+</ol>
+<div class="section">
+<h4>DNS Server</h4>
+<p>Det rekommenderas att du anger en DNS-server för att hjälpa din DiskStation att söka efter domänen. Om domänen inte är registrerad på DNS-servern kommer proceduren att gå med i domänen kanske att misslyckas.</p>
+<h4>Domänservertyp</h4>
+<p>Det här fältet visar den typ av domän när din DiskStation ansluter till en domän. Typen av domän kommer att bli "AD-domän".</p>
+<h4>Hanteringsläge</h4>
+<p>Det här alternativet kommer att avgöra hur du hanterar privilegierna för domänanvändare och -grupper. </p>
+<ul>
+<li><b>Betrodd domän</b>: Du kan hantera användare och grupper i den anslutna domänen såväl som i betrodda domäner. Användare och grupper kan filtreras med rullgardinslistan domän.</li>
+<li><b>Enkel domän med OU</b>: Endast användare och grupper i den anslutna domänen kommer att visas i detta läge. Det här läget låter dig filtrera domänanvändare/domängrupper med rullgardinsmenyn OU (Organizational Unit).</li>
+</ul>
+<h4>Avancerade domänalternativ</h4>
+<p>I de flesta fall behöver du inte fylla i några av de avancerade domänalternativen. Avancerade domänalternativ krävs endast för specifika domänmiljöer. </p>
+<ul>
+<li><b>DC IP/FQDN</b>: Specificera en IP-adress eller FQDN för DC (Domain Controller) så kommer din DiskStation att försöka kommunicera med den. Om det finns fler än en IP-adress eller FQDN, avgränsa med ett komma (,) mellan var och en. Lägg till en asterisk (*) efter den sista IP-adressen eller FQDN för DC om du vill, så kommer din DiskStation att försöka kommunicera med andra DC om alla angivna misslyckats. Du måste lägga till ett komma mellan asterisken och den sista IP-adressen eller FQDN.</li>
+<li><b>Domän NetBIOS-namn</b>: Ange NetBIOS-namn för domänen.</li>
+<li><b>Domän FQDN (DNS-namn)</b>: Ange FQDN (DNS-namn) för domänen.</li>
+<li><b>Registrera gränssnitt för DNS:</b> Vid anslutning till en domän kommer det NIC (Network Interface Card, på svenska nätverkskort) som specificerats här registreras med DNS-servern. Vänligen observera att för det fall värdnamnet för din DiskStation innehåller ett understreck (_) kommer registreringen att misslyckas eftersom understreck (_) inte kan användas med DNS.</li>
+<li><b>Uppdatera användar-/grupplista</b>: Specificera hur ofta din DiskStation automatiskt uppdaterar domänens lista över användare/grupper. Du kan anpassa tidsperioden så att uppdateringar utförs dagligen, veckovis eller månadsvis. Dessutom kan domänens användar-/grupplista uppdateras manuellt genom att gå till fliken <strong>Domänanvändare</strong> och klicka på <strong>Uppdatera alla domäner</strong>. Vänligen observera att automatiska uppdatering påverkar systemets viloläge.</li>
+</ul>
+
+<h4>Ansluta Endast läsbar domänkontrollant</h4>
+<p>För att ansluta din DiskStation till en endast läsbar domänkontrollant (RODC), behöver du specificera "hela datorns namn" (FQDN) om din läs- och skrivbara domänkontrollant (RWDC) i fältet <strong>DC IP/FQDN</strong>. Hela datorns namn ska anges i följande format: <strong>Datornamn.Domän</strong>, dvs. "ad01.synology.com".</p>
+
+</div>
+
+
+<div class="section">
+<h4>Obs:</h4>
+<ul>
+<li>Om din domäns användarnamn inkluderar ”%” eller ”$”, kanske du inte kan komma åt din home-mapp. Be din domänadministratör om ett nytt användarnamn.</li>
+<li>Domängrupperna <strong>Domänadministratörer</strong> och <strong>Företagsadministratörer</strong> läggs till den lokala gruppen <strong>Administrators</strong> automatiskt. Därför kommer domänanvändare i dessa grupper få administrativa privilegier på DIN DiskStation, inklusive åtkomst till filtjänster såsom CIFS/FTP/AFP/WebDAV och andra DSM-applikationer.</li>
+<li>Du kan också konfigurera domänanvändares åtkomstprivilegier till de delade mapparna på DIN DiskStation. Se <a href="file_directory_service_user_group.html">här</a> för mer information.</li>
+</ul>
+</div>
+
+
+
+<h3>Domänalternativ</h3>
+<p>Detta avsnitt innehåller följande ytterligare alternativ för domäner.</p>
+<ul>
+<li><b>DiskStation synkroniserar med en NTP-server varje gång en domänanvändare loggar in:</b> Att aktivera detta alternativ kommer att framtvinga synkronisering av tid mellan DIN DiskStation och NTP-servern.</li>
+<li><b>Aktivera serversignering:</b> Om klienten har klientsignering aktiverat, måste serversignering också vara aktiverat på DIN DiskStation, så att användare kan använda domänens tjänster på ett normalt sätt.</li>
+<li><b>Hämta användar-/grupplistor i NT4-kompatibelt läge:</b> Aktivering av detta alternativ låter systemet hämta användar-/grupplistor genom att använda läget NT4 RCP. Detta alternativ kan aktiveras om vissa av domänens användar-/grupplistor inte kan hämtas med standardinställningarna.</li>
+<li><b> Avaktivera administratörsbehörigheter för domän- och företagsadministratörer:</b> En användare med administratörsbehörigheter kan ha full kontroll över din DiskStation och dess filer. Aktivering av detta alternativ låter dig begränsa så att behörigheter för domän- och företagsadministratörer är desamma som för en vanlig användare och att de därför ärver alla normala behörigheter för fil/mapp.</li>
+<li><strong>Räkna upp nästlade gruppnivåer:</strong> Specificera antalet nästlade domängruppsanvändare som kan räknas upp.</li>
+</ul>
+
+</body>
+</html>
