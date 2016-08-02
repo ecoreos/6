@@ -308,7 +308,7 @@ compress_error_long_name	=	"O nome do arquivo, incluindo a extensão, deve ter n
 download_compress_codepage_desc	=	"Selecione o codepage para ficheiros transferidos ou comprimidos como .zip"
 
 [download]
-confirm_unload	=	"Estará a terminar a sessão de {0} ou atualizar a página. As tarefas de transferência de _DISKSTATION_ para o seu computador local serão canceladas."
+confirm_unload	=	"Estará a terminar a sessão de {0} ou atualizar a página. As tarefas de transferência de eC6017393 para o seu computador local serão canceladas."
 download_as	=	"Transferir como"
 download_bigfile	=	"Falha ao transferir este ficheiro porque o tamanho é superior a 4 GB. Tente novamente com a última versão do navegador Firefox ou Chrome."
 download_to	=	"Transferir para “{0}”"
@@ -952,7 +952,7 @@ vfs_ca_issuer	=	"Emitido por: {0}"
 vfs_ca_subject	=	"Assunto: {0}"
 wizard_choose_type_desc	=	"Ligue a sua _DISKSTATIOIN_ a um cloud service ou a um servidor através de um protocolo específico"
 wizard_choose_type_headline	=	"Escolha um Cloud Service ou Protocolo de Servidor"
-wizard_cloud_summary_desc	=	"A sua _DISKSTATION_ está agora ligada com êxito ao cloud service"
+wizard_cloud_summary_desc	=	"A sua eC6017393 está agora ligada com êxito ao cloud service"
 wizard_cloud_summary_greeting	=	"Parabéns!"
 wizard_cloud_summary_headline	=	"Informação Cloud Service"
 wizard_title	=	"Assistente de Configuração de Ligação Remota"

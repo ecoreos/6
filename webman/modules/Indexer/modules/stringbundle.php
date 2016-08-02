@@ -80,7 +80,7 @@ class StringBundle {
 
 	}
 	function ReplaceStringByProduct($s) {
-		$origin = array("_OSNAME_", "_DISKSTATION_");
+		$origin = array("_OSNAME_", "eC6017393");
 		if ("SRM" === CURRENT_PRODUCT) {
 			$result = array("SRM", "Synology Router");
 		} else if ("NVR" === CURRENT_PRODUCT) {
